@@ -482,29 +482,44 @@ const Treatments = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl font-bold mb-4">{treatments.hyaluronic.title}</h2>
-              <p className="text-gray-400 mb-6">{treatments.hyaluronic.description}</p>
               
-              <div className="overflow-x-auto mt-8 mb-6">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-white/20">
-                      <th className="text-left py-3 px-2">Options</th>
-                      <th className="text-left py-3 px-2">Syringes</th>
-                      <th className="text-left py-3 px-2">Price</th>
-                      <th className="text-left py-3 px-2">General Age</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {treatments.hyaluronic.items.map((item, index) => (
-                      <tr key={index} className="border-b border-white/10">
-                        <td className="py-3 px-2 font-semibold">{item.title}</td>
-                        <td className="py-3 px-2">{item.syringes}</td>
-                        <td className="py-3 px-2 font-bold">{item.price}</td>
-                        <td className="py-3 px-2">{item.age}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="flex flex-col md:flex-row gap-8 mb-8">
+                <div className="md:w-1/2">
+                  <p className="text-gray-400 mb-6">{treatments.hyaluronic.description}</p>
+                
+                  <div className="overflow-x-auto mt-4">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-white/20">
+                          <th className="text-left py-3 px-2">Options</th>
+                          <th className="text-left py-3 px-2">Syringes</th>
+                          <th className="text-left py-3 px-2">Price</th>
+                          <th className="text-left py-3 px-2">General Age</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {treatments.hyaluronic.items.map((item, index) => (
+                          <tr key={index} className="border-b border-white/10">
+                            <td className="py-3 px-2 font-semibold">{item.title}</td>
+                            <td className="py-3 px-2">{item.syringes}</td>
+                            <td className="py-3 px-2 font-bold">{item.price}</td>
+                            <td className="py-3 px-2">{item.age}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <div className="md:w-1/2">
+                  <div className="rounded-lg overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/08578c07-c2c7-43fd-a3c3-d44e6594913c.png" 
+                      alt="HA Makeover Before and After" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
               </div>
               
               {treatments.hyaluronic.note && (
