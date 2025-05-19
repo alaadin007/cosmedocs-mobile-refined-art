@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -18,6 +18,9 @@ export default function Header() {
     { name: "About Us", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
+
+  const whatsappNumber = "+447735606447";
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\s+/g, "")}`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black">
@@ -42,7 +45,17 @@ export default function Header() {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center space-x-4">
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-white hover:text-green-400 transition-colors"
+            aria-label="Contact us on WhatsApp"
+          >
+            <MessageSquare className="h-5 w-5 mr-2" />
+            <span className="text-sm">+44 7735 606447</span>
+          </a>
           <Button variant="outline" className="bg-white text-black hover:bg-gray-200 rounded-full px-6">
             Book Now
           </Button>
@@ -75,6 +88,16 @@ export default function Header() {
                       {item.name}
                     </Link>
                   ))}
+                  <a 
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-white hover:text-green-400 py-2 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <MessageSquare className="h-5 w-5 mr-2" />
+                    <span>+44 7735 606447</span>
+                  </a>
                 </div>
                 <div className="px-6 py-6 border-t border-gray-800">
                   <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-full">
