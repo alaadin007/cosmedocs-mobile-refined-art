@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -108,6 +107,39 @@ const Home = () => {
       caption: "Bridge enhancement and definition for improved facial harmony"
     }
   ];
+  
+  const dermalFillerBeforeAfterImages = [
+    {
+      src: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png",
+      alt: "Dermal filler before and after - tear trough treatment",
+      caption: "Tear trough treatment for reduced under-eye hollowing"
+    },
+    {
+      src: "/lovable-uploads/0146916c-8864-4889-b0d5-b330859a2c85.png",
+      alt: "Dermal filler profile enhancement",
+      caption: "Profile enhancement with natural-looking results"
+    },
+    {
+      src: "/lovable-uploads/3899717b-6f5a-46d5-9c4d-0f0b20c0ae5f.png",
+      alt: "Dermal filler facial enhancement",
+      caption: "Subtle facial enhancement for improved definition"
+    },
+    {
+      src: "/lovable-uploads/d91b1bcd-3f3b-4735-8157-eea0f5374eeb.png",
+      alt: "Dermal filler jawline contouring",
+      caption: "Jawline contouring and cheek enhancement"
+    },
+    {
+      src: "/lovable-uploads/fbec93fe-bce2-40ac-aa45-96b8a95170ba.png",
+      alt: "Dermal filler chin enhancement",
+      caption: "V-line chin enhancement for a balanced profile"
+    },
+    {
+      src: "/lovable-uploads/37e1c9db-26f6-439b-94c2-fd05fa7e385f.png",
+      alt: "Dermal filler full face rejuvenation",
+      caption: "Full face rejuvenation with targeted enhancement"
+    }
+  ];
 
   return <div className="bg-black text-white">
       <header>
@@ -184,7 +216,9 @@ const Home = () => {
             description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines"
           }, {
             title: "Dermal Fillers",
-            description: "Restore volume and enhance facial features"
+            description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
+            hasBeforeAfter: true,
+            baType: "dermal"
           }, {
             title: "Lip Fillers",
             description: "Subtle enhancement for natural-looking fullness",
@@ -217,7 +251,13 @@ const Home = () => {
                 <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
                 {treatment.hasBeforeAfter && (
                   <BeforeAfterImageViewer 
-                    images={treatment.baType === "nose" ? noseJobBeforeAfterImages : lipFillerBeforeAfterImages}
+                    images={
+                      treatment.baType === "nose" 
+                        ? noseJobBeforeAfterImages 
+                        : treatment.baType === "lip"
+                          ? lipFillerBeforeAfterImages
+                          : dermalFillerBeforeAfterImages
+                    }
                     triggerLabel="See Before & After"
                     title={`${treatment.title} Before & After`}
                     description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`}
