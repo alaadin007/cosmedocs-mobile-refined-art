@@ -1,11 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
-import { Eye, Images, ChevronLeft, ChevronRight } from "lucide-react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Eye, Images } from "lucide-react";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Slider } from "@/components/ui/slider";
@@ -160,49 +158,15 @@ const Home = () => {
           }}>
                 <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
-                {treatment.hasBeforeAfter ? <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium">
-                        <Eye className="h-4 w-4 mr-1" />
-                        <span>See B/A</span>
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="bg-black border-gray-800 w-full max-w-3xl p-0 overflow-hidden">
-                      <DialogHeader className="p-4 pb-0">
-                        <DialogTitle className="text-2xl font-bold mb-1">Lip Filler Before & After</DialogTitle>
-                        <DialogDescription className="text-gray-300">
-                          Results achieved with our premium lip filler treatments
-                        </DialogDescription>
-                      </DialogHeader>
-                      
-                      <div className="w-full">
-                        <Carousel className="w-full" opts={{ loop: true }}>
-                          <CarouselContent>
-                            {lipFillerBeforeAfterImages.map((image, index) => (
-                              <CarouselItem key={index}>
-                                <div className="flex flex-col items-center">
-                                  <div className="w-full bg-black flex justify-center">
-                                    <img 
-                                      src={image.src} 
-                                      alt={image.alt} 
-                                      className="max-h-[70vh] object-contain" 
-                                    />
-                                  </div>
-                                  <p className="text-center text-gray-300 py-4 px-4">{image.caption}</p>
-                                </div>
-                              </CarouselItem>
-                            ))}
-                          </CarouselContent>
-                          <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between px-2 z-10">
-                            <CarouselPrevious className="relative h-8 w-8 bg-black/60 hover:bg-black/80 border-white/20" />
-                            <CarouselNext className="relative h-8 w-8 bg-black/60 hover:bg-black/80 border-white/20" />
-                          </div>
-                        </Carousel>
-                      </div>
-                    </DialogContent>
-                  </Dialog> : <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                {treatment.hasBeforeAfter ? (
+                  <BeforeAfterImageViewer 
+                    images={lipFillerBeforeAfterImages} 
+                  />
+                ) : (
+                  <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
                     Learn more →
-                  </Button>}
+                  </Button>
+                )}
               </motion.div>)}
           </div>
         </div>
