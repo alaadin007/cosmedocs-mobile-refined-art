@@ -3,12 +3,16 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
-import { Eye, Images } from "lucide-react";
+import { Eye, Images, ChevronLeft, ChevronRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Slider } from "@/components/ui/slider";
 
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
+  const isMobile = useIsMobile();
   
   const lipFillerBeforeAfterImages = [
     {
@@ -45,6 +49,11 @@ const Home = () => {
       src: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png",
       alt: "Balanced lip enhancement",
       caption: "Balanced lip enhancement for natural-looking fullness"
+    },
+    {
+      src: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png",
+      alt: "Subtle lip enhancement result",
+      caption: "Subtle enhancement for natural-looking results"
     }
   ];
 
@@ -158,35 +167,35 @@ const Home = () => {
                         <span>See B/A</span>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="bg-black border-gray-800 w-full max-w-3xl p-6">
-                      <DialogHeader>
+                    <DialogContent className="bg-black border-gray-800 w-full max-w-3xl p-0 overflow-hidden">
+                      <DialogHeader className="p-4 pb-0">
                         <DialogTitle className="text-2xl font-bold mb-1">Lip Filler Before & After</DialogTitle>
-                        <DialogDescription className="text-gray-300 mb-4">
+                        <DialogDescription className="text-gray-300">
                           Results achieved with our premium lip filler treatments
                         </DialogDescription>
                       </DialogHeader>
                       
                       <div className="w-full">
-                        <Carousel className="w-full">
+                        <Carousel className="w-full" opts={{ loop: true }}>
                           <CarouselContent>
                             {lipFillerBeforeAfterImages.map((image, index) => (
                               <CarouselItem key={index}>
                                 <div className="flex flex-col items-center">
-                                  <div className="w-full aspect-square rounded-md overflow-hidden">
+                                  <div className="w-full bg-black flex justify-center">
                                     <img 
                                       src={image.src} 
                                       alt={image.alt} 
-                                      className="w-full h-full object-contain bg-black" 
+                                      className="max-h-[70vh] object-contain" 
                                     />
                                   </div>
-                                  <p className="text-center text-gray-300 mt-3 mb-1">{image.caption}</p>
+                                  <p className="text-center text-gray-300 py-4 px-4">{image.caption}</p>
                                 </div>
                               </CarouselItem>
                             ))}
                           </CarouselContent>
-                          <div className="flex justify-center mt-2">
-                            <CarouselPrevious className="static transform-none mx-2" />
-                            <CarouselNext className="static transform-none mx-2" />
+                          <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between px-2 z-10">
+                            <CarouselPrevious className="relative h-8 w-8 bg-black/60 hover:bg-black/80 border-white/20" />
+                            <CarouselNext className="relative h-8 w-8 bg-black/60 hover:bg-black/80 border-white/20" />
                           </div>
                         </Carousel>
                       </div>
