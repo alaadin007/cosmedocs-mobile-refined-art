@@ -22,11 +22,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black">
       <div className="flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex flex-col items-start">
           <div className="text-2xl md:text-3xl font-bold">
             <span className="text-white">COSME</span>
             <span className="text-white">DOCS</span>
           </div>
+          <p className="text-xs text-gray-400 -mt-1">since 2007, 1M+ Injections</p>
         </Link>
         
         <div className="hidden md:flex space-x-6 text-sm font-medium">
