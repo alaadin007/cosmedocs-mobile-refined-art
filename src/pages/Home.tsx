@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { useState } from "react";
 import { Eye, Images } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
@@ -107,79 +108,96 @@ const Home = () => {
                         <span>See B/A</span>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="bg-black border-gray-800 max-w-5xl">
-                      <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold">Lip Filler Before & After</DialogTitle>
-                        <DialogDescription className="text-gray-300">
-                          Results achieved with our premium lip filler treatments
-                        </DialogDescription>
-                      </DialogHeader>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                        <div className="space-y-2">
-                          <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                            <img 
-                              src="/lovable-uploads/1f53b666-2cf1-40ac-83f2-df9ea4d376af.png" 
-                              alt="Lip filler before and after - natural fullness" 
-                              className="w-full h-full object-cover"
-                            />
+                    <DialogContent className="bg-black border-gray-800 max-w-4xl max-h-[90vh] p-0">
+                      <ScrollArea className="h-full max-h-[calc(90vh-2rem)] overflow-y-auto">
+                        <div className="p-6">
+                          <DialogHeader>
+                            <DialogTitle className="text-2xl font-bold">Lip Filler Before & After</DialogTitle>
+                            <DialogDescription className="text-gray-300">
+                              Results achieved with our premium lip filler treatments
+                            </DialogDescription>
+                          </DialogHeader>
+                          
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div className="space-y-2">
+                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
+                                <img 
+                                  src="/lovable-uploads/1f53b666-2cf1-40ac-83f2-df9ea4d376af.png" 
+                                  alt="Lip filler before and after - natural fullness" 
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-300">Natural volume enhancement</p>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
+                                <img 
+                                  src="/lovable-uploads/c454131a-e502-4b22-ac0d-480d75330a86.png" 
+                                  alt="Lip filler before and after - enhanced definition" 
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-300">Enhanced lip definition and volume</p>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
+                                <img 
+                                  src="/lovable-uploads/b4cfd443-83fa-4310-bdcd-6345b85c20f5.png" 
+                                  alt="Lip filler before and after - subtle enhancement" 
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-300">Subtle enhancement with defined border</p>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
+                                <img 
+                                  src="/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png" 
+                                  alt="Lip filler before and after - balanced enhancement" 
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-300">Balanced lip enhancement</p>
+                            </div>
+                            <div className="space-y-2 md:col-span-2">
+                              <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
+                                <img 
+                                  src="/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png" 
+                                  alt="Lip filler various results" 
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-300">
+                                Various client results showcasing our approach to natural lip enhancement
+                              </p>
+                            </div>
+                            <div className="space-y-2 md:col-span-2">
+                              <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
+                                <img 
+                                  src="/lovable-uploads/8ead2a70-fe92-4c88-b50d-67219debbdf3.png" 
+                                  alt="Lip filler subtle enhancement" 
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-300">
+                                Subtle enhancement with our signature invisible art technique
+                              </p>
+                            </div>
+                            <div className="space-y-2 md:col-span-2">
+                              <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
+                                <img 
+                                  src="/lovable-uploads/05f278d3-bc3f-4915-96da-92bf08ba6a70.png" 
+                                  alt="Various client results" 
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-300">
+                                Various client results showcasing our approach to natural lip enhancement
+                              </p>
+                            </div>
                           </div>
-                          <p className="text-sm text-gray-300">Natural volume enhancement</p>
                         </div>
-                        <div className="space-y-2">
-                          <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                            <img 
-                              src="/lovable-uploads/c454131a-e502-4b22-ac0d-480d75330a86.png" 
-                              alt="Lip filler before and after - enhanced definition" 
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <p className="text-sm text-gray-300">Enhanced lip definition and volume</p>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                            <img 
-                              src="/lovable-uploads/b4cfd443-83fa-4310-bdcd-6345b85c20f5.png" 
-                              alt="Lip filler before and after - subtle enhancement" 
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <p className="text-sm text-gray-300">Subtle enhancement with defined border</p>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                            <img 
-                              src="/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png" 
-                              alt="Lip filler before and after - balanced enhancement" 
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <p className="text-sm text-gray-300">Balanced lip enhancement</p>
-                        </div>
-                        <div className="space-y-2 md:col-span-2">
-                          <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
-                            <img 
-                              src="/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png" 
-                              alt="Lip filler various results" 
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <p className="text-sm text-gray-300">
-                            Various client results showcasing our approach to natural lip enhancement
-                          </p>
-                        </div>
-                        <div className="space-y-2 md:col-span-2">
-                          <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
-                            <img 
-                              src="/lovable-uploads/8ead2a70-fe92-4c88-b50d-67219debbdf3.png" 
-                              alt="Lip filler subtle enhancement" 
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <p className="text-sm text-gray-300">
-                            Subtle enhancement with our signature invisible art technique
-                          </p>
-                        </div>
-                      </div>
+                      </ScrollArea>
                     </DialogContent>
                   </Dialog>
                 ) : (
