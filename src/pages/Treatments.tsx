@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Treatments = () => {
-  const [activeTab, setActiveTab] = useState("injectables");
+  const [activeTab, setActiveTab] = useState("botox"); // Changed from "injectables" to "botox"
 
   const treatments = {
-    injectables: {
+    botox: { // Changed from "injectables" to "botox"
       title: "INJECTABLES",
       subtitle: "Injectable treatments for facial rejuvenation",
       description: "As highly experienced injectors in London since 2007, we specialize in carefully administering high doses of botox safely providing longevity. We have developed many new techniques with dermal fillers over the last decade now taught to professionals internationally. Our team of experts are also trainers for the prestigious Harley Street Institute. Trust us for safe, effective and natural-looking results.",
@@ -349,7 +349,7 @@ const Treatments = () => {
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="max-w-4xl mx-auto">
           <div className="overflow-x-auto">
             <TabsList className="bg-accent mb-8 p-1 flex flex-nowrap min-w-max">
-              <TabsTrigger value="injectables">Injectables</TabsTrigger>
+              <TabsTrigger value="botox">Botox</TabsTrigger>
               <TabsTrigger value="sweattox">Sweat-Tox</TabsTrigger>
               <TabsTrigger value="fillers">Dermal Fillers</TabsTrigger>
               <TabsTrigger value="hyaluronic">HA Makeover</TabsTrigger>
@@ -357,17 +357,17 @@ const Treatments = () => {
             </TabsList>
           </div>
 
-          <TabsContent value="injectables" className="mt-6">
+          <TabsContent value="botox" className="mt-6">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold mb-2">{treatments.injectables.title}</h2>
-              <p className="text-gray-400 mb-6">{treatments.injectables.subtitle}</p>
+              <h2 className="text-2xl font-bold mb-2">{treatments.botox.title}</h2>
+              <p className="text-gray-400 mb-6">{treatments.botox.subtitle}</p>
               
               <div className="mt-8">
-                {treatments.injectables.items.map((item, index) => (
+                {treatments.botox.items.map((item, index) => (
                   <Card key={index} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
                       <div className="flex justify-between items-start">
