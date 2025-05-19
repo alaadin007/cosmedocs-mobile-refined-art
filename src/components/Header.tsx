@@ -27,7 +27,7 @@ export default function Header() {
             <span className="text-white">COSME</span>
             <span className="text-white">DOCS</span>
           </div>
-          <p className="text-xs text-gray-400 -mt-1">since 2007, 1M+ Injections</p>
+          <p className="text-xs text-gray-400 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
         </Link>
         
         <div className="hidden md:flex space-x-6 text-sm font-medium">
@@ -62,7 +62,7 @@ export default function Header() {
                   <div className="text-xl font-bold">
                     COSMEDOCS
                   </div>
-                  <p className="text-xs mt-1 text-gray-400">since 2007, 1M+ Injections</p>
+                  <p className="text-xs mt-1 text-gray-400">Harley Street Since 2007, 1M+ Injection</p>
                 </div>
                 <div className="px-6 py-8 flex flex-col space-y-4 flex-1">
                   {menuItems.map((item) => (
