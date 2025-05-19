@@ -27,9 +27,20 @@ export default function Footer() {
             <h3 className="text-lg font-medium mb-4">Contact</h3>
             <address className="not-italic text-gray-400 text-sm">
               <p className="mb-2">Cosmedocs Clinic</p>
-              <p className="mb-2">London, UK</p>
-              <a href="mailto:info@cosmedocs.com" className="block mb-2 hover:text-white">info@cosmedocs.com</a>
-              <a href="tel:+442071010000" className="block hover:text-white">+44 (0)20 7101 0000</a>
+              <p className="mb-2">10 Harley Street</p>
+              <p className="mb-2">London, W1G 9PF</p>
+              <p className="mb-2">United Kingdom</p>
+              <div className="pt-2">
+                <a href="mailto:info@cosmedocs.com" className="block mb-2 hover:text-white">
+                  info@cosmedocs.com
+                </a>
+                <a href="tel:+03330551503" className="block mb-2 hover:text-white">
+                  0333 0551 503
+                </a>
+                <a href="tel:+08008600178" className="block hover:text-white">
+                  0800 860 0178
+                </a>
+              </div>
             </address>
           </div>
         </div>

@@ -50,11 +50,10 @@ export default function Header() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-white hover:text-green-400 transition-colors"
+            className="text-green-500 hover:text-green-400 transition-colors"
             aria-label="Contact us on WhatsApp"
           >
-            <MessageSquare className="h-5 w-5 mr-2" />
-            <span className="text-sm">+44 7735 606447</span>
+            <MessageSquare className="h-5 w-5" />
           </a>
           <Button variant="outline" className="bg-white text-black hover:bg-gray-200 rounded-full px-6">
             Book Now
@@ -92,11 +91,10 @@ export default function Header() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-white hover:text-green-400 py-2 transition-colors"
+                    className="flex items-center text-green-500 hover:text-green-400 py-2 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <MessageSquare className="h-5 w-5 mr-2" />
-                    <span>+44 7735 606447</span>
+                    <MessageSquare className="h-5 w-5" />
                   </a>
                 </div>
                 <div className="px-6 py-6 border-t border-gray-800">

@@ -145,15 +145,18 @@ const Contact = () => {
                 <h3 className="font-medium mb-2">Contact Information</h3>
                 <address className="not-italic text-gray-300 space-y-2">
                   <p>Cosmedocs Clinic</p>
-                  <p>123 Harley Street</p>
-                  <p>London, W1G 7JU</p>
+                  <p>10 Harley Street</p>
+                  <p>London, W1G 9PF</p>
                   <p>United Kingdom</p>
                   <div className="pt-2">
                     <a href="mailto:info@cosmedocs.com" className="block hover:text-white">
                       info@cosmedocs.com
                     </a>
-                    <a href="tel:+442071010000" className="block hover:text-white">
-                      +44 (0)20 7101 0000
+                    <a href="tel:+03330551503" className="block hover:text-white">
+                      0333 0551 503
+                    </a>
+                    <a href="tel:+08008600178" className="block hover:text-white">
+                      0800 860 0178
                     </a>
                   </div>
                 </address>
