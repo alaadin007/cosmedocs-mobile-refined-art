@@ -1,42 +1,45 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogTrigger 
+} from "@/components/ui/dialog";
+import { useState } from "react";
+import { Gallery, Eye } from "lucide-react";
+
 const Home = () => {
+  const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
+
   return <div className="bg-black text-white">
+      <header>
+        {/* SEO optimized hidden heading for crawlers */}
+        <h1 className="sr-only">Cosmedocs - Premium Aesthetic Medicine Treatments | Botox, Dermal Fillers in London Harley Street</h1>
+      </header>
+      
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center">
+      <section className="relative h-screen flex items-center" aria-labelledby="hero-heading">
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
         <div className="page-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6
-          }}>
+            <motion.h2 
+              id="hero-heading"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.6 }}
+            >
               COSMEDOCS
-            </motion.h1>
+            </motion.h2>
             
-            <motion.p className="text-lg md:text-xl italic mb-6" initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.5,
-            duration: 0.6
-          }}>
+            <motion.p className="text-lg md:text-xl italic mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
               *Our aesthetics is invisible art
             </motion.p>
-            <motion.div className="mb-8 max-w-xl mx-auto" initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.7,
-            duration: 0.6
-          }}>
+            <motion.div className="mb-8 max-w-xl mx-auto" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7, duration: 0.6 }}>
               <p className="text-gray-300 mb-1">Refined. Controlled. Precise.</p>
               <p className="text-gray-400 text-sm mt-4">
                 Aesthetic medicine by Cosmedocs is minimal.<br />
@@ -45,14 +48,7 @@ const Home = () => {
                 It's transformation that speaks — without saying a word.
               </p>
             </motion.div>
-            <motion.div initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.9,
-            duration: 0.6
-          }}>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 0.6 }}>
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                 Book a Consultation
               </Button>
@@ -62,77 +58,130 @@ const Home = () => {
       </section>
 
       {/* Featured Treatments Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-black" aria-labelledby="treatments-heading">
         <div className="page-container">
-          <h2 className="text-3xl font-bold mb-12 text-center">Popular Treatments</h2>
+          <h2 id="treatments-heading" className="text-3xl font-bold mb-12 text-center">Popular Treatments</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[{
-            title: "Botox",
-            description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines"
-          }, {
-            title: "Dermal Fillers",
-            description: "Restore volume and enhance facial features"
-          }, {
-            title: "Lip Fillers",
-            description: "Subtle enhancement for natural-looking fullness"
-          }, {
-            title: "Non-Surgical Nose Job",
-            description: "Reshape without surgery"
-          }, {
-            title: "Skin Boosters",
-            description: "Deep hydration and rejuvenation"
-          }, {
-            title: "PDO Threads",
-            description: "Lift and tighten for a youthful appearance"
-          }].map((treatment, index) => <motion.div key={treatment.title} className="bg-accent rounded-lg p-6" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: index * 0.1,
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+            {[
+              {
+                title: "Botox",
+                description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines"
+              }, 
+              {
+                title: "Dermal Fillers",
+                description: "Restore volume and enhance facial features"
+              }, 
+              {
+                title: "Lip Fillers",
+                description: "Subtle enhancement for natural-looking fullness",
+                hasBeforeAfter: true
+              }, 
+              {
+                title: "Non-Surgical Nose Job",
+                description: "Reshape without surgery"
+              }, 
+              {
+                title: "Skin Boosters",
+                description: "Deep hydration and rejuvenation"
+              }, 
+              {
+                title: "PDO Threads",
+                description: "Lift and tighten for a youthful appearance"
+              }
+            ].map((treatment, index) => (
+              <motion.div 
+                key={treatment.title} 
+                className="bg-accent rounded-lg p-6" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
-                <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                  Learn more →
-                </Button>
-              </motion.div>)}
+                {treatment.hasBeforeAfter ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium">
+                        <Eye className="h-4 w-4 mr-1" />
+                        <span>See B/A</span>
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="bg-black border-gray-800 max-w-3xl">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold">Lip Filler Before & After</DialogTitle>
+                        <DialogDescription className="text-gray-300">
+                          Results achieved with our premium lip filler treatments
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div className="space-y-2">
+                          <div className="aspect-video bg-accent rounded-md overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                              alt="Lip filler before and after result - natural enhancement" 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <p className="text-sm text-gray-300">Natural volume enhancement</p>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="aspect-video bg-accent rounded-md overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b" 
+                              alt="Lip filler before and after - subtle definition" 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <p className="text-sm text-gray-300">Subtle lip definition</p>
+                        </div>
+                        <div className="space-y-2 md:col-span-2">
+                          <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
+                            <img 
+                              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                              alt="Lip filler full treatment result" 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <p className="text-sm text-gray-300">
+                            Balanced lip enhancement with our signature invisible art technique
+                          </p>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                ) : (
+                  <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                    Learn more →
+                  </Button>
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
+      <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="philosophy-heading">
         <div className="page-container">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h2 className="text-3xl font-bold mb-8" initial={{
-            opacity: 0
-          }} whileInView={{
-            opacity: 1
-          }} transition={{
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+            <motion.h2 
+              id="philosophy-heading"
+              className="text-3xl font-bold mb-8" 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               Our Philosophy
             </motion.h2>
-            <motion.div className="space-y-4 text-lg text-gray-300" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: 0.2,
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+            <motion.div 
+              className="space-y-4 text-lg text-gray-300" 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <p>
                 At Cosmedocs, we believe that the best aesthetic treatments are the ones nobody notices.
               </p>
@@ -148,10 +197,10 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#111]">
+      <section className="py-20 bg-[#111]" aria-labelledby="cta-heading">
         <div className="page-container">
           <div className="bg-accent rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to discover your refined aesthetic?</h2>
+            <h2 id="cta-heading" className="text-2xl md:text-3xl font-bold mb-4">Ready to discover your refined aesthetic?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Book a consultation with our expert practitioners and begin your journey toward subtle, controlled transformation.
             </p>
@@ -163,4 +212,5 @@ const Home = () => {
       </section>
     </div>;
 };
+
 export default Home;

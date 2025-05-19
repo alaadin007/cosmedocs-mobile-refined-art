@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-16 pb-8">
+    <footer className="bg-black text-white pt-16 pb-8" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="page-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -12,7 +13,7 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">since 2007, 1M+ Injections</p>
           </div>
           
-          <div>
+          <nav aria-label="Footer Navigation">
             <h3 className="text-lg font-medium mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="text-gray-400 hover:text-white text-sm">Home</Link></li>
@@ -21,7 +22,7 @@ export default function Footer() {
               <li><Link to="/contact" className="text-gray-400 hover:text-white text-sm">Contact</Link></li>
               <li><Link to="/booking" className="text-gray-400 hover:text-white text-sm">Book Appointment</Link></li>
             </ul>
-          </div>
+          </nav>
           
           <div>
             <h3 className="text-lg font-medium mb-4">Contact</h3>
