@@ -1,11 +1,53 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
 import { Eye, Images } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
+  
+  const lipFillerBeforeAfterImages = [
+    {
+      src: "/lovable-uploads/1f53b666-2cf1-40ac-83f2-df9ea4d376af.png",
+      alt: "Lip filler before and after - natural fullness",
+      caption: "Natural volume enhancement"
+    },
+    {
+      src: "/lovable-uploads/c454131a-e502-4b22-ac0d-480d75330a86.png",
+      alt: "Lip filler before and after - enhanced definition",
+      caption: "Enhanced lip definition and volume"
+    },
+    {
+      src: "/lovable-uploads/b4cfd443-83fa-4310-bdcd-6345b85c20f5.png",
+      alt: "Lip filler before and after - subtle enhancement",
+      caption: "Subtle enhancement with defined border"
+    },
+    {
+      src: "/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png",
+      alt: "Lip filler before and after - balanced enhancement",
+      caption: "Balanced lip enhancement"
+    },
+    {
+      src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png",
+      alt: "Lip filler various results",
+      caption: "Various client results showing natural enhancement"
+    },
+    {
+      src: "/lovable-uploads/8ead2a70-fe92-4c88-b50d-67219debbdf3.png",
+      alt: "Lip filler subtle enhancement",
+      caption: "Subtle enhancement with our signature invisible art technique"
+    },
+    {
+      src: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png",
+      alt: "Balanced lip enhancement",
+      caption: "Balanced lip enhancement for natural-looking fullness"
+    }
+  ];
+
   return <div className="bg-black text-white">
       <header>
         {/* SEO optimized hidden heading for crawlers */}
@@ -116,64 +158,38 @@ const Home = () => {
                         <span>See B/A</span>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="bg-black border-gray-800 max-w-4xl max-h-[90vh] p-0">
-                      <ScrollArea className="h-full max-h-[calc(90vh-2rem)] overflow-y-auto">
-                        <div className="p-6">
-                          <DialogHeader>
-                            <DialogTitle className="text-2xl font-bold">Lip Filler Before & After</DialogTitle>
-                            <DialogDescription className="text-gray-300">
-                              Results achieved with our premium lip filler treatments
-                            </DialogDescription>
-                          </DialogHeader>
-                          
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div className="space-y-2">
-                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                                <img src="/lovable-uploads/1f53b666-2cf1-40ac-83f2-df9ea4d376af.png" alt="Lip filler before and after - natural fullness" className="w-full h-full object-contain" />
-                              </div>
-                              <p className="text-sm text-gray-300">Natural volume enhancement</p>
-                            </div>
-                            <div className="space-y-2">
-                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                                <img src="/lovable-uploads/c454131a-e502-4b22-ac0d-480d75330a86.png" alt="Lip filler before and after - enhanced definition" className="w-full h-full object-contain" />
-                              </div>
-                              <p className="text-sm text-gray-300">Enhanced lip definition and volume</p>
-                            </div>
-                            <div className="space-y-2">
-                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                                <img src="/lovable-uploads/b4cfd443-83fa-4310-bdcd-6345b85c20f5.png" alt="Lip filler before and after - subtle enhancement" className="w-full h-full object-contain" />
-                              </div>
-                              <p className="text-sm text-gray-300">Subtle enhancement with defined border</p>
-                            </div>
-                            <div className="space-y-2">
-                              <div className="aspect-video bg-accent rounded-md overflow-hidden">
-                                <img src="/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png" alt="Lip filler before and after - balanced enhancement" className="w-full h-full object-contain" />
-                              </div>
-                              <p className="text-sm text-gray-300">Balanced lip enhancement</p>
-                            </div>
-                            <div className="space-y-2 md:col-span-2">
-                              <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
-                                <img src="/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png" alt="Lip filler various results" className="w-full h-full object-contain" />
-                              </div>
-                              <p className="text-sm text-gray-300">
-                                Various client results showcasing our approach to natural lip enhancement
-                              </p>
-                            </div>
-                            <div className="space-y-2 md:col-span-2">
-                              <div className="aspect-[21/9] bg-accent rounded-md overflow-hidden">
-                                <img src="/lovable-uploads/8ead2a70-fe92-4c88-b50d-67219debbdf3.png" alt="Lip filler subtle enhancement" className="w-full h-full object-contain" />
-                              </div>
-                              <p className="text-sm text-gray-300">
-                                Subtle enhancement with our signature invisible art technique
-                              </p>
-                            </div>
-                            <div className="space-y-2 md:col-span-2">
-                              
-                              
-                            </div>
+                    <DialogContent className="bg-black border-gray-800 w-full max-w-3xl p-6">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold mb-1">Lip Filler Before & After</DialogTitle>
+                        <DialogDescription className="text-gray-300 mb-4">
+                          Results achieved with our premium lip filler treatments
+                        </DialogDescription>
+                      </DialogHeader>
+                      
+                      <div className="w-full">
+                        <Carousel className="w-full">
+                          <CarouselContent>
+                            {lipFillerBeforeAfterImages.map((image, index) => (
+                              <CarouselItem key={index}>
+                                <div className="flex flex-col items-center">
+                                  <div className="w-full aspect-square rounded-md overflow-hidden">
+                                    <img 
+                                      src={image.src} 
+                                      alt={image.alt} 
+                                      className="w-full h-full object-contain bg-black" 
+                                    />
+                                  </div>
+                                  <p className="text-center text-gray-300 mt-3 mb-1">{image.caption}</p>
+                                </div>
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          <div className="flex justify-center mt-2">
+                            <CarouselPrevious className="static transform-none mx-2" />
+                            <CarouselNext className="static transform-none mx-2" />
                           </div>
-                        </div>
-                      </ScrollArea>
+                        </Carousel>
+                      </div>
                     </DialogContent>
                   </Dialog> : <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
                     Learn more →
