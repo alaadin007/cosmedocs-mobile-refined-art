@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -251,7 +250,7 @@ const Treatments = () => {
       note: "Contact us today to learn more about our HYALURONIC MAKEOVER and to schedule a consultation with one of our experienced professionals"
     },
     medspa: {
-      title: "MED-SPA SKIN TREATMENTS",
+      title: "SKIN & HAIR MEDICINE",
       items: [
         {
           subtitle: "SKIN PEELING SYSTEMS",
@@ -354,7 +353,7 @@ const Treatments = () => {
               <TabsTrigger value="sweattox">Sweat-Tox</TabsTrigger>
               <TabsTrigger value="fillers">Dermal Fillers</TabsTrigger>
               <TabsTrigger value="hyaluronic">HA Makeover</TabsTrigger>
-              <TabsTrigger value="medspa">Med-Spa</TabsTrigger>
+              <TabsTrigger value="medspa">Skin & Hair Medicine</TabsTrigger>
             </TabsList>
           </div>
 
