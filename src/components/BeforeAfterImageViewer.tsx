@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ScrollArea } from "./ui/scroll-area";
 
 interface BeforeAfterImage {
   src: string;
@@ -15,13 +16,15 @@ interface BeforeAfterImageViewerProps {
   triggerLabel?: string;
   title?: string;
   description?: string;
+  className?: string;
 }
 
 const BeforeAfterImageViewer = ({
   images,
   triggerLabel = "See B/A",
-  title = "Lip Filler Before & After",
-  description = "Results achieved with our premium lip filler treatments"
+  title = "Before & After",
+  description = "Results achieved with our premium treatments",
+  className = ""
 }: BeforeAfterImageViewerProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +48,7 @@ const BeforeAfterImageViewer = ({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <button className="flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium">
+        <button className={`flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium ${className}`}>
           <Eye className="h-4 w-4 mr-1" />
           <span>{triggerLabel}</span>
         </button>
@@ -106,7 +109,7 @@ const BeforeAfterImageViewer = ({
           </div>
           
           {/* Caption and navigation dots */}
-          <div className="p-4 md:p-6 bg-black border-t border-gray-800/50">
+          <ScrollArea className="p-4 md:p-6 bg-black border-t border-gray-800/50 max-h-32">
             <p className="text-center text-gray-300 mb-4">{images[currentIndex].caption}</p>
             
             <div className="flex justify-center gap-1.5">
@@ -121,7 +124,7 @@ const BeforeAfterImageViewer = ({
                 />
               ))}
             </div>
-          </div>
+          </ScrollArea>
         </div>
       </DialogContent>
     </Dialog>

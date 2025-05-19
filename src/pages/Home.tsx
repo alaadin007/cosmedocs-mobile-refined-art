@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -52,6 +53,59 @@ const Home = () => {
       src: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png",
       alt: "Subtle lip enhancement result",
       caption: "Subtle enhancement for natural-looking results"
+    }
+  ];
+
+  const noseJobBeforeAfterImages = [
+    {
+      src: "/lovable-uploads/8d22b27a-c2d5-4790-abac-6c6df301559a.png",
+      alt: "Non-surgical nose job - dorsal correction",
+      caption: "Dorsal correction for a smoother nasal profile"
+    },
+    {
+      src: "/lovable-uploads/107172b2-4707-43ce-9307-e5213da69545.png",
+      alt: "Non-surgical nose job - subtle refinement",
+      caption: "Subtle refinement of the nasal bridge"
+    },
+    {
+      src: "/lovable-uploads/7ffa8acc-3a5b-4314-a5a4-340dec391817.png",
+      alt: "Non-surgical nose job - gradual transformation",
+      caption: "Progressive transformation showing results over time (Jan 2017 to present)"
+    },
+    {
+      src: "/lovable-uploads/f30d3be7-22b0-4ba5-800f-03956e77dcc8.png",
+      alt: "Non-surgical nose job - bridge and bump correction",
+      caption: "Raised bridge and concealed bump for a refined profile"
+    },
+    {
+      src: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png",
+      alt: "Non-surgical nose job - profile enhancement",
+      caption: "Enhanced nasal profile with improved contour"
+    },
+    {
+      src: "/lovable-uploads/8dfa88f0-78d4-4859-8727-a4828a7e8d8a.png",
+      alt: "Non-surgical nose job - angular correction",
+      caption: "Concealed bump and less angular appearance for a softer profile"
+    },
+    {
+      src: "/lovable-uploads/75803d61-d5ce-414e-96c8-8fdc7c0e03ba.png",
+      alt: "Non-surgical nose job - refined tip",
+      caption: "Refined nasal tip with improved contour"
+    },
+    {
+      src: "/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png",
+      alt: "Non-surgical nose job - proximal and distal correction",
+      caption: "Proximal & distal correction for improved nasal harmony"
+    },
+    {
+      src: "/lovable-uploads/1c08600a-b561-48ca-ae0a-246717da30a7.png",
+      alt: "Non-surgical nose job - subtle profile enhancement",
+      caption: "Subtle profile enhancement with Cosmedocs technique"
+    },
+    {
+      src: "/lovable-uploads/767d5e70-2055-4549-8fd6-26fdcf079a54.png",
+      alt: "Non-surgical nose job - bridge enhancement",
+      caption: "Bridge enhancement and definition for improved facial harmony"
     }
   ];
 
@@ -134,10 +188,13 @@ const Home = () => {
           }, {
             title: "Lip Fillers",
             description: "Subtle enhancement for natural-looking fullness",
-            hasBeforeAfter: true
+            hasBeforeAfter: true,
+            baType: "lip"
           }, {
             title: "Non-Surgical Nose Job",
-            description: "Reshape without surgery"
+            description: "Reshape without surgery",
+            hasBeforeAfter: true,
+            baType: "nose"
           }, {
             title: "Skin Boosters",
             description: "Deep hydration and rejuvenation"
@@ -158,11 +215,14 @@ const Home = () => {
           }}>
                 <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
-                {treatment.hasBeforeAfter ? (
+                {treatment.hasBeforeAfter && (
                   <BeforeAfterImageViewer 
-                    images={lipFillerBeforeAfterImages} 
+                    images={treatment.baType === "nose" ? noseJobBeforeAfterImages : lipFillerBeforeAfterImages}
+                    triggerLabel="See Before & After"
+                    title={`${treatment.title} Before & After`}
+                    description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`}
                   />
-                ) : (
+                ) || (
                   <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
                     Learn more →
                   </Button>
