@@ -4,6 +4,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollArea } from "./ui/scroll-area";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Button } from "./ui/button";
 
 interface BeforeAfterImage {
   src: string;
@@ -28,6 +30,7 @@ const BeforeAfterImageViewer = ({
 }: BeforeAfterImageViewerProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const goToNext = () => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -55,12 +58,12 @@ const BeforeAfterImageViewer = ({
       </DialogTrigger>
       
       <DialogContent 
-        className="bg-black border-gray-800 p-0 w-full max-w-4xl md:h-[80vh] flex flex-col"
+        className="bg-black border-gray-800 p-0 sm:max-w-md md:max-w-lg lg:max-w-2xl w-[95vw] md:h-auto max-h-[85vh] flex flex-col"
         onKeyDown={handleKeyDown}
       >
-        <DialogHeader className="p-4 md:p-6 flex-shrink-0">
-          <DialogTitle className="text-2xl font-bold">{title}</DialogTitle>
-          <DialogDescription className="text-gray-300">
+        <DialogHeader className="p-4 flex-shrink-0">
+          <DialogTitle className="text-xl md:text-2xl font-bold">{title}</DialogTitle>
+          <DialogDescription className="text-gray-300 text-sm">
             {description}
           </DialogDescription>
         </DialogHeader>
@@ -72,7 +75,7 @@ const BeforeAfterImageViewer = ({
           </div>
           
           {/* Main viewer area */}
-          <div className="flex-grow relative overflow-hidden">
+          <div className="flex-grow relative overflow-hidden h-[40vh] md:h-[50vh]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -80,7 +83,7 @@ const BeforeAfterImageViewer = ({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="absolute inset-0 flex items-center justify-center"
+                className="absolute inset-0 flex items-center justify-center p-2"
               >
                 <img
                   src={images[currentIndex].src}
@@ -90,10 +93,10 @@ const BeforeAfterImageViewer = ({
               </motion.div>
             </AnimatePresence>
             
-            {/* Navigation buttons */}
+            {/* Navigation buttons - larger touch targets for mobile */}
             <button 
               onClick={goToPrevious}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 rounded-full p-2 transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 rounded-r-full p-3 h-12 w-12 flex items-center justify-center transition-colors"
               aria-label="Previous image"
             >
               <ChevronLeft className="h-6 w-6" />
@@ -101,30 +104,31 @@ const BeforeAfterImageViewer = ({
             
             <button 
               onClick={goToNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 rounded-full p-2 transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 rounded-l-full p-3 h-12 w-12 flex items-center justify-center transition-colors"
               aria-label="Next image"
             >
               <ChevronRight className="h-6 w-6" />
             </button>
           </div>
           
-          {/* Caption and navigation dots */}
-          <ScrollArea className="p-4 md:p-6 bg-black border-t border-gray-800/50 max-h-32">
-            <p className="text-center text-gray-300 mb-4">{images[currentIndex].caption}</p>
+          {/* Caption */}
+          <div className="p-4 bg-black border-t border-gray-800/50 text-center">
+            <p className="text-gray-200 text-sm md:text-base mb-4">{images[currentIndex].caption}</p>
             
-            <div className="flex justify-center gap-1.5">
+            {/* Simplified dot navigation */}
+            <div className="flex justify-center gap-2 flex-wrap">
               {images.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    idx === currentIndex ? "bg-white scale-125" : "bg-gray-600 hover:bg-gray-400"
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    idx === currentIndex ? "bg-white scale-110" : "bg-gray-600 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to image ${idx + 1}`}
                 />
               ))}
             </div>
-          </ScrollArea>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
