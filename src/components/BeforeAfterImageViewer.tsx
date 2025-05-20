@@ -10,7 +10,7 @@ import { Button } from "./ui/button";
 interface BeforeAfterImage {
   src: string;
   alt: string;
-  caption: string;
+  caption: string | JSX.Element;  // Updated to accept JSX.Element
 }
 
 interface BeforeAfterImageViewerProps {
