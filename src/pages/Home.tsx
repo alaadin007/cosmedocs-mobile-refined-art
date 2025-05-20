@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -8,9 +7,11 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Slider } from "@/components/ui/slider";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
+  const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const isMobile = useIsMobile();
   
   const botoxBeforeAfterImages = [
@@ -25,7 +26,7 @@ const Home = () => {
       caption: "Forehead lines treatment showing significant improvement"
     }
   ];
-
+  
   const lipFillerBeforeAfterImages = [
     {
       src: "/lovable-uploads/1f53b666-2cf1-40ac-83f2-df9ea4d376af.png",
@@ -152,6 +153,14 @@ const Home = () => {
       src: "/lovable-uploads/37e1c9db-26f6-439b-94c2-fd05fa7e385f.png",
       alt: "Dermal filler full face rejuvenation",
       caption: "Full face rejuvenation with targeted enhancement"
+    }
+  ];
+
+  const skinBoosterBeforeAfterImages = [
+    {
+      src: "/lovable-uploads/fe1449b5-4bf0-4e68-a837-160d3d506008.png",
+      alt: "Skin boosters before and after - improved skin texture",
+      caption: "Significant improvement in skin texture and tone after treatment"
     }
   ];
 
@@ -290,8 +299,154 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Face Rejuvenation Philosophy Section */}
+      <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="rejuvenation-heading">
+        <div className="page-container">
+          <div className="max-w-4xl mx-auto">
+            <motion.h2 
+              id="rejuvenation-heading" 
+              className="text-3xl font-bold mb-8 text-center" 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              Our Face Rejuvenation Philosophy
+            </motion.h2>
+            
+            <motion.p 
+              className="text-center text-gray-300 mb-10"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              At Cosmedocs, we've pioneered a comprehensive approach to facial rejuvenation that addresses all factors of aging for truly natural results.
+            </motion.p>
+            
+            <Dialog open={isRejuvenationDialogOpen} onOpenChange={setIsRejuvenationDialogOpen}>
+              <DialogTrigger asChild>
+                <motion.div 
+                  className="relative max-w-2xl mx-auto cursor-pointer group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="overflow-hidden rounded-xl">
+                    <img 
+                      src="/lovable-uploads/fe1449b5-4bf0-4e68-a837-160d3d506008.png" 
+                      alt="Face rejuvenation before and after results" 
+                      className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-8">
+                      <p className="text-white text-sm md:text-base text-center px-4">
+                        <Eye className="inline-block mr-2 h-4 w-4" /> 
+                        Tap to explore our 3-step rejuvenation methodology
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </DialogTrigger>
+              
+              <DialogContent className="bg-black border-gray-800 max-w-3xl w-[95vw] max-h-[90vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl md:text-3xl font-bold mb-2">The Cosmedocs Face Rejuvenation Philosophy</DialogTitle>
+                  <DialogDescription className="text-gray-300">
+                    Our proprietary 3-step methodology for natural, comprehensive facial rejuvenation
+                  </DialogDescription>
+                </DialogHeader>
+                
+                <div className="space-y-8 py-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold flex items-center">
+                      <span className="bg-white text-black rounded-full w-8 h-8 inline-flex items-center justify-center mr-3">1</span>
+                      Skin Clear Up
+                    </h3>
+                    <p className="text-gray-300 pl-11">We believe true rejuvenation begins with perfecting the canvas. Our first step focuses on:</p>
+                    <ul className="list-disc pl-16 text-gray-300 space-y-1">
+                      <li>Correcting uneven tone and pigmentation</li>
+                      <li>Minimizing pores for a smoother appearance</li>
+                      <li>Improving overall skin texture</li>
+                    </ul>
+                    <div className="pt-2 pl-11">
+                      <img 
+                        src="/lovable-uploads/fe1449b5-4bf0-4e68-a837-160d3d506008.png" 
+                        alt="Skin rejuvenation before and after" 
+                        className="rounded-lg max-w-md mx-auto"
+                      />
+                      <p className="text-sm text-gray-400 text-center mt-2">Visible improvement in skin quality after treatment</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold flex items-center">
+                      <span className="bg-white text-black rounded-full w-8 h-8 inline-flex items-center justify-center mr-3">2</span>
+                      Wrinkles in Motion
+                    </h3>
+                    <p className="text-gray-300 pl-11">
+                      The second step addresses dynamic facial movements that cause wrinkles over time. 
+                      Our approach preserves natural expressions while softening lines that age the face.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold flex items-center">
+                      <span className="bg-white text-black rounded-full w-8 h-8 inline-flex items-center justify-center mr-3">3</span>
+                      Volume Loss and Sagging Skin
+                    </h3>
+                    <p className="text-gray-300 pl-11">
+                      The final step restores youthful contours by addressing volume loss and skin laxity, 
+                      using advanced techniques that respect facial anatomy for natural-looking results.
+                    </p>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
+            
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {[
+                {
+                  number: "01",
+                  title: "Skin Clear Up",
+                  description: "Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation."
+                },
+                {
+                  number: "02",
+                  title: "Wrinkles in Motion",
+                  description: "Targeting dynamic wrinkles while preserving natural expressions and movement."
+                },
+                {
+                  number: "03",
+                  title: "Volume Loss & Sagging",
+                  description: "Restoring youthful contours by addressing structural volume loss and skin laxity."
+                }
+              ].map((step, index) => (
+                <Card key={step.number} className="bg-accent border-none">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="flex items-center">
+                      <span className="text-sm font-normal text-gray-400 mr-2">{step.number}</span>
+                      {step.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-300">{step.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="philosophy-heading">
+      <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A]" aria-labelledby="philosophy-heading">
         <div className="page-container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2 id="philosophy-heading" className="text-3xl font-bold mb-8" initial={{
