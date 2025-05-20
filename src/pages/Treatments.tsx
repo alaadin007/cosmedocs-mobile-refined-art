@@ -4,12 +4,36 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const Treatments = () => {
-  const [activeTab, setActiveTab] = useState("botox"); // Changed from "injectables" to "botox"
+  const [activeTab, setActiveTab] = useState("botox");
+
+  const skinBoosterBeforeAfterImages = [
+    {
+      src: "/lovable-uploads/67e6b1a0-9230-467a-baf0-dd5778c41d45.png",
+      alt: "Skin Booster before treatment",
+      caption: "Before: Skin showing signs of dehydration and texture issues"
+    },
+    {
+      src: "/lovable-uploads/b4aef6ba-b935-4242-95c1-9cc11e153c84.png",
+      alt: "Skin Booster after treatment",
+      caption: "After: Restored skin barrier function with improved hydration and vitality"
+    },
+    {
+      src: "/lovable-uploads/fca71683-2bd7-438f-b37d-750080620e09.png",
+      alt: "Skin rejuvenation treatment before and after",
+      caption: "Targeted skin rejuvenation showing significant improvement in skin texture and quality"
+    },
+    {
+      src: "/lovable-uploads/06cf90cf-537d-4b6e-9365-7fc638ee6fcb.png",
+      alt: "Skin barrier restoration treatment before and after",
+      caption: "Skin barrier restoration with improved complexion and natural glow"
+    }
+  ];
 
   const treatments = {
-    botox: { // Changed from "injectables" to "botox"
+    botox: {
       title: "INJECTABLES",
       subtitle: "Injectable treatments for facial rejuvenation",
       description: "As highly experienced injectors in London since 2007, we specialize in carefully administering high doses of botox safely providing longevity. We have developed many new techniques with dermal fillers over the last decade now taught to professionals internationally. Our team of experts are also trainers for the prestigious Harley Street Institute. Trust us for safe, effective and natural-looking results.",
@@ -330,6 +354,39 @@ const Treatments = () => {
           price: "POC"
         }
       ]
+    },
+    skinBoosters: {
+      title: "SKIN BOOSTERS",
+      subtitle: "Advanced hydration and skin rejuvenation",
+      description: "Our premium skin boosters provide deep hydration, improve skin quality and texture while restoring your skin's natural radiance. These treatments enhance collagen production, delivering long-lasting results for a healthier, more youthful complexion.",
+      items: [
+        {
+          title: "PROFHILO",
+          price: "£350 per session",
+          description: "Bio-remodeling hyaluronic acid treatment for skin laxity and hydration",
+          hasBeforeAfter: true
+        },
+        {
+          title: "POLYNUCLEOTIDES",
+          price: "£300 per session",
+          description: "DNA-based regenerative treatment to stimulate cellular renewal"
+        },
+        {
+          title: "REDENSITY 1",
+          price: "£250 per session",
+          description: "Targeted skin quality enhancer for face, neck, and décolletage"
+        },
+        {
+          title: "JALUPRO",
+          price: "£275 per session",
+          description: "Amino acid complex for deep skin restructuring"
+        },
+        {
+          title: "SUNEKOS",
+          price: "£275 per session",
+          description: "Hyaluronic acid and amino acid treatment for periorbital areas"
+        }
+      ]
     }
   };
 
@@ -353,6 +410,7 @@ const Treatments = () => {
               <TabsTrigger value="sweattox">Sweat-Tox</TabsTrigger>
               <TabsTrigger value="fillers">Dermal Fillers</TabsTrigger>
               <TabsTrigger value="hyaluronic">HA Makeover</TabsTrigger>
+              <TabsTrigger value="skinBoosters">Skin Boosters</TabsTrigger>
               <TabsTrigger value="medspa">Skin & Hair Medicine</TabsTrigger>
             </TabsList>
           </div>
@@ -532,6 +590,53 @@ const Treatments = () => {
                   </Button>
                 </div>
               )}
+            </motion.div>
+          </TabsContent>
+
+          <TabsContent value="skinBoosters" className="mt-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-bold mb-2">{treatments.skinBoosters.title}</h2>
+              <p className="text-gray-400 mb-6">{treatments.skinBoosters.subtitle}</p>
+              <p className="text-gray-300 mb-6">{treatments.skinBoosters.description}</p>
+              
+              <div className="flex justify-center mb-8">
+                <BeforeAfterImageViewer 
+                  images={skinBoosterBeforeAfterImages}
+                  triggerLabel="View Before & After Results"
+                  title="Skin Boosters Before & After"
+                  description="Real results from our advanced skin booster treatments"
+                  className="text-base"
+                />
+              </div>
+              
+              <div className="mt-6">
+                {treatments.skinBoosters.items.map((item, index) => (
+                  <Card key={index} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-semibold">{item.title}</h3>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                          {item.hasBeforeAfter && (
+                            <div className="mt-1">
+                              <Button variant="link" className="p-0 h-auto text-purple-400 hover:text-purple-300 text-sm">
+                                View Results →
+                              </Button>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </motion.div>
           </TabsContent>
 
