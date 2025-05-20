@@ -13,6 +13,19 @@ const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const isMobile = useIsMobile();
   
+  const botoxBeforeAfterImages = [
+    {
+      src: "/lovable-uploads/2b95a6f3-bcce-41f4-833d-8be389a9e323.png",
+      alt: "Botox before and after - forehead treatment",
+      caption: "Frown lines treatment showing natural smoothing of forehead"
+    },
+    {
+      src: "/lovable-uploads/a3c6b279-09fc-445c-acc4-ae5ce597f839.png",
+      alt: "Botox before and after - forehead lines",
+      caption: "Forehead lines treatment showing significant improvement"
+    }
+  ];
+
   const lipFillerBeforeAfterImages = [
     {
       src: "/lovable-uploads/1f53b666-2cf1-40ac-83f2-df9ea4d376af.png",
@@ -214,7 +227,9 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[{
             title: "Botox",
-            description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines"
+            description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
+            hasBeforeAfter: true,
+            baType: "botox"
           }, {
             title: "Dermal Fillers",
             description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
@@ -257,7 +272,9 @@ const Home = () => {
                         ? noseJobBeforeAfterImages 
                         : treatment.baType === "lip"
                           ? lipFillerBeforeAfterImages
-                          : dermalFillerBeforeAfterImages
+                          : treatment.baType === "botox"
+                            ? botoxBeforeAfterImages
+                            : dermalFillerBeforeAfterImages
                     }
                     triggerLabel="See Before & After"
                     title={`${treatment.title} Before & After`}
