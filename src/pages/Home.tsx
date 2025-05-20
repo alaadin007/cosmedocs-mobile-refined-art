@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -79,7 +80,7 @@ const Home = () => {
     {
       src: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png",
       alt: "Non-surgical nose job - profile enhancement",
-      caption: "Enhanced nasal profile with improved contour"
+      caption: "Dermal fillers to treat complications post surgical rhinoplasty"
     },
     {
       src: "/lovable-uploads/8dfa88f0-78d4-4859-8727-a4828a7e8d8a.png",
@@ -104,7 +105,7 @@ const Home = () => {
     {
       src: "/lovable-uploads/767d5e70-2055-4549-8fd6-26fdcf079a54.png",
       alt: "Non-surgical nose job - bridge enhancement",
-      caption: "Bridge enhancement and definition for improved facial harmony"
+      caption: <>Correction of deviated nose with definition & contour improvement (<a href="https://www.youtube.com/watch?v=_yO12RM4-34" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">vlog</a>)</>
     }
   ];
   
