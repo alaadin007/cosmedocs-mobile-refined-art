@@ -82,16 +82,38 @@ const Home = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Facial Contouring</h3>
               <BeforeAfterImageViewer
-                beforeImage="/lovable-uploads/8dfa88f0-78d4-4859-8727-a4828a7e8d8a.png"
-                afterImage="/lovable-uploads/c570f608-4aa7-4496-8e38-6322dfc81e16.png"
+                images={[
+                  {
+                    src: "/lovable-uploads/8dfa88f0-78d4-4859-8727-a4828a7e8d8a.png",
+                    alt: "Before facial contouring",
+                    caption: "Before treatment"
+                  },
+                  {
+                    src: "/lovable-uploads/c570f608-4aa7-4496-8e38-6322dfc81e16.png",
+                    alt: "After facial contouring",
+                    caption: "After treatment"
+                  }
+                ]}
+                triggerLabel="See Before & After"
                 className="rounded-xl shadow-lg"
               />
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-4">Anti-Wrinkle Treatment</h3>
               <BeforeAfterImageViewer
-                beforeImage="/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png"
-                afterImage="/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png"
+                images={[
+                  {
+                    src: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png",
+                    alt: "Before anti-wrinkle treatment",
+                    caption: "Before treatment"
+                  },
+                  {
+                    src: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png",
+                    alt: "After anti-wrinkle treatment",
+                    caption: "After treatment"
+                  }
+                ]}
+                triggerLabel="See Before & After"
                 className="rounded-xl shadow-lg"
               />
             </div>
