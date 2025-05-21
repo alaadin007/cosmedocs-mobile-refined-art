@@ -317,7 +317,7 @@ const Home = () => {
           <div className="max-w-4xl mx-auto">
             <motion.h2 
               id="rejuvenation-heading" 
-              className="text-3xl font-bold mb-8 text-center" 
+              className="text-4xl md:text-5xl font-bold mb-10 text-center" 
               initial={{ opacity: 0 }} 
               whileInView={{ opacity: 1 }} 
               transition={{ duration: 0.5 }} 
@@ -326,20 +326,22 @@ const Home = () => {
               Our Face Rejuvenation Philosophy
             </motion.h2>
             
-            <motion.p 
-              className="text-center text-gray-300 mb-10" 
+            <motion.div 
+              className="text-center max-w-3xl mx-auto mb-16"
               initial={{ opacity: 0 }} 
               whileInView={{ opacity: 1 }} 
               transition={{ delay: 0.2, duration: 0.5 }} 
               viewport={{ once: true }}
             >
-              At Cosmedocs, we've pioneered a comprehensive approach to facial rejuvenation that addresses all factors of aging for truly natural results.
-            </motion.p>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                At Cosmedocs, we've pioneered a comprehensive approach to facial rejuvenation that addresses all factors of aging for truly natural results.
+              </p>
+            </motion.div>
             
             <Dialog open={isRejuvenationDialogOpen} onOpenChange={setIsRejuvenationDialogOpen}>
               <DialogTrigger asChild>
                 <motion.div 
-                  className="relative max-w-3xl mx-auto cursor-pointer rounded-xl overflow-hidden mb-12" 
+                  className="relative max-w-3xl mx-auto cursor-pointer rounded-xl overflow-hidden mb-16" 
                   initial={{ opacity: 0, y: 20 }} 
                   whileInView={{ opacity: 1, y: 0 }} 
                   transition={{ delay: 0.4, duration: 0.6 }} 
@@ -350,38 +352,40 @@ const Home = () => {
                     alt="Face rejuvenation before and after collage" 
                     className="w-full h-auto" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-6">
-                    <p className="text-white text-sm md:text-base text-center px-4 flex items-center">
-                      <Eye className="inline-block mr-2 h-5 w-5" /> 
-                      Tap to explore our 3-step rejuvenation methodology
-                    </p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-12">
+                    <div className="flex items-center justify-center">
+                      <Eye className="mr-3 h-6 w-6" />
+                      <p className="text-white text-xl font-medium">
+                        Tap to explore our 3-step rejuvenation methodology
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               </DialogTrigger>
               
-              <DialogContent className="bg-black border-gray-800">
+              <DialogContent className="bg-black border-gray-800 max-w-2xl">
                 <DialogHeader className="pb-4">
-                  <DialogTitle>Our 3-Step Rejuvenation Methodology</DialogTitle>
-                  <DialogDescription>
+                  <DialogTitle className="text-2xl">Our 3-Step Rejuvenation Methodology</DialogTitle>
+                  <DialogDescription className="text-base">
                     Explore our comprehensive approach to facial rejuvenation.
                   </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-4 py-4">
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium">1. Skin Clear Up</h3>
-                    <p className="text-sm text-muted-foreground">
+                <div className="grid gap-6 py-4">
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-medium">1. Skin Clear Up</h3>
+                    <p className="text-base text-muted-foreground">
                       Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation.
                     </p>
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium">2. Wrinkles in Motion</h3>
-                    <p className="text-sm text-muted-foreground">
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-medium">2. Wrinkles in Motion</h3>
+                    <p className="text-base text-muted-foreground">
                       Targeting dynamic wrinkles while preserving natural expressions and movement.
                     </p>
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium">3. Volume Loss & Sagging</h3>
-                    <p className="text-sm text-muted-foreground">
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-medium">3. Volume Loss & Sagging</h3>
+                    <p className="text-base text-muted-foreground">
                       Restoring youthful contours by addressing structural volume loss and skin laxity.
                     </p>
                   </div>
@@ -390,7 +394,7 @@ const Home = () => {
             </Dialog>
             
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" 
+              className="grid grid-cols-1 md:grid-cols-3 gap-8" 
               initial={{ opacity: 0 }} 
               whileInView={{ opacity: 1 }} 
               transition={{ delay: 0.6, duration: 0.6 }} 
@@ -411,11 +415,11 @@ const Home = () => {
               }].map((step) => (
                 <Card key={step.number} className="bg-[#111] border-none">
                   <CardHeader className="pb-2">
-                    <div className="text-sm text-gray-400 mb-2">{step.number}</div>
-                    <CardTitle className="text-xl">{step.title}</CardTitle>
+                    <div className="text-base font-medium text-gray-400 mb-2">{step.number}</div>
+                    <CardTitle className="text-2xl">{step.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-gray-300">{step.description}</p>
+                    <p className="text-base text-gray-300">{step.description}</p>
                   </CardContent>
                 </Card>
               ))}
