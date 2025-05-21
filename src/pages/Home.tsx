@@ -311,44 +311,27 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Face Rejuvenation Philosophy Section */}
+      {/* Face Rejuvenation Philosophy Section - UPDATED to match screenshot */}
       <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="rejuvenation-heading">
         <div className="page-container">
           <div className="max-w-4xl mx-auto">
             <motion.h2 
               id="rejuvenation-heading" 
               className="text-3xl font-bold mb-8 text-center" 
-              initial={{
-                opacity: 0
-              }} 
-              whileInView={{
-                opacity: 1
-              }} 
-              transition={{
-                duration: 0.5
-              }} 
-              viewport={{
-                once: true
-              }}
+              initial={{ opacity: 0 }} 
+              whileInView={{ opacity: 1 }} 
+              transition={{ duration: 0.5 }} 
+              viewport={{ once: true }}
             >
               Our Face Rejuvenation Philosophy
             </motion.h2>
             
             <motion.p 
               className="text-center text-gray-300 mb-10" 
-              initial={{
-                opacity: 0
-              }} 
-              whileInView={{
-                opacity: 1
-              }} 
-              transition={{
-                delay: 0.2,
-                duration: 0.5
-              }} 
-              viewport={{
-                once: true
-              }}
+              initial={{ opacity: 0 }} 
+              whileInView={{ opacity: 1 }} 
+              transition={{ delay: 0.2, duration: 0.5 }} 
+              viewport={{ once: true }}
             >
               At Cosmedocs, we've pioneered a comprehensive approach to facial rejuvenation that addresses all factors of aging for truly natural results.
             </motion.p>
@@ -356,31 +339,22 @@ const Home = () => {
             <Dialog open={isRejuvenationDialogOpen} onOpenChange={setIsRejuvenationDialogOpen}>
               <DialogTrigger asChild>
                 <motion.div 
-                  className="relative max-w-2xl mx-auto cursor-pointer group" 
-                  initial={{
-                    opacity: 0,
-                    y: 20
-                  }} 
-                  whileInView={{
-                    opacity: 1,
-                    y: 0
-                  }} 
-                  transition={{
-                    delay: 0.4,
-                    duration: 0.6
-                  }} 
-                  viewport={{
-                    once: true
-                  }}
+                  className="relative max-w-3xl mx-auto cursor-pointer rounded-xl overflow-hidden mb-12" 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  transition={{ delay: 0.4, duration: 0.6 }} 
+                  viewport={{ once: true }}
                 >
-                  <div className="overflow-hidden rounded-xl">
-                    <img src="/lovable-uploads/b4495de4-9009-4381-8105-a36d078fcb76.png" alt="Face rejuvenation before and after results" className="w-full h-auto" />
-                    <div className="absolute inset-0 flex items-end justify-center pb-8">
-                      <p className="text-white text-sm md:text-base text-center px-4">
-                        <Eye className="inline-block mr-2 h-4 w-4" /> 
-                        Tap to explore our 3-step rejuvenation methodology
-                      </p>
-                    </div>
+                  <img 
+                    src="/lovable-uploads/fde802a5-3ed2-4de9-b41c-d33b3e88eef9.png" 
+                    alt="Face rejuvenation before and after collage" 
+                    className="w-full h-auto" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-6">
+                    <p className="text-white text-sm md:text-base text-center px-4 flex items-center">
+                      <Eye className="inline-block mr-2 h-5 w-5" /> 
+                      Tap to explore our 3-step rejuvenation methodology
+                    </p>
                   </div>
                 </motion.div>
               </DialogTrigger>
@@ -417,19 +391,10 @@ const Home = () => {
             
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" 
-              initial={{
-                opacity: 0
-              }} 
-              whileInView={{
-                opacity: 1
-              }} 
-              transition={{
-                delay: 0.6,
-                duration: 0.6
-              }} 
-              viewport={{
-                once: true
-              }}
+              initial={{ opacity: 0 }} 
+              whileInView={{ opacity: 1 }} 
+              transition={{ delay: 0.6, duration: 0.6 }} 
+              viewport={{ once: true }}
             >
               {[{
                 number: "01",
@@ -443,13 +408,11 @@ const Home = () => {
                 number: "03",
                 title: "Volume Loss & Sagging",
                 description: "Restoring youthful contours by addressing structural volume loss and skin laxity."
-              }].map((step, index) => (
-                <Card key={step.number} className="bg-accent border-none">
+              }].map((step) => (
+                <Card key={step.number} className="bg-[#111] border-none">
                   <CardHeader className="pb-2">
-                    <CardTitle className="flex items-center">
-                      <span className="text-sm font-normal text-gray-400 mr-2">{step.number}</span>
-                      {step.title}
-                    </CardTitle>
+                    <div className="text-sm text-gray-400 mb-2">{step.number}</div>
+                    <CardTitle className="text-xl">{step.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-gray-300">{step.description}</p>
