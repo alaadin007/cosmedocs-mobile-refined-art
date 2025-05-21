@@ -1,30 +1,12 @@
-import { useCallback, useRef, useState } from "react";
+
+import { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Card, CardContent } from "@/components/ui/card";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const Home = () => {
-  const [open, setOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const handleSubmit = useCallback((event: React.FormEvent) => {
-    event.preventDefault();
-    if (inputRef.current) {
-      setEmail(inputRef.current.value);
-      setOpen(true);
-    }
-  }, []);
-
   return (
     <div className="page-container">
       <section className="py-24">
@@ -63,45 +45,64 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-100 rounded-2xl">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-8">
-            Stay Updated with Our Latest Offers
-          </h2>
-          <p className="text-gray-700 mb-8">
-            Subscribe to our newsletter to receive exclusive deals, treatment
-            updates, and more.
-          </p>
-          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              ref={inputRef}
-            />
-            <Button type="submit" className="md:w-auto w-full">
-              Subscribe
-            </Button>
-          </form>
+      {/* Mission and Vision Section */}
+      <section className="py-16 bg-gray-50 rounded-2xl mb-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Mission & Vision</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <Card>
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
+                <p className="text-gray-600">
+                  To provide the highest quality cosmetic treatments with a focus on safety, 
+                  natural results, and patient satisfaction. We believe in enhancing your 
+                  natural beauty rather than changing how you look.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
+                <p className="text-gray-600">
+                  To be the UK's leading aesthetic clinic known for our medical expertise, 
+                  innovative treatments, and exceptional patient care. We aim to help our 
+                  clients feel confident in their appearance through subtle, refined enhancements.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle>Subscription Confirmed</DialogTitle>
-            <DialogDescription>
-              Thank you for subscribing! You will receive updates at{" "}
-              {email || "your email address"}.
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button type="submit" onClick={() => setOpen(false)}>
-              Close
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+      {/* Before & After Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Transformations</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Facial Contouring</h3>
+              <BeforeAfterImageViewer
+                beforeImage="/lovable-uploads/8dfa88f0-78d4-4859-8727-a4828a7e8d8a.png"
+                afterImage="/lovable-uploads/c570f608-4aa7-4496-8e38-6322dfc81e16.png"
+                className="rounded-xl shadow-lg"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Anti-Wrinkle Treatment</h3>
+              <BeforeAfterImageViewer
+                beforeImage="/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png"
+                afterImage="/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png"
+                className="rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+          <div className="flex justify-center mt-12">
+            <Link to="/treatments">
+              <Button size="lg">See More Treatments</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
