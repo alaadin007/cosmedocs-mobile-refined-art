@@ -321,7 +321,7 @@ const Home = () => {
               }}>
                   <div className="overflow-hidden rounded-xl">
                     <img src="/lovable-uploads/fe1449b5-4bf0-4e68-a837-160d3d506008.png" alt="Face rejuvenation before and after results" className="w-full h-auto transition-transform duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-8">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex items-end justify-center pb-8">
                       <p className="text-white text-sm md:text-base text-center px-4">
                         <Eye className="inline-block mr-2 h-4 w-4" /> 
                         Tap to explore our 3-step rejuvenation methodology
