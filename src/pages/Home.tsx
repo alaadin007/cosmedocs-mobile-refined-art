@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
@@ -12,16 +11,14 @@ import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const isMobile = useIsMobile();
-  
+
   // Booking URL for all Book Now buttons
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
-  
   const botoxBeforeAfterImages = [{
     src: "/lovable-uploads/2b95a6f3-bcce-41f4-833d-8be389a9e323.png",
     alt: "Botox before and after - forehead treatment",
@@ -164,9 +161,7 @@ const Home = () => {
     alt: "Cheek enhancement - before, during and after",
     caption: "Cheek enhancement process showing treatment application and final results"
   }];
-  
-  return (
-    <div className="bg-black text-white">
+  return <div className="bg-black text-white">
       <header>
         {/* SEO optimized hidden heading for crawlers */}
         <h1 className="sr-only">Cosmedocs - Premium Aesthetic Medicine Treatments | Botox, Dermal Fillers in London Harley Street</h1>
@@ -178,35 +173,35 @@ const Home = () => {
         <div className="page-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" initial={{
-              opacity: 0,
-              y: 20
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6
-            }}>
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6
+          }}>
               COSMEDOCS
             </motion.h2>
             
             <motion.p className="text-lg md:text-xl italic mb-6" initial={{
-              opacity: 0
-            }} animate={{
-              opacity: 1
-            }} transition={{
-              delay: 0.5,
-              duration: 0.6
-            }}>
+            opacity: 0
+          }} animate={{
+            opacity: 1
+          }} transition={{
+            delay: 0.5,
+            duration: 0.6
+          }}>
               *Our aesthetics is invisible art
             </motion.p>
             <motion.div className="mb-8 max-w-xl mx-auto" initial={{
-              opacity: 0
-            }} animate={{
-              opacity: 1
-            }} transition={{
-              delay: 0.7,
-              duration: 0.6
-            }}>
+            opacity: 0
+          }} animate={{
+            opacity: 1
+          }} transition={{
+            delay: 0.7,
+            duration: 0.6
+          }}>
               <p className="text-gray-300 mb-1">Bold • Natural • Always Your Way</p>
               <p className="text-gray-400 text-sm mt-4">
                 Aesthetic medicine by Cosmedocs is minimal.<br />
@@ -216,19 +211,14 @@ const Home = () => {
               </p>
             </motion.div>
             <motion.div initial={{
-              opacity: 0
-            }} animate={{
-              opacity: 1
-            }} transition={{
-              delay: 0.9,
-              duration: 0.6
-            }}>
-              <a 
-                href={bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors"
-              >
+            opacity: 0
+          }} animate={{
+            opacity: 1
+          }} transition={{
+            delay: 0.9,
+            duration: 0.6
+          }}>
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors">
                 Book a Consultation
               </a>
             </motion.div>
@@ -242,83 +232,53 @@ const Home = () => {
           <h2 id="treatments-heading" className="text-3xl font-bold mb-12 text-center">Popular Treatments</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[{
-              title: "Botox",
-              description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
-              hasBeforeAfter: true,
-              baType: "botox"
-            }, {
-              title: "Dermal Fillers",
-              description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
-              hasBeforeAfter: true,
-              baType: "dermal"
-            }, {
-              title: "Lip Fillers",
-              description: "Subtle enhancement for natural-looking fullness",
-              hasBeforeAfter: true,
-              baType: "lip"
-            }, {
-              title: "Non-Surgical Nose Job",
-              description: "Reshape without surgery",
-              hasBeforeAfter: true,
-              baType: "nose"
-            }, {
-              title: "Skin Boosters",
-              description: "Deep hydration and rejuvenation",
-              hasBeforeAfter: true,
-              baType: "skin"
-            }, {
-              title: "Chin & Jawline Enhancement",
-              description: "Define your facial profile",
-              hasBeforeAfter: true,
-              baType: "chin"
-            }].map((treatment, index) => (
-              <motion.div 
-                key={treatment.title} 
-                className="bg-accent rounded-lg p-6" 
-                initial={{
-                  opacity: 0,
-                  y: 20
-                }} 
-                whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} 
-                transition={{
-                  delay: index * 0.1,
-                  duration: 0.5
-                }} 
-                viewport={{
-                  once: true
-                }}
-              >
+            title: "Botox",
+            description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
+            hasBeforeAfter: true,
+            baType: "botox"
+          }, {
+            title: "Dermal Fillers",
+            description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
+            hasBeforeAfter: true,
+            baType: "dermal"
+          }, {
+            title: "Lip Fillers",
+            description: "Subtle enhancement for natural-looking fullness",
+            hasBeforeAfter: true,
+            baType: "lip"
+          }, {
+            title: "Non-Surgical Nose Job",
+            description: "Reshape without surgery",
+            hasBeforeAfter: true,
+            baType: "nose"
+          }, {
+            title: "Skin Boosters",
+            description: "Deep hydration and rejuvenation",
+            hasBeforeAfter: true,
+            baType: "skin"
+          }, {
+            title: "Chin & Jawline Enhancement",
+            description: "Define your facial profile",
+            hasBeforeAfter: true,
+            baType: "chin"
+          }].map((treatment, index) => <motion.div key={treatment.title} className="bg-accent rounded-lg p-6" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: index * 0.1,
+            duration: 0.5
+          }} viewport={{
+            once: true
+          }}>
                 <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
-                {treatment.hasBeforeAfter ? (
-                  <BeforeAfterImageViewer 
-                    images={
-                      treatment.baType === "nose" 
-                        ? noseJobBeforeAfterImages 
-                        : treatment.baType === "lip" 
-                          ? lipFillerBeforeAfterImages 
-                          : treatment.baType === "botox" 
-                            ? botoxBeforeAfterImages 
-                            : treatment.baType === "skin" 
-                              ? skinBoosterBeforeAfterImages 
-                              : treatment.baType === "chin" 
-                                ? chinAndJawlineEnhancementImages 
-                                : dermalFillerBeforeAfterImages
-                    } 
-                    triggerLabel="See Before & After" 
-                    title={`${treatment.title} Before & After`} 
-                    description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`} 
-                  />
-                ) : (
-                  <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                {treatment.hasBeforeAfter ? <BeforeAfterImageViewer images={treatment.baType === "nose" ? noseJobBeforeAfterImages : treatment.baType === "lip" ? lipFillerBeforeAfterImages : treatment.baType === "botox" ? botoxBeforeAfterImages : treatment.baType === "skin" ? skinBoosterBeforeAfterImages : treatment.baType === "chin" ? chinAndJawlineEnhancementImages : dermalFillerBeforeAfterImages} triggerLabel="See Before & After" title={`${treatment.title} Before & After`} description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`} /> : <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
                     Learn more →
-                  </Button>
-                )}
-              </motion.div>
-            ))}
+                  </Button>}
+              </motion.div>)}
           </div>
         </div>
       </section>
@@ -327,24 +287,28 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="rejuvenation-heading">
         <div className="page-container">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
-              id="rejuvenation-heading" 
-              className="text-4xl md:text-5xl font-bold mb-10 text-center" 
-              initial={{ opacity: 0 }} 
-              whileInView={{ opacity: 1 }} 
-              transition={{ duration: 0.5 }} 
-              viewport={{ once: true }}
-            >
+            <motion.h2 id="rejuvenation-heading" className="text-4xl md:text-5xl font-bold mb-10 text-center" initial={{
+            opacity: 0
+          }} whileInView={{
+            opacity: 1
+          }} transition={{
+            duration: 0.5
+          }} viewport={{
+            once: true
+          }}>
               Our Face Rejuvenation Philosophy
             </motion.h2>
             
-            <motion.div 
-              className="text-center max-w-3xl mx-auto mb-16"
-              initial={{ opacity: 0 }} 
-              whileInView={{ opacity: 1 }} 
-              transition={{ delay: 0.2, duration: 0.5 }} 
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center max-w-3xl mx-auto mb-16" initial={{
+            opacity: 0
+          }} whileInView={{
+            opacity: 1
+          }} transition={{
+            delay: 0.2,
+            duration: 0.5
+          }} viewport={{
+            once: true
+          }}>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                 At Cosmedocs, we've pioneered a comprehensive approach to facial rejuvenation that addresses all factors of aging for truly natural results.
               </p>
@@ -352,38 +316,33 @@ const Home = () => {
             
             <Dialog open={isRejuvenationDialogOpen} onOpenChange={setIsRejuvenationDialogOpen}>
               <DialogTrigger asChild>
-                <motion.div 
-                  className="relative max-w-3xl mx-auto cursor-pointer rounded-xl overflow-hidden mb-16" 
-                  initial={{ opacity: 0, y: 20 }} 
-                  whileInView={{ opacity: 1, y: 0 }} 
-                  transition={{ delay: 0.4, duration: 0.6 }} 
-                  viewport={{ once: true }}
-                >
-                  <img 
-                    src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" 
-                    alt="Face rejuvenation before and after transformation" 
-                    className="w-full h-auto" 
-                  />
+                <motion.div className="relative max-w-3xl mx-auto cursor-pointer rounded-xl overflow-hidden mb-16" initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                delay: 0.4,
+                duration: 0.6
+              }} viewport={{
+                once: true
+              }}>
+                  <img src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" alt="Face rejuvenation before and after transformation" className="w-full h-auto" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-12">
                     <div className="flex items-center justify-center">
                       <Eye className="mr-3 h-6 w-6" />
-                      <p className="text-white text-xl font-medium">
-                        Tap to explore our 3-step rejuvenation methodology
-                      </p>
+                      <p className="text-white text-xl font-medium">Tap to explore our aesthetic face calculations</p>
                     </div>
                   </div>
                   
                   {/* Scoring information tooltip/button */}
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <button 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setIsScoringDialogOpen(true);
-                        }}
-                        className="absolute top-4 right-4 bg-black/60 rounded-full p-2 hover:bg-black/80 transition-colors"
-                        aria-label="See how we score facial aesthetics"
-                      >
+                      <button onClick={e => {
+                      e.stopPropagation();
+                      setIsScoringDialogOpen(true);
+                    }} className="absolute top-4 right-4 bg-black/60 rounded-full p-2 hover:bg-black/80 transition-colors" aria-label="See how we score facial aesthetics">
                         <HelpCircle className="h-5 w-5" />
                       </button>
                     </TooltipTrigger>
@@ -434,11 +393,7 @@ const Home = () => {
                   </DialogDescription>
                 </DialogHeader>
                 <div className="py-4">
-                  <img 
-                    src="/lovable-uploads/54687321-8f1e-44e3-ab47-f76a7a5edb64.png" 
-                    alt="Facial aesthetics scoring chart showing before and after results" 
-                    className="w-full h-auto rounded-lg"
-                  />
+                  <img src="/lovable-uploads/54687321-8f1e-44e3-ab47-f76a7a5edb64.png" alt="Facial aesthetics scoring chart showing before and after results" className="w-full h-auto rounded-lg" />
                   <div className="mt-6 space-y-4">
                     <h3 className="text-xl font-medium">Our Assessment Categories</h3>
                     <p className="text-base text-gray-300">
@@ -458,27 +413,29 @@ const Home = () => {
               </DialogContent>
             </Dialog>
             
-            <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-8" 
-              initial={{ opacity: 0 }} 
-              whileInView={{ opacity: 1 }} 
-              transition={{ delay: 0.6, duration: 0.6 }} 
-              viewport={{ once: true }}
-            >
+            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" initial={{
+            opacity: 0
+          }} whileInView={{
+            opacity: 1
+          }} transition={{
+            delay: 0.6,
+            duration: 0.6
+          }} viewport={{
+            once: true
+          }}>
               {[{
-                number: "01",
-                title: "Skin Clear Up",
-                description: "Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation."
-              }, {
-                number: "02",
-                title: "Wrinkles in Motion",
-                description: "Targeting dynamic wrinkles while preserving natural expressions and movement."
-              }, {
-                number: "03",
-                title: "Volume Loss & Sagging",
-                description: "Restoring youthful contours by addressing structural volume loss and skin laxity."
-              }].map((step) => (
-                <Card key={step.number} className="bg-[#111] border-none">
+              number: "01",
+              title: "Skin Clear Up",
+              description: "Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation."
+            }, {
+              number: "02",
+              title: "Wrinkles in Motion",
+              description: "Targeting dynamic wrinkles while preserving natural expressions and movement."
+            }, {
+              number: "03",
+              title: "Volume Loss & Sagging",
+              description: "Restoring youthful contours by addressing structural volume loss and skin laxity."
+            }].map(step => <Card key={step.number} className="bg-[#111] border-none">
                   <CardHeader className="pb-2">
                     <div className="text-base font-medium text-gray-400 mb-2">{step.number}</div>
                     <CardTitle className="text-2xl">{step.title}</CardTitle>
@@ -486,8 +443,7 @@ const Home = () => {
                   <CardContent>
                     <p className="text-base text-gray-300">{step.description}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </motion.div>
           </div>
         </div>
@@ -497,42 +453,29 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A]" aria-labelledby="philosophy-heading">
         <div className="page-container">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h2 
-              id="philosophy-heading" 
-              className="text-3xl font-bold mb-8" 
-              initial={{
-                opacity: 0
-              }} 
-              whileInView={{
-                opacity: 1
-              }} 
-              transition={{
-                duration: 0.5
-              }} 
-              viewport={{
-                once: true
-              }}
-            >
+            <motion.h2 id="philosophy-heading" className="text-3xl font-bold mb-8" initial={{
+            opacity: 0
+          }} whileInView={{
+            opacity: 1
+          }} transition={{
+            duration: 0.5
+          }} viewport={{
+            once: true
+          }}>
               Our Philosophy
             </motion.h2>
-            <motion.div 
-              className="space-y-4 text-lg text-gray-300" 
-              initial={{
-                opacity: 0,
-                y: 20
-              }} 
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }} 
-              transition={{
-                delay: 0.2,
-                duration: 0.5
-              }} 
-              viewport={{
-                once: true
-              }}
-            >
+            <motion.div className="space-y-4 text-lg text-gray-300" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.2,
+            duration: 0.5
+          }} viewport={{
+            once: true
+          }}>
               <p>
                 At Cosmedocs, we believe that the best aesthetic treatments are the ones nobody notices.
               </p>
@@ -555,19 +498,12 @@ const Home = () => {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Book a consultation with our expert practitioners and begin your journey toward subtle, controlled transformation.
             </p>
-            <a 
-              href={bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors"
-            >
+            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors">
               Book Now
             </a>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
