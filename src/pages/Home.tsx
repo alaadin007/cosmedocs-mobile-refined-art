@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { useState } from "react";
-import { Eye, Images } from "lucide-react";
+import { Eye, Images, X } from "lucide-react";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
@@ -155,7 +157,9 @@ const Home = () => {
     alt: "Cheek enhancement - before, during and after",
     caption: "Cheek enhancement process showing treatment application and final results"
   }];
-  return <div className="bg-black text-white">
+  
+  return (
+    <div className="bg-black text-white">
       <header>
         {/* SEO optimized hidden heading for crawlers */}
         <h1 className="sr-only">Cosmedocs - Premium Aesthetic Medicine Treatments | Botox, Dermal Fillers in London Harley Street</h1>
@@ -167,35 +171,35 @@ const Home = () => {
         <div className="page-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6
-          }}>
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6
+            }}>
               COSMEDOCS
             </motion.h2>
             
             <motion.p className="text-lg md:text-xl italic mb-6" initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.5,
-            duration: 0.6
-          }}>
+              opacity: 0
+            }} animate={{
+              opacity: 1
+            }} transition={{
+              delay: 0.5,
+              duration: 0.6
+            }}>
               *Our aesthetics is invisible art
             </motion.p>
             <motion.div className="mb-8 max-w-xl mx-auto" initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.7,
-            duration: 0.6
-          }}>
+              opacity: 0
+            }} animate={{
+              opacity: 1
+            }} transition={{
+              delay: 0.7,
+              duration: 0.6
+            }}>
               <p className="text-gray-300 mb-1">Bold • Natural • Always Your Way</p>
               <p className="text-gray-400 text-sm mt-4">
                 Aesthetic medicine by Cosmedocs is minimal.<br />
@@ -205,13 +209,13 @@ const Home = () => {
               </p>
             </motion.div>
             <motion.div initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.9,
-            duration: 0.6
-          }}>
+              opacity: 0
+            }} animate={{
+              opacity: 1
+            }} transition={{
+              delay: 0.9,
+              duration: 0.6
+            }}>
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                 Book a Consultation
               </Button>
@@ -226,53 +230,83 @@ const Home = () => {
           <h2 id="treatments-heading" className="text-3xl font-bold mb-12 text-center">Popular Treatments</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[{
-            title: "Botox",
-            description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
-            hasBeforeAfter: true,
-            baType: "botox"
-          }, {
-            title: "Dermal Fillers",
-            description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
-            hasBeforeAfter: true,
-            baType: "dermal"
-          }, {
-            title: "Lip Fillers",
-            description: "Subtle enhancement for natural-looking fullness",
-            hasBeforeAfter: true,
-            baType: "lip"
-          }, {
-            title: "Non-Surgical Nose Job",
-            description: "Reshape without surgery",
-            hasBeforeAfter: true,
-            baType: "nose"
-          }, {
-            title: "Skin Boosters",
-            description: "Deep hydration and rejuvenation",
-            hasBeforeAfter: true,
-            baType: "skin"
-          }, {
-            title: "Chin & Jawline Enhancement",
-            description: "Define your facial profile",
-            hasBeforeAfter: true,
-            baType: "chin"
-          }].map((treatment, index) => <motion.div key={treatment.title} className="bg-accent rounded-lg p-6" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: index * 0.1,
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+              title: "Botox",
+              description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
+              hasBeforeAfter: true,
+              baType: "botox"
+            }, {
+              title: "Dermal Fillers",
+              description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
+              hasBeforeAfter: true,
+              baType: "dermal"
+            }, {
+              title: "Lip Fillers",
+              description: "Subtle enhancement for natural-looking fullness",
+              hasBeforeAfter: true,
+              baType: "lip"
+            }, {
+              title: "Non-Surgical Nose Job",
+              description: "Reshape without surgery",
+              hasBeforeAfter: true,
+              baType: "nose"
+            }, {
+              title: "Skin Boosters",
+              description: "Deep hydration and rejuvenation",
+              hasBeforeAfter: true,
+              baType: "skin"
+            }, {
+              title: "Chin & Jawline Enhancement",
+              description: "Define your facial profile",
+              hasBeforeAfter: true,
+              baType: "chin"
+            }].map((treatment, index) => (
+              <motion.div 
+                key={treatment.title} 
+                className="bg-accent rounded-lg p-6" 
+                initial={{
+                  opacity: 0,
+                  y: 20
+                }} 
+                whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} 
+                transition={{
+                  delay: index * 0.1,
+                  duration: 0.5
+                }} 
+                viewport={{
+                  once: true
+                }}
+              >
                 <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
-                {treatment.hasBeforeAfter && <BeforeAfterImageViewer images={treatment.baType === "nose" ? noseJobBeforeAfterImages : treatment.baType === "lip" ? lipFillerBeforeAfterImages : treatment.baType === "botox" ? botoxBeforeAfterImages : treatment.baType === "skin" ? skinBoosterBeforeAfterImages : treatment.baType === "chin" ? chinAndJawlineEnhancementImages : dermalFillerBeforeAfterImages} triggerLabel="See Before & After" title={`${treatment.title} Before & After`} description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`} /> || <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                {treatment.hasBeforeAfter ? (
+                  <BeforeAfterImageViewer 
+                    images={
+                      treatment.baType === "nose" 
+                        ? noseJobBeforeAfterImages 
+                        : treatment.baType === "lip" 
+                          ? lipFillerBeforeAfterImages 
+                          : treatment.baType === "botox" 
+                            ? botoxBeforeAfterImages 
+                            : treatment.baType === "skin" 
+                              ? skinBoosterBeforeAfterImages 
+                              : treatment.baType === "chin" 
+                                ? chinAndJawlineEnhancementImages 
+                                : dermalFillerBeforeAfterImages
+                    } 
+                    triggerLabel="See Before & After" 
+                    title={`${treatment.title} Before & After`} 
+                    description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`} 
+                  />
+                ) : (
+                  <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
                     Learn more →
-                  </Button>}
-              </motion.div>)}
+                  </Button>
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -281,45 +315,64 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="rejuvenation-heading">
         <div className="page-container">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 id="rejuvenation-heading" className="text-3xl font-bold mb-8 text-center" initial={{
-            opacity: 0
-          }} whileInView={{
-            opacity: 1
-          }} transition={{
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+            <motion.h2 
+              id="rejuvenation-heading" 
+              className="text-3xl font-bold mb-8 text-center" 
+              initial={{
+                opacity: 0
+              }} 
+              whileInView={{
+                opacity: 1
+              }} 
+              transition={{
+                duration: 0.5
+              }} 
+              viewport={{
+                once: true
+              }}
+            >
               Our Face Rejuvenation Philosophy
             </motion.h2>
             
-            <motion.p className="text-center text-gray-300 mb-10" initial={{
-            opacity: 0
-          }} whileInView={{
-            opacity: 1
-          }} transition={{
-            delay: 0.2,
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+            <motion.p 
+              className="text-center text-gray-300 mb-10" 
+              initial={{
+                opacity: 0
+              }} 
+              whileInView={{
+                opacity: 1
+              }} 
+              transition={{
+                delay: 0.2,
+                duration: 0.5
+              }} 
+              viewport={{
+                once: true
+              }}
+            >
               At Cosmedocs, we've pioneered a comprehensive approach to facial rejuvenation that addresses all factors of aging for truly natural results.
             </motion.p>
             
             <Dialog open={isRejuvenationDialogOpen} onOpenChange={setIsRejuvenationDialogOpen}>
               <DialogTrigger asChild>
-                <motion.div className="relative max-w-2xl mx-auto cursor-pointer group" initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                delay: 0.4,
-                duration: 0.6
-              }} viewport={{
-                once: true
-              }}>
+                <motion.div 
+                  className="relative max-w-2xl mx-auto cursor-pointer group" 
+                  initial={{
+                    opacity: 0,
+                    y: 20
+                  }} 
+                  whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} 
+                  transition={{
+                    delay: 0.4,
+                    duration: 0.6
+                  }} 
+                  viewport={{
+                    once: true
+                  }}
+                >
                   <div className="overflow-hidden rounded-xl">
                     <img src="/lovable-uploads/b4495de4-9009-4381-8105-a36d078fcb76.png" alt="Face rejuvenation before and after results" className="w-full h-auto" />
                     <div className="absolute inset-0 flex items-end justify-center pb-8">
@@ -332,72 +385,66 @@ const Home = () => {
                 </motion.div>
               </DialogTrigger>
               
-              <DialogPortal>
-    <DialogOverlay />
-    <DialogPrimitive.Content
-      
-      className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg"
-      )}
-      
-    >
-      
-      <DialogHeader className="pb-4">
-        <DialogTitle>Our 3-Step Rejuvenation Methodology</DialogTitle>
-        <DialogDescription>
-          Explore our comprehensive approach to facial rejuvenation.
-        </DialogDescription>
-      </DialogHeader>
-      <div className="grid gap-4 py-4">
-        <div className="space-y-2">
-          <h3 className="text-lg font-medium">1. Skin Clear Up</h3>
-          <p className="text-sm text-muted-foreground">
-            Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation.
-          </p>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-lg font-medium">2. Wrinkles in Motion</h3>
-          <p className="text-sm text-muted-foreground">
-            Targeting dynamic wrinkles while preserving natural expressions and movement.
-          </p>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-lg font-medium">3. Volume Loss & Sagging</h3>
-          <p className="text-sm text-muted-foreground">
-            Restoring youthful contours by addressing structural volume loss and skin laxity.
-          </p>
-        </div>
-      </div>
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-      </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
-  </DialogPortal>
+              <DialogContent className="bg-black border-gray-800">
+                <DialogHeader className="pb-4">
+                  <DialogTitle>Our 3-Step Rejuvenation Methodology</DialogTitle>
+                  <DialogDescription>
+                    Explore our comprehensive approach to facial rejuvenation.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-medium">1. Skin Clear Up</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation.
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-medium">2. Wrinkles in Motion</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Targeting dynamic wrinkles while preserving natural expressions and movement.
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-medium">3. Volume Loss & Sagging</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Restoring youthful contours by addressing structural volume loss and skin laxity.
+                    </p>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
             
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" initial={{
-            opacity: 0
-          }} whileInView={{
-            opacity: 1
-          }} transition={{
-            delay: 0.6,
-            duration: 0.6
-          }} viewport={{
-            once: true
-          }}>
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" 
+              initial={{
+                opacity: 0
+              }} 
+              whileInView={{
+                opacity: 1
+              }} 
+              transition={{
+                delay: 0.6,
+                duration: 0.6
+              }} 
+              viewport={{
+                once: true
+              }}
+            >
               {[{
-              number: "01",
-              title: "Skin Clear Up",
-              description: "Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation."
-            }, {
-              number: "02",
-              title: "Wrinkles in Motion",
-              description: "Targeting dynamic wrinkles while preserving natural expressions and movement."
-            }, {
-              number: "03",
-              title: "Volume Loss & Sagging",
-              description: "Restoring youthful contours by addressing structural volume loss and skin laxity."
-            }].map((step, index) => <Card key={step.number} className="bg-accent border-none">
+                number: "01",
+                title: "Skin Clear Up",
+                description: "Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation."
+              }, {
+                number: "02",
+                title: "Wrinkles in Motion",
+                description: "Targeting dynamic wrinkles while preserving natural expressions and movement."
+              }, {
+                number: "03",
+                title: "Volume Loss & Sagging",
+                description: "Restoring youthful contours by addressing structural volume loss and skin laxity."
+              }].map((step, index) => (
+                <Card key={step.number} className="bg-accent border-none">
                   <CardHeader className="pb-2">
                     <CardTitle className="flex items-center">
                       <span className="text-sm font-normal text-gray-400 mr-2">{step.number}</span>
@@ -407,7 +454,8 @@ const Home = () => {
                   <CardContent>
                     <p className="text-sm text-gray-300">{step.description}</p>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </motion.div>
           </div>
         </div>
@@ -417,29 +465,42 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A]" aria-labelledby="philosophy-heading">
         <div className="page-container">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h2 id="philosophy-heading" className="text-3xl font-bold mb-8" initial={{
-            opacity: 0
-          }} whileInView={{
-            opacity: 1
-          }} transition={{
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+            <motion.h2 
+              id="philosophy-heading" 
+              className="text-3xl font-bold mb-8" 
+              initial={{
+                opacity: 0
+              }} 
+              whileInView={{
+                opacity: 1
+              }} 
+              transition={{
+                duration: 0.5
+              }} 
+              viewport={{
+                once: true
+              }}
+            >
               Our Philosophy
             </motion.h2>
-            <motion.div className="space-y-4 text-lg text-gray-300" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: 0.2,
-            duration: 0.5
-          }} viewport={{
-            once: true
-          }}>
+            <motion.div 
+              className="space-y-4 text-lg text-gray-300" 
+              initial={{
+                opacity: 0,
+                y: 20
+              }} 
+              whileInView={{
+                opacity: 1,
+                y: 0
+              }} 
+              transition={{
+                delay: 0.2,
+                duration: 0.5
+              }} 
+              viewport={{
+                once: true
+              }}
+            >
               <p>
                 At Cosmedocs, we believe that the best aesthetic treatments are the ones nobody notices.
               </p>
@@ -468,6 +529,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;
