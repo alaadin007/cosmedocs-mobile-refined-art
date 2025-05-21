@@ -161,6 +161,44 @@ const Home = () => {
       src: "/lovable-uploads/fe1449b5-4bf0-4e68-a837-160d3d506008.png",
       alt: "Skin boosters before and after - improved skin texture",
       caption: "Significant improvement in skin texture and tone after treatment"
+    },
+    {
+      src: "/lovable-uploads/57903e64-3bf7-4e89-aeec-61d2fdc9c579.png",
+      alt: "Skin boosters - profile enhancement",
+      caption: "Profile enhancement showing improved skin quality and facial contour"
+    },
+    {
+      src: "/lovable-uploads/984ff472-7676-48a9-a57e-c23ca2592741.png",
+      alt: "Skin boosters - jawline definition",
+      caption: "Improved jawline definition and skin tightening"
+    },
+    {
+      src: "/lovable-uploads/8e5a45ba-9dab-4b06-a44b-2bddfaacfe4b.png",
+      alt: "Skin boosters - profile enhancement",
+      caption: "Enhanced profile showing improvement in skin structure and support"
+    },
+    {
+      src: "/lovable-uploads/805ffc38-d960-4e8e-9af1-9b3d21af13ed.png",
+      alt: "Skin boosters - facial rejuvenation",
+      caption: "Complete facial rejuvenation showing improved skin quality and texture"
+    }
+  ];
+
+  const chinAndJawlineEnhancementImages = [
+    {
+      src: "/lovable-uploads/9cc77b0b-a452-4720-9b74-2fdfedb42fba.png",
+      alt: "Chin & jawline enhancement - profile improvement",
+      caption: "Jawline and chin profile enhancement for improved facial balance"
+    },
+    {
+      src: "/lovable-uploads/c570f608-4aa7-4496-8e38-6322dfc81e16.png",
+      alt: "V-line chin enhancement",
+      caption: "V-line chin treatment for a more defined lower face"
+    },
+    {
+      src: "/lovable-uploads/c2be8e56-a215-4332-a5c5-ee6b3f431881.png",
+      alt: "Cheek enhancement - before, during and after",
+      caption: "Cheek enhancement process showing treatment application and final results"
     }
   ];
 
@@ -228,7 +266,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Featured Treatments Section */}
       <section className="py-20 bg-black" aria-labelledby="treatments-heading">
         <div className="page-container">
@@ -256,10 +294,14 @@ const Home = () => {
             baType: "nose"
           }, {
             title: "Skin Boosters",
-            description: "Deep hydration and rejuvenation"
+            description: "Deep hydration and rejuvenation",
+            hasBeforeAfter: true,
+            baType: "skin"
           }, {
-            title: "PDO Threads",
-            description: "Lift and tighten for a youthful appearance"
+            title: "Chin & Jawline Enhancement",
+            description: "Define your facial profile",
+            hasBeforeAfter: true, 
+            baType: "chin"
           }].map((treatment, index) => <motion.div key={treatment.title} className="bg-accent rounded-lg p-6" initial={{
             opacity: 0,
             y: 20
@@ -283,7 +325,11 @@ const Home = () => {
                           ? lipFillerBeforeAfterImages
                           : treatment.baType === "botox"
                             ? botoxBeforeAfterImages
-                            : dermalFillerBeforeAfterImages
+                            : treatment.baType === "skin"
+                              ? skinBoosterBeforeAfterImages
+                              : treatment.baType === "chin"
+                                ? chinAndJawlineEnhancementImages
+                                : dermalFillerBeforeAfterImages
                     }
                     triggerLabel="See Before & After"
                     title={`${treatment.title} Before & After`}
