@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -395,7 +396,7 @@ const Home = () => {
                 </motion.div>
               </DialogTrigger>
               
-              <DialogContent className="bg-black border-gray-800 max-w-3xl w-[95vw] max-h-[90vh] overflow-y-auto">
+              <DialogContent className="bg-black border-gray-800 max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
                   <DialogTitle className="text-2xl md:text-3xl font-bold mb-2">The Cosmedocs Face Rejuvenation Philosophy</DialogTitle>
                   <DialogDescription className="text-gray-300">
@@ -415,14 +416,14 @@ const Home = () => {
                       <li>Minimizing pores for a smoother appearance</li>
                       <li>Improving overall skin texture</li>
                     </ul>
-                    <div className="pt-2 pl-11">
-                      <img 
-                        src="/lovable-uploads/fe1449b5-4bf0-4e68-a837-160d3d506008.png" 
-                        alt="Skin rejuvenation before and after" 
-                        className="rounded-lg max-w-md mx-auto"
-                      />
-                      <p className="text-sm text-gray-400 text-center mt-2">Visible improvement in skin quality after treatment</p>
-                    </div>
+                  </div>
+                  
+                  <div className="mx-auto max-w-full mt-6 mb-8">
+                    <img 
+                      src="/lovable-uploads/c14805f1-7257-4bcd-81cb-827d313c023b.png" 
+                      alt="The Cosmedocs Face Rejuvenation Philosophy detailed steps" 
+                      className="rounded-lg w-full h-auto"
+                    />
                   </div>
                   
                   <div className="space-y-2">
