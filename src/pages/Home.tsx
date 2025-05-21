@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { useState } from "react";
-import { Eye, Images, X, HelpCircle } from "lucide-react";
+import { Eye, Images, X, HelpCircle, Info } from "lucide-react";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -11,6 +11,16 @@ import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { 
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
@@ -353,32 +363,195 @@ const Home = () => {
                 </motion.div>
               </DialogTrigger>
               
-              <DialogContent className="bg-black border-gray-800 max-w-2xl">
+              <DialogContent className="bg-black border-gray-800 max-w-5xl">
                 <DialogHeader className="pb-4">
-                  <DialogTitle className="text-2xl">Our 3-Step Rejuvenation Methodology</DialogTitle>
+                  <DialogTitle className="text-2xl">Facial Assessment Results</DialogTitle>
                   <DialogDescription className="text-base">
-                    Explore our comprehensive approach to facial rejuvenation.
+                    Before and after assessment showing improvement scores across key categories
                   </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-6 py-4">
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-medium">1. Skin Clear Up</h3>
-                    <p className="text-base text-muted-foreground">
-                      Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation.
-                    </p>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-medium">2. Wrinkles in Motion</h3>
-                    <p className="text-base text-muted-foreground">
-                      Targeting dynamic wrinkles while preserving natural expressions and movement.
-                    </p>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-medium">3. Volume Loss & Sagging</h3>
-                    <p className="text-base text-muted-foreground">
-                      Restoring youthful contours by addressing structural volume loss and skin laxity.
-                    </p>
-                  </div>
+                <div className="py-4 overflow-auto">
+                  <Table className="border-collapse">
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="w-1/3 font-semibold text-white border border-gray-700">Before (Client has had previous upper face Botox)</TableHead>
+                        <TableHead className="w-1/6 text-center font-semibold text-white border border-gray-700">Score</TableHead>
+                        <TableHead className="w-1/3 font-semibold text-white border border-gray-700">After</TableHead>
+                        <TableHead className="w-1/6 text-center font-semibold text-white border border-gray-700">Score</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {/* Skin Appearance Section */}
+                      <TableRow>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Skin Appearance (0,1,2,3)</TableCell>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Skin (0,1,2,3)</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Pores Size & Congestion</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Pores Size & Congestion</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Clarity / Changes</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Clarity / Changes</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Hydration</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Hydration</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Roughness</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Roughness</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Senitivity / Inflammation</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Sensitivity / Inflammation</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                      </TableRow>
+                      
+                      {/* Static Lines Section */}
+                      <TableRow>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Static Lines (0,1,2,3,4)</TableCell>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Static Lines (0,1,2,3,4)</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Frown</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                        <TableCell className="border border-gray-700">Frown</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Forehead</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                        <TableCell className="border border-gray-700">Forehead</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Crows Feet</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                        <TableCell className="border border-gray-700">Crows Feet</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">DAO (Sad Expression Lines)</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                        <TableCell className="border border-gray-700">DAO (Sad Expression Lines)</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Bunny Lines</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                        <TableCell className="border border-gray-700">Bunny Lines</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Nasolabial Crease</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Nasolabial Crease</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Oral Commissure</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Oral Commissure</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Mentalis Crease</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Mentalis Crease</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      
+                      {/* Facial Volume Loss Section */}
+                      <TableRow>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Facial Volume Loss (0,1,2,3,4)</TableCell>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Facial Volume Loss (0,1,2,3,4)</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Undereye circles</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Undereye circles</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Cheeks</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Cheeks</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Lips Body</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Lips Body</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Oral Commissure</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Oral Commissure</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Nose Drooping</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                        <TableCell className="border border-gray-700">Nose Drooping</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Outer Cheek/In Front Of Ear</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Outer Cheek/In Front Of Ear</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      
+                      {/* Sagging Skin Section */}
+                      <TableRow>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Sagging Skin (0,1,2,3,4)</TableCell>
+                        <TableCell colSpan={2} className="font-bold text-lg border border-gray-700">Sagging Skin (0,1,2,3,4)</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Jowls/Jawline</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                        <TableCell className="border border-gray-700">Jowls/Jawline</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Nasolabial Folds</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Nasolabial Folds</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Oral Commisure Fold</TableCell>
+                        <TableCell className="text-center border border-gray-700">2</TableCell>
+                        <TableCell className="border border-gray-700">Oral Commisure Fold</TableCell>
+                        <TableCell className="text-center border border-gray-700">0</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="border border-gray-700">Eyebrow Hooding</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                        <TableCell className="border border-gray-700">Eyebrow Hooding</TableCell>
+                        <TableCell className="text-center border border-gray-700">1</TableCell>
+                      </TableRow>
+                      
+                      {/* Total Section */}
+                      <TableRow className="bg-gray-900">
+                        <TableCell className="font-bold border border-gray-700">Total</TableCell>
+                        <TableCell className="text-center font-bold border border-gray-700">24</TableCell>
+                        <TableCell className="font-bold border border-gray-700">Total</TableCell>
+                        <TableCell className="text-center font-bold border border-gray-700">5</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
                 </div>
               </DialogContent>
             </Dialog>
