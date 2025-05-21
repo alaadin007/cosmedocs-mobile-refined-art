@@ -12,6 +12,7 @@ import Treatments from "./pages/Treatments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Membership from "./pages/Membership";
+import Partner from "./pages/Partner";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/membership" element={<Membership />} />
+              <Route path="/partner" element={<Partner />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
