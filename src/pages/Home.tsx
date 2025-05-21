@@ -8,6 +8,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
@@ -320,8 +321,8 @@ const Home = () => {
                 once: true
               }}>
                   <div className="overflow-hidden rounded-xl">
-                    <img src="/lovable-uploads/fe1449b5-4bf0-4e68-a837-160d3d506008.png" alt="Face rejuvenation before and after results" className="w-full h-auto transition-transform duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex items-end justify-center pb-8">
+                    <img src="/lovable-uploads/b4495de4-9009-4381-8105-a36d078fcb76.png" alt="Face rejuvenation before and after results" className="w-full h-auto" />
+                    <div className="absolute inset-0 flex items-end justify-center pb-8">
                       <p className="text-white text-sm md:text-base text-center px-4">
                         <Eye className="inline-block mr-2 h-4 w-4" /> 
                         Tap to explore our 3-step rejuvenation methodology
@@ -331,8 +332,48 @@ const Home = () => {
                 </motion.div>
               </DialogTrigger>
               
-              
-            </Dialog>
+              <DialogPortal>
+    <DialogOverlay />
+    <DialogPrimitive.Content
+      
+      className={cn(
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg"
+      )}
+      
+    >
+      
+      <DialogHeader className="pb-4">
+        <DialogTitle>Our 3-Step Rejuvenation Methodology</DialogTitle>
+        <DialogDescription>
+          Explore our comprehensive approach to facial rejuvenation.
+        </DialogDescription>
+      </DialogHeader>
+      <div className="grid gap-4 py-4">
+        <div className="space-y-2">
+          <h3 className="text-lg font-medium">1. Skin Clear Up</h3>
+          <p className="text-sm text-muted-foreground">
+            Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation.
+          </p>
+        </div>
+        <div className="space-y-2">
+          <h3 className="text-lg font-medium">2. Wrinkles in Motion</h3>
+          <p className="text-sm text-muted-foreground">
+            Targeting dynamic wrinkles while preserving natural expressions and movement.
+          </p>
+        </div>
+        <div className="space-y-2">
+          <h3 className="text-lg font-medium">3. Volume Loss & Sagging</h3>
+          <p className="text-sm text-muted-foreground">
+            Restoring youthful contours by addressing structural volume loss and skin laxity.
+          </p>
+        </div>
+      </div>
+      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
+      </DialogPrimitive.Close>
+    </DialogPrimitive.Content>
+  </DialogPortal>
             
             <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" initial={{
             opacity: 0
