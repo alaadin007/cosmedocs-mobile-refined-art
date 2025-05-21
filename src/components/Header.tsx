@@ -21,6 +21,9 @@ export default function Header() {
 
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\s+/g, "")}`;
+  
+  // Booking URL for all Book Now buttons
+  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black">
@@ -55,9 +58,14 @@ export default function Header() {
           >
             <MessageSquare className="h-5 w-5" />
           </a>
-          <Button variant="outline" className="bg-white text-black hover:bg-gray-200 rounded-full px-6">
+          <a 
+            href={bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-2 inline-flex items-center justify-center text-sm font-medium transition-colors"
+          >
             Book Now
-          </Button>
+          </a>
         </div>
 
         <div className="md:hidden">
@@ -98,9 +106,14 @@ export default function Header() {
                   </a>
                 </div>
                 <div className="px-6 py-6 border-t border-gray-800">
-                  <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-full">
+                  <a 
+                    href={bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-white text-black hover:bg-gray-200 rounded-full px-6 py-2 inline-flex items-center justify-center text-sm font-medium transition-colors"
+                  >
                     Book Now
-                  </Button>
+                  </a>
                 </div>
               </div>
             </SheetContent>

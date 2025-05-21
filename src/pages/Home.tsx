@@ -15,6 +15,10 @@ const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const isMobile = useIsMobile();
+  
+  // Booking URL for all Book Now buttons
+  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
+  
   const botoxBeforeAfterImages = [{
     src: "/lovable-uploads/2b95a6f3-bcce-41f4-833d-8be389a9e323.png",
     alt: "Botox before and after - forehead treatment",
@@ -216,9 +220,14 @@ const Home = () => {
               delay: 0.9,
               duration: 0.6
             }}>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+              <a 
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors"
+              >
                 Book a Consultation
-              </Button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -490,9 +499,14 @@ const Home = () => {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Book a consultation with our expert practitioners and begin your journey toward subtle, controlled transformation.
             </p>
-            <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+            <a 
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors"
+            >
               Book Now
-            </Button>
+            </a>
           </div>
         </div>
       </section>
