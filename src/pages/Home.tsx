@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPrimitive } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { Eye, Images } from "lucide-react";
+import { Eye, Images, X } from "lucide-react";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -155,6 +156,7 @@ const Home = () => {
     alt: "Cheek enhancement - before, during and after",
     caption: "Cheek enhancement process showing treatment application and final results"
   }];
+  
   return <div className="bg-black text-white">
       <header>
         {/* SEO optimized hidden heading for crawlers */}
@@ -333,47 +335,45 @@ const Home = () => {
               </DialogTrigger>
               
               <DialogPortal>
-    <DialogOverlay />
-    <DialogPrimitive.Content
-      
-      className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg"
-      )}
-      
-    >
-      
-      <DialogHeader className="pb-4">
-        <DialogTitle>Our 3-Step Rejuvenation Methodology</DialogTitle>
-        <DialogDescription>
-          Explore our comprehensive approach to facial rejuvenation.
-        </DialogDescription>
-      </DialogHeader>
-      <div className="grid gap-4 py-4">
-        <div className="space-y-2">
-          <h3 className="text-lg font-medium">1. Skin Clear Up</h3>
-          <p className="text-sm text-muted-foreground">
-            Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation.
-          </p>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-lg font-medium">2. Wrinkles in Motion</h3>
-          <p className="text-sm text-muted-foreground">
-            Targeting dynamic wrinkles while preserving natural expressions and movement.
-          </p>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-lg font-medium">3. Volume Loss & Sagging</h3>
-          <p className="text-sm text-muted-foreground">
-            Restoring youthful contours by addressing structural volume loss and skin laxity.
-          </p>
-        </div>
-      </div>
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-      </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
-  </DialogPortal>
+                <DialogOverlay />
+                <DialogPrimitive.Content
+                  className={cn(
+                    "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg"
+                  )}
+                >
+                  <DialogHeader className="pb-4">
+                    <DialogTitle>Our 3-Step Rejuvenation Methodology</DialogTitle>
+                    <DialogDescription>
+                      Explore our comprehensive approach to facial rejuvenation.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="grid gap-4 py-4">
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-medium">1. Skin Clear Up</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation.
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-medium">2. Wrinkles in Motion</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Targeting dynamic wrinkles while preserving natural expressions and movement.
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-medium">3. Volume Loss & Sagging</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Restoring youthful contours by addressing structural volume loss and skin laxity.
+                      </p>
+                    </div>
+                  </div>
+                  <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Close</span>
+                  </DialogPrimitive.Close>
+                </DialogPrimitive.Content>
+              </DialogPortal>
+            </Dialog>
             
             <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" initial={{
             opacity: 0
@@ -470,4 +470,5 @@ const Home = () => {
       </section>
     </div>;
 };
+
 export default Home;
