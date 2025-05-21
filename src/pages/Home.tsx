@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
@@ -16,12 +17,45 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent
+} from "@/components/ui/card";
 
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const isMobile = useIsMobile();
+
+  // Define the before/after image arrays
+  const botoxBeforeAfterImages = [
+    { before: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png", after: "/lovable-uploads/57903e64-3bf7-4e89-aeec-61d2fdc9c579.png" }
+  ];
+  
+  const dermalFillerBeforeAfterImages = [
+    { before: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", after: "/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png" }
+  ];
+  
+  const lipFillerBeforeAfterImages = [
+    { before: "/lovable-uploads/984ff472-7676-48a9-a57e-c23ca2592741.png", after: "/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" }
+  ];
+  
+  const noseJobBeforeAfterImages = [
+    { before: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png", after: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png" }
+  ];
+  
+  const skinBoosterBeforeAfterImages = [
+    { before: "/lovable-uploads/0146916c-8864-4889-b0d5-b330859a2c85.png", after: "/lovable-uploads/c14805f1-7257-4bcd-81cb-827d313c023b.png" }
+  ];
+  
+  const chinAndJawlineEnhancementImages = [
+    { before: "/lovable-uploads/1c08600a-b561-48ca-ae0a-246717da30a7.png", after: "/lovable-uploads/c2be8e56-a215-4332-a5c5-ee6b3f431881.png" }
+  ];
 
   // Booking URL for all Book Now buttons
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
