@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,6 +15,7 @@ export default function Header() {
     { name: "Home", path: "/" },
     { name: "Treatments", path: "/treatments" },
     { name: "About Us", path: "/about" },
+    { name: "Partners", path: "/partners" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -26,6 +26,7 @@ export default function Header() {
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
   return (
+    
     <header className="fixed top-0 left-0 right-0 z-50 bg-black">
       <div className="flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
         <Link to="/" className="flex flex-col items-start">
