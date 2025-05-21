@@ -1,19 +1,22 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { useState } from "react";
-import { Eye, Images, X } from "lucide-react";
+import { Eye, Images, X, HelpCircle } from "lucide-react";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Home = () => {
   const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
+  const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const isMobile = useIsMobile();
   
   // Booking URL for all Book Now buttons
@@ -357,8 +360,8 @@ const Home = () => {
                   viewport={{ once: true }}
                 >
                   <img 
-                    src="/lovable-uploads/fde802a5-3ed2-4de9-b41c-d33b3e88eef9.png" 
-                    alt="Face rejuvenation before and after collage" 
+                    src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" 
+                    alt="Face rejuvenation before and after transformation" 
                     className="w-full h-auto" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-12">
@@ -369,6 +372,25 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
+                  
+                  {/* Scoring information tooltip/button */}
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setIsScoringDialogOpen(true);
+                        }}
+                        className="absolute top-4 right-4 bg-black/60 rounded-full p-2 hover:bg-black/80 transition-colors"
+                        aria-label="See how we score facial aesthetics"
+                      >
+                        <HelpCircle className="h-5 w-5" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>See how we score facial aesthetics</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </motion.div>
               </DialogTrigger>
               
@@ -396,6 +418,40 @@ const Home = () => {
                     <h3 className="text-xl font-medium">3. Volume Loss & Sagging</h3>
                     <p className="text-base text-muted-foreground">
                       Restoring youthful contours by addressing structural volume loss and skin laxity.
+                    </p>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
+            
+            {/* Facial Aesthetics Scoring Dialog */}
+            <Dialog open={isScoringDialogOpen} onOpenChange={setIsScoringDialogOpen}>
+              <DialogContent className="bg-black border-gray-800 max-w-4xl max-h-[90vh] overflow-y-auto">
+                <DialogHeader className="pb-4">
+                  <DialogTitle className="text-2xl">How We Score Facial Aesthetics</DialogTitle>
+                  <DialogDescription className="text-base">
+                    Our comprehensive facial assessment methodology
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="py-4">
+                  <img 
+                    src="/lovable-uploads/54687321-8f1e-44e3-ab47-f76a7a5edb64.png" 
+                    alt="Facial aesthetics scoring chart showing before and after results" 
+                    className="w-full h-auto rounded-lg"
+                  />
+                  <div className="mt-6 space-y-4">
+                    <h3 className="text-xl font-medium">Our Assessment Categories</h3>
+                    <p className="text-base text-gray-300">
+                      We evaluate facial aesthetics through four key categories, each scored on a scale of 0-4:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-2 text-gray-300">
+                      <li><span className="font-medium">Skin Appearance</span> - Evaluating pores, clarity, hydration, texture, and sensitivity</li>
+                      <li><span className="font-medium">Static Lines</span> - Assessing visible lines at rest in various facial regions</li>
+                      <li><span className="font-medium">Facial Volume Loss</span> - Measuring volume deficits in key facial areas</li>
+                      <li><span className="font-medium">Sagging Skin</span> - Evaluating skin laxity and structural support</li>
+                    </ul>
+                    <p className="text-base text-gray-300 mt-4">
+                      This systematic approach allows us to create highly personalized treatment plans that address your unique concerns and goals.
                     </p>
                   </div>
                 </div>
