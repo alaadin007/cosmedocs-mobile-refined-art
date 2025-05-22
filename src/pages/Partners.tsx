@@ -341,7 +341,7 @@ const Partners = () => {
           >
             <h2 className="text-3xl font-bold mb-6 text-center">What's Included from £500–£1,500/month</h2>
           
-            <div className="bg-zinc-800 p-8 rounded-lg">
+            <div className="bg-zinc-800 p-8 rounded-lg mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                 <div className="space-y-3">
                   <div className="flex items-start">
@@ -379,6 +379,33 @@ const Partners = () => {
                     <span className="text-green-400 mr-3">✓</span>
                     <span>Ongoing business development support</span>
                   </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-r from-zinc-800 to-zinc-900 p-8 rounded-lg border border-amber-500/20">
+              <h3 className="text-xl font-semibold mb-6 text-center">Investment in Your Aesthetic Career</h3>
+              
+              <div className="space-y-6">
+                <div className="bg-zinc-800/50 p-5 rounded-lg">
+                  <h4 className="text-lg font-medium mb-2">Complete Beginners Package</h4>
+                  <p className="text-amber-300 text-xl font-semibold mb-2">£20,000</p>
+                  <p className="text-gray-300">Our comprehensive program for practitioners new to aesthetics includes extensive training, mentorship, and all the tools you need to launch a successful practice. Flexible monthly payment options available.</p>
+                </div>
+                
+                <div className="bg-zinc-800/50 p-5 rounded-lg">
+                  <h4 className="text-lg font-medium mb-2">Experienced Practitioners</h4>
+                  <p className="text-gray-300">Already have aesthetic training? We recognize your expertise. Your package price will be customized based on your existing qualifications and experience, ensuring you only pay for what you need while still meeting our exacting standards.</p>
+                </div>
+                
+                <div className="mt-6 text-center">
+                  <p className="text-gray-400 mb-4">All packages can be structured with flexible monthly payment options</p>
+                  <Button 
+                    onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="px-8"
+                  >
+                    Discuss Pricing Options
+                  </Button>
                 </div>
               </div>
             </div>
