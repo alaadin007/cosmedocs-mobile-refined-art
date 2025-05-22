@@ -55,7 +55,7 @@ const Home = () => {
   const chinAndJawlineEnhancementImages = [
     { src: "/lovable-uploads/1c08600a-b561-48ca-ae0a-246717da30a7.png", after: "/lovable-uploads/c2be8e56-a215-4332-a5c5-ee6b3f431881.png", alt: "Chin and jawline enhancement before and after", caption: "Chin and jawline enhancement results" }
   ];
-
+  
   // Booking URL for all Book Now buttons
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
@@ -70,17 +70,24 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
         <div className="page-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.h2 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6
-          }}>
-              COSMEDOCS
-            </motion.h2>
+            <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6
+            }}>
+              <div className="relative mb-6">
+                <img 
+                  src="/lovable-uploads/0548416e-603c-4a44-a2c6-44626d104ba1.png" 
+                  alt="COSMEDOCS" 
+                  className="w-full max-w-xl mx-auto" 
+                  id="hero-heading"
+                />
+              </div>
+            </motion.div>
             
             <motion.p className="text-lg md:text-xl italic mb-6" initial={{
             opacity: 0
