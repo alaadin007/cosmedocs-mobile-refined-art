@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -23,6 +22,12 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from "@/components/ui/accordion";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -376,6 +381,55 @@ const Partners = () => {
                 </div>
               </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            
+            <Accordion type="single" collapsible className="bg-zinc-800 rounded-lg p-4">
+              <AccordionItem value="item-1" className="border-b border-zinc-700">
+                <AccordionTrigger className="py-4 hover:no-underline">
+                  <span className="text-left font-medium">I work in a clinic, can I still apply?</span>
+                </AccordionTrigger>
+                <AccordionContent className="py-4 text-gray-300">
+                  Yes, of course. Regardless of where you work, we take on practitioners, not necessarily premises. 
+                  Your current employment situation doesn't affect your eligibility to become a CosmeDoc partner.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2" className="border-b border-zinc-700">
+                <AccordionTrigger className="py-4 hover:no-underline">
+                  <span className="text-left font-medium">I don't have my own premises. Is that a problem?</span>
+                </AccordionTrigger>
+                <AccordionContent className="py-4 text-gray-300">
+                  The aim of this program is to have as little overhead as possible and from our learning, we have 
+                  learned that it is best to start off without having your own dedicated space. You can associate with 
+                  local clinics, poly clinics, room rentals, as well as office buildings to carry out your work whenever 
+                  required. You can also provide house calls to clients.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3" className="border-b border-zinc-700">
+                <AccordionTrigger className="py-4 hover:no-underline">
+                  <span className="text-left font-medium">Who is this program best suitable for?</span>
+                </AccordionTrigger>
+                <AccordionContent className="py-4 text-gray-300">
+                  This is best suitable for someone who has done the basic training. It is a quick start for them, 
+                  and anyone who has not can still apply. However, the training program will be a bit more lengthy 
+                  for those without prior experience.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </motion.div>
         </div>
       </section>
