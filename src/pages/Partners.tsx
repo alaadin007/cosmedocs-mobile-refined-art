@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -402,8 +403,9 @@ const Partners = () => {
                   <span className="text-left font-medium">I work in a clinic, can I still apply?</span>
                 </AccordionTrigger>
                 <AccordionContent className="py-4 text-gray-300">
-                  Yes, of course. Regardless of where you work, we take on practitioners, not necessarily premises. 
-                  Your current employment situation doesn't affect your eligibility to become a CosmeDoc partner.
+                  Yes, absolutely! We welcome practitioners from all work environments. We partner with the medical professional, 
+                  not necessarily the premises. Your current employment situation has no impact on your eligibility to become 
+                  a successful CosmeDoc partner.
                 </AccordionContent>
               </AccordionItem>
               
@@ -412,10 +414,10 @@ const Partners = () => {
                   <span className="text-left font-medium">I don't have my own premises. Is that a problem?</span>
                 </AccordionTrigger>
                 <AccordionContent className="py-4 text-gray-300">
-                  The aim of this program is to have as little overhead as possible and from our learning, we have 
-                  learned that it is best to start off without having your own dedicated space. You can associate with 
-                  local clinics, poly clinics, room rentals, as well as office buildings to carry out your work whenever 
-                  required. You can also provide house calls to clients.
+                  Not at all! In fact, our program is designed to minimize overhead costs. Through years of experience, 
+                  we've discovered that starting without dedicated space is often the most successful approach. You have 
+                  tremendous flexibility to partner with local clinics, poly clinics, rent rooms, or utilize office spaces 
+                  as needed. You can even offer premium house calls to clients – giving you multiple pathways to build your practice.
                 </AccordionContent>
               </AccordionItem>
               
@@ -424,9 +426,10 @@ const Partners = () => {
                   <span className="text-left font-medium">Who is this program best suitable for?</span>
                 </AccordionTrigger>
                 <AccordionContent className="py-4 text-gray-300">
-                  This is best suitable for someone who has done the basic training. It is a quick start for them, 
-                  and anyone who has not can still apply. However, the training program will be a bit more lengthy 
-                  for those without prior experience.
+                  This program offers the perfect opportunity for practitioners who have completed basic aesthetic training, 
+                  providing you with an accelerated path to success. Even if you're new to aesthetics, you're absolutely welcome 
+                  to apply! We'll customize the training program to match your experience level, ensuring you receive the 
+                  comprehensive support needed to thrive in the aesthetic medicine field.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
