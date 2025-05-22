@@ -80,12 +80,9 @@ const Home = () => {
               duration: 0.6
             }}>
               <div className="relative mb-6">
-                <img 
-                  src="/lovable-uploads/0548416e-603c-4a44-a2c6-44626d104ba1.png" 
-                  alt="COSMEDOCS" 
-                  className="w-full max-w-xl mx-auto" 
-                  id="hero-heading"
-                />
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" id="hero-heading">
+                  cosmedocs
+                </h2>
               </div>
             </motion.div>
             
