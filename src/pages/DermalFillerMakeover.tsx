@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { MessageSquare, Star, Clock, Shield, Award } from "lucide-react";
 
 export default function DermalFillerMakeover() {
+  console.log("DermalFillerMakeover component is rendering");
+  
   const seoData = generateSEOMetadata(
     "Dermal Filler Makeover - Transform Your Look",
     "Transform your appearance with professional dermal filler treatments. Expert cosmetic doctors, natural results, and comprehensive makeover packages.",
@@ -15,6 +17,9 @@ export default function DermalFillerMakeover() {
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\s+/g, "")}`;
+
+  console.log("Booking URL:", bookingUrl);
+  console.log("WhatsApp URL:", whatsappUrl);
 
   return (
     <>
@@ -57,19 +62,19 @@ export default function DermalFillerMakeover() {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
                 Dermal Filler
                 <span className="block text-gray-300">Makeover</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your look with expert dermal filler treatments from our qualified cosmedocs
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
                   href={bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors min-w-[200px]"
                 >
                   Book Consultation
                 </a>
@@ -77,7 +82,7 @@ export default function DermalFillerMakeover() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors"
+                  className="border border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors min-w-[200px]"
                 >
                   <MessageSquare className="mr-2 h-5 w-5" />
                   WhatsApp
@@ -97,13 +102,13 @@ export default function DermalFillerMakeover() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Dermal Filler Makeover?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Dermal Filler Makeover?</h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                 Experience the difference of professional aesthetic treatments from qualified medical practitioners
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
                 {
                   icon: <Award className="h-8 w-8" />,
@@ -132,13 +137,13 @@ export default function DermalFillerMakeover() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-lg shadow-lg text-center"
+                  className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow"
                 >
                   <div className="text-black mb-4 flex justify-center">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <p className="text-gray-600 text-sm">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -146,7 +151,7 @@ export default function DermalFillerMakeover() {
         </section>
 
         {/* Treatment Areas */}
-        <section className="py-16">
+        <section className="py-16 bg-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -155,43 +160,37 @@ export default function DermalFillerMakeover() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Popular Treatment Areas</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular Treatment Areas</h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                 Our expert cosmedocs can enhance multiple areas for a complete facial rejuvenation
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {[
                 {
                   title: "Lips",
-                  description: "Add volume and definition for fuller, more youthful lips",
-                  image: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png"
+                  description: "Add volume and definition for fuller, more youthful lips"
                 },
                 {
                   title: "Cheeks",
-                  description: "Restore volume and create beautiful cheek contours",
-                  image: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png"
+                  description: "Restore volume and create beautiful cheek contours"
                 },
                 {
                   title: "Nasolabial Folds",
-                  description: "Smooth smile lines for a more youthful appearance",
-                  image: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png"
+                  description: "Smooth smile lines for a more youthful appearance"
                 },
                 {
                   title: "Under Eyes",
-                  description: "Reduce tear troughs and dark circles",
-                  image: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png"
+                  description: "Reduce tear troughs and dark circles"
                 },
                 {
                   title: "Jawline",
-                  description: "Define and contour for a sharper profile",
-                  image: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png"
+                  description: "Define and contour for a sharper profile"
                 },
                 {
                   title: "Chin",
-                  description: "Enhance projection and balance facial proportions",
-                  image: "/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png"
+                  description: "Enhance projection and balance facial proportions"
                 }
               ].map((area, index) => (
                 <motion.div
@@ -200,16 +199,14 @@ export default function DermalFillerMakeover() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden"
+                  className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow"
                 >
-                  <img
-                    src={area.image}
-                    alt={area.title}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <div className="text-gray-400 text-4xl font-light">{area.title}</div>
+                  </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{area.title}</h3>
-                    <p className="text-gray-600">{area.description}</p>
+                    <p className="text-gray-600 text-sm">{area.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -227,13 +224,13 @@ export default function DermalFillerMakeover() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Your Makeover Journey</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Makeover Journey</h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                 From consultation to transformation - here's what to expect
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   step: "01",
@@ -263,7 +260,7 @@ export default function DermalFillerMakeover() {
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <p className="text-gray-600 text-sm max-w-sm mx-auto">{step.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -280,16 +277,16 @@ export default function DermalFillerMakeover() {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h2 className="text-4xl font-bold mb-6">Ready for Your Transformation?</h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Your Transformation?</h2>
+              <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Book your consultation with our expert cosmedocs and discover your enhanced natural beauty
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
                   href={bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors min-w-[200px]"
                 >
                   Book Consultation
                 </a>
@@ -297,7 +294,7 @@ export default function DermalFillerMakeover() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors"
+                  className="border border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-3 inline-flex items-center justify-center text-lg font-medium transition-colors min-w-[200px]"
                 >
                   <MessageSquare className="mr-2 h-5 w-5" />
                   WhatsApp
