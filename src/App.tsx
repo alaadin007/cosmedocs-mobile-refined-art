@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
 import DermalFillerMakeover from "./pages/DermalFillerMakeover";
+import Cosmedoc from "./pages/Cosmedoc";
 import NotFound from "./pages/NotFound";
 
 // SEO helper function to generate standard metadata
@@ -103,6 +104,7 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/dermal-filler-makeover" element={<DermalFillerMakeover />} />
+                <Route path="/cosmedoc" element={<Cosmedoc />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AnimatePresence>
