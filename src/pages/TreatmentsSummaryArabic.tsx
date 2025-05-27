@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,8 +8,8 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 export default function TreatmentsSummaryArabic() {
   const seoData = generateSEOMetadata(
-    "ملخص العلاجات التجميلية - عيادة كوزميدوكس لندن",
-    "دليل شامل لجميع العلاجات التجميلية المتقدمة في عيادة كوزميدوكس لندن. البوتوكس، الفيلر، تجديد البشرة، وعلاجات طبية متخصصة. احجز استشارتك اليوم.",
+    "دليل العلاجات التجميلية الشامل - عيادة CosmeDocs هارلي ستريت لندن",
+    "دليل شامل للعلاجات التجميلية في عيادة CosmeDocs هارلي ستريت لندن. البوتوكس، حقن الفيلر، تجميل الأنف بدون جراحة، شد الوجه غير الجراحي. نخدم المجتمع العربي منذ 2007 بثقة وأمان.",
     "/treatments-summary-arabic"
   );
 
@@ -180,12 +181,26 @@ export default function TreatmentsSummaryArabic() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-white" dir="rtl">
+      <div className="min-h-screen bg-white">
+        {/* AI Disclaimer */}
+        <div className="bg-blue-50 border-r-4 border-blue-400 p-4" dir="rtl">
+          <div className="page-container">
+            <div className="flex items-center justify-end">
+              <div className="mr-3">
+                <p className="text-sm text-blue-700">
+                  <strong>إخلاء مسؤولية:</strong> محتوى هذه الصفحة مُولد بواسطة الذكاء الاصطناعي وهو للمرجع فقط. للحصول على المشورة الطبية النهائية، يرجى استشارة أطبائنا المتخصصين.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="page-container py-20"
+          dir="rtl"
         >
           {/* Header Section */}
           <div className="text-center mb-16">

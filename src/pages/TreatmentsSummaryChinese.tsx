@@ -165,6 +165,19 @@ export default function TreatmentsSummaryChinese() {
       </Helmet>
 
       <div className="min-h-screen bg-white">
+        {/* AI Disclaimer */}
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
+          <div className="page-container">
+            <div className="flex items-center">
+              <div className="ml-3">
+                <p className="text-sm text-blue-700">
+                  <strong>免责声明：</strong> 本页面内容由人工智能生成，仅供参考。如需最终医疗建议，请咨询我们的专业医生。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
