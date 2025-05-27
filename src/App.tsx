@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import { QueryClient } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -15,29 +16,29 @@ import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
 import NotFound from "./pages/NotFound";
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
     <HelmetProvider>
-      <QueryClient>
+      <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <div className="App">
             <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="treatments" element={<Treatments />} />
-                <Route path="treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
-                <Route path="treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
-                <Route path="dermal-filler-makeover" element={<DermalFillerMakeover />} />
-                <Route path="medical-anal-bleaching" element={<MedicalAnalBleaching />} />
-                <Route path="about" element={<About />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="partners" element={<Partners />} />
-                <Route path="*" element={<NotFound />} />
-              </Route>
+              <Route path="/" element={<Layout><Home /></Layout>} />
+              <Route path="treatments" element={<Layout><Treatments /></Layout>} />
+              <Route path="treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />
+              <Route path="treatments-summary-chinese" element={<Layout><TreatmentsSummaryChinese /></Layout>} />
+              <Route path="dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
+              <Route path="medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
+              <Route path="about" element={<Layout><About /></Layout>} />
+              <Route path="contact" element={<Layout><Contact /></Layout>} />
+              <Route path="partners" element={<Layout><Partners /></Layout>} />
+              <Route path="*" element={<Layout><NotFound /></Layout>} />
             </Routes>
           </div>
         </BrowserRouter>
-      </QueryClient>
+      </QueryClientProvider>
     </HelmetProvider>
   );
 }
