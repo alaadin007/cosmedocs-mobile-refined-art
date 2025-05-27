@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -13,7 +12,6 @@ export default function TreatmentsSummaryArabic() {
     "/treatments-summary-arabic"
   );
 
-  // Complete before/after image arrays for each treatment (matching home page)
   const botoxBeforeAfterImages = [
     { 
       src: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png", 
@@ -114,6 +112,19 @@ export default function TreatmentsSummaryArabic() {
       src: "/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png", 
       alt: "تحسين خط الفك - شد وتحديد", 
       caption: "تحسين خط الفك - شد وتحديد للحصول على ملامح أكثر وضوحاً" 
+    }
+  ];
+
+  const nonSurgicalFaceliftImages = [
+    { 
+      src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", 
+      alt: "شد الوجه بدون جراحة - نتائج الرفع", 
+      caption: "شد الوجه بدون جراحة - الجمع بين الفيلر وخيوط الشد لنتائج مذهلة" 
+    },
+    { 
+      src: "/lovable-uploads/8e5a45ba-9dab-4b06-a44b-2bddfaacfe4b.png", 
+      alt: "شد الوجه بدون جراحة - شد وتحديد", 
+      caption: "شد الوجه بدون جراحة - شد البشرة وإعادة تحديد ملامح الشباب" 
     }
   ];
 
@@ -457,6 +468,72 @@ export default function TreatmentsSummaryArabic() {
                       </div>
                     </AccordionContent>
                   </AccordionItem>
+
+                  <AccordionItem value="non-surgical-facelift" className="border border-gray-200 rounded-lg mb-4">
+                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
+                      <div className="flex items-center justify-between w-full">
+                        <span className="text-xl font-semibold text-black">شد الوجه بدون جراحة - إعادة تشكيل الشباب</span>
+                        <BeforeAfterImageViewer 
+                          images={nonSurgicalFaceliftImages}
+                          triggerLabel="شاهد النتائج"
+                          title="نتائج شد الوجه بدون جراحة"
+                          description="النتائج المحققة بشد الوجه بدون جراحة"
+                          className="mr-4"
+                        />
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4">
+                      <div className="space-y-4">
+                        <p className="text-gray-700">
+                          يجمع علاج شد الوجه بدون جراحة بين تقنيات الفيلر التجميلي وخيوط الشد المتطورة لتقديم حلول ثورية لترهل الوجه وفقدان المرونة. بعد التقييم والاستشارة، نضمن نتائج مذهلة للمرضى المناسبين، مما يعيد إليك ملامح الشباب المفقودة.
+                        </p>
+                        
+                        <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
+                          <h4 className="font-bold text-black mb-3">💰 تكلفة العلاج</h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="bg-white p-4 rounded-lg shadow-sm">
+                              <h5 className="font-semibold text-green-600 mb-2">الترهل البسيط</h5>
+                              <p className="text-2xl font-bold text-black">£1,500</p>
+                              <p className="text-sm text-gray-600">مناسب لترهل خط الفك البسيط والتدلي المبكر</p>
+                            </div>
+                            <div className="bg-white p-4 rounded-lg shadow-sm">
+                              <h5 className="font-semibold text-blue-600 mb-2">الترهل المتوسط</h5>
+                              <p className="text-2xl font-bold text-black">£2,500</p>
+                              <p className="text-sm text-gray-600">مناسب لترهل الوجه الواضح والتدلي المتوسط</p>
+                            </div>
+                          </div>
+                          <p className="text-sm text-gray-600 mt-3 text-center">
+                            * الترهل الشديد يتطلب التدخل الجراحي، وسننصحك بصدق بالخيار الأنسب
+                          </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <h4 className="font-semibold text-black mb-2">تقنيات العلاج:</h4>
+                            <ul className="list-disc list-inside text-gray-700 space-y-1">
+                              <li>فيلر عالي الكثافة للدعم الهيكلي</li>
+                              <li>خيوط PDO للشد والرفع</li>
+                              <li>حقن متعددة النقاط بدقة عالية</li>
+                              <li>علاج متدرج على مراحل</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-black mb-2">المرشحون المناسبون:</h4>
+                            <ul className="list-disc list-inside text-gray-700 space-y-1">
+                              <li>أعمار 30-60 عام مع ترهل الوجه</li>
+                              <li>من لا يرغب في التدخل الجراحي</li>
+                              <li>الباحثون عن نتائج طبيعية</li>
+                              <li>من يرغب في التعافي السريع</li>
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        <p className="text-gray-700 bg-red-50 p-4 rounded-lg">
+                          <strong>التزامنا المهني:</strong> نقبل فقط الحالات التي نضمن لها نتائج مرضية بعد التقييم المفصل والاستشارة. الصدق في التعامل هو مبدؤنا، ولا نبالغ في الوعود أو نفرض العلاجات.
+                        </p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
                 </Accordion>
 
                 <h3 className="text-2xl font-bold text-black mb-4">العلاجات الطبية المتخصصة</h3>
@@ -599,6 +676,9 @@ export default function TreatmentsSummaryArabic() {
                     <Link to="/medical-anal-bleaching" className="text-black hover:text-gray-700 font-medium">
                       → العلاج الطبي لتفتيح المناطق الحساسة
                     </Link>
+                  </li>
+                  <li>
+                    <span className="text-black font-medium">→ شد الوجه بدون جراحة</span>
                   </li>
                   <li>
                     <Link to="/treatments" className="text-black hover:text-gray-700 font-medium">
