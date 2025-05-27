@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
 import DermalFillerMakeover from "./pages/DermalFillerMakeover";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
+import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import NotFound from "./pages/NotFound";
 
 // SEO helper function to generate standard metadata
@@ -105,6 +106,7 @@ const App = () => (
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/dermal-filler-makeover" element={<DermalFillerMakeover />} />
                 <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
+                <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AnimatePresence>
