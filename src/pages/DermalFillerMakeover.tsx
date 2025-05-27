@@ -1,9 +1,9 @@
-
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/App";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, TableFooter } from "@/components/ui/table";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { ArrowRight, Clock, Star, CheckCircle } from "lucide-react";
 
@@ -88,6 +88,31 @@ const DermalFillerMakeover = () => {
     "Boosts confidence and self-esteem",
     "Customized treatment for individual needs"
   ];
+
+  const treatmentBreakdown = [
+    {
+      treatment: "Tear Trough Filler",
+      product: "Teoxane Redensity 2",
+      cost: 425
+    },
+    {
+      treatment: "Jawline and Chin Augmentation (x2)",
+      product: "Teosyal Ultradeep",
+      cost: 700
+    },
+    {
+      treatment: "Cheek Filler (1ml)",
+      product: "Premium Hyaluronic Acid",
+      cost: 350
+    },
+    {
+      treatment: "Fine Lines and Skin Hydration Filler",
+      product: "Vivacy Stylage S",
+      cost: 275
+    }
+  ];
+
+  const totalCost = treatmentBreakdown.reduce((sum, treatment) => sum + treatment.cost, 0);
 
   return (
     <>
@@ -213,6 +238,50 @@ const DermalFillerMakeover = () => {
                 This remarkable case demonstrates the artistry of advanced dermal filler techniques, 
                 showcasing how minor adjustments can create powerful, natural-looking results.
               </p>
+            </motion.div>
+
+            {/* Treatment Breakdown Table */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <Card className="bg-gray-800 border-gray-700">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-6 text-center">Treatment Breakdown & Investment</h3>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow className="border-gray-600">
+                          <TableHead className="text-gray-300 font-semibold">Treatment Area</TableHead>
+                          <TableHead className="text-gray-300 font-semibold">Product Used</TableHead>
+                          <TableHead className="text-gray-300 font-semibold text-right">Cost</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {treatmentBreakdown.map((item, index) => (
+                          <TableRow key={index} className="border-gray-600">
+                            <TableCell className="font-medium text-white">{item.treatment}</TableCell>
+                            <TableCell className="text-gray-300">{item.product}</TableCell>
+                            <TableCell className="text-right text-white font-medium">£{item.cost}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                      <TableFooter>
+                        <TableRow className="border-gray-600">
+                          <TableCell colSpan={2} className="font-bold text-lg text-white">Total Investment</TableCell>
+                          <TableCell className="text-right font-bold text-lg text-purple-400">£{totalCost.toLocaleString()}</TableCell>
+                        </TableRow>
+                      </TableFooter>
+                    </Table>
+                  </div>
+                  <p className="text-sm text-gray-400 mt-4 text-center">
+                    All treatments performed using premium, FDA-approved dermal fillers by certified practitioners
+                  </p>
+                </CardContent>
+              </Card>
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
