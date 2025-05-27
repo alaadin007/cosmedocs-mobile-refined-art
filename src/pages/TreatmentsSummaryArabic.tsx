@@ -13,52 +13,107 @@ export default function TreatmentsSummaryArabic() {
     "/treatments-summary-arabic"
   );
 
-  // Before/after image arrays for each treatment
+  // Complete before/after image arrays for each treatment (matching home page)
   const botoxBeforeAfterImages = [
     { 
       src: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png", 
-      alt: "البوتوكس قبل العلاج", 
-      caption: "نتائج علاج البوتوكس - قبل وبعد العلاج لإزالة التجاعيد من الجبهة ومنطقة العينين" 
+      alt: "البوتوكس - نتائج علاج التجاعيد", 
+      caption: "نتائج البوتوكس - إزالة التجاعيد من الجبهة ومنطقة العينين والخطوط التعبيرية" 
+    },
+    { 
+      src: "/lovable-uploads/8d22b27a-c2d5-4790-abac-6c6df301559a.png", 
+      alt: "البوتوكس - نتائج تنعيم البشرة", 
+      caption: "البوتوكس - نتائج طبيعية لتنعيم البشرة وإزالة خطوط التعبير" 
+    },
+    { 
+      src: "/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png", 
+      alt: "البوتوكس - تجديد الوجه", 
+      caption: "البوتوكس - تجديد ملامح الوجه مع الحفاظ على التعابير الطبيعية" 
     }
   ];
   
   const dermalFillerBeforeAfterImages = [
     { 
       src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", 
-      alt: "الفيلر قبل العلاج", 
-      caption: "نتائج حقن الفيلر - تحسين شكل الوجه واستعادة الحجم المفقود" 
+      alt: "الفيلر - استعادة حجم الوجه", 
+      caption: "الفيلر التجميلي - استعادة الحجم المفقود وتحسين ملامح الوجه" 
+    },
+    { 
+      src: "/lovable-uploads/8e5a45ba-9dab-4b06-a44b-2bddfaacfe4b.png", 
+      alt: "الفيلر - تحسين الخدود", 
+      caption: "فيلر الخدود - إضافة الحجم الطبيعي وتحسين تحديد الوجه" 
+    },
+    { 
+      src: "/lovable-uploads/75803d61-d5ce-414e-96c8-8fdc7c0e03ba.png", 
+      alt: "الفيلر - ملء التجاعيد", 
+      caption: "الفيلر - ملء التجاعيد العميقة والخطوط الأنفية الشفهية" 
+    },
+    { 
+      src: "/lovable-uploads/81447b08-e528-4535-a4b3-87f93eb36acd.png", 
+      alt: "الفيلر - تجديد شامل", 
+      caption: "الفيلر - تجديد شامل للوجه مع نتائج طبيعية ومتوازنة" 
     }
   ];
   
   const lipFillerBeforeAfterImages = [
     { 
       src: "/lovable-uploads/984ff472-7676-48a9-a57e-c23ca2592741.png", 
-      alt: "فيلر الشفاه قبل العلاج", 
-      caption: "نتائج فيلر الشفاه - تحسين شكل وحجم الشفاه بطريقة طبيعية" 
+      alt: "فيلر الشفاه - تحسين طبيعي", 
+      caption: "فيلر الشفاه - تحسين شكل وحجم الشفاه بطريقة طبيعية وجذابة" 
+    },
+    { 
+      src: "/lovable-uploads/8ead2a70-fe92-4c88-b50d-67219debbdf3.png", 
+      alt: "فيلر الشفاه - تحديد الحواف", 
+      caption: "فيلر الشفاه - تحديد حواف الشفاه وزيادة الحجم بتناسق مثالي" 
+    },
+    { 
+      src: "/lovable-uploads/c77267b3-4f58-4e3b-9623-b0d3dc18d413.png", 
+      alt: "فيلر الشفاه - نتائج متوازنة", 
+      caption: "فيلر الشفاه - نتائج متوازنة تبرز الجمال الطبيعي للشفاه" 
     }
   ];
   
   const noseJobBeforeAfterImages = [
     { 
       src: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png", 
-      alt: "تجميل الأنف بدون جراحة قبل العلاج", 
-      caption: "نتائج تجميل الأنف بدون جراحة - تحسين شكل الأنف بالفيلر" 
+      alt: "تجميل الأنف بدون جراحة - تحسين الشكل", 
+      caption: "تجميل الأنف بالفيلر - تحسين شكل الأنف بدون جراحة مع نتائج فورية" 
+    },
+    { 
+      src: "/lovable-uploads/37e1c9db-26f6-439b-94c2-fd05fa7e385f.png", 
+      alt: "تجميل الأنف - تصحيح التناسق", 
+      caption: "تجميل الأنف بدون جراحة - تصحيح عدم التناسق وتحسين الملف الجانبي" 
     }
   ];
   
   const skinBoosterBeforeAfterImages = [
     { 
       src: "/lovable-uploads/0146916c-8864-4889-b0d5-b330859a2c85.png", 
-      alt: "منشطات البشرة قبل العلاج", 
-      caption: "نتائج منشطات البشرة - ترطيب عميق وتجديد للبشرة" 
+      alt: "منشطات البشرة - ترطيب عميق", 
+      caption: "منشطات البشرة - ترطيب عميق وتحسين ملمس ونعومة البشرة" 
+    },
+    { 
+      src: "/lovable-uploads/67e6b1a0-9230-467a-baf0-dd5778c41d45.png", 
+      alt: "منشطات البشرة - إشراق طبيعي", 
+      caption: "منشطات البشرة - زيادة الإشراق الطبيعي وتحفيز الكولاجين" 
+    },
+    { 
+      src: "/lovable-uploads/c2be8e56-a215-4332-a5c5-ee6b3f431881.png", 
+      alt: "منشطات البشرة - تجديد الخلايا", 
+      caption: "منشطات البشرة - تجديد خلايا البشرة وتحسين الملمس العام" 
     }
   ];
   
   const chinAndJawlineEnhancementImages = [
     { 
       src: "/lovable-uploads/1c08600a-b561-48ca-ae0a-246717da30a7.png", 
-      alt: "تحسين الذقن وخط الفك قبل العلاج", 
-      caption: "نتائج تحسين الذقن وخط الفك - تحديد ملامح الوجه" 
+      alt: "تحسين الذقن وخط الفك - تحديد الملامح", 
+      caption: "تحسين الذقن وخط الفك - تحديد ملامح الوجه وإضافة القوة والجاذبية" 
+    },
+    { 
+      src: "/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png", 
+      alt: "تحسين خط الفك - شد وتحديد", 
+      caption: "تحسين خط الفك - شد وتحديد للحصول على ملامح أكثر وضوحاً" 
     }
   ];
 
