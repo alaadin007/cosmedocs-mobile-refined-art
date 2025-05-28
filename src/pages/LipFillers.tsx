@@ -50,7 +50,7 @@ const LipFillers = () => {
     },
     {
       question: "How much do lip fillers cost?",
-      answer: "Lip filler prices vary based on the amount of product used and specific requirements. We offer competitive pricing for premium treatments. Contact us for a detailed quote tailored to your needs."
+      answer: "Lip fillers at Cosmedocs start from £350. Final pricing varies based on the amount of product used and specific requirements. We offer competitive pricing for premium treatments and flexible payment options."
     },
     {
       question: "When will I see final results?",
@@ -106,9 +106,13 @@ const LipFillers = () => {
                   Expert Lip Fillers in London
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  Transform your lips with our premium hyaluronic acid fillers. Natural-looking enhancement 
-                  by expert cosmetic doctors at our Harley Street clinic.
+                  Transform your lips with our premium hyaluronic acid fillers. Natural, subtle or bold - as you wish. 
+                  Expert cosmetic doctors at our Harley Street clinic deliver personalized enhancement tailored to your vision.
                 </p>
+                <div className="mb-6">
+                  <p className="text-lg text-purple-300 font-semibold">Starting from £350</p>
+                  <p className="text-sm text-gray-400">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                     Book Consultation
@@ -231,7 +235,16 @@ const LipFillers = () => {
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Harley Street Academy certified trainers</p>
+                      <p className="text-gray-300">
+                        <a 
+                          href="https://www.harleystreetinstitute.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          Harley Street Institute
+                        </a> trainers - we are the trainers
+                      </p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
