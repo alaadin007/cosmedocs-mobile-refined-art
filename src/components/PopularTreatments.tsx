@@ -65,7 +65,7 @@ const PopularTreatments = ({
 
   const treatmentsList = treatments || defaultTreatments;
 
-  // Before/after image data
+  // Before/after image data with new lip filler images
   const getBeforeAfterImages = (baType: string) => {
     const imageData = {
       botox: [
@@ -75,7 +75,12 @@ const PopularTreatments = ({
         { src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", alt: "Dermal fillers before and after", caption: "Dermal filler treatment results" }
       ],
       lip: [
-        { src: "/lovable-uploads/984ff472-7676-48a9-a57e-c23ca2592741.png", alt: "Lip fillers before and after", caption: "Lip filler treatment results" }
+        { src: "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png", alt: "Lip fillers before and after 2016-2019", caption: "Dramatic lip transformation over 3 years" },
+        { src: "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png", alt: "Lip fillers showing defined peaks", caption: "Enhanced lip definition with improved ratio" },
+        { src: "/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png", alt: "Natural lip enhancement", caption: "Subtle, natural-looking lip enhancement" },
+        { src: "/lovable-uploads/94868651-44b6-4cfb-b3a4-8d3629c1358b.png", alt: "Lip fillers progression", caption: "Before, after, and 5 weeks later results" },
+        { src: "/lovable-uploads/a91d9151-e465-4ba8-82e8-f59fee576396.png", alt: "Lip fillers none to two syringes", caption: "Progressive enhancement from none to two syringes" },
+        { src: "/lovable-uploads/155a5ab6-6a67-4fe4-a246-f77856aba78d.png", alt: "Lip volume progression", caption: "Before, 1ml, and 2ml treatment progression" }
       ],
       nose: [
         { src: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png", alt: "Non-surgical nose job before and after", caption: "Non-surgical nose job results" }
