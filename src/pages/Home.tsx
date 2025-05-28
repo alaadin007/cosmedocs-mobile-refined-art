@@ -4,7 +4,6 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { Eye, HelpCircle } from "lucide-react";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { 
@@ -24,38 +23,13 @@ import {
   CardDescription,
   CardContent
 } from "@/components/ui/card";
+import PopularTreatments from "@/components/PopularTreatments";
 
 const Home = () => {
-  const [isBeforeAfterOpen, setIsBeforeAfterOpen] = useState(false);
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const isMobile = useIsMobile();
 
-  // Define the before/after image arrays with the correct type structure
-  const botoxBeforeAfterImages = [
-    { src: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png", after: "/lovable-uploads/57903e64-3bf7-4e89-aeec-61d2fdc9c579.png", alt: "Botox before and after", caption: "Botox treatment results" }
-  ];
-  
-  const dermalFillerBeforeAfterImages = [
-    { src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", after: "/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png", alt: "Dermal fillers before and after", caption: "Dermal filler treatment results" }
-  ];
-  
-  const lipFillerBeforeAfterImages = [
-    { src: "/lovable-uploads/984ff472-7676-48a9-a57e-c23ca2592741.png", after: "/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png", alt: "Lip fillers before and after", caption: "Lip filler treatment results" }
-  ];
-  
-  const noseJobBeforeAfterImages = [
-    { src: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png", after: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png", alt: "Non-surgical nose job before and after", caption: "Non-surgical nose job results" }
-  ];
-  
-  const skinBoosterBeforeAfterImages = [
-    { src: "/lovable-uploads/0146916c-8864-4889-b0d5-b330859a2c85.png", after: "/lovable-uploads/c14805f1-7257-4bcd-81cb-827d313c023b.png", alt: "Skin boosters before and after", caption: "Skin booster treatment results" }
-  ];
-  
-  const chinAndJawlineEnhancementImages = [
-    { src: "/lovable-uploads/1c08600a-b561-48ca-ae0a-246717da30a7.png", after: "/lovable-uploads/c2be8e56-a215-4332-a5c5-ee6b3f431881.png", alt: "Chin and jawline enhancement before and after", caption: "Chin and jawline enhancement results" }
-  ];
-  
   // Booking URL for all Book Now buttons
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
@@ -130,62 +104,8 @@ const Home = () => {
           </div>
         </section>
         
-        {/* Featured Treatments Section */}
-        <section className="py-20 bg-black" aria-labelledby="treatments-heading">
-          <div className="page-container">
-            <h2 id="treatments-heading" className="text-3xl font-bold mb-12 text-center">Popular Treatments</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[{
-              title: "Botox",
-              description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
-              hasBeforeAfter: true,
-              baType: "botox"
-            }, {
-              title: "Dermal Fillers",
-              description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
-              hasBeforeAfter: true,
-              baType: "dermal"
-            }, {
-              title: "Lip Fillers",
-              description: "Subtle enhancement for natural-looking fullness",
-              hasBeforeAfter: true,
-              baType: "lip"
-            }, {
-              title: "Non-Surgical Nose Job",
-              description: "Reshape without surgery",
-              hasBeforeAfter: true,
-              baType: "nose"
-            }, {
-              title: "Skin Boosters",
-              description: "Deep hydration and rejuvenation",
-              hasBeforeAfter: true,
-              baType: "skin"
-            }, {
-              title: "Chin & Jawline Enhancement",
-              description: "Define your facial profile",
-              hasBeforeAfter: true,
-              baType: "chin"
-            }].map((treatment, index) => <motion.div key={treatment.title} className="bg-accent rounded-lg p-6" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              delay: index * 0.1,
-              duration: 0.5
-            }} viewport={{
-              once: true
-            }}>
-                  <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
-                  {treatment.hasBeforeAfter ? <BeforeAfterImageViewer images={treatment.baType === "nose" ? noseJobBeforeAfterImages : treatment.baType === "lip" ? lipFillerBeforeAfterImages : treatment.baType === "botox" ? botoxBeforeAfterImages : treatment.baType === "skin" ? skinBoosterBeforeAfterImages : treatment.baType === "chin" ? chinAndJawlineEnhancementImages : dermalFillerBeforeAfterImages} triggerLabel="See Before & After" title={`${treatment.title} Before & After`} description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`} /> : <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                      Learn more →
-                    </Button>}
-                </motion.div>)}
-            </div>
-          </div>
-        </section>
+        {/* Featured Treatments Section - Now using PopularTreatments component */}
+        <PopularTreatments />
 
         {/* Face Rejuvenation Philosophy Section */}
         <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="rejuvenation-heading">
@@ -571,6 +491,13 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Hidden SEO content for search engines */}
+        <div className="sr-only">
+          <p>
+            Cosmedocs is London's premier aesthetic medicine clinic located on prestigious Harley Street, offering advanced cosmetic treatments since 2007. Our expert practitioners specialize in Botox injections, dermal fillers, lip enhancement, non-surgical nose jobs, skin boosters, and comprehensive facial rejuvenation treatments. With over 1 million injections performed, we are recognized leaders in aesthetic medicine, providing natural-looking results through our invisible art philosophy. Our clinic offers consultation services, advanced anti-aging treatments, facial contouring, and personalized aesthetic solutions. We pride ourselves on subtle enhancement that speaks without saying a word, ensuring every client receives transformative results tailored to their individual needs. Our comprehensive approach addresses skin quality, wrinkle reduction, volume restoration, and facial harmonization using the latest techniques and premium products. Located at 10 Harley Street, London W1G 9PF, we serve clients seeking the highest standard of aesthetic medicine in the heart of London's medical district. Contact us at 0333 0551 503 or info@cosmedocs.com to begin your aesthetic journey with London's most trusted cosmetic medicine specialists.
+          </p>
+        </div>
       </div>
     </TooltipProvider>
   );
