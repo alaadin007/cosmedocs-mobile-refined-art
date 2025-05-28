@@ -18,6 +18,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link to="/" className="text-gray-400 hover:text-white text-sm">Home</Link></li>
               <li><Link to="/treatments" className="text-gray-400 hover:text-white text-sm">Treatments</Link></li>
+              <li><Link to="/lip-fillers" className="text-gray-400 hover:text-white text-sm">Lip Fillers</Link></li>
+              <li><Link to="/lip-filler-dissolve" className="text-gray-400 hover:text-white text-sm">Lip Filler Dissolve</Link></li>
               <li><Link to="/about" className="text-gray-400 hover:text-white text-sm">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white text-sm">Contact</Link></li>
               <li><Link to="/booking" className="text-gray-400 hover:text-white text-sm">Book Appointment</Link></li>

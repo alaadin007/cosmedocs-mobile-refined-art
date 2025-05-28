@@ -10,6 +10,7 @@ import Treatments from "./pages/Treatments";
 import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
 import LipFillers from "./pages/LipFillers";
+import LipFillerDissolve from "./pages/LipFillerDissolve";
 import DermalFillerMakeover from "./pages/DermalFillerMakeover";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
 import About from "./pages/About";
@@ -31,6 +32,7 @@ function App() {
               <Route path="treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />
               <Route path="treatments-summary-chinese" element={<Layout><TreatmentsSummaryChinese /></Layout>} />
               <Route path="lip-fillers" element={<Layout><LipFillers /></Layout>} />
+              <Route path="lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
               <Route path="dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
               <Route path="medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
               <Route path="about" element={<Layout><About /></Layout>} />
