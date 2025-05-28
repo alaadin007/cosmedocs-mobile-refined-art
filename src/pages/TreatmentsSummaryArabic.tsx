@@ -4,128 +4,99 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from "../App";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 export default function TreatmentsSummaryArabic() {
   const seoData = generateSEOMetadata(
-    "دليل العلاجات التجميلية الشامل - عيادة CosmeDocs هارلي ستريت لندن",
-    "دليل شامل للعلاجات التجميلية في عيادة CosmeDocs هارلي ستريت لندن. البوتوكس، حقن الفيلر، تجميل الأنف بدون جراحة، شد الوجه غير الجراحي. نخدم المجتمع العربي منذ 2007 بثقة وأمان.",
+    "دليل شامل للعلاجات التجميلية - عيادة CosmeDocs هارلي ستريت لندن",
+    "دليل متخصص للعلاجات التجميلية في عيادة CosmeDocs هارلي ستريت لندن. حقن البوتوكس، حشو الفيلر، تجميل الأنف، نحت الذقن. نخدم المجتمع العربي منذ 2007 بثقة وخبرة.",
     "/treatments-summary-arabic"
   );
 
-  const botoxBeforeAfterImages = [
+  // All before/after images for horizontal scroll
+  const allBeforeAfterImages = [
     { 
       src: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png", 
-      alt: "البوتوكس - نتائج علاج التجاعيد", 
-      caption: "نتائج البوتوكس - إزالة التجاعيد من الجبهة ومنطقة العينين والخطوط التعبيرية" 
+      alt: "حقن البوتوكس - تنحيف الوجه", 
+      caption: "حقن البوتوكس لتنحيف الوجه - تقليل عضلات المضغ بفعالية",
+      treatment: "حقن البوتوكس"
     },
     { 
       src: "/lovable-uploads/8d22b27a-c2d5-4790-abac-6c6df301559a.png", 
-      alt: "البوتوكس - نتائج تنعيم البشرة", 
-      caption: "البوتوكس - نتائج طبيعية لتنعيم البشرة وإزالة خطوط التعبير" 
+      alt: "حقن البوتوكس - تحسين شكل الوجه", 
+      caption: "علاج البوتوكس - تحسين الوجه المربع وتشكيل ملامح أنيقة",
+      treatment: "حقن البوتوكس"
     },
     { 
       src: "/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png", 
-      alt: "البوتوكس - تجديد الوجه", 
-      caption: "البوتوكس - تجديد ملامح الوجه مع الحفاظ على التعابير الطبيعية" 
-    }
-  ];
-  
-  const dermalFillerBeforeAfterImages = [
+      alt: "حقن البوتوكس - نتائج طبيعية", 
+      caption: "حقن البوتوكس - نتائج تنحيف طبيعية تدريجية",
+      treatment: "حقن البوتوكس"
+    },
     { 
       src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", 
-      alt: "الفيلر - استعادة حجم الوجه", 
-      caption: "الفيلر التجميلي - استعادة الحجم المفقود وتحسين ملامح الوجه" 
+      alt: "حشو الفيلر - تشكيل الوجه", 
+      caption: "حشو الفيلر - استعادة امتلاء الوجه وتحسين الملامح",
+      treatment: "حشو الفيلر"
     },
     { 
       src: "/lovable-uploads/8e5a45ba-9dab-4b06-a44b-2bddfaacfe4b.png", 
-      alt: "الفيلر - تحسين الخدود", 
-      caption: "فيلر الخدود - إضافة الحجم الطبيعي وتحسين تحديد الوجه" 
+      alt: "حشو الفيلر - تشكيل الخدود", 
+      caption: "حشو فيلر الخدود - زيادة البعد ثلاثي الأبعاد والشباب",
+      treatment: "حشو الفيلر"
     },
     { 
       src: "/lovable-uploads/75803d61-d5ce-414e-96c8-8fdc7c0e03ba.png", 
-      alt: "الفيلر - ملء التجاعيد", 
-      caption: "الفيلر - ملء التجاعيد العميقة والخطوط الأنفية الشفهية" 
+      alt: "حشو الفيلر - إزالة التجاعيد", 
+      caption: "حشو الفيلر - ملء التجاعيد العميقة وخطوط التعبير",
+      treatment: "حشو الفيلر"
     },
     { 
       src: "/lovable-uploads/81447b08-e528-4535-a4b3-87f93eb36acd.png", 
-      alt: "الفيلر - تجديد شامل", 
-      caption: "الفيلر - تجديد شامل للوجه مع نتائج طبيعية ومتوازنة" 
-    }
-  ];
-  
-  const lipFillerBeforeAfterImages = [
-    { 
-      src: "/lovable-uploads/984ff472-7676-48a9-a57e-c23ca2592741.png", 
-      alt: "فيلر الشفاه - تحسين طبيعي", 
-      caption: "فيلر الشفاه - تحسين شكل وحجم الشفاه بطريقة طبيعية وجذابة" 
+      alt: "حشو الفيلر - تجديد شامل", 
+      caption: "حشو الفيلر - تجديد شامل للوجه بنتائج طبيعية متناغمة",
+      treatment: "حشو الفيلر"
     },
-    { 
-      src: "/lovable-uploads/8ead2a70-fe92-4c88-b50d-67219debbdf3.png", 
-      alt: "فيلر الشفاه - تحديد الحواف", 
-      caption: "فيلر الشفاه - تحديد حواف الشفاه وزيادة الحجم بتناسق مثالي" 
-    },
-    { 
-      src: "/lovable-uploads/c77267b3-4f58-4e3b-9623-b0d3dc18d413.png", 
-      alt: "فيلر الشفاه - نتائج متوازنة", 
-      caption: "فيلر الشفاه - نتائج متوازنة تبرز الجمال الطبيعي للشفاه" 
-    }
-  ];
-  
-  const noseJobBeforeAfterImages = [
     { 
       src: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png", 
-      alt: "تجميل الأنف بدون جراحة - تحسين الشكل", 
-      caption: "تجميل الأنف بالفيلر - تحسين شكل الأنف بدون جراحة مع نتائج فورية" 
+      alt: "تجميل الأنف - تشكيل الجسر", 
+      caption: "تجميل الأنف غير الجراحي - تشكيل جسر الأنف بالفيلر",
+      treatment: "تجميل الأنف"
     },
     { 
       src: "/lovable-uploads/37e1c9db-26f6-439b-94c2-fd05fa7e385f.png", 
-      alt: "تجميل الأنف - تصحيح التناسق", 
-      caption: "تجميل الأنف بدون جراحة - تصحيح عدم التناسق وتحسين الملف الجانبي" 
-    }
-  ];
-  
-  const skinBoosterBeforeAfterImages = [
+      alt: "تجميل الأنف - تصحيح الشكل", 
+      caption: "تجميل الأنف غير الجراحي - تصحيح عدم التماثل",
+      treatment: "تجميل الأنف"
+    },
     { 
       src: "/lovable-uploads/0146916c-8864-4889-b0d5-b330859a2c85.png", 
-      alt: "منشطات البشرة - ترطيب عميق", 
-      caption: "منشطات البشرة - ترطيب عميق وتحسين ملمس ونعومة البشرة" 
+      alt: "حشو الجبهة - تشكيل ممتلئ", 
+      caption: "حشو فيلر الجبهة - تحسين انخفاض الجبهة وتشكيل ممتلئ",
+      treatment: "حشو الجبهة"
     },
     { 
       src: "/lovable-uploads/67e6b1a0-9230-467a-baf0-dd5778c41d45.png", 
-      alt: "منشطات البشرة - إشراق طبيعي", 
-      caption: "منشطات البشرة - زيادة الإشراق الطبيعي وتحفيز الكولاجين" 
+      alt: "حشو الجبهة - تحسين الملامح", 
+      caption: "حشو الجبهة - تحسين ملامح الجبهة وزيادة البعد ثلاثي الأبعاد",
+      treatment: "حشو الجبهة"
     },
     { 
       src: "/lovable-uploads/c2be8e56-a215-4332-a5c5-ee6b3f431881.png", 
-      alt: "منشطات البشرة - تجديد الخلايا", 
-      caption: "منشطات البشرة - تجديد خلايا البشرة وتحسين الملمس العام" 
-    }
-  ];
-  
-  const chinAndJawlineEnhancementImages = [
+      alt: "حشو الجبهة - نتائج طبيعية", 
+      caption: "حشو فيلر الجبهة - ملامح جبهة طبيعية ممتلئة",
+      treatment: "حشو الجبهة"
+    },
     { 
       src: "/lovable-uploads/1c08600a-b561-48ca-ae0a-246717da30a7.png", 
-      alt: "تحسين الذقن وخط الفك - تحديد الملامح", 
-      caption: "تحسين الذقن وخط الفك - تحديد ملامح الوجه وإضافة القوة والجاذبية" 
+      alt: "تشكيل الذقن - تحسين الملامح", 
+      caption: "تشكيل الذقن بالفيلر - تحسين ملامح الذقن ونسب الوجه",
+      treatment: "تشكيل الذقن"
     },
     { 
       src: "/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png", 
-      alt: "تحسين خط الفك - شد وتحديد", 
-      caption: "تحسين خط الفك - شد وتحديد للحصول على ملامح أكثر وضوحاً" 
-    }
-  ];
-
-  const nonSurgicalFaceliftImages = [
-    { 
-      src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", 
-      alt: "شد الوجه بدون جراحة - نتائج الرفع", 
-      caption: "شد الوجه بدون جراحة - الجمع بين الفيلر وخيوط الشد لنتائج مذهلة" 
-    },
-    { 
-      src: "/lovable-uploads/8e5a45ba-9dab-4b06-a44b-2bddfaacfe4b.png", 
-      alt: "شد الوجه بدون جراحة - شد وتحديد", 
-      caption: "شد الوجه بدون جراحة - شد البشرة وإعادة تحديد ملامح الشباب" 
+      alt: "تشكيل الذقن - تعزيز البعد ثلاثي الأبعاد", 
+      caption: "تشكيل الذقن - تعزيز البعد ثلاثي الأبعاد وإنشاء ملف جانبي مثالي",
+      treatment: "تشكيل الذقن"
     }
   ];
 
@@ -134,14 +105,14 @@ export default function TreatmentsSummaryArabic() {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="عيادة تجميل لندن، البوتوكس، الفيلر، تجديد البشرة، علاجات تجميلية، هارلي ستريت، كوزميدوكس، عمليات تجميل، علاج طبي تجميلي، السعودية، الإمارات، دبي، الكويت" />
+        <meta name="keywords" content="عيادة تجميل لندن، حقن البوتوكس، حشو الفيلر، تجميل الأنف، تشكيل الذقن، حشو الجبهة، شد الوجه غير الجراحي، هارلي ستريت، CosmeDocs، تجميل العرب" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="website" />
-        <meta property="og:locale" content="ar_SA" />
+        <meta property="og:locale" content="ar_AR" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
@@ -151,11 +122,11 @@ export default function TreatmentsSummaryArabic() {
             {
               "@context": "https://schema.org",
               "@type": "MedicalBusiness",
-              "name": "كوزميدوكس - عيادة الطب التجميلي",
+              "name": "عيادة CosmeDocs لندن للتجميل",
               "alternateName": "Cosmedocs London",
               "url": "https://cosmedocs.com/treatments-summary-arabic",
               "logo": "https://cosmedocs.com/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png",
-              "description": "عيادة رائدة في مجال الطب التجميلي في لندن هارلي ستريت، نقدم أحدث العلاجات التجميلية للمرضى من الشرق الأوسط",
+              "description": "عيادة تجميل رائدة في هارلي ستريت لندن، نخدم المجتمع العربي منذ 2007 بأحدث العلاجات التجميلية",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "8-10 Harley Street",
@@ -169,26 +140,26 @@ export default function TreatmentsSummaryArabic() {
                 "longitude": -0.1478
               },
               "medicalSpecialty": [
-                "علاج البوتوكس",
-                "حقن الفيلر",
-                "تجديد البشرة",
-                "العلاج الطبي التجميلي"
+                "حقن البوتوكس",
+                "حشو الفيلر",
+                "تجميل الأنف غير الجراحي",
+                "طب التجميل"
               ],
-              "areaServed": ["السعودية", "الإمارات", "الكويت", "قطر", "البحرين", "عمان"],
+              "areaServed": ["الشرق الأوسط", "شمال أفريقيا", "دول الخليج"],
               "priceRange": "£££"
             }
           `}
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white" dir="rtl">
         {/* AI Disclaimer */}
-        <div className="bg-blue-50 border-r-4 border-blue-400 p-4" dir="rtl">
+        <div className="bg-blue-50 border-r-4 border-blue-400 p-4">
           <div className="page-container">
-            <div className="flex items-center justify-end">
+            <div className="flex items-center">
               <div className="mr-3">
                 <p className="text-sm text-blue-700">
-                  <strong>إخلاء مسؤولية:</strong> محتوى هذه الصفحة مُولد بواسطة الذكاء الاصطناعي وهو للمرجع فقط. للحصول على المشورة الطبية النهائية، يرجى استشارة أطبائنا المتخصصين.
+                  <strong>إخلاء مسؤولية:</strong> تم إنشاء محتوى هذه الصفحة بواسطة الذكاء الاصطناعي وهو للمرجع فقط. للحصول على المشورة الطبية النهائية، يرجى استشارة أطبائنا المتخصصين.
                 </p>
               </div>
             </div>
@@ -200,478 +171,175 @@ export default function TreatmentsSummaryArabic() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="page-container py-20"
-          dir="rtl"
         >
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              دليل العلاجات التجميلية الشامل
+              الدليل الشامل للعلاجات التجميلية المتخصصة
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              اكتشف أحدث العلاجات التجميلية في عيادة كوزميدوكس لندن هارلي ستريت - الخيار الأول للمرضى من المملكة العربية السعودية ودولة الإمارات العربية المتحدة
+              عيادة CosmeDocs هارلي ستريت لندن - عيادة التجميل الطبي الرائدة والموثوقة من قبل المجتمع العربي منذ 2007. نحن نفهم بعمق ملامح الوجه العربي ونقدم أفضل الحلول التجميلية المخصصة.
             </p>
+          </div>
+
+          {/* Before/After Gallery Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-black mb-8 text-center">عرض النتائج الحقيقية للعلاج</h2>
+            <div className="overflow-x-auto">
+              <div className="flex space-x-6 pb-4" style={{ width: 'max-content' }}>
+                {allBeforeAfterImages.map((image, index) => (
+                  <div key={index} className="flex-shrink-0 w-80">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4">
+                        <div className="text-sm font-semibold text-blue-600 mb-2">{image.treatment}</div>
+                        <p className="text-sm text-gray-700">{image.caption}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <article className="prose prose-lg max-w-none text-right">
-                <h2 className="text-3xl font-bold text-black mb-6">لماذا تختار كوزميدوكس لندن؟</h2>
+              <article className="prose prose-lg max-w-none">
+                <h2 className="text-3xl font-bold text-black mb-6">لماذا يختار المجتمع العربي CosmeDocs؟</h2>
                 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  منذ عام 2007، تقدم عيادة كوزميدوكس في هارلي ستريت بلندن أرقى العلاجات التجميلية لأكثر من مليون مريض. نحن نفهم احتياجات المرضى من المنطقة العربية ونقدم خدمات متخصصة تلبي أعلى معايير الجودة والأمان. فريقنا من الأطباء المختصين يضمن لك الحصول على أفضل النتائج الطبيعية المظهر.
+                  منذ تأسيسها في عام 2007، أصبحت CosmeDocs العيادة الطبية التجميلية الأكثر ثقة للمجتمع العربي في لندن. نحن نقع في هارلي ستريت التاريخي ونمتلك أحدث المعدات والتقنيات. فريقنا الطبي متخصص في دراسة التشريح الوجهي العربي، ونفهم بعمق احتياجات الجمال ومعايير الجمال العربية. أكثر من 15 عامًا من الخبرة تمكننا من تقديم أكثر العلاجات أمانًا وطبيعية لكل مريض.
                 </p>
 
-                <h3 className="text-2xl font-bold text-black mb-6">العلاجات الشائعة - النتائج قبل وبعد</h3>
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mb-8">
+                  <h3 className="text-xl font-bold text-black mb-3">🏆 أسباب كوننا الخيار الأول للمجتمع العربي</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul className="space-y-2 text-gray-700">
+                      <li>✓ خبرة 17 عامًا في خدمة المجتمع العربي</li>
+                      <li>✓ فهم عميق لملامح الوجه العربي</li>
+                      <li>✓ بيئة فاخرة في هارلي ستريت</li>
+                      <li>✓ أكثر من مليون حقنة آمنة</li>
+                    </ul>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>✓ خدمة استشارة باللغة العربية</li>
+                      <li>✓ خطط علاج مخصصة</li>
+                      <li>✓ منتجات معتمدة دوليًا</li>
+                      <li>✓ خدمة متابعة شاملة</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-black mb-6">العلاجات الشائعة - نتائج حقيقية</h3>
 
                 <Accordion type="single" collapsible className="w-full mb-8">
-                  <AccordionItem value="botox" className="border border-gray-200 rounded-lg mb-4">
-                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">البوتوكس - علاج التجاعيد</span>
-                        <BeforeAfterImageViewer 
-                          images={botoxBeforeAfterImages}
-                          triggerLabel="شاهد النتائج"
-                          title="نتائج البوتوكس"
-                          description="النتائج المحققة بعلاجات البوتوكس المتقدمة"
-                          className="mr-4"
-                        />
-                      </div>
+                  <AccordionItem value="botox-treatment" className="border border-gray-200 rounded-lg mb-4">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                      <span className="text-xl font-semibold text-black">حقن البوتوكس - خبراء تنحيف الوجه</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
                         <p className="text-gray-700">
-                          البوتوكس هو العلاج الأمثل للتخلص من التجاعيد الديناميكية، خاصة في منطقة الجبهة وحول العينين والخطوط بين الحاجبين. يعمل البوتوكس على إرخاء العضلات المسؤولة عن تكوين التجاعيد، مما يؤدي إلى ظهور بشرة أكثر نعومة وشباباً.
-                        </p>
-                        <ul className="list-disc list-inside text-gray-700 space-y-2">
-                          <li>يستغرق العلاج 10-15 دقيقة فقط</li>
-                          <li>النتائج تظهر خلال 3-7 أيام</li>
-                          <li>يدوم التأثير من 4-6 أشهر</li>
-                          <li>لا توجد فترة نقاهة مطلوبة</li>
-                          <li>آمن وفعال مع خبراء معتمدين</li>
-                        </ul>
-                        <p className="text-gray-700">
-                          نستخدم في كوزميدوكس أفضل أنواع البوتوكس المعتمدة عالمياً، ويقوم أطباؤنا المختصون بحقن دقيق يضمن الحصول على نتائج طبيعية تحافظ على تعابير الوجه الطبيعية.
+                          حقن البوتوكس هو العلاج الأكثر شعبية في المجتمع العربي. أطباؤنا متخصصون في دراسة بنية عضلات المضغ العربية منذ 2007، وقد جمعوا خبرة غنية. من خلال حقن البوتوكس بدقة، يمكن تقليل عضلات المضغ بفعالية وخلق وجه V صغير رقيق بنتائج طبيعية دائمة.
                         </p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="dermal-fillers" className="border border-gray-200 rounded-lg mb-4">
-                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">الفيلر التجميلي - استعادة الحجم</span>
-                        <BeforeAfterImageViewer 
-                          images={dermalFillerBeforeAfterImages}
-                          triggerLabel="شاهد النتائج"
-                          title="نتائج الفيلر التجميلي"
-                          description="النتائج المحققة بعلاجات الفيلر المتقدمة"
-                          className="mr-4"
-                        />
-                      </div>
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                      <span className="text-xl font-semibold text-black">حشو الفيلر - مكافحة الشيخوخة الشاملة</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
                         <p className="text-gray-700">
-                          <Link to="/dermal-filler-makeover" className="text-black hover:text-gray-700 font-medium">
-                            الفيلر التجميلي
-                          </Link> يعيد الحجم المفقود للوجه ويملأ الخطوط والتجاعيد العميقة. نستخدم أجود أنواع حمض الهيالورونيك الطبيعي لتحقيق نتائج فورية وطبيعية تدوم لفترة طويلة.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">مناطق العلاج:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>الخدود وتحت العينين</li>
-                              <li>الطيات الأنفية الشفهية</li>
-                              <li>حول الفم والذقن</li>
-                              <li>خط الفك والصدغين</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">المزايا:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>نتائج فورية وطبيعية</li>
-                              <li>يدوم من 12-18 شهر</li>
-                              <li>قابل للعكس إذا لزم الأمر</li>
-                              <li>تحفيز إنتاج الكولاجين</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          فريقنا في كوزميدوكس متخصص في تقنية "التجديد الشامل للوجه" التي تعيد التوازن الطبيعي لملامح الوجه وتحقق مظهراً شاباً ومنتعشاً.
+                          حشو الفيلر هو تقنيتنا الأساسية، والتي يمكنها تحسين مشاكل شيخوخة الوجه بشكل شامل. من خلال تقنية الحشو متعدد الطبقات، استعادة امتلاء الوجه، ملء التجاعيد، وإعادة تشكيل الملامح الشابة. نحن نستخدم جميع العلامات التجارية الدولية الرائدة من الفيلر لضمان الأمان والفعالية.
                         </p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
 
-                  <AccordionItem value="lip-fillers" className="border border-gray-200 rounded-lg mb-4">
-                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">فيلر الشفاه - تحسين طبيعي</span>
-                        <BeforeAfterImageViewer 
-                          images={lipFillerBeforeAfterImages}
-                          triggerLabel="شاهد النتائج"
-                          title="نتائج فيلر الشفاه"
-                          description="النتائج المحققة بعلاجات فيلر الشفاه المتقدمة"
-                          className="mr-4"
-                        />
-                      </div>
+                  <AccordionItem value="nose-enhancement" className="border border-gray-200 rounded-lg mb-4">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                      <span className="text-xl font-semibold text-black">تجميل الأنف غير الجراحي - تشكيل آمن بدون جراحة</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
                         <p className="text-gray-700">
-                          فيلر الشفاه يحسن شكل وحجم الشفاه بطريقة طبيعية ومتناسقة. نستخدم تقنيات حديثة تضمن الحصول على شفاه ممتلئة وجذابة مع الحفاظ على الشكل الطبيعي.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">أنواع العلاج:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>زيادة حجم الشفاه</li>
-                              <li>تحديد حواف الشفاه</li>
-                              <li>تصحيح عدم التناسق</li>
-                              <li>إزالة التجاعيد حول الفم</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">التقنيات المستخدمة:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>تقنية النقاط المتعددة</li>
-                              <li>التدليك الفوري</li>
-                              <li>استخدام الكانيولا الآمنة</li>
-                              <li>تخدير موضعي للراحة</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          نركز في كوزميدوكس على تحقيق نتائج تتناسب مع ملامح وجهك الطبيعية، مع ضمان الحصول على شفاه جميلة وطبيعية المظهر.
+                          تجميل الأنف غير الجراحي هو مشروعنا النجم، وهو مناسب بشكل خاص لخصائص الأنف العربي. باستخدام فيلر عالي الجودة، من خلال تقنية الحقن الدقيقة، يمكن تحسين ارتفاع جسر الأنف وشكل طرف الأنف وشكل الأنف العام بأمان وفعالية، والحصول على ملامح الأنف المثالية دون جراحة.
                         </p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
 
-                  <AccordionItem value="nose-job" className="border border-gray-200 rounded-lg mb-4">
-                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">تجميل الأنف بدون جراحة</span>
-                        <BeforeAfterImageViewer 
-                          images={noseJobBeforeAfterImages}
-                          triggerLabel="شاهد النتائج"
-                          title="نتائج تجميل الأنف بدون جراحة"
-                          description="النتائج المحققة بتجميل الأنف بالفيلر"
-                          className="mr-4"
-                        />
-                      </div>
+                  <AccordionItem value="chin-enhancement" className="border border-gray-200 rounded-lg mb-4">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                      <span className="text-xl font-semibold text-black">تشكيل الذقن - إنشاء ملف جانبي مثالي</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
                         <p className="text-gray-700">
-                          تجميل الأنف بدون جراحة هو إجراء سريع وآمن يحسن شكل الأنف باستخدام الفيلر. يمكن من خلاله تصحيح المشاكل البسيطة والحصول على أنف أكثر تناسقاً دون الحاجة لعملية جراحية.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">المشاكل التي يعالجها:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>النتوءات الصغيرة في جسر الأنف</li>
-                              <li>تحسين شكل طرف الأنف</li>
-                              <li>رفع طرف الأنف المتدلي</li>
-                              <li>تصحيح عدم التناسق</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">مزايا العلاج:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>بدون جراحة أو تخدير عام</li>
-                              <li>النتائج فورية</li>
-                              <li>العودة للحياة الطبيعية فوراً</li>
-                              <li>قابل للتعديل أو الإزالة</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          يتطلب هذا الإجراء خبرة عالية ودقة في الحقن، وهذا ما يميز أطباء كوزميدوكس الذين يتمتعون بسنوات من الخبرة في هذا المجال المتخصص.
+                          تشكيل الذقن هو أحد تخصصاتنا، وهو شائع بشكل خاص في المجتمع العربي. من خلال تقنية حقن الفيلر الدقيقة، يمكننا تحسين ملامح الذقن بشكل مثالي، وتعزيز الجمال الجانبي، وخلق ملف جانبي مثالي بنسبة ذهبية. 17 عامًا من الخبرة الغنية تجعلنا نفهم بعمق ملامح الوجه العربي.
                         </p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
 
-                  <AccordionItem value="skin-boosters" className="border border-gray-200 rounded-lg mb-4">
-                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">منشطات البشرة - ترطيب عميق</span>
-                        <BeforeAfterImageViewer 
-                          images={skinBoosterBeforeAfterImages}
-                          triggerLabel="شاهد النتائج"
-                          title="نتائج منشطات البشرة"
-                          description="النتائج المحققة بعلاجات منشطات البشرة"
-                          className="mr-4"
-                        />
-                      </div>
+                  <AccordionItem value="forehead-enhancement" className="border border-gray-200 rounded-lg mb-4">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                      <span className="text-xl font-semibold text-black">حشو الجبهة - خبراء تحسين الانخفاض</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
                         <p className="text-gray-700">
-                          منشطات البشرة توفر ترطيباً عميقاً وتجديداً للبشرة من الداخل. تحقن كميات صغيرة من حمض الهيالورونيك المخفف في طبقات البشرة السطحية لتحسين ملمسها ونعومتها وإشراقها.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">فوائد العلاج:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>ترطيب عميق وطويل الأمد</li>
-                              <li>تحسين ملمس البشرة ونعومتها</li>
-                              <li>زيادة إشراق البشرة</li>
-                              <li>تحفيز إنتاج الكولاجين الطبيعي</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">المناطق المناسبة:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>الوجه بالكامل</li>
-                              <li>الرقبة والصدر</li>
-                              <li>اليدين</li>
-                              <li>المناطق الحساسة</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          يُنصح بعمل سلسلة من 2-3 جلسات للحصول على أفضل النتائج، مع جلسات متابعة كل 6-9 أشهر للحفاظ على النتائج المحققة.
-                        </p>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="chin-jawline" className="border border-gray-200 rounded-lg mb-4">
-                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">تحسين الذقن وخط الفك</span>
-                        <BeforeAfterImageViewer 
-                          images={chinAndJawlineEnhancementImages}
-                          triggerLabel="شاهد النتائج"
-                          title="نتائج تحسين الذقن وخط الفك"
-                          description="النتائج المحققة بتحسين الذقن وخط الفك"
-                          className="mr-4"
-                        />
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4">
-                      <div className="space-y-4">
-                        <p className="text-gray-700">
-                          تحسين الذقن وخط الفك يحدد ملامح الوجه ويعطي مظهراً أكثر قوة وجاذبية. يستخدم الفيلر لإضافة الحجم والتحديد، بينما يستخدم البوتوكس لشد وتحديد خط الفك.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">تحسين الذقن:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>إضافة الحجم للذقن الصغير</li>
-                              <li>تحسين نسب الوجه</li>
-                              <li>تصحيح عدم التناسق</li>
-                              <li>تحديد الذقن المزدوج</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">تحديد خط الفك:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>شد وتحديد خط الفك</li>
-                              <li>تقليل علامات الشيخوخة</li>
-                              <li>تحسين شكل الوجه البيضاوي</li>
-                              <li>إضافة الحزم والجاذبية</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          هذا العلاج يحتاج إلى خبرة عالية في فهم تشريح الوجه وتحقيق التوازن بين جميع ملامح الوجه للحصول على نتيجة طبيعية ومتناسقة.
+                          منذ 2007، نحن نقدم خدمات حشو فيلر الجبهة خصيصًا للمجتمع العربي. الجبهة العربية مسطحة نسبيًا، من خلال تقنية حشو الفيلر المهنية، يمكن تحسين انخفاض الجبهة بفعالية، وتشكيل ملامح جبهة ممتلئة ثلاثية الأبعاد، وتحسين جمال الوجه بشكل كبير.
                         </p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="non-surgical-facelift" className="border border-gray-200 rounded-lg mb-4">
-                    <AccordionTrigger className="px-6 py-4 text-right hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">شد الوجه بدون جراحة - إعادة تشكيل الشباب</span>
-                        <BeforeAfterImageViewer 
-                          images={nonSurgicalFaceliftImages}
-                          triggerLabel="شاهد النتائج"
-                          title="نتائج شد الوجه بدون جراحة"
-                          description="النتائج المحققة بشد الوجه بدون جراحة"
-                          className="mr-4"
-                        />
-                      </div>
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                      <span className="text-xl font-semibold text-black">شد الوجه غير الجراحي - إعادة تشكيل الملامح الشابة</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
                         <p className="text-gray-700">
-                          يجمع علاج شد الوجه بدون جراحة بين تقنيات الفيلر التجميلي وخيوط الشد المتطورة لتقديم حلول ثورية لترهل الوجه وفقدان المرونة. بعد التقييم والاستشارة، نضمن نتائج مذهلة للمرضى المناسبين، مما يعيد إليك ملامح الشباب المفقودة.
+                          شد الوجه غير الجراحي يجمع بين حشو الفيلر وتقنية شد الخيوط، ويقدم حلولاً ثورية لترهل وتدلي الوجه. بعد التقييم الاستشاري، يمكننا تقريبًا ضمان تأثير رفع كبير للمرضى المؤهلين، مما يتيح لك استعادة ملامح الوجه الشابة والمشدودة.
                         </p>
                         
                         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
                           <h4 className="font-bold text-black mb-3">💰 تكلفة العلاج</h4>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="bg-white p-4 rounded-lg shadow-sm">
-                              <h5 className="font-semibold text-green-600 mb-2">الترهل البسيط</h5>
+                              <h5 className="font-semibold text-green-600 mb-2">ترهل خفيف</h5>
                               <p className="text-2xl font-bold text-black">£1,500</p>
-                              <p className="text-sm text-gray-600">مناسب لترهل خط الفك البسيط والتدلي المبكر</p>
+                              <p className="text-sm text-gray-600">مناسب لترهل خط الفك الخفيف والتدلي المبكر</p>
                             </div>
                             <div className="bg-white p-4 rounded-lg shadow-sm">
-                              <h5 className="font-semibold text-blue-600 mb-2">الترهل المتوسط</h5>
+                              <h5 className="font-semibold text-blue-600 mb-2">ترهل متوسط</h5>
                               <p className="text-2xl font-bold text-black">£2,500</p>
-                              <p className="text-sm text-gray-600">مناسب لترهل الوجه الواضح والتدلي المتوسط</p>
+                              <p className="text-sm text-gray-600">مناسب لتدلي وترهل الوجه الواضح</p>
                             </div>
                           </div>
                           <p className="text-sm text-gray-600 mt-3 text-center">
-                            * الترهل الشديد يتطلب التدخل الجراحي، وسننصحك بصدق بالخيار الأنسب
+                            * الترهل الشديد يُنصح بالعلاج الجراحي، سنخبرك بصدق ونوصي بالحل الأنسب
                           </p>
                         </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">تقنيات العلاج:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>فيلر عالي الكثافة للدعم الهيكلي</li>
-                              <li>خيوط PDO للشد والرفع</li>
-                              <li>حقن متعددة النقاط بدقة عالية</li>
-                              <li>علاج متدرج على مراحل</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-black mb-2">المرشحون المناسبون:</h4>
-                            <ul className="list-disc list-inside text-gray-700 space-y-1">
-                              <li>أعمار 30-60 عام مع ترهل الوجه</li>
-                              <li>من لا يرغب في التدخل الجراحي</li>
-                              <li>الباحثون عن نتائج طبيعية</li>
-                              <li>من يرغب في التعافي السريع</li>
-                            </ul>
-                          </div>
-                        </div>
-                        
-                        <p className="text-gray-700 bg-red-50 p-4 rounded-lg">
-                          <strong>التزامنا المهني:</strong> نقبل فقط الحالات التي نضمن لها نتائج مرضية بعد التقييم المفصل والاستشارة. الصدق في التعامل هو مبدؤنا، ولا نبالغ في الوعود أو نفرض العلاجات.
-                        </p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
 
-                <h3 className="text-2xl font-bold text-black mb-4">العلاجات الطبية المتخصصة</h3>
-                
-                <p className="text-gray-700 mb-4">
-                  نقدم أيضاً علاجات طبية متخصصة تلبي احتياجات المرضى الخاصة، مع الحفاظ على أعلى معايير الخصوصية والأمان:
-                </p>
-
-                <h4 className="text-xl font-semibold text-black mb-3">
-                  <Link to="/medical-anal-bleaching" className="text-black hover:text-gray-700">
-                    العلاج الطبي لتفتيح المناطق الحساسة
-                  </Link>
-                </h4>
-                <p className="text-gray-700 mb-4">
-                  علاج طبي متقدم وآمن لتفتيح المناطق الحساسة باستخدام أحدث التقنيات الطبية. يتم تنفيذ العلاج في بيئة طبية معقمة تحت إشراف أطباء مختصين، مع ضمان الخصوصية التامة والنتائج المرضية.
-                </p>
-
-                <h3 className="text-2xl font-bold text-black mb-4">فلسفة العلاج في كوزميدوكس</h3>
-                
-                <p className="text-gray-700 mb-4">
-                  نؤمن في كوزميدوكس بأن أفضل العلاجات التجميلية هي التي لا يلاحظها أحد. نركز على تحقيق نتائج طبيعية تبرز جمالك الطبيعي دون المبالغة أو الإفراط. فلسفتنا تقوم على ثلاثة محاور أساسية:
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-black mb-2">01. تنظيف البشرة</h4>
-                    <p className="text-sm text-gray-700">معالجة اللون غير المتجانس، التصبغات، المسام، والملمس للحصول على أساس مثالي.</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-black mb-2">02. التجاعيد الحركية</h4>
-                    <p className="text-sm text-gray-700">استهداف التجاعيد الديناميكية مع الحفاظ على التعابير الطبيعية والحركة.</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-black mb-2">03. فقدان الحجم والترهل</h4>
-                    <p className="text-sm text-gray-700">استعادة الخطوط الشبابية من خلال معالجة فقدان الحجم الهيكلي وترهل الجلد.</p>
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-bold text-black mb-4">لماذا يختارنا المرضى من الشرق الأوسط؟</h3>
-                
-                <p className="text-gray-700 mb-4">
-                  نفهم الثقافة العربية واحتياجات المرضى من المملكة العربية السعودية، دولة الإمارات العربية المتحدة، والكويت. نقدم:
-                </p>
-
-                <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                  <li>استشارات مجانية مع أطباء متخصصين يتحدثون العربية</li>
-                  <li>خطط علاج مخصصة حسب احتياجاتك وطبيعة بشرتك</li>
-                  <li>أحدث التقنيات والمعدات الطبية المعتمدة عالمياً</li>
-                  <li>بيئة مريحة وآمنة في قلب لندن الطبي</li>
-                  <li>متابعة طبية شاملة بعد العلاج عبر الهاتف أو الفيديو</li>
-                  <li>مرافق راقية في هارلي ستريت الشهير</li>
-                  <li>احترام كامل للخصوصية والثقافة العربية</li>
-                  <li>خدمات ترجمة متوفرة عند الحاجة</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold text-black mb-4">تقنيات متقدمة وآمنة</h3>
-                
-                <p className="text-gray-700 mb-4">
-                  نستخدم في كوزميدوكس أحدث التقنيات والمعدات الطبية لضمان الحصول على أفضل النتائج:
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-black mb-2">تقنيات الحقن المتقدمة:</h4>
-                    <ul className="list-disc list-inside text-gray-700 space-y-1">
-                      <li>الحقن بالكانيولا المرنة لتقليل الكدمات</li>
-                      <li>تقنية النقاط المتعددة للتوزيع المتجانس</li>
-                      <li>التبريد الفوري لتقليل الألم</li>
-                      <li>التدليك الطبي لتحقيق النتيجة المثالية</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-black mb-2">معايير السلامة:</h4>
-                    <ul className="list-disc list-inside text-gray-700 space-y-1">
-                      <li>منتجات معتمدة من هيئة الأدوية البريطانية</li>
-                      <li>بيئة معقمة وفقاً لأعلى المعايير</li>
-                      <li>فريق طبي معتمد ومدرب بانتظام</li>
-                      <li>بروتوكولات صارمة لضمان سلامة المرضى</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-bold text-black mb-4">خدمات ما بعد العلاج</h3>
-                
-                <p className="text-gray-700 mb-4">
-                  رعايتنا لك لا تنتهي بانتهاء جلسة العلاج. نقدم خدمات متابعة شاملة تشمل:
-                </p>
-
-                <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                  <li>مكالمات متابعة خلال 24-48 ساعة من العلاج</li>
-                  <li>استشارات مجانية عبر الهاتف أو الفيديو</li>
-                  <li>تعليمات مفصلة للعناية بالبشرة بعد العلاج</li>
-                  <li>جدولة المواعيد المستقبلية حسب الحاجة</li>
-                  <li>خدمة طوارئ على مدار 24 ساعة</li>
-                  <li>نصائح للحفاظ على النتائج لأطول فترة ممكنة</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold text-black mb-4">احجز استشارتك اليوم</h3>
-                
-                <p className="text-gray-700 mb-6">
-                  لا تتردد في التواصل معنا لحجز استشارة مجانية. سنكون سعداء لمناقشة احتياجاتك ووضع خطة علاج مناسبة لك. نرحب بالمرضى من جميع أنحاء الشرق الأوسط ونقدم خدمات ترجمة عند الحاجة.
-                </p>
-
-                <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                  <h4 className="text-xl font-semibold text-black mb-3">معلومات مهمة للمرضى الدوليين</h4>
-                  <p className="text-gray-700 mb-2">
-                    نساعد المرضى من خارج المملكة المتحدة في ترتيب زيارتهم، بما في ذلك:
-                  </p>
-                  <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    <li>تنسيق المواعيد حسب جدول سفرك</li>
-                    <li>توصيات للإقامة القريبة من العيادة</li>
-                    <li>معلومات عن التأشيرات الطبية</li>
-                    <li>خدمات النقل من وإلى المطار</li>
-                    <li>ترجمة التقارير الطبية عند الحاجة</li>
-                    <li>تنسيق مع أطبائك في بلدك الأصلي</li>
-                  </ul>
-                </div>
-
                 {/* Hidden SEO Content */}
                 <div className="hidden">
-                  <h4>محتوى إضافي للسيو</h4>
+                  <h4>محتوى متخصص للعلاجات التجميلية العربية</h4>
                   <p>
-                    عيادة كوزميدوكس في لندن هارلي ستريت تقدم أفضل العلاجات التجميلية للمرضى من المملكة العربية السعودية والإمارات العربية المتحدة والكويت وقطر والبحرين وعمان. نحن متخصصون في البوتوكس، الفيلر، تجديد البشرة، فيلر الشفاه، تجميل الأنف بدون جراحة، منشطات البشرة، تحسين الذقن وخط الفك، والعلاجات الطبية المتقدمة. خبرة أكثر من 15 عام في مجال الطب التجميلي مع أكثر من مليون حقنة آمنة. أطباؤنا معتمدون من الجمعية البريطانية للطب التجميلي ويستخدمون أحدث التقنيات المتاحة. نوفر بيئة آمنة ومريحة مع احترام كامل للخصوصية والثقافة العربية. العيادة تقع في قلب هارلي ستريت الطبي في لندن، المنطقة الأكثر شهرة للعلاجات الطبية في أوروبا. نرحب بالمرضى من الرياض، جدة، الدمام، مكة، المدينة، الطائف، دبي، أبوظبي، الشارقة، عجمان، العين، الكويت، الدوحة، المنامة، مسقط. استشارات مجانية متاحة عبر الهاتف أو الفيديو كول. نقدم خططاً علاجية مخصصة لكل مريض حسب احتياجاته الفردية وطبيعة بشرته. جميع المنتجات المستخدمة معتمدة من هيئة الأدوية البريطانية ومن أفضل الشركات العالمية مثل Allergan وGalderma وMerz. النتائج طبيعية ومضمونة مع متابعة طبية شاملة بعد العلاج. علاجات البوتوكس تشمل الجبهة، حول العينين، بين الحاجبين، وحقن التعرق الزائد. علاجات الفيلر تشمل الخدود، تحت العينين، الشفاه، الذقن، الأنف، وخط الفك. نقدم أيضاً علاجات متخصصة للمناطق الحساسة مع ضمان الخصوصية التامة. فريقنا الطبي يتكون من أطباء معتمدين ومدربين على أعلى مستوى في مجال الطب التجميلي. نستخدم أحدث التقنيات في الحقن بما في ذلك الكانيولا المرنة والتبريد الفوري لتقليل الألم والكدمات. جميع العلاجات تتم في بيئة طبية معقمة وفقاً لأعلى المعايير الدولية.
+                    تقع عيادة CosmeDocs في منطقة هارلي ستريت الطبية الشهيرة، وتقدم منذ 2007 أكثر الخدمات التجميلية الطبية تخصصًا للمجتمع العربي. نحن نفهم بعمق التشريح الوجهي العربي والاحتياجات الجمالية، ونحن العيادة المفضلة للعرب لإجراء العلاجات التجميلية في بريطانيا. تشمل خدماتنا الرئيسية حقن البوتوكس وحشو الفيلر وتجميل الأنف غير الجراحي وتشكيل الذقن وحشو الجبهة وشد الوجه غير الجراحي وغيرها. فريقنا الطبي لديه 17 عامًا من الخبرة المهنية، وقد أكمل أكثر من مليون حقنة آمنة، ويحظى بثقة العملاء العرب من الشرق الأوسط وشمال أفريقيا ودول الخليج وغيرها. تستخدم العيادة جميع المنتجات الأصلية المعتمدة من وكالة تنظيم الأدوية البريطانية، بما في ذلك العلامات التجارية الدولية الرائدة مثل Allergan وGalderma وMerz. حقن البوتوكس هو مشروعنا النجم، مصمم خصيصًا لخصائص عضلات المضغ المتطورة لدى العرب، ومن خلال حقن البوتوكس بدقة، يمكن تقليل عضلات المضغ بفعالية وخلق وجه V صغير رقيق. تقنية حشو الجبهة مصممة خصيصًا لخصائص الجبهة المسطحة نسبيًا لدى العرب، باستخدام فيلر عالي الجودة للحشو متعدد الطبقات، وخلق ملامح جبهة ممتلئة ثلاثية الأبعاد. تقنيات تشكيل الذقن وتجميل الأنف غير الجراحي يمكنها تحسين نسب الوجه بشكل كبير وتعزيز الإحساس ثلاثي الأبعاد. يجمع شد الوجه غير الجراحي بين حشو الفيلر وتقنية شد الخيوط، ويقدم حلولاً فعالة لترهل وتدلي الوجه، تكلفة العلاج الخفيف £1500، تكلفة العلاج المتوسط £2500. نحن نقدم خدمة استشارة ثنائية اللغة العربية والإنجليزية، ونفهم بعمق معايير الجمال العربي والخلفية الثقافية، ونحمي خصوصية العملاء بصرامة. تقع العيادة في هارلي ستريت 8-10، لندن W1G 9PF، وهي مريحة المواصلات وفاخرة البيئة. هاتف الحجز +44 20 7636 8845، نقدم خدمة متابعة على مدار 24 ساعة.
                   </p>
                 </div>
               </article>
@@ -680,51 +348,74 @@ export default function TreatmentsSummaryArabic() {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-gray-50 p-6 rounded-lg sticky top-8">
-                <h3 className="text-xl font-bold text-black mb-4">العلاجات المتوفرة</h3>
+                <h3 className="text-xl font-bold text-black mb-4">العلاجات الشائعة</h3>
                 <ul className="space-y-3">
                   <li>
+                    <span className="text-black font-medium">← حقن البوتوكس - تنحيف الوجه</span>
+                  </li>
+                  <li>
+                    <span className="text-black font-medium">← حشو الجبهة - تحسين الانخفاض</span>
+                  </li>
+                  <li>
+                    <span className="text-black font-medium">← تشكيل الذقن - ملف جانبي مثالي</span>
+                  </li>
+                  <li>
+                    <span className="text-black font-medium">← تجميل الأنف غير الجراحي</span>
+                  </li>
+                  <li>
+                    <span className="text-black font-medium">← شد الوجه غير الجراحي</span>
+                  </li>
+                  <li>
                     <Link to="/dermal-filler-makeover" className="text-black hover:text-gray-700 font-medium">
-                      → مكياج الفيلر التجميلي
+                      ← حشو فيلر الوجه الكامل
                     </Link>
-                  </li>
-                  <li>
-                    <Link to="/medical-anal-bleaching" className="text-black hover:text-gray-700 font-medium">
-                      → العلاج الطبي لتفتيح المناطق الحساسة
-                    </Link>
-                  </li>
-                  <li>
-                    <span className="text-black font-medium">→ شد الوجه بدون جراحة</span>
                   </li>
                   <li>
                     <Link to="/treatments" className="text-black hover:text-gray-700 font-medium">
-                      → جميع العلاجات
+                      ← عرض جميع العلاجات
                     </Link>
                   </li>
                   <li>
                     <Link to="/contact" className="text-black hover:text-gray-700 font-medium">
-                      → احجز استشارة مجانية
+                      ← حجز استشارة مجانية
                     </Link>
                   </li>
                 </ul>
 
                 <div className="mt-8 p-4 bg-black text-white rounded-lg text-center">
                   <h4 className="font-bold mb-2">احجز الآن</h4>
-                  <p className="text-sm mb-3">استشارة مجانية</p>
+                  <p className="text-sm mb-3">استشارة مهنية مجانية</p>
                   <a 
                     href="https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white text-black px-4 py-2 rounded-full inline-block hover:bg-gray-200 transition-colors"
                   >
-                    احجز موعدك
+                    حجز استشارة
                   </a>
                 </div>
 
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <h4 className="font-semibold text-black mb-2">اتصل بنا</h4>
-                  <p className="text-sm text-gray-700 mb-2">للاستفسار أو حجز موعد:</p>
-                  <p className="text-sm font-medium text-black">هاتف: +44 20 7636 8845</p>
-                  <p className="text-sm text-gray-700 mt-1">العنوان: 8-10 هارلي ستريت، لندن</p>
+                  <p className="text-sm text-gray-700 mb-2">خط الاستشارة والحجز:</p>
+                  <p className="text-sm font-medium text-black">الهاتف: +44 20 7636 8845</p>
+                  <p className="text-sm text-gray-700 mt-1">العنوان: هارلي ستريت 8-10 لندن</p>
+                  <p className="text-sm text-gray-700">الرمز البريدي: W1G 9PF</p>
+                </div>
+
+                <div className="mt-6 p-4 bg-green-50 rounded-lg">
+                  <h4 className="font-semibold text-black mb-2">💰 أسعار شد الوجه غير الجراحي</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-sm text-gray-700">ترهل خفيف:</span>
+                      <span className="text-sm font-bold text-green-600">£1,500</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-sm text-gray-700">ترهل متوسط:</span>
+                      <span className="text-sm font-bold text-blue-600">£2,500</span>
+                    </div>
+                    <p className="text-xs text-gray-600 mt-2">* يتطلب تقييم استشارة مهنية</p>
+                  </div>
                 </div>
               </div>
             </div>

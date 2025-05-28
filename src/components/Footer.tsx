@@ -21,6 +21,8 @@ export default function Footer() {
               <li><Link to="/about" className="text-gray-400 hover:text-white text-sm">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white text-sm">Contact</Link></li>
               <li><Link to="/booking" className="text-gray-400 hover:text-white text-sm">Book Appointment</Link></li>
+              <li><Link to="/treatments-summary-chinese" className="text-gray-400 hover:text-white text-sm">中文治疗指南</Link></li>
+              <li><Link to="/treatments-summary-arabic" className="text-gray-400 hover:text-white text-sm">دليل العلاجات</Link></li>
             </ul>
           </nav>
           

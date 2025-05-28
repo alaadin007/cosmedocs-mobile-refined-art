@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -12,6 +11,94 @@ export default function TreatmentsSummaryChinese() {
     "伦敦CosmeDocs哈利街诊所专业美容治疗指南。肉毒杆菌瘦脸，下巴鼻部塑形，玻尿酸填充，非手术拉皮。自2007年以来服务华人社区，深受信赖。",
     "/treatments-summary-chinese"
   );
+
+  // All before/after images for horizontal scroll
+  const allBeforeAfterImages = [
+    { 
+      src: "/lovable-uploads/36b15e21-1905-49d8-b920-68bc23b235c5.png", 
+      alt: "瘦脸针 - 咬肌缩小效果", 
+      caption: "肉毒杆菌瘦脸针 - 有效缩小咬肌，打造精致小V脸",
+      treatment: "瘦脸针"
+    },
+    { 
+      src: "/lovable-uploads/8d22b27a-c2d5-4790-abac-6c6df301559a.png", 
+      alt: "瘦脸针 - 脸型改善", 
+      caption: "瘦脸针治疗 - 改善方脸，塑造优雅脸部轮廓",
+      treatment: "瘦脸针"
+    },
+    { 
+      src: "/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png", 
+      alt: "瘦脸针 - 自然效果", 
+      caption: "瘦脸针 - 自然渐进的瘦脸效果，保持面部表情自然",
+      treatment: "瘦脸针"
+    },
+    { 
+      src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", 
+      alt: "玻尿酸填充 - 面部塑形", 
+      caption: "玻尿酸填充 - 恢复面部饱满度，改善面部轮廓",
+      treatment: "玻尿酸填充"
+    },
+    { 
+      src: "/lovable-uploads/8e5a45ba-9dab-4b06-a44b-2bddfaacfe4b.png", 
+      alt: "玻尿酸填充 - 苹果肌塑造", 
+      caption: "苹果肌玻尿酸填充 - 增加面部立体感和年轻感",
+      treatment: "玻尿酸填充"
+    },
+    { 
+      src: "/lovable-uploads/75803d61-d5ce-414e-96c8-8fdc7c0e03ba.png", 
+      alt: "玻尿酸填充 - 皱纹填平", 
+      caption: "玻尿酸填充 - 填平深层皱纹和法令纹",
+      treatment: "玻尿酸填充"
+    },
+    { 
+      src: "/lovable-uploads/81447b08-e528-4535-a4b3-87f93eb36acd.png", 
+      alt: "玻尿酸填充 - 全面年轻化", 
+      caption: "玻尿酸填充 - 全面面部年轻化，自然和谐的效果",
+      treatment: "玻尿酸填充"
+    },
+    { 
+      src: "/lovable-uploads/8fc7a776-c255-4ca9-a8d9-573f4083b7f1.png", 
+      alt: "隆鼻 - 鼻梁塑形", 
+      caption: "非手术隆鼻 - 玻尿酸鼻梁塑形，立即见效",
+      treatment: "非手术隆鼻"
+    },
+    { 
+      src: "/lovable-uploads/37e1c9db-26f6-439b-94c2-fd05fa7e385f.png", 
+      alt: "隆鼻 - 鼻型矫正", 
+      caption: "非手术隆鼻 - 矫正鼻型不对称，改善侧面轮廓",
+      treatment: "非手术隆鼻"
+    },
+    { 
+      src: "/lovable-uploads/0146916c-8864-4889-b0d5-b330859a2c85.png", 
+      alt: "额头填充 - 饱满塑形", 
+      caption: "额头玻尿酸填充 - 改善额头凹陷，塑造饱满额头",
+      treatment: "额头填充"
+    },
+    { 
+      src: "/lovable-uploads/67e6b1a0-9230-467a-baf0-dd5778c41d45.png", 
+      alt: "额头填充 - 轮廓改善", 
+      caption: "额头填充 - 改善额头轮廓，增强面部立体感",
+      treatment: "额头填充"
+    },
+    { 
+      src: "/lovable-uploads/c2be8e56-a215-4332-a5c5-ee6b3f431881.png", 
+      alt: "额头填充 - 自然效果", 
+      caption: "额头玻尿酸填充 - 自然饱满的额头轮廓",
+      treatment: "额头填充"
+    },
+    { 
+      src: "/lovable-uploads/1c08600a-b561-48ca-ae0a-246717da30a7.png", 
+      alt: "下巴塑形 - 轮廓改善", 
+      caption: "下巴玻尿酸塑形 - 改善下巴轮廓，增强面部比例",
+      treatment: "下巴塑形"
+    },
+    { 
+      src: "/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png", 
+      alt: "下巴塑形 - 立体感增强", 
+      caption: "下巴塑形 - 增强下巴立体感，打造完美侧颜",
+      treatment: "下巴塑形"
+    }
+  ];
 
   // Complete before/after image arrays for each treatment
   const jawReductionBeforeAfterImages = [
@@ -194,6 +281,30 @@ export default function TreatmentsSummaryChinese() {
             </p>
           </div>
 
+          {/* Before/After Gallery Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-black mb-8 text-center">真实治疗效果展示</h2>
+            <div className="overflow-x-auto">
+              <div className="flex space-x-6 pb-4" style={{ width: 'max-content' }}>
+                {allBeforeAfterImages.map((image, index) => (
+                  <div key={index} className="flex-shrink-0 w-80">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4">
+                        <div className="text-sm font-semibold text-blue-600 mb-2">{image.treatment}</div>
+                        <p className="text-sm text-gray-700">{image.caption}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
@@ -227,16 +338,7 @@ export default function TreatmentsSummaryChinese() {
                 <Accordion type="single" collapsible className="w-full mb-8">
                   <AccordionItem value="jaw-reduction" className="border border-gray-200 rounded-lg mb-4">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">瘦脸针 - 咬肌缩小专家</span>
-                        <BeforeAfterImageViewer 
-                          images={jawReductionBeforeAfterImages}
-                          triggerLabel="查看效果"
-                          title="瘦脸针治疗效果"
-                          description="专业瘦脸针治疗的真实效果展示"
-                          className="ml-4"
-                        />
-                      </div>
+                      <span className="text-xl font-semibold text-black">瘦脸针 - 咬肌缩小专家</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
@@ -272,16 +374,7 @@ export default function TreatmentsSummaryChinese() {
 
                   <AccordionItem value="forehead-fillers" className="border border-gray-200 rounded-lg mb-4">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">额头填充 - 改善凹陷专家</span>
-                        <BeforeAfterImageViewer 
-                          images={foreheadFillerBeforeAfterImages}
-                          triggerLabel="查看效果"
-                          title="额头玻尿酸填充效果"
-                          description="专业额头填充治疗的真实效果"
-                          className="ml-4"
-                        />
-                      </div>
+                      <span className="text-xl font-semibold text-black">额头填充 - 改善凹陷专家</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
@@ -317,16 +410,7 @@ export default function TreatmentsSummaryChinese() {
 
                   <AccordionItem value="chin-enhancement" className="border border-gray-200 rounded-lg mb-4">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">下巴塑形 - 完美侧颜打造</span>
-                        <BeforeAfterImageViewer 
-                          images={chinEnhancementImages}
-                          triggerLabel="查看效果"
-                          title="下巴塑形治疗效果"
-                          description="专业下巴塑形的真实效果展示"
-                          className="ml-4"
-                        />
-                      </div>
+                      <span className="text-xl font-semibold text-black">下巴塑形 - 完美侧颜打造</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
@@ -362,16 +446,7 @@ export default function TreatmentsSummaryChinese() {
 
                   <AccordionItem value="nose-job" className="border border-gray-200 rounded-lg mb-4">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">非手术隆鼻 - 安全无创塑形</span>
-                        <BeforeAfterImageViewer 
-                          images={noseJobBeforeAfterImages}
-                          triggerLabel="查看效果"
-                          title="非手术隆鼻效果"
-                          description="非手术隆鼻的专业治疗效果"
-                          className="ml-4"
-                        />
-                      </div>
+                      <span className="text-xl font-semibold text-black">非手术隆鼻 - 安全无创塑形</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
@@ -407,16 +482,7 @@ export default function TreatmentsSummaryChinese() {
 
                   <AccordionItem value="dermal-fillers" className="border border-gray-200 rounded-lg mb-4">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">玻尿酸填充 - 全面抗衰老</span>
-                        <BeforeAfterImageViewer 
-                          images={dermalFillerBeforeAfterImages}
-                          triggerLabel="查看效果"
-                          title="玻尿酸填充效果"
-                          description="专业玻尿酸填充的治疗效果"
-                          className="ml-4"
-                        />
-                      </div>
+                      <span className="text-xl font-semibold text-black">玻尿酸填充 - 全面抗衰老</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
@@ -454,16 +520,7 @@ export default function TreatmentsSummaryChinese() {
 
                   <AccordionItem value="non-surgical-facelift" className="border border-gray-200 rounded-lg mb-4">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-xl font-semibold text-black">非手术拉皮 - 重塑年轻轮廓</span>
-                        <BeforeAfterImageViewer 
-                          images={nonSurgicalFaceliftImages}
-                          triggerLabel="查看效果"
-                          title="非手术拉皮效果"
-                          description="非手术拉皮的专业治疗效果"
-                          className="ml-4"
-                        />
-                      </div>
+                      <span className="text-xl font-semibold text-black">非手术拉皮 - 重塑年轻轮廓</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4">
                       <div className="space-y-4">
