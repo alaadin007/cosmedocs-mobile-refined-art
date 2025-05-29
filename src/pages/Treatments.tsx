@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { Link } from "react-router-dom";
 
 const Treatments = () => {
   const [activeTab, setActiveTab] = useState("botox");
@@ -208,15 +209,17 @@ const Treatments = () => {
             {
               title: ".5ml Lip Filler (Natural)",
               price: "£300",
-              link: "visit page"
+              link: "/lip-fillers"
             },
             {
               title: "1ml Lip Filler (Bold & Plump)",
-              price: "£350"
+              price: "£350",
+              link: "/lip-fillers"
             },
             {
               title: "1.5 Lip Filler",
-              price: "£400"
+              price: "£400",
+              link: "/lip-fillers"
             },
             {
               title: "Non Surgical Nose Job",
@@ -518,9 +521,17 @@ const Treatments = () => {
                           </div>
                           {item.link && (
                             <div className="mt-2 text-right">
-                              <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                                Learn more →
-                              </Button>
+                              {item.link.startsWith('/') ? (
+                                <Link to={item.link}>
+                                  <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                                    Learn more →
+                                  </Button>
+                                </Link>
+                              ) : (
+                                <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                                  Learn more →
+                                </Button>
+                              )}
                             </div>
                           )}
                         </CardContent>

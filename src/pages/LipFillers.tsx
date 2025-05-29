@@ -103,14 +103,15 @@ const LipFillers = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  Expert Lip Fillers in London
+                  Expert Lip Fillers London
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  Transform your lips with our premium hyaluronic acid fillers. Natural, subtle or bold - as you wish. 
-                  Expert cosmetic doctors at our Harley Street clinic deliver personalized enhancement tailored to your vision.
+                  Our aesthetics is invisible art. Bold • Natural • Always Your Way. 
+                  Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. 
+                  Invisible, not exaggerated. It's transformation that speaks — without saying a word.
                 </p>
                 <div className="mb-6">
-                  <p className="text-lg text-purple-300 font-semibold">Starting from £350</p>
+                  <p className="text-lg text-purple-300 font-semibold">Starting from £300</p>
                   <p className="text-sm text-gray-400">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
