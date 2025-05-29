@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 interface Treatment {
@@ -8,6 +9,7 @@ interface Treatment {
   description: string;
   hasBeforeAfter?: boolean;
   baType?: string;
+  link?: string;
 }
 
 interface PopularTreatmentsProps {
@@ -35,19 +37,22 @@ const PopularTreatments = ({
       title: "Dermal Fillers",
       description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
       hasBeforeAfter: true,
-      baType: "dermal"
+      baType: "dermal",
+      link: "/dermal-filler-makeover"
     },
     {
       title: "Lip Fillers",
       description: "Subtle enhancement for natural-looking fullness",
       hasBeforeAfter: true,
-      baType: "lip"
+      baType: "lip",
+      link: "/lip-fillers"
     },
     {
       title: "Non-Surgical Nose Job",
       description: "Reshape without surgery",
       hasBeforeAfter: true,
-      baType: "nose"
+      baType: "nose",
+      link: "/non-surgical-nose-job"
     },
     {
       title: "Skin Boosters",
@@ -112,12 +117,29 @@ const PopularTreatments = ({
               <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
               <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
               {showBeforeAfter && treatment.hasBeforeAfter && treatment.baType ? (
-                <BeforeAfterImageViewer 
-                  images={getBeforeAfterImages(treatment.baType)}
-                  triggerLabel="See Before & After"
-                  title={`${treatment.title} Before & After`}
-                  description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`}
-                />
+                <div className="flex gap-3">
+                  <BeforeAfterImageViewer 
+                    images={getBeforeAfterImages(treatment.baType)}
+                    triggerLabel="See Before & After"
+                    title={`${treatment.title} Before & After`}
+                    description={`Results achieved with our premium ${treatment.title.toLowerCase()} treatments`}
+                  />
+                  {treatment.link && (
+                    <Link 
+                      to={treatment.link}
+                      className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors"
+                    >
+                      Learn more →
+                    </Link>
+                  )}
+                </div>
+              ) : treatment.link ? (
+                <Link 
+                  to={treatment.link}
+                  className="text-purple-400 hover:text-purple-300 text-sm font-medium cursor-pointer transition-colors"
+                >
+                  Learn more →
+                </Link>
               ) : (
                 <div className="text-purple-400 hover:text-purple-300 text-sm font-medium cursor-pointer">
                   Learn more →
