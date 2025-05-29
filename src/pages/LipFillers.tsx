@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -92,50 +91,48 @@ const LipFillers = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>
+        {/* Hero Section with Background Image */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('/lovable-uploads/11e7330e-8f2f-49de-817f-766edebbf9ff.png')`
+            }}
+          >
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  Expert Lip Fillers London
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
+                  Expert Lip Fillers
+                  <span className="block text-purple-300">London</span>
                 </h1>
-                <p className="text-xl text-gray-300 mb-8">
+                <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
                   Our aesthetics is invisible art. Bold • Natural • Always Your Way. 
                   Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. 
                   Invisible, not exaggerated. It's transformation that speaks — without saying a word.
                 </p>
-                <div className="mb-6">
-                  <p className="text-lg text-purple-300 font-semibold">Starting from £300</p>
-                  <p className="text-sm text-gray-400">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">Starting from £300</p>
+                  <p className="text-sm text-gray-300 drop-shadow-lg">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
                     View Price List
                   </Button>
                 </div>
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <img 
-                  src="/lovable-uploads/260e5e43-8abc-49e7-b420-1fe5cc984ac5.png" 
-                  alt="Professional lip filler treatment results showing natural enhancement"
-                  className="rounded-2xl shadow-2xl w-full"
-                />
-              </motion.div>
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
