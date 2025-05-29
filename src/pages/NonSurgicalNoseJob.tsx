@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -98,62 +97,82 @@ const NonSurgicalNoseJob = () => {
 
       <div className="bg-black text-white min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                Non-Surgical Nose Job
-              </motion.h1>
-              
-              <motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-              >
-                Reshape your nose without surgery
-              </motion.p>
-              
+        <section className="relative h-screen flex items-center">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/lovable-uploads/ac269c72-30b5-4182-a990-857547c55c4f.png')"
+            }}
+          />
+          {/* Elegant overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/40" />
+          
+          <div className="page-container relative z-10">
+            <div className="max-w-4xl">
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
+                className="text-left"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <div className="bg-accent rounded-full px-6 py-3">
-                  <span className="text-2xl font-bold">£450</span>
-                </div>
-                <div className="flex items-center gap-2 text-purple-400">
-                  <Instagram className="h-5 w-5" />
+                <motion.h1 
+                  className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <span className="block text-white/90">Non-Surgical</span>
+                  <span className="block text-white font-medium">Nose</span>
+                  <span className="block text-white/80 text-4xl md:text-5xl italic font-light">Refinement</span>
+                </motion.h1>
+                
+                <motion.div 
+                  className="mb-12 space-y-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                  <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl leading-relaxed">
+                    Precision artistry that reshapes your profile with subtle, invisible enhancement
+                  </p>
+                  <div className="flex items-center space-x-6 text-lg">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+                      <span className="text-white font-medium">From £450</span>
+                    </div>
+                    <div className="text-white/80">
+                      <span className="font-light">by </span> 
+                      <span className="font-medium">Dr. Ahmed Haq</span>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="flex flex-col sm:flex-row gap-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
                   <a 
-                    href="https://instagram.com/cosmedocs" 
+                    href={bookingUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="hover:text-purple-300 transition-colors"
+                    className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-medium transition-all duration-300 border border-white/20 hover:scale-105"
                   >
-                    Follow our results #cosmenose
+                    Book Consultation
                   </a>
-                </div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-              >
-                <a 
-                  href={bookingUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-medium transition-colors"
-                >
-                  Book Consultation
-                </a>
+                  <div className="flex items-center gap-2 text-white/80 px-6">
+                    <Instagram className="h-5 w-5" />
+                    <a 
+                      href="https://instagram.com/cosmedocs" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors font-light"
+                    >
+                      Follow our results #cosmenose
+                    </a>
+                  </div>
+                </motion.div>
               </motion.div>
             </div>
           </div>

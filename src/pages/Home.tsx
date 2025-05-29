@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
@@ -25,6 +24,7 @@ import {
   CardContent
 } from "@/components/ui/card";
 import PopularTreatments from "@/components/PopularTreatments";
+import AnimatedDots from "@/components/AnimatedDots";
 
 const Home = () => {
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
@@ -45,6 +45,7 @@ const Home = () => {
         {/* Hero Section */}
         <section className="relative h-screen flex items-center" aria-labelledby="hero-heading">
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
+          <AnimatedDots />
           <div className="page-container relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <motion.div initial={{
