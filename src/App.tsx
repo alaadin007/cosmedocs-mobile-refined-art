@@ -14,6 +14,7 @@ import LipFillerDissolve from "./pages/LipFillerDissolve";
 import DermalFillerMakeover from "./pages/DermalFillerMakeover";
 import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
+import TriggerPointBotox from "./pages/TriggerPointBotox";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
@@ -37,6 +38,7 @@ function App() {
               <Route path="dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
               <Route path="non-surgical-nose-job" element={<Layout><NonSurgicalNoseJob /></Layout>} />
               <Route path="medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
+              <Route path="trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
               <Route path="about" element={<Layout><About /></Layout>} />
               <Route path="contact" element={<Layout><Contact /></Layout>} />
               <Route path="partners" element={<Layout><Partners /></Layout>} />
