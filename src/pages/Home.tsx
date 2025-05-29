@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
@@ -107,7 +108,7 @@ const Home = () => {
         {/* Featured Treatments Section - Now using PopularTreatments component */}
         <PopularTreatments />
 
-        {/* Face Rejuvenation Philosophy Section */}
+        {/* Face Rejuvenation Assessment Section */}
         <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="rejuvenation-heading">
           <div className="page-container">
             <div className="max-w-4xl mx-auto">
@@ -120,7 +121,7 @@ const Home = () => {
             }} viewport={{
               once: true
             }}>
-                Our Face Rejuvenation Philosophy
+                Comprehensive Facial Assessment
               </motion.h2>
               
               <motion.div className="text-center max-w-3xl mx-auto mb-16" initial={{
@@ -134,7 +135,7 @@ const Home = () => {
               once: true
             }}>
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  At Cosmedocs, we've pioneered a comprehensive approach to facial rejuvenation that addresses all factors of aging for truly natural results.
+                  Every transformation begins with understanding. Our systematic approach evaluates four key aging factors to create your personalized treatment plan.
                 </p>
               </motion.div>
               
@@ -152,11 +153,11 @@ const Home = () => {
                 }} viewport={{
                   once: true
                 }}>
-                    <img src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" alt="Face rejuvenation before and after transformation" className="w-full h-auto" />
+                    <img src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" alt="Comprehensive facial assessment before and after results" className="w-full h-auto" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-12">
                       <div className="flex items-center justify-center">
                         <Eye className="mr-3 h-6 w-6" />
-                        <p className="text-white text-xl font-medium">Tap to explore our aesthetic face calculations</p>
+                        <p className="text-white text-xl font-medium">Discover your detailed facial analysis</p>
                       </div>
                     </div>
                     
@@ -412,16 +413,16 @@ const Home = () => {
             }}>
                 {[{
                 number: "01",
-                title: "Skin Clear Up",
-                description: "Addressing uneven tone, pigmentation, pores, and texture for a flawless foundation."
+                title: "Skin Quality Analysis",
+                description: "Evaluating tone, texture, pores, and hydration to establish the foundation for your treatment."
               }, {
                 number: "02",
-                title: "Wrinkles in Motion",
-                description: "Targeting dynamic wrinkles while preserving natural expressions and movement."
+                title: "Dynamic Expression Mapping",
+                description: "Assessing movement patterns and expression lines to preserve natural facial dynamics."
               }, {
                 number: "03",
-                title: "Volume Loss & Sagging",
-                description: "Restoring youthful contours by addressing structural volume loss and skin laxity."
+                title: "Structural Assessment",
+                description: "Measuring volume distribution and skin support to restore youthful facial architecture."
               }].map(step => <Card key={step.number} className="bg-[#111] border-none">
                     <CardHeader className="pb-2">
                       <div className="text-base font-medium text-gray-400 mb-2">{step.number}</div>
