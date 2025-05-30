@@ -114,9 +114,9 @@ const LipFillers = () => {
                   <span className="block text-purple-300">London</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
-                  Our aesthetics is invisible art. Bold • Natural • Always Your Way. 
-                  Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. 
-                  Invisible, not exaggerated. It's transformation that speaks — without saying a word.
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">Starting from £300</p>
