@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import ManchesterHome from "./pages/ManchesterHome";
+import BirminghamHome from "./pages/BirminghamHome";
+import CardiffHome from "./pages/CardiffHome";
 import Treatments from "./pages/Treatments";
 import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
@@ -30,6 +33,9 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Layout><Home /></Layout>} />
+              <Route path="manchester" element={<Layout><ManchesterHome /></Layout>} />
+              <Route path="birmingham" element={<Layout><BirminghamHome /></Layout>} />
+              <Route path="cardiff" element={<Layout><CardiffHome /></Layout>} />
               <Route path="treatments" element={<Layout><Treatments /></Layout>} />
               <Route path="treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />
               <Route path="treatments-summary-chinese" element={<Layout><TreatmentsSummaryChinese /></Layout>} />
