@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -15,6 +14,7 @@ import {
 } from "@/components/ui/card";
 import PopularTreatments from "@/components/PopularTreatments";
 import AnimatedDots from "@/components/AnimatedDots";
+import ComprehensiveFacialAssessment from "@/components/ComprehensiveFacialAssessment";
 
 const BirminghamHome = () => {
   const isMobile = useIsMobile();
@@ -249,6 +249,18 @@ const BirminghamHome = () => {
             </div>
           </div>
         </section>
+
+        {/* Popular Treatments Section */}
+        <PopularTreatments 
+          title="Popular Birmingham Treatments"
+          className="bg-gradient-to-b from-[#0A0A0A] to-black"
+        />
+
+        {/* Comprehensive Facial Assessment Section */}
+        <ComprehensiveFacialAssessment 
+          accentColor="blue"
+          className="bg-black"
+        />
 
         {/* Birmingham Area Coverage */}
         <section className="py-20 bg-[#0A0A0A]" aria-labelledby="birmingham-coverage">
