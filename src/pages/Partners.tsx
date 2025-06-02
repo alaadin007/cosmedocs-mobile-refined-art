@@ -13,6 +13,7 @@ import * as z from "zod";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Instagram, ExternalLink } from "lucide-react";
 import AISearchBar from "@/components/AISearchBar";
+
 const fadeIn = {
   hidden: {
     opacity: 0,
@@ -34,13 +35,16 @@ const partnerFormSchema = z.object({
   location: z.string().min(1, "City and postcode are required"),
   message: z.string().optional()
 });
+
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
-const HeroSection = () => <section className="pt-28 pb-16 px-4 md:px-8 text-center relative bg-cover bg-center bg-no-repeat" style={{
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/a972bf35-cab4-4f83-b655-228b98f0ba9f.png')`
-}}>
-    <motion.div className="max-w-5xl mx-auto relative z-10" initial="hidden" animate="visible" variants={fadeIn} transition={{
-    duration: 0.5
+
+const HeroSection = () => (
+  <section className="pt-28 pb-16 px-4 md:px-8 text-center relative bg-cover bg-center bg-no-repeat" style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/a972bf35-cab4-4f83-b655-228b98f0ba9f.png')`
   }}>
+    <motion.div className="max-w-5xl mx-auto relative z-10" initial="hidden" animate="visible" variants={fadeIn} transition={{
+      duration: 0.5
+    }}>
       <div className="mb-6">
         <span className="text-amber-400 text-sm font-medium tracking-wide uppercase">Revolutionary Franchise Model</span>
       </div>
@@ -50,7 +54,6 @@ const HeroSection = () => <section className="pt-28 pb-16 px-4 md:px-8 text-cent
         <h2 className="text-2xl md:text-3xl font-light mb-4 text-amber-300">CosmeDoc</h2>
         <p className="text-lg md:text-xl italic mb-4 text-white">*Our aesthetics is invisible art</p>
         <div className="text-gray-200">
-          
           <p className="mb-2">Aesthetic medicine by Cosmedocs is minimal.</p>
           <p className="mb-2">Quiet, not loud.</p>
           <p className="mb-2">Invisible, not exaggerated.</p>
@@ -58,8 +61,17 @@ const HeroSection = () => <section className="pt-28 pb-16 px-4 md:px-8 text-cent
         </div>
       </div>
 
-      <h1 className="text-3xl md:text-5xl font-bold mb-6">The UK's First Boutique Harley Street Aesthetic Clinic Franchise</h1>
-      <p className="text-lg md:text-xl mb-8 text-gray-300">CosmeDoc, sister company of the prestigious <a href="https://www.harleystreetinstitute.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Harley Street Institute</a>, brings you 15+ years of boutique excellence in a groundbreaking franchise model designed for the modern aesthetic practitioner.</p>
+      <h1 className="text-3xl md:text-5xl font-bold mb-6">Boutique Harley Street Aesthetic Clinic Franchise</h1>
+      <p className="text-lg md:text-xl mb-6 text-gray-300">CosmeDoc, sister company of the prestigious <a href="https://www.harleystreetinstitute.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Harley Street Institute</a>, brings you 15+ years of boutique excellence in a groundbreaking franchise model designed for the modern aesthetic practitioner.</p>
+      
+      {/* Quality Over Volume Message */}
+      <div className="mb-8 p-4 bg-amber-500/10 rounded-lg border border-amber-500/30 max-w-3xl mx-auto">
+        <p className="text-amber-200 font-medium">
+          Our philosophy centers on building quality, sustainable client relationships rather than focusing on volume. 
+          This approach ensures high satisfaction for both clients and practitioners, creating a thriving, 
+          ethical practice that stands the test of time.
+        </p>
+      </div>
       
       {/* Three Key Points */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
@@ -78,25 +90,28 @@ const HeroSection = () => <section className="pt-28 pb-16 px-4 md:px-8 text-cent
       </div>
       
       <Button size="lg" className="text-lg px-8 py-6" onClick={() => document.getElementById('application-form')?.scrollIntoView({
-      behavior: 'smooth'
-    })}>
+        behavior: 'smooth'
+      })}>
         Join the CosmeDoc Franchise
       </Button>
     </motion.div>
-  </section>;
-const InstagramSection = () => <section className="py-16 px-4 md:px-8 bg-zinc-900">
+  </section>
+);
+
+const InstagramSection = () => (
+  <section className="py-16 px-4 md:px-8 bg-zinc-900">
     <div className="max-w-4xl mx-auto">
       <motion.div initial={{
-      opacity: 0,
-      y: 30
-    }} whileInView={{
-      opacity: 1,
-      y: 0
-    }} transition={{
-      duration: 0.5
-    }} viewport={{
-      once: true
-    }} className="text-center">
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }} viewport={{
+        once: true
+      }} className="text-center">
         <h2 className="text-3xl font-bold mb-8">Follow Our Journey on Instagram</h2>
         <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
           See our world-class techniques and results in action. Over 130K followers trust us for the finest aesthetic transformations.
@@ -117,7 +132,106 @@ const InstagramSection = () => <section className="py-16 px-4 md:px-8 bg-zinc-90
         </div>
       </motion.div>
     </div>
-  </section>;
+  </section>
+);
+
+const PricingSection = () => (
+  <section className="py-16 px-4 md:px-8 bg-zinc-800">
+    <div className="max-w-4xl mx-auto">
+      <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }} viewport={{
+        once: true
+      }}>
+        <h2 className="text-3xl font-bold mb-8 text-center">Complete Harley Street Franchise Package</h2>
+        
+        <div className="text-center mb-8">
+          <p className="text-gray-300">
+            Your CosmeDoc franchise includes everything needed to establish a successful aesthetic practice 
+            with the prestige of Harley Street and the innovation of modern business systems.
+          </p>
+        </div>
+      
+        <div className="bg-zinc-900/50 p-6 rounded-lg mb-6 border border-amber-500/20">
+          <h3 className="text-xl font-semibold mb-6 text-center text-amber-400">What's Included in Your Franchise</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>CosmeDoc brand rights & Harley Street heritage</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Harley Street Institute world-class training</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Complete business systems & operations manual</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Professional website with integrated booking</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Automated marketing & patient communication</span>
+              </div>
+            </div>
+            
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Protected territory rights</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Ongoing clinical mentorship</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>National marketing presence</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Business development support</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-green-400 mr-3">✓</span>
+                <span>Access to exclusive supplier networks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="bg-zinc-900/50 p-5 rounded-lg">
+            <h4 className="text-lg font-medium mb-2">Complete Harley Street Franchise Package</h4>
+            <p className="text-amber-300 text-xl font-semibold mb-2">£25,000</p>
+            <p className="text-gray-300">Our comprehensive franchise program includes intensive Harley Street Institute training, complete business mentorship, all operational systems, and ongoing support. This package is designed for medical practitioners new to aesthetic medicine or those wanting the complete Harley Street experience. Flexible payment options available.</p>
+          </div>
+          
+          <div className="bg-zinc-900/50 p-5 rounded-lg">
+            <h4 className="text-lg font-medium mb-2">Experienced Practitioner Package</h4>
+            <p className="text-gray-300">Already established in aesthetic medicine? We recognize your expertise. Your franchise investment is customized based on your existing qualifications and experience, focusing only on the additional Harley Street Institute training and systems needed to meet our prestigious standards.</p>
+          </div>
+          
+          <div className="bg-amber-500/10 p-5 rounded-lg border border-amber-500/30">
+            <h4 className="text-lg font-medium mb-2 text-amber-400">Ongoing Franchise Fees: £500–£1,500/month</h4>
+            <p className="text-gray-300 text-sm">Includes ongoing Harley Street Institute training, marketing support, business development, and access to all franchise systems and resources.</p>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </section>
+);
+
 const ApplicationFormSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<PartnerFormValues>({
@@ -132,6 +246,7 @@ const ApplicationFormSection = () => {
       message: ""
     }
   });
+
   const onSubmit = async (data: PartnerFormValues) => {
     setIsSubmitting(true);
     await new Promise(resolve => setTimeout(resolve, 1500));
@@ -140,104 +255,106 @@ const ApplicationFormSection = () => {
     form.reset();
     setIsSubmitting(false);
   };
-  return <section id="application-form" className="py-16 px-4 md:px-8">
+
+  return (
+    <section id="application-form" className="py-16 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
         <motion.div initial={{
-        opacity: 0
-      }} whileInView={{
-        opacity: 1
-      }} transition={{
-        duration: 0.5,
-        delay: 0.2
-      }} viewport={{
-        once: true
-      }}>
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }} viewport={{
+          once: true
+        }}>
           <h2 className="text-3xl font-bold mb-8 text-center">Apply for a CosmeDoc Healthcare Partnership</h2>
 
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <FormField control={form.control} name="fullName" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel>Full Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Dr. Jane Smith" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>} />
-                
-                <FormField control={form.control} name="email" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>} />
-                
-                <FormField control={form.control} name="phone" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel>Phone</FormLabel>
-                      <FormControl>
-                        <Input placeholder="07123456789" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>} />
-                
-                <FormField control={form.control} name="profession" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel>Profession</FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select your profession" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="doctor">Doctor</SelectItem>
-                          <SelectItem value="dentist">Dentist</SelectItem>
-                          <SelectItem value="nurse">Nurse</SelectItem>
-                          <SelectItem value="pharmacist">Pharmacist</SelectItem>
-                          <SelectItem value="prescriber">Independent Prescriber</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>} />
-                
-                <FormField control={form.control} name="registrationNumber" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel>GMC/GDC/NMC/GPhC Number</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Registration number" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>} />
-                
-                <FormField control={form.control} name="location" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel>City & Postcode</FormLabel>
-                      <FormControl>
-                        <Input placeholder="London, W1G 9PF" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>} />
-              </div>
-              
-              <FormField control={form.control} name="message" render={({
-              field
-            }) => <FormItem>
-                    <FormLabel>Additional Information (Optional)</FormLabel>
+                <FormField control={form.control} name="fullName" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Full Name</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Share any additional information about your experience or interest in our healthcare partnership" className="min-h-[120px]" {...field} />
+                      <Input placeholder="Dr. Jane Smith" {...field} />
                     </FormControl>
                     <FormMessage />
-                  </FormItem>} />
+                  </FormItem>
+                )} />
+                
+                <FormField control={form.control} name="email" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="your.email@example.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                
+                <FormField control={form.control} name="phone" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone</FormLabel>
+                    <FormControl>
+                      <Input placeholder="07123456789" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                
+                <FormField control={form.control} name="profession" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Profession</FormLabel>
+                    <Select onValueChange={field.onChange} value={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select your profession" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="doctor">Doctor</SelectItem>
+                        <SelectItem value="dentist">Dentist</SelectItem>
+                        <SelectItem value="nurse">Nurse</SelectItem>
+                        <SelectItem value="pharmacist">Pharmacist</SelectItem>
+                        <SelectItem value="prescriber">Independent Prescriber</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                
+                <FormField control={form.control} name="registrationNumber" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>GMC/GDC/NMC/GPhC Number</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Registration number" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                
+                <FormField control={form.control} name="location" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>City & Postcode</FormLabel>
+                    <FormControl>
+                      <Input placeholder="London, W1G 9PF" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
+              
+              <FormField control={form.control} name="message" render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Additional Information (Optional)</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder="Share any additional information about your experience or interest in our healthcare partnership" className="min-h-[120px]" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )} />
               
               <div>
                 <p className="text-gray-400 text-sm mb-4">
@@ -253,10 +370,13 @@ const ApplicationFormSection = () => {
           </Form>
         </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 const Partners = () => {
-  return <div className="bg-black text-white">
+  return (
+    <div className="bg-black text-white">
       <Helmet>
         <title>CosmeDoc Franchise Opportunity | Harley Street Heritage & Innovation</title>
         <meta name="description" content="Join the UK's first boutique Harley Street aesthetic clinic franchise. CosmeDoc, sister company of Harley Street Institute, offers world-class training with low-overhead, high-impact franchise model for medical professionals." />
@@ -287,21 +407,22 @@ const Partners = () => {
 
       <HeroSection />
       <InstagramSection />
+      <PricingSection />
 
       {/* Main Content Accordions */}
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }} viewport={{
-          once: true
-        }}>
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5
+          }} viewport={{
+            once: true
+          }}>
             <h2 className="text-3xl font-bold mb-8 text-center">Everything You Need to Know About Our Partnership</h2>
             
             <Accordion type="single" collapsible className="space-y-4">
@@ -493,90 +614,6 @@ const Partners = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="pricing" className="bg-zinc-800 rounded-lg border border-amber-500/20">
-                <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                  <span className="text-left font-medium text-lg">Complete Harley Street Franchise Package</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <div className="text-center mb-8">
-                    <p className="text-gray-300">
-                      Your CosmeDoc franchise includes everything needed to establish a successful aesthetic practice 
-                      with the prestige of Harley Street and the innovation of modern business systems.
-                    </p>
-                  </div>
-                
-                  <div className="bg-zinc-900/50 p-6 rounded-lg mb-6 border border-amber-500/20">
-                    <h3 className="text-xl font-semibold mb-6 text-center text-amber-400">What's Included in Your Franchise</h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
-                      <div className="space-y-3">
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>CosmeDoc brand rights & Harley Street heritage</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Harley Street Institute world-class training</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Complete business systems & operations manual</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Professional website with integrated booking</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Automated marketing & patient communication</span>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-3">
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Protected territory rights</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Ongoing clinical mentorship</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>National marketing presence</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Business development support</span>
-                        </div>
-                        <div className="flex items-start">
-                          <span className="text-green-400 mr-3">✓</span>
-                          <span>Access to exclusive supplier networks</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div className="bg-zinc-900/50 p-5 rounded-lg">
-                      <h4 className="text-lg font-medium mb-2">Complete Harley Street Franchise Package</h4>
-                      <p className="text-amber-300 text-xl font-semibold mb-2">£20,000</p>
-                      <p className="text-gray-300">Our comprehensive franchise program includes intensive Harley Street Institute training, complete business mentorship, all operational systems, and ongoing support. This package is designed for medical practitioners new to aesthetic medicine or those wanting the complete Harley Street experience. Flexible payment options available.</p>
-                    </div>
-                    
-                    <div className="bg-zinc-900/50 p-5 rounded-lg">
-                      <h4 className="text-lg font-medium mb-2">Experienced Practitioner Package</h4>
-                      <p className="text-gray-300">Already established in aesthetic medicine? We recognize your expertise. Your franchise investment is customized based on your existing qualifications and experience, focusing only on the additional Harley Street Institute training and systems needed to meet our prestigious standards.</p>
-                    </div>
-                    
-                    <div className="bg-amber-500/10 p-5 rounded-lg border border-amber-500/30">
-                      <h4 className="text-lg font-medium mb-2 text-amber-400">Ongoing Franchise Fees: £500–£1,500/month</h4>
-                      <p className="text-gray-300 text-sm">Includes ongoing Harley Street Institute training, marketing support, business development, and access to all franchise systems and resources.</p>
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-
               <AccordionItem value="faq" className="bg-zinc-800 rounded-lg border border-amber-500/20">
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <span className="text-left font-medium text-lg">Frequently Asked Questions</span>
@@ -624,16 +661,16 @@ const Partners = () => {
       <section className="py-16 px-4 md:px-8 bg-zinc-900">
         <div className="max-w-4xl mx-auto">
           <motion.div initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }} viewport={{
-          once: true
-        }}>
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5
+          }} viewport={{
+            once: true
+          }}>
             <h2 className="text-3xl font-bold mb-6 text-center">Have Questions About Our Partnership?</h2>
             <p className="text-gray-300 text-center mb-8 max-w-2xl mx-auto">
               Ask our AI assistant anything about the CosmeDoc franchise opportunity, training programs, 
@@ -643,6 +680,8 @@ const Partners = () => {
           </motion.div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Partners;

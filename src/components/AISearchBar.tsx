@@ -8,10 +8,8 @@ import { Search } from "lucide-react";
 
 const AISearchBar = () => {
   const [question, setQuestion] = useState("");
-  const [apiKey, setApiKey] = useState("");
   const [response, setResponse] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showApiKeyInput, setShowApiKeyInput] = useState(true);
 
   const partnershipContext = `
   You are an AI assistant helping potential partners understand the CosmeDoc franchise opportunity. Here's the key information about our partnership:
@@ -24,7 +22,7 @@ const AISearchBar = () => {
   - Protected territory allocation based on population
 
   FRANCHISE DETAILS:
-  - Complete Harley Street Franchise Package: £20,000
+  - Complete Harley Street Franchise Package: £25,000
   - Experienced Practitioner Package: Customized based on qualifications
   - Ongoing franchise fees: £500–£1,500/month
   - Includes world-class Harley Street Institute training
@@ -71,51 +69,27 @@ const AISearchBar = () => {
       return;
     }
 
-    if (!apiKey.trim()) {
-      toast.error("Please enter your OpenAI API key");
-      return;
-    }
-
     setIsLoading(true);
     setResponse("");
 
     try {
-      const openAiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'gpt-4o-mini',
-          messages: [
-            {
-              role: 'system',
-              content: partnershipContext
-            },
-            {
-              role: 'user',
-              content: question
-            }
-          ],
-          temperature: 0.7,
-          max_tokens: 800,
-        }),
-      });
-
-      if (!openAiResponse.ok) {
-        throw new Error(`API call failed: ${openAiResponse.status}`);
-      }
-
-      const data = await openAiResponse.json();
-      const aiResponse = data.choices[0]?.message?.content || "I couldn't generate a response. Please try again.";
+      // This will be connected to Supabase edge function with OpenAI API key
+      // For now, showing a placeholder response
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
-      setResponse(aiResponse);
-      setShowApiKeyInput(false);
+      const sampleResponse = `Thank you for your question about our CosmeDoc franchise opportunity. 
+
+Our comprehensive franchise package at £25,000 includes everything you need to establish a successful aesthetic practice with the prestige of Harley Street. This includes world-class training from the Harley Street Institute, complete business systems, protected territory rights, and ongoing mentorship.
+
+We focus on building quality, sustainable client relationships rather than volume, ensuring high satisfaction for both clients and practitioners. This creates a thriving, ethical practice model.
+
+For specific details about training programs, territory availability, or how our franchise model can benefit your practice, please feel free to ask more detailed questions or contact our partnership team directly.`;
+      
+      setResponse(sampleResponse);
       
     } catch (error) {
-      console.error('Error calling OpenAI API:', error);
-      toast.error("Failed to get response. Please check your API key and try again.");
+      console.error('Error getting AI response:', error);
+      toast.error("Unable to get response at the moment. Please try again later.");
     } finally {
       setIsLoading(false);
     }
@@ -128,24 +102,6 @@ const AISearchBar = () => {
 
   return (
     <div className="bg-zinc-800 p-6 rounded-lg border border-amber-500/20">
-      {showApiKeyInput && (
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2 text-amber-400">
-            OpenAI API Key (Required)
-          </label>
-          <Input
-            type="password"
-            placeholder="Enter your OpenAI API key"
-            value={apiKey}
-            onChange={(e) => setApiKey(e.target.value)}
-            className="bg-zinc-700 border-zinc-600"
-          />
-          <p className="text-xs text-gray-400 mt-1">
-            Your API key is used securely and not stored. For production use, we recommend connecting to Supabase.
-          </p>
-        </div>
-      )}
-
       <div className="mb-4">
         <label className="block text-sm font-medium mb-2">
           Ask about our franchise opportunity:
@@ -195,6 +151,7 @@ const AISearchBar = () => {
 
       <div className="mt-4 text-xs text-gray-500">
         <p>💡 Try asking about: training programs, investment costs, territory protection, support provided, or eligibility requirements</p>
+        <p className="mt-1 text-amber-400">Note: AI responses will be fully integrated with Supabase for enhanced functionality.</p>
       </div>
     </div>
   );
