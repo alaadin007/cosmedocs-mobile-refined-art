@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Search } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const AISearchBar = () => {
   const [question, setQuestion] = useState("");
@@ -60,6 +60,11 @@ const AISearchBar = () => {
   - Protected territories
   - Ongoing support and mentorship
 
+  INNOVATIVE APPROACH:
+  - We use AI and blockchain-based contracts rather than traditional human contracts
+  - AI arbitration system for fair, transparent dispute resolution
+  - Technology-forward approach aligning with our commitment to innovation
+
   Please answer questions about this franchise opportunity in a helpful, professional manner. Focus on the benefits, training quality, support provided, and how this partnership can help medical professionals build a successful aesthetic practice.
   `;
 
@@ -73,19 +78,18 @@ const AISearchBar = () => {
     setResponse("");
 
     try {
-      // This will be connected to Supabase edge function with OpenAI API key
-      // For now, showing a placeholder response
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      const sampleResponse = `Thank you for your question about our CosmeDoc franchise opportunity. 
+      const { data, error } = await supabase.functions.invoke('ai-chat', {
+        body: {
+          question: question,
+          context: partnershipContext
+        }
+      });
 
-Our comprehensive franchise package at £25,000 includes everything you need to establish a successful aesthetic practice with the prestige of Harley Street. This includes world-class training from the Harley Street Institute, complete business systems, protected territory rights, and ongoing mentorship.
+      if (error) {
+        throw error;
+      }
 
-We focus on building quality, sustainable client relationships rather than volume, ensuring high satisfaction for both clients and practitioners. This creates a thriving, ethical practice model.
-
-For specific details about training programs, territory availability, or how our franchise model can benefit your practice, please feel free to ask more detailed questions or contact our partnership team directly.`;
-      
-      setResponse(sampleResponse);
+      setResponse(data.response);
       
     } catch (error) {
       console.error('Error getting AI response:', error);
@@ -151,7 +155,7 @@ For specific details about training programs, territory availability, or how our
 
       <div className="mt-4 text-xs text-gray-500">
         <p>💡 Try asking about: training programs, investment costs, territory protection, support provided, or eligibility requirements</p>
-        <p className="mt-1 text-amber-400">Note: AI responses will be fully integrated with Supabase for enhanced functionality.</p>
+        <p className="mt-2 text-amber-400">✨ Powered by AI technology - we use AI and blockchain contracts instead of traditional agreements, plus AI arbitration for fair dispute resolution.</p>
       </div>
     </div>
   );

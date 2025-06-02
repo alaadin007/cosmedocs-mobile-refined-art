@@ -53,6 +53,15 @@ const HeroSection = () => (
           ethical practice that stands the test of time.
         </p>
       </div>
+
+      {/* AI and Blockchain Innovation */}
+      <div className="mb-8 p-4 bg-blue-500/10 rounded-lg border border-blue-500/30 max-w-3xl mx-auto">
+        <p className="text-blue-200 font-medium">
+          🤖 Revolutionary Technology: Rather than traditional human contracts, we utilize AI and blockchain-based agreements 
+          for transparency and efficiency. Our AI arbitration system ensures fair, unbiased dispute resolution, 
+          reflecting our commitment to innovation in both medicine and business practices.
+        </p>
+      </div>
       
       {/* Three Key Points */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
