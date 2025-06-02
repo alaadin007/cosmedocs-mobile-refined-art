@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -14,7 +13,6 @@ import * as z from "zod";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Instagram, ExternalLink } from "lucide-react";
 import AISearchBar from "@/components/AISearchBar";
-
 const fadeIn = {
   hidden: {
     opacity: 0,
@@ -36,23 +34,13 @@ const partnerFormSchema = z.object({
   location: z.string().min(1, "City and postcode are required"),
   message: z.string().optional()
 });
-
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
-
-const HeroSection = () => (
-  <section 
-    className="pt-28 pb-16 px-4 md:px-8 text-center relative bg-cover bg-center bg-no-repeat"
-    style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/a972bf35-cab4-4f83-b655-228b98f0ba9f.png')`
-    }}
-  >
-    <motion.div 
-      className="max-w-5xl mx-auto relative z-10" 
-      initial="hidden" 
-      animate="visible" 
-      variants={fadeIn} 
-      transition={{ duration: 0.5 }}
-    >
+const HeroSection = () => <section className="pt-28 pb-16 px-4 md:px-8 text-center relative bg-cover bg-center bg-no-repeat" style={{
+  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/a972bf35-cab4-4f83-b655-228b98f0ba9f.png')`
+}}>
+    <motion.div className="max-w-5xl mx-auto relative z-10" initial="hidden" animate="visible" variants={fadeIn} transition={{
+    duration: 0.5
+  }}>
       <div className="mb-6">
         <span className="text-amber-400 text-sm font-medium tracking-wide uppercase">Revolutionary Franchise Model</span>
       </div>
@@ -62,7 +50,7 @@ const HeroSection = () => (
         <h2 className="text-2xl md:text-3xl font-light mb-4 text-amber-300">CosmeDoc</h2>
         <p className="text-lg md:text-xl italic mb-4 text-white">*Our aesthetics is invisible art</p>
         <div className="text-gray-200">
-          <p className="mb-2"><strong>Bold • Natural • Always Your Way</strong></p>
+          
           <p className="mb-2">Aesthetic medicine by Cosmedocs is minimal.</p>
           <p className="mb-2">Quiet, not loud.</p>
           <p className="mb-2">Invisible, not exaggerated.</p>
@@ -89,42 +77,36 @@ const HeroSection = () => (
         </div>
       </div>
       
-      <Button size="lg" className="text-lg px-8 py-6" onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}>
+      <Button size="lg" className="text-lg px-8 py-6" onClick={() => document.getElementById('application-form')?.scrollIntoView({
+      behavior: 'smooth'
+    })}>
         Join the CosmeDoc Franchise
       </Button>
     </motion.div>
-  </section>
-);
-
-const InstagramSection = () => (
-  <section className="py-16 px-4 md:px-8 bg-zinc-900">
+  </section>;
+const InstagramSection = () => <section className="py-16 px-4 md:px-8 bg-zinc-900">
     <div className="max-w-4xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="text-center"
-      >
+      <motion.div initial={{
+      opacity: 0,
+      y: 30
+    }} whileInView={{
+      opacity: 1,
+      y: 0
+    }} transition={{
+      duration: 0.5
+    }} viewport={{
+      once: true
+    }} className="text-center">
         <h2 className="text-3xl font-bold mb-8">Follow Our Journey on Instagram</h2>
         <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
           See our world-class techniques and results in action. Over 130K followers trust us for the finest aesthetic transformations.
         </p>
         
         <div className="bg-zinc-800 p-8 rounded-lg border border-amber-500/20 max-w-2xl mx-auto">
-          <img 
-            src="/lovable-uploads/bf1c9d26-e8e9-4ba7-abb8-e9982e6a110e.png" 
-            alt="CosmeDoc Instagram Account" 
-            className="w-full rounded-lg mb-6"
-          />
+          <img src="/lovable-uploads/bf1c9d26-e8e9-4ba7-abb8-e9982e6a110e.png" alt="CosmeDoc Instagram Account" className="w-full rounded-lg mb-6" />
           <div className="flex items-center justify-center gap-4">
             <Instagram className="w-6 h-6 text-amber-400" />
-            <a 
-              href="https://instagram.com/cosmedocs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-amber-400 hover:text-amber-300 font-medium flex items-center gap-2"
-            >
+            <a href="https://instagram.com/cosmedocs" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 font-medium flex items-center gap-2">
               @cosmedocs - 130K Followers
               <ExternalLink className="w-4 h-4" />
             </a>
@@ -135,12 +117,9 @@ const InstagramSection = () => (
         </div>
       </motion.div>
     </div>
-  </section>
-);
-
+  </section>;
 const ApplicationFormSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema),
     defaultValues: {
@@ -153,7 +132,6 @@ const ApplicationFormSection = () => {
       message: ""
     }
   });
-
   const onSubmit = async (data: PartnerFormValues) => {
     setIsSubmitting(true);
     await new Promise(resolve => setTimeout(resolve, 1500));
@@ -162,68 +140,56 @@ const ApplicationFormSection = () => {
     form.reset();
     setIsSubmitting(false);
   };
-
-  return (
-    <section id="application-form" className="py-16 px-4 md:px-8">
+  return <section id="application-form" className="py-16 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <motion.div initial={{
+        opacity: 0
+      }} whileInView={{
+        opacity: 1
+      }} transition={{
+        duration: 0.5,
+        delay: 0.2
+      }} viewport={{
+        once: true
+      }}>
           <h2 className="text-3xl font-bold mb-8 text-center">Apply for a CosmeDoc Healthcare Partnership</h2>
 
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <FormField
-                  control={form.control}
-                  name="fullName"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="fullName" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Full Name</FormLabel>
                       <FormControl>
                         <Input placeholder="Dr. Jane Smith" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="email" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input placeholder="your.email@example.com" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="phone" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Phone</FormLabel>
                       <FormControl>
                         <Input placeholder="07123456789" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <FormField
-                  control={form.control}
-                  name="profession"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="profession" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Profession</FormLabel>
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
@@ -240,56 +206,38 @@ const ApplicationFormSection = () => {
                         </SelectContent>
                       </Select>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <FormField
-                  control={form.control}
-                  name="registrationNumber"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="registrationNumber" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>GMC/GDC/NMC/GPhC Number</FormLabel>
                       <FormControl>
                         <Input placeholder="Registration number" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <FormField
-                  control={form.control}
-                  name="location"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="location" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>City & Postcode</FormLabel>
                       <FormControl>
                         <Input placeholder="London, W1G 9PF" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
               </div>
               
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
+              <FormField control={form.control} name="message" render={({
+              field
+            }) => <FormItem>
                     <FormLabel>Additional Information (Optional)</FormLabel>
                     <FormControl>
-                      <Textarea 
-                        placeholder="Share any additional information about your experience or interest in our healthcare partnership" 
-                        className="min-h-[120px]" 
-                        {...field} 
-                      />
+                      <Textarea placeholder="Share any additional information about your experience or interest in our healthcare partnership" className="min-h-[120px]" {...field} />
                     </FormControl>
                     <FormMessage />
-                  </FormItem>
-                )}
-              />
+                  </FormItem>} />
               
               <div>
                 <p className="text-gray-400 text-sm mb-4">
@@ -305,13 +253,10 @@ const ApplicationFormSection = () => {
           </Form>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 const Partners = () => {
-  return (
-    <div className="bg-black text-white">
+  return <div className="bg-black text-white">
       <Helmet>
         <title>CosmeDoc Franchise Opportunity | Harley Street Heritage & Innovation</title>
         <meta name="description" content="Join the UK's first boutique Harley Street aesthetic clinic franchise. CosmeDoc, sister company of Harley Street Institute, offers world-class training with low-overhead, high-impact franchise model for medical professionals." />
@@ -346,12 +291,17 @@ const Partners = () => {
       {/* Main Content Accordions */}
       <section className="py-16 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }}>
             <h2 className="text-3xl font-bold mb-8 text-center">Everything You Need to Know About Our Partnership</h2>
             
             <Accordion type="single" collapsible className="space-y-4">
@@ -359,11 +309,7 @@ const Partners = () => {
               <AccordionItem value="mission" className="bg-zinc-800 rounded-lg border border-amber-500/20">
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <div className="flex items-center gap-4">
-                    <img 
-                      src="/lovable-uploads/c84abae0-6534-48a3-9f10-b36de422095a.png" 
-                      alt="Training Excellence" 
-                      className="w-16 h-12 object-cover rounded"
-                    />
+                    <img src="/lovable-uploads/c84abae0-6534-48a3-9f10-b36de422095a.png" alt="Training Excellence" className="w-16 h-12 object-cover rounded" />
                     <span className="text-left font-medium text-lg">The First-of-Its-Kind Boutique Harley Street Franchise</span>
                   </div>
                 </AccordionTrigger>
@@ -415,11 +361,7 @@ const Partners = () => {
               <AccordionItem value="training" className="bg-zinc-800 rounded-lg border border-amber-500/20">
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <div className="flex items-center gap-4">
-                    <img 
-                      src="/lovable-uploads/98f593f9-83af-42b6-a763-7cb95599fe56.png" 
-                      alt="CosmeDoc Setup" 
-                      className="w-16 h-12 object-cover rounded"
-                    />
+                    <img src="/lovable-uploads/98f593f9-83af-42b6-a763-7cb95599fe56.png" alt="CosmeDoc Setup" className="w-16 h-12 object-cover rounded" />
                     <span className="text-left font-medium text-lg">World-Class Training by Harley Street Institute</span>
                   </div>
                 </AccordionTrigger>
@@ -435,44 +377,35 @@ const Partners = () => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {[
-                      {
-                        title: "Advanced Harley Street Techniques",
-                        icon: "💉",
-                        description: "Master the precise injection techniques and protocols used in London's most prestigious clinics"
-                      },
-                      {
-                        title: "Boutique Service Standards",
-                        icon: "👑",
-                        description: "Learn the client experience standards that have made Harley Street the global gold standard"
-                      },
-                      {
-                        title: "Clinical Excellence Protocols",
-                        icon: "🔍",
-                        description: "Comprehensive safety and efficacy protocols refined through 15+ years of practice"
-                      },
-                      {
-                        title: "Business Development Mastery",
-                        icon: "📈",
-                        description: "Proven business strategies from one of Harley Street's most successful aesthetic practices"
-                      },
-                      {
-                        title: "Ongoing Mentorship",
-                        icon: "🎓",
-                        description: "Continuous support from Harley Street Institute's team of expert practitioners"
-                      },
-                      {
-                        title: "Innovation Updates",
-                        icon: "✨",
-                        description: "First access to cutting-edge techniques and technologies as they emerge"
-                      }
-                    ].map((workshop, index) => (
-                      <div key={index} className="bg-zinc-900/50 p-4 rounded-lg border border-amber-500/10">
+                    {[{
+                    title: "Advanced Harley Street Techniques",
+                    icon: "💉",
+                    description: "Master the precise injection techniques and protocols used in London's most prestigious clinics"
+                  }, {
+                    title: "Boutique Service Standards",
+                    icon: "👑",
+                    description: "Learn the client experience standards that have made Harley Street the global gold standard"
+                  }, {
+                    title: "Clinical Excellence Protocols",
+                    icon: "🔍",
+                    description: "Comprehensive safety and efficacy protocols refined through 15+ years of practice"
+                  }, {
+                    title: "Business Development Mastery",
+                    icon: "📈",
+                    description: "Proven business strategies from one of Harley Street's most successful aesthetic practices"
+                  }, {
+                    title: "Ongoing Mentorship",
+                    icon: "🎓",
+                    description: "Continuous support from Harley Street Institute's team of expert practitioners"
+                  }, {
+                    title: "Innovation Updates",
+                    icon: "✨",
+                    description: "First access to cutting-edge techniques and technologies as they emerge"
+                  }].map((workshop, index) => <div key={index} className="bg-zinc-900/50 p-4 rounded-lg border border-amber-500/10">
                         <div className="text-2xl mb-3">{workshop.icon}</div>
                         <h3 className="text-base font-medium mb-2">{workshop.title}</h3>
                         <p className="text-gray-400 text-sm">{workshop.description}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -480,11 +413,7 @@ const Partners = () => {
               <AccordionItem value="eligibility" className="bg-zinc-800 rounded-lg border border-amber-500/20">
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <div className="flex items-center gap-4">
-                    <img 
-                      src="/lovable-uploads/821db932-4a9f-4643-8022-b2755d29adbe.png" 
-                      alt="Harley Street Location" 
-                      className="w-16 h-12 object-cover rounded"
-                    />
+                    <img src="/lovable-uploads/821db932-4a9f-4643-8022-b2755d29adbe.png" alt="Harley Street Location" className="w-16 h-12 object-cover rounded" />
                     <span className="text-left font-medium text-lg">Healthcare Professionals Eligible for Partnership</span>
                   </div>
                 </AccordionTrigger>
@@ -537,18 +466,25 @@ const Partners = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
-                    {[
-                      { population: "<100K", clinics: "1 clinic" },
-                      { population: "100K–300K", clinics: "Max 2 clinics" },
-                      { population: "300K–500K", clinics: "3–4 clinics" },
-                      { population: "500K–1M", clinics: "4–6 clinics" },
-                      { population: "1M+", clinics: "Up to 10 clinics" }
-                    ].map((territory, index) => (
-                      <div key={index} className="bg-zinc-900/50 p-4 rounded-lg text-center">
+                    {[{
+                    population: "<100K",
+                    clinics: "1 clinic"
+                  }, {
+                    population: "100K–300K",
+                    clinics: "Max 2 clinics"
+                  }, {
+                    population: "300K–500K",
+                    clinics: "3–4 clinics"
+                  }, {
+                    population: "500K–1M",
+                    clinics: "4–6 clinics"
+                  }, {
+                    population: "1M+",
+                    clinics: "Up to 10 clinics"
+                  }].map((territory, index) => <div key={index} className="bg-zinc-900/50 p-4 rounded-lg text-center">
                         <p className="font-medium mb-2">{territory.population}</p>
                         <p className="text-gray-300 text-sm">{territory.clinics}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <p className="text-center text-gray-400 text-sm">
@@ -687,12 +623,17 @@ const Partners = () => {
       {/* AI Search Bar Section */}
       <section className="py-16 px-4 md:px-8 bg-zinc-900">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }}>
             <h2 className="text-3xl font-bold mb-6 text-center">Have Questions About Our Partnership?</h2>
             <p className="text-gray-300 text-center mb-8 max-w-2xl mx-auto">
               Ask our AI assistant anything about the CosmeDoc franchise opportunity, training programs, 
@@ -702,8 +643,6 @@ const Partners = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Partners;
