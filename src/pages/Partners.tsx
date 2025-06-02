@@ -42,8 +42,17 @@ const HeroSection = () => (
         </div>
       </div>
 
-      <h1 className="text-3xl md:text-5xl font-bold mb-6">Boutique Harley Street Aesthetic Clinic Franchise</h1>
-      <p className="text-lg md:text-xl mb-6 text-gray-300">CosmeDoc, sister company of the prestigious <a href="https://www.harleystreetinstitute.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Harley Street Institute</a>, brings you 15+ years of boutique excellence in a groundbreaking franchise model designed for the modern aesthetic practitioner.</p>
+      <h1 className="text-3xl md:text-5xl font-bold mb-6">Boutique Harley Street Aesthetic Clinic Franchise with Fellowship Training</h1>
+      <p className="text-lg md:text-xl mb-6 text-gray-300">CosmeDoc, sister company of the prestigious <a href="https://www.harleystreetinstitute.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Harley Street Institute</a>, brings you 15+ years of boutique excellence in a groundbreaking franchise model. All partners receive <strong>Fellowship in Aesthetic Medicine training</strong> - the same prestigious program offered by Harley Street Institute - plus comprehensive business development support.</p>
+      
+      {/* Fellowship Training Highlight */}
+      <div className="mb-6 p-4 bg-amber-500/15 rounded-lg border border-amber-500/40 max-w-3xl mx-auto">
+        <p className="text-amber-200 font-medium">
+          🏆 <strong>Fellowship in Aesthetic Medicine Training:</strong> Every partner receives the same world-class Fellowship training 
+          as offered at <a href="https://www.harleystreetinstitute.com/fellowship-aesthetic-medicine/" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 underline">Harley Street Institute</a>, 
+          plus additional business mentorship and franchise-specific training for complete practice success.
+        </p>
+      </div>
       
       {/* Quality Over Volume Message */}
       <div className="mb-8 p-4 bg-amber-500/10 rounded-lg border border-amber-500/30 max-w-3xl mx-auto">
@@ -66,8 +75,8 @@ const HeroSection = () => (
       {/* Three Key Points */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
         <div className="bg-zinc-900/50 p-6 rounded-lg border border-amber-500/20">
-          <h3 className="text-lg font-semibold mb-2 text-amber-400">Boutique Heritage, Franchise Innovation</h3>
-          <p className="text-gray-300 text-sm">15+ years of Harley Street excellence now available in a revolutionary franchise model</p>
+          <h3 className="text-lg font-semibold mb-2 text-amber-400">Fellowship Training + Franchise Innovation</h3>
+          <p className="text-gray-300 text-sm">World-class Fellowship in Aesthetic Medicine training plus 15+ years of Harley Street business excellence</p>
         </div>
         <div className="bg-zinc-900/50 p-6 rounded-lg border border-amber-500/20">
           <h3 className="text-lg font-semibold mb-2 text-amber-400">Low-Overhead, High-Impact Model</h3>
