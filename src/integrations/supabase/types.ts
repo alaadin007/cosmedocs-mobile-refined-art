@@ -1,0 +1,1053 @@
+export type Json =
+  | string
+  | number
+  | boolean
+  | null
+  | { [key: string]: Json | undefined }
+  | Json[]
+
+export type Database = {
+  public: {
+    Tables: {
+      chatbot_knowledge: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          source_type: string
+          title: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          source_type: string
+          title: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          source_type?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      cosmetic_content: {
+        Row: {
+          content: string | null
+          created_at: string
+          embedding: string | null
+          id: string
+          image_alt: string | null
+          image_url: string | null
+          seo_description: string | null
+          title: string | null
+          url: string
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          image_alt?: string | null
+          image_url?: string | null
+          seo_description?: string | null
+          title?: string | null
+          url: string
+        }
+        Update: {
+          content?: string | null
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          image_alt?: string | null
+          image_url?: string | null
+          seo_description?: string | null
+          title?: string | null
+          url?: string
+        }
+        Relationships: []
+      }
+      facial_assessments: {
+        Row: {
+          assessment_date: string | null
+          created_at: string | null
+          dynamic_lines: Json | null
+          facial_volume: Json | null
+          id: string
+          image_path: string | null
+          sagging_skin: Json | null
+          skin_surface: Json | null
+          static_lines: Json | null
+          total_score: number | null
+        }
+        Insert: {
+          assessment_date?: string | null
+          created_at?: string | null
+          dynamic_lines?: Json | null
+          facial_volume?: Json | null
+          id?: string
+          image_path?: string | null
+          sagging_skin?: Json | null
+          skin_surface?: Json | null
+          static_lines?: Json | null
+          total_score?: number | null
+        }
+        Update: {
+          assessment_date?: string | null
+          created_at?: string | null
+          dynamic_lines?: Json | null
+          facial_volume?: Json | null
+          id?: string
+          image_path?: string | null
+          sagging_skin?: Json | null
+          skin_surface?: Json | null
+          static_lines?: Json | null
+          total_score?: number | null
+        }
+        Relationships: []
+      }
+      header_knowledge: {
+        Row: {
+          category: string
+          content: string
+          created_at: string
+          id: string
+          title: string
+        }
+        Insert: {
+          category: string
+          content: string
+          created_at?: string
+          id?: string
+          title: string
+        }
+        Update: {
+          category?: string
+          content?: string
+          created_at?: string
+          id?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      pricing_content: {
+        Row: {
+          area: string | null
+          created_at: string
+          id: string
+          page_title: string | null
+          price: string | null
+          treatment_name: string
+          url: string
+        }
+        Insert: {
+          area?: string | null
+          created_at?: string
+          id?: string
+          page_title?: string | null
+          price?: string | null
+          treatment_name: string
+          url: string
+        }
+        Update: {
+          area?: string | null
+          created_at?: string
+          id?: string
+          page_title?: string | null
+          price?: string | null
+          treatment_name?: string
+          url?: string
+        }
+        Relationships: []
+      }
+      product_analyses: {
+        Row: {
+          active_ingredients: Json | null
+          benefits: string[] | null
+          category: string | null
+          category_ratings: Json | null
+          created_at: string | null
+          description: string | null
+          id: string
+          ingredients: string[] | null
+          issues: string[] | null
+          last_scraped: string | null
+          last_updated: string | null
+          ph_level: number | null
+          price: string | null
+          product_name: string | null
+          product_url: string
+          rating: number | null
+          raw_content: string | null
+          skin_types: string[] | null
+          sustainability_info: Json | null
+          target_cells: string[] | null
+          total_ingredients: number | null
+          unnecessary_ingredients: number | null
+        }
+        Insert: {
+          active_ingredients?: Json | null
+          benefits?: string[] | null
+          category?: string | null
+          category_ratings?: Json | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          ingredients?: string[] | null
+          issues?: string[] | null
+          last_scraped?: string | null
+          last_updated?: string | null
+          ph_level?: number | null
+          price?: string | null
+          product_name?: string | null
+          product_url?: string
+          rating?: number | null
+          raw_content?: string | null
+          skin_types?: string[] | null
+          sustainability_info?: Json | null
+          target_cells?: string[] | null
+          total_ingredients?: number | null
+          unnecessary_ingredients?: number | null
+        }
+        Update: {
+          active_ingredients?: Json | null
+          benefits?: string[] | null
+          category?: string | null
+          category_ratings?: Json | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          ingredients?: string[] | null
+          issues?: string[] | null
+          last_scraped?: string | null
+          last_updated?: string | null
+          ph_level?: number | null
+          price?: string | null
+          product_name?: string | null
+          product_url?: string
+          rating?: number | null
+          raw_content?: string | null
+          skin_types?: string[] | null
+          sustainability_info?: Json | null
+          target_cells?: string[] | null
+          total_ingredients?: number | null
+          unnecessary_ingredients?: number | null
+        }
+        Relationships: []
+      }
+      products: {
+        Row: {
+          benefits: string[] | null
+          category: string | null
+          created_at: string
+          description: string
+          id: string
+          image_url: string
+          key_ingredient: string | null
+          name: string
+          price: number
+          rating: number | null
+          url: string
+        }
+        Insert: {
+          benefits?: string[] | null
+          category?: string | null
+          created_at?: string
+          description: string
+          id?: string
+          image_url: string
+          key_ingredient?: string | null
+          name: string
+          price: number
+          rating?: number | null
+          url: string
+        }
+        Update: {
+          benefits?: string[] | null
+          category?: string | null
+          created_at?: string
+          description?: string
+          id?: string
+          image_url?: string
+          key_ingredient?: string | null
+          name?: string
+          price?: number
+          rating?: number | null
+          url?: string
+        }
+        Relationships: []
+      }
+      raffle_entries: {
+        Row: {
+          claimed: boolean | null
+          created_at: string
+          email: string
+          id: string
+          prize: string
+        }
+        Insert: {
+          claimed?: boolean | null
+          created_at?: string
+          email: string
+          id?: string
+          prize: string
+        }
+        Update: {
+          claimed?: boolean | null
+          created_at?: string
+          email?: string
+          id?: string
+          prize?: string
+        }
+        Relationships: []
+      }
+      search_bar_ai_configs: {
+        Row: {
+          created_at: string
+          id: string
+          max_tokens: number | null
+          name: string
+          system_prompt: string
+          temperature: number | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          max_tokens?: number | null
+          name: string
+          system_prompt: string
+          temperature?: number | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          max_tokens?: number | null
+          name?: string
+          system_prompt?: string
+          temperature?: number | null
+        }
+        Relationships: []
+      }
+      search_bar_configurations: {
+        Row: {
+          created_at: string
+          domain: string
+          features: string[] | null
+          id: string
+          name: string
+          prompt_template: string | null
+          website_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          domain: string
+          features?: string[] | null
+          id?: string
+          name: string
+          prompt_template?: string | null
+          website_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          domain?: string
+          features?: string[] | null
+          id?: string
+          name?: string
+          prompt_template?: string | null
+          website_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "search_bar_configurations_website_id_fkey"
+            columns: ["website_id"]
+            isOneToOne: false
+            referencedRelation: "search_websites"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      search_configurations: {
+        Row: {
+          created_at: string
+          id: string
+          max_tokens: number | null
+          system_prompt: string
+          temperature: number | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          max_tokens?: number | null
+          system_prompt?: string
+          temperature?: number | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          max_tokens?: number | null
+          system_prompt?: string
+          temperature?: number | null
+        }
+        Relationships: []
+      }
+      search_history: {
+        Row: {
+          created_at: string
+          id: string
+          metadata: Json | null
+          query: string
+          response: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          query: string
+          response?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          query?: string
+          response?: string | null
+        }
+        Relationships: []
+      }
+      search_prompts: {
+        Row: {
+          created_at: string
+          document_path: string | null
+          document_type: string | null
+          id: string
+          prompt_text: string
+          website_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          document_path?: string | null
+          document_type?: string | null
+          id?: string
+          prompt_text: string
+          website_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          document_path?: string | null
+          document_type?: string | null
+          id?: string
+          prompt_text?: string
+          website_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "search_prompts_website_id_fkey"
+            columns: ["website_id"]
+            isOneToOne: false
+            referencedRelation: "search_websites"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      search_queries: {
+        Row: {
+          created_at: string | null
+          domain: string
+          fts: unknown | null
+          id: string
+          normalized_query: string
+          original_query: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          domain: string
+          fts?: unknown | null
+          id?: string
+          normalized_query: string
+          original_query: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          domain?: string
+          fts?: unknown | null
+          id?: string
+          normalized_query?: string
+          original_query?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      search_queries_responses: {
+        Row: {
+          created_at: string
+          embedding: string | null
+          id: string
+          query: string
+          response: string
+        }
+        Insert: {
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          query: string
+          response: string
+        }
+        Update: {
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          query?: string
+          response?: string
+        }
+        Relationships: []
+      }
+      search_websites: {
+        Row: {
+          created_at: string
+          domain: string
+          id: string
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          domain: string
+          id?: string
+          name: string
+        }
+        Update: {
+          created_at?: string
+          domain?: string
+          id?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      secrets: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+          value: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+          value: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
+          value?: string
+        }
+        Relationships: []
+      }
+      serp_results: {
+        Row: {
+          created_at: string | null
+          expires_at: string
+          id: string
+          query_id: string | null
+          raw_results: Json
+        }
+        Insert: {
+          created_at?: string | null
+          expires_at: string
+          id?: string
+          query_id?: string | null
+          raw_results: Json
+        }
+        Update: {
+          created_at?: string | null
+          expires_at?: string
+          id?: string
+          query_id?: string | null
+          raw_results?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "serp_results_query_id_fkey"
+            columns: ["query_id"]
+            isOneToOne: false
+            referencedRelation: "search_queries"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      website_content: {
+        Row: {
+          content: string | null
+          created_at: string | null
+          fts: unknown | null
+          id: string
+          images: string[] | null
+          last_scraped: string | null
+          raw_html: string | null
+          seo_description: string | null
+          title: string | null
+          url: string
+          website_source: string
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string | null
+          fts?: unknown | null
+          id?: string
+          images?: string[] | null
+          last_scraped?: string | null
+          raw_html?: string | null
+          seo_description?: string | null
+          title?: string | null
+          url: string
+          website_source: string
+        }
+        Update: {
+          content?: string | null
+          created_at?: string | null
+          fts?: unknown | null
+          id?: string
+          images?: string[] | null
+          last_scraped?: string | null
+          raw_html?: string | null
+          seo_description?: string | null
+          title?: string | null
+          url?: string
+          website_source?: string
+        }
+        Relationships: []
+      }
+      website_pages: {
+        Row: {
+          body_content: string | null
+          created_at: string | null
+          embedding: string | null
+          h1_tags: string[] | null
+          id: string
+          images: Json[] | null
+          last_scraped: string | null
+          meta_description: string | null
+          meta_keywords: string | null
+          raw_html: string | null
+          title: string | null
+          url: string
+        }
+        Insert: {
+          body_content?: string | null
+          created_at?: string | null
+          embedding?: string | null
+          h1_tags?: string[] | null
+          id?: string
+          images?: Json[] | null
+          last_scraped?: string | null
+          meta_description?: string | null
+          meta_keywords?: string | null
+          raw_html?: string | null
+          title?: string | null
+          url: string
+        }
+        Update: {
+          body_content?: string | null
+          created_at?: string | null
+          embedding?: string | null
+          h1_tags?: string[] | null
+          id?: string
+          images?: Json[] | null
+          last_scraped?: string | null
+          meta_description?: string | null
+          meta_keywords?: string | null
+          raw_html?: string | null
+          title?: string | null
+          url?: string
+        }
+        Relationships: []
+      }
+      website_reviews: {
+        Row: {
+          created_at: string | null
+          id: string
+          last_scraped: string | null
+          rating: number | null
+          review_date: string | null
+          review_text: string
+          reviewer_name: string | null
+          treatment_name: string | null
+          url: string
+          verified_purchase: boolean | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          last_scraped?: string | null
+          rating?: number | null
+          review_date?: string | null
+          review_text: string
+          reviewer_name?: string | null
+          treatment_name?: string | null
+          url: string
+          verified_purchase?: boolean | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          last_scraped?: string | null
+          rating?: number | null
+          review_date?: string | null
+          review_text?: string
+          reviewer_name?: string | null
+          treatment_name?: string | null
+          url?: string
+          verified_purchase?: boolean | null
+        }
+        Relationships: []
+      }
+      website_scrape_schedules: {
+        Row: {
+          created_at: string
+          id: string
+          is_active: boolean | null
+          last_scraped_at: string | null
+          next_scrape_at: string | null
+          scrape_frequency: string | null
+          website_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_active?: boolean | null
+          last_scraped_at?: string | null
+          next_scrape_at?: string | null
+          scrape_frequency?: string | null
+          website_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_active?: boolean | null
+          last_scraped_at?: string | null
+          next_scrape_at?: string | null
+          scrape_frequency?: string | null
+          website_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "website_scrape_schedules_website_id_fkey"
+            columns: ["website_id"]
+            isOneToOne: false
+            referencedRelation: "search_websites"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      website_search_content: {
+        Row: {
+          content: string | null
+          created_at: string | null
+          embedding: string | null
+          id: string
+          title: string | null
+          url: string
+          website_id: string | null
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string | null
+          embedding?: string | null
+          id?: string
+          title?: string | null
+          url: string
+          website_id?: string | null
+        }
+        Update: {
+          content?: string | null
+          created_at?: string | null
+          embedding?: string | null
+          id?: string
+          title?: string | null
+          url?: string
+          website_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "website_search_content_website_id_fkey"
+            columns: ["website_id"]
+            isOneToOne: false
+            referencedRelation: "search_websites"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      website_vectors: {
+        Row: {
+          content: string | null
+          created_at: string
+          embedding: string | null
+          id: string
+          title: string | null
+          url: string
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          title?: string | null
+          url: string
+        }
+        Update: {
+          content?: string | null
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          title?: string | null
+          url?: string
+        }
+        Relationships: []
+      }
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      binary_quantize: {
+        Args: { "": string } | { "": unknown }
+        Returns: unknown
+      }
+      cleanup_expired_results: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
+      delete_all_website_content: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
+      get_ai_system_prompt: {
+        Args: { query: string }
+        Returns: string
+      }
+      halfvec_avg: {
+        Args: { "": number[] }
+        Returns: unknown
+      }
+      halfvec_out: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      halfvec_send: {
+        Args: { "": unknown }
+        Returns: string
+      }
+      halfvec_typmod_in: {
+        Args: { "": unknown[] }
+        Returns: number
+      }
+      hnsw_bit_support: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      hnsw_halfvec_support: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      hnsw_sparsevec_support: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      hnswhandler: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      ivfflat_bit_support: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      ivfflat_halfvec_support: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      ivfflathandler: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      l2_norm: {
+        Args: { "": unknown } | { "": unknown }
+        Returns: number
+      }
+      l2_normalize: {
+        Args: { "": string } | { "": unknown } | { "": unknown }
+        Returns: string
+      }
+      match_website_content: {
+        Args: {
+          query_embedding: string
+          match_threshold: number
+          match_count: number
+        }
+        Returns: {
+          id: string
+          url: string
+          title: string
+          content: string
+          similarity: number
+        }[]
+      }
+      sparsevec_out: {
+        Args: { "": unknown }
+        Returns: unknown
+      }
+      sparsevec_send: {
+        Args: { "": unknown }
+        Returns: string
+      }
+      sparsevec_typmod_in: {
+        Args: { "": unknown[] }
+        Returns: number
+      }
+      vector_avg: {
+        Args: { "": number[] }
+        Returns: string
+      }
+      vector_dims: {
+        Args: { "": string } | { "": unknown }
+        Returns: number
+      }
+      vector_norm: {
+        Args: { "": string }
+        Returns: number
+      }
+      vector_out: {
+        Args: { "": string }
+        Returns: unknown
+      }
+      vector_send: {
+        Args: { "": string }
+        Returns: string
+      }
+      vector_typmod_in: {
+        Args: { "": unknown[] }
+        Returns: number
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
+}
+
+type DefaultSchema = Database[Extract<keyof Database, "public">]
+
+export type Tables<
+  DefaultSchemaTableNameOrOptions extends
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+    | { schema: keyof Database },
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
+    : never = never,
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
+      Row: infer R
+    }
+    ? R
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &
+        DefaultSchema["Views"])
+    ? (DefaultSchema["Tables"] &
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
+        Row: infer R
+      }
+      ? R
+      : never
+    : never
+
+export type TablesInsert<
+  DefaultSchemaTableNameOrOptions extends
+    | keyof DefaultSchema["Tables"]
+    | { schema: keyof Database },
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never,
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Insert: infer I
+    }
+    ? I
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Insert: infer I
+      }
+      ? I
+      : never
+    : never
+
+export type TablesUpdate<
+  DefaultSchemaTableNameOrOptions extends
+    | keyof DefaultSchema["Tables"]
+    | { schema: keyof Database },
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never,
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Update: infer U
+    }
+    ? U
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Update: infer U
+      }
+      ? U
+      : never
+    : never
+
+export type Enums<
+  DefaultSchemaEnumNameOrOptions extends
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof Database },
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never,
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never
+
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never,
+> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never
+
+export const Constants = {
+  public: {
+    Enums: {},
+  },
+} as const
