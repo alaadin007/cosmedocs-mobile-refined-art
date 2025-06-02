@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -83,25 +82,28 @@ const Partners = () => {
   return (
     <div className="bg-black text-white">
       <Helmet>
-        <title>Healthcare Partnership Opportunity | CosmeDoc Aesthetic Clinics</title>
-        <meta name="description" content="Join CosmeDoc's exclusive healthcare partnership network for medical professionals. Build a profitable aesthetic clinic with our proven systems, training, and support. Not a franchise—a better opportunity." />
-        <meta name="keywords" content="aesthetic clinic partnership, healthcare franchise alternative, medical aesthetic business, cosmetic clinic opportunity, doctor business partnership, aesthetic medicine training, medical practitioner business, CosmeDoc partnership" />
+        <title>CosmeDoc Franchise Opportunity | Harley Street Heritage & Innovation</title>
+        <meta name="description" content="Join the UK's first boutique Harley Street aesthetic clinic franchise. CosmeDoc, sister company of Harley Street Institute, offers world-class training with low-overhead, high-impact franchise model for medical professionals." />
+        <meta name="keywords" content="Harley Street aesthetic franchise, boutique clinic franchise, medical aesthetic franchise, CosmeDoc franchise, Harley Street Institute training, low investment franchise, aesthetic clinic business opportunity" />
         <link rel="canonical" href="https://cosmedocs.com/partners" />
-        {/* Schema markup for local business franchise opportunity */}
         <script type="application/ld+json">
         {`
           {
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "CosmeDoc Aesthetic Clinic Partnership",
-            "description": "Premium healthcare partnership opportunity for medical professionals to open their own CosmeDoc aesthetic clinic.",
+            "name": "CosmeDoc Aesthetic Clinic Franchise",
+            "description": "Revolutionary boutique Harley Street aesthetic clinic franchise with world-class training from Harley Street Institute.",
             "provider": {
               "@type": "Organization",
               "name": "CosmeDoc",
-              "url": "https://cosmedocs.com"
+              "url": "https://cosmedocs.com",
+              "parentOrganization": {
+                "@type": "Organization",
+                "name": "Harley Street Institute"
+              }
             },
             "areaServed": "United Kingdom",
-            "serviceType": "Medical Aesthetic Practice Development"
+            "serviceType": "Medical Aesthetic Franchise Development"
           }
         `}
         </script>
@@ -110,20 +112,40 @@ const Partners = () => {
       {/* Hero Section */}
       <section className="pt-28 pb-16 px-4 md:px-8 text-center">
         <motion.div 
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Open a CosmeDoc Aesthetic Clinic in Your Territory</h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-300">Join the UK's premier aesthetic medicine network — a healthcare partnership opportunity exclusively for qualified medical professionals.</p>
+          <div className="mb-6">
+            <span className="text-amber-400 text-sm font-medium tracking-wide uppercase">Revolutionary Franchise Model</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">The UK's First Boutique Harley Street Aesthetic Clinic Franchise</h1>
+          <p className="text-lg md:text-xl mb-8 text-gray-300">CosmeDoc, sister company of the prestigious Harley Street Institute, brings you 15+ years of boutique excellence in a groundbreaking franchise model designed for the modern aesthetic practitioner.</p>
+          
+          {/* Three Key Points */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+            <div className="bg-zinc-900/50 p-6 rounded-lg border border-amber-500/20">
+              <h3 className="text-lg font-semibold mb-2 text-amber-400">Boutique Heritage, Franchise Innovation</h3>
+              <p className="text-gray-300 text-sm">15+ years of Harley Street excellence now available in a revolutionary franchise model</p>
+            </div>
+            <div className="bg-zinc-900/50 p-6 rounded-lg border border-amber-500/20">
+              <h3 className="text-lg font-semibold mb-2 text-amber-400">Low-Overhead, High-Impact Model</h3>
+              <p className="text-gray-300 text-sm">Start your aesthetic practice without the traditional high costs of clinic ownership</p>
+            </div>
+            <div className="bg-zinc-900/50 p-6 rounded-lg border border-amber-500/20">
+              <h3 className="text-lg font-semibold mb-2 text-amber-400">Exclusive Territory Rights</h3>
+              <p className="text-gray-300 text-sm">Protected geographic zones ensuring sustainable growth and market integrity</p>
+            </div>
+          </div>
+          
           <Button 
             size="lg" 
             className="text-lg px-8 py-6"
             onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Apply for a Territory
+            Join the CosmeDoc Franchise
           </Button>
         </motion.div>
       </section>
@@ -131,7 +153,7 @@ const Partners = () => {
       {/* Mission Section */}
       <section className="py-16 bg-zinc-900 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">The CosmeDoc Healthcare Partnership Model</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">The First-of-Its-Kind Boutique Harley Street Franchise</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div 
@@ -140,25 +162,16 @@ const Partners = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-4">Our Vision</h3>
+              <h3 className="text-xl font-semibold mb-4">Revolutionary Concept</h3>
               <p className="text-gray-300 mb-4">
-                CosmeDoc has created a powerful alliance of medical-led aesthetic clinics 
-                across the United Kingdom. Unlike a traditional healthcare franchise, our partnership model offers:
+                For over 15 years, CosmeDoc has been synonymous with boutique excellence on Harley Street. 
+                As a sister company of the world-renowned Harley Street Institute, we're now pioneering 
+                the UK's first franchise model that brings this prestigious heritage to ambitious medical professionals nationwide.
               </p>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start">
-                  <span className="mr-2 text-white">•</span>
-                  <span>Greater clinical autonomy while maintaining brand excellence</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-white">•</span>
-                  <span>Systematized operations with lower entry costs than franchising</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-white">•</span>
-                  <span>A structure that builds real equity and sellable business value</span>
-                </li>
-              </ul>
+              <p className="text-gray-300 mb-4">
+                Our innovative approach combines the prestige and clinical excellence of Harley Street 
+                with a modern, accessible franchise structure that eliminates traditional barriers to entry.
+              </p>
             </motion.div>
             
             <motion.div 
@@ -167,41 +180,34 @@ const Partners = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+              <h3 className="text-xl font-semibold mb-4">Why This Changes Everything</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="text-xl mr-3">🏆</span>
                   <div>
-                    <p className="font-medium">National Brand Authority</p>
-                    <p className="text-gray-400 text-sm">Leverage an established aesthetic medicine brand with over 15 years of clinical excellence</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-xl mr-3">⚙️</span>
-                  <div>
-                    <p className="font-medium">Turnkey Business Systems</p>
-                    <p className="text-gray-400 text-sm">Complete operations, marketing, and administrative infrastructure without franchise fees</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-xl mr-3">💰</span>
-                  <div>
-                    <p className="font-medium">Equity-Building Structure</p>
-                    <p className="text-gray-400 text-sm">Create a healthcare business asset with real exit potential and valuation</p>
+                    <p className="font-medium">Harley Street Prestige</p>
+                    <p className="text-gray-400 text-sm">Access the most prestigious address in aesthetic medicine through our established reputation</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-xl mr-3">🎓</span>
                   <div>
-                    <p className="font-medium">Advanced Clinical Training</p>
-                    <p className="text-gray-400 text-sm">Regular aesthetic medicine workshops and cutting-edge technique updates</p>
+                    <p className="font-medium">World-Class Training Heritage</p>
+                    <p className="text-gray-400 text-sm">Harley Street Institute's unparalleled training programs, refined over decades of excellence</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-xl mr-3">🛡️</span>
+                  <span className="text-xl mr-3">💡</span>
                   <div>
-                    <p className="font-medium">Geographic Protection</p>
-                    <p className="text-gray-400 text-sm">Exclusive territory rights based on population metrics</p>
+                    <p className="font-medium">Innovation Without Compromise</p>
+                    <p className="text-gray-400 text-sm">Modern franchise flexibility while maintaining the highest clinical and service standards</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-xl mr-3">🌟</span>
+                  <div>
+                    <p className="font-medium">Proven Excellence</p>
+                    <p className="text-gray-400 text-sm">15+ years of successful practice refined into a replicable business model</p>
                   </div>
                 </li>
               </ul>
@@ -260,7 +266,7 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Workshop Section */}
+      {/* Enhanced Workshop Section */}
       <section className="py-16 bg-zinc-900 px-4 md:px-8">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -269,46 +275,51 @@ const Partners = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-8 text-center">Continuous Professional Development</h2>
-            <p className="text-gray-300 text-center max-w-3xl mx-auto mb-12">
-              CosmeDoc partners receive exclusive, high-level aesthetic medicine workshops designed to keep you at the forefront 
-              of clinical practice and grow your expertise in the field.
-            </p>
+            <h2 className="text-3xl font-bold mb-6 text-center">World-Class Training by Harley Street Institute</h2>
+            <div className="text-center mb-12">
+              <p className="text-gray-300 max-w-3xl mx-auto mb-4">
+                As a sister company of Harley Street Institute, CosmeDoc franchisees receive exclusive access to 
+                world-renowned training programs that have shaped aesthetic medicine for over 15 years.
+              </p>
+              <p className="text-amber-300 font-medium">
+                Training delivered by the same institute that trains Harley Street's elite practitioners
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {[
                 { 
-                  title: "Advanced Injectables", 
+                  title: "Advanced Harley Street Techniques", 
                   icon: "💉", 
-                  description: "Master techniques for premium dermal fillers and next-generation neurotoxins" 
+                  description: "Master the precise injection techniques and protocols used in London's most prestigious clinics" 
                 },
                 { 
-                  title: "Thread Lifting Mastery", 
-                  icon: "🧵", 
-                  description: "Advanced PDO and PCL thread placement with complication management protocols" 
+                  title: "Boutique Service Standards", 
+                  icon: "👑", 
+                  description: "Learn the client experience standards that have made Harley Street the global gold standard" 
                 },
                 { 
-                  title: "Ultrasound-Guided Procedures", 
+                  title: "Clinical Excellence Protocols", 
                   icon: "🔍", 
-                  description: "Precision placement using cutting-edge ultrasound visualization technology" 
+                  description: "Comprehensive safety and efficacy protocols refined through 15+ years of practice" 
                 },
                 { 
-                  title: "Bio-stimulator Therapies", 
-                  icon: "✨", 
-                  description: "Latest collagen-inducing treatments and combination protocols" 
-                },
-                { 
-                  title: "Medical Ethics & Governance", 
-                  icon: "⚖️", 
-                  description: "Best practice frameworks for aesthetic medicine practice" 
-                },
-                { 
-                  title: "Healthcare Business Growth", 
+                  title: "Business Development Mastery", 
                   icon: "📈", 
-                  description: "Strategic clinic expansion and healthcare practice optimization" 
+                  description: "Proven business strategies from one of Harley Street's most successful aesthetic practices" 
+                },
+                { 
+                  title: "Ongoing Mentorship", 
+                  icon: "🎓", 
+                  description: "Continuous support from Harley Street Institute's team of expert practitioners" 
+                },
+                { 
+                  title: "Innovation Updates", 
+                  icon: "✨", 
+                  description: "First access to cutting-edge techniques and technologies as they emerge" 
                 }
               ].map((workshop, index) => (
-                <div key={index} className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 transition-colors">
+                <div key={index} className="bg-zinc-800 p-6 rounded-lg hover:bg-zinc-700 transition-colors border border-amber-500/10">
                   <div className="text-3xl mb-4">{workshop.icon}</div>
                   <h3 className="text-lg font-medium mb-2">{workshop.title}</h3>
                   <p className="text-gray-400 text-sm">{workshop.description}</p>
@@ -356,7 +367,7 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Pricing & Inclusions */}
+      {/* Enhanced Pricing & Inclusions */}
       <section className="py-16 bg-zinc-900 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -365,72 +376,93 @@ const Partners = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-center">Partnership Benefits: £500–£1,500/month</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Complete Harley Street Franchise Package</h2>
+            <div className="text-center mb-8">
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Your CosmeDoc franchise includes everything needed to establish a successful aesthetic practice 
+                with the prestige of Harley Street and the innovation of modern business systems.
+              </p>
+            </div>
           
-            <div className="bg-zinc-800 p-8 rounded-lg mb-8">
+            <div className="bg-zinc-800 p-8 rounded-lg mb-8 border border-amber-500/20">
+              <h3 className="text-xl font-semibold mb-6 text-center text-amber-400">What's Included in Your Franchise</h3>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>Use of CosmeDoc brand & national identity</span>
+                    <span>CosmeDoc brand rights & Harley Street heritage</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>Clinic microsite with built-in booking</span>
+                    <span>Harley Street Institute world-class training</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>WhatsApp and SMS automation</span>
+                    <span>Complete business systems & operations manual</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>Newsletter agent & follow-up system</span>
+                    <span>Professional website with integrated booking</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-3">✓</span>
+                    <span>Automated marketing & patient communication</span>
                   </div>
                 </div>
                 
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>Admin support and clinical dashboard</span>
+                    <span>Protected territory rights</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>Access to monthly workshops</span>
+                    <span>Ongoing clinical mentorship</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>Appearance in national directory and campaigns</span>
+                    <span>National marketing presence</span>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-400 mr-3">✓</span>
-                    <span>Ongoing business development support</span>
+                    <span>Business development support</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-400 mr-3">✓</span>
+                    <span>Access to exclusive supplier networks</span>
                   </div>
                 </div>
               </div>
             </div>
             
             <div className="bg-gradient-to-r from-zinc-800 to-zinc-900 p-8 rounded-lg border border-amber-500/20">
-              <h3 className="text-xl font-semibold mb-6 text-center">Healthcare Partnership Investment</h3>
+              <h3 className="text-xl font-semibold mb-6 text-center">Franchise Investment Options</h3>
               
               <div className="space-y-6">
                 <div className="bg-zinc-800/50 p-5 rounded-lg">
-                  <h4 className="text-lg font-medium mb-2">Complete Healthcare Partnership Package</h4>
+                  <h4 className="text-lg font-medium mb-2">Complete Harley Street Franchise Package</h4>
                   <p className="text-amber-300 text-xl font-semibold mb-2">£20,000</p>
-                  <p className="text-gray-300">Our comprehensive program for medical practitioners new to aesthetic medicine includes extensive clinical training, business mentorship, and all systems required to launch a successful healthcare practice. Flexible monthly payment options available to suit your financial planning.</p>
+                  <p className="text-gray-300">Our comprehensive franchise program includes intensive Harley Street Institute training, complete business mentorship, all operational systems, and ongoing support. This package is designed for medical practitioners new to aesthetic medicine or those wanting the complete Harley Street experience. Flexible payment options available.</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-5 rounded-lg">
-                  <h4 className="text-lg font-medium mb-2">Experienced Medical Practitioners</h4>
-                  <p className="text-gray-300">Already practicing in aesthetic medicine? We value your expertise. Your partnership investment will be customized based on your existing qualifications and clinical experience, ensuring you only invest in the additional training and systems needed to meet CosmeDoc's exceptional standards.</p>
+                  <h4 className="text-lg font-medium mb-2">Experienced Practitioner Package</h4>
+                  <p className="text-gray-300">Already established in aesthetic medicine? We recognize your expertise. Your franchise investment is customized based on your existing qualifications and experience, focusing only on the additional Harley Street Institute training and systems needed to meet our prestigious standards.</p>
+                </div>
+                
+                <div className="bg-amber-500/10 p-5 rounded-lg border border-amber-500/30">
+                  <h4 className="text-lg font-medium mb-2 text-amber-400">Ongoing Franchise Fees: £500–£1,500/month</h4>
+                  <p className="text-gray-300 text-sm">Includes ongoing Harley Street Institute training, marketing support, business development, and access to all franchise systems and resources.</p>
                 </div>
                 
                 <div className="mt-6 text-center">
-                  <p className="text-gray-400 mb-4">All partnership packages include flexible monthly payment structures</p>
+                  <p className="text-gray-400 mb-4">All packages include flexible payment structures tailored to your financial planning</p>
                   <Button 
                     onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
                     className="px-8"
                   >
-                    Discuss Partnership Options
+                    Explore Franchise Options
                   </Button>
                 </div>
               </div>
