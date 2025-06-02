@@ -570,6 +570,15 @@ const Partners = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* AI Technology Statement Section */}
+      <section className="py-8 px-4 md:px-8 bg-black border-t border-zinc-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-amber-400 font-medium">
+            ✨ Powered by AI technology - we use AI and blockchain contracts instead of traditional agreements, plus AI arbitration for fair dispute resolution.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

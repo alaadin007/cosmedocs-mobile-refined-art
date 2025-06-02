@@ -155,7 +155,6 @@ const AISearchBar = () => {
 
       <div className="mt-4 text-xs text-gray-500">
         <p>💡 Try asking about: training programs, investment costs, territory protection, support provided, or eligibility requirements</p>
-        <p className="mt-2 text-amber-400">✨ Powered by AI technology - we use AI and blockchain contracts instead of traditional agreements, plus AI arbitration for fair dispute resolution.</p>
       </div>
     </div>
   );
