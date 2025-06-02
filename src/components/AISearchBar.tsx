@@ -127,6 +127,32 @@ const AISearchBar = () => {
     setResponse("");
   };
 
+  // Function to format the response text
+  const formatResponse = (text: string) => {
+    // Replace **text** with proper bold formatting
+    const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Split by double line breaks to create paragraphs
+    const paragraphs = formattedText.split('\n\n');
+    
+    return paragraphs.map((paragraph, index) => {
+      // Split single line breaks within paragraphs
+      const lines = paragraph.split('\n');
+      
+      return (
+        <div key={index} className="mb-4 last:mb-0">
+          {lines.map((line, lineIndex) => (
+            <div 
+              key={lineIndex} 
+              className={`${lineIndex > 0 ? 'mt-2' : ''}`}
+              dangerouslySetInnerHTML={{ __html: line }}
+            />
+          ))}
+        </div>
+      );
+    });
+  };
+
   return (
     <div className="bg-zinc-800 p-6 rounded-lg border border-amber-500/20">
       <div className="mb-4">
@@ -161,10 +187,10 @@ const AISearchBar = () => {
       {response && (
         <div className="mt-6">
           <h4 className="font-medium mb-3 text-amber-400">AI Response:</h4>
-          <div className="bg-zinc-900/50 p-4 rounded-lg border border-zinc-700">
-            <p className="text-gray-300 whitespace-pre-wrap leading-relaxed">
-              {response}
-            </p>
+          <div className="bg-zinc-900/50 p-6 rounded-lg border border-zinc-700">
+            <div className="text-gray-300 leading-relaxed space-y-2">
+              {formatResponse(response)}
+            </div>
           </div>
           <Button 
             onClick={handleNewQuestion}
