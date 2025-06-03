@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -42,11 +41,37 @@ const HeroSection = () => (
         </div>
       </div>
 
+      {/* Harley Street Institute Partnership Badge */}
+      <div className="mb-8 p-6 bg-blue-600/10 rounded-lg border border-blue-500/30 max-w-4xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="text-center md:text-left">
+            <p className="text-blue-200 font-medium mb-2">Sister Company of</p>
+            <img 
+              src="/lovable-uploads/57da58d9-88e9-42b4-a317-f9fa40e7cee8.png" 
+              alt="Harley Street Institute" 
+              className="h-16 mx-auto md:mx-0 filter brightness-0 invert"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <p className="text-blue-200 text-sm">15+ years of world-class training excellence</p>
+            <p className="text-blue-300 font-medium">The same prestigious Fellowship training for all CosmeDoc partners</p>
+          </div>
+        </div>
+      </div>
+
       <h1 className="text-3xl md:text-5xl font-bold mb-6">Boutique Harley Street Aesthetic Clinic Franchise with Fellowship Training</h1>
       <p className="text-lg md:text-xl mb-6 text-gray-300">CosmeDoc, sister company of the prestigious <a href="https://www.harleystreetinstitute.com/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Harley Street Institute</a>, brings you 15+ years of boutique excellence in a groundbreaking franchise model. All partners receive <strong>Fellowship in Aesthetic Medicine training</strong> - the same prestigious program offered by Harley Street Institute - plus comprehensive business development support.</p>
       
-      {/* Fellowship Training Highlight */}
+      {/* Fellowship Training Highlight with Logo */}
       <div className="mb-6 p-4 bg-amber-500/15 rounded-lg border border-amber-500/40 max-w-3xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-4 mb-3">
+          <img 
+            src="/lovable-uploads/57da58d9-88e9-42b4-a317-f9fa40e7cee8.png" 
+            alt="Harley Street Institute" 
+            className="h-8 filter brightness-0 invert opacity-80"
+          />
+          <span className="text-amber-200 font-medium text-sm">Fellowship Training Program</span>
+        </div>
         <p className="text-amber-200 font-medium">
           🏆 <strong>Fellowship in Aesthetic Medicine Training:</strong> Every partner receives the same world-class Fellowship training 
           as offered at <a href="https://www.harleystreetinstitute.com/fellowship-aesthetic-medicine/" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 underline">Harley Street Institute</a>, 
@@ -158,7 +183,14 @@ const PricingSection = () => (
         </div>
       
         <div className="bg-zinc-900/50 p-6 rounded-lg mb-6 border border-amber-500/20">
-          <h3 className="text-xl font-semibold mb-6 text-center text-amber-400">What's Included in Your Franchise</h3>
+          <div className="flex items-center justify-center mb-4">
+            <img 
+              src="/lovable-uploads/57da58d9-88e9-42b4-a317-f9fa40e7cee8.png" 
+              alt="Harley Street Institute" 
+              className="h-12 mr-4 filter brightness-0 invert opacity-70"
+            />
+            <h3 className="text-xl font-semibold text-amber-400">What's Included in Your Franchise</h3>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
             <div className="space-y-3">
@@ -381,7 +413,7 @@ const Partners = () => {
               <AccordionItem value="training" className="bg-zinc-800 rounded-lg border border-amber-500/20">
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <div className="flex items-center gap-4">
-                    <img src="/lovable-uploads/98f593f9-83af-42b6-a763-7cb95599fe56.png" alt="CosmeDoc Setup" className="w-16 h-12 object-cover rounded" />
+                    <img src="/lovable-uploads/57da58d9-88e9-42b4-a317-f9fa40e7cee8.png" alt="Harley Street Institute" className="w-16 h-10 object-contain filter brightness-0 invert" />
                     <span className="text-left font-medium text-lg">World-Class Training by Harley Street Institute</span>
                   </div>
                 </AccordionTrigger>

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -7,20 +6,23 @@ interface Treatment {
   title: string;
   description: string;
   link?: string;
+  hasBeforeAfter?: boolean;
 }
 
 interface PopularTreatmentsProps {
   title?: string;
   treatments?: Treatment[];
   className?: string;
+  showBeforeAfter?: boolean;
 }
 
 const PopularTreatments = ({ 
   title = "Popular Treatments",
   treatments,
-  className = ""
+  className = "",
+  showBeforeAfter = false
 }: PopularTreatmentsProps) => {
-  // Default treatments if none provided
+
   const defaultTreatments: Treatment[] = [
     {
       title: "Botox",
