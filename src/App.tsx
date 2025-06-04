@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import {
   BrowserRouter,
@@ -52,8 +53,7 @@ function App() {
         <Toaster />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Layout><Index /></Layout>} />
-            <Route path="/home" element={<Layout><Home /></Layout>} />
+            <Route path="/" element={<Layout><Home /></Layout>} />
             <Route path="/treatments" element={<Layout><Treatments /></Layout>} />
             <Route path="/about" element={<Layout><About /></Layout>} />
             <Route path="/contact" element={<Layout><Contact /></Layout>} />
@@ -79,3 +79,4 @@ function App() {
 }
 
 export default App;
+
