@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
@@ -82,7 +83,7 @@ const Home = () => {
               delay: 0.7,
               duration: 0.6
             }}>
-                <p className="text-gray-300 mb-1">Bold • Natural • Always Your Way</p>
+                <p className="text-gray-300 mb-1">art • science • bit of magic</p>
                 <p className="text-gray-400 text-sm mt-4">
                   Aesthetic medicine by Cosmedocs is minimal.<br />
                   Quiet, not loud.<br />
