@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   BrowserRouter,
@@ -10,7 +11,7 @@ import {
   useQuery,
   QueryClientProvider,
 } from '@tanstack/react-query'
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "@/components/ui/toaster";
 
 import Index from "./pages/Index";
 import Home from "./pages/Home";
