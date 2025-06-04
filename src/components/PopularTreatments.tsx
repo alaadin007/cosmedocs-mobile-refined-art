@@ -34,6 +34,11 @@ const PopularTreatments = ({
       link: "/dermal-filler-makeover"
     },
     {
+      title: "Clinical Concepts to Flawless Skin",
+      description: "Revolutionary 9-step protocol for achieving perfect skin health and treating lazy skin syndrome",
+      link: "/clinical-concepts-to-flawless-skin"
+    },
+    {
       title: "Lip Fillers",
       description: "Subtle enhancement for natural-looking fullness",
       link: "/lip-fillers"
@@ -46,10 +51,6 @@ const PopularTreatments = ({
     {
       title: "Skin Boosters",
       description: "Deep hydration and rejuvenation"
-    },
-    {
-      title: "Chin & Jawline Enhancement",
-      description: "Define your facial profile"
     }
   ];
 

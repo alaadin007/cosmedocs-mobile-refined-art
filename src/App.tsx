@@ -1,56 +1,76 @@
-
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import {
+  QueryClient,
+  useQuery,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import { Toaster } from 'react-hot-toast';
 
-import Layout from "./components/Layout";
+import Index from "./pages/Index";
 import Home from "./pages/Home";
-import ManchesterHome from "./pages/ManchesterHome";
-import BirminghamHome from "./pages/BirminghamHome";
-import CardiffHome from "./pages/CardiffHome";
 import Treatments from "./pages/Treatments";
-import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
-import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
-import LipFillers from "./pages/LipFillers";
-import LipFillerDissolve from "./pages/LipFillerDissolve";
-import DermalFillerMakeover from "./pages/DermalFillerMakeover";
-import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
-import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
-import TriggerPointBotox from "./pages/TriggerPointBotox";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Partners from "./pages/Partners";
+import LipFillers from "./pages/LipFillers";
+import LipFillerDissolve from "./pages/LipFillerDissolve";
+import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
+import DermalFillerMakeover from "./pages/DermalFillerMakeover";
+import TriggerPointBotox from "./pages/TriggerPointBotox";
+import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
+import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
+import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
+import BirminghamHome from "./pages/BirminghamHome";
+import ManchesterHome from "./pages/ManchesterHome";
+import CardiffHome from "./pages/CardiffHome";
 import NotFound from "./pages/NotFound";
+import Layout from "./components/Layout";
+import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSkin";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
+
+export const generateSEOMetadata = (title: string, description: string, canonical: string, image?: string) => {
+  return {
+    title: title,
+    description: description,
+    canonical: `https://www.cosmedocs.com${canonical}`,
+    image: image || "https://www.cosmedocs.com/default-og-image.jpg" // Provide a default image URL
+  };
+};
 
 function App() {
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
+        <Toaster />
         <BrowserRouter>
-          <div className="App">
-            <Routes>
-              <Route path="/" element={<Layout><Home /></Layout>} />
-              <Route path="manchester" element={<Layout><ManchesterHome /></Layout>} />
-              <Route path="birmingham" element={<Layout><BirminghamHome /></Layout>} />
-              <Route path="cardiff" element={<Layout><CardiffHome /></Layout>} />
-              <Route path="treatments" element={<Layout><Treatments /></Layout>} />
-              <Route path="treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />
-              <Route path="treatments-summary-chinese" element={<Layout><TreatmentsSummaryChinese /></Layout>} />
-              <Route path="lip-fillers" element={<Layout><LipFillers /></Layout>} />
-              <Route path="lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
-              <Route path="dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
-              <Route path="non-surgical-nose-job" element={<Layout><NonSurgicalNoseJob /></Layout>} />
-              <Route path="medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
-              <Route path="trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
-              <Route path="about" element={<Layout><About /></Layout>} />
-              <Route path="contact" element={<Layout><Contact /></Layout>} />
-              <Route path="partners" element={<Layout><Partners /></Layout>} />
-              <Route path="*" element={<Layout><NotFound /></Layout>} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Layout><Index /></Layout>} />
+            <Route path="/home" element={<Layout><Home /></Layout>} />
+            <Route path="/treatments" element={<Layout><Treatments /></Layout>} />
+            <Route path="/about" element={<Layout><About /></Layout>} />
+            <Route path="/contact" element={<Layout><Contact /></Layout>} />
+            <Route path="/partners" element={<Layout><Partners /></Layout>} />
+            <Route path="/lip-fillers" element={<Layout><LipFillers /></Layout>} />
+            <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
+            <Route path="/non-surgical-nose-job" element={<Layout><NonSurgicalNoseJob /></Layout>} />
+            <Route path="/dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
+            <Route path="/clinical-concepts-to-flawless-skin" element={<Layout><ClinicalConceptsToFlawlessSkin /></Layout>} />
+            <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
+            <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
+            <Route path="/treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />
+            <Route path="/treatments-summary-chinese" element={<Layout><TreatmentsSummaryChinese /></Layout>} />
+            <Route path="/birmingham" element={<Layout><BirminghamHome /></Layout>} />
+            <Route path="/manchester" element={<Layout><ManchesterHome /></Layout>} />
+            <Route path="/cardiff" element={<Layout><CardiffHome /></Layout>} />
+            <Route path="*" element={<Layout><NotFound /></Layout>} />
+          </Routes>
         </BrowserRouter>
       </QueryClientProvider>
     </HelmetProvider>
@@ -58,12 +78,3 @@ function App() {
 }
 
 export default App;
-
-export const generateSEOMetadata = (title: string, description: string, canonical: string, image?: string) => {
-  return {
-    title: title,
-    description: description,
-    canonical: `https://cosmedocs.com${canonical}`,
-    image: image || 'https://cosmedocs.com/lovable-uploads/c60a1e1c-0406-4552-9246-e93bdc4d7474.png',
-  };
-};
