@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import {
   BrowserRouter,
@@ -23,6 +21,7 @@ import Partners from "./pages/Partners";
 import LipFillers from "./pages/LipFillers";
 import LipFillerDissolve from "./pages/LipFillerDissolve";
 import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
+import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
 import DermalFillerMakeover from "./pages/DermalFillerMakeover";
 import TriggerPointBotox from "./pages/TriggerPointBotox";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
@@ -61,6 +60,7 @@ function App() {
             <Route path="/lip-fillers" element={<Layout><LipFillers /></Layout>} />
             <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
             <Route path="/non-surgical-nose-job" element={<Layout><NonSurgicalNoseJob /></Layout>} />
+            <Route path="/non-surgical-facelift" element={<Layout><NonSurgicalFacelift /></Layout>} />
             <Route path="/dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
             <Route path="/clinical-concepts-to-flawless-skin" element={<Layout><ClinicalConceptsToFlawlessSkin /></Layout>} />
             <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
@@ -79,4 +79,3 @@ function App() {
 }
 
 export default App;
-
