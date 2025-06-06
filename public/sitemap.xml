@@ -41,6 +41,14 @@
     <mobile:mobile/>
   </url>
   
+  <url>
+    <loc>https://cosmedocs.com/blog/aesthetic-maintenance-cost-guide</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+  
   <!-- Core Treatment Pages -->
   <url>
     <loc>https://cosmedocs.com/lip-fillers</loc>
