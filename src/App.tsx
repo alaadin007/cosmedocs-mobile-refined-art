@@ -36,6 +36,7 @@ import Layout from "./components/Layout";
 import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSkin";
 import AdvancedConsultation from "./pages/AdvancedConsultation";
 import AdvancedUpperFaceBotox from "./pages/AdvancedUpperFaceBotox";
+import LowerFaceBotox from "./pages/LowerFaceBotox";
 import NefertitiBotoxFacelift from "./pages/NefertitiBotoxFacelift";
 
 const queryClient = new QueryClient()
@@ -69,6 +70,7 @@ function App() {
             <Route path="/clinical-concepts-to-flawless-skin" element={<Layout><ClinicalConceptsToFlawlessSkin /></Layout>} />
             <Route path="/advanced-consultation" element={<Layout><AdvancedConsultation /></Layout>} />
             <Route path="/advanced-upper-face-botox" element={<Layout><AdvancedUpperFaceBotox /></Layout>} />
+            <Route path="/lower-face-botox" element={<Layout><LowerFaceBotox /></Layout>} />
             <Route path="/nefertiti-botox-facelift" element={<Layout><NefertitiBotoxFacelift /></Layout>} />
             <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
             <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
