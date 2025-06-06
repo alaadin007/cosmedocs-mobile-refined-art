@@ -29,6 +29,7 @@ import TriggerPointBotox from "./pages/TriggerPointBotox";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
 import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
+import ChineseLondonAestheticsBlog from "./pages/ChineseLondonAestheticsBlog";
 import BirminghamHome from "./pages/BirminghamHome";
 import ManchesterHome from "./pages/ManchesterHome";
 import CardiffHome from "./pages/CardiffHome";
@@ -80,6 +81,7 @@ function App() {
             <Route path="/pdo-threads" element={<Layout><PDOThreads /></Layout>} />
             <Route path="/blog/pdo-threads-comprehensive-guide" element={<Layout><PDOThreadsBlog /></Layout>} />
             <Route path="/blog/aesthetic-maintenance-cost-guide" element={<Layout><AestheticMaintenanceCostBlog /></Layout>} />
+            <Route path="/blog/chinese-london-aesthetics-guide" element={<Layout><ChineseLondonAestheticsBlog /></Layout>} />
             <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
             <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
             <Route path="/treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />

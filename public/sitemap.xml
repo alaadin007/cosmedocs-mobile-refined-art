@@ -49,6 +49,14 @@
     <mobile:mobile/>
   </url>
   
+  <url>
+    <loc>https://cosmedocs.com/blog/chinese-london-aesthetics-guide</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+  
   <!-- Core Treatment Pages -->
   <url>
     <loc>https://cosmedocs.com/lip-fillers</loc>
