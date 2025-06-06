@@ -22,6 +22,7 @@ import Partners from "./pages/Partners";
 import LipFillers from "./pages/LipFillers";
 import LipFillerDissolve from "./pages/LipFillerDissolve";
 import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
+import NonSurgicalNoseJobBlog from "./pages/NonSurgicalNoseJobBlog";
 import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
 import DermalFillerMakeover from "./pages/DermalFillerMakeover";
 import TriggerPointBotox from "./pages/TriggerPointBotox";
@@ -65,6 +66,7 @@ function App() {
             <Route path="/lip-fillers" element={<Layout><LipFillers /></Layout>} />
             <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
             <Route path="/non-surgical-nose-job" element={<Layout><NonSurgicalNoseJob /></Layout>} />
+            <Route path="/blog/non-surgical-nose-job-evolution" element={<Layout><NonSurgicalNoseJobBlog /></Layout>} />
             <Route path="/non-surgical-facelift" element={<Layout><NonSurgicalFacelift /></Layout>} />
             <Route path="/dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
             <Route path="/clinical-concepts-to-flawless-skin" element={<Layout><ClinicalConceptsToFlawlessSkin /></Layout>} />

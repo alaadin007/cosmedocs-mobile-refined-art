@@ -24,6 +24,15 @@
     <mobile:mobile/>
   </url>
   
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://cosmedocs.com/blog/non-surgical-nose-job-evolution</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+  
   <!-- Core Treatment Pages -->
   <url>
     <loc>https://cosmedocs.com/lip-fillers</loc>
