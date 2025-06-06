@@ -39,6 +39,8 @@ import AdvancedConsultation from "./pages/AdvancedConsultation";
 import AdvancedUpperFaceBotox from "./pages/AdvancedUpperFaceBotox";
 import LowerFaceBotox from "./pages/LowerFaceBotox";
 import NefertitiBotoxFacelift from "./pages/NefertitiBotoxFacelift";
+import PDOThreads from "./pages/PDOThreads";
+import PDOThreadsBlog from "./pages/PDOThreadsBlog";
 
 const queryClient = new QueryClient()
 
@@ -74,6 +76,8 @@ function App() {
             <Route path="/advanced-upper-face-botox" element={<Layout><AdvancedUpperFaceBotox /></Layout>} />
             <Route path="/lower-face-botox" element={<Layout><LowerFaceBotox /></Layout>} />
             <Route path="/nefertiti-botox-facelift" element={<Layout><NefertitiBotoxFacelift /></Layout>} />
+            <Route path="/pdo-threads" element={<Layout><PDOThreads /></Layout>} />
+            <Route path="/blog/pdo-threads-comprehensive-guide" element={<Layout><PDOThreadsBlog /></Layout>} />
             <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
             <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
             <Route path="/treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />
