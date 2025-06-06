@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   BrowserRouter,
@@ -33,6 +34,7 @@ import CardiffHome from "./pages/CardiffHome";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSkin";
+import AdvancedConsultation from "./pages/AdvancedConsultation";
 
 const queryClient = new QueryClient()
 
@@ -63,6 +65,7 @@ function App() {
             <Route path="/non-surgical-facelift" element={<Layout><NonSurgicalFacelift /></Layout>} />
             <Route path="/dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
             <Route path="/clinical-concepts-to-flawless-skin" element={<Layout><ClinicalConceptsToFlawlessSkin /></Layout>} />
+            <Route path="/advanced-consultation" element={<Layout><AdvancedConsultation /></Layout>} />
             <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
             <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
             <Route path="/treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />

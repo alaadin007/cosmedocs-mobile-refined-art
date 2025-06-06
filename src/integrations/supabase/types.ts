@@ -37,7 +37,6 @@ export type Database = {
         Row: {
           content: string | null
           created_at: string
-          embedding: string | null
           id: string
           image_alt: string | null
           image_url: string | null
@@ -48,7 +47,6 @@ export type Database = {
         Insert: {
           content?: string | null
           created_at?: string
-          embedding?: string | null
           id?: string
           image_alt?: string | null
           image_url?: string | null
@@ -59,7 +57,6 @@ export type Database = {
         Update: {
           content?: string | null
           created_at?: string
-          embedding?: string | null
           id?: string
           image_alt?: string | null
           image_url?: string | null
@@ -484,21 +481,18 @@ export type Database = {
       search_queries_responses: {
         Row: {
           created_at: string
-          embedding: string | null
           id: string
           query: string
           response: string
         }
         Insert: {
           created_at?: string
-          embedding?: string | null
           id?: string
           query: string
           response: string
         }
         Update: {
           created_at?: string
-          embedding?: string | null
           id?: string
           query?: string
           response?: string
@@ -625,7 +619,6 @@ export type Database = {
         Row: {
           body_content: string | null
           created_at: string | null
-          embedding: string | null
           h1_tags: string[] | null
           id: string
           images: Json[] | null
@@ -639,7 +632,6 @@ export type Database = {
         Insert: {
           body_content?: string | null
           created_at?: string | null
-          embedding?: string | null
           h1_tags?: string[] | null
           id?: string
           images?: Json[] | null
@@ -653,7 +645,6 @@ export type Database = {
         Update: {
           body_content?: string | null
           created_at?: string | null
-          embedding?: string | null
           h1_tags?: string[] | null
           id?: string
           images?: Json[] | null
@@ -747,7 +738,6 @@ export type Database = {
         Row: {
           content: string | null
           created_at: string | null
-          embedding: string | null
           id: string
           title: string | null
           url: string
@@ -756,7 +746,6 @@ export type Database = {
         Insert: {
           content?: string | null
           created_at?: string | null
-          embedding?: string | null
           id?: string
           title?: string | null
           url: string
@@ -765,7 +754,6 @@ export type Database = {
         Update: {
           content?: string | null
           created_at?: string | null
-          embedding?: string | null
           id?: string
           title?: string | null
           url?: string
@@ -785,7 +773,6 @@ export type Database = {
         Row: {
           content: string | null
           created_at: string
-          embedding: string | null
           id: string
           title: string | null
           url: string
@@ -793,7 +780,6 @@ export type Database = {
         Insert: {
           content?: string | null
           created_at?: string
-          embedding?: string | null
           id?: string
           title?: string | null
           url: string
@@ -801,7 +787,6 @@ export type Database = {
         Update: {
           content?: string | null
           created_at?: string
-          embedding?: string | null
           id?: string
           title?: string | null
           url?: string
@@ -813,10 +798,6 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      binary_quantize: {
-        Args: { "": string } | { "": unknown }
-        Returns: unknown
-      }
       cleanup_expired_results: {
         Args: Record<PropertyKey, never>
         Returns: undefined
@@ -828,108 +809,6 @@ export type Database = {
       get_ai_system_prompt: {
         Args: { query: string }
         Returns: string
-      }
-      halfvec_avg: {
-        Args: { "": number[] }
-        Returns: unknown
-      }
-      halfvec_out: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      halfvec_send: {
-        Args: { "": unknown }
-        Returns: string
-      }
-      halfvec_typmod_in: {
-        Args: { "": unknown[] }
-        Returns: number
-      }
-      hnsw_bit_support: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      hnsw_halfvec_support: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      hnsw_sparsevec_support: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      hnswhandler: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      ivfflat_bit_support: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      ivfflat_halfvec_support: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      ivfflathandler: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      l2_norm: {
-        Args: { "": unknown } | { "": unknown }
-        Returns: number
-      }
-      l2_normalize: {
-        Args: { "": string } | { "": unknown } | { "": unknown }
-        Returns: string
-      }
-      match_website_content: {
-        Args: {
-          query_embedding: string
-          match_threshold: number
-          match_count: number
-        }
-        Returns: {
-          id: string
-          url: string
-          title: string
-          content: string
-          similarity: number
-        }[]
-      }
-      sparsevec_out: {
-        Args: { "": unknown }
-        Returns: unknown
-      }
-      sparsevec_send: {
-        Args: { "": unknown }
-        Returns: string
-      }
-      sparsevec_typmod_in: {
-        Args: { "": unknown[] }
-        Returns: number
-      }
-      vector_avg: {
-        Args: { "": number[] }
-        Returns: string
-      }
-      vector_dims: {
-        Args: { "": string } | { "": unknown }
-        Returns: number
-      }
-      vector_norm: {
-        Args: { "": string }
-        Returns: number
-      }
-      vector_out: {
-        Args: { "": string }
-        Returns: unknown
-      }
-      vector_send: {
-        Args: { "": string }
-        Returns: string
-      }
-      vector_typmod_in: {
-        Args: { "": unknown[] }
-        Returns: number
       }
     }
     Enums: {
