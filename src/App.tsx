@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   BrowserRouter,
@@ -45,15 +44,6 @@ import PDOThreadsBlog from "./pages/PDOThreadsBlog";
 import AestheticMaintenanceCostBlog from "./pages/AestheticMaintenanceCostBlog";
 
 const queryClient = new QueryClient()
-
-export const generateSEOMetadata = (title: string, description: string, canonical: string, image?: string) => {
-  return {
-    title: title,
-    description: description,
-    canonical: `https://www.cosmedocs.com${canonical}`,
-    image: image || "https://www.cosmedocs.com/default-og-image.jpg"
-  };
-};
 
 function App() {
   console.log("App component rendering");
