@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { generateSEOMetadata } from '../App';
+import { generateSEOMetadata } from '../utils/seo';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, Shield, Star, Users, Award } from 'lucide-react';

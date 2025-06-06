@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import { generateSEOMetadata } from "@/App";
+import { generateSEOMetadata } from "@/utils/seo";
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
