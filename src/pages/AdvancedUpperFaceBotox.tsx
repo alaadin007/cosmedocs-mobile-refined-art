@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -6,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Clock, Star, Award, Eye, Zap, ArrowRight, Users, BookOpen } from 'lucide-react';
 import PopularTreatments from '@/components/PopularTreatments';
-import { generateSEOMetadata } from '@/App';
+import { generateSEOMetadata } from '@/utils/seo';
 
 const AdvancedUpperFaceBotox = () => {
   const seoData = generateSEOMetadata(

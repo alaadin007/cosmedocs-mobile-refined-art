@@ -1,8 +1,9 @@
+
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail } from "lucide-react";
-import { generateSEOMetadata } from "@/App";
+import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const NonSurgicalNoseJob = () => {

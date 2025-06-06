@@ -1,79 +1,60 @@
-
-import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import { generateSEOMetadata } from "@/App";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
+import { generateSEOMetadata } from '@/utils/seo';
 
 const LipFillerDissolve = () => {
   const seoData = generateSEOMetadata(
-    "Lip Filler Dissolve London | Professional Hyaluronidase Treatment | Cosmedocs",
-    "Professional lip filler dissolve treatment in London using hyaluronidase. Expert correction of overfilled or asymmetric lips. Safe dissolving by cosmetic doctors at Harley Street.",
+    "Lip Filler Dissolving London | Expert Hyaluronidase Injections",
+    "Safe and effective lip filler dissolving treatments in London. Expert hyaluronidase injections to correct unwanted filler or complications. Book a consultation.",
     "/lip-filler-dissolve"
   );
 
   const beforeAfterImages = [
-    { 
-      src: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png", 
-      alt: "Lip filler dissolve treatment showing natural correction", 
-      caption: "Professional lip filler dissolve treatment restoring natural lip proportions"
-    },
-    { 
-      src: "/lovable-uploads/adfd4f5d-0cca-40d0-b159-3a2fcf09289b.png", 
-      alt: "Dermal filler complications resolved with hyaluronidase", 
-      caption: "Correction of dermal filler complications using professional dissolving treatment"
-    },
-    { 
-      src: "/lovable-uploads/7c749b70-670f-4229-af29-f6e116f32fd2.png", 
-      alt: "Overfilled lips dissolved and refilled naturally", 
-      caption: "Complete transformation: overfilled lips dissolved and naturally refilled"
-    },
-    { 
-      src: "/lovable-uploads/a41898d8-e615-4717-ae3e-920c384b36ae.png", 
-      alt: "Professional filler dissolve and correction treatment", 
-      caption: "Expert dissolving and correction of previous filler treatments"
-    },
-    { 
-      src: "/lovable-uploads/1325959d-cb78-4210-ad02-64dd511dc35e.png", 
-      alt: "Hyaluronidase treatment progression showing gradual dissolving", 
-      caption: "Progressive dissolving with hyaluronidase showing natural restoration over multiple sessions"
-    }
+    { src: "/lovable-uploads/6979990b-3579-4571-b139-3501a368919b.png", alt: "Lip filler dissolving before and after", caption: "Immediate volume reduction after hyaluronidase injection" },
+    { src: "/lovable-uploads/4208979a-6544-4949-898f-4915a9791946.png", alt: "Lip filler correction", caption: "Correcting migrated filler for a more natural lip shape" },
+    { src: "/lovable-uploads/9992894b-4419-4f19-b98c-ca99a940c00c.png", alt: "Lip filler dissolving progression", caption: "Progressive dissolving over 24 hours showing gradual volume loss" },
+    { src: "/lovable-uploads/012d959d-8c75-4a11-8259-57e3ac1ca493.png", alt: "Lip filler dissolving results", caption: "Restoring natural lip shape after dissolving overfilled lips" },
+    { src: "/lovable-uploads/06549691-a99f-4a9f-a59c-590759bb449c.png", alt: "Lip filler dissolving asymmetry correction", caption: "Correcting asymmetry caused by uneven filler placement" },
+    { src: "/lovable-uploads/04b9419a-7929-4b13-b879-4c94269599a9.png", alt: "Lip filler dissolving before new filler", caption: "Dissolving old filler before new lip enhancement treatment" }
   ];
 
   const faqs = [
     {
-      question: "What is lip filler dissolve treatment?",
-      answer: "Lip filler dissolve treatment uses hyaluronidase enzyme to break down hyaluronic acid-based dermal fillers. This safe, effective procedure can correct overfilled lips, asymmetry, or unwanted results from previous treatments performed elsewhere."
+      question: "Why might I need my lip fillers dissolved?",
+      answer: "Common reasons include overfilled lips, migration of filler, asymmetry, lumps or nodules, vascular occlusion, or simply wanting to revert to your natural lip shape."
     },
     {
-      question: "How long does lip filler dissolve take?",
-      answer: "The dissolving procedure typically takes 15-30 minutes. Results begin within 24-48 hours and continue for up to 2 weeks. Multiple sessions may be needed for complete correction depending on the amount of filler to be dissolved."
+      question: "What is hyaluronidase?",
+      answer: "Hyaluronidase is an enzyme that breaks down hyaluronic acid, the substance used in most lip fillers. It's a safe and effective way to dissolve unwanted filler."
     },
     {
-      question: "Is lip filler dissolve painful?",
-      answer: "The treatment involves minimal discomfort. We use topical anaesthetic and the hyaluronidase injection is quick. Most patients describe it as similar to the original filler injection with mild stinging that subsides quickly."
+      question: "Is the dissolving process painful?",
+      answer: "We use a very fine needle and can apply topical anaesthetic to minimize discomfort. Most clients report a mild stinging sensation that is well-tolerated."
     },
     {
-      question: "How much does lip filler dissolve cost?",
-      answer: "Lip filler dissolve treatment at Cosmedocs starts from £300 per session. The total cost depends on the amount of filler to be dissolved and number of sessions required. We provide detailed pricing during consultation."
+      question: "How long does it take to see results?",
+      answer: "You'll notice immediate volume reduction, with full results visible within 24-48 hours as the hyaluronidase continues to break down the filler."
     },
     {
-      question: "Can all types of lip fillers be dissolved?",
-      answer: "Hyaluronidase only dissolves hyaluronic acid-based fillers (Juvederm, Restylane, etc.). Permanent fillers or non-hyaluronic acid products cannot be dissolved with this enzyme and may require alternative removal methods."
+      question: "Is it safe to get new fillers after dissolving?",
+      answer: "Yes, we recommend waiting 2 weeks after dissolving before getting new fillers to allow the lips to fully settle. This ensures optimal placement and results with your new filler."
     },
     {
-      question: "What are the side effects of lip filler dissolve?",
-      answer: "Common side effects include temporary swelling, bruising, and tenderness at injection sites. Rarely, allergic reactions to hyaluronidase may occur. Our experienced doctors minimize risks through proper assessment and technique."
+      question: "Are there any risks or side effects?",
+      answer: "Possible side effects include temporary swelling, bruising, redness, or allergic reaction. Our experienced practitioners take every precaution to minimize risks."
     },
     {
-      question: "When can I get new lip fillers after dissolving?",
-      answer: "We typically recommend waiting 2-4 weeks after dissolving treatment before considering new lip fillers. This allows complete healing and accurate assessment of your natural lip structure for optimal new treatment planning."
+      question: "How much does lip filler dissolving cost?",
+      answer: "The cost starts from £250. Final pricing depends on the amount of hyaluronidase needed and the complexity of the correction."
     },
     {
-      question: "Why choose Cosmedocs for lip filler dissolve?",
-      answer: "Our expert cosmetic doctors have extensive experience correcting filler complications. We use pharmaceutical-grade hyaluronidase and provide comprehensive aftercare. Many clients come to us to fix treatments performed elsewhere."
+      question: "Can you dissolve fillers done at other clinics?",
+      answer: "Yes, we can dissolve fillers regardless of where they were originally injected. However, we recommend bringing details of the filler used, if possible."
     }
   ];
 
@@ -88,13 +69,13 @@ const LipFillerDissolve = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="lip filler dissolve, hyaluronidase, dermal filler removal, lip correction, overfilled lips, London, Harley Street, cosmetic treatment, filler complications" />
+        <meta name="keywords" content="lip filler dissolving London, hyaluronidase injections, lip correction, filler migration, overfilled lips, cosmetic treatment" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Professional lip filler dissolve treatments in London",
+            "description": "Expert lip filler dissolving treatments in London",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
@@ -111,65 +92,49 @@ const LipFillerDissolve = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-orange-900/20"></div>
+        {/* Hero Section with Background Image */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('/lovable-uploads/49549549-49f4-494f-949f-494f494f494f.png')`
+            }}
+          >
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  Professional Lip Filler Dissolve Treatment in London
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
+                  Lip Filler
+                  <span className="block text-purple-300">Dissolving</span>
+                  <span className="block text-sm mt-4">Correct unwanted filler with expert hyaluronidase injections</span>
                 </h1>
-                <p className="text-xl text-gray-300 mb-8">
-                  Expert correction of overfilled, asymmetric, or poorly placed lip fillers using safe hyaluronidase treatment. 
-                  Restore your natural lips with our experienced cosmetic doctors at Harley Street.
+                <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
+                  <span className="text-purple-300 font-semibold">Safe & Effective</span>
+                  <br />
+                  Restore your natural lip shape with our specialized treatment
                 </p>
-                <div className="mb-6">
-                  <p className="text-lg text-red-300 font-semibold">Starting from £300</p>
-                  <p className="text-sm text-gray-400">
-                    <a 
-                      href="https://www.instagram.com/explore/tags/cosmelip/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-red-300 hover:text-red-200 underline"
-                    >
-                      #cosmelip
-                    </a> - See our correction transformations on Instagram
-                  </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">Starting from £250</p>
+                  <p className="text-sm text-gray-300 drop-shadow-lg">#lipdissolve - See our before & after gallery for real patient results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
-                    onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-                  >
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
-                    onClick={() => window.location.href = '/treatments'}
-                  >
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
                     View Price List
                   </Button>
                 </div>
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <img 
-                  src="/lovable-uploads/7c749b70-670f-4229-af29-f6e116f32fd2.png" 
-                  alt="Professional lip filler dissolve treatment showing overfilled to dissolved to naturally refilled transformation"
-                  className="rounded-2xl shadow-2xl w-full"
-                />
-              </motion.div>
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
@@ -184,10 +149,10 @@ const LipFillerDissolve = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Dissolve Treatment Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See how our expert cosmetic doctors have successfully corrected lip filler complications 
-                and restored natural beauty for clients who came to us from other practitioners.
+                See how our expert lip filler dissolving treatments can correct unwanted filler, 
+                restore natural lip shape, and enhance your overall appearance.
               </p>
             </motion.div>
 
@@ -214,15 +179,15 @@ const LipFillerDissolve = () => {
             <div className="text-center mt-12">
               <BeforeAfterImageViewer 
                 images={beforeAfterImages}
-                triggerLabel="View All Dissolve Results"
-                title="Lip Filler Dissolve Results Gallery"
-                description="Comprehensive gallery of our professional dissolve and correction treatments"
+                triggerLabel="View Full Gallery"
+                title="Lip Filler Dissolving Results"
+                description="Comprehensive gallery of our lip correction treatments"
               />
             </div>
           </div>
         </section>
 
-        {/* Treatment Information */}
+        {/* Treatment Summary */}
         <section className="py-20">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -232,23 +197,23 @@ const LipFillerDissolve = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Why Choose Lip Filler Dissolve?</h2>
+                <h2 className="text-3xl font-bold mb-6">Lip Filler Dissolving Summary</h2>
                 <div className="space-y-6">
-                  <div className="border-l-4 border-red-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Correct Previous Treatments</h3>
-                    <p className="text-gray-300">Safely dissolve poorly placed, overfilled, or asymmetric lip fillers from other practitioners</p>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
+                    <p className="text-gray-300">30-45 minutes including consultation</p>
                   </div>
-                  <div className="border-l-4 border-red-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Restore Natural Shape</h3>
-                    <p className="text-gray-300">Return to your natural lip proportions before considering new enhancement</p>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
+                    <p className="text-gray-300">Permanent removal of hyaluronic acid filler</p>
                   </div>
-                  <div className="border-l-4 border-red-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Fix Complications</h3>
-                    <p className="text-gray-300">Address lumps, bumps, migration, or vascular compromise safely</p>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
+                    <p className="text-gray-300">Minimal downtime, possible swelling for 24-48 hours</p>
                   </div>
-                  <div className="border-l-4 border-red-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Start Fresh</h3>
-                    <p className="text-gray-300">Create a clean canvas for optimal new filler placement by experts</p>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Anaesthesia</h3>
+                    <p className="text-gray-300">Topical anaesthetic available</p>
                   </div>
                 </div>
               </motion.div>
@@ -261,36 +226,24 @@ const LipFillerDissolve = () => {
               >
                 <Card className="bg-accent border-none">
                   <CardHeader>
-                    <CardTitle className="text-white">Treatment Process</CardTitle>
+                    <CardTitle className="text-white">Why Choose Cosmedocs?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-sm font-bold">1</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Consultation & Assessment</h4>
-                        <p className="text-gray-300 text-sm">Detailed evaluation of existing filler and treatment planning</p>
-                      </div>
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Experienced medical professionals</p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-sm font-bold">2</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Hyaluronidase Injection</h4>
-                        <p className="text-gray-300 text-sm">Precise injection of enzyme to dissolve unwanted filler</p>
-                      </div>
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Safe and effective hyaluronidase injections</p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-sm font-bold">3</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Monitoring & Follow-up</h4>
-                        <p className="text-gray-300 text-sm">Regular check-ups to assess progress and plan next steps</p>
-                      </div>
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Personalized treatment plans</p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-sm font-bold">4</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Correction Treatment</h4>
-                        <p className="text-gray-300 text-sm">Optional new filler treatment with expert technique (if desired)</p>
-                      </div>
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Comprehensive aftercare and support</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -299,60 +252,8 @@ const LipFillerDissolve = () => {
           </div>
         </section>
 
-        {/* Expert Information */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Expert Dissolve Treatment</h2>
-                <p className="text-gray-300 mb-6">
-                  Our cosmetic doctors have extensive experience in correcting filler complications and 
-                  dissolving treatments performed by other practitioners. We see many clients who need 
-                  correction after unsatisfactory results elsewhere.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Pharmaceutical-grade hyaluronidase only</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Safe, controlled dissolving technique</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Comprehensive aftercare and monitoring</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Option for expert re-treatment once healed</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <img 
-                  src="/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png" 
-                  alt="Professional lip dissolve treatment results showing natural correction"
-                  className="rounded-2xl shadow-2xl w-full"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -363,14 +264,14 @@ const LipFillerDissolve = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about lip filler dissolve treatment at our London clinic.
+                Get answers to common questions about lip filler dissolving treatments at our London clinic.
               </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-accent rounded-lg border-gray-800">
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
                       <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
@@ -385,25 +286,22 @@ const LipFillerDissolve = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-accent">
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-red-900/50 to-orange-900/50 rounded-2xl p-12"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Need Lip Filler Correction?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready to Correct Your Lip Filler?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book a consultation with our expert cosmetic doctors to assess your lips and discuss 
-                safe dissolving options. We specialize in correcting treatments from other practitioners.
+                Book your consultation with our expert cosmetic doctors and discover how lip filler 
+                dissolving can restore your natural lip shape and enhance your confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
-                  onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
-                >
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                   Book Free Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
@@ -417,7 +315,7 @@ const LipFillerDissolve = () => {
         {/* Hidden SEO content for search engines */}
         <div className="sr-only">
           <p>
-            Cosmedocs Harley Street clinic provides expert lip filler dissolve treatment in London using pharmaceutical-grade hyaluronidase enzyme. Our experienced cosmetic doctors specialize in correcting overfilled lips, asymmetric filler placement, and complications from treatments performed by other practitioners. Located at 10 Harley Street, we offer safe, effective lip filler removal with minimal downtime and professional aftercare. Our dissolve treatments use only medical-grade hyaluronidase to break down hyaluronic acid-based dermal fillers including Juvederm, Restylane, and other premium brands. We provide comprehensive correction services including filler dissolving, complication management, lip restoration, and expert re-treatment options. Our practitioners have extensive experience in aesthetic emergency management and corrective procedures. Lip filler dissolve procedures typically take 15-30 minutes with results visible within 24-48 hours and complete dissolution within 2 weeks. We offer detailed consultation, professional assessment, and comprehensive aftercare to ensure optimal healing and patient satisfaction. Many clients come to us to correct unsatisfactory results from other clinics. Book your lip filler dissolve consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer competitive pricing starting from £300 and flexible payment options for all correction treatments.
+            Cosmedocs Harley Street clinic offers expert lip filler dissolving treatments in London using safe and effective hyaluronidase injections. Our experienced cosmetic doctors specialize in correcting overfilled lips, filler migration, asymmetry, and other lip filler complications. Located at 10 Harley Street, we provide personalized treatment plans and comprehensive aftercare. Our lip filler dissolving procedures can restore your natural lip shape and enhance your confidence. We use a very fine needle and can apply topical anaesthetic to minimize discomfort. Results are visible within 24-48 hours. We can dissolve fillers regardless of where they were originally injected. Book your lip filler dissolving consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer competitive pricing and flexible payment options for all lip correction treatments.
           </p>
         </div>
       </div>
