@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
@@ -187,6 +186,16 @@ const Home = () => {
                       Before and after assessment showing improvement scores across key categories
                     </DialogDescription>
                   </DialogHeader>
+                  
+                  {/* Before and After Image at the top */}
+                  <div className="mb-6">
+                    <img 
+                      src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" 
+                      alt="Before and after facial assessment results" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                  
                   <div className="py-4 overflow-auto">
                     <Table className="w-full text-left">
                       <TableHeader>
