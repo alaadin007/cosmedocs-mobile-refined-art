@@ -51,11 +51,13 @@ export const generateSEOMetadata = (title: string, description: string, canonica
     title: title,
     description: description,
     canonical: `https://www.cosmedocs.com${canonical}`,
-    image: image || "https://www.cosmedocs.com/default-og-image.jpg" // Provide a default image URL
+    image: image || "https://www.cosmedocs.com/default-og-image.jpg"
   };
 };
 
 function App() {
+  console.log("App component rendering");
+  
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
