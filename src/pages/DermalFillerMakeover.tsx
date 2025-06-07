@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
@@ -15,6 +16,20 @@ const DermalFillerMakeover = () => {
   );
 
   const beforeAfterImages = [
+    {
+      src: "/lovable-uploads/4e76f684-cc16-4283-bc39-94de86680278.png",
+      alt: "Supermodal natural rejuvenation with dermal fillers",
+      caption: (
+        <div>
+          <h3 className="font-semibold text-white mb-2">Supermodal's Natural Rejuvenation Journey</h3>
+          <p className="text-gray-200">
+            Our aesthetics is invisible art. Supermodal wanted a natural rejuvenation that enhanced her features 
+            without looking overdone. Using our expertise in dermal fillers, we created subtle yet transformative 
+            results that speak without saying a word - Bold • Natural • Always Your Way.
+          </p>
+        </div>
+      )
+    },
     {
       src: "/lovable-uploads/01999999-9999-9999-9999-999999999999.png",
       alt: "Dermal filler makeover before and after",
@@ -76,9 +91,12 @@ const DermalFillerMakeover = () => {
                   Dermal Filler Makeover
                   <span className="block text-primary mt-2">Full Face Rejuvenation</span>
                 </h1>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                   Achieve a natural-looking, rejuvenated appearance with our expert dermal filler makeover in London.
                   Personalized treatment plans for comprehensive facial enhancement.
+                </p>
+                <p className="text-sm text-muted-foreground/80 italic mb-8">
+                  Our aesthetics is invisible art • Bold • Natural • Always Your Way
                 </p>
                 <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-8">
                   <div className="flex items-center gap-2">
@@ -185,9 +203,9 @@ const DermalFillerMakeover = () => {
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <h2>Dermal Filler Makeover London Full Face Rejuvenation Cosmedocs</h2>
+          <h2>Dermal Filler Makeover London Full Face Rejuvenation Cosmedocs Natural Results Supermodal</h2>
           <p>
-            Dermal filler makeover London, full face rejuvenation, Cosmedocs, dermal fillers, facial enhancement, natural results, personalized treatment plans, expert practitioners, cheek fillers, temple fillers, under-eye fillers, nasolabial folds, marionette lines, lip fillers, jawline fillers, youthful appearance, refreshed appearance.
+            Dermal filler makeover London, full face rejuvenation, Cosmedocs, dermal fillers, facial enhancement, natural results, personalized treatment plans, expert practitioners, cheek fillers, temple fillers, under-eye fillers, nasolabial folds, marionette lines, lip fillers, jawline fillers, youthful appearance, refreshed appearance, invisible art, bold natural always your way, supermodal rejuvenation, aesthetic medicine, minimal transformation, quiet enhancement.
           </p>
         </div>
       </div>
