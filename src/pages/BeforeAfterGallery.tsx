@@ -1,86 +1,20 @@
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 
-// Aggregated images from all treatment pages
+// Mixed and matched images from all treatment pages
 const allGalleryImages = [
-  // Dermal Filler Makeover images
+  // New lip filler image
   {
-    src: "/lovable-uploads/4e76f684-cc16-4283-bc39-94de86680278.png",
-    alt: "Supermodal natural rejuvenation with dermal fillers",
-    caption: "Supermodal's Natural Rejuvenation Journey",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/01999999-9999-9999-9999-999999999999.png",
-    alt: "Dermal filler makeover before and after",
-    caption: "Comprehensive facial rejuvenation with dermal fillers",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/11111111-1111-1111-1111-111111111111.png",
-    alt: "Dermal filler makeover results",
-    caption: "Natural-looking results achieved with expert technique",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/22222222-2222-2222-2222-222222222222.png",
-    alt: "Dermal filler makeover transformation",
-    caption: "Subtle yet significant transformation with dermal fillers",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/33333333-3333-3333-3333-333333333333.png",
-    alt: "Dermal filler makeover side profile",
-    caption: "Enhanced facial contours and profile with dermal fillers",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/44444444-4444-4444-4444-444444444444.png",
-    alt: "Dermal filler makeover close up",
-    caption: "Close-up view of dermal filler makeover results",
-    category: "dermal-fillers"
-  },
-  // Lip Filler Dissolve images
-  {
-    src: "/lovable-uploads/6979990b-3579-4571-b139-3501a368919b.png",
-    alt: "Lip filler dissolving before and after",
-    caption: "Immediate volume reduction after hyaluronidase injection",
+    src: "/lovable-uploads/bb065723-5cc4-4e75-b47e-10fc0f741157.png",
+    alt: "Bold lip filler enhancement results",
+    caption: "Sometimes we go bold but it requires something unique",
     category: "lip-treatments"
   },
-  {
-    src: "/lovable-uploads/4208979a-6544-4949-898f-4915a9791946.png",
-    alt: "Lip filler correction",
-    caption: "Correcting migrated filler for a more natural lip shape",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/9992894b-4419-4f19-b98c-ca99a940c00c.png",
-    alt: "Lip filler dissolving progression",
-    caption: "Progressive dissolving over 24 hours showing gradual volume loss",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/012d959d-8c75-4a11-8259-57e3ac1ca493.png",
-    alt: "Lip filler dissolving results",
-    caption: "Restoring natural lip shape after dissolving overfilled lips",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/06549691-a99f-4a9f-a59c-590759bb449c.png",
-    alt: "Lip filler dissolving asymmetry correction",
-    caption: "Correcting asymmetry caused by uneven filler placement",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/04b9419a-7929-4b13-b879-4c94269599a9.png",
-    alt: "Lip filler dissolving before new filler",
-    caption: "Dissolving old filler before new lip enhancement treatment",
-    category: "lip-treatments"
-  },
-  // New Nose Job images
+  // Nose job images mixed in
   {
     src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
     alt: "Non-surgical nose job before and after profile view London Harley Street",
