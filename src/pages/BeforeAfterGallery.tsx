@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
+import CollageViewer from '@/components/CollageViewer';
 
 // Mixed and matched images from all treatment pages
 const allGalleryImages = [
@@ -67,6 +68,26 @@ const allGalleryImages = [
   }
 ];
 
+// New collage data for lip treatments
+const lipCollageImages = [
+  {
+    src: "/lovable-uploads/ff79ac9e-7b65-41a3-a7d7-5ea281d0bc69.png",
+    alt: "Lip treatment consultation natural state"
+  },
+  {
+    src: "/lovable-uploads/755f56d3-3def-454e-8691-fd3335be4f34.png",
+    alt: "Lip filler injection procedure in progress"
+  },
+  {
+    src: "/lovable-uploads/6c665b2f-9145-446a-8cb0-ccef6bef602e.png",
+    alt: "Lip treatment immediate post-procedure results"
+  },
+  {
+    src: "/lovable-uploads/29e40de0-6799-47d2-bd48-272b87c4c70c.png",
+    alt: "Final lip enhancement results natural volume"
+  }
+];
+
 const categories = [
   { id: 'all', name: 'All', icon: '✨' },
   { id: 'dermal-fillers', name: 'Dermal Fillers', icon: '💫' },
@@ -87,6 +108,8 @@ const BeforeAfterGallery = () => {
   const filteredImages = activeCategory === 'all' 
     ? allGalleryImages 
     : allGalleryImages.filter(img => img.category === activeCategory);
+
+  const shouldShowCollage = activeCategory === 'all' || activeCategory === 'lip-treatments';
 
   return (
     <>
@@ -169,12 +192,26 @@ const BeforeAfterGallery = () => {
                 transition={{ duration: 0.3 }}
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               >
+                {/* Add collage at the beginning of lip treatments */}
+                {shouldShowCollage && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <CollageViewer 
+                      images={lipCollageImages}
+                      caption="Complete lip enhancement journey: consultation, procedure, and beautiful natural results"
+                    />
+                  </motion.div>
+                )}
+                
                 {filteredImages.map((image, index) => (
                   <motion.div
                     key={`${activeCategory}-${index}`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    transition={{ duration: 0.3, delay: shouldShowCollage ? (index + 1) * 0.1 : index * 0.1 }}
                     className="group cursor-pointer"
                   >
                     <div className="aspect-square rounded-lg overflow-hidden bg-accent mb-3">
@@ -192,7 +229,7 @@ const BeforeAfterGallery = () => {
               </motion.div>
             </AnimatePresence>
 
-            {filteredImages.length === 0 && (
+            {filteredImages.length === 0 && !shouldShowCollage && (
               <div className="text-center py-12">
                 <p className="text-muted-foreground">No images found for this category.</p>
               </div>
