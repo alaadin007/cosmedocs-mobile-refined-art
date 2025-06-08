@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -6,55 +7,6 @@ import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 
 // Mixed and matched images from all treatment pages
 const allGalleryImages = [
-  // Client transformation series over the years
-  {
-    src: "/lovable-uploads/0ad0adc3-a90d-45c0-9a21-ceebdf7d6bc6.png",
-    alt: "Lip treatment client transformation series year 1",
-    caption: "Can you guess what was done? This client's journey over the years - Year 1",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/bad31c16-b040-4e78-89c5-ba8ec03fc4ad.png",
-    alt: "Lip treatment client transformation series year 2",
-    caption: "Can you guess what was done? This client's journey over the years - Year 2",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/9e58cf5c-c162-40f6-a463-4387f09f1a4c.png",
-    alt: "Lip treatment client transformation series year 3",
-    caption: "Can you guess what was done? This client's journey over the years - Year 3",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/8177fd33-7cad-4e96-8bdc-9ad80bafcd3a.png",
-    alt: "Lip treatment client transformation series year 4",
-    caption: "Can you guess what was done? This client's journey over the years - Year 4",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/0449a1df-2da5-4faf-b266-a88ed8fbdeea.png",
-    alt: "Lip treatment procedure in progress",
-    caption: "Can you guess what was done? Professional treatment in progress",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/c64b8f4d-3661-4237-bbc3-b536b66b41cd.png",
-    alt: "Lip treatment client transformation series year 5",
-    caption: "Can you guess what was done? This client's journey over the years - Year 5",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/b59f239a-af08-414c-84c4-3ec2ecc33b6c.png",
-    alt: "Lip treatment client transformation series final result",
-    caption: "Can you guess what was done? This client's journey over the years - Final result",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/f7dc566b-356d-4e3f-997f-a02c1f76be64.png",
-    alt: "Before and after lip transformation with arrow comparison",
-    caption: "Can you guess what was done? Before and after comparison showing the transformation",
-    category: "lip-treatments"
-  },
   // Featured new lip treatment before and after
   {
     src: "/lovable-uploads/00df0c0c-e651-402b-bdb2-4cc80a39f284.png",
