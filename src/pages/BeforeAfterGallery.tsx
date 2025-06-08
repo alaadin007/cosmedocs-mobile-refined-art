@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -80,6 +79,37 @@ const allGalleryImages = [
     alt: "Lip filler dissolving before new filler",
     caption: "Dissolving old filler before new lip enhancement treatment",
     category: "lip-treatments"
+  },
+  // New Nose Job images
+  {
+    src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
+    alt: "Non-surgical nose job before and after profile view London Harley Street",
+    caption: "Profile transformation showing refined nasal bridge and enhanced projection",
+    category: "nose-jobs"
+  },
+  {
+    src: "/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png",
+    alt: "Non-surgical nose job bottom view before after London Cosmedocs",
+    caption: "Underneath view showing improved nasal tip projection and symmetry",
+    category: "nose-jobs"
+  },
+  {
+    src: "/lovable-uploads/cc387da3-1543-4b06-8b11-a48d29f03456.png",
+    alt: "Non-surgical nose job side profile before after London Harley Street",
+    caption: "Side profile enhancement demonstrating subtle yet significant improvement",
+    category: "nose-jobs"
+  },
+  {
+    src: "/lovable-uploads/1cceb92b-eacb-48b4-9c9f-04c4cb2b025e.png",
+    alt: "Non-surgical nose job profile transformation London Cosmedocs",
+    caption: "Natural-looking profile enhancement with advanced #cosmenose technique",
+    category: "nose-jobs"
+  },
+  {
+    src: "/lovable-uploads/bf8a69d8-6776-4187-857d-a009e9fd6147.png",
+    alt: "Non-surgical nose job Cosmedocs London Harley Street before after results",
+    caption: "Remarkable transformation achieving perfect nasal proportions and harmony",
+    category: "nose-jobs"
   }
 ];
 

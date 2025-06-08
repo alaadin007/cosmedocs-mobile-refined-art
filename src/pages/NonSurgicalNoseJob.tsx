@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,7 +16,7 @@ const NonSurgicalNoseJob = () => {
 
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
-  // Before/after images for the viewer
+  // Before/after images for the viewer - updated with new images
   const beforeAfterImages = [
     {
       src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
@@ -48,10 +47,35 @@ const NonSurgicalNoseJob = () => {
       src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png",
       alt: "Non-surgical nose job technique showing raised bridge concealed bump correction London Harley Street Cosmedocs",
       caption: "Advanced technique demonstrating raised bridge and concealed bump correction"
+    },
+    // New images added
+    {
+      src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
+      alt: "Non-surgical nose job before and after profile view London Harley Street Cosmedocs",
+      caption: "Profile transformation showing refined nasal bridge and enhanced projection with #cosmenose technique"
+    },
+    {
+      src: "/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png",
+      alt: "Non-surgical nose job bottom view before after London Cosmedocs Harley Street",
+      caption: "Underneath view demonstrating improved nasal tip projection and symmetry"
+    },
+    {
+      src: "/lovable-uploads/cc387da3-1543-4b06-8b11-a48d29f03456.png",
+      alt: "Non-surgical nose job side profile before after London Harley Street Cosmedocs",
+      caption: "Side profile enhancement demonstrating subtle yet significant improvement in nasal contours"
+    },
+    {
+      src: "/lovable-uploads/1cceb92b-eacb-48b4-9c9f-04c4cb2b025e.png",
+      alt: "Non-surgical nose job profile transformation London Cosmedocs Dr Ahmed Haq",
+      caption: "Natural-looking profile enhancement achieved with advanced dermal filler techniques"
+    },
+    {
+      src: "/lovable-uploads/bf8a69d8-6776-4187-857d-a009e9fd6147.png",
+      alt: "Non-surgical nose job Cosmedocs London Harley Street before after results Dr Ahmed Haq",
+      caption: "Remarkable transformation achieving perfect nasal proportions and facial harmony"
     }
   ];
 
-  // FAQ data split into two columns
   const leftColumnFaqs = [
     {
       question: "How much does a non-surgical nose job cost in London?",
