@@ -14,6 +14,13 @@ const allGalleryImages = [
     caption: "Sometimes we go bold but it requires something unique",
     category: "lip-treatments"
   },
+  // Latest lip treatment image
+  {
+    src: "/lovable-uploads/f12fe2de-6ab2-4a17-8dde-f7d429cfb948.png",
+    alt: "Lip edge enhancement before and after",
+    caption: "Sometimes just enhancing the edges of the lip/corners accentuates the lip beautifully",
+    category: "lip-treatments"
+  },
   // Nose job images mixed in
   {
     src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
