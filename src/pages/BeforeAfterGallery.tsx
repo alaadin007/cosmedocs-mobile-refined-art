@@ -7,6 +7,19 @@ import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 
 // Mixed and matched images from all treatment pages
 const allGalleryImages = [
+  // Featured new lip treatment before and after
+  {
+    src: "/lovable-uploads/00df0c0c-e651-402b-bdb2-4cc80a39f284.png",
+    alt: "Lip enhancement before treatment natural lips",
+    caption: "Before: Natural lip shape and volume",
+    category: "lip-treatments"
+  },
+  {
+    src: "/lovable-uploads/4870b5ac-6167-4baa-8561-0f5617cd4814.png",
+    alt: "Lip enhancement after treatment enhanced volume and definition",
+    caption: "After: Enhanced lip volume and definition with natural-looking results",
+    category: "lip-treatments"
+  },
   // New lip filler image
   {
     src: "/lovable-uploads/bb065723-5cc4-4e75-b47e-10fc0f741157.png",
