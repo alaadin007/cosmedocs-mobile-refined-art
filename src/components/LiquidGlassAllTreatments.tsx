@@ -1,4 +1,3 @@
-
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Star, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       name: "Botox",
       isPopular: true,
       treatments: [
-        { name: "Face Botox (1-3 Areas)", price: "£175-£350", isPopular: true },
+        { name: "Face Botox (1-3 Areas)", price: "£175-£350", isPopular: true, route: "/face-botox-areas" },
         { name: "Nefertiti Face Lift", price: "£300", route: "/nefertiti-botox-facelift" },
         { name: "Masseter (Jawline Slimming)", price: "£350" },
         { name: "Full Face Natural Botox", price: "£500" },

@@ -23,6 +23,7 @@ import NefertitiBotoxFacelift from './pages/NefertitiBotoxFacelift';
 import TriggerPointBotox from './pages/TriggerPointBotox';
 import MedicalAnalBleaching from './pages/MedicalAnalBleaching';
 import AdvancedConsultation from './pages/AdvancedConsultation';
+import FaceBotoxAreas from './pages/FaceBotoxAreas';
 import Partners from './pages/Partners';
 import BirminghamHome from './pages/BirminghamHome';
 import ManchesterHome from './pages/ManchesterHome';
@@ -63,6 +64,7 @@ function App() {
             <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
             <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
             <Route path="/advanced-consultation" element={<Layout><AdvancedConsultation /></Layout>} />
+            <Route path="/face-botox-areas" element={<Layout><FaceBotoxAreas /></Layout>} />
             <Route path="/partners" element={<Layout><Partners /></Layout>} />
             <Route path="/birmingham" element={<Layout><BirminghamHome /></Layout>} />
             <Route path="/manchester" element={<Layout><ManchesterHome /></Layout>} />
