@@ -39,25 +39,25 @@ const FaceBotoxBeforeAfterSlider = () => {
   };
 
   return (
-    <section className="py-12 px-4 bg-black">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 bg-black">
+      <div className="w-full">
         {/* Mobile: Slider */}
         <div className="md:hidden">
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden">
               <motion.div
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {slides.map((slide, index) => (
                   <div key={index} className="w-full flex-shrink-0">
-                    <div className="relative">
+                    <div>
                       <img
                         src={slide.image}
                         alt={slide.caption}
-                        className="w-full h-64 object-cover"
+                        className="w-full h-80 object-cover"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                      <div className="bg-black p-4 text-center">
                         <h3 className="text-white font-semibold text-sm mb-1">
                           {slide.caption}
                         </h3>
@@ -76,7 +76,7 @@ const FaceBotoxBeforeAfterSlider = () => {
               variant="ghost"
               size="icon"
               onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full z-10"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -84,7 +84,7 @@ const FaceBotoxBeforeAfterSlider = () => {
               variant="ghost"
               size="icon"
               onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full z-10"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -105,21 +105,21 @@ const FaceBotoxBeforeAfterSlider = () => {
         </div>
 
         {/* Desktop: Row layout */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4">
           {slides.map((slide, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="relative group overflow-hidden rounded-2xl"
+              className="group"
             >
               <img
                 src={slide.image}
                 alt={slide.caption}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <div className="bg-black p-4 text-center">
                 <h3 className="text-white font-semibold text-sm mb-1">
                   {slide.caption}
                 </h3>
