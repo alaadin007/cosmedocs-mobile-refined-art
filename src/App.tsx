@@ -7,6 +7,7 @@ import './App.css';
 
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import Home2 from './pages/Home2';
 import Index from './pages/Index';
 import About from './pages/About';
 import Treatments from './pages/Treatments';
@@ -48,6 +49,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
             <Route path="/home" element={<Layout><Home /></Layout>} />
+            <Route path="/home2" element={<Home2 />} />
             <Route path="/about" element={<Layout><About /></Layout>} />
             <Route path="/treatments" element={<Layout><Treatments /></Layout>} />
             <Route path="/contact" element={<Layout><Contact /></Layout>} />
