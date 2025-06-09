@@ -74,7 +74,7 @@ const Home2 = () => {
           
           <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
             <Link to="/" className="flex flex-col items-start">
-              <div className="text-2xl md:text-3xl font-bold">
+              <div className="text-xl md:text-2xl font-bold">
                 <span className="text-white">COSME</span>
                 <span className="text-white">DOCS</span>
               </div>
@@ -107,7 +107,7 @@ const Home2 = () => {
               
               <Button
                 onClick={() => setIsContactMenuOpen(true)}
-                className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-300 hover:scale-105 border border-white/20"
+                className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm transition-all duration-300 hover:scale-105 border border-white/20"
               >
                 Contact Us
               </Button>
@@ -153,14 +153,14 @@ const Home2 = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6"
             >
               {/* Main Heading */}
               <div className="space-y-2">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   cosmedocs
                 </h1>
-                <p className="text-xl md:text-2xl italic text-gray-300">
+                <p className="text-lg md:text-xl italic text-gray-300">
                   *Our aesthetics is invisible art
                 </p>
               </div>
@@ -170,7 +170,7 @@ const Home2 = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-lg md:text-xl text-gray-400"
+                className="text-base md:text-lg text-gray-400"
               >
                 art • science • bit of magic
               </motion.p>
@@ -180,18 +180,18 @@ const Home2 = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="max-w-2xl mx-auto space-y-4"
+                className="max-w-2xl mx-auto space-y-3"
               >
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   Aesthetic medicine by Cosmedocs is minimal.
                 </p>
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   Quiet, not loud.
                 </p>
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   Invisible, not exaggerated.
                 </p>
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed italic">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed italic">
                   It's transformation that speaks — without saying a word.
                 </p>
               </motion.div>
@@ -201,18 +201,18 @@ const Home2 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
-                className="pt-8 space-y-4"
+                className="pt-6 space-y-3"
               >
                 <Button
                   onClick={() => setIsAllTreatmentsOpen(true)}
-                  className="bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 border border-white/20 mb-4"
+                  className="bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-300 hover:scale-105 border border-white/20 mb-3"
                 >
                   All Treatments
                 </Button>
                 <br />
                 <Button
                   onClick={() => setIsFacialAssessmentOpen(true)}
-                  className="bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 border border-white/20"
+                  className="bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-300 hover:scale-105 border border-white/20"
                 >
                   Comprehensive Facial Assessment
                 </Button>
