@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const FaceBotoxBeforeAfterSlider = () => {
@@ -39,29 +39,39 @@ const FaceBotoxBeforeAfterSlider = () => {
   };
 
   return (
-    <section className="py-12 bg-black">
+    <section className="relative overflow-hidden">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 z-10 pointer-events-none"></div>
+      
       <div className="w-full">
         {/* Mobile: Slider */}
         <div className="md:hidden">
           <div className="relative">
             <div className="overflow-hidden">
               <motion.div
-                className="flex transition-transform duration-300 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {slides.map((slide, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
-                    <div>
+                  <div key={index} className="w-full flex-shrink-0 relative">
+                    <div className="relative group">
                       <img
                         src={slide.image}
                         alt={slide.caption}
-                        className="w-full h-80 object-cover"
+                        className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="bg-black p-4 text-center">
-                        <h3 className="text-white font-semibold text-sm mb-1">
-                          {slide.caption}
-                        </h3>
-                        <p className="text-gray-300 text-xs">
+                      {/* Gradient overlay for better text readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                      
+                      {/* Floating caption with glassmorphism */}
+                      <div className="absolute bottom-4 left-4 right-4 backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-4 text-center">
+                        <div className="flex items-center justify-center mb-2">
+                          <Sparkles className="h-4 w-4 text-cyan-400 mr-2" />
+                          <h3 className="text-white font-semibold text-sm bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                            {slide.caption}
+                          </h3>
+                        </div>
+                        <p className="text-gray-200 text-xs">
                           {slide.description}
                         </p>
                       </div>
@@ -71,12 +81,12 @@ const FaceBotoxBeforeAfterSlider = () => {
               </motion.div>
             </div>
             
-            {/* Navigation buttons */}
+            {/* Enhanced navigation buttons */}
             <Button
               variant="ghost"
               size="icon"
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full z-10"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 backdrop-blur-sm hover:bg-black/50 text-white rounded-full z-20 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -84,19 +94,21 @@ const FaceBotoxBeforeAfterSlider = () => {
               variant="ghost"
               size="icon"
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full z-10"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 backdrop-blur-sm hover:bg-black/50 text-white rounded-full z-20 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
             
-            {/* Dots indicator */}
-            <div className="flex justify-center mt-4 space-x-2">
+            {/* Enhanced dots indicator */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center space-x-2 z-20">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentSlide ? "bg-white" : "bg-white/30"
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? "bg-gradient-to-r from-cyan-400 to-purple-400 w-6" 
+                      : "bg-white/30 hover:bg-white/50"
                   }`}
                 />
               ))}
@@ -112,18 +124,31 @@ const FaceBotoxBeforeAfterSlider = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group"
+              className="group relative overflow-hidden"
             >
-              <img
-                src={slide.image}
-                alt={slide.caption}
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="bg-black p-4 text-center">
-                <h3 className="text-white font-semibold text-sm mb-1">
-                  {slide.caption}
-                </h3>
-                <p className="text-gray-300 text-xs">
+              <div className="relative">
+                <img
+                  src={slide.image}
+                  alt={slide.caption}
+                  className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110"
+                />
+                
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                
+                {/* Glowing border effect on hover */}
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400/50 transition-colors duration-300"></div>
+              </div>
+              
+              {/* Enhanced caption with glassmorphism */}
+              <div className="absolute bottom-0 left-0 right-0 backdrop-blur-xl bg-black/40 border-t border-white/10 p-4 text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="flex items-center justify-center mb-2">
+                  <Sparkles className="h-4 w-4 text-cyan-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <h3 className="text-white font-semibold text-sm bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                    {slide.caption}
+                  </h3>
+                </div>
+                <p className="text-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                   {slide.description}
                 </p>
               </div>
