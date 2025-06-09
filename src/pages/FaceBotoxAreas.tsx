@@ -7,6 +7,7 @@ import { ArrowLeft, Eye, Frown, Smile } from "lucide-react";
 import { Link } from "react-router-dom";
 import { generateSEOMetadata } from "@/utils/seo";
 import FaceBotoxRelatedTreatments from "@/components/FaceBotoxRelatedTreatments";
+import FaceBotoxBeforeAfterSlider from "@/components/FaceBotoxBeforeAfterSlider";
 
 const FaceBotoxAreas = () => {
   const [isRelatedTreatmentsOpen, setIsRelatedTreatmentsOpen] = useState(false);
@@ -58,17 +59,12 @@ const FaceBotoxAreas = () => {
           </Link>
         </header>
 
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 text-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-30"
-            style={{
-              backgroundImage: `url('/lovable-uploads/c32f1151-24c9-4e9e-a7de-ee1ef761bab0.png')`
-            }}
-          />
-          
-          <div className="relative max-w-4xl mx-auto">
+        {/* Before/After Slider - First element */}
+        <FaceBotoxBeforeAfterSlider />
+
+        {/* Hero Section - No background image */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
