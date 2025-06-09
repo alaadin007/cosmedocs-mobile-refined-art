@@ -35,6 +35,13 @@ const allGalleryImages = [
     caption: "Sometimes just enhancing the edges of the lip/corners accentuates the lip beautifully",
     category: "lip-treatments"
   },
+  // Lip anatomy educational image
+  {
+    src: "/lovable-uploads/706383d6-fe0f-44cb-bfad-d5a688d10d20.png",
+    alt: "Lip anatomy diagram showing injection points and lip structure Cosmedocs",
+    caption: "Understanding lip anatomy is crucial for precise injections - our doctors target specific areas for natural enhancement",
+    category: "lip-treatments"
+  },
   // Nose job images mixed in
   {
     src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
