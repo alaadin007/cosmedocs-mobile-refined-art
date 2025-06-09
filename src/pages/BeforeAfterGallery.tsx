@@ -21,12 +21,25 @@ const allGalleryImages = [
     caption: "After: Enhanced lip volume and definition with natural-looking results",
     category: "lip-treatments"
   },
+  // Training and certification images scattered throughout
+  {
+    src: "/lovable-uploads/96f42376-2462-4bfd-946f-4fc73647f391.png",
+    alt: "Cosmedocs aesthetic training certification London Harley Street",
+    caption: "Excellence through education - our aestheticians complete rigorous training programs to master the invisible art of enhancement",
+    category: "dermal-fillers"
+  },
   // New lip filler image
   {
     src: "/lovable-uploads/bb065723-5cc4-4e75-b47e-10fc0f741157.png",
     alt: "Bold lip filler enhancement results",
     caption: "Sometimes we go bold but it requires something unique",
     category: "lip-treatments"
+  },
+  {
+    src: "/lovable-uploads/188431e9-facd-4459-9b12-c700ae47ed77.png",
+    alt: "Professional development aesthetic medicine training Cosmedocs",
+    caption: "Continuous learning drives our commitment to delivering natural, refined results - Bold • Natural • Always Your Way",
+    category: "dermal-fillers"
   },
   // Latest lip treatment image
   {
@@ -35,12 +48,24 @@ const allGalleryImages = [
     caption: "Sometimes just enhancing the edges of the lip/corners accentuates the lip beautifully",
     category: "lip-treatments"
   },
+  {
+    src: "/lovable-uploads/3b8b9417-a6f3-48dc-aff7-260e479613a3.png",
+    alt: "Team training graduation aesthetic medicine Harley Street London",
+    caption: "Our team's dedication to mastering advanced techniques ensures every treatment reflects our aesthetic philosophy of invisible art",
+    category: "threads"
+  },
   // Lip anatomy educational image
   {
     src: "/lovable-uploads/706383d6-fe0f-44cb-bfad-d5a688d10d20.png",
     alt: "Lip anatomy diagram showing injection points and lip structure Cosmedocs",
     caption: "Understanding lip anatomy is crucial for precise injections - our doctors target specific areas for natural enhancement",
     category: "lip-treatments"
+  },
+  {
+    src: "/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png",
+    alt: "Advanced aesthetic training certification program Cosmedocs London",
+    caption: "Training the next generation of aesthetic practitioners in our signature approach - quiet transformation that speaks volumes",
+    category: "dermal-fillers"
   },
   // Nose job images mixed in
   {
@@ -50,16 +75,34 @@ const allGalleryImages = [
     category: "nose-jobs"
   },
   {
+    src: "/lovable-uploads/fd5d3d65-8e19-492f-842b-de7deb04898a.png",
+    alt: "Aesthetic medicine certification training London Harley Street Cosmedocs",
+    caption: "Behind every invisible transformation is extensive training - our team embodies the precision and artistry of modern aesthetics",
+    category: "threads"
+  },
+  {
     src: "/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png",
     alt: "Non-surgical nose job bottom view before after London Cosmedocs",
     caption: "Underneath view showing improved nasal tip projection and symmetry",
     category: "nose-jobs"
   },
   {
+    src: "/lovable-uploads/c0a65d2b-fc99-48e0-b5bf-a2bc14f65d5a.png",
+    alt: "Professional aesthetic training team development Cosmedocs",
+    caption: "Investing in expertise - our comprehensive training ensures every practitioner delivers results that are minimal, quiet, and invisible",
+    category: "dermal-fillers"
+  },
+  {
     src: "/lovable-uploads/cc387da3-1543-4b06-8b11-a48d29f03456.png",
     alt: "Non-surgical nose job side profile before after London Harley Street",
     caption: "Side profile enhancement demonstrating subtle yet significant improvement",
     category: "nose-jobs"
+  },
+  {
+    src: "/lovable-uploads/4ce415a7-393b-4834-8a89-514b93314623.png",
+    alt: "Dr Ahmed Haq training session aesthetic medicine procedures London",
+    caption: "Hands-on training with Dr Ahmed Haq - where precision meets artistry in every procedure we perform",
+    category: "threads"
   },
   {
     src: "/lovable-uploads/1cceb92b-eacb-48b4-9c9f-04c4cb2b025e.png",
