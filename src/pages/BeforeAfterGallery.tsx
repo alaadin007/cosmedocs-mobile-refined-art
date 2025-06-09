@@ -201,7 +201,7 @@ const BeforeAfterGallery = () => {
                   >
                     <CollageViewer 
                       images={lipCollageImages}
-                      caption="Complete lip enhancement journey: consultation, procedure, and beautiful natural results"
+                      caption="Our lip injections are precise and on target - complete lip enhancement journey showcasing our invisible art approach"
                     />
                   </motion.div>
                 )}
