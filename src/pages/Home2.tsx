@@ -11,12 +11,14 @@ import LiquidGlassMenu from "@/components/LiquidGlassMenu";
 import LiquidGlassSearch from "@/components/LiquidGlassSearch";
 import LiquidGlassContactMenu from "@/components/LiquidGlassContactMenu";
 import LiquidGlassFacialAssessment from "@/components/LiquidGlassFacialAssessment";
+import LiquidGlassAllTreatments from "@/components/LiquidGlassAllTreatments";
 
 const Home2 = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
   const [isFacialAssessmentOpen, setIsFacialAssessmentOpen] = useState(false);
+  const [isAllTreatmentsOpen, setIsAllTreatmentsOpen] = useState(false);
   const isMobile = useIsMobile();
 
   const menuItems = [
@@ -194,13 +196,20 @@ const Home2 = () => {
                 </p>
               </motion.div>
 
-              {/* CTA Button */}
+              {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
-                className="pt-8"
+                className="pt-8 space-y-4"
               >
+                <Button
+                  onClick={() => setIsAllTreatmentsOpen(true)}
+                  className="bg-white/5 text-white hover:bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 border border-white/20 mb-4"
+                >
+                  All Treatments
+                </Button>
+                <br />
                 <Button
                   onClick={() => setIsFacialAssessmentOpen(true)}
                   className="bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 border border-white/20"
@@ -220,6 +229,11 @@ const Home2 = () => {
         </div>
 
         {/* Liquid Glass Modals */}
+        <LiquidGlassAllTreatments 
+          isOpen={isAllTreatmentsOpen}
+          onClose={() => setIsAllTreatmentsOpen(false)}
+        />
+
         <LiquidGlassFacialAssessment 
           isOpen={isFacialAssessmentOpen}
           onClose={() => setIsFacialAssessmentOpen(false)}
