@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -259,7 +260,7 @@ const AdvancedConsultation = () => {
                 to aesthetic medicine. Bold. Natural. Always Your Way.
               </p>
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Book Your Advanced Consultation
+                Do something here
               </Button>
             </div>
           </div>
