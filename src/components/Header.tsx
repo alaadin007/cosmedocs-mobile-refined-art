@@ -32,7 +32,7 @@ export default function Header() {
     },
     {
       icon: Search,
-      label: "AI Search Bar",
+      label: "Search CosmeDocs",
       action: () => setIsSearchOpen(true)
     },
     {
