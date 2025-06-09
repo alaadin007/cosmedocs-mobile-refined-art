@@ -36,6 +36,7 @@ import ClinicalConceptsToFlawlessSkin from './pages/ClinicalConceptsToFlawlessSk
 import DermalFillerMakeover from './pages/DermalFillerMakeover';
 import LipFillerDissolve from './pages/LipFillerDissolve';
 import BeforeAfterGallery from './pages/BeforeAfterGallery';
+import BotoxCalfReduction from './pages/BotoxCalfReduction';
 
 const queryClient = new QueryClient();
 
@@ -74,6 +75,7 @@ function App() {
             <Route path="/dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
             <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
             <Route path="/before-after-gallery" element={<Layout><BeforeAfterGallery /></Layout>} />
+            <Route path="/botox-calf-reduction" element={<Layout><BotoxCalfReduction /></Layout>} />
             <Route path="*" element={<Layout><NotFound /></Layout>} />
           </Routes>
         </BrowserRouter>
