@@ -1,15 +1,17 @@
+
 import { useState } from "react";
-import { Menu, MessageSquare } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
+import LiquidGlassMenu from "./LiquidGlassMenu";
+import LiquidGlassSearch from "./LiquidGlassSearch";
+import LiquidGlassContactMenu from "./LiquidGlassContactMenu";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
   
   const menuItems = [
     { name: "Home", path: "/" },
@@ -21,106 +23,132 @@ export default function Header() {
 
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\s+/g, "")}`;
-  
-  // Booking URL for all Book Now buttons
-  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
+
+  const contactOptions = [
+    {
+      icon: MessageSquare,
+      label: "WhatsApp",
+      action: () => window.open(whatsappUrl, "_blank")
+    },
+    {
+      icon: Search,
+      label: "AI Search Bar",
+      action: () => setIsSearchOpen(true)
+    },
+    {
+      icon: Mail,
+      label: "Email Us",
+      action: () => window.open("mailto:info@cosmedocs.com", "_blank")
+    },
+    {
+      icon: Phone,
+      label: "Call Us",
+      action: () => window.open("tel:+447735606447", "_blank")
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      action: () => window.open("https://instagram.com/cosmedocs", "_blank")
+    },
+    {
+      icon: Twitter,
+      label: "Twitter",
+      action: () => window.open("https://twitter.com/cosmedocs", "_blank")
+    }
+  ];
 
   return (
-    
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black">
-      <div className="flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
-        <Link to="/" className="flex flex-col items-start">
-          <div className="text-2xl md:text-3xl font-bold">
-            <span className="text-white">COSME</span>
-            <span className="text-white">DOCS</span>
-          </div>
-          <p className="text-xs text-gray-400 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
-        </Link>
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50">
+        {/* Liquid glass background */}
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-xl border-b border-white/10" />
         
-        <div className="hidden md:flex space-x-6 text-sm font-medium">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className="text-white hover:text-gray-300 transition-colors"
+        <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+          <Link to="/" className="flex flex-col items-start">
+            <div className="text-2xl md:text-3xl font-bold">
+              <span className="text-white">COSME</span>
+              <span className="text-white">DOCS</span>
+            </div>
+            <p className="text-xs text-gray-300 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-6 text-sm font-medium">
+            {menuItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className="text-white/90 hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Button
+              onClick={() => setIsSearchOpen(true)}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
             >
-              {item.name}
-            </Link>
-          ))}
-        </div>
+              <Search className="h-5 w-5" />
+            </Button>
+            
+            <Button
+              onClick={() => setIsContactMenuOpen(true)}
+              className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-300 hover:scale-105 border border-white/20"
+            >
+              Do something here
+            </Button>
+          </div>
 
-        <div className="hidden md:flex items-center space-x-4">
-          <a 
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-500 hover:text-green-400 transition-colors"
-            aria-label="Contact us on WhatsApp"
-          >
-            <MessageSquare className="h-5 w-5" />
-          </a>
-          <a 
-            href={bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-2 inline-flex items-center justify-center text-sm font-medium transition-colors"
-          >
-            Book Now
-          </a>
+          {/* Mobile Actions */}
+          <div className="md:hidden flex items-center space-x-2">
+            <Button
+              onClick={() => setIsSearchOpen(true)}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10"
+            >
+              <Search className="h-5 w-5" />
+            </Button>
+            
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-white/90 hover:text-white hover:bg-white/10">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="p-0 border-none">
+                <LiquidGlassMenu 
+                  menuItems={menuItems}
+                  onItemClick={() => setIsMobileMenuOpen(false)}
+                  onContactClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsContactMenuOpen(true);
+                  }}
+                />
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
+      </header>
 
-        <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-black text-white p-0">
-              <div className="flex flex-col h-full">
-                <div className="px-6 py-6 border-b border-gray-800">
-                  <div className="text-xl font-bold">
-                    COSMEDOCS
-                  </div>
-                  <p className="text-xs mt-1 text-gray-400">Harley Street Since 2007, 1M+ Injection</p>
-                </div>
-                <div className="px-6 py-8 flex flex-col space-y-4 flex-1">
-                  {menuItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.path}
-                      className="text-white hover:text-gray-300 py-2 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                  <a 
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-green-500 hover:text-green-400 py-2 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <MessageSquare className="h-5 w-5" />
-                  </a>
-                </div>
-                <div className="px-6 py-6 border-t border-gray-800">
-                  <a 
-                    href={bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-white text-black hover:bg-gray-200 rounded-full px-6 py-2 inline-flex items-center justify-center text-sm font-medium transition-colors"
-                  >
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </div>
-    </header>
+      {/* Search Modal */}
+      <LiquidGlassSearch 
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+      />
+
+      {/* Contact Menu Modal */}
+      <LiquidGlassContactMenu
+        isOpen={isContactMenuOpen}
+        onClose={() => setIsContactMenuOpen(false)}
+        options={contactOptions}
+      />
+    </>
   );
 }
