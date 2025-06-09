@@ -60,25 +60,23 @@ const FaceBotoxBeforeAfterSlider = () => {
                         alt={slide.caption}
                         className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      {/* Gradient overlay for better text readability */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                      
-                      {/* Floating caption with glassmorphism */}
-                      <div className="absolute bottom-4 left-4 right-4 backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-4 text-center">
-                        <div className="flex items-center justify-center mb-2">
-                          <Sparkles className="h-4 w-4 text-cyan-400 mr-2" />
-                          <h3 className="text-white font-semibold text-sm bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-                            {slide.caption}
-                          </h3>
-                        </div>
-                        <p className="text-gray-200 text-xs">
-                          {slide.description}
-                        </p>
-                      </div>
                     </div>
                   </div>
                 ))}
               </motion.div>
+            </div>
+            
+            {/* Caption below image for mobile */}
+            <div className="p-4 backdrop-blur-xl bg-white/10 border border-white/20 rounded-b-2xl text-center">
+              <div className="flex items-center justify-center mb-2">
+                <Sparkles className="h-4 w-4 text-cyan-400 mr-2" />
+                <h3 className="text-white font-semibold text-sm bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                  {slides[currentSlide].caption}
+                </h3>
+              </div>
+              <p className="text-gray-200 text-xs">
+                {slides[currentSlide].description}
+              </p>
             </div>
             
             {/* Enhanced navigation buttons */}
@@ -100,7 +98,7 @@ const FaceBotoxBeforeAfterSlider = () => {
             </Button>
             
             {/* Enhanced dots indicator */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center space-x-2 z-20">
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex justify-center space-x-2 z-20">
               {slides.map((_, index) => (
                 <button
                   key={index}
@@ -140,15 +138,15 @@ const FaceBotoxBeforeAfterSlider = () => {
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400/50 transition-colors duration-300"></div>
               </div>
               
-              {/* Enhanced caption with glassmorphism */}
-              <div className="absolute bottom-0 left-0 right-0 backdrop-blur-xl bg-black/40 border-t border-white/10 p-4 text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              {/* Caption below image for desktop */}
+              <div className="backdrop-blur-xl bg-black/40 border-t border-white/10 p-4 text-center">
                 <div className="flex items-center justify-center mb-2">
-                  <Sparkles className="h-4 w-4 text-cyan-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <Sparkles className="h-4 w-4 text-cyan-400 mr-2" />
                   <h3 className="text-white font-semibold text-sm bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
                     {slide.caption}
                   </h3>
                 </div>
-                <p className="text-gray-200 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                <p className="text-gray-200 text-xs">
                   {slide.description}
                 </p>
               </div>
