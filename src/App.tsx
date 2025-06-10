@@ -42,6 +42,7 @@ import BotoxCalfReduction from './pages/BotoxCalfReduction';
 import PartnerInvitation from './pages/PartnerInvitation';
 import PartnerInvitationWrapper from './components/PartnerInvitationWrapper';
 import SatisfactionGuaranteed from './pages/SatisfactionGuaranteed';
+import Membership from './pages/Membership';
 
 const queryClient = new QueryClient();
 
@@ -83,6 +84,7 @@ function App() {
             <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
             <Route path="/before-after-gallery" element={<Layout><BeforeAfterGallery /></Layout>} />
             <Route path="/botox-calf-reduction" element={<Layout><BotoxCalfReduction /></Layout>} />
+            <Route path="/membership" element={<Layout><Membership /></Layout>} />
             <Route path="/satisfaction-guaranteed" element={<SatisfactionGuaranteed />} />
             <Route path="/partner-invitation/:fellowName?" element={<PartnerInvitationWrapper />} />
             <Route path="/partner-invitation" element={<PartnerInvitationWrapper />} />
