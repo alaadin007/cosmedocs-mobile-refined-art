@@ -2,11 +2,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface Treatment {
   name: string;
   price?: string;
   isPopular?: boolean;
+  link?: string;
 }
 
 interface TreatmentCategory {
@@ -26,12 +28,12 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       name: "Botox",
       isPopular: true,
       treatments: [
-        { name: "Face Botox (1-3 Areas)", price: "£175-£350", isPopular: true },
-        { name: "Nefertiti Face Lift", price: "£300" },
+        { name: "Face Botox (1-3 Areas)", price: "£175-£350", isPopular: true, link: "/face-botox-areas" },
+        { name: "Nefertiti Face Lift", price: "£300", link: "/nefertiti-botox-facelift" },
         { name: "Masseter (Jawline Slimming)", price: "£350" },
         { name: "Full Face Natural Botox", price: "£500" },
         { name: "Migraines / Headaches", price: "£450-£550" },
-        { name: "Trigger Point Botox", price: "£350-£550" },
+        { name: "Trigger Point Botox", price: "£350-£550", link: "/trigger-point-botox" },
         { name: "Full Barbie Botox", price: "£450" },
         { name: "Lip Flip", price: "£175" },
         { name: "Gummy Smile", price: "£50" },
@@ -101,7 +103,31 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
   ];
 
   const popularCategories = treatmentCategories.filter(cat => cat.isPopular);
-  const otherCategories = treatmentCategories.filter(cat => !cat.isPopular);
+
+  const TreatmentItem = ({ treatment, onClick }: { treatment: Treatment; onClick?: () => void }) => {
+    const content = (
+      <div className="flex justify-between items-center text-sm">
+        <span className="text-gray-300">{treatment.name}</span>
+        {treatment.price && (
+          <span className="text-yellow-400 font-medium">{treatment.price}</span>
+        )}
+      </div>
+    );
+
+    if (treatment.link) {
+      return (
+        <Link 
+          to={treatment.link} 
+          onClick={onClick}
+          className="block hover:bg-white/5 rounded px-2 py-1 transition-colors"
+        >
+          {content}
+        </Link>
+      );
+    }
+
+    return <div className="px-2 py-1">{content}</div>;
+  };
 
   return (
     <AnimatePresence>
@@ -166,12 +192,11 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
                       </div>
                       <div className="space-y-2">
                         {category.treatments.slice(0, 3).map((treatment, idx) => (
-                          <div key={idx} className="flex justify-between items-center text-sm">
-                            <span className="text-gray-300">{treatment.name}</span>
-                            {treatment.price && (
-                              <span className="text-yellow-400 font-medium">{treatment.price}</span>
-                            )}
-                          </div>
+                          <TreatmentItem 
+                            key={idx} 
+                            treatment={treatment} 
+                            onClick={onClose}
+                          />
                         ))}
                         {category.treatments.length > 3 && (
                           <p className="text-xs text-gray-400 mt-2">

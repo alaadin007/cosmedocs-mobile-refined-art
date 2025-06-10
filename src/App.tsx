@@ -40,6 +40,7 @@ import BeforeAfterGallery from './pages/BeforeAfterGallery';
 import BotoxCalfReduction from './pages/BotoxCalfReduction';
 import Membership from './pages/Membership';
 import FellowshipInvitation from './pages/FellowshipInvitation';
+import FaceBotoxAreas from './pages/FaceBotoxAreas';
 
 const queryClient = new QueryClient();
 
@@ -82,6 +83,7 @@ function App() {
             <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
             <Route path="/before-after-gallery" element={<Layout><BeforeAfterGallery /></Layout>} />
             <Route path="/botox-calf-reduction" element={<Layout><BotoxCalfReduction /></Layout>} />
+            <Route path="/face-botox-areas" element={<Layout><FaceBotoxAreas /></Layout>} />
             <Route path="*" element={<Layout><NotFound /></Layout>} />
           </Routes>
         </BrowserRouter>
