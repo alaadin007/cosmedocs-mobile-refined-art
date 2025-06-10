@@ -161,10 +161,25 @@ const FaceBotoxAreas = () => {
                   </div>
                 </div>
                 
-                <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
                   Professional Botox treatment for facial areas including frown lines, forehead, and crow's feet. 
                   Our invisible art philosophy ensures natural-looking results.
                 </p>
+                
+                {/* Animated Tagline */}
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="text-lg md:text-xl text-gray-400 mb-8 relative"
+                >
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-pulse">
+                      art • science • bit of magic
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 blur-sm rounded-lg animate-pulse opacity-50"></span>
+                  </span>
+                </motion.p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-white text-black hover:bg-gray-100">
