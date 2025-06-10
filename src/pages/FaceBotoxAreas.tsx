@@ -474,44 +474,39 @@ const FaceBotoxAreas = () => {
                   
                   {/* Carousel Container */}
                   <div className="relative bg-gray-900/50 rounded-2xl p-6 border border-gray-800">
-                    {/* Main Image */}
-                    <div className="relative overflow-hidden rounded-xl mb-4">
-                      <motion.img
-                        key={currentImageIndex}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -100 }}
-                        transition={{ duration: 0.5 }}
-                        src={beforeAfterImages[currentImageIndex].src}
-                        alt={beforeAfterImages[currentImageIndex].alt}
-                        className="w-full h-64 object-cover"
-                      />
-                      
-                      {/* Navigation Arrows */}
-                      <button
-                        onClick={prevImage}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
-                      >
-                        <ChevronLeft className="h-4 w-4" />
-                      </button>
-                      
-                      <button
-                        onClick={nextImage}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
-                      >
-                        <ChevronRight className="h-4 w-4" />
-                      </button>
-                    </div>
-
-                    {/* Caption */}
-                    <div className="p-3 bg-gray-900/50 rounded-lg">
-                      <p className="text-sm text-gray-300 leading-relaxed">
-                        {beforeAfterImages[currentImageIndex].caption}
-                      </p>
+                    {/* Main Image - Square Shape */}
+                    <div className="relative overflow-hidden rounded-xl mb-6">
+                      <div className="relative w-full aspect-square">
+                        <motion.img
+                          key={currentImageIndex}
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -100 }}
+                          transition={{ duration: 0.5 }}
+                          src={beforeAfterImages[currentImageIndex].src}
+                          alt={beforeAfterImages[currentImageIndex].alt}
+                          className="w-full h-full object-cover"
+                        />
+                        
+                        {/* Navigation Arrows */}
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                        </button>
+                        
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+                        >
+                          <ChevronRight className="h-4 w-4" />
+                        </button>
+                      </div>
                     </div>
 
                     {/* Dots Indicator */}
-                    <div className="flex justify-center space-x-2 mt-4">
+                    <div className="flex justify-center space-x-2 mb-4">
                       {beforeAfterImages.map((_, index) => (
                         <button
                           key={index}
@@ -524,6 +519,13 @@ const FaceBotoxAreas = () => {
                         />
                       ))}
                     </div>
+                  </div>
+
+                  {/* Caption - Outside and Below the Container */}
+                  <div className="mt-4 p-4 bg-gray-900/30 rounded-lg">
+                    <p className="text-sm text-gray-300 leading-relaxed text-center">
+                      {beforeAfterImages[currentImageIndex].caption}
+                    </p>
                   </div>
                 </motion.div>
               </div>
