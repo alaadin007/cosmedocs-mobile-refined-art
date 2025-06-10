@@ -124,46 +124,34 @@ const FaceBotoxAreas = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src="/lovable-uploads/d610e5f1-30da-4a26-b87c-a7c38162811f.png"
-              alt="Face Botox treatment"
-              className="w-full h-full object-cover opacity-20"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
+      <div className="bg-black text-white">
+        {/* Hero Section with Background Image */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('/lovable-uploads/d610e5f1-30da-4a26-b87c-a7c38162811f.png')`
+            }}
+          >
+            <div className="absolute inset-0 bg-black/60"></div>
           </div>
-          
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6">
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
                   Face Botox
-                  <span className="block text-xl md:text-2xl text-gray-300 font-light mt-4">
-                    1-3 Areas Treatment
-                  </span>
+                  <span className="block text-purple-300">1-3 Areas</span>
+                  <span className="block text-sm mt-4">Professional treatment for natural-looking results</span>
                 </h1>
-                
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-                  <div className="text-3xl lg:text-4xl font-light text-white">
-                    From £175
-                  </div>
-                  <div className="hidden md:block w-px h-8 bg-gray-600"></div>
-                  <div className="flex items-center text-gray-300">
-                    <Clock className="h-5 w-5 mr-2" />
-                    <span>15-20 minutes consultation & treatment</span>
-                  </div>
-                </div>
-                
-                <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
-                  Professional Botox treatment for facial areas including frown lines, forehead, and crow's feet. 
-                  Our invisible art philosophy ensures natural-looking results.
+                <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
+                  <span className="text-purple-300 font-semibold">Expert Practitioners</span>
+                  <br />
+                  Frown lines, forehead, and crow's feet treatment with invisible art philosophy
                 </p>
                 
                 {/* Animated Tagline */}
@@ -171,7 +159,7 @@ const FaceBotoxAreas = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
-                  className="text-lg md:text-xl text-gray-400 mb-8 relative"
+                  className="text-lg md:text-xl text-gray-400 mb-8 relative drop-shadow-lg"
                 >
                   <span className="relative inline-block">
                     <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-pulse">
@@ -181,12 +169,21 @@ const FaceBotoxAreas = () => {
                   </span>
                 </motion.p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-white text-black hover:bg-gray-100">
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">From £175</p>
+                  <p className="text-sm text-gray-300 drop-shadow-lg">15-20 minutes • Results last 4-6 months</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
