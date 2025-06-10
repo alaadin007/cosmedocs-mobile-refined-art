@@ -50,9 +50,9 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Layout><Index /></Layout>} />
+            <Route path="/" element={<Home2 />} />
             <Route path="/home" element={<Layout><Home /></Layout>} />
-            <Route path="/home2" element={<Home2 />} />
+            <Route path="/index" element={<Layout><Index /></Layout>} />
             <Route path="/about" element={<Layout><About /></Layout>} />
             <Route path="/treatments" element={<Layout><Treatments /></Layout>} />
             <Route path="/contact" element={<Layout><Contact /></Layout>} />

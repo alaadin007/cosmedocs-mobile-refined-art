@@ -12,6 +12,7 @@ import LiquidGlassSearch from "@/components/LiquidGlassSearch";
 import LiquidGlassContactMenu from "@/components/LiquidGlassContactMenu";
 import LiquidGlassFacialAssessment from "@/components/LiquidGlassFacialAssessment";
 import LiquidGlassAllTreatments from "@/components/LiquidGlassAllTreatments";
+import Footer from "@/components/Footer";
 
 const Home2 = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -227,6 +228,9 @@ const Home2 = () => {
             Cosmedocs is London's premier aesthetic medicine clinic located on prestigious Harley Street, offering advanced cosmetic treatments since 2007. Our expert practitioners specialize in Botox injections, dermal fillers, lip enhancement, non-surgical nose jobs, skin boosters, and comprehensive facial rejuvenation treatments. With over 1 million injections performed, we are recognized leaders in aesthetic medicine, providing natural-looking results through our invisible art philosophy. Our clinic offers consultation services, advanced anti-aging treatments, facial contouring, and personalized aesthetic solutions. We pride ourselves on subtle enhancement that speaks without saying a word, ensuring every client receives transformative results tailored to their individual needs. Our comprehensive approach addresses skin quality, wrinkle reduction, volume restoration, and facial harmonization using the latest techniques and premium products. Located at 10 Harley Street, London W1G 9PF, we serve clients seeking the highest standard of aesthetic medicine in the heart of London's medical district. Contact us at 0333 0551 503 or info@cosmedocs.com to begin your aesthetic journey with London's most trusted cosmetic medicine specialists.
           </p>
         </div>
+
+        {/* Footer */}
+        <Footer />
 
         {/* Liquid Glass Modals */}
         <LiquidGlassAllTreatments 
