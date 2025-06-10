@@ -123,7 +123,7 @@ const SatisfactionGuaranteed = () => {
                   Remember: every skin is different. Do not go only by before and after photos, 
                   but seek a consultation with our qualified clinical staff.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
