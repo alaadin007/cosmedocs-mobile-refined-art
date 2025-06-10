@@ -1,10 +1,8 @@
-
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import { Star, Clock, Shield, Award, Check } from 'lucide-react';
-import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import LiquidGlassRelatedTreatments from '@/components/LiquidGlassRelatedTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
 
@@ -21,32 +19,17 @@ const FaceBotoxAreas = () => {
     {
       src: "/lovable-uploads/d610e5f1-30da-4a26-b87c-a7c38162811f.png",
       alt: "Before and after frown lines botox treatment",
-      caption: (
-        <span>
-          <strong>Frown Lines Treatment:</strong> Smooth, natural results with our precision Botox technique. 
-          Result achieved with 20 units of premium Botox - transformation that speaks without saying a word.
-        </span>
-      )
+      caption: "Frown Lines Treatment: Smooth, natural results with our precision Botox technique. Result achieved with 20 units of premium Botox - transformation that speaks without saying a word."
     },
     {
       src: "/lovable-uploads/35a418d0-b5b2-4c2c-864c-a3546681613f.png", 
       alt: "Before and after forehead lines botox treatment",
-      caption: (
-        <span>
-          <strong>Forehead Lines Treatment:</strong> Gentle smoothing of expression lines while maintaining natural movement.
-          Our invisible art philosophy ensures you look refreshed, never frozen.
-        </span>
-      )
+      caption: "Forehead Lines Treatment: Gentle smoothing of expression lines while maintaining natural movement. Our invisible art philosophy ensures you look refreshed, never frozen."
     },
     {
       src: "/lovable-uploads/4fc6cbae-9029-4158-bc6e-1e30f20ac5a3.png",
       alt: "Before and after gummy smile botox treatment", 
-      caption: (
-        <span>
-          <strong>Gummy Smile Treatment:</strong> Delicate enhancement for a perfect smile.
-          Bold yet natural results that enhance your natural beauty.
-        </span>
-      )
+      caption: "Gummy Smile Treatment: Delicate enhancement for a perfect smile. Bold yet natural results that enhance your natural beauty."
     }
   ];
 
@@ -142,13 +125,6 @@ const FaceBotoxAreas = () => {
                   <Button size="lg" className="bg-white text-black hover:bg-gray-100">
                     Book Consultation
                   </Button>
-                  <BeforeAfterImageViewer 
-                    images={beforeAfterImages}
-                    triggerLabel="View Results"
-                    title="Face Botox Before & After"
-                    description="Real results from our expert practitioners"
-                    className="border border-white/30 text-white hover:bg-white/10"
-                  />
                 </div>
               </motion.div>
             </div>
@@ -241,7 +217,7 @@ const FaceBotoxAreas = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
+        {/* Why Choose Us with Before/After Gallery */}
         <section className="py-20 bg-gray-900/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -287,11 +263,27 @@ const FaceBotoxAreas = () => {
                   transition={{ duration: 0.6 }}
                   className="relative"
                 >
-                  <img 
-                    src="/lovable-uploads/35a418d0-b5b2-4c2c-864c-a3546681613f.png"
-                    alt="Expert botox treatment at Cosmedocs"
-                    className="rounded-2xl w-full border border-gray-800"
-                  />
+                  <h3 className="text-2xl font-light mb-6 text-center">Before & After Results</h3>
+                  <div className="space-y-6">
+                    {beforeAfterImages.map((image, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="relative"
+                      >
+                        <img 
+                          src={image.src}
+                          alt={image.alt}
+                          className="rounded-2xl w-full border border-gray-800"
+                        />
+                        <div className="mt-3 p-3 bg-gray-900/50 rounded-lg">
+                          <p className="text-sm text-gray-300">{image.caption}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </motion.div>
               </div>
             </div>
