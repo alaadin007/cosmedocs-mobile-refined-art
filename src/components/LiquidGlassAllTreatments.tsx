@@ -174,7 +174,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
               {/* Popular Categories Grid */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
-                  <Star className="h-5 w-5 text-yellow-400 mr-2" />
+                  <Star className="h-4 w-4 text-yellow-400 mr-2" />
                   Popular Treatment Categories
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -188,7 +188,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
                     >
                       <div className="flex items-center justify-between mb-3">
                         <h4 className="text-lg font-semibold text-white">{category.name}</h4>
-                        <Star className="h-4 w-4 text-yellow-400" />
+                        <Star className="h-3 w-3 text-yellow-400" />
                       </div>
                       <div className="space-y-2">
                         {category.treatments.slice(0, 3).map((treatment, idx) => (
