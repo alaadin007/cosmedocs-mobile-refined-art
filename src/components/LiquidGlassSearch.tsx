@@ -20,12 +20,6 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   const searchContext = `
   You are an AI assistant helping users find information about Cosmedocs, a premium aesthetic medicine clinic on Harley Street, London.
 
-  IMPORTANT INSTRUCTIONS:
-  - Keep responses SHORT and conversational (2-3 sentences maximum)
-  - Always end with a helpful follow-up question to continue the conversation
-  - Be friendly and professional
-  - Focus on what the user specifically asked about
-
   ABOUT COSMEDOCS:
   - Premium aesthetic medicine clinic located on Harley Street, London
   - Established since 2007 with over 1 million injections performed
@@ -49,9 +43,7 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   - Email: info@cosmedocs.com
   - WhatsApp: +447735606447
   
-  RESPONSE STYLE EXAMPLES:
-  - If asked about "lip fillers": "I'd be happy to help with lip filler information! We specialize in natural-looking lip enhancement using premium hyaluronic acid fillers. What specifically would you like to know - pricing, procedure details, or booking a consultation?"
-  - If asked about "Botox": "Great question about Botox! We offer various Botox treatments for different areas. Are you interested in forehead lines, crow's feet, or perhaps something else?"
+  Please provide helpful, accurate information about our treatments, booking process, and aesthetic medicine expertise.
   `;
 
   const handleSearch = async () => {
@@ -109,15 +101,15 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="relative w-full max-w-2xl max-h-[80vh] flex flex-col"
+            className="relative w-full max-w-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Liquid glass background */}
             <div className="absolute inset-0 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20" />
             
-            <div className="relative p-6 flex flex-col h-full">
+            <div className="relative p-6">
               {/* Header */}
-              <div className="flex items-center justify-between mb-6 flex-shrink-0">
+              <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-semibold text-white">Search Cosmedocs</h2>
                 <Button
                   onClick={onClose}
@@ -130,7 +122,7 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
               </div>
               
               {/* Search Input */}
-              <div className="flex gap-3 mb-6 flex-shrink-0">
+              <div className="flex gap-3 mb-6">
                 <div className="relative flex-1">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 h-4 w-4" />
                   <Input
@@ -154,41 +146,35 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                 </Button>
               </div>
 
-              {/* Results - Now with proper scrolling */}
+              {/* Results */}
               {results && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 flex-1 min-h-0 flex flex-col"
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 >
-                  <div className="p-4 border-b border-white/10 flex-shrink-0">
-                    <h3 className="font-medium text-white/90">AI Response:</h3>
+                  <h3 className="font-medium mb-3 text-white/90">AI Response:</h3>
+                  <div className="text-white/80 leading-relaxed space-y-2">
+                    {results.split('\n\n').map((paragraph, index) => (
+                      <p key={index} className="text-sm">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
-                  <div className="p-4 overflow-y-auto flex-1">
-                    <div className="text-white/80 leading-relaxed space-y-3">
-                      {results.split('\n\n').map((paragraph, index) => (
-                        <p key={index} className="text-sm">
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="p-4 border-t border-white/10 flex-shrink-0">
-                    <Button 
-                      onClick={handleClear}
-                      variant="outline"
-                      className="border-white/20 text-white/70 hover:bg-white/10 rounded-xl"
-                      size="sm"
-                    >
-                      Clear & Search Again
-                    </Button>
-                  </div>
+                  <Button 
+                    onClick={handleClear}
+                    variant="outline"
+                    className="mt-4 border-white/20 text-white/70 hover:bg-white/10 rounded-xl"
+                    size="sm"
+                  >
+                    Clear & Search Again
+                  </Button>
                 </motion.div>
               )}
 
               {/* Quick suggestions */}
               {!results && !isLoading && (
-                <div className="space-y-3 flex-shrink-0">
+                <div className="space-y-3">
                   <p className="text-white/70 text-sm">Try asking about:</p>
                   <div className="flex flex-wrap gap-2">
                     {[

@@ -23,7 +23,6 @@ import NefertitiBotoxFacelift from './pages/NefertitiBotoxFacelift';
 import TriggerPointBotox from './pages/TriggerPointBotox';
 import MedicalAnalBleaching from './pages/MedicalAnalBleaching';
 import AdvancedConsultation from './pages/AdvancedConsultation';
-import FaceBotoxAreas from './pages/FaceBotoxAreas';
 import Partners from './pages/Partners';
 import BirminghamHome from './pages/BirminghamHome';
 import ManchesterHome from './pages/ManchesterHome';
@@ -39,10 +38,6 @@ import DermalFillerMakeover from './pages/DermalFillerMakeover';
 import LipFillerDissolve from './pages/LipFillerDissolve';
 import BeforeAfterGallery from './pages/BeforeAfterGallery';
 import BotoxCalfReduction from './pages/BotoxCalfReduction';
-import PartnerInvitation from './pages/PartnerInvitation';
-import PartnerInvitationWrapper from './components/PartnerInvitationWrapper';
-import SatisfactionGuaranteed from './pages/SatisfactionGuaranteed';
-import Membership from './pages/Membership';
 
 const queryClient = new QueryClient();
 
@@ -68,7 +63,6 @@ function App() {
             <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
             <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
             <Route path="/advanced-consultation" element={<Layout><AdvancedConsultation /></Layout>} />
-            <Route path="/face-botox-areas" element={<Layout><FaceBotoxAreas /></Layout>} />
             <Route path="/partners" element={<Layout><Partners /></Layout>} />
             <Route path="/birmingham" element={<Layout><BirminghamHome /></Layout>} />
             <Route path="/manchester" element={<Layout><ManchesterHome /></Layout>} />
@@ -84,10 +78,6 @@ function App() {
             <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
             <Route path="/before-after-gallery" element={<Layout><BeforeAfterGallery /></Layout>} />
             <Route path="/botox-calf-reduction" element={<Layout><BotoxCalfReduction /></Layout>} />
-            <Route path="/membership" element={<Layout><Membership /></Layout>} />
-            <Route path="/satisfaction-guaranteed" element={<SatisfactionGuaranteed />} />
-            <Route path="/partner-invitation/:fellowName?" element={<PartnerInvitationWrapper />} />
-            <Route path="/partner-invitation" element={<PartnerInvitationWrapper />} />
             <Route path="*" element={<Layout><NotFound /></Layout>} />
           </Routes>
         </BrowserRouter>

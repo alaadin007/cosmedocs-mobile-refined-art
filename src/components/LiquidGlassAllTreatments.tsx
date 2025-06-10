@@ -1,15 +1,12 @@
+
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Star, ChevronDown, ChevronUp } from "lucide-react";
+import { X, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 interface Treatment {
   name: string;
   price?: string;
   isPopular?: boolean;
-  route?: string;
 }
 
 interface TreatmentCategory {
@@ -24,37 +21,17 @@ interface LiquidGlassAllTreatmentsProps {
 }
 
 export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlassAllTreatmentsProps) {
-  const navigate = useNavigate();
-  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
-
-  const toggleCategory = (categoryName: string) => {
-    const newExpanded = new Set(expandedCategories);
-    if (newExpanded.has(categoryName)) {
-      newExpanded.delete(categoryName);
-    } else {
-      newExpanded.add(categoryName);
-    }
-    setExpandedCategories(newExpanded);
-  };
-
-  const handleTreatmentClick = (treatment: Treatment) => {
-    if (treatment.route) {
-      onClose();
-      navigate(treatment.route);
-    }
-  };
-
   const treatmentCategories: TreatmentCategory[] = [
     {
       name: "Botox",
       isPopular: true,
       treatments: [
-        { name: "Face Botox (1-3 Areas)", price: "£175-£350", isPopular: true, route: "/face-botox-areas" },
-        { name: "Nefertiti Face Lift", price: "£300", route: "/nefertiti-botox-facelift" },
+        { name: "Face Botox (1-3 Areas)", price: "£175-£350", isPopular: true },
+        { name: "Nefertiti Face Lift", price: "£300" },
         { name: "Masseter (Jawline Slimming)", price: "£350" },
         { name: "Full Face Natural Botox", price: "£500" },
         { name: "Migraines / Headaches", price: "£450-£550" },
-        { name: "Trigger Point Botox", price: "£350-£550", route: "/trigger-point-botox" },
+        { name: "Trigger Point Botox", price: "£350-£550" },
         { name: "Full Barbie Botox", price: "£450" },
         { name: "Lip Flip", price: "£175" },
         { name: "Gummy Smile", price: "£50" },
@@ -77,8 +54,8 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       name: "Dermal Fillers",
       isPopular: true,
       treatments: [
-        { name: "Lip Fillers (0.5ml-1.5ml)", price: "£300-£400", isPopular: true, route: "/lip-fillers" },
-        { name: "Non Surgical Nose Job", price: "£450", isPopular: true, route: "/non-surgical-nose-job" },
+        { name: "Lip Fillers (0.5ml-1.5ml)", price: "£300-£400", isPopular: true },
+        { name: "Non Surgical Nose Job", price: "£450", isPopular: true },
         { name: "Cheek Volume", price: "£350/ml" },
         { name: "Jawline Contouring", price: "£350/ml" },
         { name: "Tear Trough", price: "£425" },
@@ -124,6 +101,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
   ];
 
   const popularCategories = treatmentCategories.filter(cat => cat.isPopular);
+  const otherCategories = treatmentCategories.filter(cat => !cat.isPopular);
 
   return (
     <AnimatePresence>
@@ -186,61 +164,21 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
                         <h4 className="text-lg font-semibold text-white">{category.name}</h4>
                         <Star className="h-4 w-4 text-yellow-400" />
                       </div>
-                      
-                      <Collapsible 
-                        open={expandedCategories.has(category.name)}
-                        onOpenChange={() => toggleCategory(category.name)}
-                      >
-                        <div className="space-y-2">
-                          {category.treatments.slice(0, 3).map((treatment, idx) => (
-                            <div 
-                              key={idx} 
-                              className={`flex justify-between items-center text-sm ${
-                                treatment.route ? 'cursor-pointer hover:text-yellow-300 transition-colors' : ''
-                              }`}
-                              onClick={() => handleTreatmentClick(treatment)}
-                            >
-                              <span className="text-gray-300">{treatment.name}</span>
-                              {treatment.price && (
-                                <span className="text-yellow-400 font-medium">{treatment.price}</span>
-                              )}
-                            </div>
-                          ))}
-                          
-                          <CollapsibleContent className="space-y-2">
-                            {category.treatments.slice(3).map((treatment, idx) => (
-                              <div 
-                                key={idx + 3} 
-                                className={`flex justify-between items-center text-sm ${
-                                  treatment.route ? 'cursor-pointer hover:text-yellow-300 transition-colors' : ''
-                                }`}
-                                onClick={() => handleTreatmentClick(treatment)}
-                              >
-                                <span className="text-gray-300">{treatment.name}</span>
-                                {treatment.price && (
-                                  <span className="text-yellow-400 font-medium">{treatment.price}</span>
-                                )}
-                              </div>
-                            ))}
-                          </CollapsibleContent>
-                          
-                          {category.treatments.length > 3 && (
-                            <CollapsibleTrigger className="text-xs text-gray-400 mt-2 hover:text-white transition-colors flex items-center gap-1">
-                              {expandedCategories.has(category.name) ? (
-                                <>
-                                  Show less
-                                  <ChevronUp className="h-3 w-3" />
-                                </>
-                              ) : (
-                                <>
-                                  +{category.treatments.length - 3} more treatments
-                                  <ChevronDown className="h-3 w-3" />
-                                </>
-                              )}
-                            </CollapsibleTrigger>
-                          )}
-                        </div>
-                      </Collapsible>
+                      <div className="space-y-2">
+                        {category.treatments.slice(0, 3).map((treatment, idx) => (
+                          <div key={idx} className="flex justify-between items-center text-sm">
+                            <span className="text-gray-300">{treatment.name}</span>
+                            {treatment.price && (
+                              <span className="text-yellow-400 font-medium">{treatment.price}</span>
+                            )}
+                          </div>
+                        ))}
+                        {category.treatments.length > 3 && (
+                          <p className="text-xs text-gray-400 mt-2">
+                            +{category.treatments.length - 3} more treatments
+                          </p>
+                        )}
+                      </div>
                     </motion.div>
                   ))}
                 </div>
