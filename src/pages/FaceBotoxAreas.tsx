@@ -1,14 +1,15 @@
 
 import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
-import { Star, Clock, Shield, Award, Check, ArrowRight } from 'lucide-react';
+import { Star, Clock, Shield, Award, Check, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import LiquidGlassRelatedTreatments from '@/components/LiquidGlassRelatedTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
 
 const FaceBotoxAreas = () => {
   const [isRelatedTreatmentsOpen, setIsRelatedTreatmentsOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const seoData = generateSEOMetadata(
     "Face Botox (1-3 Areas) £175-£350 | Cosmedocs London",
@@ -33,6 +34,23 @@ const FaceBotoxAreas = () => {
       caption: "Gummy Smile Treatment: Delicate enhancement for a perfect smile. Bold yet natural results that enhance your natural beauty."
     }
   ];
+
+  // Auto-scroll carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % beforeAfterImages.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [beforeAfterImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % beforeAfterImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + beforeAfterImages.length) % beforeAfterImages.length);
+  };
 
   const relatedTreatments = [
     { name: "Nefertiti Face Lift", price: "£300", link: "/nefertiti-botox-facelift" },
@@ -406,7 +424,7 @@ const FaceBotoxAreas = () => {
           </div>
         </section>
 
-        {/* Why Choose Us with Before/After Gallery */}
+        {/* Before/After Carousel Section */}
         <section className="py-20 bg-gray-900/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -453,25 +471,59 @@ const FaceBotoxAreas = () => {
                   className="relative"
                 >
                   <h3 className="text-2xl font-light mb-6 text-center">Before & After Results</h3>
-                  <div className="space-y-6">
-                    {beforeAfterImages.map((image, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="relative"
+                  
+                  {/* Carousel Container */}
+                  <div className="relative bg-gray-900/50 rounded-2xl p-6 border border-gray-800">
+                    {/* Main Image */}
+                    <div className="relative overflow-hidden rounded-xl mb-4">
+                      <motion.img
+                        key={currentImageIndex}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -100 }}
+                        transition={{ duration: 0.5 }}
+                        src={beforeAfterImages[currentImageIndex].src}
+                        alt={beforeAfterImages[currentImageIndex].alt}
+                        className="w-full h-64 object-cover"
+                      />
+                      
+                      {/* Navigation Arrows */}
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
                       >
-                        <img 
-                          src={image.src}
-                          alt={image.alt}
-                          className="rounded-2xl w-full border border-gray-800"
+                        <ChevronLeft className="h-4 w-4" />
+                      </button>
+                      
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+                      >
+                        <ChevronRight className="h-4 w-4" />
+                      </button>
+                    </div>
+
+                    {/* Caption */}
+                    <div className="p-3 bg-gray-900/50 rounded-lg">
+                      <p className="text-sm text-gray-300 leading-relaxed">
+                        {beforeAfterImages[currentImageIndex].caption}
+                      </p>
+                    </div>
+
+                    {/* Dots Indicator */}
+                    <div className="flex justify-center space-x-2 mt-4">
+                      {beforeAfterImages.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentImageIndex(index)}
+                          className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                            index === currentImageIndex 
+                              ? 'bg-white' 
+                              : 'bg-gray-600 hover:bg-gray-500'
+                          }`}
                         />
-                        <div className="mt-3 p-3 bg-gray-900/50 rounded-lg">
-                          <p className="text-sm text-gray-300">{image.caption}</p>
-                        </div>
-                      </motion.div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
               </div>
