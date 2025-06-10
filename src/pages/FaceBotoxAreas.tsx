@@ -1,9 +1,8 @@
-
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
-import { Star, Clock, Shield, Award, Check } from 'lucide-react';
+import { Star, Clock, Shield, Award, Check, ArrowRight } from 'lucide-react';
 import LiquidGlassRelatedTreatments from '@/components/LiquidGlassRelatedTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
 
@@ -44,6 +43,51 @@ const FaceBotoxAreas = () => {
     { name: "Lip Flip", price: "£175", link: "/lip-flip-botox" },
     { name: "Gummy Smile", price: "£50", link: "/gummy-smile-botox" },
     { name: "Bunny Lines", price: "£50", link: "/bunny-lines-botox" }
+  ];
+
+  const otherFaceCommonAreas = [
+    {
+      name: "Chin Botox",
+      price: "£175",
+      description: "Smooth dimpled or cobblestone chin texture for a refined appearance.",
+      units: "15-25 units",
+      duration: "4-6 months"
+    },
+    {
+      name: "Nefertiti Face Lift",
+      price: "£300",
+      description: "Jawline definition and neck smoothing for an elegant profile.",
+      units: "30-50 units",
+      duration: "4-6 months"
+    },
+    {
+      name: "Masseter (Jaw Slimming)",
+      price: "£350",
+      description: "Reduce jaw muscle bulk for a softer, more feminine facial contour.",
+      units: "25-40 units per side",
+      duration: "6-8 months"
+    },
+    {
+      name: "Lip Flip",
+      price: "£175",
+      description: "Subtle upper lip enhancement for a naturally fuller appearance.",
+      units: "4-8 units",
+      duration: "3-4 months"
+    },
+    {
+      name: "Gummy Smile",
+      price: "£50",
+      description: "Reduce excessive gum display when smiling for perfect smile proportions.",
+      units: "2-4 units",
+      duration: "4-6 months"
+    },
+    {
+      name: "Bunny Lines",
+      price: "£50",
+      description: "Smooth fine lines on the nose bridge that appear when scrunching.",
+      units: "4-8 units",
+      duration: "4-6 months"
+    }
   ];
 
   return (
@@ -239,6 +283,80 @@ const FaceBotoxAreas = () => {
                     </ul>
                   </motion.div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Face Common Areas Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-light mb-6">Other Face Common Areas</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Enhance your natural beauty with specialized Botox treatments for additional facial areas
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {otherFaceCommonAreas.map((area, index) => (
+                  <motion.div
+                    key={area.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:bg-gray-800/70 transition-all duration-300 group"
+                  >
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-light text-white group-hover:text-yellow-400 transition-colors">
+                        {area.name}
+                      </h3>
+                      <div className="text-right">
+                        <div className="text-lg font-medium text-yellow-400">{area.price}</div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+                      {area.description}
+                    </p>
+                    
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center text-xs text-gray-400">
+                        <Check className="h-3 w-3 text-green-400 mr-2 flex-shrink-0" />
+                        {area.units}
+                      </div>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <Check className="h-3 w-3 text-green-400 mr-2 flex-shrink-0" />
+                        Lasts {area.duration}
+                      </div>
+                      <div className="flex items-center text-xs text-gray-400">
+                        <Check className="h-3 w-3 text-green-400 mr-2 flex-shrink-0" />
+                        Natural results
+                      </div>
+                    </div>
+
+                    <div className="flex items-center text-sm text-gray-400 group-hover:text-white transition-colors">
+                      <span>Learn more</span>
+                      <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="text-center mt-12">
+                <Button
+                  onClick={() => setIsRelatedTreatmentsOpen(true)}
+                  variant="outline"
+                  className="border-white/30 text-white hover:bg-white/10"
+                >
+                  View All Botox Treatments
+                </Button>
               </div>
             </div>
           </div>
