@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -39,6 +38,8 @@ import DermalFillerMakeover from './pages/DermalFillerMakeover';
 import LipFillerDissolve from './pages/LipFillerDissolve';
 import BeforeAfterGallery from './pages/BeforeAfterGallery';
 import BotoxCalfReduction from './pages/BotoxCalfReduction';
+import PartnerInvitation from './pages/PartnerInvitation';
+import PartnerInvitationWrapper from './components/PartnerInvitationWrapper';
 
 const queryClient = new QueryClient();
 
@@ -80,6 +81,8 @@ function App() {
             <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
             <Route path="/before-after-gallery" element={<Layout><BeforeAfterGallery /></Layout>} />
             <Route path="/botox-calf-reduction" element={<Layout><BotoxCalfReduction /></Layout>} />
+            <Route path="/partner-invitation/:fellowName?" element={<PartnerInvitationWrapper />} />
+            <Route path="/partner-invitation" element={<PartnerInvitationWrapper />} />
             <Route path="*" element={<Layout><NotFound /></Layout>} />
           </Routes>
         </BrowserRouter>
