@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
-import { Star, Clock, Shield, Award } from 'lucide-react';
+import { Star, Clock, Shield, Award, Check } from 'lucide-react';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import LiquidGlassRelatedTreatments from '@/components/LiquidGlassRelatedTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
@@ -96,224 +96,238 @@ const FaceBotoxAreas = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen">
+      <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
-        <section className="relative bg-black text-white py-24 px-4 overflow-hidden">
+        <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src="/lovable-uploads/d610e5f1-30da-4a26-b87c-a7c38162811f.png"
-              alt="Face Botox treatment hero"
+              alt="Face Botox treatment"
               className="w-full h-full object-cover opacity-20"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
           </div>
           
-          <div className="relative max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-3xl"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-                Face Botox
-                <span className="block text-2xl md:text-3xl text-gray-300 font-light mt-2">
-                  1-3 Areas Treatment
-                </span>
-              </h1>
-              
-              <div className="flex items-center space-x-6 mb-8">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-400">
-                  £175-£350
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Clock className="h-5 w-5 mr-2" />
-                  <span>30-45 minutes</span>
-                </div>
-              </div>
-              
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed italic">
-                Our aesthetics is invisible art • Quiet, not loud • Invisible, not exaggerated
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-black hover:bg-gray-100 px-8 py-3 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105">
-                  Book Consultation
-                </Button>
-                <BeforeAfterImageViewer 
-                  images={beforeAfterImages}
-                  triggerLabel="View Results"
-                  title="Face Botox Before & After"
-                  description="Real results from our expert practitioners"
-                  className="text-white border-white/30 hover:border-white/50 px-8 py-3 text-lg rounded-full border-2 transition-all duration-300 hover:scale-105"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Treatment Areas Details */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Treatment Areas
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our precision Botox technique targets the three most common facial areas for natural, lasting results
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Frown Lines */}
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/60 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
               >
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <span className="text-2xl">👁️</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6">
+                  Face Botox
+                  <span className="block text-xl md:text-2xl text-gray-300 font-light mt-4">
+                    1-3 Areas Treatment
+                  </span>
+                </h1>
+                
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+                  <div className="text-3xl lg:text-4xl font-light text-white">
+                    From £175
+                  </div>
+                  <div className="hidden md:block w-px h-8 bg-gray-600"></div>
+                  <div className="flex items-center text-gray-300">
+                    <Clock className="h-5 w-5 mr-2" />
+                    <span>30-45 minutes</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Frown Lines</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  The vertical lines between your eyebrows that form from concentration and expression. 
-                  Our precise technique smooths these lines while maintaining natural facial expression.
+                
+                <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  Professional Botox treatment for facial areas including frown lines, forehead, and crow's feet. 
+                  Our invisible art philosophy ensures natural-looking results.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />15-25 units typically required</li>
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />Results last 3-4 months</li>
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />Immediate improvement visible</li>
-                </ul>
-              </motion.div>
-
-              {/* Forehead Lines */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/60 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <span className="text-2xl">📏</span>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="bg-white text-black hover:bg-gray-100">
+                    Book Consultation
+                  </Button>
+                  <BeforeAfterImageViewer 
+                    images={beforeAfterImages}
+                    triggerLabel="View Results"
+                    title="Face Botox Before & After"
+                    description="Real results from our expert practitioners"
+                    className="border border-white/30 text-white hover:bg-white/10"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Forehead Lines</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Horizontal lines across the forehead caused by raising eyebrows. We create a smooth, 
-                  natural appearance while preserving your ability to express surprise and emotion.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />10-20 units typically required</li>
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />Gradual improvement over 5-7 days</li>
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />Natural movement preserved</li>
-                </ul>
-              </motion.div>
-
-              {/* Crow's Feet */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/60 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <span className="text-2xl">😊</span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Crow's Feet</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  The fine lines that radiate from the outer corners of your eyes when smiling. 
-                  Our delicate approach softens these lines while keeping your smile authentic and warm.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />8-15 units per side typically</li>
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />Subtle, natural enhancement</li>
-                  <li className="flex items-center"><Star className="h-4 w-4 text-yellow-400 mr-2" />Smile lines remain natural</li>
-                </ul>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
-        <section className="py-20 px-4 bg-black">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+        {/* Quick Info */}
+        <section className="py-12 bg-gray-900/50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl font-light mb-2">£175-£350</div>
+                <div className="text-sm text-gray-400">Treatment Price</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-light mb-2">30-45min</div>
+                <div className="text-sm text-gray-400">Duration</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-light mb-2">3-4 months</div>
+                <div className="text-sm text-gray-400">Results Last</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-light mb-2">Immediate</div>
+                <div className="text-sm text-gray-400">Downtime</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Areas */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-light mb-6">Treatment Areas</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Target the three most common facial areas for natural, lasting results
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    icon: "👁️",
+                    title: "Frown Lines",
+                    description: "Vertical lines between eyebrows caused by concentration and expression. Our precise technique smooths these lines while maintaining natural facial expression.",
+                    details: ["15-25 units typically", "Results last 3-4 months", "Immediate improvement"]
+                  },
+                  {
+                    icon: "📏",
+                    title: "Forehead Lines",
+                    description: "Horizontal lines across the forehead from raising eyebrows. We create smooth, natural appearance while preserving your ability to express emotion.",
+                    details: ["10-20 units typically", "Gradual improvement over 5-7 days", "Natural movement preserved"]
+                  },
+                  {
+                    icon: "😊",
+                    title: "Crow's Feet",
+                    description: "Fine lines radiating from outer corners of eyes when smiling. Our delicate approach softens lines while keeping your smile authentic.",
+                    details: ["8-15 units per side", "Subtle enhancement", "Smile lines remain natural"]
+                  }
+                ].map((area, index) => (
+                  <motion.div
+                    key={area.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-900/70 transition-all duration-300"
+                  >
+                    <div className="text-4xl mb-4">{area.icon}</div>
+                    <h3 className="text-xl font-light mb-4">{area.title}</h3>
+                    <p className="text-gray-300 mb-6 leading-relaxed">{area.description}</p>
+                    <ul className="space-y-2">
+                      {area.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                    Why Choose Cosmedocs for Face Botox?
-                  </h2>
+                  <h2 className="text-3xl md:text-4xl font-light mb-8">Why Choose Cosmedocs?</h2>
                   <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <Shield className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-white mb-2">Expert Practitioners</h3>
-                        <p className="text-gray-300">Over 1 million injections performed by our experienced team on Harley Street since 2007.</p>
+                    {[
+                      {
+                        icon: Shield,
+                        title: "Expert Practitioners",
+                        description: "Over 1 million injections performed by our experienced team on Harley Street since 2007."
+                      },
+                      {
+                        icon: Award,
+                        title: "Natural Results",
+                        description: "Our invisible art philosophy ensures subtle enhancement that preserves your natural expressions."
+                      },
+                      {
+                        icon: Star,
+                        title: "Premium Products",
+                        description: "We use only the highest quality Botox products for optimal safety and efficacy."
+                      }
+                    ].map((feature, index) => (
+                      <div key={feature.title} className="flex items-start space-x-4">
+                        <feature.icon className="h-6 w-6 text-white mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-medium text-white mb-2">{feature.title}</h3>
+                          <p className="text-gray-300">{feature.description}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <Award className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-white mb-2">Natural Results</h3>
-                        <p className="text-gray-300">Our invisible art philosophy ensures subtle enhancement that preserves your natural expressions.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <Star className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-white mb-2">Premium Products</h3>
-                        <p className="text-gray-300">We use only the highest quality Botox products for optimal safety and efficacy.</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="relative"
+                >
+                  <img 
+                    src="/lovable-uploads/35a418d0-b5b2-4c2c-864c-a3546681613f.png"
+                    alt="Expert botox treatment at Cosmedocs"
+                    className="rounded-2xl w-full border border-gray-800"
+                  />
+                </motion.div>
               </div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <img 
-                  src="/lovable-uploads/35a418d0-b5b2-4c2c-864c-a3546681613f.png"
-                  alt="Expert botox treatment at Cosmedocs"
-                  className="rounded-2xl shadow-lg w-full border border-white/10"
-                />
-              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Related Treatments CTA */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Explore Related Botox Treatments
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Discover our comprehensive range of Botox treatments designed to enhance your natural beauty
-              </p>
-              <Button
-                onClick={() => setIsRelatedTreatmentsOpen(true)}
-                className="bg-white text-black hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105"
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
               >
-                View All Botox Treatments
-              </Button>
-            </motion.div>
+                <h2 className="text-3xl md:text-4xl font-light mb-6">
+                  Ready to Enhance Your Natural Beauty?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Book your consultation with our expert practitioners and discover the art of invisible enhancement.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="bg-white text-black hover:bg-gray-100">
+                    Book Consultation
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    onClick={() => setIsRelatedTreatmentsOpen(true)}
+                    className="border-white/30 text-white hover:bg-white/10"
+                  >
+                    View All Treatments
+                  </Button>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
