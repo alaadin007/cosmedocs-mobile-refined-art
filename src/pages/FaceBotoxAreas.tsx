@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
@@ -200,15 +199,15 @@ const FaceBotoxAreas = () => {
         </section>
 
         {/* Enhanced Pricing Section */}
-        <section className="py-16 bg-gray-900/50">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-gray-900/50 w-full">
+          <div className="px-4 w-full max-w-none">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-light mb-4">Face Botox / Azzalure / Dysport</h2>
                 <p className="text-gray-300">Transparent pricing for all facial areas</p>
               </div>
               
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -269,8 +268,8 @@ const FaceBotoxAreas = () => {
         </section>
 
         {/* Quick Info */}
-        <section className="py-12 bg-gray-900/30">
-          <div className="container mx-auto px-4">
+        <section className="py-12 bg-gray-900/30 w-full">
+          <div className="px-4 w-full max-w-none">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-2xl font-light mb-2">&lt;5min</div>
@@ -293,8 +292,8 @@ const FaceBotoxAreas = () => {
         </section>
 
         {/* Treatment Areas */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 w-full">
+          <div className="px-4 w-full max-w-none">
             <div className="max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -331,7 +330,7 @@ const FaceBotoxAreas = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-900/70 transition-all duration-300"
+                    className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-900/70 transition-all duration-300"
                   >
                     <h3 className="text-xl font-light mb-4">{area.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{area.description}</p>
@@ -351,8 +350,8 @@ const FaceBotoxAreas = () => {
         </section>
 
         {/* Other Face Common Areas Section */}
-        <section className="py-20 bg-gray-900/50">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-gray-900/50 w-full">
+          <div className="px-4 w-full max-w-none">
             <div className="max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -373,7 +372,7 @@ const FaceBotoxAreas = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:bg-gray-800/70 transition-all duration-300 group"
+                    className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-800/70 transition-all duration-300 group"
                   >
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-light text-white group-hover:text-yellow-400 transition-colors">
@@ -425,8 +424,8 @@ const FaceBotoxAreas = () => {
         </section>
 
         {/* Before/After Carousel Section */}
-        <section className="py-20 bg-gray-900/30">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-gray-900/30 w-full">
+          <div className="px-4 lg:px-4 w-full max-w-none">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -468,13 +467,13 @@ const FaceBotoxAreas = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="relative"
+                  className="relative w-full"
                 >
                   <h3 className="text-2xl font-light mb-6 text-center">Before & After Results</h3>
                   
-                  {/* Carousel Container */}
-                  <div className="relative bg-gray-900/50 rounded-2xl p-6 border border-gray-800">
-                    {/* Main Image - Square Shape */}
+                  {/* Carousel Container - Full width on mobile */}
+                  <div className="relative bg-gray-900/50 rounded-2xl p-3 md:p-6 w-full">
+                    {/* Main Image - Square Shape, Full width on mobile */}
                     <div className="relative overflow-hidden rounded-xl mb-6">
                       <div className="relative w-full aspect-square">
                         <motion.img
@@ -534,8 +533,8 @@ const FaceBotoxAreas = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 w-full">
+          <div className="px-4 w-full max-w-none">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
