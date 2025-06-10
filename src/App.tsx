@@ -38,6 +38,7 @@ import DermalFillerMakeover from './pages/DermalFillerMakeover';
 import LipFillerDissolve from './pages/LipFillerDissolve';
 import BeforeAfterGallery from './pages/BeforeAfterGallery';
 import BotoxCalfReduction from './pages/BotoxCalfReduction';
+import Membership from './pages/Membership';
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ function App() {
             <Route path="/about" element={<Layout><About /></Layout>} />
             <Route path="/treatments" element={<Layout><Treatments /></Layout>} />
             <Route path="/contact" element={<Layout><Contact /></Layout>} />
+            <Route path="/membership" element={<Layout><Membership /></Layout>} />
             <Route path="/lip-fillers" element={<Layout><LipFillers /></Layout>} />
             <Route path="/non-surgical-nose-job" element={<Layout><NonSurgicalNoseJob /></Layout>} />
             <Route path="/non-surgical-facelift" element={<Layout><NonSurgicalFacelift /></Layout>} />
