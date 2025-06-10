@@ -100,7 +100,7 @@ export default function Header() {
               onClick={() => setIsContactMenuOpen(true)}
               className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-300 hover:scale-105 border border-white/20"
             >
-              Do something here
+              BabyDose/Microdose Try
             </Button>
           </div>
 
