@@ -1,10 +1,10 @@
+
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import { Star, Clock, Shield, Award, Check, ArrowRight } from 'lucide-react';
 import LiquidGlassRelatedTreatments from '@/components/LiquidGlassRelatedTreatments';
-import FlipCard from '@/components/FlipCard';
 import { generateSEOMetadata } from '@/utils/seo';
 
 const FaceBotoxAreas = () => {
@@ -91,30 +91,6 @@ const FaceBotoxAreas = () => {
     }
   ];
 
-  const treatmentAreas = [
-    {
-      title: "Frown Lines",
-      description: "Vertical lines between eyebrows caused by concentration and expression. Our precise technique smooths these lines while maintaining natural facial expression.",
-      details: ["15-25 units typically", "Results develop over 5-10 days", "Lasts 4-6 months"],
-      beforeAfterImage: "/lovable-uploads/a1dda21a-a67c-42bf-8b91-74cf216ca122.png",
-      beforeAfterAlt: "Before and after frown lines botox treatment"
-    },
-    {
-      title: "Forehead Lines",
-      description: "Horizontal lines across the forehead from raising eyebrows. We create smooth, natural appearance while preserving your ability to express emotion.",
-      details: ["10-20 units typically", "Effects visible in 5-10 days", "Natural movement preserved"],
-      beforeAfterImage: "/lovable-uploads/a4cfa2f3-3ad7-4d5a-8707-c1d717969b88.png",
-      beforeAfterAlt: "Before and after forehead lines botox treatment"
-    },
-    {
-      title: "Crow's Feet",
-      description: "Fine lines radiating from outer corners of eyes when smiling. Our delicate approach softens lines while keeping your smile authentic.",
-      details: ["8-15 units per side", "Subtle enhancement", "Smile lines remain natural"],
-      beforeAfterImage: "/lovable-uploads/8d0cb89e-218e-4ea5-9164-1ecce6a443d4.png",
-      beforeAfterAlt: "Before and after crow's feet botox treatment"
-    }
-  ];
-
   return (
     <>
       <Helmet>
@@ -147,19 +123,6 @@ const FaceBotoxAreas = () => {
             }
           })}
         </script>
-        <style>
-          {`
-            .perspective-1000 {
-              perspective: 1000px;
-            }
-            .preserve-3d {
-              transform-style: preserve-3d;
-            }
-            .backface-hidden {
-              backface-visibility: hidden;
-            }
-          `}
-        </style>
       </Helmet>
 
       <div className="bg-black text-white">
@@ -311,7 +274,7 @@ const FaceBotoxAreas = () => {
           </div>
         </section>
 
-        {/* Treatment Areas with Flipable Cards */}
+        {/* Treatment Areas */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -328,20 +291,40 @@ const FaceBotoxAreas = () => {
               </motion.div>
 
               <div className="grid md:grid-cols-3 gap-8">
-                {treatmentAreas.map((area, index) => (
+                {[
+                  {
+                    title: "Frown Lines",
+                    description: "Vertical lines between eyebrows caused by concentration and expression. Our precise technique smooths these lines while maintaining natural facial expression.",
+                    details: ["15-25 units typically", "Results develop over 5-10 days", "Lasts 4-6 months"]
+                  },
+                  {
+                    title: "Forehead Lines",
+                    description: "Horizontal lines across the forehead from raising eyebrows. We create smooth, natural appearance while preserving your ability to express emotion.",
+                    details: ["10-20 units typically", "Effects visible in 5-10 days", "Natural movement preserved"]
+                  },
+                  {
+                    title: "Crow's Feet",
+                    description: "Fine lines radiating from outer corners of eyes when smiling. Our delicate approach softens lines while keeping your smile authentic.",
+                    details: ["8-15 units per side", "Subtle enhancement", "Smile lines remain natural"]
+                  }
+                ].map((area, index) => (
                   <motion.div
                     key={area.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-900/70 transition-all duration-300"
                   >
-                    <FlipCard
-                      title={area.title}
-                      description={area.description}
-                      details={area.details}
-                      beforeAfterImage={area.beforeAfterImage}
-                      beforeAfterAlt={area.beforeAfterAlt}
-                    />
+                    <h3 className="text-xl font-light mb-4">{area.title}</h3>
+                    <p className="text-gray-300 mb-6 leading-relaxed">{area.description}</p>
+                    <ul className="space-y-2">
+                      {area.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
                   </motion.div>
                 ))}
               </div>
