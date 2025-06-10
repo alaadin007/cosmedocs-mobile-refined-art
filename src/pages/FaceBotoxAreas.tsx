@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
@@ -112,7 +113,7 @@ const FaceBotoxAreas = () => {
                   <div className="hidden md:block w-px h-8 bg-gray-600"></div>
                   <div className="flex items-center text-gray-300">
                     <Clock className="h-5 w-5 mr-2" />
-                    <span>30-45 minutes</span>
+                    <span>15-20 minutes consultation & treatment</span>
                   </div>
                 </div>
                 
@@ -131,25 +132,55 @@ const FaceBotoxAreas = () => {
           </div>
         </section>
 
-        {/* Quick Info */}
+        {/* Pricing Section */}
         <section className="py-12 bg-gray-900/50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-light mb-4">Treatment Pricing</h2>
+                <p className="text-gray-300">Transparent pricing for all facial areas</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center bg-gray-800/50 rounded-lg p-6">
+                  <div className="text-2xl font-light mb-2">£175</div>
+                  <div className="text-sm text-gray-400">1 Area</div>
+                </div>
+                <div className="text-center bg-gray-800/50 rounded-lg p-6">
+                  <div className="text-2xl font-light mb-2">£275</div>
+                  <div className="text-sm text-gray-400">2 Areas</div>
+                </div>
+                <div className="text-center bg-gray-800/50 rounded-lg p-6">
+                  <div className="text-2xl font-light mb-2">£350</div>
+                  <div className="text-sm text-gray-400">3 Areas</div>
+                </div>
+                <div className="text-center bg-gray-800/50 rounded-lg p-6">
+                  <div className="text-2xl font-light mb-2">+£50</div>
+                  <div className="text-sm text-gray-400">Male Supplement</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Info */}
+        <section className="py-12 bg-gray-900/30">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-2xl font-light mb-2">£175-£350</div>
-                <div className="text-sm text-gray-400">Treatment Price</div>
+                <div className="text-2xl font-light mb-2">&lt;5min</div>
+                <div className="text-sm text-gray-400">Treatment Time</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-light mb-2">30-45min</div>
-                <div className="text-sm text-gray-400">Duration</div>
+                <div className="text-2xl font-light mb-2">5-10 days</div>
+                <div className="text-sm text-gray-400">Takes Effect</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-light mb-2">3-4 months</div>
+                <div className="text-2xl font-light mb-2">4-6 months</div>
                 <div className="text-sm text-gray-400">Results Last</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-light mb-2">Immediate</div>
-                <div className="text-sm text-gray-400">Downtime</div>
+                <div className="text-sm text-gray-400">Return to Work</div>
               </div>
             </div>
           </div>
@@ -174,19 +205,16 @@ const FaceBotoxAreas = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 {[
                   {
-                    icon: "👁️",
                     title: "Frown Lines",
                     description: "Vertical lines between eyebrows caused by concentration and expression. Our precise technique smooths these lines while maintaining natural facial expression.",
-                    details: ["15-25 units typically", "Results last 3-4 months", "Immediate improvement"]
+                    details: ["15-25 units typically", "Results develop over 5-10 days", "Lasts 4-6 months"]
                   },
                   {
-                    icon: "📏",
                     title: "Forehead Lines",
                     description: "Horizontal lines across the forehead from raising eyebrows. We create smooth, natural appearance while preserving your ability to express emotion.",
-                    details: ["10-20 units typically", "Gradual improvement over 5-7 days", "Natural movement preserved"]
+                    details: ["10-20 units typically", "Effects visible in 5-10 days", "Natural movement preserved"]
                   },
                   {
-                    icon: "😊",
                     title: "Crow's Feet",
                     description: "Fine lines radiating from outer corners of eyes when smiling. Our delicate approach softens lines while keeping your smile authentic.",
                     details: ["8-15 units per side", "Subtle enhancement", "Smile lines remain natural"]
@@ -199,7 +227,6 @@ const FaceBotoxAreas = () => {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:bg-gray-900/70 transition-all duration-300"
                   >
-                    <div className="text-4xl mb-4">{area.icon}</div>
                     <h3 className="text-xl font-light mb-4">{area.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{area.description}</p>
                     <ul className="space-y-2">
@@ -326,7 +353,7 @@ const FaceBotoxAreas = () => {
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <p>
-            Face Botox treatment at Cosmedocs London offers professional wrinkle reduction for 1-3 facial areas including frown lines, forehead lines, and crow's feet. Our expert practitioners on Harley Street have performed over 1 million injections since 2007, delivering natural-looking results through our invisible art philosophy. Botox treatment costs £175-£350 depending on the areas treated, with results lasting 3-4 months. Our precision injection technique ensures minimal discomfort and maximum effectiveness. The treatment takes 30-45 minutes with immediate results visible and full effects developing over 5-7 days. We use premium Botox products and follow strict safety protocols to ensure optimal outcomes. Our consultation process includes detailed facial assessment, treatment planning, and aftercare guidance. Cosmedocs specializes in subtle enhancement that preserves natural facial expressions while reducing unwanted lines and wrinkles. Book your consultation today at our Harley Street clinic for expert Botox treatment in London. Contact us at 0333 0551 503 or info@cosmedocs.com for more information about our face Botox treatments and pricing options.
+            Face Botox treatment at Cosmedocs London offers professional wrinkle reduction for 1-3 facial areas including frown lines, forehead lines, and crow's feet. Our expert practitioners on Harley Street have performed over 1 million injections since 2007, delivering natural-looking results through our invisible art philosophy. Botox treatment costs £175 for 1 area, £275 for 2 areas, £350 for 3 areas with an additional £50 male supplement. Results take 5-10 days to develop and last 4-6 months. The treatment takes less than 5 minutes with a 15-20 minute consultation and treatment session overall. We use premium Botox products and follow strict safety protocols to ensure optimal outcomes. Our consultation process includes detailed facial assessment, treatment planning, and aftercare guidance. Cosmedocs specializes in subtle enhancement that preserves natural facial expressions while reducing unwanted lines and wrinkles. Book your consultation today at our Harley Street clinic for expert Botox treatment in London. Contact us at 0333 0551 503 or info@cosmedocs.com for more information about our face Botox treatments and pricing options.
           </p>
         </div>
 
