@@ -56,8 +56,9 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       name: "Dermal Fillers",
       isPopular: true,
       treatments: [
-        { name: "Lip Fillers (0.5ml-1.5ml)", price: "£300-£400", isPopular: true },
-        { name: "Non Surgical Nose Job", price: "£450", isPopular: true },
+        { name: "Dermal Filler Makeover", price: "From £350", isPopular: true, link: "/dermal-filler-makeover" },
+        { name: "Lip Fillers (0.5ml-1.5ml)", price: "£300-£400", isPopular: true, link: "/lip-fillers" },
+        { name: "Non Surgical Nose Job", price: "£450", isPopular: true, link: "/non-surgical-nose-job" },
         { name: "Cheek Volume", price: "£350/ml" },
         { name: "Jawline Contouring", price: "£350/ml" },
         { name: "Tear Trough", price: "£425" },
@@ -191,18 +192,13 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
                         <Star className="h-3 w-3 text-yellow-400" />
                       </div>
                       <div className="space-y-2">
-                        {category.treatments.slice(0, 3).map((treatment, idx) => (
+                        {category.treatments.map((treatment, idx) => (
                           <TreatmentItem 
                             key={idx} 
                             treatment={treatment} 
                             onClick={onClose}
                           />
                         ))}
-                        {category.treatments.length > 3 && (
-                          <p className="text-xs text-gray-400 mt-2">
-                            +{category.treatments.length - 3} more treatments
-                          </p>
-                        )}
                       </div>
                     </motion.div>
                   ))}
@@ -216,13 +212,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
                 </p>
                 <div className="space-x-4">
                   <Button className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-8 py-3 transition-all duration-300 hover:scale-105 border border-white/20">
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white/20 text-white hover:bg-white/10 backdrop-blur-sm rounded-full px-8 py-3 transition-all duration-300 hover:scale-105"
-                  >
-                    View Full Price List
+                    Do Something Here
                   </Button>
                 </div>
               </div>
