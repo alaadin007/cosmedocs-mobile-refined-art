@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
@@ -102,7 +101,7 @@ const DrAhmedHaq = () => {
         </section>
 
         {/* Qualifications Section */}
-        <section className="py-16 bg-cosmedocs-lightgray">
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -111,22 +110,18 @@ const DrAhmedHaq = () => {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <Card className="border-0 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-cosmedocs-black to-gray-800 text-white rounded-t-lg">
-                  <CardTitle className="flex items-center gap-3 text-2xl">
-                    <GraduationCap className="h-6 w-6 text-yellow-400" />
-                    Qualifications & Recognition
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-8">
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    Dr Haq has received widespread recognition, both for his highly regarded work in complex facial contouring 
-                    and non-surgical jaw reduction, and his valuable contributions at various conferences and workshops, 
-                    nationally and internationally during the past 8 years. He leads the in-house team at CosmeDocs, 
-                    and trains cosmetic physicians in advanced techniques at the Harley Street Institute.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="bg-black/30 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <GraduationCap className="h-6 w-6 text-yellow-400" />
+                  <h2 className="text-2xl font-semibold text-white">Qualifications & Recognition</h2>
+                </div>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  Dr Haq has received widespread recognition, both for his highly regarded work in complex facial contouring 
+                  and non-surgical jaw reduction, and his valuable contributions at various conferences and workshops, 
+                  nationally and internationally during the past 8 years. He leads the in-house team at CosmeDocs, 
+                  and trains cosmetic physicians in advanced techniques at the Harley Street Institute.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
