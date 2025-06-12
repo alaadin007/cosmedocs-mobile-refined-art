@@ -133,7 +133,7 @@ const DrAhmedHaq = () => {
                     <p className="text-gray-300 mb-4">
                       Royal College of Surgeons, Medical School Graduate
                     </p>
-                    <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center justify-center gap-2 mb-6">
                       <Award className="h-5 w-5 text-yellow-400" />
                       <span className="text-sm">British Association of Cosmetic Doctors Member</span>
                     </div>
