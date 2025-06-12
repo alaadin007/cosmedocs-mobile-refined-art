@@ -41,6 +41,7 @@ import BotoxCalfReduction from './pages/BotoxCalfReduction';
 import Membership from './pages/Membership';
 import FellowshipInvitation from './pages/FellowshipInvitation';
 import FaceBotoxAreas from './pages/FaceBotoxAreas';
+import DrAhmedHaq from './pages/DrAhmedHaq';
 
 const queryClient = new QueryClient();
 
@@ -84,6 +85,7 @@ function App() {
             <Route path="/before-after-gallery" element={<Layout><BeforeAfterGallery /></Layout>} />
             <Route path="/botox-calf-reduction" element={<Layout><BotoxCalfReduction /></Layout>} />
             <Route path="/face-botox-areas" element={<Layout><FaceBotoxAreas /></Layout>} />
+            <Route path="/team/dr-ahmed-haq" element={<Layout><DrAhmedHaq /></Layout>} />
             <Route path="*" element={<Layout><NotFound /></Layout>} />
           </Routes>
         </BrowserRouter>
