@@ -206,7 +206,7 @@ const DrAhmedHaq = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-cosmedocs-lightgray">
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -215,16 +215,18 @@ const DrAhmedHaq = () => {
               viewport={{ once: true }}
               className="max-w-2xl mx-auto text-center"
             >
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Ready to Transform?
-              </h2>
-              <p className="text-muted-foreground mb-8 text-lg">
-                Book your consultation with Dr Haq and discover the invisible art of aesthetic enhancement.
-                Our aesthetics is invisible art • Bold • Natural • Always Your Way
-              </p>
-              <Button className="bg-cosmedocs-black hover:bg-gray-800 text-white px-12 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
-                Book Your Consultation
-              </Button>
+              <div className="bg-black/30 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-8">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Ready to Transform?
+                </h2>
+                <p className="text-gray-300 mb-8 text-lg">
+                  Book your consultation with Dr Haq and discover the invisible art of aesthetic enhancement.
+                  Our aesthetics is invisible art • Bold • Natural • Always Your Way
+                </p>
+                <Button className="bg-yellow-600 hover:bg-yellow-700 text-white px-12 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
+                  Book Your Consultation
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
