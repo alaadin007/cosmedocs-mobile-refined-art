@@ -9,6 +9,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   console.log("Layout component rendering");
+  console.log("Current pathname:", window.location.pathname);
   
   return (
     <div className="flex flex-col min-h-screen">

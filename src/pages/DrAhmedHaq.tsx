@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
@@ -8,6 +7,8 @@ import { Star, CheckCircle, Award, GraduationCap } from "lucide-react";
 import AutoLinkedText from "@/components/AutoLinkedText";
 
 const DrAhmedHaq = () => {
+  console.log("DrAhmedHaq component is rendering");
+  
   const seoData = generateSEOMetadata(
     "Dr A. Farhan Haq | Expert Cosmetic Physician | Cosmedocs London",
     "Meet Dr A. Farhan Haq, leading cosmetic physician at Cosmedocs London. Royal College of Surgeons graduate specializing in advanced aesthetic treatments, facial contouring, and non-surgical procedures.",
