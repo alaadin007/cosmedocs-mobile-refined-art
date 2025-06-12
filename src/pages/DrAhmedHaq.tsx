@@ -1,9 +1,11 @@
+
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, CheckCircle, Award, GraduationCap } from "lucide-react";
+import AutoLinkedText from "@/components/AutoLinkedText";
 
 const DrAhmedHaq = () => {
   const seoData = generateSEOMetadata(
@@ -138,10 +140,12 @@ const DrAhmedHaq = () => {
                   </div>
 
                   <p className="text-gray-300 mb-8 leading-relaxed">
-                    An extensively experienced practitioner, Dr Haq is a graduate of The Royal College of Surgeons Medical School, 
-                    and a member of the British Association of Cosmetic Doctors. He specialises in a variety of non-surgical 
-                    aesthetic treatments, especially advanced injectable procedures, and has trained for a range of surgical specialities. 
-                    Our aesthetics is invisible art - transformation that speaks without saying a word.
+                    <AutoLinkedText>
+                      An extensively experienced practitioner, Dr Haq is a graduate of The Royal College of Surgeons Medical School, 
+                      and a member of the British Association of Cosmetic Doctors. He specialises in a variety of non-surgical 
+                      aesthetic treatments, especially advanced injectable procedures, and has trained for a range of surgical specialities. 
+                      Our aesthetics is invisible art - transformation that speaks without saying a word.
+                    </AutoLinkedText>
                   </p>
 
                   <a href="https://med.as.me/schedule/0cc7d92b/?calendarIds=3572888" target="_blank" rel="noopener noreferrer">
@@ -171,10 +175,12 @@ const DrAhmedHaq = () => {
                   <h2 className="text-2xl font-semibold text-white">Qualifications & Recognition</h2>
                 </div>
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  Dr Haq has received widespread recognition, both for his highly regarded work in complex facial contouring 
-                  and non-surgical jaw reduction, and his valuable contributions at various conferences and workshops, 
-                  nationally and internationally during the past 8 years. He leads the in-house team at CosmeDocs, 
-                  and trains cosmetic physicians in advanced techniques at the Harley Street Institute.
+                  <AutoLinkedText>
+                    Dr Haq has received widespread recognition, both for his highly regarded work in complex facial contouring 
+                    and non-surgical jaw reduction, and his valuable contributions at various conferences and workshops, 
+                    nationally and internationally during the past 8 years. He leads the in-house team at CosmeDocs, 
+                    and trains cosmetic physicians in advanced techniques at the Harley Street Institute.
+                  </AutoLinkedText>
                 </p>
               </div>
             </motion.div>

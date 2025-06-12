@@ -1,6 +1,8 @@
+
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import AutoLinkedText from "./AutoLinkedText";
 
 interface Treatment {
   title: string;
@@ -71,7 +73,9 @@ const PopularTreatments = ({
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
-              <p className="text-gray-400 text-sm mb-4">{treatment.description}</p>
+              <p className="text-gray-400 text-sm mb-4">
+                <AutoLinkedText>{treatment.description}</AutoLinkedText>
+              </p>
               {treatment.link ? (
                 <Link 
                   to={treatment.link}
