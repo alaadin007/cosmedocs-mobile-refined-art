@@ -7,8 +7,8 @@ import { Star, CheckCircle, Award, GraduationCap } from "lucide-react";
 
 const DrAhmedHaq = () => {
   const seoData = generateSEOMetadata(
-    "Dr A. Farhan Haq | Cosmetic Physician | Cosmedocs London",
-    "Meet Dr A. Farhan Haq, an extensively experienced cosmetic physician at Cosmedocs. Graduate of The Royal College of Surgeons Medical School specializing in advanced aesthetic treatments.",
+    "Dr A. Farhan Haq | Expert Cosmetic Physician | Cosmedocs London",
+    "Meet Dr A. Farhan Haq, leading cosmetic physician at Cosmedocs London. Royal College of Surgeons graduate specializing in advanced aesthetic treatments, facial contouring, and non-surgical procedures.",
     "/team/dr-ahmed-haq"
   );
 
@@ -26,19 +26,68 @@ const DrAhmedHaq = () => {
     "Ageing Skin Concerns"
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr A. Farhan Haq",
+    "jobTitle": "Cosmetic Physician",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Cosmedocs",
+      "url": "https://www.cosmedocs.com"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "The Royal College of Surgeons Medical School"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "British Association of Cosmetic Doctors"
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Cosmetic Physician",
+      "occupationLocation": {
+        "@type": "Place",
+        "name": "London, UK"
+      },
+      "skills": [
+        "Anti-Wrinkle Treatments",
+        "Facial Contouring",
+        "Non-Surgical Aesthetic Procedures",
+        "Advanced Injectable Procedures",
+        "Jaw Reduction",
+        "Lip Enhancement"
+      ]
+    },
+    "url": "https://www.cosmedocs.com/team/dr-ahmed-haq",
+    "image": "https://www.cosmedocs.com/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png"
+  };
+
   return (
     <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="keywords" content="Dr Ahmed Haq, cosmetic physician London, aesthetic doctor, botox specialist, facial contouring, non-surgical treatments, Cosmedocs, Harley Street, Royal College Surgeons" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="profile" />
+        <meta property="og:image" content="https://www.cosmedocs.com/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Cosmedocs" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content="https://www.cosmedocs.com/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png" />
+        <meta name="author" content="Dr A. Farhan Haq" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -57,9 +106,12 @@ const DrAhmedHaq = () => {
                   <div className="relative max-w-md mx-auto lg:mx-0">
                     <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-yellow-600/20 rounded-3xl rotate-3"></div>
                     <img
-                      src="/lovable-uploads/a79dedf2-e721-47c4-b683-b966f8ab9edf.png"
-                      alt="Dr A. Farhan Haq - Cosmetic Physician at Cosmedocs London"
+                      src="/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png"
+                      alt="Dr A. Farhan Haq - Expert Cosmetic Physician at Cosmedocs London specializing in facial contouring and advanced aesthetic treatments"
                       className="relative w-full h-auto rounded-3xl shadow-2xl"
+                      loading="eager"
+                      width="400"
+                      height="400"
                     />
                   </div>
                 </motion.div>
@@ -75,24 +127,25 @@ const DrAhmedHaq = () => {
                     <h1 className="text-4xl lg:text-5xl font-bold mb-4">
                       Dr A. Farhan Haq
                     </h1>
-                    <p className="text-xl text-yellow-400 mb-2">Cosmetic Physician</p>
+                    <p className="text-xl text-yellow-400 mb-2">Expert Cosmetic Physician</p>
                     <p className="text-gray-300 mb-4">
-                      Royal College of Surgeons, Medical School
+                      Royal College of Surgeons, Medical School Graduate
                     </p>
                     <div className="flex items-center gap-2 mb-6">
                       <Award className="h-5 w-5 text-yellow-400" />
-                      <span className="text-sm">British Association of Cosmetic Doctors</span>
+                      <span className="text-sm">British Association of Cosmetic Doctors Member</span>
                     </div>
                   </div>
 
                   <p className="text-gray-300 mb-8 leading-relaxed">
                     An extensively experienced practitioner, Dr Haq is a graduate of The Royal College of Surgeons Medical School, 
                     and a member of the British Association of Cosmetic Doctors. He specialises in a variety of non-surgical 
-                    aesthetic treatments, especially advanced injectable procedures, and has trained for a range of surgical specialities.
+                    aesthetic treatments, especially advanced injectable procedures, and has trained for a range of surgical specialities. 
+                    Our aesthetics is invisible art - transformation that speaks without saying a word.
                   </p>
 
                   <Button className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
-                    Book Appointment
+                    Book Appointment with Dr Haq
                   </Button>
                 </motion.div>
               </div>
@@ -231,14 +284,41 @@ const DrAhmedHaq = () => {
           </div>
         </section>
 
-        {/* Hidden SEO Content */}
+        {/* Enhanced Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <h2>Dr Ahmed Haq Cosmetic Physician London Harley Street Cosmedocs Team Member</h2>
+          <h2>Dr Ahmed Haq Leading Cosmetic Physician London Harley Street Cosmedocs</h2>
           <p>
-            Dr A. Farhan Haq, cosmetic physician, Royal College of Surgeons, British Association of Cosmetic Doctors,
-            aesthetic treatments, anti-wrinkle treatments, botox, lip enhancement, non-surgical nose job, tear trough,
-            nefertiti face lift, skin peels, microdermabrasion, facial contouring, jaw reduction, Harley Street Institute,
-            advanced injectable procedures, cosmetic medicine London, aesthetic doctor, invisible art, bold natural always your way.
+            Dr A. Farhan Haq stands as one of London's premier cosmetic physicians, bringing extensive expertise in aesthetic medicine to Cosmedocs clinic. 
+            As a distinguished graduate of The Royal College of Surgeons Medical School and esteemed member of the British Association of Cosmetic Doctors, 
+            Dr Haq represents the pinnacle of medical excellence in non-surgical aesthetic treatments. His specialization encompasses advanced injectable 
+            procedures, facial contouring, non-surgical jaw reduction, and a comprehensive range of aesthetic enhancements that embody our philosophy 
+            of invisible art - bold, natural, always your way.
+          </p>
+          <p>
+            Located in the heart of London's prestigious medical district, Dr Haq leads the in-house team at Cosmedocs and serves as a distinguished 
+            instructor at the renowned Harley Street Institute, where he trains fellow cosmetic physicians in advanced aesthetic techniques. His 
+            expertise in complex facial contouring has garnered widespread recognition both nationally and internationally, with valuable contributions 
+            to numerous conferences and workshops spanning over 8 years of dedicated practice.
+          </p>
+          <p>
+            The treatments performed by Dr Haq include anti-wrinkle treatments using premium botox formulations, sophisticated lip enhancement procedures, 
+            revolutionary non-surgical nose job techniques, under-eye circle treatments targeting tear trough concerns, the innovative Nefertiti face 
+            lift utilizing botox-only methodology, professional skin peels, diamond microdermabrasion, advanced E-Dermastamp procedures, tired eyes 
+            rejuvenation, hyperpigmentation correction, and comprehensive aging skin concern management. Each treatment reflects our commitment to 
+            aesthetic excellence through invisible art.
+          </p>
+          <p>
+            At Cosmedocs, we believe that true aesthetic enhancement should be quiet, not loud; invisible, not exaggerated. Dr Haq's approach 
+            embodies this philosophy, creating transformations that speak without saying a word. His patients consistently praise his professional 
+            approach and the natural, refined results that align perfectly with Cosmedocs' motto: Our aesthetics is invisible art - Bold, Natural, 
+            Always Your Way. Whether seeking facial rejuvenation, body contouring, or specialized aesthetic treatments, Dr Haq's expertise ensures 
+            exceptional outcomes that enhance natural beauty while maintaining authenticity.
+          </p>
+          <p>
+            Keywords: Dr Ahmed Haq, cosmetic physician London, aesthetic treatments, botox specialist, facial contouring expert, non-surgical 
+            procedures, Cosmedocs team, Harley Street Institute trainer, Royal College Surgeons graduate, British Association Cosmetic Doctors, 
+            advanced injectable procedures, jaw reduction specialist, lip enhancement, non-surgical nose job, tear trough treatment, Nefertiti 
+            facelift, skin peels, microdermabrasion, aesthetic medicine London, invisible art cosmetics, bold natural always your way.
           </p>
         </div>
       </div>
