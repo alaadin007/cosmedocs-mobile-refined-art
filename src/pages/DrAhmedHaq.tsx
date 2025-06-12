@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
@@ -11,7 +12,7 @@ const DrAhmedHaq = () => {
   
   const seoData = generateSEOMetadata(
     "Dr A. Farhan Haq | Expert Cosmetic Physician | Cosmedocs London",
-    "Meet Dr A. Farhan Haq, leading cosmetic physician at Cosmedocs London. Royal College of Surgeons graduate specializing in advanced aesthetic treatments, facial contouring, and non-surgical procedures.",
+    "Dr. A.Farhan Haq is an eminent cosmetic doctor who possesses extensive experience and does profound latest research in the aesthetics medicine field.",
     "/team/dr-ahmed-haq"
   );
 
