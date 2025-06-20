@@ -1,99 +1,105 @@
 
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import './App.css';
-
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Home2 from './pages/Home2';
-import Index from './pages/Index';
-import About from './pages/About';
-import Treatments from './pages/Treatments';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-import LipFillers from './pages/LipFillers';
-import NonSurgicalNoseJob from './pages/NonSurgicalNoseJob';
-import NonSurgicalFacelift from './pages/NonSurgicalFacelift';
-import PDOThreads from './pages/PDOThreads';
-import LowerFaceBotox from './pages/LowerFaceBotox';
-import AdvancedUpperFaceBotox from './pages/AdvancedUpperFaceBotox';
-import NefertitiBotoxFacelift from './pages/NefertitiBotoxFacelift';
-import TriggerPointBotox from './pages/TriggerPointBotox';
-import MedicalAnalBleaching from './pages/MedicalAnalBleaching';
-import AdvancedConsultation from './pages/AdvancedConsultation';
-import Partners from './pages/Partners';
-import BirminghamHome from './pages/BirminghamHome';
-import ManchesterHome from './pages/ManchesterHome';
-import CardiffHome from './pages/CardiffHome';
-import TreatmentsSummaryArabic from './pages/TreatmentsSummaryArabic';
-import TreatmentsSummaryChinese from './pages/TreatmentsSummaryChinese';
-import ChineseLondonAestheticsBlog from './pages/ChineseLondonAestheticsBlog';
-import NonSurgicalNoseJobBlog from './pages/NonSurgicalNoseJobBlog';
-import PDOThreadsBlog from './pages/PDOThreadsBlog';
-import AestheticMaintenanceCostBlog from './pages/AestheticMaintenanceCostBlog';
-import ClinicalConceptsToFlawlessSkin from './pages/ClinicalConceptsToFlawlessSkin';
-import DermalFillerMakeover from './pages/DermalFillerMakeover';
-import LipFillerDissolve from './pages/LipFillerDissolve';
-import BeforeAfterGallery from './pages/BeforeAfterGallery';
-import BotoxCalfReduction from './pages/BotoxCalfReduction';
-import Membership from './pages/Membership';
-import FellowshipInvitation from './pages/FellowshipInvitation';
-import FaceBotoxAreas from './pages/FaceBotoxAreas';
-import DrAhmedHaq from './pages/DrAhmedHaq';
+import Layout from "./components/Layout";
+import Index from "./pages/Index";
+import Home from "./pages/Home";
+import Home2 from "./pages/Home2";
+import Treatments from "./pages/Treatments";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import LipFillers from "./pages/LipFillers";
+import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
+import BeforeAfterGallery from "./pages/BeforeAfterGallery";
+import Membership from "./pages/Membership";
+import DrAhmedHaq from "./pages/DrAhmedHaq";
+import Partners from "./pages/Partners";
+import NotFound from "./pages/NotFound";
+import BotoxCalfReduction from "./pages/BotoxCalfReduction";
+import LipFillerDissolve from "./pages/LipFillerDissolve";
+import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
+import PDOThreads from "./pages/PDOThreads";
+import TriggerPointBotox from "./pages/TriggerPointBotox";
+import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
+import DermalFillerMakeover from "./pages/DermalFillerMakeover";
+import NefertitiBotoxFacelift from "./pages/NefertitiBotoxFacelift";
+import AdvancedUpperFaceBotox from "./pages/AdvancedUpperFaceBotox";
+import FaceBotoxAreas from "./pages/FaceBotoxAreas";
+import LowerFaceBotox from "./pages/LowerFaceBotox";
+import AdvancedConsultation from "./pages/AdvancedConsultation";
+import FellowshipInvitation from "./pages/FellowshipInvitation";
+import LongTermAestheticCareBlog from "./pages/LongTermAestheticCareBlog";
+import AestheticMaintenanceCostBlog from "./pages/AestheticMaintenanceCostBlog";
+import PDOThreadsBlog from "./pages/PDOThreadsBlog";
+import NonSurgicalNoseJobBlog from "./pages/NonSurgicalNoseJobBlog";
+import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSkin";
+import ChineseLondonAestheticsBlog from "./pages/ChineseLondonAestheticsBlog";
+import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
+import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
+import BirminghamHome from "./pages/BirminghamHome";
+import ManchesterHome from "./pages/ManchesterHome";
+import CardiffHome from "./pages/CardiffHome";
+import { GoogleAnalytics } from "./components/GoogleAnalytics";
 
 const queryClient = new QueryClient();
 
-function App() {
-  console.log("App component is rendering");
-  
-  return (
+const App = () => (
+  <QueryClientProvider client={queryClient}>
     <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home2 />} />
-            <Route path="/home" element={<Layout><Home /></Layout>} />
-            <Route path="/index" element={<Layout><Index /></Layout>} />
-            <Route path="/about" element={<Layout><About /></Layout>} />
-            <Route path="/treatments" element={<Layout><Treatments /></Layout>} />
-            <Route path="/contact" element={<Layout><Contact /></Layout>} />
-            <Route path="/membership" element={<Layout><Membership /></Layout>} />
-            <Route path="/fellowship-invitation" element={<Layout><FellowshipInvitation /></Layout>} />
-            <Route path="/lip-fillers" element={<Layout><LipFillers /></Layout>} />
-            <Route path="/non-surgical-nose-job" element={<Layout><NonSurgicalNoseJob /></Layout>} />
-            <Route path="/non-surgical-facelift" element={<Layout><NonSurgicalFacelift /></Layout>} />
-            <Route path="/pdo-threads" element={<Layout><PDOThreads /></Layout>} />
-            <Route path="/lower-face-botox" element={<Layout><LowerFaceBotox /></Layout>} />
-            <Route path="/advanced-upper-face-botox" element={<Layout><AdvancedUpperFaceBotox /></Layout>} />
-            <Route path="/nefertiti-botox-facelift" element={<Layout><NefertitiBotoxFacelift /></Layout>} />
-            <Route path="/trigger-point-botox" element={<Layout><TriggerPointBotox /></Layout>} />
-            <Route path="/medical-anal-bleaching" element={<Layout><MedicalAnalBleaching /></Layout>} />
-            <Route path="/advanced-consultation" element={<Layout><AdvancedConsultation /></Layout>} />
-            <Route path="/partners" element={<Layout><Partners /></Layout>} />
-            <Route path="/birmingham" element={<Layout><BirminghamHome /></Layout>} />
-            <Route path="/manchester" element={<Layout><ManchesterHome /></Layout>} />
-            <Route path="/cardiff" element={<Layout><CardiffHome /></Layout>} />
-            <Route path="/treatments-summary-arabic" element={<Layout><TreatmentsSummaryArabic /></Layout>} />
-            <Route path="/treatments-summary-chinese" element={<Layout><TreatmentsSummaryChinese /></Layout>} />
-            <Route path="/chinese-london-aesthetics-blog" element={<Layout><ChineseLondonAestheticsBlog /></Layout>} />
-            <Route path="/non-surgical-nose-job-blog" element={<Layout><NonSurgicalNoseJobBlog /></Layout>} />
-            <Route path="/pdo-threads-blog" element={<Layout><PDOThreadsBlog /></Layout>} />
-            <Route path="/aesthetic-maintenance-cost-blog" element={<Layout><AestheticMaintenanceCostBlog /></Layout>} />
-            <Route path="/clinical-concepts-to-flawless-skin" element={<Layout><ClinicalConceptsToFlawlessSkin /></Layout>} />
-            <Route path="/dermal-filler-makeover" element={<Layout><DermalFillerMakeover /></Layout>} />
-            <Route path="/lip-filler-dissolve" element={<Layout><LipFillerDissolve /></Layout>} />
-            <Route path="/before-after-gallery" element={<Layout><BeforeAfterGallery /></Layout>} />
-            <Route path="/botox-calf-reduction" element={<Layout><BotoxCalfReduction /></Layout>} />
-            <Route path="/face-botox-areas" element={<Layout><FaceBotoxAreas /></Layout>} />
-            <Route path="/team/dr-ahmed-haq" element={<Layout><DrAhmedHaq /></Layout>} />
-            <Route path="*" element={<Layout><NotFound /></Layout>} />
-          </Routes>
+          <GoogleAnalytics />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/home2" element={<Home2 />} />
+              <Route path="/treatments" element={<Treatments />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/lip-fillers" element={<LipFillers />} />
+              <Route path="/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
+              <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
+              <Route path="/membership" element={<Membership />} />
+              <Route path="/dr-ahmed-haq" element={<DrAhmedHaq />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
+              <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
+              <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
+              <Route path="/pdo-threads" element={<PDOThreads />} />
+              <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
+              <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
+              <Route path="/dermal-filler-makeover" element={<DermalFillerMakeover />} />
+              <Route path="/nefertiti-botox-facelift" element={<NefertitiBotoxFacelift />} />
+              <Route path="/advanced-upper-face-botox" element={<AdvancedUpperFaceBotox />} />
+              <Route path="/face-botox-areas" element={<FaceBotoxAreas />} />
+              <Route path="/lower-face-botox" element={<LowerFaceBotox />} />
+              <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
+              <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
+              <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />
+              <Route path="/aesthetic-maintenance-cost-blog" element={<AestheticMaintenanceCostBlog />} />
+              <Route path="/pdo-threads-blog" element={<PDOThreadsBlog />} />
+              <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
+              <Route path="/clinical-concepts-to-flawless-skin" element={<ClinicalConceptsToFlawlessSkin />} />
+              <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
+              <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
+              <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
+              <Route path="/birmingham" element={<BirminghamHome />} />
+              <Route path="/manchester" element={<ManchesterHome />} />
+              <Route path="/cardiff" element={<CardiffHome />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
         </BrowserRouter>
-      </QueryClientProvider>
+      </TooltipProvider>
     </HelmetProvider>
-  );
-}
+  </QueryClientProvider>
+);
 
 export default App;
