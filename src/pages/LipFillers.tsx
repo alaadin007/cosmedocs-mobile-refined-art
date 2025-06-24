@@ -92,45 +92,42 @@ const LipFillers = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section with Full Screen Background Image */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('/lovable-uploads/11e7330e-8f2f-49de-817f-766edebbf9ff.png')`
-            }}
-          >
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
+        {/* Hero Section - Updated to match LipFillerDissolve design */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
-                Expert Lip Fillers
-                <span className="block text-purple-300">London</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-lg">
-                <span className="text-purple-300 font-semibold">Invisible Art</span>
-                <br />
-                Transformation that speaks without saying a word
-              </p>
-              <div className="mb-8">
-                <p className="text-3xl text-purple-300 font-bold drop-shadow-lg">Starting from £300</p>
-                <p className="text-base text-gray-300 drop-shadow-lg mt-2">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
-                  Book Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                  View Price List
-                </Button>
-              </div>
-            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Expert Lip
+                  <span className="block text-purple-300">Fillers</span>
+                  <span className="block text-sm mt-4">Natural enhancement with premium dermal fillers</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £300</p>
+                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                    Book Consultation
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    View Price List
+                  </Button>
+                </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
           </div>
         </section>
 
