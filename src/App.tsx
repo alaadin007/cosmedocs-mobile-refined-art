@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,7 @@ import Home2 from "./pages/Home2";
 import Treatments from "./pages/Treatments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 import LipFillers from "./pages/LipFillers";
 import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
 import BeforeAfterGallery from "./pages/BeforeAfterGallery";
@@ -63,6 +63,7 @@ const App = () => (
               <Route path="/treatments" element={<Treatments />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/thank-you" element={<ThankYou />} />
               <Route path="/lip-fillers" element={<LipFillers />} />
               <Route path="/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
               <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />

@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -49,18 +50,8 @@ const Contact = () => {
           variant: "destructive",
         });
       } else {
-        toast({
-          title: "Message Sent",
-          description: "We'll get back to you as soon as possible.",
-        });
-
-        // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
+        // Redirect to thank you page instead of showing toast
+        navigate('/thank-you');
       }
     } catch (error) {
       console.error('Unexpected error:', error);
