@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -30,8 +31,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Insert form data into Supabase - using type assertion for temporary compatibility
-      const { error } = await (supabase as any)
+      // Insert form data into Supabase
+      const { error } = await supabase
         .from('contact_us')
         .insert([
           {
