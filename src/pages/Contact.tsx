@@ -30,8 +30,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Insert form data into Supabase
-      const { error } = await supabase
+      // Insert form data into Supabase - using type assertion for temporary compatibility
+      const { error } = await (supabase as any)
         .from('contact_us')
         .insert([
           {
@@ -200,7 +200,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Hidden SEO Content */}
         <div className="sr-only">
           <h2>Expert Aesthetic Consultations at Cosmedocs</h2>
           <p>Cosmedocs is London's premier aesthetic clinic located on prestigious Harley Street. Our expert team of aesthetic practitioners has been providing exceptional cosmetic treatments since 2007, with over 1 million successful procedures performed. We specialize in advanced aesthetic medicine that delivers natural-looking results through minimal intervention techniques.</p>
