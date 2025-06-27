@@ -28,7 +28,8 @@ const PopularTreatments = ({
   const defaultTreatments: Treatment[] = [
     {
       title: "Botox",
-      description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines"
+      description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
+      link: "/face-botox-areas"
     },
     {
       title: "Dermal Fillers",
@@ -52,7 +53,8 @@ const PopularTreatments = ({
     },
     {
       title: "Skin Boosters",
-      description: "Deep hydration and rejuvenation"
+      description: "Deep hydration and rejuvenation",
+      link: "/skin-boosters"
     }
   ];
 

@@ -1,8 +1,10 @@
+
 // Treatment name to route mapping
 export const treatmentRoutes: Record<string, string> = {
   // Botox treatments
   "botox": "/face-botox-areas",
   "face botox": "/face-botox-areas",
+  "face botox areas": "/face-botox-areas",
   "anti-wrinkle treatments": "/face-botox-areas",
   "nefertiti face lift": "/nefertiti-botox-facelift",
   "nefertiti facelift": "/nefertiti-botox-facelift",
@@ -28,6 +30,7 @@ export const treatmentRoutes: Record<string, string> = {
   "botox calf reduction": "/botox-calf-reduction",
   "medical anal bleaching": "/medical-anal-bleaching",
   "advanced consultation": "/advanced-consultation",
+  "skin boosters": "/skin-boosters",
   
   // Add more treatments as pages are created
 };
