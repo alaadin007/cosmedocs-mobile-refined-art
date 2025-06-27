@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -43,6 +44,7 @@ import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import BirminghamHome from "./pages/BirminghamHome";
 import ManchesterHome from "./pages/ManchesterHome";
 import CardiffHome from "./pages/CardiffHome";
+import GummySmileBotox from "./pages/GummySmileBotox";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 
 const queryClient = new QueryClient();
@@ -94,6 +96,7 @@ const App = () => (
               <Route path="/birmingham" element={<BirminghamHome />} />
               <Route path="/manchester" element={<ManchesterHome />} />
               <Route path="/cardiff" element={<CardiffHome />} />
+              <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

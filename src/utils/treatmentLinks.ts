@@ -11,6 +11,9 @@ export const treatmentRoutes: Record<string, string> = {
   "trigger point botox": "/trigger-point-botox",
   "advanced upper face botox": "/advanced-upper-face-botox",
   "lower face botox": "/lower-face-botox",
+  "gummy smile botox": "/gummy-smile-botox",
+  "gummy smile": "/gummy-smile-botox",
+  "gummy smile treatment": "/gummy-smile-botox",
   
   // Dermal Fillers
   "lip fillers": "/lip-fillers",
@@ -46,6 +49,8 @@ export const treatmentAliases: Record<string, string> = {
   "non-surgical rhinoplasty": "non surgical nose job",
   "thread lift": "pdo threads",
   "polydioxanone threads": "pdo threads",
+  "excessive gum display": "gummy smile botox",
+  "high lip line": "gummy smile botox",
 };
 
 export function getAllTreatmentNames(): string[] {
