@@ -26,7 +26,7 @@ import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
 import PDOThreads from "./pages/PDOThreads";
 import TriggerPointBotox from "./pages/TriggerPointBotox";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
-import DermalFillerMakeover from "./pages/DermalFillerMakeover";
+import DermalFillers from "./pages/DermalFillers";
 import NefertitiBotoxFacelift from "./pages/NefertitiBotoxFacelift";
 import AdvancedUpperFaceBotox from "./pages/AdvancedUpperFaceBotox";
 import FaceBotoxAreas from "./pages/FaceBotoxAreas";
@@ -45,6 +45,8 @@ import BirminghamHome from "./pages/BirminghamHome";
 import ManchesterHome from "./pages/ManchesterHome";
 import CardiffHome from "./pages/CardiffHome";
 import GummySmileBotox from "./pages/GummySmileBotox";
+import MarionnetteLines from "./pages/MarionnetteLines";
+import NasolabialFolds from "./pages/NasolabialFolds";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 
 const queryClient = new QueryClient();
@@ -78,7 +80,13 @@ const App = () => (
               <Route path="/pdo-threads" element={<PDOThreads />} />
               <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
               <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
-              <Route path="/dermal-filler-makeover" element={<DermalFillerMakeover />} />
+              
+              {/* Dermal Filler Routes */}
+              <Route path="/dermal-fillers" element={<DermalFillers />} />
+              <Route path="/dermal-filler-makeover" element={<DermalFillers />} />
+              <Route path="/marionette-lines" element={<MarionnetteLines />} />
+              <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
+              
               <Route path="/nefertiti-botox-facelift" element={<NefertitiBotoxFacelift />} />
               <Route path="/advanced-upper-face-botox" element={<AdvancedUpperFaceBotox />} />
               <Route path="/face-botox-areas" element={<FaceBotoxAreas />} />

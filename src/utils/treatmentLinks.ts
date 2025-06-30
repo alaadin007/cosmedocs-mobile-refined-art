@@ -1,4 +1,3 @@
-
 // Treatment name to route mapping
 export const treatmentRoutes: Record<string, string> = {
   // Botox treatments
@@ -15,17 +14,34 @@ export const treatmentRoutes: Record<string, string> = {
   "gummy smile": "/gummy-smile-botox",
   "gummy smile treatment": "/gummy-smile-botox",
   
-  // Dermal Fillers
+  // Dermal Fillers - Main page
+  "dermal fillers": "/dermal-fillers",
+  "dermal filler": "/dermal-fillers",
+  "dermal filler makeover": "/dermal-fillers",
+  
+  // Dermal Fillers - Individual treatments
+  "marionette lines": "/marionette-lines",
+  "marionette lines filler": "/marionette-lines",
+  "nasolabial folds": "/nasolabial-folds",
+  "nasolabial fold filler": "/nasolabial-folds",
+  "smile lines": "/nasolabial-folds",
+  "jawline filler": "/jawline-filler",
+  "jawline": "/jawline-filler",
+  "jawline definition": "/jawline-filler",
+  "cheek filler": "/cheek-filler",
+  "cheek volume": "/cheek-filler",
+  "cheek enhancement": "/cheek-filler",
+  "tear trough": "/tear-trough-filler",
+  "tear trough filler": "/tear-trough-filler",
+  "under eye filler": "/tear-trough-filler",
+  "under eye circles": "/tear-trough-filler",
   "lip fillers": "/lip-fillers",
   "lip filler": "/lip-fillers",
-  "dermal fillers": "/dermal-filler-makeover",
-  "dermal filler": "/dermal-filler-makeover",
-  "dermal filler makeover": "/dermal-filler-makeover",
+  
+  // Other existing treatments
   "non surgical nose job": "/non-surgical-nose-job",
   "non-surgical nose job": "/non-surgical-nose-job",
   "lip filler dissolve": "/lip-filler-dissolve",
-  
-  // Other treatments
   "pdo threads": "/pdo-threads",
   "non surgical facelift": "/non-surgical-facelift",
   "non-surgical facelift": "/non-surgical-facelift",
@@ -34,8 +50,6 @@ export const treatmentRoutes: Record<string, string> = {
   "medical anal bleaching": "/medical-anal-bleaching",
   "advanced consultation": "/advanced-consultation",
   "skin boosters": "/skin-boosters",
-  
-  // Add more treatments as pages are created
 };
 
 // Common treatment variations and aliases
