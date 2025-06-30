@@ -7,7 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import AutoLinkedText from '@/components/AutoLinkedText';
+import PopularTreatments from '@/components/PopularTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
+import { Link } from 'react-router-dom';
 
 const NasolabialFolds = () => {
   const seoData = generateSEOMetadata(
@@ -58,6 +60,39 @@ const NasolabialFolds = () => {
     {
       question: "How much does nasolabial fold filler cost?",
       answer: "Nasolabial fold filler treatment starts from £325 per ml. The exact amount needed varies depending on the depth of your folds and desired results, which will be assessed during your consultation."
+    }
+  ];
+
+  const relatedTreatments = [
+    {
+      title: "Marionette Lines",
+      description: "Smooth vertical lines from mouth corners to chin for a more youthful appearance",
+      link: "/marionette-lines"
+    },
+    {
+      title: "Dermal Fillers",
+      description: "Comprehensive facial rejuvenation with personalized treatment plans",
+      link: "/dermal-fillers"
+    },
+    {
+      title: "Cheek Fillers",
+      description: "Restore volume and enhance cheek contours for lifted appearance",
+      link: "/cheek-filler"
+    },
+    {
+      title: "Lip Fillers",
+      description: "Natural lip enhancement for fuller, more defined lips",
+      link: "/lip-fillers"
+    },
+    {
+      title: "Jawline Fillers",
+      description: "Define and contour jawline for enhanced facial structure",
+      link: "/jawline-filler"
+    },
+    {
+      title: "Tear Trough Fillers",
+      description: "Address under-eye hollowing and dark circles for refreshed eyes",
+      link: "/tear-trough-filler"
     }
   ];
 
@@ -113,6 +148,11 @@ const NasolabialFolds = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
+                <Link to="/dermal-fillers" className="inline-block mb-4">
+                  <h2 className="text-lg font-medium text-purple-300 hover:text-purple-200 transition-colors">
+                    DERMAL FILLERS
+                  </h2>
+                </Link>
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
                   Nasolabial Folds
                   <span className="block text-purple-300">Dermal Fillers</span>
@@ -275,6 +315,13 @@ const NasolabialFolds = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Treatments */}
+        <PopularTreatments 
+          title="Related Dermal Filler Treatments"
+          treatments={relatedTreatments}
+          className="py-20"
+        />
 
         {/* Call to Action */}
         <section className="py-20">
