@@ -48,6 +48,7 @@ import GummySmileBotox from "./pages/GummySmileBotox";
 import MarionnetteLines from "./pages/MarionnetteLines";
 import NasolabialFolds from "./pages/NasolabialFolds";
 import DelhiLocation from "./pages/DelhiLocation";
+import BarbadosHome from "./pages/BarbadosHome";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 
 const queryClient = new QueryClient();
@@ -106,6 +107,7 @@ const App = () => (
               <Route path="/manchester" element={<ManchesterHome />} />
               <Route path="/cardiff" element={<CardiffHome />} />
               <Route path="/delhi" element={<DelhiLocation />} />
+              <Route path="/barbados" element={<BarbadosHome />} />
               <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
