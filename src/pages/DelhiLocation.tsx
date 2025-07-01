@@ -617,6 +617,206 @@ const DelhiLocation = () => {
           </div>
         </section>
 
+        {/* Inside Our Clinic Gallery */}
+        <section className="py-20 bg-gray-900">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-6">Inside Our Clinic</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+                Witness Dr. Geetika's professional training and expertise at the prestigious Harley Street Institute
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img 
+                    src="/lovable-uploads/0e7d6308-98d0-4d70-9ed4-e2af2be0e17f.png" 
+                    alt="Dr. Geetika receiving Fellowship certificate at Harley Street Institute"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-semibold text-lg">Fellowship Achievement</h3>
+                    <p className="text-gray-200 text-sm">Aesthetic Medicine Certification</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img 
+                    src="/lovable-uploads/ff5d7b76-998f-49b1-8139-9f42cb469027.png" 
+                    alt="Dr. Geetika performing advanced aesthetic procedure"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-semibold text-lg">Expert Technique</h3>
+                    <p className="text-gray-200 text-sm">Precision in Every Treatment</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img 
+                    src="/lovable-uploads/c47cf752-b777-49da-b470-f6c1f7e3a292.png" 
+                    alt="Dr. Geetika collaborating with Harley Street Institute mentors"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-semibold text-lg">Collaborative Learning</h3>
+                    <p className="text-gray-200 text-sm">Training with Industry Leaders</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img 
+                    src="/lovable-uploads/1c79267b-6464-48f8-898d-da2e831dacfa.png" 
+                    alt="Dr. Geetika performing advanced aesthetic treatments"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-semibold text-lg">Advanced Procedures</h3>
+                    <p className="text-gray-200 text-sm">State-of-the-Art Techniques</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Real Patient Results Gallery */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-6">Real Patient Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+                Authentic before and after transformations showcasing our invisible art philosophy
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-900/70 transition-all duration-300"
+              >
+                <div className="relative overflow-hidden rounded-xl mb-4">
+                  <img 
+                    src="/lovable-uploads/2dc938fb-78b2-4af7-a0cb-190492553cbb.png" 
+                    alt="Natural lip enhancement before and after results"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-purple-300">Lip Enhancement</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Natural lip augmentation with premium hyaluronic acid fillers. 
+                  Notice the subtle enhancement that maintains natural proportions while adding definition and volume.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-900/70 transition-all duration-300"
+              >
+                <div className="relative overflow-hidden rounded-xl mb-4">
+                  <img 
+                    src="/lovable-uploads/fa526805-2f04-4033-a0ef-61614a042609.png" 
+                    alt="Chin and jawline contouring transformation results"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-purple-300">Chin & Jawline Contouring</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Profile transformation through strategic dermal filler placement. 
+                  Enhanced facial harmony with improved chin projection and jawline definition.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-900/70 transition-all duration-300"
+              >
+                <div className="relative overflow-hidden rounded-xl mb-4">
+                  <img 
+                    src="/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png" 
+                    alt="Non-surgical rhinoplasty nose reshaping results"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-purple-300">Non-Surgical Rhinoplasty</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Subtle nose reshaping without surgery. 
+                  Refined nasal bridge contour and improved profile balance through precise filler technique.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-400 text-sm italic max-w-3xl mx-auto">
+                All results shown are real patients treated by Dr. Geetika. Individual results may vary. 
+                Book a consultation to discuss your personal aesthetic goals and treatment options.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Quick Contact */}
         <section className="py-16 bg-purple-900/30">
           <div className="container mx-auto px-4">
