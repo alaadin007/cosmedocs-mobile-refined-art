@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Star, Clock, Shield, Award, Check, ArrowRight, Phone, Mail, MessageCircle, MapPin, Calendar, Users, Heart, Sparkles } from 'lucide-react';
+import { Star, Clock, Shield, Award, Check, ArrowRight, Phone, Mail, MessageCircle, MapPin, Calendar, Users, Heart, Sparkles, Zap, Droplets, Sun } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { generateSEOMetadata } from '@/utils/seo';
 import PopularTreatments from '@/components/PopularTreatments';
 
@@ -256,7 +257,7 @@ const BarbadosHome = () => {
           </div>
         </section>
 
-        {/* Popular Treatments */}
+        {/* Treatments Tabs Section */}
         <section className="py-20 bg-gray-900">
           <div className="container mx-auto px-4">
             <motion.div
@@ -266,39 +267,326 @@ const BarbadosHome = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6">Signature Treatments in Barbados</h2>
+              <h2 className="text-4xl font-bold mb-6">Comprehensive Treatment Menu</h2>
               <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                Experience world-class aesthetic treatments with Caribbean hospitality
+                Discover our full range of aesthetic treatments with Barbados pricing
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {barbadosTreatments.map((treatment, index) => (
+            <Tabs defaultValue="botox" className="w-full">
+              <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 bg-gray-800 rounded-2xl p-2 mb-8">
+                <TabsTrigger value="botox" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
+                  <Sparkles className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Botox</span>
+                </TabsTrigger>
+                <TabsTrigger value="dermal-fillers" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
+                  <Heart className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Dermal Fillers</span>
+                </TabsTrigger>
+                <TabsTrigger value="skin-boosters" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
+                  <Zap className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Skin Boosters</span>
+                </TabsTrigger>
+                <TabsTrigger value="sweat-tox" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
+                  <Droplets className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Sweat-Tox</span>
+                </TabsTrigger>
+                <TabsTrigger value="skin-hair" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
+                  <Shield className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Skin & Hair</span>
+                </TabsTrigger>
+                <TabsTrigger value="laser-hair" className="data-[state=active]:bg-purple-600 data-[state=active]:text-white">
+                  <Sun className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Laser Hair</span>
+                </TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="botox" className="mt-8">
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
                 >
-                  <Card className="bg-gray-800/50 border-purple-500/30 hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer h-full">
-                    <CardHeader className="text-center">
-                      <div className="text-4xl mb-4">{treatment.icon}</div>
-                      <CardTitle className="text-xl font-semibold group-hover:text-purple-300 transition-colors">
-                        {treatment.title}
+                  <Card className="bg-gray-800/50 border-purple-500/30">
+                    <CardHeader>
+                      <CardTitle className="text-2xl flex items-center">
+                        <Sparkles className="h-6 w-6 mr-3 text-purple-400" />
+                        Botox Treatments
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="text-center">
-                      <p className="text-gray-300 mb-4 leading-relaxed">{treatment.description}</p>
-                      <p className="text-purple-300 font-semibold text-lg mb-4">{treatment.price}</p>
-                      <Button variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black w-full">
-                        Learn More
-                      </Button>
+                    <CardContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Forehead Lines</h4>
+                          <p className="text-gray-300 text-sm mb-3">Smooth horizontal forehead wrinkles</p>
+                          <p className="text-purple-300 font-bold">$300 - $450</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Frown Lines</h4>
+                          <p className="text-gray-300 text-sm mb-3">Vertical lines between eyebrows</p>
+                          <p className="text-purple-300 font-bold">$350 - $500</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Crow's Feet</h4>
+                          <p className="text-gray-300 text-sm mb-3">Laugh lines around the eyes</p>
+                          <p className="text-purple-300 font-bold">$300 - $450</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Bunny Lines</h4>
+                          <p className="text-gray-300 text-sm mb-3">Lines on nose when smiling</p>
+                          <p className="text-purple-300 font-bold">$200 - $300</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Jawline Slimming</h4>
+                          <p className="text-gray-300 text-sm mb-3">Masseter muscle reduction</p>
+                          <p className="text-purple-300 font-bold">$600 - $800</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Lip Flip</h4>
+                          <p className="text-gray-300 text-sm mb-3">Subtle lip enhancement</p>
+                          <p className="text-purple-300 font-bold">$200 - $300</p>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
-              ))}
-            </div>
+              </TabsContent>
+
+              <TabsContent value="dermal-fillers" className="mt-8">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card className="bg-gray-800/50 border-purple-500/30">
+                    <CardHeader>
+                      <CardTitle className="text-2xl flex items-center">
+                        <Heart className="h-6 w-6 mr-3 text-rose-400" />
+                        Dermal Fillers
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Lip Fillers</h4>
+                          <p className="text-gray-300 text-sm mb-3">Natural lip enhancement</p>
+                          <p className="text-rose-300 font-bold">$500 - $750</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Cheek Fillers</h4>
+                          <p className="text-gray-300 text-sm mb-3">Restore cheek volume</p>
+                          <p className="text-rose-300 font-bold">$750 - $1,100</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Nasolabial Folds</h4>
+                          <p className="text-gray-300 text-sm mb-3">Smooth smile lines</p>
+                          <p className="text-rose-300 font-bold">$600 - $850</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Marionette Lines</h4>
+                          <p className="text-gray-300 text-sm mb-3">Correct downturned mouth</p>
+                          <p className="text-rose-300 font-bold">$600 - $850</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Tear Trough</h4>
+                          <p className="text-gray-300 text-sm mb-3">Under-eye hollows</p>
+                          <p className="text-rose-300 font-bold">$750 - $1,000</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Jawline Definition</h4>
+                          <p className="text-gray-300 text-sm mb-3">Enhance jaw contour</p>
+                          <p className="text-rose-300 font-bold">$850 - $1,250</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </TabsContent>
+
+              <TabsContent value="skin-boosters" className="mt-8">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card className="bg-gray-800/50 border-purple-500/30">
+                    <CardHeader>
+                      <CardTitle className="text-2xl flex items-center">
+                        <Zap className="h-6 w-6 mr-3 text-green-400" />
+                        Skin Boosters
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Profhilo</h4>
+                          <p className="text-gray-300 text-sm mb-3">Bio-remodeling skin booster</p>
+                          <p className="text-green-300 font-bold">$600 - $850</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Skinvive</h4>
+                          <p className="text-gray-300 text-sm mb-3">Micro-droplet skin hydration</p>
+                          <p className="text-green-300 font-bold">$500 - $750</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Mesotherapy</h4>
+                          <p className="text-gray-300 text-sm mb-3">Skin rejuvenation treatment</p>
+                          <p className="text-green-300 font-bold">$375 - $625</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Vampire Facial (PRP)</h4>
+                          <p className="text-gray-300 text-sm mb-3">Platelet-rich plasma therapy</p>
+                          <p className="text-green-300 font-bold">$450 - $700</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </TabsContent>
+
+              <TabsContent value="sweat-tox" className="mt-8">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card className="bg-gray-800/50 border-purple-500/30">
+                    <CardHeader>
+                      <CardTitle className="text-2xl flex items-center">
+                        <Droplets className="h-6 w-6 mr-3 text-blue-400" />
+                        Sweat-Tox (Hyperhidrosis Treatment)
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Underarm Hyperhidrosis</h4>
+                          <p className="text-gray-300 text-sm mb-3">Reduce excessive underarm sweating</p>
+                          <p className="text-blue-300 font-bold">$850 - $1,125</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Palm Hyperhidrosis</h4>
+                          <p className="text-gray-300 text-sm mb-3">Control excessive palm sweating</p>
+                          <p className="text-blue-300 font-bold">$1,000 - $1,250</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Facial Hyperhidrosis</h4>
+                          <p className="text-gray-300 text-sm mb-3">Reduce facial sweating</p>
+                          <p className="text-blue-300 font-bold">$750 - $1,000</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Feet Hyperhidrosis</h4>
+                          <p className="text-gray-300 text-sm mb-3">Control excessive foot sweating</p>
+                          <p className="text-blue-300 font-bold">$1,125 - $1,375</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </TabsContent>
+
+              <TabsContent value="skin-hair" className="mt-8">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card className="bg-gray-800/50 border-purple-500/30">
+                    <CardHeader>
+                      <CardTitle className="text-2xl flex items-center">
+                        <Shield className="h-6 w-6 mr-3 text-cyan-400" />
+                        Skin & Hair Medicine
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Acne Treatment</h4>
+                          <p className="text-gray-300 text-sm mb-3">Comprehensive acne management</p>
+                          <p className="text-cyan-300 font-bold">$200 - $375</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Pigmentation Treatment</h4>
+                          <p className="text-gray-300 text-sm mb-3">Melasma and dark spot removal</p>
+                          <p className="text-cyan-300 font-bold">$300 - $500</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Hair Loss Treatment</h4>
+                          <p className="text-gray-300 text-sm mb-3">PRP for hair restoration</p>
+                          <p className="text-cyan-300 font-bold">$200 - $300</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Chemical Peels</h4>
+                          <p className="text-gray-300 text-sm mb-3">Skin resurfacing treatments</p>
+                          <p className="text-cyan-300 font-bold">$125 - $375</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Microneedling</h4>
+                          <p className="text-gray-300 text-sm mb-3">Collagen induction therapy</p>
+                          <p className="text-cyan-300 font-bold">$200 - $300</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Skin Tightening</h4>
+                          <p className="text-gray-300 text-sm mb-3">Non-invasive skin firming</p>
+                          <p className="text-cyan-300 font-bold">$375 - $625</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </TabsContent>
+
+              <TabsContent value="laser-hair" className="mt-8">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card className="bg-gray-800/50 border-purple-500/30">
+                    <CardHeader>
+                      <CardTitle className="text-2xl flex items-center">
+                        <Sun className="h-6 w-6 mr-3 text-orange-400" />
+                        Laser Hair Removal
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Upper Lip</h4>
+                          <p className="text-gray-300 text-sm mb-3">Per session</p>
+                          <p className="text-orange-300 font-bold">$50 - $75</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Underarms</h4>
+                          <p className="text-gray-300 text-sm mb-3">Per session</p>
+                          <p className="text-orange-300 font-bold">$75 - $125</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Half Legs</h4>
+                          <p className="text-gray-300 text-sm mb-3">Per session</p>
+                          <p className="text-orange-300 font-bold">$200 - $300</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Full Legs</h4>
+                          <p className="text-gray-300 text-sm mb-3">Per session</p>
+                          <p className="text-orange-300 font-bold">$375 - $500</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Brazilian</h4>
+                          <p className="text-gray-300 text-sm mb-3">Per session</p>
+                          <p className="text-orange-300 font-bold">$200 - $300</p>
+                        </div>
+                        <div className="bg-gray-900/50 rounded-xl p-6">
+                          <h4 className="font-semibold mb-2">Full Body</h4>
+                          <p className="text-gray-300 text-sm mb-3">Per session</p>
+                          <p className="text-orange-300 font-bold">$875 - $1,250</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
 
