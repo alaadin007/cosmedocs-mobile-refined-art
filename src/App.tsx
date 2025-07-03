@@ -75,7 +75,7 @@ const App = () => (
               <Route path="/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
               <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
               <Route path="/membership" element={<Membership />} />
-              <Route path="/dr-ahmed-haq" element={<DrAhmedHaq />} />
+              <Route path="/team/dr-ahmed-haq" element={<DrAhmedHaq />} />
               <Route path="/team/dr-hena-haq" element={<DrHenaHaq />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
