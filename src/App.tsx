@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Home2 from "./pages/Home2";
 import Treatments from "./pages/Treatments";
+import Team from "./pages/Team";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
@@ -68,6 +69,7 @@ const App = () => (
               <Route path="/home" element={<Home />} />
               <Route path="/home2" element={<Home2 />} />
               <Route path="/treatments" element={<Treatments />} />
+              <Route path="/team" element={<Team />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/thank-you" element={<ThankYou />} />
