@@ -20,7 +20,6 @@ const Team = () => {
       title: "Expert Cosmetic Physician",
       image: "/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png",
       education: "Royal College of Surgeons, Medical School Graduate",
-      specialization: "Advanced injectable procedures, facial contouring, non-surgical jaw reduction",
       link: "/team/dr-ahmed-haq",
       bookingUrl: "https://med.as.me/schedule/0cc7d92b/?calendarIds=3572888",
       description: "An extensively experienced practitioner with expertise in complex facial contouring and advanced aesthetic treatments. Dr. Haq leads our in-house team and trains cosmetic physicians at the Harley Street Institute."
@@ -30,7 +29,6 @@ const Team = () => {
       title: "Cosmetic Physician",
       image: "/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png",
       education: "Oxford Medical Training • London & Kent GP Training",
-      specialization: "Subtle tweakments, holistic approach, natural aesthetic outcomes",
       link: "/team/dr-hena-haq",
       bookingUrl: "https://med.as.me/schedule/0cc7d92b?calendarIds=5494281",
       description: "An Aesthetic Doctor whose holistic approach to client treatments has made her popular amongst her clients. Her special interest lies in subtle tweakments and natural outcomes."
@@ -141,15 +139,6 @@ const Team = () => {
                               <GraduationCap className="h-4 w-4 text-yellow-400" />
                               <span className="text-sm text-muted-foreground">{member.education}</span>
                             </div>
-                          </div>
-
-                          {/* Specialization */}
-                          <div className="mb-6">
-                            <div className="flex items-center justify-center gap-2 mb-3">
-                              <Award className="h-4 w-4 text-yellow-400" />
-                              <span className="text-sm font-medium">Specialization</span>
-                            </div>
-                            <p className="text-sm text-muted-foreground">{member.specialization}</p>
                           </div>
 
                           {/* Description */}
