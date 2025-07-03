@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle, Clock, Star, Award, Eye, Zap, ArrowRight, Users, BookOpen } from 'lucide-react';
 import PopularTreatments from '@/components/PopularTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
+import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 
 const AdvancedUpperFaceBotox = () => {
   const seoData = generateSEOMetadata(
@@ -73,6 +74,24 @@ const AdvancedUpperFaceBotox = () => {
     { month: 3, percentage: 60, description: "Significant movement returns" },
     { month: 4, percentage: 80, description: "Most effect worn off" },
     { month: 5, percentage: 100, description: "Complete wear-off" }
+  ];
+
+  const beforeAfterImages = [
+    {
+      src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      alt: "Before and after advanced upper face botox treatment - forehead lines",
+      caption: "Advanced Botox with dermal filler combination for deep forehead lines - 6 months result"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158", 
+      alt: "Before and after advanced upper face botox treatment - frown lines",
+      caption: "Combination therapy for deep frown lines showing natural, long-lasting results"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      alt: "Before and after advanced upper face botox treatment - crow's feet",
+      caption: "Strategic filler placement with Botox for comprehensive periorbital rejuvenation"
+    }
   ];
 
   return (
