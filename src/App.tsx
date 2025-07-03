@@ -18,6 +18,7 @@ import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
 import BeforeAfterGallery from "./pages/BeforeAfterGallery";
 import Membership from "./pages/Membership";
 import DrAhmedHaq from "./pages/DrAhmedHaq";
+import DrHenaHaq from "./pages/DrHenaHaq";
 import Partners from "./pages/Partners";
 import NotFound from "./pages/NotFound";
 import BotoxCalfReduction from "./pages/BotoxCalfReduction";
@@ -75,6 +76,7 @@ const App = () => (
               <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
               <Route path="/membership" element={<Membership />} />
               <Route path="/dr-ahmed-haq" element={<DrAhmedHaq />} />
+              <Route path="/team/dr-hena-haq" element={<DrHenaHaq />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
               <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
