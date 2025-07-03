@@ -65,7 +65,7 @@ const DrHenaHaq = () => {
       ]
     },
     "url": "https://www.cosmedocs.com/team/dr-hena-haq",
-    "image": "https://www.cosmedocs.com/lovable-uploads/d7bad7e3-fa9f-4357-8e4c-04ed2a494412.png"
+    "image": "https://www.cosmedocs.com/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png"
   };
 
   return (
@@ -79,14 +79,14 @@ const DrHenaHaq = () => {
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="profile" />
-        <meta property="og:image" content="https://www.cosmedocs.com/lovable-uploads/d7bad7e3-fa9f-4357-8e4c-04ed2a494412.png" />
+        <meta property="og:image" content="https://www.cosmedocs.com/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Cosmedocs" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content="https://www.cosmedocs.com/lovable-uploads/d7bad7e3-fa9f-4357-8e4c-04ed2a494412.png" />
+        <meta name="twitter:image" content="https://www.cosmedocs.com/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png" />
         <meta name="author" content="Dr Hena Haq" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <script type="application/ld+json">
@@ -110,7 +110,7 @@ const DrHenaHaq = () => {
                   <div className="relative max-w-md mx-auto lg:mx-0">
                     <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-yellow-600/20 rounded-3xl rotate-3"></div>
                     <img
-                      src="/lovable-uploads/d7bad7e3-fa9f-4357-8e4c-04ed2a494412.png"
+                      src="/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png"
                       alt="Dr Hena Haq - Expert Cosmetic Physician at Cosmedocs London specializing in subtle tweakments and natural aesthetic outcomes"
                       className="relative w-full h-auto rounded-3xl shadow-2xl"
                       loading="eager"
