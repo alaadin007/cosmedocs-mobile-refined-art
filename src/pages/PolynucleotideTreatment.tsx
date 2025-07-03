@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap, Users } from "lucide-react";
 import PopularTreatments from "@/components/PopularTreatments";
@@ -439,6 +440,160 @@ const PolynucleotideTreatment = () => {
                 ⭐ Sessions spaced 3 weeks apart • Full effects visible in 6-9 months • 
                 Combines beautifully with other treatments
               </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-background">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p className="text-muted-foreground text-lg">
+                  Everything you need to know about polynucleotide treatment
+                </p>
+              </div>
+              
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    Is Polynucleotide Treatment safe?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      Yes, Polynucleotide Treatment is considered safe and is suitable for all skin types. 
+                      It uses biocompatible and naturally occurring DNA fragments, which minimizes the risk 
+                      of adverse allergic reactions. At Cosmedocs, treatments are performed by highly trained 
+                      professionals to ensure both safety and optimal results. Our aesthetics is invisible 
+                      art - safe, natural transformation.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    How many sessions are typically required?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      While noticeable improvements can be seen after one session, a series of 2-3 sessions 
+                      spaced a few weeks apart is recommended for optimal and long-lasting results. 
+                      Maintenance sessions can be scheduled every few months to maintain your transformation.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    What areas can be treated with Polynucleotide Injections?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      Commonly treated areas include the under-eye area for puffiness and dark circles, 
+                      as well as the face for comprehensive facial rejuvenation treatments. Additionally, 
+                      the neck is treated for tightening, the hands for hydration, and the scalp for 
+                      addressing hair thinning or hair loss.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    How long does each session last?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Each session typically lasts about 20 minutes, though this can vary depending on the 
+                    treatment area. Our efficient approach ensures minimal disruption to your day.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    What can I expect after the treatment?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      You may experience mild redness or swelling post-treatment, which usually subsides 
+                      within a few hours to a day. However, there is minimal downtime, allowing you to 
+                      resume most daily activities immediately. This aligns with our philosophy of bold, 
+                      natural results that don't disrupt your lifestyle.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    Is there any aftercare needed?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      Yes, keeping sensitive skin around the treated area clean and moisturized is important. 
+                      Additionally, avoid direct sunlight and use sunscreen to protect the skin. 
+                      Furthermore, detailed aftercare instructions will be provided by your clinician 
+                      to ensure optimal results.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-7" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    When will I see the results?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      Improvements can be noticed within a few weeks, with more significant changes 
+                      occurring over the following months. Full effects are typically visible in 
+                      6-9 months as your skin naturally produces collagen and elastin.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-8" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    Are there any side effects?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Polynucleotide treatments are generally safe with minimal side effects. Some clients 
+                    may experience temporary bruising or swelling at the injection site, which typically 
+                    resolves quickly.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-9" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    Can Polynucleotide Treatment help with hair loss?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      Yes, polynucleotide treatment for hair loss is highly effective. In addition, 
+                      the injections improve scalp health, stimulate hair follicles, and promote hair growth, 
+                      making it an excellent option for those experiencing thinning hair or the early 
+                      stages of hair loss.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-10" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    What is the cost of Polynucleotide Treatment in London?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    <AutoLinkedText>
+                      At Cosmedocs, a single session costs £450, and a package deal for three syringes 
+                      is available at £400 each, providing a total saving of £150. This pricing ensures 
+                      both affordability and access to premium-quality treatments with our invisible 
+                      art approach to aesthetics.
+                    </AutoLinkedText>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </motion.div>
           </div>
         </section>
