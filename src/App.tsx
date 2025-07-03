@@ -51,6 +51,7 @@ import MarionnetteLines from "./pages/MarionnetteLines";
 import NasolabialFolds from "./pages/NasolabialFolds";
 import DelhiLocation from "./pages/DelhiLocation";
 import BarbadosHome from "./pages/BarbadosHome";
+import PolynucleotideTreatment from "./pages/PolynucleotideTreatment";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 
 const queryClient = new QueryClient();
@@ -113,6 +114,7 @@ const App = () => (
               <Route path="/delhi" element={<DelhiLocation />} />
               <Route path="/barbados" element={<BarbadosHome />} />
               <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
+              <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
