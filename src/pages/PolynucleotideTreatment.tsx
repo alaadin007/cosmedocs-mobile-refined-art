@@ -206,7 +206,7 @@ const PolynucleotideTreatment = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/lovable-uploads/4e5fa552-2a57-4379-924b-179c9c147f37.png')"
+              backgroundImage: "url('/lovable-uploads/5d5cdfeb-2896-4bd6-bef0-619ce6e68d59.png')"
             }}
           />
           {/* Apple-style overlay */}
