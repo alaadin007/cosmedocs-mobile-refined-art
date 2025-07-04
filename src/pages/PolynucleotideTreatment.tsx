@@ -199,43 +199,88 @@ const PolynucleotideTreatment = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative py-24 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
+      <div className="bg-black text-white min-h-screen">
+        {/* Hero Section - Apple Style */}
+        <section className="relative min-h-screen flex items-center">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/lovable-uploads/4e5fa552-2a57-4379-924b-179c9c147f37.png')"
+            }}
+          />
+          {/* Apple-style overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
+          
+          <div className="page-container relative z-10">
+            <div className="max-w-6xl">
+              <motion.div 
+                className="text-left"
+                initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-white"
+                transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <Badge className="bg-yellow-400 text-cosmedocs-black mb-6 text-sm px-4 py-2">
-                  Regenerative DNA Therapy
-                </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-                  Polynucleotide Treatment
-                  <span className="block text-yellow-400 mt-2">
-                    Harness the Healing Power of DNA
-                  </span>
-                </h1>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  <AutoLinkedText>
+                <motion.div
+                  className="mb-12"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  <div className="bg-yellow-400/90 backdrop-blur-sm rounded-full px-8 py-3 inline-block border border-yellow-400/20 mb-8">
+                    <span className="text-black font-light text-lg">Regenerative DNA Therapy</span>
+                  </div>
+                </motion.div>
+                
+                <motion.h1 
+                  className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  <span className="block text-white/95 font-thin">Polynucleotide</span>
+                  <span className="block text-white font-light">Treatment</span>
+                  <span className="block text-yellow-400 text-5xl md:text-6xl italic font-extralight mt-2">Harness the Healing Power of DNA</span>
+                </motion.h1>
+                
+                <motion.div 
+                  className="mb-16 space-y-6 max-w-3xl"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
                     Revolutionary regenerative medicine for skin, eyes, and hair using natural DNA fragments. 
-                    Our aesthetics is invisible art - transformation that speaks without saying a word. 
-                    Experience the power of cellular renewal with our advanced polynucleotide therapy.
-                  </AutoLinkedText>
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="https://med.as.me/schedule/0cc7d92b" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4">
-                      Book Consultation
-                    </Button>
+                    Our aesthetics is invisible art - transformation that speaks without saying a word.
+                  </p>
+                  <div className="flex items-center space-x-8 text-xl">
+                    <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
+                      <span className="text-white font-light">From £450</span>
+                    </div>
+                    <div className="text-white/80">
+                      <span className="font-extralight">Advanced </span> 
+                      <span className="font-light">DNA Therapy</span>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="flex flex-col sm:flex-row gap-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  <a 
+                    href="https://med.as.me/schedule/0cc7d92b" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
+                  >
+                    Book Consultation
                   </a>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-cosmedocs-black">
+                  <button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20">
                     Learn More
-                  </Button>
-                </div>
+                  </button>
+                </motion.div>
               </motion.div>
             </div>
           </div>
