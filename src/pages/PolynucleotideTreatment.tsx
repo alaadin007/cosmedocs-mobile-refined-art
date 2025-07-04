@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap, Users } from "lucide-react";
 import PopularTreatments from "@/components/PopularTreatments";
 import AutoLinkedText from "@/components/AutoLinkedText";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 
 const PolynucleotideTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -78,6 +78,21 @@ const PolynucleotideTreatment = () => {
       src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
       alt: "Before and after polynucleotide treatment - skin booster results",
       caption: "DNA regenerative therapy showing improved skin elasticity and hydration levels"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      alt: "Before and after polynucleotide treatment - skin texture improvement",
+      caption: "Comprehensive facial polynucleotide therapy demonstrating enhanced skin firmness and natural collagen boost"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
+      alt: "Before and after polynucleotide treatment - hair restoration",
+      caption: "Scalp polynucleotide treatment showing improved hair density and follicle regeneration after 6 months"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      alt: "Before and after polynucleotide treatment - neck rejuvenation",
+      caption: "Neck and décolletage polynucleotide therapy showing enhanced skin elasticity and hydration"
     }
   ];
 
@@ -430,7 +445,7 @@ const PolynucleotideTreatment = () => {
                   creating natural, bold transformations that speak without saying a word.
                 </p>
               </div>
-              <BeforeAfterImageViewer images={beforeAfterImages} />
+              <BeforeAfterGrid images={beforeAfterImages} />
               <div className="text-center mt-8">
                 <p className="text-gray-400 text-sm">
                   Individual results may vary. Results shown after 3 treatment sessions spaced 3 weeks apart. 
