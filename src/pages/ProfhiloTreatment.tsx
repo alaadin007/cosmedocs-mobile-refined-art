@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Syringe, Star, Clock, Shield, Heart, Briefcase } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
@@ -211,37 +211,50 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Treatment Stats - Modern Cards Row */}
-        <section className="py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
+        {/* Treatment Stats */}
+        <section className="py-12 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
           <div className="page-container">
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="max-w-7xl mx-auto"
             >
-              {[
-                { label: "Anaesthetic", value: "Local", icon: "💉" },
-                { label: "Results", value: "Immediate | 6-12 Months", icon: "⭐" },
-                { label: "Procedure Time", value: "30 Minutes", icon: "⏱️" },
-                { label: "Risk & Complications", value: "Minimal", icon: "🛡️" },
-                { label: "Recovery", value: "Immediate", icon: "❤️" },
-                { label: "Back To Work", value: "Immediate", icon: "💼" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-2xl mb-3">{stat.icon}</div>
-                  <h3 className="text-white font-medium text-sm mb-2">{stat.label}</h3>
-                  <p className="text-white/80 text-xs font-light">{stat.value}</p>
-                </motion.div>
-              ))}
+              <div className="flex flex-wrap justify-center gap-4">
+                {[
+                  { label: "Anaesthetic", value: "Local", icon: "syringe" },
+                  { label: "Results", value: "Immediate | 6-12 Months", icon: "star" },
+                  { label: "Procedure Time", value: "30 Minutes", icon: "clock" },
+                  { label: "Risk & Complications", value: "Minimal", icon: "shield" },
+                  { label: "Recovery", value: "Immediate", icon: "heart" },
+                  { label: "Back To Work", value: "Immediate", icon: "briefcase" },
+                ].map((stat, index) => {
+                  const IconComponent = {
+                    syringe: Syringe,
+                    star: Star,
+                    clock: Clock,
+                    shield: Shield,
+                    heart: Heart,
+                    briefcase: Briefcase
+                  }[stat.icon];
+                  
+                  return (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[160px] text-center"
+                    >
+                      <IconComponent className="h-6 w-6 text-yellow-400 mx-auto mb-2" />
+                      <h3 className="font-semibold text-sm mb-1">{stat.label}</h3>
+                      <p className="text-xs text-gray-300">{stat.value}</p>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </motion.div>
           </div>
         </section>
