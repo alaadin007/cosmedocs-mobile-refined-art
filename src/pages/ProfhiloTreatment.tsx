@@ -366,8 +366,189 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Profhilo Treatment Procedure Section */}
         <section className="py-32 bg-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Profhilo Treatment Procedure
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                A comprehensive guide to your Profhilo bio-remodelling journey
+              </p>
+            </motion.div>
+            
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-3 gap-12">
+                {/* Before Treatment */}
+                <motion.div
+                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <span className="text-white text-2xl font-light">1</span>
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-6">Before Your Treatment</h3>
+                  <div className="space-y-4 text-white/80 font-light">
+                    <p>The first step is consultation with a medical professional, followed by a comprehensive skin examination and progress photos.</p>
+                    <p>At Cosmedocs, adherence to a strict Profhilo treatment protocol is essential for optimal results.</p>
+                  </div>
+                </motion.div>
+
+                {/* During Treatment */}
+                <motion.div
+                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <span className="text-white text-2xl font-light">2</span>
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-6">During Your Treatment</h3>
+                  <div className="space-y-4 text-white/80 font-light">
+                    <p>• Profhilo is a speedy treatment with no downtime, lasting under 30 minutes</p>
+                    <p>• Topical numbing cream applied followed by injection with a very thin needle</p>
+                    <p>• High-concentration HA injected in 10 strategic locations, five on each side of the face</p>
+                    <p>• Some patients may experience a slight prick sensation during injection</p>
+                  </div>
+                </motion.div>
+
+                {/* After Treatment */}
+                <motion.div
+                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <span className="text-white text-2xl font-light">3</span>
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-6">After Your Treatment</h3>
+                  <div className="space-y-4 text-white/80 font-light">
+                    <p>Mild bruising or swelling around injection sites may occur but usually subsides within a few days.</p>
+                    <p>Avoid touching or rubbing the area and strenuous exercise for 24 hours following treatment.</p>
+                    <p>Two treatments suggested one month apart for maximum performance with final results becoming visible gradually.</p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Profhilo Injection Points Section */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Profhilo Injection Points
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Strategic BAP (Bio Aesthetic Points) technique for optimal results
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
+                    BAP Technique
+                  </h3>
+                  <p className="text-lg text-white/80 font-light leading-relaxed mb-6">
+                    The latest injectable skin remodelling treatment corrects the ageing signs and their source.
+                  </p>
+                  <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
+                    To achieve remarkable results, experts use the <strong>BAP (Bio Aesthetic Points)</strong> technique, 
+                    which reduces the required injections and ensures an even and efficient dispersal of the hyaluronic acid 
+                    into the skin layers.
+                  </p>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
+                  <h4 className="text-2xl font-light text-white mb-6">Key Benefits</h4>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-white/10 rounded-full p-2 mt-1">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      </div>
+                      <p className="text-white/80 font-light">
+                        Enables Profhilo to battle signs of ageing more efficiently
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="bg-white/10 rounded-full p-2 mt-1">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      </div>
+                      <p className="text-white/80 font-light">
+                        Ensures your comfort throughout the process
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="bg-white/10 rounded-full p-2 mt-1">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      </div>
+                      <p className="text-white/80 font-light">
+                        Reduces the required number of injections
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-8">
+                <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
+                  <h4 className="text-2xl font-light text-white mb-6">Treatment Areas</h4>
+                  <div className="space-y-6">
+                    <div>
+                      <h5 className="text-white font-medium mb-2">Face Treatment</h5>
+                      <p className="text-white/70 text-sm leading-relaxed">
+                        10 strategic injection points - 5 on each side of the face for optimal HA distribution
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="text-white font-medium mb-2">Neck Treatment</h5>
+                      <p className="text-white/70 text-sm leading-relaxed">
+                        Targeted points to address sagging skin and improve texture in the neck and décolletage area
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="text-white font-medium mb-2">Hand Treatment</h5>
+                      <p className="text-white/70 text-sm leading-relaxed">
+                        Specific injection points to treat skin laxity and reduce wrinkles and fine lines on hands
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
             <motion.div
               className="text-center mb-20"
