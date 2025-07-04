@@ -193,8 +193,40 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Treatment Stats */}
+        {/* Treatment Stats - Option 1: Horizontal Timeline */}
         <section className="py-16 bg-background">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-7xl mx-auto"
+            >
+              <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-950/20 dark:to-yellow-900/20 rounded-2xl p-8 border border-yellow-200 dark:border-yellow-800">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  {treatmentStats.map((stat, index) => (
+                    <div key={stat.label} className="flex items-center gap-3 min-w-0 flex-1">
+                      <div className="bg-yellow-500 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <stat.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100">{stat.label}</h3>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 truncate">{stat.value}</p>
+                      </div>
+                      {index < treatmentStats.length - 1 && (
+                        <div className="hidden lg:block w-px h-8 bg-yellow-300 dark:bg-yellow-700 ml-4" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Treatment Stats - Option 2: Compact Stats Bar */}
+        <section className="py-8 bg-primary/10">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -203,17 +235,47 @@ const PolynucleotideTreatment = () => {
               viewport={{ once: true }}
               className="max-w-6xl mx-auto"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {treatmentStats.map((stat, index) => (
-                  <Card key={stat.label} className="text-center hover:shadow-lg transition-shadow duration-300">
-                    <CardContent className="p-6">
-                      <div className="bg-yellow-400/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <stat.icon className="h-8 w-8 text-yellow-600" />
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg border">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 divide-x divide-gray-200 dark:divide-gray-700">
+                  {treatmentStats.map((stat, index) => (
+                    <div key={stat.label} className={`text-center ${index > 0 ? 'pl-4' : ''}`}>
+                      <div className="bg-yellow-500/10 rounded-lg w-10 h-10 flex items-center justify-center mx-auto mb-2">
+                        <stat.icon className="h-5 w-5 text-yellow-600" />
                       </div>
-                      <h3 className="text-lg font-semibold mb-2">{stat.label}</h3>
-                      <p className="text-muted-foreground">{stat.value}</p>
-                    </CardContent>
-                  </Card>
+                      <h4 className="font-medium text-xs text-gray-900 dark:text-gray-100 mb-1">{stat.label}</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-400 leading-tight">{stat.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Treatment Stats - Option 3: Modern Cards Row */}
+        <section className="py-12 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-7xl mx-auto"
+            >
+              <div className="flex flex-wrap justify-center gap-4">
+                {treatmentStats.map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[160px] text-center"
+                  >
+                    <stat.icon className="h-6 w-6 text-yellow-400 mx-auto mb-2" />
+                    <h3 className="font-semibold text-sm mb-1">{stat.label}</h3>
+                    <p className="text-xs text-gray-300">{stat.value}</p>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
