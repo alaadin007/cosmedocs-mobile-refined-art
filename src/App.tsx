@@ -52,6 +52,7 @@ import NasolabialFolds from "./pages/NasolabialFolds";
 import DelhiLocation from "./pages/DelhiLocation";
 import BarbadosHome from "./pages/BarbadosHome";
 import PolynucleotideTreatment from "./pages/PolynucleotideTreatment";
+import ProfhiloTreatment from "./pages/ProfhiloTreatment";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 
 const queryClient = new QueryClient();
@@ -115,6 +116,7 @@ const App = () => (
               <Route path="/barbados" element={<BarbadosHome />} />
               <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
               <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
+              <Route path="/profhilo-treatment" element={<ProfhiloTreatment />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
