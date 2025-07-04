@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap, Users } from "lucide-react";
 import PopularTreatments from "@/components/PopularTreatments";
 import AutoLinkedText from "@/components/AutoLinkedText";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const PolynucleotideTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -60,6 +61,24 @@ const PolynucleotideTreatment = () => {
     "Reduced fine lines",
     "Better skin texture",
     "Natural glow restoration"
+  ];
+
+  const beforeAfterImages = [
+    {
+      src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      alt: "Before and after polynucleotide treatment - under eye rejuvenation",
+      caption: "Under-eye polynucleotide treatment showing dramatic reduction in dark circles and improved skin texture - 3 months result"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158", 
+      alt: "Before and after polynucleotide treatment - facial skin regeneration",
+      caption: "Facial polynucleotide therapy demonstrating enhanced collagen production and natural glow restoration"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
+      alt: "Before and after polynucleotide treatment - skin booster results",
+      caption: "DNA regenerative therapy showing improved skin elasticity and hydration levels"
+    }
   ];
 
   const structuredData = {
@@ -389,6 +408,34 @@ const PolynucleotideTreatment = () => {
                     </ul>
                   </CardContent>
                 </Card>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Before & After Results */}
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-6xl mx-auto"
+            >
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">Before & After Results</h2>
+                <p className="text-gray-300 text-lg">
+                  Witness the transformative power of polynucleotide DNA therapy. Our aesthetics is invisible art - 
+                  creating natural, bold transformations that speak without saying a word.
+                </p>
+              </div>
+              <BeforeAfterImageViewer images={beforeAfterImages} />
+              <div className="text-center mt-8">
+                <p className="text-gray-400 text-sm">
+                  Individual results may vary. Results shown after 3 treatment sessions spaced 3 weeks apart. 
+                  Full effects visible in 6-9 months.
+                </p>
               </div>
             </motion.div>
           </div>
