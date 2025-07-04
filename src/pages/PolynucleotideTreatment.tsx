@@ -65,34 +65,24 @@ const PolynucleotideTreatment = () => {
 
   const beforeAfterImages = [
     {
-      src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      src: "/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png",
+      alt: "Before and after polynucleotide treatment - lip rejuvenation",
+      caption: "Polynucleotide treatment showing enhanced lip texture and reduced fine lines around the mouth area - 3 months result"
+    },
+    {
+      src: "/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png", 
       alt: "Before and after polynucleotide treatment - under eye rejuvenation",
-      caption: "Under-eye polynucleotide treatment showing dramatic reduction in dark circles and improved skin texture - 3 months result"
+      caption: "Under-eye polynucleotide therapy demonstrating dramatic reduction in dark circles and improved skin texture"
     },
     {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158", 
-      alt: "Before and after polynucleotide treatment - facial skin regeneration",
-      caption: "Facial polynucleotide therapy demonstrating enhanced collagen production and natural glow restoration"
+      src: "/lovable-uploads/7bef47b3-8c8f-42e2-b301-cff179a7c8bf.png",
+      alt: "Before and after polynucleotide treatment - eyebrow area improvement",
+      caption: "Eyebrow area polynucleotide treatment showing improved skin texture and reduced fine lines"
     },
     {
-      src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
-      alt: "Before and after polynucleotide treatment - skin booster results",
-      caption: "DNA regenerative therapy showing improved skin elasticity and hydration levels"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      alt: "Before and after polynucleotide treatment - skin texture improvement",
-      caption: "Comprehensive facial polynucleotide therapy demonstrating enhanced skin firmness and natural collagen boost"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
-      alt: "Before and after polynucleotide treatment - hair restoration",
-      caption: "Scalp polynucleotide treatment showing improved hair density and follicle regeneration after 6 months"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      alt: "Before and after polynucleotide treatment - neck rejuvenation",
-      caption: "Neck and décolletage polynucleotide therapy showing enhanced skin elasticity and hydration"
+      src: "/lovable-uploads/159173ee-5192-416f-af16-0b7d13fce18d.png",
+      alt: "Before and after polynucleotide treatment - hair restoration results",
+      caption: "Scalp polynucleotide treatment showing significant hair density improvement and follicle regeneration after treatment course"
     }
   ];
 
