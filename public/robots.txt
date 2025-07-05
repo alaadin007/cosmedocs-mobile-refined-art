@@ -14,4 +14,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://cosmedocs.com/sitemap.xml
+Sitemap: https://www.cosmedocs.co.uk/sitemap.xml
