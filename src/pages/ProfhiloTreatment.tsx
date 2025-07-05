@@ -367,10 +367,16 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* Profhilo Treatment Procedure Section */}
-        <section className="py-32 bg-black">
-          <div className="page-container">
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A] relative overflow-hidden">
+          {/* Background elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-1/3 w-72 h-72 bg-white/[0.015] rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-white/[0.01] rounded-full blur-3xl" />
+          </div>
+          
+          <div className="page-container relative z-10">
             <motion.div
-              className="text-center mb-20"
+              className="text-center mb-24"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -384,64 +390,81 @@ const ProfhiloTreatment = () => {
               </p>
             </motion.div>
             
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-3 gap-12">
-                {/* Before Treatment */}
-                <motion.div
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <span className="text-white text-2xl font-light">1</span>
-                  </div>
-                  <h3 className="text-2xl font-light text-white mb-6">Before Your Treatment</h3>
-                  <div className="space-y-4 text-white/80 font-light">
-                    <p>The first step is consultation with a medical professional, followed by a comprehensive skin examination and progress photos.</p>
-                    <p>At Cosmedocs, adherence to a strict Profhilo treatment protocol is essential for optimal results.</p>
-                  </div>
-                </motion.div>
-
-                {/* During Treatment */}
-                <motion.div
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <span className="text-white text-2xl font-light">2</span>
-                  </div>
-                  <h3 className="text-2xl font-light text-white mb-6">During Your Treatment</h3>
-                  <div className="space-y-4 text-white/80 font-light">
-                    <p>• Profhilo is a speedy treatment with no downtime, lasting under 30 minutes</p>
-                    <p>• Topical numbing cream applied followed by injection with a very thin needle</p>
-                    <p>• High-concentration HA injected in 10 strategic locations, five on each side of the face</p>
-                    <p>• Some patients may experience a slight prick sensation during injection</p>
-                  </div>
-                </motion.div>
-
-                {/* After Treatment */}
-                <motion.div
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <span className="text-white text-2xl font-light">3</span>
-                  </div>
-                  <h3 className="text-2xl font-light text-white mb-6">After Your Treatment</h3>
-                  <div className="space-y-4 text-white/80 font-light">
-                    <p>Mild bruising or swelling around injection sites may occur but usually subsides within a few days.</p>
-                    <p>Avoid touching or rubbing the area and strenuous exercise for 24 hours following treatment.</p>
-                    <p>Two treatments suggested one month apart for maximum performance with final results becoming visible gradually.</p>
-                  </div>
-                </motion.div>
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    number: "1",
+                    title: "Before Your Treatment",
+                    content: [
+                      "The first step is consultation with a medical professional, followed by a comprehensive skin examination and progress photos.",
+                      "At Cosmedocs, adherence to a strict Profhilo treatment protocol is essential for optimal results."
+                    ],
+                    icon: "📋"
+                  },
+                  {
+                    number: "2", 
+                    title: "During Your Treatment",
+                    content: [
+                      "• Profhilo is a speedy treatment with no downtime, lasting under 30 minutes",
+                      "• Topical numbing cream applied followed by injection with a very thin needle", 
+                      "• High-concentration HA injected in 10 strategic locations, five on each side of the face",
+                      "• Some patients may experience a slight prick sensation during injection"
+                    ],
+                    icon: "💉"
+                  },
+                  {
+                    number: "3",
+                    title: "After Your Treatment", 
+                    content: [
+                      "Mild bruising or swelling around injection sites may occur but usually subsides within a few days.",
+                      "Avoid touching or rubbing the area and strenuous exercise for 24 hours following treatment.",
+                      "Two treatments suggested one month apart for maximum performance with final results becoming visible gradually."
+                    ],
+                    icon: "✨"
+                  }
+                ].map((step, index) => (
+                  <motion.div
+                    key={index}
+                    className="group relative bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/5"
+                    initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.8, delay: index * 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                    
+                    {/* Connection line to next step */}
+                    {index < 2 && (
+                      <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-white/20 to-transparent" />
+                    )}
+                    
+                    <div className="relative z-10">
+                      {/* Number badge with enhanced styling */}
+                      <div className="relative mb-6">
+                        <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-full w-20 h-20 flex items-center justify-center border border-white/20 group-hover:border-white/30 transition-all duration-300">
+                          <span className="text-white text-2xl font-light">{step.number}</span>
+                        </div>
+                        <div className="absolute -top-2 -right-2 text-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-300">
+                          {step.icon}
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-2xl font-light text-white mb-6 group-hover:text-white transition-colors duration-300">
+                        {step.title}
+                      </h3>
+                      
+                      <div className="space-y-4">
+                        {step.content.map((text, textIndex) => (
+                          <p key={textIndex} className="text-white/70 font-light leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                            {text}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
