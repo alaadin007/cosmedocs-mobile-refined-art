@@ -548,8 +548,14 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
+        <section className="py-32 bg-black relative overflow-hidden">
+          {/* Subtle background elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-white/[0.01] rounded-full blur-3xl" />
+          </div>
+          
+          <div className="page-container relative z-10">
             <motion.div
               className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
@@ -566,29 +572,66 @@ const ProfhiloTreatment = () => {
             </motion.div>
             
             <motion.div 
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
               {[
-                "Better moisturising effects than topical skincare",
-                "Addresses ageing wrinkles & creases",
-                "Plumps up crepey skin on face, neck, hands",
-                "Boosts skin's elastin and collagen production",
-                "Delivers the effect of tighter skin",
-                "Suitable for all skin types and ethnicities"
+                {
+                  title: "Superior Hydration",
+                  description: "Better moisturising effects than topical skincare",
+                  icon: "💧"
+                },
+                {
+                  title: "Anti-Ageing Power",
+                  description: "Addresses ageing wrinkles & creases",
+                  icon: "✨"
+                },
+                {
+                  title: "Skin Plumping",
+                  description: "Plumps up crepey skin on face, neck, hands",
+                  icon: "🌟"
+                },
+                {
+                  title: "Collagen Boost",
+                  description: "Boosts skin's elastin and collagen production",
+                  icon: "🧬"
+                },
+                {
+                  title: "Skin Tightening",
+                  description: "Delivers the effect of tighter skin",
+                  icon: "🎯"
+                },
+                {
+                  title: "Universal Suitability",
+                  description: "Suitable for all skin types and ethnicities",
+                  icon: "🌍"
+                }
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group relative bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/5"
+                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-white/90 font-light">{benefit}</div>
+                  {/* Subtle gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                  
+                  <div className="relative z-10">
+                    <div className="text-3xl mb-4 opacity-60 group-hover:opacity-80 transition-opacity duration-300">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-white/70 font-light leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                      {benefit.description}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
