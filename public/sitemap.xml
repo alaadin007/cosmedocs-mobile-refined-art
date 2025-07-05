@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
@@ -9,16 +8,16 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://cosmedocs.com/</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/treatments</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/treatments</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
@@ -26,32 +25,32 @@
   
   <!-- Blog Pages -->
   <url>
-    <loc>https://cosmedocs.com/blog/non-surgical-nose-job-evolution</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/non-surgical-nose-job-evolution</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/blog/pdo-threads-comprehensive-guide</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/pdo-threads-comprehensive-guide</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/blog/aesthetic-maintenance-cost-guide</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/aesthetic-maintenance-cost-guide</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/blog/chinese-london-aesthetics-guide</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/blog/chinese-london-aesthetics-guide</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
@@ -59,40 +58,40 @@
   
   <!-- Core Treatment Pages -->
   <url>
-    <loc>https://cosmedocs.com/lip-fillers</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/lip-fillers</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/non-surgical-nose-job</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/non-surgical-nose-job</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/non-surgical-facelift</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/non-surgical-facelift</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/dermal-filler-makeover</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/dermal-filler-makeover</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/pdo-threads</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/pdo-threads</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <mobile:mobile/>
@@ -100,32 +99,32 @@
   
   <!-- Advanced Treatment Pages -->
   <url>
-    <loc>https://cosmedocs.com/advanced-consultation</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/advanced-consultation</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/advanced-upper-face-botox</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/advanced-upper-face-botox</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/lower-face-botox</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/lower-face-botox</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/nefertiti-botox-facelift</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/nefertiti-botox-facelift</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
@@ -133,8 +132,8 @@
   
   <!-- Specialized Botox Treatments -->
   <url>
-    <loc>https://cosmedocs.com/trigger-point-botox</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/trigger-point-botox</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <mobile:mobile/>
@@ -142,8 +141,8 @@
   
   <!-- Filler Treatments -->
   <url>
-    <loc>https://cosmedocs.com/lip-filler-dissolve</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/lip-filler-dissolve</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
@@ -151,16 +150,16 @@
   
   <!-- Specialized Treatments -->
   <url>
-    <loc>https://cosmedocs.com/clinical-concepts-to-flawless-skin</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/clinical-concepts-to-flawless-skin</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/medical-anal-bleaching</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/medical-anal-bleaching</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
@@ -168,16 +167,16 @@
   
   <!-- Multilingual Treatment Summaries -->
   <url>
-    <loc>https://cosmedocs.com/treatments-summary-arabic</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/treatments-summary-arabic</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/treatments-summary-chinese</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/treatments-summary-chinese</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
@@ -185,24 +184,24 @@
   
   <!-- Location Pages -->
   <url>
-    <loc>https://cosmedocs.com/birmingham</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/birmingham</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/manchester</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/manchester</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/cardiff</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/cardiff</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <mobile:mobile/>
@@ -210,24 +209,24 @@
   
   <!-- Company Pages -->
   <url>
-    <loc>https://cosmedocs.com/about</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/about</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/contact</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/contact</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <mobile:mobile/>
   </url>
   
   <url>
-    <loc>https://cosmedocs.com/partners</loc>
-    <lastmod>2025-06-06</lastmod>
+    <loc>https://www.cosmedocs.co.uk/partners</loc>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <mobile:mobile/>
