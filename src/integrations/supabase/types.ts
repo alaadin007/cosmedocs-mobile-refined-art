@@ -603,6 +603,45 @@ export type Database = {
           },
         ]
       }
+      treatment_videos: {
+        Row: {
+          created_at: string
+          description: string | null
+          duration: number | null
+          file_size: number | null
+          id: string
+          thumbnail_url: string | null
+          title: string
+          treatment_name: string
+          updated_at: string
+          video_url: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          duration?: number | null
+          file_size?: number | null
+          id?: string
+          thumbnail_url?: string | null
+          title: string
+          treatment_name: string
+          updated_at?: string
+          video_url: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          duration?: number | null
+          file_size?: number | null
+          id?: string
+          thumbnail_url?: string | null
+          title?: string
+          treatment_name?: string
+          updated_at?: string
+          video_url?: string
+        }
+        Relationships: []
+      }
       website_content: {
         Row: {
           content: string | null

@@ -138,6 +138,12 @@ export const sitemapData: SitemapData = {
       lastmod: currentDate,
       changefreq: 'monthly',
       priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/chin-botox`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.8
     }
   ],
   blog: [
