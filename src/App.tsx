@@ -55,6 +55,7 @@ import PolynucleotideTreatment from "./pages/PolynucleotideTreatment";
 import ProfhiloTreatment from "./pages/ProfhiloTreatment";
 import ChinBotox from "./pages/ChinBotox";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <GoogleAnalytics />
           <Layout>
             <Routes>
