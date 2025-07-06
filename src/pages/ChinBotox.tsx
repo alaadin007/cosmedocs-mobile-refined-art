@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+
 import { generateSEOMetadata } from "@/utils/seo";
 
 const ChinBotox = () => {
@@ -148,8 +148,45 @@ const ChinBotox = () => {
           </div>
         </section>
 
+        {/* Before & After Section */}
+        <section className="py-16 bg-gray-900">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-glow">Chin Botox Results</h2>
+              <p className="text-xl text-gray-300">Real transformation from our Harley Street clinic</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gray-800 rounded-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png"
+                  alt="Chin botox before and after treatment"
+                  className="w-full h-auto"
+                />
+                <div className="p-6">
+                  <p className="text-gray-300 text-center leading-relaxed">
+                    <strong className="text-primary-glow">Chin Botox Treatment:</strong> Smooth, refined chin texture eliminating dimpling and cobblestone appearance. Natural results achieved with precision DAO muscle botox - transformation that speaks without saying a word.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Main Content */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2">
@@ -170,35 +207,49 @@ const ChinBotox = () => {
                     The treatment primarily focuses on two key muscle groups: the mentalis muscle in the chin and the DAO (Depressor Anguli Oris) muscle that controls mouth corner positioning. When these muscles become overactive, they create unwanted aesthetic concerns including persistent chin dimpling, downturned mouth corners, and an overall sad or stern facial expression that doesn't reflect your true emotions.
                   </p>
 
-                  <h3 className="text-2xl font-bold mb-4 text-primary-glow">The Science Behind DAO Muscle Treatment</h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    The DAO muscle, short for Depressor Anguli Oris, is a triangular muscle that originates from the mandible and inserts into the corner of the mouth. Its primary function is to depress the angle of the mouth, creating facial expressions associated with sadness, disappointment, or sternness. While this muscle serves important emotional expression purposes, chronic overactivity can result in a permanently downturned appearance, creating what's commonly known as "sad mouth corners."
-                  </p>
+                  <Accordion type="single" collapsible className="space-y-4 mt-8">
+                    <AccordionItem value="dao-science" className="bg-gray-800 border-gray-700 rounded-lg px-6">
+                      <AccordionTrigger className="text-white hover:text-primary-glow text-left">
+                        <h3 className="text-xl font-bold text-primary-glow">The Science Behind DAO Muscle Treatment</h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-300 leading-relaxed space-y-4">
+                        <p>
+                          The DAO muscle, short for Depressor Anguli Oris, is a triangular muscle that originates from the mandible and inserts into the corner of the mouth. Its primary function is to depress the angle of the mouth, creating facial expressions associated with sadness, disappointment, or sternness. While this muscle serves important emotional expression purposes, chronic overactivity can result in a permanently downturned appearance, creating what's commonly known as "sad mouth corners."
+                        </p>
+                        <p>
+                          Our chin botox treatment involves precise injections of botulinum toxin into strategic points along the DAO muscle and mentalis muscle. This carefully calibrated approach temporarily relaxes these muscles, allowing the opposing elevator muscles to create a subtle lifting effect on the mouth corners. The result is a more neutral, pleasant resting facial expression that better reflects your natural personality.
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    Our chin botox treatment involves precise injections of botulinum toxin into strategic points along the DAO muscle and mentalis muscle. This carefully calibrated approach temporarily relaxes these muscles, allowing the opposing elevator muscles to create a subtle lifting effect on the mouth corners. The result is a more neutral, pleasant resting facial expression that better reflects your natural personality.
-                  </p>
+                    <AccordionItem value="technique" className="bg-gray-800 border-gray-700 rounded-lg px-6">
+                      <AccordionTrigger className="text-white hover:text-primary-glow text-left">
+                        <h3 className="text-xl font-bold text-primary-glow">Advanced Technique and Natural Results</h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-300 leading-relaxed space-y-4">
+                        <p>
+                          At Cosmedocs, we employ advanced injection techniques developed through years of experience in facial anatomy and aesthetic medicine. Our doctors understand that successful chin botox requires not just technical skill, but an artistic eye for facial proportions and muscle dynamics. Each treatment is customized based on your unique facial structure, muscle strength, and aesthetic goals.
+                        </p>
+                        <p>
+                          The treatment process begins with a comprehensive consultation where we analyze your facial expressions, both at rest and during movement. This detailed assessment allows us to identify the specific muscles contributing to your concerns and develop a targeted treatment plan. We consider factors such as your natural facial asymmetries, speaking patterns, and desired level of correction to ensure optimal results.
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
 
-                  <h3 className="text-2xl font-bold mb-4 text-primary-glow">Advanced Technique and Natural Results</h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    At Cosmedocs, we employ advanced injection techniques developed through years of experience in facial anatomy and aesthetic medicine. Our doctors understand that successful chin botox requires not just technical skill, but an artistic eye for facial proportions and muscle dynamics. Each treatment is customized based on your unique facial structure, muscle strength, and aesthetic goals.
-                  </p>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    The treatment process begins with a comprehensive consultation where we analyze your facial expressions, both at rest and during movement. This detailed assessment allows us to identify the specific muscles contributing to your concerns and develop a targeted treatment plan. We consider factors such as your natural facial asymmetries, speaking patterns, and desired level of correction to ensure optimal results.
-                  </p>
-
-                  <h3 className="text-2xl font-bold mb-4 text-primary-glow">Benefits Beyond Aesthetics</h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    While the aesthetic improvements from chin botox are immediately apparent, many clients discover additional benefits that extend beyond appearance. Reducing chronic muscle tension in the lower face can alleviate jaw strain and contribute to overall facial comfort. Additionally, the psychological impact of achieving a more pleasant resting expression often enhances confidence and social interactions.
-                  </p>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    Our approach to chin botox embodies Cosmedocs' philosophy of "invisible art" – creating subtle, natural enhancements that improve your appearance without obvious artificial intervention. The goal is not to eliminate all facial expression, but rather to optimize your natural features for a more balanced, youthful, and approachable appearance that truly represents who you are.
-                  </p>
+                    <AccordionItem value="benefits" className="bg-gray-800 border-gray-700 rounded-lg px-6">
+                      <AccordionTrigger className="text-white hover:text-primary-glow text-left">
+                        <h3 className="text-xl font-bold text-primary-glow">Benefits Beyond Aesthetics</h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-300 leading-relaxed space-y-4">
+                        <p>
+                          While the aesthetic improvements from chin botox are immediately apparent, many clients discover additional benefits that extend beyond appearance. Reducing chronic muscle tension in the lower face can alleviate jaw strain and contribute to overall facial comfort. Additionally, the psychological impact of achieving a more pleasant resting expression often enhances confidence and social interactions.
+                        </p>
+                        <p>
+                          Our approach to chin botox embodies Cosmedocs' philosophy of "invisible art" – creating subtle, natural enhancements that improve your appearance without obvious artificial intervention. The goal is not to eliminate all facial expression, but rather to optimize your natural features for a more balanced, youthful, and approachable appearance that truly represents who you are.
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </motion.div>
               </div>
 
@@ -246,23 +297,6 @@ const ChinBotox = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-gray-900">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-glow">Chin Botox Results</h2>
-              <p className="text-xl text-gray-300">Real transformations from our Harley Street clinic</p>
-            </motion.div>
-
-            <BeforeAfterImageViewer images={beforeAfterImages} />
-          </div>
-        </section>
 
         {/* FAQ Section */}
         <section className="py-20 bg-black">
