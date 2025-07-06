@@ -14,9 +14,7 @@ const ChinBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png", alt: "Chin botox before and after", caption: "Transformation showing lifted mouth corners and improved chin contour" },
-    { src: "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png", alt: "DAO muscle botox results", caption: "Enhanced facial harmony with reduced downturned mouth appearance" },
-    { src: "/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png", alt: "Natural chin enhancement", caption: "Subtle, natural-looking chin improvement maintaining facial balance" }
+    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Chin botox before and after treatment", caption: "Chin Botox Treatment: Smooth, refined chin texture eliminating dimpling and cobblestone appearance. Natural results achieved with precision DAO muscle botox - transformation that speaks without saying a word." }
   ];
 
   const faqs = [
@@ -46,7 +44,7 @@ const ChinBotox = () => {
     },
     {
       question: "How much does chin botox cost?",
-      answer: "Chin botox at Cosmedocs starts from £280. The final cost depends on the number of units required and specific treatment areas. We provide transparent pricing during your consultation with no hidden fees."
+      answer: "Chin botox at Cosmedocs costs £175 when done independently, or £50 extra when combined with other botox areas like frown lines, forehead, or crow's feet. We provide transparent pricing during your consultation with no hidden fees."
     },
     {
       question: "Can chin botox be combined with other treatments?",
@@ -90,7 +88,7 @@ const ChinBotox = () => {
       <div className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="page-container relative z-10">
+          <div className="container mx-auto px-4 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -98,47 +96,54 @@ const ChinBotox = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Chin Botox
-                  <span className="block text-primary-glow">London</span>
+                  <span className="block text-purple-300">DAO Muscle Treatment</span>
+                  <span className="block text-sm mt-4">Professional treatment for natural-looking results</span>
                 </h1>
-                <p className="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
-                  Transform sad mouth corners and chin dimpling with expert DAO muscle botox treatment. Our aesthetics is invisible art.
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Expert Practitioners</span>
+                  <br />
+                  Transform sad mouth corners and chin dimpling with invisible art philosophy
                 </p>
+                
+                {/* Animated Tagline */}
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="text-lg md:text-xl text-gray-400 mb-8 relative"
+                >
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-pulse">
+                      art • science • bit of magic
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 blur-sm rounded-lg animate-pulse opacity-50"></span>
+                  </span>
+                </motion.p>
+                
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">From £175</p>
+                  <p className="text-sm text-gray-300">15-20 minutes • Results last 4-6 months</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
-                    size="lg" 
-                    className="text-lg px-8 py-4 bg-primary hover:bg-primary-glow text-white rounded-full transition-all duration-300 transform hover:scale-105"
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
                     onClick={() => window.open('https://med.as.me/schedule.php?appointmentType=16864702', '_blank')}
                   >
-                    Book Free Consultation
+                    Book Consultation
                   </Button>
                   <Button 
                     variant="outline" 
-                    size="lg" 
-                    className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black rounded-full transition-all duration-300"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
                     onClick={() => window.open('tel:08008600178', '_self')}
                   >
-                    Call Now
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <div className="relative z-10">
-                  <img 
-                    src="/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png" 
-                    alt="Chin botox treatment results" 
-                    className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent rounded-lg blur-3xl"></div>
-              </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
@@ -225,7 +230,7 @@ const ChinBotox = () => {
                         <strong className="text-white">Downtime:</strong> None required
                       </div>
                       <div>
-                        <strong className="text-white">Price from:</strong> £280
+                        <strong className="text-white">Price from:</strong> £175 (standalone) or +£50 (with other areas)
                       </div>
                       <Button 
                         className="w-full mt-4 bg-primary hover:bg-primary-glow"

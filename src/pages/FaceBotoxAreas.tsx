@@ -69,42 +69,48 @@ const FaceBotoxAreas = () => {
       price: "£175",
       description: "Smooth dimpled or cobblestone chin texture for a refined appearance.",
       units: "15-25 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "/chin-botox"
     },
     {
       name: "Nefertiti Face Lift",
       price: "£300",
       description: "Jawline definition and neck smoothing for an elegant profile.",
       units: "30-50 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "/nefertiti-botox-facelift"
     },
     {
       name: "Masseter (Jaw Slimming)",
       price: "£350",
       description: "Reduce jaw muscle bulk for a softer, more feminine facial contour.",
       units: "25-40 units per side",
-      duration: "6-8 months"
+      duration: "6-8 months",
+      link: "#"
     },
     {
       name: "Lip Flip",
       price: "£175",
       description: "Subtle upper lip enhancement for a naturally fuller appearance.",
       units: "4-8 units",
-      duration: "3-4 months"
+      duration: "3-4 months",
+      link: "#"
     },
     {
       name: "Gummy Smile",
       price: "£50",
       description: "Reduce excessive gum display when smiling for perfect smile proportions.",
       units: "2-4 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "/gummy-smile-botox"
     },
     {
       name: "Bunny Lines",
       price: "£50",
       description: "Smooth fine lines on the nose bridge that appear when scrunching.",
       units: "4-8 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "#"
     }
   ];
 
@@ -402,10 +408,13 @@ const FaceBotoxAreas = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center text-sm text-gray-400 group-hover:text-white transition-colors">
+                    <button
+                      onClick={() => area.link && area.link !== '#' && (window.location.href = area.link)}
+                      className="flex items-center text-sm text-gray-400 group-hover:text-white transition-colors cursor-pointer"
+                    >
                       <span>Learn more</span>
                       <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    </button>
                   </motion.div>
                 ))}
               </div>
