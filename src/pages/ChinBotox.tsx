@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
+import { Check } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 
 const ChinBotox = () => {
@@ -297,6 +297,70 @@ const ChinBotox = () => {
           </div>
         </section>
 
+
+        {/* Related Chin Treatments Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-glow">Related Chin Treatments</h2>
+              <p className="text-xl text-gray-300">Complete your chin transformation with our complementary treatments</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 text-primary-glow">V-Line Chin Contouring</h3>
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Achieve the perfect V-shaped jawline with our advanced contouring treatment. This complementary procedure works beautifully alongside chin botox to create a refined, elegant chin profile that enhances your natural beauty.
+                    </p>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center text-sm text-gray-400">
+                        <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        Enhanced jawline definition
+                      </div>
+                      <div className="flex items-center text-sm text-gray-400">
+                        <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        Natural, elegant contouring
+                      </div>
+                      <div className="flex items-center text-sm text-gray-400">
+                        <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        Complements chin botox treatment
+                      </div>
+                    </div>
+                    <Button 
+                      className="bg-primary hover:bg-primary-glow rounded-full px-6 py-3"
+                      onClick={() => window.open('https://med.as.me/schedule.php?appointmentType=16864702', '_blank')}
+                    >
+                      Learn More About V-Line
+                    </Button>
+                  </div>
+                  
+                  <div className="relative">
+                    <img 
+                      src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
+                      alt="V-Line chin contouring before and after results"
+                      className="w-full h-auto rounded-lg shadow-xl"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <section className="py-20 bg-black">
