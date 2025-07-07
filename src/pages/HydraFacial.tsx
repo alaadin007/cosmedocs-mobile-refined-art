@@ -315,6 +315,50 @@ const HydraFacial = () => {
           </div>
         </section>
 
+        {/* Benefits Section */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment Benefits
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Discover why HydraFacial is the preferred choice for immediate, visible skin transformation
+              </p>
+            </motion.div>
+            
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="bg-primary/20 rounded-full p-3 group-hover:bg-primary/30 transition-colors">
+                        <Star className="h-6 w-6 text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-light text-white mb-2 leading-relaxed">
+                      {benefit}
+                    </h3>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Treatment Steps Section */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
