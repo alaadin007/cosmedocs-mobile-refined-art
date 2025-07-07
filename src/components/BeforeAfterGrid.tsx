@@ -26,8 +26,13 @@ const BeforeAfterGrid = ({
     setDisplayCount(prev => Math.min(prev + loadMoreIncrement, images.length));
   };
 
+  const handleShowLess = () => {
+    setDisplayCount(initialDisplay);
+  };
+
   const displayedImages = images.slice(0, displayCount);
   const hasMore = displayCount < images.length;
+  const showingAll = displayCount >= images.length;
 
   return (
     <div className="space-y-8">
@@ -61,15 +66,15 @@ const BeforeAfterGrid = ({
         ))}
       </div>
 
-      {/* Load More Button */}
-      {hasMore && (
+      {/* Load More / Show Less Button */}
+      {(hasMore || showingAll) && (
         <div className="text-center">
           <Button
-            onClick={handleLoadMore}
+            onClick={hasMore ? handleLoadMore : handleShowLess}
             variant="outline"
             className="border-white/20 text-white hover:bg-white/10 hover:text-white"
           >
-            Load More Results
+            {hasMore ? "Load More Results" : "Show Less"}
           </Button>
         </div>
       )}
