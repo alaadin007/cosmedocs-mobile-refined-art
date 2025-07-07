@@ -315,7 +315,7 @@ const HydraFacial = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section - Option 1: Horizontal List with Icons */}
         <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div
@@ -333,25 +333,165 @@ const HydraFacial = () => {
               </p>
             </motion.div>
             
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Option 1: Clean List Layout */}
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-6">
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 40 }}
+                    className="flex items-center space-x-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group"
+                    initial={{ opacity: 0, x: -40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="bg-primary/20 rounded-full p-3 group-hover:bg-primary/30 transition-colors flex-shrink-0">
+                      <Star className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-light text-white leading-relaxed">
+                      {benefit}
+                    </h3>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Alternative Option 2: Two Column Layout */}
+        <section className="py-32 bg-[#0A0A0A] hidden">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment Benefits
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Discover why HydraFacial is the preferred choice for immediate, visible skin transformation
+              </p>
+            </motion.div>
+            
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="space-y-8">
+                  {benefits.slice(0, Math.ceil(benefits.length / 2)).map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-start space-x-4"
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="bg-primary/20 rounded-full p-2 mt-1 flex-shrink-0">
+                        <Star className="h-4 w-4 text-primary" />
+                      </div>
+                      <p className="text-lg text-white/90 font-light leading-relaxed">{benefit}</p>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="space-y-8">
+                  {benefits.slice(Math.ceil(benefits.length / 2)).map((benefit, index) => (
+                    <motion.div
+                      key={index + Math.ceil(benefits.length / 2)}
+                      className="flex items-start space-x-4"
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: (index + Math.ceil(benefits.length / 2)) * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="bg-primary/20 rounded-full p-2 mt-1 flex-shrink-0">
+                        <Star className="h-4 w-4 text-primary" />
+                      </div>
+                      <p className="text-lg text-white/90 font-light leading-relaxed">{benefit}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Alternative Option 3: Centered Single Column */}
+        <section className="py-32 bg-black hidden">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment Benefits
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Discover why HydraFacial is the preferred choice for immediate, visible skin transformation
+              </p>
+            </motion.div>
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="space-y-8">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="bg-primary/20 rounded-full p-3 group-hover:bg-primary/30 transition-colors">
-                        <Star className="h-6 w-6 text-primary" />
-                      </div>
+                    <div className="bg-primary/20 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                      <Star className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-lg font-light text-white mb-2 leading-relaxed">
+                    <h3 className="text-xl font-light text-white leading-relaxed">
                       {benefit}
                     </h3>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Alternative Option 4: Minimal Checkmark List */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black hidden">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment Benefits
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Discover why HydraFacial is the preferred choice for immediate, visible skin transformation
+              </p>
+            </motion.div>
+            
+            <div className="max-w-2xl mx-auto">
+              <div className="space-y-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center space-x-4 py-4 border-b border-white/10 last:border-b-0"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="bg-primary rounded-full p-1 flex-shrink-0">
+                      <Star className="h-4 w-4 text-black fill-black" />
+                    </div>
+                    <p className="text-lg text-white/90 font-light">{benefit}</p>
                   </motion.div>
                 ))}
               </div>
