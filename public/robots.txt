@@ -14,4 +14,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://61800678-40c0-4e6d-b6f4-f27e93644520.lovableproject.com/sitemap.xml
+Sitemap: https://www.cosmedocs.co.uk/sitemap.xml
