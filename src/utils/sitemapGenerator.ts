@@ -12,7 +12,7 @@ interface SitemapData {
   locations: SitemapUrl[];
 }
 
-const baseUrl = 'https://www.cosmedocs.co.uk';
+const baseUrl = 'https://61800678-40c0-4e6d-b6f4-f27e93644520.lovableproject.com';
 const currentDate = new Date().toISOString().split('T')[0];
 
 export const sitemapData: SitemapData = {
