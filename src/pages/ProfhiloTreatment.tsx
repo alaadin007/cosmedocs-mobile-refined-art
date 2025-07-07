@@ -19,19 +19,29 @@ const ProfhiloTreatment = () => {
   // Before/after images for the viewer
   const beforeAfterImages = [
     {
-      src: "/lovable-uploads/c32f1151-24c9-4e9e-a7de-ee1ef761bab0.png",
-      alt: "Profhilo neck treatment before and after results London Harley Street Cosmedocs",
-      caption: "Neck bio-remodelling showing improved skin texture and tightening"
+      src: "/lovable-uploads/e70c5134-7f36-4127-af82-0d196d38b142.png",
+      alt: "Profhilo nasolabial treatment before and after results London Harley Street Cosmedocs",
+      caption: "Nasolabial area bio-remodelling showing improved skin texture and reduced lines"
     },
     {
-      src: "/lovable-uploads/d91b1bcd-3f3b-4735-8157-eea0f5374eeb.png",
-      alt: "Profhilo face treatment before and after London Cosmedocs bio-remodelling",
-      caption: "Facial rejuvenation with natural hydration and glow"
+      src: "/lovable-uploads/44cfb88a-2a8d-4598-8993-1535528ecbb8.png",
+      alt: "Profhilo lip area treatment before and after London Cosmedocs bio-remodelling",
+      caption: "Lip area rejuvenation with natural hydration and enhanced definition"
     },
     {
-      src: "/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png",
-      alt: "Profhilo cheek treatment severe sun damage before after London Harley Street",
-      caption: "Significant improvement in sun-damaged skin with enhanced texture"
+      src: "/lovable-uploads/3d2b453f-86db-4e3b-9703-d1ce579ed960.png",
+      alt: "Profhilo profile treatment before and after London Harley Street",
+      caption: "Profile improvement showing enhanced skin quality and firmness"
+    },
+    {
+      src: "/lovable-uploads/a65d2bfb-9ce1-4bd9-92fb-5f514a24aab1.png",
+      alt: "Profhilo neck and jawline treatment before and after London Cosmedocs",
+      caption: "Neck and jawline bio-remodelling with visible skin tightening"
+    },
+    {
+      src: "/lovable-uploads/d36a6f86-9526-4705-a008-410d58fb8264.png",
+      alt: "Profhilo treatment 1 month results London Harley Street bio-remodelling",
+      caption: "One month post-treatment showing significant skin improvement"
     }
   ];
 
