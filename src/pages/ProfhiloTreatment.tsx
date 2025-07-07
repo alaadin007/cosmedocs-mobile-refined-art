@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Syringe, Star, Clock, Shield, Heart, Briefcase } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -346,33 +346,31 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        {/* Before & After Results */}
+        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
           <div className="page-container">
             <motion.div
-              className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="max-w-6xl mx-auto"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Transformation Gallery
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing natural bio-remodelling results
-              </p>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">Before & After Results</h2>
+                <p className="text-gray-300 text-lg">
+                  Witness the transformative power of Profhilo bio-remodelling. Our aesthetics is invisible art - 
+                  creating natural, bold transformations that speak without saying a word.
+                </p>
+              </div>
+              <BeforeAfterGrid images={beforeAfterImages} />
+              <div className="text-center mt-8">
+                <p className="text-gray-400 text-sm">
+                  Individual results may vary. Results shown after 2 treatment sessions spaced 4 weeks apart. 
+                  Full effects visible in 6-8 weeks.
+                </p>
+              </div>
             </motion.div>
-            
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Results"
-                title="Profhilo Treatment Results"
-                description="Real patient transformations with bio-remodelling"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-              />
-            </div>
           </div>
         </section>
 
