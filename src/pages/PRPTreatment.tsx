@@ -46,12 +46,6 @@ const PRPTreatment = () => {
   // Handle video selection
   const handleVideoSelect = (video: Tables<'treatment_videos'>) => {
     setSelectedVideo(video);
-    setIsEditMode(false);
-  };
-
-  // Handle video removal
-  const handleVideoRemove = () => {
-    setSelectedVideo(undefined);
   };
 
   const treatmentSpecs = [
@@ -489,15 +483,22 @@ const PRPTreatment = () => {
                   <div className="relative">
                     {/* Enhanced video player container */}
                     <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-2 border border-white/20 shadow-2xl shadow-black/20">
-                      <TreatmentVideoPlayer
-                        video={selectedVideo}
-                        onVideoChange={handleVideoSelect}
-                        onRemove={handleVideoRemove}
-                        treatmentName="PRP"
-                        editMode={true}
-                        showControls={true}
-                        className="w-full rounded-2xl overflow-hidden"
-                      />
+                      {selectedVideo ? (
+                        <TreatmentVideoPlayer
+                          video={selectedVideo}
+                          treatmentName="PRP"
+                          editMode={false}
+                          showControls={true}
+                          className="w-full rounded-2xl overflow-hidden"
+                        />
+                      ) : (
+                        <div className="aspect-video bg-black/30 rounded-2xl flex items-center justify-center">
+                          <div className="text-center p-8">
+                            <Star className="h-12 w-12 text-white/40 mx-auto mb-4" />
+                            <p className="text-white/60">No video available</p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                     
                     {/* Decorative glow */}
@@ -513,7 +514,7 @@ const PRPTreatment = () => {
                     viewport={{ once: true }}
                   >
                     <p className="text-white/60 text-sm">
-                      {selectedVideo ? 'Watch real PRP treatment footage' : 'Select a video to showcase the treatment process'}
+                      {selectedVideo ? 'Real PRP treatment footage' : 'Video content coming soon'}
                     </p>
                   </motion.div>
                 </motion.div>
