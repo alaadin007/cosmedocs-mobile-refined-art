@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import { useVideoManagement } from "@/hooks/useVideoManagement";
@@ -23,7 +23,25 @@ const PRPTreatment = () => {
   const [selectedVideo, setSelectedVideo] = useState<Tables<'treatment_videos'> | undefined>();
   const [isEditMode, setIsEditMode] = useState(false);
   
-  const { getVideosByTreatment } = useVideoManagement();
+  const { videos, loading, loadVideos } = useVideoManagement();
+
+  // Load videos and auto-select PRP video on mount
+  useEffect(() => {
+    loadVideos();
+  }, []);
+
+  // Auto-select the first PRP video when videos are loaded
+  useEffect(() => {
+    if (videos.length > 0 && !selectedVideo) {
+      // Look for PRP videos first, then any video
+      const prpVideo = videos.find(video => 
+        video.treatment_name.toLowerCase().includes('prp') ||
+        video.title.toLowerCase().includes('prp')
+      );
+      const videoToSelect = prpVideo || videos[0];
+      setSelectedVideo(videoToSelect);
+    }
+  }, [videos, selectedVideo]);
 
   // Handle video selection
   const handleVideoSelect = (video: Tables<'treatment_videos'>) => {
