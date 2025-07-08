@@ -29,17 +29,11 @@ const VideoSelector = ({ onVideoSelect, selectedVideoId, treatmentName }: VideoS
   const loadVideos = async () => {
     setLoading(true);
     try {
-      let query = supabase
+      // Show all videos - this allows users to choose from any available video
+      const { data, error } = await supabase
         .from('treatment_videos')
         .select('*')
         .order('created_at', { ascending: false });
-
-      // Optionally filter by treatment name
-      if (treatmentName) {
-        query = query.eq('treatment_name', treatmentName);
-      }
-
-      const { data, error } = await query;
 
       if (error) throw error;
       setVideos(data || []);
@@ -79,10 +73,7 @@ const VideoSelector = ({ onVideoSelect, selectedVideoId, treatmentName }: VideoS
         ) : videos.length === 0 ? (
           <div className="text-center py-8">
             <p className="text-white/60 mb-4">
-              {treatmentName 
-                ? `No videos found for ${treatmentName}`
-                : 'No videos available'
-              }
+              No videos available
             </p>
             <p className="text-white/40 text-sm">
               Upload videos through the Video Management System first
