@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause, Volume2, VolumeX, Maximize2, Edit3, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,41 +29,53 @@ const TreatmentVideoPlayer = ({
 }: TreatmentVideoPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const [videoElement, setVideoElement] = useState<HTMLVideoElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+    const handleEnded = () => setIsPlaying(false);
+
+    videoElement.addEventListener('play', handlePlay);
+    videoElement.addEventListener('pause', handlePause);
+    videoElement.addEventListener('ended', handleEnded);
+
+    return () => {
+      videoElement.removeEventListener('play', handlePlay);
+      videoElement.removeEventListener('pause', handlePause);
+      videoElement.removeEventListener('ended', handleEnded);
+    };
+  }, [video]);
 
   const togglePlay = () => {
-    if (!videoElement) return;
+    if (!videoRef.current) return;
     
     if (isPlaying) {
-      videoElement.pause();
+      videoRef.current.pause();
     } else {
-      videoElement.play();
+      videoRef.current.play();
     }
     setIsPlaying(!isPlaying);
   };
 
   const toggleMute = () => {
-    if (!videoElement) return;
+    if (!videoRef.current) return;
     
-    videoElement.muted = !isMuted;
+    videoRef.current.muted = !isMuted;
     setIsMuted(!isMuted);
   };
 
   const toggleFullscreen = () => {
-    if (!videoElement) return;
+    if (!videoRef.current) return;
     
     if (document.fullscreenElement) {
       document.exitFullscreen();
     } else {
-      videoElement.requestFullscreen();
+      videoRef.current.requestFullscreen();
     }
-  };
-
-  const handleVideoLoad = (element: HTMLVideoElement) => {
-    setVideoElement(element);
-    element.addEventListener('play', () => setIsPlaying(true));
-    element.addEventListener('pause', () => setIsPlaying(false));
-    element.addEventListener('ended', () => setIsPlaying(false));
   };
 
   // Placeholder component when no video is selected
@@ -100,7 +112,7 @@ const TreatmentVideoPlayer = ({
           {/* Video Container */}
           <div className="relative group">
             <video
-              ref={handleVideoLoad}
+              ref={videoRef}
               src={video.video_url}
               className="w-full aspect-video object-cover"
               controls={!showControls}
