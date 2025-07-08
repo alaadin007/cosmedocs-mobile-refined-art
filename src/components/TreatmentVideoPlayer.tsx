@@ -29,6 +29,7 @@ const TreatmentVideoPlayer = ({
 }: TreatmentVideoPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -38,15 +39,21 @@ const TreatmentVideoPlayer = ({
     const handlePlay = () => setIsPlaying(true);
     const handlePause = () => setIsPlaying(false);
     const handleEnded = () => setIsPlaying(false);
+    const handleError = () => setHasError(true);
+    const handleCanPlay = () => setHasError(false);
 
     videoElement.addEventListener('play', handlePlay);
     videoElement.addEventListener('pause', handlePause);
     videoElement.addEventListener('ended', handleEnded);
+    videoElement.addEventListener('error', handleError);
+    videoElement.addEventListener('canplay', handleCanPlay);
 
     return () => {
       videoElement.removeEventListener('play', handlePlay);
       videoElement.removeEventListener('pause', handlePause);
       videoElement.removeEventListener('ended', handleEnded);
+      videoElement.removeEventListener('error', handleError);
+      videoElement.removeEventListener('canplay', handleCanPlay);
     };
   }, [video]);
 
@@ -100,6 +107,9 @@ const TreatmentVideoPlayer = ({
     );
   }
 
+  // Check if video format is supported
+  const isUnsupportedFormat = video?.video_url.toLowerCase().includes('.mov');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -111,14 +121,34 @@ const TreatmentVideoPlayer = ({
         <CardContent className="p-0">
           {/* Video Container */}
           <div className="relative group">
-            <video
-              ref={videoRef}
-              src={video.video_url}
-              className="w-full aspect-video object-cover"
-              controls={!showControls}
-              preload="metadata"
-              playsInline
-            />
+            {hasError || isUnsupportedFormat ? (
+              <div className="aspect-video bg-black/30 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <Play className="h-12 w-12 text-white/40 mx-auto mb-4" />
+                  <p className="text-white/60 mb-2">Video format not supported</p>
+                  <p className="text-white/40 text-sm">
+                    {isUnsupportedFormat ? 'MOV files require Safari browser or MP4 conversion' : 'Please try a different browser'}
+                  </p>
+                  <a 
+                    href={video.video_url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 text-sm underline mt-2 inline-block"
+                  >
+                    Download video
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <video
+                ref={videoRef}
+                src={video.video_url}
+                className="w-full aspect-video object-cover"
+                controls={!showControls}
+                preload="metadata"
+                playsInline
+              />
+            )}
 
             {/* Custom Controls Overlay */}
             {showControls && (
