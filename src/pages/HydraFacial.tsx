@@ -28,24 +28,24 @@ const HydraFacial = () => {
   // Before/after images for HydraFacial
   const beforeAfterImages = [
     {
-      src: "/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png",
-      alt: "HydraFacial before and after London Cosmedocs glowing skin transformation",
-      caption: "Radiant skin transformation achieved with HydraFacial vortex technology showing improved texture and hydration"
+      src: "/lovable-uploads/38a0f044-da28-413f-afa4-d9f7955797f5.png",
+      alt: "HydraFacial before and after London Cosmedocs skin texture improvement",
+      caption: "Remarkable skin texture improvement and radiance achieved with HydraFacial vortex technology"
     },
     {
-      src: "/lovable-uploads/fca71683-2bd7-438f-b37d-750080620e09.png",
-      alt: "HydraFacial pore refinement before after London Harley Street Cosmedocs",
-      caption: "Visible pore refinement and skin smoothing with improved clarity and radiance"
+      src: "/lovable-uploads/5a0b4122-4a4e-4dfd-90aa-7af725983356.png",
+      alt: "HydraFacial pigmentation treatment before after London Harley Street Cosmedocs",
+      caption: "Visible reduction in pigmentation and improved skin clarity with enhanced brightness"
     },
     {
-      src: "/lovable-uploads/44cfb88a-2a8d-4598-8993-1535528ecbb8.png",
-      alt: "HydraFacial acne treatment before after London Cosmedocs skin improvement",
-      caption: "Acne-prone skin improvement showing clearer complexion and reduced inflammation"
+      src: "/lovable-uploads/9f5e369e-f3ac-4643-9470-bb1642025063.png",
+      alt: "HydraFacial skin hydration before after London Cosmedocs glowing results",
+      caption: "Deep hydration and skin rejuvenation showing improved texture and natural glow"
     },
     {
-      src: "/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png",
-      alt: "HydraFacial hydration boost before after London Harley Street glowing skin",
-      caption: "Deep hydration boost revealing plump, dewy skin with enhanced luminosity"
+      src: "/lovable-uploads/59aa52ad-4a4d-417e-8d44-3d9252fd6180.png",
+      alt: "HydraFacial complexion enhancement before after London Harley Street treatment",
+      caption: "Overall complexion enhancement with improved skin tone and radiant appearance"
     }
   ];
 
