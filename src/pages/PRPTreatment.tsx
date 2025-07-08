@@ -27,11 +27,15 @@ const PRPTreatment = () => {
 
   // Load videos and auto-select PRP video on mount
   useEffect(() => {
+    console.log('Loading videos for PRP page...');
     loadVideos();
   }, []);
 
   // Auto-select the first PRP video when videos are loaded
   useEffect(() => {
+    console.log('Videos loaded:', videos.length, 'videos');
+    console.log('Current selectedVideo:', selectedVideo);
+    
     if (videos.length > 0 && !selectedVideo) {
       // Look for PRP videos first, then any video
       const prpVideo = videos.find(video => 
@@ -39,6 +43,7 @@ const PRPTreatment = () => {
         video.title.toLowerCase().includes('prp')
       );
       const videoToSelect = prpVideo || videos[0];
+      console.log('Selecting video:', videoToSelect);
       setSelectedVideo(videoToSelect);
     }
   }, [videos, selectedVideo]);
