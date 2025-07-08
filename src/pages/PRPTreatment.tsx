@@ -414,42 +414,89 @@ const PRPTreatment = () => {
             </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-16 items-start">
-              {/* Benefits - Left Side (Two Columns) */}
+              {/* Benefits - Left Side (Enhanced Grid) */}
               <div className="flex-1">
-                <div className="grid md:grid-cols-2 gap-4">
+                <motion.div
+                  className="grid md:grid-cols-2 gap-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
                   {benefits.map((benefit, index) => (
                     <motion.div
                       key={index}
-                      className="flex items-center space-x-4 p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300"
-                      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                      className="group relative overflow-hidden"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       viewport={{ once: true }}
+                      whileHover={{ scale: 1.02 }}
                     >
-                      <Star className="h-5 w-5 text-white/60 flex-shrink-0" />
-                      <span className="text-white/80">{benefit}</span>
+                      <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-white/10">
+                        {/* Gradient overlay on hover */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                        
+                        {/* Content */}
+                        <div className="relative z-10 flex items-start space-x-4">
+                          <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <Star className="h-6 w-6 text-primary group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
+                              {benefit}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {/* Decorative elements */}
+                        <div className="absolute top-2 right-2 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
+                        <div className="absolute bottom-2 left-2 w-8 h-8 bg-gradient-to-br from-white/5 to-transparent rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
+                      </div>
                     </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
 
-              {/* Video - Right Side */}
+              {/* Video - Right Side (Enhanced) */}
               <div className="flex-1 max-w-lg">
                 <motion.div
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: true }}
+                  className="sticky top-8"
                 >
-                  <TreatmentVideoPlayer
-                    video={selectedVideo}
-                    onVideoChange={handleVideoSelect}
-                    onRemove={handleVideoRemove}
-                    treatmentName="PRP"
-                    editMode={true}
-                    showControls={true}
-                    className="w-full"
-                  />
+                  <div className="relative">
+                    {/* Enhanced video player container */}
+                    <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-2 border border-white/20 shadow-2xl shadow-black/20">
+                      <TreatmentVideoPlayer
+                        video={selectedVideo}
+                        onVideoChange={handleVideoSelect}
+                        onRemove={handleVideoRemove}
+                        treatmentName="PRP"
+                        editMode={true}
+                        showControls={true}
+                        className="w-full rounded-2xl overflow-hidden"
+                      />
+                    </div>
+                    
+                    {/* Decorative glow */}
+                    <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-transparent to-primary/20 rounded-3xl blur-xl opacity-30" />
+                  </div>
+                  
+                  {/* Video info text */}
+                  <motion.div
+                    className="mt-6 text-center"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="text-white/60 text-sm">
+                      {selectedVideo ? 'Watch real PRP treatment footage' : 'Select a video to showcase the treatment process'}
+                    </p>
+                  </motion.div>
                 </motion.div>
               </div>
             </div>
