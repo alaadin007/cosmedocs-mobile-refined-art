@@ -55,6 +55,7 @@ import PolynucleotideTreatment from "./pages/PolynucleotideTreatment";
 import ProfhiloTreatment from "./pages/ProfhiloTreatment";
 import ChinBotox from "./pages/ChinBotox";
 import HydraFacial from "./pages/HydraFacial";
+import VideoUpload from "./pages/VideoUpload";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -123,6 +124,7 @@ const App = () => (
               <Route path="/profhilo-treatment" element={<ProfhiloTreatment />} />
               <Route path="/chin-botox" element={<ChinBotox />} />
               <Route path="/hydrafacial-london" element={<HydraFacial />} />
+              <Route path="/admin/video-upload" element={<VideoUpload />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

@@ -5,15 +5,23 @@ import { Droplets, Star, Clock, Users, Calendar, Shield } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
+import { useVideoManagement } from "@/hooks/useVideoManagement";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 
 const HydraFacial = () => {
+  const { videos, getVideosByTreatment } = useVideoManagement();
+  const [selectedVideo, setSelectedVideo] = useState<any>(null);
+  
   const seoData = generateSEOMetadata(
     "HydraFacial London | £175 | Cosmedocs | Harley Street",
     "Premium HydraFacial treatments in London's Harley Street. Advanced vortex technology for glowing, hydrated skin. From £175. Book your session today.",
     "/hydrafacial-london"
   );
+
+  // Get HydraFacial specific videos
+  const hydraFacialVideos = getVideosByTreatment('HydraFacial');
 
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
@@ -555,23 +563,13 @@ const HydraFacial = () => {
                   transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                   viewport={{ once: true }}
                 >
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
-                    <div className="aspect-video bg-black/50 rounded-xl mb-6 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="bg-primary/20 rounded-full p-6 mx-auto mb-4 w-20 h-20 flex items-center justify-center">
-                          <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                          </svg>
-                        </div>
-                        <h3 className="text-xl font-light text-white mb-2">HydraFacial Treatment</h3>
-                        <p className="text-white/70 text-sm">Watch the complete procedure</p>
-                      </div>
-                    </div>
-                    <p className="text-white/80 text-sm leading-relaxed">
-                      Experience the complete HydraFacial journey from start to finish. 
-                      See how our advanced vortex technology transforms your skin in just 30-45 minutes.
-                    </p>
-                  </div>
+                  <TreatmentVideoPlayer
+                    video={hydraFacialVideos[0] || selectedVideo}
+                    onVideoChange={setSelectedVideo}
+                    treatmentName="HydraFacial"
+                    editMode={false}
+                    showControls={true}
+                  />
                 </motion.div>
               </div>
             </div>
