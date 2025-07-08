@@ -395,21 +395,50 @@ const PRPTreatment = () => {
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-4">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center space-x-4 p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300"
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Star className="h-5 w-5 text-white/60 flex-shrink-0" />
-                    <span className="text-white/80">{benefit}</span>
-                  </motion.div>
-                ))}
+            <div className="flex flex-col lg:flex-row gap-16 items-start">
+              {/* Benefits - Left Side (Two Columns) */}
+              <div className="flex-1">
+                <div className="grid md:grid-cols-2 gap-4">
+                  {benefits.map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center space-x-4 p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300"
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <Star className="h-5 w-5 text-white/60 flex-shrink-0" />
+                      <span className="text-white/80">{benefit}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Video - Right Side */}
+              <div className="flex-1 max-w-lg">
+                <motion.div
+                  className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-2xl font-light text-white mb-6 text-center">
+                    Watch PRP Treatment
+                  </h3>
+                  <div className="aspect-video bg-black/50 rounded-lg border border-white/10 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                      <p className="text-white/60 text-sm">PRP Treatment Video</p>
+                      <p className="text-white/40 text-xs mt-1">Coming Soon</p>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
