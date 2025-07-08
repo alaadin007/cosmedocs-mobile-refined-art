@@ -1,13 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star } from "lucide-react";
+import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
-import { useVideoManagement } from "@/hooks/useVideoManagement";
-import { Tables } from "@/integrations/supabase/types";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 
 const PRPTreatment = () => {
@@ -20,38 +17,6 @@ const PRPTreatment = () => {
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [selectedVideo, setSelectedVideo] = useState<Tables<'treatment_videos'> | undefined>();
-  const [isEditMode, setIsEditMode] = useState(false);
-  
-  const { videos, loading, loadVideos } = useVideoManagement();
-
-  // Load videos and auto-select PRP video on mount
-  useEffect(() => {
-    console.log('Loading videos for PRP page...');
-    loadVideos();
-  }, []);
-
-  // Auto-select the first PRP video when videos are loaded
-  useEffect(() => {
-    console.log('Videos loaded:', videos.length, 'videos');
-    console.log('Current selectedVideo:', selectedVideo);
-    
-    if (videos.length > 0 && !selectedVideo) {
-      // Look for PRP videos first, then any video
-      const prpVideo = videos.find(video => 
-        video.treatment_name.toLowerCase().includes('prp') ||
-        video.title.toLowerCase().includes('prp')
-      );
-      const videoToSelect = prpVideo || videos[0];
-      console.log('Selecting video:', videoToSelect);
-      setSelectedVideo(videoToSelect);
-    }
-  }, [videos, selectedVideo]);
-
-  // Handle video selection
-  const handleVideoSelect = (video: Tables<'treatment_videos'>) => {
-    setSelectedVideo(video);
-  };
 
   const treatmentSpecs = [
     {
@@ -431,100 +396,46 @@ const PRPTreatment = () => {
               </p>
             </motion.div>
 
-            <div className="flex flex-col lg:flex-row gap-16 items-start">
-              {/* Benefits - Left Side (Enhanced Grid) */}
-              <div className="flex-1">
+            <motion.div
+              className="grid md:grid-cols-2 gap-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              {benefits.map((benefit, index) => (
                 <motion.div
-                  className="grid md:grid-cols-2 gap-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  key={index}
+                  className="group relative overflow-hidden"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  whileHover={{ scale: 1.02 }}
                 >
-                  {benefits.map((benefit, index) => (
-                    <motion.div
-                      key={index}
-                      className="group relative overflow-hidden"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      whileHover={{ scale: 1.02 }}
-                    >
-                      <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-white/10">
-                        {/* Gradient overlay on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-                        
-                        {/* Content */}
-                        <div className="relative z-10 flex items-start space-x-4">
-                          <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <Star className="h-6 w-6 text-primary group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
-                              {benefit}
-                            </p>
-                          </div>
-                        </div>
-                        
-                        {/* Decorative elements */}
-                        <div className="absolute top-2 right-2 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
-                        <div className="absolute bottom-2 left-2 w-8 h-8 bg-gradient-to-br from-white/5 to-transparent rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-white/10">
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                    
+                    {/* Content */}
+                    <div className="relative z-10 flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <Star className="h-6 w-6 text-primary group-hover:text-white transition-colors duration-300" />
                       </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </div>
-
-              {/* Video - Right Side (Enhanced) */}
-              <div className="flex-1 max-w-lg">
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="sticky top-8"
-                >
-                  <div className="relative">
-                    {/* Enhanced video player container */}
-                    <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-2 border border-white/20 shadow-2xl shadow-black/20">
-                      {selectedVideo ? (
-                        <TreatmentVideoPlayer
-                          video={selectedVideo}
-                          treatmentName="PRP"
-                          editMode={false}
-                          showControls={true}
-                          className="w-full rounded-2xl overflow-hidden"
-                        />
-                      ) : (
-                        <div className="aspect-video bg-black/30 rounded-2xl flex items-center justify-center">
-                          <div className="text-center p-8">
-                            <Star className="h-12 w-12 text-white/40 mx-auto mb-4" />
-                            <p className="text-white/60">No video available</p>
-                          </div>
-                        </div>
-                      )}
+                      <div className="flex-1 min-w-0">
+                        <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
+                          {benefit}
+                        </p>
+                      </div>
                     </div>
                     
-                    {/* Decorative glow */}
-                    <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-transparent to-primary/20 rounded-3xl blur-xl opacity-30" />
+                    {/* Decorative elements */}
+                    <div className="absolute top-2 right-2 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
+                    <div className="absolute bottom-2 left-2 w-8 h-8 bg-gradient-to-br from-white/5 to-transparent rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
                   </div>
-                  
-                  {/* Video info text */}
-                  <motion.div
-                    className="mt-6 text-center"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    viewport={{ once: true }}
-                  >
-                    <p className="text-white/60 text-sm">
-                      {selectedVideo ? 'Real PRP treatment footage' : 'Video content coming soon'}
-                    </p>
-                  </motion.div>
                 </motion.div>
-              </div>
-            </div>
+              ))}
+            </motion.div>
           </div>
         </section>
 
