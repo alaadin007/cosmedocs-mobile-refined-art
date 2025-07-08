@@ -5,6 +5,9 @@ import { Clock, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, Chevro
 import { generateSEOMetadata } from "@/utils/seo";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
+import { useVideoManagement } from "@/hooks/useVideoManagement";
+import { Tables } from "@/integrations/supabase/types";
 
 const PRPTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -16,6 +19,21 @@ const PRPTreatment = () => {
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<Tables<'treatment_videos'> | undefined>();
+  const [isEditMode, setIsEditMode] = useState(false);
+  
+  const { getVideosByTreatment } = useVideoManagement();
+
+  // Handle video selection
+  const handleVideoSelect = (video: Tables<'treatment_videos'>) => {
+    setSelectedVideo(video);
+    setIsEditMode(false);
+  };
+
+  // Handle video removal
+  const handleVideoRemove = () => {
+    setSelectedVideo(undefined);
+  };
 
   const treatmentSpecs = [
     {
@@ -418,26 +436,20 @@ const PRPTreatment = () => {
               {/* Video - Right Side */}
               <div className="flex-1 max-w-lg">
                 <motion.div
-                  className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="text-2xl font-light text-white mb-6 text-center">
-                    Watch PRP Treatment
-                  </h3>
-                  <div className="aspect-video bg-black/50 rounded-lg border border-white/10 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z"/>
-                        </svg>
-                      </div>
-                      <p className="text-white/60 text-sm">PRP Treatment Video</p>
-                      <p className="text-white/40 text-xs mt-1">Coming Soon</p>
-                    </div>
-                  </div>
+                  <TreatmentVideoPlayer
+                    video={selectedVideo}
+                    onVideoChange={handleVideoSelect}
+                    onRemove={handleVideoRemove}
+                    treatmentName="PRP"
+                    editMode={true}
+                    showControls={true}
+                    className="w-full"
+                  />
                 </motion.div>
               </div>
             </div>
