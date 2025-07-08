@@ -4,12 +4,14 @@ import { useToast } from '@/hooks/use-toast';
 
 interface TreatmentImage {
   id: string;
-  url: string;
   title: string;
   description?: string;
+  image_url: string;
   treatment_name: string;
   image_type: 'before_after' | 'process' | 'result' | 'general';
+  file_size?: number;
   created_at: string;
+  updated_at: string;
 }
 
 interface ImageSection {
@@ -25,39 +27,28 @@ export const useImageManagement = (treatmentName?: string) => {
   const [uploading, setUploading] = useState(false);
   const { toast } = useToast();
 
-  // For now, we'll use a simple array to store images
-  // In a real implementation, this would connect to Supabase storage
   const loadImages = async () => {
     setLoading(true);
     try {
-      // Simulated image data - in real implementation, fetch from Supabase
-      const mockImages: TreatmentImage[] = [
-        {
-          id: '1',
-          url: '/lovable-uploads/ac269c72-30b5-4182-a990-857547c55c4f.png',
-          title: 'PRP Before/After Results',
-          description: 'Showing skin improvement after PRP treatment',
-          treatment_name: 'PRP',
-          image_type: 'before_after',
-          created_at: new Date().toISOString()
-        },
-        {
-          id: '2',
-          url: '/lovable-uploads/a4df5f90-dda5-48a2-9bd2-19728aa1a275.png',
-          title: 'PRP Treatment Process',
-          description: 'Step-by-step PRP procedure',
-          treatment_name: 'PRP',
-          image_type: 'process',
-          created_at: new Date().toISOString()
-        }
-      ];
+      // Fetch from Supabase database
+      const { data, error } = await supabase
+        .from('treatment_images')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      const typedData = (data || []).map(item => ({
+        ...item,
+        image_type: item.image_type as TreatmentImage['image_type']
+      }));
 
       if (treatmentName) {
-        setImages(mockImages.filter(img => 
+        setImages(typedData.filter(img => 
           img.treatment_name.toLowerCase().includes(treatmentName.toLowerCase())
         ));
       } else {
-        setImages(mockImages);
+        setImages(typedData);
       }
     } catch (error: any) {
       toast({
@@ -109,12 +100,13 @@ export const useImageManagement = (treatmentName?: string) => {
       // In real implementation, upload to Supabase storage
       const newImage: TreatmentImage = {
         id: Date.now().toString(),
-        url: URL.createObjectURL(file), // Temporary URL
+        image_url: URL.createObjectURL(file), // Temporary URL
         title,
         description,
         treatment_name: treatmentName || 'General',
         image_type: imageType,
-        created_at: new Date().toISOString()
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
       };
 
       setImages(prev => [newImage, ...prev]);

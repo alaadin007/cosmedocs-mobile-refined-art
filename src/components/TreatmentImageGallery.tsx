@@ -8,12 +8,14 @@ import ImageSelector from './ImageSelector';
 
 interface TreatmentImage {
   id: string;
-  url: string;
   title: string;
   description?: string;
+  image_url: string;
   treatment_name: string;
   image_type: 'before_after' | 'process' | 'result' | 'general';
+  file_size?: number;
   created_at: string;
+  updated_at: string;
 }
 
 interface TreatmentImageGalleryProps {
@@ -139,7 +141,7 @@ const TreatmentImageGallery = ({
                   >
                     <div className="aspect-square bg-black/30 rounded-xl overflow-hidden relative">
                       <img
-                        src={image.url}
+                        src={image.image_url}
                         alt={image.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -227,7 +229,7 @@ const TreatmentImageGallery = ({
                 {/* Image */}
                 <div className="relative">
                   <img
-                    src={images[selectedImage].url}
+                    src={images[selectedImage].image_url}
                     alt={images[selectedImage].title}
                     className="w-full max-h-[80vh] object-contain"
                   />

@@ -12,12 +12,14 @@ import { useImageManagement } from '@/hooks/useImageManagement';
 
 interface TreatmentImage {
   id: string;
-  url: string;
   title: string;
   description?: string;
+  image_url: string;
   treatment_name: string;
   image_type: 'before_after' | 'process' | 'result' | 'general';
+  file_size?: number;
   created_at: string;
+  updated_at: string;
 }
 
 interface ImageSelectorProps {
@@ -201,7 +203,7 @@ const ImageSelector = ({ onImageSelect, selectedImageId, treatmentName, imageTyp
                     {/* Image Preview */}
                     <div className="aspect-video bg-black/50 relative group overflow-hidden">
                       <img 
-                        src={image.url}
+                        src={image.image_url}
                         alt={image.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
