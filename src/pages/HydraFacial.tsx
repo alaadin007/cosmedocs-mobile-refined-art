@@ -517,22 +517,62 @@ const HydraFacial = () => {
               </p>
             </motion.div>
             
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {treatmentSteps.map((step, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="text-primary text-4xl font-thin mb-4">{step.step}</div>
-                    <h3 className="text-xl font-light text-white mb-4">{step.title}</h3>
-                    <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
-                  </motion.div>
-                ))}
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-16 items-start">
+                {/* Left Column - Treatment Steps */}
+                <motion.div
+                  className="space-y-6"
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  viewport={{ once: true }}
+                >
+                  {treatmentSteps.map((step, index) => (
+                    <motion.div
+                      key={index}
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="flex items-start space-x-6">
+                        <div className="text-primary text-3xl font-thin flex-shrink-0">{step.step}</div>
+                        <div>
+                          <h3 className="text-xl font-light text-white mb-3">{step.title}</h3>
+                          <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+                
+                {/* Right Column - Treatment Video */}
+                <motion.div
+                  className="lg:sticky lg:top-32"
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
+                    <div className="aspect-video bg-black/50 rounded-xl mb-6 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="bg-primary/20 rounded-full p-6 mx-auto mb-4 w-20 h-20 flex items-center justify-center">
+                          <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </div>
+                        <h3 className="text-xl font-light text-white mb-2">HydraFacial Treatment</h3>
+                        <p className="text-white/70 text-sm">Watch the complete procedure</p>
+                      </div>
+                    </div>
+                    <p className="text-white/80 text-sm leading-relaxed">
+                      Experience the complete HydraFacial journey from start to finish. 
+                      See how our advanced vortex technology transforms your skin in just 30-45 minutes.
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
