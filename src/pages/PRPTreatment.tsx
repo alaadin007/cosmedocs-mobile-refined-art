@@ -511,9 +511,10 @@ const PRPTreatment = () => {
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <motion.div
+            <div className="max-w-7xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                {faqs.map((faq, index) => (
+                  <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -539,7 +540,8 @@ const PRPTreatment = () => {
                     </CollapsibleContent>
                   </Collapsible>
                 </motion.div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
