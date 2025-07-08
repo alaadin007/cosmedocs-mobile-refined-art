@@ -608,42 +608,6 @@ export type Database = {
           },
         ]
       }
-      treatment_images: {
-        Row: {
-          created_at: string
-          description: string | null
-          file_size: number | null
-          id: string
-          image_type: string
-          image_url: string
-          title: string
-          treatment_name: string
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          description?: string | null
-          file_size?: number | null
-          id?: string
-          image_type: string
-          image_url: string
-          title: string
-          treatment_name: string
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          description?: string | null
-          file_size?: number | null
-          id?: string
-          image_type?: string
-          image_url?: string
-          title?: string
-          treatment_name?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
       treatment_videos: {
         Row: {
           created_at: string
