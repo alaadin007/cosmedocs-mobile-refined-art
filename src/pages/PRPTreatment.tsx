@@ -8,6 +8,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import { useVideoManagement } from "@/hooks/useVideoManagement";
 import { Tables } from "@/integrations/supabase/types";
+import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 
 const PRPTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -500,6 +501,60 @@ const PRPTreatment = () => {
                 </motion.div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Before & After
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                See the transformative results achieved with our PRP treatments
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <BeforeAfterGrid 
+                images={[
+                  {
+                    src: "/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png",
+                    alt: "PRP facial treatment before and after",
+                    caption: "PRP facial rejuvenation showing improved skin texture and reduced fine lines after 3 sessions"
+                  },
+                  {
+                    src: "/lovable-uploads/b4495de4-9009-4381-8105-a36d078fcb76.png", 
+                    alt: "PRP hair treatment results",
+                    caption: "PRP hair restoration demonstrating increased hair density and thickness after 6 months"
+                  },
+                  {
+                    src: "/lovable-uploads/8785b0dd-a50d-4e0a-b691-3254b6c5f925.png",
+                    alt: "PRP under-eye treatment before and after",
+                    caption: "Under-eye PRP treatment reducing dark circles and improving skin elasticity"
+                  },
+                  {
+                    src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png",
+                    alt: "PRP acne scarring treatment results", 
+                    caption: "PRP therapy for acne scarring showing significant improvement in skin texture and tone"
+                  }
+                ]}
+                initialDisplay={4}
+                loadMoreIncrement={4}
+              />
+            </motion.div>
           </div>
         </section>
 
