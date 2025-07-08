@@ -50,6 +50,12 @@ export const treatmentRoutes: Record<string, string> = {
   "medical anal bleaching": "/medical-anal-bleaching",
   "advanced consultation": "/advanced-consultation",
   "skin boosters": "/skin-boosters",
+  "prp treatment": "/prp-treatment",
+  "prp": "/prp-treatment",
+  "vampire facial": "/prp-treatment",
+  "platelet rich plasma": "/prp-treatment",
+  "platelet-rich plasma": "/prp-treatment",
+  "prgf": "/prp-treatment",
 };
 
 // Common treatment variations and aliases
