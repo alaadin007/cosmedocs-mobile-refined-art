@@ -25,7 +25,8 @@ function main() {
   console.log('- sitemap-treatments.xml (treatment pages - AUTO-DETECTED)');
   console.log('- sitemap-blog.xml (blog posts)');
   console.log('- sitemap-locations.xml (location pages)');
-  console.log('\n📝 Note: Treatment pages are now auto-detected from App.tsx routing!');
+console.log('\n📝 Note: Treatment pages are now auto-detected from the treatment patterns list!');
+console.log('✅ PRP treatment and all other treatment pages are automatically included!');
 }
 
 if (require.main === module) {

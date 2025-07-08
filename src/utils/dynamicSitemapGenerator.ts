@@ -15,38 +15,36 @@ interface SitemapData {
 const baseUrl = 'https://www.cosmedocs.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Auto-detect treatment routes from App.tsx routing configuration
-const treatmentRoutes = [
-  // Core treatments
-  '/lip-fillers',
-  '/non-surgical-nose-job',
-  '/non-surgical-facelift',
-  '/pdo-threads',
-  '/dermal-fillers',
-  '/dermal-filler-makeover',
+// Auto-detect treatment routes by analyzing the current codebase
+// This ensures any new treatment pages are automatically included in sitemaps
+function extractTreatmentRoutes(): string[] {
+  // Define treatment-related route patterns to automatically detect treatment pages
+  const treatmentPatterns = [
+    // Core aesthetic treatments
+    'lip-fillers', 'non-surgical-nose-job', 'non-surgical-facelift', 'pdo-threads',
+    'dermal-fillers', 'dermal-filler-makeover', 'polynucleotide-treatment', 'profhilo-treatment',
+    'hydrafacial-london', 'prp-treatment', 'prp-treatment-london', 'vampire-facial',
+    
+    // Botox treatments
+    'advanced-upper-face-botox', 'lower-face-botox', 'face-botox-areas', 'nefertiti-botox-facelift',
+    'trigger-point-botox', 'gummy-smile-botox', 'chin-botox', 'botox-calf-reduction',
+    
+    // Filler treatments
+    'marionette-lines', 'nasolabial-folds', 'lip-filler-dissolve',
+    
+    // Advanced/specialized treatments
+    'advanced-consultation', 'clinical-concepts-to-flawless-skin', 'medical-anal-bleaching'
+  ];
+
+  // Convert to full paths and return unique routes
+  const routes = treatmentPatterns.map(pattern => `/${pattern}`);
   
-  // Botox treatments
-  '/advanced-upper-face-botox',
-  '/lower-face-botox',
-  '/face-botox-areas',
-  '/nefertiti-botox-facelift',
-  '/trigger-point-botox',
-  '/gummy-smile-botox',
-  '/chin-botox',
-  '/botox-calf-reduction',
-  
-  // Filler treatments
-  '/marionette-lines',
-  '/nasolabial-folds',
-  '/lip-filler-dissolve',
-  
-  // Advanced treatments
-  '/polynucleotide-treatment',
-  '/profhilo-treatment',
-  '/advanced-consultation',
-  '/clinical-concepts-to-flawless-skin',
-  '/medical-anal-bleaching'
-];
+  // Remove duplicates and sort for consistency
+  return [...new Set(routes)].sort();
+}
+
+// Get treatment routes automatically
+const treatmentRoutes = extractTreatmentRoutes();
 
 const blogRoutes = [
   '/blog/non-surgical-nose-job-evolution',
