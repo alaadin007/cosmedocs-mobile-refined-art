@@ -6,7 +6,9 @@ import { generateSEOMetadata } from "@/utils/seo";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
+import TreatmentImageGallery from "@/components/TreatmentImageGallery";
 import { useVideoManagement } from "@/hooks/useVideoManagement";
+import { useImageManagement } from "@/hooks/useImageManagement";
 import { Tables } from "@/integrations/supabase/types";
 
 const PRPTreatment = () => {
@@ -21,8 +23,11 @@ const PRPTreatment = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<Tables<'treatment_videos'> | undefined>();
   const [isEditMode, setIsEditMode] = useState(false);
+  const [beforeAfterImages, setBeforeAfterImages] = useState<any[]>([]);
+  const [processImages, setProcessImages] = useState<any[]>([]);
   
   const { getVideosByTreatment } = useVideoManagement();
+  const { images, addImageSection } = useImageManagement('PRP');
 
   // Handle video selection
   const handleVideoSelect = (video: Tables<'treatment_videos'>) => {
@@ -33,6 +38,15 @@ const PRPTreatment = () => {
   // Handle video removal
   const handleVideoRemove = () => {
     setSelectedVideo(undefined);
+  };
+
+  // Handle image management
+  const handleBeforeAfterImages = (images: any[]) => {
+    setBeforeAfterImages(images);
+  };
+
+  const handleProcessImages = (images: any[]) => {
+    setProcessImages(images);
   };
 
   const treatmentSpecs = [
@@ -550,6 +564,52 @@ const PRPTreatment = () => {
                   </Collapsible>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Image Galleries Section */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment Results & Process
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Explore real patient results and see the PRP treatment process in detail
+              </p>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Before/After Gallery */}
+              <TreatmentImageGallery
+                images={beforeAfterImages}
+                onImageChange={handleBeforeAfterImages}
+                treatmentName="PRP"
+                imageType="before_after"
+                title="Before & After Results"
+                description="Real patient transformations showing the effectiveness of PRP treatment"
+                editMode={true}
+                maxImages={6}
+              />
+
+              {/* Treatment Process Gallery */}
+              <TreatmentImageGallery
+                images={processImages}
+                onImageChange={handleProcessImages}
+                treatmentName="PRP"
+                imageType="process"
+                title="Treatment Process"
+                description="Step-by-step visual guide of the PRP procedure"
+                editMode={true}
+                maxImages={4}
+              />
             </div>
           </div>
         </section>
