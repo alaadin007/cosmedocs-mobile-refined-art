@@ -33,7 +33,8 @@ function extractTreatmentRoutes(): string[] {
     'marionette-lines', 'nasolabial-folds', 'lip-filler-dissolve',
     
     // Advanced/specialized treatments
-    'advanced-consultation', 'clinical-concepts-to-flawless-skin', 'medical-anal-bleaching'
+    'advanced-consultation', 'clinical-concepts-to-flawless-skin', 'medical-anal-bleaching',
+    'peel-to-reveal'
   ];
 
   // Convert to full paths and return unique routes

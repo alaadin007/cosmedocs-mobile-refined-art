@@ -1,0 +1,644 @@
+import { Helmet } from 'react-helmet-async';
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Clock, Zap, Sparkles, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { useState } from "react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
+const PeelToReveal = () => {
+  const seoData = generateSEOMetadata(
+    "Peel to Reveal London | £120 | Deep Skin Rejuvenation | Harley Street",
+    "Revolutionary Peel to Reveal treatment in London's Harley Street. Deep skin cleansing, repairing & rejuvenation with powerful antioxidants. From £120.",
+    "/peel-to-reveal"
+  );
+
+  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
+
+  // Before/after images for the viewer
+  const beforeAfterImages = [
+    {
+      src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
+      alt: "Peel to Reveal before and after results showing improved skin texture and brightness",
+      caption: "Transformative results showing clearer, brighter skin with improved texture"
+    },
+    {
+      src: "/lovable-uploads/16fa7311-00af-4ea7-b353-73f981f6d87c.png",
+      alt: "Peel to Reveal treatment results showing reduced pigmentation and improved skin tone",
+      caption: "Significant improvement in skin tone and reduction in pigmentation"
+    },
+    {
+      src: "/lovable-uploads/717753b3-1c9d-43bd-bdc1-ca245fc3c284.png",
+      alt: "Peel to Reveal results showing smoother skin texture and reduced fine lines",
+      caption: "Enhanced skin smoothness with visible reduction in fine lines"
+    }
+  ];
+
+  const [isOpenIngredients, setIsOpenIngredients] = useState(false);
+  const [isOpenProcess, setIsOpenProcess] = useState(false);
+
+  const leftColumnFaqs = [
+    {
+      question: "How much does Peel to Reveal cost?",
+      answer: "Peel to Reveal Lite starts from £120, and Peel to Reveal Plus is £250. We offer 25% off your second treatment if performed within 6 months, making it an affordable ongoing skincare solution."
+    },
+    {
+      question: "How long does the Peel to Reveal treatment take?",
+      answer: "The treatment takes only 10-15 minutes, making it perfect for lunch breaks or busy schedules. The controllable depth and intensity allow for customized treatment based on your skin needs."
+    },
+    {
+      question: "What skin concerns does Peel to Reveal address?",
+      answer: "Peel to Reveal treats multiple skin concerns simultaneously including dullness, pigmentation, melasma, sun damage, fine lines, acne, enlarged pores, whiteheads, and blackheads. It's suitable for all skin types."
+    },
+    {
+      question: "Is there any downtime after Peel to Reveal?",
+      answer: "Minimal downtime is required. You can return to work immediately with minimal skin changes and apply light cover-up straight after. Some mild redness may occur for a few hours, with gentle peeling starting day 3-4."
+    },
+    {
+      question: "How soon will I see results?",
+      answer: "You'll notice improvements within 10 days, with clearer, brighter, and more radiant skin. The powerful antioxidant cocktail and natural extracts work to reveal your skin's natural glow progressively."
+    }
+  ];
+
+  const rightColumnFaqs = [
+    {
+      question: "What makes Peel to Reveal different from other peels?",
+      answer: "Peel to Reveal is a modern fusion peel combining multiple acids (Glycolic, Lactic, Salicylic, TCA) with powerful antioxidants like Glutathione. This CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) treats over a dozen skin issues at once."
+    },
+    {
+      question: "What are the key ingredients in Peel to Reveal?",
+      answer: "The treatment includes Salicylic Acid, Tea Tree Oil, Glutathione, Kojic/Mandelic/Azelaic acids, TCA, Lactic and Glycolic acids, plus natural extracts from papaya, licorice, and bearberry for comprehensive skin rejuvenation."
+    },
+    {
+      question: "Are there any side effects?",
+      answer: "Common minor side effects include mild redness for a few hours, gentle peeling/flaking of old skin starting day 3-4 lasting a few days, and temporary dry skin for 7-10 days. These are normal signs of skin renewal."
+    },
+    {
+      question: "Who is suitable for Peel to Reveal?",
+      answer: "Peel to Reveal is suitable for anyone from their mid-20s onwards experiencing skin dullness, ageing signs, or specific concerns like acne or pigmentation. It's designed for all skin types with minimal side effects."
+    },
+    {
+      question: "How often should I have Peel to Reveal treatments?",
+      answer: "For optimal results, treatments can be repeated every 4-6 weeks. The frequency depends on your skin concerns and goals. Our practitioners will create a personalized treatment plan during your consultation."
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href={seoData.canonical} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:image" content={seoData.image} />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+        
+        {/* Local SEO */}
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.5074;-0.1278" />
+        <meta name="ICBM" content="51.5074, -0.1278" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs - Peel to Reveal Treatment",
+            "description": "Revolutionary skin peel treatment for deep cleansing, repairing & rejuvenation",
+            "url": "https://cosmedocs.com/peel-to-reveal",
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "medicalSpecialty": "Dermatology",
+            "priceRange": "£120-£250"
+          })}
+        </script>
+      </Helmet>
+
+      <div className="bg-black text-white min-h-screen">
+        {/* Hero Section - Apple Style */}
+        <section className="relative min-h-screen flex items-center">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/lovable-uploads/ac269c72-30b5-4182-a990-857547c55c4f.png')"
+            }}
+          />
+          {/* Apple-style overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
+          
+          <div className="page-container relative z-10">
+            <div className="max-w-6xl">
+              <motion.div 
+                className="text-left"
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              >
+                <motion.h1 
+                  className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  <span className="block text-white/95 font-thin">Peel</span>
+                  <span className="block text-white font-light">to</span>
+                  <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Reveal</span>
+                </motion.h1>
+                
+                <motion.div 
+                  className="mb-16 space-y-6 max-w-3xl"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
+                    Deep skin cleansing, repairing & rejuvenation with a powerful cocktail of antioxidants and natural extracts
+                  </p>
+                  <div className="flex items-center space-x-8 text-xl">
+                    <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
+                      <span className="text-white font-light">From £120</span>
+                    </div>
+                    <div className="text-white/80">
+                      <span className="font-extralight">10 days to </span> 
+                      <span className="font-light">radiant skin</span>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="flex flex-col sm:flex-row gap-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  <a 
+                    href={bookingUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
+                  >
+                    Book Treatment
+                  </a>
+                  <div className="flex items-center gap-3 text-white/80 px-8">
+                    <Sparkles className="h-6 w-6" />
+                    <span className="font-extralight text-lg">CRES System Technology</span>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Benefits Section */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Reveal Your Best Skin
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                A revolutionary fusion peel that treats multiple skin concerns simultaneously with minimal downtime
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+              {/* Duration */}
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
+                  <Clock className="h-12 w-12 text-white mx-auto mb-6" />
+                  <h3 className="text-2xl font-light text-white mb-4">Duration</h3>
+                  <p className="text-white/70 font-light leading-relaxed">
+                    Treatment time of 10-15 minutes with controllable depth and intensity
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Powerful Antioxidants */}
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
+                  <Zap className="h-12 w-12 text-white mx-auto mb-6" />
+                  <h3 className="text-2xl font-light text-white mb-4">Powerful Antioxidants</h3>
+                  <p className="text-white/70 font-light leading-relaxed">
+                    Cocktail of powerful antioxidants, immune boosters, natural extracts & skin brighteners
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Results */}
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
+                  <Sparkles className="h-12 w-12 text-white mx-auto mb-6" />
+                  <h3 className="text-2xl font-light text-white mb-4">Clearer & Brighter</h3>
+                  <p className="text-white/70 font-light leading-relaxed">
+                    Multiple skin indications treated simultaneously. 10 days to clearer, brighter skin
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Downtime */}
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
+                  <Calendar className="h-12 w-12 text-white mx-auto mb-6" />
+                  <h3 className="text-2xl font-light text-white mb-4">Minimal Downtime</h3>
+                  <p className="text-white/70 font-light leading-relaxed">
+                    Return to work directly with minimal skin changes. Apply light cover-up straight after
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-32 bg-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Transformation Results
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Real patient transformations showcasing the power of our revolutionary peel treatment
+              </p>
+            </motion.div>
+            
+            <div className="text-center">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View Treatment Results"
+                title="Peel to Reveal Transformations"
+                description="See the remarkable skin improvements achieved with our advanced peel treatment"
+                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* CRES System Explanation */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                CRES System Technology
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Formulated to Cleanse, Revitalise, Exfoliate & Stimulate for complete facial rejuvenation
+              </p>
+            </motion.div>
+            
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-16">
+                {/* Ingredients Breakdown */}
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <Collapsible open={isOpenIngredients} onOpenChange={setIsOpenIngredients}>
+                    <CollapsibleTrigger className="w-full">
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer hover:bg-white/15 transition-all duration-300">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-3xl font-light text-white">Performance Ingredients</h3>
+                          {isOpenIngredients ? <ChevronUp className="h-6 w-6 text-white" /> : <ChevronDown className="h-6 w-6 text-white" />}
+                        </div>
+                      </div>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="mt-4">
+                      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 space-y-6">
+                        <div>
+                          <h4 className="text-xl font-light text-white mb-3">Cleanse</h4>
+                          <p className="text-white/70 font-light">Salicylic Acid • Tea Tree Oil • Willow Bark Extract</p>
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-light text-white mb-3">Revitalise</h4>
+                          <p className="text-white/70 font-light">Glutathione • Kojic/Mandelic/Azelaic Acids • Natural Extracts (Papaya, Licorice, Bearberry) • Arginine</p>
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-light text-white mb-3">Exfoliate & Stimulate</h4>
+                          <p className="text-white/70 font-light">TCA • Lactic Acid • Glycolic Acid • Malic/Citric Acids</p>
+                        </div>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </motion.div>
+
+                {/* Benefits */}
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <Collapsible open={isOpenProcess} onOpenChange={setIsOpenProcess}>
+                    <CollapsibleTrigger className="w-full">
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer hover:bg-white/15 transition-all duration-300">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-3xl font-light text-white">Treatment Benefits</h3>
+                          {isOpenProcess ? <ChevronUp className="h-6 w-6 text-white" /> : <ChevronDown className="h-6 w-6 text-white" />}
+                        </div>
+                      </div>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="mt-4">
+                      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 space-y-4">
+                        <div className="grid grid-cols-1 gap-3 text-white/70 font-light">
+                          <p>• Anti-inflammatory, anti-fungal, anti-microbial</p>
+                          <p>• Deep pore cleansing</p>
+                          <p>• Neutralise free radicals</p>
+                          <p>• Decrease skin dullness and melasma</p>
+                          <p>• Improve skin blood flow</p>
+                          <p>• Improve skin texture, pores, and acne</p>
+                          <p>• Increase cellular turnover</p>
+                          <p>• Stimulate collagen production</p>
+                          <p>• Improve fine lines and wrinkles</p>
+                        </div>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-32 bg-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment Options
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Choose the perfect treatment level for your skin needs
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
+              {/* Peel to Reveal Lite */}
+              <motion.div
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-light text-white mb-4">Peel to Reveal Lite</h3>
+                <div className="text-4xl font-thin text-white mb-6">£120</div>
+                <p className="text-white/70 font-light mb-8 leading-relaxed">
+                  Perfect introduction to our revolutionary peel treatment. Gentle yet effective for first-time users or maintenance treatments.
+                </p>
+                <a 
+                  href={bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/15 backdrop-blur-sm text-white hover:bg-white/25 rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 w-full"
+                >
+                  Book Lite Treatment
+                </a>
+              </motion.div>
+
+              {/* Peel to Reveal Plus */}
+              <motion.div
+                className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/30 relative overflow-hidden"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-light text-white border border-white/30">
+                  Most Popular
+                </div>
+                <h3 className="text-3xl font-light text-white mb-4">Peel to Reveal Plus</h3>
+                <div className="text-4xl font-thin text-white mb-6">£250</div>
+                <p className="text-white/70 font-light mb-8 leading-relaxed">
+                  Our comprehensive treatment with maximum strength formulation for optimal results and complete skin transformation.
+                </p>
+                <a 
+                  href={bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 w-full"
+                >
+                  Book Plus Treatment
+                </a>
+                <p className="text-white/60 font-light text-sm mt-4 text-center">
+                  25% off your next treatment within 6 months
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Everything you need to know about our Peel to Reveal treatment
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+              {/* Left Column FAQs */}
+              <motion.div
+                className="space-y-6"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                {leftColumnFaqs.map((faq, index) => (
+                  <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <CardHeader>
+                      <CardTitle className="text-white font-light text-lg">{faq.question}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-white/70 font-light leading-relaxed">{faq.answer}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </motion.div>
+
+              {/* Right Column FAQs */}
+              <motion.div
+                className="space-y-6"
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                {rightColumnFaqs.map((faq, index) => (
+                  <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300">
+                    <CardHeader>
+                      <CardTitle className="text-white font-light text-lg">{faq.question}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-white/70 font-light leading-relaxed">{faq.answer}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-32 bg-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Ready to Reveal Your Best Skin?
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto mb-12">
+                Book your Peel to Reveal consultation today and discover the transformative power of our revolutionary treatment
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <a 
+                  href={bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
+                >
+                  Book Your Treatment
+                </a>
+                <a 
+                  href="tel:03330551503"
+                  className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20"
+                >
+                  <Phone className="h-5 w-5 mr-3" />
+                  Call Now
+                </a>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="text-center space-y-4"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center justify-center space-x-2 text-white/70">
+                <MapPin className="h-5 w-5" />
+                <span className="font-light">10 Harley Street, London W1G 9PF</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2 text-white/70">
+                <Phone className="h-5 w-5" />
+                <span className="font-light">0333 0551 503</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2 text-white/70">
+                <Mail className="h-5 w-5" />
+                <span className="font-light">info@cosmedocs.com</span>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content */}
+        <div className="hidden">
+          <h2>Peel to Reveal - Revolutionary Skin Rejuvenation Treatment in London</h2>
+          <p>Transform your skin with our revolutionary Peel to Reveal treatment at Cosmedocs Harley Street. This innovative fusion peel combines the power of multiple active ingredients including Glycolic Acid, Lactic Acid, Salicylic Acid, and TCA (Trichloroacetic Acid) with powerful antioxidants like Glutathione to deliver comprehensive skin rejuvenation in just 10-15 minutes.</p>
+          
+          <p>Our CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) addresses multiple skin concerns simultaneously, making it one of the most effective treatments for achieving clearer, brighter, and more radiant skin. Unlike traditional chemical peels that target single issues, Peel to Reveal treats over a dozen skin conditions at once, including general skin dullness, premature aging, pigmentation, melasma, uneven skin tone and texture, sun damage, fine lines, wrinkles, acne, enlarged pores, whiteheads, and blackheads.</p>
+
+          <p>The treatment begins with a thorough cleansing phase using Salicylic Acid, Tea Tree Oil, and Willow Bark Extract to deeply cleanse pores and remove impurities. The revitalisation phase introduces Glutathione, a powerful antioxidant naturally produced by the liver, along with Kojic Acid, Mandelic Acid, and Azelaic Acid, complemented by natural extracts from papaya, licorice, and bearberry. Finally, the exfoliation and stimulation phase employs TCA, Lactic Acid, Glycolic Acid, and Malic/Citric Acids to promote cellular turnover and stimulate collagen production.</p>
+
+          <p>What sets Peel to Reveal apart is its minimal downtime and immediate return to daily activities. Patients can resume work immediately after treatment with only minimal skin changes that can be easily concealed with light makeup. The treatment offers controllable depth and intensity, allowing our experienced practitioners to customize the procedure based on individual skin types and concerns.</p>
+
+          <p>Results become apparent within 10 days, with patients experiencing clearer, brighter, and more radiant skin. The treatment's anti-inflammatory, anti-fungal, and antimicrobial properties provide comprehensive skin health benefits while neutralizing free radicals that contribute to premature aging. Improved skin blood flow enhances natural radiance, while increased cellular turnover reveals fresh, healthy skin cells.</p>
+
+          <p>Our Harley Street clinic offers two treatment options: Peel to Reveal Lite at £120, perfect for first-time users or maintenance treatments, and Peel to Reveal Plus at £250, our comprehensive treatment with maximum strength formulation for optimal results. We offer a 25% discount on the second treatment when performed within 6 months, making ongoing skin care more affordable.</p>
+
+          <p>The treatment is suitable for all skin types and ages, particularly beneficial for individuals from their mid-20s onwards experiencing signs of aging or specific skin concerns. Common minor side effects include mild redness for a few hours post-treatment, gentle peeling or flaking of old skin starting on day 3-4 and lasting a few days, and temporary dry skin for 7-10 days. These effects are normal indicators of the skin renewal process and resolve naturally.</p>
+
+          <p>Located in the prestigious Harley Street medical district, Cosmedocs has established itself as a renowned leader in cosmetic treatments and aesthetic medicine. Our modern, well-equipped clinic serves patients from across London and beyond, offering the latest innovations in skin rejuvenation technology. We also provide comprehensive training to physicians worldwide, sharing our expertise in advanced aesthetic procedures.</p>
+
+          <p>The Peel to Reveal treatment represents a significant advancement in cosmetic dermatology, offering a safe, effective, and convenient solution for comprehensive skin rejuvenation. By combining multiple proven ingredients and techniques in a single treatment session, we deliver exceptional results that traditional single-ingredient peels cannot match. Book your consultation today to discover how Peel to Reveal can transform your skin and restore your natural radiance.</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default PeelToReveal;

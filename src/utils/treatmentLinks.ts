@@ -56,6 +56,13 @@ export const treatmentRoutes: Record<string, string> = {
   "platelet rich plasma": "/prp-treatment",
   "platelet-rich plasma": "/prp-treatment",
   "prgf": "/prp-treatment",
+  "peel to reveal": "/peel-to-reveal",
+  "peel-to-reveal": "/peel-to-reveal",
+  "chemical peel": "/peel-to-reveal",
+  "skin peel": "/peel-to-reveal",
+  "cres system": "/peel-to-reveal",
+  "deep cleansing": "/peel-to-reveal",
+  "skin rejuvenation": "/peel-to-reveal",
 };
 
 // Common treatment variations and aliases
