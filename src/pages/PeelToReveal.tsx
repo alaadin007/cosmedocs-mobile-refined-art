@@ -353,10 +353,10 @@ const PeelToReveal = () => {
         </section>
 
         {/* Before & After Gallery */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="py-16 bg-[#0A0A0A]">
           <div className="page-container">
             <motion.div
-              className="text-center mb-20"
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
