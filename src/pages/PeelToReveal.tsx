@@ -16,7 +16,7 @@ const PeelToReveal = () => {
 
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
-  // Before/after images for the viewer
+  // Before/after images for the viewer - Using available uploaded images
   const beforeAfterImages = [
     {
       src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
@@ -32,6 +32,21 @@ const PeelToReveal = () => {
       src: "/lovable-uploads/717753b3-1c9d-43bd-bdc1-ca245fc3c284.png",
       alt: "Peel to Reveal results showing smoother skin texture and reduced fine lines",
       caption: "Enhanced skin smoothness with visible reduction in fine lines"
+    },
+    {
+      src: "/lovable-uploads/c47cf752-b777-49da-b470-f6c1f7e3a292.png",
+      alt: "Peel to Reveal before and after showing reduction in acne and pore size",
+      caption: "Remarkable improvement in acne and pore refinement"
+    },
+    {
+      src: "/lovable-uploads/2b95a6f3-bcce-41f4-833d-8be389a9e323.png",
+      alt: "Peel to Reveal treatment showing improved skin radiance and glow",
+      caption: "Enhanced skin radiance and natural glow after treatment"
+    },
+    {
+      src: "/lovable-uploads/3d2ce348-5696-4922-ad5c-ea1e9c5232b3.png",
+      alt: "Peel to Reveal results demonstrating melasma and sun damage improvement",
+      caption: "Significant reduction in melasma and sun damage"
     }
   ];
 
