@@ -9,130 +9,92 @@ import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import { useVideoManagement } from "@/hooks/useVideoManagement";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
-
 const HydraFacial = () => {
-  const { videos, getVideosByTreatment } = useVideoManagement();
+  const {
+    videos,
+    getVideosByTreatment
+  } = useVideoManagement();
   const [selectedVideo, setSelectedVideo] = useState<any>(null);
-  
-  const seoData = generateSEOMetadata(
-    "HydraFacial London | £175 | Cosmedocs | Harley Street",
-    "Premium HydraFacial treatments in London's Harley Street. Advanced vortex technology for glowing, hydrated skin. From £175. Book your session today.",
-    "/hydrafacial-london"
-  );
+  const seoData = generateSEOMetadata("HydraFacial London | £175 | Cosmedocs | Harley Street", "Premium HydraFacial treatments in London's Harley Street. Advanced vortex technology for glowing, hydrated skin. From £175. Book your session today.", "/hydrafacial-london");
 
   // Get HydraFacial specific videos
   const hydraFacialVideos = getVideosByTreatment('HydraFacial');
-
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
   // Before/after images for HydraFacial
-  const beforeAfterImages = [
-    {
-      src: "/lovable-uploads/38a0f044-da28-413f-afa4-d9f7955797f5.png",
-      alt: "HydraFacial before and after London Cosmedocs skin texture improvement",
-      caption: "Remarkable skin texture improvement and radiance achieved with HydraFacial vortex technology"
-    },
-    {
-      src: "/lovable-uploads/5a0b4122-4a4e-4dfd-90aa-7af725983356.png",
-      alt: "HydraFacial pigmentation treatment before after London Harley Street Cosmedocs",
-      caption: "Visible reduction in pigmentation and improved skin clarity with enhanced brightness"
-    },
-    {
-      src: "/lovable-uploads/9f5e369e-f3ac-4643-9470-bb1642025063.png",
-      alt: "HydraFacial skin hydration before after London Cosmedocs glowing results",
-      caption: "Deep hydration and skin rejuvenation showing improved texture and natural glow"
-    },
-    {
-      src: "/lovable-uploads/59aa52ad-4a4d-417e-8d44-3d9252fd6180.png",
-      alt: "HydraFacial complexion enhancement before after London Harley Street treatment",
-      caption: "Overall complexion enhancement with improved skin tone and radiant appearance"
-    }
-  ];
-
-  const treatmentSteps = [
-    {
-      step: "01",
-      title: "Detoxification",
-      description: "Gentle lymphatic drainage to remove toxins and reduce puffiness for firmer, more toned skin."
-    },
-    {
-      step: "02", 
-      title: "Deep Cleanse",
-      description: "Vortex cleansing and exfoliation removes dead skin cells while AHAs and BHAs unclog pores."
-    },
-    {
-      step: "03",
-      title: "Extract + Hydrate", 
-      description: "Powerful blend of salicylic and glycolic acid removes impurities while boosting collagen production."
-    },
-    {
-      step: "04",
-      title: "Boost + Infuse",
-      description: "Vortex-Fusion technology delivers antioxidants, peptides, and hyaluronic acid deep into skin."
-    },
-    {
-      step: "05",
-      title: "Restore + Rejuvenate",
-      description: "LED light therapy fights bacteria and boosts collagen for a luminous, flawless glow."
-    }
-  ];
-
-  const benefits = [
-    "Refines and reduces pore size",
-    "Evens out and brightens skin tone", 
-    "Degreases oily skin naturally",
-    "Plumps up dry, thirsty skin",
-    "Effective for acne and acne scars",
-    "Soothes sensitive skin conditions",
-    "Tailored to every skin type"
-  ];
-
-  const leftColumnFaqs = [
-    {
-      question: "How much does HydraFacial cost in London?",
-      answer: "At Cosmedocs Harley Street, HydraFacial treatments start from £175 for a single session. We offer courses of 3 sessions at £150 each, or 6 sessions at £125 each for optimal results."
-    },
-    {
-      question: "How effective is HydraFacial for acne?",
-      answer: "HydraFacial is highly effective for acne-prone skin. It deeply cleanses to remove dead skin cells, impurities, and excess sebum while unclogging pores and soothing inflamed skin to prevent future breakouts."
-    },
-    {
-      question: "Are there any side effects of HydraFacial?",
-      answer: "HydraFacial is widely regarded as safe with minimal side effects. Some may experience mild skin peeling, slight redness for sensitive skin, or temporary sensitivity, all of which fade quickly."
-    },
-    {
-      question: "How many treatments are needed to see results?",
-      answer: "Clients notice instant glow and hydration after their first session. For optimal long-term skin health, we recommend monthly HydraFacial treatments at our London clinic."
-    }
-  ];
-
-  const rightColumnFaqs = [
-    {
-      question: "Who is the ideal candidate for HydraFacial?",
-      answer: "HydraFacial is suitable for all skin types and anyone 18+ with fine lines, excess sebum, skin discoloration, rough texture, or dull complexion. Those using Accutane or with severe scarring may not be suitable."
-    },
-    {
-      question: "How to care for skin after HydraFacial?",
-      answer: "Limit sun exposure for 72 hours, use daily SPF 30+, avoid harsh treatments for 2 weeks, pause strong topicals for 48 hours, and incorporate hyaluronic serum for 30 days."
-    },
-    {
-      question: "Can HydraFacial be combined with other treatments?",
-      answer: "Yes, at Cosmedocs we combine HydraFacial with Dermaplaning for enhanced results. Dermaplaning removes dead skin cells, while HydraFacial deeply cleanses, exfoliates, and moisturizes."
-    },
-    {
-      question: "Is HydraFacial suitable for men?",
-      answer: "Absolutely! HydraFacial is popular among men for addressing dryness, shaving irritation, congested skin, rough texture, acne, and fine lines. We recommend monthly sessions for lasting results."
-    }
-  ];
-
+  const beforeAfterImages = [{
+    src: "/lovable-uploads/38a0f044-da28-413f-afa4-d9f7955797f5.png",
+    alt: "HydraFacial before and after London Cosmedocs skin texture improvement",
+    caption: "Remarkable skin texture improvement and radiance achieved with HydraFacial vortex technology"
+  }, {
+    src: "/lovable-uploads/5a0b4122-4a4e-4dfd-90aa-7af725983356.png",
+    alt: "HydraFacial pigmentation treatment before after London Harley Street Cosmedocs",
+    caption: "Visible reduction in pigmentation and improved skin clarity with enhanced brightness"
+  }, {
+    src: "/lovable-uploads/9f5e369e-f3ac-4643-9470-bb1642025063.png",
+    alt: "HydraFacial skin hydration before after London Cosmedocs glowing results",
+    caption: "Deep hydration and skin rejuvenation showing improved texture and natural glow"
+  }, {
+    src: "/lovable-uploads/59aa52ad-4a4d-417e-8d44-3d9252fd6180.png",
+    alt: "HydraFacial complexion enhancement before after London Harley Street treatment",
+    caption: "Overall complexion enhancement with improved skin tone and radiant appearance"
+  }];
+  const treatmentSteps = [{
+    step: "01",
+    title: "Detoxification",
+    description: "Gentle lymphatic drainage to remove toxins and reduce puffiness for firmer, more toned skin."
+  }, {
+    step: "02",
+    title: "Deep Cleanse",
+    description: "Vortex cleansing and exfoliation removes dead skin cells while AHAs and BHAs unclog pores."
+  }, {
+    step: "03",
+    title: "Extract + Hydrate",
+    description: "Powerful blend of salicylic and glycolic acid removes impurities while boosting collagen production."
+  }, {
+    step: "04",
+    title: "Boost + Infuse",
+    description: "Vortex-Fusion technology delivers antioxidants, peptides, and hyaluronic acid deep into skin."
+  }, {
+    step: "05",
+    title: "Restore + Rejuvenate",
+    description: "LED light therapy fights bacteria and boosts collagen for a luminous, flawless glow."
+  }];
+  const benefits = ["Refines and reduces pore size", "Evens out and brightens skin tone", "Degreases oily skin naturally", "Plumps up dry, thirsty skin", "Effective for acne and acne scars", "Soothes sensitive skin conditions", "Tailored to every skin type"];
+  const leftColumnFaqs = [{
+    question: "How much does HydraFacial cost in London?",
+    answer: "At Cosmedocs Harley Street, HydraFacial treatments start from £175 for a single session. We offer courses of 3 sessions at £150 each, or 6 sessions at £125 each for optimal results."
+  }, {
+    question: "How effective is HydraFacial for acne?",
+    answer: "HydraFacial is highly effective for acne-prone skin. It deeply cleanses to remove dead skin cells, impurities, and excess sebum while unclogging pores and soothing inflamed skin to prevent future breakouts."
+  }, {
+    question: "Are there any side effects of HydraFacial?",
+    answer: "HydraFacial is widely regarded as safe with minimal side effects. Some may experience mild skin peeling, slight redness for sensitive skin, or temporary sensitivity, all of which fade quickly."
+  }, {
+    question: "How many treatments are needed to see results?",
+    answer: "Clients notice instant glow and hydration after their first session. For optimal long-term skin health, we recommend monthly HydraFacial treatments at our London clinic."
+  }];
+  const rightColumnFaqs = [{
+    question: "Who is the ideal candidate for HydraFacial?",
+    answer: "HydraFacial is suitable for all skin types and anyone 18+ with fine lines, excess sebum, skin discoloration, rough texture, or dull complexion. Those using Accutane or with severe scarring may not be suitable."
+  }, {
+    question: "How to care for skin after HydraFacial?",
+    answer: "Limit sun exposure for 72 hours, use daily SPF 30+, avoid harsh treatments for 2 weeks, pause strong topicals for 48 hours, and incorporate hyaluronic serum for 30 days."
+  }, {
+    question: "Can HydraFacial be combined with other treatments?",
+    answer: "Yes, at Cosmedocs we combine HydraFacial with Dermaplaning for enhanced results. Dermaplaning removes dead skin cells, while HydraFacial deeply cleanses, exfoliates, and moisturizes."
+  }, {
+    question: "Is HydraFacial suitable for men?",
+    answer: "Absolutely! HydraFacial is popular among men for addressing dryness, shaving irritation, congested skin, rough texture, acne, and fine lines. We recommend monthly sessions for lasting results."
+  }];
   const [openFaqs, setOpenFaqs] = useState<Record<string, boolean>>({});
-
   const toggleFaq = (question: string) => {
-    setOpenFaqs(prev => ({ ...prev, [question]: !prev[question] }));
+    setOpenFaqs(prev => ({
+      ...prev,
+      [question]: !prev[question]
+    }));
   };
-
-  return (
-    <>
+  return <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -154,27 +116,27 @@ const HydraFacial = () => {
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Cosmedocs - HydraFacial London",
-            "description": "Premium HydraFacial treatments in London's Harley Street using advanced vortex technology",
-            "url": "https://cosmedocs.com/hydrafacial-london",
-            "telephone": "0333 0551 503",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "medicalSpecialty": "Dermatology",
-            "priceRange": "£175"
-          })}
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          "name": "Cosmedocs - HydraFacial London",
+          "description": "Premium HydraFacial treatments in London's Harley Street using advanced vortex technology",
+          "url": "https://cosmedocs.com/hydrafacial-london",
+          "telephone": "0333 0551 503",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10 Harley Street",
+            "addressLocality": "London",
+            "postalCode": "W1G 9PF",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+          },
+          "medicalSpecialty": "Dermatology",
+          "priceRange": "£175"
+        })}
         </script>
       </Helmet>
 
@@ -182,40 +144,51 @@ const HydraFacial = () => {
         {/* Hero Section - Apple Style */}
         <section className="relative min-h-screen flex items-center">
           {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png')"
-            }}
-          />
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: "url('/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png')"
+        }} />
           {/* Apple-style overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
           
           <div className="page-container relative z-10">
             <div className="max-w-6xl">
-              <motion.div 
-                className="text-left"
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
-                <motion.h1 
-                  className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight"
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+              <motion.div className="text-left" initial={{
+              opacity: 0,
+              y: 60
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}>
+                <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight" initial={{
+                opacity: 0,
+                y: 40
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 1,
+                delay: 0.3,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
                   <span className="block text-white/95 font-thin">HydraFacial</span>
                   <span className="block text-white font-light">London</span>
                   <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Skin Recharge</span>
                 </motion.h1>
                 
-                <motion.div 
-                  className="mb-16 space-y-6 max-w-3xl"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+                <motion.div className="mb-16 space-y-6 max-w-3xl" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.6,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
                   <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
                     Award-winning vortex technology that refines, rehydrates, and recharges your skin in just 30-45 minutes
                   </p>
@@ -230,18 +203,18 @@ const HydraFacial = () => {
                   </div>
                 </motion.div>
                 
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
-                  >
+                <motion.div className="flex flex-col sm:flex-row gap-6" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.9,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
+                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
                     Book HydraFacial
                   </a>
                   <div className="flex items-center gap-3 text-white/80 px-8">
@@ -257,16 +230,21 @@ const HydraFacial = () => {
         </section>
 
         {/* What is HydraFacial Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[46px]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mb-20" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                   What is HydraFacial?
                 </h2>
@@ -276,13 +254,19 @@ const HydraFacial = () => {
                 </p>
               </motion.div>
               
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
@@ -295,28 +279,26 @@ const HydraFacial = () => {
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {benefits.slice(0, 4).map((benefit, index) => (
-                      <motion.div
-                        key={index}
-                        className="flex items-center space-x-3"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                      >
+                    {benefits.slice(0, 4).map((benefit, index) => <motion.div key={index} className="flex items-center space-x-3" initial={{
+                    opacity: 0,
+                    x: -20
+                  }} whileInView={{
+                    opacity: 1,
+                    x: 0
+                  }} transition={{
+                    duration: 0.5,
+                    delay: index * 0.1
+                  }} viewport={{
+                    once: true
+                  }}>
                         <Star className="h-5 w-5 text-primary" />
                         <span className="text-white/90 text-sm">{benefit}</span>
-                      </motion.div>
-                    ))}
+                      </motion.div>)}
                   </div>
                 </div>
                 
                 <div className="relative">
-                  <img 
-                    src="/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png" 
-                    alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
-                  />
+                  <img src="/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png" alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment" className="w-full h-auto rounded-2xl shadow-2xl" />
                 </div>
               </motion.div>
             </div>
@@ -326,13 +308,18 @@ const HydraFacial = () => {
         {/* Benefits Section - Option 1: Horizontal List with Icons */}
         <section className="py-16 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Treatment Benefits
               </h2>
@@ -344,23 +331,25 @@ const HydraFacial = () => {
             {/* Option 1: Clean List Layout */}
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center space-x-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group"
-                    initial={{ opacity: 0, x: -40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+                {benefits.map((benefit, index) => <motion.div key={index} className="flex items-center space-x-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group" initial={{
+                opacity: 0,
+                x: -40
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} transition={{
+                duration: 0.6,
+                delay: index * 0.1
+              }} viewport={{
+                once: true
+              }}>
                     <div className="bg-primary/20 rounded-full p-3 group-hover:bg-primary/30 transition-colors flex-shrink-0">
                       <Star className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-light text-white leading-relaxed">
                       {benefit}
                     </h3>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </div>
           </div>
@@ -369,13 +358,18 @@ const HydraFacial = () => {
         {/* Alternative Option 2: Two Column Layout */}
         <section className="py-32 bg-[#0A0A0A] hidden">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Treatment Benefits
               </h2>
@@ -387,38 +381,42 @@ const HydraFacial = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div className="space-y-8">
-                  {benefits.slice(0, Math.ceil(benefits.length / 2)).map((benefit, index) => (
-                    <motion.div
-                      key={index}
-                      className="flex items-start space-x-4"
-                      initial={{ opacity: 0, x: -30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
+                  {benefits.slice(0, Math.ceil(benefits.length / 2)).map((benefit, index) => <motion.div key={index} className="flex items-start space-x-4" initial={{
+                  opacity: 0,
+                  x: -30
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.6,
+                  delay: index * 0.1
+                }} viewport={{
+                  once: true
+                }}>
                       <div className="bg-primary/20 rounded-full p-2 mt-1 flex-shrink-0">
                         <Star className="h-4 w-4 text-primary" />
                       </div>
                       <p className="text-lg text-white/90 font-light leading-relaxed">{benefit}</p>
-                    </motion.div>
-                  ))}
+                    </motion.div>)}
                 </div>
                 <div className="space-y-8">
-                  {benefits.slice(Math.ceil(benefits.length / 2)).map((benefit, index) => (
-                    <motion.div
-                      key={index + Math.ceil(benefits.length / 2)}
-                      className="flex items-start space-x-4"
-                      initial={{ opacity: 0, x: 30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: (index + Math.ceil(benefits.length / 2)) * 0.1 }}
-                      viewport={{ once: true }}
-                    >
+                  {benefits.slice(Math.ceil(benefits.length / 2)).map((benefit, index) => <motion.div key={index + Math.ceil(benefits.length / 2)} className="flex items-start space-x-4" initial={{
+                  opacity: 0,
+                  x: 30
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.6,
+                  delay: (index + Math.ceil(benefits.length / 2)) * 0.1
+                }} viewport={{
+                  once: true
+                }}>
                       <div className="bg-primary/20 rounded-full p-2 mt-1 flex-shrink-0">
                         <Star className="h-4 w-4 text-primary" />
                       </div>
                       <p className="text-lg text-white/90 font-light leading-relaxed">{benefit}</p>
-                    </motion.div>
-                  ))}
+                    </motion.div>)}
                 </div>
               </div>
             </div>
@@ -428,13 +426,18 @@ const HydraFacial = () => {
         {/* Alternative Option 3: Centered Single Column */}
         <section className="py-32 bg-black hidden">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Treatment Benefits
               </h2>
@@ -445,23 +448,25 @@ const HydraFacial = () => {
             
             <div className="max-w-3xl mx-auto">
               <div className="space-y-8">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+                {benefits.map((benefit, index) => <motion.div key={index} className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6,
+                delay: index * 0.1
+              }} viewport={{
+                once: true
+              }}>
                     <div className="bg-primary/20 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                       <Star className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-light text-white leading-relaxed">
                       {benefit}
                     </h3>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </div>
           </div>
@@ -470,13 +475,18 @@ const HydraFacial = () => {
         {/* Alternative Option 4: Minimal Checkmark List */}
         <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black hidden">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Treatment Benefits
               </h2>
@@ -487,36 +497,43 @@ const HydraFacial = () => {
             
             <div className="max-w-2xl mx-auto">
               <div className="space-y-6">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center space-x-4 py-4 border-b border-white/10 last:border-b-0"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+                {benefits.map((benefit, index) => <motion.div key={index} className="flex items-center space-x-4 py-4 border-b border-white/10 last:border-b-0" initial={{
+                opacity: 0,
+                scale: 0.9
+              }} whileInView={{
+                opacity: 1,
+                scale: 1
+              }} transition={{
+                duration: 0.5,
+                delay: index * 0.1
+              }} viewport={{
+                once: true
+              }}>
                     <div className="bg-primary rounded-full p-1 flex-shrink-0">
                       <Star className="h-4 w-4 text-black fill-black" />
                     </div>
                     <p className="text-lg text-white/90 font-light">{benefit}</p>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </div>
           </div>
         </section>
 
         {/* Treatment Steps Section */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="bg-[#0A0A0A] py-[29px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 HydraFacial Treatment Steps
               </h2>
@@ -528,22 +545,30 @@ const HydraFacial = () => {
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-16 items-start">
                 {/* Left Column - Treatment Steps */}
-                <motion.div
-                  className="space-y-6"
-                  initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  viewport={{ once: true }}
-                >
-                  {treatmentSteps.map((step, index) => (
-                    <motion.div
-                      key={index}
-                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
+                <motion.div className="space-y-6" initial={{
+                opacity: 0,
+                x: -40
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} transition={{
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }} viewport={{
+                once: true
+              }}>
+                  {treatmentSteps.map((step, index) => <motion.div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300" initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} transition={{
+                  duration: 0.6,
+                  delay: index * 0.1
+                }} viewport={{
+                  once: true
+                }}>
                       <div className="flex items-start space-x-6">
                         <div className="text-primary text-3xl font-thin flex-shrink-0">{step.step}</div>
                         <div>
@@ -551,25 +576,23 @@ const HydraFacial = () => {
                           <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
                         </div>
                       </div>
-                    </motion.div>
-                  ))}
+                    </motion.div>)}
                 </motion.div>
                 
                 {/* Right Column - Treatment Video */}
-                <motion.div
-                  className="lg:sticky lg:top-32"
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  viewport={{ once: true }}
-                >
-                  <TreatmentVideoPlayer
-                    video={hydraFacialVideos[0] || selectedVideo}
-                    onVideoChange={setSelectedVideo}
-                    treatmentName="HydraFacial"
-                    editMode={false}
-                    showControls={true}
-                  />
+                <motion.div className="lg:sticky lg:top-32" initial={{
+                opacity: 0,
+                x: 40
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} transition={{
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }} viewport={{
+                once: true
+              }}>
+                  <TreatmentVideoPlayer video={hydraFacialVideos[0] || selectedVideo} onVideoChange={setSelectedVideo} treatmentName="HydraFacial" editMode={false} showControls={true} />
                 </motion.div>
               </div>
             </div>
@@ -577,15 +600,20 @@ const HydraFacial = () => {
         </section>
 
         {/* Before & After Gallery */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[50px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 HydraFacial Results
               </h2>
@@ -594,24 +622,25 @@ const HydraFacial = () => {
               </p>
             </motion.div>
             
-            <BeforeAfterGrid 
-              images={beforeAfterImages}
-              initialDisplay={2}
-              loadMoreIncrement={2}
-            />
+            <BeforeAfterGrid images={beforeAfterImages} initialDisplay={2} loadMoreIncrement={2} />
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-32 bg-black">
+        <section className="bg-black py-[35px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 HydraFacial Pricing
               </h2>
@@ -622,52 +651,61 @@ const HydraFacial = () => {
             
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  { title: "Single Session", price: "£175", sessions: "1 treatment" },
-                  { title: "Course of 3", price: "£150", sessions: "per treatment", popular: true },
-                  { title: "Course of 6", price: "£125", sessions: "per treatment" }
-                ].map((plan, index) => (
-                  <motion.div
-                    key={index}
-                    className={`relative bg-white/5 backdrop-blur-sm border ${plan.popular ? 'border-primary' : 'border-white/10'} rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300`}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-black px-4 py-2 rounded-full text-sm font-medium">
+                {[{
+                title: "Single Session",
+                price: "£175",
+                sessions: "1 treatment"
+              }, {
+                title: "Course of 3",
+                price: "£150",
+                sessions: "per treatment",
+                popular: true
+              }, {
+                title: "Course of 6",
+                price: "£125",
+                sessions: "per treatment"
+              }].map((plan, index) => <motion.div key={index} className={`relative bg-white/5 backdrop-blur-sm border ${plan.popular ? 'border-primary' : 'border-white/10'} rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300`} initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6,
+                delay: index * 0.1
+              }} viewport={{
+                once: true
+              }}>
+                    {plan.popular && <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-black px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
-                      </div>
-                    )}
+                      </div>}
                     <h3 className="text-xl font-light text-white mb-4">{plan.title}</h3>
                     <div className="text-4xl font-thin text-white mb-2">{plan.price}</div>
                     <p className="text-white/70 text-sm mb-6">{plan.sessions}</p>
-                    <a 
-                      href={bookingUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-8 py-3 inline-flex items-center justify-center text-sm font-light transition-all duration-300 border border-white/20"
-                    >
+                    <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-8 py-3 inline-flex items-center justify-center text-sm font-light transition-all duration-300 border border-white/20">
                       Book Now
                     </a>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="bg-[#0A0A0A] py-[40px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Frequently Asked Questions
               </h2>
@@ -680,62 +718,54 @@ const HydraFacial = () => {
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Left Column */}
                 <div className="space-y-6">
-                  {leftColumnFaqs.map((faq, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <Collapsible 
-                        open={openFaqs[faq.question]} 
-                        onOpenChange={() => toggleFaq(faq.question)}
-                      >
+                  {leftColumnFaqs.map((faq, index) => <motion.div key={index} initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} transition={{
+                  duration: 0.5,
+                  delay: index * 0.1
+                }} viewport={{
+                  once: true
+                }}>
+                      <Collapsible open={openFaqs[faq.question]} onOpenChange={() => toggleFaq(faq.question)}>
                         <CollapsibleTrigger className="flex justify-between items-start w-full text-left p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
                           <span className="text-white font-light pr-4">{faq.question}</span>
-                          {openFaqs[faq.question] ? (
-                            <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />
-                          ) : (
-                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />
-                          )}
+                          {openFaqs[faq.question] ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />}
                         </CollapsibleTrigger>
                         <CollapsibleContent className="px-6 pb-6">
                           <p className="text-white/80 text-sm leading-relaxed">{faq.answer}</p>
                         </CollapsibleContent>
                       </Collapsible>
-                    </motion.div>
-                  ))}
+                    </motion.div>)}
                 </div>
                 
                 {/* Right Column */}
                 <div className="space-y-6">
-                  {rightColumnFaqs.map((faq, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: (index + leftColumnFaqs.length) * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <Collapsible 
-                        open={openFaqs[faq.question]} 
-                        onOpenChange={() => toggleFaq(faq.question)}
-                      >
+                  {rightColumnFaqs.map((faq, index) => <motion.div key={index} initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} transition={{
+                  duration: 0.5,
+                  delay: (index + leftColumnFaqs.length) * 0.1
+                }} viewport={{
+                  once: true
+                }}>
+                      <Collapsible open={openFaqs[faq.question]} onOpenChange={() => toggleFaq(faq.question)}>
                         <CollapsibleTrigger className="flex justify-between items-start w-full text-left p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
                           <span className="text-white font-light pr-4">{faq.question}</span>
-                          {openFaqs[faq.question] ? (
-                            <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />
-                          ) : (
-                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />
-                          )}
+                          {openFaqs[faq.question] ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />}
                         </CollapsibleTrigger>
                         <CollapsibleContent className="px-6 pb-6">
                           <p className="text-white/80 text-sm leading-relaxed">{faq.answer}</p>
                         </CollapsibleContent>
                       </Collapsible>
-                    </motion.div>
-                  ))}
+                    </motion.div>)}
                 </div>
               </div>
             </div>
@@ -743,27 +773,28 @@ const HydraFacial = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-32 bg-gradient-to-t from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-t from-black to-[#0A0A0A] py-[40px]">
           <div className="page-container">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
                   Ready to Recharge Your Skin?
                 </h2>
                 <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
                   Experience the transformative power of HydraFacial at London's premier Harley Street clinic
                 </p>
-                <a 
-                  href={bookingUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
-                >
+                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
                   Book Your HydraFacial
                 </a>
               </motion.div>
@@ -771,8 +802,6 @@ const HydraFacial = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default HydraFacial;
