@@ -341,7 +341,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[40px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -414,7 +414,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* Before & After Gallery */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[16px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -469,7 +469,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-32 bg-black">
+        <section className="bg-black py-px">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -522,7 +522,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-32 bg-gradient-to-r from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-r from-black to-[#0A0A0A] py-[55px]">
           <div className="page-container">
             <motion.div className="text-center max-w-4xl mx-auto" initial={{
             opacity: 0,
