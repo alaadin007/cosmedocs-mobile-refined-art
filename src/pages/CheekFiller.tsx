@@ -264,7 +264,92 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* 1ml & 2ml Cheek Filler Results */}
+        {/* More About Cheeks Section */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                More About Cheeks
+              </h2>
+            </motion.div>
+
+            <div className="max-w-6xl mx-auto space-y-12">
+              <motion.div
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-light text-white mb-6">Defined Cheeks Are Universally Attractive</h3>
+                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-4">
+                  Cheek fillers have become a gold standard for natural and non-surgical face lifts because an attractive facial profile is incomplete without visibly sculpted cheeks or high cheekbones.
+                </p>
+                <p className="text-white/80 font-extralight leading-relaxed text-lg">
+                  According to scientific studies, the presence of a prominent mid-face area or defined cheeks signals sexual maturity for both males and females, making cheek enhancement universally appealing.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-light text-white mb-6">How Aging Affects Your Face Structure</h3>
+                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-4">
+                  One of the most important face areas that show noticeable aging signs is the mid-face. As you age, the skin, bone and soft tissues undergo major changes.
+                </p>
+                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-6">
+                  The ligaments become loose, and fat pads of the face become thinner and shift, resulting in:
+                </p>
+                <ul className="space-y-3 text-white/80 font-extralight text-lg">
+                  <li className="flex items-start">
+                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    Cheeks start to look flat or sag
+                  </li>
+                  <li className="flex items-start">
+                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    Jowls are created along the jawline
+                  </li>
+                  <li className="flex items-start">
+                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    Droopy jawline and neck skin
+                  </li>
+                  <li className="flex items-start">
+                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                    Nasolabial folds (smile lines) become prominent
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-light text-white mb-6">A Trending 'Liquid Facelift'</h3>
+                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-4">
+                  This 'next generation facelift' adds volume to the sunken cheek area while subtly improving the under-eye area, aging mouth lines, and lifting the lower face.
+                </p>
+                <p className="text-white/80 font-extralight leading-relaxed text-lg">
+                  Many young patients also get high cheekbones, cheek fillers, and apple cheek fillers to add natural angles and soft youthful contours to their cheeks.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Collapsible Before & After Sections */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
             <motion.div
@@ -275,83 +360,117 @@ const CheekFiller = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                1ml & 2ml Cheek Filler Results
+                Transformation Gallery
               </h2>
               <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Subtle to moderate enhancement perfect for natural-looking results
+                Real patient transformations showcasing natural cheek enhancement artistry
               </p>
             </motion.div>
-            
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={[
-                  {
-                    src: "/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png",
-                    alt: "1ml cheek filler before and after results London Harley Street natural enhancement",
-                    caption: "Natural volume enhancement with 1ml cheek filler creating youthful contours"
-                  },
-                  {
-                    src: "/lovable-uploads/95608275-de36-4458-901d-2cc2ce2136de.png",
-                    alt: "2ml cheek enhancement dermal filler before after moderate definition",
-                    caption: "Sculpted cheekbones and lifted midface with 2ml strategic filler placement"
-                  },
-                  {
-                    src: "/lovable-uploads/2dc938fb-78b2-4af7-a0cb-190492553cbb.png",
-                    alt: "Apple cheek filler 1ml 2ml before after London youthful enhancement",
-                    caption: "Apple cheek enhancement for youthful, plump appearance with 1-2ml"
-                  }
-                ]}
-                triggerLabel="View 1ml & 2ml Results"
-                title="1ml & 2ml Cheek Filler Results"
-                description="Natural enhancement results by Dr. Ahmed Haq"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-              />
-            </div>
-          </div>
-        </section>
 
-        {/* 3ml & 4ml Cheek Filler Results for Men */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                3ml & 4ml Cheek Filler for Men
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Maximum enhancement for masculine facial definition and structure
-              </p>
-            </motion.div>
-            
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={[
-                  {
-                    src: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png",
-                    alt: "Male cheek filler 3ml 4ml before after London masculine enhancement",
-                    caption: "Masculine cheek enhancement with 3ml for defined facial structure"
-                  },
-                  {
-                    src: "/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png",
-                    alt: "Men's cheek volume restoration 4ml before after London Cosmedocs",
-                    caption: "Maximum volume restoration with 4ml creating strong facial harmony"
-                  },
-                  {
-                    src: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png",
-                    alt: "Male cheek lift 3ml 4ml dermal filler London masculine rejuvenation",
-                    caption: "Masculine midface rejuvenation with instant cheek lift and angular definition"
-                  }
-                ]}
-                triggerLabel="View Men's Results"
-                title="3ml & 4ml Cheek Filler Results for Men"
-                description="Masculine enhancement results by Dr. Ahmed Haq"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-              />
+            <div className="max-w-4xl mx-auto space-y-4">
+              {/* 1ml & 2ml Cheek Filler Results - Collapsible */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Collapsible
+                  open={openFaqIndex === 100}
+                  onOpenChange={() => setOpenFaqIndex(openFaqIndex === 100 ? null : 100)}
+                >
+                  <CollapsibleTrigger className="w-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex justify-between items-center text-left hover:bg-white/10 transition-colors">
+                    <div>
+                      <h3 className="text-2xl font-light text-white mb-2">1ml & 2ml Cheek Filler Results</h3>
+                      <p className="text-white/70 font-extralight">Subtle to moderate enhancement perfect for natural-looking results</p>
+                    </div>
+                    {openFaqIndex === 100 ? (
+                      <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+                    )}
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="px-6 pb-6 pt-4 bg-white/5 backdrop-blur-sm border border-white/10 border-t-0 rounded-b-xl">
+                    <div className="text-center">
+                      <BeforeAfterImageViewer 
+                        images={[
+                          {
+                            src: "/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png",
+                            alt: "1ml cheek filler before and after results London Harley Street natural enhancement",
+                            caption: "Natural volume enhancement with 1ml cheek filler creating youthful contours"
+                          },
+                          {
+                            src: "/lovable-uploads/95608275-de36-4458-901d-2cc2ce2136de.png",
+                            alt: "2ml cheek enhancement dermal filler before after moderate definition",
+                            caption: "Sculpted cheekbones and lifted midface with 2ml strategic filler placement"
+                          },
+                          {
+                            src: "/lovable-uploads/2dc938fb-78b2-4af7-a0cb-190492553cbb.png",
+                            alt: "Apple cheek filler 1ml 2ml before after London youthful enhancement",
+                            caption: "Apple cheek enhancement for youthful, plump appearance with 1-2ml"
+                          }
+                        ]}
+                        triggerLabel="View 1ml & 2ml Results"
+                        title="1ml & 2ml Cheek Filler Results"
+                        description="Natural enhancement results by Dr. Ahmed Haq"
+                        className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+                      />
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </motion.div>
+
+              {/* 3ml & 4ml Cheek Filler Results for Men - Collapsible */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Collapsible
+                  open={openFaqIndex === 101}
+                  onOpenChange={() => setOpenFaqIndex(openFaqIndex === 101 ? null : 101)}
+                >
+                  <CollapsibleTrigger className="w-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex justify-between items-center text-left hover:bg-white/10 transition-colors">
+                    <div>
+                      <h3 className="text-2xl font-light text-white mb-2">3ml & 4ml Cheek Filler for Men</h3>
+                      <p className="text-white/70 font-extralight">Maximum enhancement for masculine facial definition and structure</p>
+                    </div>
+                    {openFaqIndex === 101 ? (
+                      <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+                    )}
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="px-6 pb-6 pt-4 bg-white/5 backdrop-blur-sm border border-white/10 border-t-0 rounded-b-xl">
+                    <div className="text-center">
+                      <BeforeAfterImageViewer 
+                        images={[
+                          {
+                            src: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png",
+                            alt: "Male cheek filler 3ml 4ml before after London masculine enhancement",
+                            caption: "Masculine cheek enhancement with 3ml for defined facial structure"
+                          },
+                          {
+                            src: "/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png",
+                            alt: "Men's cheek volume restoration 4ml before after London Cosmedocs",
+                            caption: "Maximum volume restoration with 4ml creating strong facial harmony"
+                          },
+                          {
+                            src: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png",
+                            alt: "Male cheek lift 3ml 4ml dermal filler London masculine rejuvenation",
+                            caption: "Masculine midface rejuvenation with instant cheek lift and angular definition"
+                          }
+                        ]}
+                        triggerLabel="View Men's Results"
+                        title="3ml & 4ml Cheek Filler Results for Men"
+                        description="Masculine enhancement results by Dr. Ahmed Haq"
+                        className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+                      />
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </motion.div>
             </div>
           </div>
         </section>
