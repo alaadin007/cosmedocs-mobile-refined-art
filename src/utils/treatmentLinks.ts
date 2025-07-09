@@ -29,6 +29,7 @@ export const treatmentRoutes: Record<string, string> = {
   "jawline": "/jawline-filler",
   "jawline definition": "/jawline-filler",
   "cheek filler": "/cheek-filler",
+  "cheek fillers": "/cheek-filler",
   "cheek volume": "/cheek-filler",
   "cheek enhancement": "/cheek-filler",
   "tear trough": "/tear-trough-filler",
