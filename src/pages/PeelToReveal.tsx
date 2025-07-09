@@ -465,7 +465,7 @@ const PeelToReveal = () => {
         </section>
 
         {/* CRES System Explanation */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[32px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
