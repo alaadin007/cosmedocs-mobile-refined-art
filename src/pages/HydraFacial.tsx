@@ -324,7 +324,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Benefits Section - Option 1: Horizontal List with Icons */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="py-16 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div
               className="text-center mb-20"
