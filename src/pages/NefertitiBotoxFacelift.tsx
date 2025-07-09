@@ -1,93 +1,93 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, Clock, Star, Award, Eye, Zap, ArrowRight, Users, Heart, Shield, Target } from 'lucide-react';
-import PopularTreatments from '@/components/PopularTreatments';
-import { generateSEOMetadata } from '@/utils/seo';
+import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
+import { ChevronLeft, ChevronRight, Star, Clock, Shield, Users } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+import LiquidGlassRelatedTreatments from "@/components/LiquidGlassRelatedTreatments";
 
-const NefertitiBotoxFacelift = () => {
+export default function NefertitiBotoxFacelift() {
+  const [isRelatedTreatmentsOpen, setIsRelatedTreatmentsOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const seoData = generateSEOMetadata(
-    "Nefertiti Botox Facelift | Lower Face Botox | Dr. Ahmed Haq | London",
-    "Advanced Nefertiti Botox facelift for lower face rejuvenation by Dr. Ahmed Haq. Targets DAO muscle, mentalis crease, and platysma for natural jawline definition. £250 comprehensive treatment in London.",
-    "/nefertiti-botox-facelift"
+    "Nefertiti Lift - Non-Surgical Jawline & Neck Contouring | Cosmedocs",
+    "Redefine your jawline with precision using the Nefertiti Lift. Non-surgical Botox treatment for sharper jawlines, improved neck contour & reduced neck bands. Book consultation.",
+    "/nefertiti-botox-face-jaw-lift"
   );
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalService",
-    "name": "Nefertiti Botox Facelift",
-    "provider": {
-      "@type": "Physician",
-      "name": "Dr. Ahmed Haq",
-      "specialty": "Aesthetic Medicine",
-      "yearsOfExperience": "15+"
+  const beforeAfterImages = [
+    {
+      src: "/lovable-uploads/9c7fac37-e442-4d67-bb1b-f3f79c67e279.png",
+      alt: "Nefertiti Lift before and after results showing improved neck contour",
+      caption: "Before & After: Significant improvement in neck bands and jawline definition"
     },
-    "description": "Advanced lower face Botox treatment including DAO muscle and mentalis crease for jawline definition",
-    "serviceType": "Botox Facelift Treatment",
-    "areaServed": ["London", "Birmingham", "Manchester", "Cardiff"],
-    "availableLanguage": "English",
-    "offers": {
-      "@type": "Offer",
-      "price": "250",
-      "priceCurrency": "GBP",
-      "description": "Comprehensive Nefertiti Botox facelift treatment"
+    {
+      src: "/lovable-uploads/e09a9811-f63b-493e-9c69-78f715481f5c.png", 
+      alt: "Nefertiti Lift side profile showing enhanced jawline definition",
+      caption: "Side Profile: Enhanced jawline definition and smoother neck contour"
     }
+  ];
+
+  const relatedTreatments = [
+    { name: "Face Botox Areas", price: "£200-400", link: "/face-botox-areas" },
+    { name: "Lower Face Botox", price: "£250-350", link: "/lower-face-botox" },
+    { name: "Chin Botox", price: "£200-300", link: "/chin-botox" },
+    { name: "Non-Surgical Facelift", price: "£800-1200", link: "/non-surgical-facelift" }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === beforeAfterImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [beforeAfterImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex(currentImageIndex === beforeAfterImages.length - 1 ? 0 : currentImageIndex + 1);
   };
 
-  const treatmentAreas = [
-    {
-      icon: Target,
-      title: "DAO Muscle (Depressor Anguli Oris)",
-      description: "Targets muscles that pull down the corners of the mouth",
-      benefit: "Lifts downturned mouth corners for a more youthful appearance"
-    },
-    {
-      icon: Shield,
-      title: "Mentalis Crease",
-      description: "Addresses horizontal lines and dimpling over the chin area",
-      benefit: "Smooths chin texture and reduces orange peel appearance"
-    },
-    {
-      icon: Zap,
-      title: "Platysma Muscle",
-      description: "Relaxes the large neck muscle that creates neck bands",
-      benefit: "Defines jawline and reduces appearance of neck aging"
-    },
-    {
-      icon: Heart,
-      title: "Jawline Definition",
-      description: "Strategic placement to enhance facial contours",
-      benefit: "Creates sharper, more defined jawline without surgery"
-    }
-  ];
+  const prevImage = () => {
+    setCurrentImageIndex(currentImageIndex === 0 ? beforeAfterImages.length - 1 : currentImageIndex - 1);
+  };
 
-  const beforeAfterPoints = [
-    "Lifted mouth corners instead of downturned expression",
-    "Smooth chin surface without dimpling or creases",
-    "Defined jawline with reduced jowling appearance",
-    "Reduced neck bands and platysma prominence",
-    "Overall more youthful lower face expression",
-    "Balanced facial animation between upper and lower face"
-  ];
-
-  const whyChoosePoints = [
+  const faqs = [
     {
-      title: "15+ Years Expertise",
-      description: "Dr. Ahmed Haq's extensive experience in advanced Botox techniques"
+      question: "What is the Nefertiti Lift and how does it work?",
+      answer: "The Nefertiti Lift is a non-surgical treatment using Botox injections to relax the platysma muscle in the neck. This muscle naturally pulls downward on the lower face, and by relaxing it, we allow the natural lifting muscles of the jaw to rebalance facial tension, creating a more defined jawline and smoother neck contour."
     },
     {
-      title: "Comprehensive Approach",
-      description: "Addresses multiple muscle groups for complete lower face rejuvenation"
+      question: "How long do Nefertiti Lift results last?",
+      answer: "Results typically last 3-4 months, similar to other Botox treatments. The longevity can vary based on individual factors such as muscle strength, metabolism, and lifestyle. Regular maintenance treatments can help maintain optimal results."
     },
     {
-      title: "Natural Results",
-      description: "Maintains facial expression while improving contours"
+      question: "Is the Nefertiti Lift painful?",
+      answer: "The treatment involves minimal discomfort. Most patients describe it as small pinpricks. A topical numbing cream can be applied before treatment to enhance comfort. The entire procedure typically takes 15-20 minutes."
     },
     {
-      title: "Advanced Training Available",
-      description: "We train medical professionals in these advanced techniques"
+      question: "What areas does the Nefertiti Lift target?",
+      answer: "The Nefertiti Lift specifically targets the platysma muscle bands in the neck, the jawline area, and the transition zone between the face and neck. This creates a lifting effect that defines the jawline and smooths neck bands."
+    },
+    {
+      question: "When will I see results from the Nefertiti Lift?",
+      answer: "Initial results can be seen within 3-5 days, with full results visible after 2 weeks. The gradual onset allows for natural-looking enhancement of your jawline and neck contour."
+    },
+    {
+      question: "Who is a good candidate for the Nefertiti Lift?",
+      answer: "Ideal candidates are those with mild to moderate neck bands, loss of jawline definition, or early signs of neck aging. A consultation will determine if this treatment is suitable for your specific concerns and aesthetic goals."
+    },
+    {
+      question: "Are there any side effects?",
+      answer: "Side effects are typically minimal and may include temporary redness, slight swelling, or mild bruising at injection sites. These usually resolve within 24-48 hours. Serious complications are rare when performed by qualified practitioners."
+    },
+    {
+      question: "How much does the Nefertiti Lift cost?",
+      answer: "Treatment typically ranges from £300-500 depending on the number of units required and individual needs. A detailed quote will be provided during your consultation based on your specific treatment plan."
     }
   ];
 
@@ -99,177 +99,226 @@ const NefertitiBotoxFacelift = () => {
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
+        <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
+        <meta name="twitter:image" content={seoData.image} />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
-          <div className="page-container">
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10" />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Nefertiti Botox Facelift
-                  <span className="block text-primary mt-2">Advanced Lower Face Rejuvenation</span>
-                </h1>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Dr. Ahmed Haq's comprehensive approach to lower face Botox targeting the DAO muscle, 
-                  mentalis crease, and platysma for natural jawline definition and facial balance.
+              <Badge variant="secondary" className="mb-6 text-sm font-medium">
+                Non-Surgical Jawline Enhancement
+              </Badge>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">
+                Nefertiti Lift
+              </h1>
+              <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                Redefine Your Jawline with Precision
+              </h2>
+              <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
+                The Nefertiti Lift is a modern, non-surgical technique that subtly lifts and redefines the jawline and neck using targeted Botox injections. Inspired by Queen Nefertiti's legendary profile, this treatment restores elegance and confidence—without surgery.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  Book Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => setIsRelatedTreatmentsOpen(true)}
+                >
+                  View Related Treatments
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Info Cards */}
+        <section className="py-16 bg-background/50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <Card className="text-center border-primary/20 hover:border-primary/40 transition-colors">
+                <CardContent className="p-6">
+                  <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold mb-2">Treatment Time</h3>
+                  <p className="text-muted-foreground text-sm">15-20 minutes</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center border-primary/20 hover:border-primary/40 transition-colors">
+                <CardContent className="p-6">
+                  <Shield className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold mb-2">Downtime</h3>
+                  <p className="text-muted-foreground text-sm">None required</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center border-primary/20 hover:border-primary/40 transition-colors">
+                <CardContent className="p-6">
+                  <Star className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold mb-2">Results</h3>
+                  <p className="text-muted-foreground text-sm">3-5 days onset</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center border-primary/20 hover:border-primary/40 transition-colors">
+                <CardContent className="p-6">
+                  <Users className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold mb-2">Duration</h3>
+                  <p className="text-muted-foreground text-sm">3-4 months</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Details */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">How the Nefertiti Lift Works</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground">
+                <p className="text-lg leading-relaxed mb-6">
+                  By relaxing the platysma muscle—a thin sheet of muscle that pulls downward on the lower face—we allow the natural lifting muscles of the jaw to rebalance facial tension. This creates a smoother, more youthful silhouette from the jaw to the collarbone.
                 </p>
-                <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-8">
-                  <div className="flex items-center gap-2">
-                    <Award className="h-5 w-5 text-primary" />
-                    <span>£250 Treatment</span>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-semibold text-foreground">Benefits of the Nefertiti Lift:</h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0"></div>
+                        <span>Sharper, more defined jawline</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0"></div>
+                        <span>Improved neck contour</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0"></div>
+                        <span>Reduction in neck bands and sagging</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0"></div>
+                        <span>Subtle lift with no downtime</span>
+                      </li>
+                    </ul>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-primary" />
-                    <span>45 Minutes</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Eye className="h-5 w-5 text-primary" />
-                    <span>Natural Results</span>
+                  
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-semibold text-foreground">Treatment Process:</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <Badge variant="outline" className="text-xs">1</Badge>
+                        <p className="text-sm">Comprehensive consultation and facial assessment</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Badge variant="outline" className="text-xs">2</Badge>
+                        <p className="text-sm">Precise mapping of injection points</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Badge variant="outline" className="text-xs">3</Badge>
+                        <p className="text-sm">Strategic Botox placement along neck muscles</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Badge variant="outline" className="text-xs">4</Badge>
+                        <p className="text-sm">Immediate return to daily activities</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
+                
+                <p className="text-lg leading-relaxed">
+                  At Cosmedocs, our aesthetic philosophy is invisible art—transformation that speaks without saying a word. The Nefertiti Lift embodies this principle perfectly, delivering natural-looking enhancement that defines your features while maintaining the authentic you. Bold yet natural, always your way.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* The Lower Face Problem */}
-        <section className="py-16">
-          <div className="page-container">
+        {/* Before & After Gallery */}
+        <section className="py-16 bg-background/50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Before & After Results</h2>
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Why Lower Face Botox is Essential</h2>
-              <Card className="p-8 mb-8">
+              <Card className="overflow-hidden border-primary/20">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">The Unbalanced Face Problem</h3>
-                      <p className="text-muted-foreground mb-4">
-                        Many clients have been receiving upper face Botox for years, but their lower 
-                        face remains hyper-animated. This creates an unnatural imbalance where the 
-                        upper face is relaxed while the lower face shows excessive movement.
-                      </p>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>Mentalis crease over the chin from habitual muscle use</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>Downturned mouth corners creating sad expression</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>Horizontal lines along jawline from muscle tension</span>
-                        </li>
-                      </ul>
+                  <div className="relative">
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src={beforeAfterImages[currentImageIndex].src}
+                        alt={beforeAfterImages[currentImageIndex].alt}
+                        className="w-full h-full object-cover transition-all duration-500"
+                      />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">The Childhood Expression Return</h3>
-                      <p className="text-muted-foreground mb-4">
-                        Interestingly, the lower face expressions we treat are often the same ones 
-                        children use when sad - you'll see 2-4 year olds making these exact facial 
-                        movements. After our teens and twenties, these expressions return, often 
-                        related to strong platysma muscle activity.
-                      </p>
-                      <div className="bg-primary/10 p-4 rounded-lg">
-                        <p className="text-sm font-medium mb-2">The Solution:</p>
-                        <p className="text-sm text-muted-foreground">
-                          Strategic lower face Botox creates balance, symmetry, and natural results 
-                          by harmonizing upper and lower facial animation.
-                        </p>
-                      </div>
+                    
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background"
+                      onClick={prevImage}
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background"
+                      onClick={nextImage}
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                    
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-background/90 px-4 py-2 rounded-full">
+                      <p className="text-sm text-center">{beforeAfterImages[currentImageIndex].caption}</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Areas */}
-        <section className="py-16 bg-accent/30">
-          <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Comprehensive Treatment Areas</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {treatmentAreas.map((area, index) => (
-                  <motion.div
-                    key={area.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="h-full p-6 hover:shadow-lg transition-shadow">
-                      <CardContent className="p-0">
-                        <area.icon className="h-8 w-8 text-primary mb-4" />
-                        <h3 className="text-lg font-semibold mb-3">{area.title}</h3>
-                        <p className="text-muted-foreground text-sm mb-4">{area.description}</p>
-                        <div className="bg-accent/50 p-3 rounded text-xs">
-                          <span className="font-medium">Benefit: </span>
-                          <span className="text-muted-foreground">{area.benefit}</span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+              
+              <div className="flex justify-center gap-2 mt-6">
+                {beforeAfterImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentImageIndex ? 'bg-primary' : 'bg-primary/30'
+                    }`}
+                    onClick={() => setCurrentImageIndex(index)}
+                  />
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Before & After Expectations */}
+        {/* Pricing */}
         <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">What to Expect After Treatment</h2>
-              <Card className="p-8">
-                <CardContent className="p-0">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                        <Star className="h-5 w-5 text-primary" />
-                        Visible Improvements
-                      </h3>
-                      <ul className="space-y-3">
-                        {beforeAfterPoints.map((point, index) => (
-                          <li key={index} className="flex items-start gap-2 text-sm">
-                            <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                            <span className="text-muted-foreground">{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">Investment & Value</h3>
-                      <div className="space-y-4">
-                        <div className="bg-primary/10 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-primary mb-2">£250</div>
-                          <p className="text-sm text-muted-foreground">
-                            Comprehensive treatment including DAO muscle, mentalis crease, 
-                            and platysma muscle for complete lower face rejuvenation.
-                          </p>
-                        </div>
-                        <p className="text-sm text-muted-foreground">
-                          <strong>Why the higher dose?</strong> The platysma is a large muscle 
-                          requiring higher doses for effective treatment, but the results are 
-                          transformative for facial balance and definition.
-                        </p>
-                      </div>
-                    </div>
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-8">Treatment Investment</h2>
+              <Card className="border-primary/20">
+                <CardContent className="p-8">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold mb-4">Nefertiti Lift</h3>
+                    <div className="text-4xl font-bold text-primary mb-4">£300-500</div>
+                    <p className="text-muted-foreground mb-6">
+                      Complete jawline and neck contouring treatment
+                    </p>
+                    <ul className="text-sm text-muted-foreground space-y-2 mb-8">
+                      <li>• Comprehensive consultation included</li>
+                      <li>• Precise Botox placement</li>
+                      <li>• 3-4 months duration</li>
+                      <li>• No downtime required</li>
+                    </ul>
+                    <Button className="w-full bg-primary hover:bg-primary/90">
+                      Book Consultation
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -277,113 +326,82 @@ const NefertitiBotoxFacelift = () => {
           </div>
         </section>
 
-        {/* Why Choose Dr. Ahmed Haq */}
-        <section className="py-16 bg-accent/30">
-          <div className="page-container">
+        {/* FAQ Section */}
+        <section className="py-16 bg-background/50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Why Choose Dr. Ahmed Haq</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {whyChoosePoints.map((point, index) => (
-                  <Card key={index} className="p-6">
-                    <CardContent className="p-0">
-                      <h3 className="text-lg font-semibold mb-3">{point.title}</h3>
-                      <p className="text-muted-foreground text-sm">{point.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  {faqs.slice(0, Math.ceil(faqs.length / 2)).map((faq, index) => (
+                    <Accordion key={index} type="single" collapsible>
+                      <AccordionItem value={`item-${index}`} className="border-primary/20">
+                        <AccordionTrigger className="text-left hover:text-primary">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  ))}
+                </div>
+                <div className="space-y-4">
+                  {faqs.slice(Math.ceil(faqs.length / 2)).map((faq, index) => (
+                    <Accordion key={index + Math.ceil(faqs.length / 2)} type="single" collapsible>
+                      <AccordionItem value={`item-${index + Math.ceil(faqs.length / 2)}`} className="border-primary/20">
+                        <AccordionTrigger className="text-left hover:text-primary">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  ))}
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Professional Training */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">Professional Training Available</h2>
-              <Card className="p-8">
-                <CardContent className="p-0">
-                  <Users className="h-12 w-12 text-primary mx-auto mb-6" />
-                  <h3 className="text-xl font-semibold mb-4">Learn Advanced Lower Face Techniques</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    For medical professionals looking to master advanced lower face Botox techniques, 
-                    we offer comprehensive training through harleystreetinstitute.com and one-to-one 
-                    sessions with Dr. Ahmed Haq.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button variant="outline">
-                      Online Training Courses
-                    </Button>
-                    <Button variant="outline">
-                      Book One-to-One Training
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-primary/10">
-          <div className="page-container">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Ready for Balanced, Natural Results?</h2>
-              <p className="text-muted-foreground mb-8">
-                Transform your lower face with Dr. Ahmed Haq's advanced Nefertiti Botox technique. 
-                Follow @Cosmedocs on Instagram to see these procedures in action.
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">Ready to Redefine Your Jawline?</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Experience the elegance of Queen Nefertiti with our precision Botox technique. 
+                Book your consultation today and discover how the Nefertiti Lift can enhance your natural beauty.
               </p>
-              <div className="flex justify-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Book Your Consultation
+                  Book Free Consultation
                 </Button>
-                <Button size="lg" variant="outline">
-                  View Instagram <ArrowRight className="ml-2 h-4 w-4" />
+                <Button variant="outline" size="lg">
+                  Call 020 7234 5678
                 </Button>
-              </div>
-              <div className="mt-8 text-center">
-                <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <Eye className="h-4 w-4" />
-                  <span>Bold • Natural • Always Your Way</span>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only" aria-hidden="true">
-          <h2>Nefertiti Botox Facelift Lower Face Botox DAO Muscle Mentalis Crease Platysma London Birmingham Manchester Cardiff</h2>
+        <div className="sr-only">
+          <h3>Nefertiti Lift London - Advanced Jawline Contouring</h3>
           <p>
-            Dr Ahmed Haq nefertiti botox facelift lower face botox dao muscle depressor anguli oris 
-            mentalis crease platysma muscle botox jawline definition neck bands treatment london 
-            birmingham manchester cardiff cosmedocs advanced botox techniques lower face rejuvenation 
-            facial balance symmetry natural results aesthetic medicine expert consultation booking 
-            £250 comprehensive treatment high dose botox large muscle platysma facial animation 
-            balance upper face lower face harmony aesthetic enhancement invisible art philosophy 
-            millimeter precision medicine facial optimization expert consultation aesthetic medicine 
-            london birmingham manchester cardiff advanced botox consultation booking natural facial 
-            enhancement techniques lower face botox treatment expert aesthetic physician consultation 
-            facial anatomy expertise aesthetic medicine training physician education advanced aesthetic 
-            techniques natural results cosmedocs aesthetic clinic dr ahmed haq consultation booking 
-            aesthetic medicine expertise facial rejuvenation techniques advanced consultation millimeter 
-            precision aesthetic enhancement natural facial optimization jawline definition techniques 
-            expert aesthetic physician consultation facial anatomy expertise aesthetic medicine london 
-            birmingham manchester cardiff advanced aesthetic consultation booking natural facial 
-            enhancement techniques nefertiti botox facelift lower face treatment professional training 
-            harley street institute online courses one to one training medical professionals aesthetic 
-            medicine education advanced botox technique dao muscle mentalis platysma treatment expert 
-            aesthetic physician lower face botox facelift treatment natural results cosmedocs.
+            The Nefertiti Lift at Cosmedocs London combines advanced Botox techniques with artistic precision to create stunning jawline definition. 
+            Our experienced practitioners use strategic platysma muscle relaxation to achieve natural-looking neck lift results without surgery. 
+            Book your Nefertiti Lift consultation in London today for expert jawline enhancement and neck contouring.
           </p>
         </div>
-
-        <PopularTreatments 
-          title="Related Treatments"
-          className="bg-black"
-        />
       </div>
+
+      <LiquidGlassRelatedTreatments
+        isOpen={isRelatedTreatmentsOpen}
+        onClose={() => setIsRelatedTreatmentsOpen(false)}
+        treatments={relatedTreatments}
+      />
     </>
   );
-};
-
-export default NefertitiBotoxFacelift;
+}

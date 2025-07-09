@@ -116,6 +116,12 @@ export const sitemapData: SitemapData = {
       priority: 0.8
     },
     {
+      loc: `${baseUrl}/nefertiti-botox-face-jaw-lift`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.8
+    },
+    {
       loc: `${baseUrl}/trigger-point-botox`,
       lastmod: currentDate,
       changefreq: 'monthly',

@@ -104,6 +104,7 @@ const App = () => (
               <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
               
               <Route path="/nefertiti-botox-facelift" element={<NefertitiBotoxFacelift />} />
+              <Route path="/nefertiti-botox-face-jaw-lift" element={<NefertitiBotoxFacelift />} />
               <Route path="/advanced-upper-face-botox" element={<AdvancedUpperFaceBotox />} />
               <Route path="/face-botox-areas" element={<FaceBotoxAreas />} />
               <Route path="/lower-face-botox" element={<LowerFaceBotox />} />

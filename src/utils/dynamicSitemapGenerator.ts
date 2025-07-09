@@ -27,7 +27,7 @@ function extractTreatmentRoutes(): string[] {
     
     // Botox treatments
     'advanced-upper-face-botox', 'lower-face-botox', 'face-botox-areas', 'nefertiti-botox-facelift',
-    'trigger-point-botox', 'gummy-smile-botox', 'chin-botox', 'botox-calf-reduction',
+    'nefertiti-botox-face-jaw-lift', 'trigger-point-botox', 'gummy-smile-botox', 'chin-botox', 'botox-calf-reduction',
     
     // Filler treatments
     'marionette-lines', 'nasolabial-folds', 'lip-filler-dissolve',
