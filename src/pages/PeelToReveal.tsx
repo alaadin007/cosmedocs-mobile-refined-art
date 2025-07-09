@@ -16,37 +16,22 @@ const PeelToReveal = () => {
 
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
-  // Before/after images for the viewer - Using available uploaded images
+  // Before/after images for the viewer - Real Cosmedocs results
   const beforeAfterImages = [
     {
-      src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
-      alt: "Peel to Reveal before and after results showing improved skin texture and brightness",
-      caption: "Transformative results showing clearer, brighter skin with improved texture"
+      src: "/lovable-uploads/bd706998-fd71-4df5-a58b-4f4d5185ee0d.png",
+      alt: "Peel to Reveal before and after showing improved skin tone and reduced pigmentation",
+      caption: "Dramatic improvement in skin tone and pigmentation reduction"
     },
     {
-      src: "/lovable-uploads/16fa7311-00af-4ea7-b353-73f981f6d87c.png",
-      alt: "Peel to Reveal treatment results showing reduced pigmentation and improved skin tone",
-      caption: "Significant improvement in skin tone and reduction in pigmentation"
+      src: "/lovable-uploads/3be6db97-ef72-4352-abbb-8a0891d46c87.png",
+      alt: "Peel to Reveal treatment results showing enhanced skin texture and clarity",
+      caption: "Enhanced skin texture and improved overall clarity"
     },
     {
-      src: "/lovable-uploads/717753b3-1c9d-43bd-bdc1-ca245fc3c284.png",
-      alt: "Peel to Reveal results showing smoother skin texture and reduced fine lines",
-      caption: "Enhanced skin smoothness with visible reduction in fine lines"
-    },
-    {
-      src: "/lovable-uploads/c47cf752-b777-49da-b470-f6c1f7e3a292.png",
-      alt: "Peel to Reveal before and after showing reduction in acne and pore size",
-      caption: "Remarkable improvement in acne and pore refinement"
-    },
-    {
-      src: "/lovable-uploads/2b95a6f3-bcce-41f4-833d-8be389a9e323.png",
-      alt: "Peel to Reveal treatment showing improved skin radiance and glow",
-      caption: "Enhanced skin radiance and natural glow after treatment"
-    },
-    {
-      src: "/lovable-uploads/3d2ce348-5696-4922-ad5c-ea1e9c5232b3.png",
-      alt: "Peel to Reveal results demonstrating melasma and sun damage improvement",
-      caption: "Significant reduction in melasma and sun damage"
+      src: "/lovable-uploads/c040756c-623e-4569-b07b-ff9f9ae5aefd.png",
+      alt: "Peel to Reveal results demonstrating smoother complexion and refined skin",
+      caption: "Smoother complexion with refined skin texture and tone"
     }
   ];
 
