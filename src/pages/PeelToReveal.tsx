@@ -661,46 +661,20 @@ const PeelToReveal = () => {
               </p>
             </motion.div>
             
-            <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-              {/* Left Column FAQs */}
-              <motion.div
-                className="space-y-6"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
+              {/* Left Column */}
+              <div className="space-y-4">
                 {leftColumnFaqs.map((faq, index) => (
-                  <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300">
-                    <CardHeader>
-                      <CardTitle className="text-white font-light text-lg">{faq.question}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-white/70 font-light leading-relaxed">{faq.answer}</p>
-                    </CardContent>
-                  </Card>
+                  <FAQItem key={`left-${index}`} question={faq.question} answer={faq.answer} index={index} />
                 ))}
-              </motion.div>
-
-              {/* Right Column FAQs */}
-              <motion.div
-                className="space-y-6"
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
+              </div>
+              
+              {/* Right Column */}
+              <div className="space-y-4">
                 {rightColumnFaqs.map((faq, index) => (
-                  <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300">
-                    <CardHeader>
-                      <CardTitle className="text-white font-light text-lg">{faq.question}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-white/70 font-light leading-relaxed">{faq.answer}</p>
-                    </CardContent>
-                  </Card>
+                  <FAQItem key={`right-${index}`} question={faq.question} answer={faq.answer} index={index + 5} />
                 ))}
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -787,6 +761,42 @@ const PeelToReveal = () => {
         </div>
       </div>
     </>
+  );
+};
+
+// FAQ Item Component
+const FAQItem = ({ question, answer, index }: { question: string; answer: string; index: number }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.05, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      viewport={{ once: true }}
+    >
+      <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+        <CollapsibleTrigger className="w-full">
+          <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between">
+                <h3 className="text-left font-light text-white text-lg">{question}</h3>
+                {isOpen ? (
+                  <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />
+                ) : (
+                  <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <div className="px-6 pb-6">
+            <p className="text-white/80 leading-relaxed font-light">{answer}</p>
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
+    </motion.div>
   );
 };
 
