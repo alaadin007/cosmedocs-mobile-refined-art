@@ -207,8 +207,63 @@ const PeelToReveal = () => {
           </div>
         </section>
 
-        {/* Treatment Benefits Section */}
+        {/* Introduction Section */}
         <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="max-w-5xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-thin text-white mb-12 text-center tracking-tight">
+                Reverse the Signs of Aging
+              </h2>
+              
+              <div className="space-y-8 text-lg text-white/80 font-light leading-relaxed">
+                <p>
+                  Our skin cells become dormant and cellular regeneration slows down as we age, leaving dull, damaged, dead skin cells on the surface. Collagen, elastin, hyaluronic acid and other structural elements vital for skin health start to decrease from our mid-20s, and increasing layers of dead skin and micro-pigmentation cause unevenly toned skins with an irregular texture and enlarged pores.
+                </p>
+                
+                <p>
+                  Although make-up, moisturisers and other beauty products may temporarily conceal some of these signs of ageing, they cannot reverse them and may accelerate the process. Our cosmetic doctors from Harley Street, London, are passionate about skincare and have formulated an in-clinic skin peel treatment called Peel To Reveal.
+                </p>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 my-12">
+                  <h3 className="text-2xl font-light text-white mb-6">When is Peel to Reveal used?</h3>
+                  <div className="grid md:grid-cols-2 gap-6 text-white/70">
+                    <div>
+                      <h4 className="text-lg font-light text-white mb-3">Ideal for treating:</h4>
+                      <ul className="space-y-2">
+                        <li>• General skin dullness & aging (mid-20s onwards)</li>
+                        <li>• Pigmentation and melasma</li>
+                        <li>• Uneven skin tone and texture</li>
+                        <li>• Sun damage and fine lines</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-light text-white mb-3">Also effective for:</h4>
+                      <ul className="space-y-2">
+                        <li>• Acne and enlarged pores</li>
+                        <li>• Whiteheads and blackheads</li>
+                        <li>• Wrinkles and age spots</li>
+                        <li>• Skin rejuvenation maintenance</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <p className="text-center text-xl">
+                  <span className="text-white font-light">Peel to Reveal is a modern fusion skin peel</span> using multiple superficial to medium peeling agents such as Glycolic, Lactic, Salicylic Acids and TCA, treating more than a dozen skin issues at once. Combined with powerful antioxidants including Glutathione, it's probably the quickest skin rejuvenation treatment for any skin type with minimal side effects.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Treatment Benefits Section */}
+        <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
             <motion.div
               className="text-center mb-20"
@@ -346,74 +401,168 @@ const PeelToReveal = () => {
             </motion.div>
             
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-16">
-                {/* Ingredients Breakdown */}
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Performance Ingredients - Enhanced UI */}
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <Collapsible open={isOpenIngredients} onOpenChange={setIsOpenIngredients}>
-                    <CollapsibleTrigger className="w-full">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer hover:bg-white/15 transition-all duration-300">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-3xl font-light text-white">Performance Ingredients</h3>
-                          {isOpenIngredients ? <ChevronUp className="h-6 w-6 text-white" /> : <ChevronDown className="h-6 w-6 text-white" />}
-                        </div>
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="mt-4">
-                      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 space-y-6">
-                        <div>
-                          <h4 className="text-xl font-light text-white mb-3">Cleanse</h4>
-                          <p className="text-white/70 font-light">Salicylic Acid • Tea Tree Oil • Willow Bark Extract</p>
-                        </div>
-                        <div>
-                          <h4 className="text-xl font-light text-white mb-3">Revitalise</h4>
-                          <p className="text-white/70 font-light">Glutathione • Kojic/Mandelic/Azelaic Acids • Natural Extracts (Papaya, Licorice, Bearberry) • Arginine</p>
-                        </div>
-                        <div>
-                          <h4 className="text-xl font-light text-white mb-3">Exfoliate & Stimulate</h4>
-                          <p className="text-white/70 font-light">TCA • Lactic Acid • Glycolic Acid • Malic/Citric Acids</p>
-                        </div>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
+                  <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/30 shadow-2xl">
+                    <h3 className="text-3xl font-light text-white mb-8 text-center">Performance Ingredients</h3>
+                    
+                    <div className="space-y-6">
+                      {/* Cleanse Phase */}
+                      <Collapsible>
+                        <CollapsibleTrigger className="w-full group">
+                          <div className="bg-white/10 hover:bg-white/20 rounded-2xl p-6 border border-white/20 transition-all duration-300 cursor-pointer">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-4">
+                                <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                                <h4 className="text-xl font-light text-white">Cleanse</h4>
+                              </div>
+                              <ChevronDown className="h-5 w-5 text-white/70 group-data-[state=open]:rotate-180 transition-transform duration-300" />
+                            </div>
+                          </div>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="mt-3">
+                          <div className="bg-white/5 rounded-xl p-6 border border-white/10 ml-7">
+                            <div className="space-y-3 text-white/80">
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
+                                <span className="font-light">Salicylic Acid</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
+                                <span className="font-light">Tea Tree Oil</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
+                                <span className="font-light">Willow Bark Extract</span>
+                              </div>
+                            </div>
+                          </div>
+                        </CollapsibleContent>
+                      </Collapsible>
+
+                      {/* Revitalise Phase */}
+                      <Collapsible>
+                        <CollapsibleTrigger className="w-full group">
+                          <div className="bg-white/10 hover:bg-white/20 rounded-2xl p-6 border border-white/20 transition-all duration-300 cursor-pointer">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-4">
+                                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                                <h4 className="text-xl font-light text-white">Revitalise</h4>
+                              </div>
+                              <ChevronDown className="h-5 w-5 text-white/70 group-data-[state=open]:rotate-180 transition-transform duration-300" />
+                            </div>
+                          </div>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="mt-3">
+                          <div className="bg-white/5 rounded-xl p-6 border border-white/10 ml-7">
+                            <div className="space-y-3 text-white/80">
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
+                                <span className="font-light">Glutathione</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
+                                <span className="font-light">Kojic/Mandelic/Azelaic Acids</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
+                                <span className="font-light">Natural Extracts (Papaya, Licorice, Bearberry)</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
+                                <span className="font-light">Arginine</span>
+                              </div>
+                            </div>
+                          </div>
+                        </CollapsibleContent>
+                      </Collapsible>
+
+                      {/* Exfoliate & Stimulate Phase */}
+                      <Collapsible>
+                        <CollapsibleTrigger className="w-full group">
+                          <div className="bg-white/10 hover:bg-white/20 rounded-2xl p-6 border border-white/20 transition-all duration-300 cursor-pointer">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-4">
+                                <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                                <h4 className="text-xl font-light text-white">Exfoliate & Stimulate</h4>
+                              </div>
+                              <ChevronDown className="h-5 w-5 text-white/70 group-data-[state=open]:rotate-180 transition-transform duration-300" />
+                            </div>
+                          </div>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="mt-3">
+                          <div className="bg-white/5 rounded-xl p-6 border border-white/10 ml-7">
+                            <div className="space-y-3 text-white/80">
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
+                                <span className="font-light">TCA</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
+                                <span className="font-light">Lactic Acid</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
+                                <span className="font-light">Glycolic Acid</span>
+                              </div>
+                              <div className="flex items-center space-x-3">
+                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
+                                <span className="font-light">Malic/Citric Acids</span>
+                              </div>
+                            </div>
+                          </div>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    </div>
+                  </div>
                 </motion.div>
 
-                {/* Benefits */}
+                {/* Treatment Benefits - Enhanced UI */}
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <Collapsible open={isOpenProcess} onOpenChange={setIsOpenProcess}>
-                    <CollapsibleTrigger className="w-full">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer hover:bg-white/15 transition-all duration-300">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-3xl font-light text-white">Treatment Benefits</h3>
-                          {isOpenProcess ? <ChevronUp className="h-6 w-6 text-white" /> : <ChevronDown className="h-6 w-6 text-white" />}
-                        </div>
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="mt-4">
-                      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 space-y-4">
-                        <div className="grid grid-cols-1 gap-3 text-white/70 font-light">
-                          <p>• Anti-inflammatory, anti-fungal, anti-microbial</p>
-                          <p>• Deep pore cleansing</p>
-                          <p>• Neutralise free radicals</p>
-                          <p>• Decrease skin dullness and melasma</p>
-                          <p>• Improve skin blood flow</p>
-                          <p>• Improve skin texture, pores, and acne</p>
-                          <p>• Increase cellular turnover</p>
-                          <p>• Stimulate collagen production</p>
-                          <p>• Improve fine lines and wrinkles</p>
-                        </div>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
+                  <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/30 shadow-2xl h-full">
+                    <h3 className="text-3xl font-light text-white mb-8 text-center">Treatment Benefits</h3>
+                    
+                    <div className="space-y-4">
+                      {[
+                        { icon: "🛡️", text: "Anti-inflammatory, anti-fungal, anti-microbial" },
+                        { icon: "🧽", text: "Deep pore cleansing" },
+                        { icon: "⚡", text: "Neutralise free radicals" },
+                        { icon: "✨", text: "Decrease skin dullness and melasma" },
+                        { icon: "🩸", text: "Improve skin blood flow" },
+                        { icon: "🎯", text: "Improve skin texture, pores, and acne" },
+                        { icon: "🔄", text: "Increase cellular turnover" },
+                        { icon: "🏗️", text: "Stimulate collagen production" },
+                        { icon: "📈", text: "Improve fine lines and wrinkles" }
+                      ].map((benefit, index) => (
+                        <motion.div
+                          key={index}
+                          className="bg-white/10 hover:bg-white/15 rounded-xl p-4 border border-white/20 transition-all duration-300 cursor-pointer group"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                        >
+                          <div className="flex items-center space-x-4">
+                            <span className="text-2xl">{benefit.icon}</span>
+                            <span className="text-white/80 font-light group-hover:text-white transition-colors duration-300">
+                              {benefit.text}
+                            </span>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
               </div>
             </div>
