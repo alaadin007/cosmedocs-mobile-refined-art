@@ -245,19 +245,21 @@ const CheekFiller = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6 max-w-7xl mx-auto">
               {treatmentDetails.map((detail, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <detail.icon className="h-8 w-8 text-white/80 mb-4" />
-                  <h3 className="text-lg font-light text-white mb-2">{detail.label}</h3>
-                  <p className="text-white/70 font-extralight">{detail.value}</p>
+                  <div className="text-center">
+                    <detail.icon className="h-10 w-10 text-white/80 mb-4 mx-auto group-hover:text-white transition-colors duration-300" />
+                    <h3 className="text-lg font-medium text-white mb-2 group-hover:text-white/95 transition-colors duration-300">{detail.label}</h3>
+                    <p className="text-white/70 font-light text-sm group-hover:text-white/80 transition-colors duration-300">{detail.value}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
