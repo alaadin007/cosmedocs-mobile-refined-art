@@ -264,7 +264,7 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
+        {/* 1ml & 2ml Cheek Filler Results */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
             <motion.div
@@ -275,19 +275,81 @@ const CheekFiller = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Transformation Gallery
+                1ml & 2ml Cheek Filler Results
               </h2>
               <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing natural cheek enhancement artistry
+                Subtle to moderate enhancement perfect for natural-looking results
               </p>
             </motion.div>
             
             <div className="text-center">
               <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Results"
-                title="Cheek Filler Results"
-                description="Real patient transformations by Dr. Ahmed Haq"
+                images={[
+                  {
+                    src: "/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png",
+                    alt: "1ml cheek filler before and after results London Harley Street natural enhancement",
+                    caption: "Natural volume enhancement with 1ml cheek filler creating youthful contours"
+                  },
+                  {
+                    src: "/lovable-uploads/95608275-de36-4458-901d-2cc2ce2136de.png",
+                    alt: "2ml cheek enhancement dermal filler before after moderate definition",
+                    caption: "Sculpted cheekbones and lifted midface with 2ml strategic filler placement"
+                  },
+                  {
+                    src: "/lovable-uploads/2dc938fb-78b2-4af7-a0cb-190492553cbb.png",
+                    alt: "Apple cheek filler 1ml 2ml before after London youthful enhancement",
+                    caption: "Apple cheek enhancement for youthful, plump appearance with 1-2ml"
+                  }
+                ]}
+                triggerLabel="View 1ml & 2ml Results"
+                title="1ml & 2ml Cheek Filler Results"
+                description="Natural enhancement results by Dr. Ahmed Haq"
+                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* 3ml & 4ml Cheek Filler Results for Men */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                3ml & 4ml Cheek Filler for Men
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Maximum enhancement for masculine facial definition and structure
+              </p>
+            </motion.div>
+            
+            <div className="text-center">
+              <BeforeAfterImageViewer 
+                images={[
+                  {
+                    src: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png",
+                    alt: "Male cheek filler 3ml 4ml before after London masculine enhancement",
+                    caption: "Masculine cheek enhancement with 3ml for defined facial structure"
+                  },
+                  {
+                    src: "/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png",
+                    alt: "Men's cheek volume restoration 4ml before after London Cosmedocs",
+                    caption: "Maximum volume restoration with 4ml creating strong facial harmony"
+                  },
+                  {
+                    src: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png",
+                    alt: "Male cheek lift 3ml 4ml dermal filler London masculine rejuvenation",
+                    caption: "Masculine midface rejuvenation with instant cheek lift and angular definition"
+                  }
+                ]}
+                triggerLabel="View Men's Results"
+                title="3ml & 4ml Cheek Filler Results for Men"
+                description="Masculine enhancement results by Dr. Ahmed Haq"
                 className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
               />
             </div>
