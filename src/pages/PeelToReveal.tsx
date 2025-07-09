@@ -192,7 +192,7 @@ const PeelToReveal = () => {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[45px]">
           <div className="page-container">
             <motion.div className="max-w-5xl mx-auto" initial={{
             opacity: 0,
