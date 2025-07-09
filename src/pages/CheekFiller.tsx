@@ -572,33 +572,69 @@ const CheekFiller = () => {
               </h2>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                >
-                  <Collapsible
-                    open={openFaqIndex === index}
-                    onOpenChange={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
+              {/* Left Column */}
+              <div className="space-y-4">
+                {faqs.slice(0, Math.ceil(faqs.length / 2)).map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.05 }}
+                    viewport={{ once: true }}
                   >
-                    <CollapsibleTrigger className="w-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex justify-between items-center text-left hover:bg-white/10 transition-colors">
-                      <h3 className="text-lg font-light text-white pr-4">{faq.question}</h3>
-                      {openFaqIndex === index ? (
-                        <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-                      )}
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="px-6 pb-6 pt-4 bg-white/5 backdrop-blur-sm border border-white/10 border-t-0 rounded-b-xl">
-                      <p className="text-white/80 font-extralight leading-relaxed">{faq.answer}</p>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </motion.div>
-              ))}
+                    <Collapsible
+                      open={openFaqIndex === index}
+                      onOpenChange={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                    >
+                      <CollapsibleTrigger className="w-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex justify-between items-center text-left hover:bg-white/10 transition-colors">
+                        <h3 className="text-lg font-light text-white pr-4">{faq.question}</h3>
+                        {openFaqIndex === index ? (
+                          <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
+                        ) : (
+                          <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+                        )}
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="px-6 pb-6 pt-4 bg-white/5 backdrop-blur-sm border border-white/10 border-t-0 rounded-b-xl">
+                        <p className="text-white/80 font-extralight leading-relaxed">{faq.answer}</p>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Right Column */}
+              <div className="space-y-4">
+                {faqs.slice(Math.ceil(faqs.length / 2)).map((faq, index) => {
+                  const actualIndex = index + Math.ceil(faqs.length / 2);
+                  return (
+                    <motion.div
+                      key={actualIndex}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <Collapsible
+                        open={openFaqIndex === actualIndex}
+                        onOpenChange={() => setOpenFaqIndex(openFaqIndex === actualIndex ? null : actualIndex)}
+                      >
+                        <CollapsibleTrigger className="w-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex justify-between items-center text-left hover:bg-white/10 transition-colors">
+                          <h3 className="text-lg font-light text-white pr-4">{faq.question}</h3>
+                          {openFaqIndex === actualIndex ? (
+                            <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
+                          ) : (
+                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+                          )}
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="px-6 pb-6 pt-4 bg-white/5 backdrop-blur-sm border border-white/10 border-t-0 rounded-b-xl">
+                          <p className="text-white/80 font-extralight leading-relaxed">{faq.answer}</p>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
