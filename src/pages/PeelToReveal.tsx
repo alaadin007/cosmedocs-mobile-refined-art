@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Zap, Sparkles, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -37,6 +36,7 @@ const PeelToReveal = () => {
 
   const [isOpenIngredients, setIsOpenIngredients] = useState(false);
   const [isOpenProcess, setIsOpenProcess] = useState(false);
+  const [showMoreImages, setShowMoreImages] = useState(false);
 
   const leftColumnFaqs = [
     {
@@ -370,14 +370,84 @@ const PeelToReveal = () => {
               </p>
             </motion.div>
             
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View Treatment Results"
-                title="Peel to Reveal Transformations"
-                description="See the remarkable skin improvements achieved with our advanced peel treatment"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-              />
+            {/* Images Grid */}
+            <div className="max-w-6xl mx-auto">
+              {/* First Row - Always Visible */}
+              <motion.div 
+                className="grid md:grid-cols-3 gap-8 mb-8"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                {beforeAfterImages.slice(0, 3).map((image, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <p className="text-white/80 text-center font-light text-sm leading-relaxed">
+                      {image.caption}
+                    </p>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* Second Row - Conditional */}
+              {beforeAfterImages.length > 3 && (
+                <motion.div 
+                  className={`grid md:grid-cols-3 gap-8 mb-12 transition-all duration-500 ${
+                    showMoreImages ? 'opacity-100 max-h-none' : 'opacity-0 max-h-0 overflow-hidden'
+                  }`}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: showMoreImages ? 1 : 0, y: showMoreImages ? 0 : 40 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  {beforeAfterImages.slice(3).map((image, index) => (
+                    <motion.div
+                      key={index + 3}
+                      className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300"
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: showMoreImages ? 1 : 0, y: showMoreImages ? 0 : 30 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                    >
+                      <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <p className="text-white/80 text-center font-light text-sm leading-relaxed">
+                        {image.caption}
+                      </p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+
+              {/* Load More Button */}
+              {beforeAfterImages.length > 3 && (
+                <div className="text-center">
+                  <button
+                    onClick={() => setShowMoreImages(!showMoreImages)}
+                    className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 hover:scale-105"
+                  >
+                    {showMoreImages ? 'Show Less' : 'Load More Results'}
+                    <ChevronDown className={`h-5 w-5 ml-2 transition-transform duration-300 ${showMoreImages ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </section>
