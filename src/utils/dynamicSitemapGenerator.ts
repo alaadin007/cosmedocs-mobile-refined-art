@@ -81,6 +81,7 @@ const pageRoutes = [
   '/partners',
   '/treatments-summary-arabic',
   '/treatments-summary-chinese',
+  '/treatments-summary-japanese',
   '/team',
   '/before-after-gallery',
   '/membership'

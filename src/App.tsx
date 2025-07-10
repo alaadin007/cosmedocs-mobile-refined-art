@@ -43,6 +43,7 @@ import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSk
 import ChineseLondonAestheticsBlog from "./pages/ChineseLondonAestheticsBlog";
 import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
 import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
+import TreatmentsSummaryJapanese from "./pages/TreatmentsSummaryJapanese";
 import BirminghamHome from "./pages/BirminghamHome";
 import ManchesterHome from "./pages/ManchesterHome";
 import CardiffHome from "./pages/CardiffHome";
@@ -118,6 +119,7 @@ const App = () => (
               <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
               <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
               <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
+              <Route path="/treatments-summary-japanese" element={<TreatmentsSummaryJapanese />} />
               <Route path="/birmingham" element={<BirminghamHome />} />
               <Route path="/manchester" element={<ManchesterHome />} />
               <Route path="/cardiff" element={<CardiffHome />} />
