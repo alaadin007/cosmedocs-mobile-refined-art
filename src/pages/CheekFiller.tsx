@@ -409,7 +409,7 @@ const CheekFiller = () => {
             }} viewport={{
               once: true
             }}>
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion type="single" collapsible className="w-full" defaultValue="1ml-2ml-results">
                   <AccordionItem value="1ml-2ml-results" className="border-white/10">
                     <AccordionTrigger className="text-left hover:no-underline bg-white/5 backdrop-blur-sm rounded-xl px-6 py-6 border border-white/10 mb-2 text-white hover:bg-white/10 transition-colors">
                       <div className="flex items-center justify-between w-full">
