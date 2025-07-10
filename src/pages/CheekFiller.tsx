@@ -700,7 +700,7 @@ const CheekFiller = () => {
               </p>
             </motion.div>
 
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               {loadingVideos ? (
                 <motion.div 
                   className="flex items-center justify-center py-20"
@@ -722,49 +722,92 @@ const CheekFiller = () => {
                     <Play className="h-16 w-16 text-white/40 mx-auto mb-6" />
                     <h3 className="text-2xl font-light text-white mb-4">Treatment Videos Coming Soon</h3>
                     <p className="text-white/70 max-w-md mx-auto">
-                      We're preparing exclusive treatment videos to showcase our cheek enhancement techniques. Check back soon!
+                      We are preparing exclusive treatment videos to showcase our cheek enhancement techniques. Check back soon!
                     </p>
                   </div>
                 </motion.div>
               ) : (
-                <div className="grid md:grid-cols-2 gap-8">
-                  {cheekFillerVideos.slice(0, 4).map((video, index) => (
-                    <motion.div
-                      key={video.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <TreatmentVideoPlayer
-                        video={video}
-                        className="h-full"
-                        showControls={true}
-                        editMode={false}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              )}
-
-              {/* Call to Action */}
-              {cheekFillerVideos.length > 0 && (
-                <motion.div 
-                  className="text-center mt-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 hover:scale-[1.02]"
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                  {/* Left Column - Text About Cheek Fillers */}
+                  <motion.div
+                    className="space-y-8"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    viewport={{ once: true }}
                   >
-                    Book Your Cheek Enhancement Consultation
-                  </a>
-                </motion.div>
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                      <h3 className="text-3xl font-light text-white mb-6">Expert Cheek Enhancement</h3>
+                      <div className="space-y-6 text-white/80 font-light leading-relaxed">
+                        <p>
+                          Our cheek filler treatments represent the pinnacle of aesthetic medicine - where invisible art meets 
+                          natural enhancement. Each procedure is meticulously planned to restore volume, define contours, 
+                          and create harmonious facial proportions.
+                        </p>
+                        <p>
+                          Using premium Swiss, French, and American dermal fillers, we achieve results that are bold yet natural, 
+                          transformative yet subtle. Our approach ensures every enhancement speaks without saying a word.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                      <h4 className="text-2xl font-light text-white mb-6">Treatment Highlights</h4>
+                      <div className="space-y-4">
+                        {[
+                          "Advanced injection techniques for natural-looking results",
+                          "Precise volume restoration and cheekbone definition", 
+                          "Immediate enhancement with minimal downtime",
+                          "Premium dermal fillers for long-lasting effects",
+                          "Personalized treatment plans for your facial structure"
+                        ].map((highlight, index) => (
+                          <div key={index} className="flex items-start space-x-4">
+                            <div className="w-2 h-2 bg-white/60 rounded-full mt-3 flex-shrink-0"></div>
+                            <p className="text-white/80 font-light">{highlight}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="text-center">
+                      <a 
+                        href={bookingUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+                      >
+                        Book Your Cheek Enhancement Consultation
+                      </a>
+                    </div>
+                  </motion.div>
+
+                  {/* Right Column - Videos */}
+                  <motion.div
+                    className="space-y-6"
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    viewport={{ once: true }}
+                  >
+                    {cheekFillerVideos.slice(0, 2).map((video, index) => (
+                      <motion.div
+                        key={video.id}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
+                        viewport={{ once: true }}
+                      >
+                        <TreatmentVideoPlayer
+                          video={video}
+                          className="h-full"
+                          showControls={true}
+                          editMode={false}
+                          treatmentName="Cheek Fillers"
+                        />
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </div>
               )}
             </div>
           </div>
