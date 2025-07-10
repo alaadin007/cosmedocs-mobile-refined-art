@@ -709,9 +709,14 @@ const CheekFiller = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="bg-black py-[81px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
+        <section className="bg-gradient-to-b from-black via-black to-[#0A0A0A] py-[100px] relative">
+          {/* Subtle background pattern */}
+          <div className="absolute inset-0 opacity-[0.02]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:50px_50px]"></div>
+          </div>
+          
+          <div className="page-container relative z-10">
+            <motion.div className="text-center mb-24" initial={{
             opacity: 0,
             y: 30
           }} whileInView={{
@@ -723,26 +728,61 @@ const CheekFiller = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
                 Benefits of Cheek Enhancement
               </h2>
+              <div className="w-20 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {["More defined and plump cheeks", "Reduced look of nasolabial folds", "Subtle lift of drooping jowls", "Naturally defined cheekbones", "Instant 'Cheek Lift' for sagging", "Fraction of surgery cost", "Plumper cheeks for thin faces", "Angular look for round faces"].map((benefit, index) => <motion.div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: index * 0.05
-            }} viewport={{
-              once: true
-            }}>
-                  <p className="text-white/90 font-light text-center">{benefit}</p>
-                </motion.div>)}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {[
+                "More defined and plump cheeks",
+                "Reduced look of nasolabial folds", 
+                "Subtle lift of drooping jowls",
+                "Naturally defined cheekbones",
+                "Instant 'Cheek Lift' for sagging",
+                "Fraction of surgery cost",
+                "Plumper cheeks for thin faces",
+                "Angular look for round faces"
+              ].map((benefit, index) => (
+                <motion.div 
+                  key={index} 
+                  className="group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.15] hover:border-white/30 transition-all duration-500 hover:bg-gradient-to-br hover:from-white/[0.12] hover:to-white/[0.04] hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-2"
+                  initial={{
+                    opacity: 0,
+                    y: 40
+                  }} 
+                  whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} 
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.08,
+                    ease: [0.25, 0.46, 0.45, 0.94]
+                  }} 
+                  viewport={{
+                    once: true
+                  }}
+                >
+                  {/* Subtle gradient overlay on hover */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-white/60 to-white/40 group-hover:from-white/80 group-hover:to-white/60 transition-all duration-300"></div>
+                    </div>
+                    
+                    <p className="text-white/90 font-light text-center leading-relaxed group-hover:text-white transition-colors duration-300 text-[15px]">
+                      {benefit}
+                    </p>
+                  </div>
+                  
+                  {/* Subtle inner glow */}
+                  <div className="absolute inset-[1px] rounded-2xl bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
