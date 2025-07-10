@@ -1,17 +1,19 @@
 
 import { useState } from "react";
-import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 import LiquidGlassMenu from "./LiquidGlassMenu";
 import LiquidGlassSearch from "./LiquidGlassSearch";
 import LiquidGlassContactMenu from "./LiquidGlassContactMenu";
+import AestheticAnalysisWizard from "./AestheticAnalysisWizard";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
+  const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   
   const menuItems = [
     { name: "Home", path: "/" },
@@ -25,6 +27,11 @@ export default function Header() {
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\s+/g, "")}`;
 
   const contactOptions = [
+    {
+      icon: Sparkles,
+      label: "AI Aesthetic Analysis",
+      action: () => setIsAnalysisOpen(true)
+    },
     {
       icon: MessageSquare,
       label: "WhatsApp",
@@ -88,6 +95,16 @@ export default function Header() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-3">
             <Button
+              onClick={() => setIsAnalysisOpen(true)}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
+              title="AI Aesthetic Analysis"
+            >
+              <Sparkles className="h-5 w-5" />
+            </Button>
+            
+            <Button
               onClick={() => setIsSearchOpen(true)}
               variant="ghost"
               size="icon"
@@ -100,12 +117,22 @@ export default function Header() {
               onClick={() => setIsContactMenuOpen(true)}
               className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-300 hover:scale-105 border border-white/20"
             >
-              Do something here
+              Contact
             </Button>
           </div>
 
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center space-x-2">
+            <Button
+              onClick={() => setIsAnalysisOpen(true)}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10"
+              title="AI Analysis"
+            >
+              <Sparkles className="h-5 w-5" />
+            </Button>
+            
             <Button
               onClick={() => setIsSearchOpen(true)}
               variant="ghost"
@@ -141,6 +168,12 @@ export default function Header() {
       <LiquidGlassSearch 
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
+      />
+
+      {/* AI Aesthetic Analysis Modal */}
+      <AestheticAnalysisWizard 
+        isOpen={isAnalysisOpen}
+        onClose={() => setIsAnalysisOpen(false)}
       />
 
       {/* Contact Menu Modal */}

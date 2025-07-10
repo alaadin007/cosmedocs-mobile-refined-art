@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { useState } from "react";
-import { Eye, HelpCircle } from "lucide-react";
+import { Eye, HelpCircle, Sparkles, Brain, Heart, Clock } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
 import { 
   Table,
   TableBody,
@@ -32,6 +32,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 const Index = () => {
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
+  const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   const isMobile = useIsMobile();
 
   const seoData = generateSEOMetadata(
@@ -131,6 +132,83 @@ const Index = () => {
           
           {/* Featured Treatments Section - Now using PopularTreatments component */}
           <PopularTreatments />
+
+          {/* AI Aesthetic Analysis Section */}
+          <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="ai-analysis-heading">
+            <div className="page-container">
+              <div className="max-w-6xl mx-auto">
+                <motion.div
+                  className="text-center mb-16"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 id="ai-analysis-heading" className="text-4xl md:text-5xl font-bold mb-6">
+                    <Sparkles className="inline-block h-8 w-8 mr-3 text-primary" />
+                    AI Aesthetic Analysis
+                  </h2>
+                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                    Discover your personalized treatment plan with our advanced AI assessment tool. 
+                    Get professional analysis of your facial features and receive customized recommendations.
+                  </p>
+                </motion.div>
+
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                  {[
+                    {
+                      icon: Brain,
+                      title: "Smart Assessment",
+                      description: "AI-powered analysis of skin quality, wrinkles, and volume loss"
+                    },
+                    {
+                      icon: Heart,
+                      title: "Personalized Plan", 
+                      description: "Customized treatment recommendations based on your unique features"
+                    },
+                    {
+                      icon: Clock,
+                      title: "Instant Results",
+                      description: "Get your detailed aesthetic report in minutes, not days"
+                    }
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                      <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <motion.div
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <Button
+                    onClick={() => setIsAnalysisOpen(true)}
+                    size="lg"
+                    className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white rounded-full px-12 py-6 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-2xl"
+                  >
+                    <Sparkles className="h-5 w-5 mr-2" />
+                    Start Your AI Analysis
+                  </Button>
+                  <p className="text-sm text-gray-400 mt-4">
+                    Free assessment • No personal information required • Instant results
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </section>
 
           {/* Face Rejuvenation Assessment Section */}
           <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="rejuvenation-heading">

@@ -1,0 +1,162 @@
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+};
+
+interface AnalysisData {
+  age: number;
+  agePerception: string;
+  skincareRoutine: string;
+  retinolYears: number;
+  sunscreenYears: number;
+  skinTone: number;
+  pores: number;
+  texture: number;
+  clarity: number;
+  foundationUse: number;
+  frown: number;
+  forehead: number;
+  crowsFeet: number;
+  chin: number;
+  smileLines: number;
+  marionette: number;
+  underEyes: number;
+  cheeks: number;
+  jowls: number;
+  lips: number;
+  faceShape: string;
+  ethnicity: string;
+  tanEasily: boolean;
+  smokingStatus: string;
+  previousTreatments: boolean;
+}
+
+serve(async (req) => {
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders });
+  }
+
+  try {
+    const analysisData: AnalysisData = await req.json();
+
+    // Calculate scores
+    const skinScore = analysisData.skinTone + analysisData.pores + analysisData.texture + analysisData.clarity + analysisData.foundationUse;
+    const upperFaceWrinkles = analysisData.frown + analysisData.forehead + analysisData.crowsFeet;
+    const lowerFaceWrinkles = analysisData.chin + analysisData.smileLines + analysisData.marionette;
+    const volumeScore = analysisData.underEyes + analysisData.cheeks + analysisData.jowls + analysisData.lips;
+
+    const prompt = `
+You are an expert cosmetic doctor providing a comprehensive aesthetic analysis. Based on the following patient data, provide a detailed report:
+
+PATIENT DATA:
+- Age: ${analysisData.age}
+- People say they look: ${analysisData.agePerception}
+- Skincare routine: ${analysisData.skincareRoutine}
+- Retinol use: ${analysisData.retinolYears} years
+- Daily sunscreen use: ${analysisData.sunscreenYears} years
+- Face shape: ${analysisData.faceShape}
+- Ethnicity/Skin type: ${analysisData.ethnicity}
+- Tans easily: ${analysisData.tanEasily ? 'Yes' : 'No'}
+- Smoking status: ${analysisData.smokingStatus}
+- Previous treatments: ${analysisData.previousTreatments ? 'Yes' : 'No'}
+
+SCORES (0-3 scale):
+Skin Quality (Total: ${skinScore}/15):
+- Uneven tone: ${analysisData.skinTone}
+- Large pores: ${analysisData.pores}
+- Rough texture: ${analysisData.texture}
+- Poor clarity: ${analysisData.clarity}
+- Foundation dependency: ${analysisData.foundationUse}
+
+Upper Face Wrinkles (Total: ${upperFaceWrinkles}/9):
+- Frown lines: ${analysisData.frown}
+- Forehead: ${analysisData.forehead}
+- Crow's feet: ${analysisData.crowsFeet}
+
+Lower Face Wrinkles (Total: ${lowerFaceWrinkles}/9):
+- Chin lines: ${analysisData.chin}
+- Smile lines: ${analysisData.smileLines}
+- Marionette lines: ${analysisData.marionette}
+
+Volume Loss (Total: ${volumeScore}/12):
+- Under-eyes: ${analysisData.underEyes}
+- Cheeks: ${analysisData.cheeks}
+- Jowls: ${analysisData.jowls}
+- Lips: ${analysisData.lips}
+
+Please provide a comprehensive analysis including:
+
+1. **Aesthetic Age Assessment**: Based on all factors, what age does their skin/face appear?
+
+2. **Priority Treatment Areas**: What should be addressed first for maximum impact?
+
+3. **Detailed Treatment Plan** with costs (use these prices):
+   - Dermal Filler: £350 per 1ml syringe
+   - Botox: £200 per treatment zone
+   - Chemical Peels: £120 per session
+   - Professional Skincare: £95 per product
+   - HydraFacial: £150 per session
+   - PRP Treatment: £300 per session
+
+4. **Maintenance Schedule**: Yearly maintenance costs and timeline
+
+5. **Lifestyle Recommendations**: Based on their current routine and risk factors
+
+6. **Expected Results**: Realistic timeline and outcomes
+
+Format this as a professional yet warm consultation report that our Cosmedocs patients would receive. Use the clinic's motto: "Our aesthetics is invisible art. Bold • Natural • Always Your Way"
+`;
+
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${openAIApiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages: [
+          { 
+            role: 'system', 
+            content: 'You are Dr. Ahmed Haq, a leading cosmetic doctor at Cosmedocs Harley Street. Provide expert aesthetic analysis with warmth and professionalism. Always mention specific treatment options available at Cosmedocs and emphasize natural-looking results.'
+          },
+          { role: 'user', content: prompt }
+        ],
+        temperature: 0.7,
+        max_tokens: 2000
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`OpenAI API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const analysis = data.choices[0].message.content;
+
+    return new Response(JSON.stringify({ 
+      analysis,
+      scores: {
+        skinScore,
+        upperFaceWrinkles,
+        lowerFaceWrinkles,
+        volumeScore,
+        totalScore: skinScore + upperFaceWrinkles + lowerFaceWrinkles + volumeScore
+      }
+    }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
+
+  } catch (error) {
+    console.error('Error in aesthetic-analysis function:', error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
+  }
+});
