@@ -4,14 +4,44 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Clock, Zap, Shield, Calendar, Heart, Award } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import { useState } from "react";
+import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
+import { useState, useEffect } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Play } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { Tables } from "@/integrations/supabase/types";
+type TreatmentVideo = Tables<'treatment_videos'>;
+
 const CheekFiller = () => {
   const seoData = generateSEOMetadata("Cheek Fillers London | From £350 | Dr. Ahmed Haq | Harley Street", "Expert cheek filler treatments in London's Harley Street. Visibly lifted & defined cheeks and cheekbones by Dr. Ahmed Haq. Premium dermal fillers from £350.", "/cheek-filler");
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [cheekFillerVideos, setCheekFillerVideos] = useState<TreatmentVideo[]>([]);
+  const [loadingVideos, setLoadingVideos] = useState(false);
+
+  // Load cheek filler videos
+  useEffect(() => {
+    loadCheekFillerVideos();
+  }, []);
+
+  const loadCheekFillerVideos = async () => {
+    setLoadingVideos(true);
+    try {
+      const { data, error } = await supabase
+        .from('treatment_videos')
+        .select('*')
+        .ilike('treatment_name', '%cheek%')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      setCheekFillerVideos(data || []);
+    } catch (error) {
+      console.error('Error loading cheek filler videos:', error);
+    } finally {
+      setLoadingVideos(false);
+    }
+  };
 
   // Before/after images for cheek fillers
   const beforeAfterImages = [{
@@ -648,6 +678,94 @@ const CheekFiller = () => {
                   </AccordionItem>
                 </Accordion>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cheek Filler Treatment Videos Section */}
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[78px]">
+          <div className="page-container">
+            <motion.div 
+              className="text-center mb-20" 
+              initial={{ opacity: 0, y: 30 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }} 
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment Videos
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Watch real cheek filler procedures and see the artistry behind natural enhancement
+              </p>
+            </motion.div>
+
+            <div className="max-w-6xl mx-auto">
+              {loadingVideos ? (
+                <motion.div 
+                  className="flex items-center justify-center py-20"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white/30"></div>
+                  <span className="ml-4 text-white/70 text-lg">Loading treatment videos...</span>
+                </motion.div>
+              ) : cheekFillerVideos.length === 0 ? (
+                <motion.div 
+                  className="text-center py-20"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
+                    <Play className="h-16 w-16 text-white/40 mx-auto mb-6" />
+                    <h3 className="text-2xl font-light text-white mb-4">Treatment Videos Coming Soon</h3>
+                    <p className="text-white/70 max-w-md mx-auto">
+                      We're preparing exclusive treatment videos to showcase our cheek enhancement techniques. Check back soon!
+                    </p>
+                  </div>
+                </motion.div>
+              ) : (
+                <div className="grid md:grid-cols-2 gap-8">
+                  {cheekFillerVideos.slice(0, 4).map((video, index) => (
+                    <motion.div
+                      key={video.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <TreatmentVideoPlayer
+                        video={video}
+                        className="h-full"
+                        showControls={true}
+                        editMode={false}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+
+              {/* Call to Action */}
+              {cheekFillerVideos.length > 0 && (
+                <motion.div 
+                  className="text-center mt-16"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <a 
+                    href={bookingUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 hover:scale-[1.02]"
+                  >
+                    Book Your Cheek Enhancement Consultation
+                  </a>
+                </motion.div>
+              )}
             </div>
           </div>
         </section>
