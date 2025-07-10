@@ -15,33 +15,39 @@ interface SitemapData {
 const baseUrl = 'https://www.cosmedocs.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Auto-detect treatment routes by analyzing the current codebase
+// Auto-detect treatment routes using the centralized treatment registry
 // This ensures any new treatment pages are automatically included in sitemaps
 function extractTreatmentRoutes(): string[] {
-  // Define treatment-related route patterns to automatically detect treatment pages
-  const treatmentPatterns = [
-    // Core aesthetic treatments
-    'lip-fillers', 'non-surgical-nose-job', 'non-surgical-facelift', 'pdo-threads',
-    'dermal-fillers', 'dermal-filler-makeover', 'polynucleotide-treatment', 'profhilo-treatment',
-    'hydrafacial-london', 'prp-treatment', 'prp-treatment-london', 'vampire-facial',
+  try {
+    // Import treatment routes from the centralized registry
+    const { getAllTreatmentRoutes } = require('./treatmentRoutes');
+    return getAllTreatmentRoutes();
+  } catch (error) {
+    console.warn('Could not load treatment routes from registry, using fallback');
     
-    // Botox treatments
-    'advanced-upper-face-botox', 'lower-face-botox', 'face-botox-areas', 'nefertiti-botox-facelift',
-    'nefertiti-botox-face-jaw-lift', 'trigger-point-botox', 'gummy-smile-botox', 'chin-botox', 'botox-calf-reduction',
-    
-    // Filler treatments
-    'marionette-lines', 'nasolabial-folds', 'lip-filler-dissolve',
-    
-    // Advanced/specialized treatments
-    'advanced-consultation', 'clinical-concepts-to-flawless-skin', 'medical-anal-bleaching',
-    'peel-to-reveal'
-  ];
+    // Fallback: Define treatment-related route patterns 
+    const treatmentPatterns = [
+      // Core aesthetic treatments
+      'lip-fillers', 'non-surgical-nose-job', 'non-surgical-facelift', 'pdo-threads',
+      'dermal-fillers', 'polynucleotide-treatment', 'profhilo-treatment',
+      'hydrafacial', 'prp-treatment',
+      
+      // Botox treatments
+      'advanced-upper-face-botox', 'lower-face-botox', 'face-botox-areas', 'nefertiti-botox-facelift',
+      'trigger-point-botox', 'gummy-smile-botox', 'chin-botox', 'botox-calf-reduction',
+      
+      // Filler treatments
+      'marionette-lines', 'nasolabial-folds', 'lip-filler-dissolve', 'cheek-filler',
+      
+      // Advanced/specialized treatments
+      'advanced-consultation', 'clinical-concepts-to-flawless-skin', 'medical-anal-bleaching',
+      'peel-to-reveal'
+    ];
 
-  // Convert to full paths and return unique routes
-  const routes = treatmentPatterns.map(pattern => `/${pattern}`);
-  
-  // Remove duplicates and sort for consistency
-  return [...new Set(routes)].sort();
+    // Convert to full paths and return unique routes
+    const routes = treatmentPatterns.map(pattern => `/${pattern}`);
+    return [...new Set(routes)].sort();
+  }
 }
 
 // Get treatment routes automatically
