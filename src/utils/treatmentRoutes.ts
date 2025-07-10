@@ -33,6 +33,7 @@ const TREATMENT_ROUTES = [
   '/nasolabial-folds',
   '/lip-filler-dissolve',
   '/cheek-filler',  // ✅ Added the missing Cheek Filler page
+  '/chin-filler',   // ✅ Added new Chin Filler page
   
   // Advanced/specialized treatments
   '/advanced-consultation',
