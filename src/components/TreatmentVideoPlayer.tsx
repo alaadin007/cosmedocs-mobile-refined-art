@@ -222,28 +222,37 @@ const TreatmentVideoPlayer = ({
             )}
           </div>
 
-          {/* Video Information */}
+            {/* Video Information */}
           <div className="p-6">
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-xl font-light text-white mb-2">{video.title}</h3>
                 <p className="text-primary text-sm mb-2">{video.treatment_name}</p>
-                {video.description && (
+                
+                {/* Enhanced descriptive text for cheek fillers */}
+                {treatmentName?.toLowerCase().includes('cheek') || video.treatment_name?.toLowerCase().includes('cheek') ? (
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    Watch expert cheek filler procedures showcasing natural enhancement techniques. 
+                    Our aesthetic medicine approach delivers subtle volume restoration and refined cheekbone definition 
+                    for naturally beautiful results that enhance your facial contours.
+                  </p>
+                ) : video.description ? (
                   <p className="text-white/70 text-sm leading-relaxed">{video.description}</p>
+                ) : (
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    Professional aesthetic treatment demonstration showcasing our invisible art approach - 
+                    bold, natural, and always your way.
+                  </p>
                 )}
               </div>
             </div>
 
-            {/* Video Metadata */}
-            <div className="flex items-center gap-4 text-white/40 text-xs">
-              {video.duration && (
+            {/* Simplified Video Duration Only */}
+            {video.duration && (
+              <div className="text-white/40 text-xs">
                 <span>{Math.floor(video.duration / 60)}:{(video.duration % 60).toString().padStart(2, '0')}</span>
-              )}
-              {video.file_size && (
-                <span>{(video.file_size / (1024 * 1024)).toFixed(1)} MB</span>
-              )}
-              <span>Uploaded {new Date(video.created_at).toLocaleDateString()}</span>
-            </div>
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>
