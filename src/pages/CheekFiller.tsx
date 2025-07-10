@@ -506,6 +506,145 @@ const CheekFiller = () => {
           </div>
         </section>
 
+        {/* 3ml and 4ml Cheek Filler For Men Accordion */}
+        <section className="py-32 bg-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                3ml & 4ml Cheek Fillers For Men
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Masculine enhancement with bold, natural-looking results
+              </p>
+            </motion.div>
+
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="3ml-4ml-men-results" className="border-white/10">
+                    <AccordionTrigger className="text-left hover:no-underline bg-white/5 backdrop-blur-sm rounded-xl px-6 py-6 border border-white/10 mb-2 text-white hover:bg-white/10 transition-colors">
+                      <div className="flex items-center justify-between w-full">
+                        <div>
+                          <h3 className="text-2xl font-light text-white mb-2">3ml & 4ml Cheek Filler Results For Men</h3>
+                          <p className="text-white/70 font-extralight text-left">Click to view masculine enhancement before & after images</p>
+                        </div>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8">
+                      <div className="space-y-8">
+                        {/* Before & After Images Grid */}
+                        <div className="grid md:grid-cols-2 gap-6 mb-8">
+                          <div className="space-y-4">
+                            <img 
+                              src="/lovable-uploads/89278789-16b0-4b03-8f8e-c0aeef19db16.png" 
+                              alt="3ml cheek filler before and after results for men - volume restoration"
+                              className="w-full rounded-xl border border-white/20"
+                            />
+                            <p className="text-white/80 text-sm font-light text-center">
+                              3ml Volume Restoration: Masculine cheek enhancement for defined structure
+                            </p>
+                          </div>
+                          <div className="space-y-4">
+                            <img 
+                              src="/lovable-uploads/33b7b10d-07ef-4c95-b87c-0ab87978dd44.png" 
+                              alt="4ml cheek filler before and after results London men"
+                              className="w-full rounded-xl border border-white/20"
+                            />
+                            <p className="text-white/80 text-sm font-light text-center">
+                              4ml Enhanced Definition: Dramatic yet natural masculine transformation
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Treatment Information */}
+                        <div className="grid md:grid-cols-2 gap-8">
+                          <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <h4 className="text-xl font-light text-white mb-4">3ml Cheek Filler For Men</h4>
+                            <p className="text-white/80 font-extralight leading-relaxed mb-4">
+                              3ml cheek filler provides substantial volume enhancement ideal for men seeking more pronounced cheekbone definition. This amount delivers masculine facial structure while maintaining natural proportions.
+                            </p>
+                            <p className="text-white/80 font-extralight leading-relaxed">
+                              Perfect for correcting age-related volume loss and creating the strong, angular features that define masculine facial aesthetics.
+                            </p>
+                          </div>
+
+                          <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                            <h4 className="text-xl font-light text-white mb-4">4ml Cheek Enhancement</h4>
+                            <p className="text-white/80 font-extralight leading-relaxed mb-4">
+                              4ml represents our premium masculine enhancement, delivering dramatic yet natural transformation. This volume creates bold cheekbone projection while maintaining facial harmony.
+                            </p>
+                            <p className="text-white/80 font-extralight leading-relaxed">
+                              Ideal for men wanting maximum definition and those with naturally flat cheek structure requiring significant enhancement.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Treatment Benefits */}
+                        <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                          <h4 className="text-xl font-light text-white mb-4">3ml & 4ml Masculine Enhancement Benefits</h4>
+                          <div className="grid md:grid-cols-2 gap-6">
+                            <ul className="space-y-3 text-white/80 font-extralight">
+                              <li className="flex items-start">
+                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                                Bold, masculine cheekbone definition
+                              </li>
+                              <li className="flex items-start">
+                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                                Enhanced jawline projection and strength
+                              </li>
+                              <li className="flex items-start">
+                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                                Correction of age-related volume loss
+                              </li>
+                            </ul>
+                            <ul className="space-y-3 text-white/80 font-extralight">
+                              <li className="flex items-start">
+                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                                Improved facial symmetry and balance
+                              </li>
+                              <li className="flex items-start">
+                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                                Natural-looking masculine enhancement
+                              </li>
+                              <li className="flex items-start">
+                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                                Long-lasting results (15-18 months)
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        {/* Call to Action */}
+                        <div className="text-center">
+                          <a 
+                            href={bookingUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+                          >
+                            Book Your 3ml or 4ml Masculine Enhancement
+                          </a>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
           <div className="page-container">
