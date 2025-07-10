@@ -170,7 +170,7 @@ const CheekFiller = () => {
         <section className="relative min-h-screen flex items-center">
           {/* Background Image */}
           <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: "url('/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png')"
+          backgroundImage: "url('/lovable-uploads/9f6c05a6-bd3b-4ba8-93e0-795c685b7635.png')"
         }} />
           {/* Apple-style overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
