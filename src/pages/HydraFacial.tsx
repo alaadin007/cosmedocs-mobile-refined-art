@@ -5,6 +5,7 @@ import { Droplets, Star, Clock, Users, Calendar, Shield } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import { useVideoManagement } from "@/hooks/useVideoManagement";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -319,7 +320,7 @@ const HydraFacial = () => {
           </div>
         </section>
 
-        {/* Benefits Section - Option 1: Horizontal List with Icons */}
+        {/* Benefits Section - Accordion Style */}
         <section className="py-16 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
@@ -342,42 +343,85 @@ const HydraFacial = () => {
               </p>
             </motion.div>
             
-            {/* Enhanced Two-Column Benefits Layout */}
+            {/* Two-Column Accordion Layout */}
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => <motion.div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-500 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10" initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.7,
-                delay: index * 0.1,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }} viewport={{
-                once: true
-              }}>
-                    <div className="space-y-6">
-                      {/* Icon and Title Row */}
-                      <div className="flex items-center space-x-4">
-                        <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-2xl p-4 group-hover:from-primary/40 group-hover:to-primary/30 transition-all duration-300 flex-shrink-0">
-                          <Star className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" />
-                        </div>
-                        <h3 className="text-2xl font-light text-white leading-tight group-hover:text-primary/90 transition-colors duration-300">
-                          {benefit.title}
-                        </h3>
-                      </div>
-                      
-                      {/* Description */}
-                      <p className="text-lg text-white/70 font-light leading-relaxed group-hover:text-white/80 transition-colors duration-300 pl-2">
-                        {benefit.description}
-                      </p>
-                      
-                      {/* Bottom accent line */}
-                      <div className="w-full h-px bg-gradient-to-r from-primary/30 via-primary/10 to-transparent group-hover:from-primary/50 group-hover:via-primary/20 transition-all duration-500"></div>
-                    </div>
-                  </motion.div>)}
+                {/* Left Column */}
+                <motion.div initial={{
+                  opacity: 0,
+                  x: -40
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.8,
+                  ease: [0.25, 0.46, 0.45, 0.94]
+                }} viewport={{
+                  once: true
+                }}>
+                  <Accordion type="single" collapsible className="space-y-4">
+                    {benefits.slice(0, Math.ceil(benefits.length / 2)).map((benefit, index) => (
+                      <AccordionItem 
+                        key={`left-${index}`} 
+                        value={`left-${index}`}
+                        className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-300"
+                      >
+                        <AccordionTrigger className="px-6 py-4 text-left text-white hover:text-primary/90 hover:no-underline group">
+                          <div className="flex items-center space-x-4 w-full">
+                            <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-xl p-3 group-hover:from-primary/40 group-hover:to-primary/30 transition-all duration-300 flex-shrink-0">
+                              <Star className="h-5 w-5 text-primary" />
+                            </div>
+                            <span className="text-lg font-light leading-tight">{benefit.title}</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-6 pb-6">
+                          <p className="text-white/70 font-light leading-relaxed pl-2">
+                            {benefit.description}
+                          </p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
+
+                {/* Right Column */}
+                <motion.div initial={{
+                  opacity: 0,
+                  x: 40
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: [0.25, 0.46, 0.45, 0.94]
+                }} viewport={{
+                  once: true
+                }}>
+                  <Accordion type="single" collapsible className="space-y-4">
+                    {benefits.slice(Math.ceil(benefits.length / 2)).map((benefit, index) => (
+                      <AccordionItem 
+                        key={`right-${index}`} 
+                        value={`right-${index}`}
+                        className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-300"
+                      >
+                        <AccordionTrigger className="px-6 py-4 text-left text-white hover:text-primary/90 hover:no-underline group">
+                          <div className="flex items-center space-x-4 w-full">
+                            <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-xl p-3 group-hover:from-primary/40 group-hover:to-primary/30 transition-all duration-300 flex-shrink-0">
+                              <Star className="h-5 w-5 text-primary" />
+                            </div>
+                            <span className="text-lg font-light leading-tight">{benefit.title}</span>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-6 pb-6">
+                          <p className="text-white/70 font-light leading-relaxed pl-2">
+                            {benefit.description}
+                          </p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </motion.div>
               </div>
             </div>
           </div>
