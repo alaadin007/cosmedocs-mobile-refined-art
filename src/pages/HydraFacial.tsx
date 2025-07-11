@@ -60,36 +60,28 @@ const HydraFacial = () => {
     title: "Restore + Rejuvenate",
     description: "LED light therapy fights bacteria and boosts collagen for a luminous, flawless glow."
   }];
-  const benefits = [
-    {
-      title: "Refines & Reduces Pore Size",
-      description: "Enlarged and blocked pores filled with sebum, dead skin cells, and impurities are instantly purified and shrunk using the vortex-powered machine's powerful suction tip wand."
-    },
-    {
-      title: "Evens Out and Brightens Skin Tone",  
-      description: "Infuses skin with antioxidants and brightening agents to correct dark spots, dull skin condition, and discoloration. The skin instantly glows with a radiant and more even tone."
-    },
-    {
-      title: "HydraFacial Degreases Oily Skin",
-      description: "Through vortex cleansing, exfoliation, and extraction, oily skin looks less shiny and achieves a healthy glow by removing excess sebum that leads to clogged pores and blemishes."
-    },
-    {
-      title: "Plumps Up Thirsty, Dry Skin & Lips",
-      description: "Applies skin boosters, hyaluronic acid, and vortex technology to restore moisture balance. Many clients notice their dry skin improved after the first session."
-    },
-    {
-      title: "Ideal For Acne & Acne Scars",
-      description: "The intense buffing action makes this an effective acne treatment. It's also very effective for acne scars as it promotes your skin's healing system."
-    },
-    {
-      title: "Soothes Sensitive Skin Signs",
-      description: "Skin conditions as complex as rosacea can be easily improved. Symptoms like facial redness, enlarged pores, and bumps are directly targeted with this gentle, zero-downtime treatment."
-    },
-    {
-      title: "Tailored To Every Skin Needs",
-      description: "Skin boosters, antioxidant serums, and specific acids like glycolic for dry skin and salicylic for oily skin target various issues including wrinkles, dryness, and acne."
-    }
-  ];
+  const benefits = [{
+    title: "Refines & Reduces Pore Size",
+    description: "Enlarged and blocked pores filled with sebum, dead skin cells, and impurities are instantly purified and shrunk using the vortex-powered machine's powerful suction tip wand."
+  }, {
+    title: "Evens Out and Brightens Skin Tone",
+    description: "Infuses skin with antioxidants and brightening agents to correct dark spots, dull skin condition, and discoloration. The skin instantly glows with a radiant and more even tone."
+  }, {
+    title: "HydraFacial Degreases Oily Skin",
+    description: "Through vortex cleansing, exfoliation, and extraction, oily skin looks less shiny and achieves a healthy glow by removing excess sebum that leads to clogged pores and blemishes."
+  }, {
+    title: "Plumps Up Thirsty, Dry Skin & Lips",
+    description: "Applies skin boosters, hyaluronic acid, and vortex technology to restore moisture balance. Many clients notice their dry skin improved after the first session."
+  }, {
+    title: "Ideal For Acne & Acne Scars",
+    description: "The intense buffing action makes this an effective acne treatment. It's also very effective for acne scars as it promotes your skin's healing system."
+  }, {
+    title: "Soothes Sensitive Skin Signs",
+    description: "Skin conditions as complex as rosacea can be easily improved. Symptoms like facial redness, enlarged pores, and bumps are directly targeted with this gentle, zero-downtime treatment."
+  }, {
+    title: "Tailored To Every Skin Needs",
+    description: "Skin boosters, antioxidant serums, and specific acids like glycolic for dry skin and salicylic for oily skin target various issues including wrinkles, dryness, and acne."
+  }];
   const leftColumnFaqs = [{
     question: "How much does HydraFacial cost in London?",
     answer: "At Cosmedocs Harley Street, HydraFacial treatments start from £175 for a single session. We offer courses of 3 sessions at £150 each, or 6 sessions at £125 each for optimal results."
@@ -320,7 +312,7 @@ const HydraFacial = () => {
                 </div>
                 
                 <div className="relative">
-                  <img src="/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png" alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment" className="w-full h-auto rounded-2xl shadow-2xl" />
+                  <img alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment" className="w-full h-auto rounded-2xl shadow-2xl" src="/lovable-uploads/b624113a-809b-46ae-a8ff-1b78e1f48f1d.png" />
                 </div>
               </motion.div>
             </div>
