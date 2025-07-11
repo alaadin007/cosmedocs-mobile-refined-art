@@ -211,13 +211,6 @@ const HydraFacial = () => {
                 delay: 0.6,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}>
-                  <div className="mb-6">
-                    <img 
-                      src="/lovable-uploads/53f15f85-eb4a-4d42-a696-a2ae8eca2b00.png" 
-                      alt="Nose treatment before and after results at Cosmedocs" 
-                      className="w-full max-w-md h-auto rounded-lg shadow-2xl"
-                    />
-                  </div>
                   <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
                     Award-winning vortex technology that refines, rehydrates, and recharges your skin in just 30-45 minutes
                   </p>
