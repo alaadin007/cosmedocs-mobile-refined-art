@@ -213,8 +213,8 @@ const HydraFacial = () => {
               }}>
                   <div className="mb-6">
                     <img 
-                      src="/lovable-uploads/fd1ffae5-5ae8-4d12-8384-1070936fb7b1.png" 
-                      alt="HydraFacial vortex technology in action" 
+                      src="/lovable-uploads/0f7d15be-d3af-4d18-a55e-37357428ddae.png" 
+                      alt="Cosmedocs nose treatment before and after results" 
                       className="w-full max-w-md h-auto rounded-lg shadow-2xl"
                     />
                   </div>
