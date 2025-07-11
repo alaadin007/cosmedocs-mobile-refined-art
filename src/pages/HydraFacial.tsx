@@ -60,7 +60,36 @@ const HydraFacial = () => {
     title: "Restore + Rejuvenate",
     description: "LED light therapy fights bacteria and boosts collagen for a luminous, flawless glow."
   }];
-  const benefits = ["Refines and reduces pore size", "Evens out and brightens skin tone", "Degreases oily skin naturally", "Plumps up dry, thirsty skin", "Effective for acne and acne scars", "Soothes sensitive skin conditions", "Tailored to every skin type"];
+  const benefits = [
+    {
+      title: "Refines & Reduces Pore Size",
+      description: "Enlarged and blocked pores filled with sebum, dead skin cells, and impurities are instantly purified and shrunk using the vortex-powered machine's powerful suction tip wand."
+    },
+    {
+      title: "Evens Out and Brightens Skin Tone",  
+      description: "Infuses skin with antioxidants and brightening agents to correct dark spots, dull skin condition, and discoloration. The skin instantly glows with a radiant and more even tone."
+    },
+    {
+      title: "HydraFacial Degreases Oily Skin",
+      description: "Through vortex cleansing, exfoliation, and extraction, oily skin looks less shiny and achieves a healthy glow by removing excess sebum that leads to clogged pores and blemishes."
+    },
+    {
+      title: "Plumps Up Thirsty, Dry Skin & Lips",
+      description: "Applies skin boosters, hyaluronic acid, and vortex technology to restore moisture balance. Many clients notice their dry skin improved after the first session."
+    },
+    {
+      title: "Ideal For Acne & Acne Scars",
+      description: "The intense buffing action makes this an effective acne treatment. It's also very effective for acne scars as it promotes your skin's healing system."
+    },
+    {
+      title: "Soothes Sensitive Skin Signs",
+      description: "Skin conditions as complex as rosacea can be easily improved. Symptoms like facial redness, enlarged pores, and bumps are directly targeted with this gentle, zero-downtime treatment."
+    },
+    {
+      title: "Tailored To Every Skin Needs",
+      description: "Skin boosters, antioxidant serums, and specific acids like glycolic for dry skin and salicylic for oily skin target various issues including wrinkles, dryness, and acne."
+    }
+  ];
   const leftColumnFaqs = [{
     question: "How much does HydraFacial cost in London?",
     answer: "At Cosmedocs Harley Street, HydraFacial treatments start from £175 for a single session. We offer courses of 3 sessions at £150 each, or 6 sessions at £125 each for optimal results."
@@ -292,7 +321,7 @@ const HydraFacial = () => {
                     once: true
                   }}>
                         <Star className="h-5 w-5 text-primary" />
-                        <span className="text-white/90 text-sm">{benefit}</span>
+                        <span className="text-white/90 text-sm">{benefit.title}</span>
                       </motion.div>)}
                   </div>
                 </div>
@@ -328,27 +357,34 @@ const HydraFacial = () => {
               </p>
             </motion.div>
             
-            {/* Option 1: Clean List Layout */}
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
-                {benefits.map((benefit, index) => <motion.div key={index} className="flex items-center space-x-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group" initial={{
+            {/* Enhanced Benefits Layout */}
+            <div className="max-w-5xl mx-auto">
+              <div className="space-y-8">
+                {benefits.map((benefit, index) => <motion.div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" initial={{
                 opacity: 0,
-                x: -40
+                y: 40
               }} whileInView={{
                 opacity: 1,
-                x: 0
+                y: 0
               }} transition={{
                 duration: 0.6,
                 delay: index * 0.1
               }} viewport={{
                 once: true
               }}>
-                    <div className="bg-primary/20 rounded-full p-3 group-hover:bg-primary/30 transition-colors flex-shrink-0">
-                      <Star className="h-6 w-6 text-primary" />
+                    <div className="flex items-start space-x-6">
+                      <div className="bg-primary/20 rounded-full p-3 group-hover:bg-primary/30 transition-colors flex-shrink-0 mt-1">
+                        <Star className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="space-y-3">
+                        <h3 className="text-2xl font-light text-white leading-relaxed">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-lg text-white/70 font-light leading-relaxed">
+                          {benefit.description}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-light text-white leading-relaxed">
-                      {benefit}
-                    </h3>
                   </motion.div>)}
               </div>
             </div>
@@ -396,7 +432,7 @@ const HydraFacial = () => {
                       <div className="bg-primary/20 rounded-full p-2 mt-1 flex-shrink-0">
                         <Star className="h-4 w-4 text-primary" />
                       </div>
-                      <p className="text-lg text-white/90 font-light leading-relaxed">{benefit}</p>
+                      <p className="text-lg text-white/90 font-light leading-relaxed">{benefit.title}</p>
                     </motion.div>)}
                 </div>
                 <div className="space-y-8">
@@ -415,7 +451,7 @@ const HydraFacial = () => {
                       <div className="bg-primary/20 rounded-full p-2 mt-1 flex-shrink-0">
                         <Star className="h-4 w-4 text-primary" />
                       </div>
-                      <p className="text-lg text-white/90 font-light leading-relaxed">{benefit}</p>
+                      <p className="text-lg text-white/90 font-light leading-relaxed">{benefit.title}</p>
                     </motion.div>)}
                 </div>
               </div>
@@ -464,7 +500,7 @@ const HydraFacial = () => {
                       <Star className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-light text-white leading-relaxed">
-                      {benefit}
+                      {benefit.title}
                     </h3>
                   </motion.div>)}
               </div>
@@ -512,7 +548,7 @@ const HydraFacial = () => {
                     <div className="bg-primary rounded-full p-1 flex-shrink-0">
                       <Star className="h-4 w-4 text-black fill-black" />
                     </div>
-                    <p className="text-lg text-white/90 font-light">{benefit}</p>
+                    <p className="text-lg text-white/90 font-light">{benefit.title}</p>
                   </motion.div>)}
               </div>
             </div>
