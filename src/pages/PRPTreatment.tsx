@@ -6,10 +6,13 @@ import { generateSEOMetadata } from "@/utils/seo";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
+import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
+import { useVideoManagement } from "@/hooks/useVideoManagement";
 const PRPTreatment = () => {
   const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Platelet-Rich Plasma | Cosmedocs", "Expert PRP treatments in London's Harley Street. Vampire facial, hair restoration, and skin rejuvenation using your body's natural healing power. Book consultation today.", "/prp-treatment");
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { videos } = useVideoManagement("PRP");
   const treatmentSpecs = [{
     icon: Clock,
     title: "Procedure Time",
@@ -412,6 +415,52 @@ const PRPTreatment = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Video Section */}
+        {videos && videos.length > 0 && (
+          <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[32px]">
+            <div className="page-container">
+              <motion.div className="text-center mb-20" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8
+              }} viewport={{
+                once: true
+              }}>
+                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                  PRP in Action
+                </h2>
+                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                  Watch our experts perform PRP treatments and see the process in detail
+                </p>
+              </motion.div>
+
+              <motion.div className="max-w-4xl mx-auto" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.2
+              }} viewport={{
+                once: true
+              }}>
+                <TreatmentVideoPlayer 
+                  video={videos[0]} 
+                  treatmentName="PRP Treatment"
+                  showControls={true}
+                  className="rounded-2xl overflow-hidden border border-white/20"
+                />
+              </motion.div>
+            </div>
+          </section>
+        )}
 
         {/* Before & After Gallery */}
         <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[16px]">
