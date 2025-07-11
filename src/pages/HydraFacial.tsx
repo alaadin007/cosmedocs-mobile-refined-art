@@ -169,7 +169,87 @@ const HydraFacial = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen pt-16">
+      <div className="bg-black text-white min-h-screen">
+        {/* Hero Section - No Background Image */}
+        <section className="relative min-h-screen flex items-center bg-black">
+          <div className="page-container relative z-10">
+            <div className="max-w-6xl">
+              <motion.div className="text-left" initial={{
+              opacity: 0,
+              y: 60
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}>
+                <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight" initial={{
+                opacity: 0,
+                y: 40
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 1,
+                delay: 0.3,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
+                  <span className="block text-white/95 font-thin">HydraFacial</span>
+                  <span className="block text-white font-light">London</span>
+                  <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Skin Recharge</span>
+                </motion.h1>
+                
+                <motion.div className="mb-16 space-y-6 max-w-3xl" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.6,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
+                  <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
+                    Award-winning vortex technology that refines, rehydrates, and recharges your skin in just 30-45 minutes
+                  </p>
+                  <div className="flex items-center space-x-8 text-xl">
+                    <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
+                      <span className="text-white font-light">From £175</span>
+                    </div>
+                    <div className="text-white/80">
+                      <span className="font-extralight">at </span> 
+                      <span className="font-light">Harley Street</span>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div className="flex flex-col sm:flex-row gap-6" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.9,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
+                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
+                    Book HydraFacial
+                  </a>
+                  <div className="flex items-center gap-3 text-white/80 px-8">
+                    <Droplets className="h-6 w-6" />
+                    <span className="hover:text-white transition-colors font-extralight text-lg">
+                      Zero downtime • Instant glow
+                    </span>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         {/* What is HydraFacial Section */}
         <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[46px]">
