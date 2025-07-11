@@ -211,8 +211,15 @@ const HydraFacial = () => {
                 delay: 0.6,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}>
+                  <div className="mb-6">
+                    <img 
+                      src="/lovable-uploads/fd1ffae5-5ae8-4d12-8384-1070936fb7b1.png" 
+                      alt="HydraFacial vortex technology in action" 
+                      className="w-full max-w-md h-auto rounded-lg shadow-2xl"
+                    />
+                  </div>
                   <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
-                    Award-winning vortex technology that refines, rehydrates, and recharges your skin in just 30-45 minutes
+                    Technology that refines, rehydrates, and recharges your skin in just 30-45 minutes
                   </p>
                   <div className="flex items-center space-x-8 text-xl">
                     <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
