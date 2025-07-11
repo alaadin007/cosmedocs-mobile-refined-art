@@ -357,33 +357,40 @@ const HydraFacial = () => {
               </p>
             </motion.div>
             
-            {/* Enhanced Benefits Layout */}
-            <div className="max-w-5xl mx-auto">
-              <div className="space-y-8">
-                {benefits.map((benefit, index) => <motion.div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" initial={{
+            {/* Enhanced Two-Column Benefits Layout */}
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {benefits.map((benefit, index) => <motion.div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-500 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10" initial={{
                 opacity: 0,
                 y: 40
               }} whileInView={{
                 opacity: 1,
                 y: 0
               }} transition={{
-                duration: 0.6,
-                delay: index * 0.1
+                duration: 0.7,
+                delay: index * 0.1,
+                ease: [0.25, 0.46, 0.45, 0.94]
               }} viewport={{
                 once: true
               }}>
-                    <div className="flex items-start space-x-6">
-                      <div className="bg-primary/20 rounded-full p-3 group-hover:bg-primary/30 transition-colors flex-shrink-0 mt-1">
-                        <Star className="h-6 w-6 text-primary" />
-                      </div>
-                      <div className="space-y-3">
-                        <h3 className="text-2xl font-light text-white leading-relaxed">
+                    <div className="space-y-6">
+                      {/* Icon and Title Row */}
+                      <div className="flex items-center space-x-4">
+                        <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-2xl p-4 group-hover:from-primary/40 group-hover:to-primary/30 transition-all duration-300 flex-shrink-0">
+                          <Star className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <h3 className="text-2xl font-light text-white leading-tight group-hover:text-primary/90 transition-colors duration-300">
                           {benefit.title}
                         </h3>
-                        <p className="text-lg text-white/70 font-light leading-relaxed">
-                          {benefit.description}
-                        </p>
                       </div>
+                      
+                      {/* Description */}
+                      <p className="text-lg text-white/70 font-light leading-relaxed group-hover:text-white/80 transition-colors duration-300 pl-2">
+                        {benefit.description}
+                      </p>
+                      
+                      {/* Bottom accent line */}
+                      <div className="w-full h-px bg-gradient-to-r from-primary/30 via-primary/10 to-transparent group-hover:from-primary/50 group-hover:via-primary/20 transition-all duration-500"></div>
                     </div>
                   </motion.div>)}
               </div>
