@@ -459,7 +459,7 @@ const PRPTreatment = () => {
 
         {/* Before & After Gallery */}
         <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[16px]">
-          <div className="page-container">
+          <div className="page-container py-[85px]">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
             y: 30
