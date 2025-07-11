@@ -12,7 +12,9 @@ const PRPTreatment = () => {
   const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Platelet-Rich Plasma | Cosmedocs", "Expert PRP treatments in London's Harley Street. Vampire facial, hair restoration, and skin rejuvenation using your body's natural healing power. Book consultation today.", "/prp-treatment");
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const { videos } = useVideoManagement("PRP");
+  const {
+    videos
+  } = useVideoManagement("PRP");
   const treatmentSpecs = [{
     icon: Clock,
     title: "Procedure Time",
@@ -213,7 +215,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* Treatment Overview */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[44px]">
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[85px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -227,7 +229,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
                 PRGF / PRP Treatment
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -290,7 +292,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* Treatment Types */}
-        <section className="bg-[#0A0A0A] py-[28px]">
+        <section className="bg-[#0A0A0A] py-[75px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -303,7 +305,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
                 Treatment Options
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -344,7 +346,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[40px]">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[85px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -357,7 +359,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
                 PRP Benefits
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -417,21 +419,20 @@ const PRPTreatment = () => {
         </section>
 
         {/* Video Section */}
-        {videos && videos.length > 0 && (
-          <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[32px]">
+        {videos && videos.length > 0 && <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[85px]">
             <div className="page-container">
               <motion.div className="text-center mb-20" initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8
-              }} viewport={{
-                once: true
-              }}>
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
+                <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
                   PRP in Action
                 </h2>
                 <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -440,27 +441,21 @@ const PRPTreatment = () => {
               </motion.div>
 
               <motion.div className="max-w-4xl mx-auto" initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.2
-              }} viewport={{
-                once: true
-              }}>
-                <TreatmentVideoPlayer 
-                  video={videos[0]} 
-                  treatmentName="PRP Treatment"
-                  showControls={true}
-                  className="rounded-2xl overflow-hidden border border-white/20"
-                />
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.2
+          }} viewport={{
+            once: true
+          }}>
+                <TreatmentVideoPlayer video={videos[0]} treatmentName="PRP Treatment" showControls={true} className="rounded-2xl overflow-hidden border border-white/20" />
               </motion.div>
             </div>
-          </section>
-        )}
+          </section>}
 
         {/* Before & After Gallery */}
         <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[16px]">
@@ -476,7 +471,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
                 Before & After
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -519,7 +514,7 @@ const PRPTreatment = () => {
 
         {/* FAQ Section */}
         <section className="bg-black py-px">
-          <div className="page-container">
+          <div className="page-container py-[75px]">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
             y: 30
@@ -531,7 +526,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
                 Frequently Asked Questions
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -571,7 +566,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-black to-[#0A0A0A] py-[55px]">
+        <section className="bg-gradient-to-r from-black to-[#0A0A0A] py-[75px]">
           <div className="page-container">
             <motion.div className="text-center max-w-4xl mx-auto" initial={{
             opacity: 0,
@@ -584,7 +579,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
+              <h2 className="text-5xl md:text-6xl text-white mb-8 tracking-tight font-bold">
                 Ready to Begin?
               </h2>
               <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
