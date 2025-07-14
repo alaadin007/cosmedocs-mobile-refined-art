@@ -215,6 +215,7 @@ const PolynucleotideTreatment = () => {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
+                    <Syringe className="h-5 w-5 text-white/60 mx-auto mb-2" />
                     <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Anaesthetic
                     </h3>
@@ -226,6 +227,7 @@ const PolynucleotideTreatment = () => {
                 
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
+                    <Star className="h-5 w-5 text-white/60 mx-auto mb-2" />
                     <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Treatment Results
                     </h3>
@@ -237,6 +239,7 @@ const PolynucleotideTreatment = () => {
                 
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
+                    <Clock className="h-5 w-5 text-white/60 mx-auto mb-2" />
                     <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Procedure Time
                     </h3>
@@ -248,6 +251,7 @@ const PolynucleotideTreatment = () => {
                 
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
+                    <Shield className="h-5 w-5 text-white/60 mx-auto mb-2" />
                     <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Risk & Complications
                     </h3>
@@ -259,6 +263,7 @@ const PolynucleotideTreatment = () => {
                 
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
+                    <Heart className="h-5 w-5 text-white/60 mx-auto mb-2" />
                     <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Full Recovery
                     </h3>
@@ -270,6 +275,7 @@ const PolynucleotideTreatment = () => {
                 
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
+                    <Users className="h-5 w-5 text-white/60 mx-auto mb-2" />
                     <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Back To Work
                     </h3>
