@@ -739,6 +739,44 @@ const PolynucleotideTreatment = () => {
               <p className="text-xl text-white/70 font-light mb-12">
                 Professional polynucleotide therapy pricing with package savings
               </p>
+              
+              <div className="mt-16 grid md:grid-cols-3 gap-8">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/8 transition-all duration-300 group">
+                  <CardContent className="p-8 text-center">
+                    <div className="text-4xl font-light text-white mb-3 group-hover:scale-105 transition-transform duration-300">£450</div>
+                    <div className="text-white/70 font-light text-lg">Single Session</div>
+                    <div className="mt-4 pt-4 border-t border-white/10">
+                      <p className="text-white/50 text-sm">Perfect for first-time patients</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-white/8 backdrop-blur-sm border-white/20 hover:bg-white/12 transition-all duration-300 group relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-white/90 to-white/70 text-black px-4 py-1 rounded-full text-xs font-medium">
+                      BEST VALUE
+                    </div>
+                  </div>
+                  <CardContent className="p-8 text-center">
+                    <div className="text-4xl font-light text-white mb-3 group-hover:scale-105 transition-transform duration-300">£1,200</div>
+                    <div className="text-white/70 font-light text-lg">3-Session Package</div>
+                    <div className="mt-4 pt-4 border-t border-white/10">
+                      <p className="text-green-400 text-sm font-medium">Save £150</p>
+                      <p className="text-white/50 text-sm">Optimal results guaranteed</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/8 transition-all duration-300 group">
+                  <CardContent className="p-8 text-center">
+                    <div className="text-4xl font-light text-white mb-3 group-hover:scale-105 transition-transform duration-300">6-9 Months</div>
+                    <div className="text-white/70 font-light text-lg">Result Duration</div>
+                    <div className="mt-4 pt-4 border-t border-white/10">
+                      <p className="text-white/50 text-sm">Long-lasting regeneration</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -808,44 +846,6 @@ const PolynucleotideTreatment = () => {
                 <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20 hover:scale-[1.02]">
                   Book Consultation
                 </a>
-              </div>
-              
-              <div className="mt-16 grid md:grid-cols-3 gap-8">
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/8 transition-all duration-300 group">
-                  <CardContent className="p-8 text-center">
-                    <div className="text-4xl font-light text-white mb-3 group-hover:scale-105 transition-transform duration-300">£450</div>
-                    <div className="text-white/70 font-light text-lg">Single Session</div>
-                    <div className="mt-4 pt-4 border-t border-white/10">
-                      <p className="text-white/50 text-sm">Perfect for first-time patients</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/8 backdrop-blur-sm border-white/20 hover:bg-white/12 transition-all duration-300 group relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-white/90 to-white/70 text-black px-4 py-1 rounded-full text-xs font-medium">
-                      BEST VALUE
-                    </div>
-                  </div>
-                  <CardContent className="p-8 text-center">
-                    <div className="text-4xl font-light text-white mb-3 group-hover:scale-105 transition-transform duration-300">£1,200</div>
-                    <div className="text-white/70 font-light text-lg">3-Session Package</div>
-                    <div className="mt-4 pt-4 border-t border-white/10">
-                      <p className="text-green-400 text-sm font-medium">Save £150</p>
-                      <p className="text-white/50 text-sm">Optimal results guaranteed</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/8 transition-all duration-300 group">
-                  <CardContent className="p-8 text-center">
-                    <div className="text-4xl font-light text-white mb-3 group-hover:scale-105 transition-transform duration-300">6-9 Months</div>
-                    <div className="text-white/70 font-light text-lg">Result Duration</div>
-                    <div className="mt-4 pt-4 border-t border-white/10">
-                      <p className="text-white/50 text-sm">Long-lasting regeneration</p>
-                    </div>
-                  </CardContent>
-                </Card>
               </div>
             </motion.div>
           </div>
