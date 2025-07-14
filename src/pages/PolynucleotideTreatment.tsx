@@ -217,8 +217,79 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
+        {/* Treatment Summary Section */}
+        <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                  <div className="text-center">
+                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                      Anaesthetic
+                    </h3>
+                    <p className="text-white text-lg font-light">
+                      Local
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                      Treatment Results
+                    </h3>
+                    <p className="text-white text-lg font-light">
+                      Immediate, gets better over 6-9 Months
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                      Procedure Time
+                    </h3>
+                    <p className="text-white text-lg font-light">
+                      20 Minutes
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                      Risk & Complications
+                    </h3>
+                    <p className="text-white text-lg font-light">
+                      Bruises, Swelling and Infection (rare)
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                      Full Recovery
+                    </h3>
+                    <p className="text-white text-lg font-light">
+                      Immediate
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                      Back To Work
+                    </h3>
+                    <p className="text-white text-lg font-light">
+                      Immediate
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Before & After Gallery - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A]">
           <div className="page-container">
             <motion.div
               className="text-center mb-20"
