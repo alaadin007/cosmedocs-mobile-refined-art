@@ -1,201 +1,136 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
-import { generateSEOMetadata } from "@/utils/seo";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
-import { Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap, Users, ChevronDown, ChevronUp } from "lucide-react";
-import PopularTreatments from "@/components/PopularTreatments";
-import AutoLinkedText from "@/components/AutoLinkedText";
-import BeforeAfterGrid from "@/components/BeforeAfterGrid";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import PopularTreatments from "@/components/PopularTreatments";
 
 const PolynucleotideTreatment = () => {
   const seoData = generateSEOMetadata(
-    "Polynucleotide Treatment London | Regenerative DNA Skin Therapy",
-    "Advanced Polynucleotide DNA therapy for skin regeneration, anti-aging, and hair restoration. Harness the healing power of natural DNA fragments for visible skin transformation.",
+    "Polynucleotide Treatment London | £450 | Regenerative DNA Therapy | Harley Street",
+    "Expert polynucleotide DNA therapy for skin regeneration, anti-aging, and hair restoration in London's Harley Street. Advanced regenerative medicine from £450.",
     "/polynucleotide-treatment"
   );
 
-  const treatmentStats = [
-    { label: "Anaesthetic", value: "Local numbing cream", icon: Syringe },
-    { label: "Treatment Time", value: "20 minutes", icon: Clock },
-    { label: "Results Duration", value: "6-9 months improvement", icon: Star },
-    { label: "Recovery Time", value: "Immediate return to work", icon: Heart },
-    { label: "Risk Level", value: "Minimal side effects", icon: Shield },
-    { label: "Sessions Needed", value: "3 sessions recommended", icon: Zap }
-  ];
+  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
-  const treatmentAreas = [
-    "Under-eye rejuvenation",
-    "Fine lines and wrinkles",
-    "Skin texture improvement",
-    "Hair loss and thinning",
-    "Neck and décolletage",
-    "Hand rejuvenation",
-    "Acne scarring",
-    "Skin elasticity",
-    "Collagen stimulation",
-    "Facial contouring",
-    "Scalp health",
-    "Dark circles"
-  ];
-
-  const idealCandidates = [
-    "Early signs of aging",
-    "Collagen deficiency concerns",
-    "Sun-damaged skin",
-    "Sagging skin areas",
-    "Hair loss conditions",
-    "Dry, damaged skin",
-    "Acne scarring",
-    "Uneven skin tone"
-  ];
-
-  const results = [
-    "Deep skin nourishment",
-    "Age-defying radiance",
-    "Enhanced collagen production",
-    "Improved skin firmness",
-    "Hair follicle regeneration",
-    "Reduced fine lines",
-    "Better skin texture",
-    "Natural glow restoration"
-  ];
-
+  // Before/after images for the viewer
   const beforeAfterImages = [
     {
       src: "/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png",
-      alt: "Before and after polynucleotide treatment - lip rejuvenation",
-      caption: "Polynucleotide treatment showing enhanced lip texture and reduced fine lines around the mouth area - 3 months result"
+      alt: "Polynucleotide treatment London lip rejuvenation results showing enhanced texture and reduced fine lines",
+      caption: "Lip rejuvenation with polynucleotide therapy showing enhanced texture and reduced fine lines - 3 months result"
     },
     {
       src: "/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png", 
-      alt: "Before and after polynucleotide treatment - under eye rejuvenation",
+      alt: "Polynucleotide treatment London under eye rejuvenation dramatic reduction dark circles improved skin texture",
       caption: "Under-eye polynucleotide therapy demonstrating dramatic reduction in dark circles and improved skin texture"
     },
     {
       src: "/lovable-uploads/7bef47b3-8c8f-42e2-b301-cff179a7c8bf.png",
-      alt: "Before and after polynucleotide treatment - eyebrow area improvement",
+      alt: "Polynucleotide treatment London eyebrow area improvement skin texture fine lines reduction",
       caption: "Eyebrow area polynucleotide treatment showing improved skin texture and reduced fine lines"
     },
     {
       src: "/lovable-uploads/159173ee-5192-416f-af16-0b7d13fce18d.png",
-      alt: "Before and after polynucleotide treatment - hair restoration results",
-      caption: "Scalp polynucleotide treatment showing significant hair density improvement and follicle regeneration after treatment course"
+      alt: "Polynucleotide treatment London hair restoration scalp therapy follicle regeneration results",
+      caption: "Scalp polynucleotide treatment showing significant hair density improvement and follicle regeneration"
     }
   ];
 
   const leftColumnFaqs = [
     {
-      question: "Is Polynucleotide Treatment safe?",
-      answer: "Yes, Polynucleotide Treatment is considered safe and is suitable for all skin types. It uses biocompatible and naturally occurring DNA fragments, which minimizes the risk of adverse allergic reactions. At Cosmedocs, treatments are performed by highly trained professionals to ensure both safety and optimal results."
+      question: "How much does polynucleotide treatment cost in London?",
+      answer: "At Cosmedocs Harley Street, polynucleotide treatments start from £450 per session. A 3-session package costs £1,200, saving you £150. The cost depends on the treatment area and your specific aesthetic goals."
     },
     {
-      question: "How many sessions are typically required?",
-      answer: "While noticeable improvements can be seen after one session, a series of 2-3 sessions spaced a few weeks apart is recommended for optimal and long-lasting results. Maintenance sessions can be scheduled every few months to maintain your transformation."
+      question: "How long do polynucleotide results last?",
+      answer: "Results typically last 6-9 months and continue improving over time. The longevity depends on your skin condition, age, and lifestyle factors. Regular maintenance sessions can help sustain your natural transformation."
     },
     {
-      question: "What areas can be treated with Polynucleotide Injections?",
-      answer: "Commonly treated areas include the under-eye area for puffiness and dark circles, as well as the face for comprehensive facial rejuvenation treatments. Additionally, the neck is treated for tightening, the hands for hydration, and the scalp for addressing hair thinning or hair loss."
+      question: "Is polynucleotide treatment safe?",
+      answer: "Yes, polynucleotide treatment is very safe when performed by our experienced practitioners. It uses biocompatible DNA fragments that are naturally found in the body, minimizing the risk of allergic reactions."
     },
     {
-      question: "How long does each session last?",
-      answer: "Each session typically lasts about 20 minutes, though this can vary depending on the treatment area. Our efficient approach ensures minimal disruption to your day."
+      question: "What areas can be treated with polynucleotides?",
+      answer: "Polynucleotides can treat the under-eye area, face, neck, décolletage, hands, and scalp. They're particularly effective for dark circles, fine lines, skin texture improvement, and hair loss conditions."
     },
     {
-      question: "What can I expect after the treatment?",
-      answer: "You may experience mild redness or swelling post-treatment, which usually subsides within a few hours to a day. However, there is minimal downtime, allowing you to resume most daily activities immediately."
+      question: "How many sessions are needed for optimal results?",
+      answer: "While improvements can be seen after one session, we recommend 3 sessions spaced 3 weeks apart for optimal and lasting results. This allows for progressive regenerative benefits and maximum collagen stimulation."
     }
   ];
 
   const rightColumnFaqs = [
     {
-      question: "Is there any aftercare needed?",
-      answer: "Yes, keeping sensitive skin around the treated area clean and moisturized is important. Additionally, avoid direct sunlight and use sunscreen to protect the skin. Furthermore, detailed aftercare instructions will be provided by your clinician to ensure optimal results."
+      question: "How painful is polynucleotide treatment?",
+      answer: "Most patients experience minimal discomfort. We use topical numbing cream and fine needles for precise injection. The treatment is generally well-tolerated with minimal downtime required."
     },
     {
-      question: "When will I see the results?",
-      answer: "Improvements can be noticed within a few weeks, with more significant changes occurring over the following months. Full effects are typically visible in 6-9 months as your skin naturally produces collagen and elastin."
+      question: "When will I see results from polynucleotide therapy?",
+      answer: "Initial improvements can be noticed within 2-3 weeks, with progressive enhancement over the following months. Full regenerative effects are typically visible at 6-9 months as natural collagen production increases."
     },
     {
-      question: "Are there any side effects?",
-      answer: "Polynucleotide treatments are generally safe with minimal side effects. Some clients may experience temporary bruising or swelling at the injection site, which typically resolves quickly."
+      question: "Can polynucleotides help with hair loss?",
+      answer: "Yes, polynucleotide therapy is highly effective for hair restoration. It stimulates follicle regeneration, improves scalp health, and promotes natural hair growth, making it excellent for androgenic alopecia and thinning hair."
     },
     {
-      question: "Can Polynucleotide Treatment help with hair loss?",
-      answer: "Yes, polynucleotide treatment for hair loss is highly effective. The injections improve scalp health, stimulate hair follicles, and promote hair growth, making it an excellent option for those experiencing thinning hair or the early stages of hair loss."
+      question: "What happens during a polynucleotide consultation?",
+      answer: "Our practitioners will assess your skin or scalp condition, discuss your aesthetic goals, explain the treatment process, and create a personalized treatment plan. You'll understand exactly what to expect from your transformation."
     },
     {
-      question: "What is the cost of Polynucleotide Treatment in London?",
-      answer: "At Cosmedocs, a single session costs £450, and a package deal for three sessions is available at £1,200, providing a total saving of £150. This pricing ensures both affordability and access to premium-quality treatments."
+      question: "How does polynucleotide therapy work?",
+      answer: "Polynucleotides are natural DNA fragments that stimulate cellular repair, boost collagen synthesis, and enhance skin regeneration. They work with your body's natural healing processes to restore youthful skin from within."
     }
   ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "MedicalService",
-    "name": "Polynucleotide Treatment",
-    "alternateName": "DNA Regenerative Therapy",
-    "provider": {
-      "@type": "MedicalOrganization",
-      "name": "Cosmedocs",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Harley Street",
-        "addressLocality": "London",
-        "addressCountry": "UK"
-      }
-    },
-    "description": "Advanced polynucleotide DNA therapy for skin regeneration, anti-aging, and hair restoration using natural DNA fragments",
-    "serviceType": "Aesthetic Medicine",
-    "areaServed": ["London", "Birmingham", "Manchester", "Cardiff"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Polynucleotide Treatment Options",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Single Polynucleotide Treatment",
-            "price": "450",
-            "priceCurrency": "GBP"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "3-Session Polynucleotide Package",
-            "price": "1200",
-            "priceCurrency": "GBP"
-          }
-        }
-      ]
-    }
-  };
 
   return (
     <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="polynucleotide treatment London, DNA therapy, skin regeneration, anti-aging, hair restoration, collagen stimulation, aesthetic medicine, Harley Street" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Cosmedocs" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:image" content={seoData.image} />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="twitter:image" content={seoData.image} />
+        
+        {/* Local SEO */}
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.5074;-0.1278" />
+        <meta name="ICBM" content="51.5074, -0.1278" />
+        
+        {/* Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs - Polynucleotide Treatment",
+            "description": "Advanced polynucleotide DNA therapy for skin regeneration and hair restoration in London's Harley Street",
+            "url": "https://cosmedocs.com/polynucleotide-treatment",
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "medicalSpecialty": "Regenerative Medicine",
+            "priceRange": "£450"
+          })}
         </script>
       </Helmet>
 
@@ -220,17 +155,6 @@ const PolynucleotideTreatment = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <motion.div
-                  className="mb-12"
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <div className="bg-yellow-400/90 backdrop-blur-sm rounded-full px-8 py-3 inline-block border border-yellow-400/20 mb-8">
-                    <span className="text-black font-light text-lg">Regenerative DNA Therapy</span>
-                  </div>
-                </motion.div>
-                
                 <motion.h1 
                   className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight"
                   initial={{ opacity: 0, y: 40 }}
@@ -238,8 +162,8 @@ const PolynucleotideTreatment = () => {
                   transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                   <span className="block text-white/95 font-thin">Polynucleotide</span>
-                  <span className="block text-white font-light">Treatment</span>
-                  <span className="block text-yellow-400 text-5xl md:text-6xl italic font-extralight mt-2">Harness the Healing Power of DNA</span>
+                  <span className="block text-white font-light">DNA</span>
+                  <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Therapy</span>
                 </motion.h1>
                 
                 <motion.div 
@@ -249,8 +173,7 @@ const PolynucleotideTreatment = () => {
                   transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                   <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
-                    Revolutionary regenerative medicine for skin, eyes, and hair using natural DNA fragments. 
-                    Our aesthetics is invisible art - transformation that speaks without saying a word.
+                    Revolutionary regenerative medicine that harnesses the healing power of natural DNA fragments for skin, hair, and cellular renewal
                   </p>
                   <div className="flex items-center space-x-8 text-xl">
                     <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
@@ -258,7 +181,7 @@ const PolynucleotideTreatment = () => {
                     </div>
                     <div className="text-white/80">
                       <span className="font-extralight">Advanced </span> 
-                      <span className="font-light">DNA Therapy</span>
+                      <span className="font-light">Regenerative Therapy</span>
                     </div>
                   </div>
                 </motion.div>
@@ -270,330 +193,190 @@ const PolynucleotideTreatment = () => {
                   transition={{ duration: 0.8, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                   <a 
-                    href="https://med.as.me/schedule/0cc7d92b" 
+                    href={bookingUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
                   >
                     Book Consultation
                   </a>
-                  <button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20">
-                    Learn More
-                  </button>
+                  <div className="flex items-center gap-3 text-white/80 px-8">
+                    <Instagram className="h-6 w-6" />
+                    <a 
+                      href="https://instagram.com/cosmedocs" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors font-extralight text-lg"
+                    >
+                      Follow our results #polynucleotide
+                    </a>
+                  </div>
                 </motion.div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Treatment Stats */}
-        <section className="py-12 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
+        {/* Before & After Gallery - Apple Style */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div
+              className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
-              className="max-w-7xl mx-auto"
             >
-              <div className="flex flex-wrap justify-center gap-4">
-                {treatmentStats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 min-w-[160px] text-center"
-                  >
-                    <stat.icon className="h-6 w-6 text-yellow-400 mx-auto mb-2" />
-                    <h3 className="font-semibold text-sm mb-1">{stat.label}</h3>
-                    <p className="text-xs text-gray-300">{stat.value}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* What Are Polynucleotides */}
-        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="text-3xl font-bold mb-6">What Are Polynucleotides?</h2>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    <AutoLinkedText>
-                      Polynucleotide treatment is transforming skincare in the UK, offering a natural way 
-                      to refresh and restore your skin. Backed by over 30 years of research, it uses DNA 
-                      fragments from salmon or trout to work with your body's natural processes.
-                    </AutoLinkedText>
-                  </p>
-                  <p className="text-gray-300 mb-8 leading-relaxed">
-                    <AutoLinkedText>
-                      This revolutionary treatment repairs and revitalizes the skin by supporting cellular 
-                      regeneration, collagen production, and natural healing. Our aesthetics is invisible 
-                      art - creating transformations that enhance your natural beauty boldly and naturally, 
-                      always your way.
-                    </AutoLinkedText>
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-yellow-400" />
-                      <span>Natural DNA fragments from marine sources</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-yellow-400" />
-                      <span>30+ years of scientific research</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-yellow-400" />
-                      <span>Biocompatible and safe for all skin types</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="bg-yellow-400/10 rounded-lg p-8">
-                    <h3 className="text-xl font-semibold mb-4">How It Works</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Polynucleotides are injected into target areas where they stimulate cellular repair, 
-                      boost collagen synthesis, and enhance skin hydration. This gentle, non-invasive approach 
-                      offers superior results compared to chemical peels or laser therapy, restoring your 
-                      skin's natural glow and elasticity from within.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Treatment Areas */}
-        <section className="py-16 bg-background">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Treatment Areas</h2>
-                <p className="text-muted-foreground text-lg">
-                  Comprehensive regenerative therapy for multiple areas of concern
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {treatmentAreas.map((area, index) => (
-                  <motion.div
-                    key={area}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="hover:shadow-md transition-shadow duration-300">
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-yellow-600 flex-shrink-0" />
-                          <span className="font-medium">{area}</span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Targeted Treatments */}
-        <section className="py-16 bg-primary/10">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Targeted Polynucleotide Treatments</h2>
-                <p className="text-muted-foreground text-lg">
-                  Specialized applications for specific aesthetic concerns
-                </p>
-              </div>
-              <div className="grid lg:grid-cols-3 gap-8">
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl">Under-Eye Rejuvenation</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Target the delicate under-eye area to reduce dark circles, minimize puffiness, 
-                      and smooth fine lines for a more youthful appearance.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Reduces dark circles</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Minimizes puffiness</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Improves skin texture</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl">Skin Booster Treatment</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Enhance your skin's natural repair mechanisms to reduce fine lines, 
-                      improve texture, and stimulate collagen production.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Stimulates collagen production</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Deep hydration</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Reduces fine lines</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl">Hair Loss Treatment</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Stimulate hair growth and restore scalp health for those experiencing 
-                      hair thinning or loss with natural regenerative therapy.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Hair follicle regeneration</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Improves scalp health</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-yellow-600" />
-                        <span className="text-sm">Reduces hair loss</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Before & After Results */}
-        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Before & After Results</h2>
-                <p className="text-gray-300 text-lg">
-                  Witness the transformative power of polynucleotide DNA therapy. Our aesthetics is invisible art - 
-                  creating natural, bold transformations that speak without saying a word.
-                </p>
-              </div>
-              <BeforeAfterGrid images={beforeAfterImages} />
-              <div className="text-center mt-8">
-                <p className="text-gray-400 text-sm">
-                  Individual results may vary. Results shown after 3 treatment sessions spaced 3 weeks apart. 
-                  Full effects visible in 6-9 months.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-16 bg-gradient-to-br from-cosmedocs-black via-gray-900 to-cosmedocs-black text-white">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto text-center"
-            >
-              <h2 className="text-3xl font-bold mb-8">Investment in Your Transformation</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-4">Single Treatment</h3>
-                    <div className="text-4xl font-bold text-yellow-400 mb-4">£450</div>
-                    <p className="text-gray-300 mb-6">
-                      Perfect for first-time clients or maintenance sessions
-                    </p>
-                    <Button className="w-full bg-yellow-600 hover:bg-yellow-700">
-                      Book Single Session
-                    </Button>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white/10 backdrop-blur-sm border-yellow-400/50 relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-yellow-400 text-cosmedocs-black">Most Popular</Badge>
-                  </div>
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-4">3-Session Package</h3>
-                    <div className="text-4xl font-bold text-yellow-400 mb-2">£1,200</div>
-                    <div className="text-sm text-green-400 mb-4">Save £150</div>
-                    <p className="text-gray-300 mb-6">
-                      Recommended course for optimal and lasting results
-                    </p>
-                    <Button className="w-full bg-yellow-600 hover:bg-yellow-700">
-                      Book Package Deal
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-              <p className="text-gray-300 mt-8 text-sm">
-                ⭐ Sessions spaced 3 weeks apart • Full effects visible in 6-9 months • 
-                Combines beautifully with other treatments
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Regenerative Results
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Real patient transformations showcasing the power of DNA regenerative therapy
               </p>
             </motion.div>
+            
+            <div className="text-center">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Results"
+                title="Polynucleotide Treatment Results"
+                description="Real patient transformations with DNA therapy"
+                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+              />
+            </div>
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-32 bg-gradient-to-b from-cosmedocs-black to-[#0A0A0A]">
+        {/* Regenerative Science Section - Apple Style */}
+        <section className="py-32 bg-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                The Science of Regeneration
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Harnessing natural DNA fragments to stimulate cellular repair and regeneration
+              </p>
+            </motion.div>
+            
+            <div className="max-w-6xl mx-auto">
+              <motion.div 
+                className="grid lg:grid-cols-2 gap-16 items-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <div className="order-2 lg:order-1">
+                  <img 
+                    src="/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png" 
+                    alt="Polynucleotide DNA therapy mechanism skin regeneration collagen stimulation cellular repair London Harley Street"
+                    className="w-full h-auto rounded-2xl shadow-2xl"
+                  />
+                </div>
+                
+                <div className="order-1 lg:order-2 space-y-8">
+                  <div>
+                    <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
+                      Natural DNA Therapy
+                    </h3>
+                    <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
+                      Polynucleotides are biocompatible DNA fragments extracted from salmon that work with your body's 
+                      natural healing processes to stimulate cellular regeneration, boost collagen production, and restore 
+                      youthful vitality to skin and hair.
+                    </p>
+                  </div>
+                  
+                  <RegenerativeScienceCard />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Areas Section - Apple Style */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                className="text-center mb-20"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                  Treatment Applications
+                </h2>
+                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                  Comprehensive regenerative therapy for multiple aesthetic concerns
+                </p>
+              </motion.div>
+              
+              <motion.div 
+                className="grid md:grid-cols-3 gap-8"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl font-light flex items-center gap-3">
+                      <Heart className="h-6 w-6 text-white/70" />
+                      Skin Regeneration
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-white/80 space-y-3">
+                    <p className="font-light">Face, neck, and décolletage rejuvenation</p>
+                    <p className="font-light">Under-eye dark circles and puffiness</p>
+                    <p className="font-light">Fine lines and texture improvement</p>
+                    <p className="font-light">Hand and lip rejuvenation</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl font-light flex items-center gap-3">
+                      <Zap className="h-6 w-6 text-white/70" />
+                      Hair Restoration
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-white/80 space-y-3">
+                    <p className="font-light">Androgenic alopecia treatment</p>
+                    <p className="font-light">Hair follicle regeneration</p>
+                    <p className="font-light">Scalp health improvement</p>
+                    <p className="font-light">Thinning hair enhancement</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl font-light flex items-center gap-3">
+                      <Star className="h-6 w-6 text-white/70" />
+                      Advanced Applications
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-white/80 space-y-3">
+                    <p className="font-light">Acne scarring improvement</p>
+                    <p className="font-light">Collagen stimulation</p>
+                    <p className="font-light">Skin elasticity restoration</p>
+                    <p className="font-light">Natural anti-aging therapy</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section - Apple Style */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -628,35 +411,120 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-16 bg-primary/10">
+        {/* Call to Action Section - Apple Style */}
+        <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
             <motion.div
+              className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
-              className="max-w-2xl mx-auto text-center"
             >
-              <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Skin?</h2>
-              <p className="text-muted-foreground mb-8 text-lg">
-                <AutoLinkedText>
-                  Experience the power of regenerative DNA therapy. Book your consultation and discover 
-                  how polynucleotides can naturally restore your skin's youth and vitality. 
-                  Our aesthetics is invisible art • Bold • Natural • Always Your Way
-                </AutoLinkedText>
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
+                Transform with DNA Science
+              </h2>
+              <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
+                Experience the future of regenerative medicine. Our aesthetics is invisible art - 
+                transformation that speaks without saying a word.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://med.as.me/schedule/0cc7d92b" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700">
-                    Book Consultation
-                  </Button>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <a 
+                  href={bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20 hover:scale-[1.02]"
+                >
+                  Book Consultation
                 </a>
-                <Button size="lg" variant="outline">
-                  Download Treatment Guide
-                </Button>
+                <button className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20">
+                  Download Guide
+                </button>
+              </div>
+              
+              <div className="mt-16 grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl font-light text-white mb-2">£450</div>
+                  <div className="text-white/70 font-light">Single Session</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-light text-white mb-2">£1,200</div>
+                  <div className="text-white/70 font-light">3-Session Package</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-light text-white mb-2">6-9 Months</div>
+                  <div className="text-white/70 font-light">Result Duration</div>
+                </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Location & Contact - Apple Style */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                className="text-center mb-20"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                  Visit Our Harley Street Clinic
+                </h2>
+              </motion.div>
+              
+              <motion.div 
+                className="grid lg:grid-cols-2 gap-16 items-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <div className="space-y-8">
+                  <div className="flex items-center gap-4 text-white/80">
+                    <MapPin className="h-6 w-6 text-white/70" />
+                    <div>
+                      <p className="font-light text-lg">10 Harley Street</p>
+                      <p className="font-light">London W1G 9PF</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 text-white/80">
+                    <Phone className="h-6 w-6 text-white/70" />
+                    <p className="font-light text-lg">0333 0551 503</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 text-white/80">
+                    <Mail className="h-6 w-6 text-white/70" />
+                    <p className="font-light text-lg">info@cosmedocs.com</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 text-white/80">
+                    <Calendar className="h-6 w-6 text-white/70" />
+                    <div>
+                      <p className="font-light text-lg">Monday - Friday: 9am - 6pm</p>
+                      <p className="font-light">Saturday: 9am - 5pm</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                  <h3 className="text-2xl font-light text-white mb-6">Expert Care</h3>
+                  <p className="text-white/80 font-light leading-relaxed mb-6">
+                    Our experienced practitioners combine medical expertise with artistic vision to deliver 
+                    natural, transformative results using the latest in regenerative DNA therapy.
+                  </p>
+                  <div className="flex items-center gap-4 text-white/80">
+                    <Award className="h-6 w-6 text-white/70" />
+                    <p className="font-light">Harley Street Excellence</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -691,10 +559,43 @@ const PolynucleotideTreatment = () => {
 
         <PopularTreatments 
           title="Related Regenerative Treatments"
-          className="bg-background"
+          className="bg-black"
         />
       </div>
     </>
+  );
+};
+
+// Regenerative Science Card Component
+const RegenerativeScienceCard = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+      <CollapsibleTrigger className="w-full">
+        <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer text-left">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <h4 className="text-xl font-light text-white">How DNA Therapy Works</h4>
+              {isOpen ? (
+                <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
+              ) : (
+                <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      </CollapsibleTrigger>
+      <CollapsibleContent>
+        <div className="px-6 pb-6">
+          <p className="text-white/80 leading-relaxed font-light">
+            Polynucleotides work by providing biocompatible DNA building blocks that stimulate your skin's 
+            natural repair mechanisms. They boost cellular regeneration, enhance collagen synthesis, and 
+            improve tissue hydration, resulting in healthier, more youthful-looking skin and stronger hair growth.
+          </p>
+        </div>
+      </CollapsibleContent>
+    </Collapsible>
   );
 };
 
