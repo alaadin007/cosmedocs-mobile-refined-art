@@ -212,68 +212,68 @@ const PolynucleotideTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
-                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Anaesthetic
                     </h3>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-base font-light">
                       Local
                     </p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-6">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
-                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Treatment Results
                     </h3>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-base font-light leading-tight">
                       Immediate, gets better over 6-9 Months
                     </p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-6">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
-                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Procedure Time
                     </h3>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-base font-light">
                       20 Minutes
                     </p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-6">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
-                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Risk & Complications
                     </h3>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-base font-light leading-tight">
                       Bruises, Swelling and Infection (rare)
                     </p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-6">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
-                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Full Recovery
                     </h3>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-base font-light">
                       Immediate
                     </p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-6">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
                   <CardContent className="p-0">
-                    <h3 className="text-white/60 text-sm font-light uppercase tracking-wide mb-3">
+                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
                       Back To Work
                     </h3>
-                    <p className="text-white text-lg font-light">
+                    <p className="text-white text-base font-light">
                       Immediate
                     </p>
                   </CardContent>
