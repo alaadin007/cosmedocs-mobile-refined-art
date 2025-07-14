@@ -696,14 +696,25 @@ const PolynucleotideTreatment = () => {
               <p className="text-xl text-white/70 font-light mb-12">
                 Professional polynucleotide therapy pricing with package savings
               </p>
-              
-              <div className="mt-12">
-                <img 
-                  src="/lovable-uploads/c5bdb84d-d8f9-418d-a133-3bac9a63fa98.png"
-                  alt="Polynucleotide treatment pricing - Single session £450, 3-session package £1,200 with best value, results lasting 6-9 months"
-                  className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
-                />
-              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Pricing Cards Section */}
+        <section className="py-20 bg-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <img 
+                src="/lovable-uploads/892c94be-4b08-4ec6-890e-c9cb6a62147b.png"
+                alt="Polynucleotide treatment pricing cards - Single session £450, 3-session package £1,200 with best value, 6-9 months result duration"
+                className="w-full max-w-5xl mx-auto"
+              />
             </motion.div>
           </div>
         </section>
