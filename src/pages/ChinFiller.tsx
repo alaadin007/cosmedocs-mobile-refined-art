@@ -7,74 +7,61 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-
 const ChinFiller = () => {
-  const seoData = generateSEOMetadata(
-    "Chin Filler London | From £350 | Dr. Ahmed Haq | Harley Street",
-    "Professional chin filler treatments in London's Harley Street. Transform from a weak chin to a well-defined profile. Expert chin augmentation from £350.",
-    "/chin-filler"
-  );
-
+  const seoData = generateSEOMetadata("Chin Filler London | From £350 | Dr. Ahmed Haq | Harley Street", "Professional chin filler treatments in London's Harley Street. Transform from a weak chin to a well-defined profile. Expert chin augmentation from £350.", "/chin-filler");
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
-
-
-  const leftColumnFaqs = [
-    {
-      question: "How much does chin filler cost in London?",
-      answer: "At Cosmedocs Harley Street, chin filler treatments start from £350 for the first syringe (1.2ml). The cost varies depending on the amount of filler needed to achieve your desired results."
-    },
-    {
-      question: "How long do chin filler results last?",
-      answer: "Chin filler results typically last 12-18 months, sometimes longer. The longevity depends on the type and amount of filler used, your metabolism, and individual factors."
-    },
-    {
-      question: "Is chin filler safe?",
-      answer: "Yes, when performed by qualified practitioners like Dr. Ahmed Haq at our Harley Street clinic, chin fillers are very safe. We use premium hyaluronic acid fillers and follow strict safety protocols."
-    },
-    {
-      question: "What's the difference between chin filler and chin surgery?",
-      answer: "Chin filler is non-surgical, temporary, and involves minimal downtime. Surgical chin augmentation is permanent but carries surgical risks, longer recovery time, and higher costs."
-    },
-    {
-      question: "Can chin filler help with a double chin?",
-      answer: "Yes, chin fillers can help minimize the appearance of a double chin by enhancing the chin projection and creating better definition between the chin and neck area."
-    }
-  ];
-
-  const rightColumnFaqs = [
-    {
-      question: "How painful is chin filler treatment?",
-      answer: "Most patients find chin filler treatment comfortable. We use topical numbing cream and the fillers contain lidocaine for additional comfort during the procedure."
-    },
-    {
-      question: "What happens during a chin filler consultation?",
-      answer: "During your consultation, Dr. Ahmed Haq will assess your facial proportions, discuss your goals, and create a personalized treatment plan to achieve optimal facial harmony."
-    },
-    {
-      question: "Can I combine chin filler with other treatments?",
-      answer: "Absolutely! Chin filler works beautifully with jawline filler, cheek filler, and other facial treatments. The 3D jawline makeover is one of our most popular combination treatments."
-    },
-    {
-      question: "How quickly will I see chin filler results?",
-      answer: "Results are visible immediately after treatment, with final results apparent within 2 weeks once any minor swelling subsides."
-    },
-    {
-      question: "Can chin filler results be reversed?",
-      answer: "Yes, hyaluronic acid chin fillers can be dissolved with hyaluronidase if needed, providing flexibility that surgical options cannot offer."
-    }
-  ];
-
-  const treatmentDetails = [
-    { title: "Anaesthetic", detail: "Local / Topical" },
-    { title: "Procedure Time", detail: "30 minutes" }, 
-    { title: "Results Duration", detail: "12+ months" },
-    { title: "Recovery", detail: "24-48 hours" },
-    { title: "Back to Work", detail: "Immediate" },
-    { title: "Risks", detail: "Minimal - swelling, bruising" }
-  ];
-
-  return (
-    <>
+  const leftColumnFaqs = [{
+    question: "How much does chin filler cost in London?",
+    answer: "At Cosmedocs Harley Street, chin filler treatments start from £350 for the first syringe (1.2ml). The cost varies depending on the amount of filler needed to achieve your desired results."
+  }, {
+    question: "How long do chin filler results last?",
+    answer: "Chin filler results typically last 12-18 months, sometimes longer. The longevity depends on the type and amount of filler used, your metabolism, and individual factors."
+  }, {
+    question: "Is chin filler safe?",
+    answer: "Yes, when performed by qualified practitioners like Dr. Ahmed Haq at our Harley Street clinic, chin fillers are very safe. We use premium hyaluronic acid fillers and follow strict safety protocols."
+  }, {
+    question: "What's the difference between chin filler and chin surgery?",
+    answer: "Chin filler is non-surgical, temporary, and involves minimal downtime. Surgical chin augmentation is permanent but carries surgical risks, longer recovery time, and higher costs."
+  }, {
+    question: "Can chin filler help with a double chin?",
+    answer: "Yes, chin fillers can help minimize the appearance of a double chin by enhancing the chin projection and creating better definition between the chin and neck area."
+  }];
+  const rightColumnFaqs = [{
+    question: "How painful is chin filler treatment?",
+    answer: "Most patients find chin filler treatment comfortable. We use topical numbing cream and the fillers contain lidocaine for additional comfort during the procedure."
+  }, {
+    question: "What happens during a chin filler consultation?",
+    answer: "During your consultation, Dr. Ahmed Haq will assess your facial proportions, discuss your goals, and create a personalized treatment plan to achieve optimal facial harmony."
+  }, {
+    question: "Can I combine chin filler with other treatments?",
+    answer: "Absolutely! Chin filler works beautifully with jawline filler, cheek filler, and other facial treatments. The 3D jawline makeover is one of our most popular combination treatments."
+  }, {
+    question: "How quickly will I see chin filler results?",
+    answer: "Results are visible immediately after treatment, with final results apparent within 2 weeks once any minor swelling subsides."
+  }, {
+    question: "Can chin filler results be reversed?",
+    answer: "Yes, hyaluronic acid chin fillers can be dissolved with hyaluronidase if needed, providing flexibility that surgical options cannot offer."
+  }];
+  const treatmentDetails = [{
+    title: "Anaesthetic",
+    detail: "Local / Topical"
+  }, {
+    title: "Procedure Time",
+    detail: "30 minutes"
+  }, {
+    title: "Results Duration",
+    detail: "12+ months"
+  }, {
+    title: "Recovery",
+    detail: "24-48 hours"
+  }, {
+    title: "Back to Work",
+    detail: "Immediate"
+  }, {
+    title: "Risks",
+    detail: "Minimal - swelling, bruising"
+  }];
+  return <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -96,27 +83,27 @@ const ChinFiller = () => {
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Cosmedocs - Chin Filler Treatment",
-            "description": "Professional chin filler treatments for facial enhancement and profile correction",
-            "url": "https://cosmedocs.com/chin-filler",
-            "telephone": "0333 0551 503",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "medicalSpecialty": "Cosmetic Surgery",
-            "priceRange": "£350+"
-          })}
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          "name": "Cosmedocs - Chin Filler Treatment",
+          "description": "Professional chin filler treatments for facial enhancement and profile correction",
+          "url": "https://cosmedocs.com/chin-filler",
+          "telephone": "0333 0551 503",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10 Harley Street",
+            "addressLocality": "London",
+            "postalCode": "W1G 9PF",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+          },
+          "medicalSpecialty": "Cosmetic Surgery",
+          "priceRange": "£350+"
+        })}
         </script>
       </Helmet>
 
@@ -124,40 +111,51 @@ const ChinFiller = () => {
         {/* Hero Section - Apple Style */}
         <section className="relative min-h-screen flex items-center">
           {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/ac269c72-30b5-4182-a990-857547c55c4f.png')"
-            }}
-          />
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: "url('/lovable-uploads/ac269c72-30b5-4182-a990-857547c55c4f.png')"
+        }} />
           {/* Apple-style overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
           
           <div className="page-container relative z-10">
             <div className="max-w-6xl">
-              <motion.div 
-                className="text-left"
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
-                <motion.h1 
-                  className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight"
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+              <motion.div className="text-left" initial={{
+              opacity: 0,
+              y: 60
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}>
+                <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight" initial={{
+                opacity: 0,
+                y: 40
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 1,
+                delay: 0.3,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
                   <span className="block text-white/95 font-thin">Chin</span>
                   <span className="block text-white font-light">Enhancement</span>
                   <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Projected</span>
                 </motion.h1>
                 
-                <motion.div 
-                  className="mb-16 space-y-6 max-w-3xl"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+                <motion.div className="mb-16 space-y-6 max-w-3xl" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.6,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
                   <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
                     Transform from a weak chin to well-defined profile with liquid mentoplasty using advanced dermal filler techniques
                   </p>
@@ -172,28 +170,23 @@ const ChinFiller = () => {
                   </div>
                 </motion.div>
                 
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
-                  >
+                <motion.div className="flex flex-col sm:flex-row gap-6" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.9,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
+                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
                     Book Consultation
                   </a>
                   <div className="flex items-center gap-3 text-white/80 px-8">
                     <Instagram className="h-6 w-6" />
-                    <a 
-                      href="https://instagram.com/cosmedocs" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-colors font-extralight text-lg"
-                    >
+                    <a href="https://instagram.com/cosmedocs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-extralight text-lg">
                       Follow our results #cosmedocs
                     </a>
                   </div>
@@ -206,13 +199,17 @@ const ChinFiller = () => {
         {/* Treatment Details Section */}
         <section className="py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-16" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-4xl md:text-5xl font-thin text-white mb-6 tracking-tight">
                 Treatment Overview
               </h2>
@@ -296,15 +293,19 @@ const ChinFiller = () => {
 
 
         {/* What is Chin Filler Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[95px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 What is Liquid Mentoplasty?
               </h2>
@@ -314,13 +315,17 @@ const ChinFiller = () => {
             </motion.div>
             
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-              <motion.div
-                className="space-y-8"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="space-y-8" initial={{
+              opacity: 0,
+              x: -40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-6">
                   <h3 className="text-3xl font-light text-white">Precision Enhancement</h3>
                   <p className="text-lg text-white/80 font-light leading-relaxed">
@@ -358,13 +363,18 @@ const ChinFiller = () => {
                 </div>
               </motion.div>
               
-              <motion.div
-                className="space-y-8"
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="space-y-8" initial={{
+              opacity: 0,
+              x: 40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2
+            }} viewport={{
+              once: true
+            }}>
                 <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
                   <h4 className="text-2xl font-light text-white mb-8">Complete Facial Harmony</h4>
                   <div className="space-y-6">
@@ -403,15 +413,19 @@ const ChinFiller = () => {
         </section>
 
         {/* Treatment Journey Section */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="bg-[#0A0A0A] py-[75px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Your Treatment Journey
               </h2>
@@ -422,13 +436,17 @@ const ChinFiller = () => {
             
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
-                <motion.div
-                  className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6
+              }} viewport={{
+                once: true
+              }}>
                   <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Users className="h-8 w-8 text-white/70" />
                   </div>
@@ -444,13 +462,18 @@ const ChinFiller = () => {
                   </div>
                 </motion.div>
                 
-                <motion.div
-                  className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6,
+                delay: 0.2
+              }} viewport={{
+                once: true
+              }}>
                   <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Syringe className="h-8 w-8 text-white/70" />
                   </div>
@@ -466,13 +489,18 @@ const ChinFiller = () => {
                   </div>
                 </motion.div>
                 
-                <motion.div
-                  className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6,
+                delay: 0.4
+              }} viewport={{
+                once: true
+              }}>
                   <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Heart className="h-8 w-8 text-white/70" />
                   </div>
@@ -493,15 +521,19 @@ const ChinFiller = () => {
         </section>
 
         {/* Face Types Section */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[75px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Personalized for Every Face
               </h2>
@@ -511,13 +543,17 @@ const ChinFiller = () => {
             </motion.div>
             
             <div className="max-w-6xl mx-auto space-y-16">
-              <motion.div
-                className="grid lg:grid-cols-2 gap-12 items-center"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid lg:grid-cols-2 gap-12 items-center" initial={{
+              opacity: 0,
+              x: -40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-6">
                   <h3 className="text-3xl font-light text-white">Round Face Enhancement</h3>
                   <p className="text-lg text-white/80 font-light leading-relaxed">
@@ -549,13 +585,17 @@ const ChinFiller = () => {
                 </div>
               </motion.div>
               
-              <motion.div
-                className="grid lg:grid-cols-2 gap-12 items-center"
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid lg:grid-cols-2 gap-12 items-center" initial={{
+              opacity: 0,
+              x: 40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8
+            }} viewport={{
+              once: true
+            }}>
                 <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 lg:order-1">
                   <h4 className="text-xl font-light text-white mb-4">Square Face Softening</h4>
                   <p className="text-white/70 font-light">
@@ -587,13 +627,17 @@ const ChinFiller = () => {
                 </div>
               </motion.div>
               
-              <motion.div
-                className="grid lg:grid-cols-2 gap-12 items-center"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid lg:grid-cols-2 gap-12 items-center" initial={{
+              opacity: 0,
+              x: -40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-6">
                   <h3 className="text-3xl font-light text-white">Double Chin Reduction</h3>
                   <p className="text-lg text-white/80 font-light leading-relaxed">
@@ -629,15 +673,20 @@ const ChinFiller = () => {
         </section>
 
         {/* Transformation Gallery */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="bg-[#0A0A0A] py-[75px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Transformation Gallery
               </h2>
@@ -646,45 +695,41 @@ const ChinFiller = () => {
               </p>
             </motion.div>
             
-            <BeforeAfterGrid 
-              images={[
-                {
-                  src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
-                  alt: "Chin filler before and after profile balancing natural results Cosmedocs",
-                  caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
-                },
-                {
-                  src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
-                  alt: "Chin augmentation before after London jawline definition facial enhancement",
-                  caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
-                },
-                {
-                  src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
-                  alt: "Chin filler profile enhancement side view transformation Harley Street",
-                  caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
-                },
-                {
-                  src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
-                  alt: "Liquid mentoplasty before after chin enhancement non surgical results",
-                  caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
-                }
-              ]}
-              initialDisplay={4}
-              loadMoreIncrement={4}
-            />
+            <BeforeAfterGrid images={[{
+            src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
+            alt: "Chin filler before and after profile balancing natural results Cosmedocs",
+            caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
+          }, {
+            src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
+            alt: "Chin augmentation before after London jawline definition facial enhancement",
+            caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
+          }, {
+            src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
+            alt: "Chin filler profile enhancement side view transformation Harley Street",
+            caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
+          }, {
+            src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
+            alt: "Liquid mentoplasty before after chin enhancement non surgical results",
+            caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
+          }]} initialDisplay={4} loadMoreIncrement={4} />
           </div>
         </section>
 
         {/* Video Treatment Section - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[75px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Treatment in Action
               </h2>
@@ -694,32 +739,35 @@ const ChinFiller = () => {
             </motion.div>
             
             <div className="max-w-4xl mx-auto">
-              <motion.div 
-                className="relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2
+            }} viewport={{
+              once: true
+            }}>
                 <div className="aspect-video">
-                  <iframe
-                    className="w-full h-full rounded-3xl"
-                    src="https://www.youtube.com/embed/Y3gCG1n2ioo"
-                    title="Professional chin filler demonstration - Advanced liquid mentoplasty technique"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
+                  <iframe className="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/Y3gCG1n2ioo" title="Professional chin filler demonstration - Advanced liquid mentoplasty technique" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
                 </div>
               </motion.div>
               
-              <motion.div 
-                className="text-center mt-8"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mt-8" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.4
+            }} viewport={{
+              once: true
+            }}>
                 <p className="text-white/70 font-light text-lg">
                   Professional chin filler demonstration
                 </p>
@@ -732,15 +780,19 @@ const ChinFiller = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-32 bg-black">
+        <section className="bg-black py-[75px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Investment in Your Confidence
               </h2>
@@ -751,13 +803,17 @@ const ChinFiller = () => {
             
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-3 gap-8">
-                <motion.div
-                  className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6
+              }} viewport={{
+                once: true
+              }}>
                   <div className="mb-6">
                     <h3 className="text-2xl font-light text-white mb-2">Single Treatment</h3>
                     <p className="text-white/60 text-sm font-light">1.2ml Hyaluronic Acid</p>
@@ -781,13 +837,18 @@ const ChinFiller = () => {
                   </div>
                 </motion.div>
                 
-                <motion.div
-                  className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center relative"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center relative" initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6,
+                delay: 0.2
+              }} viewport={{
+                once: true
+              }}>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-white text-black px-4 py-1 rounded-full text-xs font-medium">
                       Most Popular
@@ -816,13 +877,18 @@ const ChinFiller = () => {
                   </div>
                 </motion.div>
                 
-                <motion.div
-                  className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6,
+                delay: 0.4
+              }} viewport={{
+                once: true
+              }}>
                   <div className="mb-6">
                     <h3 className="text-2xl font-light text-white mb-2">Premium Treatment</h3>
                     <p className="text-white/60 text-sm font-light">3.6ml Hyaluronic Acid</p>
@@ -847,22 +913,22 @@ const ChinFiller = () => {
                 </motion.div>
               </div>
               
-              <motion.div
-                className="text-center mt-12"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mt-12" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.6
+            }} viewport={{
+              once: true
+            }}>
                 <p className="text-white/60 font-light mb-8">
                   All treatments include consultation, premium fillers, and comprehensive aftercare
                 </p>
-                <a 
-                  href={bookingUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-medium transition-all duration-300 hover:scale-105"
-                >
+                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-medium transition-all duration-300 hover:scale-105">
                   Book Your Consultation
                 </a>
               </motion.div>
@@ -871,28 +937,36 @@ const ChinFiller = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-32 bg-black">
+        <section className="bg-black py-[75px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Why Choose Chin Filler?
               </h2>
             </motion.div>
             
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-              <motion.div
-                className="space-y-8"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="space-y-8" initial={{
+              opacity: 0,
+              x: -40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-6">
                   <h3 className="text-3xl font-light text-white">Enhanced Facial Balance</h3>
                   <p className="text-lg text-white/80 font-light leading-relaxed">
@@ -920,13 +994,18 @@ const ChinFiller = () => {
                 </div>
               </motion.div>
               
-              <motion.div
-                className="space-y-8"
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="space-y-8" initial={{
+              opacity: 0,
+              x: 40
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-6">
                   <h3 className="text-3xl font-light text-white">Expert Technique</h3>
                   <p className="text-lg text-white/80 font-light leading-relaxed">
@@ -949,15 +1028,19 @@ const ChinFiller = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[75px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Frequently Asked Questions
               </h2>
@@ -965,15 +1048,11 @@ const ChinFiller = () => {
             
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
               <div className="space-y-6">
-                {leftColumnFaqs.map((faq, index) => (
-                  <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                ))}
+                {leftColumnFaqs.map((faq, index) => <FAQItem key={index} question={faq.question} answer={faq.answer} />)}
               </div>
               
               <div className="space-y-6">
-                {rightColumnFaqs.map((faq, index) => (
-                  <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                ))}
+                {rightColumnFaqs.map((faq, index) => <FAQItem key={index} question={faq.question} answer={faq.answer} />)}
               </div>
             </div>
           </div>
@@ -983,12 +1062,17 @@ const ChinFiller = () => {
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
                   Ready to Transform Your Profile?
                 </h2>
@@ -997,18 +1081,10 @@ const ChinFiller = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-medium transition-all duration-300 hover:scale-105"
-                  >
+                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-medium transition-all duration-300 hover:scale-105">
                     Book Consultation
                   </a>
-                  <a 
-                    href="tel:03330551503"
-                    className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-                  >
+                  <a href="tel:03330551503" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20">
                     <Phone className="h-5 w-5 mr-2" />
                     Call: 0333 055 1503
                   </a>
@@ -1029,25 +1105,24 @@ const ChinFiller = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
 };
 
 // FAQ Item Component
-const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
+const FAQItem = ({
+  question,
+  answer
+}: {
+  question: string;
+  answer: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+  return <Collapsible open={isOpen} onOpenChange={setIsOpen}>
       <CollapsibleTrigger className="w-full text-left">
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
           <div className="flex justify-between items-center">
             <h3 className="text-lg font-light text-white pr-4">{question}</h3>
-            {isOpen ? (
-              <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
-            ) : (
-              <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-            )}
+            {isOpen ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />}
           </div>
         </div>
       </CollapsibleTrigger>
@@ -1056,8 +1131,6 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
           <p className="text-white/80 font-light leading-relaxed">{answer}</p>
         </div>
       </CollapsibleContent>
-    </Collapsible>
-  );
+    </Collapsible>;
 };
-
 export default ChinFiller;
