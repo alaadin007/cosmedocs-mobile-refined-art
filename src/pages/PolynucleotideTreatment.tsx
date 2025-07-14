@@ -520,7 +520,7 @@ const PolynucleotideTreatment = () => {
         </section>
 
         {/* Who Is It For Section */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[60px]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
               <motion.div className="text-center mb-20" initial={{
@@ -613,7 +613,7 @@ const PolynucleotideTreatment = () => {
         </section>
         
         {/* Targeted Treatments Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[66px]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
               <motion.div className="text-center mb-20" initial={{
@@ -719,7 +719,7 @@ const PolynucleotideTreatment = () => {
         </section>
 
         {/* Investment in Regeneration Section */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="bg-[#0A0A0A] py-[33px]">
           <div className="page-container">
             <motion.div className="text-center max-w-4xl mx-auto" initial={{
             opacity: 0,
@@ -745,7 +745,7 @@ const PolynucleotideTreatment = () => {
 
 
         {/* FAQ Section - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[66px]">
           <div className="page-container">
             <motion.div initial={{
             opacity: 0,
@@ -782,7 +782,7 @@ const PolynucleotideTreatment = () => {
         </section>
 
         {/* Call to Action Section - Apple Style */}
-        <section className="py-32 bg-black">
+        <section className="bg-black py-[64px]">
           <div className="page-container">
             <motion.div className="text-center max-w-4xl mx-auto" initial={{
             opacity: 0,
