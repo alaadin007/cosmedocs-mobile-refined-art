@@ -17,39 +17,6 @@ const ChinFiller = () => {
 
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
-  // Before/after images for chin filler
-  const beforeAfterImages = [
-    {
-      src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
-      alt: "Chin filler before and after London Cosmedocs Harley Street profile enhancement jawline definition",
-      caption: "Dramatic chin enhancement showing improved profile balance and facial harmony"
-    },
-    {
-      src: "/lovable-uploads/16fa7311-00af-4ea7-b353-73f981f6d87c.png",
-      alt: "Chin filler London profile transformation Harley Street Cosmedocs weak chin correction",
-      caption: "Profile transformation with enhanced chin projection and jawline definition"
-    },
-    {
-      src: "/lovable-uploads/717753b3-1c9d-43bd-bdc1-ca245fc3c284.png",
-      alt: "Chin augmentation filler London results Cosmedocs Dr Ahmed Haq liquid mentoplasty",
-      caption: "Liquid mentoplasty results showing natural-looking chin enhancement"
-    },
-    {
-      src: "/lovable-uploads/d5cec131-9f61-4b49-9dba-8658eda2eddf.png",
-      alt: "Chin filler treatment progression London Harley Street immediate results",
-      caption: "Treatment progression showing immediate chin enhancement results"
-    },
-    {
-      src: "/lovable-uploads/a9ac5188-66f2-420b-9b39-3449dc02ff7b.png",
-      alt: "Chin and jawline filler combination London Cosmedocs 3D jawline enhancement",
-      caption: "Combined chin and jawline enhancement for complete lower face transformation"
-    },
-    {
-      src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png",
-      alt: "Chin filler facial harmony London profile balance weak chin correction Harley Street",
-      caption: "Enhanced facial harmony achieved through strategic chin augmentation"
-    }
-  ];
 
   const leftColumnFaqs = [
     {
@@ -366,8 +333,7 @@ const ChinFiller = () => {
                   src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
                   alt: "Liquid mentoplasty before after chin enhancement non surgical results",
                   caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
-                },
-                ...beforeAfterImages
+                }
               ]}
               initialDisplay={4}
               loadMoreIncrement={4}
