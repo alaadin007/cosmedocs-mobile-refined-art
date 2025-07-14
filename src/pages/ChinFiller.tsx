@@ -294,108 +294,6 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Transformation Gallery */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Transformation Gallery
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing enhanced chin projection and facial harmony
-              </p>
-            </motion.div>
-            
-            <BeforeAfterGrid 
-              images={[
-                {
-                  src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
-                  alt: "Chin filler before and after profile balancing natural results Cosmedocs",
-                  caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
-                },
-                {
-                  src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
-                  alt: "Chin augmentation before after London jawline definition facial enhancement",
-                  caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
-                },
-                {
-                  src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
-                  alt: "Chin filler profile enhancement side view transformation Harley Street",
-                  caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
-                },
-                {
-                  src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
-                  alt: "Liquid mentoplasty before after chin enhancement non surgical results",
-                  caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
-                }
-              ]}
-              initialDisplay={4}
-              loadMoreIncrement={4}
-            />
-          </div>
-        </section>
-
-        {/* Video Treatment Section - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Treatment in Action
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Watch our expert technique for chin augmentation using advanced dermal filler methods
-              </p>
-            </motion.div>
-            
-            <div className="max-w-4xl mx-auto">
-              <motion.div 
-                className="relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="aspect-video">
-                  <iframe
-                    className="w-full h-full rounded-3xl"
-                    src="https://www.youtube.com/embed/Y3gCG1n2ioo"
-                    title="Professional chin filler demonstration - Advanced liquid mentoplasty technique"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                className="text-center mt-8"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <p className="text-white/70 font-light text-lg">
-                  Professional chin filler demonstration
-                </p>
-                <p className="text-white/50 text-sm mt-2 font-light">
-                  Advanced liquid mentoplasty technique
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* What is Chin Filler Section */}
         <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
@@ -725,6 +623,109 @@ const ChinFiller = () => {
                     concerns less prominent while defining the jawline beautifully.
                   </p>
                 </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Transformation Gallery */}
+        <section className="py-32 bg-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Transformation Gallery
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Real patient transformations showcasing enhanced chin projection and facial harmony
+              </p>
+            </motion.div>
+            
+            <BeforeAfterGrid 
+              images={[
+                {
+                  src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
+                  alt: "Chin filler before and after profile balancing natural results Cosmedocs",
+                  caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
+                },
+                {
+                  src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
+                  alt: "Chin augmentation before after London jawline definition facial enhancement",
+                  caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
+                },
+                {
+                  src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
+                  alt: "Chin filler profile enhancement side view transformation Harley Street",
+                  caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
+                },
+                {
+                  src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
+                  alt: "Liquid mentoplasty before after chin enhancement non surgical results",
+                  caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
+                }
+              ]}
+              initialDisplay={4}
+              loadMoreIncrement={4}
+            />
+          </div>
+        </section>
+
+        {/* Video Treatment Section - Apple Style */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Treatment in Action
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Watch our expert technique for chin augmentation using advanced dermal filler methods
+              </p>
+            </motion.div>
+            
+            <div className="max-w-4xl mx-auto">
+              <motion.div 
+                className="relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="aspect-video">
+                  <iframe
+                    className="w-full h-full rounded-3xl"
+                    src="https://www.youtube.com/embed/Y3gCG1n2ioo"
+                    title="Professional chin filler demonstration - Advanced liquid mentoplasty technique"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                className="text-center mt-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <p className="text-white/70 font-light text-lg">
+                  Professional chin filler demonstration
+                </p>
+                <p className="text-white/50 text-sm mt-2 font-light">
+                  Advanced liquid mentoplasty technique
+                </p>
               </motion.div>
             </div>
           </div>
