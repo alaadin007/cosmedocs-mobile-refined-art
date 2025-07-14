@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Play } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Play, Syringe, Clock, Heart, Shield, CalendarDays } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
@@ -97,12 +97,12 @@ const ChinFiller = () => {
   ];
 
   const treatmentDetails = [
-    { icon: "💉", title: "Anaesthetic", detail: "Local / Topical" },
-    { icon: "⏰", title: "Procedure Time", detail: "30 minutes" }, 
-    { icon: "📅", title: "Results Duration", detail: "12+ months" },
-    { icon: "⚕️", title: "Recovery", detail: "24-48 hours" },
-    { icon: "🏢", title: "Back to Work", detail: "Immediate" },
-    { icon: "⚠️", title: "Risks", detail: "Minimal - swelling, bruising" }
+    { title: "Anaesthetic", detail: "Local / Topical" },
+    { title: "Procedure Time", detail: "30 minutes" }, 
+    { title: "Results Duration", detail: "12+ months" },
+    { title: "Recovery", detail: "24-48 hours" },
+    { title: "Back to Work", detail: "Immediate" },
+    { title: "Risks", detail: "Minimal - swelling, bruising" }
   ];
 
   return (
@@ -250,21 +250,78 @@ const ChinFiller = () => {
               </h2>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {treatmentDetails.map((detail, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-4xl mb-4">{detail.icon}</div>
-                  <h3 className="text-xl font-light text-white mb-2">{detail.title}</h3>
-                  <p className="text-white/70 font-light">{detail.detail}</p>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
+                <CardContent className="p-0">
+                  <Syringe className="h-5 w-5 text-white/60 mx-auto mb-2" />
+                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
+                    Anaesthetic
+                  </h3>
+                  <p className="text-white text-sm font-light">
+                    Local / Topical
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
+                <CardContent className="p-0">
+                  <Clock className="h-5 w-5 text-white/60 mx-auto mb-2" />
+                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
+                    Procedure Time
+                  </h3>
+                  <p className="text-white text-sm font-light">
+                    30 minutes
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
+                <CardContent className="p-0">
+                  <CalendarDays className="h-5 w-5 text-white/60 mx-auto mb-2" />
+                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
+                    Results Duration
+                  </h3>
+                  <p className="text-white text-sm font-light">
+                    12+ months
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
+                <CardContent className="p-0">
+                  <Heart className="h-5 w-5 text-white/60 mx-auto mb-2" />
+                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
+                    Recovery
+                  </h3>
+                  <p className="text-white text-sm font-light">
+                    24-48 hours
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
+                <CardContent className="p-0">
+                  <Users className="h-5 w-5 text-white/60 mx-auto mb-2" />
+                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
+                    Back to Work
+                  </h3>
+                  <p className="text-white text-sm font-light">
+                    Immediate
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
+                <CardContent className="p-0">
+                  <Shield className="h-5 w-5 text-white/60 mx-auto mb-2" />
+                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
+                    Risks
+                  </h3>
+                  <p className="text-white text-sm font-light">
+                    Minimal - swelling, bruising
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
