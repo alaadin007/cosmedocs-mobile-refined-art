@@ -8,88 +8,61 @@ import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import PopularTreatments from "@/components/PopularTreatments";
-
 const PolynucleotideTreatment = () => {
-  const seoData = generateSEOMetadata(
-    "Polynucleotide Treatment London | £450 | Regenerative DNA Therapy | Harley Street",
-    "Expert polynucleotide DNA therapy for skin regeneration, anti-aging, and hair restoration in London's Harley Street. Advanced regenerative medicine from £450.",
-    "/polynucleotide-treatment"
-  );
-
+  const seoData = generateSEOMetadata("Polynucleotide Treatment London | £450 | Regenerative DNA Therapy | Harley Street", "Expert polynucleotide DNA therapy for skin regeneration, anti-aging, and hair restoration in London's Harley Street. Advanced regenerative medicine from £450.", "/polynucleotide-treatment");
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
   // Before/after images for the viewer
-  const beforeAfterImages = [
-    {
-      src: "/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png",
-      alt: "Polynucleotide treatment London lip rejuvenation results showing enhanced texture and reduced fine lines",
-      caption: "Lip rejuvenation with polynucleotide therapy showing enhanced texture and reduced fine lines - 3 months result"
-    },
-    {
-      src: "/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png", 
-      alt: "Polynucleotide treatment London under eye rejuvenation dramatic reduction dark circles improved skin texture",
-      caption: "Under-eye polynucleotide therapy demonstrating dramatic reduction in dark circles and improved skin texture"
-    },
-    {
-      src: "/lovable-uploads/7bef47b3-8c8f-42e2-b301-cff179a7c8bf.png",
-      alt: "Polynucleotide treatment London eyebrow area improvement skin texture fine lines reduction",
-      caption: "Eyebrow area polynucleotide treatment showing improved skin texture and reduced fine lines"
-    },
-    {
-      src: "/lovable-uploads/159173ee-5192-416f-af16-0b7d13fce18d.png",
-      alt: "Polynucleotide treatment London hair restoration scalp therapy follicle regeneration results",
-      caption: "Scalp polynucleotide treatment showing significant hair density improvement and follicle regeneration"
-    }
-  ];
-
-  const leftColumnFaqs = [
-    {
-      question: "How much does polynucleotide treatment cost in London?",
-      answer: "At Cosmedocs Harley Street, polynucleotide treatments start from £450 per session. A 3-session package costs £1,200, saving you £150. The cost depends on the treatment area and your specific aesthetic goals."
-    },
-    {
-      question: "How long do polynucleotide results last?",
-      answer: "Results typically last 6-9 months and continue improving over time. The longevity depends on your skin condition, age, and lifestyle factors. Regular maintenance sessions can help sustain your natural transformation."
-    },
-    {
-      question: "Is polynucleotide treatment safe?",
-      answer: "Yes, polynucleotide treatment is very safe when performed by our experienced practitioners. It uses biocompatible DNA fragments that are naturally found in the body, minimizing the risk of allergic reactions."
-    },
-    {
-      question: "What areas can be treated with polynucleotides?",
-      answer: "Polynucleotides can treat the under-eye area, face, neck, décolletage, hands, and scalp. They're particularly effective for dark circles, fine lines, skin texture improvement, and hair loss conditions."
-    },
-    {
-      question: "How many sessions are needed for optimal results?",
-      answer: "While improvements can be seen after one session, we recommend 3 sessions spaced 3 weeks apart for optimal and lasting results. This allows for progressive regenerative benefits and maximum collagen stimulation."
-    }
-  ];
-
-  const rightColumnFaqs = [
-    {
-      question: "How painful is polynucleotide treatment?",
-      answer: "Most patients experience minimal discomfort. We use topical numbing cream and fine needles for precise injection. The treatment is generally well-tolerated with minimal downtime required."
-    },
-    {
-      question: "When will I see results from polynucleotide therapy?",
-      answer: "Initial improvements can be noticed within 2-3 weeks, with progressive enhancement over the following months. Full regenerative effects are typically visible at 6-9 months as natural collagen production increases."
-    },
-    {
-      question: "Can polynucleotides help with hair loss?",
-      answer: "Yes, polynucleotide therapy is highly effective for hair restoration. It stimulates follicle regeneration, improves scalp health, and promotes natural hair growth, making it excellent for androgenic alopecia and thinning hair."
-    },
-    {
-      question: "What happens during a polynucleotide consultation?",
-      answer: "Our practitioners will assess your skin or scalp condition, discuss your aesthetic goals, explain the treatment process, and create a personalized treatment plan. You'll understand exactly what to expect from your transformation."
-    },
-    {
-      question: "How does polynucleotide therapy work?",
-      answer: "Polynucleotides are natural DNA fragments that stimulate cellular repair, boost collagen synthesis, and enhance skin regeneration. They work with your body's natural healing processes to restore youthful skin from within."
-    }
-  ];
-
-  return (
-    <>
+  const beforeAfterImages = [{
+    src: "/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png",
+    alt: "Polynucleotide treatment London lip rejuvenation results showing enhanced texture and reduced fine lines",
+    caption: "Lip rejuvenation with polynucleotide therapy showing enhanced texture and reduced fine lines - 3 months result"
+  }, {
+    src: "/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png",
+    alt: "Polynucleotide treatment London under eye rejuvenation dramatic reduction dark circles improved skin texture",
+    caption: "Under-eye polynucleotide therapy demonstrating dramatic reduction in dark circles and improved skin texture"
+  }, {
+    src: "/lovable-uploads/7bef47b3-8c8f-42e2-b301-cff179a7c8bf.png",
+    alt: "Polynucleotide treatment London eyebrow area improvement skin texture fine lines reduction",
+    caption: "Eyebrow area polynucleotide treatment showing improved skin texture and reduced fine lines"
+  }, {
+    src: "/lovable-uploads/159173ee-5192-416f-af16-0b7d13fce18d.png",
+    alt: "Polynucleotide treatment London hair restoration scalp therapy follicle regeneration results",
+    caption: "Scalp polynucleotide treatment showing significant hair density improvement and follicle regeneration"
+  }];
+  const leftColumnFaqs = [{
+    question: "How much does polynucleotide treatment cost in London?",
+    answer: "At Cosmedocs Harley Street, polynucleotide treatments start from £450 per session. A 3-session package costs £1,200, saving you £150. The cost depends on the treatment area and your specific aesthetic goals."
+  }, {
+    question: "How long do polynucleotide results last?",
+    answer: "Results typically last 6-9 months and continue improving over time. The longevity depends on your skin condition, age, and lifestyle factors. Regular maintenance sessions can help sustain your natural transformation."
+  }, {
+    question: "Is polynucleotide treatment safe?",
+    answer: "Yes, polynucleotide treatment is very safe when performed by our experienced practitioners. It uses biocompatible DNA fragments that are naturally found in the body, minimizing the risk of allergic reactions."
+  }, {
+    question: "What areas can be treated with polynucleotides?",
+    answer: "Polynucleotides can treat the under-eye area, face, neck, décolletage, hands, and scalp. They're particularly effective for dark circles, fine lines, skin texture improvement, and hair loss conditions."
+  }, {
+    question: "How many sessions are needed for optimal results?",
+    answer: "While improvements can be seen after one session, we recommend 3 sessions spaced 3 weeks apart for optimal and lasting results. This allows for progressive regenerative benefits and maximum collagen stimulation."
+  }];
+  const rightColumnFaqs = [{
+    question: "How painful is polynucleotide treatment?",
+    answer: "Most patients experience minimal discomfort. We use topical numbing cream and fine needles for precise injection. The treatment is generally well-tolerated with minimal downtime required."
+  }, {
+    question: "When will I see results from polynucleotide therapy?",
+    answer: "Initial improvements can be noticed within 2-3 weeks, with progressive enhancement over the following months. Full regenerative effects are typically visible at 6-9 months as natural collagen production increases."
+  }, {
+    question: "Can polynucleotides help with hair loss?",
+    answer: "Yes, polynucleotide therapy is highly effective for hair restoration. It stimulates follicle regeneration, improves scalp health, and promotes natural hair growth, making it excellent for androgenic alopecia and thinning hair."
+  }, {
+    question: "What happens during a polynucleotide consultation?",
+    answer: "Our practitioners will assess your skin or scalp condition, discuss your aesthetic goals, explain the treatment process, and create a personalized treatment plan. You'll understand exactly what to expect from your transformation."
+  }, {
+    question: "How does polynucleotide therapy work?",
+    answer: "Polynucleotides are natural DNA fragments that stimulate cellular repair, boost collagen synthesis, and enhance skin regeneration. They work with your body's natural healing processes to restore youthful skin from within."
+  }];
+  return <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -111,27 +84,27 @@ const PolynucleotideTreatment = () => {
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Cosmedocs - Polynucleotide Treatment",
-            "description": "Advanced polynucleotide DNA therapy for skin regeneration and hair restoration in London's Harley Street",
-            "url": "https://cosmedocs.com/polynucleotide-treatment",
-            "telephone": "0333 0551 503",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "medicalSpecialty": "Regenerative Medicine",
-            "priceRange": "£450"
-          })}
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          "name": "Cosmedocs - Polynucleotide Treatment",
+          "description": "Advanced polynucleotide DNA therapy for skin regeneration and hair restoration in London's Harley Street",
+          "url": "https://cosmedocs.com/polynucleotide-treatment",
+          "telephone": "0333 0551 503",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10 Harley Street",
+            "addressLocality": "London",
+            "postalCode": "W1G 9PF",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+          },
+          "medicalSpecialty": "Regenerative Medicine",
+          "priceRange": "£450"
+        })}
         </script>
       </Helmet>
 
@@ -139,40 +112,51 @@ const PolynucleotideTreatment = () => {
         {/* Hero Section - Apple Style */}
         <section className="relative min-h-screen flex items-center">
           {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/5d5cdfeb-2896-4bd6-bef0-619ce6e68d59.png')"
-            }}
-          />
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: "url('/lovable-uploads/5d5cdfeb-2896-4bd6-bef0-619ce6e68d59.png')"
+        }} />
           {/* Apple-style overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
           
           <div className="page-container relative z-10">
             <div className="max-w-6xl">
-              <motion.div 
-                className="text-left"
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              >
-                <motion.h1 
-                  className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight"
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+              <motion.div className="text-left" initial={{
+              opacity: 0,
+              y: 60
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}>
+                <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight" initial={{
+                opacity: 0,
+                y: 40
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 1,
+                delay: 0.3,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
                   <span className="block text-white/95 font-thin">Polynucleotide</span>
                   <span className="block text-white font-light">DNA</span>
                   <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Therapy</span>
                 </motion.h1>
                 
-                <motion.div 
-                  className="mb-16 space-y-6 max-w-3xl"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+                <motion.div className="mb-16 space-y-6 max-w-3xl" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.6,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
                   <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
                     Revolutionary regenerative medicine that harnesses the healing power of natural DNA fragments for skin, hair, and cellular renewal
                   </p>
@@ -187,28 +171,23 @@ const PolynucleotideTreatment = () => {
                   </div>
                 </motion.div>
                 
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
-                  >
+                <motion.div className="flex flex-col sm:flex-row gap-6" initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.9,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}>
+                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
                     Book Consultation
                   </a>
                   <div className="flex items-center gap-3 text-white/80 px-8">
                     <Instagram className="h-6 w-6" />
-                    <a 
-                      href="https://instagram.com/cosmedocs" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-colors font-extralight text-lg"
-                    >
+                    <a href="https://instagram.com/cosmedocs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-extralight text-lg">
                       Follow our results #polynucleotide
                     </a>
                   </div>
@@ -221,13 +200,18 @@ const PolynucleotideTreatment = () => {
         {/* Treatment Summary Section */}
         <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
-            <motion.div
-              className="max-w-6xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-6">
                   <CardContent className="p-0">
@@ -301,16 +285,21 @@ const PolynucleotideTreatment = () => {
 
 
         {/* What Are Polynucleotides Section */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="bg-[#0A0A0A] py-[4px]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mb-20" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                   What Are Polynucleotides?
                 </h2>
@@ -321,13 +310,19 @@ const PolynucleotideTreatment = () => {
                 </p>
               </motion.div>
 
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center mb-16"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid lg:grid-cols-2 gap-16 items-center mb-16" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-6">
                   <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
                     Advanced DNA Technology
@@ -345,11 +340,7 @@ const PolynucleotideTreatment = () => {
                 </div>
                 
                 <div>
-                  <img 
-                    src="/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png" 
-                    alt="Polynucleotide treatment demonstration showing precision injection technique for under-eye rejuvenation"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
-                  />
+                  <img src="/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png" alt="Polynucleotide treatment demonstration showing precision injection technique for under-eye rejuvenation" className="w-full h-auto rounded-2xl shadow-2xl" />
                 </div>
               </motion.div>
             </div>
@@ -357,16 +348,21 @@ const PolynucleotideTreatment = () => {
         </section>
 
         {/* Treatment Areas Section */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[8px]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mb-20" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                   Comprehensive Treatment Areas
                 </h2>
@@ -375,13 +371,19 @@ const PolynucleotideTreatment = () => {
                 </p>
               </motion.div>
               
-              <motion.div 
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardHeader>
                     <CardTitle className="text-white text-xl font-light">Facial Rejuvenation</CardTitle>
@@ -426,15 +428,20 @@ const PolynucleotideTreatment = () => {
         </section>
 
         {/* Regenerative Results - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A]">
+        <section className="bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A] py-[66px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Regenerative Results
               </h2>
@@ -443,24 +450,25 @@ const PolynucleotideTreatment = () => {
               </p>
             </motion.div>
             
-            <BeforeAfterGrid 
-              images={beforeAfterImages}
-              initialDisplay={4}
-              loadMoreIncrement={4}
-            />
+            <BeforeAfterGrid images={beforeAfterImages} initialDisplay={4} loadMoreIncrement={4} />
           </div>
         </section>
 
         {/* Regenerative Science Section - Apple Style */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="bg-[#0A0A0A] py-[66px]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 The Science of Regeneration
               </h2>
@@ -470,19 +478,21 @@ const PolynucleotideTreatment = () => {
             </motion.div>
             
             <div className="max-w-6xl mx-auto">
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <div className="order-2 lg:order-1">
-                  <img 
-                    src="/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png" 
-                    alt="Polynucleotide DNA therapy mechanism demonstration showing cellular regeneration and collagen stimulation process"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
-                  />
+                  <img src="/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png" alt="Polynucleotide DNA therapy mechanism demonstration showing cellular regeneration and collagen stimulation process" className="w-full h-auto rounded-2xl shadow-2xl" />
                 </div>
                 
                 <div className="order-1 lg:order-2 space-y-8">
@@ -513,13 +523,18 @@ const PolynucleotideTreatment = () => {
         <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mb-20" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                   Ideal Candidates
                 </h2>
@@ -528,13 +543,19 @@ const PolynucleotideTreatment = () => {
                 </p>
               </motion.div>
               
-              <motion.div 
-                className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardHeader>
                     <CardTitle className="text-white text-lg font-light">Aging Concerns</CardTitle>
@@ -595,13 +616,18 @@ const PolynucleotideTreatment = () => {
         <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mb-20" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                   Treatment Results & Benefits
                 </h2>
@@ -610,13 +636,19 @@ const PolynucleotideTreatment = () => {
                 </p>
               </motion.div>
               
-              <motion.div 
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardHeader>
                     <CardTitle className="text-white text-xl font-light">Skin Regeneration</CardTitle>
@@ -657,13 +689,19 @@ const PolynucleotideTreatment = () => {
                 </Card>
               </motion.div>
 
-              <motion.div 
-                className="text-center space-y-6"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center space-y-6" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.4,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto">
                   <p className="text-lg text-white/80 font-light leading-relaxed mb-6">
                     <span className="text-yellow-400">⭐</span> Optimal protocol: 1 session every 3 weeks, 
@@ -683,13 +721,18 @@ const PolynucleotideTreatment = () => {
         {/* Investment in Regeneration Section */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center max-w-4xl mx-auto" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
                 Investment in Regeneration
               </h2>
@@ -704,13 +747,18 @@ const PolynucleotideTreatment = () => {
         {/* FAQ Section - Apple Style */}
         <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-              className="text-center mb-20"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }} className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                 Frequently Asked Questions
               </h2>
@@ -722,16 +770,12 @@ const PolynucleotideTreatment = () => {
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
               {/* Left Column */}
               <div className="space-y-4">
-                {leftColumnFaqs.map((faq, index) => (
-                  <FAQItem key={`left-${index}`} question={faq.question} answer={faq.answer} index={index} />
-                ))}
+                {leftColumnFaqs.map((faq, index) => <FAQItem key={`left-${index}`} question={faq.question} answer={faq.answer} index={index} />)}
               </div>
               
               {/* Right Column */}
               <div className="space-y-4">
-                {rightColumnFaqs.map((faq, index) => (
-                  <FAQItem key={`right-${index}`} question={faq.question} answer={faq.answer} index={index + 5} />
-                ))}
+                {rightColumnFaqs.map((faq, index) => <FAQItem key={`right-${index}`} question={faq.question} answer={faq.answer} index={index + 5} />)}
               </div>
             </div>
           </div>
@@ -740,13 +784,18 @@ const PolynucleotideTreatment = () => {
         {/* Call to Action Section - Apple Style */}
         <section className="py-32 bg-black">
           <div className="page-container">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center max-w-4xl mx-auto" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
                 Transform with DNA Science
               </h2>
@@ -756,12 +805,7 @@ const PolynucleotideTreatment = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a 
-                  href={bookingUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20 hover:scale-[1.02]"
-                >
+                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20 hover:scale-[1.02]">
                   Book Consultation
                 </a>
               </div>
@@ -811,25 +855,36 @@ const PolynucleotideTreatment = () => {
         <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="text-center mb-20" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
                   Visit Our Harley Street Clinic
                 </h2>
               </motion.div>
               
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
+              opacity: 0,
+              y: 40
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
                 <div className="space-y-8">
                   <div className="flex items-center gap-4 text-white/80">
                     <MapPin className="h-6 w-6 text-white/70" />
@@ -903,31 +958,21 @@ const PolynucleotideTreatment = () => {
           </p>
         </div>
 
-        <PopularTreatments 
-          title="Related Regenerative Treatments"
-          className="bg-black"
-        />
+        <PopularTreatments title="Related Regenerative Treatments" className="bg-black" />
       </div>
-    </>
-  );
+    </>;
 };
 
 // Regenerative Science Card Component
 const RegenerativeScienceCard = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+  return <Collapsible open={isOpen} onOpenChange={setIsOpen}>
       <CollapsibleTrigger className="w-full">
         <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer text-left">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <h4 className="text-xl font-light text-white">How DNA Therapy Works</h4>
-              {isOpen ? (
-                <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
-              ) : (
-                <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-              )}
+              {isOpen ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />}
             </div>
           </CardContent>
         </Card>
@@ -941,32 +986,40 @@ const RegenerativeScienceCard = () => {
           </p>
         </div>
       </CollapsibleContent>
-    </Collapsible>
-  );
+    </Collapsible>;
 };
 
 // FAQ Item Component
-const FAQItem = ({ question, answer, index }: { question: string; answer: string; index: number }) => {
+const FAQItem = ({
+  question,
+  answer,
+  index
+}: {
+  question: string;
+  answer: string;
+  index: number;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      viewport={{ once: true }}
-    >
+  return <motion.div initial={{
+    opacity: 0,
+    y: 20
+  }} whileInView={{
+    opacity: 1,
+    y: 0
+  }} transition={{
+    delay: index * 0.05,
+    duration: 0.6,
+    ease: [0.25, 0.46, 0.45, 0.94]
+  }} viewport={{
+    once: true
+  }}>
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CollapsibleTrigger className="w-full">
           <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <h3 className="text-left font-light text-white text-lg">{question}</h3>
-                {isOpen ? (
-                  <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />
-                )}
+                {isOpen ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />}
               </div>
             </CardContent>
           </Card>
@@ -977,8 +1030,6 @@ const FAQItem = ({ question, answer, index }: { question: string; answer: string
           </div>
         </CollapsibleContent>
       </Collapsible>
-    </motion.div>
-  );
+    </motion.div>;
 };
-
 export default PolynucleotideTreatment;
