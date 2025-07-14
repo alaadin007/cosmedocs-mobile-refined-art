@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Play, Syringe, Clock, Heart, Shield, CalendarDays } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -326,7 +327,7 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery - Apple Style */}
+        {/* Transformation Gallery */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
             <motion.div
@@ -344,15 +345,33 @@ const ChinFiller = () => {
               </p>
             </motion.div>
             
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Results"
-                title="Chin Filler Results"
-                description="Real patient transformations by Dr. Ahmed Haq"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-              />
-            </div>
+            <BeforeAfterGrid 
+              images={[
+                {
+                  src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
+                  alt: "Chin filler before and after profile balancing natural results Cosmedocs",
+                  caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
+                },
+                {
+                  src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
+                  alt: "Chin augmentation before after London jawline definition facial enhancement",
+                  caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
+                },
+                {
+                  src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
+                  alt: "Chin filler profile enhancement side view transformation Harley Street",
+                  caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
+                },
+                {
+                  src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
+                  alt: "Liquid mentoplasty before after chin enhancement non surgical results",
+                  caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
+                },
+                ...beforeAfterImages
+              ]}
+              initialDisplay={4}
+              loadMoreIncrement={4}
+            />
           </div>
         </section>
 
