@@ -367,19 +367,31 @@ const ChinFiller = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="aspect-video bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mb-6 mx-auto">
-                      <Play className="h-8 w-8 text-white ml-1" />
-                    </div>
-                    <p className="text-white/70 font-light">
-                      Professional chin filler demonstration
-                    </p>
-                    <p className="text-white/50 text-sm mt-2 font-light">
-                      Advanced liquid mentoplasty technique
-                    </p>
-                  </div>
+                <div className="aspect-video">
+                  <iframe
+                    className="w-full h-full rounded-3xl"
+                    src="https://www.youtube.com/embed/Y3gCG1n2ioo"
+                    title="Professional chin filler demonstration - Advanced liquid mentoplasty technique"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
                 </div>
+              </motion.div>
+              
+              <motion.div 
+                className="text-center mt-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <p className="text-white/70 font-light text-lg">
+                  Professional chin filler demonstration
+                </p>
+                <p className="text-white/50 text-sm mt-2 font-light">
+                  Advanced liquid mentoplasty technique
+                </p>
               </motion.div>
             </div>
           </div>
