@@ -299,31 +299,6 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Regenerative Results
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing the power of DNA regenerative therapy
-              </p>
-            </motion.div>
-            
-            <BeforeAfterGrid 
-              images={beforeAfterImages}
-              initialDisplay={4}
-              loadMoreIncrement={4}
-            />
-          </div>
-        </section>
 
         {/* What Are Polynucleotides Section */}
         <section className="py-32 bg-[#0A0A0A]">
@@ -447,6 +422,32 @@ const PolynucleotideTreatment = () => {
                 </Card>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Regenerative Results - Apple Style */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Regenerative Results
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+                Real patient transformations showcasing the power of DNA regenerative therapy
+              </p>
+            </motion.div>
+            
+            <BeforeAfterGrid 
+              images={beforeAfterImages}
+              initialDisplay={4}
+              loadMoreIncrement={4}
+            />
           </div>
         </section>
 
