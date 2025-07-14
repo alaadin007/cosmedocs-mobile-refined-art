@@ -111,10 +111,16 @@ const HydraFacial = () => {
   }];
   const [openFaqs, setOpenFaqs] = useState<Record<string, boolean>>({});
   const toggleFaq = (question: string) => {
-    setOpenFaqs(prev => ({
-      ...prev,
-      [question]: !prev[question]
-    }));
+    setOpenFaqs(prev => {
+      const isCurrentlyOpen = prev[question];
+      // Close all FAQs
+      const newState: Record<string, boolean> = {};
+      // If the clicked FAQ was closed, open only that one
+      if (!isCurrentlyOpen) {
+        newState[question] = true;
+      }
+      return newState;
+    });
   };
   return <>
       <Helmet>
