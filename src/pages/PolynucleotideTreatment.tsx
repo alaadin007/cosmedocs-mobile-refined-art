@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import PopularTreatments from "@/components/PopularTreatments";
@@ -316,15 +317,11 @@ const PolynucleotideTreatment = () => {
               </p>
             </motion.div>
             
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Results"
-                title="Polynucleotide Treatment Results"
-                description="Real patient transformations with DNA therapy"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-              />
-            </div>
+            <BeforeAfterGrid 
+              images={beforeAfterImages}
+              initialDisplay={4}
+              loadMoreIncrement={4}
+            />
           </div>
         </section>
 
