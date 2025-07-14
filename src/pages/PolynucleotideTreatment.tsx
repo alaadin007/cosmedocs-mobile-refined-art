@@ -680,49 +680,6 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
-                Investment in Regeneration
-              </h2>
-              <p className="text-xl text-white/70 font-light mb-12">
-                Professional polynucleotide therapy pricing with package savings
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 p-8">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-2xl font-light mb-4">Single Session</CardTitle>
-                    <div className="text-4xl font-light text-white mb-2">£450</div>
-                    <p className="text-white/70 font-light">Per treatment session</p>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-white/80 font-light">Perfect for maintenance or trying the treatment</p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 p-8 ring-2 ring-white/20">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-2xl font-light mb-4">3-Session Package</CardTitle>
-                    <div className="text-4xl font-light text-white mb-2">£1,200</div>
-                    <p className="text-white/70 font-light">Save £150 total</p>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-white/80 font-light">Recommended protocol for optimal regenerative results</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* FAQ Section - Apple Style */}
         <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
