@@ -807,7 +807,7 @@ const HydraFacial = () => {
                           <span className="text-white font-light pr-4">{faq.question}</span>
                           {openFaqs[faq.question] ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />}
                         </CollapsibleTrigger>
-                        <CollapsibleContent className="px-6 pb-6">
+                        <CollapsibleContent className="px-6 pb-6 pt-4">
                           <p className="text-white/80 text-sm leading-relaxed">{faq.answer}</p>
                         </CollapsibleContent>
                       </Collapsible>
@@ -833,7 +833,7 @@ const HydraFacial = () => {
                           <span className="text-white font-light pr-4">{faq.question}</span>
                           {openFaqs[faq.question] ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 mt-1" />}
                         </CollapsibleTrigger>
-                        <CollapsibleContent className="px-6 pb-6">
+                        <CollapsibleContent className="px-6 pb-6 pt-4">
                           <p className="text-white/80 text-sm leading-relaxed">{faq.answer}</p>
                         </CollapsibleContent>
                       </Collapsible>
