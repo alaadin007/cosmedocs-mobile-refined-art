@@ -700,7 +700,45 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
+        {/* Pricing Cards Section */}
+        <section className="py-20 bg-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              {/* Single Session Card */}
+              <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-center">
+                <h3 className="text-4xl font-light text-white mb-4">£450</h3>
+                <p className="text-xl text-white/90 mb-6">Single Session</p>
+                <p className="text-white/60 text-sm">Perfect for first-time patients</p>
+              </div>
 
+              {/* 3-Session Package Card */}
+              <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-center relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-white text-black text-xs font-medium px-4 py-1 rounded-full">
+                    BEST VALUE
+                  </span>
+                </div>
+                <h3 className="text-4xl font-light text-white mb-4">£1,200</h3>
+                <p className="text-xl text-white/90 mb-4">3-Session Package</p>
+                <p className="text-green-400 text-sm mb-2">Save £150</p>
+                <p className="text-white/60 text-sm">Optimal results guaranteed</p>
+              </div>
+
+              {/* Result Duration Card */}
+              <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-center">
+                <h3 className="text-4xl font-light text-white mb-4">6-9 Months</h3>
+                <p className="text-xl text-white/90 mb-6">Result Duration</p>
+                <p className="text-white/60 text-sm">Long-lasting regeneration</p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* FAQ Section - Apple Style */}
         <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
