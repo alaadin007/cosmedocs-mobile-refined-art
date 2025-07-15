@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
