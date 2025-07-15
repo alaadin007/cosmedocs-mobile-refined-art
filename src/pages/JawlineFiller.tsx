@@ -244,59 +244,52 @@ const JawlineFiller = () => {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
               {[
                 { 
                   icon: Target, 
-                  title: "Anesthetic", 
-                  detail: "Local", 
-                  description: "Comfortable treatment with topical numbing" 
+                  title: "ANAESTHETIC", 
+                  detail: "Local / Topical"
                 },
                 { 
                   icon: Clock, 
-                  title: "Procedure Time", 
-                  detail: "30 mins", 
-                  description: "Quick and efficient treatment session" 
+                  title: "PROCEDURE TIME", 
+                  detail: "30 minutes"
                 },
                 { 
                   icon: Calendar, 
-                  title: "Results Duration", 
-                  detail: "15-18 months", 
-                  description: "Long-lasting jawline enhancement" 
-                },
-                { 
-                  icon: Shield, 
-                  title: "Risk & Complications", 
-                  detail: "Minimal", 
-                  description: "Swelling, redness, itching, bruising" 
+                  title: "RESULTS DURATION", 
+                  detail: "15-18 months"
                 },
                 { 
                   icon: RotateCcw, 
-                  title: "Full Recovery", 
-                  detail: "24-48 hours", 
-                  description: "No downtime required" 
+                  title: "RECOVERY", 
+                  detail: "24-48 hours"
                 },
                 { 
                   icon: Briefcase, 
-                  title: "Back To Work", 
-                  detail: "Immediately", 
-                  description: "Resume activities after treatment" 
+                  title: "BACK TO WORK", 
+                  detail: "Immediate"
+                },
+                { 
+                  icon: Shield, 
+                  title: "RISKS", 
+                  detail: "Minimal - swelling, bruising"
                 }
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center"
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <IconComponent className="h-8 w-8 text-primary mx-auto mb-4" />
-                    <h3 className="text-lg font-light text-white mb-2">{item.title}</h3>
-                    <div className="text-2xl font-light text-white mb-3">{item.detail}</div>
-                    <p className="text-sm text-white/70 font-light">{item.description}</p>
+                    <IconComponent className="h-6 w-6 text-white/70 mx-auto mb-3" />
+                    <h3 className="text-xs font-medium text-white/90 mb-2 uppercase tracking-wider">{item.title}</h3>
+                    <div className="text-sm font-light text-white leading-tight">{item.detail}</div>
                   </motion.div>
                 );
               })}
