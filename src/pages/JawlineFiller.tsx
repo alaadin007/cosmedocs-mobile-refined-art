@@ -249,12 +249,12 @@ const JawlineFiller = () => {
                 { 
                   icon: Target, 
                   title: "ANAESTHETIC", 
-                  detail: "Local / Topical"
+                  detail: "Local"
                 },
                 { 
                   icon: Clock, 
                   title: "PROCEDURE TIME", 
-                  detail: "30 minutes"
+                  detail: "30 mins"
                 },
                 { 
                   icon: Calendar, 
@@ -263,18 +263,18 @@ const JawlineFiller = () => {
                 },
                 { 
                   icon: RotateCcw, 
-                  title: "RECOVERY", 
+                  title: "FULL RECOVERY", 
                   detail: "24-48 hours"
                 },
                 { 
                   icon: Briefcase, 
                   title: "BACK TO WORK", 
-                  detail: "Immediate"
+                  detail: "After Treatment"
                 },
                 { 
                   icon: Shield, 
-                  title: "RISKS", 
-                  detail: "Minimal - swelling, bruising"
+                  title: "RISK & COMPLICATIONS", 
+                  detail: "Swelling, Redness, Itching, Bruising"
                 }
               ].map((item, index) => {
                 const IconComponent = item.icon;
