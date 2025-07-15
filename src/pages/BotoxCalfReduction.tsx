@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -78,279 +77,233 @@ const BotoxCalfReduction = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="bg-black text-white">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-background to-accent/10">
-          <div className="page-container">
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
+                transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                  Botox Calf Reduction
-                  <span className="block text-3xl md:text-4xl text-muted-foreground mt-2">
-                    Sculpt Elegant Leg Contours
-                  </span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Botox Calf
+                  <span className="block text-purple-300">Reduction</span>
+                  <span className="block text-sm mt-4">Sculpt elegant leg contours with precision</span>
                 </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Transform your leg silhouette with our expert botox calf reduction treatment. 
-                  Our aesthetics is invisible art - achieving naturally slimmer, more refined calf contours 
-                  that enhance your overall leg proportions.
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
                 </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £400</p>
+                  <p className="text-sm text-gray-300">Achieve naturally slimmer, more refined calf contours that enhance your overall leg proportions.</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="rounded-full">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <BeforeAfterImageViewer 
-                    images={beforeAfterImages}
-                    triggerLabel="View Results"
-                    title="Calf Reduction Results"
-                    description="See real patient transformations"
-                    className="border border-border bg-background hover:bg-accent transition-colors rounded-full px-6 py-3"
-                  />
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    View Results
+                  </Button>
                 </div>
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative"
-              >
-                <img
-                  src="/lovable-uploads/6ab37d8b-70a2-4167-a975-d2c8b7d97b4d.png"
-                  alt="Botox calf reduction before and after results"
-                  className="w-full rounded-2xl shadow-2xl"
-                />
-              </motion.div>
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
 
-        {/* What is Botox Calf Reduction */}
-        <section className="py-16">
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">What is Botox Calf Reduction?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
-                <div className="space-y-6">
-                  <p className="text-muted-foreground leading-relaxed">
-                    Botox calf reduction is an innovative non-surgical treatment that uses botulinum toxin 
-                    to relax the gastrocnemius muscle in the calves. This procedure effectively reduces 
-                    muscle bulk, creating a slimmer, more feminine leg silhouette.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Unlike surgical procedures, our botox calf reduction offers a minimally invasive 
-                    approach to achieving your desired leg contours. The treatment works by temporarily 
-                    reducing muscle activity, allowing the calf muscle to gradually decrease in size 
-                    over time.
-                  </p>
-                </div>
-                <div className="relative">
-                  <img
-                    src="/lovable-uploads/40254aca-b496-475c-9430-1cd87d088bcb.png"
-                    alt="Botox calf reduction injection procedure"
-                    className="w-full rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the natural, beautiful results achieved with our expert calf reduction treatments. 
+                Each patient receives a personalized approach for optimal outcomes.
+              </p>
+            </motion.div>
 
-        {/* Treatment Benefits */}
-        <section className="py-16 bg-accent/30">
-          <div className="page-container">
-            <h2 className="text-3xl font-bold mb-12 text-center">Treatment Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Non-Surgical Solution",
-                  description: "Achieve calf reduction without invasive surgery or lengthy recovery periods"
-                },
-                {
-                  title: "Natural-Looking Results",
-                  description: "Our invisible art approach ensures subtle, refined changes that look completely natural"
-                },
-                {
-                  title: "Minimal Downtime",
-                  description: "Return to daily activities immediately with no significant recovery time required"
-                },
-                {
-                  title: "Gradual Transformation",
-                  description: "Results develop progressively over 2-4 weeks, allowing for natural-looking changes"
-                },
-                {
-                  title: "Improved Confidence",
-                  description: "Feel more confident in skirts, dresses, and fitted clothing with slimmer leg contours"
-                },
-                {
-                  title: "Reversible Treatment",
-                  description: "Effects are temporary, typically lasting 6-12 months, providing flexibility in your aesthetic journey"
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                      <p className="text-muted-foreground">{benefit.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Process */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">The Treatment Process</h2>
-              <div className="space-y-8">
-                {[
-                  {
-                    step: "1",
-                    title: "Comprehensive Consultation",
-                    description: "Our expert practitioners assess your calf anatomy, discuss your aesthetic goals, and create a personalized treatment plan tailored to your unique needs."
-                  },
-                  {
-                    step: "2",
-                    title: "Precise Injection Technique",
-                    description: "Using advanced injection techniques, botox is strategically placed into specific areas of the gastrocnemius muscle to achieve optimal contouring results."
-                  },
-                  {
-                    step: "3",
-                    title: "Progressive Results",
-                    description: "Over the following 2-4 weeks, you'll notice gradual muscle relaxation and calf slimming, with full results typically visible within 6-8 weeks."
-                  },
-                  {
-                    step: "4",
-                    title: "Follow-up Care",
-                    description: "We provide comprehensive aftercare guidance and schedule follow-up appointments to monitor your progress and ensure optimal results."
-                  }
-                ].map((process, index) => (
-                  <motion.div
-                    key={process.step}
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.2, duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="flex gap-6 items-start"
-                  >
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg">
-                      {process.step}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{process.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{process.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Results Gallery */}
-        <section className="py-16 bg-accent/30">
-          <div className="page-container">
-            <h2 className="text-3xl font-bold mb-12 text-center">Real Patient Results</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {beforeAfterImages.slice(1).map((image, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {beforeAfterImages.map((image, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group cursor-pointer"
+                  className="relative group cursor-pointer"
                 >
-                  <div className="aspect-square rounded-lg overflow-hidden bg-accent mb-3">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {image.caption}
-                  </p>
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* Why Choose Cosmedocs */}
-        <section className="py-16">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">Why Choose Cosmedocs for Calf Reduction?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="text-left space-y-4">
-                  <h3 className="text-xl font-semibold">Expert Practitioners</h3>
-                  <p className="text-muted-foreground">
-                    Our team of highly trained medical professionals specializes in advanced 
-                    botox techniques, ensuring safe and effective calf reduction treatments.
-                  </p>
-                </div>
-                <div className="text-left space-y-4">
-                  <h3 className="text-xl font-semibold">Harley Street Excellence</h3>
-                  <p className="text-muted-foreground">
-                    Located in the prestigious Harley Street medical district, we maintain 
-                    the highest standards of care and treatment quality.
-                  </p>
-                </div>
-                <div className="text-left space-y-4">
-                  <h3 className="text-xl font-semibold">Personalized Approach</h3>
-                  <p className="text-muted-foreground">
-                    Every treatment is tailored to your unique anatomy and aesthetic goals, 
-                    ensuring results that complement your natural beauty.
-                  </p>
-                </div>
-                <div className="text-left space-y-4">
-                  <h3 className="text-xl font-semibold">Invisible Art Philosophy</h3>
-                  <p className="text-muted-foreground">
-                    Our aesthetics is invisible art - creating transformations that are 
-                    Bold • Natural • Always Your Way.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="/lovable-uploads/65f0c54f-8234-4b7f-a081-ce20d21df1fb.png"
-                alt="Cosmedocs Harley Street clinic exterior"
-                className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Calf Reduction Results Gallery"
+                description="Comprehensive gallery of our calf reduction treatments"
               />
             </div>
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="page-container text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Leg Silhouette?</h2>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Book your consultation today and discover how botox calf reduction can help you 
-              achieve the elegant leg contours you've always desired.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="rounded-full">
-                Book Consultation
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Call 0333 0551 503
-              </Button>
+        {/* Treatment Summary */}
+        <section className="py-20">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Calf Reduction Treatment Summary</h2>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
+                    <p className="text-gray-300">30-45 minutes including consultation</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
+                    <p className="text-gray-300">6-12 months with gradual muscle relaxation</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
+                    <p className="text-gray-300">Minimal downtime - return to normal activities immediately</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Full Results</h3>
+                    <p className="text-gray-300">Visible within 6-8 weeks as muscle gradually reduces</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <h2 className="text-3xl font-bold mb-6">Why Choose Cosmedocs?</h2>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Expert practitioners with advanced botox techniques</p>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Harley Street excellence and highest safety standards</p>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Personalized treatment plans for natural-looking results</p>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Invisible art philosophy - Bold • Natural • Always Your Way</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Everything you need to know about botox calf reduction treatment
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              {[
+                {
+                  question: "How does botox calf reduction work?",
+                  answer: "Botox is injected into the gastrocnemius muscle to temporarily relax it, causing a gradual reduction in muscle bulk and creating slimmer calf contours."
+                },
+                {
+                  question: "How long do results last?",
+                  answer: "Results typically last 6-12 months. The effects are temporary and reversible, allowing for adjustments as needed."
+                },
+                {
+                  question: "Is the treatment painful?",
+                  answer: "The treatment involves minimal discomfort. Most patients experience only mild temporary soreness at injection sites."
+                },
+                {
+                  question: "When will I see results?",
+                  answer: "Initial changes become visible within 2-4 weeks, with full results apparent at 6-8 weeks as the muscle gradually reduces in size."
+                },
+                {
+                  question: "Are there any side effects?",
+                  answer: "Side effects are rare but may include temporary bruising, swelling, or mild discomfort at injection sites. These resolve within a few days."
+                }
+              ].map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-background rounded-lg p-6"
+                >
+                  <h3 className="text-lg font-semibold mb-3 text-foreground">{faq.question}</h3>
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Leg Silhouette?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation today and discover how our expert calf reduction treatment can help you achieve the elegant leg contours you desire.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  Book Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold">
+                  Call 0333 0551 503
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </section>
 
