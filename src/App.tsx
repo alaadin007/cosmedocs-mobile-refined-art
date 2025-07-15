@@ -60,6 +60,7 @@ import PRPTreatment from "./pages/PRPTreatment";
 import PeelToReveal from "./pages/PeelToReveal";
 import CheekFiller from "./pages/CheekFiller";
 import ChinFiller from "./pages/ChinFiller";
+import JawlineFiller from "./pages/JawlineFiller";
 import VideoUpload from "./pages/VideoUpload";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
@@ -137,6 +138,7 @@ const App = () => (
               <Route path="/peel-to-reveal" element={<PeelToReveal />} />
               <Route path="/cheek-filler" element={<CheekFiller />} />
               <Route path="/chin-filler" element={<ChinFiller />} />
+              <Route path="/jawline-filler" element={<JawlineFiller />} />
               <Route path="/admin/video-upload" element={<VideoUpload />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
