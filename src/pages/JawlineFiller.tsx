@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Zap, Shield, RotateCcw, Briefcase, Target } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
@@ -244,29 +244,62 @@ const JawlineFiller = () => {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
-                { icon: "🎯", title: "Anesthetic", detail: "Local", description: "Comfortable treatment with topical numbing" },
-                { icon: "⏱", title: "Procedure Time", detail: "30 mins", description: "Quick and efficient treatment session" },
-                { icon: "📅", title: "Results Duration", detail: "15-18 months", description: "Long-lasting jawline enhancement" },
-                { icon: "⚕️", title: "Risk & Complications", detail: "Minimal", description: "Swelling, redness, itching, bruising" },
-                { icon: "🔄", title: "Full Recovery", detail: "24-48 hours", description: "No downtime required" },
-                { icon: "💼", title: "Back To Work", detail: "Immediately", description: "Resume activities after treatment" }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-lg font-light text-white mb-2">{item.title}</h3>
-                  <div className="text-2xl font-light text-white mb-3">{item.detail}</div>
-                  <p className="text-sm text-white/70 font-light">{item.description}</p>
-                </motion.div>
-              ))}
+                { 
+                  icon: Target, 
+                  title: "Anesthetic", 
+                  detail: "Local", 
+                  description: "Comfortable treatment with topical numbing" 
+                },
+                { 
+                  icon: Clock, 
+                  title: "Procedure Time", 
+                  detail: "30 mins", 
+                  description: "Quick and efficient treatment session" 
+                },
+                { 
+                  icon: Calendar, 
+                  title: "Results Duration", 
+                  detail: "15-18 months", 
+                  description: "Long-lasting jawline enhancement" 
+                },
+                { 
+                  icon: Shield, 
+                  title: "Risk & Complications", 
+                  detail: "Minimal", 
+                  description: "Swelling, redness, itching, bruising" 
+                },
+                { 
+                  icon: RotateCcw, 
+                  title: "Full Recovery", 
+                  detail: "24-48 hours", 
+                  description: "No downtime required" 
+                },
+                { 
+                  icon: Briefcase, 
+                  title: "Back To Work", 
+                  detail: "Immediately", 
+                  description: "Resume activities after treatment" 
+                }
+              ].map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <IconComponent className="h-8 w-8 text-primary mx-auto mb-4" />
+                    <h3 className="text-lg font-light text-white mb-2">{item.title}</h3>
+                    <div className="text-2xl font-light text-white mb-3">{item.detail}</div>
+                    <p className="text-sm text-white/70 font-light">{item.description}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
