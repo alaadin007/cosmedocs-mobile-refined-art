@@ -11,6 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ChevronDown, ChevronUp, Play } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Tables } from "@/integrations/supabase/types";
+import { Button } from "@/components/ui/button";
 type TreatmentVideo = Tables<'treatment_videos'>;
 
 const CheekFiller = () => {
@@ -201,64 +202,6 @@ const CheekFiller = () => {
               </motion.div>
               
               <div className="hidden lg:block"></div>
-            </div>
-          </div>
-        </section>
-                delay: 0.3,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <span className="block text-white/95 font-thin">Cheek</span>
-                  <span className="block text-white font-light">Enhancement</span>
-                  <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Artistry</span>
-                </motion.h1>
-                
-                <motion.div className="mb-16 space-y-6 max-w-3xl" initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
-                    Invisible artistry that sculpts visibly lifted & defined cheeks and cheekbones using advanced dermal filler techniques
-                  </p>
-                  <div className="flex items-center space-x-8 text-xl">
-                    <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
-                      <span className="text-white font-light">From £350</span>
-                    </div>
-                    <div className="text-white/80">
-                      <span className="font-extralight">by </span> 
-                      <span className="font-light">Dr. Ahmed Haq</span>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div className="flex flex-col sm:flex-row gap-6" initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.9,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
-                    Book Consultation
-                  </a>
-                  <div className="flex items-center gap-3 text-white/80 px-8">
-                    <Instagram className="h-6 w-6" />
-                    <a href="https://instagram.com/cosmedocs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-extralight text-lg">
-                      Follow our results @cosmedocs
-                    </a>
-                  </div>
-                </motion.div>
-              </motion.div>
             </div>
           </div>
         </section>
