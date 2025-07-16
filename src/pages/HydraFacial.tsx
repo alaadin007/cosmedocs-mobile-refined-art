@@ -168,84 +168,44 @@ const HydraFacial = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen">
-        {/* Hero Section - No Background Image */}
-        <section className="relative min-h-screen flex items-center bg-black">
+      <div className="bg-black text-white">
+        {/* Hero Section - Updated to match LipFillers design */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
-            <div className="max-w-6xl">
-              <motion.div className="text-left" initial={{
-              opacity: 0,
-              y: 60
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 1.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }}>
-                <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight" initial={{
-                opacity: 0,
-                y: 40
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 1,
-                delay: 0.3,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <span className="block text-white/95 font-thin">HydraFacial</span>
-                  <span className="block text-white font-light">London</span>
-                  <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Skin Recharge</span>
-                </motion.h1>
-                
-                <motion.div className="mb-16 space-y-6 max-w-3xl" initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
-                    Award-winning vortex technology that refines, rehydrates, and recharges your skin in just 30-45 minutes
-                  </p>
-                  <div className="flex items-center space-x-8 text-xl">
-                    <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
-                      <span className="text-white font-light">From £175</span>
-                    </div>
-                    <div className="text-white/80">
-                      <span className="font-extralight">at </span> 
-                      <span className="font-light">Harley Street</span>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div className="flex flex-col sm:flex-row gap-6" initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.9,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
-                    Book HydraFacial
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Premium
+                  <span className="block text-purple-300">HydraFacial</span>
+                  <span className="block text-sm mt-4">Advanced vortex technology for glowing skin</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £175</p>
+                  <p className="text-sm text-gray-300">Zero downtime • Instant glow • Suitable for all skin types</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
+                    <button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl w-full sm:w-auto">
+                      Book HydraFacial
+                    </button>
                   </a>
-                  <div className="flex items-center gap-3 text-white/80 px-8">
-                    <Droplets className="h-6 w-6" />
-                    <span className="hover:text-white transition-colors font-extralight text-lg">
-                      Zero downtime • Instant glow
-                    </span>
-                  </div>
-                </motion.div>
+                  <button className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm border w-full sm:w-auto">
+                    View Treatment Details
+                  </button>
+                </div>
               </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
