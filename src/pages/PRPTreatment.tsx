@@ -8,6 +8,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import { useVideoManagement } from "@/hooks/useVideoManagement";
+import { Button } from "@/components/ui/button";
 const PRPTreatment = () => {
   const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Platelet-Rich Plasma | Cosmedocs", "Expert PRP treatments in London's Harley Street. Vampire facial, hair restoration, and skin rejuvenation using your body's natural healing power. Book consultation today.", "/prp-treatment");
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
@@ -125,91 +126,42 @@ const PRPTreatment = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen">
-        {/* Hero Section - Apple Style */}
-        <section className="relative min-h-screen flex items-center">
-          {/* Background Image */}
-          <div className="absolute inset-0 bg-cover bg-center" style={{
-          backgroundImage: "url('/lovable-uploads/ac269c72-30b5-4182-a990-857547c55c4f.png')"
-        }} />
-          {/* Apple-style overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
-          
+      <div className="bg-black text-white">
+        {/* Hero Section - Updated to match LipFillers design */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
-            <div className="max-w-6xl">
-              <motion.div className="text-left" initial={{
-              opacity: 0,
-              y: 60
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 1.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }}>
-                <motion.h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight" initial={{
-                opacity: 0,
-                y: 40
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 1,
-                delay: 0.3,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <span className="block text-white/95 font-thin">PRP</span>
-                  <span className="block text-white font-light">Treatment</span>
-                  <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Vampire Facial</span>
-                </motion.h1>
-                
-                <motion.div className="mb-16 space-y-6 max-w-3xl" initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
-                    Let your body heal the skin naturally using your own platelet-rich plasma for facial rejuvenation, hair restoration, and skin regeneration
-                  </p>
-                  <div className="flex items-center space-x-8 text-xl">
-                    <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
-                      <span className="text-white font-light">Price on consultation</span>
-                    </div>
-                    <div className="text-white/80">
-                      <span className="font-extralight">by </span> 
-                      <span className="font-light">CosmeDocs Experts</span>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div className="flex flex-col sm:flex-row gap-6" initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.9,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              }}>
-                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  PRP Treatment
+                  <span className="block text-purple-300">Vampire Facial</span>
+                  <span className="block text-sm mt-4">Natural skin rejuvenation using your body's healing power</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Price on consultation</p>
+                  <p className="text-sm text-gray-300">#cosmeprp - Check out our IG for hundreds more natural, subtle transformations</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
-                  </a>
-                  <div className="flex items-center gap-3 text-white/80 px-8">
-                    <Droplets className="h-6 w-6" />
-                    <span className="font-extralight text-lg">
-                      Natural healing power
-                    </span>
-                  </div>
-                </motion.div>
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    View Price List
+                  </Button>
+                </div>
               </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>

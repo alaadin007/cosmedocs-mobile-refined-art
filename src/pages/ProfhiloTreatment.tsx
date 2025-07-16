@@ -6,6 +6,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Button } from "@/components/ui/button";
 
 const ProfhiloTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -138,85 +139,42 @@ const ProfhiloTreatment = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen">
-        {/* Hero Section - Apple Style */}
-        <section className="relative min-h-screen flex items-center">
-          {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/lovable-uploads/cc52c444-86d0-429d-ae4b-da84e429f406.png')"
-            }}
-          />
-          {/* Apple-style overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent" />
-          
+      <div className="bg-black text-white">
+        {/* Hero Section - Updated to match LipFillers design */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
-            <div className="max-w-6xl">
-              <motion.div 
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
                 className="text-left"
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <motion.h1 
-                  className="text-6xl md:text-7xl lg:text-8xl font-light mb-12 leading-[0.9] tracking-tight"
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <span className="block text-white/95 font-thin">Profhilo</span>
-                  <span className="block text-white font-light">Bio-Remodelling</span>
-                  <span className="block text-white/85 text-5xl md:text-6xl italic font-extralight mt-2">Injectable Skincare</span>
-                </motion.h1>
-                
-                <motion.div 
-                  className="mb-16 space-y-6 max-w-3xl"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <p className="text-2xl md:text-3xl text-white/90 font-extralight leading-relaxed">
-                    Advanced bio-remodelling therapy that stimulates natural collagen production for a dewy, youthful complexion
-                  </p>
-                  <div className="flex items-center space-x-8 text-xl">
-                    <div className="bg-white/15 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20">
-                      <span className="text-white font-light">From £350</span>
-                    </div>
-                    <div className="text-white/80">
-                      <span className="font-extralight">Injectable </span> 
-                      <span className="font-light">Moisturiser</span>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
-                  >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Profhilo
+                  <span className="block text-purple-300">Bio-Remodelling</span>
+                  <span className="block text-sm mt-4">Advanced injectable skincare for natural skin rejuvenation</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £350</p>
+                  <p className="text-sm text-gray-300">#cosmeprofhilo - Check out our IG for hundreds more natural, subtle transformations</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
-                  </a>
-                  <div className="flex items-center gap-3 text-white/80 px-8">
-                    <Instagram className="h-6 w-6" />
-                    <a 
-                      href="https://instagram.com/cosmedocs" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-colors font-extralight text-lg"
-                    >
-                      Follow our transformations
-                    </a>
-                  </div>
-                </motion.div>
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    View Price List
+                  </Button>
+                </div>
               </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
