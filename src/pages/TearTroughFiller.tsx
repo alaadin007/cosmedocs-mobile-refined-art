@@ -14,12 +14,12 @@ const TearTroughFiller = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/8d22b27a-c2d5-4790-abac-6c6df301559a.png", alt: "Tear trough filler before and after transformation", caption: "Dramatic improvement in under eye hollowness and dark circles" },
-    { src: "/lovable-uploads/462ae463-011b-428b-9685-1e13d2d061d9.png", alt: "Under eye filler results showing brighter eyes", caption: "Restored volume and reduced shadows under the eyes" },
-    { src: "/lovable-uploads/9c7fac37-e442-4d67-bb1b-f3f79c67e279.png", alt: "Dark circles treatment with tear trough fillers", caption: "Significant reduction in dark circles and tired appearance" },
-    { src: "/lovable-uploads/0e7d6308-98d0-4d70-9ed4-e2af2be0e17f.png", alt: "Eye bag improvement with dermal fillers", caption: "Smoother under eye area with reduced puffiness" },
-    { src: "/lovable-uploads/6ec85bc2-528e-409d-a14c-5a7bb318c406.png", alt: "Tear trough rejuvenation results", caption: "Natural-looking under eye enhancement and brightening" },
-    { src: "/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png", alt: "Complete under eye makeover", caption: "Comprehensive tear trough treatment for youthful appearance" }
+    { src: "/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png", alt: "Tear trough filler before and after transformation", caption: "Dramatic improvement in under eye hollowness and dark circles" },
+    { src: "/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png", alt: "Under eye filler results showing brighter eyes", caption: "Restored volume and reduced shadows under the eyes" },
+    { src: "/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png", alt: "Dark circles treatment with tear trough fillers", caption: "Comparison showing treated vs untreated under eye area" },
+    { src: "/lovable-uploads/4843c9ce-f56d-4ee5-b3a0-6b7486d88d5c.png", alt: "Eye bag improvement with dermal fillers", caption: "Smoother under eye area with reduced puffiness" },
+    { src: "/lovable-uploads/fc2c9a14-126c-4030-93b3-d5b5bd99feff.png", alt: "Tear trough rejuvenation results", caption: "Natural-looking under eye enhancement and brightening" },
+    { src: "/lovable-uploads/ec372a42-0e65-42ff-a9d2-1d4f92c7b7e3.png", alt: "Complete under eye makeover", caption: "Side profile showing tear trough improvement" }
   ];
 
   const faqs = [
