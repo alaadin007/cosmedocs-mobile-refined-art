@@ -137,7 +137,7 @@ const CosmetalkBlog = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950 dark:via-purple-950 dark:to-pink-950">
+      <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
