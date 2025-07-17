@@ -130,8 +130,61 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Benefits Section */}
+        {/* Video Section */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Watch Our Expert Technique</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                See how our experienced cosmetic doctors perform tear trough filler treatments using advanced techniques 
+                for natural-looking results that brighten and rejuvenate your under-eye area.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <Card className="bg-black border-purple-500/20 overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="aspect-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/DI7U2IuSSRY"
+                      title="Tear Trough Filler Treatment - Expert Technique"
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Professional Tear Trough Filler Procedure
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Watch our expert cosmetic doctors demonstrate the precise injection technique used for tear trough fillers. 
+                      This video showcases our invisible art approach - achieving natural enhancement that brightens the under-eye 
+                      area while maintaining your unique facial features. Our aesthetic medicine philosophy ensures bold, 
+                      natural results that are always your way.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Treatment Benefits Section */}
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -203,7 +256,7 @@ const TearTroughFiller = () => {
         </section>
 
         {/* Before & After Gallery */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -251,7 +304,7 @@ const TearTroughFiller = () => {
         </section>
 
         {/* Treatment Types Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -319,7 +372,7 @@ const TearTroughFiller = () => {
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
@@ -388,7 +441,7 @@ const TearTroughFiller = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -421,7 +474,7 @@ const TearTroughFiller = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
