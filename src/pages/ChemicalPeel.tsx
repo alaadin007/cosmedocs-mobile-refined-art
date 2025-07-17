@@ -294,8 +294,149 @@ const ChemicalPeel = () => {
           </div>
         </section>
 
-        {/* Treatment Summary */}
+        {/* What is Chemical Peel */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">What is Chemical Peel?</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Understanding the science behind professional chemical peel treatments and their transformative effects.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto bg-black p-8 rounded-lg border border-gray-800"
+            >
+              <div className="prose prose-lg max-w-none text-gray-300">
+                <p className="text-lg leading-relaxed mb-6">
+                  Chemical Peel at Cosmedocs offers you an ideal non-invasive solution for resurfacing and regenerating your skin. This treatment is highly effective in addressing various skin complaints such as fine lines, wrinkles, pigmentation issues, acne, and dull skin.
+                </p>
+                <p className="text-lg leading-relaxed mb-6">
+                  With a gentle exfoliation of the outermost layer of skin cells, our process reveals a fresher and revitalized complexion. After your treatment, you'll be delighted to see smoother and more youthful-looking skin.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Chemical peels are versatile and can be tailored to meet specific skin concerns and needs. From mild peels for subtle improvements to deeper peels for more dramatic skin rejuvenation experience, there is a peel suitable for everyone.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Skin Concerns Corrected */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Skin Concerns Corrected by Chemical Peel</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Chemical peels effectively address a wide range of skin concerns, delivering visible improvements.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  "Ageing skin (age spots, fine lines and wrinkles)",
+                  "Photo-damage (Sun damage and sun spots)",
+                  "Acne and acne marks",
+                  "Mild acne scarring",
+                  "Enlarged pores",
+                  "Rough skin texture",
+                  "Dull complexion or uneven skin tone",
+                  "Melasma & hyperpigmentation"
+                ].map((concern, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center p-4 bg-accent rounded-lg border border-gray-800 hover:border-purple-500/50 transition-colors"
+                  >
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-4 flex-shrink-0"></div>
+                    <p className="text-gray-300">{concern}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* How Chemical Peels Work */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">How do Chemical Peels Work?</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Our professional three-step process ensures safe, effective treatment tailored to your skin's needs.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-6xl mx-auto"
+            >
+              <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="bg-black p-6 rounded-lg border border-gray-800">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-purple-400">1</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">Consultation & Analysis</h3>
+                  <p className="text-gray-300">
+                    During your in-depth skin consultation, our skilled skincare experts thoroughly analyse your skin health and conditions to assess your expectations.
+                  </p>
+                </div>
+                
+                <div className="bg-black p-6 rounded-lg border border-gray-800">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-purple-400">2</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">Application Process</h3>
+                  <p className="text-gray-300">
+                    We cleanse and disinfect your skin, then apply a specially formulated chemical peel solution to the outermost layer, tailored to your specific needs.
+                  </p>
+                </div>
+                
+                <div className="bg-black p-6 rounded-lg border border-gray-800">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-purple-400">3</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">Healing & Results</h3>
+                  <p className="text-gray-300">
+                    Small scabs form and gradually fall off within days, revealing fresh, radiant, and irresistibly smooth new skin with a youthful glow.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-20">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
