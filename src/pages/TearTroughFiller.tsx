@@ -1,0 +1,474 @@
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { generateSEOMetadata } from "@/utils/seo";
+
+const TearTroughFiller = () => {
+  const seoData = generateSEOMetadata(
+    "Tear Trough Filler London | Under Eye Fillers & Dark Circles | Cosmedocs",
+    "Expert tear trough filler treatments in London. Brighten under eyes, reduce dark circles & eye bags. Professional under eye fillers at Harley Street clinic.",
+    "/tear-trough-filler"
+  );
+
+  const beforeAfterImages = [
+    { src: "/lovable-uploads/8d22b27a-c2d5-4790-abac-6c6df301559a.png", alt: "Tear trough filler before and after transformation", caption: "Dramatic improvement in under eye hollowness and dark circles" },
+    { src: "/lovable-uploads/462ae463-011b-428b-9685-1e13d2d061d9.png", alt: "Under eye filler results showing brighter eyes", caption: "Restored volume and reduced shadows under the eyes" },
+    { src: "/lovable-uploads/9c7fac37-e442-4d67-bb1b-f3f79c67e279.png", alt: "Dark circles treatment with tear trough fillers", caption: "Significant reduction in dark circles and tired appearance" },
+    { src: "/lovable-uploads/0e7d6308-98d0-4d70-9ed4-e2af2be0e17f.png", alt: "Eye bag improvement with dermal fillers", caption: "Smoother under eye area with reduced puffiness" },
+    { src: "/lovable-uploads/6ec85bc2-528e-409d-a14c-5a7bb318c406.png", alt: "Tear trough rejuvenation results", caption: "Natural-looking under eye enhancement and brightening" },
+    { src: "/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png", alt: "Complete under eye makeover", caption: "Comprehensive tear trough treatment for youthful appearance" }
+  ];
+
+  const faqs = [
+    {
+      question: "What is a tear trough filler?",
+      answer: "Tear trough filler is a minimally invasive treatment using hyaluronic acid-based dermal fillers to restore volume, reduce dark circles, and minimize under-eye puffiness. It targets the hollow area between your lower eyelids and upper cheek."
+    },
+    {
+      question: "How long do tear trough fillers last?",
+      answer: "Tear trough fillers typically last 12-18 months. The longevity depends on your metabolism, lifestyle factors, and the type of filler used. Results are not permanent, so maintenance treatments are needed."
+    },
+    {
+      question: "Who is a good candidate for tear trough fillers?",
+      answer: "Ideal candidates have realistic expectations and experience genetic discoloration, volume loss under the eyes, or early signs of aging. Not suitable for pregnant/breastfeeding individuals or those with lidocaine allergies."
+    },
+    {
+      question: "Is the tear trough filler treatment painful?",
+      answer: "Most patients experience little to no pain due to our expert injection techniques and use of topical anesthetic numbing cream. Any discomfort is minimal and brief during the procedure."
+    },
+    {
+      question: "What's the recovery time?",
+      answer: "Recovery is typically swift with immediate visible results. You may experience slight bruising and swelling for a few days. Most patients return to normal activities immediately with no significant downtime."
+    },
+    {
+      question: "What are the possible side effects?",
+      answer: "Main side effects include mild swelling or bruising around injection sites that resolve naturally. Severe complications are rare when performed by experienced professionals using quality products."
+    },
+    {
+      question: "Can tear trough fillers be combined with other treatments?",
+      answer: "Yes, they work well with Botox for crow's feet, cheek fillers, and other facial treatments. We often recommend combining treatments for comprehensive under-eye rejuvenation and optimal results."
+    },
+    {
+      question: "How much do tear trough fillers cost?",
+      answer: "Tear trough fillers start from £425. We also offer polynucleotide under eye treatments at £450/session with package deals available. Final pricing depends on your specific requirements."
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href={seoData.canonical} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:image" content={seoData.image} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="keywords" content="tear trough filler, under eye fillers, dark circles treatment, eye bags, under eye hollows, London, Harley Street, dermal fillers" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs",
+            "description": "Expert tear trough filler and under eye treatments in London",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "medicalSpecialty": "Cosmetic Medicine",
+            "priceRange": "£££"
+          })}
+        </script>
+      </Helmet>
+
+      <div className="bg-black text-white">
+        {/* Hero Section - Matching LipFillers style */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Tear Trough
+                  <span className="block text-purple-300">Fillers</span>
+                  <span className="block text-sm mt-4">Brighten up your eyes, lighten up your dark circles</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £425</p>
+                  <p className="text-sm text-gray-300">Results last 12-18 months with instant visible improvement</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                    Book Consultation
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    View Before & After
+                  </Button>
+                </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Benefits Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Benefits</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transform your under-eye area with our expert tear trough filler treatments. 
+                Address multiple concerns with one comprehensive solution.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Dark Circles Reduction",
+                  description: "Improves dark circles and discoloration by restoring volume and reducing shadows",
+                  icon: "👁️"
+                },
+                {
+                  title: "Wrinkle Smoothing",
+                  description: "Softens and smoothes fine lines and wrinkles around the eye area",
+                  icon: "✨"
+                },
+                {
+                  title: "Eye Bag Minimization",
+                  description: "Reduces the appearance of puffy eye bags and under-eye hollowness",
+                  icon: "💧"
+                },
+                {
+                  title: "Instant Results",
+                  description: "Visible improvements immediately after treatment with natural-looking results",
+                  icon: "⚡"
+                },
+                {
+                  title: "Skin Quality Enhancement",
+                  description: "Boosts hydration and stimulates collagen production for healthier skin",
+                  icon: "🌟"
+                },
+                {
+                  title: "Confidence Boost",
+                  description: "Achieve a more refreshed, youthful appearance that enhances self-confidence",
+                  icon: "💪"
+                }
+              ].map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black border-purple-500/20 h-full text-center">
+                    <CardHeader>
+                      <div className="text-4xl mb-4">{benefit.icon}</div>
+                      <CardTitle className="text-white text-xl">{benefit.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">{benefit.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the dramatic transformations achieved with our expert tear trough filler treatments. 
+                Each result showcases natural-looking improvements that brighten and rejuvenate the eye area.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {beforeAfterImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="relative group cursor-pointer"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Tear Trough Results"
+                title="Tear Trough Filler Results Gallery"
+                description="Comprehensive gallery of our under eye enhancement treatments"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Types Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Types of Under Eye Treatments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                We offer comprehensive solutions for various under-eye concerns, each tailored to your specific needs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Tear Trough Fillers",
+                  description: "Target the hollows between cheekbones and lower eyelids to restore volume and reduce tired appearance.",
+                  features: ["Volume restoration", "Shadow reduction", "Natural contour enhancement"]
+                },
+                {
+                  title: "Dark Circle Treatment",
+                  description: "Address thinning skin and visible veins that cause unflattering darkness under the eyes.",
+                  features: ["Skin thickening", "Vein camouflage", "Pigmentation improvement"]
+                },
+                {
+                  title: "Eye Bag Reduction",
+                  description: "Early-stage eye bags can be effectively masked with strategic filler placement.",
+                  features: ["Puffiness reduction", "Smooth contours", "Youthful appearance"]
+                },
+                {
+                  title: "Under Eye Wrinkle Treatment",
+                  description: "Soft fillers hydrate and fill fine lines while stimulating collagen production.",
+                  features: ["Line smoothing", "Collagen stimulation", "Instant hydration"]
+                }
+              ].map((treatment, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black border-purple-500/20 h-full">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl">{treatment.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300 mb-4">{treatment.description}</p>
+                      <div className="space-y-2">
+                        {treatment.features.map((feature, i) => (
+                          <div key={i} className="flex items-center space-x-2">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <span className="text-gray-300 text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-20">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Treatment Summary</h2>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Procedure Time</h3>
+                    <p className="text-gray-300">10-25 minutes including consultation</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
+                    <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
+                    <p className="text-gray-300">1 week, return to work after treatment</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Anaesthesia</h3>
+                    <p className="text-gray-300">Local anaesthetic cream for comfort</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none">
+                  <CardHeader>
+                    <CardTitle className="text-white">Why Choose Cosmedocs?</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Expert injectors trained at Harley Street Institute</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Premium Teosyal Redensity II fillers for delicate eye area</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Multi-layered injection approach for enhanced safety</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Thousands of successful tear trough treatments</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Comprehensive aftercare and follow-up support</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about tear trough filler treatments and under eye enhancement.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready to Brighten Your Eyes?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how tear trough fillers 
+                can transform your under-eye area for a more refreshed, youthful appearance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Hidden SEO content for search engines */}
+        <div className="sr-only">
+          <p>
+            Tear trough filler treatments at Cosmedocs London address multiple under-eye concerns including dark circles, 
+            eye bags, hollowness, and fine lines. Our expert cosmetic doctors use premium hyaluronic acid-based dermal 
+            fillers like Teosyal Redensity II specifically designed for the delicate under-eye area. Located on Harley Street, 
+            our clinic offers comprehensive tear trough solutions that brighten and rejuvenate the eye area for a more 
+            youthful appearance. The tear trough is the groove between your lower eyelid and upper cheek that can create 
+            shadows and make you look tired or aged. Our multi-layered injection approach ensures optimal safety and results, 
+            with treatments typically lasting 12-18 months. Under eye fillers work by restoring lost volume, improving skin 
+            hydration, and stimulating collagen production for long-term benefits. The procedure takes 10-25 minutes with 
+            minimal downtime and immediate visible results. We treat various under-eye concerns including genetic dark circles, 
+            volume loss, early-stage eye bags, and fine lines around the eyes. Our aesthetic medicine approach follows the 
+            invisible art philosophy, ensuring natural-looking results that enhance your features rather than creating an 
+            artificial appearance. Tear trough filler side effects are minimal when performed by experienced professionals, 
+            with only mild swelling or bruising possible. The treatment can be combined with other facial treatments like 
+            Botox for crow's feet or cheek fillers for comprehensive facial rejuvenation.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default TearTroughFiller;
