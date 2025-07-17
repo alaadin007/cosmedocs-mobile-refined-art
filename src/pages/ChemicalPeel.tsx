@@ -14,12 +14,10 @@ const ChemicalPeel = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/c47cf752-b777-49da-b470-f6c1f7e3a292.png", alt: "Chemical peel before and after skin texture", caption: "Dramatic improvement in skin texture and tone after chemical peel treatment" },
-    { src: "/lovable-uploads/d7bad7e3-fa9f-4357-8e4c-04ed2a494412.png", alt: "Chemical peel acne treatment results", caption: "Significant reduction in acne and blemishes with improved skin clarity" },
-    { src: "/lovable-uploads/e3020fef-05e0-4022-b981-0fe5dc9a2c53.png", alt: "Chemical peel pigmentation treatment", caption: "Reduced pigmentation and more even skin tone after peel treatment" },
-    { src: "/lovable-uploads/f30d3be7-22b0-4ba5-800f-03956e77dcc8.png", alt: "Chemical peel anti-aging results", caption: "Visible reduction in fine lines and improved skin radiance" },
-    { src: "/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png", alt: "Chemical peel full face transformation", caption: "Complete facial rejuvenation with smoother, brighter skin" },
-    { src: "/lovable-uploads/9f6c05a6-bd3b-4ba8-93e0-795c685b7635.png", alt: "Chemical peel sun damage treatment", caption: "Remarkable improvement in sun damage and skin clarity" }
+    { src: "/lovable-uploads/3184a1ab-13a8-4518-9753-e9ad278346e6.png", alt: "Chemical peel before and after skin improvement", caption: "Dramatic improvement in skin texture and overall complexion after chemical peel treatment" },
+    { src: "/lovable-uploads/d947c958-7a72-47b1-8681-d32aae21773c.png", alt: "Chemical peel skin rejuvenation results", caption: "Significant enhancement in skin clarity and smoothness with improved overall appearance" },
+    { src: "/lovable-uploads/5f980404-9482-4c99-aa46-8001ce1495c8.png", alt: "Chemical peel eye area treatment", caption: "Remarkable improvement in eye area skin texture and reduction of signs of aging" },
+    { src: "/lovable-uploads/5dfb6e21-7126-47d6-850b-d01c94e0988a.png", alt: "Chemical peel profile view results", caption: "Visible enhancement in skin quality and texture from profile view after treatment" }
   ];
 
   const faqs = [
