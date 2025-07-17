@@ -64,13 +64,13 @@ const VitaminCSerumBenefitsBlog = () => {
         {/* Hero Section with Banner Space */}
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-4xl">
-            {/* Banner Image Placeholder */}
-            <div className="w-full h-64 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg mb-8 flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-              <div className="text-center text-muted-foreground">
-                <Sparkles className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                <p className="text-lg font-medium">Banner Image Space</p>
-                <p className="text-sm">Vitamin C Serum Benefits</p>
-              </div>
+            {/* Banner Image */}
+            <div className="w-full h-64 rounded-lg mb-8 overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/e60d095c-6136-4cdb-9142-21a3e3bf3356.png" 
+                alt="Hanley Street Formulations C20 Vitamin C Serum with Ferulic Acid and Vitamin E"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
 
             <motion.div
