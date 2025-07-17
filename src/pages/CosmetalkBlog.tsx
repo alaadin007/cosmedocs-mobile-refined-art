@@ -76,6 +76,18 @@ const CosmetalkBlog = () => {
 
   const categories = ["All", "Skincare", "Non-Surgical", "Treatment Planning", "Clinical Excellence"];
 
+  const getCategoryColor = (category) => {
+    const colors = {
+      "Skincare": "bg-gradient-to-r from-green-400 to-emerald-500 text-white",
+      "Non-Surgical": "bg-gradient-to-r from-blue-400 to-cyan-500 text-white", 
+      "Treatment Planning": "bg-gradient-to-r from-purple-400 to-violet-500 text-white",
+      "Clinical Excellence": "bg-gradient-to-r from-orange-400 to-red-500 text-white",
+      "Investment Guide": "bg-gradient-to-r from-yellow-400 to-amber-500 text-white",
+      "Cultural Aesthetics": "bg-gradient-to-r from-pink-400 to-rose-500 text-white"
+    };
+    return colors[category] || "bg-gradient-to-r from-gray-400 to-gray-500 text-white";
+  };
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -125,7 +137,7 @@ const CosmetalkBlog = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-accent/5 via-background to-primary/5">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950 dark:via-purple-950 dark:to-pink-950">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -136,11 +148,14 @@ const CosmetalkBlog = () => {
               className="text-center mb-16"
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <Sparkles className="w-8 h-8 text-primary" />
-                <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                  Cosmetalk
+                <Sparkles className="w-8 h-8 text-primary animate-pulse" />
+                <h1 className="text-5xl md:text-6xl font-bold">
+                  <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                    Cosme
+                  </span>
+                  <span className="text-red-500">Talk</span>
                 </h1>
-                <Sparkles className="w-8 h-8 text-primary" />
+                <Sparkles className="w-8 h-8 text-accent animate-pulse" />
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 Where aesthetic medicine meets invisible art. Discover expert insights, 
@@ -164,13 +179,15 @@ const CosmetalkBlog = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Badge className="mb-4">Featured Post</Badge>
+                <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600">
+                  ✨ Featured Post
+                </Badge>
                 <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-primary/20">
                   <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                       <Calendar className="w-4 h-4" />
                       {post.date}
-                      <Badge variant="outline">{post.category}</Badge>
+                      <Badge className={`text-xs ${getCategoryColor(post.category)}`}>{post.category}</Badge>
                       <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
@@ -214,7 +231,7 @@ const CosmetalkBlog = () => {
                         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                           <Calendar className="w-4 h-4" />
                           {post.date}
-                          <Badge variant="outline" className="text-xs">{post.category}</Badge>
+                          <Badge className={`text-xs ${getCategoryColor(post.category)}`}>{post.category}</Badge>
                         </div>
                         <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
                           {post.title}
