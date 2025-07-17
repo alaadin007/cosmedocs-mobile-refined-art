@@ -42,6 +42,7 @@ import NonSurgicalNoseJobBlog from "./pages/NonSurgicalNoseJobBlog";
 import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSkin";
 import ChineseLondonAestheticsBlog from "./pages/ChineseLondonAestheticsBlog";
 import VitaminCSerumBenefitsBlog from "./pages/VitaminCSerumBenefitsBlog";
+import CosmetalkBlog from "./pages/CosmetalkBlog";
 import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
 import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import TreatmentsSummaryJapanese from "./pages/TreatmentsSummaryJapanese";
@@ -124,6 +125,7 @@ const App = () => (
               <Route path="/clinical-concepts-to-flawless-skin" element={<ClinicalConceptsToFlawlessSkin />} />
               <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
               <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
+              <Route path="/cosmetalk" element={<CosmetalkBlog />} />
               <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
               <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
               <Route path="/treatments-summary-japanese" element={<TreatmentsSummaryJapanese />} />
