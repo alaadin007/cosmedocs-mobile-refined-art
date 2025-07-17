@@ -21,7 +21,7 @@ const CosmetalkBlog = () => {
       category: "Skincare",
       readTime: "8 min read",
       date: "January 17, 2025",
-      slug: "/blog/vitamin-c-ferulic-acid-benefits",
+      slug: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
       featured: true
     },
     {
@@ -138,64 +138,61 @@ const CosmetalkBlog = () => {
       </Helmet>
 
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
+        {/* Hero Section - Compact */}
+        <section className="relative py-12 px-4 bg-gradient-to-r from-gray-50 to-gray-100">
           <div className="container mx-auto max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center"
             >
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Sparkles className="w-8 h-8 text-primary animate-pulse" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Sparkles className="w-6 h-6 text-purple-500 animate-pulse" />
+                <h1 className="text-4xl md:text-5xl font-bold">
+                  <span className="bg-gradient-to-r from-slate-400 via-slate-300 to-slate-500 bg-clip-text text-transparent font-extrabold">
                     Cosme
                   </span>
-                  <span className="text-red-500">Talk</span>
+                  <span className="text-red-500 font-extrabold">Talk</span>
                 </h1>
-                <Sparkles className="w-8 h-8 text-accent animate-pulse" />
+                <Sparkles className="w-6 h-6 text-purple-500 animate-pulse" />
               </div>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Where aesthetic medicine meets invisible art. Discover expert insights, 
-                treatment guides, and the science behind beautiful, natural results.
+              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-4">
+                Where aesthetic medicine meets invisible art. Expert insights and treatment guides for beautiful, natural results.
               </p>
-              <div className="mt-8">
-                <Badge variant="secondary" className="text-lg px-4 py-2">
-                  Our aesthetics is invisible art
-                </Badge>
-              </div>
+              <Badge variant="secondary" className="text-sm px-3 py-1 bg-purple-100 text-purple-800">
+                Our aesthetics is invisible art
+              </Badge>
             </motion.div>
           </div>
         </section>
 
-        {/* Featured Post */}
+        {/* Featured Post - Compact */}
         {blogPosts.filter(post => post.featured).map((post, index) => (
-          <section key={index} className="py-16 px-4">
+          <section key={index} className="py-8 px-4">
             <div className="container mx-auto max-w-6xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600">
+                <Badge className="mb-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600">
                   ✨ Featured Post
                 </Badge>
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-primary/20">
-                  <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-purple-200">
+                  <CardHeader className="bg-gradient-to-r from-purple-50/50 to-pink-50/50 pb-3">
+                    <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
                       <Calendar className="w-4 h-4" />
                       {post.date}
                       <Badge className={`text-xs ${getCategoryColor(post.category)}`}>{post.category}</Badge>
                       <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
-                    <CardTitle className="text-2xl md:text-3xl mb-3">{post.title}</CardTitle>
-                    <CardDescription className="text-lg">{post.description}</CardDescription>
+                    <CardTitle className="text-xl md:text-2xl mb-2 text-gray-900">{post.title}</CardTitle>
+                    <CardDescription className="text-base text-gray-700">{post.description}</CardDescription>
                   </CardHeader>
-                  <CardContent className="p-6">
-                    <Button asChild size="lg" className="group">
+                  <CardContent className="p-4">
+                    <Button asChild size="default" className="group bg-purple-600 hover:bg-purple-700">
                       <Link to={post.slug} className="inline-flex items-center gap-2">
                         Read Full Article
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -208,15 +205,15 @@ const CosmetalkBlog = () => {
           </section>
         ))}
 
-        {/* All Posts Grid */}
-        <section className="py-16 px-4">
+        {/* All Posts Grid - Compact */}
+        <section className="py-8 px-4">
           <div className="container mx-auto max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <h2 className="text-3xl font-bold mb-8 text-center">Latest Insights</h2>
+              <h2 className="text-2xl font-bold mb-6 text-center text-gray-900">Latest Insights</h2>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {blogPosts.filter(post => !post.featured).map((post, index) => (
@@ -226,22 +223,22 @@ const CosmetalkBlog = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
                   >
-                    <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
-                      <CardHeader>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                    <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border-gray-200">
+                      <CardHeader className="pb-3">
+                        <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
                           <Calendar className="w-4 h-4" />
                           {post.date}
                           <Badge className={`text-xs ${getCategoryColor(post.category)}`}>{post.category}</Badge>
                         </div>
-                        <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                        <CardTitle className="text-lg mb-2 group-hover:text-purple-600 transition-colors text-gray-900">
                           {post.title}
                         </CardTitle>
-                        <CardDescription>{post.description}</CardDescription>
+                        <CardDescription className="text-gray-700">{post.description}</CardDescription>
                       </CardHeader>
-                      <CardContent className="pt-0">
+                      <CardContent className="pt-0 pb-4">
                         <div className="flex items-center justify-between">
-                          <span className="text-sm text-muted-foreground">{post.readTime}</span>
-                          <Button variant="ghost" size="sm" asChild className="group/btn">
+                          <span className="text-sm text-gray-600">{post.readTime}</span>
+                          <Button variant="ghost" size="sm" asChild className="group/btn text-purple-600 hover:text-purple-700 hover:bg-purple-50">
                             <Link to={post.slug} className="inline-flex items-center gap-1">
                               Read More
                               <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
@@ -257,24 +254,24 @@ const CosmetalkBlog = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-16 px-4 bg-gradient-to-r from-primary/10 to-accent/10">
+        {/* Call to Action - Compact */}
+        <section className="py-12 px-4 bg-gradient-to-r from-purple-50 to-pink-50">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <h3 className="text-2xl font-bold mb-4">Ready to Begin Your Aesthetic Journey?</h3>
-              <p className="text-lg mb-8 text-muted-foreground">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Ready to Begin Your Aesthetic Journey?</h3>
+              <p className="text-base mb-6 text-gray-700">
                 Transform your understanding of aesthetic medicine with expert guidance from Cosmedocs.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button asChild size="default" className="bg-purple-600 hover:bg-purple-700">
                   <Link to="/contact">Book Your Consultation</Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="default" asChild className="border-purple-600 text-purple-600 hover:bg-purple-50">
                   <Link to="/treatments">Explore Treatments</Link>
                 </Button>
               </div>

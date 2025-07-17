@@ -30,7 +30,7 @@ const VitaminCSerumBenefitsBlog = () => {
     "dateModified": "2025-01-17",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.cosmedocs.com/blog/vitamin-c-ferulic-acid-benefits"
+      "@id": "https://www.cosmedocs.com/cosmetalk/vitamin-c-ferulic-acid-benefits"
     }
   };
 

@@ -124,7 +124,7 @@ const App = () => (
               <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
               <Route path="/clinical-concepts-to-flawless-skin" element={<ClinicalConceptsToFlawlessSkin />} />
               <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
-              <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
+              <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
               <Route path="/cosmetalk" element={<CosmetalkBlog />} />
               <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
               <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />
@@ -150,8 +150,9 @@ const App = () => (
               <Route path="/chin-filler" element={<ChinFiller />} />
               <Route path="/jawline-filler" element={<JawlineFiller />} />
               
-              {/* Blog redirect */}
+              {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
+              <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/cosmetalk/vitamin-c-ferulic-acid-benefits" replace />} />
               
               <Route path="/admin/video-upload" element={<VideoUpload />} />
               <Route path="*" element={<NotFound />} />

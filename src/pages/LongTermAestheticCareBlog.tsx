@@ -35,7 +35,7 @@ const LongTermAestheticCareBlog = () => {
     },
     "datePublished": "2025-06-17",
     "dateModified": "2025-06-17",
-    "mainEntityOfPage": "https://www.cosmedocs.com/blog/long-term-aesthetic-care-benefits",
+    "mainEntityOfPage": "https://www.cosmedocs.com/cosmetalk/long-term-aesthetic-care-benefits",
     "image": "https://www.cosmedocs.com/lovable-uploads/aesthetic-continuity-blog.jpg"
   };
 

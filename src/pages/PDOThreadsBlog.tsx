@@ -49,7 +49,7 @@ const PDOThreadsBlog = () => {
             "dateModified": "2025-06-06",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.cosmedocs.com/blog/pdo-threads-comprehensive-guide"
+              "@id": "https://www.cosmedocs.com/cosmetalk/pdo-threads-comprehensive-guide"
             }
           })}
         </script>
