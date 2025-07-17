@@ -67,7 +67,7 @@ const VitaminCSerumBenefitsBlog = () => {
             {/* Banner Image */}
             <div className="w-full h-64 rounded-lg mb-8 overflow-hidden shadow-lg">
               <img 
-                src="/lovable-uploads/e60d095c-6136-4cdb-9142-21a3e3bf3356.png" 
+                src="/lovable-uploads/327a7e16-eb4b-4e4b-a758-e0599e0c046c.png" 
                 alt="Hanley Street Formulations C20 Vitamin C Serum with Ferulic Acid and Vitamin E"
                 className="w-full h-full object-cover object-center"
               />
