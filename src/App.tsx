@@ -61,6 +61,7 @@ import PeelToReveal from "./pages/PeelToReveal";
 import CheekFiller from "./pages/CheekFiller";
 import ChinFiller from "./pages/ChinFiller";
 import JawlineFiller from "./pages/JawlineFiller";
+import ChemicalPeel from "./pages/ChemicalPeel";
 import VideoUpload from "./pages/VideoUpload";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
@@ -136,6 +137,7 @@ const App = () => (
               <Route path="/prp-treatment-london" element={<PRPTreatment />} />
               <Route path="/vampire-facial" element={<PRPTreatment />} />
               <Route path="/peel-to-reveal" element={<PeelToReveal />} />
+              <Route path="/chemical-peel" element={<ChemicalPeel />} />
               <Route path="/cheek-filler" element={<CheekFiller />} />
               <Route path="/chin-filler" element={<ChinFiller />} />
               <Route path="/jawline-filler" element={<JawlineFiller />} />
