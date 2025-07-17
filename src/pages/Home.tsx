@@ -129,6 +129,72 @@ const Home = () => {
         {/* Featured Treatments Section */}
         <PopularTreatments />
 
+        {/* Harley Street Institute Section */}
+        <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-black" aria-labelledby="institute-heading">
+          <div className="page-container">
+            <div className="max-w-6xl mx-auto">
+              <motion.div 
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                {/* Content */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 id="institute-heading" className="text-3xl md:text-4xl font-bold mb-6">
+                    Founders & Trainers
+                  </h2>
+                  <h3 className="text-xl md:text-2xl text-blue-400 mb-6">
+                    Harley Street Institute
+                  </h3>
+                  <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                    As founders and principal trainers of the prestigious Harley Street Institute, 
+                    we combine our clinical expertise with educational excellence. Our commitment 
+                    to advancing aesthetic medicine extends beyond our practice to training the 
+                    next generation of aesthetic practitioners.
+                  </p>
+                  <Button 
+                    asChild
+                    className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
+                  >
+                    <a 
+                      href="https://www.harleystreetinstitute.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Visit Harley Street Institute →
+                    </a>
+                  </Button>
+                </motion.div>
+
+                {/* Image */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="relative"
+                >
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img 
+                      src="/lovable-uploads/263b4ed0-5db0-471d-9455-fba1581c1834.png"
+                      alt="Cosmedocs team and graduates at Harley Street Institute training session"
+                      className="w-full h-auto object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Hidden SEO content for search engines */}
         <div className="sr-only">
           <p>
