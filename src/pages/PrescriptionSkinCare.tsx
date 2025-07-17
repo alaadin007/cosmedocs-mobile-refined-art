@@ -14,12 +14,13 @@ const PrescriptionSkinCare = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/90c69926-3cb1-4844-a634-68a8f111cb1a.png", alt: "Prescription skin care before and after results", caption: "Comprehensive skin transformation with prescription cosmeceuticals" },
-    { src: "/lovable-uploads/0e8b6139-9d6a-462d-87fc-8e03bca4e913.png", alt: "Skin brightening treatment results", caption: "Improved skin tone and radiance with targeted skin brighteners" },
-    { src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png", alt: "Anti-aging skin care treatment", caption: "Reduced fine lines and improved skin texture with retinoid therapy" },
-    { src: "/lovable-uploads/4e5fa552-2a57-4379-924b-179c9c147f37.png", alt: "Pigmentation treatment results", caption: "Significant improvement in hyperpigmentation and skin evenness" },
-    { src: "/lovable-uploads/c77267b3-4f58-4e3b-9623-b0d3dc18d413.png", alt: "Acne treatment with prescription skin care", caption: "Clear, refined skin achieved through targeted cosmeceutical protocols" },
-    { src: "/lovable-uploads/67e6b1a0-9230-467a-baf0-dd5778c41d45.png", alt: "Overall skin improvement", caption: "Enhanced skin clarity and radiance with CRES system approach" }
+    { src: "/lovable-uploads/1c255e69-f32f-4760-a0ab-f9ef6121d2eb.png", alt: "Prescription skin care before and after results", caption: "Comprehensive skin transformation with prescription cosmeceuticals" },
+    { src: "/lovable-uploads/e726cd6f-14fe-4c0e-b3c0-e7aee0dd310d.png", alt: "Skin brightening treatment results", caption: "Improved skin tone and radiance with targeted skin brighteners" },
+    { src: "/lovable-uploads/8a63cc72-c51e-4f71-83b6-1624de463c4e.png", alt: "Anti-aging skin care treatment", caption: "Reduced fine lines and improved skin texture with retinoid therapy" },
+    { src: "/lovable-uploads/0573fff6-1f9b-4393-a953-0c3f4b654eed.png", alt: "Pigmentation treatment results", caption: "Significant improvement in hyperpigmentation and skin evenness" },
+    { src: "/lovable-uploads/ad92d961-36d6-452d-8117-a7b4cf65c27f.png", alt: "Acne treatment with prescription skin care", caption: "Clear, refined skin achieved through targeted cosmeceutical protocols" },
+    { src: "/lovable-uploads/2b02c93a-a072-4b82-b856-0ff2e0bbfcba.png", alt: "Overall skin improvement", caption: "Enhanced skin clarity and radiance with CRES system approach" },
+    { src: "/lovable-uploads/85e1a6fa-a499-4d9a-9b7f-a0ed859f10f8.png", alt: "Jawline and neck improvement", caption: "Remarkable transformation of jawline and neck area with prescription treatments" }
   ];
 
   const faqs = [
