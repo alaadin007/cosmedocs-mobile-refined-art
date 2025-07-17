@@ -26,6 +26,7 @@ import {
   CardContent
 } from "@/components/ui/card";
 import PopularTreatments from "@/components/PopularTreatments";
+import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import AnimatedDots from "@/components/AnimatedDots";
 import { generateSEOMetadata } from '@/utils/seo';
 
@@ -132,6 +133,9 @@ const Index = () => {
           
           {/* Featured Treatments Section - Now using PopularTreatments component */}
           <PopularTreatments />
+
+          {/* Before & After Transformation Gallery */}
+          <BeforeAfterCarousel />
 
           {/* AI Aesthetic Analysis Section */}
           <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="ai-analysis-heading">
