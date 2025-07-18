@@ -419,6 +419,57 @@ const FlawlessSkin = () => {
           <h3>Achieving Flawless Skin Without Makeup</h3>
           <p>The ultimate goal of flawless skin without makeup involves addressing multiple factors simultaneously. This includes managing extrinsic ageing factors like sun damage and pollution while supporting intrinsic cellular function. Professional treatments combined with appropriate cosmeceuticals create synergistic effects that restore skin to its optimal baseline condition.</p>
         </div>
+
+        {/* Related Blog Cards */}
+        <div className="mt-16 border-t border-gray-800 pt-8">
+          <h3 className="text-2xl font-bold text-white mb-8">Related Articles</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-r from-orange-600 to-red-600 rounded-t-lg flex items-center justify-center">
+                  <span className="text-white text-sm">Lazy Skin Syndrome Image</span>
+                </div>
+                <div className="p-6">
+                  <h4 className="text-white font-semibold mb-2">Lazy Skin Syndrome</h4>
+                  <p className="text-gray-400 text-sm mb-4">Discover how moisturisers may be creating skin dependency and how to fix it.</p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/cosmetalk/lazy-skin-syndrome">Read More</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-r from-blue-600 to-purple-600 rounded-t-lg flex items-center justify-center">
+                  <span className="text-white text-sm">Smokers Lines Image</span>
+                </div>
+                <div className="p-6">
+                  <h4 className="text-white font-semibold mb-2">Why Women Get Smokers Lines</h4>
+                  <p className="text-gray-400 text-sm mb-4">Understanding perioral lines and effective treatment options for women.</p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/cosmetalk/smokers-lines-women">Read More</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-r from-green-600 to-teal-600 rounded-t-lg flex items-center justify-center">
+                  <span className="text-white text-sm">Vitamin C Benefits Image</span>
+                </div>
+                <div className="p-6">
+                  <h4 className="text-white font-semibold mb-2">Vitamin C & Ferulic Acid Benefits</h4>
+                  <p className="text-gray-400 text-sm mb-4">The science behind vitamin C serums and their anti-aging properties.</p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/cosmetalk/vitamin-c-ferulic-acid-benefits">Read More</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </article>
     </div>
   );

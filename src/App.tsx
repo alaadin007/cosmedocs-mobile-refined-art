@@ -45,6 +45,7 @@ import VitaminCSerumBenefitsBlog from "./pages/VitaminCSerumBenefitsBlog";
 import CosmetalkBlog from "./pages/CosmetalkBlog";
 import SmokersLinesWomen from "./pages/SmokersLinesWomen";
 import FlawlessSkin from "./pages/FlawlessSkin";
+import LazySkinSyndrome from "./pages/LazySkinSyndrome";
 import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
 import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import TreatmentsSummaryJapanese from "./pages/TreatmentsSummaryJapanese";
@@ -129,6 +130,7 @@ const App = () => (
               <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
               <Route path="/cosmetalk/smokers-lines-women" element={<SmokersLinesWomen />} />
               <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
+              <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
               <Route path="/cosmetalk" element={<CosmetalkBlog />} />
               <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
               <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />

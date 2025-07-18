@@ -310,32 +310,69 @@ const SmokersLinesWomen = () => {
               </Card>
             </div>
           </motion.div>
-        </article>
+        {/* Hidden SEO Content */}
+        <div className="mt-16" style={{ visibility: 'hidden', position: 'absolute', left: '-9999px' }}>
+          <h2>Comprehensive Guide to Smokers Lines in Women</h2>
+          <p>Understanding why women develop smokers lines requires examining anatomical differences, hormonal factors, and lifestyle patterns. These perioral wrinkles affect 99% of patients seeking treatment, with women being disproportionately affected due to specific biological and behavioral factors.</p>
+          
+          <h3>Advanced Treatment Options for Perioral Lines</h3>
+          <p>Modern aesthetic medicine offers multiple approaches to treating smokers lines, from preventive Botox injections to dermal filler placement and skin resurfacing techniques. The key to successful treatment lies in understanding the underlying muscle dynamics and choosing the appropriate intervention based on individual anatomy and severity.</p>
+          
+          <h3>Prevention and Long-term Management</h3>
+          <p>Preventing the formation of smokers lines involves a combination of sun protection, proper skincare, and early intervention with professional treatments. Understanding the role of repetitive muscle movements and environmental factors helps in developing personalized prevention strategies for long-term skin health.</p>
+        </div>
 
-        {/* Related Articles */}
-        <section className="bg-gray-900 py-12">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-2xl font-bold mb-8 text-center">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-black border-gray-700">
-                <CardHeader>
-                  <CardTitle className="text-white text-lg">Understanding Lip Filler vs Anti-Wrinkle Treatment</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-sm">Learn the difference between volumizing treatments and line-smoothing options for perioral rejuvenation.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-black border-gray-700">
-                <CardHeader>
-                  <CardTitle className="text-white text-lg">Preventing Facial Aging: A Gender-Specific Guide</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-sm">Discover how men and women age differently and what preventive measures work best for each gender.</p>
-                </CardContent>
-              </Card>
-            </div>
+        {/* Related Blog Cards */}
+        <div className="mt-16 border-t border-gray-800 pt-8">
+          <h3 className="text-2xl font-bold text-white mb-8">Related Articles</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-r from-orange-600 to-red-600 rounded-t-lg flex items-center justify-center">
+                  <span className="text-white text-sm">Lazy Skin Syndrome Image</span>
+                </div>
+                <div className="p-6">
+                  <h4 className="text-white font-semibold mb-2">Lazy Skin Syndrome</h4>
+                  <p className="text-gray-400 text-sm mb-4">Discover how moisturisers may be creating skin dependency and how to fix it.</p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/cosmetalk/lazy-skin-syndrome">Read More</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-r from-purple-600 to-pink-600 rounded-t-lg flex items-center justify-center">
+                  <span className="text-white text-sm">Flawless Skin Guide Image</span>
+                </div>
+                <div className="p-6">
+                  <h4 className="text-white font-semibold mb-2">How to Achieve Flawless Skin</h4>
+                  <p className="text-gray-400 text-sm mb-4">Discover the 9-step dermatologist-approved plan to transform your skin naturally.</p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/cosmetalk/flawless-skin">Read More</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 transition-colors">
+              <CardContent className="p-0">
+                <div className="h-48 bg-gradient-to-r from-green-600 to-teal-600 rounded-t-lg flex items-center justify-center">
+                  <span className="text-white text-sm">Vitamin C Benefits Image</span>
+                </div>
+                <div className="p-6">
+                  <h4 className="text-white font-semibold mb-2">Vitamin C & Ferulic Acid Benefits</h4>
+                  <p className="text-gray-400 text-sm mb-4">The science behind vitamin C serums and their anti-aging properties.</p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/cosmetalk/vitamin-c-ferulic-acid-benefits">Read More</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </section>
+        </div>
+        </article>
       </div>
     </>
   );
