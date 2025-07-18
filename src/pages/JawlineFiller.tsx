@@ -313,8 +313,266 @@ const JawlineFiller = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* What Is Jawline Filler Section */}
+        <section className="py-20">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
+                <p className="text-gray-300 mb-6">
+                  Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
+                  The treatment involves injecting hyaluronic acid-based dermal fillers to enhance structure, 
+                  hydration, and contour in the jawline area.
+                </p>
+                <p className="text-gray-300 mb-6">
+                  Just <strong>1ml of filler</strong> — about 1/5 of a teaspoon — can make a noticeable 
+                  difference, delivering precise, long-lasting results for a beautifully sculpted lower face.
+                </p>
+                <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20">
+                  <h3 className="text-xl font-semibold mb-3 text-purple-300">Jawline Signifies Youth</h3>
+                  <p className="text-gray-300">
+                    A defined jawline is like the perfect frame for a portrait—it adds structure and balance 
+                    to your face. The jawline filler before and after results are stunning, restoring volume, 
+                    correcting asymmetry, and creating a beautifully contoured look.
+                  </p>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold mb-6 text-center">Golden Ratio Face</h3>
+                  <p className="text-gray-300 mb-4">
+                    Aesthetic experts at Cosmedocs often use the "Golden Ratio" (1:1.618) to create facial harmony. 
+                    This means the distance from the center of your lips to your chin should be about 1.618 times 
+                    that from your nose to your lips.
+                  </p>
+                  <p className="text-gray-300">
+                    At Cosmedocs, we use this principle to enhance both the chin and jawline, giving you a more 
+                    balanced, youthful profile with beautifully natural results.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Jaw Filler Benefits</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                At Cosmedocs, jaw fillers offer multiple benefits for both men and women seeking facial enhancement.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Define the Jawline",
+                  description: "Create clear definition and enhance your lower face structure"
+                },
+                {
+                  title: "Reduce Double Chin Appearance",
+                  description: "Minimize the look of double chin through better facial contouring"
+                },
+                {
+                  title: "Boost Natural Collagen",
+                  description: "Stimulate your skin's natural collagen production for lasting results"
+                },
+                {
+                  title: "Rejuvenate Facial Volume",
+                  description: "Restore age-related volume loss for a more youthful appearance"
+                },
+                {
+                  title: "Enhance Weak Chin",
+                  description: "Strengthen and project a receding or weak chin area"
+                },
+                {
+                  title: "Lift Sagging Jowls",
+                  description: "Improve the appearance of early jowl formation and sagging skin"
+                }
+              ].map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-black rounded-lg p-6 border border-gray-800 hover:border-purple-500/50 transition-colors"
+                >
+                  <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 max-w-2xl mx-auto">
+                <p className="text-gray-300">
+                  The most important benefit of jawline filler treatment at our London clinic is improving 
+                  patients' self-confidence at the best jawline filler cost.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Journey Section */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Jaw Filler Treatment Journey</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Understanding what to expect during your jawline enhancement treatment at Cosmedocs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Treatment Procedure */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white">Treatment Procedure</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">1</div>
+                      <p className="text-gray-300">Topical numbing cream applied to the lower face</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">2</div>
+                      <p className="text-gray-300">Expert assessment of facial anatomy and aesthetic goals</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">3</div>
+                      <p className="text-gray-300">Use of cannula technique to minimize bruising and discomfort</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">4</div>
+                      <p className="text-gray-300">Strategic injection of hyaluronic acid fillers along jawline edges</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Aftercare */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white">Aftercare Instructions</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Avoid touching face for 6 hours post-treatment</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Sleep with head elevated for first few days</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Avoid hot showers, saunas, swimming for few days</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Refrain from heavy exercise for several days</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Avoid alcohol, coffee, and fish oil immediately after</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Watch Jawline Filler Treatment</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the jawline filler treatment process and understand what to expect during your appointment.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative aspect-video rounded-2xl overflow-hidden bg-black"
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/Y3gCG1n2ioo"
+                  title="Jawline Filler Treatment Video"
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </motion.div>
+              
+              <div className="text-center mt-8">
+                <p className="text-gray-300 mb-4">
+                  This video demonstrates the professional jawline filler technique used at Cosmedocs, 
+                  showing the precision and care taken during each treatment.
+                </p>
+                <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/20 inline-block">
+                  <p className="text-purple-300 font-semibold">
+                    Treatment Time: 30 minutes | Results Last: 15-18 months
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
