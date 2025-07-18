@@ -16,15 +16,37 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Lazy Skin Syndrome: The Hidden Cost of Moisturiser Dependency",
+      description: "Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within.",
+      category: "Skincare Science",
+      readTime: "9 min read",
+      date: "January 20, 2024",
+      slug: "/cosmetalk/lazy-skin-syndrome",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=400&fit=crop",
+      author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
+    },
+    {
+      title: "How to Achieve Flawless Skin: 9-Step Dermatologist Guide",
+      description: "Discover the 9-step dermatologist-approved plan to transform your skin naturally. From understanding ageing causes to professional treatments that deliver real results.",
+      category: "Skincare Science", 
+      readTime: "12 min read",
+      date: "January 18, 2024",
+      slug: "/cosmetalk/flawless-skin",
+      featured: false,
+      image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=300&fit=crop",
+      author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
+    },
+    {
       title: "Why Women Get Smokers Lines (Even Without Smoking)",
       description: "Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines.",
       category: "Facial Aging",
-      readTime: "7 min read",
+      readTime: "7 min read", 
       date: "January 15, 2024",
       slug: "/cosmetalk/smokers-lines-women",
-      featured: true,
+      featured: false,
       image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=400&fit=crop",
-      author: "Dr. Sarah Johnson"
+      author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
     },
     {
       title: "The Power Trio: L-Ascorbic Acid with Ferulic Acid and Vitamin E",
@@ -33,9 +55,9 @@ const CosmetalkBlog = () => {
       readTime: "8 min read",
       date: "January 17, 2025",
       slug: "/cosmetalk/vitamin-c-ferulic-acid-benefits",
-      featured: true,
+      featured: false,
       image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=400&fit=crop",
-      author: "Dr. Sarah Chen"
+      author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
     },
     {
       title: "Long-Term Aesthetic Care: Building Your Beauty Journey",
