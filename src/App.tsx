@@ -68,6 +68,7 @@ import ChinFiller from "./pages/ChinFiller";
 import JawlineFiller from "./pages/JawlineFiller";
 import ChemicalPeel from "./pages/ChemicalPeel";
 import PrescriptionSkinCare from "./pages/PrescriptionSkinCare";
+import Microneedling from "./pages/Microneedling";
 import TearTroughFiller from "./pages/TearTroughFiller";
 import VideoUpload from "./pages/VideoUpload";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
@@ -155,6 +156,7 @@ const App = () => (
               <Route path="/cheek-filler" element={<CheekFiller />} />
               <Route path="/chin-filler" element={<ChinFiller />} />
               <Route path="/jawline-filler" element={<JawlineFiller />} />
+              <Route path="/microneedling" element={<Microneedling />} />
               
               {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />

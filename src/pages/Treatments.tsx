@@ -303,6 +303,7 @@ const Treatments = () => {
         {
           subtitle: "MICRONEEDLING (NATURAL COLLAGEN INDUCTION)",
           isSubcategory: true,
+          link: "/microneedling",
           subitems: [
             {
               title: "1 Session",
@@ -388,6 +389,12 @@ const Treatments = () => {
           title: "SUNEKOS",
           price: "£275 per session",
           description: "Hyaluronic acid and amino acid treatment for periorbital areas"
+        },
+        {
+          title: "MICRONEEDLING",
+          price: "£250 per session",
+          description: "Advanced collagen induction therapy for flawless skin rejuvenation",
+          link: "/microneedling"
         }
       ]
     }
@@ -644,6 +651,15 @@ const Treatments = () => {
                           )}
                         </div>
                       </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 ))}
@@ -664,7 +680,16 @@ const Treatments = () => {
                   if (item.isSubcategory) {
                     return (
                       <div key={index} className="mb-8">
-                        <h3 className="text-xl font-semibold mb-4">{item.subtitle}</h3>
+                        <div className="flex justify-between items-center mb-4">
+                          <h3 className="text-xl font-semibold">{item.subtitle}</h3>
+                          {item.link && (
+                            <Link to={item.link}>
+                              <Button variant="link" className="p-0 h-auto text-purple-400 hover:text-purple-300">
+                                Learn more →
+                              </Button>
+                            </Link>
+                          )}
+                        </div>
                         
                         {item.subitems && item.subitems.map((subitem, idx) => (
                           <Card key={idx} className="mb-4 bg-accent text-white border-0">
