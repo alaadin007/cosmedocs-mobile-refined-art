@@ -229,12 +229,25 @@ const TearTroughFiller = () => {
                   viewport={{ once: true }}
                   className="relative group cursor-pointer"
                 >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                  <div className="bg-black border-purple-500/20 border rounded-lg overflow-hidden">
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-white font-semibold mb-2">{image.caption}</h3>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        {index === 0 && "This patient achieved remarkable improvement in under-eye hollowness with expertly placed hyaluronic acid fillers. The treatment eliminated dark shadows and restored youthful volume to the tear trough area."}
+                        {index === 1 && "Notice the significant brightening effect achieved through strategic filler placement. The under-eye area appears more refreshed and awake, with natural-looking volume restoration."}
+                        {index === 2 && "A clear comparison showing one treated side versus untreated. The difference demonstrates how tear trough fillers can address genetic dark circles and volume loss effectively."}
+                        {index === 3 && "Excellent results showing smoother under-eye contours with reduced puffiness. The treatment created a seamless transition between the lower eyelid and upper cheek area."}
+                        {index === 4 && "Natural-looking enhancement that maintains facial harmony while significantly improving the under-eye appearance. The patient's tired look has been replaced with a refreshed, youthful glow."}
+                        {index === 5 && "Side profile view demonstrating the three-dimensional improvement achieved. The tear trough depression has been corrected, creating better facial balance and proportion."}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-lg"></div>
                 </motion.div>
               ))}
             </div>
