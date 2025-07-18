@@ -131,13 +131,6 @@ const FlawlessSkin = () => {
         </Card>
 
         {/* Section 1: What Is Flawless Skin? */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/f50a9d99-d41d-40b8-adc0-82978d238edb.png" 
-            alt="What is flawless skin definition" 
-            className="w-full h-auto rounded-lg mb-6"
-          />
-        </div>
         <Card className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-gray-700 mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-white">
@@ -147,6 +140,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/f50a9d99-d41d-40b8-adc0-82978d238edb.png" 
+                alt="What is flawless skin definition" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <div className="bg-blue-900/30 rounded-lg p-6 mb-6">
               <h3 className="text-lg font-semibold mb-4 text-white">Definition</h3>
               <p className="text-gray-300 mb-4">Flawless skin is defined by:</p>
@@ -164,13 +164,6 @@ const FlawlessSkin = () => {
         </Card>
 
         {/* Section 2: How to Achieve Flawless Skin */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/d5baa12c-cda3-4b03-b377-90ea65289584.png" 
-            alt="How to achieve flawless skin - two options" 
-            className="w-full h-auto rounded-lg mb-6"
-          />
-        </div>
         <Card className="bg-gradient-to-r from-green-900/50 to-blue-900/50 border-gray-700 mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-white">
@@ -180,6 +173,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/d5baa12c-cda3-4b03-b377-90ea65289584.png" 
+                alt="How to achieve flawless skin - two options" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <p className="text-gray-300 mb-4">There are two options:</p>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="bg-red-900/30 rounded-lg p-4">
@@ -201,13 +201,6 @@ const FlawlessSkin = () => {
         </Card>
 
         {/* Section 3: Understanding the Causes of Ageing */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/1673359f-b34e-4d07-a669-1bec47c18660.png" 
-            alt="Causes of ageing - extrinsic vs intrinsic factors" 
-            className="w-full h-auto rounded-lg mb-6"
-          />
-        </div>
         <Card className="bg-gradient-to-r from-orange-900/50 to-red-900/50 border-gray-700 mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-white">
@@ -217,6 +210,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/1673359f-b34e-4d07-a669-1bec47c18660.png" 
+                alt="Causes of ageing - extrinsic vs intrinsic factors" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <p className="text-gray-300 mb-6">Ageing is driven by two main factors:</p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-orange-900/30 rounded-lg p-6">
@@ -241,13 +241,6 @@ const FlawlessSkin = () => {
         </Card>
 
         {/* Section 4: What's Happening to the Skin Over Time */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/271851b5-1919-47d1-95a9-e9a106dfa8af.png" 
-            alt="Treatment planning strategy for skin health" 
-            className="w-full h-auto rounded-lg mb-6"
-          />
-        </div>
         <Card className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-gray-700 mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-white">
@@ -257,6 +250,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/271851b5-1919-47d1-95a9-e9a106dfa8af.png" 
+                alt="Treatment planning strategy for skin health" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <div className="space-y-6">
               <div className="bg-blue-900/30 rounded-lg p-6">
                 <h4 className="font-semibold text-white mb-3">By Age 9+:</h4>
@@ -278,13 +278,6 @@ const FlawlessSkin = () => {
         </Card>
 
         {/* Section 5: Where Is the Water? */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/4f4a39bf-b634-457b-b8d1-6d3f132a8104.png" 
-            alt="Aged vs rejuvenated skin comparison" 
-            className="w-full h-auto rounded-lg mb-6"
-          />
-        </div>
         <Card className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border-gray-700 mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-white">
@@ -294,6 +287,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/4f4a39bf-b634-457b-b8d1-6d3f132a8104.png" 
+                alt="Aged vs rejuvenated skin comparison" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <p className="text-gray-300 mb-6">A visual contrast between aged/photodamaged skin and rejuvenated young skin:</p>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="bg-red-900/30 rounded-lg p-6">
