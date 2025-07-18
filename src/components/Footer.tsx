@@ -81,8 +81,13 @@ export default function Footer() {
                   </div>
                 </div>
                 
-                <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-xs">
+                <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-xs space-y-2">
                   <p>© {new Date().getFullYear()} Cosmedocs Ltd. All rights reserved.</p>
+                  <p className="text-xs">
+                    Disclaimer: Individual results may vary. Cosmedocs provides aesthetic treatments for enhancement purposes. 
+                    Please consult with our qualified practitioners for professional medical advice. 
+                    This website is for informational purposes only and does not constitute medical advice.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -139,8 +144,13 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-xs">
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-xs space-y-3">
             <p>© {new Date().getFullYear()} Cosmedocs Ltd. All rights reserved.</p>
+            <p className="text-xs max-w-4xl mx-auto">
+              Disclaimer: Individual results may vary. Cosmedocs provides aesthetic treatments for enhancement purposes. 
+              Please consult with our qualified practitioners for professional medical advice. 
+              This website is for informational purposes only and does not constitute medical advice.
+            </p>
           </div>
         </div>
       </div>
