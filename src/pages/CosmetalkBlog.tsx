@@ -16,6 +16,17 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Why Women Get Smokers Lines (Even Without Smoking)",
+      description: "Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines.",
+      category: "Facial Aging",
+      readTime: "7 min read",
+      date: "January 15, 2024",
+      slug: "/cosmetalk/smokers-lines-women",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=400&fit=crop",
+      author: "Dr. Sarah Johnson"
+    },
+    {
       title: "The Power Trio: L-Ascorbic Acid with Ferulic Acid and Vitamin E",
       description: "Discover the remarkable benefits of L-Ascorbic Acid combined with Ferulic Acid and Vitamin E for radiant, protected skin.",
       category: "Skincare Science",
