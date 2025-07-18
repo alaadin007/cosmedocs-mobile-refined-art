@@ -120,9 +120,16 @@ const SmokersLinesWomen = () => {
                 movements that eventually form permanent lines.
               </p>
 
-              {/* Treatment Image Placeholder 1 */}
-              <div className="bg-gray-800 rounded-lg p-6 text-center my-8">
-                <p className="text-gray-400">[Treatment Image 1: Before and after perioral line treatment]</p>
+              {/* Treatment Image - Immediate Post-Treatment */}
+              <div className="w-full h-64 md:h-80 rounded-lg mb-8 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/84ed81e8-cd33-4b3b-9301-e42d9a95da5a.png" 
+                  alt="Immediate post-treatment appearance showing temporary redness that will settle as lines improve"
+                  className="w-full h-full object-cover"
+                />
+                <p className="text-center text-sm text-gray-400 mt-2 italic">
+                  Immediate post-treatment: Initial redness settles within hours as lines soften and disappear
+                </p>
               </div>
 
               <h2 className="text-2xl font-semibold mb-4 text-purple-300">Hormonal and Structural Factors</h2>
