@@ -329,6 +329,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/c3e4b2bc-95ac-4d38-8e81-74ca7d2098ee.png" 
+                alt="What's happening to skin over time - age progression" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <p className="text-gray-300 mb-6">Your treatment plan should aim to:</p>
             <div className="space-y-4">
               <div className="bg-green-900/30 rounded-lg p-4">
@@ -361,6 +368,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/a5380cb9-8739-4bf3-a120-3eb87f9504b4.png" 
+                alt="Lazy skin syndrome - moisturiser dependency" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <div className="bg-yellow-900/30 rounded-lg p-6 mb-6">
               <h3 className="text-lg font-semibold mb-3 text-white">"Less is more."</h3>
               <p className="text-gray-300 mb-4">
@@ -383,6 +397,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/de610581-3b2c-4f66-8de6-c10a1e25afd3.png" 
+                alt="Epidermis issues and solutions" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-red-900/30 rounded-lg p-6">
                 <h4 className="font-semibold text-white mb-3">Common Problems:</h4>
@@ -417,6 +438,13 @@ const FlawlessSkin = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/3711b275-d4f8-476a-bb90-0f4f06a97ecf.png" 
+                alt="Dermis issues and deep rejuvenation treatments" 
+                className="w-full max-w-md mx-auto h-auto rounded-lg"
+              />
+            </div>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="bg-red-900/30 rounded-lg p-6">
                 <h4 className="font-semibold text-white mb-3">Deeper Skin Concerns:</h4>
