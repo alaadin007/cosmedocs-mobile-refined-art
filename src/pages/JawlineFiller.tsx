@@ -1,12 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Zap, Shield, RotateCcw, Briefcase, Target } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import { useState } from "react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const JawlineFiller = () => {
   const seoData = generateSEOMetadata(
@@ -144,7 +142,7 @@ const JawlineFiller = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white min-h-screen">
+      <div className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -156,7 +154,7 @@ const JawlineFiller = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Jawline
+                  Expert Jawline
                   <span className="block text-purple-300">Sculpting</span>
                   <span className="block text-sm mt-4">Natural HD jawline enhancement for perfect proportions</span>
                 </h1>
@@ -189,283 +187,185 @@ const JawlineFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Details Section - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
-              className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Treatment Details
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Everything you need to know about our Natural HD Jawline Package
+              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the dramatic, natural results achieved with our expert jawline filler treatments. 
+                Each patient receives a personalized approach for optimal jaw sculpting.
               </p>
             </motion.div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
-              {[
-                { 
-                  icon: Target, 
-                  title: "ANAESTHETIC", 
-                  detail: "Local"
-                },
-                { 
-                  icon: Clock, 
-                  title: "PROCEDURE TIME", 
-                  detail: "30 mins"
-                },
-                { 
-                  icon: Calendar, 
-                  title: "RESULTS DURATION", 
-                  detail: "15-18 months"
-                },
-                { 
-                  icon: RotateCcw, 
-                  title: "FULL RECOVERY", 
-                  detail: "24-48 hours"
-                },
-                { 
-                  icon: Briefcase, 
-                  title: "BACK TO WORK", 
-                  detail: "After Treatment"
-                },
-                { 
-                  icon: Shield, 
-                  title: "RISK & COMPLICATIONS", 
-                  detail: "Swelling, Redness, Itching, Bruising"
-                }
-              ].map((item, index) => {
-                const IconComponent = item.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <IconComponent className="h-6 w-6 text-white/70 mx-auto mb-3" />
-                    <h3 className="text-xs font-medium text-white/90 mb-2 uppercase tracking-wider">{item.title}</h3>
-                    <div className="text-sm font-light text-white leading-tight">{item.detail}</div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
 
-        {/* Before & After Gallery - Apple Style */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Transformation Gallery
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing sculpted jawline enhancement
-              </p>
-            </motion.div>
-            
-            <div className="text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {beforeAfterImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="relative group cursor-pointer"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
               <BeforeAfterImageViewer 
                 images={beforeAfterImages}
-                triggerLabel="View All Results"
-                title="Jawline Filler Results"
-                description="Real patient transformations by Dr. Ahmed Haq"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
+                triggerLabel="View All Before & After Photos"
+                title="Jawline Filler Results Gallery"
+                description="Comprehensive gallery of our jawline enhancement treatments"
               />
             </div>
           </div>
         </section>
 
-        {/* Jawline Signifies Youth Section - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        {/* Treatment Summary */}
+        <section className="py-20">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                  Jawline Signifies Youth
-                </h2>
-                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                  A defined jawline is like the perfect frame for a portrait—it adds structure and balance to your face
-                </p>
+                <h2 className="text-3xl font-bold mb-6">Jawline Filler Treatment Summary</h2>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
+                    <p className="text-gray-300">30-45 minutes including consultation</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
+                    <p className="text-gray-300">15-18 months with premium dermal fillers</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
+                    <p className="text-gray-300">Minimal downtime, return to work same day</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Anaesthesia</h3>
+                    <p className="text-gray-300">Local anaesthetic + lidocaine in filler</p>
+                  </div>
+                </div>
               </motion.div>
-              
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                      The Perfect Frame
-                    </h3>
-                    <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
-                      With jawline filler treatment, you can achieve a sculpted, youthful look that enhances your natural features. 
-                      Our invisible aesthetics approach ensures results that speak without saying a word - bold, natural, and always your way.
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                      <h4 className="text-xl font-light text-white mb-3">Natural Enhancement</h4>
-                      <p className="text-white/70 font-light">
-                        Our aesthetic medicine approach is minimal, quiet, and invisible - transformation that enhances your natural beauty.
+                <Card className="bg-accent border-none">
+                  <CardHeader>
+                    <CardTitle className="text-white">Why Choose Cosmedocs?</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">
+                        <a 
+                          href="https://www.harleystreetinstitute.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          Harley Street Institute
+                        </a> trainers - we are the trainers
                       </p>
                     </div>
-                    
-                    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                      <h4 className="text-xl font-light text-white mb-3">Facial Harmony</h4>
-                      <p className="text-white/70 font-light">
-                        A well-defined jawline creates perfect facial proportions and balance, enhancing your overall appearance.
-                      </p>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
                     </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <img 
-                    src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
-                    alt="Jawline filler natural enhancement results London Harley Street Cosmedocs Dr Ahmed Haq facial harmony"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
-                  />
-                </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">'Invisible art' philosophy for natural results</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Dr. Ahmed Haq Section - Apple Style */}
-        <section className="py-32 bg-black">
-          <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <motion.div
-                className="text-center mb-20"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                  Meet Dr. Ahmed Haq
-                </h2>
-                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                  Leading aesthetic practitioner specializing in natural jawline enhancement
-                </p>
-              </motion.div>
-              
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
-                <div>
-                  <img 
-                    src="/lovable-uploads/94868651-44b6-4cfb-b3a4-8d3629c1358b.png" 
-                    alt="Dr Ahmed Haq aesthetic practitioner London Harley Street Cosmedocs jawline filler specialist"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
-                  />
-                </div>
-                
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                      Expertise in Jawline Enhancement
-                    </h3>
-                    <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
-                      Dr. Ahmed Haq brings years of specialized experience in facial aesthetics to every jawline enhancement treatment. 
-                      His approach focuses on creating natural, harmonious results that enhance your unique facial structure.
-                    </p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="flex items-center space-x-4">
-                      <Award className="h-8 w-8 text-white/70" />
-                      <div>
-                        <div className="text-lg font-light text-white">Expert Practitioner</div>
-                        <div className="text-sm text-white/60">Specialized Training</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-4">
-                      <Users className="h-8 w-8 text-white/70" />
-                      <div>
-                        <div className="text-lg font-light text-white">Thousands Treated</div>
-                        <div className="text-sm text-white/60">Proven Results</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-8">
-                    <a 
-                      href={bookingUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-                    >
-                      Consult with Dr. Haq
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
-              className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Everything you need to know about jawline filler treatments
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about jawline filler treatments at our London clinic.
               </p>
             </motion.div>
-            
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-8">
                 {/* Left Column */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {leftColumnFaqs.map((faq, index) => (
-                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                    <div key={index} className="bg-black rounded-lg border-gray-800 border">
+                      <details className="group">
+                        <summary className="flex justify-between items-center px-6 py-4 cursor-pointer list-none hover:bg-gray-900 rounded-lg">
+                          <span className="text-white font-medium">{faq.question}</span>
+                          <span className="transition-transform group-open:rotate-180">
+                            <ChevronDown className="h-5 w-5 text-gray-400" />
+                          </span>
+                        </summary>
+                        <div className="px-6 pb-4 text-gray-300">
+                          {faq.answer}
+                        </div>
+                      </details>
+                    </div>
                   ))}
                 </div>
                 
                 {/* Right Column */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {rightColumnFaqs.map((faq, index) => (
-                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                    <div key={index} className="bg-black rounded-lg border-gray-800 border">
+                      <details className="group">
+                        <summary className="flex justify-between items-center px-6 py-4 cursor-pointer list-none hover:bg-gray-900 rounded-lg">
+                          <span className="text-white font-medium">{faq.question}</span>
+                          <span className="transition-transform group-open:rotate-180">
+                            <ChevronDown className="h-5 w-5 text-gray-400" />
+                          </span>
+                        </summary>
+                        <div className="px-6 pb-4 text-gray-300">
+                          {faq.answer}
+                        </div>
+                      </details>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -473,120 +373,58 @@ const JawlineFiller = () => {
           </div>
         </section>
 
-        {/* Contact Section - Apple Style */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
             <motion.div
-              className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Book Your Consultation
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Start your jawline transformation journey at our Harley Street clinic
+              <h2 className="text-3xl font-bold mb-4">Ready for a Jaw-Dropping Jawline?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with Dr. Ahmed Haq and discover how jawline fillers 
+                can enhance your natural features with sophisticated, masculine results.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href={bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center font-semibold"
+                >
+                  Book Free Consultation
+                </a>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
-            
-            <div className="max-w-4xl mx-auto">
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
-                <div className="space-y-8">
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="h-6 w-6 text-white/70" />
-                    <div>
-                      <div className="text-lg font-light text-white">10 Harley Street</div>
-                      <div className="text-white/60">London W1G 9PF</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <Phone className="h-6 w-6 text-white/70" />
-                    <div>
-                      <div className="text-lg font-light text-white">0333 0551 503</div>
-                      <div className="text-white/60">Call to book</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <Mail className="h-6 w-6 text-white/70" />
-                    <div>
-                      <div className="text-lg font-light text-white">info@cosmedocs.com</div>
-                      <div className="text-white/60">Email enquiries</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="text-center lg:text-right">
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
-                  >
-                    Book Now - £950
-                  </a>
-                  <p className="mt-4 text-white/60 text-sm">
-                    *Consultation fee £50 included if treatment proceeds
-                  </p>
-                </div>
-              </motion.div>
-            </div>
           </div>
         </section>
 
-        {/* Hidden SEO Content */}
-        <div className="hidden">
-          <h3>Jawline Filler London - Transform Your Profile</h3>
-          <p>Cosmedocs offers the most advanced jawline filler treatments in London's prestigious Harley Street. Our Natural HD Jawline Package provides exceptional value at £950, delivering remarkable results that enhance your natural facial structure. Dr. Ahmed Haq, our lead aesthetic practitioner, specializes in creating sculpted, masculine jawlines that frame your face perfectly.</p>
-          
-          <h4>Why Choose Jawline Filler Treatment?</h4>
-          <p>A well-defined jawline signifies youth and creates the perfect frame for your facial features. Our jawline enhancement treatments use premium dermal fillers to add structure, definition, and proportion to your face. The results are immediate, natural-looking, and long-lasting, typically maintaining their effect for 15-18 months.</p>
-          
-          <h4>The Natural HD Jawline Package</h4>
-          <p>Our comprehensive Natural HD Jawline Package is designed to create a slimmer, sleeker, and sharper jawline. The treatment takes approximately 30 minutes and requires minimal downtime, allowing you to return to work immediately. Dr. Ahmed Haq uses advanced injection techniques to ensure optimal results with minimal discomfort.</p>
-          
-          <h4>Benefits of Jawline Filler at Cosmedocs</h4>
-          <p>Choosing Cosmedocs for your jawline enhancement ensures you receive treatment from one of London's most experienced aesthetic practitioners. Our clinic in Harley Street provides a luxurious environment where safety, comfort, and exceptional results are our top priorities. The treatment enhances facial harmony, improves profile aesthetics, and boosts confidence through subtle yet transformative results.</p>
-          
-          <h4>Recovery and Aftercare</h4>
-          <p>Recovery from jawline filler treatment is minimal, with most patients experiencing only mild swelling or redness for 24-48 hours. Full recovery typically occurs within a week, and you can resume normal activities immediately after treatment. Our team provides comprehensive aftercare guidance to ensure optimal results and patient satisfaction.</p>
+        {/* Hidden SEO content for search engines */}
+        <div className="sr-only">
+          <p>
+            Jawline fillers at Cosmedocs Harley Street offer the perfect solution for creating a more defined, masculine facial profile. Our Natural HD Jawline Package provides exceptional value at £950, combining premium dermal fillers with Dr. Ahmed Haq's advanced injection techniques. The treatment enhances facial structure, creating better proportions and a more youthful appearance that lasts 15-18 months.
+          </p>
+          <p>
+            Jawline enhancement using dermal fillers has become increasingly popular among men seeking non-surgical facial sculpting. The treatment targets specific areas of the jaw to create definition, improve angles, and enhance overall facial harmony. At our prestigious Harley Street clinic, we specialize in creating natural-looking results that enhance rather than alter your inherent features.
+          </p>
+          <p>
+            The benefits of choosing jawline fillers include immediate results, minimal downtime, and reversible effects. Unlike surgical jaw enhancement, dermal filler treatments allow for gradual improvements and adjustments over time. Our patients typically return to work the same day, with only mild swelling or redness that subsides within 24-48 hours.
+          </p>
+          <p>
+            Dr. Ahmed Haq brings extensive experience in facial anatomy and aesthetic enhancement to every jawline filler treatment. His understanding of masculine facial proportions and advanced injection techniques ensure optimal results while maintaining natural facial movement and expression. The Natural HD technique creates definition without appearing artificial or overdone.
+          </p>
+          <p>
+            Recovery from jawline filler treatment is straightforward, with most patients experiencing minimal side effects. We provide comprehensive aftercare instructions and follow-up appointments to ensure optimal healing and results. The treatment's longevity makes it an excellent investment in facial enhancement, typically requiring touch-ups only every 15-18 months.
+          </p>
         </div>
       </div>
     </>
-  );
-};
-
-// FAQ Item Component
-const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <CollapsibleTrigger className="w-full text-left">
-        <motion.div 
-          className="flex justify-between items-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.2 }}
-        >
-          <h3 className="text-lg font-light text-white pr-4">{question}</h3>
-          {isOpen ? <ChevronUp className="h-5 w-5 text-white/70" /> : <ChevronDown className="h-5 w-5 text-white/70" />}
-        </motion.div>
-      </CollapsibleTrigger>
-      <CollapsibleContent>
-        <div className="px-6 pb-6 pt-2">
-          <p className="text-white/80 font-light leading-relaxed">{answer}</p>
-        </div>
-      </CollapsibleContent>
-    </Collapsible>
   );
 };
 
