@@ -89,6 +89,15 @@ const FlawlessSkin = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Real Results, Not Filters
             </p>
+            
+            {/* Hero Infographic - Full Width */}
+            <div className="w-full max-w-6xl mx-auto mb-8">
+              <img 
+                src="/lovable-uploads/5dced835-f996-4de3-9630-369db5c43e9b.png" 
+                alt="Complete guide to achieving flawless skin - 9 step process" 
+                className="w-full h-auto rounded-lg shadow-2xl"
+              />
+            </div>
           </div>
         </section>
       </header>
