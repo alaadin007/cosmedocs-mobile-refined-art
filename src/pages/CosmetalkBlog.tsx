@@ -23,7 +23,7 @@ const CosmetalkBlog = () => {
       date: "January 20, 2024",
       slug: "/cosmetalk/lazy-skin-syndrome",
       featured: true,
-      image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=400&fit=crop",
+      image: "/src/assets/dehydrated-fingers.jpg",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
     },
     {
@@ -34,7 +34,7 @@ const CosmetalkBlog = () => {
       date: "January 18, 2024",
       slug: "/cosmetalk/flawless-skin",
       featured: false,
-      image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=300&fit=crop",
+      image: "/lovable-uploads/5dced835-f996-4de3-9630-369db5c43e9b.png",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
     },
     {
@@ -45,7 +45,7 @@ const CosmetalkBlog = () => {
       date: "January 15, 2024",
       slug: "/cosmetalk/smokers-lines-women",
       featured: false,
-      image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=400&fit=crop",
+      image: "/lovable-uploads/b71c8892-0875-4d89-ba82-33c9ac45e35f.png",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
     },
     {
