@@ -154,14 +154,14 @@ const JawlineFiller = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Expert Jawline
-                  <span className="block text-purple-300">Sculpting</span>
-                  <span className="block text-sm mt-4">Natural HD jawline enhancement for perfect proportions</span>
+                  Jawline Filler
+                  <span className="block text-purple-300">London</span>
+                  <span className="block text-sm mt-4">£950 Natural HD Package</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  Dr. Ahmed Haq | Harley Street
                   <br />
-                  Transformation that speaks without saying a word
+                  Create a jaw-dropping jawline - slimmer, sleeker & sharper
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Natural HD Package £950</p>
