@@ -60,7 +60,7 @@ const SmokersLinesWomen = () => {
               </div>
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-1" />
-                Dr. Sarah Johnson
+                Edited by Dr. Ahmed Haq, Dr. Hena Haq • Harley Street Institute
               </div>
             </div>
           </div>
@@ -283,7 +283,7 @@ const SmokersLinesWomen = () => {
                   In women, these lines are often a testament to decades of animated conversation, careful grooming habits, and 
                   expressive communication – all beautiful aspects of femininity that unfortunately leave their mark on the skin."
                 </p>
-                <p className="text-purple-300 text-sm mt-2">- Dr. Sarah Johnson, Aesthetic Medicine Specialist</p>
+                <p className="text-purple-300 text-sm mt-2">- CosmedTalk Editorial Team</p>
               </div>
             </div>
 
