@@ -318,6 +318,250 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
+        {/* Reason Behind Under Eye Dark Circles */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Reason Behind Under Eye Dark Circles</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the root causes of under-eye concerns helps us provide the most effective treatment approach for lasting results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-semibold mb-6 text-purple-300">Common Causes</h3>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h4 className="font-semibold text-white mb-2">Volume Loss</h4>
+                    <p className="text-gray-300 text-sm">Natural aging causes fat pad descent and bone resorption, creating hollow tear troughs that cast shadows.</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h4 className="font-semibold text-white mb-2">Genetics</h4>
+                    <p className="text-gray-300 text-sm">Inherited facial structure and skin thickness can predispose to prominent tear troughs from a young age.</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h4 className="font-semibold text-white mb-2">Lifestyle Factors</h4>
+                    <p className="text-gray-300 text-sm">Sleep deprivation, dehydration, and excessive screen time can worsen the appearance of dark circles.</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-semibold mb-6 text-purple-300">Anatomical Changes</h3>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-pink-500 pl-6">
+                    <h4 className="font-semibold text-white mb-2">Collagen Breakdown</h4>
+                    <p className="text-gray-300 text-sm">Reduced collagen production leads to thinner skin, making underlying blood vessels more visible.</p>
+                  </div>
+                  <div className="border-l-4 border-pink-500 pl-6">
+                    <h4 className="font-semibold text-white mb-2">Fat Displacement</h4>
+                    <p className="text-gray-300 text-sm">Orbital fat pads shift downward with age, creating a hollow appearance in the tear trough area.</p>
+                  </div>
+                  <div className="border-l-4 border-pink-500 pl-6">
+                    <h4 className="font-semibold text-white mb-2">Muscle Changes</h4>
+                    <p className="text-gray-300 text-sm">Weakening of the orbicularis oculi muscle contributes to the development of tear trough deformity.</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-black border-purple-500/20 p-6">
+                <h3 className="text-lg font-semibold mb-4 text-center text-white">How Tear Trough Fillers Address These Issues</h3>
+                <p className="text-gray-300 text-center">
+                  Our precisely placed hyaluronic acid fillers restore lost volume, smooth the transition between the lower eyelid and cheek, 
+                  and eliminate the shadowing effect that creates the appearance of dark circles. This creates a more youthful, refreshed look 
+                  while maintaining natural facial expressions - our invisible art approach to aesthetic medicine.
+                </p>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Tear Trough Filler Treatment Journey */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Treatment Journey</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Your comprehensive treatment experience from consultation to final results, designed for comfort and optimal outcomes.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              {/* Timeline */}
+              <div className="relative">
+                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-purple-500/20"></div>
+                
+                <div className="space-y-8">
+                  {/* Consultation */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="relative flex items-start space-x-6"
+                  >
+                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
+                      1
+                    </div>
+                    <Card className="flex-1 bg-black border-purple-500/20">
+                      <CardHeader>
+                        <CardTitle className="text-white text-lg">Initial Consultation</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-300 mb-3">
+                          Comprehensive facial assessment and treatment planning with our expert practitioners.
+                        </p>
+                        <ul className="text-sm text-gray-300 space-y-1">
+                          <li>• Medical history review</li>
+                          <li>• Facial anatomy analysis</li>
+                          <li>• Treatment goals discussion</li>
+                          <li>• Before photos taken</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+
+                  {/* Treatment Day */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="relative flex items-start space-x-6"
+                  >
+                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
+                      2
+                    </div>
+                    <Card className="flex-1 bg-black border-purple-500/20">
+                      <CardHeader>
+                        <CardTitle className="text-white text-lg">Treatment Day</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-300 mb-3">
+                          Precise filler placement using advanced injection techniques for optimal results.
+                        </p>
+                        <ul className="text-sm text-gray-300 space-y-1">
+                          <li>• Topical numbing cream applied</li>
+                          <li>• Sterile preparation of treatment area</li>
+                          <li>• Precise filler injection using cannula technique</li>
+                          <li>• Immediate assessment and minor adjustments</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+
+                  {/* Recovery Period */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="relative flex items-start space-x-6"
+                  >
+                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
+                      3
+                    </div>
+                    <Card className="flex-1 bg-black border-purple-500/20">
+                      <CardHeader>
+                        <CardTitle className="text-white text-lg">Recovery Period (1-2 weeks)</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-300 mb-3">
+                          Minimal downtime with gradual improvement as any minor swelling subsides.
+                        </p>
+                        <ul className="text-sm text-gray-300 space-y-1">
+                          <li>• Day 1-3: Possible mild swelling and bruising</li>
+                          <li>• Day 4-7: Significant improvement visible</li>
+                          <li>• Day 8-14: Final results become apparent</li>
+                          <li>• Follow aftercare instructions carefully</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+
+                  {/* Follow-up */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="relative flex items-start space-x-6"
+                  >
+                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
+                      4
+                    </div>
+                    <Card className="flex-1 bg-black border-purple-500/20">
+                      <CardHeader>
+                        <CardTitle className="text-white text-lg">Follow-up & Maintenance</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-300 mb-3">
+                          Regular check-ins to ensure optimal results and plan future treatments.
+                        </p>
+                        <ul className="text-sm text-gray-300 space-y-1">
+                          <li>• 2-week assessment appointment</li>
+                          <li>• 6-month progress review</li>
+                          <li>• 12-18 month touch-up as needed</li>
+                          <li>• Ongoing skincare recommendations</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Journey Summary */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="mt-12"
+              >
+                <Card className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-purple-500/20 p-6">
+                  <div className="text-center">
+                    <h3 className="text-lg font-semibold mb-2 text-white">Your Journey to Refreshed Eyes</h3>
+                    <p className="text-gray-300">
+                      From consultation to final results, our comprehensive approach ensures you achieve natural-looking, 
+                      long-lasting improvements to your under-eye area with minimal disruption to your daily routine.
+                    </p>
+                  </div>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Treatment Summary */}
         <section className="py-20 bg-accent">
           <div className="page-container">
