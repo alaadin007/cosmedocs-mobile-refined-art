@@ -82,9 +82,13 @@ const SmokersLinesWomen = () => {
               So why do these perioral lines predominantly affect females? The answer lies in fascinating anatomical and behavioral differences.
             </p>
 
-            {/* Main Image Placeholder */}
-            <div className="bg-gray-800 rounded-lg p-8 text-center mb-12">
-              <p className="text-gray-400">[Main Image: Close-up of female perioral area showing smokers lines]</p>
+            {/* Main Banner Image */}
+            <div className="w-full h-64 md:h-80 rounded-lg mb-12 overflow-hidden">
+              <img 
+                src="/lovable-uploads/e3b8f0b0-e43f-4c9f-8e4a-47afe43a1022.png" 
+                alt="Close-up view of perioral lines around the mouth area showing smokers lines"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="prose prose-invert max-w-none">
