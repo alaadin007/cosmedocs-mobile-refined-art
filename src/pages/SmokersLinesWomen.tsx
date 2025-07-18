@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { ArrowLeft, Calendar, User, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const SmokersLinesWomen = () => {
@@ -186,6 +187,32 @@ const SmokersLinesWomen = () => {
                 a straw enthusiast, or simply blessed with expressive lips, there are effective treatments available to maintain 
                 a smooth, youthful perioral area.
               </p>
+
+              {/* Instagram Reel Popup */}
+              <div className="flex justify-center my-8">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300">
+                      <Play className="w-5 h-5" />
+                      Watch Treatment in Action
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md w-full p-0 bg-black border-gray-700">
+                    <div className="aspect-[9/16] w-full">
+                      <iframe
+                        src="https://www.instagram.com/reel/DCZoNKot3qo/embed/"
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        scrolling="no"
+                        allowTransparency={true}
+                        className="rounded-lg"
+                        title="Smokers Lines Treatment - Instagram Reel"
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
 
               <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 mt-8">
                 <h3 className="text-lg font-semibold mb-3 text-white">Expert Insight</h3>
