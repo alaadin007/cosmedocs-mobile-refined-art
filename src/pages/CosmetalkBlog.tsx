@@ -196,6 +196,19 @@ const CosmetalkBlog = () => {
           </div>
         </section>
 
+        {/* Hero Image Section */}
+        <section className="bg-black py-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <img 
+                src="/lovable-uploads/285a6dd9-9951-47f1-a5fd-4842b9248ee2.png"
+                alt="Smokers lines treatment - understanding facial aging in women"
+                className="w-full rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        </section>
+
         <div className="container mx-auto px-2 py-4">
           {/* Featured Article */}
           {featuredPost && (
