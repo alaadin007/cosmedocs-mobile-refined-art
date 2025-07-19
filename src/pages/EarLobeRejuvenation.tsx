@@ -5,9 +5,20 @@ import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, Ch
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
+
+// Declare Instagram global type
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void;
+      };
+    };
+  }
+}
 
 const EarLobeRejuvenation = () => {
   const seoData = generateSEOMetadata(
@@ -15,6 +26,28 @@ const EarLobeRejuvenation = () => {
     "Professional ear lobe rejuvenation treatments in London's Harley Street. Transform drooping, aged earlobes with dermal fillers. Expert treatment from £500 at Cosmedocs.", 
     "/ear-lobe-rejuvenation"
   );
+  
+  // Load Instagram embed script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//www.instagram.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    // Process Instagram embeds when script loads
+    script.onload = () => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    };
+    
+    return () => {
+      // Clean up script on component unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
   
   const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
 
@@ -799,9 +832,6 @@ const EarLobeRejuvenation = () => {
             us to monitor your progress and ensure you're completely satisfied with your rejuvenated ear lobes.
           </p>
         </div>
-
-        {/* Instagram Embed Script */}
-        <script async src="//www.instagram.com/embed.js"></script>
       </div>
     </>
   );
