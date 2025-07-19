@@ -244,6 +244,177 @@ const ExperimentalTreatment = () => {
           </div>
         </section>
 
+        {/* Before & After Results Section */}
+        <section className="py-12 md:py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="text-left lg:sticky lg:top-8"
+              >
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                  Before & After <span className="text-purple-300">Results</span>
+                </h2>
+                <p className="text-xl text-white/70 font-light mb-8 max-w-2xl">
+                  Witness the transformative power of our invisible art approach. Real patient results 
+                  showcasing natural enhancement and refined aesthetics.
+                </p>
+                
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/20">
+                  <h3 className="text-xl font-light text-white mb-6">Our Results Promise</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-2 h-2 bg-purple-300 rounded-full mt-3 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-white/90 font-light">Natural enhancement</p>
+                        <p className="text-white/60 text-sm font-light">Subtle improvements that enhance your features</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-2 h-2 bg-purple-300 rounded-full mt-3 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-white/90 font-light">Immediate transformation</p>
+                        <p className="text-white/60 text-sm font-light">Visible results from your first treatment</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-2 h-2 bg-purple-300 rounded-full mt-3 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-white/90 font-light">Long-lasting beauty</p>
+                        <p className="text-white/60 text-sm font-light">Results that evolve beautifully over time</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 gap-8"
+              >
+                {/* Before/After Set 1 - Lip Enhancement */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-purple-200 text-sm font-light uppercase tracking-wide mb-4 text-center">Before</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/00df0c0c-e651-402b-bdb2-4cc80a39f284.png" 
+                        alt="Natural lips before enhancement treatment"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-white/60 text-xs font-light text-center">Natural lip shape and volume</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-purple-300/20">
+                    <h4 className="text-purple-300 text-sm font-light uppercase tracking-wide mb-4 text-center">After</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/4870b5ac-6167-4baa-8561-0f5617cd4814.png" 
+                        alt="Enhanced lips after treatment showing improved volume"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-purple-200 text-xs font-light text-center">Enhanced volume and definition</p>
+                  </div>
+                </div>
+
+                {/* Before/After Set 2 - Nose Refinement */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-purple-200 text-sm font-light uppercase tracking-wide mb-4 text-center">Before</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png" 
+                        alt="Nose profile before non-surgical enhancement"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-white/60 text-xs font-light text-center">Original nasal profile</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-purple-300/20">
+                    <h4 className="text-purple-300 text-sm font-light uppercase tracking-wide mb-4 text-center">After</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png" 
+                        alt="Refined nose profile after non-surgical treatment"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-purple-200 text-xs font-light text-center">Refined projection and harmony</p>
+                  </div>
+                </div>
+
+                {/* Before/After Set 3 - Ear Lobe Rejuvenation */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-purple-200 text-sm font-light uppercase tracking-wide mb-4 text-center">Before</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/e9ca6f3d-62c7-416f-b623-8202fb6ef181.png" 
+                        alt="Ear lobe showing volume loss and aging signs"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-white/60 text-xs font-light text-center">Volume loss and deep wrinkles</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-purple-300/20">
+                    <h4 className="text-purple-300 text-sm font-light uppercase tracking-wide mb-4 text-center">After</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/a6ddbdbb-2597-49b1-9b92-bac7242c0b83.png" 
+                        alt="Restored ear lobe with improved volume and firmness"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-purple-200 text-xs font-light text-center">Restored volume and firmness</p>
+                  </div>
+                </div>
+
+                {/* Before/After Set 4 - Advanced Lip Treatment */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-purple-200 text-sm font-light uppercase tracking-wide mb-4 text-center">Before</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/ff79ac9e-7b65-41a3-a7d7-5ea281d0bc69.png" 
+                        alt="Lips before advanced enhancement treatment"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-white/60 text-xs font-light text-center">Natural lip consultation state</p>
+                  </div>
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-purple-300/20">
+                    <h4 className="text-purple-300 text-sm font-light uppercase tracking-wide mb-4 text-center">After</h4>
+                    <div className="aspect-square overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src="/lovable-uploads/29e40de0-6799-47d2-bd48-272b87c4c70c.png" 
+                        alt="Final lip enhancement results with natural volume"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-purple-200 text-xs font-light text-center">Natural enhanced volume</p>
+                  </div>
+                </div>
+
+                <div className="text-center mt-8">
+                  <Button 
+                    className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-4 text-lg font-semibold"
+                    onClick={() => window.open(bookingUrl, '_blank')}
+                  >
+                    View More Results
+                  </Button>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Results Section */}
         <section className="py-12 md:py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
