@@ -68,6 +68,7 @@ import PRPTreatment from "./pages/PRPTreatment";
 import PeelToReveal from "./pages/PeelToReveal";
 import CheekFiller from "./pages/CheekFiller";
 import ChinFiller from "./pages/ChinFiller";
+// Import ear lobe rejuvenation component
 import EarLobeRejuvenation from "./pages/EarLobeRejuvenation";
 import JawlineFiller from "./pages/JawlineFiller";
 import ChemicalPeel from "./pages/ChemicalPeel";
