@@ -201,7 +201,7 @@ const Index = () => {
                   <Button
                     onClick={() => setIsAnalysisOpen(true)}
                     size="lg"
-                    className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white rounded-full px-12 py-6 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-2xl"
+                    className="bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-white text-black rounded-full px-12 py-6 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-2xl border border-gray-200"
                   >
                     <Sparkles className="h-5 w-5 mr-2" />
                     Start Your AI Analysis
