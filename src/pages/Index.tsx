@@ -617,6 +617,12 @@ const Index = () => {
             </p>
           </div>
         </div>
+
+        {/* AI Aesthetic Analysis Modal */}
+        <AestheticAnalysisWizard 
+          isOpen={isAnalysisOpen}
+          onClose={() => setIsAnalysisOpen(false)}
+        />
       </TooltipProvider>
     </>
   );
