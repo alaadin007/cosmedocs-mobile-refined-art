@@ -219,7 +219,7 @@ const EarLobeRejuvenation = () => {
 
       <div className="bg-black text-white">
         {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <section className="relative py-16 md:py-32 overflow-hidden flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -261,10 +261,10 @@ const EarLobeRejuvenation = () => {
         </section>
 
         {/* Before/After Gallery Section */}
-        <section className="py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div 
-              className="text-center mb-16" 
+              className="text-center mb-8 md:mb-16"
               initial={{ opacity: 0, y: 30 }} 
               whileInView={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.8 }} 
