@@ -11,8 +11,8 @@ import { Button } from "@/components/ui/button";
 
 const EarLobeRejuvenation = () => {
   const seoData = generateSEOMetadata(
-    "Ear Lobe Rejuvenation London | From £500 | Dr. Ahmed Haq | Harley Street", 
-    "Professional ear lobe rejuvenation treatments in London's Harley Street. Transform drooping, aged earlobes with dermal fillers. Expert collagen stimulation from £500.", 
+    "Ear Lobe Rejuvenation London | From £500 | Cosmedocs | Harley Street", 
+    "Professional ear lobe rejuvenation treatments in London's Harley Street. Transform drooping, aged earlobes with dermal fillers. Expert treatment from £500 at Cosmedocs.", 
     "/ear-lobe-rejuvenation"
   );
   
@@ -29,7 +29,7 @@ const EarLobeRejuvenation = () => {
     },
     {
       question: "Is ear lobe rejuvenation safe?",
-      answer: "Yes, when performed by qualified practitioners like Dr. Ahmed Haq at our Harley Street clinic, ear lobe rejuvenation is very safe. We use premium hyaluronic acid fillers and follow strict safety protocols."
+      answer: "Yes, when performed by qualified practitioners at our Cosmedocs Harley Street clinic, ear lobe rejuvenation is very safe. We use premium hyaluronic acid fillers and follow strict safety protocols."
     },
     {
       question: "Why do earlobes droop with age?",
@@ -48,7 +48,7 @@ const EarLobeRejuvenation = () => {
     },
     {
       question: "What happens during an ear lobe rejuvenation consultation?",
-      answer: "During your consultation, Dr. Ahmed Haq will assess your ear lobes, discuss your concerns, and create a personalized treatment plan to restore volume and firmness."
+      answer: "During your consultation, our expert practitioners at Cosmedocs will assess your ear lobes, discuss your concerns, and create a personalized treatment plan to restore volume and firmness."
     },
     {
       question: "Can I combine ear lobe rejuvenation with other treatments?",
@@ -143,7 +143,7 @@ const EarLobeRejuvenation = () => {
             "@context": "https://schema.org",
             "@type": "VideoObject",
             "name": "Ear Lobe Rejuvenation with Dermal Fillers - Before & After Results",
-            "description": "Watch real ear lobe rejuvenation treatment results using dermal fillers. Professional demonstration of the procedure and immediate results by Dr. Ahmed Haq at Cosmedocs Harley Street.",
+            "description": "Watch real ear lobe rejuvenation treatment results using dermal fillers. Professional demonstration of the procedure and immediate results at Cosmedocs Harley Street.",
             "thumbnailUrl": "https://cosmedocs.com/default-og-image.jpg",
             "uploadDate": "2024-01-19",
             "duration": "PT60S",
@@ -224,6 +224,80 @@ const EarLobeRejuvenation = () => {
               
               <div className="hidden lg:block"></div>
             </div>
+          </div>
+        </section>
+
+        {/* Before/After Gallery Section */}
+        <section className="py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
+            <motion.div 
+              className="text-center mb-16" 
+              initial={{ opacity: 0, y: 30 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8 }} 
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-thin text-white mb-6 tracking-tight">
+                Before & After Results
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Witness the transformative power of ear lobe rejuvenation at Cosmedocs
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 40 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8, delay: 0.2 }} 
+              viewport={{ once: true }}
+            >
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                <h3 className="text-xl font-light text-white mb-6 text-center">Before Treatment</h3>
+                <div className="aspect-square overflow-hidden rounded-2xl">
+                  <img 
+                    src="/lovable-uploads/e9ca6f3d-62c7-416f-b623-8202fb6ef181.png" 
+                    alt="Ear lobe before rejuvenation treatment showing drooping and volume loss"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-white/70 text-sm font-light mt-4 text-center">
+                  Drooping ear lobe with age-related volume loss and structural changes
+                </p>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                <h3 className="text-xl font-light text-white mb-6 text-center">After Treatment</h3>
+                <div className="aspect-square overflow-hidden rounded-2xl">
+                  <img 
+                    src="/lovable-uploads/a6ddbdbb-2597-49b1-9b92-bac7242c0b83.png" 
+                    alt="Ear lobe after rejuvenation treatment showing restored volume and firmness"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-white/70 text-sm font-light mt-4 text-center">
+                  Restored ear lobe with improved volume, firmness and youthful appearance
+                </p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center mt-12"
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8, delay: 0.4 }} 
+              viewport={{ once: true }}
+            >
+              <p className="text-white/80 font-light text-lg mb-6">
+                Our invisible art approach delivers natural-looking results that enhance your natural beauty
+              </p>
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
+                onClick={() => window.open(bookingUrl, '_blank')}
+              >
+                See Your Transformation
+              </Button>
+            </motion.div>
           </div>
         </section>
 
@@ -681,7 +755,7 @@ const EarLobeRejuvenation = () => {
                 Ready to Rejuvenate Your Ear Lobes?
               </h2>
               <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
-                Book your consultation with Dr. Ahmed Haq at our Harley Street clinic and discover 
+                Book your consultation with our expert practitioners at Cosmedocs Harley Street clinic and discover 
                 how ear lobe rejuvenation can restore your youthful confidence.
               </p>
               <Button 
@@ -715,9 +789,9 @@ const EarLobeRejuvenation = () => {
             as new collagen forms.
           </p>
           <p>
-            Dr. Ahmed Haq's expertise in facial anatomy ensures safe, natural-looking results that complement your overall 
+            Our expert practitioners' expertise in facial anatomy ensures safe, natural-looking results that complement your overall 
             facial aesthetics. The treatment can be combined with other rejuvenation procedures for comprehensive facial 
-            enhancement. Our Harley Street clinic provides a comfortable, professional environment for all aesthetic treatments.
+            enhancement. Our Cosmedocs Harley Street clinic provides a comfortable, professional environment for all aesthetic treatments.
           </p>
           <p>
             Aftercare is minimal, with patients able to return to normal activities immediately. We recommend avoiding 
