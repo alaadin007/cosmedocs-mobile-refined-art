@@ -16,13 +16,24 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Beauty as Ethnic Neutrality: Aesthetic Harmony Beyond Race",
+      description: "Exploring how universal beauty standards transcend ethnicity through facial harmony, balance, and symmetry across all cultures.",
+      category: "Beauty Science",
+      readTime: "12 min read",
+      date: "January 15, 2024",
+      slug: "/blog/beauty-ethnic-neutrality",
+      featured: true,
+      image: "/lovable-uploads/95a2c194-5d44-4495-8025-de676d437b8d.png",
+      author: "By CosmeDocs"
+    },
+    {
       title: "Lazy Skin Syndrome: The Hidden Cost of Moisturiser Dependency",
       description: "Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within.",
       category: "Skincare Science",
       readTime: "9 min read",
       date: "January 20, 2024",
       slug: "/cosmetalk/lazy-skin-syndrome",
-      featured: true,
+      featured: false,
       image: "/src/assets/dehydrated-fingers.jpg",
       author: "Edited by Dr. Ahmed Haq, Dr. Hena Haq"
     },
@@ -113,6 +124,7 @@ const CosmetalkBlog = () => {
 
   const categories = [
     { name: "All Posts", count: blogPosts.length, icon: BookOpen },
+    { name: "Beauty Science", count: 1, icon: Star },
     { name: "Skincare Science", count: 1, icon: Star },
     { name: "Non-Surgical", count: 2, icon: Heart },
     { name: "Treatment Planning", count: 1, icon: TrendingUp },
@@ -121,6 +133,7 @@ const CosmetalkBlog = () => {
 
   const getCategoryColor = (category: string) => {
     const colors = {
+      "Beauty Science": "bg-gradient-to-r from-pink-500 to-rose-600 text-white",
       "Skincare Science": "bg-gradient-to-r from-emerald-500 to-teal-600 text-white",
       "Non-Surgical": "bg-gradient-to-r from-blue-500 to-cyan-600 text-white", 
       "Treatment Planning": "bg-gradient-to-r from-purple-500 to-violet-600 text-white",
