@@ -34,6 +34,7 @@ const TREATMENT_ROUTES = [
   '/lip-filler-dissolve',
   '/cheek-filler',  // ✅ Added the missing Cheek Filler page
   '/chin-filler',   // ✅ Added new Chin Filler page
+  '/ear-lobe-rejuvenation', // ✅ Added new Ear Lobe Rejuvenation page
   
   // Advanced/specialized treatments
   '/advanced-consultation',

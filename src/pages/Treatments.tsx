@@ -257,6 +257,12 @@ const Treatments = () => {
             {
               title: "PDO Threads",
               link: "Visit Page"
+            },
+            {
+              title: "Ear Lobe Rejuvenation",
+              price: "From £500",
+              description: "Rejuvenation, new collagen, plumping using hyaluronic acid that stimulates your own collagen",
+              link: "/ear-lobe-rejuvenation"
             }
           ]
         }
