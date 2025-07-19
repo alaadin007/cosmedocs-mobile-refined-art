@@ -48,6 +48,7 @@ import SmokersLinesWomen from "./pages/SmokersLinesWomen";
 import FlawlessSkin from "./pages/FlawlessSkin";
 import LazySkinSyndrome from "./pages/LazySkinSyndrome";
 import BeautyEthnicNeutrality from "./pages/blog/BeautyEthnicNeutrality";
+import EightPointFacelift from "./pages/EightPointFacelift";
 import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
 import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
 import TreatmentsSummaryJapanese from "./pages/TreatmentsSummaryJapanese";
@@ -136,6 +137,7 @@ const App = () => (
               <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
                <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
                <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
+               <Route path="/8-point-facelift" element={<EightPointFacelift />} />
                <Route path="/cosmetalk" element={<CosmetalkBlog />} />
               <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
               <Route path="/treatments-summary-arabic" element={<TreatmentsSummaryArabic />} />

@@ -167,6 +167,12 @@ const Treatments = () => {
           isSubcategory: true,
           subitems: [
             {
+              title: "8 Point Facelift",
+              price: "From £800",
+              description: "Comprehensive non-surgical facelift targeting 8 key facial points",
+              link: "visit page"
+            },
+            {
               title: "Marionette Lines",
               price: "£325/ml",
               link: "visit page"
