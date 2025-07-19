@@ -76,6 +76,7 @@ import PrescriptionSkinCare from "./pages/PrescriptionSkinCare";
 import Microneedling from "./pages/Microneedling";
 import TearTroughFiller from "./pages/TearTroughFiller";
 import VideoUpload from "./pages/VideoUpload";
+import ExperimentalTreatment from "./pages/ExperimentalTreatment";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -171,6 +172,7 @@ const App = () => (
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
               <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/cosmetalk/vitamin-c-ferulic-acid-benefits" replace />} />
               
+              <Route path="/experimental-treatment" element={<ExperimentalTreatment />} />
               <Route path="/admin/video-upload" element={<VideoUpload />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
