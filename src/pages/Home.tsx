@@ -183,8 +183,8 @@ const Home = () => {
                 >
                   <div className="relative overflow-hidden rounded-2xl">
                     <img 
-                      src="/lovable-uploads/263b4ed0-5db0-471d-9455-fba1581c1834.png"
-                      alt="Cosmedocs team and graduates at Harley Street Institute training session"
+                      src="/lovable-uploads/005944a9-e0d0-4c10-b612-02794768fc09.png"
+                      alt="Cosmedocs medical professionals with Harley Street Institute certificates"
                       className="w-full h-auto object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
