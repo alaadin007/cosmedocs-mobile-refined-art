@@ -115,6 +115,19 @@ const allGalleryImages = [
     alt: "Non-surgical nose job Cosmedocs London Harley Street before after results",
     caption: "Remarkable transformation achieving perfect nasal proportions and harmony",
     category: "nose-jobs"
+  },
+  // Ear lobe rejuvenation images
+  {
+    src: "/lovable-uploads/e9ca6f3d-62c7-416f-b623-8202fb6ef181.png",
+    alt: "Ear lobe before rejuvenation treatment showing volume loss and deep wrinkles",
+    caption: "Before: Significant ear lobe volume loss and deep wrinkles with age-related structural changes",
+    category: "ear-treatments"
+  },
+  {
+    src: "/lovable-uploads/a6ddbdbb-2597-49b1-9b92-bac7242c0b83.png",
+    alt: "Ear lobe after rejuvenation treatment showing restored volume and firmness",
+    caption: "After: Restored ear lobe with improved volume, firmness and youthful appearance - invisible art transformation",
+    category: "ear-treatments"
   }
 ];
 
@@ -143,6 +156,7 @@ const categories = [
   { id: 'dermal-fillers', name: 'Dermal Fillers', icon: '💫' },
   { id: 'lip-treatments', name: 'Lip Treatments', icon: '💋' },
   { id: 'nose-jobs', name: 'Nose Jobs', icon: '👃' },
+  { id: 'ear-treatments', name: 'Ear Treatments', icon: '👂' },
   { id: 'threads', name: 'PDO Threads', icon: '🧵' }
 ];
 

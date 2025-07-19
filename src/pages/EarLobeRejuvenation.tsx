@@ -260,11 +260,49 @@ const EarLobeRejuvenation = () => {
           </div>
         </section>
 
-        {/* Before/After Gallery Section */}
+        {/* Treatment Details Section */}
         <section className="py-12 md:py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div 
-              className="text-center mb-8 md:mb-16"
+              className="text-center mb-8 md:mb-16" 
+              initial={{ opacity: 0, y: 30 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8 }} 
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-thin text-white mb-6 tracking-tight">
+                Treatment Overview
+              </h2>
+            </motion.div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {treatmentDetails.map((detail, index) => (
+                <Card key={index} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
+                  <CardContent className="p-0">
+                    {index === 0 && <Syringe className="h-5 w-5 text-white/60 mx-auto mb-2" />}
+                    {index === 1 && <Clock className="h-5 w-5 text-white/60 mx-auto mb-2" />}
+                    {index === 2 && <CalendarDays className="h-5 w-5 text-white/60 mx-auto mb-2" />}
+                    {index === 3 && <Heart className="h-5 w-5 text-white/60 mx-auto mb-2" />}
+                    {index === 4 && <Users className="h-5 w-5 text-white/60 mx-auto mb-2" />}
+                    {index === 5 && <Shield className="h-5 w-5 text-white/60 mx-auto mb-2" />}
+                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
+                      {detail.title}
+                    </h3>
+                    <p className="text-white text-sm font-light">
+                      {detail.detail}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Before/After Gallery Section */}
+        <section className="py-12 md:py-24 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <motion.div 
+              className="text-center mb-8 md:mb-16" 
               initial={{ opacity: 0, y: 30 }} 
               whileInView={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.8 }} 
@@ -295,7 +333,7 @@ const EarLobeRejuvenation = () => {
                   />
                 </div>
                 <p className="text-white/70 text-sm font-light mt-4 text-center">
-                  Drooping ear lobe with age-related volume loss and structural changes
+                  Significant ear lobe volume loss and deep wrinkles with age-related structural changes
                 </p>
               </div>
               
