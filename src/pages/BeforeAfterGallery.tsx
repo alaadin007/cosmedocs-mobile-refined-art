@@ -8,6 +8,13 @@ import CollageViewer from '@/components/CollageViewer';
 
 // Mixed and matched images from all treatment pages
 const allGalleryImages = [
+  // Team credentials and education
+  {
+    src: "/lovable-uploads/38f9764b-fcca-429c-8900-8e7eaeaf55d8.png",
+    alt: "Cosmedocs team with training certificates",
+    caption: "Not just injectors - we teach the future generation of aesthetic practitioners. Our commitment to education ensures excellence in every treatment.",
+    category: "team"
+  },
   // Featured new lip treatment before and after
   {
     src: "/lovable-uploads/00df0c0c-e651-402b-bdb2-4cc80a39f284.png",
@@ -153,6 +160,7 @@ const lipCollageImages = [
 
 const categories = [
   { id: 'all', name: 'All', icon: '✨' },
+  { id: 'team', name: 'Team', icon: '👥' },
   { id: 'dermal-fillers', name: 'Dermal Fillers', icon: '💫' },
   { id: 'lip-treatments', name: 'Lip Treatments', icon: '💋' },
   { id: 'nose-jobs', name: 'Nose Jobs', icon: '👃' },
