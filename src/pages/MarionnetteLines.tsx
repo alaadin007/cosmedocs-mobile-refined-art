@@ -129,7 +129,7 @@ const MarionnetteLines = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/lovable-uploads/765101d1-1ff9-4425-9d8a-da5eb0bcaa17.png')`
+              backgroundImage: `url('/lovable-uploads/bd7c2222-e959-4253-af8d-c3a54757661d.png')`
             }}
           >
             <div className="absolute inset-0 bg-black/70"></div>

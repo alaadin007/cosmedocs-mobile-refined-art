@@ -136,7 +136,7 @@ const NasolabialFolds = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png')`
+              backgroundImage: `url('/lovable-uploads/bd7c2222-e959-4253-af8d-c3a54757661d.png')`
             }}
           >
             <div className="absolute inset-0 bg-black/70"></div>
