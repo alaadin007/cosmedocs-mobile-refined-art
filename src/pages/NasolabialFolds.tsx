@@ -10,6 +10,7 @@ import AutoLinkedText from '@/components/AutoLinkedText';
 import PopularTreatments from '@/components/PopularTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Link } from 'react-router-dom';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const NasolabialFolds = () => {
   const seoData = generateSEOMetadata(
@@ -312,6 +313,166 @@ const NasolabialFolds = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Dermal Filler Treatments */}
+        <section className="w-full py-24 bg-gray-900/50">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Other Dermal Filler Treatments</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your natural beauty with specialized dermal filler treatments for individual facial areas
+              </p>
+            </div>
+
+            {/* Anti-Ageing Treatments */}
+            <div className="mb-16">
+              <h3 className="text-3xl font-semibold text-white text-center mb-12">Anti-Ageing Treatments</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: "Marionette Lines",
+                    price: "£325/ml",
+                    description: "Smooth vertical lines from mouth corners to chin for a more youthful appearance.",
+                    features: ["Long-lasting results", "Natural appearance", "Minimal downtime"],
+                    link: "/marionette-lines"
+                  },
+                  {
+                    title: "Jawline (High Def/Jowls)",
+                    price: "£350/ml",
+                    description: "Define and contour jawline while addressing jowl sagging.",
+                    features: ["Sculpted definition", "Youthful contour", "Professional technique"]
+                  },
+                  {
+                    title: "Cheek Volume",
+                    price: "£350/ml",
+                    description: "Restore youthful cheek fullness and enhance facial proportions.",
+                    features: ["Natural volume", "Lifted appearance", "Long-lasting results"]
+                  },
+                  {
+                    title: "Tear Trough / Under Eye",
+                    price: "£425",
+                    description: "Address under-eye hollowing and dark circles for refreshed eyes.",
+                    features: ["Refreshed look", "Reduced shadows", "Expert technique required"]
+                  },
+                  {
+                    title: "Profhilo",
+                    price: "£350",
+                    description: "Bio-remodelling treatment for skin hydration and firmness.",
+                    features: ["Skin bio-remodelling", "Hydration boost", "Natural glow"]
+                  }
+                ].map((treatment, index) => {
+                  const CardComponent = (
+                    <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
+                      <CardContent className="p-0">
+                        <div className="flex justify-between items-start mb-4">
+                          <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
+                          <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
+                        </div>
+                        <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
+                        <div className="space-y-2 mb-4">
+                          {treatment.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-sm">
+                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
+                              <span className="text-gray-400">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
+                          Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  );
+
+                  return treatment.link ? (
+                    <Link key={index} to={treatment.link} className="block hover:no-underline">
+                      {CardComponent}
+                    </Link>
+                  ) : (
+                    CardComponent
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Facial Contouring Treatments */}
+            <div className="mb-16">
+              <h3 className="text-3xl font-semibold text-white text-center mb-12">Facial Contouring</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: "0.5ml Lip Filler (Natural)",
+                    price: "£300",
+                    description: "Subtle lip enhancement for naturally fuller lips.",
+                    features: ["Natural enhancement", "Subtle volume", "Perfect proportions"]
+                  },
+                  {
+                    title: "1ml Lip Filler (Bold & Plump)",
+                    price: "£350",
+                    description: "More dramatic lip enhancement for fuller, plumper lips.",
+                    features: ["Bold results", "Dramatic volume", "Long-lasting effect"]
+                  },
+                  {
+                    title: "Non Surgical Nose Job",
+                    price: "£450",
+                    description: "Reshape and refine nose contours without surgery.",
+                    features: ["No surgery required", "Immediate results", "Reversible treatment"]
+                  },
+                  {
+                    title: "Forehead Filler",
+                    price: "£400",
+                    description: "Smooth forehead bumps and dips for an even surface.",
+                    features: ["Smooth surface", "Natural appearance", "Expert precision"]
+                  },
+                  {
+                    title: "Temples Hollowing",
+                    price: "£350/ml",
+                    description: "Restore temple volume for a more youthful facial shape.",
+                    features: ["Youthful restoration", "Natural volume", "Facial harmony"],
+                    link: "/temple-filler-london"
+                  },
+                  {
+                    title: "Redensity 1",
+                    price: "£250/ml",
+                    description: "Skin quality improvement with micro-injections.",
+                    features: ["Skin quality boost", "Hydration enhancement", "Natural glow"]
+                  }
+                ].map((treatment, index) => {
+                  const CardComponent = (
+                    <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
+                      <CardContent className="p-0">
+                        <div className="flex justify-between items-start mb-4">
+                          <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
+                          <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
+                        </div>
+                        <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
+                        <div className="space-y-2 mb-4">
+                          {treatment.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-sm">
+                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
+                              <span className="text-gray-400">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
+                          Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  );
+
+                  return treatment.link ? (
+                    <Link key={index} to={treatment.link} className="block hover:no-underline">
+                      {CardComponent}
+                    </Link>
+                  ) : (
+                    CardComponent
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
