@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Clock, Star, Award, Eye, Zap, ArrowRight, Users, BookOpen, Plus, Minus } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Link } from 'react-router-dom';
 
 const DermalFillerMakeover = () => {
   const seoData = generateSEOMetadata(
@@ -139,7 +140,8 @@ const DermalFillerMakeover = () => {
       title: "Temples Hollowing",
       price: "£350/ml",
       description: "Restore temple volume for a more youthful facial shape.",
-      features: ["Youthful restoration", "Natural volume", "Facial harmony"]
+      features: ["Youthful restoration", "Natural volume", "Facial harmony"],
+      link: "/temple-filler-london"
     },
     {
       title: "Redensity 1",
@@ -386,28 +388,38 @@ const DermalFillerMakeover = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-8 text-center">Facial Contouring</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {facialContouringTreatments.map((treatment, index) => (
-                  <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
-                    <CardContent className="p-0">
-                      <div className="flex justify-between items-start mb-4">
-                        <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
-                        <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
-                      </div>
-                      <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
-                      <div className="space-y-2 mb-4">
-                        {treatment.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-sm">
-                            <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
-                            <span className="text-gray-400">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
-                        Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+                {facialContouringTreatments.map((treatment, index) => {
+                  const CardComponent = (
+                    <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
+                      <CardContent className="p-0">
+                        <div className="flex justify-between items-start mb-4">
+                          <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
+                          <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
+                        </div>
+                        <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
+                        <div className="space-y-2 mb-4">
+                          {treatment.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-sm">
+                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
+                              <span className="text-gray-400">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
+                          Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  );
+
+                  return treatment.link ? (
+                    <Link key={index} to={treatment.link} className="block hover:no-underline">
+                      {CardComponent}
+                    </Link>
+                  ) : (
+                    CardComponent
+                  );
+                })}
               </div>
             </div>
 
