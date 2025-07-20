@@ -11,15 +11,47 @@ const TempleFiller = () => {
     "/lovable-uploads/3bbc1c04-e87d-4253-811d-e71dfa550186.png"
   );
 
-  const beforeAfterImages = [
-    // Placeholder for individual before/after images - to be added later
-    {
-      before: "/placeholder-before.jpg",
-      after: "/placeholder-after.jpg",
-      alt: "Temple filler before and after results",
-      treatment: "Temple volume restoration"
-    }
-  ];
+  const beforeAfterImages = {
+    before: [
+      {
+        src: "/lovable-uploads/6ed7822c-5e7e-4482-a672-0c24c0861794.png",
+        alt: "Temple volume loss before dermal filler treatment - side profile view showing hollowed temple area",
+        caption: "Before Treatment: Visible temple volume loss creating a sunken, aged appearance"
+      },
+      {
+        src: "/lovable-uploads/19872114-4efb-4e4a-b4be-bfbf424fbe20.png", 
+        alt: "Temple hollowing before treatment - frontal view showing bilateral temple depression",
+        caption: "Before Treatment: Frontal view highlighting bilateral temple depression and volume loss"
+      },
+      {
+        src: "/lovable-uploads/d84c901e-c124-44be-961a-345eb5133271.png",
+        alt: "Temple area before filler injection showing natural aging process and volume depletion",
+        caption: "Before Treatment: Close-up view of temple area showing natural aging and volume depletion"
+      }
+    ],
+    during: {
+      src: "/lovable-uploads/3b70fd8c-c9b5-4e7c-bc2e-3b7d12779116.png",
+      alt: "Professional temple filler injection procedure being performed by qualified aesthetic practitioner",
+      caption: "During Treatment: Precision temple filler injection using advanced techniques and premium dermal fillers"
+    },
+    after: [
+      {
+        src: "/lovable-uploads/987195e3-5c3c-4605-9160-0f4c4f8631de.png",
+        alt: "Temple filler results immediately after treatment showing restored volume and improved facial harmony",
+        caption: "After Treatment: Immediate results showing restored temple volume and improved facial balance"
+      },
+      {
+        src: "/lovable-uploads/2549c031-c4e5-4be1-a708-694953067baf.png",
+        alt: "Temple filler before and after comparison - side profile showing dramatic volume restoration",
+        caption: "After Treatment: Side profile view demonstrating significant temple volume restoration and youthful contours"
+      },
+      {
+        src: "/lovable-uploads/48325025-1ed1-494c-9fb0-ecbb3e5d3195.png",
+        alt: "Final temple filler results showing natural-looking enhancement and facial rejuvenation",
+        caption: "After Treatment: Final results showcasing natural-looking temple enhancement and overall facial rejuvenation"
+      }
+    ]
+  };
 
   return (
     <>
@@ -240,43 +272,127 @@ const TempleFiller = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery Section */}
+        {/* Before & During & After Gallery Section */}
         <section className="py-20 bg-secondary/10">
           <div className="page-container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-light mb-6">Temple Filler Results</h2>
+              <h2 className="text-4xl font-light mb-6">Temple Filler Treatment Journey</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                View our collection of temple filler before and after images showcasing the transformative 
-                results achieved through our expert treatment approach.
+                Witness the complete transformation process from initial consultation through to final results. 
+                This comprehensive case study showcases the precision and artistry of professional temple filler treatment.
               </p>
             </div>
             
-            {/* Individual Before/After Images - Space reserved for future additions */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {beforeAfterImages.map((image, index) => (
-                <div key={index} className="bg-card rounded-lg overflow-hidden">
-                  <div className="aspect-square bg-muted flex items-center justify-center">
-                    <span className="text-muted-foreground">Before & After Image {index + 1}</span>
+            {/* Before Images */}
+            <div className="mb-16">
+              <h3 className="text-3xl font-light text-center mb-8">Before Treatment</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {beforeAfterImages.before.map((image, index) => (
+                  <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h4 className="font-semibold mb-2 text-lg">Before Assessment #{index + 1}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{image.caption}</p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Temple Volume Loss</span>
+                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Facial Aging</span>
+                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Before Photos</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-2">{image.treatment}</h3>
-                    <p className="text-sm text-muted-foreground">Professional temple filler results</p>
+                ))}
+              </div>
+            </div>
+
+            {/* During Treatment */}
+            <div className="mb-16">
+              <h3 className="text-3xl font-light text-center mb-8">During Treatment</h3>
+              <div className="max-w-2xl mx-auto">
+                <div className="bg-card rounded-lg overflow-hidden shadow-lg">
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img 
+                      src={beforeAfterImages.during.src}
+                      alt={beforeAfterImages.during.alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="font-semibold mb-2 text-xl">Professional Treatment Process</h4>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{beforeAfterImages.during.caption}</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Professional Injection</span>
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Medical Grade Fillers</span>
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Expert Technique</span>
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Safe Procedure</span>
+                    </div>
                   </div>
                 </div>
-              ))}
-              
-              {/* Placeholder for additional before/after images */}
-              {[1, 2, 3, 4, 5].map((_, index) => (
-                <div key={index} className="bg-card rounded-lg overflow-hidden border-2 border-dashed border-muted">
-                  <div className="aspect-square bg-muted/50 flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm">Before & After #{index + 2}</span>
+              </div>
+            </div>
+
+            {/* After Results */}
+            <div className="mb-8">
+              <h3 className="text-3xl font-light text-center mb-8">After Treatment Results</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {beforeAfterImages.after.map((image, index) => (
+                  <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h4 className="font-semibold mb-2 text-lg">Result View #{index + 1}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{image.caption}</p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">Volume Restored</span>
+                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">Natural Results</span>
+                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">After Photos</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-2">Temple Enhancement</h3>
-                    <p className="text-sm text-muted-foreground">Results coming soon</p>
-                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Treatment Summary */}
+            <div className="bg-card rounded-lg p-8 mt-12">
+              <h3 className="text-2xl font-light mb-6 text-center">Treatment Summary & Results</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-semibold mb-4">Treatment Details</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• <strong>Treatment:</strong> Temple Dermal Filler Enhancement</li>
+                    <li>• <strong>Product Used:</strong> Premium Hyaluronic Acid Filler</li>
+                    <li>• <strong>Technique:</strong> Multi-point Precision Injection</li>
+                    <li>• <strong>Duration:</strong> 45 minutes including consultation</li>
+                    <li>• <strong>Anaesthetic:</strong> Topical numbing applied</li>
+                    <li>• <strong>Recovery:</strong> Minimal downtime, immediate return to activities</li>
+                  </ul>
                 </div>
-              ))}
+                <div>
+                  <h4 className="font-semibold mb-4">Results Achieved</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Significant temple volume restoration</li>
+                    <li>• Enhanced facial symmetry and proportion</li>
+                    <li>• Reduced appearance of temple hollowing</li>
+                    <li>• More youthful, refreshed facial contours</li>
+                    <li>• Natural-looking enhancement</li>
+                    <li>• Improved overall facial harmony</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -385,34 +501,67 @@ const TempleFiller = () => {
           </div>
         </section>
 
-        {/* Hidden SEO Content */}
+        {/* Enhanced SEO Content with Image References */}
         <div className="sr-only">
-          <h2>Temple Filler London - Expert Aesthetic Treatment</h2>
+          <h2>Temple Filler London - Expert Aesthetic Treatment with Real Results</h2>
           <p>
             Temple dermal fillers have become increasingly popular in London's aesthetic medicine scene, offering 
-            a non-surgical solution for age-related volume loss in the temporal region. As one of the most 
-            sophisticated facial rejuvenation treatments available, temple fillers address the hollowing that 
-            occurs naturally with aging, restoring youthful contours and improving overall facial harmony.
+            a non-surgical solution for age-related volume loss in the temporal region. Our featured case study 
+            demonstrates the remarkable transformation possible with professional temple filler treatment, showing 
+            before, during, and after images that highlight the expertise and artistry involved in this sophisticated procedure.
           </p>
           <p>
-            The procedure involves strategic placement of premium hyaluronic acid-based dermal fillers into 
-            the temple area, replenishing lost volume and creating more balanced facial proportions. London 
-            patients increasingly choose temple fillers for their ability to deliver natural-looking results 
-            with minimal downtime, making it an ideal treatment for busy professionals seeking aesthetic 
-            enhancement without surgical intervention.
+            The before treatment images clearly show the common signs of temple volume loss - hollowed areas, 
+            sunken appearance, and loss of youthful facial contours. During the treatment phase, our qualified 
+            aesthetic practitioners use advanced injection techniques with medical-grade hyaluronic acid fillers 
+            to precisely restore volume. The after treatment results showcase significant improvement in facial 
+            harmony, restored temple volume, and a more youthful, refreshed appearance.
           </p>
           <p>
-            Our London clinic specializes in advanced temple filler techniques, utilizing only medical-grade 
-            products and following stringent safety protocols. The treatment process begins with a comprehensive 
-            consultation to assess facial anatomy and discuss aesthetic goals, followed by precise injection 
-            techniques that ensure optimal results while maintaining facial expression and natural movement.
+            This comprehensive temple filler case study represents typical results achievable at our London clinic, 
+            where we specialize in natural-looking enhancements using only premium dermal filler products. The 
+            treatment process involves strategic placement of fillers to address volume loss while maintaining 
+            facial expression and natural movement, ensuring results that enhance rather than alter the patient's 
+            natural beauty.
           </p>
           <p>
-            Temple filler benefits extend beyond simple volume restoration, contributing to improved facial 
-            symmetry, enhanced cheekbone definition, and a more youthful overall appearance. The treatment 
-            is particularly effective for addressing the gaunt, tired look that can develop with age, helping 
-            patients achieve a refreshed, revitalized appearance that looks completely natural.
+            Temple filler before and after photography demonstrates the effectiveness of this treatment for addressing 
+            age-related changes in the temporal region. Our London patients consistently achieve excellent results 
+            through our combination of expert technique, premium products, and personalized treatment planning. 
+            The transformation shown in these images represents the gold standard of temple filler treatment available 
+            in London's aesthetic medicine landscape.
           </p>
+          
+          {/* Additional SEO metadata for images */}
+          <div itemScope itemType="https://schema.org/ImageGallery">
+            <h3 itemProp="name">Temple Filler Before During After Image Gallery</h3>
+            <p itemProp="description">Comprehensive visual documentation of temple filler treatment process showing before, during treatment, and after results</p>
+            
+            {/* Before images metadata */}
+            {beforeAfterImages.before.map((image, index) => (
+              <div key={index} itemScope itemType="https://schema.org/ImageObject">
+                <img src={image.src} alt={image.alt} itemProp="contentUrl" className="hidden" />
+                <span itemProp="caption">{image.caption}</span>
+                <span itemProp="description">Temple filler before treatment documentation showing volume loss and aging concerns</span>
+              </div>
+            ))}
+            
+            {/* During treatment metadata */}
+            <div itemScope itemType="https://schema.org/ImageObject">
+              <img src={beforeAfterImages.during.src} alt={beforeAfterImages.during.alt} itemProp="contentUrl" className="hidden" />
+              <span itemProp="caption">{beforeAfterImages.during.caption}</span>
+              <span itemProp="description">Professional temple filler injection procedure documentation</span>
+            </div>
+            
+            {/* After images metadata */}
+            {beforeAfterImages.after.map((image, index) => (
+              <div key={index} itemScope itemType="https://schema.org/ImageObject">
+                <img src={image.src} alt={image.alt} itemProp="contentUrl" className="hidden" />
+                <span itemProp="caption">{image.caption}</span>
+                <span itemProp="description">Temple filler after treatment results showing volume restoration and facial enhancement</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
