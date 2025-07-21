@@ -259,15 +259,15 @@ const NasolabialFolds = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="relative group cursor-pointer"
+                  className="relative group cursor-pointer overflow-hidden rounded-lg"
                 >
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-[2]"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg">
-                    <p className="text-white text-sm">{image.caption}</p>
+                  <div className="absolute top-4 left-4 right-4 p-3 bg-black/80 backdrop-blur-sm rounded-lg">
+                    <p className="text-white text-sm font-medium">{image.caption}</p>
                   </div>
                 </motion.div>
               ))}
