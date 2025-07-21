@@ -78,6 +78,7 @@ import TearTroughFiller from "./pages/TearTroughFiller";
 import VideoUpload from "./pages/VideoUpload";
 import ExperimentalTreatment from "./pages/ExperimentalTreatment";
 import TempleFiller from "./pages/TempleFiller";
+import NeckFillers from "./pages/NeckFillers";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -167,8 +168,10 @@ const App = () => (
             <Route path="/chin-filler" element={<ChinFiller />} />
             <Route path="/ear-lobe-rejuvenation" element={<EarLobeRejuvenation />} />
                <Route path="/jawline-filler" element={<JawlineFiller />} />
-               <Route path="/microneedling" element={<Microneedling />} />
-               <Route path="/temple-filler-london" element={<TempleFiller />} />
+                <Route path="/microneedling" element={<Microneedling />} />
+                <Route path="/temple-filler-london" element={<TempleFiller />} />
+                <Route path="/neck-fillers" element={<NeckFillers />} />
+                <Route path="/neck" element={<NeckFillers />} />
                
                {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
