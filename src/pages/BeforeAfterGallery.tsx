@@ -8,6 +8,25 @@ import CollageViewer from '@/components/CollageViewer';
 
 // Mixed and matched images from all treatment pages
 const allGalleryImages = [
+  // Nasolabial folds before/during/after series
+  {
+    src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png",
+    alt: "Nasolabial folds before treatment showing prominent smile lines",
+    caption: "Before: Visible nasolabial folds creating tired appearance",
+    category: "nasolabial-folds"
+  },
+  {
+    src: "/lovable-uploads/ad7bb9c5-b7d5-415f-bad6-3b790df6abc8.png",
+    alt: "During nasolabial folds dermal filler injection procedure",
+    caption: "During: Expert dermal filler injection technique",
+    category: "nasolabial-folds"
+  },
+  {
+    src: "/lovable-uploads/c4f1a760-712a-4b3e-84b5-b2534cf4dd77.png",
+    alt: "Nasolabial folds after treatment showing smooth results",
+    caption: "After: Natural, youthful appearance with smooth smile lines",
+    category: "nasolabial-folds"
+  },
   // Team credentials and education
   {
     src: "/lovable-uploads/38f9764b-fcca-429c-8900-8e7eaeaf55d8.png",
@@ -162,6 +181,7 @@ const categories = [
   { id: 'all', name: 'All', icon: '✨' },
   { id: 'team', name: 'Team', icon: '👥' },
   { id: 'dermal-fillers', name: 'Dermal Fillers', icon: '💫' },
+  { id: 'nasolabial-folds', name: 'Nasolabial Folds', icon: '😊' },
   { id: 'lip-treatments', name: 'Lip Treatments', icon: '💋' },
   { id: 'nose-jobs', name: 'Nose Jobs', icon: '👃' },
   { id: 'ear-treatments', name: 'Ear Treatments', icon: '👂' },

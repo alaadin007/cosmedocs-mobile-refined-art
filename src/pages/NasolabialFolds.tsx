@@ -21,19 +21,19 @@ const NasolabialFolds = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png", 
-      alt: "Nasolabial folds before and after dermal filler treatment", 
-      caption: "Dramatic smoothing of smile lines with natural-looking results" 
+      src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png", 
+      alt: "Nasolabial folds before treatment showing prominent smile lines", 
+      caption: "Before: Visible nasolabial folds creating tired appearance" 
     },
     { 
-      src: "/lovable-uploads/a4df5f90-dda5-48a2-9bd2-19728aa1a275.png", 
-      alt: "Nasolabial folds filler results", 
-      caption: "Restored facial harmony and youthful appearance" 
+      src: "/lovable-uploads/ad7bb9c5-b7d5-415f-bad6-3b790df6abc8.png", 
+      alt: "During nasolabial folds dermal filler injection procedure", 
+      caption: "During: Expert dermal filler injection technique" 
     },
     { 
-      src: "/lovable-uploads/64ee3f9e-7616-464d-962f-0a5ba656a82c.png", 
-      alt: "Smile lines treatment before after", 
-      caption: "Expert filler placement for seamless facial rejuvenation" 
+      src: "/lovable-uploads/c4f1a760-712a-4b3e-84b5-b2534cf4dd77.png", 
+      alt: "Nasolabial folds after treatment showing smooth results", 
+      caption: "After: Natural, youthful appearance with smooth smile lines" 
     }
   ];
 
