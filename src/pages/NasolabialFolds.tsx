@@ -12,19 +12,40 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 const NasolabialFolds = () => {
   const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Reduce nasolabial folds (smile lines) with expert dermal filler treatments in London. Smooth nose-to-mouth lines for natural, youthful results. Book consultation today.", "/nasolabial-folds");
-  const beforeAfterImages = [{
-    src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png",
-    alt: "Nasolabial folds before treatment showing prominent smile lines",
-    caption: "Before: Visible nasolabial folds creating tired appearance"
-  }, {
-    src: "/lovable-uploads/ad7bb9c5-b7d5-415f-bad6-3b790df6abc8.png",
-    alt: "During nasolabial folds dermal filler injection procedure",
-    caption: "During: Expert dermal filler injection technique"
-  }, {
-    src: "/lovable-uploads/c4f1a760-712a-4b3e-84b5-b2534cf4dd77.png",
-    alt: "Nasolabial folds after treatment showing smooth results",
-    caption: "After: Natural, youthful appearance with smooth smile lines"
-  }];
+  const treatmentCases = [
+    {
+      title: "Treatment Case 1",
+      images: [{
+        src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png",
+        alt: "Nasolabial folds before treatment showing prominent smile lines",
+        caption: "Before: Visible nasolabial folds creating tired appearance"
+      }, {
+        src: "/lovable-uploads/ad7bb9c5-b7d5-415f-bad6-3b790df6abc8.png",
+        alt: "During nasolabial folds dermal filler injection procedure",
+        caption: "During: Expert dermal filler injection technique"
+      }, {
+        src: "/lovable-uploads/c4f1a760-712a-4b3e-84b5-b2534cf4dd77.png",
+        alt: "Nasolabial folds after treatment showing smooth results",
+        caption: "After: Natural, youthful appearance with smooth smile lines"
+      }]
+    },
+    {
+      title: "Treatment Case 2",
+      images: [{
+        src: "/lovable-uploads/de38851a-ee5c-47ce-a020-12d33fc4fb0d.png",
+        alt: "Nasolabial folds before treatment showing deep smile lines",
+        caption: "Before: Deep nasolabial folds affecting facial expression"
+      }, {
+        src: "/lovable-uploads/f52bdef0-c07a-44dc-a09a-5d7c6f199af9.png",
+        alt: "During nasolabial folds dermal filler injection procedure",
+        caption: "During: Precise dermal filler injection technique"
+      }, {
+        src: "/lovable-uploads/b4f8ed85-0bfd-4f11-9831-1b4088d7df24.png",
+        alt: "Nasolabial folds after treatment showing smooth results",
+        caption: "After: Smooth, natural-looking nasolabial area"
+      }]
+    }
+  ];
   const faqs = [{
     question: "What are nasolabial folds?",
     answer: "Nasolabial folds, also known as smile lines or laugh lines, are the creases that run from the sides of the nose down to the corners of the mouth. They become more pronounced with age due to volume loss and decreased skin elasticity."
@@ -231,24 +252,44 @@ const NasolabialFolds = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {beforeAfterImages.map((image, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              scale: 0.9
-            }} whileInView={{
-              opacity: 1,
-              scale: 1
-            }} transition={{
-              duration: 0.5,
-              delay: index * 0.1
-            }} viewport={{
-              once: true
-            }} className="relative group cursor-pointer overflow-hidden rounded-lg">
-                  <img src={image.src} alt={image.alt} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-[2]" />
-                  <div className="absolute top-4 left-4 right-4 p-3 bg-black/80 backdrop-blur-sm rounded-lg">
-                    <p className="text-white text-sm font-medium">{image.caption}</p>
+            <div className="space-y-12">
+              {treatmentCases.map((treatmentCase, caseIndex) => (
+                <motion.div
+                  key={caseIndex}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: caseIndex * 0.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-6"
+                >
+                  <h3 className="text-2xl font-bold text-center text-purple-300">{treatmentCase.title}</h3>
+                  
+                  {/* Scrollable container */}
+                  <div className="overflow-x-auto pb-4">
+                    <div className="flex gap-6 min-w-max px-4">
+                      {treatmentCase.images.map((image, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                          className="relative group cursor-pointer overflow-hidden rounded-lg flex-shrink-0 w-80"
+                        >
+                          <img 
+                            src={image.src} 
+                            alt={image.alt} 
+                            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" 
+                          />
+                          <div className="absolute bottom-4 left-4 right-4 p-3 bg-black/80 backdrop-blur-sm rounded-lg">
+                            <p className="text-white text-sm font-medium">{image.caption}</p>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
-                </motion.div>)}
+                </motion.div>
+              ))}
             </div>
 
             <div className="text-center mt-12">
