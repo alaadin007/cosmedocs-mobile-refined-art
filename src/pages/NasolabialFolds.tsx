@@ -274,12 +274,11 @@ const NasolabialFolds = () => {
             </div>
 
             <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View Complete Gallery"
-                title="Nasolabial Folds Filler Results"
-                description="Comprehensive collection of our smile line treatments"
-              />
+              <Link to="/before-after-gallery">
+                <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-lg font-semibold">
+                  View Complete Gallery
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
