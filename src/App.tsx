@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import LipFillers from "./pages/LipFillers";
+import ForeheadFillers from "./pages/ForeheadFillers";
 import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
 import BeforeAfterGallery from "./pages/BeforeAfterGallery";
 import Membership from "./pages/Membership";
@@ -107,6 +108,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/thank-you" element={<ThankYou />} />
               <Route path="/lip-fillers" element={<LipFillers />} />
+              <Route path="/forehead-fillers" element={<ForeheadFillers />} />
               <Route path="/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
               <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
               <Route path="/membership" element={<Membership />} />
