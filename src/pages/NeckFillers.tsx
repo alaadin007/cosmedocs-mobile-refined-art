@@ -14,9 +14,9 @@ const NeckFillers = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/placeholder.svg", alt: "Neck fillers before and after showing reduced necklines", caption: "Smooth neck transformation with reduced horizontal lines" },
-    { src: "/placeholder.svg", alt: "Neck filler treatment reducing tech neck wrinkles", caption: "Before and after showing improved neck contour and reduced tech neck lines" },
-    { src: "/placeholder.svg", alt: "Neck skin improvement with dermal fillers", caption: "Enhanced neck elasticity and smoother skin texture" },
+    { src: "/lovable-uploads/bb3c489c-72d1-457d-b7f8-297e490cd639.png", alt: "Neck fillers before and after showing dramatic reduction in horizontal neck lines", caption: "Dramatic improvement in neck lines and skin texture with dermal fillers" },
+    { src: "/lovable-uploads/3ab5c4cb-18a8-491d-a52e-ad5ce159af83.png", alt: "Professional neck filler results showing smoother neck contour", caption: "Professional neck filler treatment results showing enhanced neck profile" },
+    { src: "/lovable-uploads/bb3c489c-72d1-457d-b7f8-297e490cd639.png", alt: "Before and after neck filler treatment reducing tech neck wrinkles", caption: "Real patient results: smoother neck with reduced horizontal lines" },
   ];
 
   const faqs = [
