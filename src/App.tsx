@@ -79,6 +79,7 @@ import ExperimentalTreatment from "./pages/ExperimentalTreatment";
 import TempleFiller from "./pages/TempleFiller";
 import NeckFillers from "./pages/NeckFillers";
 import HarleyStreetConsultingRooms from "./pages/HarleyStreetConsultingRooms";
+import PlasticSurgeon from "./pages/PlasticSurgeon";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -173,6 +174,7 @@ const App = () => (
                 <Route path="/neck-fillers" element={<NeckFillers />} />
                 <Route path="/neck" element={<NeckFillers />} />
                 <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
+                <Route path="/plastic-surgeon" element={<PlasticSurgeon />} />
                
                {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
