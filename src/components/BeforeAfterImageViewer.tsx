@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,6 +19,9 @@ interface BeforeAfterImageViewerProps {
   title?: string;
   description?: string;
   className?: string;
+  startIndex?: number;
+  isOpen?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 const BeforeAfterImageViewer = ({
@@ -26,10 +29,17 @@ const BeforeAfterImageViewer = ({
   triggerLabel = "See B/A",
   title = "Before & After",
   description = "Results achieved with our premium treatments",
-  className = ""
+  className = "",
+  startIndex = 0,
+  isOpen: externalIsOpen,
+  onOpenChange: externalOnOpenChange
 }: BeforeAfterImageViewerProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(startIndex);
+  const [internalIsOpen, setInternalIsOpen] = useState(false);
+  
+  // Use external control if provided, otherwise use internal state
+  const isOpen = externalIsOpen ?? internalIsOpen;
+  const setIsOpen = externalOnOpenChange ?? setInternalIsOpen;
   const isMobile = useIsMobile();
 
   const goToNext = () => {
@@ -48,14 +58,23 @@ const BeforeAfterImageViewer = ({
     }
   };
 
+  // Update currentIndex when startIndex changes and dialog opens
+  useEffect(() => {
+    if (isOpen && startIndex !== currentIndex) {
+      setCurrentIndex(startIndex);
+    }
+  }, [isOpen, startIndex, currentIndex]);
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>
-        <button className={`flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium ${className}`}>
-          <Eye className="h-4 w-4 mr-1" />
-          <span>{triggerLabel}</span>
-        </button>
-      </DialogTrigger>
+      {triggerLabel && (
+        <DialogTrigger asChild>
+          <button className={`flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium ${className}`}>
+            <Eye className="h-4 w-4 mr-1" />
+            <span>{triggerLabel}</span>
+          </button>
+        </DialogTrigger>
+      )}
       
       <DialogContent 
         className="bg-black border-gray-800 p-0 sm:max-w-md md:max-w-lg lg:max-w-2xl w-[95vw] md:h-auto max-h-[85vh] flex flex-col"

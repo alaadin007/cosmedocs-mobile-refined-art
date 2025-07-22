@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -13,10 +14,11 @@ const NeckFillers = () => {
     "/neck-fillers"
   );
 
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  
   const beforeAfterImages = [
     { src: "/lovable-uploads/bb3c489c-72d1-457d-b7f8-297e490cd639.png", alt: "Neck fillers before and after showing dramatic reduction in horizontal neck lines", caption: "Dramatic improvement in neck lines and skin texture with dermal fillers" },
     { src: "/lovable-uploads/3ab5c4cb-18a8-491d-a52e-ad5ce159af83.png", alt: "Professional neck filler results showing smoother neck contour", caption: "Professional neck filler treatment results showing enhanced neck profile" },
-    { src: "/lovable-uploads/bb3c489c-72d1-457d-b7f8-297e490cd639.png", alt: "Before and after neck filler treatment reducing tech neck wrinkles", caption: "Real patient results: smoother neck with reduced horizontal lines" },
   ];
 
   const faqs = [
@@ -164,7 +166,7 @@ const NeckFillers = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {beforeAfterImages.map((image, index) => (
                 <motion.div
                   key={index}
@@ -173,13 +175,20 @@ const NeckFillers = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="relative group cursor-pointer"
+                  onClick={() => setSelectedImageIndex(index)}
                 >
                   <img 
                     src={image.src} 
                     alt={image.alt}
                     className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -192,6 +201,15 @@ const NeckFillers = () => {
                 description="Comprehensive gallery of our neck enhancement treatments"
               />
             </div>
+
+            <BeforeAfterImageViewer 
+              images={beforeAfterImages}
+              isOpen={selectedImageIndex !== null}
+              onOpenChange={(open) => !open && setSelectedImageIndex(null)}
+              startIndex={selectedImageIndex || 0}
+              title="Neck Filler Results Gallery"
+              description="Professional neck enhancement treatments"
+            />
           </div>
         </section>
 
