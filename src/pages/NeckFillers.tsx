@@ -26,7 +26,7 @@ const NeckFillers = () => {
     },
     {
       question: "Are neck fillers painful?",
-      answer: "We use topical anaesthetic to minimize discomfort during the procedure. Most clients describe minimal pain during neck filler injections, with the entire treatment being well-tolerated."
+      answer: "Most patients report minimal discomfort during neck filler injections. We use topical numbing cream or ice packs to minimise any potential pain during the procedure, ensuring a comfortable experience."
     },
     {
       question: "Can neck fillers treat tech neck wrinkles?",
@@ -38,11 +38,15 @@ const NeckFillers = () => {
     },
     {
       question: "Can neck fillers help with sagging skin?",
-      answer: "Neck fillers are effective for mild to moderate skin laxity and sagging. For more advanced cases like pronounced turkey neck, additional treatments may be recommended alongside fillers."
+      answer: "Neck fillers are effective for mild to moderate skin laxity and sagging. For more advanced cases like pronounced turkey neck, additional treatments such as a neck lift surgery or skin-tightening procedures might be more appropriate."
     },
     {
       question: "What issues can neck fillers address?",
-      answer: "Neck fillers can treat horizontal neck lines, tech neck wrinkles, mild sagging skin, loss of volume and elasticity, and overall improvement of neck contour and texture."
+      answer: "Neck fillers can address horizontal neck lines (necklace lines), tech neck wrinkles caused by device use, loose skin and mild sagging, wrinkles and creases in the neck area, and loss of volume and elasticity in the neck skin."
+    },
+    {
+      question: "Who is a good candidate for neck fillers?",
+      answer: "Neck fillers are ideal for patients with mild to moderate neck wrinkles, people experiencing 'tech neck', those with crepey or thin neck skin, individuals with sun-damaged neck skin, patients with slight skin laxity, and anyone seeking a non-surgical option for neck enhancement."
     },
     {
       question: "How much do neck fillers cost?",
@@ -50,7 +54,23 @@ const NeckFillers = () => {
     },
     {
       question: "When will I see results from neck fillers?",
-      answer: "Results are visible immediately after treatment, with optimal results developing within 1-2 weeks once any swelling subsides. The hyaluronic acid continues to integrate naturally with your tissues."
+      answer: "Results are typically visible immediately after the procedure. However, minor swelling may temporarily obscure final results. Once swelling subsides—usually within a few days to a week—you'll notice a rejuvenated, smoother neck profile. Full results become apparent within 1-2 weeks."
+    },
+    {
+      question: "What are the risks of neck fillers?",
+      answer: "While neck filler injections are generally safe, potential risks include infection, allergic reaction, asymmetry, lumpiness, and migration of the filler. Our aesthetic doctor will thoroughly discuss these risks before your procedure."
+    },
+    {
+      question: "Can neck fillers be reversed?",
+      answer: "Yes, hyaluronic acid fillers used for neck injections are reversible. If you're not satisfied with results or encounter complications, the filler can be dissolved using hyaluronidase, ensuring flexibility and peace of mind."
+    },
+    {
+      question: "What treatments can be combined with neck fillers?",
+      answer: "Neck fillers work excellently with Botox for muscle relaxation, skin boosters and polynucleotides for hydration, Profhilo for enhanced skin quality, and PDO threads for additional lifting effects."
+    },
+    {
+      question: "What should I do before my neck filler treatment?",
+      answer: "Avoid blood-thinning agents like aspirin for two weeks before treatment, wean off retinoid products two days prior, stay out of the sun to minimize complications, and follow all pre-treatment instructions provided."
     }
   ];
 
@@ -175,6 +195,148 @@ const NeckFillers = () => {
           </div>
         </section>
 
+        {/* Treatment Overview */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">Neckline Filler Treatment</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+                Neck fillers, also known as neck injections or neck contouring, are a non-surgical cosmetic 
+                procedure designed to improve the overall look of the neck. This treatment targets neck wrinkles, 
+                neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen 
+                and elastin production.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* What Causes Neck Wrinkles */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Causes Neck Wrinkles?</h3>
+                <p className="text-gray-300 mb-6">
+                  Necklines, often referred to as neck wrinkles, are creases or folds that develop on the neck skin. 
+                  These lines can appear as horizontal neck lines or vertical neck lines, varying in depth and severity.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Ageing</h4>
+                      <p className="text-gray-300 text-sm">Natural loss of collagen and elasticity</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Sun Exposure</h4>
+                      <p className="text-gray-300 text-sm">Damages neck skin, accelerating wrinkle formation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Tech Neck</h4>
+                      <p className="text-gray-300 text-sm">Daily actions like looking down at devices lead to tech neck lines</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Genetics & Lifestyle</h4>
+                      <p className="text-gray-300 text-sm">Predisposition to lines and smoking depleting skin elasticity</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* How Dermal Fillers Help */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">How Dermal Fillers Help</h3>
+                <p className="text-gray-300 mb-6">
+                  Dermal fillers provide an effective solution for treating neck wrinkles and neck lines. 
+                  Using hyaluronic acid fillers, these treatments restore hydration and stimulate collagen production.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Replenish lost volume in the neck area</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Smooth out horizontal and vertical neck lines</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Improve neck skin texture and elasticity</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Reduce tech neck wrinkles and sagging skin</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Benefits */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Benefits of Neck Fillers</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Experience the transformative benefits of professional neck filler treatment at Cosmedocs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                "Smooths Horizontal Neck Lines",
+                "Enhances Skin Quality",
+                "Non-Invasive Rejuvenation",
+                "Improves Neck Contour",
+                "Natural-Looking Results",
+                "Long-Lasting Effects"
+              ].map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-black rounded-lg p-6 text-center border border-gray-800"
+                >
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
+                  </div>
+                  <h3 className="text-white font-semibold">{benefit}</h3>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Treatment Summary */}
         <section className="py-20">
           <div className="page-container">
@@ -185,23 +347,27 @@ const NeckFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Neck Filler Treatment Summary</h2>
+                <h2 className="text-3xl font-bold mb-6">Treatment Summary</h2>
                 <div className="space-y-6">
                   <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
+                    <h3 className="text-xl font-semibold mb-2">Procedure Time</h3>
                     <p className="text-gray-300">30-40 minutes including consultation</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-6">
                     <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
-                    <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
+                    <p className="text-gray-300">1-2 weeks visible | 6-12 months lasting</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
+                    <h3 className="text-xl font-semibold mb-2">Full Recovery</h3>
                     <p className="text-gray-300">No downtime, immediate return to work</p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Anaesthesia</h3>
-                    <p className="text-gray-300">Local anaesthetic for comfort</p>
+                    <h3 className="text-xl font-semibold mb-2">Anesthetic</h3>
+                    <p className="text-gray-300">Local anaesthetic for maximum comfort</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Risks & Complications</h3>
+                    <p className="text-gray-300">Minimal: Allergic reactions, bruises, swelling, filler migration, asymmetry</p>
                   </div>
                 </div>
               </motion.div>
