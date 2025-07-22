@@ -83,6 +83,7 @@ import HarleyStreetConsultingRooms from "./pages/HarleyStreetConsultingRooms";
 import PlasticSurgeon from "./pages/PlasticSurgeon";
 import Dermatology from "./pages/Dermatology";
 import AestheticTraining from "./pages/AestheticTraining";
+import HairTransplantSurgeon from "./pages/HairTransplantSurgeon";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -181,6 +182,7 @@ const App = () => (
                  <Route path="/plastic-surgeon" element={<PlasticSurgeon />} />
                  <Route path="/dermatology" element={<Dermatology />} />
                  <Route path="/aesthetic-training" element={<AestheticTraining />} />
+                 <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
                
                {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />

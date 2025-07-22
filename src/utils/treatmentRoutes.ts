@@ -35,6 +35,7 @@ const TREATMENT_ROUTES = [
   '/cheek-filler',  // ✅ Added the missing Cheek Filler page
   '/chin-filler',   // ✅ Added new Chin Filler page
   '/ear-lobe-rejuvenation', // ✅ Added new Ear Lobe Rejuvenation page
+  '/hair-transplant-surgeon', // ✅ Added Hair Transplant Surgeon page
   
   // Advanced/specialized treatments
   '/advanced-consultation',
