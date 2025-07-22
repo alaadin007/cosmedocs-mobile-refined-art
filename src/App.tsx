@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -79,6 +78,7 @@ import VideoUpload from "./pages/VideoUpload";
 import ExperimentalTreatment from "./pages/ExperimentalTreatment";
 import TempleFiller from "./pages/TempleFiller";
 import NeckFillers from "./pages/NeckFillers";
+import HarleyStreetConsultingRooms from "./pages/HarleyStreetConsultingRooms";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -172,6 +172,7 @@ const App = () => (
                 <Route path="/temple-filler-london" element={<TempleFiller />} />
                 <Route path="/neck-fillers" element={<NeckFillers />} />
                 <Route path="/neck" element={<NeckFillers />} />
+                <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
                
                {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />

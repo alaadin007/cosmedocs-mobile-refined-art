@@ -1,3 +1,4 @@
+
 interface SitemapUrl {
   loc: string;
   lastmod: string;
@@ -38,10 +39,12 @@ function extractTreatmentRoutes(): string[] {
       
       // Filler treatments
       'marionette-lines', 'nasolabial-folds', 'lip-filler-dissolve', 'cheek-filler',
+      'chin-filler', 'ear-lobe-rejuvenation', 'jawline-filler', 'temple-filler-london',
+      'tear-trough-filler', 'neck-fillers',
       
       // Advanced/specialized treatments
       'advanced-consultation', 'clinical-concepts-to-flawless-skin', 'medical-anal-bleaching',
-      'peel-to-reveal'
+      'peel-to-reveal', 'chemical-peel', 'prescription-skin-care', 'microneedling'
     ];
 
     // Convert to full paths and return unique routes
@@ -84,13 +87,15 @@ const pageRoutes = [
   '/treatments-summary-japanese',
   '/team',
   '/before-after-gallery',
-  '/membership'
+  '/membership',
+  '/harley-street-consulting-rooms'
 ];
 
 // Function to determine priority based on route importance
 function getPriority(route: string): number {
   if (route === '/') return 1.0;
   if (['/treatments', '/lip-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', '/pdo-threads'].includes(route)) return 0.9;
+  if (route === '/harley-street-consulting-rooms') return 0.8;
   if (route.includes('botox') || route.includes('filler')) return 0.8;
   if (route.includes('blog') || route.includes('treatment')) return 0.8;
   if (locationRoutes.includes(route)) return 0.7;
