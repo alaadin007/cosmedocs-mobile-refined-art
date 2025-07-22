@@ -8,6 +8,8 @@ import PopularTreatments from "@/components/PopularTreatments";
 import AnimatedDots from "@/components/AnimatedDots";
 import LiquidGlassFacialAssessment from "@/components/LiquidGlassFacialAssessment";
 import LiquidGlassAllTreatments from "@/components/LiquidGlassAllTreatments";
+import CosmeDocsAI from "@/components/CosmeDocs AI";
+import SkinAnalysisButton from "@/components/SkinAnalysisButton";
 
 const Home = () => {
   const [isFacialAssessmentOpen, setIsFacialAssessmentOpen] = useState(false);
@@ -121,6 +123,39 @@ const Home = () => {
                   </p>
                   <div className="text-blue-400 font-medium">View Assessment Details →</div>
                 </motion.button>
+              </motion.div>
+
+              {/* Book Consultation Section */}
+              <motion.div 
+                className="mt-12 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Button 
+                  asChild
+                  className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300"
+                >
+                  <a 
+                    href="tel:03330551503"
+                    className="inline-block"
+                  >
+                    Book Consultation
+                  </a>
+                </Button>
+              </motion.div>
+
+              {/* AI Assistant & Skin Analysis Section */}
+              <motion.div 
+                className="mt-8 flex justify-center items-center gap-4"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <CosmeDocsAI />
+                <SkinAnalysisButton />
               </motion.div>
             </div>
           </div>
