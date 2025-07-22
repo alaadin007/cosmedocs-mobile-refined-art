@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import AutoLinkedText from "@/components/AutoLinkedText";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const AestheticTraining = () => {
   const seoData = generateSEOMetadata(
@@ -275,6 +276,101 @@ const AestheticTraining = () => {
                     allowFullScreen
                   ></iframe>
                 </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Student Results & Skills */}
+        <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-yellow-50">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Student Results & Clinical Skills</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Witness the exceptional results achieved by our fellowship students during their live patient training. 
+                These transformations showcase the precision and artistry developed through our comprehensive programme.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <h3 className="text-2xl font-bold">Excellence in Practice</h3>
+                <p className="text-muted-foreground">
+                  Our fellowship students work directly with real patients under expert supervision, developing 
+                  the skills and confidence that only come from authentic clinical experience. These before-and-after 
+                  results demonstrate the quality of work our students achieve during their training.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white rounded-lg p-4 shadow-sm border">
+                    <div className="text-2xl font-bold text-purple-600 mb-1">84+</div>
+                    <div className="text-sm text-muted-foreground">Clinical Hours</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4 shadow-sm border">
+                    <div className="text-2xl font-bold text-purple-600 mb-1">100%</div>
+                    <div className="text-sm text-muted-foreground">Real Patients</div>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground italic">
+                  "Our aesthetics is invisible art • Bold • Natural • Always Your Way"
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <BeforeAfterImageViewer
+                  images={[
+                    {
+                      src: "/lovable-uploads/25d47872-3be5-4faa-9b90-1f3f4cb4ac51.png",
+                      alt: "Fellowship student performing precise injectable treatment with expert supervision",
+                      caption: "Student demonstrating advanced injection technique during live patient training"
+                    },
+                    {
+                      src: "/lovable-uploads/0468aaae-f777-4be0-a0b9-a51f44a46d2e.png",
+                      alt: "Comprehensive before and after results showing natural enhancement achieved by fellowship student",
+                      caption: "Multi-angle assessment showing natural, balanced results achieved during training"
+                    },
+                    {
+                      src: "/lovable-uploads/9eb0c6e7-ea1b-4de2-b5c2-9181159319da.png",
+                      alt: "Before and after facial enhancement showing subtle natural improvement by fellowship trainee",
+                      caption: "Subtle facial enhancement demonstrating invisible art philosophy - natural results"
+                    },
+                    {
+                      src: "/lovable-uploads/e91e0eaa-62bb-43d4-b259-6bc94d965711.png",
+                      alt: "Side profile before and after showing skilled non-surgical enhancement by student",
+                      caption: "Profile enhancement showcasing precision and skill developed through mentorship"
+                    },
+                    {
+                      src: "/lovable-uploads/580a1722-2a3f-4cc7-b193-dada72f9a582.png",
+                      alt: "Before and after nasal enhancement showing expert technique learned during fellowship",
+                      caption: "Non-surgical nose refinement demonstrating advanced technique mastery"
+                    },
+                    {
+                      src: "/lovable-uploads/eaa3e1b9-b337-4518-a4ce-58818e62334f.png",
+                      alt: "Dorsal correction before and after showing fellowship student's developing expertise",
+                      caption: "Dorsal correction - precision technique learned through hands-on training"
+                    }
+                  ]}
+                  triggerLabel="View Student Results Gallery"
+                  title="Fellowship Student Clinical Results"
+                  description="Real results achieved by students during their live patient training"
+                />
               </motion.div>
             </div>
           </div>
