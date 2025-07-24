@@ -9,10 +9,10 @@ export function useAutoSitemap() {
     // Only run in development or when explicitly needed
     if (import.meta.env.DEV || localStorage.getItem('forceAutoSitemap')) {
       try {
-        // Import and trigger sitemap regeneration
-        import('../utils/routeAutoDetection').then(({ regenerateSitemapFromRoutes }) => {
-          console.log('🔄 Auto-updating sitemap with current routes...');
-          regenerateSitemapFromRoutes();
+        // Import and trigger sitemap update notification
+        import('../utils/routeAutoDetection').then(({ triggerSitemapUpdate }) => {
+          console.log('🔄 Auto-checking sitemap with current routes...');
+          triggerSitemapUpdate();
         });
       } catch (error) {
         console.warn('Could not auto-update sitemap:', error);
@@ -28,9 +28,26 @@ export function useAutoSitemap() {
 export function forceSitemapUpdate() {
   localStorage.setItem('forceAutoSitemap', 'true');
   
-  import('../utils/routeAutoDetection').then(({ regenerateSitemapFromRoutes }) => {
+  import('../utils/routeAutoDetection').then(({ triggerSitemapUpdate }) => {
     console.log('🔄 Forcing sitemap update...');
-    regenerateSitemapFromRoutes();
+    triggerSitemapUpdate();
     localStorage.removeItem('forceAutoSitemap');
+  });
+}
+
+/**
+ * Helper functions to manage routes in the sitemap
+ */
+export function addPageToSitemap(path: string, category: 'page' | 'treatment' | 'blog' | 'location') {
+  import('../utils/routeAutoDetection').then(({ addRoute, triggerSitemapUpdate }) => {
+    addRoute(path, category);
+    triggerSitemapUpdate();
+  });
+}
+
+export function removePageFromSitemap(path: string, category?: 'page' | 'treatment' | 'blog' | 'location') {
+  import('../utils/routeAutoDetection').then(({ removeRoute, triggerSitemapUpdate }) => {
+    removeRoute(path, category);
+    triggerSitemapUpdate();
   });
 }
