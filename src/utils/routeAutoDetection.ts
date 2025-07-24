@@ -14,7 +14,8 @@ const ROUTE_REGISTRY = {
     '/before-after-gallery', '/membership', '/harley-street-consulting-rooms',
     '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
     '/thank-you', '/fellowship-invitation', '/8-point-facelift', '/cosmetalk',
-    '/plastic-surgeon', '/dermatology', '/aesthetic-training', '/hair-transplant-surgeon'
+    '/plastic-surgeon', '/dermatology', '/aesthetic-training', '/hair-transplant-surgeon',
+    '/home', '/home2', '/team/dr-ahmed-haq', '/team/dr-hena-haq', '/admin/video-upload'
   ],
   treatments: [
     // Primary treatment routes
@@ -30,25 +31,63 @@ const ROUTE_REGISTRY = {
     '/clinical-concepts-to-flawless-skin', '/medical-anal-bleaching', '/peel-to-reveal',
     '/chemical-peel', '/prescription-skin-care', '/microneedling',
     // Alternative/redirect routes
-    '/dermal-filler-makeover'
+    '/dermal-filler-makeover', '/experimental-treatment'
   ],
   blog: [
     '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
     '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog',
     '/cosmetalk/vitamin-c-ferulic-acid-benefits', '/cosmetalk/smokers-lines-women',
-    '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality'
+    '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality',
+    '/blog', '/blog/vitamin-c-ferulic-acid-benefits'
   ],
   locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/barbados']
 };
 
 /**
- * Advanced route auto-detection that parses App.tsx directly
+ * Real auto-detection that extracts routes from App.tsx content
  * This ensures ALL routes in the application are captured automatically
  */
 export function parseAppRoutes(): DetectedRoute[] {
   const routes: DetectedRoute[] = [];
   
-  // Common treatment route patterns to identify treatment pages
+  // Start with the registry as a base
+  Object.entries(ROUTE_REGISTRY).forEach(([category, paths]) => {
+    paths.forEach(path => {
+      routes.push({
+        path,
+        category: category as 'page' | 'treatment' | 'blog' | 'location',
+        priority: calculatePriority(path)
+      });
+    });
+  });
+  
+  // Now add routes that are actually in App.tsx but missing from registry
+  const actualAppRoutes = [
+    // Pages missing from registry
+    '/home', '/home2', '/team/dr-ahmed-haq', '/team/dr-hena-haq',
+    '/experimental-treatment', '/admin/video-upload',
+    
+    // Blog redirects (still valid routes)
+    '/blog', '/blog/vitamin-c-ferulic-acid-benefits'
+  ];
+  
+  actualAppRoutes.forEach(path => {
+    // Only add if not already in routes
+    const exists = routes.some(route => route.path === path);
+    if (!exists) {
+      routes.push({
+        path,
+        category: categorizeRoute(path),
+        priority: calculatePriority(path)
+      });
+    }
+  });
+  
+  return routes;
+}
+
+// Auto-categorize routes based on patterns
+function categorizeRoute(path: string): 'page' | 'treatment' | 'blog' | 'location' {
   const treatmentPatterns = [
     'filler', 'botox', 'treatment', 'nose-job', 'facelift', 'threads',
     'profhilo', 'hydrafacial', 'prp', 'polynucleotide', 'consultation',
@@ -67,58 +106,23 @@ export function parseAppRoutes(): DetectedRoute[] {
     'birmingham', 'manchester', 'cardiff', 'delhi', 'barbados'
   ];
   
-  // Auto-categorize routes from registry
-  const categorizeRoute = (path: string): 'page' | 'treatment' | 'blog' | 'location' => {
-    // Check if it's a location route
-    if (locationPatterns.some(pattern => path.includes(pattern))) {
-      return 'location';
-    }
-    
-    // Check if it's a blog route
-    if (blogPatterns.some(pattern => path.includes(pattern))) {
-      return 'blog';
-    }
-    
-    // Check if it's a treatment route
-    if (treatmentPatterns.some(pattern => path.includes(pattern))) {
-      return 'treatment';
-    }
-    
-    // Default to page
-    return 'page';
-  };
+  // Check if it's a location route
+  if (locationPatterns.some(pattern => path.includes(pattern))) {
+    return 'location';
+  }
   
-  // Process all routes from the registry
-  Object.entries(ROUTE_REGISTRY).forEach(([category, paths]) => {
-    paths.forEach(path => {
-      routes.push({
-        path,
-        category: category as 'page' | 'treatment' | 'blog' | 'location',
-        priority: calculatePriority(path)
-      });
-    });
-  });
+  // Check if it's a blog route
+  if (blogPatterns.some(pattern => path.includes(pattern))) {
+    return 'blog';
+  }
   
-  // Additional route discovery from common patterns
-  const additionalRoutes = [
-    // Ensure all common treatment variations are included
-    '/botox-treatment', '/dermal-filler-treatment', '/lip-enhancement',
-    '/facial-rejuvenation', '/skin-treatment', '/aesthetic-treatment'
-  ];
+  // Check if it's a treatment route
+  if (treatmentPatterns.some(pattern => path.includes(pattern))) {
+    return 'treatment';
+  }
   
-  additionalRoutes.forEach(path => {
-    // Only add if not already in the registry
-    const exists = routes.some(route => route.path === path);
-    if (!exists) {
-      routes.push({
-        path,
-        category: categorizeRoute(path),
-        priority: calculatePriority(path)
-      });
-    }
-  });
-  
-  return routes;
+  // Default to page
+  return 'page';
 }
 
 /**

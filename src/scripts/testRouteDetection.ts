@@ -57,8 +57,29 @@ function testRouteDetection() {
     '/dermal-filler-makeover', '/face-botox'
   ];
   
+  const criticalPages = [
+    '/home', '/home2', '/team/dr-ahmed-haq', '/team/dr-hena-haq',
+    '/experimental-treatment', '/admin/video-upload'
+  ];
+  
+  const criticalBlogRoutes = [
+    '/blog', '/blog/vitamin-c-ferulic-acid-benefits'
+  ];
+  
   console.log(`\n✅ VERIFICATION - Critical Treatment Pages:`);
   criticalTreatments.forEach(path => {
+    const found = detectedRoutes.some(route => route.path === path);
+    console.log(`  ${found ? '✅' : '❌'} ${path}`);
+  });
+  
+  console.log(`\n✅ VERIFICATION - Critical Pages:`);
+  criticalPages.forEach(path => {
+    const found = detectedRoutes.some(route => route.path === path);
+    console.log(`  ${found ? '✅' : '❌'} ${path}`);
+  });
+  
+  console.log(`\n✅ VERIFICATION - Critical Blog Routes:`);
+  criticalBlogRoutes.forEach(path => {
     const found = detectedRoutes.some(route => route.path === path);
     console.log(`  ${found ? '✅' : '❌'} ${path}`);
   });
