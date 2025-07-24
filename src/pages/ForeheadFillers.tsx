@@ -17,8 +17,9 @@ const ForeheadFillers = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/placeholder.svg", alt: "Forehead fillers before and after showing reduction of forehead lines", caption: "Smooth forehead transformation with reduced lines and enhanced contour" },
-    { src: "/placeholder.svg", alt: "Forehead filler treatment for indentations", caption: "Before and after showing improved forehead symmetry and volume restoration" },
+    { src: "/lovable-uploads/7e486f38-8f56-40fa-9aea-f86747fd0c21.png", alt: "Forehead fillers before and after showing reduction of forehead lines and wrinkles", caption: "Dramatic reduction in forehead lines with natural-looking smoothing results" },
+    { src: "/lovable-uploads/31b1d4a0-b008-41ed-b88f-e2351fccab88.png", alt: "Forehead filler treatment before and after comparison", caption: "Enhanced forehead contour and volume restoration with premium dermal fillers" },
+    { src: "/lovable-uploads/f00e769d-0a61-4346-afb5-5c4f46b0a591.png", alt: "Forehead depression filled showing before and after transformation", caption: "Forehead depression successfully filled, creating smooth, natural-looking results" },
   ];
 
   const faqs = [
