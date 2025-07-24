@@ -16,80 +16,76 @@ interface SitemapData {
 const baseUrl = 'https://www.cosmedocs.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-// Auto-detect treatment routes using the centralized treatment registry
-// This ensures any new treatment pages are automatically included in sitemaps
-function extractTreatmentRoutes(): string[] {
+// Auto-detect ALL routes directly from App.tsx routing configuration
+// This ensures the sitemap is always in sync with actual application routes
+function extractAllRoutes(): { pages: string[], treatments: string[], blog: string[], locations: string[] } {
   try {
-    // Import treatment routes from the centralized registry
-    const { getAllTreatmentRoutes } = require('./treatmentRoutes');
-    return getAllTreatmentRoutes();
-  } catch (error) {
-    console.warn('Could not load treatment routes from registry, using fallback');
+    // Import the auto-detection utility
+    const { autoDetectRoutes } = require('./routeAutoDetection');
+    const detectedRoutes = autoDetectRoutes();
     
-    // Fallback: Define treatment-related route patterns 
-    const treatmentPatterns = [
-      // Core aesthetic treatments
-      'lip-fillers', 'non-surgical-nose-job', 'non-surgical-facelift', 'pdo-threads',
-      'dermal-fillers', 'polynucleotide-treatment', 'profhilo-treatment',
-      'hydrafacial', 'prp-treatment',
-      
-      // Botox treatments
-      'advanced-upper-face-botox', 'lower-face-botox', 'face-botox-areas', 'nefertiti-botox-facelift',
-      'trigger-point-botox', 'gummy-smile-botox', 'chin-botox', 'botox-calf-reduction',
-      
-      // Filler treatments
-      'marionette-lines', 'nasolabial-folds', 'lip-filler-dissolve', 'cheek-filler',
-      'chin-filler', 'ear-lobe-rejuvenation', 'jawline-filler', 'temple-filler-london',
-      'tear-trough-filler', 'neck-fillers',
-      
-      // Advanced/specialized treatments
-      'advanced-consultation', 'clinical-concepts-to-flawless-skin', 'medical-anal-bleaching',
-      'peel-to-reveal', 'chemical-peel', 'prescription-skin-care', 'microneedling'
-    ];
-
-    // Convert to full paths and return unique routes
-    const routes = treatmentPatterns.map(pattern => `/${pattern}`);
-    return [...new Set(routes)].sort();
+    // Categorize routes automatically
+    const categorized = {
+      pages: [] as string[],
+      treatments: [] as string[],
+      blog: [] as string[],
+      locations: [] as string[]
+    };
+    
+    detectedRoutes.forEach(route => {
+      switch (route.category) {
+        case 'page':
+          categorized.pages.push(route.path);
+          break;
+        case 'treatment':
+          categorized.treatments.push(route.path);
+          break;
+        case 'blog':
+          categorized.blog.push(route.path);
+          break;
+        case 'location':
+          categorized.locations.push(route.path);
+          break;
+      }
+    });
+    
+    return categorized;
+  } catch (error) {
+    console.warn('Could not auto-detect routes from App.tsx, using fallback');
+    
+    // Fallback to manual route definitions
+    return {
+      pages: [
+        '/', '/treatments', '/about', '/contact', '/partners',
+        '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
+        '/team', '/before-after-gallery', '/membership', '/harley-street-consulting-rooms'
+      ],
+      treatments: [
+        '/lip-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', '/pdo-threads',
+        '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
+        '/hydrafacial', '/prp-treatment', '/advanced-upper-face-botox', '/lower-face-botox',
+        '/face-botox-areas', '/nefertiti-botox-facelift', '/trigger-point-botox', 
+        '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction', '/marionette-lines',
+        '/nasolabial-folds', '/lip-filler-dissolve', '/cheek-filler', '/chin-filler',
+        '/ear-lobe-rejuvenation', '/jawline-filler', '/temple-filler-london',
+        '/tear-trough-filler', '/neck-fillers', '/forehead-fillers', '/advanced-consultation',
+        '/clinical-concepts-to-flawless-skin', '/medical-anal-bleaching', '/peel-to-reveal',
+        '/chemical-peel', '/prescription-skin-care', '/microneedling'
+      ],
+      blog: [
+        '/blog/non-surgical-nose-job-evolution', '/blog/pdo-threads-comprehensive-guide',
+        '/blog/aesthetic-maintenance-cost-guide', '/blog/chinese-london-aesthetics-guide',
+        '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
+        '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog'
+      ],
+      locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/barbados']
+    };
   }
 }
 
-// Get treatment routes automatically
-const treatmentRoutes = extractTreatmentRoutes();
-
-const blogRoutes = [
-  '/blog/non-surgical-nose-job-evolution',
-  '/blog/pdo-threads-comprehensive-guide', 
-  '/blog/aesthetic-maintenance-cost-guide',
-  '/blog/chinese-london-aesthetics-guide',
-  '/long-term-aesthetic-care-blog',
-  '/aesthetic-maintenance-cost-blog',
-  '/pdo-threads-blog',
-  '/non-surgical-nose-job-blog',
-  '/chinese-london-aesthetics-blog'
-];
-
-const locationRoutes = [
-  '/birmingham',
-  '/manchester', 
-  '/cardiff',
-  '/delhi',
-  '/barbados'
-];
-
-const pageRoutes = [
-  '/',
-  '/treatments',
-  '/about',
-  '/contact',
-  '/partners',
-  '/treatments-summary-arabic',
-  '/treatments-summary-chinese',
-  '/treatments-summary-japanese',
-  '/team',
-  '/before-after-gallery',
-  '/membership',
-  '/harley-street-consulting-rooms'
-];
+// Get all routes automatically from App.tsx
+const allRoutes = extractAllRoutes();
+const { pages: pageRoutes, treatments: treatmentRoutes, blog: blogRoutes, locations: locationRoutes } = allRoutes;
 
 // Function to determine priority based on route importance
 function getPriority(route: string): number {
