@@ -295,6 +295,171 @@ const ForeheadFillers = () => {
           </div>
         </section>
 
+        {/* Forehead Fillers Indications */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">Forehead Fillers Indications</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+                Forehead fillers are indicated for various aesthetic concerns and functional improvements. Understanding when forehead fillers are the right choice helps ensure optimal treatment outcomes.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">Primary Indications</h3>
+                <div className="space-y-4">
+                  {[
+                    "Static forehead wrinkles and lines",
+                    "Deep horizontal forehead furrows",
+                    "Forehead volume loss due to ageing",
+                    "Congenital forehead indentations",
+                    "Post-traumatic forehead depressions",
+                    "Asymmetrical forehead contours",
+                    "Hollow or sunken forehead appearance"
+                  ].map((indication, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">{indication}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">Secondary Indications</h3>
+                <div className="space-y-4">
+                  {[
+                    "Enhancement of facial proportions",
+                    "Improvement of brow position",
+                    "Correction of forehead scarring",
+                    "Balancing upper facial features",
+                    "Creating smoother facial contours",
+                    "Addressing genetic forehead irregularities",
+                    "Restoring youthful forehead projection"
+                  ].map((indication, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">{indication}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* What Is Forehead Indentation (Concavity) */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">What Is Forehead Indentation (Concavity)?</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+                Forehead indentation, or concavity, refers to areas of the forehead that appear sunken, hollow, or depressed compared to the surrounding areas. This condition can significantly impact facial harmony and self-confidence.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6 border border-gray-800"
+              >
+                <h3 className="text-xl font-bold mb-4 text-purple-300">Causes of Forehead Indentation</h3>
+                <div className="space-y-3">
+                  {[
+                    "Natural ageing process",
+                    "Loss of subcutaneous fat",
+                    "Genetic predisposition",
+                    "Previous trauma or injury",
+                    "Muscle atrophy over time",
+                    "Bone resorption with age"
+                  ].map((cause, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">{cause}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6 border border-gray-800"
+              >
+                <h3 className="text-xl font-bold mb-4 text-purple-300">Types of Forehead Concavity</h3>
+                <div className="space-y-3">
+                  {[
+                    "Temporal hollowing",
+                    "Central forehead depression",
+                    "Lateral forehead indentations",
+                    "Post-traumatic depressions",
+                    "Congenital forehead asymmetry",
+                    "Age-related volume loss"
+                  ].map((type, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">{type}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6 border border-gray-800"
+              >
+                <h3 className="text-xl font-bold mb-4 text-purple-300">Treatment Benefits</h3>
+                <div className="space-y-3">
+                  {[
+                    "Restored facial symmetry",
+                    "Enhanced facial contours",
+                    "Improved self-confidence",
+                    "Natural-looking results",
+                    "Non-surgical approach",
+                    "Immediate improvement"
+                  ].map((benefit, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">{benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Forehead Fillers */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -346,6 +511,166 @@ const ForeheadFillers = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Botox vs. Fillers for the Forehead */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">Botox vs. Fillers for the Forehead: Which One Is Right for You?</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+                Understanding the differences between Botox and fillers helps you make an informed decision about the best treatment for your specific forehead concerns and aesthetic goals.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Botox for Forehead */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-8 border border-gray-800"
+              >
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-blue-300">Botox Treatment</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-bold text-white mb-3">How It Works</h4>
+                    <p className="text-gray-300 text-sm">
+                      Botox temporarily relaxes forehead muscles that cause dynamic wrinkles, preventing the formation of lines when you make facial expressions.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-white mb-3">Best For</h4>
+                    <div className="space-y-2">
+                      {[
+                        "Dynamic forehead wrinkles",
+                        "Expression lines",
+                        "Prevention of new wrinkles",
+                        "Horizontal forehead lines",
+                        "Muscle-related wrinkles"
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-start space-x-2">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2"></div>
+                          <p className="text-gray-300 text-sm">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-white mb-3">Results</h4>
+                    <p className="text-gray-300 text-sm">
+                      Effects last 3-4 months. Gradual muscle relaxation over 7-14 days with natural-looking wrinkle reduction.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Fillers for Forehead */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-8 border border-gray-800"
+              >
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-8 h-8 bg-purple-500 rounded-full"></div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-purple-300">Filler Treatment</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-bold text-white mb-3">How It Works</h4>
+                    <p className="text-gray-300 text-sm">
+                      Dermal fillers add volume and structure to the forehead, filling in deep lines, indentations, and restoring lost facial volume.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-white mb-3">Best For</h4>
+                    <div className="space-y-2">
+                      {[
+                        "Deep static wrinkles",
+                        "Forehead indentations",
+                        "Volume loss",
+                        "Facial contouring",
+                        "Structural improvements"
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-start space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2"></div>
+                          <p className="text-gray-300 text-sm">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-white mb-3">Results</h4>
+                    <p className="text-gray-300 text-sm">
+                      Effects last 15-18 months. Immediate volume enhancement with gradual improvement over 2 weeks.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Combination Treatment */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-12 bg-accent rounded-lg p-8 border border-gray-800"
+            >
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-white mb-4">Combination Treatment</h3>
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                  Many patients achieve optimal results by combining both treatments. Botox addresses dynamic wrinkles while fillers restore volume and structure, creating comprehensive forehead rejuvenation.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div className="w-6 h-6 bg-green-500 rounded-full"></div>
+                  </div>
+                  <h4 className="font-bold text-white mb-2">Comprehensive Results</h4>
+                  <p className="text-gray-300 text-sm">Addresses both muscle activity and volume loss</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div className="w-6 h-6 bg-green-500 rounded-full"></div>
+                  </div>
+                  <h4 className="font-bold text-white mb-2">Enhanced Longevity</h4>
+                  <p className="text-gray-300 text-sm">Prolonged results with synergistic effects</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div className="w-6 h-6 bg-green-500 rounded-full"></div>
+                  </div>
+                  <h4 className="font-bold text-white mb-2">Natural Appearance</h4>
+                  <p className="text-gray-300 text-sm">Subtle, balanced facial rejuvenation</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
