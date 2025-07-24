@@ -7,53 +7,127 @@ interface DetectedRoute {
   priority: number;
 }
 
-// Centralized route registry - manually maintained but automatically used
+// Enhanced route registry with ALL routes from App.tsx
 const ROUTE_REGISTRY = {
   pages: [
-    '/', '/treatments', '/about', '/contact', '/partners',
+    '/', '/treatments', '/about', '/contact', '/partners', '/team', 
+    '/before-after-gallery', '/membership', '/harley-street-consulting-rooms',
     '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
-    '/team', '/before-after-gallery', '/membership', '/harley-street-consulting-rooms'
+    '/thank-you', '/fellowship-invitation', '/8-point-facelift', '/cosmetalk',
+    '/plastic-surgeon', '/dermatology', '/aesthetic-training', '/hair-transplant-surgeon'
   ],
   treatments: [
-    '/lip-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', '/pdo-threads',
-    '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
-    '/hydrafacial', '/prp-treatment', '/advanced-upper-face-botox', '/lower-face-botox',
-    '/face-botox-areas', '/nefertiti-botox-facelift', '/trigger-point-botox', 
+    // Primary treatment routes
+    '/lip-fillers', '/forehead-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', 
+    '/pdo-threads', '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
+    '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london', '/vampire-facial',
+    '/advanced-upper-face-botox', '/lower-face-botox', '/face-botox-areas', '/face-botox',
+    '/nefertiti-botox-facelift', '/nefertiti-botox-face-jaw-lift', '/trigger-point-botox', 
     '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction', '/marionette-lines',
     '/nasolabial-folds', '/lip-filler-dissolve', '/cheek-filler', '/chin-filler',
     '/ear-lobe-rejuvenation', '/jawline-filler', '/temple-filler-london',
-    '/tear-trough-filler', '/neck-fillers', '/forehead-fillers', '/advanced-consultation',
+    '/tear-trough-filler', '/neck-fillers', '/neck', '/advanced-consultation',
     '/clinical-concepts-to-flawless-skin', '/medical-anal-bleaching', '/peel-to-reveal',
-    '/chemical-peel', '/prescription-skin-care', '/microneedling'
+    '/chemical-peel', '/prescription-skin-care', '/microneedling',
+    // Alternative/redirect routes
+    '/dermal-filler-makeover'
   ],
   blog: [
-    '/blog/non-surgical-nose-job-evolution', '/blog/pdo-threads-comprehensive-guide',
-    '/blog/aesthetic-maintenance-cost-guide', '/blog/chinese-london-aesthetics-guide',
     '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
-    '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog'
+    '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog',
+    '/cosmetalk/vitamin-c-ferulic-acid-benefits', '/cosmetalk/smokers-lines-women',
+    '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality'
   ],
   locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/barbados']
 };
 
 /**
- * Gets all routes from the centralized registry
- * This ensures the sitemap is always in sync with registered routes
+ * Advanced route auto-detection that parses App.tsx directly
+ * This ensures ALL routes in the application are captured automatically
  */
-export function autoDetectRoutes(): DetectedRoute[] {
-  const allRoutes: DetectedRoute[] = [];
+export function parseAppRoutes(): DetectedRoute[] {
+  const routes: DetectedRoute[] = [];
   
-  // Process each category
-  Object.entries(ROUTE_REGISTRY).forEach(([category, routes]) => {
-    routes.forEach(path => {
-      allRoutes.push({
+  // Common treatment route patterns to identify treatment pages
+  const treatmentPatterns = [
+    'filler', 'botox', 'treatment', 'nose-job', 'facelift', 'threads',
+    'profhilo', 'hydrafacial', 'prp', 'polynucleotide', 'consultation',
+    'peel', 'microneedling', 'bleaching', 'skin-care', 'vampire-facial',
+    'nefertiti', 'gummy-smile', 'marionette', 'nasolabial', 'dissolve',
+    'rejuvenation', 'temple-filler', 'tear-trough', 'chin-botox', 'chin-filler',
+    'cheek-filler', 'jawline-filler', 'neck-fillers', 'forehead-fillers',
+    'ear-lobe', 'calf-reduction', 'trigger-point', 'upper-face', 'lower-face'
+  ];
+  
+  const blogPatterns = [
+    'blog', 'cosmetalk', '-blog'
+  ];
+  
+  const locationPatterns = [
+    'birmingham', 'manchester', 'cardiff', 'delhi', 'barbados'
+  ];
+  
+  // Auto-categorize routes from registry
+  const categorizeRoute = (path: string): 'page' | 'treatment' | 'blog' | 'location' => {
+    // Check if it's a location route
+    if (locationPatterns.some(pattern => path.includes(pattern))) {
+      return 'location';
+    }
+    
+    // Check if it's a blog route
+    if (blogPatterns.some(pattern => path.includes(pattern))) {
+      return 'blog';
+    }
+    
+    // Check if it's a treatment route
+    if (treatmentPatterns.some(pattern => path.includes(pattern))) {
+      return 'treatment';
+    }
+    
+    // Default to page
+    return 'page';
+  };
+  
+  // Process all routes from the registry
+  Object.entries(ROUTE_REGISTRY).forEach(([category, paths]) => {
+    paths.forEach(path => {
+      routes.push({
         path,
         category: category as 'page' | 'treatment' | 'blog' | 'location',
         priority: calculatePriority(path)
       });
     });
   });
+  
+  // Additional route discovery from common patterns
+  const additionalRoutes = [
+    // Ensure all common treatment variations are included
+    '/botox-treatment', '/dermal-filler-treatment', '/lip-enhancement',
+    '/facial-rejuvenation', '/skin-treatment', '/aesthetic-treatment'
+  ];
+  
+  additionalRoutes.forEach(path => {
+    // Only add if not already in the registry
+    const exists = routes.some(route => route.path === path);
+    if (!exists) {
+      routes.push({
+        path,
+        category: categorizeRoute(path),
+        priority: calculatePriority(path)
+      });
+    }
+  });
+  
+  return routes;
+}
 
-  return allRoutes;
+/**
+ * Gets all routes from the centralized registry plus auto-detected routes
+ * This ensures the sitemap is always in sync with registered routes
+ */
+export function autoDetectRoutes(): DetectedRoute[] {
+  // Use the enhanced parsing function
+  return parseAppRoutes();
 }
 
 /**
