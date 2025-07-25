@@ -18,18 +18,28 @@ const ROUTE_REGISTRY = {
     '/home', '/home2', '/team/dr-ahmed-haq', '/team/dr-hena-haq', '/admin/video-upload'
   ],
   treatments: [
-    // Primary treatment routes
+    // Core aesthetic treatments
     '/lip-fillers', '/forehead-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', 
     '/pdo-threads', '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
-    '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london', '/vampire-facial',
+    '/hydrafacial', '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london', '/vampire-facial',
+    
+    // Botox treatments
     '/advanced-upper-face-botox', '/lower-face-botox', '/face-botox-areas', '/face-botox',
     '/nefertiti-botox-facelift', '/nefertiti-botox-face-jaw-lift', '/trigger-point-botox', 
-    '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction', '/marionette-lines',
-    '/nasolabial-folds', '/lip-filler-dissolve', '/cheek-filler', '/chin-filler',
-    '/ear-lobe-rejuvenation', '/jawline-filler', '/temple-filler-london',
-    '/tear-trough-filler', '/neck-fillers', '/neck', '/advanced-consultation',
-    '/clinical-concepts-to-flawless-skin', '/medical-anal-bleaching', '/peel-to-reveal',
-    '/chemical-peel', '/prescription-skin-care', '/microneedling',
+    '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction',
+    
+    // Filler treatments
+    '/marionette-lines', '/nasolabial-folds', '/lip-filler-dissolve', '/cheek-filler', '/chin-filler',
+    '/ear-lobe-rejuvenation', '/jawline-filler', '/temple-filler-london', '/tear-trough-filler', 
+    '/neck-fillers', '/neck',
+    
+    // Advanced/specialized treatments
+    '/advanced-consultation', '/clinical-concepts-to-flawless-skin', '/medical-anal-bleaching', 
+    '/peel-to-reveal', '/chemical-peel', '/prescription-skin-care', '/microneedling',
+    
+    // Professional services
+    '/hair-transplant-surgeon',
+    
     // Alternative/redirect routes
     '/dermal-filler-makeover', '/experimental-treatment'
   ],
