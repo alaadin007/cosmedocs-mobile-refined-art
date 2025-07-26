@@ -100,7 +100,7 @@ const benefits = [
 
 export function ThreadFaceLift() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-black text-white">
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -119,131 +119,47 @@ export function ThreadFaceLift() {
       </Helmet>
 
       {/* Hero Section - Matching LipFillers style */}
-      <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 pt-20 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-5" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              className="space-y-8"
-              initial={{ opacity: 0, x: -20 }}
+      <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <div className="page-container relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
             >
-              <div className="space-y-4">
-                <motion.h1 
-                  className="text-4xl lg:text-6xl font-bold text-foreground leading-tight"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                >
-                  PDO Thread
-                  <span className="block text-primary">Face Lift</span>
-                </motion.h1>
-                <motion.p 
-                  className="text-xl text-muted-foreground leading-relaxed"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                >
-                  Non-surgical facelift using advanced PDO threads for natural skin tightening and facial contouring. Achieve a youthful, lifted appearance with minimal downtime.
-                </motion.p>
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                PDO Thread
+                <span className="block text-purple-300">Face Lift</span>
+                <span className="block text-sm mt-4">Non-surgical facelift with natural results</span>
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                <span className="text-purple-300 font-semibold">Invisible Art</span>
+                <br />
+                Transformation that speaks without saying a word
+              </p>
+              <div className="mb-8">
+                <p className="text-2xl text-purple-300 font-bold">Starting from £800</p>
+                <p className="text-sm text-gray-300">Natural lifting results lasting 2-3 years</p>
               </div>
-
-              <motion.div 
-                className="grid grid-cols-2 gap-4 text-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-              >
-                <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-primary" />
-                  <span>25-45 minutes</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-primary" />
-                  <span>Results last 2-3 years</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-primary" />
-                  <span>Minimal downtime</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-primary" />
-                  <span>FDA approved</span>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-              >
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                   Book Consultation
                 </Button>
-                <Button variant="outline" size="lg" className="px-8">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
                   Call: 020 7401 8757
                 </Button>
-              </motion.div>
-
-              <motion.div 
-                className="flex items-center gap-6 pt-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.6 }}
-              >
-                <div className="flex items-center gap-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <span className="text-sm font-medium">4.9/5 Rating</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-primary" />
-                  <span className="text-sm">Harley Street, London</span>
-                </div>
-              </motion.div>
+              </div>
             </motion.div>
-
-            <motion.div 
-              className="lg:pl-8"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-semibold mb-6 text-center">Treatment Details</h3>
-                  <div className="grid gap-4">
-                    {treatmentDetails.map((detail, index) => (
-                      <motion.div 
-                        key={index}
-                        className="flex items-center justify-between p-3 rounded-lg bg-background/50"
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.6 + index * 0.1, duration: 0.4 }}
-                      >
-                        <div className="flex items-center gap-3">
-                          <detail.icon className="w-5 h-5 text-primary" />
-                          <span className="font-medium">{detail.label}</span>
-                        </div>
-                        <span className="text-sm text-muted-foreground">{detail.value}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+            
+            <div className="hidden lg:block"></div>
           </div>
         </div>
       </section>
 
       {/* Before & After Gallery */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-accent">
+        <div className="page-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -262,8 +178,8 @@ export function ThreadFaceLift() {
       </section>
 
       {/* Treatment Overview */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -312,8 +228,8 @@ export function ThreadFaceLift() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-accent">
+        <div className="page-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -345,8 +261,8 @@ export function ThreadFaceLift() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary/5">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20">
+        <div className="page-container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
