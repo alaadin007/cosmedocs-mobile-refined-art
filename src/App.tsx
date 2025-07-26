@@ -27,6 +27,7 @@ import BotoxCalfReduction from "./pages/BotoxCalfReduction";
 import LipFillerDissolve from "./pages/LipFillerDissolve";
 import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
 import PDOThreads from "./pages/PDOThreads";
+import { ThreadFaceLift } from "./pages/ThreadFaceLift";
 import TriggerPointBotox from "./pages/TriggerPointBotox";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
 import DermalFillers from "./pages/DermalFillers";
@@ -125,6 +126,7 @@ const App = () => {
               <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
               <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
               <Route path="/pdo-threads" element={<PDOThreads />} />
+              <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
               <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
               <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
               
