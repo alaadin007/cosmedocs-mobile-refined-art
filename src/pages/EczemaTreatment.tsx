@@ -4,13 +4,48 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateSEOMetadata } from "@/utils/seo";
 import CosmeDocsAI from "@/components/CosmeDocs AI";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 export default function EczemaTreatment() {
   const seoData = generateSEOMetadata(
     "Eczema Treatment London | Expert Dermatology Care | CosmeDocs",
-    "Professional eczema treatment in London. Expert dermatologists offering effective solutions for dry, red, and scaly skin. Reduce inflammation and restore healthy skin.",
+    "Professional eczema treatment in London. Expert dermatologists offering effective solutions for dry, red, and scaly skin. Reduce inflammation and restore skin health.",
     "/eczema-treatment"
   );
+
+  // Before and after images for eczema treatment
+  const beforeAfterImages = [
+    {
+      src: "/placeholder.svg",
+      alt: "Eczema treatment before and after - Patient 1",
+      caption: "Significant improvement in skin inflammation and texture"
+    },
+    {
+      src: "/placeholder.svg", 
+      alt: "Eczema treatment before and after - Patient 2",
+      caption: "Reduced redness and restored skin barrier function"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Eczema treatment before and after - Patient 3", 
+      caption: "Dramatic healing of dry, scaly patches"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Eczema treatment before and after - Patient 4",
+      caption: "Complete resolution of chronic eczema symptoms"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Eczema treatment before and after - Patient 5",
+      caption: "Smooth, healthy skin restoration"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Eczema treatment before and after - Patient 6",
+      caption: "Long-term eczema management success"
+    }
+  ];
 
   return (
     <>
@@ -55,92 +90,97 @@ export default function EczemaTreatment() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-          <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-          <div className="container mx-auto px-4 py-20 lg:py-32 relative">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="bg-black text-white">
+        {/* Hero Section - Matching LipFillers design */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
+                transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <div className="space-y-4">
-                  <motion.h1 
-                    className="text-4xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-primary via-primary/80 to-secondary bg-clip-text text-transparent"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                  >
-                    Eczema Treatment
-                  </motion.h1>
-                  <motion.p 
-                    className="text-xl lg:text-2xl text-muted-foreground font-light"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                  >
-                    Dry, Red & Scaly Rashes
-                  </motion.p>
-                  <motion.p 
-                    className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                  >
-                    Expert treatment for chronic skin conditions with proven methods to reduce inflammation, 
-                    control symptoms, and restore healthy skin barrier function.
-                  </motion.p>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Expert Eczema
+                  <span className="block text-purple-300">Treatment</span>
+                  <span className="block text-sm mt-4">Professional care for dry, red & scaly skin</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Price on Consultation</p>
+                  <p className="text-sm text-gray-300">Expert dermatological care for chronic skin conditions</p>
                 </div>
-                
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-4 pt-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-                  >
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
                     Call: 020 7043 0748
                   </Button>
-                </motion.div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative"
-              >
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-8">
-                  <div className="aspect-square bg-white/50 rounded-2xl flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <div className="w-24 h-24 mx-auto bg-primary/20 rounded-full flex items-center justify-center">
-                        <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground">Expert Care</h3>
-                      <p className="text-muted-foreground">Professional dermatological treatment</p>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the dramatic improvements achieved with our expert eczema treatments. 
+                Each patient receives personalized care for optimal skin health restoration.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {beforeAfterImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="relative group cursor-pointer"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Eczema Treatment Results Gallery"
+                description="Comprehensive gallery of our eczema treatment results"
+              />
             </div>
           </div>
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-gray-900">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -148,35 +188,35 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <div className="bg-card rounded-3xl p-8 shadow-lg border">
-                <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Treatment Summary</h2>
+              <div className="bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-700">
+                <h2 className="text-3xl font-bold text-center mb-8 text-white">Treatment Summary</h2>
                 <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center p-6 bg-background rounded-2xl">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="text-center p-6 bg-gray-700 rounded-2xl">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">Treatment Time</h3>
-                    <p className="text-muted-foreground">30-45 minutes consultation</p>
+                    <h3 className="font-semibold text-lg mb-2 text-white">Treatment Time</h3>
+                    <p className="text-gray-300">30-45 minutes consultation</p>
                   </div>
-                  <div className="text-center p-6 bg-background rounded-2xl">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="text-center p-6 bg-gray-700 rounded-2xl">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">Results</h3>
-                    <p className="text-muted-foreground">Gradual improvement over weeks</p>
+                    <h3 className="font-semibold text-lg mb-2 text-white">Results</h3>
+                    <p className="text-gray-300">Gradual improvement over weeks</p>
                   </div>
-                  <div className="text-center p-6 bg-background rounded-2xl">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="text-center p-6 bg-gray-700 rounded-2xl">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                       </svg>
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">Recovery</h3>
-                    <p className="text-muted-foreground">No downtime required</p>
+                    <h3 className="font-semibold text-lg mb-2 text-white">Recovery</h3>
+                    <p className="text-gray-300">No downtime required</p>
                   </div>
                 </div>
               </div>
@@ -185,8 +225,8 @@ export default function EczemaTreatment() {
         </section>
 
         {/* Why Choose CosmeDocs */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-black">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -194,8 +234,8 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose CosmeDocs?</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">Why Choose CosmeDocs?</h2>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Our aesthetics is invisible art - Bold • Natural • Always Your Way
               </p>
             </motion.div>
@@ -229,11 +269,11 @@ export default function EczemaTreatment() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center p-6 bg-card rounded-2xl shadow-lg border hover:shadow-xl transition-shadow duration-300"
+                  className="text-center p-6 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -241,8 +281,8 @@ export default function EczemaTreatment() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-gray-900">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -250,59 +290,59 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
               
               <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="what-is-eczema" className="bg-card border rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionItem value="what-is-eczema" className="bg-gray-800 border border-gray-700 rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-white">
                     What is eczema and what causes it?
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4">
+                  <AccordionContent className="text-gray-300 pt-4">
                     Eczema is a chronic skin condition characterized by dry, red, and scaly rashes. It occurs when the skin struggles to retain moisture, making it more reactive to triggers. Genetics play a significant role, with family history being a strong factor. Environmental triggers include soaps, detergents, cold weather, food allergies, and stress.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="symptoms" className="bg-card border rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionItem value="symptoms" className="bg-gray-800 border border-gray-700 rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-white">
                     What are the main symptoms of eczema?
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4">
+                  <AccordionContent className="text-gray-300 pt-4">
                     Primary symptoms include dry, red, itchy skin, cracked or crusted skin, blisters, oozing or bleeding, sore and swollen areas, and red, purple, or grey patches. Symptoms can range from mild and localized to widespread and severe, often fluctuating between improvements and flare-ups.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="treatment-options" className="bg-card border rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionItem value="treatment-options" className="bg-gray-800 border border-gray-700 rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-white">
                     What treatment options are available?
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4">
+                  <AccordionContent className="text-gray-300 pt-4">
                     Key treatments include emollients (daily moisturizers) to prevent skin dryness, topical corticosteroids to reduce swelling and redness during flare-ups, and antihistamines for severe itching relief. Our expert team provides personalized treatment plans that help reduce inflammation without causing skin thinning.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="lifestyle-changes" className="bg-card border rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionItem value="lifestyle-changes" className="bg-gray-800 border border-gray-700 rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-white">
                     What lifestyle changes can help manage eczema?
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4">
+                  <AccordionContent className="text-gray-300 pt-4">
                     Lifestyle modifications that can enhance treatment include minimizing scratching of affected areas, avoiding triggers such as heat and irritants like certain soaps and fabrics, and considering dietary changes to limit foods like dairy that may worsen symptoms. Stress management is also important as stress can trigger flare-ups.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="who-suitable" className="bg-card border rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionItem value="who-suitable" className="bg-gray-800 border border-gray-700 rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-white">
                     Who is suitable for eczema treatment?
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4">
+                  <AccordionContent className="text-gray-300 pt-4">
                     Treatment is suitable for anyone experiencing eczema symptoms and looking to improve their quality of life. While there's no cure for eczema, many people experience symptom improvement as they grow older. A consultation with our dermatologists will determine the best personalized treatment plan for your specific condition.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="pricing" className="bg-card border rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionItem value="pricing" className="bg-gray-800 border border-gray-700 rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-white">
                     How much does eczema treatment cost?
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-4">
+                  <AccordionContent className="text-gray-300 pt-4">
                     Pricing is determined during consultation based on your specific condition and treatment requirements. Our team will provide a detailed treatment plan with transparent pricing after assessing your individual needs. Contact us for a consultation to discuss your treatment options and associated costs.
                   </AccordionContent>
                 </AccordionItem>
@@ -312,8 +352,8 @@ export default function EczemaTreatment() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-16 bg-black">
+          <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -321,21 +361,17 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="max-w-3xl mx-auto space-y-8"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold">Ready to Begin Your Journey?</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white">Ready to Begin Your Journey?</h2>
+              <p className="text-lg text-gray-300">
                 Take the first step towards healthier skin with our expert eczema treatment. 
                 Book your consultation today and discover how we can help restore your skin's natural balance.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                   Book Consultation
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-                >
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
                   Call: 020 7043 0748
                 </Button>
               </div>
