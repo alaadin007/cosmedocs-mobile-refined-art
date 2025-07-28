@@ -90,6 +90,7 @@ import HairTransplantSurgeon from "./pages/HairTransplantSurgeon";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 import MoleSkinTagRemoval from "./pages/MoleSkinTagRemoval";
+import EczemaTreatment from "./pages/EczemaTreatment";
 
 const queryClient = new QueryClient();
 
@@ -190,8 +191,9 @@ const App = () => {
                 <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
                  <Route path="/plastic-surgeon" element={<PlasticSurgeon />} />
                  <Route path="/dermatology" element={<Dermatology />} />
-                 <Route path="/acne-treatment" element={<AcneTreatment />} />
-                 <Route path="/mole-skin-tag-removal" element={<MoleSkinTagRemoval />} />
+              <Route path="/acne-treatment" element={<AcneTreatment />} />
+              <Route path="/mole-skin-tag-removal" element={<MoleSkinTagRemoval />} />
+              <Route path="/eczema-treatment" element={<EczemaTreatment />} />
                  <Route path="/aesthetic-training" element={<AestheticTraining />} />
                  <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
                
