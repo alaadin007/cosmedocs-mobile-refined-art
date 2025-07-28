@@ -29,6 +29,7 @@ import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
 import PDOThreads from "./pages/PDOThreads";
 import { ThreadFaceLift } from "./pages/ThreadFaceLift";
 import TriggerPointBotox from "./pages/TriggerPointBotox";
+import AcneTreatment from "./pages/AcneTreatment";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
 import DermalFillers from "./pages/DermalFillers";
 import NefertitiBotoxFacelift from "./pages/NefertitiBotoxFacelift";
@@ -188,6 +189,7 @@ const App = () => {
                 <Route path="/harley-street-consulting-rooms" element={<HarleyStreetConsultingRooms />} />
                  <Route path="/plastic-surgeon" element={<PlasticSurgeon />} />
                  <Route path="/dermatology" element={<Dermatology />} />
+                 <Route path="/acne-treatment" element={<AcneTreatment />} />
                  <Route path="/aesthetic-training" element={<AestheticTraining />} />
                  <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
                
