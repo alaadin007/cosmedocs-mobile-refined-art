@@ -130,51 +130,170 @@ export default function EczemaTreatment() {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-accent">
+        {/* What Causes Eczema */}
+        <section className="py-16 bg-gray-900">
           <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See the dramatic improvements achieved with our expert eczema treatments. 
-                Each patient receives personalized care for optimal skin health restoration.
-              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">What Causes Eczema?</h2>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Genetic Factors</h3>
+                  <p className="text-gray-300 mb-4">
+                    Family history plays a significant role in eczema development. If one or both parents have eczema, allergies, or asthma, their children are more likely to develop the condition.
+                  </p>
+                  <ul className="text-gray-300 space-y-2">
+                    <li>• Inherited skin barrier dysfunction</li>
+                    <li>• Genetic variations affecting immune response</li>
+                    <li>• Family history of atopic conditions</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Environmental Triggers</h3>
+                  <p className="text-gray-300 mb-4">
+                    Various environmental factors can trigger eczema flare-ups or worsen existing symptoms.
+                  </p>
+                  <ul className="text-gray-300 space-y-2">
+                    <li>• Harsh soaps and detergents</li>
+                    <li>• Extreme weather conditions</li>
+                    <li>• Allergens (dust mites, pollen, pet dander)</li>
+                    <li>• Stress and emotional factors</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Immune System</h3>
+                  <p className="text-gray-300 mb-4">
+                    An overactive immune system response to irritants and allergens contributes to inflammation and eczema symptoms.
+                  </p>
+                  <ul className="text-gray-300 space-y-2">
+                    <li>• Inflammatory response dysfunction</li>
+                    <li>• T-cell activation irregularities</li>
+                    <li>• Cytokine imbalance</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Skin Barrier Issues</h3>
+                  <p className="text-gray-300 mb-4">
+                    Defects in the skin's protective barrier allow moisture to escape and irritants to enter, leading to dry, inflamed skin.
+                  </p>
+                  <ul className="text-gray-300 space-y-2">
+                    <li>• Reduced ceramide production</li>
+                    <li>• Impaired moisture retention</li>
+                    <li>• Increased permeability to allergens</li>
+                  </ul>
+                </div>
+              </div>
             </motion.div>
+          </div>
+        </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {beforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative group cursor-pointer"
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                </motion.div>
-              ))}
-            </div>
+        {/* Treatment Options for Eczema */}
+        <section className="py-16 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">Treatment Options for Eczema</h2>
+              
+              <div className="space-y-8">
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3 text-white">Topical Treatments</h3>
+                      <p className="text-gray-300 mb-4">
+                        First-line treatments applied directly to the skin to reduce inflammation and control symptoms.
+                      </p>
+                      <ul className="text-gray-300 space-y-2">
+                        <li>• <strong>Topical Corticosteroids:</strong> Reduce inflammation and itching during flare-ups</li>
+                        <li>• <strong>Topical Calcineurin Inhibitors:</strong> Non-steroidal anti-inflammatory medications</li>
+                        <li>• <strong>Barrier Repair Moisturizers:</strong> Restore and maintain skin barrier function</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Eczema Treatment Results Gallery"
-                description="Comprehensive gallery of our eczema treatment results"
-              />
-            </div>
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3 text-white">Moisturizing Therapy</h3>
+                      <p className="text-gray-300 mb-4">
+                        Daily emollient use is essential for maintaining skin hydration and preventing flare-ups.
+                      </p>
+                      <ul className="text-gray-300 space-y-2">
+                        <li>• <strong>Ceramide-rich Moisturizers:</strong> Restore natural skin barrier components</li>
+                        <li>• <strong>Occlusive Agents:</strong> Prevent water loss from the skin surface</li>
+                        <li>• <strong>Humectant Products:</strong> Draw moisture into the skin layers</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3 text-white">Advanced Therapies</h3>
+                      <p className="text-gray-300 mb-4">
+                        For moderate to severe eczema that doesn't respond to conventional treatments.
+                      </p>
+                      <ul className="text-gray-300 space-y-2">
+                        <li>• <strong>Oral Antihistamines:</strong> Control severe itching and improve sleep</li>
+                        <li>• <strong>Phototherapy:</strong> UV light treatment for widespread eczema</li>
+                        <li>• <strong>Wet Wrap Therapy:</strong> Intensive hydration for severe flare-ups</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-8 h-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3 text-white">Lifestyle Management</h3>
+                      <p className="text-gray-300 mb-4">
+                        Comprehensive approach including trigger avoidance and stress management.
+                      </p>
+                      <ul className="text-gray-300 space-y-2">
+                        <li>• <strong>Trigger Identification:</strong> Identify and avoid personal eczema triggers</li>
+                        <li>• <strong>Stress Reduction:</strong> Manage stress through relaxation techniques</li>
+                        <li>• <strong>Dietary Modifications:</strong> Address food allergies that may worsen symptoms</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
