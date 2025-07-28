@@ -6,7 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import PopularTreatments from "@/components/PopularTreatments";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Syringe, Calendar, Clock, AlertTriangle, RotateCcw, Briefcase } from "lucide-react";
+import { Syringe, Calendar, Clock, AlertTriangle, RotateCcw, Briefcase, User, UserCheck, Shirt } from "lucide-react";
 
 const AcneTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -399,7 +399,7 @@ const AcneTreatment = () => {
               >
                 <Card className="bg-accent border-gray-800 text-center h-full">
                   <CardContent className="p-6">
-                    <div className="text-4xl mb-4">👤</div>
+                    <User className="w-12 h-12 mb-4 mx-auto text-purple-300" />
                     <h3 className="text-xl font-semibold mb-3 text-purple-300">Facial Acne</h3>
                     <p className="text-gray-300">
                       Affects every acne patient. The most visible and common area where acne develops, 
@@ -417,7 +417,7 @@ const AcneTreatment = () => {
               >
                 <Card className="bg-accent border-gray-800 text-center h-full">
                   <CardContent className="p-6">
-                    <div className="text-4xl mb-4">🏃‍♂️</div>
+                    <UserCheck className="w-12 h-12 mb-4 mx-auto text-purple-300" />
                     <h3 className="text-xl font-semibold mb-3 text-purple-300">Back Acne</h3>
                     <p className="text-gray-300">
                       Almost 50% of acne patients experience back acne. Often more severe due to 
@@ -435,7 +435,7 @@ const AcneTreatment = () => {
               >
                 <Card className="bg-accent border-gray-800 text-center h-full">
                   <CardContent className="p-6">
-                    <div className="text-4xl mb-4">👕</div>
+                    <Shirt className="w-12 h-12 mb-4 mx-auto text-purple-300" />
                     <h3 className="text-xl font-semibold mb-3 text-purple-300">Chest Acne</h3>
                     <p className="text-gray-300">
                       One in 6 acne patients experience chest acne. Less common but can be particularly 
@@ -617,53 +617,6 @@ const AcneTreatment = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See the remarkable transformations achieved with our expert acne treatment programs. 
-                Each patient receives personalized care for optimal results.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {beforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative group cursor-pointer"
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Acne Treatment Results Gallery"
-                description="Comprehensive gallery of our acne treatment transformations"
-              />
-            </div>
-          </div>
-        </section>
 
         {/* FAQ Section */}
         <section className="py-20">
