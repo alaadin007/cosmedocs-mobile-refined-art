@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import PopularTreatments from "@/components/PopularTreatments";
 import { generateSEOMetadata } from "@/utils/seo";
+import { Syringe, Calendar, Clock, AlertTriangle, RotateCcw, Briefcase } from "lucide-react";
 
 const AcneTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -15,12 +16,12 @@ const AcneTreatment = () => {
   );
 
   const treatmentDetails = [
-    { label: "Anaesthetic", value: "Local", icon: "💉" },
-    { label: "Acne Results", value: "15-18 months", icon: "📅" },
-    { label: "Procedure Time", value: "30 mins", icon: "⏱️" },
-    { label: "Risk & Complications", value: "Swelling, Redness, Itching, Bruising", icon: "⚠️" },
-    { label: "Full Recovery", value: "24-48 hours, no downtime", icon: "🔄" },
-    { label: "Back To Work", value: "After Treatment", icon: "💼" }
+    { label: "Anaesthetic", value: "Local", icon: Syringe },
+    { label: "Acne Results", value: "15-18 months", icon: Calendar },
+    { label: "Procedure Time", value: "30 mins", icon: Clock },
+    { label: "Risk & Complications", value: "Swelling, Redness, Itching, Bruising", icon: AlertTriangle },
+    { label: "Full Recovery", value: "24-48 hours, no downtime", icon: RotateCcw },
+    { label: "Back To Work", value: "After Treatment", icon: Briefcase }
   ];
 
   const beforeAfterImages = [
@@ -161,24 +162,27 @@ const AcneTreatment = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {treatmentDetails.map((detail, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-black border-gray-800 h-full">
-                    <CardContent className="p-6 text-center">
-                      <div className="text-3xl mb-3">{detail.icon}</div>
-                      <h3 className="text-lg font-semibold mb-2 text-purple-300">{detail.label}</h3>
-                      <p className="text-gray-300">{detail.value}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-6 gap-4">
+              {treatmentDetails.map((detail, index) => {
+                const IconComponent = detail.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="bg-black border-gray-800 h-full">
+                      <CardContent className="p-4 text-center">
+                        <IconComponent className="w-8 h-8 mb-3 mx-auto text-purple-300" />
+                        <h3 className="text-sm font-semibold mb-2 text-purple-300">{detail.label}</h3>
+                        <p className="text-xs text-gray-300">{detail.value}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
