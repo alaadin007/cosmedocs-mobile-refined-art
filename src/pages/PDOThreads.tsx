@@ -331,34 +331,34 @@ const PDOThreads = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full">
+              <Card className="h-full bg-black border-gray-800">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-purple-600">Small PDO Threads</CardTitle>
-                  <p className="text-gray-600">Collagen Stimulation & Skin Tightening</p>
+                  <CardTitle className="text-2xl text-purple-400">Small PDO Threads</CardTitle>
+                  <p className="text-gray-300">Collagen Stimulation & Skin Tightening</p>
                 </CardHeader>
                 <CardContent>
-                  <h4 className="font-semibold mb-3">Treatment Concept:</h4>
-                  <p className="text-gray-700 mb-4">
+                  <h4 className="font-semibold mb-3 text-white">Treatment Concept:</h4>
+                  <p className="text-gray-300 mb-4">
                     Small PDO threads are inserted into the skin using a technique similar to acupuncture. These threads work continuously for 4-5 months as the body naturally dissolves the suture material.
                   </p>
                   
-                  <h4 className="font-semibold mb-3">How It Works:</h4>
-                  <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                  <h4 className="font-semibold mb-3 text-white">How It Works:</h4>
+                  <ul className="list-disc list-inside text-gray-300 mb-4 space-y-2">
                     <li>Creates controlled mild inflammation in targeted areas</li>
                     <li>Stimulates natural collagen production</li>
                     <li>Promotes skin tightening and lipolysis</li>
                     <li>Evidence of collagen formation is noticeable years later</li>
                   </ul>
                   
-                  <h4 className="font-semibold mb-3">Ideal Candidates:</h4>
-                  <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                  <h4 className="font-semibold mb-3 text-white">Ideal Candidates:</h4>
+                  <ul className="list-disc list-inside text-gray-300 mb-4 space-y-2">
                     <li>Patients from early 20s onwards</li>
                     <li>Those seeking natural collagen stimulation</li>
                     <li>Individuals wanting jawline tightening</li>
                     <li>Preventative anti-aging approach</li>
                   </ul>
                   
-                  <div className="bg-purple-50 p-4 rounded-lg">
+                  <div className="bg-white p-4 rounded-lg">
                     <p className="text-sm text-purple-800">
                       <strong>Treatment Duration:</strong> Quick procedure, minimal downtime<br/>
                       <strong>Results:</strong> Gradual improvement over 4-5 months
@@ -375,34 +375,34 @@ const PDOThreads = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full">
+              <Card className="h-full bg-black border-gray-800">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-purple-600">Large PDO Threads with Hooks</CardTitle>
-                  <p className="text-gray-600">Advanced Facial Lifting</p>
+                  <CardTitle className="text-2xl text-purple-400">Large PDO Threads with Hooks</CardTitle>
+                  <p className="text-gray-300">Advanced Facial Lifting</p>
                 </CardHeader>
                 <CardContent>
-                  <h4 className="font-semibold mb-3">Treatment Concept:</h4>
-                  <p className="text-gray-700 mb-4">
+                  <h4 className="font-semibold mb-3 text-white">Treatment Concept:</h4>
+                  <p className="text-gray-300 mb-4">
                     Large PDO threads with laser-engraved hooks represent a completely different medical procedure. These threads physically lift and reposition facial tissues, similar to surgical facelift principles.
                   </p>
                   
-                  <h4 className="font-semibold mb-3">Advanced Technology:</h4>
-                  <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                  <h4 className="font-semibold mb-3 text-white">Advanced Technology:</h4>
+                  <ul className="list-disc list-inside text-gray-300 mb-4 space-y-2">
                     <li>Longer, thicker thread construction</li>
                     <li>Precision laser-engraved hooks</li>
                     <li>Mechanical lifting and repositioning</li>
                     <li>Combined with dermal filler therapy</li>
                   </ul>
                   
-                  <h4 className="font-semibold mb-3">Ideal Candidates:</h4>
-                  <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                  <h4 className="font-semibold mb-3 text-white">Ideal Candidates:</h4>
+                  <ul className="list-disc list-inside text-gray-300 mb-4 space-y-2">
                     <li>Advanced facial aging concerns</li>
                     <li>Significant skin sagging</li>
                     <li>Patients seeking dramatic improvement</li>
                     <li>Those wanting non-surgical facelift alternative</li>
                   </ul>
                   
-                  <div className="bg-purple-50 p-4 rounded-lg">
+                  <div className="bg-white p-4 rounded-lg">
                     <p className="text-sm text-purple-800">
                       <strong>Treatment Approach:</strong> Always combined with dermal fillers<br/>
                       <strong>Results:</strong> Immediate lifting with continued improvement
