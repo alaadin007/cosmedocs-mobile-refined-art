@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { generateSEOMetadata } from "@/utils/seo";
 import CosmeDocsAI from "@/components/CosmeDocs AI";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { Stethoscope, Target, Sparkles, HandHeart } from "lucide-react";
 
 export default function EczemaTreatment() {
   const seoData = generateSEOMetadata(
@@ -392,37 +393,42 @@ export default function EczemaTreatment() {
                 {
                   title: "Expert Dermatologists",
                   description: "Qualified specialists with extensive experience in eczema treatment",
-                  icon: "👨‍⚕️"
+                  icon: Stethoscope
                 },
                 {
                   title: "Personalized Care", 
                   description: "Tailored treatment plans based on your specific skin condition",
-                  icon: "🎯"
+                  icon: Target
                 },
                 {
                   title: "Proven Results",
                   description: "Effective treatments that reduce inflammation and restore skin health",
-                  icon: "✨"
+                  icon: Sparkles
                 },
                 {
                   title: "Ongoing Support",
                   description: "Long-term care and monitoring to maintain healthy skin",
-                  icon: "🤝"
+                  icon: HandHeart
                 }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center p-6 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </motion.div>
-              ))}
+              ].map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-center p-6 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div className="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <IconComponent className="w-8 h-8 text-purple-300" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
+                    <p className="text-gray-300">{benefit.description}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
