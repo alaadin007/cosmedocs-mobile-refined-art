@@ -121,39 +121,38 @@ export function ThreadFaceLift() {
       {/* Hero Section - Matching LipFillers style */}
       <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
         <div className="page-container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-left"
-            >
-              <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                PDO Thread
-                <span className="block text-purple-300">Face Lift</span>
-                <span className="block text-sm mt-4">Non-surgical facelift with natural results</span>
-              </h1>
-              <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                <span className="text-purple-300 font-semibold">Invisible Art</span>
-                <br />
-                Transformation that speaks without saying a word
-              </p>
-              <div className="mb-8">
-                <p className="text-2xl text-purple-300 font-bold">Starting from £800</p>
-                <p className="text-sm text-gray-300">Natural lifting results lasting 2-3 years</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
-                  Book Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                  Call: 020 7401 8757
-                </Button>
-              </div>
-            </motion.div>
-            
-            <div className="hidden lg:block"></div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-left max-w-2xl"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Expert PDO Thread
+              <span className="block text-purple-300">Face Lift</span>
+            </h1>
+            <p className="text-xl text-white mb-8">
+              Non-surgical facial lifting with premium PDO threads
+            </p>
+            <p className="text-xl mb-2">
+              <span className="text-purple-300 font-semibold">Invisible Art</span>
+            </p>
+            <p className="text-white mb-8">
+              Transformation that speaks without saying a word
+            </p>
+            <p className="text-2xl text-purple-300 font-bold mb-2">Starting from £800</p>
+            <p className="text-sm text-gray-300 mb-8">
+              #threadlift - Natural lifting results lasting 2-3 years
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
+                Book Consultation
+              </Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-4 text-lg font-semibold">
+                View Price List
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
