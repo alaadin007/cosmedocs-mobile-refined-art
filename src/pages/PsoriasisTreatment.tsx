@@ -214,6 +214,13 @@ export default function PsoriasisTreatment() {
                 viewport={{ once: true }}
               >
                 <div className="bg-accent rounded-lg p-8">
+                  <div className="mb-6">
+                    <img 
+                      src="/lovable-uploads/a996e10f-5573-47a6-a71d-cde73371153e.png" 
+                      alt="Psoriasis on elbow showing typical symptoms" 
+                      className="w-full h-48 object-cover rounded-lg mb-4"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold mb-6 text-white">Why Choose Cosmedocs?</h3>
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
