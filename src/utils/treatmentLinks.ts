@@ -41,6 +41,10 @@ export const treatmentRoutes: Record<string, string> = {
   "under eye circles": "/tear-trough-filler",
   "lip fillers": "/lip-fillers",
   "lip filler": "/lip-fillers",
+  "eczema": "/eczema-treatment",
+  "eczema treatment": "/eczema-treatment",
+  "psoriasis": "/psoriasis-treatment",
+  "psoriasis treatment": "/psoriasis-treatment",
   
   // Other existing treatments
   "non surgical nose job": "/non-surgical-nose-job",

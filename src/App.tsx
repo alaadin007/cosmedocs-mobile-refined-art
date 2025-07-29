@@ -91,6 +91,7 @@ import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
 import MoleSkinTagRemoval from "./pages/MoleSkinTagRemoval";
 import EczemaTreatment from "./pages/EczemaTreatment";
+import PsoriasisTreatment from "./pages/PsoriasisTreatment";
 
 const queryClient = new QueryClient();
 
@@ -193,7 +194,8 @@ const App = () => {
                  <Route path="/dermatology" element={<Dermatology />} />
               <Route path="/acne-treatment" element={<AcneTreatment />} />
               <Route path="/mole-skin-tag-removal" element={<MoleSkinTagRemoval />} />
-              <Route path="/eczema-treatment" element={<EczemaTreatment />} />
+               <Route path="/eczema-treatment" element={<EczemaTreatment />} />
+               <Route path="/psoriasis-treatment" element={<PsoriasisTreatment />} />
                  <Route path="/aesthetic-training" element={<AestheticTraining />} />
                  <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
                

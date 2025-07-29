@@ -36,6 +36,8 @@ const TREATMENT_ROUTES = [
   '/chin-filler',   // ✅ Added new Chin Filler page
   '/ear-lobe-rejuvenation', // ✅ Added new Ear Lobe Rejuvenation page
   '/hair-transplant-surgeon', // ✅ Added Hair Transplant Surgeon page
+  '/eczema-treatment',
+  '/psoriasis-treatment',
   
   // Advanced/specialized treatments
   '/advanced-consultation',
