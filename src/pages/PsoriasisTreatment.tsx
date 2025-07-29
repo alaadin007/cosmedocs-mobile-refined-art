@@ -113,243 +113,194 @@ export default function PsoriasisTreatment() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-500/10 to-teal-500/10" />
-          <div className="relative max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 bg-clip-text text-transparent mb-6">
-                Psoriasis Treatment
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-                Expert dermatological care for all types of psoriasis. From topical therapies to advanced treatments, 
-                regain control over your skin health with our comprehensive approach.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
-                  Book Consultation
-                </Button>
-                <Button variant="outline" size="lg">
-                  Call Now: 020 7851 6616
-                </Button>
-              </div>
-            </motion.div>
+      <div className="bg-black text-white">
+        {/* Hero Section - Matching LipFillers style */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Expert Psoriasis
+                  <span className="block text-purple-300">Treatment</span>
+                  <span className="block text-sm mt-4">Professional dermatological care for all types of psoriasis</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Consultation from £150</p>
+                  <p className="text-sm text-gray-300">Comprehensive treatment plans tailored to your specific needs</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                    Book Consultation
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    Call: 020 7851 6616
+                  </Button>
+                </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
           </div>
         </section>
 
-        {/* Before & After Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Real Results from Our Patients
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 See the transformative results achieved through our expert psoriasis treatment protocols.
               </p>
             </motion.div>
 
-            <div className="flex justify-center">
-              <BeforeAfterImageViewer
+            <div className="text-center">
+              <BeforeAfterImageViewer 
                 images={beforeAfterImages}
-                triggerLabel="View Before & After Gallery"
-                title="Psoriasis Treatment Results"
-                description="Browse through real patient transformations"
+                triggerLabel="View All Before & After Photos"
+                title="Psoriasis Treatment Results Gallery"
+                description="Comprehensive gallery of our psoriasis treatment outcomes"
               />
             </div>
           </div>
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-16 px-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-20">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 p-6 rounded-2xl shadow-lg"
               >
-                <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-white" />
+                <h2 className="text-3xl font-bold mb-6">Psoriasis Treatment Summary</h2>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
+                    <p className="text-gray-300">Varies by type: 15 minutes for topical consultation to ongoing therapy sessions</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Results Timeline</h3>
+                    <p className="text-gray-300">Improvement typically seen within 2-4 weeks, optimal results in 3-6 months</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
+                    <p className="text-gray-300">Minimal downtime for topical treatments, gradual improvement with ongoing care</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Treatment Types</h3>
+                    <p className="text-gray-300">Topical therapies, phototherapy, and systemic medications</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
-                <p className="text-gray-600 dark:text-gray-300">Varies by type: 15 minutes for topical consultation to ongoing therapy sessions</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-100 to-teal-100 dark:from-blue-900/30 dark:to-teal-900/30 p-6 rounded-2xl shadow-lg"
               >
-                <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Results Timeline</h3>
-                <p className="text-gray-600 dark:text-gray-300">Improvement typically seen within 2-4 weeks, optimal results in 3-6 months</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-teal-100 to-green-100 dark:from-teal-900/30 dark:to-green-900/30 p-6 rounded-2xl shadow-lg"
-              >
-                <div className="w-12 h-12 bg-teal-500 rounded-xl flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Recovery</h3>
-                <p className="text-gray-600 dark:text-gray-300">Minimal downtime for topical treatments, gradual improvement with ongoing care</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Cosmedocs */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Why Choose Cosmedocs for Psoriasis Treatment?
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Our aesthetics is invisible art - Bold • Natural • Always Your Way
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  title: "Expert Dermatologists",
-                  description: "Qualified specialists with extensive experience in psoriasis diagnosis and treatment",
-                  icon: Stethoscope
-                },
-                {
-                  title: "Comprehensive Care", 
-                  description: "Full range of treatments from topical therapies to advanced systemic medications",
-                  icon: Target
-                },
-                {
-                  title: "Proven Results",
-                  description: "Evidence-based treatments that effectively manage symptoms and improve quality of life",
-                  icon: Sparkles
-                },
-                {
-                  title: "Ongoing Support",
-                  description: "Long-term monitoring and care to maintain healthy skin and prevent flare-ups",
-                  icon: HandHeart
-                }
-              ].map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="text-center p-6 bg-white/70 dark:bg-gray-800/70 rounded-2xl shadow-lg backdrop-blur-sm hover:shadow-xl transition-shadow duration-300"
-                  >
-                    <div className="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                <div className="bg-accent rounded-lg p-8">
+                  <h3 className="text-xl font-bold mb-6 text-white">Why Choose Cosmedocs?</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Expert dermatologists specializing in psoriasis treatment</p>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">{benefit.description}</p>
-                  </motion.div>
-                );
-              })}
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Comprehensive range of treatment options available</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Evidence-based treatments with proven results</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">'Invisible art' philosophy for natural-looking skin health</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Ongoing support and personalized care plans</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-20 bg-accent">
+          <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                Common questions about psoriasis treatment
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about psoriasis treatment at our London clinic.
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Accordion type="single" collapsible className="w-full space-y-4">
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem
-                    key={index}
-                    value={`item-${index}`}
-                    className="bg-white/70 dark:bg-gray-800/70 rounded-lg px-6 border-none shadow-sm"
-                  >
-                    <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                      {faq.question}
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 dark:text-gray-300 pt-2">
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
-            </motion.div>
+            </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 rounded-3xl p-8 md:p-12 text-white"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Take Control of Your Psoriasis?
-              </h2>
-              <p className="text-xl mb-8 opacity-90">
-                Book your consultation today and start your journey to healthier skin
+              <h2 className="text-3xl font-bold mb-4">Ready to Take Control of Your Psoriasis?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert dermatologists and discover how comprehensive psoriasis treatment 
+                can transform your skin health and quality of life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="outline" className="bg-white text-purple-600 hover:bg-gray-100">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                   Book Free Consultation
                 </Button>
-                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  Call: 020 7851 6616
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 020 7851 6616
                 </Button>
               </div>
             </motion.div>
