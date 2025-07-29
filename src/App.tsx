@@ -92,6 +92,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import MoleSkinTagRemoval from "./pages/MoleSkinTagRemoval";
 import EczemaTreatment from "./pages/EczemaTreatment";
 import PsoriasisTreatment from "./pages/PsoriasisTreatment";
+import HyperpigmentationTreatment from "./pages/HyperpigmentationTreatment";
 
 const queryClient = new QueryClient();
 
@@ -195,7 +196,8 @@ const App = () => {
               <Route path="/acne-treatment" element={<AcneTreatment />} />
               <Route path="/mole-skin-tag-removal" element={<MoleSkinTagRemoval />} />
                <Route path="/eczema-treatment" element={<EczemaTreatment />} />
-               <Route path="/psoriasis-treatment" element={<PsoriasisTreatment />} />
+                <Route path="/psoriasis-treatment" element={<PsoriasisTreatment />} />
+                <Route path="/hyperpigmentation-treatment" element={<HyperpigmentationTreatment />} />
                  <Route path="/aesthetic-training" element={<AestheticTraining />} />
                  <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
                
