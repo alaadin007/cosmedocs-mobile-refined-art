@@ -149,32 +149,6 @@ export default function PsoriasisTreatment() {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See the transformative results achieved through our expert psoriasis treatment protocols.
-              </p>
-            </motion.div>
-
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Psoriasis Treatment Results Gallery"
-                description="Comprehensive gallery of our psoriasis treatment outcomes"
-              />
-            </div>
-          </div>
-        </section>
 
         {/* Treatment Summary */}
         <section className="py-20">
