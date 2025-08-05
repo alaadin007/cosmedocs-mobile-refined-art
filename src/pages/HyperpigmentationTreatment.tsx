@@ -111,90 +111,45 @@ export default function HyperpigmentationTreatment() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen">
+      <div className="bg-black text-white">
         {/* Hero Section - Matching Lip Fillers Style */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/20 via-background to-accent">
-          <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent z-10" />
-          
-          <div className="page-container relative z-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Hyperpigmentation
-                  <span className="block text-primary">Treatment</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Expert
+                  <span className="block text-purple-300">Hyperpigmentation</span>
+                  <span className="block text-purple-300">Treatment</span>
+                  <span className="block text-sm mt-4">Melasma, Dark Patches & Melanin Irregulation</span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground mb-4">
-                  Melasma, Dark Patches & Melanin Irregulation
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
                 </p>
-                <p className="text-base text-muted-foreground mb-8 max-w-lg">
-                  Expert treatment for skin discoloration using advanced techniques including IPL, chemical peels, and medical-grade skincare for even, radiant skin.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £200</p>
+                  <p className="text-sm text-gray-300">Advanced IPL, chemical peels, and medical-grade skincare solutions</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     <Calendar className="mr-2 h-5 w-5" />
                     Book Consultation
                   </Button>
-                  <Button variant="outline" size="lg">
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Us
                   </Button>
                 </div>
-
-                <div className="grid grid-cols-2 gap-6">
-                  {treatmentDetails.map((detail, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                      className="flex items-center space-x-3"
-                    >
-                      <detail.icon className="h-5 w-5 text-primary" />
-                      <div>
-                        <p className="text-sm font-medium">{detail.label}</p>
-                        <p className="text-xs text-muted-foreground">{detail.value}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <div className="relative bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl p-8 backdrop-blur-sm">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl" />
-                  <div className="relative text-center">
-                    <div className="text-6xl mb-4">🌟</div>
-                    <h3 className="text-2xl font-semibold mb-4">Transform Your Skin</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Professional hyperpigmentation treatment for even, radiant complexion
-                    </p>
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <div className="text-2xl font-bold text-primary">95%</div>
-                        <div className="text-sm text-muted-foreground">Patient Satisfaction</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-primary">2-3</div>
-                        <div className="text-sm text-muted-foreground">Sessions Typical</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-primary">0</div>
-                        <div className="text-sm text-muted-foreground">Days Downtime</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
