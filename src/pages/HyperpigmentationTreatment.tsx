@@ -154,7 +154,7 @@ export default function HyperpigmentationTreatment() {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
+        {/* Hyperpigmentation Can Be Treated By */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -164,19 +164,78 @@ export default function HyperpigmentationTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Hyperpigmentation can be treated by:</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                See the transformative results achieved through our expert hyperpigmentation treatment protocols.
+                Comprehensive treatment options available at our clinic for effective hyperpigmentation management.
               </p>
             </motion.div>
 
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Hyperpigmentation Treatment Results Gallery"
-                description="Comprehensive gallery of our hyperpigmentation treatment outcomes"
-              />
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="bg-background rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-primary">Cosmeceuticals & Prescription Skin Care</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-medium mb-2">Broad Spectrum Sunscreen</h4>
+                      <p className="text-sm text-muted-foreground">SPF 30 and above is highly recommended during sun exposure to prevent further skin damage due to UV rays exposure.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium mb-2">Hydroquinone & Kojic Acid</h4>
+                      <p className="text-sm text-muted-foreground">Very effective cosmeceutical skin lightener products. Hydroquinone is referred to as the 'Gold Standard' for treating hyperpigmentation. Enhanced when used in combination with antioxidants, hydroxy acids retinoids.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium mb-2">Vitamin A Products</h4>
+                      <p className="text-sm text-muted-foreground">Including Retinol and Tretinoin that help in skin rejuvenation and resurfacing and increase cell turnover.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium mb-2">Alpha Hydroxy Acids</h4>
+                      <p className="text-sm text-muted-foreground">Exfoliate skin and smooth while increasing cell turnover for even skin tone.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-background rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-primary">Microdermabrasion</h3>
+                  <p className="text-sm text-muted-foreground">
+                    For mild pigmentation, microdermabrasion proves to be an effective treatment. It improves rough and sun damaged skin through skin exfoliation and lightens pigmentation. Also aids in diffusing active care products into skin. Highly effective when used in combination with chemical skin peel treatment.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="bg-background rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-primary">Skin Peel Treatment</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Chemical skin peels give improved results when other topical therapies are unable to provide desired results. Essential natural ingredients including Lactic, Salicylic and Glycolic Acid help in skin resurfacing and increase cell turnover. Available in varying depths and strengths to suit different skin types.
+                  </p>
+                </div>
+
+                <div className="bg-background rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-primary">IPL Treatment</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Intense Pulse Light uses broad spectrum light contrary to single wavelength lasers. Helps in clearing dark spots, age spots and hyperpigmentation caused by sun damage and ageing. Usually needs 3-6 treatment sessions to clear skin and give even skin tone. No downtime required.
+                  </p>
+                </div>
+
+                <div className="bg-background rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-primary">Dermaroller Treatment</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Micro-needling uses a special dermaroller device which gently rejuvenates skin and improves pigmentation. Helps in reduction of pigmentation by increasing cell turnover while powerful anti-oxidants and skin brighteners are infused into the skin.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
