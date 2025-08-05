@@ -155,7 +155,7 @@ export default function HyperpigmentationTreatment() {
         </section>
 
         {/* What is Hyperpigmentation */}
-        <section className="py-20">
+        <section className="py-20 bg-primary/5">
           <div className="page-container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.div
