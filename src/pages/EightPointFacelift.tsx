@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle } from 'lucide-react';
+import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle, Diamond, Eye, Smile, Gem, Droplets, Sparkles } from 'lucide-react';
 
 export default function EightPointFacelift() {
   const seoData = generateSEOMetadata(
@@ -74,49 +74,57 @@ export default function EightPointFacelift() {
       number: "01",
       title: "Cheek Structure",
       description: "Restore volume to cheek structure for enhanced definition",
-      icon: "🔹"
+      icon: Diamond,
+      iconColor: "text-blue-400"
     },
     {
       number: "02", 
       title: "Cheek Volume & Definition",
       description: "Add volume and create beautiful cheek definition",
-      icon: "🔹"
+      icon: Diamond,
+      iconColor: "text-blue-400"
     },
     {
       number: "03",
       title: "Under Eye Hollows",
       description: "Address dark circles and under eye hollows effectively",
-      icon: "👁️"
+      icon: Eye,
+      iconColor: "text-orange-400"
     },
     {
       number: "04",
       title: "Smile Enhancement",
       description: "Lift downward smile lines for a more youthful appearance",
-      icon: "😊"
+      icon: Smile,
+      iconColor: "text-yellow-400"
     },
     {
       number: "05",
       title: "Jawline Definition",
       description: "Create a more defined and sculpted jawline",
-      icon: "💎"
+      icon: Gem,
+      iconColor: "text-cyan-400"
     },
     {
       number: "06",
       title: "Jowl Area",
       description: "Reduce the appearance of jowls and sagging",
-      icon: "🔸"
+      icon: Diamond,
+      iconColor: "text-orange-500"
     },
     {
       number: "07",
       title: "Nose to Mouth Contours",
       description: "Smooth nose to mouth lines and contours",
-      icon: "✨"
+      icon: Sparkles,
+      iconColor: "text-yellow-300"
     },
     {
       number: "08",
       title: "Tear Troughs",
       description: "Address tear troughs that contribute to tired appearance",
-      icon: "💧"
+      icon: Droplets,
+      iconColor: "text-blue-300"
     }
   ];
 
@@ -265,9 +273,9 @@ export default function EightPointFacelift() {
                   viewport={{ once: true }}
                 >
                   <Card className="h-full border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
-                    <CardHeader className="text-center pb-4">
-                      <div className="text-4xl mb-2">{point.icon}</div>
-                      <div className="text-3xl font-bold text-primary mb-2">
+                     <CardHeader className="text-center pb-4">
+                       <point.icon className={`w-8 h-8 mx-auto mb-2 ${point.iconColor}`} />
+                       <div className="text-3xl font-bold text-primary mb-2">
                         {point.number}
                       </div>
                       <CardTitle className="text-lg">{point.title}</CardTitle>
