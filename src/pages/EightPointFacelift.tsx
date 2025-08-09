@@ -1,131 +1,155 @@
-import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
-import { generateSEOMetadata } from "@/utils/seo";
-import { Card, CardContent } from "@/components/ui/card";
+import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, Sparkles, Heart, Target, CheckCircle, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+import { generateSEOMetadata } from '@/utils/seo';
+import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle } from 'lucide-react';
 
-const EightPointFacelift = () => {
+export default function EightPointFacelift() {
   const seoData = generateSEOMetadata(
-    "8 Point Facelift - Non-Surgical Face Lift | CosmeDocs London",
-    "Revolutionary 8 Point Facelift using advanced dermal fillers. Natural, non-surgical facial rejuvenation targeting 8 key points for a lifted, youthful appearance. Harley Street trained experts.",
+    "8 Point Face Lift London | Non-Surgical Facelift | Cosmedocs",
+    "Transform your appearance with our 8 Point Face Lift treatment in London. Non-surgical facelift using dermal fillers to restore volume and lift. Book your consultation today.",
     "/8-point-facelift"
   );
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
-    "name": "8 Point Facelift",
-    "description": "Non-surgical facial rejuvenation using dermal fillers at 8 strategic points",
-    "procedureType": "Non-surgical cosmetic procedure",
+    "name": "8 Point Face Lift",
+    "description": "Non-surgical facelift treatment using dermal fillers strategically placed at 8 key points to restore volume and lift the face",
+    "procedureType": "Minimally Invasive",
     "bodyLocation": "Face",
-    "benefits": [
-      "Natural facelift effect",
-      "Restored facial volume",
-      "Improved facial contours",
-      "Non-surgical approach",
-      "Minimal downtime"
-    ],
+    "preparation": "Consultation with qualified practitioner",
+    "followup": "Follow-up appointment if required",
+    "howPerformed": "Strategic injection of dermal fillers at 8 key facial points",
     "provider": {
-      "@type": "Organization",
-      "name": "CosmeDocs",
-      "url": "https://www.cosmedocs.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "London",
-        "addressCountry": "UK"
-      }
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "From £800",
-      "priceCurrency": "GBP"
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs",
+      "url": "https://www.cosmedocs.com"
     }
   };
 
-  const eightPoints = [
+  const treatmentInfo = [
     {
-      number: "1-2",
-      title: "Cheekbones & Facial Structure",
-      description: "Strategic volume placement enhances cheekbone definition and naturally lifts nasolabial folds",
-      icon: "💎"
+      icon: Shield,
+      title: "Anaesthetic",
+      value: "Local",
+      description: "Comfortable treatment with local anaesthetic"
     },
     {
-      number: "3",
-      title: "Tear Trough & Under-Eye Area", 
-      description: "Reduces tired hollows under eyes, restoring youthful brightness and eliminating dark circles",
-      icon: "👁️"
+      icon: Calendar,
+      title: "Results",
+      value: "Immediate | 12-15 Months",
+      description: "Immediate visible results lasting up to 15 months"
     },
     {
-      number: "4",
-      title: "Nasolabial Folds",
-      description: "Softens nose-to-mouth lines that deepen with age, creating a smoother facial transition",
-      icon: "😊"
+      icon: Clock,
+      title: "Procedure Time",
+      value: "10-25 mins",
+      description: "Quick and efficient treatment session"
     },
     {
-      number: "5", 
-      title: "Mouth Corners",
-      description: "Lifts downturned corners to eliminate the 'sad' appearance and restore a natural smile",
-      icon: "💋"
+      icon: Activity,
+      title: "Risk & Complications",
+      value: "Minimal",
+      description: "Very low risk with minimal side effects"
     },
     {
-      number: "6",
-      title: "Pre-Jowl Area",
-      description: "Restores volume along the jawline to reduce jowl formation and maintain facial definition",
-      icon: "🎯"
+      icon: Heart,
+      title: "Full Recovery",
+      value: "1 Week",
+      description: "Complete recovery within one week"
     },
     {
-      number: "7",
-      title: "Jawline Definition",
-      description: "Redefines the jaw angle and contour, providing lift and support to the lower face",
-      icon: "💪"
-    },
-    {
-      number: "8",
-      title: "Lower Cheek/Buccal Area",
-      description: "Fills hollow cheeks to eliminate gaunt appearance and restore youthful facial curves",
-      icon: "✨"
+      icon: Users,
+      title: "Back To Work",
+      value: "Immediately",
+      description: "Resume work activities right after treatment"
     }
   ];
 
-  const benefitsData = [
-    { icon: Clock, title: "60-90 Minutes", description: "Complete treatment time" },
-    { icon: Users, title: "Expert Practitioners", description: "Harley Street trained specialists" },
-    { icon: Star, title: "Natural Results", description: "Subtle, age-appropriate enhancement" },
-    { icon: Target, title: "Precision Technique", description: "Targeted 8-point approach" }
-  ];
-
-  const beforeAfterData = [
+  const eightPoints = [
     {
-      before: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=500&fit=crop",
-      after: "https://images.unsplash.com/photo-1594824706977-5bb00e53137a?w=400&h=500&fit=crop",
-      caption: "8 Point Facelift transformation - Natural volume restoration"
+      number: "01",
+      title: "Cheek Structure",
+      description: "Restore volume to cheek structure for enhanced definition",
+      icon: "🔹"
+    },
+    {
+      number: "02", 
+      title: "Cheek Volume & Definition",
+      description: "Add volume and create beautiful cheek definition",
+      icon: "🔹"
+    },
+    {
+      number: "03",
+      title: "Under Eye Hollows",
+      description: "Address dark circles and under eye hollows effectively",
+      icon: "👁️"
+    },
+    {
+      number: "04",
+      title: "Smile Enhancement",
+      description: "Lift downward smile lines for a more youthful appearance",
+      icon: "😊"
+    },
+    {
+      number: "05",
+      title: "Jawline Definition",
+      description: "Create a more defined and sculpted jawline",
+      icon: "💎"
+    },
+    {
+      number: "06",
+      title: "Jowl Area",
+      description: "Reduce the appearance of jowls and sagging",
+      icon: "🔸"
+    },
+    {
+      number: "07",
+      title: "Nose to Mouth Contours",
+      description: "Smooth nose to mouth lines and contours",
+      icon: "✨"
+    },
+    {
+      number: "08",
+      title: "Tear Troughs",
+      description: "Address tear troughs that contribute to tired appearance",
+      icon: "💧"
     }
   ];
 
   const faqData = [
     {
-      question: "Who is suitable for the 8 Point Facelift?",
-      answer: "Ideal candidates are those experiencing volume loss, sagging skin, or seeking facial rejuvenation without surgery. Our practitioners assess facial anatomy, aging patterns, and aesthetic goals during consultation to determine suitability."
+      question: "What Is Involved In 8 Point Facelift Procedure?",
+      answer: "8 point facelift treatment makes use of dermal fillers injected at 8 key points on the face to give volume and rejuvenate the facial appearance. It gives immediate and natural results."
     },
     {
-      question: "How long do results last?",
-      answer: "Results typically last 12-18 months, depending on individual factors like metabolism, lifestyle, and product choice. We use premium hyaluronic acid fillers for optimal longevity and natural-looking results."
+      question: "What Is A Suitable Age For 8 Point Facelift Treatment?",
+      answer: "Patients who are in their late 30s and early 40s with mild skin laxity can undertake this non-invasive facelift treatment. If there is severe skin laxity, desired results can be achieved but more quantity of dermal fillers will be required."
     },
     {
-      question: "Is the treatment painful?",
-      answer: "Discomfort is minimal thanks to topical numbing cream and our gentle injection technique. Most patients describe the sensation as mild pressure with occasional pinching. Our practitioners prioritize your comfort throughout the procedure."
+      question: "What Are The Possible Side Effects?",
+      answer: "No or very few side effects have been observed in majority of the patients. However, there can be mild swelling and bruising which normally subsides in few days."
     },
     {
-      question: "What's the recovery time?",
-      answer: "Minimal downtime with most patients returning to normal activities immediately. Mild swelling or bruising may occur for 24-48 hours. We provide comprehensive aftercare instructions for optimal healing."
+      question: "What Is The Downtime Of The Treatment?",
+      answer: "There is no downtime of this non-surgical facelift treatment. Patients can go back to their work instantly after getting the treatment."
     },
     {
-      question: "How does this compare to surgical facelift?",
-      answer: "The 8 Point Facelift offers natural rejuvenation without surgery, scarring, or lengthy recovery. While surgical facelifts provide more dramatic results, our technique delivers subtle, age-appropriate enhancement with immediate results."
+      question: "How Long Lasting Are The Effects Of 8 Point Facelift Treatment?",
+      answer: "The treatment gives instant improvement in the facial appearance however the full results of this non-surgical facelift treatment can be seen after about 1-2 weeks when the minor swelling and bruising subsides. The results keep on improving for 2-3 months. The effect of the results lasts for almost 12-18 months."
     }
+  ];
+
+  const benefits = [
+    "Immediate visible results",
+    "Non-surgical approach",
+    "Minimal downtime",
+    "Natural-looking enhancement", 
+    "Long-lasting effects (12-18 months)",
+    "Customized to your needs"
   ];
 
   return (
@@ -133,99 +157,120 @@ const EightPointFacelift = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
-        <meta name="keywords" content="8 point facelift, non-surgical facelift, dermal fillers, facial rejuvenation, liquid facelift, anti-aging, volume restoration, facial contouring, London aesthetic clinic" />
         <link rel="canonical" href={seoData.canonical} />
-        
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:type" content="website" />
-        
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-subtle">
-        {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
-          <div className="container mx-auto px-4">
+      <div className="min-h-screen bg-background">
+        {/* Hero Section - LipFillers style */}
+        <motion.section 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="relative bg-gradient-to-br from-primary/10 via-background to-primary/5 py-24 px-6"
+        >
+          <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="space-y-8"
               >
-                <Badge className="mb-4 bg-primary/10 text-primary">
-                  Non-Surgical Excellence
-                </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-                  8 Point Facelift
-                </h1>
-                <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                  Revolutionary non-surgical facial rejuvenation using advanced dermal fillers 
-                  at 8 strategic points. Achieve natural lifting and volume restoration without surgery.
-                </p>
-                <div className="flex flex-wrap gap-4 mb-8">
-                  {benefitsData.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-2 bg-card p-3 rounded-lg">
-                      <benefit.icon className="w-5 h-5 text-primary" />
-                      <div>
-                        <p className="font-semibold text-sm">{benefit.title}</p>
-                        <p className="text-xs text-muted-foreground">{benefit.description}</p>
-                      </div>
-                    </div>
-                  ))}
+                <div className="space-y-4">
+                  <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                    8 Point Face Lift
+                  </h1>
+                  <h2 className="text-xl md:text-2xl text-muted-foreground font-light">
+                    Elevate, Enhance, and Embrace Youthful Radiance!
+                  </h2>
                 </div>
-                <div className="flex gap-4">
-                  <Button asChild size="lg">
-                    <Link to="/contact">Book Consultation</Link>
+                
+                <p className="text-lg text-muted-foreground max-w-2xl">
+                  Non-surgical facelift treatment using dermal fillers strategically placed at 8 key points to restore volume and create a lifting effect for a completely rejuvenated appearance.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="text-lg px-8">
+                    Book Consultation
                   </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <Link to="/treatments">View All Treatments</Link>
+                  <Button size="lg" variant="outline" className="text-lg px-8">
+                    Call Now: 0207 435 7521
                   </Button>
                 </div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="grid grid-cols-2 gap-4"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-                  <img 
-                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=700&fit=crop"
-                    alt="8 Point Facelift results"
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
+                {treatmentInfo.map((info, index) => (
+                  <Card key={index} className="p-4 text-center border-primary/20 hover:border-primary/40 transition-colors">
+                    <CardContent className="p-0 space-y-2">
+                      <info.icon className="w-8 h-8 mx-auto text-primary" />
+                      <h3 className="font-semibold text-sm">{info.title}</h3>
+                      <p className="text-lg font-bold text-primary">{info.value}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </motion.div>
             </div>
           </div>
+        </motion.section>
+
+        {/* Treatment Objective */}
+        <section className="py-20 px-6 bg-primary/5">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                8 Point Face Lift Treatment Objective
+              </h2>
+              <p className="text-xl text-primary font-semibold mb-6">
+                Replace lost volume in 8 key points contributing to a sunken and tired appearance.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Ageing takes its toll on us through the progressive loss of collagen, elastin, and subcutaneous fats. 
+                This brings about continuous changes in our facial profile in the form of facial volume loss, lines and wrinkles, 
+                folds, and sagging facial skin. The 8 point face lift treatment is designed to restore lost volume and lift the face. 
+                This non-surgical facelift treatment is also called 'liquid facelift treatment' because dermal fillers are used 
+                strategically to give volume to the face and create a lifting impact for a completely rejuvenated appearance.
+              </p>
+            </motion.div>
+          </div>
         </section>
 
-        {/* The 8 Points Section */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+        {/* The 8 Points */}
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">The 8 Strategic Points</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                The Strategic 8 Points
+              </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Our precision approach targets specific facial areas for comprehensive rejuvenation. 
-                Each point is carefully selected to create natural lift and restore youthful contours.
+                Each point is carefully selected to restore volume and create a lifting effect for natural-looking rejuvenation
               </p>
             </motion.div>
 
@@ -233,21 +278,23 @@ const EightPointFacelift = () => {
               {eightPoints.map((point, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full border border-primary/20 hover:border-primary/40 transition-colors">
-                    <CardContent className="p-6 text-center">
-                      <div className="text-4xl mb-4">{point.icon}</div>
-                      <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg mb-4 mx-auto">
+                  <Card className="h-full border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
+                    <CardHeader className="text-center pb-4">
+                      <div className="text-4xl mb-2">{point.icon}</div>
+                      <div className="text-3xl font-bold text-primary mb-2">
                         {point.number}
                       </div>
-                      <h3 className="font-semibold mb-3">{point.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <CardTitle className="text-lg">{point.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <CardDescription className="text-center">
                         {point.description}
-                      </p>
+                      </CardDescription>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -256,182 +303,87 @@ const EightPointFacelift = () => {
           </div>
         </section>
 
-        {/* Treatment Process */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Ideal Candidates & Results */}
+        <section className="py-20 px-6 bg-primary/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-4xl font-bold mb-6">Our Advanced Technique</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  The 8 Point Facelift combines precision injection techniques with premium hyaluronic acid fillers 
-                  to achieve natural-looking facial rejuvenation. Our approach differs from traditional methods by 
-                  targeting specific anatomical points for optimal lift and volume distribution.
-                </p>
-                
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Advanced Assessment</h4>
-                      <p className="text-muted-foreground">Comprehensive facial analysis using 3D imaging and anatomical mapping</p>
+                <Card className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Ideal Candidates</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground">
+                      The 8 point face lift treatment is ideal for patients in their late 30s and early 40s who have 
+                      decreased facial volume with mild jowling. In the case of heavy jowls, PDO thread lift treatment 
+                      is recommended, as this non-surgical facelift treatment will not improve them significantly.
+                    </p>
+                    <div className="space-y-2">
+                      <h4 className="font-semibold">Perfect for:</h4>
+                      <ul className="space-y-1">
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Late 30s to early 40s age group</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Decreased facial volume</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Mild jowling concerns</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Desire for non-surgical solution</span>
+                        </li>
+                      </ul>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Precision Injection</h4>
-                      <p className="text-muted-foreground">Strategic placement at 8 key points using advanced cannula techniques</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Premium Products</h4>
-                      <p className="text-muted-foreground">FDA-approved hyaluronic acid fillers with optimal viscosity for each area</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg border border-primary/20">
-                  <h4 className="font-semibold mb-2 text-primary">CosmeDocs Advantage</h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Our Harley Street trained practitioners have developed advanced techniques taught internationally. 
-                    With over 15 years of experience, we deliver superior results through precision and artistry.
-                  </p>
-                  <div className="flex items-center gap-2 text-primary text-sm font-medium">
-                    <Sparkles className="w-4 h-4" />
-                    <span>Invisible art • Bold • Natural • Always Your Way</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <img 
-                      src="https://images.unsplash.com/photo-1594824706977-5bb00e53137a?w=300&h=400&fit=crop"
-                      alt="8 Point Facelift technique"
-                      className="rounded-lg shadow-lg"
-                    />
-                  </div>
-                  <div className="space-y-4 pt-8">
-                    <img 
-                      src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop"
-                      alt="Facial analysis process"
-                      className="rounded-lg shadow-lg"
-                    />
-                    <img 
-                      src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=250&fit=crop"
-                      alt="Premium dermal fillers"
-                      className="rounded-lg shadow-lg"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Results & Benefits */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6">What to Expect</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                The 8 Point Facelift delivers comprehensive facial rejuvenation with natural-looking results 
-                that enhance your unique features while turning back the clock.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full border border-primary/20">
-                  <CardContent className="p-6">
-                    <div className="text-center mb-4">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Heart className="w-8 h-8 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Immediate Results</h3>
-                    </div>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Instant volume restoration</li>
-                      <li>• Visible lift and contouring</li>
-                      <li>• Improved facial symmetry</li>
-                      <li>• Enhanced natural beauty</li>
-                      <li>• Minimal downtime</li>
-                    </ul>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full border border-primary/20">
-                  <CardContent className="p-6">
-                    <div className="text-center mb-4">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Target className="w-8 h-8 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Targeted Areas</h3>
+                <Card className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Results & Recovery</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">Results Timeline:</h4>
+                      <p className="text-muted-foreground">
+                        The 8 Point facelift treatment gives immediate results that last for about 12-18 months. 
+                        Full results are visible after 1-2 weeks when minor swelling and bruising subsides.
+                      </p>
                     </div>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Cheekbone enhancement</li>
-                      <li>• Under-eye rejuvenation</li>
-                      <li>• Nasolabial fold softening</li>
-                      <li>• Jawline definition</li>
-                      <li>• Overall facial lifting</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full border border-primary/20">
-                  <CardContent className="p-6">
-                    <div className="text-center mb-4">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Sparkles className="w-8 h-8 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Long-Term Benefits</h3>
+                    <div>
+                      <h4 className="font-semibold mb-2">Recovery & Downtime:</h4>
+                      <p className="text-muted-foreground">
+                        There is no or little downtime. Routine activities can be resumed immediately after treatment. 
+                        Minor bruising and swelling may occur but are temporary and fade within a few days.
+                      </p>
                     </div>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• 12-18 months duration</li>
-                      <li>• Collagen stimulation</li>
-                      <li>• Improved skin quality</li>
-                      <li>• Natural aging prevention</li>
-                      <li>• Confidence enhancement</li>
-                    </ul>
+                    <div className="space-y-2">
+                      <h4 className="font-semibold">Key Benefits:</h4>
+                      <ul className="space-y-1">
+                        {benefits.map((benefit, index) => (
+                          <li key={index} className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-primary" />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -440,67 +392,92 @@ const EightPointFacelift = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 px-6">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Get answers to common questions about the 8 Point Facelift procedure
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Get answers to common questions about 8 Point Face Lift treatment
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto space-y-6">
-              {faqData.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="border border-muted hover:border-primary/30 transition-colors">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold mb-3 text-primary">{faq.question}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Accordion type="single" collapsible className="w-full space-y-4">
+                {faqData.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border border-primary/20 rounded-lg px-6">
+                    <AccordionTrigger className="text-left hover:text-primary">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+        {/* Why CosmeDocs */}
+        <section className="py-20 px-6 bg-primary/5">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="space-y-6"
             >
-              <h2 className="text-4xl font-bold mb-6">
-                Ready for Your 8 Point Transformation?
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Why Choose CosmeDocs?
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                Experience the artistry of advanced facial rejuvenation with our expert team. 
-                Book your consultation today and discover the CosmeDocs difference.
+              <p className="text-lg text-muted-foreground">
+                <strong>CosmeDocs</strong> is a renowned name in the industry of cosmetics. Our clinics located in 
+                Harley Street (London), Derby, Nottingham, and Portsmouth are well equipped and modern practices. 
+                CosmeDocs are also well-known trainers to physicians from around the globe.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <Link to="/contact" className="flex items-center gap-2">
-                    Book Your Consultation
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
+              <p className="text-sm text-muted-foreground italic">
+                Our aesthetics is invisible art - Bold • Natural • Always Your Way
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Ready to Transform Your Appearance?
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Book your consultation today and discover how the 8 Point Face Lift can help you achieve natural, youthful results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">
+                  Book Consultation Now
                 </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                  <Link to="/before-after-gallery">View Results Gallery</Link>
+                <Button size="lg" variant="outline" className="text-lg px-8">
+                  Call: 0207 435 7521
                 </Button>
               </div>
             </motion.div>
@@ -510,26 +487,37 @@ const EightPointFacelift = () => {
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <p>
-            The 8 Point Facelift at CosmeDocs represents the pinnacle of non-surgical facial rejuvenation, 
-            offering natural results through precision dermal filler placement. Our Harley Street trained 
-            practitioners utilize advanced techniques developed over 15+ years of experience, targeting 
-            eight strategic facial points for comprehensive lifting and volume restoration. This revolutionary 
-            approach enhances cheekbones, reduces nasolabial folds, lifts mouth corners, defines jawlines, 
-            and restores youthful facial contours without surgery. Using premium hyaluronic acid fillers, 
-            the treatment delivers immediate results lasting 12-18 months with minimal downtime. Our aesthetic 
-            philosophy emphasizes invisible art - bold, natural enhancement that celebrates your unique beauty. 
-            The 8 Point Facelift addresses volume loss, sagging skin, and facial aging through scientific 
-            precision and artistic vision, providing an alternative to surgical facelift procedures. 
-            Professional consultation includes 3D facial analysis and personalized treatment planning 
-            to ensure optimal results. CosmeDocs practitioners are internationally recognized trainers 
-            who teach these advanced techniques to medical professionals worldwide, ensuring you receive 
-            the highest standard of care. Experience the transformative power of the 8 Point Facelift 
-            in our London, Birmingham, Manchester, or Cardiff clinics.
+            The 8 Point Face Lift at CosmeDocs London represents the pinnacle of non-surgical facial rejuvenation techniques. 
+            This innovative liquid facelift procedure strategically targets eight crucial areas of the face using premium dermal fillers 
+            to restore volume, enhance contours, and create a natural lifting effect. Located in prestigious Harley Street, our clinic 
+            offers this transformative treatment to clients seeking to combat the signs of aging without the need for invasive surgery.
+          </p>
+          <p>
+            Our approach focuses on the middle face, facial contours, and lower face regions, addressing concerns such as volume loss, 
+            sagging skin, and the development of jowls. The treatment is particularly effective for individuals in their late thirties 
+            and early forties who are beginning to notice the effects of collagen and elastin depletion. By precisely injecting 
+            dermal fillers at the eight strategic points, we can restore the youthful architecture of the face while maintaining 
+            completely natural-looking results.
+          </p>
+          <p>
+            The eight points targeted in this comprehensive facial rejuvenation treatment include the cheek structure and volume, 
+            under-eye hollows and tear troughs, jawline definition, jowl area improvement, nose-to-mouth contour enhancement, 
+            and smile line correction. Each injection point is carefully selected based on individual facial anatomy and aesthetic goals, 
+            ensuring optimal results that complement the patient's natural features.
+          </p>
+          <p>
+            At CosmeDocs, we pride ourselves on our expertise in aesthetic medicine and our commitment to safety and natural results. 
+            Our practitioners are highly trained professionals who understand the importance of precision and artistry in cosmetic treatments. 
+            The 8 Point Face Lift procedure typically takes between 10-25 minutes to complete, with immediate results that continue to 
+            improve over the following weeks as any minor swelling subsides.
+          </p>
+          <p>
+            The longevity of results from the 8 Point Face Lift treatment is impressive, with effects lasting between 12-18 months 
+            depending on individual factors such as metabolism, lifestyle, and the specific dermal fillers used. This makes it an 
+            excellent investment for those seeking long-term facial rejuvenation without the commitment and risks associated with surgical procedures.
           </p>
         </div>
       </div>
     </>
   );
-};
-
-export default EightPointFacelift;
+}
