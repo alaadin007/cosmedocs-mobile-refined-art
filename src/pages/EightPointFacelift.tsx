@@ -171,67 +171,48 @@ export default function EightPointFacelift() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Hero Section - LipFillers style */}
-        <motion.section 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="relative bg-gradient-to-br from-primary/10 via-background to-primary/5 py-24 px-6"
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="bg-black text-white">
+        {/* Hero Section - Matching LipFillers exact style */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-8"
+                transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <div className="space-y-4">
-                  <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                    8 Point Face Lift
-                  </h1>
-                  <h2 className="text-xl md:text-2xl text-muted-foreground font-light">
-                    Elevate, Enhance, and Embrace Youthful Radiance!
-                  </h2>
-                </div>
-                
-                <p className="text-lg text-muted-foreground max-w-2xl">
-                  Non-surgical facelift treatment using dermal fillers strategically placed at 8 key points to restore volume and create a lifting effect for a completely rejuvenated appearance.
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  8 Point
+                  <span className="block text-purple-300">Face Lift</span>
+                  <span className="block text-sm mt-4">Elevate, Enhance, and Embrace Youthful Radiance!</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
                 </p>
-                
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £800</p>
+                  <p className="text-sm text-gray-300">Non-surgical facelift using dermal fillers at 8 strategic points</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="text-lg px-8">
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <Button size="lg" variant="outline" className="text-lg px-8">
-                    Call Now: 0207 435 7521
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                    Call: 0207 435 7521
                   </Button>
                 </div>
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid grid-cols-2 gap-4"
-              >
-                {treatmentInfo.map((info, index) => (
-                  <Card key={index} className="p-4 text-center border-primary/20 hover:border-primary/40 transition-colors">
-                    <CardContent className="p-0 space-y-2">
-                      <info.icon className="w-8 h-8 mx-auto text-primary" />
-                      <h3 className="font-semibold text-sm">{info.title}</h3>
-                      <p className="text-lg font-bold text-primary">{info.value}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Treatment Objective */}
-        <section className="py-20 px-6 bg-primary/5">
+        <section className="py-20 px-6 bg-accent">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
