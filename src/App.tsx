@@ -25,6 +25,7 @@ import Partners from "./pages/Partners";
 import NotFound from "./pages/NotFound";
 import BotoxCalfReduction from "./pages/BotoxCalfReduction";
 import LipFillerDissolve from "./pages/LipFillerDissolve";
+import PrivateGPDoctor from "./pages/PrivateGPDoctor";
 import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
 import PDOThreads from "./pages/PDOThreads";
 import { ThreadFaceLift } from "./pages/ThreadFaceLift";
@@ -129,6 +130,7 @@ const App = () => {
               <Route path="/partners" element={<Partners />} />
               <Route path="/botox-calf-reduction" element={<BotoxCalfReduction />} />
               <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
+              <Route path="/private-gp-doctor" element={<PrivateGPDoctor />} />
               <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
               <Route path="/pdo-threads" element={<PDOThreads />} />
               <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
