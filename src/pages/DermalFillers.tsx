@@ -359,28 +359,60 @@ const DermalFillerMakeover = () => {
             <div className="mb-16">
               <h3 className="text-2xl font-bold text-white mb-8 text-center">Anti-Ageing Treatments</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {antiAgeingTreatments.map((treatment, index) => (
-                  <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
-                    <CardContent className="p-0">
-                      <div className="flex justify-between items-start mb-4">
-                        <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
-                        <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
-                      </div>
-                      <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
-                      <div className="space-y-2 mb-4">
-                        {treatment.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-sm">
-                            <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
-                            <span className="text-gray-400">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
-                        Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+                {antiAgeingTreatments.map((treatment, index) => {
+                  // Map treatment titles to their respective pages
+                  const getPageLink = (title: string) => {
+                    switch (title) {
+                      case "Marionette Lines":
+                        return "/marionette-lines";
+                      case "Nasolabial Folds":
+                        return "/nasolabial-folds";
+                      case "Jawline (High Def/Jowls)":
+                        return "/jawline-filler";
+                      case "Cheek Volume":
+                        return "/cheek-filler";
+                      case "Tear Trough / Under Eye":
+                        return "/tear-trough-filler";
+                      case "Profhilo":
+                        return "/profhilo-treatment";
+                      default:
+                        return null;
+                    }
+                  };
+
+                  const pageLink = getPageLink(treatment.title);
+
+                  return (
+                    <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
+                      <CardContent className="p-0">
+                        <div className="flex justify-between items-start mb-4">
+                          <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
+                          <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
+                        </div>
+                        <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
+                        <div className="space-y-2 mb-4">
+                          {treatment.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-sm">
+                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
+                              <span className="text-gray-400">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        {pageLink ? (
+                          <Link to={pageLink}>
+                            <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
+                              Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
+                            Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        )}
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             </div>
 
@@ -389,6 +421,25 @@ const DermalFillerMakeover = () => {
               <h3 className="text-2xl font-bold text-white mb-8 text-center">Facial Contouring</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {facialContouringTreatments.map((treatment, index) => {
+                  // Map treatment titles to their respective pages
+                  const getPageLink = (title: string) => {
+                    switch (title) {
+                      case "0.5ml Lip Filler (Natural)":
+                      case "1ml Lip Filler (Bold & Plump)":
+                        return "/lip-fillers";
+                      case "Non Surgical Nose Job":
+                        return "/non-surgical-nose-job";
+                      case "Forehead Filler":
+                        return "/forehead-fillers";
+                      case "Temples Hollowing":
+                        return "/temple-filler-london";
+                      default:
+                        return null;
+                    }
+                  };
+
+                  const pageLink = getPageLink(treatment.title);
+
                   const CardComponent = (
                     <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
                       <CardContent className="p-0">
@@ -405,9 +456,17 @@ const DermalFillerMakeover = () => {
                             </div>
                           ))}
                         </div>
-                        <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
-                          Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
+                        {pageLink ? (
+                          <Link to={pageLink}>
+                            <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
+                              Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
+                            Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        )}
                       </CardContent>
                     </Card>
                   );
