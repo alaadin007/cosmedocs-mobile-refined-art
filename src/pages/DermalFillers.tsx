@@ -208,8 +208,8 @@ const DermalFillerMakeover = () => {
                   <p className="text-sm text-gray-300">45-60 minutes • Results last 12-18 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold">
-                    Book Consultation
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold" asChild>
+                    <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Consultation</a>
                   </Button>
                   <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold">
                     View Price List
@@ -480,9 +480,12 @@ const DermalFillerMakeover = () => {
               <Button
                 size="lg"
                 className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg rounded-full font-semibold"
+                asChild
               >
-                Book Your Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                  Book Your Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
           </div>
