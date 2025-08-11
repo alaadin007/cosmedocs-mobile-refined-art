@@ -11,7 +11,7 @@ import { useVideoManagement } from "@/hooks/useVideoManagement";
 import { Button } from "@/components/ui/button";
 const PRPTreatment = () => {
   const seoData = generateSEOMetadata("PRP Treatment London | Vampire Facial | Platelet-Rich Plasma | Cosmedocs", "Expert PRP treatments in London's Harley Street. Vampire facial, hair restoration, and skin rejuvenation using your body's natural healing power. Book consultation today.", "/prp-treatment");
-  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
+  const bookingUrl = "https://med.as.me/harleystreet";
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const {
     videos

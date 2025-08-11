@@ -13,7 +13,7 @@ const JawlineFiller = () => {
     "/jawline-filler"
   );
 
-  const bookingUrl = "https://med.as.me/schedule.php?appointmentType=17376873";
+  const bookingUrl = "https://med.as.me/harleystreet";
 
   // Before/after images for the viewer
   const beforeAfterImages = [

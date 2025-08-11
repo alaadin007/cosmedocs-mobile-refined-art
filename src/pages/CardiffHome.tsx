@@ -18,7 +18,7 @@ import AnimatedDots from "@/components/AnimatedDots";
 
 const CardiffHome = () => {
   const isMobile = useIsMobile();
-  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
+  const bookingUrl = "https://med.as.me/harleystreet";
 
   const structuredData = {
     "@context": "https://schema.org",

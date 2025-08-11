@@ -129,7 +129,7 @@ const ChinBotox = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
-                    onClick={() => window.open('https://med.as.me/schedule.php?appointmentType=16864702', '_blank')}
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                   >
                     Book Consultation
                   </Button>
@@ -285,7 +285,7 @@ const ChinBotox = () => {
                       </div>
                       <Button 
                         className="w-full mt-4 bg-primary hover:bg-primary-glow"
-                        onClick={() => window.open('https://med.as.me/schedule.php?appointmentType=16864702', '_blank')}
+                        onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                       >
                         Book Consultation
                       </Button>
@@ -342,7 +342,7 @@ const ChinBotox = () => {
                     </div>
                     <Button 
                       className="bg-primary hover:bg-primary-glow rounded-full px-6 py-3"
-                      onClick={() => window.open('https://med.as.me/schedule.php?appointmentType=16864702', '_blank')}
+                      onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                     >
                       Learn More About V-Line
                     </Button>
@@ -422,7 +422,7 @@ const ChinBotox = () => {
                 <Button 
                   size="lg" 
                   className="text-lg px-8 py-4 bg-primary hover:bg-primary-glow rounded-full"
-                  onClick={() => window.open('https://med.as.me/schedule.php?appointmentType=16864702', '_blank')}
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                 >
                   Book Free Consultation
                 </Button>

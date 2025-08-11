@@ -16,7 +16,7 @@ type TreatmentVideo = Tables<'treatment_videos'>;
 
 const CheekFiller = () => {
   const seoData = generateSEOMetadata("Cheek Fillers London | From £350 | Dr. Ahmed Haq | Harley Street", "Expert cheek filler treatments in London's Harley Street. Visibly lifted & defined cheeks and cheekbones by Dr. Ahmed Haq. Premium dermal fillers from £350.", "/cheek-filler");
-  const bookingUrl = "https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29";
+  const bookingUrl = "https://med.as.me/harleystreet";
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [cheekFillerVideos, setCheekFillerVideos] = useState<TreatmentVideo[]>([]);
   const [loadingVideos, setLoadingVideos] = useState(false);

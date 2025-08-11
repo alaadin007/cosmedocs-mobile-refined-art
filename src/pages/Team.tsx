@@ -21,7 +21,7 @@ const Team = () => {
       image: "/lovable-uploads/fcb0e7d1-207b-4491-9e33-c13f7f7e4ecd.png",
       education: "Royal College of Surgeons, Medical School Graduate",
       link: "/team/dr-ahmed-haq",
-      bookingUrl: "https://med.as.me/schedule/0cc7d92b/?calendarIds=3572888",
+      bookingUrl: "https://med.as.me/harleystreet",
       description: "An extensively experienced practitioner with expertise in complex facial contouring and advanced aesthetic treatments. Dr. Haq leads our in-house team and trains cosmetic physicians at the Harley Street Institute."
     },
     {
@@ -30,7 +30,7 @@ const Team = () => {
       image: "/lovable-uploads/b90d3993-6cef-4758-8037-8c5461a2076c.png",
       education: "Oxford Medical Training • London & Kent GP Training",
       link: "/team/dr-hena-haq",
-      bookingUrl: "https://med.as.me/schedule/0cc7d92b?calendarIds=5494281",
+      bookingUrl: "https://med.as.me/harleystreet",
       description: "An Aesthetic Doctor whose holistic approach to client treatments has made her popular amongst her clients. Her special interest lies in subtle tweakments and natural outcomes."
     }
   ];
@@ -234,7 +234,7 @@ const Team = () => {
                 Our aesthetics is invisible art • Bold • Natural • Always Your Way
               </p>
               <div className="flex justify-center gap-4">
-                <a href="https://med.as.me/schedule/0cc7d92b" target="_blank" rel="noopener noreferrer">
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700">
                     Book Consultation
                   </Button>

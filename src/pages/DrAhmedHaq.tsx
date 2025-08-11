@@ -150,7 +150,7 @@ const DrAhmedHaq = () => {
                     </AutoLinkedText>
                   </p>
 
-                  <a href="https://med.as.me/schedule/0cc7d92b/?calendarIds=3572888" target="_blank" rel="noopener noreferrer">
+                  <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
                     <Button className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
                       Book Appointment with Dr Haq
                     </Button>
@@ -286,7 +286,7 @@ const DrAhmedHaq = () => {
                   Book your consultation with Dr Haq and discover the invisible art of aesthetic enhancement.
                   Our aesthetics is invisible art • Bold • Natural • Always Your Way
                 </p>
-                <a href="https://med.as.me/schedule/0cc7d92b/?calendarIds=3572888" target="_blank" rel="noopener noreferrer">
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-yellow-600 hover:bg-yellow-700 text-white px-12 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
                   Book Your Consultation
                   </Button>
