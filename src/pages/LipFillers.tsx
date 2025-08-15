@@ -257,6 +257,98 @@ const LipFillers = () => {
           </div>
         </section>
 
+        {/* Expert Advice Video Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Lip Filler Treatment Advice & Videos</h2>
+                <p className="text-gray-300 mb-6">
+                  Dr. Haq offers expert advice on{" "}
+                  <span className="text-purple-300 font-semibold">lip fillers</span>, based on the training provided through our{" "}
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a>
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Expert technique demonstrations</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Treatment planning insights</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Safety protocols and aftercare</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+                  {/* Video placeholder - will be replaced when user provides actual video */}
+                  <div className="aspect-video bg-gray-800 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                      <p className="text-gray-300">Expert Advice Video</p>
+                      <p className="text-sm text-gray-500">Video will be added here</p>
+                    </div>
+                  </div>
+                  
+                  {/* Video controls overlay placeholder */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </button>
+                        <span className="text-white text-sm">00:00</span>
+                      </div>
+                      <div className="flex-1 mx-4">
+                        <div className="h-1 bg-white/20 rounded-full">
+                          <div className="h-1 bg-white rounded-full w-0"></div>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-white text-sm">01:45</span>
+                        <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
