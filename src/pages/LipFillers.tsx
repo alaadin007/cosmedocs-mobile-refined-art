@@ -50,7 +50,15 @@ const LipFillers = () => {
     },
     {
       question: "How much do lip fillers cost?",
-      answer: "Lip fillers at Cosmedocs start from £350. Final pricing varies based on the amount of product used and specific requirements. We offer competitive pricing for premium treatments and flexible payment options."
+      answer: "0.5ml lip filler costs £275 while 1ml lip filler costs £325. We use only premium quality fillers from Swiss, French, and USA manufacturers, tailored to your unique lip anatomy and physiology."
+    },
+    {
+      question: "What's the difference between 0.5ml and 1ml lip filler?",
+      answer: "0.5ml provides subtle, natural enhancement perfect for first-time treatments and thin lips. 1ml offers more visible enhancement for those seeking bolder results. 0.5ml lasts 6-9 months while 1ml typically lasts 9-12 months."
+    },
+    {
+      question: "Which lip filler volume should I choose?",
+      answer: "For thin lips with dense elastin, we recommend starting with 0.5ml. For medium to large lips or those wanting more noticeable change, 1ml is ideal. Our doctors will assess your lips and recommend the optimal volume during consultation."
     },
     {
       question: "When will I see final results?",
@@ -113,7 +121,7 @@ const LipFillers = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £300</p>
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £275</p>
                   <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -175,6 +183,279 @@ const LipFillers = () => {
                 title="Lip Filler Results Gallery"
                 description="Comprehensive gallery of our lip enhancement treatments"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Comprehensive Lip Filler Information */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">1ml Lip Filler Bold, 0.5ml Lip Filler Natural</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Choose between 1ml lip filler for a bolder look or 0.5ml lip filler for a more natural enhancement. 
+                Our expert cosmetic doctors help you achieve the perfect lip volume and contour for your unique features.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">0.5ml Lip Filler - Natural Enhancement</CardTitle>
+                    <div className="text-purple-300 text-3xl font-bold">£275</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Perfect for first-time treatments and those seeking subtle enhancement. This volume provides 
+                      natural-looking fullness and moisture without significant swelling.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Ideal for thin lips with dense elastin</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Natural appearance with minimal swelling</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Results last 6-9 months</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Perfect starting point for lip enhancement journey</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">1ml Lip Filler - Bold Enhancement</CardTitle>
+                    <div className="text-purple-300 text-3xl font-bold">£325</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      For those seeking more noticeable enhancement. This volume provides visible fullness 
+                      and dramatic improvement in lip shape and contour.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Visibly enhances small lips, enlarges medium lips</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">More apparent results in younger individuals</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Results last 9-12 months</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Perfect for those wanting noticeable change</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            {/* Understanding Lip Filler Volumes */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-accent rounded-2xl p-8 mb-12"
+            >
+              <h3 className="text-2xl font-bold text-white mb-6">How Full Should Lips Be?</h3>
+              <p className="text-gray-300 mb-6">
+                Understanding lip filler volumes is crucial for achieving your desired results. Lip fillers are supplied 
+                in 1ml syringes (roughly a fifth of a teaspoon), though the effective volume is slightly higher as 
+                hyaluronic acid attracts water.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-semibold text-purple-300 mb-3">For Thin Lips</h4>
+                  <p className="text-gray-300 mb-4">
+                    Thin lips have different elasticity and collagen levels. They contain dense elastin and are 
+                    difficult to stretch, making gradual volume increase the safest approach.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <span className="text-gray-300">Start with 0.5ml for natural enhancement</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <span className="text-gray-300">Consider 0.7ml for more noticeable change</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-purple-300 mb-3">For Medium to Large Lips</h4>
+                  <p className="text-gray-300 mb-4">
+                    Medium and large lips can accommodate more filler due to their natural elasticity and 
+                    existing volume, allowing for more dramatic transformations.
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <span className="text-gray-300">1ml provides visible enhancement</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <span className="text-gray-300">1.5-2ml for dramatic results</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Lip Filler Areas of Treatment */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Comprehensive Lip Enhancement Areas</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Our lip filler treatments target multiple areas around the lips for complete enhancement 
+                and natural-looking results that complement your facial features.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { area: "Vermilion Border", description: "Define and enhance the natural lip line for better shape and definition" },
+                { area: "Cupid's Bow", description: "Enhance the central curves of the upper lip for a more defined appearance" },
+                { area: "Upper & Lower Lips", description: "Add volume to the fleshy part of both lips for natural fullness" },
+                { area: "Oral Commissures", description: "Treat the corners of the mouth to prevent downward turning" },
+                { area: "Marionette Lines", description: "Address puppet lines that extend downward from the mouth corners" },
+                { area: "Philtrum Ridges", description: "Enhance the natural ridges between nose and upper lip for better definition" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black border-gray-800 h-full hover:border-purple-500 transition-colors">
+                    <CardHeader>
+                      <CardTitle className="text-white text-lg">{item.area}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Swelling and Recovery Information */}
+        <section className="py-20">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">0.5ml Lip Filler Swelling Stages</h2>
+                <p className="text-gray-300 mb-6">
+                  Understanding the recovery timeline helps you plan your treatment effectively. Schedule your 
+                  lip enhancement well before important events as swelling can be unpredictable.
+                </p>
+                <div className="space-y-4">
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">First 24-48 Hours</h4>
+                    <p className="text-gray-300">Initial swelling begins, lips may feel tender and appear larger than final result</p>
+                  </div>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">48-72 Hours</h4>
+                    <p className="text-gray-300">Peak swelling period, lips reach maximum size before beginning to settle</p>
+                  </div>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">1-2 Weeks</h4>
+                    <p className="text-gray-300">Gradual reduction in swelling, true results begin to show as lips settle naturally</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Lip Filler Aftercare Guide</h2>
+                <p className="text-gray-300 mb-6">
+                  Proper aftercare ensures optimal healing and the best possible results from your 
+                  lip filler treatment at our London clinic.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">First 24 Hours</h4>
+                      <p className="text-gray-300">Avoid touching lips, applying makeup, or consuming hot drinks</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Ice Application</h4>
+                      <p className="text-gray-300">Apply ice packs carefully to reduce swelling and discomfort</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Daily Massage</h4>
+                      <p className="text-gray-300">Massage lips firmly for 7-14 days to prevent lumps and ensure smooth results</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Activity Restrictions</h4>
+                      <p className="text-gray-300">Avoid strenuous exercise for 24-48 hours to minimize swelling</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -384,8 +665,15 @@ const LipFillers = () => {
 
         {/* Hidden SEO content for search engines */}
         <div className="sr-only">
+          <h3>Comprehensive Lip Filler Information London</h3>
           <p>
-            Cosmedocs Harley Street clinic offers premium lip filler treatments in London using advanced hyaluronic acid dermal fillers. Our expert cosmetic doctors specialize in natural lip enhancement, lip augmentation, and subtle lip contouring procedures. Located at 10 Harley Street, we provide safe, effective lip injections with minimal downtime and natural-looking results. Our lip filler treatments use only FDA-approved products including Juvederm, Restylane, and other premium brands. We offer comprehensive lip enhancement services including lip volume increase, lip shape correction, lip symmetry adjustment, and lip border definition. Our experienced practitioners have performed over one million aesthetic injections since 2007, making us one of London's most trusted cosmetic clinics. Lip filler procedures typically take 30-45 minutes with immediate results and 6-12 months duration. We provide detailed aftercare instructions and follow-up appointments to ensure optimal healing and satisfaction. Our 'invisible art' philosophy ensures natural-looking lip enhancement that complements your facial features. Book your lip filler consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer competitive pricing and flexible payment options for all lip enhancement treatments.
+            Cosmedocs Harley Street clinic offers premium lip filler treatments in London using advanced hyaluronic acid dermal fillers. Our expert cosmetic doctors specialize in 0.5ml lip filler natural enhancement and 1ml lip filler bold enhancement procedures. Located at 10 Harley Street, we provide safe, effective lip injections with minimal downtime and natural-looking results. 0.5ml lip filler costs £275 and provides subtle enhancement perfect for thin lips and first-time treatments, lasting 6-9 months. 1ml lip filler costs £325 and offers visible enhancement for medium to large lips, lasting 9-12 months. Our lip filler treatments target vermilion border, cupid's bow, upper and lower lips, oral commissures, marionette lines, and philtrum ridges for comprehensive enhancement.
+          </p>
+          <p>
+            We use only FDA-approved products including Juvederm, Restylane, and other premium brands from Swiss, French, and USA manufacturers. Our comprehensive lip enhancement services include lip volume increase, lip shape correction, lip symmetry adjustment, and lip border definition. Thin lips have different elasticity and collagen levels with dense elastin, making gradual volume increase with 0.5ml the safest approach. Medium and large lips can accommodate 1ml to 2ml for more dramatic transformations. Understanding lip filler volumes is crucial as fillers are supplied in 1ml syringes (roughly a fifth of a teaspoon), though effective volume is higher as hyaluronic acid attracts water.
+          </p>
+          <p>
+            Our experienced practitioners have performed over one million aesthetic injections since 2007, making us one of London's most trusted cosmetic clinics. Lip filler procedures typically take 10-25 minutes with immediate results. Recovery involves 1-2 weeks full healing with swelling peaking at 48-72 hours then gradually subsiding. Proper aftercare includes avoiding touching lips for 24 hours, applying ice packs, daily massage for 7-14 days, and avoiding strenuous exercise. We provide detailed aftercare instructions and follow-up appointments to ensure optimal healing and satisfaction. Our 'invisible art' philosophy ensures natural-looking lip enhancement that complements your facial features. Book your lip filler consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer competitive pricing and flexible payment options for all lip enhancement treatments.
           </p>
         </div>
       </div>
