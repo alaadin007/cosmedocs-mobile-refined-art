@@ -316,33 +316,6 @@ const LipFillers = () => {
                     />
                     Your browser does not support the video tag.
                   </video>
-                  
-                  {/* Video title overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                          </svg>
-                        </button>
-                        <span className="text-white text-sm">00:00</span>
-                      </div>
-                      <div className="flex-1 mx-4">
-                        <div className="h-1 bg-white/20 rounded-full">
-                          <div className="h-1 bg-white rounded-full w-0"></div>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <span className="text-white text-sm">01:45</span>
-                        <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             </div>
