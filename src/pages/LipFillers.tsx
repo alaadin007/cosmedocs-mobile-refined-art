@@ -304,20 +304,20 @@ const LipFillers = () => {
                 className="relative"
               >
                 <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                  {/* Video placeholder - will be replaced when user provides actual video */}
-                  <div className="aspect-video bg-gray-800 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z"/>
-                        </svg>
-                      </div>
-                      <p className="text-gray-300">Expert Advice Video</p>
-                      <p className="text-sm text-gray-500">Video will be added here</p>
-                    </div>
-                  </div>
+                  {/* Expert Advice Video */}
+                  <video 
+                    controls 
+                    className="w-full aspect-video object-cover"
+                    poster="/placeholder.svg"
+                  >
+                    <source 
+                      src="https://mrrdrtbarxaacmlzvgne.supabase.co/storage/v1/object/public/treatment-videos/1755264601226_oah7twobb4l.mp4" 
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
                   
-                  {/* Video controls overlay placeholder */}
+                  {/* Video title overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
