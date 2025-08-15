@@ -308,7 +308,7 @@ const LipFillers = () => {
                   <video 
                     controls 
                     className="w-full aspect-video object-cover"
-                    poster="/placeholder.svg"
+                    poster="/lovable-uploads/09951dc6-93ca-42a0-80e6-127bcc865484.png"
                   >
                     <source 
                       src="https://mrrdrtbarxaacmlzvgne.supabase.co/storage/v1/object/public/treatment-videos/1755264601226_oah7twobb4l.mp4" 
