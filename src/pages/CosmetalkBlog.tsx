@@ -16,13 +16,24 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Inside the Mind of an Aesthetic Doctor: The Art of Cheeks, Lips and Chin Fillers",
+      description: "Discover the artistic approach to facial aesthetics through the expert perspective of Dr Ahmed Haq. Learn about the nuanced techniques behind cheeks, lips and chin fillers.",
+      category: "Expert Insight",
+      readTime: "8 min read",
+      date: "January 16, 2025",
+      slug: "/inside-mind-aesthetic-doctor-blog",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
+      author: "By Dr. Ahmed Haq"
+    },
+    {
       title: "Beauty as Ethnic Neutrality: Aesthetic Harmony Beyond Race",
       description: "Exploring how universal beauty standards transcend ethnicity through facial harmony, balance, and symmetry across all cultures.",
       category: "Beauty Science",
       readTime: "12 min read",
       date: "January 15, 2024",
       slug: "/blog/beauty-ethnic-neutrality",
-      featured: true,
+      featured: false,
       image: "/lovable-uploads/95a2c194-5d44-4495-8025-de676d437b8d.png",
       author: "By CosmeDocs"
     },

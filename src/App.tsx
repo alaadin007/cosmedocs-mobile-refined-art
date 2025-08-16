@@ -48,6 +48,7 @@ import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSk
 import ChineseLondonAestheticsBlog from "./pages/ChineseLondonAestheticsBlog";
 import VitaminCSerumBenefitsBlog from "./pages/VitaminCSerumBenefitsBlog";
 import CosmetalkBlog from "./pages/CosmetalkBlog";
+import InsideMindAestheticDoctorBlog from "./pages/InsideMindAestheticDoctorBlog";
 import SmokersLinesWomen from "./pages/SmokersLinesWomen";
 import FlawlessSkin from "./pages/FlawlessSkin";
 import LazySkinSyndrome from "./pages/LazySkinSyndrome";
@@ -157,6 +158,7 @@ const App = () => {
               <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
               <Route path="/clinical-concepts-to-flawless-skin" element={<ClinicalConceptsToFlawlessSkin />} />
               <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
+              <Route path="/inside-mind-aesthetic-doctor-blog" element={<InsideMindAestheticDoctorBlog />} />
               <Route path="/cosmetalk/vitamin-c-ferulic-acid-benefits" element={<VitaminCSerumBenefitsBlog />} />
               <Route path="/cosmetalk/smokers-lines-women" element={<SmokersLinesWomen />} />
               <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
