@@ -312,7 +312,14 @@ const NonSurgicalNoseJob = () => {
                   <img 
                     src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
                     alt="Complex nose fracture non-surgical reconstruction before after London Harley Street Cosmedocs Dr Ahmed Haq fibrosis cartilage bone treatment cannula technique"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
+                    className="w-full h-auto rounded-2xl shadow-2xl object-cover max-w-full"
+                    loading="lazy"
+                    onError={(e) => {
+                      console.error('Image failed to load:', e.currentTarget.src);
+                      e.currentTarget.style.display = 'block';
+                      e.currentTarget.style.backgroundColor = '#333';
+                      e.currentTarget.style.minHeight = '300px';
+                    }}
                   />
                 </div>
                 
