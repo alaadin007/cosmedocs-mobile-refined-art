@@ -233,14 +233,51 @@ const NonSurgicalNoseJob = () => {
               </p>
             </motion.div>
             
-            <div className="text-center">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Results"
-                title="Non-Surgical Nose Job Results"
-                description="Real patient transformations by Dr. Ahmed Haq"
-                className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {beforeAfterImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="group cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  onClick={() => {
+                    const modal = document.createElement('div');
+                    modal.className = 'fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4';
+                    modal.innerHTML = `
+                      <div class="relative max-w-4xl w-full max-h-screen overflow-auto">
+                        <button class="absolute top-4 right-4 z-60 text-white hover:text-gray-300 text-2xl font-bold" onclick="this.parentElement.parentElement.remove()">×</button>
+                        <img src="${image.src}" alt="${image.alt}" class="w-full h-auto rounded-lg">
+                        <p class="text-white text-center mt-4 px-4">${image.caption}</p>
+                      </div>
+                    `;
+                    modal.onclick = (e) => {
+                      if (e.target === modal) modal.remove();
+                    };
+                    document.body.appendChild(modal);
+                  }}
+                >
+                  <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:scale-105">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full aspect-[4/3] object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-white/70 mt-3 text-center font-light">
+                    {image.caption}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
