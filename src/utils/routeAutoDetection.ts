@@ -21,7 +21,7 @@ const ROUTE_REGISTRY = {
     // Core aesthetic treatments
     '/lip-fillers', '/forehead-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', 
     '/pdo-threads', '/thread-face-lift', '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
-    '/hydrafacial', '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london', '/vampire-facial',
+    '/hydrafacial', '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london',
     
     // Botox treatments
     '/advanced-upper-face-botox', '/lower-face-botox', '/face-botox-areas', '/face-botox',
@@ -101,7 +101,7 @@ function categorizeRoute(path: string): 'page' | 'treatment' | 'blog' | 'locatio
   const treatmentPatterns = [
     'filler', 'botox', 'treatment', 'nose-job', 'facelift', 'threads',
     'profhilo', 'hydrafacial', 'prp', 'polynucleotide', 'consultation',
-    'peel', 'microneedling', 'bleaching', 'skin-care', 'vampire-facial',
+    'peel', 'microneedling', 'bleaching', 'skin-care',
     'nefertiti', 'gummy-smile', 'marionette', 'nasolabial', 'dissolve',
     'rejuvenation', 'temple-filler', 'tear-trough', 'chin-botox', 'chin-filler',
     'cheek-filler', 'jawline-filler', 'neck-fillers', 'forehead-fillers',

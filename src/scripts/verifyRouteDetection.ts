@@ -21,7 +21,7 @@ function verifyRouteDetection() {
     // Treatments
     '/lip-fillers', '/forehead-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', 
     '/pdo-threads', '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
-    '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london', '/vampire-facial',
+    '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london',
     '/advanced-upper-face-botox', '/lower-face-botox', '/face-botox-areas', '/face-botox',
     '/nefertiti-botox-facelift', '/nefertiti-botox-face-jaw-lift', '/trigger-point-botox', 
     '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction', '/marionette-lines',
