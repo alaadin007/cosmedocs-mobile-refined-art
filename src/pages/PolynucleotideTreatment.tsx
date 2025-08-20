@@ -152,54 +152,6 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See the natural, beautiful results achieved with our expert polynucleotide treatments. 
-                Each patient receives a personalized approach for optimal regenerative outcomes.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {beforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative group cursor-pointer"
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Polynucleotide Results Gallery"
-                description="Comprehensive gallery of our regenerative treatments"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Treatment Summary Section */}
         <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
