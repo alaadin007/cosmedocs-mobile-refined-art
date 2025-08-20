@@ -100,37 +100,46 @@ const PDOThreads = () => {
         </script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="bg-black text-white py-20">
-        <div className="page-container">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              PDO Thread Treatments
-            </h1>
-            <p className="text-xl mb-4 text-gray-300">
-              Advanced thread lift procedures combining science with artistry for natural facial rejuvenation
-            </p>
-            <p className="text-sm text-gray-400 italic mb-8">
-              Our aesthetics is invisible art • Bold • Natural • Always Your Way
-            </p>
-            <div className="flex justify-center items-center space-x-4 text-sm text-purple-400 mb-6">
-              <span>Expert Thread Placement</span>
-              <span>•</span>
-              <span>CQC Registered</span>
-              <span>•</span>
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View Results"
-                title="PDO Thread Lift Results"
-                description="Real client transformations with our expert PDO thread treatments"
-              />
-            </div>
-          </motion.div>
+      {/* Hero Section - Updated to match LipFillers design */}
+      <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <div className="page-container relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                Expert PDO
+                <span className="block text-purple-300">Thread Lift</span>
+                <span className="block text-sm mt-4">Advanced thread procedures for natural facial rejuvenation</span>
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                <span className="text-purple-300 font-semibold">Invisible Art</span>
+                <br />
+                Transformation that speaks without saying a word
+              </p>
+              <div className="mb-8">
+                <p className="text-2xl text-purple-300 font-bold">Starting from £550</p>
+                <p className="text-sm text-gray-300">Expert thread placement • CQC Registered • Natural lifting results</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  Book Consultation
+                </Button>
+                <BeforeAfterImageViewer 
+                  images={beforeAfterImages}
+                  triggerLabel="View Results"
+                  title="PDO Thread Lift Results"
+                  description="Real client transformations with our expert PDO thread treatments"
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm border-2"
+                />
+              </div>
+            </motion.div>
+            
+            <div className="hidden lg:block"></div>
+          </div>
         </div>
       </section>
 
