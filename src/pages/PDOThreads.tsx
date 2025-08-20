@@ -327,6 +327,54 @@ const PDOThreads = () => {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-16 bg-black">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-white">PDO Thread Lift Procedure</h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Watch our expert explain the PDO thread lift procedure and see real before & after results
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/mHn0TARBHik"
+                title="PDO Thread Lift Procedure and Before & After Results"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-8"
+          >
+            <p className="text-gray-300 text-sm">
+              Expert insights into PDO thread technology and real client transformations
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Two Types of PDO Threads */}
       <section className="py-16 bg-gray-50">
         <div className="page-container">
