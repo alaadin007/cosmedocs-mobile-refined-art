@@ -153,7 +153,7 @@ const PDOThreads = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-center mb-8">Understanding PDO Thread Technology</h2>
+              <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Understanding PDO Thread Technology</h2>
               <p className="text-lg text-gray-700 mb-6">
                 PDO (Polydioxanone) threads represent one of the most sophisticated non-surgical facial rejuvenation treatments available today. Unfortunately, this fascinating procedure is often misunderstood by both the public and some medical professionals who view threads merely as a tool rather than understanding the complete treatment philosophy.
               </p>
@@ -175,7 +175,7 @@ const PDOThreads = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Real PDO Thread Results</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Real PDO Thread Results</h2>
             <p className="text-lg text-gray-600 mb-8">
               Performed in London - Final results develop over a few weeks as swelling settles
             </p>
@@ -222,7 +222,7 @@ const PDOThreads = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">PDO Thread Lift Cost</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">PDO Thread Lift Cost</h2>
             <p className="text-lg text-gray-600">
               Transparent pricing for professional PDO thread treatments
             </p>
@@ -378,7 +378,7 @@ const PDOThreads = () => {
       {/* Two Types of PDO Threads */}
       <section className="py-16 bg-gray-50">
         <div className="page-container">
-          <h2 className="text-3xl font-bold text-center mb-12">Two Distinct PDO Thread Treatments</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Two Distinct PDO Thread Treatments</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Small Threads */}
@@ -482,7 +482,7 @@ const PDOThreads = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-8">The Critical Importance of Proper Client Selection</h2>
+              <h2 className="text-3xl font-bold mb-8 text-gray-900">The Critical Importance of Proper Client Selection</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <Card className="bg-green-50 border-green-200">
@@ -526,7 +526,7 @@ const PDOThreads = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-center mb-8">Regulatory Compliance & Clinical Excellence</h2>
+              <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Regulatory Compliance & Clinical Excellence</h2>
               
               <Card className="bg-blue-50 border-blue-200 mb-8">
                 <CardContent className="pt-6">
@@ -543,7 +543,7 @@ const PDOThreads = () => {
               </Card>
               
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-4">What This Means for You:</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">What This Means for You:</h3>
                 <ul className="text-left max-w-2xl mx-auto space-y-2 text-gray-700">
                   <li>✓ Fully CQC-compliant treatment environment</li>
                   <li>✓ Sterile clinical clean room procedures</li>
