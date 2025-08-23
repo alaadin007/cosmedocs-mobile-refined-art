@@ -20,8 +20,6 @@ export default function Header() {
     { name: "Treatments", path: "/treatments" },
     { name: "Cosmetalk", path: "/cosmetalk" },
     { name: "About Us", path: "/about" },
-    { name: "Plastic Surgeon", path: "/plastic-surgeon" },
-    { name: "Dermatology", path: "/dermatology" },
     { name: "Partners", path: "/partners" },
     { name: "Contact", path: "/contact" },
   ];

@@ -54,10 +54,10 @@ export default function LiquidGlassMenu({ menuItems, onItemClick, onContactClick
         
         <div className="px-6 py-6 border-t border-white/10">
           <button 
-            onClick={onContactClick}
+            onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
             className="w-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-2xl px-6 py-3 transition-all duration-300 hover:scale-105 border border-white/20"
           >
-            Do something here
+            Book Consultation
           </button>
         </div>
       </div>

@@ -84,8 +84,12 @@ const MedicalAnalBleaching = () => {
                     <span>Discreet Treatment</span>
                   </div>
                 </div>
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Do something here
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90"
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                >
+                  Book Consultation
                 </Button>
               </motion.div>
             </div>
@@ -153,8 +157,12 @@ const MedicalAnalBleaching = () => {
                 Take the first step towards addressing your concerns with our professional, 
                 discreet medical anal bleaching treatment. Bold. Natural. Always Your Way.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Do something here
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90"
+                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+              >
+                Book Consultation
               </Button>
             </div>
           </div>

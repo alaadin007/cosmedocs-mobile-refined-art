@@ -259,8 +259,12 @@ const AdvancedConsultation = () => {
                 Experience the Cosmedocs difference with Dr. Ahmed Haq's millimeter-precision approach 
                 to aesthetic medicine. Bold. Natural. Always Your Way.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Do something here
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90"
+                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+              >
+                Book Consultation
               </Button>
             </div>
           </div>

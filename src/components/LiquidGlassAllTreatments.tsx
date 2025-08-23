@@ -211,8 +211,11 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
                   Our aesthetics is invisible art • Bold • Natural • Always Your Way
                 </p>
                 <div className="space-x-4">
-                  <Button className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-8 py-3 transition-all duration-300 hover:scale-105 border border-white/20">
-                    Do Something Here
+                  <Button 
+                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                    className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-8 py-3 transition-all duration-300 hover:scale-105 border border-white/20"
+                  >
+                    Book Consultation
                   </Button>
                 </div>
               </div>

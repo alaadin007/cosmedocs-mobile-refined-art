@@ -409,6 +409,111 @@ const Treatments = () => {
           link: "/microneedling"
         }
       ]
+    },
+    plasticsurgeon: {
+      title: "PLASTIC SURGEON SERVICES",
+      subtitle: "Expert cosmetic surgery procedures",
+      description: "Our experienced plastic surgeons provide comprehensive cosmetic surgery procedures with the highest standards of care. From consultation to recovery, we ensure natural-looking results that enhance your confidence.",
+      items: [
+        {
+          title: "CONSULTATION",
+          price: "£150",
+          description: "Comprehensive surgical consultation and assessment"
+        },
+        {
+          title: "RHINOPLASTY (NOSE SURGERY)",
+          price: "From £6,000",
+          description: "Surgical nose reshaping for improved aesthetics and function"
+        },
+        {
+          title: "BREAST AUGMENTATION",
+          price: "From £5,500",
+          description: "Breast enhancement with implants"
+        },
+        {
+          title: "BREAST REDUCTION",
+          price: "From £7,000",
+          description: "Reduction mammoplasty for comfort and proportion"
+        },
+        {
+          title: "FACELIFT",
+          price: "From £8,000",
+          description: "Comprehensive facial rejuvenation surgery"
+        },
+        {
+          title: "TUMMY TUCK",
+          price: "From £6,500",
+          description: "Abdominoplasty for flatter, firmer abdomen"
+        },
+        {
+          title: "LIPOSUCTION",
+          price: "From £3,500",
+          description: "Fat removal for body contouring"
+        },
+        {
+          title: "BLEPHAROPLASTY",
+          price: "From £3,000",
+          description: "Eyelid surgery for refreshed appearance"
+        }
+      ]
+    },
+    dermatology: {
+      title: "DERMATOLOGY SERVICES",
+      subtitle: "Medical and aesthetic dermatology",
+      description: "Our qualified dermatologists provide comprehensive skin health services, treating both medical conditions and aesthetic concerns with evidence-based treatments for optimal skin health.",
+      items: [
+        {
+          title: "DERMATOLOGY CONSULTATION",
+          price: "£200",
+          description: "Comprehensive skin health assessment and treatment planning"
+        },
+        {
+          title: "MOLE & SKIN TAG REMOVAL",
+          price: "From £150",
+          description: "Safe removal of benign skin lesions",
+          link: "/mole-skin-tag-removal"
+        },
+        {
+          title: "ACNE TREATMENT",
+          price: "From £250",
+          description: "Comprehensive acne management and treatment",
+          link: "/acne-treatment"
+        },
+        {
+          title: "ECZEMA TREATMENT",
+          price: "From £200",
+          description: "Specialized treatment for eczema and dermatitis",
+          link: "/eczema-treatment"
+        },
+        {
+          title: "PSORIASIS TREATMENT",
+          price: "From £250",
+          description: "Advanced psoriasis management and therapy",
+          link: "/psoriasis-treatment"
+        },
+        {
+          title: "HYPERPIGMENTATION TREATMENT",
+          price: "From £300",
+          description: "Treatment for dark spots and uneven skin tone",
+          link: "/hyperpigmentation-treatment"
+        },
+        {
+          title: "SKIN CANCER SCREENING",
+          price: "£300",
+          description: "Comprehensive skin cancer detection and monitoring"
+        },
+        {
+          title: "ROSACEA TREATMENT",
+          price: "From £200",
+          description: "Management of rosacea and facial redness"
+        },
+        {
+          title: "PRESCRIPTION SKINCARE",
+          price: "From £100",
+          description: "Medical-grade skincare prescriptions",
+          link: "/prescription-skin-care"
+        }
+      ]
     }
   };
 
@@ -434,6 +539,8 @@ const Treatments = () => {
               <TabsTrigger value="hyaluronic">HA Makeover</TabsTrigger>
               <TabsTrigger value="skinBoosters">Skin Boosters</TabsTrigger>
               <TabsTrigger value="medspa">Skin & Hair Medicine</TabsTrigger>
+              <TabsTrigger value="plasticsurgeon">Plastic Surgeon</TabsTrigger>
+              <TabsTrigger value="dermatology">Dermatology</TabsTrigger>
             </TabsList>
           </div>
 
@@ -734,10 +841,82 @@ const Treatments = () => {
               </div>
             </motion.div>
           </TabsContent>
+
+          <TabsContent value="plasticsurgeon" className="mt-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-bold mb-2">{treatments.plasticsurgeon.title}</h2>
+              <p className="text-gray-400 mb-6">{treatments.plasticsurgeon.subtitle}</p>
+              <p className="text-gray-300 mb-6">{treatments.plasticsurgeon.description}</p>
+              
+              <div className="mt-8">
+                {treatments.plasticsurgeon.items.map((item, index) => (
+                  <Card key={index} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-semibold">{item.title}</h3>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </motion.div>
+          </TabsContent>
+
+          <TabsContent value="dermatology" className="mt-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-bold mb-2">{treatments.dermatology.title}</h2>
+              <p className="text-gray-400 mb-6">{treatments.dermatology.subtitle}</p>
+              <p className="text-gray-300 mb-6">{treatments.dermatology.description}</p>
+              
+              <div className="mt-8">
+                {treatments.dermatology.items.map((item, index) => (
+                  <Card key={index} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-semibold">{item.title}</h3>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                        </div>
+                      </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </motion.div>
+          </TabsContent>
         </Tabs>
 
         <div className="mt-16 text-center">
-          <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+          <Button 
+            className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+            onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+          >
             Book a Consultation
           </Button>
         </div>
