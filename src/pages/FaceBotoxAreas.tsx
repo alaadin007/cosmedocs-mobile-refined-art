@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
@@ -190,7 +191,10 @@ const FaceBotoxAreas = () => {
                   <p className="text-sm text-gray-300">15-20 minutes • Results last 4-6 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
                     Book Consultation
                   </Button>
                   <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold">
@@ -557,7 +561,11 @@ const FaceBotoxAreas = () => {
                   Book your consultation with our expert practitioners and discover the art of invisible enhancement.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-white text-black hover:bg-gray-100">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-black hover:bg-gray-100"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
                     Book Consultation
                   </Button>
                   <Button
