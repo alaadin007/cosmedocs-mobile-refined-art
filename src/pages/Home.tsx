@@ -40,7 +40,7 @@ const Home = () => {
                 duration: 0.6
               }}>
                 <div className="relative mb-6">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" id="hero-heading">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-400" id="hero-heading">
                     cosmedocs
                   </h2>
                 </div>

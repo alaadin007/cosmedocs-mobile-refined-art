@@ -74,8 +74,8 @@ export default function Header() {
         <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           <Link to="/" className="flex flex-col items-start">
             <div className="text-2xl md:text-3xl font-bold">
-              <span className="text-white">COSME</span>
-              <span className="text-white">DOCS</span>
+              <span className="text-amber-400">COSME</span>
+              <span className="text-amber-400">DOCS</span>
             </div>
             <p className="text-xs text-gray-300 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
           </Link>
