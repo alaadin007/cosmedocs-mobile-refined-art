@@ -46,10 +46,11 @@ const Treatments = () => {
         },
         {
           title: "FACE BOTOX / AZZALURE / DYSPORT",
+          description: "Choose from: Frown Area, Forehead Area, Crows Feet",
           prices: [
             { name: "1 Area", price: "£175" },
-            { name: "2 Area", price: "£275" },
-            { name: "3 Area", price: "£350" },
+            { name: "2 Areas", price: "£275" },
+            { name: "3 Areas", price: "£350" },
             { name: "*Men supplement", price: "£50", note: "If Combined With Any 1,2,3 Main Areas" }
           ],
           link: "visit page"
