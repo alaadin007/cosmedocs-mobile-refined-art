@@ -141,7 +141,7 @@ const MasseterBotox = () => {
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">£350 (Both Sides)</p>
-                  <p className="text-sm text-gray-300">25-45 units per side | Results in 1-2 weeks | Lasts 4-6 months</p>
+                  <p className="text-sm text-gray-300">25-45 units per side | Results 1-2 weeks | Repeat 4-6 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
