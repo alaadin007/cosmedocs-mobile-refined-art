@@ -36,7 +36,8 @@ export default function Header() {
     {
       icon: MessageSquare,
       label: "WhatsApp",
-      action: () => window.open(whatsappUrl, "_blank")
+      action: () => window.open(whatsappUrl, "_blank"),
+      subtitle: "+44 7735 606447"
     },
     {
       icon: Search,
@@ -46,12 +47,20 @@ export default function Header() {
     {
       icon: Mail,
       label: "Email Us",
-      action: () => window.open("mailto:info@cosmedocs.com", "_blank")
+      action: () => window.open("mailto:info@cosmedocs.com", "_blank"),
+      subtitle: "info@cosmedocs.com"
     },
     {
       icon: Phone,
-      label: "Call Us",
-      action: () => window.open("tel:+447735606447", "_blank")
+      label: "Call Us - Clinic 1",
+      action: () => window.open("tel:+443330551503", "_blank"),
+      subtitle: "333 0551 503"
+    },
+    {
+      icon: Phone,
+      label: "Call Us - Clinic 2", 
+      action: () => window.open("tel:+448008600178", "_blank"),
+      subtitle: "0800 8600 178"
     },
     {
       icon: Instagram,
@@ -143,6 +152,12 @@ export default function Header() {
         isOpen={isContactMenuOpen}
         onClose={() => setIsContactMenuOpen(false)}
         options={contactOptions}
+      />
+
+      {/* Aesthetic Analysis Modal */}
+      <AestheticAnalysisWizard
+        isOpen={isAnalysisOpen}
+        onClose={() => setIsAnalysisOpen(false)}
       />
     </>
   );

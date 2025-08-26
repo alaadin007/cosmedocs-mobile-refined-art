@@ -7,6 +7,7 @@ interface ContactOption {
   icon: LucideIcon;
   label: string;
   action: () => void;
+  subtitle?: string;
 }
 
 interface LiquidGlassContactMenuProps {
@@ -72,7 +73,12 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, options }: Liq
                     <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
                       <option.icon className="h-5 w-5 text-white/80" />
                     </div>
-                    <span className="text-white/90 font-medium">{option.label}</span>
+                    <div className="flex-1 text-left">
+                      <span className="text-white/90 font-medium block">{option.label}</span>
+                      {option.subtitle && (
+                        <span className="text-white/60 text-sm block">{option.subtitle}</span>
+                      )}
+                    </div>
                   </motion.button>
                 ))}
               </div>
