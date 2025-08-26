@@ -4,7 +4,7 @@ import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
-import LiquidGlassMenu from "./LiquidGlassMenu";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import LiquidGlassSearch from "./LiquidGlassSearch";
 import LiquidGlassContactMenu from "./LiquidGlassContactMenu";
 import AestheticAnalysisWizard from "./AestheticAnalysisWizard";
@@ -80,17 +80,11 @@ export default function Header() {
             <p className="text-xs text-amber-400 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
           </Link>
           
-          {/* Desktop Navigation - Simplified */}
+          {/* Desktop Navigation - Sidebar Trigger */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button
-              onClick={() => setIsMobileMenuOpen(true)}
-              variant="ghost"
-              size="icon"
-              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
-              title="Menu"
-            >
+            <SidebarTrigger className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 p-2 rounded-lg">
               <Menu className="h-5 w-5" />
-            </Button>
+            </SidebarTrigger>
           </div>
 
           {/* Desktop Actions */}
@@ -118,6 +112,10 @@ export default function Header() {
 
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center space-x-2">
+            <SidebarTrigger className="text-white/90 hover:text-white hover:bg-white/10 p-2 rounded-lg">
+              <Menu className="h-5 w-5" />
+            </SidebarTrigger>
+            
             <Button
               onClick={() => setIsSearchOpen(true)}
               variant="ghost"
@@ -127,25 +125,6 @@ export default function Header() {
             >
               <Search className="h-5 w-5" />
             </Button>
-            
-            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white/90 hover:text-white hover:bg-white/10">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="p-0 border-none">
-                <LiquidGlassMenu 
-                  menuItems={menuItems}
-                  onItemClick={() => setIsMobileMenuOpen(false)}
-                  onContactClick={() => {
-                    setIsMobileMenuOpen(false);
-                    setIsContactMenuOpen(true);
-                  }}
-                />
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </header>
