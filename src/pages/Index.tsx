@@ -120,13 +120,35 @@ const Index = () => {
               }} animate={{
                 opacity: 1
               }} transition={{
-                delay: 0.9,
-                duration: 0.6
-              }}>
-                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors">
-                    Book a Consultation
-                  </a>
-                </motion.div>
+                 delay: 0.9,
+                 duration: 0.6
+               }}>
+                   <div className="space-y-4">
+                     <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors">
+                       Book a Consultation
+                     </a>
+                     
+                     {/* AI Facial Analysis Button */}
+                     <motion.div
+                       initial={{ opacity: 0, y: 10 }}
+                       animate={{ opacity: 1, y: 0 }}
+                       transition={{ delay: 1.1, duration: 0.6 }}
+                     >
+                       <Button
+                         onClick={() => setIsAnalysisOpen(true)}
+                         variant="outline"
+                         size="lg"
+                         className="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-full px-8 py-6 text-sm font-medium transition-all duration-300"
+                       >
+                         <Sparkles className="h-4 w-4 mr-2" />
+                         AI Facial Analysis
+                       </Button>
+                       <p className="text-xs text-gray-400 mt-2">
+                         Free assessment • Instant results
+                       </p>
+                     </motion.div>
+                   </div>
+                 </motion.div>
               </div>
             </div>
           </section>
