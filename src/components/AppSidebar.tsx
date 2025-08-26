@@ -124,7 +124,7 @@ export function AppSidebar() {
         {!collapsed && (
           <div className="p-4 mt-auto">
             <Button 
-              className="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 rounded-lg transition-all duration-300"
+              className="w-full bg-amber-400 hover:bg-amber-500 text-black font-medium py-3 rounded-lg transition-all duration-300"
               onClick={() => window.open("https://www.harleystreetinstitute.com", "_blank")}
             >
               Book Consultation
