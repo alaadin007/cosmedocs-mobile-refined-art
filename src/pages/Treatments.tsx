@@ -579,7 +579,11 @@ const Treatments = () => {
                       </div>
                       {item.link && (
                         <div className="mt-2 text-right">
-                          <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                          <Button 
+                            variant="link" 
+                            className="p-0 h-auto text-white hover:text-gray-300"
+                            onClick={() => window.location.href = "/face-botox-areas"}
+                          >
                             Learn more →
                           </Button>
                         </div>
