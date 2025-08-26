@@ -74,10 +74,13 @@ export default function Header() {
         <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           <Link to="/" className="flex flex-col items-start">
             <div className="text-2xl md:text-3xl font-bold">
-              <span className="text-white">COSME</span>
+              <span className="bg-gradient-to-r from-amber-600 to-amber-700 bg-clip-text text-transparent">COSME</span>
               <span className="text-white">DOCS</span>
             </div>
-            <p className="text-xs text-gray-300 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-amber-600 to-amber-700 mb-1"></div>
+            <p className="text-xs text-gray-300 -mt-1">
+              <span className="text-amber-600 font-medium">Harley Street</span> Since 2007, 1M+ Injection
+            </p>
           </Link>
           
           {/* Desktop Navigation */}
