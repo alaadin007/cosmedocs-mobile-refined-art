@@ -68,19 +68,6 @@ export function AppSidebar() {
       collapsible="icon"
     >
       <SidebarContent className="bg-transparent pt-20">
-        {/* Logo Section */}
-        <div className="p-6 border-b border-amber-400/20">
-          <div className="flex flex-col items-start">
-            <div className="text-xl font-bold">
-              <span className="text-white">COSME</span>
-              <span className="text-white">DOCS</span>
-            </div>
-            {!collapsed && (
-              <p className="text-xs text-amber-400 mt-1">Harley Street Since 2007</p>
-            )}
-          </div>
-        </div>
-
         {/* Navigation */}
         <SidebarGroup>
           <SidebarGroupLabel className="text-amber-400 font-medium px-4 py-2">
