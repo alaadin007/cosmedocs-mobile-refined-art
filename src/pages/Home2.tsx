@@ -33,36 +33,54 @@ const Home2 = () => {
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.`;
 
-  const contactOptions = [
+  const contactGroups = [
     {
-      icon: MessageSquare,
-      label: "WhatsApp",
-      action: () => window.open(whatsappUrl, "_blank")
+      title: "Navigate",
+      options: [
+        { name: "Home", path: "/" },
+        { name: "Treatments", path: "/treatments" },
+        { name: "About", path: "/about" },
+        { name: "Contact", path: "/contact" },
+      ].map(item => ({
+        icon: MessageSquare,
+        label: item.name,
+        action: () => window.location.href = item.path
+      }))
     },
     {
-      icon: Search,
-      label: "Search CosmeDocs",
-      action: () => setIsSearchOpen(true)
-    },
-    {
-      icon: Mail,
-      label: "Email Us",
-      action: () => window.open("mailto:info@cosmedocs.com", "_blank")
-    },
-    {
-      icon: Phone,
-      label: "Call Us",
-      action: () => window.open("tel:+447735606447", "_blank")
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      action: () => window.open("https://instagram.com/cosmedocs", "_blank")
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      action: () => window.open("https://twitter.com/cosmedocs", "_blank")
+      title: "Get in Touch", 
+      options: [
+        {
+          icon: MessageSquare,
+          label: "WhatsApp",
+          action: () => window.open(whatsappUrl, "_blank")
+        },
+        {
+          icon: Search,
+          label: "Search CosmeDocs",
+          action: () => setIsSearchOpen(true)
+        },
+        {
+          icon: Mail,
+          label: "Email Us",
+          action: () => window.open("mailto:info@cosmedocs.com", "_blank")
+        },
+        {
+          icon: Phone,
+          label: "Call Us",
+          action: () => window.open("tel:+447735606447", "_blank")
+        },
+        {
+          icon: Instagram,
+          label: "Instagram",
+          action: () => window.open("https://instagram.com/cosmedocs", "_blank")
+        },
+        {
+          icon: Twitter,
+          label: "Twitter",
+          action: () => window.open("https://twitter.com/cosmedocs", "_blank")
+        }
+      ]
     }
   ];
 
@@ -251,7 +269,7 @@ const Home2 = () => {
         <LiquidGlassContactMenu
           isOpen={isContactMenuOpen}
           onClose={() => setIsContactMenuOpen(false)}
-          options={contactOptions}
+          groups={contactGroups}
         />
       </div>
     </TooltipProvider>

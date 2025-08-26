@@ -26,72 +26,80 @@ export default function Header() {
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.`;
 
-  const allMenuOptions = [
-    // Navigation Items
+  const menuGroups = [
     {
-      icon: Sparkles,
-      label: "Treatments",
-      action: () => window.location.href = "/treatments"
+      title: "Navigate",
+      options: [
+        {
+          icon: Sparkles,
+          label: "Treatments",
+          action: () => window.location.href = "/treatments"
+        },
+        {
+          icon: MessageSquare,
+          label: "Cosmetalk",
+          action: () => window.location.href = "/cosmetalk"
+        },
+        {
+          icon: Users,
+          label: "About Us",
+          action: () => window.location.href = "/about"
+        },
+        {
+          icon: Phone,
+          label: "Contact",
+          action: () => window.location.href = "/contact"
+        }
+      ]
     },
     {
-      icon: MessageSquare,
-      label: "Cosmetalk",
-      action: () => window.location.href = "/cosmetalk"
-    },
-    {
-      icon: Users,
-      label: "About Us",
-      action: () => window.location.href = "/about"
-    },
-    {
-      icon: Phone,
-      label: "Contact",
-      action: () => window.location.href = "/contact"
-    },
-    // Contact Options
-    {
-      icon: Sparkles,
-      label: "AI Aesthetic Analysis",
-      action: () => setIsAnalysisOpen(true)
-    },
-    {
-      icon: MessageSquare,
-      label: "WhatsApp",
-      action: () => window.open(whatsappUrl, "_blank"),
-      subtitle: "+44 7735 606447"
-    },
-    {
-      icon: Search,
-      label: "Search CosmeDocs",
-      action: () => setIsSearchOpen(true)
-    },
-    {
-      icon: Mail,
-      label: "Email Us",
-      action: () => window.open("mailto:info@cosmedocs.com", "_blank"),
-      subtitle: "info@cosmedocs.com"
-    },
-    {
-      icon: Phone,
-      label: "Call Us - Clinic 1",
-      action: () => window.open("tel:+443330551503", "_blank"),
-      subtitle: "333 0551 503"
-    },
-    {
-      icon: Phone,
-      label: "Call Us - Clinic 2", 
-      action: () => window.open("tel:+448008600178", "_blank"),
-      subtitle: "0800 8600 178"
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      action: () => window.open("https://instagram.com/cosmedocs", "_blank")
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      action: () => window.open("https://twitter.com/cosmedocs", "_blank")
+      title: "Get in Touch",
+      options: [
+        {
+          icon: Sparkles,
+          label: "AI Aesthetic Analysis",
+          action: () => setIsAnalysisOpen(true)
+        },
+        {
+          icon: MessageSquare,
+          label: "WhatsApp",
+          action: () => window.open(whatsappUrl, "_blank"),
+          subtitle: "+44 7735 606447"
+        },
+        {
+          icon: Search,
+          label: "Search CosmeDocs",
+          action: () => setIsSearchOpen(true)
+        },
+        {
+          icon: Mail,
+          label: "Email Us",
+          action: () => window.open("mailto:info@cosmedocs.com", "_blank"),
+          subtitle: "info@cosmedocs.com"
+        },
+        {
+          icon: Phone,
+          label: "Call Us - Clinic 1",
+          action: () => window.open("tel:+443330551503", "_blank"),
+          subtitle: "333 0551 503"
+        },
+        {
+          icon: Phone,
+          label: "Call Us - Clinic 2", 
+          action: () => window.open("tel:+448008600178", "_blank"),
+          subtitle: "0800 8600 178"
+        },
+        {
+          icon: Instagram,
+          label: "Instagram",
+          action: () => window.open("https://instagram.com/cosmedocs", "_blank")
+        },
+        {
+          icon: Twitter,
+          label: "Twitter",
+          action: () => window.open("https://twitter.com/cosmedocs", "_blank")
+        }
+      ]
     }
   ];
 
@@ -174,7 +182,7 @@ export default function Header() {
       <LiquidGlassContactMenu
         isOpen={isContactMenuOpen}
         onClose={() => setIsContactMenuOpen(false)}
-        options={allMenuOptions}
+        groups={menuGroups}
       />
 
       {/* Aesthetic Analysis Modal */}

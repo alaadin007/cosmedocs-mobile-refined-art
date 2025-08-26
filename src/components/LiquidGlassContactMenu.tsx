@@ -10,13 +10,18 @@ interface ContactOption {
   subtitle?: string;
 }
 
-interface LiquidGlassContactMenuProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface OptionGroup {
+  title: string;
   options: ContactOption[];
 }
 
-export default function LiquidGlassContactMenu({ isOpen, onClose, options }: LiquidGlassContactMenuProps) {
+interface LiquidGlassContactMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+  groups: OptionGroup[];
+}
+
+export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: LiquidGlassContactMenuProps) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -56,30 +61,40 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, options }: Liq
                 </Button>
               </div>
               
-              {/* All Options */}
-              <div className="space-y-2 max-h-96 overflow-y-auto">
-                {options.map((option, index) => (
-                  <motion.button
-                    key={option.label}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.03, duration: 0.2 }}
-                    onClick={() => {
-                      option.action();
-                      onClose();
-                    }}
-                    className="w-full flex items-center gap-4 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all duration-300 hover:scale-105 border border-white/10"
-                  >
-                    <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
-                      <option.icon className="h-5 w-5 text-white/80" />
+              {/* Grouped Options */}
+              <div className="space-y-6 max-h-96 overflow-y-auto">
+                {groups.map((group, groupIndex) => (
+                  <div key={group.title}>
+                    {/* Group Title */}
+                    <h3 className="text-sm font-medium text-white/70 mb-3 px-2">{group.title}</h3>
+                    
+                    {/* Group Options */}
+                    <div className="space-y-2">
+                      {group.options.map((option, optionIndex) => (
+                        <motion.button
+                          key={option.label}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: (groupIndex * group.options.length + optionIndex) * 0.03, duration: 0.2 }}
+                          onClick={() => {
+                            option.action();
+                            onClose();
+                          }}
+                          className="w-full flex items-center gap-4 p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all duration-300 hover:scale-105 border border-white/10"
+                        >
+                          <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                            <option.icon className="h-5 w-5 text-white/80" />
+                          </div>
+                          <div className="flex-1 text-left">
+                            <span className="text-white/90 font-medium block">{option.label}</span>
+                            {option.subtitle && (
+                              <span className="text-white/60 text-sm block">{option.subtitle}</span>
+                            )}
+                          </div>
+                        </motion.button>
+                      ))}
                     </div>
-                    <div className="flex-1 text-left">
-                      <span className="text-white/90 font-medium block">{option.label}</span>
-                      {option.subtitle && (
-                        <span className="text-white/60 text-sm block">{option.subtitle}</span>
-                      )}
-                    </div>
-                  </motion.button>
+                  </div>
                 ))}
               </div>
               
