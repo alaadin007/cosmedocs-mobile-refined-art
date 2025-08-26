@@ -113,13 +113,8 @@ const Treatments = () => {
           title: "Rosacea & Blushing",
           price: "£350- 450"
         }
-      ]
-    },
-    botoxcontouring: {
-      title: "BOTOX CONTOURING",
-      subtitle: "Body contouring and facial shaping with Botox",
-      description: "Advanced Botox treatments for body contouring and precise facial shaping",
-      items: [
+      ],
+      contouringItems: [
         {
           title: "Masseter (Jawline Slimming, Bruxism Teeth Grinding)",
           price: "£350",
@@ -135,14 +130,8 @@ const Treatments = () => {
           price: "£750",
           link: "/botox-calf-reduction"
         }
-      ]
-    },
-    sweattox: {
-      title: "SWEAT-TOX | FLUSHING",
-      subtitle: "BOTOX / AZZALURE / DYSPORT",
-      description: "Treatments for excessive sweating and facial flushing",
-      link: "visit page",
-      items: [
+      ],
+      sweattoxItems: [
         {
           title: "Underarms Advanced Treatments",
           price: "£550"
@@ -546,8 +535,6 @@ const Treatments = () => {
           <div className="overflow-x-auto">
             <TabsList className="bg-accent mb-8 p-1 flex flex-nowrap min-w-max">
               <TabsTrigger value="botox">Botox</TabsTrigger>
-              <TabsTrigger value="botoxcontouring">Botox Contouring</TabsTrigger>
-              <TabsTrigger value="sweattox">Sweat-Tox</TabsTrigger>
               <TabsTrigger value="fillers">Dermal Fillers</TabsTrigger>
               <TabsTrigger value="hyaluronic">HA Makeover</TabsTrigger>
               <TabsTrigger value="skinBoosters">Skin Boosters</TabsTrigger>
@@ -563,7 +550,7 @@ const Treatments = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold mb-2">{treatments.botox.title}</h2>
+              <h2 className="text-2xl font-bold mb-2 text-amber-400">{treatments.botox.title}</h2>
               <p className="text-gray-400 mb-6">{treatments.botox.subtitle}</p>
               
               <div className="mt-8">
@@ -600,25 +587,22 @@ const Treatments = () => {
                   </Card>
                 ))}
               </div>
-            </motion.div>
-          </TabsContent>
 
-          <TabsContent value="botoxcontouring" className="mt-6">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-2xl font-bold mb-2">{treatments.botoxcontouring.title}</h2>
-              <p className="text-gray-400 mb-6">{treatments.botoxcontouring.subtitle}</p>
-              
-              <div className="mt-8">
-                {treatments.botoxcontouring.items.map((item, index) => (
+              {/* Botox Contouring Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">BOTOX CONTOURING</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                <p className="text-gray-400 mb-6 text-center">Advanced Botox treatments for body contouring and precise facial shaping</p>
+                
+                {treatments.botox.contouringItems.map((item, index) => (
                   <Card key={index} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
                       <div className="flex justify-between items-start">
                         <div>
-                          <h3 className="font-semibold">{item.title}</h3>
+                          <h4 className="font-semibold">{item.title}</h4>
                         </div>
                         <div className="text-right">
                           <p className="font-bold">{item.price}</p>
@@ -643,38 +627,27 @@ const Treatments = () => {
                   </Card>
                 ))}
               </div>
-            </motion.div>
-          </TabsContent>
 
-          <TabsContent value="sweattox" className="mt-6">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-2xl font-bold mb-2">{treatments.sweattox.title}</h2>
-              <p className="text-gray-400 mb-6">{treatments.sweattox.subtitle}</p>
-              
-              <div className="mt-8">
-                {treatments.sweattox.items.map((item, index) => (
+              {/* Sweat-Tox Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">SWEAT-TOX | FLUSHING</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                <p className="text-gray-400 mb-6 text-center">Treatments for excessive sweating and facial flushing</p>
+                
+                {treatments.botox.sweattoxItems.map((item, index) => (
                   <Card key={index} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
                       <div className="flex justify-between items-center">
-                        <h3 className="font-semibold">{item.title}</h3>
+                        <h4 className="font-semibold">{item.title}</h4>
                         <p className="font-bold">{item.price}</p>
                       </div>
                     </CardContent>
                   </Card>
                 ))}
               </div>
-              
-              {treatments.sweattox.link && (
-                <div className="mt-4 text-center">
-                  <Button variant="link" className="text-white hover:text-gray-300">
-                    Learn more about Sweat-Tox treatments →
-                  </Button>
-                </div>
-              )}
             </motion.div>
           </TabsContent>
 
