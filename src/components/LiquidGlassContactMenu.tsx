@@ -45,7 +45,7 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, options }: Liq
             <div className="relative p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-semibold text-white">Get in Touch</h2>
+                <h2 className="text-xl font-semibold text-white">Menu & Contact</h2>
                 <Button
                   onClick={onClose}
                   variant="ghost"
@@ -56,14 +56,14 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, options }: Liq
                 </Button>
               </div>
               
-              {/* Contact Options */}
-              <div className="space-y-2">
+              {/* All Options */}
+              <div className="space-y-2 max-h-96 overflow-y-auto">
                 {options.map((option, index) => (
                   <motion.button
                     key={option.label}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05, duration: 0.2 }}
+                    transition={{ delay: index * 0.03, duration: 0.2 }}
                     onClick={() => {
                       option.action();
                       onClose();
@@ -86,7 +86,7 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, options }: Liq
               {/* Footer */}
               <div className="mt-6 pt-4 border-t border-white/10">
                 <p className="text-white/60 text-xs text-center">
-                  Choose how you'd like to connect with our team
+                  Navigate to pages or connect with our team
                 </p>
               </div>
             </div>

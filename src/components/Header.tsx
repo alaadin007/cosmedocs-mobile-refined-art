@@ -1,10 +1,9 @@
 
 import { useState } from "react";
-import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import LiquidGlassSearch from "./LiquidGlassSearch";
 import LiquidGlassContactMenu from "./LiquidGlassContactMenu";
 import AestheticAnalysisWizard from "./AestheticAnalysisWizard";
@@ -27,7 +26,29 @@ export default function Header() {
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.`;
 
-  const contactOptions = [
+  const allMenuOptions = [
+    // Navigation Items
+    {
+      icon: Sparkles,
+      label: "Treatments",
+      action: () => window.location.href = "/treatments"
+    },
+    {
+      icon: MessageSquare,
+      label: "Cosmetalk",
+      action: () => window.location.href = "/cosmetalk"
+    },
+    {
+      icon: Users,
+      label: "About Us",
+      action: () => window.location.href = "/about"
+    },
+    {
+      icon: Phone,
+      label: "Contact",
+      action: () => window.location.href = "/contact"
+    },
+    // Contact Options
     {
       icon: Sparkles,
       label: "AI Aesthetic Analysis",
@@ -80,12 +101,18 @@ export default function Header() {
         {/* Liquid glass background */}
         <div className="absolute inset-0 bg-black/20 backdrop-blur-xl border-b border-white/10" />
         
-        <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
-          {/* Desktop Sidebar Trigger - Left */}
+         <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+          {/* Desktop Menu Button - Left */}
           <div className="hidden md:flex items-center">
-            <SidebarTrigger className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 p-2 rounded-lg">
+            <Button
+              onClick={() => setIsContactMenuOpen(true)}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 p-2 rounded-lg"
+              title="Menu"
+            >
               <Menu className="h-5 w-5" />
-            </SidebarTrigger>
+            </Button>
           </div>
 
           {/* Logo - Center */}
@@ -108,24 +135,20 @@ export default function Header() {
             >
               <Search className="h-5 w-5" />
             </Button>
-            
-            <Button
-              onClick={() => setIsContactMenuOpen(true)}
-              variant="ghost"
-              size="icon"
-              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
-              title="Contact"
-            >
-              <Mail className="h-5 w-5" />
-            </Button>
           </div>
 
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center justify-between w-full">
-            {/* Mobile Sidebar Trigger - Left */}
-            <SidebarTrigger className="text-white/90 hover:text-white hover:bg-white/10 p-2 rounded-lg">
+            {/* Mobile Menu Button - Left */}
+            <Button
+              onClick={() => setIsContactMenuOpen(true)}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10 p-2 rounded-lg"
+              title="Menu"
+            >
               <Menu className="h-5 w-5" />
-            </SidebarTrigger>
+            </Button>
             
             {/* Mobile Search - Right */}
             <Button
@@ -151,7 +174,7 @@ export default function Header() {
       <LiquidGlassContactMenu
         isOpen={isContactMenuOpen}
         onClose={() => setIsContactMenuOpen(false)}
-        options={contactOptions}
+        options={allMenuOptions}
       />
 
       {/* Aesthetic Analysis Modal */}
