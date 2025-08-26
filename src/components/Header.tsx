@@ -72,22 +72,23 @@ export default function Header() {
         <div className="absolute inset-0 bg-black/20 backdrop-blur-xl border-b border-white/10" />
         
         <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
-          <Link to="/" className="flex flex-col items-start">
+          {/* Desktop Sidebar Trigger - Left */}
+          <div className="hidden md:flex items-center">
+            <SidebarTrigger className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 p-2 rounded-lg">
+              <Menu className="h-5 w-5" />
+            </SidebarTrigger>
+          </div>
+
+          {/* Logo - Center */}
+          <Link to="/" className="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2">
             <div className="text-2xl md:text-3xl font-bold">
               <span className="text-white">COSME</span>
               <span className="text-white">DOCS</span>
             </div>
             <p className="text-xs text-amber-400 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
           </Link>
-          
-          {/* Desktop Navigation - Sidebar Trigger */}
-          <div className="hidden md:flex items-center space-x-3">
-            <SidebarTrigger className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 p-2 rounded-lg">
-              <Menu className="h-5 w-5" />
-            </SidebarTrigger>
-          </div>
 
-          {/* Desktop Actions */}
+          {/* Desktop Actions - Right */}
           <div className="hidden md:flex items-center space-x-3">
             <Button
               onClick={() => setIsSearchOpen(true)}
@@ -111,11 +112,22 @@ export default function Header() {
           </div>
 
           {/* Mobile Actions */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center justify-between w-full">
+            {/* Mobile Sidebar Trigger - Left */}
             <SidebarTrigger className="text-white/90 hover:text-white hover:bg-white/10 p-2 rounded-lg">
               <Menu className="h-5 w-5" />
             </SidebarTrigger>
             
+            {/* Mobile Logo - Center */}
+            <Link to="/" className="flex flex-col items-center">
+              <div className="text-xl font-bold">
+                <span className="text-white">COSME</span>
+                <span className="text-white">DOCS</span>
+              </div>
+              <p className="text-xs text-amber-400 -mt-1">Harley Street Since 2007</p>
+            </Link>
+            
+            {/* Mobile Search - Right */}
             <Button
               onClick={() => setIsSearchOpen(true)}
               variant="ghost"
