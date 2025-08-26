@@ -20,7 +20,6 @@ const navigationItems = [
   { title: "Treatments", url: "/treatments", icon: Sparkles },
   { title: "Cosmetalk", url: "/cosmetalk", icon: MessageSquare },
   { title: "About Us", url: "/about", icon: Users },
-  { title: "Partners", url: "/partners", icon: Users },
   { title: "Contact", url: "/contact", icon: Phone },
 ];
 
