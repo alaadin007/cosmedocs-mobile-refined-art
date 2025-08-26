@@ -67,7 +67,7 @@ export function AppSidebar() {
       className={`${collapsed ? "w-16" : "w-72"} bg-black/95 backdrop-blur-xl border-r border-amber-400/20`}
       collapsible="icon"
     >
-      <SidebarContent className="bg-transparent">
+      <SidebarContent className="bg-transparent pt-20">
         {/* Logo Section */}
         <div className="p-6 border-b border-amber-400/20">
           <div className="flex flex-col items-start">
