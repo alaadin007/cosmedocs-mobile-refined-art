@@ -8,6 +8,43 @@ import CollageViewer from '@/components/CollageViewer';
 
 // Mixed and matched images from all treatment pages
 const allGalleryImages = [
+  // Dermal Filler Makeover Results
+  {
+    src: "/lovable-uploads/64ee3f9e-7616-464d-962f-0a5ba656a82c.png",
+    alt: "Dermal filler makeover before and after front view",
+    caption: "Full face rejuvenation with dermal fillers - front view transformation",
+    category: "dermal-fillers"
+  },
+  {
+    src: "/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png",
+    alt: "Dermal filler makeover before and after side profile",
+    caption: "Enhanced facial contours and profile definition",
+    category: "dermal-fillers"
+  },
+  {
+    src: "/lovable-uploads/a4df5f90-dda5-48a2-9bd2-19728aa1a275.png",
+    alt: "Dermal filler makeover cheek enhancement",
+    caption: "Natural cheek enhancement and facial contouring",
+    category: "dermal-fillers"
+  },
+  {
+    src: "/lovable-uploads/1beab5af-7f27-4505-83ec-b0fab7ef68cc.png",
+    alt: "Dermal filler makeover jawline definition",
+    caption: "Defined jawline and improved facial structure",
+    category: "dermal-fillers"
+  },
+  {
+    src: "/lovable-uploads/e3020fef-05e0-4022-b981-0fe5dc9a2c53.png",
+    alt: "Dermal filler makeover side profile enhancement",
+    caption: "Elegant side profile enhancement with dermal fillers",
+    category: "dermal-fillers"
+  },
+  {
+    src: "/lovable-uploads/462ae463-011b-428b-9685-1e13d2d061d9.png",
+    alt: "Dermal filler makeover male jawline",
+    caption: "Masculine jawline enhancement for male clients",
+    category: "dermal-fillers"
+  },
   // Nasolabial folds before/during/after series
   {
     src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png",
