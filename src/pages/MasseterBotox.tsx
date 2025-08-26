@@ -15,14 +15,14 @@ const MasseterBotox = () => {
   );
 
   const beforeAfterImages = [
+    { src: "/lovable-uploads/387f8164-1ea6-491f-8553-3effea5fd956.png", alt: "Masseter Botox comprehensive results gallery", caption: "Remarkable result post masseter muscle reduction • Masseter Botox reduces muscle size • Jaw contouring before and after • Subtle jaw slimming impact of one session" },
+    { src: "/lovable-uploads/a1d2708c-a7cd-49c2-b531-aabf0b52b8b5.png", alt: "Masseter Botox transformation showcase", caption: "Jawline transformation from square to oval face shape • Shoulder muscle reduction for oro-facial neck pain • Botox jawline for facial slimming • Complete transformation results" },
     { src: "/lovable-uploads/8f820207-ab70-4e87-8092-eb39e3eda82d.png", alt: "Masseter Botox before and after showing facial slimming results", caption: "Dramatic facial slimming and jaw contouring with masseter muscle reduction" },
     { src: "/lovable-uploads/0f53b9e7-85da-4c39-98c4-b5e3d8023764.png", alt: "Jawline slimming before and after masseter Botox treatment", caption: "Enhanced jawline definition and facial balance after masseter treatment" },
     { src: "/lovable-uploads/59c20a72-3b99-454f-9b1a-478326a8856a.png", alt: "Male masseter Botox before and after jaw reduction", caption: "Male jaw slimming results showing refined masculine facial contours" },
     { src: "/lovable-uploads/16101df9-2d69-49bd-90d1-4d2e313a6c42.png", alt: "Jaw angle reduction before and after masseter Botox", caption: "Precise jaw angle refinement creating softer facial profile" },
     { src: "/lovable-uploads/5f942469-fc79-4e02-adc3-87bd12a6076b.png", alt: "Jawline contouring before and after with masseter Botox", caption: "Natural jawline contouring achieving elegant facial proportions" },
-    { src: "/lovable-uploads/feb85f00-5226-47ab-8f5a-26c9f27c9e9c.png", alt: "Masseter Botox progression 2018 to 2019", caption: "Long-term results showing sustained jaw slimming over time" },
-    { src: "/lovable-uploads/207e3f44-7e36-42cf-b201-680ceda56410.png", alt: "Square to oval face transformation with masseter Botox", caption: "Face shape transformation from square to oval with expert masseter treatment" },
-    { src: "/lovable-uploads/6d8b66dc-01a8-41dd-95bb-917cc53a899d.png", alt: "Masseter Botox August to October progression", caption: "Progressive jaw slimming results from August to October treatment" }
+    { src: "/lovable-uploads/feb85f00-5226-47ab-8f5a-26c9f27c9e9c.png", alt: "Masseter Botox progression 2018 to 2019", caption: "Long-term results showing sustained jaw slimming over time" }
   ];
 
   const treatmentBenefits = [
