@@ -24,6 +24,7 @@ import DrHenaHaq from "./pages/DrHenaHaq";
 import Partners from "./pages/Partners";
 import NotFound from "./pages/NotFound";
 import BotoxCalfReduction from "./pages/BotoxCalfReduction";
+import MasseterBotox from "./pages/MasseterBotox";
 import LipFillerDissolve from "./pages/LipFillerDissolve";
 import PrivateGPDoctor from "./pages/PrivateGPDoctor";
 import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
@@ -135,6 +136,8 @@ const App = () => {
               <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
               <Route path="/pdo-threads" element={<PDOThreads />} />
               <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
+              <Route path="/masseter-botox" element={<MasseterBotox />} />
+              <Route path="/treatments/masseter-botox" element={<MasseterBotox />} />
               <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
               <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
               
