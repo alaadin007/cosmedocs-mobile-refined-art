@@ -68,7 +68,7 @@ export default function Header() {
         },
         {
           icon: Search,
-          label: "Search CosmeDocs",
+          label: "Chat With Our AI CosmeDoc",
           action: () => setIsSearchOpen(true)
         },
         {
