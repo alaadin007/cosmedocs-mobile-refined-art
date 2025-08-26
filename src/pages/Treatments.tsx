@@ -522,12 +522,22 @@ const Treatments = () => {
     <div className="bg-black text-white py-24">
       <div className="page-container">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Our Treatments & Prices</h1>
-          <p className="text-gray-400 max-w-3xl mx-auto">
+          <div className="flex items-center justify-center mb-6">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-600/60 to-amber-700/40 max-w-32"></div>
+            <div className="mx-8">
+              <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-amber-600/60 to-amber-700/40 max-w-32"></div>
+          </div>
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-amber-600 to-amber-700 bg-clip-text text-transparent">
+            Our Treatments & Prices
+          </h1>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-amber-600 to-amber-700 mx-auto mb-6"></div>
+          <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed">
             As highly experienced injectors in London since 2007, we specialize in carefully administering high doses of botox 
             safely providing longevity. We have developed many new techniques with dermal fillers over the last decade 
             now taught to professionals internationally. Our team of experts are also trainers for the prestigious 
-            Harley Street Institute. Trust us for safe, effective and natural-looking results.
+            <span className="text-amber-600 font-medium"> Harley Street Institute</span>. Trust us for safe, effective and natural-looking results.
           </p>
         </div>
 
