@@ -25,7 +25,7 @@ export default function Header() {
   ];
 
   const whatsappNumber = "+447735606447";
-  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\s+/g, "")}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.`;
 
   const contactOptions = [
     {
