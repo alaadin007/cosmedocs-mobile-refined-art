@@ -101,11 +101,6 @@ const Treatments = () => {
           link: "visit page"
         },
         {
-          title: "Masseter (Jawline Slimming, Bruxism Teeth Grinding)",
-          price: "£350",
-          link: "visit page"
-        },
-        {
           title: "Migraines / Headaches",
           price: "£450-550"
         },
@@ -115,13 +110,30 @@ const Treatments = () => {
           link: "visit page"
         },
         {
+          title: "Rosacea & Blushing",
+          price: "£350- 450"
+        }
+      ]
+    },
+    botoxcontouring: {
+      title: "BOTOX CONTOURING",
+      subtitle: "Body contouring and facial shaping with Botox",
+      description: "Advanced Botox treatments for body contouring and precise facial shaping",
+      items: [
+        {
+          title: "Masseter (Jawline Slimming, Bruxism Teeth Grinding)",
+          price: "£350",
+          link: "visit page"
+        },
+        {
           title: "Full Barbie Botox (Shoulder Reduction)",
           price: "£450",
           link: "visit page"
         },
         {
-          title: "Rosacea & Blushing",
-          price: "£350- 450"
+          title: "Botox Calf Reduction",
+          price: "£750",
+          link: "/botox-calf-reduction"
         }
       ]
     },
@@ -534,6 +546,7 @@ const Treatments = () => {
           <div className="overflow-x-auto">
             <TabsList className="bg-accent mb-8 p-1 flex flex-nowrap min-w-max">
               <TabsTrigger value="botox">Botox</TabsTrigger>
+              <TabsTrigger value="botoxcontouring">Botox Contouring</TabsTrigger>
               <TabsTrigger value="sweattox">Sweat-Tox</TabsTrigger>
               <TabsTrigger value="fillers">Dermal Fillers</TabsTrigger>
               <TabsTrigger value="hyaluronic">HA Makeover</TabsTrigger>
@@ -581,6 +594,49 @@ const Treatments = () => {
                           <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
                             Learn more →
                           </Button>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </motion.div>
+          </TabsContent>
+
+          <TabsContent value="botoxcontouring" className="mt-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-bold mb-2">{treatments.botoxcontouring.title}</h2>
+              <p className="text-gray-400 mb-6">{treatments.botoxcontouring.subtitle}</p>
+              
+              <div className="mt-8">
+                {treatments.botoxcontouring.items.map((item, index) => (
+                  <Card key={index} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-semibold">{item.title}</h3>
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                        </div>
+                      </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          {item.link.startsWith('/') ? (
+                            <Link to={item.link}>
+                              <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                                Learn more →
+                              </Button>
+                            </Link>
+                          ) : (
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          )}
                         </div>
                       )}
                     </CardContent>
