@@ -10,10 +10,12 @@ import LiquidGlassFacialAssessment from "@/components/LiquidGlassFacialAssessmen
 import LiquidGlassAllTreatments from "@/components/LiquidGlassAllTreatments";
 import CosmeDocsAI from "@/components/CosmeDocs AI";
 import SkinAnalysisButton from "@/components/SkinAnalysisButton";
+import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
 
 const Home = () => {
   const [isFacialAssessmentOpen, setIsFacialAssessmentOpen] = useState(false);
   const [isAllTreatmentsOpen, setIsAllTreatmentsOpen] = useState(false);
+  const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   const isMobile = useIsMobile();
 
   return (
@@ -157,6 +159,22 @@ const Home = () => {
                 <CosmeDocsAI />
                 <SkinAnalysisButton />
               </motion.div>
+
+              {/* AI Facial Analysis Section */}
+              <motion.div 
+                className="mt-6 flex justify-center"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Button
+                  onClick={() => setIsAnalysisOpen(true)}
+                  className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
+                >
+                  AI Facial Analysis Now
+                </Button>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -246,6 +264,12 @@ const Home = () => {
         <LiquidGlassAllTreatments 
           isOpen={isAllTreatmentsOpen}
           onClose={() => setIsAllTreatmentsOpen(false)}
+        />
+
+        {/* AI Aesthetic Analysis Modal */}
+        <AestheticAnalysisWizard 
+          isOpen={isAnalysisOpen}
+          onClose={() => setIsAnalysisOpen(false)}
         />
       </div>
     </TooltipProvider>

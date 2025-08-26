@@ -74,71 +74,56 @@ export default function Header() {
         <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           <Link to="/" className="flex flex-col items-start">
             <div className="text-2xl md:text-3xl font-bold">
-              <span className="text-amber-400">COSME</span>
-              <span className="text-amber-400">DOCS</span>
+              <span className="text-white">COSME</span>
+              <span className="text-white">DOCS</span>
             </div>
-            <p className="text-xs text-gray-300 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
+            <p className="text-xs text-amber-400 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
           </Link>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6 text-sm font-medium">
-            {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-white/90 hover:text-white transition-all duration-300 hover:scale-105"
-              >
-                {item.name}
-              </Link>
-            ))}
+          {/* Desktop Navigation - Simplified */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Button
+              onClick={() => setIsMobileMenuOpen(true)}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
+              title="Menu"
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
           </div>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-3">
             <Button
-              onClick={() => setIsAnalysisOpen(true)}
-              variant="ghost"
-              size="icon"
-              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
-              title="AI Aesthetic Analysis"
-            >
-              <Sparkles className="h-5 w-5" />
-            </Button>
-            
-            <Button
               onClick={() => setIsSearchOpen(true)}
               variant="ghost"
               size="icon"
               className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
+              title="Search"
             >
               <Search className="h-5 w-5" />
             </Button>
             
             <Button
               onClick={() => setIsContactMenuOpen(true)}
-              className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-300 hover:scale-105 border border-white/20"
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
+              title="Contact"
             >
-              Contact
+              <Mail className="h-5 w-5" />
             </Button>
           </div>
 
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center space-x-2">
             <Button
-              onClick={() => setIsAnalysisOpen(true)}
-              variant="ghost"
-              size="icon"
-              className="text-white/90 hover:text-white hover:bg-white/10"
-              title="AI Analysis"
-            >
-              <Sparkles className="h-5 w-5" />
-            </Button>
-            
-            <Button
               onClick={() => setIsSearchOpen(true)}
               variant="ghost"
               size="icon"
               className="text-white/90 hover:text-white hover:bg-white/10"
+              title="Search"
             >
               <Search className="h-5 w-5" />
             </Button>
@@ -169,12 +154,6 @@ export default function Header() {
       <LiquidGlassSearch 
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
-      />
-
-      {/* AI Aesthetic Analysis Modal */}
-      <AestheticAnalysisWizard 
-        isOpen={isAnalysisOpen}
-        onClose={() => setIsAnalysisOpen(false)}
       />
 
       {/* Contact Menu Modal */}
