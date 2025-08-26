@@ -134,7 +134,11 @@ export default function FaceBotox() {
                   <span>Expert Doctors</span>
                 </div>
               </div>
-              <Button size="lg" className="px-8 py-4 text-lg">
+              <Button 
+                size="lg" 
+                className="px-8 py-4 text-lg"
+                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+              >
                 Book Consultation
               </Button>
             </motion.div>
@@ -464,7 +468,11 @@ export default function FaceBotox() {
                 <div className="text-center">
                   <div className="text-4xl font-bold text-primary mb-4">From £200</div>
                   <p className="text-muted-foreground mb-6">Per treatment area</p>
-                  <Button size="lg" className="w-full">
+                  <Button 
+                    size="lg" 
+                    className="w-full"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
                     Book Your Treatment
                   </Button>
                 </div>
@@ -503,7 +511,12 @@ export default function FaceBotox() {
                 </div>
               </div>
               <Separator className="my-8 bg-primary-foreground/20" />
-              <Button size="lg" variant="secondary" className="px-8 py-4 text-lg">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="px-8 py-4 text-lg"
+                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+              >
                 Schedule Consultation
               </Button>
             </motion.div>
