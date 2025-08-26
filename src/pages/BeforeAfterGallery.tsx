@@ -64,12 +64,12 @@ const allGalleryImages = [
     caption: "After: Natural, youthful appearance with smooth smile lines",
     category: "nasolabial-folds"
   },
-  // Team credentials and education
+  // Team credentials and education distributed across categories
   {
     src: "/lovable-uploads/38f9764b-fcca-429c-8900-8e7eaeaf55d8.png",
     alt: "Cosmedocs team with training certificates",
     caption: "Not just injectors - we teach the future generation of aesthetic practitioners. Our commitment to education ensures excellence in every treatment.",
-    category: "team"
+    category: "lip-treatments"
   },
   // Featured new lip treatment before and after
   {
@@ -102,7 +102,7 @@ const allGalleryImages = [
     src: "/lovable-uploads/188431e9-facd-4459-9b12-c700ae47ed77.png",
     alt: "Professional development aesthetic medicine training Cosmedocs",
     caption: "Continuous learning drives our commitment to delivering natural, refined results - Bold • Natural • Always Your Way",
-    category: "dermal-fillers"
+    category: "nose-jobs"
   },
   // Latest lip treatment image
   {
@@ -115,7 +115,7 @@ const allGalleryImages = [
     src: "/lovable-uploads/3b8b9417-a6f3-48dc-aff7-260e479613a3.png",
     alt: "Team training graduation aesthetic medicine Harley Street London",
     caption: "Our team's dedication to mastering advanced techniques ensures every treatment reflects our aesthetic philosophy of invisible art",
-    category: "threads"
+    category: "nasolabial-folds"
   },
   // Lip anatomy educational image
   {
@@ -128,7 +128,7 @@ const allGalleryImages = [
     src: "/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png",
     alt: "Advanced aesthetic training certification program Cosmedocs London",
     caption: "Training the next generation of aesthetic practitioners in our signature approach - quiet transformation that speaks volumes",
-    category: "dermal-fillers"
+    category: "ear-treatments"
   },
   // Nose job images mixed in
   {
@@ -141,7 +141,7 @@ const allGalleryImages = [
     src: "/lovable-uploads/fd5d3d65-8e19-492f-842b-de7deb04898a.png",
     alt: "Aesthetic medicine certification training London Harley Street Cosmedocs",
     caption: "Behind every invisible transformation is extensive training - our team embodies the precision and artistry of modern aesthetics",
-    category: "threads"
+    category: "all"
   },
   {
     src: "/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png",
@@ -153,7 +153,7 @@ const allGalleryImages = [
     src: "/lovable-uploads/c0a65d2b-fc99-48e0-b5bf-a2bc14f65d5a.png",
     alt: "Professional aesthetic training team development Cosmedocs",
     caption: "Investing in expertise - our comprehensive training ensures every practitioner delivers results that are minimal, quiet, and invisible",
-    category: "dermal-fillers"
+    category: "threads"
   },
   {
     src: "/lovable-uploads/cc387da3-1543-4b06-8b11-a48d29f03456.png",
@@ -165,7 +165,7 @@ const allGalleryImages = [
     src: "/lovable-uploads/4ce415a7-393b-4834-8a89-514b93314623.png",
     alt: "Dr Ahmed Haq training session aesthetic medicine procedures London",
     caption: "Hands-on training with Dr Ahmed Haq - where precision meets artistry in every procedure we perform",
-    category: "threads"
+    category: "lip-treatments"
   },
   {
     src: "/lovable-uploads/1cceb92b-eacb-48b4-9c9f-04c4cb2b025e.png",
