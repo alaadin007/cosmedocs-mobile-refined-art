@@ -118,15 +118,6 @@ export default function Header() {
               <Menu className="h-5 w-5" />
             </SidebarTrigger>
             
-            {/* Mobile Logo - Center */}
-            <Link to="/" className="flex flex-col items-center">
-              <div className="text-xl font-bold">
-                <span className="text-white">COSME</span>
-                <span className="text-white">DOCS</span>
-              </div>
-              <p className="text-xs text-amber-400 -mt-1">Harley Street Since 2007</p>
-            </Link>
-            
             {/* Mobile Search - Right */}
             <Button
               onClick={() => setIsSearchOpen(true)}
