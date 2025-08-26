@@ -15,12 +15,14 @@ const MasseterBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png", alt: "Remarkable result post masseter muscle reduction using Botox", caption: "Dramatic masseter muscle reduction achieving refined jawline" },
-    { src: "/lovable-uploads/ad7bb9c5-b7d5-415f-bad6-3b790df6abc8.png", alt: "Before and after images of masseter Botox treatment demonstrating muscle size reduction", caption: "Muscle size reduction from XL to M showing significant jaw slimming" },
-    { src: "/lovable-uploads/c4f1a760-712a-4b3e-84b5-b2534cf4dd77.png", alt: "Before and after masseter Botox for jaw slimming", caption: "Effective jaw slimming results with natural facial harmony" },
-    { src: "/lovable-uploads/1beab5af-7f27-4505-83ec-b0fab7ef68cc.png", alt: "Minor reduction in wide jaw achieved with single masseter Botox treatment", caption: "Single treatment achieving noticeable jaw reduction and improved profile" },
-    { src: "/lovable-uploads/e3020fef-05e0-4022-b981-0fe5dc9a2c53.png", alt: "Masseter Botox treatment effective solution for wide jaw", caption: "Wide jaw transformation showing balanced facial proportions" },
-    { src: "/lovable-uploads/462ae463-011b-428b-9685-1e13d2d061d9.png", alt: "Before and after images showing effects of Botox treatment on large masseter muscles", caption: "Large masseter muscle treatment with dramatic slimming results" }
+    { src: "/lovable-uploads/8f820207-ab70-4e87-8092-eb39e3eda82d.png", alt: "Masseter Botox before and after showing facial slimming results", caption: "Dramatic facial slimming and jaw contouring with masseter muscle reduction" },
+    { src: "/lovable-uploads/0f53b9e7-85da-4c39-98c4-b5e3d8023764.png", alt: "Jawline slimming before and after masseter Botox treatment", caption: "Enhanced jawline definition and facial balance after masseter treatment" },
+    { src: "/lovable-uploads/59c20a72-3b99-454f-9b1a-478326a8856a.png", alt: "Male masseter Botox before and after jaw reduction", caption: "Male jaw slimming results showing refined masculine facial contours" },
+    { src: "/lovable-uploads/16101df9-2d69-49bd-90d1-4d2e313a6c42.png", alt: "Jaw angle reduction before and after masseter Botox", caption: "Precise jaw angle refinement creating softer facial profile" },
+    { src: "/lovable-uploads/5f942469-fc79-4e02-adc3-87bd12a6076b.png", alt: "Jawline contouring before and after with masseter Botox", caption: "Natural jawline contouring achieving elegant facial proportions" },
+    { src: "/lovable-uploads/feb85f00-5226-47ab-8f5a-26c9f27c9e9c.png", alt: "Masseter Botox progression 2018 to 2019", caption: "Long-term results showing sustained jaw slimming over time" },
+    { src: "/lovable-uploads/207e3f44-7e36-42cf-b201-680ceda56410.png", alt: "Square to oval face transformation with masseter Botox", caption: "Face shape transformation from square to oval with expert masseter treatment" },
+    { src: "/lovable-uploads/6d8b66dc-01a8-41dd-95bb-917cc53a899d.png", alt: "Masseter Botox August to October progression", caption: "Progressive jaw slimming results from August to October treatment" }
   ];
 
   const treatmentBenefits = [
