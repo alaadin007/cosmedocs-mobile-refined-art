@@ -10,10 +10,15 @@ interface ContactOption {
   subtitle?: string;
 }
 
+interface Treatment {
+  name: string;
+  link: string;
+}
+
 interface TreatmentCategory {
   name: string;
   icon: LucideIcon;
-  treatments: string[];
+  treatments: Treatment[];
   color: string;
 }
 
@@ -32,37 +37,67 @@ const treatmentCategories: TreatmentCategory[] = [
   {
     name: "Botox",
     icon: Zap,
-    treatments: ["Face Botox", "Masseter", "Migraines", "Hyperhidrosis"],
+    treatments: [
+      { name: "Face Botox (1-3 Areas)", link: "/face-botox-areas" },
+      { name: "Nefertiti Face Lift", link: "/nefertiti-botox-facelift" },
+      { name: "Masseter (Jawline Slimming)", link: "/treatments" },
+      { name: "Migraines / Headaches", link: "/treatments" }
+    ],
     color: "from-amber-400 to-yellow-500"
   },
   {
     name: "Dermal Fillers",
     icon: Heart,
-    treatments: ["Lips", "Cheeks", "Jawline", "Non-Surgical Rhinoplasty"],
+    treatments: [
+      { name: "Lip Fillers", link: "/lip-fillers" },
+      { name: "Non Surgical Nose Job", link: "/non-surgical-nose-job" },
+      { name: "Dermal Filler Makeover", link: "/dermal-filler-makeover" },
+      { name: "Cheek Volume", link: "/treatments" }
+    ],
     color: "from-rose-400 to-pink-500"
   },
   {
     name: "Skin Treatments",
     icon: Sparkles,
-    treatments: ["Hydrafacial", "Chemical Peels", "Microneedling", "IPL"],
+    treatments: [
+      { name: "Chemical Peels", link: "/treatments" },
+      { name: "Microneedling", link: "/treatments" },
+      { name: "PRP Vampire Facelift", link: "/treatments" },
+      { name: "IPL/Laser Hair Removal", link: "/treatments" }
+    ],
     color: "from-blue-400 to-cyan-500"
   },
   {
-    name: "Fat Dissolving",
+    name: "Sweat-Tox",
     icon: Crown,
-    treatments: ["Aqualyx", "Double Chin", "Body Contouring"],
+    treatments: [
+      { name: "Underarms Advanced", link: "/treatments" },
+      { name: "Palms", link: "/treatments" },
+      { name: "Forehead", link: "/treatments" },
+      { name: "Scalp", link: "/treatments" }
+    ],
     color: "from-purple-400 to-violet-500"
   },
   {
-    name: "Medical",
+    name: "Skin Boosters",
     icon: Stethoscope,
-    treatments: ["B12 Shots", "Vitamin D", "Iron Infusions"],
+    treatments: [
+      { name: "Profhilo", link: "/treatments" },
+      { name: "Polynucleotides", link: "/treatments" },
+      { name: "Redensity 1", link: "/treatments" },
+      { name: "Jalupro", link: "/treatments" }
+    ],
     color: "from-green-400 to-emerald-500"
   },
   {
-    name: "Hair & Skin",
+    name: "Hair & Skin Medicine",
     icon: Eye,
-    treatments: ["PRP", "Hair Restoration", "Acne Treatment"],
+    treatments: [
+      { name: "Acne Treatment", link: "/treatments" },
+      { name: "Facial Thread Veins", link: "/treatments" },
+      { name: "Leg Veins Treatment", link: "/treatments" },
+      { name: "Skin Tag Removal", link: "/treatments" }
+    ],
     color: "from-orange-400 to-red-500"
   }
 ];
@@ -209,16 +244,19 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                               </h4>
                             </div>
                             
-                            {/* Treatment List */}
                             <div className="space-y-2">
                               {category.treatments.map((treatment, treatmentIndex) => (
-                                <div 
-                                  key={treatment}
-                                  className="text-sm text-white/70 group-hover:text-white/90 transition-colors duration-300 flex items-center gap-2"
+                                <button 
+                                  key={treatment.name}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    window.location.href = treatment.link;
+                                  }}
+                                  className="text-sm text-white/70 hover:text-amber-300 transition-colors duration-300 flex items-center gap-2 w-full text-left hover:translate-x-1"
                                 >
                                   <div className="w-1 h-1 bg-amber-400 rounded-full opacity-60"></div>
-                                  {treatment}
-                                </div>
+                                  {treatment.name}
+                                </button>
                               ))}
                             </div>
                             
