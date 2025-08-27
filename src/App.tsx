@@ -78,7 +78,7 @@ import ChinFiller from "./pages/ChinFiller";
 import EarLobeRejuvenation from "./pages/EarLobeRejuvenation";
 import JawlineFiller from "./pages/JawlineFiller";
 import ChemicalPeel from "./pages/ChemicalPeel";
-import PrescriptionSkinCare from "./pages/PrescriptionSkinCare";
+import PrescriptionSkincare from "./pages/PrescriptionSkincare";
 import Microneedling from "./pages/Microneedling";
 import TearTroughFiller from "./pages/TearTroughFiller";
 import VideoUpload from "./pages/VideoUpload";
@@ -187,7 +187,7 @@ const App = () => {
               
               <Route path="/peel-to-reveal" element={<PeelToReveal />} />
               <Route path="/chemical-peel" element={<ChemicalPeel />} />
-              <Route path="/prescription-skin-care" element={<PrescriptionSkinCare />} />
+              <Route path="/prescription-skincare" element={<PrescriptionSkincare />} />
               <Route path="/tear-trough-filler" element={<TearTroughFiller />} />
               <Route path="/cheek-filler" element={<CheekFiller />} />
             <Route path="/chin-filler" element={<ChinFiller />} />
