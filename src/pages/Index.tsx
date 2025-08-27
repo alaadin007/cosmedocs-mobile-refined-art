@@ -143,9 +143,12 @@ const Index = () => {
                          <Sparkles className="h-4 w-4 mr-2" />
                          AI Facial Analysis
                        </Button>
-                       <p className="text-xs text-gray-400 mt-2">
-                         Free assessment • Instant results
-                       </p>
+                        <p className="text-xs text-gray-400 mt-2">
+                          Free assessment • Instant results • 
+                          <a href="/prescription-skincare" className="text-primary hover:text-primary/80 transition-colors ml-1">
+                            Prescription Medical Skincare
+                          </a>
+                        </p>
                      </motion.div>
                    </div>
                  </motion.div>

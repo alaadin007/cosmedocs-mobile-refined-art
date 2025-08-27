@@ -1,8 +1,10 @@
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
 import { 
   Heart, 
   Shield, 
@@ -15,11 +17,13 @@ import {
   Sparkles,
   Sun,
   Zap,
-  Eye
+  Eye,
+  Brain
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PrescriptionSkincare = () => {
+  const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   const seoData = generateSEOMetadata(
     "Personalised Prescription Skincare – CosmeDocs | £60 Every 3 Months",
     "Get dermatologist-grade skincare with clinically proven actives. Generic formulations from pharma giants, tailored to your skin for just £60 every 3 months.",
@@ -152,11 +156,21 @@ const PrescriptionSkincare = () => {
               
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-6 text-lg"
+                className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-6 text-lg mr-4"
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
                 Start My Consultation
                 <Star className="w-5 h-5 ml-2" />
+              </Button>
+              
+              <Button
+                onClick={() => setIsAnalysisOpen(true)}
+                variant="outline"
+                size="lg"
+                className="bg-transparent border-2 border-primary/20 text-primary hover:bg-primary/10 hover:border-primary/40 px-8 py-6 text-lg"
+              >
+                <Sparkles className="h-5 w-5 mr-2" />
+                AI Skin Analysis
               </Button>
               
               <div className="mt-8 flex items-center justify-center gap-6 text-sm text-muted-foreground">
@@ -173,6 +187,79 @@ const PrescriptionSkincare = () => {
                   Proven Quality
                 </div>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* AI Skin Analysis Section */}
+        <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+          <div className="container mx-auto px-4">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <Sparkles className="inline-block h-8 w-8 mr-3 text-primary" />
+                AI Skin Analysis for Prescription Planning
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Get a comprehensive AI analysis of your skin to help our doctors create the perfect prescription plan for you
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  icon: Brain,
+                  title: "Smart Assessment",
+                  description: "AI analysis identifies skin concerns that benefit from prescription treatment"
+                },
+                {
+                  icon: Heart,
+                  title: "Personalized Recommendations", 
+                  description: "Get targeted suggestions for prescription actives based on your skin analysis"
+                },
+                {
+                  icon: Clock,
+                  title: "Instant Results",
+                  description: "Immediate skin analysis to complement your doctor consultation"
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-primary/10 text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Button
+                onClick={() => setIsAnalysisOpen(true)}
+                size="lg"
+                className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-12 py-6 text-lg"
+              >
+                <Sparkles className="h-5 w-5 mr-2" />
+                Start Your AI Skin Analysis
+              </Button>
+              <p className="text-sm text-muted-foreground mt-4">
+                Free assessment • Complements doctor consultation • Instant results
+              </p>
             </motion.div>
           </div>
         </section>
@@ -419,6 +506,12 @@ const PrescriptionSkincare = () => {
           <h4>Pricing and Value</h4>
           <p>At £60 every three months, our service includes doctor consultation, prescription, three-month medication supply, postage, and follow-up review. This represents significant value compared to competitors charging £75-90 for similar treatments.</p>
         </div>
+
+        {/* AI Analysis Wizard */}
+        <AestheticAnalysisWizard 
+          isOpen={isAnalysisOpen} 
+          onClose={() => setIsAnalysisOpen(false)} 
+        />
       </div>
     </>
   );
