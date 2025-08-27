@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
+import AIConsultationWidget from "@/components/AIConsultationWidget";
 import { 
   Heart, 
   Shield, 
@@ -24,6 +25,7 @@ import { motion } from "framer-motion";
 
 const PrescriptionSkincare = () => {
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const seoData = generateSEOMetadata(
     "Personalised Prescription Skincare – CosmeDocs | £60 Every 3 Months",
     "Get dermatologist-grade skincare with clinically proven actives. Generic formulations from pharma giants, tailored to your skin for just £60 every 3 months.",
@@ -157,7 +159,7 @@ const PrescriptionSkincare = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-6 text-lg mr-4"
-                onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+                onClick={() => setIsConsultationOpen(true)}
               >
                 Start My Consultation
                 <Star className="w-5 h-5 ml-2" />
@@ -455,6 +457,7 @@ const PrescriptionSkincare = () => {
                 <Button 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
+                  onClick={() => setIsConsultationOpen(true)}
                 >
                   Start My Consultation Now
                   <Star className="w-5 h-5 ml-2" />
@@ -481,6 +484,7 @@ const PrescriptionSkincare = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-12 py-6 text-lg"
+                onClick={() => setIsConsultationOpen(true)}
               >
                 Start My Consultation Now
                 <Clock className="w-5 h-5 ml-2" />
@@ -511,6 +515,12 @@ const PrescriptionSkincare = () => {
         <AestheticAnalysisWizard 
           isOpen={isAnalysisOpen} 
           onClose={() => setIsAnalysisOpen(false)} 
+        />
+
+        {/* AI Consultation Widget */}
+        <AIConsultationWidget 
+          isOpen={isConsultationOpen} 
+          onClose={() => setIsConsultationOpen(false)} 
         />
       </div>
     </>
