@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { Eye, HelpCircle, Sparkles, Brain, Heart, Clock } from "lucide-react";
+import { Eye, HelpCircle, Sparkles, Brain, Heart, Clock, Shield, Stethoscope, Package, Star } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
@@ -231,6 +231,125 @@ const Index = () => {
                   <p className="text-sm text-gray-400 mt-4">
                     Free assessment • No personal information required • Instant results
                   </p>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+
+          {/* Prescription Skincare Section */}
+          <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-black" aria-labelledby="prescription-skincare-heading">
+            <div className="page-container">
+              <div className="max-w-6xl mx-auto">
+                <motion.div
+                  className="text-center mb-16"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 id="prescription-skincare-heading" className="text-4xl md:text-5xl font-bold mb-6">
+                    <Stethoscope className="inline-block h-8 w-8 mr-3 text-primary" />
+                    Prescription Medical Skincare
+                  </h2>
+                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                    Get dermatologist-grade skincare with pharmaceutical-grade generic formulations. 
+                    Clinically proven actives, tailored to your skin, for just £60 every 3 months.
+                  </p>
+                </motion.div>
+
+                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4">
+                        <Shield className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="text-xl font-semibold mb-2">GMC-Registered Doctors</h3>
+                          <p className="text-gray-300">AI-guided consultation reviewed by qualified medical professionals</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <Package className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="text-xl font-semibold mb-2">Pharmaceutical-Grade Quality</h3>
+                          <p className="text-gray-300">Generic formulations from pharmaceutical giants - not custom compounded</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <Heart className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="text-xl font-semibold mb-2">Personalized Treatment</h3>
+                          <p className="text-gray-300">Tailored to treat acne, pigmentation, aging, photoageing, and rosacea</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-center mb-6">
+                      <div className="text-5xl font-bold text-primary mb-2">£60</div>
+                      <div className="text-lg text-gray-300">every 3 months</div>
+                    </div>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-gray-300">Doctor consultation & prescription</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-gray-300">3-month supply of medication</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-gray-300">Postage & handling included</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-gray-300">Follow-up review</span>
+                      </div>
+                    </div>
+                    
+                    <Button 
+                      asChild
+                      size="lg" 
+                      className="w-full bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-white text-black rounded-full py-6 text-lg font-medium transition-all duration-300 hover:scale-105"
+                    >
+                      <a href="/prescription-skincare">
+                        <Star className="w-5 h-5 mr-2" />
+                        Start My Consultation
+                      </a>
+                    </Button>
+                  </motion.div>
+                </div>
+
+                <motion.div
+                  className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-8 border border-green-500/20"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="text-center">
+                    <h3 className="text-2xl font-semibold mb-4">Why Generic Over Custom Compounded?</h3>
+                    <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                      We exclusively use pharmaceutical-grade generic formulations from established manufacturers, 
+                      ensuring superior quality, rigorous testing, and consistent results - unlike custom compounded 
+                      alternatives made in smaller facilities with variable quality control.
+                    </p>
+                  </div>
                 </motion.div>
               </div>
             </div>
