@@ -151,24 +151,83 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 flex flex-col max-h-96"
                 >
-                  <h3 className="font-medium mb-3 text-white/90">AI Response:</h3>
-                  <div className="text-white/80 leading-relaxed space-y-2">
-                    {results.split('\n\n').map((paragraph, index) => (
-                      <p key={index} className="text-sm">
-                        {paragraph}
-                      </p>
-                    ))}
+                  <h3 className="font-medium p-6 pb-3 text-white/90">AI Response:</h3>
+                  <div className="flex-1 overflow-y-auto px-6 pb-3">
+                    <div className="text-white/80 leading-relaxed space-y-2">
+                      {results.split('\n\n').map((paragraph, index) => (
+                        <p key={index} className="text-sm">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
                   </div>
-                  <Button 
-                    onClick={handleClear}
-                    variant="outline"
-                    className="mt-4 border-white/20 text-white/70 hover:bg-white/10 rounded-xl"
-                    size="sm"
-                  >
-                    Clear & Search Again
-                  </Button>
+                  
+                  {/* Follow-up Chat */}
+                  <div className="p-6 pt-3 border-t border-white/10">
+                    <div className="flex gap-2 mb-4">
+                      <Input
+                        placeholder="Ask a follow-up question..."
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-xl text-sm"
+                      />
+                      <Button 
+                        onClick={handleSearch}
+                        disabled={isLoading}
+                        size="sm"
+                        className="bg-white/20 text-white hover:bg-white/30 rounded-xl border border-white/20"
+                      >
+                        Ask
+                      </Button>
+                    </div>
+                    
+                    {/* Action Buttons */}
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <Button 
+                        onClick={() => window.open('https://www.acuityscheduling.com/schedule.php?owner=11449602', '_blank')}
+                        size="sm"
+                        className="bg-primary/20 text-white hover:bg-primary/30 rounded-xl border border-primary/20"
+                      >
+                        Book Now
+                      </Button>
+                      <Button 
+                        onClick={() => window.open('tel:03330551503', '_blank')}
+                        size="sm"
+                        variant="outline"
+                        className="border-white/20 text-white/70 hover:bg-white/10 rounded-xl"
+                      >
+                        Call
+                      </Button>
+                      <Button 
+                        onClick={() => window.open('https://wa.me/447735606447', '_blank')}
+                        size="sm"
+                        variant="outline"
+                        className="border-white/20 text-white/70 hover:bg-white/10 rounded-xl"
+                      >
+                        WhatsApp
+                      </Button>
+                      <Button 
+                        onClick={() => window.open('https://instagram.com/cosmedocs', '_blank')}
+                        size="sm"
+                        variant="outline"
+                        className="border-white/20 text-white/70 hover:bg-white/10 rounded-xl"
+                      >
+                        Instagram
+                      </Button>
+                    </div>
+                    
+                    <Button 
+                      onClick={handleClear}
+                      variant="ghost"
+                      className="text-white/50 hover:text-white/70 hover:bg-white/5 rounded-xl text-xs"
+                      size="sm"
+                    >
+                      Clear & Search Again
+                    </Button>
+                  </div>
                 </motion.div>
               )}
 
