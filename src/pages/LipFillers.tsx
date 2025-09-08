@@ -165,6 +165,25 @@ const LipFillers = () => {
           </div>
         </section>
 
+        {/* Lip Enhancement London Section */}
+        <section className="py-16 bg-gradient-to-b from-black to-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">Lip Enhancement London</h2>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                Transform your lips with expert lip enhancement London treatments at our prestigious Harley Street clinic. 
+                Our cosmetic doctors specialize in natural-looking results that enhance your unique beauty.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Before & After Gallery */}
         <section className="py-20 bg-accent">
           <div className="page-container">
