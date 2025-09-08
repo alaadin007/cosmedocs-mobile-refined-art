@@ -165,6 +165,25 @@ const LipFillers = () => {
         {/* Treatment Summary */}
         <section className="py-16 bg-accent">
           <div className="page-container">
+            {/* Written Summary */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Lip Filler Treatment Summary</h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+                Our expert lip filler treatments in London use premium hyaluronic acid to enhance your lips with 
+                <span className="text-purple-300 font-semibold"> invisible art</span> philosophy. Whether you choose 
+                0.5ml for subtle enhancement or 1ml for bolder results, our cosmetic doctors create personalized 
+                treatments that complement your facial features. With minimal downtime and results lasting 6-12 months, 
+                lip augmentation at our Harley Street clinic delivers transformation that speaks without saying a word.
+              </p>
+            </motion.div>
+
+            {/* Visual Summary Grid */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
