@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
@@ -34,6 +34,11 @@ export default function Header() {
           icon: Sparkles,
           label: "Treatments",
           action: () => window.location.href = "/treatments"
+        },
+        {
+          icon: Camera,
+          label: "Before & After Gallery",
+          action: () => window.location.href = "/before-after-gallery"
         },
         {
           icon: MessageSquare,

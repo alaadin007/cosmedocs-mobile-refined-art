@@ -1,250 +1,128 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { X, ChevronLeft, ChevronRight, Camera, Play } from "lucide-react";
+import { generateSEOMetadata } from "../utils/seo";
 
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion, AnimatePresence } from 'framer-motion';
-import { generateSEOMetadata } from '@/utils/seo';
-import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
-import CollageViewer from '@/components/CollageViewer';
-
-// Mixed and matched images from all treatment pages
-const allGalleryImages = [
-  // Dermal Filler Makeover Results
-  {
-    src: "/lovable-uploads/64ee3f9e-7616-464d-962f-0a5ba656a82c.png",
-    alt: "Dermal filler makeover before and after front view",
-    caption: "Full face rejuvenation with dermal fillers - front view transformation",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png",
-    alt: "Dermal filler makeover before and after side profile",
-    caption: "Enhanced facial contours and profile definition",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/a4df5f90-dda5-48a2-9bd2-19728aa1a275.png",
-    alt: "Dermal filler makeover cheek enhancement",
-    caption: "Natural cheek enhancement and facial contouring",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/1beab5af-7f27-4505-83ec-b0fab7ef68cc.png",
-    alt: "Dermal filler makeover jawline definition",
-    caption: "Defined jawline and improved facial structure",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/e3020fef-05e0-4022-b981-0fe5dc9a2c53.png",
-    alt: "Dermal filler makeover side profile enhancement",
-    caption: "Elegant side profile enhancement with dermal fillers",
-    category: "dermal-fillers"
-  },
-  {
-    src: "/lovable-uploads/462ae463-011b-428b-9685-1e13d2d061d9.png",
-    alt: "Dermal filler makeover male jawline",
-    caption: "Masculine jawline enhancement for male clients",
-    category: "dermal-fillers"
-  },
-  // Nasolabial folds before/during/after series
-  {
-    src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png",
-    alt: "Nasolabial folds before treatment showing prominent smile lines",
-    caption: "Before: Visible nasolabial folds creating tired appearance",
-    category: "nasolabial-folds"
-  },
-  {
-    src: "/lovable-uploads/ad7bb9c5-b7d5-415f-bad6-3b790df6abc8.png",
-    alt: "During nasolabial folds dermal filler injection procedure",
-    caption: "During: Expert dermal filler injection technique",
-    category: "nasolabial-folds"
-  },
-  {
-    src: "/lovable-uploads/c4f1a760-712a-4b3e-84b5-b2534cf4dd77.png",
-    alt: "Nasolabial folds after treatment showing smooth results",
-    caption: "After: Natural, youthful appearance with smooth smile lines",
-    category: "nasolabial-folds"
-  },
-  // Team credentials and education distributed across categories
-  {
-    src: "/lovable-uploads/38f9764b-fcca-429c-8900-8e7eaeaf55d8.png",
-    alt: "Cosmedocs team with training certificates",
-    caption: "Not just injectors - we teach the future generation of aesthetic practitioners. Our commitment to education ensures excellence in every treatment.",
-    category: "lip-treatments"
-  },
-  // Featured new lip treatment before and after
-  {
-    src: "/lovable-uploads/00df0c0c-e651-402b-bdb2-4cc80a39f284.png",
-    alt: "Lip enhancement before treatment natural lips",
-    caption: "Before: Natural lip shape and volume",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/4870b5ac-6167-4baa-8561-0f5617cd4814.png",
-    alt: "Lip enhancement after treatment enhanced volume and definition",
-    caption: "After: Enhanced lip volume and definition with natural-looking results",
-    category: "lip-treatments"
-  },
-  // Training and certification images scattered throughout
-  {
-    src: "/lovable-uploads/96f42376-2462-4bfd-946f-4fc73647f391.png",
-    alt: "Cosmedocs aesthetic training certification London Harley Street",
-    caption: "Excellence through education - our aestheticians complete rigorous training programs to master the invisible art of enhancement",
-    category: "dermal-fillers"
-  },
-  // New lip filler image
-  {
-    src: "/lovable-uploads/bb065723-5cc4-4e75-b47e-10fc0f741157.png",
-    alt: "Bold lip filler enhancement results",
-    caption: "Sometimes we go bold but it requires something unique",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/188431e9-facd-4459-9b12-c700ae47ed77.png",
-    alt: "Professional development aesthetic medicine training Cosmedocs",
-    caption: "Continuous learning drives our commitment to delivering natural, refined results - Bold • Natural • Always Your Way",
-    category: "nose-jobs"
-  },
-  // Latest lip treatment image
-  {
-    src: "/lovable-uploads/f12fe2de-6ab2-4a17-8dde-f7d429cfb948.png",
-    alt: "Lip edge enhancement before and after",
-    caption: "Sometimes just enhancing the edges of the lip/corners accentuates the lip beautifully",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/3b8b9417-a6f3-48dc-aff7-260e479613a3.png",
-    alt: "Team training graduation aesthetic medicine Harley Street London",
-    caption: "Our team's dedication to mastering advanced techniques ensures every treatment reflects our aesthetic philosophy of invisible art",
-    category: "nasolabial-folds"
-  },
-  // Lip anatomy educational image
-  {
-    src: "/lovable-uploads/706383d6-fe0f-44cb-bfad-d5a688d10d20.png",
-    alt: "Lip anatomy diagram showing injection points and lip structure Cosmedocs",
-    caption: "Understanding lip anatomy is crucial for precise injections - our doctors target specific areas for natural enhancement",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png",
-    alt: "Advanced aesthetic training certification program Cosmedocs London",
-    caption: "Training the next generation of aesthetic practitioners in our signature approach - quiet transformation that speaks volumes",
-    category: "ear-treatments"
-  },
-  // Nose job images mixed in
-  {
-    src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
-    alt: "Non-surgical nose job before and after profile view London Harley Street",
-    caption: "Profile transformation showing refined nasal bridge and enhanced projection",
-    category: "nose-jobs"
-  },
-  {
-    src: "/lovable-uploads/fd5d3d65-8e19-492f-842b-de7deb04898a.png",
-    alt: "Aesthetic medicine certification training London Harley Street Cosmedocs",
-    caption: "Behind every invisible transformation is extensive training - our team embodies the precision and artistry of modern aesthetics",
-    category: "all"
-  },
-  {
-    src: "/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png",
-    alt: "Non-surgical nose job bottom view before after London Cosmedocs",
-    caption: "Underneath view showing improved nasal tip projection and symmetry",
-    category: "nose-jobs"
-  },
-  {
-    src: "/lovable-uploads/c0a65d2b-fc99-48e0-b5bf-a2bc14f65d5a.png",
-    alt: "Professional aesthetic training team development Cosmedocs",
-    caption: "Investing in expertise - our comprehensive training ensures every practitioner delivers results that are minimal, quiet, and invisible",
-    category: "threads"
-  },
-  {
-    src: "/lovable-uploads/cc387da3-1543-4b06-8b11-a48d29f03456.png",
-    alt: "Non-surgical nose job side profile before after London Harley Street",
-    caption: "Side profile enhancement demonstrating subtle yet significant improvement",
-    category: "nose-jobs"
-  },
-  {
-    src: "/lovable-uploads/4ce415a7-393b-4834-8a89-514b93314623.png",
-    alt: "Dr Ahmed Haq training session aesthetic medicine procedures London",
-    caption: "Hands-on training with Dr Ahmed Haq - where precision meets artistry in every procedure we perform",
-    category: "lip-treatments"
-  },
-  {
-    src: "/lovable-uploads/1cceb92b-eacb-48b4-9c9f-04c4cb2b025e.png",
-    alt: "Non-surgical nose job profile transformation London Cosmedocs",
-    caption: "Natural-looking profile enhancement with advanced #cosmenose technique",
-    category: "nose-jobs"
-  },
-  {
-    src: "/lovable-uploads/bf8a69d8-6776-4187-857d-a009e9fd6147.png",
-    alt: "Non-surgical nose job Cosmedocs London Harley Street before after results",
-    caption: "Remarkable transformation achieving perfect nasal proportions and harmony",
-    category: "nose-jobs"
-  },
-  // Ear lobe rejuvenation images
-  {
-    src: "/lovable-uploads/e9ca6f3d-62c7-416f-b623-8202fb6ef181.png",
-    alt: "Ear lobe before rejuvenation treatment showing volume loss and deep wrinkles",
-    caption: "Before: Significant ear lobe volume loss and deep wrinkles with age-related structural changes",
-    category: "ear-treatments"
-  },
-  {
-    src: "/lovable-uploads/a6ddbdbb-2597-49b1-9b92-bac7242c0b83.png",
-    alt: "Ear lobe after rejuvenation treatment showing restored volume and firmness",
-    caption: "After: Restored ear lobe with improved volume, firmness and youthful appearance - invisible art transformation",
-    category: "ear-treatments"
-  }
-];
-
-// New collage data for lip treatments
-const lipCollageImages = [
-  {
-    src: "/lovable-uploads/ff79ac9e-7b65-41a3-a7d7-5ea281d0bc69.png",
-    alt: "Lip treatment consultation natural state"
-  },
-  {
-    src: "/lovable-uploads/755f56d3-3def-454e-8691-fd3335be4f34.png",
-    alt: "Lip filler injection procedure in progress"
-  },
-  {
-    src: "/lovable-uploads/6c665b2f-9145-446a-8cb0-ccef6bef602e.png",
-    alt: "Lip treatment immediate post-procedure results"
-  },
-  {
-    src: "/lovable-uploads/29e40de0-6799-47d2-bd48-272b87c4c70c.png",
-    alt: "Final lip enhancement results natural volume"
-  }
-];
-
-const categories = [
-  { id: 'all', name: 'All', icon: '✨' },
-  { id: 'team', name: 'Team', icon: '👥' },
-  { id: 'dermal-fillers', name: 'Dermal Fillers', icon: '💫' },
-  { id: 'nasolabial-folds', name: 'Nasolabial Folds', icon: '😊' },
-  { id: 'lip-treatments', name: 'Lip Treatments', icon: '💋' },
-  { id: 'nose-jobs', name: 'Nose Jobs', icon: '👃' },
-  { id: 'ear-treatments', name: 'Ear Treatments', icon: '👂' },
-  { id: 'threads', name: 'PDO Threads', icon: '🧵' }
-];
+interface MediaItem {
+  id: string;
+  type: "image" | "video";
+  beforeUrl: string;
+  afterUrl?: string;
+  videoUrl?: string;
+  treatment: string;
+  description: string;
+  duration?: string;
+  patientAge?: string;
+  gender?: string;
+}
 
 const BeforeAfterGallery = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  
+  const [selectedItem, setSelectedItem] = useState<MediaItem | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [filter, setFilter] = useState("all");
+
   const seoData = generateSEOMetadata(
-    "Before & After Gallery | Real Patient Results | Cosmedocs London",
-    "View our comprehensive before and after gallery showcasing real patient transformations. Expert aesthetic treatments with natural-looking results at Cosmedocs.",
+    "Before & After Gallery - Real Results | CosmeDocs",
+    "View real before and after photos and videos of our aesthetic treatments. See actual patient results from Botox, dermal fillers, lip enhancement and more at CosmeDocs Harley Street.",
     "/before-after-gallery"
   );
 
-  const filteredImages = activeCategory === 'all' 
-    ? allGalleryImages 
-    : allGalleryImages.filter(img => img.category === activeCategory);
+  // Sample data - in real implementation, this would come from a CMS or API
+  const mediaItems: MediaItem[] = [
+    {
+      id: "1",
+      type: "image",
+      beforeUrl: "/api/placeholder/400/300",
+      afterUrl: "/api/placeholder/400/300",
+      treatment: "Lip Fillers",
+      description: "0.5ml natural lip enhancement for subtle volume",
+      patientAge: "28",
+      gender: "Female"
+    },
+    {
+      id: "2", 
+      type: "image",
+      beforeUrl: "/api/placeholder/400/300",
+      afterUrl: "/api/placeholder/400/300",
+      treatment: "Botox",
+      description: "Forehead and frown line treatment",
+      patientAge: "35",
+      gender: "Female"
+    },
+    {
+      id: "3",
+      type: "video",
+      beforeUrl: "/api/placeholder/400/300",
+      videoUrl: "#",
+      treatment: "Dermal Filler Makeover",
+      description: "Complete facial rejuvenation with HAMA technique",
+      duration: "3 months",
+      patientAge: "42",
+      gender: "Female"
+    },
+    {
+      id: "4",
+      type: "image",
+      beforeUrl: "/api/placeholder/400/300",
+      afterUrl: "/api/placeholder/400/300",
+      treatment: "Non-Surgical Nose Job",
+      description: "Profile refinement with hyaluronic acid",
+      patientAge: "24",
+      gender: "Male"
+    },
+    {
+      id: "5",
+      type: "image",
+      beforeUrl: "/api/placeholder/400/300",
+      afterUrl: "/api/placeholder/400/300",
+      treatment: "Cheek Fillers",
+      description: "Volume restoration and contouring",
+      patientAge: "38",
+      gender: "Female"
+    },
+    {
+      id: "6",
+      type: "image",
+      beforeUrl: "/api/placeholder/400/300",
+      afterUrl: "/api/placeholder/400/300",
+      treatment: "Jawline Contouring",
+      description: "Masculine jawline enhancement",
+      patientAge: "32",
+      gender: "Male"
+    }
+  ];
 
-  const shouldShowCollage = activeCategory === 'all' || activeCategory === 'lip-treatments';
+  const treatments = ["all", "Lip Fillers", "Botox", "Dermal Filler Makeover", "Non-Surgical Nose Job", "Cheek Fillers", "Jawline Contouring"];
+
+  const filteredItems = filter === "all" 
+    ? mediaItems 
+    : mediaItems.filter(item => item.treatment === filter);
+
+  const openModal = (item: MediaItem, index: number) => {
+    setSelectedItem(item);
+    setCurrentIndex(index);
+  };
+
+  const closeModal = () => {
+    setSelectedItem(null);
+  };
+
+  const navigateMedia = (direction: "prev" | "next") => {
+    const newIndex = direction === "next" 
+      ? (currentIndex + 1) % filteredItems.length
+      : (currentIndex - 1 + filteredItems.length) % filteredItems.length;
+    
+    setCurrentIndex(newIndex);
+    setSelectedItem(filteredItems[newIndex]);
+  };
 
   return (
     <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="keywords" content="before after gallery, aesthetic results, cosmetic surgery results, botox before after, dermal filler results, lip filler before after, real patient results" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
@@ -255,155 +133,275 @@ const BeforeAfterGallery = () => {
         <meta name="twitter:description" content={seoData.description} />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Instagram-style Header */}
-        <section className="py-8 border-b border-border">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Hero Section */}
+        <section className="relative py-20">
           <div className="page-container">
-            <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-              <div className="relative mb-6">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-orange-500 p-1">
-                  <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                    <div className="text-3xl font-bold text-primary">CD</div>
-                  </div>
-                </div>
-              </div>
-              <h1 className="text-2xl font-bold mb-2">cosmedocs</h1>
-              <p className="text-muted-foreground mb-4">
-                🏥 Our Aesthetics Is Refined • Controlled • Precise - invisible art, since 2007, Harley St, London
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent">
+                Before & After Gallery
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Real results from real patients. Our aesthetics is invisible art - 
+                bold, natural, always your way.
               </p>
-              <div className="flex items-center gap-8 text-sm">
-                <div><span className="font-semibold">{allGalleryImages.length}</span> transformations</div>
-                <div><span className="font-semibold">129K</span> followers</div>
-                <div><span className="font-semibold">7</span> following</div>
-              </div>
-            </div>
+              <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-transparent mx-auto"></div>
+            </motion.div>
           </div>
         </section>
 
-        {/* Category Highlights */}
-        <section className="py-6 border-b border-border">
+        {/* Filter Buttons */}
+        <section className="py-8">
           <div className="page-container">
-            <div className="flex gap-4 overflow-x-auto pb-2">
-              {categories.map((category) => (
-                <motion.button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className="flex flex-col items-center min-w-[80px] group"
-                  whileTap={{ scale: 0.95 }}
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {treatments.map((treatment) => (
+                <button
+                  key={treatment}
+                  onClick={() => setFilter(treatment)}
+                  className={`px-6 py-3 rounded-full transition-all duration-300 capitalize ${
+                    filter === treatment
+                      ? "bg-amber-500 text-black font-medium"
+                      : "bg-white/10 text-white hover:bg-white/20 border border-white/20"
+                  }`}
                 >
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl mb-2 transition-all duration-300 ${
-                    activeCategory === category.id 
-                      ? 'bg-gradient-to-tr from-pink-500 via-purple-500 to-orange-500 scale-110' 
-                      : 'bg-accent hover:bg-accent/80'
-                  }`}>
-                    {category.icon}
-                  </div>
-                  <span className={`text-xs font-medium transition-colors ${
-                    activeCategory === category.id ? 'text-primary' : 'text-muted-foreground'
-                  }`}>
-                    {category.name}
-                  </span>
-                </motion.button>
+                  {treatment === "all" ? "All Treatments" : treatment}
+                </button>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Image Grid */}
-        <section className="py-8">
+        {/* Gallery Grid */}
+        <section className="pb-20">
           <div className="page-container">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeCategory}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-              >
-                {/* Add collage at the beginning of lip treatments */}
-                {shouldShowCollage && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <CollageViewer 
-                      images={lipCollageImages}
-                      caption="Our lip injections are precise and on target - complete lip enhancement journey showcasing our invisible art approach"
-                    />
-                  </motion.div>
-                )}
-                
-                {filteredImages.map((image, index) => (
-                  <motion.div
-                    key={`${activeCategory}-${index}`}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: shouldShowCollage ? (index + 1) * 0.1 : index * 0.1 }}
-                    className="group cursor-pointer"
-                  >
-                    <div className="aspect-square rounded-lg overflow-hidden bg-accent mb-3">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredItems.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="group cursor-pointer"
+                  onClick={() => openModal(item, index)}
+                >
+                  <div className="relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                    {/* Media Preview */}
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      {item.type === "image" ? (
+                        <div className="flex h-full">
+                          <div className="flex-1 relative">
+                            <img
+                              src={item.beforeUrl}
+                              alt={`Before ${item.treatment}`}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute top-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-xs">
+                              Before
+                            </div>
+                          </div>
+                          {item.afterUrl && (
+                            <div className="flex-1 relative">
+                              <img
+                                src={item.afterUrl}
+                                alt={`After ${item.treatment}`}
+                                className="w-full h-full object-cover"
+                              />
+                              <div className="absolute top-2 right-2 bg-amber-500 text-black px-2 py-1 rounded text-xs font-medium">
+                                After
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="relative w-full h-full">
+                          <img
+                            src={item.beforeUrl}
+                            alt={`${item.treatment} video preview`}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                            <Play className="w-12 h-12 text-white" />
+                          </div>
+                          <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs flex items-center">
+                            <Camera className="w-3 h-3 mr-1" />
+                            Video
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {image.caption}
-                    </p>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </AnimatePresence>
 
-            {filteredImages.length === 0 && !shouldShowCollage && (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground">No images found for this category.</p>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-16 bg-accent/30">
-          <div className="page-container">
-            <div className="text-center max-w-2xl mx-auto">
-              <h2 className="text-3xl font-bold mb-4">Ready for Your Transformation?</h2>
-              <p className="text-muted-foreground mb-8">
-                Book your consultation today and join our gallery of satisfied patients. 
-                Our aesthetics is invisible art • Bold • Natural • Always Your Way
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
-                  Book Consultation
-                </button>
-                <BeforeAfterImageViewer 
-                  images={allGalleryImages.map(img => ({
-                    src: img.src,
-                    alt: img.alt,
-                    caption: img.caption
-                  }))}
-                  triggerLabel="View Full Gallery"
-                  title="Complete Before & After Gallery"
-                  description="Browse our comprehensive collection of patient transformations"
-                  className="border border-border bg-background px-8 py-3 rounded-lg hover:bg-accent transition-colors"
-                />
-              </div>
+                    {/* Content */}
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {item.treatment}
+                      </h3>
+                      <p className="text-gray-400 text-sm mb-3">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <span>{item.gender}, {item.patientAge}</span>
+                        {item.duration && <span>{item.duration}</span>}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
+        {/* Modal */}
+        <AnimatePresence>
+          {selectedItem && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              onClick={closeModal}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="max-w-4xl w-full bg-gray-900 rounded-2xl overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Modal Header */}
+                <div className="flex items-center justify-between p-6 border-b border-gray-700">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">
+                      {selectedItem.treatment}
+                    </h3>
+                    <p className="text-gray-400">{selectedItem.description}</p>
+                  </div>
+                  <button
+                    onClick={closeModal}
+                    className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+                  >
+                    <X className="w-6 h-6 text-gray-400" />
+                  </button>
+                </div>
+
+                {/* Modal Content */}
+                <div className="relative">
+                  {selectedItem.type === "image" ? (
+                    <div className="flex">
+                      <div className="flex-1 relative">
+                        <img
+                          src={selectedItem.beforeUrl}
+                          alt={`Before ${selectedItem.treatment}`}
+                          className="w-full h-[400px] object-cover"
+                        />
+                        <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-2 rounded">
+                          Before
+                        </div>
+                      </div>
+                      {selectedItem.afterUrl && (
+                        <div className="flex-1 relative">
+                          <img
+                            src={selectedItem.afterUrl}
+                            alt={`After ${selectedItem.treatment}`}
+                            className="w-full h-[400px] object-cover"
+                          />
+                          <div className="absolute top-4 right-4 bg-amber-500 text-black px-3 py-2 rounded font-medium">
+                            After
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="relative h-[400px]">
+                      <video
+                        controls
+                        className="w-full h-full object-cover"
+                        poster={selectedItem.beforeUrl}
+                      >
+                        <source src={selectedItem.videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  )}
+
+                  {/* Navigation Arrows */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateMedia("prev");
+                    }}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-black/70 rounded-full transition-colors"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigateMedia("next");
+                    }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-black/70 rounded-full transition-colors"
+                  >
+                    <ChevronRight className="w-6 h-6 text-white" />
+                  </button>
+                </div>
+
+                {/* Modal Footer */}
+                <div className="p-6 border-t border-gray-700">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-400">
+                      Patient: {selectedItem.gender}, {selectedItem.patientAge}
+                      {selectedItem.duration && ` • Duration: ${selectedItem.duration}`}
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      {currentIndex + 1} of {filteredItems.length}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-amber-500/10 to-transparent">
+          <div className="page-container text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready for Your Transformation?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Book your consultation with our expert practitioners and discover 
+              how we can help you achieve natural, beautiful results.
+            </p>
+            <button
+              onClick={() => window.open('https://www.acuityscheduling.com/schedule.php?owner=11449602', '_blank')}
+              className="bg-amber-500 text-black px-8 py-4 rounded-full font-medium hover:bg-amber-400 transition-colors"
+            >
+              Book Your Consultation
+            </button>
+          </div>
+        </section>
+
         {/* Hidden SEO Content */}
-        <div className="sr-only" aria-hidden="true">
-          <h2>Before After Gallery Cosmedocs London Aesthetic Treatments Real Results Patient Transformations</h2>
-          <p>
-            Before and after gallery, Cosmedocs London, aesthetic treatments, real patient results, dermal fillers, 
-            lip treatments, nose jobs, PDO threads, facial enhancement, natural results, invisible art, bold natural 
-            always your way, cosmetic medicine, Harley Street, patient transformations, before after photos, 
-            aesthetic clinic London, cosmetic doctors, facial rejuvenation, anti-aging treatments.
-          </p>
+        <div className="sr-only">
+          <h2>Real Patient Results Gallery</h2>
+          <p>View authentic before and after photos from our Harley Street clinic. Our patients have achieved natural, beautiful results with Botox, dermal fillers, lip enhancement, non-surgical nose jobs, and facial rejuvenation treatments.</p>
+          
+          <h3>Treatment Results Showcase</h3>
+          <p>Browse through hundreds of real patient transformations including lip filler before and after photos, Botox treatment results, dermal filler makeovers, jawline contouring, cheek enhancement, and non-surgical nose job outcomes.</p>
+          
+          <h3>Expert Aesthetic Medicine London</h3>
+          <p>CosmeDocs has performed over 1 million injections since 2007. Our before and after gallery demonstrates our commitment to natural-looking results and aesthetic excellence on Harley Street, London.</p>
+          
+          <h3>Patient Testimonials Visual Evidence</h3>
+          <p>See the transformative power of invisible art aesthetic medicine. Our philosophy of bold, natural, always your way is evident in every before and after comparison in our comprehensive results gallery.</p>
         </div>
       </div>
     </>
