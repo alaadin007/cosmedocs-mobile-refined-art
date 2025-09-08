@@ -4,6 +4,13 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe } from "lucide-react";
@@ -250,39 +257,40 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Before and After Forehead Filler Results in London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See the transformative results achieved with our expert forehead filler treatments. 
-                Each patient receives personalized care for optimal forehead enhancement outcomes.
+                Explore authentic before and after forehead filler results from our London clinic. 
+                Our premium dermal filler treatments smooth wrinkles, lines and restore natural volume for youthful enhancement.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {beforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative group cursor-pointer"
-                  onClick={() => setSelectedImageIndex(index)}
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
 
             <div className="text-center mt-12">
               <BeforeAfterImageViewer 
