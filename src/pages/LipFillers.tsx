@@ -17,33 +17,33 @@ const LipFillers = () => {
   const beforeAfterImages = [
     { 
       src: "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png", 
-      alt: "Lip filler London before and after results 2016-2019 showing natural lip augmentation progression", 
-      caption: "3-year lip filler London journey - subtle, natural enhancement that grows with confidence" 
+      alt: "Before and after 0.5ml lip filler London showing natural lip augmentation progression over 3 years", 
+      caption: "Before and after 0.5ml lip filler - natural enhancement that grows with confidence" 
     },
     { 
       src: "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png", 
-      alt: "1ml lip filler before and after showing defined lip peaks and enhanced lip shape London", 
-      caption: "1ml lip filler creates perfect lip definition - enhanced peaks, improved ratio, natural beauty" 
+      alt: "Before and after 1ml lip filler showing defined lip peaks and enhanced lip shape London", 
+      caption: "Before and after 1ml lip filler - perfect definition with enhanced peaks and improved ratio" 
     },
     { 
       src: "/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png", 
-      alt: "Natural looking lip enhancement before and after lip augmentation London treatment", 
-      caption: "Natural looking lip enhancement - subtle volume that maintains perfect facial harmony" 
+      alt: "Before and after 0.5ml lip filler natural looking lip enhancement London treatment", 
+      caption: "Before and after 0.5ml lip filler - subtle volume maintaining perfect facial harmony" 
     },
     { 
       src: "/lovable-uploads/94868651-44b6-4cfb-b3a4-8d3629c1358b.png", 
-      alt: "Lip injection London progression showing immediate results and healed lip filler after 5 weeks", 
-      caption: "Lip injection timeline - immediate results, settling process, and beautiful 5-week outcome" 
+      alt: "Before and after 1ml lip filler progression showing immediate results and healed after 5 weeks", 
+      caption: "Before and after 1ml lip filler timeline - immediate results and beautiful healed outcome" 
     },
     { 
       src: "/lovable-uploads/a91d9151-e465-4ba8-82e8-f59fee576396.png", 
-      alt: "Progressive lip augmentation filler London from no treatment to 2ml showing gradual enhancement", 
-      caption: "Progressive lip augmentation - from natural to bold, two syringes of expert artistry" 
+      alt: "Before and after 1ml lip filler progressive enhancement from natural to bold results London", 
+      caption: "Before and after 1ml lip filler progression - from natural to bold enhancement" 
     },
     { 
       src: "/lovable-uploads/155a5ab6-6a67-4fe4-a246-f77856aba78d.png", 
-      alt: "Lip filler cost comparison showing before treatment, after 1ml and 2ml lip enhancement London", 
-      caption: "Volume comparison guide - see how 1ml and 2ml lip filler transforms your smile" 
+      alt: "Before and after 0.5ml lip filler vs 1ml comparison showing different enhancement levels London", 
+      caption: "Before and after 0.5ml vs 1ml lip filler - see how different volumes transform your smile" 
     }
   ];
 
@@ -77,8 +77,8 @@ const LipFillers = () => {
       answer: "Lip fillers cost from £300 - 0.5ml natural lip filler costs £300 while 1ml lip filler costs £350. Our lip augmentation filler pricing includes premium quality products from Swiss, French, and USA manufacturers for natural looking lip enhancement."
     },
     {
-      question: "What's the difference between 0.5ml and 1ml lip filler?",
-      answer: "0.5ml provides subtle, natural enhancement perfect for first-time treatments and thin lips. 1ml offers more visible enhancement for those seeking bolder results. 0.5ml lasts 6-9 months while 1ml typically lasts 9-12 months."
+      question: "What's the difference between before and after 0.5ml lip filler vs 1ml?",
+      answer: "Before and after 0.5ml lip filler shows subtle, natural enhancement perfect for first-time treatments. Before and after 1ml lip filler demonstrates more visible enhancement for bolder results. 0.5ml lasts 6-9 months while 1ml typically lasts 9-12 months."
     },
     {
       question: "Which lip filler volume should I choose?",
@@ -87,6 +87,10 @@ const LipFillers = () => {
     {
       question: "When will I see final results?",
       answer: "Initial results are visible immediately, but final results appear after 2 weeks once swelling subsides. The filler continues to integrate naturally with your tissues over this period for optimal results."
+    },
+    {
+      question: "Can I see before and after 0.5ml and 1ml lip filler examples?",
+      answer: "Yes! Our gallery showcases authentic before and after 0.5ml lip filler and before and after 1ml lip filler results from real patients at our London clinic. Each image demonstrates the natural, beautiful enhancement achievable with expert technique."
     }
   ];
 
@@ -101,7 +105,7 @@ const LipFillers = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="lip fillers London, lip augmentation London, lip filler UK London, lip injections London, lip enhancement London, 1ml lip filler, natural looking lip enhancement, lip fillers cost, how much is lip filler, dermal fillers, Harley Street" />
+        <meta name="keywords" content="lip fillers London, lip augmentation London, lip filler UK London, lip injections London, lip enhancement London, 1ml lip filler, 0.5ml lip filler, before and after 0.5ml lip filler, before and after 1ml lip filler, natural looking lip enhancement, lip fillers cost, how much is lip filler, dermal fillers, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -140,9 +144,7 @@ const LipFillers = () => {
                   <span className="block text-sm mt-4">Premium lip augmentation with natural looking enhancement</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  Professional lip filler London treatments at our Harley Street clinic. Our expert cosmetic doctors provide 
-                  <span className="text-purple-300 font-semibold"> invisible art</span> - 
-                  lip enhancement that speaks without saying a word.
+                  Professional lip filler London treatments at our Harley Street clinic.
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Lip fillers cost from £300</p>
@@ -173,10 +175,10 @@ const LipFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Before and After 0.5ml & 1ml Lip Fillers in London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See the natural, beautiful results achieved with our expert lip filler treatments. 
-                Each patient receives a personalized approach for optimal outcomes.
+                Explore authentic before and after 0.5ml lip filler and before and after 1ml lip filler results from our London clinic. 
+                Each treatment showcases natural enhancement tailored to individual features.
               </p>
             </motion.div>
 
@@ -217,6 +219,23 @@ const LipFillers = () => {
         {/* Comprehensive Lip Filler Information */}
         <section className="py-20">
           <div className="page-container">
+            {/* Moved introductory content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16 bg-accent rounded-2xl p-8"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Expert Lip Enhancement London</h2>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                Our expert cosmetic doctors provide <span className="text-purple-300 font-semibold">invisible art</span> - 
+                lip enhancement that speaks without saying a word. Whether you choose before and after 0.5ml lip filler 
+                for natural results or before and after 1ml lip filler for bolder enhancement, every treatment is 
+                crafted to complement your unique beauty.
+              </p>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
