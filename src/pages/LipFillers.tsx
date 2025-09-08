@@ -234,6 +234,103 @@ const LipFillers = () => {
         </section>
 
         
+        {/* Lip Filler Volume Comparison */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">0.5ml vs 1ml Lip Filler - Choose Your Enhancement</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Select the perfect volume for your lip goals. Our lip injection specialists in London help achieve 
+                ideal enhancement with premium filler tailored to your lip size and desired outcome.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">0.5ml Subtle Lip Enhancement</CardTitle>
+                    <div className="text-purple-300 text-3xl font-bold">£300</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Perfect for thin lips and first-time treatments. This volume provides gentle fullness 
+                      and moisture without significant swelling or dramatic change.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Ideal for thin lips with dense elastin</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Subtle appearance with minimal swelling</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Results last 6-9 months</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Perfect starting point for lip enhancement journey</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">1ml Bold Lip Augmentation</CardTitle>
+                    <div className="text-purple-300 text-3xl font-bold">£350</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      For medium to normal lips seeking noticeable enhancement. This volume provides visible fullness 
+                      and dramatic improvement in lip shape and contour.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Visibly enhances medium lips, enlarges smaller lips</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">More apparent results with defined shape</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Results last 9-12 months</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Perfect for those wanting noticeable transformation</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Lip Filler Areas of Treatment */}
         <section className="py-20 bg-accent">
           <div className="page-container">
