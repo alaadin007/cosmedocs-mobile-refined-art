@@ -163,7 +163,7 @@ const LipFillers = () => {
         </section>
 
         {/* Lip Enhancement London Section */}
-        <section className="py-16 bg-gradient-to-b from-black to-accent">
+        <section className="py-20 bg-white text-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -172,10 +172,10 @@ const LipFillers = () => {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Lip Enhancement London</h2>
-              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              <h2 className="text-4xl font-bold mb-6 text-black">Lip Enhancement London</h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 Lip fillers are injectable hyaluronic acid treatments that add volume, shape and hydration to your lips. 
-                At our Harley Street clinic, we use premium dermal fillers to create natural-looking enhancement 
+                At our Harley Street clinic, we use premium dermal fillers to create subtle enhancement 
                 tailored to your facial features.
               </p>
             </motion.div>
