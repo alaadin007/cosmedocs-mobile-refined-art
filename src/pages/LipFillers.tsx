@@ -15,12 +15,36 @@ const LipFillers = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png", alt: "Lip fillers before and after 2016-2019", caption: "Dramatic lip transformation over 3 years showing natural progression" },
-    { src: "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png", alt: "Lip fillers showing defined peaks", caption: "Enhanced lip definition with improved ratio and natural-looking peaks" },
-    { src: "/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png", alt: "Natural lip enhancement", caption: "Subtle, natural-looking lip enhancement maintaining facial harmony" },
-    { src: "/lovable-uploads/94868651-44b6-4cfb-b3a4-8d3629c1358b.png", alt: "Lip fillers progression", caption: "Before, immediately after, and 5 weeks later showing settled results" },
-    { src: "/lovable-uploads/a91d9151-e465-4ba8-82e8-f59fee576396.png", alt: "Lip fillers progressive enhancement", caption: "Progressive enhancement from no treatment to two syringes of dermal filler" },
-    { src: "/lovable-uploads/155a5ab6-6a67-4fe4-a246-f77856aba78d.png", alt: "Lip volume progression", caption: "Before treatment, after 1ml, and after 2ml showing gradual volume increase" }
+    { 
+      src: "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png", 
+      alt: "Lip filler London before and after results 2016-2019 showing natural lip augmentation progression", 
+      caption: "3-year lip filler London journey - subtle, natural enhancement that grows with confidence" 
+    },
+    { 
+      src: "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png", 
+      alt: "1ml lip filler before and after showing defined lip peaks and enhanced lip shape London", 
+      caption: "1ml lip filler creates perfect lip definition - enhanced peaks, improved ratio, natural beauty" 
+    },
+    { 
+      src: "/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png", 
+      alt: "Natural looking lip enhancement before and after lip augmentation London treatment", 
+      caption: "Natural looking lip enhancement - subtle volume that maintains perfect facial harmony" 
+    },
+    { 
+      src: "/lovable-uploads/94868651-44b6-4cfb-b3a4-8d3629c1358b.png", 
+      alt: "Lip injection London progression showing immediate results and healed lip filler after 5 weeks", 
+      caption: "Lip injection timeline - immediate results, settling process, and beautiful 5-week outcome" 
+    },
+    { 
+      src: "/lovable-uploads/a91d9151-e465-4ba8-82e8-f59fee576396.png", 
+      alt: "Progressive lip augmentation filler London from no treatment to 2ml showing gradual enhancement", 
+      caption: "Progressive lip augmentation - from natural to bold, two syringes of expert artistry" 
+    },
+    { 
+      src: "/lovable-uploads/155a5ab6-6a67-4fe4-a246-f77856aba78d.png", 
+      alt: "Lip filler cost comparison showing before treatment, after 1ml and 2ml lip enhancement London", 
+      caption: "Volume comparison guide - see how 1ml and 2ml lip filler transforms your smile" 
+    }
   ];
 
   const faqs = [
@@ -172,6 +196,9 @@ const LipFillers = () => {
                     className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                    <p className="text-white text-sm font-medium">{image.caption}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
