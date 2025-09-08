@@ -147,8 +147,7 @@ const LipFillers = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Advanced Lip
-                  <span className="block text-purple-300">Filler London</span>
+                  <span className="text-purple-300">Advanced Lip Filler London</span>
                   <span className="block text-sm mt-4">Invisible art - natural lip enhancement that speaks without words</span>
                 </h1>
                 <div className="mb-8">
