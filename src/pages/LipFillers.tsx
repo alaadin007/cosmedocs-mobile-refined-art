@@ -9,8 +9,8 @@ import { generateSEOMetadata } from "@/utils/seo";
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
-    "Lip Fillers London | Expert Lip Enhancement | Cosmedocs Harley Street",
-    "Professional lip fillers in London by expert cosmetic doctors. Natural-looking lip enhancement with premium dermal fillers. Book consultation at Harley Street clinic.",
+    "Lip Fillers London | Expert Lip Augmentation UK | 1ml Lip Filler Cost | Cosmedocs",
+    "Professional lip fillers & lip augmentation in London. Expert lip injections from £300. 1ml lip filler for natural looking lip enhancement. How much is lip filler? Book consultation.",
     "/lip-fillers"
   );
 
@@ -25,20 +25,20 @@ const LipFillers = () => {
 
   const faqs = [
     {
-      question: "How long do lip fillers last?",
-      answer: "Lip fillers typically last 6-12 months, depending on the type of filler used, your metabolism, and lifestyle factors. Premium hyaluronic acid fillers used at Cosmedocs provide long-lasting, natural results."
+      question: "How long does it take lip filler to dissolve naturally?",
+      answer: "Lip filler injection duration varies - typically lasting 6-12 months before naturally dissolving. Premium hyaluronic acid fillers used for lip augmentation at Cosmedocs provide long-lasting, natural results that gradually fade."
     },
     {
-      question: "Are lip fillers painful?",
-      answer: "We use topical anaesthetic and premium fillers containing lidocaine to minimize discomfort. Most clients describe the sensation as mild pressure rather than pain. Our expert technique ensures maximum comfort throughout the procedure."
+      question: "How much lip filler pain should I expect?",
+      answer: "Lip filler pain is minimal - we use topical anaesthetic and premium lip augmentation filler containing lidocaine. Most clients describe lip injection pain as mild pressure rather than discomfort. Our expert technique ensures maximum comfort throughout the procedure."
     },
     {
       question: "How much filler do I need for my lips?",
       answer: "The amount varies based on your natural lip size and desired outcome. Typically, 0.5-1ml is used for subtle enhancement, while 1-2ml creates more dramatic results. Our doctors will assess and recommend the optimal amount during consultation."
     },
     {
-      question: "What's the recovery time after lip fillers?",
-      answer: "Most clients return to normal activities immediately. You may experience mild swelling for 24-48 hours and minor bruising. Ice packs and avoiding strenuous exercise for 24 hours helps minimize side effects."
+      question: "What are the lip filler swelling stages and how to reduce lip injection swelling?",
+      answer: "Lip filler swelling stages: immediate swelling peaks at 24-48 hours, then gradually reduces. How to reduce lip injection swelling: apply ice packs, avoid strenuous exercise for 24 hours, sleep elevated, and stay hydrated. Most clients return to normal activities immediately."
     },
     {
       question: "Can lip fillers look natural?",
@@ -49,8 +49,8 @@ const LipFillers = () => {
       answer: "When performed by qualified medical professionals using premium products, risks are minimal. Possible side effects include temporary swelling, bruising, or asymmetry. Our doctors have extensive experience minimizing complications."
     },
     {
-      question: "How much do lip fillers cost?",
-      answer: "0.5ml lip filler costs £275 while 1ml lip filler costs £325. We use only premium quality fillers from Swiss, French, and USA manufacturers, tailored to your unique lip anatomy and physiology."
+      question: "How much is lip filler in London?",
+      answer: "Lip fillers cost from £300 - 0.5ml natural lip filler costs £300 while 1ml lip filler costs £350. Our lip augmentation filler pricing includes premium quality products from Swiss, French, and USA manufacturers for natural looking lip enhancement."
     },
     {
       question: "What's the difference between 0.5ml and 1ml lip filler?",
@@ -77,13 +77,13 @@ const LipFillers = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="lip fillers London, lip enhancement, dermal fillers, Harley Street, cosmetic treatment, lip augmentation, hyaluronic acid, natural lips" />
+        <meta name="keywords" content="lip fillers London, lip augmentation London, lip filler UK London, lip injections London, lip enhancement London, 1ml lip filler, natural looking lip enhancement, lip fillers cost, how much is lip filler, dermal fillers, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert lip filler treatments in London",
+            "description": "Expert lip augmentation and lip filler treatments in London UK",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
@@ -112,8 +112,8 @@ const LipFillers = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Expert Lip
-                  <span className="block text-purple-300">Fillers</span>
-                  <span className="block text-sm mt-4">Natural enhancement with premium dermal fillers</span>
+                  <span className="block text-purple-300">Augmentation</span>
+                  <span className="block text-sm mt-4">Natural looking lip enhancement with premium lip filler injections</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
@@ -121,8 +121,8 @@ const LipFillers = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £275</p>
-                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more natural, subtle or bold transformations</p>
+                  <p className="text-2xl text-purple-300 font-bold">Lip fillers cost from £300</p>
+                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more natural looking lip enhancement transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
@@ -197,10 +197,10 @@ const LipFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">1ml Lip Filler Bold, 0.5ml Lip Filler Natural</h2>
+              <h2 className="text-3xl font-bold mb-4">1ml Lip Filler Bold Enhancement | 0.5ml Natural Lip Augmentation</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Choose between 1ml lip filler for a bolder look or 0.5ml lip filler for a more natural enhancement. 
-                Our expert cosmetic doctors help you achieve the perfect lip volume and contour for your unique features.
+                Choose between 1ml lip filler for bold lip augmentation or 0.5ml for natural looking lip enhancement in London. 
+                Our lip injection specialists help achieve perfect lip volume with lip augmentation filler tailored to your features.
               </p>
             </motion.div>
 
@@ -213,8 +213,8 @@ const LipFillers = () => {
               >
                 <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">0.5ml Lip Filler - Natural Enhancement</CardTitle>
-                    <div className="text-purple-300 text-3xl font-bold">£275</div>
+                    <CardTitle className="text-white text-2xl">0.5ml Lip Filler - Natural Lip Enhancement London</CardTitle>
+                    <div className="text-purple-300 text-3xl font-bold">£300</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
@@ -251,8 +251,8 @@ const LipFillers = () => {
               >
                 <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">1ml Lip Filler - Bold Enhancement</CardTitle>
-                    <div className="text-purple-300 text-3xl font-bold">£325</div>
+                    <CardTitle className="text-white text-2xl">1ml Lip Filler - Bold Lip Augmentation UK</CardTitle>
+                    <div className="text-purple-300 text-3xl font-bold">£350</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
