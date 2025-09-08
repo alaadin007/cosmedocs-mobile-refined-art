@@ -75,7 +75,7 @@ const LipFillers = () => {
     },
     {
       question: "How much is lip filler in London?",
-      answer: "Lip fillers cost from £300 - 0.5ml natural lip filler costs £300 while 1ml lip filler costs £350. Our lip augmentation filler pricing includes premium quality products from Swiss, French, and USA manufacturers for natural looking lip enhancement."
+      answer: "Our lip fillers are competitively priced with transparent costs detailed in our pricing section. Our lip augmentation filler pricing includes premium quality products from Swiss, French, and USA manufacturers for natural looking lip enhancement."
     },
     {
       question: "What's the difference between before and after 0.5ml lip filler vs 1ml?",
@@ -145,7 +145,7 @@ const LipFillers = () => {
                   <span className="block text-sm mt-4">Invisible art - natural lip enhancement that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Lip fillers cost from £300</p>
+                  <p className="text-2xl text-purple-300 font-bold">Professional Lip Enhancement</p>
                   <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more natural looking lip enhancement transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -316,7 +316,6 @@ const LipFillers = () => {
                 <Card className="bg-accent border-none h-full">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">0.5ml Subtle Lip Enhancement</CardTitle>
-                    <div className="text-purple-300 text-3xl font-bold">£300</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
@@ -354,7 +353,6 @@ const LipFillers = () => {
                 <Card className="bg-accent border-none h-full">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">1ml Bold Lip Augmentation</CardTitle>
-                    <div className="text-purple-300 text-3xl font-bold">£350</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
@@ -872,13 +870,13 @@ const LipFillers = () => {
         <div className="sr-only">
           <h3>Comprehensive Lip Filler Information London</h3>
           <p>
-            Cosmedocs Harley Street clinic offers premium lip filler treatments in London using advanced hyaluronic acid dermal fillers. Our expert cosmetic doctors specialize in 0.5ml lip filler natural enhancement and 1ml lip filler bold enhancement procedures. Located at 10 Harley Street, we provide safe, effective lip injections with minimal downtime and natural-looking results. 0.5ml lip filler costs £275 and provides subtle enhancement perfect for thin lips and first-time treatments, lasting 6-9 months. 1ml lip filler costs £325 and offers visible enhancement for medium to large lips, lasting 9-12 months. Our lip filler treatments target vermilion border, cupid's bow, upper and lower lips, oral commissures, marionette lines, and philtrum ridges for comprehensive enhancement.
+            Cosmedocs Harley Street clinic offers premium lip filler treatments in London using advanced hyaluronic acid dermal fillers. Our expert cosmetic doctors specialize in 0.5ml lip filler natural enhancement and 1ml lip filler bold enhancement procedures. Located at 10 Harley Street, we provide safe, effective lip injections with minimal downtime and natural-looking results. Our lip filler treatments are competitively priced with transparent rates available in our pricing section. 0.5ml lip filler provides subtle enhancement perfect for thin lips and first-time treatments, lasting 6-9 months. 1ml lip filler offers visible enhancement for medium to large lips, lasting 9-12 months. Our lip filler treatments target vermilion border, cupid's bow, upper and lower lips, oral commissures, marionette lines, and philtrum ridges for comprehensive enhancement.
           </p>
           <p>
             We use only FDA-approved products including Juvederm, Restylane, and other premium brands from Swiss, French, and USA manufacturers. Our comprehensive lip enhancement services include lip volume increase, lip shape correction, lip symmetry adjustment, and lip border definition. Thin lips have different elasticity and collagen levels with dense elastin, making gradual volume increase with 0.5ml the safest approach. Medium and large lips can accommodate 1ml to 2ml for more dramatic transformations. Understanding lip filler volumes is crucial as fillers are supplied in 1ml syringes (roughly a fifth of a teaspoon), though effective volume is higher as hyaluronic acid attracts water.
           </p>
           <p>
-            Our experienced practitioners have performed over one million aesthetic injections since 2007, making us one of London's most trusted cosmetic clinics. Lip filler procedures typically take 10-25 minutes with immediate results. Recovery involves 1-2 weeks full healing with swelling peaking at 48-72 hours then gradually subsiding. Proper aftercare includes avoiding touching lips for 24 hours, applying ice packs, daily massage for 7-14 days, and avoiding strenuous exercise. We provide detailed aftercare instructions and follow-up appointments to ensure optimal healing and satisfaction. Our 'invisible art' philosophy ensures natural-looking lip enhancement that complements your facial features. Book your lip filler consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer competitive pricing and flexible payment options for all lip enhancement treatments.
+            Our experienced practitioners have performed over one million aesthetic injections since 2007, making us one of London's most trusted cosmetic clinics. Lip filler procedures typically take 10-25 minutes with immediate results. Recovery involves 1-2 weeks full healing with swelling peaking at 48-72 hours then gradually subsiding. Proper aftercare includes avoiding touching lips for 24 hours, applying ice packs, daily massage for 7-14 days, and avoiding strenuous exercise. We provide detailed aftercare instructions and follow-up appointments to ensure optimal healing and satisfaction. Our 'invisible art' philosophy ensures natural-looking lip enhancement that complements your facial features. Book your lip filler consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer flexible payment options for all lip enhancement treatments.
           </p>
         </div>
       </div>
