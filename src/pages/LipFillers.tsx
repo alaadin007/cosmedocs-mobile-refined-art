@@ -165,6 +165,16 @@ const LipFillers = () => {
         {/* Treatment Summary */}
         <section className="py-16 bg-accent">
           <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Lip Filler Treatment Summary</h2>
+            </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -174,10 +184,10 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">💉</span>
+                  <span className="text-purple-600 font-bold text-lg">⏱️</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Time</h3>
-                <p className="text-gray-300">15-30 minutes</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30-45 minutes including consultation</p>
               </motion.div>
 
               <motion.div
@@ -188,10 +198,10 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">💰</span>
+                  <span className="text-purple-600 font-bold text-lg">📅</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Price Range</h3>
-                <p className="text-gray-300">£300 - £350</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
               </motion.div>
 
               <motion.div
@@ -202,10 +212,10 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">⏱️</span>
+                  <span className="text-purple-600 font-bold text-lg">🏃</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">6-12 months</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
               </motion.div>
 
               <motion.div
@@ -216,10 +226,10 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">🏥</span>
+                  <span className="text-purple-600 font-bold text-lg">💉</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Downtime</h3>
-                <p className="text-gray-300">Minimal - same day</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
             </div>
           </div>
