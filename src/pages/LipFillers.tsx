@@ -51,7 +51,7 @@ const LipFillers = () => {
   const faqs = [
     {
       question: "How long does it take lip filler to dissolve naturally?",
-      answer: "Lip filler injection duration varies - typically lasting 6-12 months before naturally dissolving. Premium hyaluronic acid fillers used for lip augmentation at Cosmedocs provide long-lasting, natural results that gradually fade."
+      answer: "Lip filler injection duration varies - typically lasting 6-12 months before naturally dissolving. Premium hyaluronic acid treatments used for lip enhancement at Cosmedocs provide long-lasting results that gradually fade while maintaining shape and hydration."
     },
     {
       question: "How much lip filler pain should I expect?",
@@ -67,7 +67,7 @@ const LipFillers = () => {
     },
     {
       question: "Can lip fillers look natural?",
-      answer: "Absolutely. Our 'invisible art' philosophy ensures natural-looking results. We enhance your natural lip shape and proportions rather than creating an artificial appearance. The key is expert technique and appropriate product selection."
+      answer: "Absolutely. Our lip enhancement London philosophy ensures natural-looking results using premium hyaluronic acid treatments. We enhance your natural lip shape and proportions rather than creating an artificial appearance with careful volume and hydration techniques."
     },
     {
       question: "What are the risks of lip fillers?",
@@ -236,26 +236,7 @@ const LipFillers = () => {
           </div>
         </section>
 
-        {/* Lip Enhancement London Section */}
-        <section className="py-20 bg-accent text-white">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h2 className="text-4xl font-bold mb-6 text-white">Lip Enhancement London</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Lip fillers are injectable hyaluronic acid treatments that add volume, shape and hydration to your lips. 
-                At our Harley Street clinic, we use premium dermal fillers to create subtle enhancement 
-                tailored to your facial features.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
+        
         {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -269,7 +250,7 @@ const LipFillers = () => {
               <h2 className="text-3xl font-bold mb-4">Before and After 0.5ml & 1ml Lip Fillers in London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Explore authentic before and after 0.5ml lip filler and before and after 1ml lip filler results from our London clinic. 
-                Each treatment showcases natural enhancement tailored to individual features.
+                Our injectable hyaluronic acid treatments add volume, shape and hydration for subtle enhancement tailored to your features.
               </p>
             </motion.div>
 
@@ -377,8 +358,8 @@ const LipFillers = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      For medium to normal lips seeking noticeable enhancement. This volume provides visible fullness 
-                      and dramatic improvement in lip shape and contour.
+                      For medium to normal lips seeking noticeable lip enhancement London results. This volume provides visible fullness 
+                      and dramatic improvement in lip shape and contour using premium dermal fillers.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
