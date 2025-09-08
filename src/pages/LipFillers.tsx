@@ -141,10 +141,10 @@ const LipFillers = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Expert Lip
                   <span className="block text-purple-300">Filler London</span>
-                  <span className="block text-sm mt-4">Premium lip augmentation with natural looking enhancement</span>
+                  <span className="block text-sm mt-4">Invisible art - natural lip enhancement that speaks without words</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  Expert lip filler London at our Harley Street clinic.
+                  Expert lip filler London treatments using our invisible art philosophy at Harley Street clinic.
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Lip fillers cost from £300</p>
