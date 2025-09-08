@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
@@ -184,7 +185,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">⏱️</span>
+                  <Clock className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
                 <p className="text-gray-300">30-45 minutes including consultation</p>
@@ -198,7 +199,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">📅</span>
+                  <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
                 <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
@@ -212,7 +213,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">🏃</span>
+                  <Activity className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
                 <p className="text-gray-300">Minimal downtime, return to work same day</p>
@@ -226,7 +227,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">💉</span>
+                  <Syringe className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
                 <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
@@ -616,7 +617,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">📊</span>
+                  <Award className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
                 <p className="text-gray-300">Over 1 million injections performed since 2007</p>
@@ -630,7 +631,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">🎓</span>
+                  <GraduationCap className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
                 <p className="text-gray-300">
@@ -653,7 +654,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">✅</span>
+                  <CheckCircle className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
                 <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
@@ -667,7 +668,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">🎨</span>
+                  <Palette className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
                 <p className="text-gray-300">'Invisible art' for natural results</p>
@@ -681,7 +682,7 @@ const LipFillers = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">💙</span>
+                  <Heart className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
