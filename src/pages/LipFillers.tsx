@@ -173,7 +173,7 @@ const LipFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Lip Filler Treatment Summary</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Lip Filler Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
