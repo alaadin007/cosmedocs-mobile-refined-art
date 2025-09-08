@@ -144,7 +144,7 @@ const LipFillers = () => {
                   <span className="block text-sm mt-4">Premium lip augmentation with natural looking enhancement</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  Professional lip filler London at our Harley Street clinic.
+                  Expert lip filler London at our Harley Street clinic.
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Lip fillers cost from £300</p>
