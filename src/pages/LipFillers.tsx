@@ -140,13 +140,13 @@ const LipFillers = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Expert Lip
+                  Skilled Lip
                   <span className="block text-purple-300">Filler London</span>
                   <span className="block text-sm mt-4">Invisible art - natural lip enhancement that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Professional Lip Enhancement</p>
-                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more natural looking lip enhancement transformations</p>
+                  <p className="text-2xl text-purple-300 font-bold">Advanced Lip Enhancement</p>
+                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more authentic looking lip enhancement transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
