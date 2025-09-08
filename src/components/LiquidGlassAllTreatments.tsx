@@ -37,7 +37,11 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
         { name: "Full Barbie Botox", price: "£450" },
         { name: "Lip Flip", price: "£175" },
         { name: "Gummy Smile", price: "£50" },
-        { name: "Bunny Lines", price: "£50" }
+        { name: "Bunny Lines", price: "£50" },
+        { name: "Chin Botox", price: "£50" },
+        { name: "Brow Lift", price: "£50" },
+        { name: "Jelly Roll Botox", price: "£175" },
+        { name: "Rosacea & Blushing", price: "£350-£450" }
       ]
     },
     {
@@ -56,24 +60,29 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       name: "Dermal Fillers",
       isPopular: true,
       treatments: [
-        { name: "Dermal Filler Makeover", price: "From £350", isPopular: true, link: "/dermal-filler-makeover" },
-        { name: "Lip Fillers (0.5ml-1.5ml)", price: "£300-£400", isPopular: true, link: "/lip-fillers" },
+        { name: "Lip Filler 0.5ml (Natural)", price: "£300", isPopular: true, link: "/lip-fillers" },
+        { name: "Lip Filler 1.0ml (Bold & Plump)", price: "£350", isPopular: true, link: "/lip-fillers" },
+        { name: "Lip Filler 1.5ml", price: "£400", isPopular: true, link: "/lip-fillers" },
         { name: "Non Surgical Nose Job", price: "£450", isPopular: true, link: "/non-surgical-nose-job" },
+        { name: "Nose Filler Maintenance", price: "£400" },
         { name: "Cheek Volume", price: "£350/ml" },
-        { name: "Jawline Contouring", price: "£350/ml" },
+        { name: "Jawline (High Def/Jowls)", price: "£350/ml" },
         { name: "Tear Trough", price: "£425" },
         { name: "Marionette Lines", price: "£325/ml" },
         { name: "Nasolabial Folds", price: "£325/ml" },
-        { name: "Temple Fillers", price: "£350/ml" },
-        { name: "Forehead Filler", price: "£400" }
+        { name: "Temples Hollowing", price: "£350/ml" },
+        { name: "Forehead Filler (Bumps & Dips)", price: "£400" },
+        { name: "Redensity 1", price: "£250/ml" },
+        { name: "Aqualyx Fat Dissolving", price: "POC" },
+        { name: "PDO Threads", price: "Visit page" }
       ]
     },
     {
       name: "HA Makeover",
       isPopular: true,
       treatments: [
-        { name: "HAMA 1 (3 Syringes)", price: "£1250" },
-        { name: "HAMA 2 (4 Syringes)", price: "£1500" }
+        { name: "HAMA 1 (3 Syringes)", price: "£1,250" },
+        { name: "HAMA 2 (4 Syringes)", price: "£1,500" }
       ]
     },
     {
@@ -81,10 +90,9 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       isPopular: true,
       treatments: [
         { name: "Profhilo", price: "£350", isPopular: true },
-        { name: "Polynucleotides", price: "£300" },
-        { name: "Redensity 1", price: "£250" },
-        { name: "Jalupro", price: "£275" },
-        { name: "Sunekos", price: "£275" }
+        { name: "Neck Lines Hydromax", price: "£350" },
+        { name: "Polynucleotides", price: "POC" },
+        { name: "Redensity 1", price: "£250/ml" }
       ]
     },
     {

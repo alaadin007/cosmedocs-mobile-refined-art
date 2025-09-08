@@ -27,21 +27,43 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   - Philosophy: "Our aesthetics is invisible art • Bold • Natural • Always Your Way"
   - Aesthetic medicine that is minimal, quiet, invisible, not exaggerated
   
-  TREATMENTS OFFERED:
-  - Botox injections (forehead, crow's feet, frown lines)
-  - Dermal fillers (cheeks, lips, nasolabial folds)
-  - Lip enhancement and lip fillers
-  - Non-surgical nose jobs
-  - Facial rejuvenation
-  - Skin boosters and hydration treatments
-  - Anti-aging treatments
-  - Facial contouring
+  CONSULTATION:
+  - Injectable consultation: £50 (redeemable against any treatment)
+
+  BOTOX TREATMENTS (Female prices - Male supplement +£50 for 1-3 main areas):
+  - 1 Area (forehead OR frown OR crow's feet): £175
+  - 2 Areas (e.g., forehead + frown): £275  
+  - 3 Areas (forehead + frown + crow's feet): £350
+  - Chin, Brow Lift, Gummy Smile, Bunny Lines: £50 each (add-on)
+  - Lip Flip: £175
+  - Nefertiti Face Lift: £300
+  - Masseter (Jawline Slimming): £350
+  - Full Face Natural Botox: £500
+  - Migraines/Headaches: £450-£550
+  - Trigger Point Botox: £350-£550
+  - Sweat-Tox (Underarms Advanced, Palms): £550
+  - Sweat-Tox (Scalp): £600
+
+  DERMAL FILLERS:
+  - Lip Filler 0.5ml (Natural): £300
+  - Lip Filler 1.0ml (Bold & Plump): £350
+  - Lip Filler 1.5ml: £400
+  - Non Surgical Nose Job: £450
+  - Tear Trough: £425
+  - Cheek Volume: £350/ml
+  - Jawline (High Def): £350/ml
+  - Marionette Lines: £325/ml
+  - Nasolabial Folds: £325/ml
+  - Profhilo: £350
+  - HAMA 1 (3 syringes): £1,250
+  - HAMA 2 (4 syringes): £1,500
   
   CONTACT INFORMATION:
   - Location: 10 Harley Street, London W1G 9PF
   - Phone: 0333 0551 503
   - Email: info@cosmedocs.com
   - WhatsApp: +447735606447
+  - Book online: https://www.acuityscheduling.com/schedule.php?owner=11449602
   
   Please provide helpful, accurate information about our treatments, booking process, and aesthetic medicine expertise.
   `;
