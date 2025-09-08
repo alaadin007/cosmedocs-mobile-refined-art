@@ -9,8 +9,8 @@ import { generateSEOMetadata } from "@/utils/seo";
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
-    "Lip Fillers London | Expert Lip Augmentation UK | 1ml Lip Filler Cost | Cosmedocs",
-    "Professional lip fillers & lip augmentation in London. Expert lip injections from £300. 1ml lip filler for natural looking lip enhancement. How much is lip filler? Book consultation.",
+    "Lip Filler London | Expert Lip Augmentation UK | 1ml Lip Injection Cost | Cosmedocs",
+    "Professional lip filler London treatments by expert doctors. Lip augmentation UK from £300. Natural looking lip enhancement & 1ml lip filler. How much is lip filler? Book consultation.",
     "/lip-fillers"
   );
 
@@ -112,13 +112,13 @@ const LipFillers = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Expert Lip
-                  <span className="block text-purple-300">Augmentation</span>
-                  <span className="block text-sm mt-4">Natural looking lip enhancement with premium lip filler injections</span>
+                  <span className="block text-purple-300">Filler London</span>
+                  <span className="block text-sm mt-4">Premium lip augmentation with natural looking enhancement</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
+                  Professional lip filler London treatments at our Harley Street clinic. Our expert cosmetic doctors provide 
+                  <span className="text-purple-300 font-semibold"> invisible art</span> - 
+                  lip enhancement that speaks without saying a word.
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Lip fillers cost from £300</p>
@@ -197,10 +197,10 @@ const LipFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">1ml Lip Filler Bold Enhancement | 0.5ml Natural Lip Augmentation</h2>
+              <h2 className="text-3xl font-bold mb-4">1ml Lip Filler vs 0.5ml Lip Augmentation - Choose Your Enhancement</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Choose between 1ml lip filler for bold lip augmentation or 0.5ml for natural looking lip enhancement in London. 
-                Our lip injection specialists help achieve perfect lip volume with lip augmentation filler tailored to your features.
+                Choose between 1ml lip filler for bold enhancement or 0.5ml for natural lip augmentation. 
+                Our lip injection specialists in London help achieve perfect volume with premium filler tailored to your features.
               </p>
             </motion.div>
 
@@ -213,7 +213,7 @@ const LipFillers = () => {
               >
                 <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">0.5ml Lip Filler - Natural Lip Enhancement London</CardTitle>
+                    <CardTitle className="text-white text-2xl">0.5ml Natural Lip Enhancement</CardTitle>
                     <div className="text-purple-300 text-3xl font-bold">£300</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -251,7 +251,7 @@ const LipFillers = () => {
               >
                 <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">1ml Lip Filler - Bold Lip Augmentation UK</CardTitle>
+                    <CardTitle className="text-white text-2xl">1ml Bold Lip Augmentation</CardTitle>
                     <div className="text-purple-300 text-3xl font-bold">£350</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
