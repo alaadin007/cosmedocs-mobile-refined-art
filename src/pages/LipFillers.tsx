@@ -163,7 +163,7 @@ const LipFillers = () => {
         </section>
 
         {/* Lip Enhancement London Section */}
-        <section className="py-20 bg-gray-800 text-white">
+        <section className="py-20 bg-accent text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -235,7 +235,7 @@ const LipFillers = () => {
 
         
         {/* Lip Filler Volume Comparison */}
-        <section className="py-20 bg-gray-800 text-white">
+        <section className="py-20 bg-accent text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
