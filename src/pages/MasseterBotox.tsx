@@ -415,56 +415,90 @@ const MasseterBotox = () => {
                      </p>
                    </div>
                  </motion.div>
-               </div>
-
-               <div className="text-left">
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                  <div className="bg-black/30 rounded-lg p-6">
-                    <h4 className="font-semibold text-purple-300 mb-4 text-xl">Cosmetic Concerns</h4>
-                    <ul className="text-gray-300 space-y-2">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Facial asymmetry</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Wide jaw reduction</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Aesthetic imbalance</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="bg-black/30 rounded-lg p-6">
-                    <h4 className="font-semibold text-purple-300 mb-4 text-xl">Medical Concerns</h4>
-                    <ul className="text-gray-300 space-y-2">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Teeth grinding (severe bruxism)</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Reducing jaw pain & tension</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Headaches & facial pain</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>TMJ symptoms</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Dental damage prevention</span>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Masseter Botox Indications */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Masseter Botox Indications</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Discover the comprehensive benefits of masseter botox treatment for both cosmetic enhancement and medical relief.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-accent/30 border border-purple-500/30 rounded-lg p-8"
+              >
+                <h3 className="text-white text-2xl font-semibold mb-6 flex items-center">
+                  <Sparkles className="text-purple-400 mr-3" size={24} />
+                  Cosmetic Concerns
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Facial asymmetry</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Wide jaw reduction</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Aesthetic imbalance</span>
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-accent/30 border border-purple-500/30 rounded-lg p-8"
+              >
+                <h3 className="text-white text-2xl font-semibold mb-6 flex items-center">
+                  <Heart className="text-purple-400 mr-3" size={24} />
+                  Medical Concerns
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Teeth grinding (severe bruxism)</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Reducing jaw pain & tension</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Headaches & facial pain</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">TMJ symptoms</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Dental damage prevention</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
           </div>
         </section>
 
