@@ -118,8 +118,8 @@ const ForeheadFillers = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Your Forehead's
-                  <span className="block text-purple-300">Second Chance</span>
+                  Forehead Filler
+                  <span className="block text-purple-300">Your Forehead's Second Chance</span>
                   <span className="block text-sm mt-4">Professional dermal fillers forehead treatment with premium filler in forehead</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
