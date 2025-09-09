@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
   Carousel,
   CarouselContent,
@@ -12,9 +13,45 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Zap, Users, Shield } from "lucide-react";
+import { Clock, Zap, Users, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const MasseterBotox = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openImageModal = (index: number) => {
+    setSelectedImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeImageModal = () => {
+    setIsModalOpen(false);
+    setSelectedImageIndex(null);
+  };
+
+  const goToNext = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex + 1) % beforeAfterImages.length);
+    }
+  };
+
+  const goToPrevious = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex(selectedImageIndex === 0 ? beforeAfterImages.length - 1 : selectedImageIndex - 1);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      goToPrevious();
+    } else if (e.key === "ArrowRight") {
+      goToNext();
+    } else if (e.key === "Escape") {
+      closeImageModal();
+    }
+  };
   const seoData = generateSEOMetadata(
     "Masseter Botox London | Jaw Slimming & Bruxism Treatment | Cosmedocs Harley Street",
     "Expert Masseter Botox for jaw slimming & bruxism treatment. Reduce jaw muscle size & relieve teeth grinding. £350 both sides. Book consultation at Harley Street clinic.",
@@ -234,13 +271,20 @@ const MasseterBotox = () => {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       className="relative group cursor-pointer p-2"
+                      onClick={() => openImageModal(index)}
                     >
                       <img 
                         src={image.src} 
                         alt={image.alt}
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                          </svg>
+                        </div>
+                      </div>
                       <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
                         <p className="text-white text-sm font-medium">{image.caption}</p>
                       </div>
@@ -492,6 +536,86 @@ const MasseterBotox = () => {
             Masseter Botox treatment at CosmeDocs London provides expert jaw slimming and bruxism treatment with dual medical and cosmetic benefits. Our experienced practitioners use precision injection techniques to reduce masseter muscle size, achieving natural jaw contouring while relieving teeth grinding symptoms. Located in prestigious Harley Street, we offer comprehensive masseter Botox treatments starting from £350 for both sides, including thorough consultation, precise dosing from 25-45 units per side, and complimentary follow-up appointments. Treatment results appear within 1-2 weeks and last 4-6 months, making it an effective solution for wide jaw reduction, facial asymmetry correction, TMJ symptom relief, and severe bruxism management. Our invisible art philosophy ensures natural-looking results that enhance facial harmony while providing significant medical benefits for jaw pain, headaches, and dental damage prevention. CosmeDocs maintains the highest clinical standards with CQC registration, using only premium Botox products and sterile injection techniques. The masseter muscle, known as the strongest muscle in the human body, can be safely and effectively treated to achieve both aesthetic jawline slimming and medical relief from grinding-related symptoms. Our treatment approach considers individual muscle size assessment, facial anatomy evaluation, and personalized dosing strategies to optimize outcomes while minimizing side effects. Patients experience minimal downtime with immediate return to normal activities, though we recommend avoiding strenuous exercise for 24 hours post-treatment. Regular maintenance treatments every 3-6 months help sustain both cosmetic improvements and medical benefits, with many patients requiring fewer sessions over time as muscle memory develops.
           </p>
         </div>
+
+        {/* Image Zoom Modal */}
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+          <DialogContent 
+            className="bg-black border-gray-800 p-0 sm:max-w-4xl w-[95vw] max-h-[90vh] flex flex-col"
+            onKeyDown={handleKeyDown}
+          >
+            {selectedImageIndex !== null && (
+              <>
+                <div className="relative flex-grow flex flex-col">
+                  {/* Image counter */}
+                  <div className="absolute top-4 right-6 z-10 bg-black/60 px-3 py-1 rounded-full text-sm text-white">
+                    {selectedImageIndex + 1} / {beforeAfterImages.length}
+                  </div>
+                  
+                  {/* Main image viewer */}
+                  <div className="flex-grow relative overflow-hidden h-[70vh]">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={selectedImageIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0 flex items-center justify-center p-4"
+                      >
+                        <img
+                          src={beforeAfterImages[selectedImageIndex].src}
+                          alt={beforeAfterImages[selectedImageIndex].alt}
+                          className="max-h-full max-w-full object-contain"
+                        />
+                      </motion.div>
+                    </AnimatePresence>
+                    
+                    {/* Navigation buttons */}
+                    <button 
+                      onClick={goToPrevious}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 rounded-full p-3 transition-colors"
+                      aria-label="Previous image"
+                    >
+                      <ChevronLeft className="h-6 w-6 text-white" />
+                    </button>
+                    
+                    <button 
+                      onClick={goToNext}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 rounded-full p-3 transition-colors"
+                      aria-label="Next image"
+                    >
+                      <ChevronRight className="h-6 w-6 text-white" />
+                    </button>
+                  </div>
+                  
+                  {/* Caption */}
+                  <div className="p-6 bg-black border-t border-gray-800/50 text-center">
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Masseter Botox Results
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                      {beforeAfterImages[selectedImageIndex].caption}
+                    </p>
+                    
+                    {/* Dot navigation */}
+                    <div className="flex justify-center gap-2 flex-wrap">
+                      {beforeAfterImages.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setSelectedImageIndex(idx)}
+                          className={`w-3 h-3 rounded-full transition-all ${
+                            idx === selectedImageIndex ? "bg-white scale-110" : "bg-gray-600 hover:bg-gray-400"
+                          }`}
+                          aria-label={`Go to image ${idx + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </>
   );
