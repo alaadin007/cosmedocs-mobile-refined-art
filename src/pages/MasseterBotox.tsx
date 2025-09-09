@@ -568,11 +568,12 @@ const MasseterBotox = () => {
               >
                 <Card className="bg-accent border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Masseter Botox</CardTitle>
+                    <CardTitle className="text-white text-2xl">Masseter Botox Treatment</CardTitle>
                     <div className="text-purple-300 text-4xl font-bold">£350</div>
+                    <div className="text-purple-200 text-sm">(Both Sides)</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional jaw slimming and teeth grinding treatment</p>
+                    <p className="text-gray-300">Professional jaw slimming and teeth grinding treatment for both masseter muscles</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
