@@ -340,44 +340,6 @@ const MasseterBotox = () => {
                   </div>
                 </div>
               </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <h3 className="text-2xl font-bold">Treatment Journey</h3>
-                <div className="space-y-4">
-                  <Card className="bg-white/5 border-white/10 text-white">
-                    <CardHeader>
-                      <CardTitle className="text-lg">Consultation & Assessment</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 text-sm">Detailed facial evaluation and muscle size assessment at CosmeDocs</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-white/5 border-white/10 text-white">
-                    <CardHeader>
-                      <CardTitle className="text-lg">Treatment Procedure</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 text-sm">Quick procedure using ultra-fine needles, 2-3 injections per side, less than 60 seconds per side</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-white/5 border-white/10 text-white">
-                    <CardHeader>
-                      <CardTitle className="text-lg">Post-Treatment Care</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 text-sm">Avoid physical activities for 24 hours, complimentary follow-up after two weeks</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>
