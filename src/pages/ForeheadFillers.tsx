@@ -123,7 +123,7 @@ const ForeheadFillers = () => {
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Forehead Wrinkle Filler</p>
-                  <p className="text-sm text-gray-300">Invisible Art - dermal filler transformation and frown line filler that speaks without saying a word</p>
+                  <p className="text-sm text-gray-300">Transformation that speaks without saying a word</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
