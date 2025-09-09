@@ -417,12 +417,7 @@ const MasseterBotox = () => {
                  </motion.div>
                </div>
 
-                <div className="text-left">
-
-                <h3 className="text-2xl font-bold mb-8 text-white text-center">Jawline Slimming Botox</h3>
-                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                  Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour.
-                </p>
+               <div className="text-left">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                   <div className="bg-black/30 rounded-lg p-6">
