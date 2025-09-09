@@ -368,29 +368,12 @@ const MasseterBotox = () => {
                 </p>
                </div>
 
-               <motion.div
-                 initial={{ opacity: 0, y: 30 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 0.6, delay: 0.2 }}
-                 viewport={{ once: true }}
-                 className="mb-12"
-               >
-                 <div className="bg-gradient-to-r from-purple-600/20 to-purple-400/20 border border-purple-500/40 rounded-lg p-8 text-center">
-                   <div className="flex items-center justify-center mb-4">
-                     <div className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center mr-4">
-                       <Sparkles className="text-white" size={28} />
-                     </div>
-                     <h3 className="text-2xl font-bold text-white">Jawline Slimming Botox</h3>
-                   </div>
-                   <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-                     Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour.
-                   </p>
-                   <div className="mt-6 inline-flex items-center px-4 py-2 bg-purple-600/20 rounded-full border border-purple-500/30">
-                     <Heart className="text-purple-400 mr-2" size={16} />
-                     <span className="text-purple-300 text-sm font-medium">Transform your facial profile with invisible art</span>
-                   </div>
-                 </div>
-               </motion.div>
+               <div className="mb-12 text-left">
+                 <h3 className="text-2xl font-bold mb-6 text-white text-center">Jawline Slimming Botox</h3>
+                 <p className="text-gray-300 text-lg leading-relaxed">
+                   Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour.
+                 </p>
+               </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                  <motion.div
