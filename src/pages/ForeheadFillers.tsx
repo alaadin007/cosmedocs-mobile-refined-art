@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, CheckCircle } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 
 const ForeheadFillers = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -838,102 +838,97 @@ const ForeheadFillers = () => {
           </div>
         </section>
 
-        {/* Treatment Information */}
-        <section className="py-20">
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Treatment Process */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gray-900 border-gray-800">
-                  <CardHeader>
-                    <CardTitle className="text-purple-300">Treatment Process</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-xs font-bold">1</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white">Consultation</h4>
-                        <p className="text-gray-300 text-sm">Detailed assessment of your concerns and aesthetic goals</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-xs font-bold">2</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white">Preparation</h4>
-                        <p className="text-gray-300 text-sm">Topical anesthetic applied to minimize discomfort</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-xs font-bold">3</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white">Injection</h4>
-                        <p className="text-gray-300 text-sm">Precise filler placement using fine needles</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-xs font-bold">4</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white">Aftercare</h4>
-                        <p className="text-gray-300 text-sm">Post-procedure instructions and follow-up care</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
               </motion.div>
 
-              {/* Treatment Details */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gray-900 border-gray-800">
-                  <CardHeader>
-                    <CardTitle className="text-purple-300">Treatment Details</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Procedure Time</h4>
-                        <p className="text-gray-300 text-sm">15-20 minutes</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Anesthetic</h4>
-                        <p className="text-gray-300 text-sm">Local topical</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Results Duration</h4>
-                        <p className="text-gray-300 text-sm">15-18 months</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Recovery</h4>
-                        <p className="text-gray-300 text-sm">No downtime</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Back to Work</h4>
-                        <p className="text-gray-300 text-sm">Immediate</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white mb-1">Final Results</h4>
-                        <p className="text-gray-300 text-sm">1-2 weeks</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
