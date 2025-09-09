@@ -115,14 +115,14 @@ const ForeheadFillers = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-left"
+                className="text-left max-w-lg"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Your Forehead's
                   <span className="block text-purple-300">Second Chance</span>
                   <span className="block text-sm mt-4">Professional dermal fillers forehead treatment with premium filler in forehead</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                <p className="text-xl text-gray-200 mb-8 max-w-md">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
                   Transformation that speaks without saying a word
