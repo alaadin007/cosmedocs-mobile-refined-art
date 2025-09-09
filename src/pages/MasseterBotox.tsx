@@ -368,16 +368,23 @@ const MasseterBotox = () => {
                 </p>
               </div>
 
-              <div className="text-left">
-                <h3 className="text-2xl font-bold mb-8 text-white text-center">Where is the Masseter Muscle?</h3>
-                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                  The masseter is a muscle on the side of your face. It interlinks the bones in your jaw to your cheekbones, making chewing effortless. It's known for its feathered pattern.
-                </p>
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                 <div>
+                   <h3 className="text-2xl font-bold mb-6 text-white text-center">Where is the Masseter Muscle?</h3>
+                   <p className="text-gray-300 text-lg leading-relaxed">
+                     The masseter is a muscle on the side of your face. It interlinks the bones in your jaw to your cheekbones, making chewing effortless. It's known for its feathered pattern.
+                   </p>
+                 </div>
 
-                <h3 className="text-2xl font-bold mb-8 text-white text-center">What Is Masseter Hypertrophy?</h3>
-                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                  Masseter hypertrophy occurs when the masseter muscle enlarges, typically due to excessive chewing or teeth grinding (bruxism). This enlargement can cause the jawline to appear more prominent and may result in discomfort from increased muscle tension.
-                </p>
+                 <div>
+                   <h3 className="text-2xl font-bold mb-6 text-white text-center">What Is Masseter Hypertrophy?</h3>
+                   <p className="text-gray-300 text-lg leading-relaxed">
+                     Masseter hypertrophy occurs when the masseter muscle enlarges, typically due to excessive chewing or teeth grinding (bruxism). This enlargement can cause the jawline to appear more prominent and may result in discomfort from increased muscle tension.
+                   </p>
+                 </div>
+                </div>
+
+                <div className="text-left">
 
                 <h3 className="text-2xl font-bold mb-8 text-white text-center">Jawline Slimming Botox</h3>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed">
