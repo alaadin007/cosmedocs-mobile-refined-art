@@ -118,8 +118,7 @@ const ForeheadFillers = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Forehead Filler</span>
-                  <span className="block text-purple-300">Anti-Wrinkle Treatment</span>
+                  <span className="text-purple-300">Forehead Filler Anti-Wrinkle Treatment</span>
                   <span className="block text-sm mt-4">Professional dermal fillers forehead treatment with premium filler in forehead</span>
                 </h1>
                 <div className="mb-8">
