@@ -458,43 +458,6 @@ const MasseterBotox = () => {
                 </Card>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
-                  </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Full Face Anti-Wrinkle</CardTitle>
-                    <div className="text-white text-4xl font-bold">£450</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">Comprehensive treatment including masseter and other areas</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Multiple treatment areas</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">4-week follow-up</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
