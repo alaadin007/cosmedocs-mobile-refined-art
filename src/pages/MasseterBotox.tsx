@@ -552,10 +552,9 @@ const MasseterBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Masseter Botox Pricing London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Masseter Muscle Botox Cost</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for professional jaw slimming and teeth grinding treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
+                Discover our transparent masseter botox pricing London with professional jaw slimming and teeth grinding treatments. All prices include consultation, treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
