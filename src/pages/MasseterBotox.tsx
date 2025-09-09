@@ -205,8 +205,8 @@ const MasseterBotox = () => {
           </div>
         </section>
 
-        {/* Treatment Information Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-accent">
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -215,95 +215,64 @@ const MasseterBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Information</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Quick, precise, and effective - discover what makes our masseter botox treatment the gold standard in London.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Masseter Botox Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="bg-accent/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 text-center h-full">
-                  <Clock className="text-purple-400 mx-auto mb-4" size={32} />
-                  <h3 className="text-white text-xl font-semibold mb-3">Procedure Time</h3>
-                  <p className="text-gray-300 text-sm">15-20 minutes</p>
-                  <p className="text-gray-400 text-xs mt-2">Quick and efficient treatment</p>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">15-20 minutes including consultation</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="bg-accent/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 text-center h-full">
-                  <Calendar className="text-purple-400 mx-auto mb-4" size={32} />
-                  <h3 className="text-white text-xl font-semibold mb-3">Results Timeline</h3>
-                  <p className="text-gray-300 text-sm">1-2 weeks | 4-6 months duration</p>
-                  <p className="text-gray-400 text-xs mt-2">Visible improvement within days</p>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">4-6 months with visible results in 1-2 weeks</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="bg-accent/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 text-center h-full">
-                  <Activity className="text-purple-400 mx-auto mb-4" size={32} />
-                  <h3 className="text-white text-xl font-semibold mb-3">Recovery</h3>
-                  <p className="text-gray-300 text-sm">No downtime | Immediate return to work</p>
-                  <p className="text-gray-400 text-xs mt-2">Resume normal activities instantly</p>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">No downtime, return to work immediately</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="bg-accent/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 text-center h-full">
-                  <Syringe className="text-purple-400 mx-auto mb-4" size={32} />
-                  <h3 className="text-white text-xl font-semibold mb-3">Anaesthetic</h3>
-                  <p className="text-gray-300 text-sm">Local numbing agent</p>
-                  <p className="text-gray-400 text-xs mt-2">Minimal discomfort</p>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
                 </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-accent/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 text-center h-full">
-                  <Shield className="text-purple-400 mx-auto mb-4" size={32} />
-                  <h3 className="text-white text-xl font-semibold mb-3">Units Required</h3>
-                  <p className="text-gray-300 text-sm">25-45 units per side</p>
-                  <p className="text-gray-400 text-xs mt-2">Customized to muscle size</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-accent/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 text-center h-full">
-                  <AlertCircle className="text-purple-400 mx-auto mb-4" size={32} />
-                  <h3 className="text-white text-xl font-semibold mb-3">Possible Side Effects</h3>
-                  <p className="text-gray-300 text-sm">Minor bruising, temporary weakness</p>
-                  <p className="text-gray-400 text-xs mt-2">Risk under 0.5%</p>
-                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Local numbing agent with ultra-fine needles</p>
               </motion.div>
             </div>
           </div>
