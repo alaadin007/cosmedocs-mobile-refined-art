@@ -127,10 +127,6 @@ const ForeheadFillers = () => {
                   <br />
                   Transformation that speaks without saying a word
                 </p>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £400</p>
-                  <p className="text-sm text-gray-300">Smooth forehead wrinkles with filler for forehead lines and frown line filler treatments</p>
-                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
