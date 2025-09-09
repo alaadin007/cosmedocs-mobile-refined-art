@@ -432,7 +432,7 @@ const MasseterBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Is Masseter Botox Right for You?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Discover the comprehensive benefits and indications of masseter botox treatment for both cosmetic enhancement and medical relief.
+                Masseter Botox London offers dual benefits for jaw slimming and teeth grinding relief. Whether you're seeking facial contouring to reduce a square jaw, treatment for bruxism and TMJ symptoms, or correction of facial asymmetry, our expert jaw botox treatments provide natural-looking results. Discover if masseter muscle reduction is the solution for your cosmetic concerns or medical symptoms.
               </p>
             </motion.div>
 
