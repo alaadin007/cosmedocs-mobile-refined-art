@@ -292,46 +292,6 @@ const MasseterBotox = () => {
           </div>
         </section>
 
-        {/* Treatment Benefits */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Why Choose Masseter Botox?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                The strongest muscle in your body can now be your most refined feature. Dual benefits for medical relief and aesthetic enhancement.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {treatmentBenefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-white/5 border-white/10 text-white h-full">
-                    <CardHeader className="text-center">
-                      <benefit.icon className="h-12 w-12 mx-auto mb-4 text-purple-300" />
-                      <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 text-sm text-center">{benefit.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Before & After Gallery */}
         <section className="py-20">
           <div className="page-container">
