@@ -678,60 +678,6 @@ const ForeheadFillers = () => {
           </div>
         </section>
 
-        {/* Why Choose Forehead Fillers */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Why Choose Forehead Fillers?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Forehead fillers are your go-to solution for a refreshed, youthful appearance! Here's how they can work wonders for you.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  title: "Restore Youthful Volume",
-                  description: "Bring back that youthful glow by restoring lost volume and erasing signs of aging"
-                },
-                {
-                  title: "Smooth Away Wrinkles",
-                  description: "Say goodbye to forehead lines, wrinkles, and indentations caused by aging and collagen loss"
-                },
-                {
-                  title: "Achieve Perfect Symmetry",
-                  description: "Enhance facial harmony by smoothing and balancing your forehead for a more symmetrical look"
-                },
-                {
-                  title: "Non-Surgical Results",
-                  description: "Get stunning results without going under the knife—quick, easy, and non-invasive"
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-black rounded-lg p-6 text-center border border-gray-800"
-                >
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Botox vs. Fillers for the Forehead */}
         <section className="py-20">
           <div className="page-container">
