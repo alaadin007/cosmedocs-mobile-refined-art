@@ -368,21 +368,53 @@ const MasseterBotox = () => {
                 </p>
               </div>
 
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                 <div>
-                   <h3 className="text-2xl font-bold mb-6 text-white text-center">Where is the Masseter Muscle?</h3>
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                 <motion.div
+                   initial={{ opacity: 0, x: -30 }}
+                   whileInView={{ opacity: 1, x: 0 }}
+                   transition={{ duration: 0.6 }}
+                   viewport={{ once: true }}
+                   className="bg-black/30 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-colors"
+                 >
+                   <div className="flex items-center mb-4">
+                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                       <Users className="text-white" size={24} />
+                     </div>
+                     <h3 className="text-2xl font-bold text-white">Where is the Masseter Muscle?</h3>
+                   </div>
                    <p className="text-gray-300 text-lg leading-relaxed">
                      The masseter is a muscle on the side of your face. It interlinks the bones in your jaw to your cheekbones, making chewing effortless. It's known for its feathered pattern.
                    </p>
-                 </div>
+                   <div className="mt-4 p-3 bg-purple-600/10 rounded-lg border-l-4 border-purple-400">
+                     <p className="text-purple-300 text-sm font-medium">
+                       💡 Located on both sides of your jaw, these powerful muscles work together for efficient chewing.
+                     </p>
+                   </div>
+                 </motion.div>
 
-                 <div>
-                   <h3 className="text-2xl font-bold mb-6 text-white text-center">What Is Masseter Hypertrophy?</h3>
+                 <motion.div
+                   initial={{ opacity: 0, x: 30 }}
+                   whileInView={{ opacity: 1, x: 0 }}
+                   transition={{ duration: 0.6 }}
+                   viewport={{ once: true }}
+                   className="bg-black/30 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-colors"
+                 >
+                   <div className="flex items-center mb-4">
+                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                       <AlertCircle className="text-white" size={24} />
+                     </div>
+                     <h3 className="text-2xl font-bold text-white">What Is Masseter Hypertrophy?</h3>
+                   </div>
                    <p className="text-gray-300 text-lg leading-relaxed">
                      Masseter hypertrophy occurs when the masseter muscle enlarges, typically due to excessive chewing or teeth grinding (bruxism). This enlargement can cause the jawline to appear more prominent and may result in discomfort from increased muscle tension.
                    </p>
-                 </div>
-                </div>
+                   <div className="mt-4 p-3 bg-purple-600/10 rounded-lg border-l-4 border-purple-400">
+                     <p className="text-purple-300 text-sm font-medium">
+                       ⚠️ Common causes include teeth grinding, gum chewing, and jaw clenching during stress.
+                     </p>
+                   </div>
+                 </motion.div>
+               </div>
 
                 <div className="text-left">
 
