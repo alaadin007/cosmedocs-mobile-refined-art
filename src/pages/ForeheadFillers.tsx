@@ -115,15 +115,21 @@ const ForeheadFillers = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-left max-w-xl"
+                className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Forehead Filler</span>
-                  <span className="block text-sm mt-4">Invisible art - natural forehead enhancement that speaks without words</span>
+                  Your Forehead's
+                  <span className="block text-purple-300">Second Chance</span>
+                  <span className="block text-sm mt-4">Professional dermal fillers forehead treatment with premium filler in forehead</span>
                 </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <br />
+                  Transformation that speaks without saying a word
+                </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Skilled Forehead Enhancement</p>
-                  <p className="text-sm text-gray-300">#cosmeforehead - Expert dermal filler treatments for natural-looking results</p>
+                  <p className="text-2xl text-purple-300 font-bold">Starting from £400</p>
+                  <p className="text-sm text-gray-300">Smooth forehead wrinkles with filler for forehead lines and frown line filler treatments</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
