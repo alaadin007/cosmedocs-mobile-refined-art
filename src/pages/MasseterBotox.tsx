@@ -383,10 +383,7 @@ const MasseterBotox = () => {
                    viewport={{ once: true }}
                    className="bg-black/30 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-colors"
                  >
-                   <div className="flex items-center mb-4">
-                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
-                       <Users className="text-white" size={24} />
-                     </div>
+                   <div className="mb-4">
                      <h3 className="text-2xl font-bold text-white">Where is the Masseter Muscle?</h3>
                    </div>
                    <p className="text-gray-300 text-lg leading-relaxed">
@@ -406,10 +403,7 @@ const MasseterBotox = () => {
                    viewport={{ once: true }}
                    className="bg-black/30 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-colors"
                  >
-                   <div className="flex items-center mb-4">
-                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
-                       <AlertCircle className="text-white" size={24} />
-                     </div>
+                   <div className="mb-4">
                      <h3 className="text-2xl font-bold text-white">What Is Masseter Hypertrophy?</h3>
                    </div>
                    <p className="text-gray-300 text-lg leading-relaxed">
