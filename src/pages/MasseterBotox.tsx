@@ -194,8 +194,17 @@ const MasseterBotox = () => {
                   >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    View Treatment Info
+                  <Button 
+                    variant="outline" 
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                  >
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
