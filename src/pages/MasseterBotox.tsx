@@ -302,45 +302,87 @@ const MasseterBotox = () => {
         {/* What is Masseter Botox Treatment */}
         <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">What is Masseter Botox Treatment?</h2>
-                <p className="text-gray-300 mb-6">
-                  Masseter Botox treatment helps with both aesthetic and medical issues. It can slim down a square, wide jawline, correct facial asymmetry, and alleviate jaw pain and aches. These symptoms are often related to bruxism, which involves teeth clenching and TMJ (Temporomandibular Joint Disorders).
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">What is Masseter Botox Treatment?</h2>
+              
+              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                Masseter Botox treatment helps with both aesthetic and medical issues. It can slim down a square, wide jawline, correct facial asymmetry, and alleviate jaw pain and aches. These symptoms are often related to bruxism, which involves teeth clenching and TMJ (Temporomandibular Joint Disorders).
+              </p>
+
+              <div className="bg-purple-300/10 border-l-4 border-purple-300 p-6 mb-12 text-left">
+                <p className="text-purple-300 font-semibold text-lg">
+                  Did you know that the strongest muscle in your body is the one that helps you chew? It is known as the 'Masseter Muscle' or jaw muscle.
                 </p>
-                <div className="bg-purple-300/10 border-l-4 border-purple-300 p-4 mb-6">
-                  <p className="text-purple-300 font-semibold">
-                    Did you know that the strongest muscle in your body is the one that helps you chew? It is known as the 'Masseter Muscle' or jaw muscle.
-                  </p>
-                </div>
-                <h3 className="text-xl font-bold mb-4">Benefits of Masseter Botox</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold text-purple-300 mb-2">Cosmetic Concerns</h4>
-                    <ul className="text-gray-300 text-sm space-y-1">
-                      <li>• Facial asymmetry</li>
-                      <li>• Wide jaw reduction</li>
-                      <li>• Aesthetic imbalance</li>
+              </div>
+
+              <div className="text-left">
+                <h3 className="text-2xl font-bold mb-8 text-white text-center">Where is the Masseter Muscle?</h3>
+                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                  The masseter is a muscle on the side of your face. It interlinks the bones in your jaw to your cheekbones, making chewing effortless. It's known for its feathered pattern.
+                </p>
+
+                <h3 className="text-2xl font-bold mb-8 text-white text-center">What Is Masseter Hypertrophy?</h3>
+                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                  Masseter hypertrophy occurs when the masseter muscle enlarges, typically due to excessive chewing or teeth grinding (bruxism). This enlargement can cause the jawline to appear more prominent and may result in discomfort from increased muscle tension.
+                </p>
+
+                <h3 className="text-2xl font-bold mb-8 text-white text-center">Jawline Slimming Botox</h3>
+                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                  Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                  <div className="bg-black/30 rounded-lg p-6">
+                    <h4 className="font-semibold text-purple-300 mb-4 text-xl">Cosmetic Concerns</h4>
+                    <ul className="text-gray-300 space-y-2">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Facial asymmetry</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Wide jaw reduction</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Aesthetic imbalance</span>
+                      </li>
                     </ul>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-purple-300 mb-2">Medical Concerns</h4>
-                    <ul className="text-gray-300 text-sm space-y-1">
-                      <li>• Teeth grinding (severe bruxism)</li>
-                      <li>• Reducing jaw pain & tension</li>
-                      <li>• Headaches & facial pain</li>
-                      <li>• TMJ symptoms</li>
-                      <li>• Dental damage prevention</li>
+                  <div className="bg-black/30 rounded-lg p-6">
+                    <h4 className="font-semibold text-purple-300 mb-4 text-xl">Medical Concerns</h4>
+                    <ul className="text-gray-300 space-y-2">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Teeth grinding (severe bruxism)</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Reducing jaw pain & tension</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Headaches & facial pain</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>TMJ symptoms</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Dental damage prevention</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
