@@ -430,7 +430,7 @@ const MasseterBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Masseter Botox Indications</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Is Masseter Botox Right for You?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Discover the comprehensive benefits and indications of masseter botox treatment for both cosmetic enhancement and medical relief.
               </p>
