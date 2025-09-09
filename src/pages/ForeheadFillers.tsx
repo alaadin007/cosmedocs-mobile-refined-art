@@ -115,7 +115,7 @@ const ForeheadFillers = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-left"
+                className="text-left max-w-xl"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Forehead Filler</span>
