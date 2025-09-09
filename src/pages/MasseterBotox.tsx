@@ -432,11 +432,11 @@ const MasseterBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Masseter Botox Indications</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Discover the comprehensive benefits of masseter botox treatment for both cosmetic enhancement and medical relief.
+                Discover the comprehensive benefits and indications of masseter botox treatment for both cosmetic enhancement and medical relief.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -446,20 +446,28 @@ const MasseterBotox = () => {
               >
                 <h3 className="text-white text-2xl font-semibold mb-6 flex items-center">
                   <Sparkles className="text-purple-400 mr-3" size={24} />
-                  Cosmetic Concerns
+                  Cosmetic Concerns & Benefits
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">Facial asymmetry</span>
+                    <span className="text-gray-300">Facial asymmetry correction</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">Wide jaw reduction</span>
+                    <span className="text-gray-300">Wide jaw reduction and facial slimming</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">Aesthetic imbalance</span>
+                    <span className="text-gray-300">Enhanced facial contour and balance</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Softened square jawline appearance</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                    <span className="text-gray-300">Aesthetic imbalance improvement</span>
                   </li>
                 </ul>
               </motion.div>
@@ -473,28 +481,28 @@ const MasseterBotox = () => {
               >
                 <h3 className="text-white text-2xl font-semibold mb-6 flex items-center">
                   <Heart className="text-purple-400 mr-3" size={24} />
-                  Medical Concerns
+                  Medical Concerns & Benefits
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">Teeth grinding (severe bruxism)</span>
+                    <span className="text-gray-300">Teeth grinding (severe bruxism) relief</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">Reducing jaw pain & tension</span>
+                    <span className="text-gray-300">Reduction in jaw pain and tension</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">Headaches & facial pain</span>
+                    <span className="text-gray-300">Treatment of TMJ symptoms</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">TMJ symptoms</span>
+                    <span className="text-gray-300">Reduced headaches and facial pain</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                    <span className="text-gray-300">Dental damage prevention</span>
+                    <span className="text-gray-300">Prevention of dental damage</span>
                   </li>
                 </ul>
               </motion.div>
@@ -719,94 +727,6 @@ const MasseterBotox = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Benefits of Masseter Botox</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Addressing both cosmetic and medical concerns with one effective treatment.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-accent/30 border border-purple-500/30 rounded-lg p-8">
-                  <h3 className="text-white text-2xl font-semibold mb-6 flex items-center">
-                    <Sparkles className="text-purple-400 mr-3" size={24} />
-                    Cosmetic Benefits
-                  </h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Wide jaw reduction and facial slimming</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Correction of facial asymmetry</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Enhanced facial contour and balance</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Softened square jawline appearance</span>
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-accent/30 border border-purple-500/30 rounded-lg p-8">
-                  <h3 className="text-white text-2xl font-semibold mb-6 flex items-center">
-                    <Heart className="text-purple-400 mr-3" size={24} />
-                    Medical Benefits
-                  </h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Relief from teeth grinding (bruxism)</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Reduction in jaw pain and tension</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Treatment of TMJ symptoms</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Reduced headaches and facial pain</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                      <span className="text-gray-300">Prevention of dental damage</span>
-                    </li>
-                  </ul>
-                </div>
               </motion.div>
             </div>
           </div>
