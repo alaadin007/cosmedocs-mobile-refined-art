@@ -132,10 +132,17 @@ const ForeheadFillers = () => {
                   <p className="text-sm text-gray-300">Smooth forehead wrinkles with filler for forehead lines and frown line filler treatments</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={() => window.location.href = '/contact'}
+                  >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     View Price List
                   </Button>
                 </div>
@@ -671,7 +678,10 @@ const ForeheadFillers = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+                onClick={() => window.location.href = '/contact'}
+              >
                 Book Your Consultation
               </Button>
             </motion.div>
@@ -993,7 +1003,10 @@ const ForeheadFillers = () => {
                 Let us help you achieve natural-looking, beautiful results with premium forehead fillers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  onClick={() => window.location.href = '/contact'}
+                >
                   Book Free Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
