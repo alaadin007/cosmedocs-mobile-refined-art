@@ -119,11 +119,11 @@ const ForeheadFillers = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Forehead Filler</span>
-                  <span className="block text-sm mt-4">Professional dermal fillers forehead treatment with premium filler in forehead</span>
+                  <span className="block text-sm mt-4">Invisible art - natural forehead enhancement that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Second Chance</p>
-                  <p className="text-sm text-gray-300">Invisible Art - Transformation that speaks without saying a word</p>
+                  <p className="text-2xl text-purple-300 font-bold">Skilled Forehead Enhancement</p>
+                  <p className="text-sm text-gray-300">#cosmeforehead - Expert dermal filler treatments for natural-looking results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
