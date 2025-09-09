@@ -19,8 +19,8 @@ const ForeheadFillers = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   
   const seoData = generateSEOMetadata(
-    "Forehead Fillers London | Your Forehead's Second Chance | Cosmedocs Harley Street",
-    "Professional forehead filler treatments in London. Smooth forehead wrinkles, lines and indentations with premium dermal fillers. Expert cosmetic doctors at Harley Street clinic.",
+    "Forehead Filler | Dermal Fillers for Forehead Lines & Wrinkles",
+    "Professional dermal fillers forehead treatment in London. View forehead filler before and after results. Expert frown line filler & wrinkle treatment.",
     "/forehead-fillers"
   );
 
@@ -84,7 +84,7 @@ const ForeheadFillers = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="forehead fillers London, forehead wrinkles, dermal fillers, Harley Street, cosmetic treatment, forehead lines, hyaluronic acid, forehead contouring, indentation treatment" />
+        <meta name="keywords" content="dermal fillers forehead, filler in forehead, forehead filler, filler for forehead lines, frown line filler, forehead wrinkle filler, forehead crease filler, fillers before and after forehead, forehead filler before and after, indent in forehead, forehead botox" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -120,7 +120,7 @@ const ForeheadFillers = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Your Forehead's
                   <span className="block text-purple-300">Second Chance</span>
-                  <span className="block text-sm mt-4">Professional forehead enhancement with premium dermal fillers</span>
+                  <span className="block text-sm mt-4">Professional dermal fillers forehead treatment with premium filler in forehead</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
@@ -129,7 +129,7 @@ const ForeheadFillers = () => {
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Starting from £400</p>
-                  <p className="text-sm text-gray-300">Smooth forehead wrinkles, lines and restore youthful volume with premium fillers</p>
+                  <p className="text-sm text-gray-300">Smooth forehead wrinkles with filler for forehead lines and frown line filler treatments</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
@@ -229,10 +229,10 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Before and After Forehead Filler Results in London</h2>
+              <h2 className="text-3xl font-bold mb-4">Forehead Filler Before and After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore authentic before and after forehead filler results from our London clinic. 
-                Our premium dermal filler treatments smooth wrinkles, lines and restore natural volume for youthful enhancement.
+                Explore authentic fillers before and after forehead transformations from our London clinic. 
+                Our dermal fillers forehead before after gallery showcases natural face fillers before and after results.
               </p>
             </motion.div>
 
@@ -294,11 +294,11 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Understanding Forehead Fillers</h2>
+              <h2 className="text-4xl font-bold mb-6">Understanding Dermal Fillers Forehead Treatment</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg">
-                Forehead fillers are a type of dermal filler specifically designed for the upper face. They effectively 
-                reduce the appearance of static lines, creases, forehead wrinkles, and deep forehead wrinkles. Due to their 
-                minimal invasiveness and instant results, these fillers are popular in non-surgical cosmetic enhancements.
+                Dermal filler in forehead treatments are a specialized antiaging treatment designed for the upper face. They effectively 
+                reduce the appearance of static lines, creases, and forehead wrinkle filler applications address deep wrinkle treatment needs. 
+                This forehead wrinkles treatment offers minimal invasiveness with instant results, making it a popular anti wrinkle skin treatment.
               </p>
             </motion.div>
 
@@ -310,11 +310,11 @@ const ForeheadFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Are Forehead Fillers?</h3>
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Are Dermal Filler on Forehead Treatments?</h3>
                 <p className="text-gray-300 mb-6">
-                  Forehead fillers involve the injection of a gel-like substance directly into targeted areas to address 
-                  moderate to severe facial wrinkles. Depending on their active ingredients—either hyaluronic acid or calcium 
-                  hydroxyapatite—these fillers smooth and volumize the skin.
+                  Dermal filler forehead treatments involve the injection of best cosmetic wrinkle fillers directly into targeted areas 
+                  to address moderate to severe facial wrinkles and indent on forehead areas. These specialized forehead crease filler 
+                  treatments use premium ingredients to smooth and volumize the skin for natural-looking results.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
