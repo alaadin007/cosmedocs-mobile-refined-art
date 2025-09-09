@@ -985,7 +985,7 @@ const ForeheadFillers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12 text-center"
             >
               <h2 className="text-4xl font-bold mb-6">Ready for Your Forehead's Second Chance?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
