@@ -157,7 +157,7 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Forehead Filler Treatment Details</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Forehead Filler Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
