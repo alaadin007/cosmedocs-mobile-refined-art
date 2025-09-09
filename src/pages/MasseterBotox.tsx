@@ -511,7 +511,7 @@ const MasseterBotox = () => {
         </section>
 
         {/* How to Assess Your Masseter Muscle */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
