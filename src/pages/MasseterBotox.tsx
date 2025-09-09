@@ -835,16 +835,17 @@ const MasseterBotox = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-800">
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Jawline?</h2>
-              <p className="text-gray-200 mb-8 max-w-2xl mx-auto">
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book a consultation with our expert practitioners and begin your journey toward refined facial aesthetics and medical relief.
               </p>
               <Button 
