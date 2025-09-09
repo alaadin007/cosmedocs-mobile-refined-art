@@ -118,16 +118,13 @@ const ForeheadFillers = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Forehead Filler
-                  <span className="block text-purple-300">Second Chance</span>
+                  <span className="text-purple-300">Forehead Filler</span>
+                  <span className="block text-sm mt-4">Professional dermal fillers forehead treatment with premium filler in forehead</span>
                 </h1>
-                <p className="text-sm text-gray-300 mb-4">
-                  Professional dermal fillers forehead treatment with premium filler in forehead
-                </p>
-                <p className="text-sm text-gray-300 mb-8">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span> - 
-                  Transformation that speaks without saying a word
-                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Second Chance</p>
+                  <p className="text-sm text-gray-300">Invisible Art - Transformation that speaks without saying a word</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
