@@ -229,6 +229,7 @@ const CheekFiller = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
                 {[
                   { icon: CheckCircle, text: "Advanced injection techniques for natural-looking results" },
+                  { icon: CheckCircle, text: "Premium Swiss, USA & French dermal fillers only" },
                   { icon: Palette, text: "Precise volume restoration and cheekbone definition" },
                   { icon: Zap, text: "Immediate enhancement with minimal downtime" },
                   { icon: Award, text: "Premium dermal fillers for long-lasting effects" },
