@@ -198,15 +198,18 @@ const CheekFiller = () => {
                   <br />
                   Transformation that speaks without saying a word
                 </p>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £350</p>
-                  <p className="text-sm text-gray-300">#cosmecheck - Check out our IG for hundreds more natural, subtle transformations</p>
-                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      pricingSection?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
                     View Price List
                   </Button>
                 </div>
@@ -363,7 +366,7 @@ const CheekFiller = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-accent">
+        <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
