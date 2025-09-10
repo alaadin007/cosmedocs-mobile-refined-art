@@ -504,8 +504,8 @@ const CheekFiller = () => {
                 </p>
               </motion.div>
 
-              {/* Videos Section - Full Width */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Videos Section - Full Width Centered */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-6xl mx-auto">
                 {cheekFillerVideos.slice(0, 6).map((video, index) => (
                   <motion.div
                     key={video.id}
