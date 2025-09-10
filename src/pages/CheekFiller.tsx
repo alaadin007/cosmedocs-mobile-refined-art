@@ -613,7 +613,134 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* Doctor Information */}
+        {/* More About Cheeks Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">More About Cheek Enhancement</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the science and artistry behind natural cheek enhancement at our Harley Street clinic.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">Facial Anatomy</h3>
+                <p className="text-gray-300 mb-4">
+                  The cheek area consists of multiple fat compartments that naturally lose volume with age. 
+                  Our expert practitioners understand the complex anatomy of the zygomatic arch, malar eminence, 
+                  and submalar regions.
+                </p>
+                <div className="text-purple-300">
+                  <CheckCircle className="inline mr-2" size={16} />
+                  <span className="text-sm">3D facial analysis</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">Injection Techniques</h3>
+                <p className="text-gray-300 mb-4">
+                  We employ advanced microcannula and needle techniques for precise filler placement. 
+                  The cannula method reduces bruising and allows for smooth, even distribution of dermal filler.
+                </p>
+                <div className="text-purple-300">
+                  <CheckCircle className="inline mr-2" size={16} />
+                  <span className="text-sm">Minimal discomfort</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">Premium Fillers</h3>
+                <p className="text-gray-300 mb-4">
+                  We exclusively use premium hyaluronic acid fillers from leading Swiss, American, 
+                  and French manufacturers. These advanced formulations provide natural results lasting 15-18 months.
+                </p>
+                <div className="text-purple-300">
+                  <CheckCircle className="inline mr-2" size={16} />
+                  <span className="text-sm">FDA approved products</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">Natural Results</h3>
+                <p className="text-gray-300 mb-4">
+                  Our "invisible art" philosophy ensures enhancement that looks completely natural. 
+                  Results are visible immediately with final outcome apparent within two weeks.
+                </p>
+                <div className="text-purple-300">
+                  <CheckCircle className="inline mr-2" size={16} />
+                  <span className="text-sm">Immediate results</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">Safety Protocol</h3>
+                <p className="text-gray-300 mb-4">
+                  All treatments follow strict safety protocols with comprehensive medical history assessment. 
+                  Our clinic maintains full CQC regulation compliance.
+                </p>
+                <div className="text-purple-300">
+                  <CheckCircle className="inline mr-2" size={16} />
+                  <span className="text-sm">CQC regulated clinic</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">Aftercare Excellence</h3>
+                <p className="text-gray-300 mb-4">
+                  Comprehensive aftercare instructions and follow-up support ensure optimal healing. 
+                  Most patients return to normal activities immediately.
+                </p>
+                <div className="text-purple-300">
+                  <CheckCircle className="inline mr-2" size={16} />
+                  <span className="text-sm">24/7 support available</span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
