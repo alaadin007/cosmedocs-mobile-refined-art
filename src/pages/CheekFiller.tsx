@@ -1,14 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Clock, Zap, Shield, Calendar, Heart, Award, Activity, Syringe, GraduationCap, CheckCircle, Palette } from "lucide-react";
+import { Instagram, Clock, Zap, Shield, Calendar, Heart, Award, Activity, Syringe, GraduationCap, CheckCircle, Palette, Play } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import { useState, useEffect } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ChevronDown, ChevronUp, Play } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -583,133 +583,79 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* Cheek Filler Treatment Videos Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[78px]">
+        {/* Expert Advice Video Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <motion.div 
-              className="text-center mb-20" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }} 
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Treatment Videos
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Watch real cheek filler procedures and see the artistry behind natural enhancement
-              </p>
-            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Cheek Filler Treatment Advice & Videos</h2>
+                <p className="text-gray-300 mb-6">
+                  Dr. Haq offers expert advice on{" "}
+                  <span className="text-purple-300 font-semibold">cheek fillers</span>, based on the training provided through our{" "}
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a>. Watch real cheek filler procedures and see the artistry behind natural enhancement.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Expert technique demonstrations</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Treatment planning insights</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Safety protocols and aftercare</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Natural enhancement techniques</p>
+                  </div>
+                </div>
+              </motion.div>
 
-            <div className="max-w-7xl mx-auto">
-              {loadingVideos ? (
-                <motion.div 
-                  className="flex items-center justify-center py-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                >
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white/30"></div>
-                  <span className="ml-4 text-white/70 text-lg">Loading treatment videos...</span>
-                </motion.div>
-              ) : cheekFillerVideos.length === 0 ? (
-                <motion.div 
-                  className="text-center py-20"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                {loadingVideos ? (
+                  <div className="flex items-center justify-center py-20 bg-black rounded-lg">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white/30"></div>
+                    <span className="ml-4 text-white/70 text-lg">Loading treatment videos...</span>
+                  </div>
+                ) : cheekFillerVideos.length === 0 ? (
+                  <div className="bg-black rounded-lg p-12 text-center">
                     <Play className="h-16 w-16 text-white/40 mx-auto mb-6" />
                     <h3 className="text-2xl font-light text-white mb-4">Treatment Videos Coming Soon</h3>
                     <p className="text-white/70 max-w-md mx-auto">
                       We are preparing exclusive treatment videos to showcase our cheek enhancement techniques. Check back soon!
                     </p>
                   </div>
-                </motion.div>
-              ) : (
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                  {/* Left Column - Text About Cheek Fillers */}
-                  <motion.div
-                    className="space-y-8"
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                      <h3 className="text-3xl font-light text-white mb-6">Expert Cheek Enhancement</h3>
-                      <div className="space-y-6 text-white/80 font-light leading-relaxed">
-                        <p>
-                          Our cheek filler treatments represent the pinnacle of aesthetic medicine - where invisible art meets 
-                          natural enhancement. Each procedure is meticulously planned to restore volume, define contours, 
-                          and create harmonious facial proportions.
-                        </p>
-                        <p>
-                          Using premium Swiss, French, and American dermal fillers, we achieve results that are bold yet natural, 
-                          transformative yet subtle. Our approach ensures every enhancement speaks without saying a word.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                      <h4 className="text-2xl font-light text-white mb-6">Treatment Highlights</h4>
-                      <div className="space-y-4">
-                        {[
-                          "Advanced injection techniques for natural-looking results",
-                          "Precise volume restoration and cheekbone definition", 
-                          "Immediate enhancement with minimal downtime",
-                          "Premium dermal fillers for long-lasting effects",
-                          "Personalized treatment plans for your facial structure"
-                        ].map((highlight, index) => (
-                          <div key={index} className="flex items-start space-x-4">
-                            <div className="w-2 h-2 bg-white/60 rounded-full mt-3 flex-shrink-0"></div>
-                            <p className="text-white/80 font-light">{highlight}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="text-center">
-                      <a 
-                        href={bookingUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-                      >
-                        Book Your Cheek Enhancement Consultation
-                      </a>
-                    </div>
-                  </motion.div>
-
-                  {/* Right Column - Videos */}
-                  <motion.div
-                    className="space-y-6"
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    viewport={{ once: true }}
-                  >
-                    {cheekFillerVideos.slice(0, 2).map((video, index) => (
-                      <motion.div
-                        key={video.id}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.2 }}
-                        viewport={{ once: true }}
-                      >
-                        <TreatmentVideoPlayer
-                          video={video}
-                          className="h-full"
-                          showControls={true}
-                          editMode={false}
-                          treatmentName="Cheek Fillers"
-                        />
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                </div>
-              )}
+                ) : (
+                  <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+                    <TreatmentVideoPlayer
+                      video={cheekFillerVideos[0]}
+                      className="w-full aspect-video"
+                      showControls={true}
+                    />
+                  </div>
+                )}
+              </motion.div>
             </div>
           </div>
         </section>
