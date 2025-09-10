@@ -504,74 +504,19 @@ const CheekFiller = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-                {/* Videos Section - Left Column */}
-                <div className="lg:col-span-1">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {cheekFillerVideos.slice(0, 6).map((video, index) => (
-                      <motion.div
-                        key={video.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                      >
-                        <TreatmentVideoPlayer video={video} />
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Description Section - Right Column */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                  className="lg:col-span-2"
-                >
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm sticky top-8">
-                    <div className="flex items-center space-x-3 mb-6">
-                      <div className="bg-purple-600 rounded-full w-10 h-10 flex items-center justify-center">
-                        <CheckCircle className="text-white" size={18} />
-                      </div>
-                      <h3 className="text-xl font-bold text-white">Expert Results</h3>
-                    </div>
-                    
-                    <div className="space-y-6 text-gray-300">
-                      <div className="relative">
-                        <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-purple-300 rounded-full"></div>
-                        <p className="pl-4 text-sm leading-relaxed">
-                          Our cheek filler before and after images demonstrate the transformative power of expert aesthetic medicine. Each treatment is carefully planned and executed by Dr. Ahmed Haq to enhance your natural facial structure while maintaining complete authenticity to your unique features.
-                        </p>
-                      </div>
-                      
-                      <div className="relative">
-                        <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-purple-300 to-purple-500 rounded-full"></div>
-                        <p className="pl-4 text-sm leading-relaxed">
-                          These results showcase our commitment to creating subtle, natural-looking enhancements that restore volume, improve facial proportions, and provide lifting effects without appearing overdone. Our invisible art philosophy ensures that your enhanced beauty looks completely natural to others.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-6 pt-4 border-t border-white/10">
-                      <div className="space-y-2 text-xs text-gray-400">
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle size={12} className="text-purple-400" />
-                          <span>Natural Results</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle size={12} className="text-purple-400" />
-                          <span>Expert Technique</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle size={12} className="text-purple-400" />
-                          <span>Invisible Art</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
+              {/* Videos Section - Full Width */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {cheekFillerVideos.slice(0, 6).map((video, index) => (
+                  <motion.div
+                    key={video.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <TreatmentVideoPlayer video={video} />
+                  </motion.div>
+                ))}
               </div>
             </div>
           </section>
