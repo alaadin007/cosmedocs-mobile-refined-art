@@ -77,6 +77,7 @@ const CheekFiller = () => {
     alt: "Apple cheek filler before after London youthful enhancement",
     caption: "Apple cheek enhancement for youthful, plump appearance"
   }];
+  
   const treatmentDetails = [{
     icon: Zap,
     label: "Anaesthetic",
@@ -102,6 +103,7 @@ const CheekFiller = () => {
     label: "Safety",
     value: "Minimal Risk"
   }];
+  
   const faqs = [{
     question: "How much do cheek fillers cost in London?",
     answer: "At Cosmedocs Harley Street, cheek filler treatments start from £350 for 1ml. We offer 2ml for £650 and 3ml for £950. The final cost depends on your individual needs and the amount of filler required to achieve your desired results."
@@ -127,7 +129,9 @@ const CheekFiller = () => {
     question: "Can cheek fillers be combined with other treatments?",
     answer: "Yes, cheek fillers work excellently as part of a comprehensive facial rejuvenation plan. They can be combined with treatments like lip fillers, anti-wrinkle injections, or non-surgical facelifts for complete facial harmony."
   }];
-  return <>
+
+  return (
+    <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -224,31 +228,9 @@ const CheekFiller = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-8 text-white">Cheek Filler Treatment</h2>
-              
-              {/* Treatment Highlights with Icons */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-                {[
-                  { icon: Palette, text: "Precise volume restoration and cheekbone definition" },
-                  { icon: Clock, text: "Immediate enhancement with minimal downtime" }
-                ].map((highlight, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-start space-x-3 text-left"
-                  >
-                    <div className="bg-purple-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
-                      <highlight.icon className="text-purple-600" size={20} />
-                    </div>
-                    <p className="text-gray-300 text-sm">{highlight.text}</p>
-                  </motion.div>
-                ))}
-              </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -257,7 +239,35 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Precise Volume</h3>
+                <p className="text-gray-300">Restoration and cheekbone definition</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Immediate Enhancement</h3>
+                <p className="text-gray-300">With minimal downtime</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
                 <p className="text-gray-300">30-45 minutes including consultation</p>
@@ -266,7 +276,7 @@ const CheekFiller = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -280,7 +290,7 @@ const CheekFiller = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -294,7 +304,7 @@ const CheekFiller = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -305,7 +315,6 @@ const CheekFiller = () => {
                 <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
             </div>
-
           </div>
         </section>
 
@@ -362,546 +371,144 @@ const CheekFiller = () => {
                 description="Comprehensive gallery of our cheek enhancement treatments"
               />
             </div>
-          </div>
-        </section>
 
-        {/* More About Cheeks Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[72px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                More About Cheeks
-              </h2>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto space-y-12">
-              <motion.div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6
-            }} viewport={{
-              once: true
-            }}>
-                <h3 className="text-3xl font-light text-white mb-6">Defined Cheeks Are Universally Attractive</h3>
-                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-4">
-                  Cheek fillers have become a gold standard for natural and non-surgical face lifts because an attractive facial profile is incomplete without visibly sculpted cheeks or high cheekbones.
-                </p>
-                <p className="text-white/80 font-extralight leading-relaxed text-lg">
-                  According to scientific studies, the presence of a prominent mid-face area or defined cheeks signals sexual maturity for both males and females, making cheek enhancement universally appealing.
-                </p>
-              </motion.div>
-
-              <motion.div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: 0.1
-            }} viewport={{
-              once: true
-            }}>
-                <h3 className="text-3xl font-light text-white mb-6">How Aging Affects Your Face Structure</h3>
-                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-4">
-                  One of the most important face areas that show noticeable aging signs is the mid-face. As you age, the skin, bone and soft tissues undergo major changes.
-                </p>
-                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-6">
-                  The ligaments become loose, and fat pads of the face become thinner and shift, resulting in:
-                </p>
-                <ul className="space-y-3 text-white/80 font-extralight text-lg">
-                  <li className="flex items-start">
-                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    Cheeks start to look flat or sag
-                  </li>
-                  <li className="flex items-start">
-                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    Jowls are created along the jawline
-                  </li>
-                  <li className="flex items-start">
-                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    Droopy jawline and neck skin
-                  </li>
-                  <li className="flex items-start">
-                    <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    Nasolabial folds (smile lines) become prominent
-                  </li>
-                </ul>
-              </motion.div>
-
-              <motion.div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: 0.2
-            }} viewport={{
-              once: true
-            }}>
-                <h3 className="text-3xl font-light text-white mb-6">A Trending 'Liquid Facelift'</h3>
-                <p className="text-white/80 font-extralight leading-relaxed text-lg mb-4">
-                  This 'next generation facelift' adds volume to the sunken cheek area while subtly improving the under-eye area, aging mouth lines, and lifting the lower face.
-                </p>
-                <p className="text-white/80 font-extralight leading-relaxed text-lg">
-                  Many young patients also get high cheekbones, cheek fillers, and apple cheek fillers to add natural angles and soft youthful contours to their cheeks.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-
-        {/* 3ml and 4ml Cheek Filler For Men Accordion */}
-        <section className="bg-black py-[78px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                3ml & 4ml Cheek Fillers For Men
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Masculine enhancement with bold, natural-looking results
+            {/* Text after the gallery */}
+            <div className="mt-16 text-center max-w-4xl mx-auto space-y-6">
+              <p className="text-gray-300">
+                Our cheek filler before and after images demonstrate the transformative power of expert aesthetic medicine. Each treatment is carefully planned and executed by Dr. Ahmed Haq to enhance your natural facial structure while maintaining complete authenticity to your unique features.
               </p>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto">
-              <motion.div initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6
-            }} viewport={{
-              once: true
-            }}>
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="3ml-4ml-men-results" className="border-white/10">
-                    <AccordionTrigger className="text-left hover:no-underline bg-white/5 backdrop-blur-sm rounded-xl px-6 py-6 border border-white/10 mb-2 text-white hover:bg-white/10 transition-colors">
-                      <div className="flex items-center justify-between w-full">
-                        <div>
-                          <h3 className="text-2xl font-light text-white mb-2">3ml & 4ml Cheek Filler Results For Men</h3>
-                          <p className="text-white/70 font-extralight text-left">Click to view masculine enhancement before & after images</p>
-                        </div>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8">
-                      <div className="space-y-8">
-                        {/* Before & After Images Grid */}
-                        <div className="grid md:grid-cols-2 gap-6 mb-8">
-                          <div className="space-y-4">
-                            <img src="/lovable-uploads/89278789-16b0-4b03-8f8e-c0aeef19db16.png" alt="3ml cheek filler before and after results for men - volume restoration" className="w-full rounded-xl border border-white/20" />
-                            <p className="text-white/80 text-sm font-light text-center">
-                              3ml Volume Restoration: Masculine cheek enhancement for defined structure
-                            </p>
-                          </div>
-                          <div className="space-y-4">
-                            <img src="/lovable-uploads/33b7b10d-07ef-4c95-b87c-0ab87978dd44.png" alt="4ml cheek filler before and after results London men" className="w-full rounded-xl border border-white/20" />
-                            <p className="text-white/80 text-sm font-light text-center">
-                              4ml Enhanced Definition: Dramatic yet natural masculine transformation
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Treatment Information */}
-                        <div className="grid md:grid-cols-2 gap-8">
-                          <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                            <h4 className="text-xl font-light text-white mb-4">3ml Cheek Filler For Men</h4>
-                            <p className="text-white/80 font-extralight leading-relaxed mb-4">
-                              3ml cheek filler provides substantial volume enhancement ideal for men seeking more pronounced cheekbone definition. This amount delivers masculine facial structure while maintaining natural proportions.
-                            </p>
-                            <p className="text-white/80 font-extralight leading-relaxed">
-                              Perfect for correcting age-related volume loss and creating the strong, angular features that define masculine facial aesthetics.
-                            </p>
-                          </div>
-
-                          <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                            <h4 className="text-xl font-light text-white mb-4">4ml Cheek Enhancement</h4>
-                            <p className="text-white/80 font-extralight leading-relaxed mb-4">
-                              4ml represents our premium masculine enhancement, delivering dramatic yet natural transformation. This volume creates bold cheekbone projection while maintaining facial harmony.
-                            </p>
-                            <p className="text-white/80 font-extralight leading-relaxed">
-                              Ideal for men wanting maximum definition and those with naturally flat cheek structure requiring significant enhancement.
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Treatment Benefits */}
-                        <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                          <h4 className="text-xl font-light text-white mb-4">3ml & 4ml Masculine Enhancement Benefits</h4>
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <ul className="space-y-3 text-white/80 font-extralight">
-                              <li className="flex items-start">
-                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                                Bold, masculine cheekbone definition
-                              </li>
-                              <li className="flex items-start">
-                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                                Enhanced jawline projection and strength
-                              </li>
-                              <li className="flex items-start">
-                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                                Correction of age-related volume loss
-                              </li>
-                            </ul>
-                            <ul className="space-y-3 text-white/80 font-extralight">
-                              <li className="flex items-start">
-                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                                Improved facial symmetry and balance
-                              </li>
-                              <li className="flex items-start">
-                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                                Natural-looking masculine enhancement
-                              </li>
-                              <li className="flex items-start">
-                                <span className="block w-2 h-2 bg-white/60 rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                                Long-lasting results (15-18 months)
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-
-                        {/* Call to Action */}
-                        <div className="text-center">
-                          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20">
-                            Book Your 3ml or 4ml Masculine Enhancement
-                          </a>
-                        </div>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Expert Advice Video Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Cheek Filler Treatment Advice & Videos</h2>
-                <p className="text-gray-300 mb-6">
-                  Dr. Haq offers expert advice on{" "}
-                  <span className="text-purple-300 font-semibold">cheek fillers</span>, based on the training provided through our{" "}
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
-                  >
-                    Harley Street Institute
-                  </a>. Watch real cheek filler procedures and see the artistry behind natural enhancement.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Expert technique demonstrations</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Treatment planning insights</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Safety protocols and aftercare</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Natural enhancement techniques</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                {loadingVideos ? (
-                  <div className="flex items-center justify-center py-20 bg-black rounded-lg">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white/30"></div>
-                    <span className="ml-4 text-white/70 text-lg">Loading treatment videos...</span>
-                  </div>
-                ) : cheekFillerVideos.length === 0 ? (
-                  <div className="bg-black rounded-lg p-12 text-center">
-                    <Play className="h-16 w-16 text-white/40 mx-auto mb-6" />
-                    <h3 className="text-2xl font-light text-white mb-4">Treatment Videos Coming Soon</h3>
-                    <p className="text-white/70 max-w-md mx-auto">
-                      We are preparing exclusive treatment videos to showcase our cheek enhancement techniques. Check back soon!
-                    </p>
-                  </div>
-                ) : (
-                  <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                    <TreatmentVideoPlayer
-                      video={cheekFillerVideos[0]}
-                      className="w-full aspect-video"
-                      showControls={true}
-                    />
-                  </div>
-                )}
-              </motion.div>
+              <p className="text-gray-300">
+                These results showcase our commitment to creating subtle, natural-looking enhancements that restore volume, improve facial proportions, and provide lifting effects without appearing overdone. Our invisible art philosophy ensures that your enhanced beauty looks completely natural to others.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Cheek Filler Pricing London</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for premium cheek enhancement treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
-              </p>
-              <p className="text-purple-300 mt-4 font-medium">
-                Premium Swiss, USA & French dermal fillers only
+              <h2 className="text-3xl font-bold mb-4 text-white">Cheek Filler Pricing in London</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Transparent pricing for premium cheek filler treatments at our Harley Street clinic. 
+                All treatments include consultation, aftercare, and follow-up support.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-purple-500 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">1ml Cheek Filler</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£350</div>
+                <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-xl mb-2">1ml Cheek Filler</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£350</div>
+                    <p className="text-gray-300 text-sm">Subtle enhancement</p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Usually enough for most - subtle enhancement and first-time treatments</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Consultation included</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
-                      </div>
-                    </div>
+                  <CardContent className="text-center">
+                    <ul className="space-y-2 text-sm text-gray-300 mb-6">
+                      <li>• Perfect for first-time patients</li>
+                      <li>• Subtle volume restoration</li>
+                      <li>• Natural-looking results</li>
+                      <li>• 15-18 month duration</li>
+                    </ul>
+                    <Button 
+                      className="w-full bg-purple-600 hover:bg-purple-700"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Now
+                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                <Card className="bg-purple-600/20 border-purple-500/50 text-white relative overflow-hidden">
+                  <div className="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-xs">
+                    Most Popular
                   </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">2ml Cheek Filler</CardTitle>
-                    <div className="text-white text-4xl font-bold">£650</div>
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-xl mb-2">2ml Cheek Filler</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£650</div>
+                    <p className="text-gray-300 text-sm">Optimal enhancement</p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">Enhanced definition - ideal for dramatic results</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Premium hyaluronic acid</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">2-week follow-up</span>
-                      </div>
-                    </div>
+                  <CardContent className="text-center">
+                    <ul className="space-y-2 text-sm text-gray-300 mb-6">
+                      <li>• Noticeable definition & lift</li>
+                      <li>• Ideal for volume restoration</li>
+                      <li>• Enhanced cheekbone structure</li>
+                      <li>• Long-lasting results</li>
+                    </ul>
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-gray-200"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Now
+                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-700 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">3ml Cheek Filler</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£950</div>
+                <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-xl mb-2">3ml Cheek Filler</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£950</div>
+                    <p className="text-gray-300 text-sm">Maximum transformation</p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Maximum enhancement - for dramatic transformation</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full facial assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Complete aftercare package</span>
-                      </div>
-                    </div>
+                  <CardContent className="text-center">
+                    <ul className="space-y-2 text-sm text-gray-300 mb-6">
+                      <li>• Dramatic enhancement</li>
+                      <li>• Significant volume restoration</li>
+                      <li>• Complete facial rebalancing</li>
+                      <li>• Premium filler placement</li>
+                    </ul>
+                    <Button 
+                      className="w-full bg-purple-600 hover:bg-purple-700"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Now
+                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
+            <div className="text-center mt-12">
               <p className="text-gray-300 mb-6">
-                *All prices include consultation, treatment, and comprehensive aftercare support
+                All prices include consultation, treatment, premium dermal fillers, and comprehensive aftercare support.
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
-                Book Your Consultation
+              <Button 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-black"
+                onClick={() => window.open(bookingUrl, '_blank')}
+              >
+                Book Free Consultation
               </Button>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="bg-gradient-to-b from-black via-black to-[#0A0A0A] py-[100px] relative">
-          {/* Subtle background pattern */}
-          <div className="absolute inset-0 opacity-[0.02]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:50px_50px]"></div>
-          </div>
-          
-          <div className="page-container relative z-10">
-            <motion.div className="text-center mb-24" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
-                Benefits of Cheek Enhancement
-              </h2>
-              <div className="w-20 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              {[
-                "More defined and plump cheeks",
-                "Reduced look of nasolabial folds", 
-                "Subtle lift of drooping jowls",
-                "Naturally defined cheekbones",
-                "Instant 'Cheek Lift' for sagging",
-                "Fraction of surgery cost",
-                "Plumper cheeks for thin faces",
-                "Angular look for round faces"
-              ].map((benefit, index) => (
-                <motion.div 
-                  key={index} 
-                  className="group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.15] hover:border-white/30 transition-all duration-500 hover:bg-gradient-to-br hover:from-white/[0.12] hover:to-white/[0.04] hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-2"
-                  initial={{
-                    opacity: 0,
-                    y: 40
-                  }} 
-                  whileInView={{
-                    opacity: 1,
-                    y: 0
-                  }} 
-                  transition={{
-                    duration: 0.7,
-                    delay: index * 0.08,
-                    ease: [0.25, 0.46, 0.45, 0.94]
-                  }} 
-                  viewport={{
-                    once: true
-                  }}
-                >
-                  {/* Subtle gradient overlay on hover */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-white/60 to-white/40 group-hover:from-white/80 group-hover:to-white/60 transition-all duration-300"></div>
-                    </div>
-                    
-                    <p className="text-white/90 font-light text-center leading-relaxed group-hover:text-white transition-colors duration-300 text-[15px]">
-                      {benefit}
-                    </p>
-                  </div>
-                  
-                  {/* Subtle inner glow */}
-                  <div className="absolute inset-[1px] rounded-2xl bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </motion.div>
-              ))}
             </div>
           </div>
         </section>
 
-        {/* Why Choose Cosmedocs */}
+        {/* Treatment Details Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -909,225 +516,233 @@ const CheekFiller = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-bold mb-4">Treatment Information</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Everything you need to know about cheek filler treatments at our Harley Street clinic.
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-              </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {treatmentDetails.map((detail, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <detail.icon className="text-purple-600" size={24} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{detail.label}</h3>
+                  <p className="text-gray-300">{detail.value}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
+        {/* Treatment Videos Section */}
+        {cheekFillerVideos.length > 0 && (
+          <section className="py-20 bg-accent">
+            <div className="page-container">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center mb-12"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
-                  >
-                    Harley Street Institute
-                  </a> trainers
+                <h2 className="text-3xl font-bold mb-4 text-white">Treatment Videos</h2>
+                <p className="text-gray-300 max-w-2xl mx-auto">
+                  Watch real cheek filler treatments performed by Dr. Ahmed Haq at our Harley Street clinic.
                 </p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {cheekFillerVideos.slice(0, 6).map((video, index) => (
+                  <motion.div
+                    key={video.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <TreatmentVideoPlayer video={video} />
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* FAQ Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[78px]">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Frequently Asked Questions
-              </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Common questions about cheek filler treatments answered by our medical experts.
+              </p>
             </motion.div>
 
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
-              {/* Left Column */}
-              <div className="space-y-4">
-                {faqs.slice(0, Math.ceil(faqs.length / 2)).map((faq, index) => <motion.div key={index} initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.05
-              }} viewport={{
-                once: true
-              }}>
-                    <Collapsible open={openFaqIndex === index} onOpenChange={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}>
-                      <CollapsibleTrigger className="w-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex justify-between items-center text-left hover:bg-white/10 transition-colors">
-                        <h3 className="text-lg font-light text-white pr-4">{faq.question}</h3>
-                        {openFaqIndex === index ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />}
-                      </CollapsibleTrigger>
-                      <CollapsibleContent className="px-6 pb-6 pt-4 bg-white/5 backdrop-blur-sm border border-white/10 border-t-0 rounded-b-xl">
-                        <p className="text-white/80 font-extralight leading-relaxed">{faq.answer}</p>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  </motion.div>)}
-              </div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <AccordionItem 
+                      value={`item-${index}`} 
+                      className="bg-white/5 border-white/10 rounded-lg px-6 hover:bg-white/10 transition-colors"
+                    >
+                      <AccordionTrigger className="text-left text-white hover:no-underline py-6">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-300 pb-6">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+              </Accordion>
+            </div>
 
-              {/* Right Column */}
-              <div className="space-y-4">
-                {faqs.slice(Math.ceil(faqs.length / 2)).map((faq, index) => {
-                const actualIndex = index + Math.ceil(faqs.length / 2);
-                return <motion.div key={actualIndex} initial={{
-                  opacity: 0,
-                  y: 20
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  duration: 0.6,
-                  delay: index * 0.05
-                }} viewport={{
-                  once: true
-                }}>
-                      <Collapsible open={openFaqIndex === actualIndex} onOpenChange={() => setOpenFaqIndex(openFaqIndex === actualIndex ? null : actualIndex)}>
-                        <CollapsibleTrigger className="w-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex justify-between items-center text-left hover:bg-white/10 transition-colors">
-                          <h3 className="text-lg font-light text-white pr-4">{faq.question}</h3>
-                          {openFaqIndex === actualIndex ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />}
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="px-6 pb-6 pt-4 bg-white/5 backdrop-blur-sm border border-white/10 border-t-0 rounded-b-xl">
-                          <p className="text-white/80 font-extralight leading-relaxed">{faq.answer}</p>
-                        </CollapsibleContent>
-                      </Collapsible>
-                    </motion.div>;
-              })}
-              </div>
+            <div className="text-center mt-12">
+              <Button 
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3"
+                onClick={() => window.open(bookingUrl, '_blank')}
+              >
+                Book Your Consultation
+              </Button>
             </div>
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="bg-[#0A0A0A] py-[78px]">
-          <div className="page-container text-center">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
-                Ready to Enhance Your Cheeks?
-              </h2>
-              <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
-                Book your consultation with Dr. Ahmed Haq at our Harley Street clinic
+        {/* Doctor Information */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Meet Dr. Ahmed Haq</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Leading aesthetic practitioner specializing in natural cheek enhancement at Harley Street, London.
               </p>
-              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                Book Your Consultation
-              </a>
             </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-white">Expert Aesthetic Medicine</h3>
+                  <p className="text-gray-300">
+                    Dr. Ahmed Haq brings years of specialized experience in facial aesthetics to every cheek filler treatment. 
+                    His expertise in facial anatomy and advanced injection techniques ensures safe, natural-looking results 
+                    that enhance your unique beauty.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-white">Advanced Techniques</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• Microcannula and needle techniques</li>
+                    <li>• Premium Swiss, USA & French dermal fillers</li>
+                    <li>• 3D facial analysis and planning</li>
+                    <li>• Minimal downtime protocols</li>
+                  </ul>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200"
+                    onClick={() => window.open(bookingUrl, '_blank')}
+                  >
+                    Book Consultation
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black"
+                    onClick={() => window.open('https://instagram.com/cosmedocs', '_blank')}
+                  >
+                    <Instagram className="mr-2" size={16} />
+                    Follow @cosmedocs
+                  </Button>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-purple-600/20 rounded-2xl p-8 border border-purple-500/30">
+                  <h4 className="text-xl font-bold text-white mb-4">Professional Credentials</h4>
+                  <div className="space-y-3 text-gray-300">
+                    <p>✓ GMC Registered Medical Practitioner</p>
+                    <p>✓ Advanced Aesthetic Medicine Training</p>
+                    <p>✓ Harley Street Clinic Director</p>
+                    <p>✓ 1000+ Successful Treatments</p>
+                    <p>✓ Patient Safety Certified</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
-      </div>
 
-      {/* Hidden SEO Content */}
-      <div className="sr-only">
-        <h1>Cheek Fillers London - Expert Treatments by Dr. Ahmed Haq</h1>
-        <p>Discover the transformative power of cheek fillers at Cosmedocs London. Our Harley Street clinic offers premium cheek enhancement treatments designed to create visibly lifted and defined cheeks and cheekbones. Dr. Ahmed Haq, with over 15 years of experience, utilizes advanced dermal filler techniques to deliver natural-looking results that enhance your facial harmony.</p>
-        
-        <h2>Why Choose Cheek Fillers at Cosmedocs?</h2>
-        <p>Cheek fillers have become the gold standard for non-surgical facial enhancement because they address multiple aging concerns simultaneously. As we age, the midface undergoes significant changes - the skin loses elasticity, bone density decreases, and facial fat pads shift downward. This natural aging process results in flat or sagging cheeks, prominent nasolabial folds, and loss of facial definition.</p>
-        
-        <p>Our cheek filler treatments use premium hyaluronic acid-based dermal fillers to restore lost volume, lift sagging tissues, and create the defined cheekbone structure that signals youth and vitality. The procedure is minimally invasive, with immediate results and minimal downtime, making it an ideal alternative to surgical cheek implants or facelifts.</p>
-        
-        <h2>Advanced Injection Techniques</h2>
-        <p>At Cosmedocs, we employ both cannula and needle techniques depending on your specific anatomy and aesthetic goals. Our microdroplet injection technique ensures precise placement of filler for natural-looking enhancement. We follow a "less is more" approach, typically starting with 1ml of filler and gradually building to achieve your desired results while maintaining facial harmony.</p>
-        
-        <h2>Types of Cheek Enhancement</h2>
-        <p>Our cheek filler treatments can address various aesthetic concerns: apple cheek fillers for a youthful, plump appearance; cheekbone enhancement for sculptural definition; mid-cheek groove filling for improved facial contours; and volume restoration for age-related deflation. Each treatment is customized to your unique facial structure and aesthetic preferences.</p>
-        
-        <h2>Safety and Quality Assurance</h2>
-        <p>Patient safety is our highest priority. We exclusively use premium dermal fillers from reputable Swiss, USA, and French manufacturers. All treatments are performed in our fully regulated Harley Street clinic by Dr. Ahmed Haq, ensuring the highest standards of safety and efficacy. Our comprehensive consultation process includes detailed medical history assessment and realistic expectation setting.</p>
-        
-        <h2>Aftercare and Results</h2>
-        <p>Cheek filler results are visible immediately, with final results apparent within two weeks as any minor swelling subsides. The enhancement typically lasts 15-18 months, depending on individual factors such as metabolism, lifestyle, and the specific filler used. We provide comprehensive aftercare instructions to optimize your results and minimize any potential side effects.</p>
-        
-        <p>The treatment involves minimal discomfort, with topical numbing cream applied before the procedure and lidocaine-containing fillers for additional comfort. Most patients return to work immediately after treatment, with any minor swelling or bruising typically resolving within 24-48 hours.</p>
+        {/* Hidden SEO Content */}
+        <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+          <h2>Comprehensive Cheek Filler Information</h2>
+          <p>Cheek fillers represent one of the most transformative non-surgical aesthetic treatments available in London's Harley Street. Our expert practitioners utilize advanced dermal filler technology to restore volume, enhance contours, and create natural-looking facial rejuvenation that speaks volumes about our commitment to aesthetic excellence.</p>
+          
+          <h2>Understanding Facial Volume Loss</h2>
+          <p>Natural aging processes lead to gradual volume loss in the midface region, particularly affecting the cheek area where subcutaneous fat pads diminish over time. This volume depletion results in flattened cheeks, loss of cheekbone definition, and the appearance of nasolabial folds. Professional cheek enhancement treatments address these concerns by strategically restoring volume using premium hyaluronic acid-based dermal fillers.</p>
+          
+          <h2>Advanced Injection Techniques</h2>
+          <p>Our Harley Street clinic employs both microcannula and precision needle techniques for cheek filler placement. The microcannula method minimizes bruising and discomfort while allowing for smooth, even distribution of filler material. Strategic injection points target specific anatomical landmarks including the zygomatic arch, malar eminence, and submalar region to achieve optimal lifting and contouring effects.</p>
+          
+          <h2>Premium Dermal Filler Selection</h2>
+          <p>We exclusively utilize premium dermal fillers from renowned Swiss, American, and French manufacturers, ensuring the highest quality and safety standards. These advanced formulations contain lidocaine for patient comfort and are specifically designed for midface enhancement, providing natural-looking results with excellent longevity of 15-18 months.</p>
+          
+          <h2>Personalized Treatment Planning</h2>
+          <p>Each cheek enhancement treatment begins with comprehensive facial analysis to determine the optimal approach for your unique facial structure. Our practitioners assess bone structure, soft tissue characteristics, and aesthetic goals to create a personalized treatment plan that enhances your natural beauty while maintaining facial harmony and proportion.</p>
+          
+          <h2>Safety and Aftercare Excellence</h2>
+          <p>Patient safety is our highest priority. We exclusively use premium dermal fillers from reputable Swiss, USA, and French manufacturers. All treatments are performed in our fully regulated Harley Street clinic by Dr. Ahmed Haq, ensuring the highest standards of safety and efficacy. Our comprehensive consultation process includes detailed medical history assessment and realistic expectation setting.</p>
+          
+          <h2>Aftercare and Results</h2>
+          <p>Cheek filler results are visible immediately, with final results apparent within two weeks as any minor swelling subsides. The enhancement typically lasts 15-18 months, depending on individual factors such as metabolism, lifestyle, and the specific filler used. We provide comprehensive aftercare instructions to optimize your results and minimize any potential side effects.</p>
+          
+          <p>The treatment involves minimal discomfort, with topical numbing cream applied before the procedure and lidocaine-containing fillers for additional comfort. Most patients return to work immediately after treatment, with any minor swelling or bruising typically resolving within 24-48 hours.</p>
+        </div>
       </div>
-    </>;
+    </>
+  );
 };
+
 export default CheekFiller;
