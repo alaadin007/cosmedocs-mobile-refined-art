@@ -504,19 +504,60 @@ const CheekFiller = () => {
                 </p>
               </motion.div>
 
-              {/* Videos Section - Full Width Centered */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center max-w-6xl mx-auto">
-                {cheekFillerVideos.slice(0, 6).map((video, index) => (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                {/* Videos Section - Properly Centered */}
+                <div className="lg:col-span-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+                    {cheekFillerVideos.slice(0, 6).map((video, index) => (
+                      <motion.div
+                        key={video.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        <TreatmentVideoPlayer video={video} />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Description Section */}
+                <div className="lg:col-span-1">
                   <motion.div
-                    key={video.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
+                    className="space-y-6"
                   >
-                    <TreatmentVideoPlayer video={video} />
+                    <h3 className="text-2xl font-bold text-white mb-4">Expert Cheek Enhancement</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Our cheek filler treatments use advanced cannula techniques to create natural, 
+                      lifted cheek contours. Dr. Ahmed Haq's precision approach ensures minimal 
+                      discomfort and optimal results.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      Watch how our expert injector strategically places premium dermal fillers 
+                      to enhance volume, lift the midface, and create beautiful cheekbone definition 
+                      that looks completely natural.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-purple-300" size={20} />
+                        <span className="text-gray-300">Cannula technique for safety</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-purple-300" size={20} />
+                        <span className="text-gray-300">Immediate visible results</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-purple-300" size={20} />
+                        <span className="text-gray-300">15+ months duration</span>
+                      </div>
+                    </div>
                   </motion.div>
-                ))}
+                </div>
               </div>
             </div>
           </section>
