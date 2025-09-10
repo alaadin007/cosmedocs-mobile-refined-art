@@ -368,7 +368,7 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* More About Cheek Enhancement Section */}
+        {/* Cheekbone Dermal Filler Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -378,7 +378,7 @@ const CheekFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">More About Cheek Enhancement</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Cheekbone Dermal Filler</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Understanding the science and artistry behind natural cheek enhancement at our Harley Street clinic.
               </p>
