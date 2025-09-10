@@ -729,6 +729,9 @@ const CheekFiller = () => {
                 Transparent pricing for premium cheek enhancement treatments. All prices include consultation, 
                 treatment, and aftercare support from our expert medical team.
               </p>
+              <p className="text-purple-300 mt-4 font-medium">
+                Premium Swiss, USA & French dermal fillers only
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
