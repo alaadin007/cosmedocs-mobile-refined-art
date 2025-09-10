@@ -715,58 +715,138 @@ const CheekFiller = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[79px]">
+        <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Treatment Pricing
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Premium Swiss, USA & French dermal fillers only
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Cheek Filler Pricing London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for premium cheek enhancement treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              {[{
-              volume: "1ml",
-              price: "£350",
-              note: "Usually enough for most"
-            }, {
-              volume: "2ml",
-              price: "£650",
-              note: "Enhanced definition"
-            }, {
-              volume: "3ml",
-              price: "£950",
-              note: "Maximum enhancement"
-            }].map((option, index) => <motion.div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: index * 0.1
-            }} viewport={{
-              once: true
-            }}>
-                  <h3 className="text-3xl font-light text-white mb-2">{option.volume}</h3>
-                  <p className="text-4xl font-thin text-white mb-4">{option.price}</p>
-                  <p className="text-white/70 font-extralight">{option.note}</p>
-                </motion.div>)}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">1ml Cheek Filler</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£350</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Perfect for subtle enhancement and first-time treatments</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">2ml Cheek Filler</CardTitle>
+                    <div className="text-white text-4xl font-bold">£650</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Ideal for enhanced definition and dramatic results</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Premium hyaluronic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">2-week follow-up</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">3ml Cheek Filler</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£950</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Maximum enhancement for dramatic transformation</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full facial assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Complete aftercare package</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *All prices include consultation, treatment, and comprehensive aftercare support
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+                Book Your Consultation
+              </Button>
+            </motion.div>
           </div>
         </section>
 
