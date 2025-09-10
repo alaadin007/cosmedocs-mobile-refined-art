@@ -224,6 +224,32 @@ const CheekFiller = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-8 text-white">Cheek Filler Treatment</h2>
+              
+              {/* Treatment Highlights with Icons */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                {[
+                  { icon: CheckCircle, text: "Advanced injection techniques for natural-looking results" },
+                  { icon: Palette, text: "Precise volume restoration and cheekbone definition" },
+                  { icon: Zap, text: "Immediate enhancement with minimal downtime" },
+                  { icon: Award, text: "Premium dermal fillers for long-lasting effects" },
+                  { icon: GraduationCap, text: "Personalized treatment plans for your facial structure" },
+                  { icon: Syringe, text: "Both cannula and needle techniques available" }
+                ].map((highlight, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start space-x-3 text-left"
+                  >
+                    <div className="bg-purple-100 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                      <highlight.icon className="text-purple-600" size={20} />
+                    </div>
+                    <p className="text-gray-300 text-sm">{highlight.text}</p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -284,38 +310,6 @@ const CheekFiller = () => {
               </motion.div>
             </div>
 
-            {/* Treatment Highlights */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto mt-16"
-            >
-              <h3 className="text-2xl font-bold text-center text-white mb-8">Treatment Highlights</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  "Advanced injection techniques for natural-looking results",
-                  "Precise volume restoration and cheekbone definition", 
-                  "Immediate enhancement with minimal downtime",
-                  "Premium dermal fillers for long-lasting effects",
-                  "Personalized treatment plans for your facial structure",
-                  "Both cannula and needle techniques available"
-                ].map((highlight, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-start space-x-3"
-                  >
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300">{highlight}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </section>
 
