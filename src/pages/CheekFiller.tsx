@@ -283,6 +283,39 @@ const CheekFiller = () => {
                 <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
             </div>
+
+            {/* Treatment Highlights */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto mt-16"
+            >
+              <h3 className="text-2xl font-bold text-center text-white mb-8">Treatment Highlights</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  "Advanced injection techniques for natural-looking results",
+                  "Precise volume restoration and cheekbone definition", 
+                  "Immediate enhancement with minimal downtime",
+                  "Premium dermal fillers for long-lasting effects",
+                  "Personalized treatment plans for your facial structure",
+                  "Both cannula and needle techniques available"
+                ].map((highlight, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start space-x-3"
+                  >
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">{highlight}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
