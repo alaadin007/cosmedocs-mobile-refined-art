@@ -199,7 +199,10 @@ const CheekFiller = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={() => window.open(bookingUrl, '_blank')}
+                  >
                     Book Consultation
                   </Button>
                   <Button 
