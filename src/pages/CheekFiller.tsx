@@ -230,7 +230,7 @@ const CheekFiller = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Cheek Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
+                  <CheckCircle className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Precise Volume</h3>
                 <p className="text-gray-300">Restoration and cheekbone definition</p>
@@ -287,19 +287,6 @@ const CheekFiller = () => {
                 <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Minimal downtime, return to work same day</p>
-              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
