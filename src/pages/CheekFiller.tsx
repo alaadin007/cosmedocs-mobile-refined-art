@@ -744,7 +744,7 @@ const CheekFiller = () => {
                     <div className="text-purple-300 text-4xl font-bold">£350</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Perfect for subtle enhancement and first-time treatments</p>
+                    <p className="text-gray-300">Usually enough for most - subtle enhancement and first-time treatments</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
@@ -778,7 +778,7 @@ const CheekFiller = () => {
                     <div className="text-white text-4xl font-bold">£650</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">Ideal for enhanced definition and dramatic results</p>
+                    <p className="text-purple-100">Enhanced definition - ideal for dramatic results</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
@@ -813,7 +813,7 @@ const CheekFiller = () => {
                     <div className="text-purple-300 text-4xl font-bold">£950</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Maximum enhancement for dramatic transformation</p>
+                    <p className="text-gray-300">Maximum enhancement - for dramatic transformation</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
