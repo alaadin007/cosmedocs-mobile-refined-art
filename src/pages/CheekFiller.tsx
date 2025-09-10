@@ -540,7 +540,7 @@ const CheekFiller = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -582,8 +582,8 @@ const CheekFiller = () => {
                   </div>
                 </motion.div>
 
-                <div className="space-y-8">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                     {cheekFillerVideos.slice(0, 4).map((video, index) => (
                       <motion.div
                         key={video.id}
@@ -593,7 +593,7 @@ const CheekFiller = () => {
                         viewport={{ once: true }}
                         className="group"
                       >
-                        <div className="relative overflow-hidden rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                        <div className="relative overflow-hidden rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 h-full">
                           <TreatmentVideoPlayer video={video} />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
@@ -601,22 +601,30 @@ const CheekFiller = () => {
                     ))}
                   </div>
                   
-                  {cheekFillerVideos.length > 4 && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      viewport={{ once: true }}
-                      className="text-center"
-                    >
-                      <Button 
-                        variant="outline" 
-                        className="border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300"
-                      >
-                        View More Videos
-                      </Button>
-                    </motion.div>
-                  )}
+                  {/* Additional content to balance the visual weight */}
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-lg font-semibold text-white">Treatment Gallery</h4>
+                      <div className="text-sm text-purple-300">Real Results</div>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-4">
+                      Watch live procedures and see immediate transformations performed by Dr. Ahmed Haq using advanced techniques.
+                    </p>
+                    <div className="grid grid-cols-3 gap-3 text-xs text-gray-400">
+                      <div className="text-center">
+                        <div className="text-purple-300 font-semibold">{cheekFillerVideos.length}+</div>
+                        <div>Videos</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-purple-300 font-semibold">100%</div>
+                        <div>Real Results</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-purple-300 font-semibold">HD</div>
+                        <div>Quality</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
