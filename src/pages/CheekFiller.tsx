@@ -228,13 +228,8 @@ const CheekFiller = () => {
               {/* Treatment Highlights with Icons */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
                 {[
-                  { icon: CheckCircle, text: "Advanced injection techniques for natural-looking results" },
-                  { icon: CheckCircle, text: "Premium Swiss, USA & French dermal fillers only" },
                   { icon: Palette, text: "Precise volume restoration and cheekbone definition" },
-                  { icon: Clock, text: "Immediate enhancement with minimal downtime" },
-                  { icon: Award, text: "Premium dermal fillers for long-lasting effects" },
-                  { icon: GraduationCap, text: "Personalized treatment plans for your facial structure" },
-                  { icon: Syringe, text: "Both cannula and needle techniques available" }
+                  { icon: Clock, text: "Immediate enhancement with minimal downtime" }
                 ].map((highlight, index) => (
                   <motion.div
                     key={index}
