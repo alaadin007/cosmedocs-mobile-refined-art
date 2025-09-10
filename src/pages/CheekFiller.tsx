@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 type TreatmentVideo = Tables<'treatment_videos'>;
 
 const CheekFiller = () => {
-  const seoData = generateSEOMetadata("Cheek Fillers London | From £350 | Dr. Ahmed Haq | Harley Street", "Expert cheek filler treatments in London's Harley Street. Visibly lifted & defined cheeks and cheekbones by Dr. Ahmed Haq. Premium dermal fillers from £350.", "/cheek-filler");
+  const seoData = generateSEOMetadata("Cheek Fillers London | 1ml & 2ml Dermal Fillers | Before & After | From £350", "Premium cheek filler treatments London. 1ml vs 2ml cheek fillers, before and after results. Dermal fillers cheekbones enhancement by Dr. Ahmed Haq, Harley Street.", "/cheek-filler");
   const bookingUrl = "https://med.as.me/harleystreet";
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [cheekFillerVideos, setCheekFillerVideos] = useState<TreatmentVideo[]>([]);
@@ -106,28 +106,28 @@ const CheekFiller = () => {
   
   const faqs = [{
     question: "How much do cheek fillers cost in London?",
-    answer: "At Cosmedocs Harley Street, cheek filler treatments start from £350 for 1ml. We offer 2ml for £650 and 3ml for £950. The final cost depends on your individual needs and the amount of filler required to achieve your desired results."
+    answer: "At Cosmedocs Harley Street, cheek filler cost starts from £350 for 1ml cheek filler. 2ml cheek filler costs £650 and 3ml costs £950. Cheekbone filler cost varies based on volume needed. Our transparent cheek fillers cost includes consultation and aftercare."
   }, {
-    question: "How long do cheek fillers last?",
-    answer: "Cheek fillers typically last 15-18 months. The longevity depends on factors like your metabolism, lifestyle, physical activity, and the type of filler used. Touch-up treatments can help maintain your enhanced cheek contours."
+    question: "How long do cheek fillers take to settle?",
+    answer: "How long do cheek fillers take to settle varies by individual. Initial swelling subsides within 48-72 hours, but complete settlement takes 2-3 weeks. Cheek filler aftercare helps optimize settling and final results."
   }, {
-    question: "Are cheek fillers safe?",
-    answer: "When performed by Dr. Ahmed Haq at our Harley Street clinic, cheek fillers are very safe. We use premium Swiss, USA, and French dermal fillers with advanced cannula techniques to minimize risks and ensure natural-looking results."
+    question: "What's the best filler for cheeks and cheekbones?",
+    answer: "The best filler for cheeks depends on your goals. We use premium dermal fillers for cheek enhancement from Swiss, USA, and French manufacturers. The best filler for cheekbones provides structure while maintaining natural movement."
   }, {
-    question: "Do cheek fillers hurt?",
-    answer: "Cheek filler treatments cause minimal discomfort. We apply numbing cream before the procedure, and the dermal fillers contain lidocaine for additional comfort. Most patients find the treatment very tolerable."
+    question: "1ml vs 2ml cheek filler - which is right for me?",
+    answer: "1ml vs 2ml cheek filler depends on your anatomy and goals. 1ml cheek filler before and after shows subtle enhancement. 2ml cheek filler before and after demonstrates more dramatic cheekbone definition. Consultation determines optimal volume."
   }, {
-    question: "Who is a good candidate for cheek fillers?",
-    answer: "Cheek fillers are ideal for those experiencing volume loss due to aging, wanting to enhance natural cheekbone structure, correct facial asymmetry, or achieve more defined facial contours. A consultation will determine if you're a suitable candidate."
+    question: "Do you offer cheek filler for men?",
+    answer: "Yes, we specialize in cheek filler man treatments. Men cheek filler requires different techniques to maintain masculine features while enhancing cheekbone structure. Our male cheek enhancement creates natural, masculine definition."
   }, {
-    question: "What's the difference between 1ml and 2ml cheek fillers?",
-    answer: "1ml provides subtle, natural enhancement perfect for first-time patients or minor volume loss. 2ml offers more noticeable definition and lift, ideal for significant volume restoration or those wanting more dramatic cheekbone enhancement."
+    question: "What about apple cheek filler and mid face treatments?",
+    answer: "Apple cheek filler targets the anterior cheek for youthful plumpness. Mid face fillers address broader volume loss. Mid cheek filler can lift jowls while apple cheek fillers create that youthful 'apple' shape in the cheeks."
   }, {
-    question: "What should I expect after cheek filler treatment?",
-    answer: "Results are visible immediately with final results apparent within 2 weeks. Some mild swelling or bruising may occur but typically resolves within 24-48 hours. Most patients return to work immediately after treatment."
+    question: "Can cheek filler help lift jowls?",
+    answer: "Yes, strategic filler in cheeks to lift jowls works by restoring midface volume. Cheek filler to lift jowls creates an overall lifting effect. This cheek lift filler technique addresses multiple areas simultaneously."
   }, {
-    question: "Can cheek fillers be combined with other treatments?",
-    answer: "Yes, cheek fillers work excellently as part of a comprehensive facial rejuvenation plan. They can be combined with treatments like lip fillers, anti-wrinkle injections, or non-surgical facelifts for complete facial harmony."
+    question: "How much filler do I need - 3ml or 4ml cheek filler?",
+    answer: "3ml cheek filler before and after shows significant enhancement for moderate volume loss. 4ml cheek filler is typically for extensive restoration. Most patients achieve excellent results with 1-2ml per side."
   }];
 
   return (
@@ -189,9 +189,9 @@ const CheekFiller = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Expert Cheek
-                  <span className="block text-purple-300">Enhancement</span>
-                  <span className="block text-sm mt-4">Lifted and defined cheeks with precision dermal fillers</span>
+                  Expert Cheek Fillers
+                  <span className="block text-purple-300">London</span>
+                  <span className="block text-sm mt-4">Dermal fillers cheekbones | 1ml vs 2ml cheek filler before and after</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
@@ -315,10 +315,10 @@ const CheekFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Before and After Cheek Filler Results in London</h2>
+              <h2 className="text-3xl font-bold mb-4">Cheek Filler Before and After Results | 1ml vs 2ml</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore authentic before and after cheek filler results from our Harley Street clinic. 
-                Our advanced dermal filler treatments enhance volume, contour and definition for natural-looking enhancement.
+                Explore authentic 1ml cheek filler before and after and 2ml cheek filler before and after results from our Harley Street clinic. 
+                Our premium dermal fillers for cheek enhancement create natural cheekbone fillers before and after transformations.
               </p>
             </motion.div>
 
@@ -372,10 +372,10 @@ const CheekFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Cheek Filler Pricing in London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Cheek Filler Cost London | 1ml vs 2ml Cheek Filler</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Transparent pricing for premium cheek filler treatments at our Harley Street clinic. 
-                All treatments include consultation, aftercare, and follow-up support.
+                Transparent cheek filler cost for 1ml cheek filler and 2ml cheek filler treatments. Best filler for cheeks 
+                and cheekbones at our Harley Street clinic. All treatments include consultation, aftercare, and follow-up support.
               </p>
             </motion.div>
 
@@ -881,6 +881,30 @@ const CheekFiller = () => {
           <p>Cheek filler results are visible immediately, with final results apparent within two weeks as any minor swelling subsides. The enhancement typically lasts 15-18 months, depending on individual factors such as metabolism, lifestyle, and the specific filler used. We provide comprehensive aftercare instructions to optimize your results and minimize any potential side effects.</p>
           
           <p>The treatment involves minimal discomfort, with topical numbing cream applied before the procedure and lidocaine-containing fillers for additional comfort. Most patients return to work immediately after treatment, with any minor swelling or bruising typically resolving within 24-48 hours.</p>
+          
+          <h2>1ml vs 2ml Cheek Filler: Volume and Results Comparison</h2>
+          <p>Understanding the difference between 1ml cheek filler and 2ml cheek filler is crucial for achieving optimal results. 1ml cheek filler before and after results show subtle enhancement perfect for first-time patients or minor volume loss. 2ml cheek filler before and after demonstrates more dramatic transformation with significant cheekbone definition. For extensive volume restoration, 3ml cheek filler before and after or even 4ml cheek filler may be recommended. The choice between 1ml vs 2ml cheek filler depends on your natural anatomy, desired results, and practitioner recommendations.</p>
+          
+          <h2>Apple Cheek Filler and Mid Face Enhancement</h2>
+          <p>Apple cheek filler targets the anterior cheek region for youthful plumpness, while mid face fillers address broader facial volume loss. Mid cheek filler placement focuses on the central facial region, creating lift that can reduce jowls and nasolabial folds. These techniques work synergistically with cheekbone fillers to create comprehensive facial rejuvenation.</p>
+          
+          <h2>Male Cheek Enhancement and Masculine Contouring</h2>
+          <p>Cheek filler man treatments require specialized technique to maintain masculine facial characteristics. Men cheek filler focuses on creating angular definition rather than soft curves. Our practitioners understand the anatomical differences in male facial structure, ensuring natural-looking enhancement that preserves masculinity while addressing volume loss and creating more defined cheekbones filler results.</p>
+          
+          <h2>Cheek Filler Placement and Marking Techniques</h2>
+          <p>Precise cheek filler placement is essential for optimal results. Cheek filler markings guide injection points to ensure symmetrical enhancement. Our practitioners use anatomical landmarks to determine ideal cheek filler placement, considering factors like bone structure, existing volume, and desired outcome. Proper marking ensures consistent, natural-looking results across all cheek filler treatments.</p>
+          
+          <h2>Aftercare and Settlement Timeline</h2>
+          <p>Patients often ask how long do cheek fillers take to settle. Initial swelling subsides within 48-72 hours, but complete settlement occurs over 2-3 weeks. Cheek filler aftercare includes avoiding excessive heat, massage, and strenuous exercise for 24-48 hours. Following proper aftercare protocols ensures optimal healing and longevity of results.</p>
+          
+          <h2>Advanced Techniques: Cheek Lift and Jowl Improvement</h2>
+          <p>Strategic filler in cheeks to lift jowls represents an advanced application of cheek enhancement. By restoring midface volume, cheek filler to lift jowls creates an overall lifting effect that improves lower facial contours. This technique demonstrates how comprehensive cheek lift filler treatments can address multiple facial concerns simultaneously.</p>
+          
+          <h2>London Cheek Filler Services</h2>
+          <p>Our cheek fillers London clinic on Harley Street offers comprehensive cheek enhancement services. Cheek filler London treatments utilize the best filler for cheeks and cheekbones, ensuring premium results. As a leading cheek filler London provider, we maintain the highest standards of safety and aesthetic excellence. Our Harley Street location provides convenient access to world-class cheek fillers London treatments.</p>
+          
+          <h2>Cost Considerations and Treatment Value</h2>
+          <p>Cheekbone filler cost varies based on volume required and complexity of treatment. Cheek fillers cost reflects the premium products used and expertise provided. Our transparent pricing ensures patients understand cheek filler cost before treatment. The investment in quality dermal filler cheeks treatment provides long-lasting results with excellent value compared to surgical alternatives.</p>
         </div>
       </div>
     </>
