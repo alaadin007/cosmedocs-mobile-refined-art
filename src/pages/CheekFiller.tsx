@@ -506,7 +506,7 @@ const CheekFiller = () => {
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
                 {/* Videos Section - Left Column */}
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-1">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {cheekFillerVideos.slice(0, 6).map((video, index) => (
                       <motion.div
@@ -528,7 +528,7 @@ const CheekFiller = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className="lg:col-span-1"
+                  className="lg:col-span-2"
                 >
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm sticky top-8">
                     <div className="flex items-center space-x-3 mb-6">
