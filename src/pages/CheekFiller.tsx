@@ -506,44 +506,18 @@ const CheekFiller = () => {
 
               <div className="space-y-12">
                 {/* Videos Section */}
-                <div className="w-full">
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                    <div className="flex items-center space-x-3 mb-8">
-                      <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center">
-                        <Play className="text-white" size={20} />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">Treatment Videos</h3>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                      {cheekFillerVideos.slice(0, 8).map((video, index) => (
-                        <motion.div
-                          key={video.id}
-                          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                          viewport={{ once: true }}
-                          className="group"
-                        >
-                          <div className="relative overflow-hidden rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 h-full">
-                            <TreatmentVideoPlayer video={video} />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    {cheekFillerVideos.length > 8 && (
-                      <div className="text-center mt-8">
-                        <Button 
-                          variant="outline" 
-                          className="border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300"
-                        >
-                          View More Videos
-                        </Button>
-                      </div>
-                    )}
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {cheekFillerVideos.slice(0, 6).map((video, index) => (
+                    <motion.div
+                      key={video.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <TreatmentVideoPlayer video={video} />
+                    </motion.div>
+                  ))}
                 </div>
 
                 {/* Description Section */}
