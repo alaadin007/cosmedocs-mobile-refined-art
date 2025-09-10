@@ -540,31 +540,83 @@ const CheekFiller = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-6">Expert Aesthetic Results</h3>
-                  <div className="space-y-4 text-gray-300">
-                    <p>
-                      Our cheek filler before and after images demonstrate the transformative power of expert aesthetic medicine. Each treatment is carefully planned and executed by Dr. Ahmed Haq to enhance your natural facial structure while maintaining complete authenticity to your unique features.
-                    </p>
-                    <p>
-                      These results showcase our commitment to creating subtle, natural-looking enhancements that restore volume, improve facial proportions, and provide lifting effects without appearing overdone. Our invisible art philosophy ensures that your enhanced beauty looks completely natural to others.
-                    </p>
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="lg:sticky lg:top-8"
+                >
+                  <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
+                    <div className="flex items-center space-x-3 mb-6">
+                      <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center">
+                        <Play className="text-white" size={20} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white">Expert Aesthetic Results</h3>
+                    </div>
+                    
+                    <div className="space-y-6 text-gray-300">
+                      <div className="relative">
+                        <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-purple-300 rounded-full"></div>
+                        <p className="pl-6">
+                          Our cheek filler before and after images demonstrate the transformative power of expert aesthetic medicine. Each treatment is carefully planned and executed by Dr. Ahmed Haq to enhance your natural facial structure while maintaining complete authenticity to your unique features.
+                        </p>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-purple-300 to-purple-500 rounded-full"></div>
+                        <p className="pl-6">
+                          These results showcase our commitment to creating subtle, natural-looking enhancements that restore volume, improve facial proportions, and provide lifting effects without appearing overdone. Our invisible art philosophy ensures that your enhanced beauty looks completely natural to others.
+                        </p>
+                      </div>
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {cheekFillerVideos.slice(0, 6).map((video, index) => (
+                    <div className="mt-8 pt-6 border-t border-white/10">
+                      <div className="flex items-center justify-between text-sm text-gray-400">
+                        <span>✓ Natural Results</span>
+                        <span>✓ Expert Technique</span>
+                        <span>✓ Invisible Art</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <div className="space-y-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {cheekFillerVideos.slice(0, 4).map((video, index) => (
+                      <motion.div
+                        key={video.id}
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="group"
+                      >
+                        <div className="relative overflow-hidden rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                          <TreatmentVideoPlayer video={video} />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  {cheekFillerVideos.length > 4 && (
                     <motion.div
-                      key={video.id}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
                       viewport={{ once: true }}
+                      className="text-center"
                     >
-                      <TreatmentVideoPlayer video={video} />
+                      <Button 
+                        variant="outline" 
+                        className="border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300"
+                      >
+                        View More Videos
+                      </Button>
                     </motion.div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
