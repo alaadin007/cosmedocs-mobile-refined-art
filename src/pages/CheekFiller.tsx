@@ -359,15 +359,6 @@ const CheekFiller = () => {
               />
             </div>
 
-            {/* Text after the gallery */}
-            <div className="mt-16 text-center max-w-4xl mx-auto space-y-6">
-              <p className="text-gray-300">
-                Our cheek filler before and after images demonstrate the transformative power of expert aesthetic medicine. Each treatment is carefully planned and executed by Dr. Ahmed Haq to enhance your natural facial structure while maintaining complete authenticity to your unique features.
-              </p>
-              <p className="text-gray-300">
-                These results showcase our commitment to creating subtle, natural-looking enhancements that restore volume, improve facial proportions, and provide lifting effects without appearing overdone. Our invisible art philosophy ensures that your enhanced beauty looks completely natural to others.
-              </p>
-            </div>
           </div>
         </section>
 
@@ -549,18 +540,32 @@ const CheekFiller = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cheekFillerVideos.slice(0, 6).map((video, index) => (
-                  <motion.div
-                    key={video.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <TreatmentVideoPlayer video={video} />
-                  </motion.div>
-                ))}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">Expert Aesthetic Results</h3>
+                  <div className="space-y-4 text-gray-300">
+                    <p>
+                      Our cheek filler before and after images demonstrate the transformative power of expert aesthetic medicine. Each treatment is carefully planned and executed by Dr. Ahmed Haq to enhance your natural facial structure while maintaining complete authenticity to your unique features.
+                    </p>
+                    <p>
+                      These results showcase our commitment to creating subtle, natural-looking enhancements that restore volume, improve facial proportions, and provide lifting effects without appearing overdone. Our invisible art philosophy ensures that your enhanced beauty looks completely natural to others.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {cheekFillerVideos.slice(0, 6).map((video, index) => (
+                    <motion.div
+                      key={video.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <TreatmentVideoPlayer video={video} />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
