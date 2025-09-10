@@ -16,6 +16,11 @@ export const treatmentRoutes: Record<string, string> = {
   "gummy smile botox": "/gummy-smile-botox",
   "gummy smile": "/gummy-smile-botox",
   "gummy smile treatment": "/gummy-smile-botox",
+  "masseter botox": "/masseter-botox",
+  "masseter": "/masseter-botox",
+  "jawline slimming": "/masseter-botox",
+  "jaw slimming": "/masseter-botox",
+  "bruxism treatment": "/masseter-botox",
   
   // Dermal Fillers - Main page
   "dermal fillers": "/dermal-fillers",
