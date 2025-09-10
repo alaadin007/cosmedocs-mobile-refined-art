@@ -486,42 +486,6 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Details Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl font-bold mb-4">Treatment Information</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Everything you need to know about cheek filler treatments at our Harley Street clinic.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {treatmentDetails.map((detail, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <detail.icon className="text-purple-600" size={24} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{detail.label}</h3>
-                  <p className="text-gray-300">{detail.value}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Treatment Videos Section */}
         {cheekFillerVideos.length > 0 && (
@@ -616,7 +580,8 @@ const CheekFiller = () => {
                         <span className="flex items-center space-x-2">
                           <CheckCircle size={16} className="text-purple-400" />
                           <span>Invisible Art</span>
-                        </span>
+                         </span>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
