@@ -226,78 +226,6 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Benefits Section */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Benefits</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transform your under-eye area with our expert tear trough filler treatments. 
-                Address multiple concerns with one comprehensive solution.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Dark Circles Reduction",
-                  description: "Improves dark circles and discoloration by restoring volume and reducing shadows",
-                  icon: "👁️"
-                },
-                {
-                  title: "Wrinkle Smoothing",
-                  description: "Softens and smoothes fine lines and wrinkles around the eye area",
-                  icon: "✨"
-                },
-                {
-                  title: "Eye Bag Minimization",
-                  description: "Reduces the appearance of puffy eye bags and under-eye hollowness",
-                  icon: "💧"
-                },
-                {
-                  title: "Instant Results",
-                  description: "Visible improvements immediately after treatment with natural-looking results",
-                  icon: "⚡"
-                },
-                {
-                  title: "Skin Quality Enhancement",
-                  description: "Boosts hydration and stimulates collagen production for healthier skin",
-                  icon: "🌟"
-                },
-                {
-                  title: "Confidence Boost",
-                  description: "Achieve a more refreshed, youthful appearance that enhances self-confidence",
-                  icon: "💪"
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-black border-purple-500/20 h-full text-center">
-                    <CardHeader>
-                      <div className="text-4xl mb-4">{benefit.icon}</div>
-                      <CardTitle className="text-white text-xl">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300">{benefit.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -505,7 +433,286 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
-        {/* Tear Trough Filler Treatment Journey */}
+        {/* Tear Troughs Vs. Dark Circles Vs. Eye Bags Comparison */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Tear Troughs Vs. Dark Circles Vs. Eye Bags</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                It is essential to know what condition you are dealing with and what has caused it to happen in the first place. 
+                Here is the breakdown of different under-eye concerns and how they can be effectively treated.
+              </p>
+            </motion.div>
+
+            {/* Treatment Images Display */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div 
+                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() => handleImageClick(
+                    "/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png",
+                    "Tear trough treatment before and after comparison",
+                    "Tear Troughs Treatment Results"
+                  )}
+                >
+                  <img 
+                    src="/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png" 
+                    alt="Tear trough treatment before and after comparison"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-white text-xl font-semibold">Tear Troughs</h3>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div 
+                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() => handleImageClick(
+                    "/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png",
+                    "Dark circles before and after treatment",
+                    "Dark Circles Treatment Results"
+                  )}
+                >
+                  <img 
+                    src="/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png" 
+                    alt="Dark circles before and after treatment"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-white text-xl font-semibold">Dark Circles</h3>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div 
+                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() => handleImageClick(
+                    "/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png",
+                    "Eye bags treatment before and after",
+                    "Eye Bags Treatment Results"
+                  )}
+                >
+                  <img 
+                    src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png" 
+                    alt="Eye bags treatment before and after"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-white text-xl font-semibold">Eye Bags</h3>
+              </motion.div>
+            </div>
+
+            {/* Information Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-white text-xl">Tear Troughs</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center mb-4">
+                      A deep groove or crease between your lower eyelid and upper cheek. Depending on its depth, 
+                      it can cast a shadow below your eyes, giving a tired, aged, and sad look.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Often hereditary</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Volume loss under eyes</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Creates tired appearance</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-white text-xl">Dark Circles</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center mb-4">
+                      Common condition characterized by visible discoloration. May involve dermal fillers to address 
+                      volume loss and combination treatments for comprehensive rejuvenation.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Iron deposits (bluish hue)</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Pigmentation (brownish hue)</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Genetic predisposition</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-white text-xl">Eye Bags</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center mb-4">
+                      Small bulges or pouches underneath the eyes. Can be hereditary or caused by excessive salt intake, 
+                      thyroid issues, or aging. Natural aging process is the primary cause.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Often hereditary</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Lifestyle factors</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Aging process</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Benefits Section - Simplified Design */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Benefits</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transform your under-eye area with our expert tear trough filler treatments. 
+                Address multiple concerns with one comprehensive solution.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Dark Circles Reduction</h3>
+                        <p className="text-gray-300">Improves dark circles and discoloration by restoring volume and reducing shadows</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Wrinkle Smoothing</h3>
+                        <p className="text-gray-300">Softens and smoothes fine lines and wrinkles around the eye area</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Eye Bag Minimization</h3>
+                        <p className="text-gray-300">Reduces the appearance of puffy eye bags and under-eye hollowness</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Instant Results</h3>
+                        <p className="text-gray-300">Visible improvements immediately after treatment with natural-looking results</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Skin Quality Enhancement</h3>
+                        <p className="text-gray-300">Boosts hydration and stimulates collagen production for healthier skin</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Confidence Boost</h3>
+                        <p className="text-gray-300">Achieve a more refreshed, youthful appearance that enhances self-confidence</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="py-20">
           <div className="page-container">
             <motion.div
@@ -782,202 +989,6 @@ const TearTroughFiller = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Tear Troughs Vs. Dark Circles Vs. Eye Bags Comparison */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Tear Troughs Vs. Dark Circles Vs. Eye Bags</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                It is essential to know what condition you are dealing with and what has caused it to happen in the first place. 
-                Here is the breakdown of different under-eye concerns and how they can be effectively treated.
-              </p>
-            </motion.div>
-
-            {/* Treatment Images Display */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div 
-                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => handleImageClick(
-                    "/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png",
-                    "Tear trough treatment before and after comparison",
-                    "Tear Troughs Treatment Results"
-                  )}
-                >
-                  <img 
-                    src="/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png" 
-                    alt="Tear trough treatment before and after comparison"
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-                <h3 className="text-white text-xl font-semibold">Tear Troughs</h3>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div 
-                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => handleImageClick(
-                    "/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png",
-                    "Dark circles before and after treatment",
-                    "Dark Circles Treatment Results"
-                  )}
-                >
-                  <img 
-                    src="/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png" 
-                    alt="Dark circles before and after treatment"
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-                <h3 className="text-white text-xl font-semibold">Dark Circles</h3>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div 
-                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => handleImageClick(
-                    "/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png",
-                    "Eye bags treatment before and after",
-                    "Eye Bags Treatment Results"
-                  )}
-                >
-                  <img 
-                    src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png" 
-                    alt="Eye bags treatment before and after"
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-                <h3 className="text-white text-xl font-semibold">Eye Bags</h3>
-              </motion.div>
-            </div>
-
-            {/* Information Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-purple-500/20 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Tear Troughs</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center mb-4">
-                      A deep groove or crease between your lower eyelid and upper cheek. Depending on its depth, 
-                      it can cast a shadow below your eyes, giving a tired, aged, and sad look.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Often hereditary</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Volume loss under eyes</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Creates tired appearance</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-purple-500/20 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Dark Circles</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center mb-4">
-                      Common condition characterized by visible discoloration. May involve dermal fillers to address 
-                      volume loss and combination treatments for comprehensive rejuvenation.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Iron deposits (bluish hue)</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Pigmentation (brownish hue)</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Genetic predisposition</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-purple-500/20 h-full">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Eye Bags</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center mb-4">
-                      Small bulges or pouches underneath the eyes. Can be hereditary or caused by excessive salt intake, 
-                      thyroid issues, or aging. Natural aging process is the primary cause.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Often hereditary</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Lifestyle factors</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Aging process</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </motion.div>
             </div>
           </div>
