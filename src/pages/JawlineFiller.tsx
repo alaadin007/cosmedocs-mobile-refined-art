@@ -536,113 +536,155 @@ const JawlineFiller = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">1ml vs 2ml Jawline Filler - Choose Your Enhancement</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Select the perfect volume for your jawline goals. Our specialists help achieve 
-                ideal enhancement with premium filler tailored to your jaw structure and desired outcome.
+              <h2 className="text-4xl font-bold mb-6 text-white">1ml vs 2ml Jawline Filler - See The Difference</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Compare the visual impact of different filler volumes. These real patient results show the 
+                significant difference between 1ml and 2ml treatments to help you choose the right option.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-              {/* 1ml Jawline Filler */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">1ml Jawline Filler Transformation</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="relative group cursor-pointer">
-                      <img 
-                        src={jawlineFiller1ml} 
-                        alt="1ml jawline filler before and after results London Harley Street Cosmedocs"
-                        className="w-full h-80 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">1ml Jawline Filler Results</p>
+            {/* 1ml Treatment Results */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-20"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">1ml Jawline Filler Results</h3>
+                <p className="text-purple-300 text-xl font-semibold">Subtle Enhancement - £350</p>
+              </div>
+              
+              <div className="relative group cursor-pointer max-w-4xl mx-auto">
+                <img 
+                  src={jawlineFiller1ml} 
+                  alt="1ml jawline filler before and after results London showing subtle natural enhancement"
+                  className="w-full h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                  onClick={() => {
+                    const modal = document.createElement('div');
+                    modal.className = 'fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4';
+                    modal.innerHTML = `
+                      <div class="relative max-w-6xl w-full max-h-screen overflow-auto">
+                        <button class="absolute top-4 right-4 z-60 text-white hover:text-gray-300 text-3xl font-bold" onclick="this.parentElement.parentElement.remove()">×</button>
+                        <img src="${jawlineFiller1ml}" alt="1ml jawline filler detailed results" class="w-full h-auto rounded-lg">
+                        <div class="text-center mt-6">
+                          <h4 class="text-white text-2xl font-bold mb-2">1ml Jawline Filler Results</h4>
+                          <p class="text-gray-300">Subtle, natural enhancement perfect for first-time treatments</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="space-y-3">
-                      <p className="text-gray-300">
-                        <strong className="text-white">Perfect for:</strong> First-time treatments, subtle enhancement, natural definition
-                      </p>
-                      <p className="text-gray-300">
-                        <strong className="text-white">Results:</strong> Natural improvements enhancing your jawline's definition and overall profile
-                      </p>
-                      <p className="text-gray-300">
-                        <strong className="text-white">Duration:</strong> 12-15 months
-                      </p>
-                      <p className="text-gray-300">
-                        <strong className="text-white">Best for:</strong> Women often lose jaw angle bone thickness earlier than men, making 1ml ideal for early intervention
-                      </p>
-                      <div className="mt-4 p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
-                        <p className="text-purple-300 font-semibold text-center">From £350</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                    `;
+                    modal.onclick = (e) => {
+                      if (e.target === modal) modal.remove();
+                    };
+                    document.body.appendChild(modal);
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl"></div>
+                <div className="absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-full font-bold">
+                  1ml Treatment
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
+                  <p className="text-white text-lg font-medium mb-2">Natural Definition & Subtle Enhancement</p>
+                  <p className="text-gray-300">Perfect for first-time patients seeking gentle jawline improvement</p>
+                </div>
+              </div>
 
-              {/* 2ml Jawline Filler */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">2ml Jawline Filler Transformation</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="relative group cursor-pointer">
-                      <img 
-                        src={jawlineFiller2ml} 
-                        alt="2ml jawline filler before and after results London Harley Street Cosmedocs dramatic enhancement"
-                        className="w-full h-80 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">2ml Jawline Filler Results</p>
-                      </div>
-                    </div>
-                    <div className="space-y-3">
-                      <p className="text-gray-300">
-                        <strong className="text-white">Perfect for:</strong> Dramatic enhancement, masculine jawlines, significant volume loss
-                      </p>
-                      <p className="text-gray-300">
-                        <strong className="text-white">Results:</strong> 2ml (1ml per side) can significantly improve jawline definition
-                      </p>
-                      <p className="text-gray-300">
-                        <strong className="text-white">Duration:</strong> 15-18 months
-                      </p>
-                      <p className="text-gray-300">
-                        <strong className="text-white">Best for:</strong> Young men and women wanting more noticeable change, lifting early jowls caused by volume loss
-                      </p>
-                      <div className="mt-4 p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
-                        <p className="text-purple-300 font-semibold text-center">From £650</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
+                <div className="bg-accent p-6 rounded-lg text-center">
+                  <h4 className="text-white font-semibold mb-2">Best For</h4>
+                  <p className="text-gray-300">First-time treatments, subtle enhancement</p>
+                </div>
+                <div className="bg-accent p-6 rounded-lg text-center">
+                  <h4 className="text-white font-semibold mb-2">Duration</h4>
+                  <p className="text-gray-300">12-15 months</p>
+                </div>
+                <div className="bg-accent p-6 rounded-lg text-center">
+                  <h4 className="text-white font-semibold mb-2">Price</h4>
+                  <p className="text-purple-300 font-bold">£350</p>
+                </div>
+              </div>
+            </motion.div>
 
-            <div className="text-center">
-              <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 max-w-2xl mx-auto">
-                <p className="text-gray-300 mb-4">
-                  The results of jawline filler depend on your jaw's natural structure and any age-related bone changes.
+            {/* 2ml Treatment Results */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">2ml Jawline Filler Results</h3>
+                <p className="text-purple-300 text-xl font-semibold">Dramatic Enhancement - £650</p>
+              </div>
+              
+              <div className="relative group cursor-pointer max-w-4xl mx-auto">
+                <img 
+                  src={jawlineFiller2ml} 
+                  alt="2ml jawline filler before and after results London showing dramatic enhancement"
+                  className="w-full h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                  onClick={() => {
+                    const modal = document.createElement('div');
+                    modal.className = 'fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4';
+                    modal.innerHTML = `
+                      <div class="relative max-w-6xl w-full max-h-screen overflow-auto">
+                        <button class="absolute top-4 right-4 z-60 text-white hover:text-gray-300 text-3xl font-bold" onclick="this.parentElement.parentElement.remove()">×</button>
+                        <img src="${jawlineFiller2ml}" alt="2ml jawline filler detailed results" class="w-full h-auto rounded-lg">
+                        <div class="text-center mt-6">
+                          <h4 class="text-white text-2xl font-bold mb-2">2ml Jawline Filler Results</h4>
+                          <p class="text-gray-300">Dramatic enhancement for significant jawline definition</p>
+                        </div>
+                      </div>
+                    `;
+                    modal.onclick = (e) => {
+                      if (e.target === modal) modal.remove();
+                    };
+                    document.body.appendChild(modal);
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl"></div>
+                <div className="absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-full font-bold">
+                  2ml Treatment
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
+                  <p className="text-white text-lg font-medium mb-2">Dramatic Definition & Masculine Enhancement</p>
+                  <p className="text-gray-300">Significant improvement for noticeable jawline transformation</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
+                <div className="bg-accent p-6 rounded-lg text-center">
+                  <h4 className="text-white font-semibold mb-2">Best For</h4>
+                  <p className="text-gray-300">Dramatic enhancement, masculine jawlines</p>
+                </div>
+                <div className="bg-accent p-6 rounded-lg text-center">
+                  <h4 className="text-white font-semibold mb-2">Duration</h4>
+                  <p className="text-gray-300">15-18 months</p>
+                </div>
+                <div className="bg-accent p-6 rounded-lg text-center">
+                  <h4 className="text-white font-semibold mb-2">Price</h4>
+                  <p className="text-purple-300 font-bold">£650</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="text-center mt-16">
+              <div className="bg-purple-900/20 rounded-lg p-8 border border-purple-500/20 max-w-3xl mx-auto">
+                <h4 className="text-white text-xl font-semibold mb-4">Can't decide between 1ml and 2ml?</h4>
+                <p className="text-gray-300 mb-6">
+                  The choice depends on your natural jaw structure, desired enhancement level, and aesthetic goals. 
+                  Our expert team will assess your facial anatomy during consultation to recommend the optimal volume.
                 </p>
-                <p className="text-purple-300 font-semibold">
-                  See our detailed pricing below to choose the best option for your goals.
-                </p>
+                <a 
+                  href={bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold shadow-2xl inline-flex items-center justify-center"
+                >
+                  Book Your Consultation
+                </a>
               </div>
             </div>
           </div>
