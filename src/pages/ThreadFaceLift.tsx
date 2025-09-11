@@ -647,12 +647,6 @@ export function ThreadFaceLift() {
                   3 months outcomes visible as swelling subsides and collagen remodeling continues.
                 </p>
               </div>
-              <Button 
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold mt-8"
-              >
-                Book Consultation
-              </Button>
             </motion.div>
 
             <motion.div
