@@ -396,12 +396,15 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">1ml Cheek Filler Before & After</h3>
-                <div className="mb-6">
+                <div className="mb-6 relative">
                   <img 
                     src={oneMLImage}
                     alt="1ml cheek filler before and after London natural enhancement Cosmedocs"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
+                  <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
+                    BEFORE & AFTER
+                  </div>
                 </div>
                 <p className="text-gray-300">
                   Cheek filler treatment can create a noticeable difference in the face and provide a refreshing and youthful look to men and women of any age.
@@ -416,12 +419,15 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">2ml Cheek Filler Before & After</h3>
-                <div className="mb-6">
+                <div className="mb-6 relative">
                   <img 
                     src={twoMLImage}
                     alt="2ml cheek filler before and after dramatic cheekbone definition London"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
+                  <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
+                    BEFORE & AFTER
+                  </div>
                 </div>
                 <p className="text-gray-300">
                   From correcting volume loss to a visible cheek lift to reducing sagging jowls, cheek filler is an ideal approach.
@@ -456,12 +462,18 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">3ml Cheek Filler Men Before & After</h3>
-                <div className="mb-6">
+                <div className="mb-6 relative">
                   <img 
                     src="/lovable-uploads/1e8bac0a-c2b4-4629-b56e-cce71b126dfe.png"
                     alt="3ml male cheek filler before and after volume loss correction London"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
+                  <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
+                    BEFORE & AFTER
+                  </div>
+                  <div className="absolute bottom-2 right-2 bg-purple-600/90 text-white px-3 py-1 rounded text-sm font-semibold">
+                    3ML VOLUME RESTORATION
+                  </div>
                 </div>
                 <div className="text-left max-w-md mx-auto">
                   <p className="text-gray-300 mb-4">
@@ -481,12 +493,18 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">4ml Cheek Filler Men Before & After</h3>
-                <div className="mb-6">
+                <div className="mb-6 relative">
                   <img 
                     src={menCheekImage}
                     alt="4ml male cheek filler before and after dramatic masculine transformation London"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
+                  <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
+                    BEFORE & AFTER
+                  </div>
+                  <div className="absolute bottom-2 right-2 bg-purple-600/90 text-white px-3 py-1 rounded text-sm font-semibold">
+                    4ML MAXIMUM ENHANCEMENT
+                  </div>
                 </div>
                 <p className="text-gray-300">
                   This patient came for cheek filler men and was treated with 4 ml cheek filler to add cheek volume to his hollow cheeks and correct lateral volume loss.
