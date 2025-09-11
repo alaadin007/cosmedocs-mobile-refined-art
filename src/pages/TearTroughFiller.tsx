@@ -359,7 +359,7 @@ const TearTroughFiller = () => {
         </section>
 
         {/* Reason Behind Under Eye Dark Circles */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
