@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,10 +12,24 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import ImageZoomModal from "@/components/ImageZoomModal";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 
 const TearTroughFiller = () => {
+  const [zoomedImage, setZoomedImage] = useState<{
+    src: string;
+    alt: string;
+    title: string;
+  } | null>(null);
+
+  const handleImageClick = (src: string, alt: string, title: string) => {
+    setZoomedImage({ src, alt, title });
+  };
+
+  const closeZoom = () => {
+    setZoomedImage(null);
+  };
   const seoData = generateSEOMetadata(
     "Tear Trough Filler London | Under Eye Fillers & Dark Circles | Cosmedocs",
     "Expert tear trough filler treatments in London. Brighten under eyes, reduce dark circles & eye bags. Professional under eye fillers at Harley Street clinic.",
@@ -912,7 +927,14 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="rounded-lg overflow-hidden mb-4">
+                <div 
+                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() => handleImageClick(
+                    "/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png",
+                    "Tear trough treatment before and after comparison",
+                    "Tear Troughs Treatment Results"
+                  )}
+                >
                   <img 
                     src="/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png" 
                     alt="Tear trough treatment before and after comparison"
@@ -929,7 +951,14 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="rounded-lg overflow-hidden mb-4">
+                <div 
+                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() => handleImageClick(
+                    "/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png",
+                    "Dark circles before and after treatment",
+                    "Dark Circles Treatment Results"
+                  )}
+                >
                   <img 
                     src="/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png" 
                     alt="Dark circles before and after treatment"
@@ -946,7 +975,14 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="rounded-lg overflow-hidden mb-4">
+                <div 
+                  className="rounded-lg overflow-hidden mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() => handleImageClick(
+                    "/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png",
+                    "Eye bags treatment before and after",
+                    "Eye Bags Treatment Results"
+                  )}
+                >
                   <img 
                     src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png" 
                     alt="Eye bags treatment before and after"
@@ -1274,6 +1310,14 @@ const TearTroughFiller = () => {
             Botox for crow's feet or cheek fillers for comprehensive facial rejuvenation.
           </p>
         </div>
+
+        <ImageZoomModal
+          isOpen={zoomedImage !== null}
+          onClose={closeZoom}
+          imageSrc={zoomedImage?.src || ""}
+          imageAlt={zoomedImage?.alt || ""}
+          title={zoomedImage?.title || ""}
+        />
       </div>
     </>
   );
