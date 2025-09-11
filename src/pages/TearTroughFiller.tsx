@@ -48,11 +48,11 @@ const TearTroughFiller = () => {
   const faqs = [
     {
       question: "What is a tear trough filler?",
-      answer: "Tear trough filler is a minimally invasive treatment using hyaluronic acid-based dermal fillers to restore volume, reduce dark circles, and minimize under-eye puffiness. It targets the hollow area between your lower eyelids and upper cheek."
+      answer: "Tear trough filler is a minimally invasive treatment using hyaluronic acid-based dermal fillers for under eye bags to restore volume, reduce dark circles, and minimize under-eye puffiness. This eye bag filler targets the hollow tear through eyes area between your lower eyelids and upper cheek."
     },
     {
       question: "What types of under eye treatments do you offer?",
-      answer: "We offer comprehensive under eye solutions including: Tear Trough Fillers for volume restoration and shadow reduction, Dark Circle Treatment to address pigmentation and visible veins, Eye Bag Reduction for puffiness and smooth contours, and Under Eye Wrinkle Treatment for line smoothing and collagen stimulation."
+      answer: "We offer comprehensive under eye filler london solutions including: tear trough dermal filler for volume restoration, eye fillers for dark circles to address pigmentation, fillers for eye bags reduction for puffiness, injectables for under eyes wrinkle treatment, and specialized undereye filler for natural-looking results."
     },
     {
       question: "How do tear trough fillers differ from other under eye treatments?",
@@ -63,32 +63,32 @@ const TearTroughFiller = () => {
       answer: "The best treatment depends on your specific concerns. Tear trough fillers work best for volume loss and shadowing, dark circle treatments for pigmentation issues, eye bag reduction for puffiness, and wrinkle treatments for fine lines. Our consultation will determine the optimal approach for your needs."
     },
     {
-      question: "How long do tear trough fillers last?",
-      answer: "Tear trough fillers typically last 12-18 months. The longevity depends on your metabolism, lifestyle factors, and the type of filler used. Results are not permanent, so maintenance treatments are needed."
+      question: "How long does tear trough filler last?",
+      answer: "How long does tear trough filler last depends on individual factors, but typically 12-18 months. The longevity depends on your metabolism, lifestyle factors, and what filler for tear trough is used. Results are not permanent, so maintenance treatments are needed to sustain the under eye dermal filler before and after results."
     },
     {
       question: "Who is a good candidate for tear trough fillers?",
       answer: "Ideal candidates have realistic expectations and experience genetic discoloration, volume loss under the eyes, or early signs of aging. Not suitable for pregnant/breastfeeding individuals or those with lidocaine allergies."
     },
     {
-      question: "Is the tear trough filler treatment painful?",
-      answer: "Most patients experience little to no pain due to our expert injection techniques and use of topical anesthetic numbing cream. Any discomfort is minimal and brief during the procedure."
+      question: "Does tear trough filler hurt?",
+      answer: "Does tear trough filler hurt? Most patients experience little to no pain due to our expert injection techniques and use of topical anesthetic numbing cream. Any discomfort is minimal and brief during the eye circle filler procedure."
     },
     {
-      question: "What's the recovery time?",
-      answer: "Recovery is typically swift with immediate visible results. You may experience slight bruising and swelling for a few days. Most patients return to normal activities immediately with no significant downtime."
+      question: "What's the recovery time and tear trough filler aftercare?",
+      answer: "Recovery is typically swift with immediate visible results. You may experience tear trough filler swelling stages and slight bruising for a few days. Proper tear trough filler aftercare includes avoiding excessive touching and following our post-treatment guidelines. Most patients return to normal activities immediately with no significant downtime."
     },
     {
-      question: "What are the possible side effects?",
-      answer: "Main side effects include mild swelling or bruising around injection sites that resolve naturally. Severe complications are rare when performed by experienced professionals using quality products."
+      question: "What are the possible side effects and risks of lumpy filler under eye?",
+      answer: "Main side effects include mild swelling or bruising around injection sites that resolve naturally. Lumpy filler under eye complications are rare when performed by experienced professionals using quality products. Our expert technique minimizes risks of uneven results."
     },
     {
       question: "Can tear trough fillers be combined with other treatments?",
       answer: "Yes, they work well with Botox for crow's feet, cheek fillers, and other facial treatments. We often recommend combining treatments for comprehensive under-eye rejuvenation and optimal results."
     },
     {
-      question: "How much do tear trough fillers cost?",
-      answer: "Tear trough fillers start from £425. We also offer polynucleotide under eye treatments at £450/session with package deals available. Final pricing depends on your specific requirements."
+      question: "What is the tear trough filler price and price of under eye filler?",
+      answer: "Tear trough filler price starts from £425. The price of under eye filler and dermal filler tear trough cost varies based on individual needs. We also offer polynucleotide treatments at £450/session with package deals available. Our tear trough filler cost uk is competitive for London clinic standards."
     }
   ];
 
@@ -103,7 +103,7 @@ const TearTroughFiller = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="tear trough filler, under eye fillers, dark circles treatment, eye bags, under eye hollows, London, Harley Street, dermal fillers" />
+        <meta name="keywords" content="tear trough filler, under eye fillers, eye bag fillers, tear trough dermal filler, dermal fillers for under eye bags, eye fillers for dark circles, under eye filler london, fillers for eye bags, tear trough filler before after, tear trough filler aftercare, tear trough filler cost uk, dermal filler under eyes, eye circle filler, tear trough filler swelling stages, does tear trough filler hurt, how long does tear trough filler last, tear trough treatment, London, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -142,9 +142,9 @@ const TearTroughFiller = () => {
                   <span className="block text-sm mt-4">Brighten up your eyes, lighten up your dark circles</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  Expert <span className="text-purple-300 font-semibold">under eye filler London</span> treatments for eye bags, dark circles and tear troughs
                   <br />
-                  Transformation that speaks without saying a word
+                  <span className="text-purple-300 font-semibold">Invisible Art</span> - Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Starting from £425</p>
@@ -271,8 +271,9 @@ const TearTroughFiller = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Before and After</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Discover authentic before and after tear trough filler results from our London clinic. 
-                Our expert treatments restore volume, brighten under eyes, and reduce dark circles for natural-looking rejuvenation.
+                Discover authentic tear trough filler before after results from our London clinic. 
+                Our expert eye bag fillers and dermal fillers for under eye bags restore volume, brighten under eyes, 
+                and reduce dark circles for natural-looking rejuvenation without lumpy filler under eye issues.
               </p>
             </motion.div>
 
@@ -319,8 +320,9 @@ const TearTroughFiller = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Under Eye Circles | Tear Troughs</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                The anatomy of the tear trough is intricate, consisting of fat spaces, ligaments, and muscles that all change with age. 
-                These alterations can lead to issues like darkness and hollowness under the eyes.
+                Understanding tear through eyes anatomy is crucial for effective eye fillers for eye bags treatment. 
+                The tear trough area consists of fat spaces, ligaments, and muscles that change with age, 
+                leading to eye bags and under eye circles that require specialized injectables for under eyes.
               </p>
             </motion.div>
 
@@ -337,12 +339,13 @@ const TearTroughFiller = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-6">
-                      The Tear Trough Filler or the Eye Bag Filler is a minimally invasive treatment that aims to restore volume, 
-                      fill in eye wrinkles, and minimize under-eye puffiness in minutes.
+                      The tear trough dermal filler or eye bag filler is a minimally invasive treatment using what filler for tear trough - 
+                      premium hyaluronic acid. This undereye filler treatment aims to restore volume, reduce fillers for under eye circles, 
+                      and minimize puffiness while addressing how to remove eye circles effectively.
                     </p>
                     <p className="text-gray-300 mb-6">
-                      Soft gel-like substance, hyaluronic acid-based Dermal fillers combined with master injection skills rejuvenate 
-                      the tear trough area, a junction between your lower eyelids and upper cheek.
+                      Our tear trough filler cost uk starts from £425. These dermal fillers under eyes use soft gel-like hyaluronic acid 
+                      combined with expert injection techniques to rejuvenate the tear trough area - the junction between your lower eyelids and upper cheek.
                     </p>
                     
                     <div className="bg-purple-900/30 border-l-4 border-purple-500 p-4 rounded-r-lg">
@@ -368,9 +371,10 @@ const TearTroughFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Reason Behind Under Eye Dark Circles</h2>
+              <h2 className="text-3xl font-bold mb-4">Reason Behind Under Eye Dark Circles & Eye Bags</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding the root causes of under-eye concerns helps us provide the most effective treatment approach for lasting results.
+                Understanding the root causes behind eye bags, tear through eyes, and under eye circles helps us provide 
+                the most effective fillers for dark circles and eye fillers for eye bags treatment approach for lasting results.
               </p>
             </motion.div>
 
@@ -431,9 +435,9 @@ const TearTroughFiller = () => {
               <Card className="bg-black border-purple-500/20 p-6">
                 <h3 className="text-lg font-semibold mb-4 text-center text-white">How Tear Trough Fillers Address These Issues</h3>
                 <p className="text-gray-300 text-center">
-                  Our precisely placed hyaluronic acid fillers restore lost volume, smooth the transition between the lower eyelid and cheek, 
-                  and eliminate the shadowing effect that creates the appearance of dark circles. This creates a more youthful, refreshed look 
-                  while maintaining natural facial expressions - our invisible art approach to aesthetic medicine.
+                  Our precisely placed trough filler and eye circle filler treatments restore lost volume, smooth the transition between 
+                  the lower eyelid and cheek, and eliminate the shadowing effect. This teardrop filler approach creates a more youthful, 
+                  refreshed look while maintaining natural facial expressions - our invisible art approach to aesthetic medicine.
                 </p>
               </Card>
             </motion.div>
@@ -897,10 +901,10 @@ const TearTroughFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Tear Trough Filler Pricing London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Tear Trough Filler Price & Cost in London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for premium under eye treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
+                Transparent tear trough filler cost uk pricing for premium under eye filler london treatments. 
+                All prices include consultation, dermal filler under eyes treatment, and comprehensive tear trough before and after support from our expert medical team.
               </p>
             </motion.div>
 
@@ -917,7 +921,7 @@ const TearTroughFiller = () => {
                     <div className="text-purple-300 text-4xl font-bold">£425</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional under eye enhancement with premium hyaluronic acid</p>
+                    <p className="text-gray-300">Professional eye bag fillers and teardrop filler enhancement with premium hyaluronic acid for natural-looking results</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
