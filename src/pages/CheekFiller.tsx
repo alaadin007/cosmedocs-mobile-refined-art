@@ -456,7 +456,12 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">3ml Cheek Filler Men Before & After</h3>
-                <div className="mb-6">
+                <div className="mb-6 grid grid-cols-1 gap-4">
+                  <img 
+                    src="/lovable-uploads/1e8bac0a-c2b4-4629-b56e-cce71b126dfe.png"
+                    alt="3ml male cheek filler before and after volume loss correction London"
+                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                  />
                   <img 
                     src={menCheekImage}
                     alt="3ml male cheek filler before and after masculine enhancement London Cosmedocs"
