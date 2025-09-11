@@ -41,19 +41,9 @@ const JawlineFiller = () => {
   // Before/after images for the viewer - Real jawline filler results from #cosmejaw gallery
   const beforeAfterImages = [
     {
-      src: jawlineFiller1ml,
-      alt: "1ml Jawline filler before and after London Dr Ahmed Haq Cosmedocs Harley Street natural enhancement results",
-      caption: "1ml jawline filler transformation showing natural definition and enhanced facial contours"
-    },
-    {
       src: jawlineFiller1mlTransformation,
       alt: "Jawline filler 1ml before after profile view Harley Street London Cosmedocs treatment results subtle enhancement",
       caption: "Subtle 1ml jawline enhancement achieving natural profile improvement"
-    },
-    {
-      src: jawlineFiller2ml,
-      alt: "2ml Jawline filler before and after London Cosmedocs Harley Street dramatic jawline enhancement results",
-      caption: "2ml jawline filler transformation demonstrating significant jawline definition and facial balance"
     },
     {
       src: jawlineGallery1,
