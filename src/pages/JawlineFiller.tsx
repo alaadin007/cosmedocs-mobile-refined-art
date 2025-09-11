@@ -442,45 +442,27 @@ const JawlineFiller = () => {
         {/* How Does Jaw Filler Work Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">How Does Jaw Filler Work?</h2>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  Jaw fillers enhance volume and definition, creating a clear separation between your face and neck. 
-                  They sculpt the natural bone structure for a sharper, more defined jawline, tailored to your unique features.
-                </p>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  Filler can also define your jaw angle, enhance a receding chin, and reduce sagging jowls and give 
-                  projection to no jawline, weak jawline, bad jawline or a soft jawline.
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Just 1ml per side post chin and jaw filler can deliver natural, transformative results, 
-                  giving you a beautifully contoured jawline.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <img 
-                  src={howJawFillerWorks} 
-                  alt="How jaw filler works medical illustration showing dermal filler placement in jawline anatomy"
-                  className="w-full h-auto rounded-lg shadow-2xl"
-                />
-                <p className="text-sm text-gray-400 mt-4">
-                  Medical illustration showing how dermal fillers enhance jawline definition and structure
-                </p>
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Jaw Filler Work?</h2>
+              <p className="text-gray-300 mb-4 leading-relaxed text-lg">
+                Jaw fillers enhance volume and definition, creating a clear separation between your face and neck. 
+                They sculpt the natural bone structure for a sharper, more defined jawline, tailored to your unique features.
+              </p>
+              <p className="text-gray-300 mb-4 leading-relaxed text-lg">
+                Filler can also define your jaw angle, enhance a receding chin, and reduce sagging jowls and give 
+                projection to no jawline, weak jawline, bad jawline or a soft jawline.
+              </p>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                Just 1ml per side post chin and jaw filler can deliver natural, transformative results, 
+                giving you a beautifully contoured jawline.
+              </p>
+            </motion.div>
           </div>
         </section>
 
