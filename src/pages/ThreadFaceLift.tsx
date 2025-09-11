@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Clock, User, CheckCircle, Star, Calendar, Shield, Award, MapPin } from 'lucide-react';
+import { Clock, User, CheckCircle, Star, Calendar, Shield, Award, MapPin, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import PopularTreatments from '@/components/PopularTreatments';
@@ -226,6 +226,238 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing-section" className="py-20 bg-black">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-white">PDO Thread Lift Pricing London</h2>
+            <p className="text-gray-300 max-w-3xl mx-auto">
+              Transparent pricing for premium PDO thread lift treatments. All prices include consultation, 
+              treatment, and aftercare support from our expert medical team.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-accent border-purple-500 h-full text-center">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl">Mini Thread Lift</CardTitle>
+                  <div className="text-purple-300 text-4xl font-bold">£800</div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-300">Perfect for subtle lifting and first-time treatments</p>
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300 text-sm">4-6 PDO threads</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300 text-sm">Consultation included</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300 text-sm">Aftercare support</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                </div>
+                <CardHeader className="pt-8">
+                  <CardTitle className="text-white text-2xl">Full Face Thread Lift</CardTitle>
+                  <div className="text-white text-4xl font-bold">£1,500</div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-purple-100">Comprehensive lifting for dramatic results</p>
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-white" size={16} />
+                      <span className="text-purple-100 text-sm">12-16 PDO threads</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-white" size={16} />
+                      <span className="text-purple-100 text-sm">Full facial assessment</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-white" size={16} />
+                      <span className="text-purple-100 text-sm">Extended aftercare</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-white" size={16} />
+                      <span className="text-purple-100 text-sm">4-week follow-up</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-accent border-gray-700 h-full text-center">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                  <div className="text-purple-300 text-4xl font-bold">£50</div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-300">Professional assessment and treatment planning</p>
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300 text-sm">Full facial assessment</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-gray-300 mb-6">
+              *Consultation fee is deducted from treatment cost if you proceed on the same day
+            </p>
+            <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              Book Your Consultation
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Cosmedocs */}
+      <section className="py-20 bg-accent">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Award className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+              <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+              <p className="text-gray-300">
+                <a 
+                  href="https://www.harleystreetinstitute.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-300 hover:text-purple-200 underline"
+                >
+                  Harley Street Institute
+                </a> trainers
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+              <p className="text-gray-300">Premium FDA-approved PDO threads only</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <MapPin className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
+              <p className="text-gray-300">Harley Street, Central London</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Shield className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Safety</h3>
+              <p className="text-gray-300">CQC registered clinic with highest standards</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-accent">
         <div className="page-container">
@@ -259,26 +491,27 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Call to Action */}
       <section className="py-20">
         <div className="page-container text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto"
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Appearance?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Book your consultation today and discover how PDO thread face lift can help you achieve natural, long-lasting results.
+            <h2 className="text-3xl font-bold mb-4">Ready for Your PDO Thread Lift Transformation?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Book your consultation with our expert cosmetic doctors and discover how PDO thread lifts 
+              can enhance your natural beauty with subtle, long-lasting results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                 Book Free Consultation
               </Button>
-              <Button variant="outline" size="lg" className="px-8">
-                Call: 020 7401 8757
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                Call 0333 0551 503
               </Button>
             </div>
           </motion.div>
