@@ -819,6 +819,61 @@ const TearTroughFiller = () => {
               </p>
             </motion.div>
 
+            {/* Treatment Images Display */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="rounded-lg overflow-hidden mb-4">
+                  <img 
+                    src="/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png" 
+                    alt="Tear trough treatment before and after comparison"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-white text-xl font-semibold">Tear Troughs</h3>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="rounded-lg overflow-hidden mb-4">
+                  <img 
+                    src="/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png" 
+                    alt="Dark circles before and after treatment"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-white text-xl font-semibold">Dark Circles</h3>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="rounded-lg overflow-hidden mb-4">
+                  <img 
+                    src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png" 
+                    alt="Eye bags treatment before and after"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <h3 className="text-white text-xl font-semibold">Eye Bags</h3>
+              </motion.div>
+            </div>
+
+            {/* Information Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -828,13 +883,6 @@ const TearTroughFiller = () => {
               >
                 <Card className="bg-black border-purple-500/20 h-full">
                   <CardHeader className="text-center">
-                    <div className="w-full h-32 mb-4 rounded-lg overflow-hidden">
-                      <img 
-                        src="/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png" 
-                        alt="Tear trough treatment before and after comparison"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                     <CardTitle className="text-white text-xl">Tear Troughs</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -868,13 +916,6 @@ const TearTroughFiller = () => {
               >
                 <Card className="bg-black border-purple-500/20 h-full">
                   <CardHeader className="text-center">
-                    <div className="w-full h-32 mb-4 rounded-lg overflow-hidden">
-                      <img 
-                        src="/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png" 
-                        alt="Dark circles before and after treatment"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                     <CardTitle className="text-white text-xl">Dark Circles</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -908,13 +949,6 @@ const TearTroughFiller = () => {
               >
                 <Card className="bg-black border-purple-500/20 h-full">
                   <CardHeader className="text-center">
-                    <div className="w-full h-32 mb-4 rounded-lg overflow-hidden">
-                      <img 
-                        src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png" 
-                        alt="Eye bags treatment before and after"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                     <CardTitle className="text-white text-xl">Eye Bags</CardTitle>
                   </CardHeader>
                   <CardContent>
