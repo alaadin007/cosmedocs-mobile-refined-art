@@ -339,8 +339,8 @@ const JawlineFiller = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Jawline Filler Before and After</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See the dramatic, natural results achieved with our expert jawline filler treatments. 
-                Each patient receives a personalized approach for optimal jaw sculpting.
+                Discover how our patients transformed their confidence with expert jawline filler treatments. 
+                Each journey is unique, with personalized approaches that enhance natural features and create beautiful, lasting results.
               </p>
             </motion.div>
 
