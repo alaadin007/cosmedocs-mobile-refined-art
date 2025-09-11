@@ -229,7 +229,7 @@ const JawlineFiller = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Natural HD Package £950</p>
+                  <p className="text-2xl text-purple-300 font-bold">Natural HD Package</p>
                   <p className="text-sm text-gray-300">Expert jaw sculpting • CQC Registered • Natural enhancement results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
