@@ -224,9 +224,9 @@ const JawlineFiller = () => {
                   a jaw-dropping jawline - slimmer, sleeker & sharper
                 </p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  Dr. Ahmed Haq | Harley Street
+                  Invisible art - natural jawline enhancement that speaks without words
                   <br />
-                  Create a jaw-dropping jawline - slimmer, sleeker & sharper
+                  #cosmejaw - Expert jaw sculpting and definition
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
