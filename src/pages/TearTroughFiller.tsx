@@ -51,6 +51,18 @@ const TearTroughFiller = () => {
       answer: "Tear trough filler is a minimally invasive treatment using hyaluronic acid-based dermal fillers to restore volume, reduce dark circles, and minimize under-eye puffiness. It targets the hollow area between your lower eyelids and upper cheek."
     },
     {
+      question: "What types of under eye treatments do you offer?",
+      answer: "We offer comprehensive under eye solutions including: Tear Trough Fillers for volume restoration and shadow reduction, Dark Circle Treatment to address pigmentation and visible veins, Eye Bag Reduction for puffiness and smooth contours, and Under Eye Wrinkle Treatment for line smoothing and collagen stimulation."
+    },
+    {
+      question: "How do tear trough fillers differ from other under eye treatments?",
+      answer: "Tear trough fillers specifically target volume loss and hollowing, while dark circle treatments focus on pigmentation and skin thickening. Eye bag reduction addresses puffiness, and wrinkle treatments concentrate on fine lines. Each treatment can be combined for comprehensive rejuvenation."
+    },
+    {
+      question: "Which under eye treatment is right for me?",
+      answer: "The best treatment depends on your specific concerns. Tear trough fillers work best for volume loss and shadowing, dark circle treatments for pigmentation issues, eye bag reduction for puffiness, and wrinkle treatments for fine lines. Our consultation will determine the optimal approach for your needs."
+    },
+    {
       question: "How long do tear trough fillers last?",
       answer: "Tear trough fillers typically last 12-18 months. The longevity depends on your metabolism, lifestyle factors, and the type of filler used. Results are not permanent, so maintenance treatments are needed."
     },
@@ -284,73 +296,6 @@ const TearTroughFiller = () => {
         </section>
 
         {/* Treatment Types Section */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Types of Under Eye Treatments</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                We offer comprehensive solutions for various under-eye concerns, each tailored to your specific needs.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "Tear Trough Fillers",
-                  description: "Target the hollows between cheekbones and lower eyelids to restore volume and reduce tired appearance.",
-                  features: ["Volume restoration", "Shadow reduction", "Natural contour enhancement"]
-                },
-                {
-                  title: "Dark Circle Treatment",
-                  description: "Address thinning skin and visible veins that cause unflattering darkness under the eyes.",
-                  features: ["Skin thickening", "Vein camouflage", "Pigmentation improvement"]
-                },
-                {
-                  title: "Eye Bag Reduction",
-                  description: "Early-stage eye bags can be effectively masked with strategic filler placement.",
-                  features: ["Puffiness reduction", "Smooth contours", "Youthful appearance"]
-                },
-                {
-                  title: "Under Eye Wrinkle Treatment",
-                  description: "Soft fillers hydrate and fill fine lines while stimulating collagen production.",
-                  features: ["Line smoothing", "Collagen stimulation", "Instant hydration"]
-                }
-              ].map((treatment, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-black border-purple-500/20 h-full">
-                    <CardHeader>
-                      <CardTitle className="text-white text-xl">{treatment.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 mb-4">{treatment.description}</p>
-                      <div className="space-y-2">
-                        {treatment.features.map((feature, i) => (
-                          <div key={i} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                            <span className="text-gray-300 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Reason Behind Under Eye Dark Circles */}
         <section className="py-20 bg-accent">
           <div className="page-container">
