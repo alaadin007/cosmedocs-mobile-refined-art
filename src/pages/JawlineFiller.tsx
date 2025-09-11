@@ -205,7 +205,7 @@ const JawlineFiller = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section */}
+        {/* Hero Section - Updated to match PDO Thread design */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -215,19 +215,23 @@ const JawlineFiller = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-white">
-                  Jawline Filler
-                  <span className="block text-purple-300">London</span>
-                  <span className="block text-sm mt-4 text-gray-400">#cosmejaw</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  Expert Jawline
+                  <span className="block text-purple-300">Filler London</span>
+                  <span className="block text-sm mt-4">#cosmejaw</span>
                 </h1>
                 <p className="text-xl text-purple-300 mb-8 font-semibold">
                   a jaw-dropping jawline - slimmer, sleeker & sharper
                 </p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  Invisible art - natural jawline enhancement that speaks without words
+                  <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
-                  #cosmejaw - Expert jaw sculpting and definition
+                  Transformation that speaks without saying a word
                 </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Natural HD Package £950</p>
+                  <p className="text-sm text-gray-300">Expert jaw sculpting • CQC Registered • Natural enhancement results</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     onClick={() => window.open(bookingUrl, "_blank")}
@@ -235,13 +239,13 @@ const JawlineFiller = () => {
                   >
                     Book Consultation
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    View Pricing
-                  </Button>
+                  <BeforeAfterImageViewer 
+                    images={beforeAfterImages}
+                    triggerLabel="View Results"
+                    title="Jawline Filler Before and After"
+                    description="Real patient transformations with our expert jawline filler treatments"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm border-2"
+                  />
                 </div>
               </motion.div>
               
