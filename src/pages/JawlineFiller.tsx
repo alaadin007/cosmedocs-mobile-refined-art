@@ -714,14 +714,6 @@ const JawlineFiller = () => {
                 </p>
               </div>
               
-              <a 
-                href={bookingUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold shadow-2xl inline-flex items-center justify-center"
-              >
-                Book Your Consultation
-              </a>
             </div>
           </div>
         </section>
