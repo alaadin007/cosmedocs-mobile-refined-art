@@ -607,18 +607,10 @@ const JawlineFiller = () => {
             <div className="text-center mt-16">
               <div className="bg-purple-900/20 rounded-lg p-8 border border-purple-500/20 max-w-3xl mx-auto">
                 <h4 className="text-white text-xl font-semibold mb-4">Not sure which option is right for you?</h4>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300">
                   Our expert team will assess your facial anatomy, discuss your aesthetic goals, and recommend 
                   the optimal treatment volume during your consultation.
                 </p>
-                <a 
-                  href={bookingUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold shadow-2xl inline-flex items-center justify-center transition-colors duration-200"
-                >
-                  Book Your Consultation
-                </a>
               </div>
             </div>
           </div>
