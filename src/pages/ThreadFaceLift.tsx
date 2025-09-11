@@ -8,6 +8,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import PopularTreatments from '@/components/PopularTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
+import threadLiftImage1 from '@/assets/thread-lift-before-after-1.jpg';
+import pdoThreadsImage from '@/assets/pdo-threads-before-after.jpg';
+import threadLiftImage2 from '@/assets/thread-lift-before-after-2.png';
+import pdoThreadLiftImage from '@/assets/pdo-thread-lift-before-after.jpg';
 
 const seoData = generateSEOMetadata(
   "PDO Thread Face Lift London | Non-Surgical Facelift - CosmeDocs",
@@ -46,19 +50,24 @@ const treatmentDetails = [
 
 const beforeAfterImages = [
   {
-    src: "/placeholder.svg",
-    alt: "PDO Thread Lift before and after results",
-    caption: "Natural lifting and tightening results"
+    src: threadLiftImage1,
+    alt: "Thread face lift before and after image 2 weeks later - combination PDO thread lift",
+    caption: "Combination PDO Thread lift before and after combined with skin treatment"
   },
   {
-    src: "/placeholder.svg", 
-    alt: "Thread facelift jawline definition",
-    caption: "Enhanced jawline definition and neck contour"
+    src: pdoThreadsImage, 
+    alt: "PDO Thread Lift Before and After Image Performed In London",
+    caption: "PDO Thread Face Lift Transformation in London"
   },
   {
-    src: "/placeholder.svg",
-    alt: "Non-surgical facelift transformation",
-    caption: "Subtle yet effective facial rejuvenation"
+    src: threadLiftImage2,
+    alt: "PDO thread lift before and after procedure final results",
+    caption: "PDO Thread Lift: Before and After Comparison - Final results in a few weeks once swelling settles"
+  },
+  {
+    src: pdoThreadLiftImage,
+    alt: "PDO thread lift before after natural facial rejuvenation",
+    caption: "Natural lifting and tightening results with PDO threads"
   }
 ];
 
@@ -252,15 +261,15 @@ export function ThreadFaceLift() {
             >
               <Card className="bg-accent border-purple-500 h-full text-center">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl">Mini Thread Lift</CardTitle>
-                  <div className="text-purple-300 text-4xl font-bold">£800</div>
+                  <CardTitle className="text-white text-2xl">Full Face Thread Lift</CardTitle>
+                  <div className="text-purple-300 text-4xl font-bold">£2,750</div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-300">Perfect for subtle lifting and first-time treatments</p>
+                  <p className="text-gray-300">Comprehensive lifting for dramatic facial rejuvenation</p>
                   <div className="space-y-2 text-left">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">4-6 PDO threads</span>
+                      <span className="text-gray-300 text-sm">Full face and neck treatment</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
@@ -268,7 +277,7 @@ export function ThreadFaceLift() {
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">Aftercare support</span>
+                      <span className="text-gray-300 text-sm">Extended aftercare support</span>
                     </div>
                   </div>
                 </CardContent>
@@ -286,27 +295,23 @@ export function ThreadFaceLift() {
                   <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
                 </div>
                 <CardHeader className="pt-8">
-                  <CardTitle className="text-white text-2xl">Full Face Thread Lift</CardTitle>
-                  <div className="text-white text-4xl font-bold">£1,500</div>
+                  <CardTitle className="text-white text-2xl">Jawline Definition</CardTitle>
+                  <div className="text-white text-4xl font-bold">£650-£950</div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-purple-100">Comprehensive lifting for dramatic results</p>
+                  <p className="text-purple-100">Perfect for mild jowling and jawline enhancement</p>
                   <div className="space-y-2 text-left">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-white" size={16} />
-                      <span className="text-purple-100 text-sm">12-16 PDO threads</span>
+                      <span className="text-purple-100 text-sm">Targeted jawline treatment</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-white" size={16} />
-                      <span className="text-purple-100 text-sm">Full facial assessment</span>
+                      <span className="text-purple-100 text-sm">Immediate lifting effect</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-white" size={16} />
-                      <span className="text-purple-100 text-sm">Extended aftercare</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="text-white" size={16} />
-                      <span className="text-purple-100 text-sm">4-week follow-up</span>
+                      <span className="text-purple-100 text-sm">2-3 year results</span>
                     </div>
                   </div>
                 </CardContent>
@@ -345,6 +350,38 @@ export function ThreadFaceLift() {
             </motion.div>
           </div>
 
+          {/* Additional Pricing Options */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-12"
+          >
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">Small PDO Threads For Skin Tightening</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { area: "Lower Facial Slimming", price: "£650" },
+                { area: "Chin Lift / Tightening", price: "£500-£750" },
+                { area: "Tear Trough / Under Eye Circles", price: "£400" },
+                { area: "Eyebrow Thread Lift (lateral)", price: "£600" },
+                { area: "Tear Trough & Eye Brow Lift", price: "£900" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-900 rounded-lg p-6 text-center border border-gray-700"
+                >
+                  <h4 className="text-white font-semibold mb-2">{item.area}</h4>
+                  <p className="text-purple-300 text-2xl font-bold">{item.price}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -362,8 +399,57 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
-      {/* Why Choose Cosmedocs */}
+      {/* Treatment Areas Section */}
       <section className="py-20 bg-accent">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-white">What Can Be Treated?</h2>
+            <p className="text-gray-300 max-w-3xl mx-auto">
+              PDO thread lifts can address multiple areas of concern for comprehensive facial rejuvenation
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { area: "Sagging Facial Skin", description: "Lift and tighten loose, sagging skin across the face" },
+              { area: "Cheeks", description: "Restore volume and lift to the mid-face area" },
+              { area: "Forehead and Brow Area", description: "Smooth forehead lines and lift drooping brows" },
+              { area: "Around the Eyes", description: "Address crow's feet and under-eye sagging" },
+              { area: "Neck, Jawline, and Jowls", description: "Define jawline and tighten neck skin" },
+              { area: "Deep Wrinkles and Folds", description: "Soften nasolabial folds and marionette lines" },
+              { area: "Drooping Mouth Corners", description: "Lift downturned mouth corners for a youthful appearance" },
+              { area: "Lines Around the Mouth", description: "Reduce smoker's lines and perioral wrinkles" },
+              { area: "Body Areas", description: "Treat abdomen, arms, and other body areas requiring lifting" }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-gray-800 h-full hover:border-purple-500 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-white text-lg">{item.area}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Cosmedocs */}
+      <section className="py-20 bg-black">
         <div className="page-container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
