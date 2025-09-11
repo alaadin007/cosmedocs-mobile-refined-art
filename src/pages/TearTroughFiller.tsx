@@ -803,6 +803,135 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
+        {/* Tear Troughs Vs. Dark Circles Vs. Eye Bags Comparison */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Tear Troughs Vs. Dark Circles Vs. Eye Bags</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                It is essential to know what condition you are dealing with and what has caused it to happen in the first place. 
+                Here is the breakdown of different under-eye concerns and how they can be effectively treated.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 flex items-center justify-center">
+                      <span className="text-2xl">👁️</span>
+                    </div>
+                    <CardTitle className="text-white text-xl">Tear Troughs</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center mb-4">
+                      A deep groove or crease between your lower eyelid and upper cheek. Depending on its depth, 
+                      it can cast a shadow below your eyes, giving a tired, aged, and sad look.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Often hereditary</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Volume loss under eyes</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Creates tired appearance</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 flex items-center justify-center">
+                      <span className="text-2xl">🌙</span>
+                    </div>
+                    <CardTitle className="text-white text-xl">Dark Circles</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center mb-4">
+                      Common condition characterized by visible discoloration. May involve dermal fillers to address 
+                      volume loss and combination treatments for comprehensive rejuvenation.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Iron deposits (bluish hue)</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Pigmentation (brownish hue)</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Genetic predisposition</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-pink-600 to-pink-400 flex items-center justify-center">
+                      <span className="text-2xl">💼</span>
+                    </div>
+                    <CardTitle className="text-white text-xl">Eye Bags</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center mb-4">
+                      Small bulges or pouches underneath the eyes. Can be hereditary or caused by excessive salt intake, 
+                      thyroid issues, or aging. Natural aging process is the primary cause.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Often hereditary</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Lifestyle factors</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Aging process</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
