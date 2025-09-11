@@ -231,6 +231,35 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
+      {/* Reveal Your Radiance Section */}
+      <section className="py-20 bg-black">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold mb-6 text-white">
+              🌟 Reveal Your Radiance with PDO Thread Lift 🌟
+            </h2>
+            <p className="text-xl text-gray-300 leading-relaxed">
+              Are you ready to turn back the clock on ageing and unveil a more youthful, rejuvenated appearance? 
+              Look no further than the transformative power of PDO thread face lift! This non-surgical procedure 
+              utilises bio-stimulating materials to stimulate collagen production, effectively lifting and 
+              tightening sagging skin. Say goodbye to fine lines, wrinkles, and loss of volume, and hello to 
+              a refreshed, revitalised look that lasts.
+            </p>
+            <div className="mt-8">
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
+                Discover Your Transformation
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Treatment Overview */}
       <section className="py-20">
         <div className="page-container">
