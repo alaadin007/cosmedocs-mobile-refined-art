@@ -137,12 +137,13 @@ export function ThreadFaceLift() {
       {/* Hero Section - Matching LipFillers style */}
       <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
         <div className="page-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-left max-w-2xl ml-0"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-left"
+            >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Expert PDO Thread
               <span className="block text-purple-300">Face Lift</span>
@@ -168,7 +169,10 @@ export function ThreadFaceLift() {
                 View Price List
               </Button>
             </div>
-          </motion.div>
+            </motion.div>
+            
+            <div className="hidden lg:block"></div>
+          </div>
         </div>
       </section>
 
