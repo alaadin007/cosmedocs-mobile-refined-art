@@ -569,7 +569,7 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
-      {/* Reveal Your Radiance Section */}
+      {/* PDO Thread Lift Summary Section */}
       <section className="py-20 bg-black">
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -579,18 +579,41 @@ export function ThreadFaceLift() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">
-                🌟 Reveal Your Radiance with PDO Thread Lift 🌟
+              <h2 className="text-3xl font-bold mb-6 text-white">
+                PDO Thread Lift Treatment Summary
               </h2>
-              <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                Are you ready to turn back the clock on ageing and unveil a more youthful, rejuvenated appearance? 
-                Look no further than the transformative power of PDO thread face lift! This non-surgical procedure 
-                utilises bio-stimulating materials to stimulate collagen production, effectively lifting and 
-                tightening sagging skin. Say goodbye to fine lines, wrinkles, and loss of volume, and hello to 
-                a refreshed, revitalised look that lasts.
-              </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
-                Discover Your Transformation
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-white">Non-Surgical Face Lift</h3>
+                    <p>Advanced PDO threads for natural facial lifting and tightening</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-white">Collagen Stimulation</h3>
+                    <p>Bio-stimulating threads promote natural collagen production</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-white">Immediate & Long-term Results</h3>
+                    <p>Instant lifting effect with continued improvement over 2-3 months</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-white">Minimal Downtime</h3>
+                    <p>Return to work within 0-2 days with full recovery in one week</p>
+                  </div>
+                </div>
+              </div>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold mt-8">
+                Book Consultation
               </Button>
             </motion.div>
 
