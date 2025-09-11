@@ -2,6 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Clock, User, CheckCircle, Star, Calendar, Shield, Award, MapPin, GraduationCap } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -175,13 +182,52 @@ export function ThreadFaceLift() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Real Patient Results</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See the natural-looking results achieved with our PDO thread face lift treatments
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">PDO Thread Lift Before and After Results</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              See the natural-looking results achieved with our PDO thread face lift treatments in London. 
+              Real patient transformations showing 2-3 years lasting results.
             </p>
           </motion.div>
-          
-          <BeforeAfterImageViewer images={beforeAfterImages} />
+
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {beforeAfterImages.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="relative group cursor-pointer p-2"
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                    <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                      <p className="text-white text-sm font-medium">{image.caption}</p>
+                    </div>
+                    <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
+                      BEFORE & AFTER
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+            <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+          </Carousel>
+
+          <div className="text-center mt-12">
+            <BeforeAfterImageViewer 
+              images={beforeAfterImages}
+              triggerLabel="View All Before & After Photos"
+              title="PDO Thread Lift Results Gallery"
+              description="Comprehensive gallery of our thread lift treatments showing natural facial rejuvenation"
+            />
+          </div>
         </div>
       </section>
 
