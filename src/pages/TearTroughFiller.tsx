@@ -295,7 +295,94 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Types Section */}
+        {/* Under Eye Circles & Tear Troughs Anatomy */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Under Eye Circles | Tear Troughs</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                The anatomy of the tear trough is intricate, consisting of fat spaces, ligaments, and muscles that all change with age. 
+                These alterations can lead to issues like darkness and hollowness under the eyes.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Addressing Under-Eye Concerns with Tear Trough Fillers</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-6">
+                      Due to the fragile nature of the under-eye area, it is susceptible to:
+                    </p>
+                    <div className="space-y-3">
+                      {[
+                        "Early signs of ageing",
+                        "Volume loss", 
+                        "Fatigue",
+                        "Dark circles",
+                        "Puffiness",
+                        "Hollowness",
+                        "Fine lines and wrinkles"
+                      ].map((concern, index) => (
+                        <div key={index} className="flex items-center space-x-3">
+                          <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                          <span className="text-gray-300">{concern}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-gray-300 mt-6 font-medium">
+                      These concerns can be efficiently corrected with the use of tear trough fillers.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500/20 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">What Is A Tear Trough Filler?</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-6">
+                      The Tear Trough Filler or the Eye Bag Filler is a minimally invasive treatment that aims to restore volume, 
+                      fill in eye wrinkles, and minimize under-eye puffiness in minutes.
+                    </p>
+                    <p className="text-gray-300 mb-6">
+                      Soft gel-like substance, hyaluronic acid-based Dermal fillers combined with master injection skills rejuvenate 
+                      the tear trough area, a junction between your lower eyelids and upper cheek.
+                    </p>
+                    
+                    <div className="bg-purple-900/30 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                      <h4 className="text-purple-300 font-semibold mb-2">Did you know?</h4>
+                      <p className="text-gray-300 text-sm">
+                        The eye area is very sensitive and the skin around the eyes is up to 10 times more fragile than the skin of your face.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Reason Behind Under Eye Dark Circles */}
         <section className="py-20 bg-accent">
           <div className="page-container">
