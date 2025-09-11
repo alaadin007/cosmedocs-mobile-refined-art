@@ -331,6 +331,55 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
+      {/* Treatment Areas Section */}
+      <section className="py-20 bg-accent">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-white">What Can Be Treated?</h2>
+            <p className="text-gray-300 max-w-3xl mx-auto">
+              PDO thread lifts can address multiple areas of concern for comprehensive facial rejuvenation
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { area: "Sagging Facial Skin", description: "Lift and tighten loose, sagging skin across the face" },
+              { area: "Cheeks", description: "Restore volume and lift to the mid-face area" },
+              { area: "Forehead and Brow Area", description: "Smooth forehead lines and lift drooping brows" },
+              { area: "Around the Eyes", description: "Address crow's feet and under-eye sagging" },
+              { area: "Neck, Jawline, and Jowls", description: "Define jawline and tighten neck skin" },
+              { area: "Deep Wrinkles and Folds", description: "Soften nasolabial folds and marionette lines" },
+              { area: "Drooping Mouth Corners", description: "Lift downturned mouth corners for a youthful appearance" },
+              { area: "Lines Around the Mouth", description: "Reduce smoker's lines and perioral wrinkles" },
+              { area: "Body Areas", description: "Treat abdomen, arms, and other body areas requiring lifting" }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-gray-800 h-full hover:border-purple-500 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-white text-lg">{item.area}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="pricing-section" className="py-20 bg-black">
         <div className="page-container">
@@ -492,55 +541,6 @@ export function ThreadFaceLift() {
               Book Your Consultation
             </Button>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Treatment Areas Section */}
-      <section className="py-20 bg-accent">
-        <div className="page-container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-white">What Can Be Treated?</h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              PDO thread lifts can address multiple areas of concern for comprehensive facial rejuvenation
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { area: "Sagging Facial Skin", description: "Lift and tighten loose, sagging skin across the face" },
-              { area: "Cheeks", description: "Restore volume and lift to the mid-face area" },
-              { area: "Forehead and Brow Area", description: "Smooth forehead lines and lift drooping brows" },
-              { area: "Around the Eyes", description: "Address crow's feet and under-eye sagging" },
-              { area: "Neck, Jawline, and Jowls", description: "Define jawline and tighten neck skin" },
-              { area: "Deep Wrinkles and Folds", description: "Soften nasolabial folds and marionette lines" },
-              { area: "Drooping Mouth Corners", description: "Lift downturned mouth corners for a youthful appearance" },
-              { area: "Lines Around the Mouth", description: "Reduce smoker's lines and perioral wrinkles" },
-              { area: "Body Areas", description: "Treat abdomen, arms, and other body areas requiring lifting" }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-800 h-full hover:border-purple-500 transition-colors">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg">{item.area}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">{item.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
