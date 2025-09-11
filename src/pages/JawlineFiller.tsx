@@ -226,7 +226,7 @@ const JawlineFiller = () => {
                 <span className="text-purple-300 font-semibold">Invisible Art</span>
               </p>
               <p className="text-white mb-8">
-                Transformation that speaks without saying a word
+                Jaw sculpting transformation that speaks without saying a word
               </p>
               <p className="text-sm text-gray-300 mb-8">
                 #cosmejaw #jawlinefiller #jawsculpting - Expert jaw sculpting with natural enhancement results
