@@ -141,7 +141,7 @@ export function ThreadFaceLift() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left max-w-2xl"
+            className="text-left max-w-2xl ml-0"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Expert PDO Thread
