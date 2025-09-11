@@ -144,7 +144,7 @@ const TearTroughFiller = () => {
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   Expert <span className="text-purple-300 font-semibold">under eye filler London</span> treatments for eye bags, dark circles and tear troughs
                   <br />
-                  <span className="text-purple-300 font-semibold">Under eye transformation that speaks without saying a word</span>
+                  <span className="text-purple-300 font-medium text-lg">Invisible Art</span> - Under eye transformation that speaks without saying a word
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
