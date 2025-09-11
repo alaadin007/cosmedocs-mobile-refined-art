@@ -569,7 +569,7 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
-      {/* PDO Thread Lift Summary Section */}
+      {/* PDO Thread Lift Procedure Section */}
       <section className="py-20 bg-black">
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -580,37 +580,37 @@ export function ThreadFaceLift() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-6 text-white">
-                PDO Thread Lift Treatment Summary
+                What Is The PDO Thread Face Lift Procedure?
               </h2>
               <div className="space-y-4 text-gray-300">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-white">Non-Surgical Face Lift</h3>
-                    <p>Advanced PDO threads for natural facial lifting and tightening</p>
+                <p>
+                  During the PDO thread face lift procedure, a medical professional uses a thin needle or cannula to insert the threads into the skin. These threads create a scaffolding effect that lifts and supports sagging skin. Some types of lifting threads have small hooks that aid in uplifting the skin. See video below.
+                </p>
+                <p>
+                  As the threads dissolve over time, they stimulate collagen production, enhancing skin tightness and elasticity.
+                </p>
+                <h3 className="text-xl font-semibold text-white mt-6 mb-4">The specific benefits of PDO threads include:</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <p>The ultra-fine threads naturally break down within the body over 6-8 months, with results lasting about 18 months.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <p>The transparent material is invisible under the skin.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <p>The threads are cone-free, preventing tissue damage.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <p>They have an excellent safety record, the same type used in cardiac and other surgical sutures.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-white">Collagen Stimulation</h3>
-                    <p>Bio-stimulating threads promote natural collagen production</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-white">Immediate & Long-term Results</h3>
-                    <p>Instant lifting effect with continued improvement over 2-3 months</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-white">Minimal Downtime</h3>
-                    <p>Return to work within 0-2 days with full recovery in one week</p>
-                  </div>
-                </div>
+                <p className="mt-4">
+                  The PDO thread lift is designed to reposition the skin and trigger the body's natural response to foreign objects by producing collagen and improving blood circulation, which tightens the tissue.
+                </p>
               </div>
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold mt-8">
                 Book Consultation
