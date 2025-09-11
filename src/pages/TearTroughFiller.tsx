@@ -144,12 +144,8 @@ const TearTroughFiller = () => {
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   Expert <span className="text-purple-300 font-semibold">under eye filler London</span> treatments for eye bags, dark circles and tear troughs
                   <br />
-                  <span className="text-purple-300 font-semibold">Invisible Art</span> - Transformation that speaks without saying a word
+                  <span className="text-purple-300 font-semibold">Under eye transformation that speaks without saying a word</span>
                 </p>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £425</p>
-                  <p className="text-sm text-gray-300">Results last 12-18 months with instant visible improvement</p>
-                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
