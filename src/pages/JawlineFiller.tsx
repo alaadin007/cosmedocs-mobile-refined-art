@@ -218,7 +218,6 @@ const JawlineFiller = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Expert Jawline
                   <span className="block text-purple-300">Filler London</span>
-                  <span className="block text-sm mt-4">#cosmejaw</span>
                 </h1>
                 <p className="text-xl text-purple-300 mb-8 font-semibold">
                   a jaw-dropping jawline - slimmer, sleeker & sharper
@@ -229,7 +228,7 @@ const JawlineFiller = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">#cosmejaw</p>
+                  <p className="text-lg text-purple-300 font-bold">#cosmejaw</p>
                   <p className="text-sm text-gray-300">Expert jaw sculpting • CQC Registered • Natural enhancement results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
