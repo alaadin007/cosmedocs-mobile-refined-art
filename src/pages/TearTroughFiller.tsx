@@ -804,90 +804,6 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
-        {/* Recovery Period Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Recovery Timeline</h2>
-                <p className="text-gray-300 mb-6">
-                  Understanding what to expect during your tear trough filler recovery helps ensure 
-                  optimal healing and the best possible results.
-                </p>
-                <div className="space-y-4">
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-300 mb-2">First 24-48 Hours</h4>
-                    <p className="text-gray-300">Minimal swelling and tenderness around injection sites. Some redness may be visible.</p>
-                  </div>
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-300 mb-2">2-7 Days</h4>
-                    <p className="text-gray-300">Any initial swelling subsides. Bruising, if present, begins to fade.</p>
-                  </div>
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-300 mb-2">1-2 Weeks</h4>
-                    <p className="text-gray-300">Full results become visible as filler settles naturally. Under-eye area appears refreshed and rejuvenated.</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Tear Trough Filler Aftercare</h2>
-                <p className="text-gray-300 mb-6">
-                  Proper aftercare ensures optimal healing and maintains the longevity of your 
-                  tear trough filler results.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">First 24 Hours</h4>
-                      <p className="text-gray-300">Avoid touching the treated area and applying makeup</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Cold Compress</h4>
-                      <p className="text-gray-300">Apply ice packs gently to reduce any swelling or discomfort</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Sleep Position</h4>
-                      <p className="text-gray-300">Sleep with your head elevated for the first few nights</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Activity Restrictions</h4>
-                      <p className="text-gray-300">Avoid intense exercise and excessive heat for 48 hours</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Sun Protection</h4>
-                      <p className="text-gray-300">Use SPF and sunglasses to protect the delicate under-eye area</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
@@ -1020,6 +936,91 @@ const TearTroughFiller = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Recovery Period Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Recovery Timeline</h2>
+                <p className="text-gray-300 mb-6">
+                  Understanding what to expect during your tear trough filler recovery helps ensure 
+                  optimal healing and the best possible results.
+                </p>
+                <div className="space-y-4">
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">First 24-48 Hours</h4>
+                    <p className="text-gray-300">Minimal swelling and tenderness around injection sites. Some redness may be visible.</p>
+                  </div>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">2-7 Days</h4>
+                    <p className="text-gray-300">Any initial swelling subsides. Bruising, if present, begins to fade.</p>
+                  </div>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">1-2 Weeks</h4>
+                    <p className="text-gray-300">Full results become visible as filler settles naturally. Under-eye area appears refreshed and rejuvenated.</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Tear Trough Filler Aftercare</h2>
+                <p className="text-gray-300 mb-6">
+                  Proper aftercare ensures optimal healing and maintains the longevity of your 
+                  tear trough filler results.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">First 24 Hours</h4>
+                      <p className="text-gray-300">Avoid touching the treated area and applying makeup</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Cold Compress</h4>
+                      <p className="text-gray-300">Apply ice packs gently to reduce any swelling or discomfort</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Sleep Position</h4>
+                      <p className="text-gray-300">Sleep with your head elevated for the first few nights</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Activity Restrictions</h4>
+                      <p className="text-gray-300">Avoid intense exercise and excessive heat for 48 hours</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Sun Protection</h4>
+                      <p className="text-gray-300">Use SPF and sunglasses to protect the delicate under-eye area</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
