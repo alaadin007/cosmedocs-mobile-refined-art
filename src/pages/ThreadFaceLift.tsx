@@ -173,19 +173,19 @@ export function ThreadFaceLift() {
       </section>
 
       {/* Before & After Gallery */}
-      <section className="py-20 bg-accent">
+      <section className="py-20 bg-black">
         <div className="page-container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">PDO Thread Lift Before and After Results</h2>
+            <h2 className="text-3xl font-bold mb-4">PDO Thread Lift Before and After Results</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              See the natural-looking results achieved with our PDO thread face lift treatments in London. 
-              Real patient transformations showing 2-3 years lasting results.
+              Explore authentic PDO thread lift before and after results from our London clinic. 
+              Our thread lift treatments provide natural facial rejuvenation with 2-3 years lasting results.
             </p>
           </motion.div>
 
@@ -208,9 +208,6 @@ export function ThreadFaceLift() {
                     <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                     <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
                       <p className="text-white text-sm font-medium">{image.caption}</p>
-                    </div>
-                    <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
-                      BEFORE & AFTER
                     </div>
                   </motion.div>
                 </CarouselItem>
