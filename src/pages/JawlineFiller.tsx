@@ -16,6 +16,18 @@ import jawlineFiller1ml from "@/assets/jawline-filler-1ml-before-after.png";
 import jawlineFiller1mlTransformation from "@/assets/jawline-filler-1ml-transformation.jpg";
 import jawlineFiller2ml from "@/assets/jawline-filler-2ml-before-after.png";
 import howJawFillerWorks from "@/assets/how-jaw-filler-works-illustration.jpg";
+import jawlineGallery1 from "@/assets/jawline-gallery-1.jpg";
+import jawlineGallery2 from "@/assets/jawline-gallery-2.jpg";
+import jawlineGallery3 from "@/assets/jawline-gallery-3.png";
+import jawlineGallery4 from "@/assets/jawline-gallery-4.jpg";
+import jawlineGallery5 from "@/assets/jawline-gallery-5.jpg";
+import jawlineGallery6 from "@/assets/jawline-gallery-6.jpg";
+import jawlineGallery7 from "@/assets/jawline-gallery-7.png";
+import jawlineGallery8 from "@/assets/jawline-gallery-8.png";
+import jawlineGallery9 from "@/assets/jawline-gallery-9.png";
+import jawlineGallery10 from "@/assets/jawline-gallery-10.png";
+import jawlineGallery11 from "@/assets/jawline-gallery-11.png";
+import jawlineGallery12 from "@/assets/jawline-gallery-12.jpg";
 
 const JawlineFiller = () => {
   const seoData = generateSEOMetadata(
@@ -26,7 +38,7 @@ const JawlineFiller = () => {
 
   const bookingUrl = "https://med.as.me/harleystreet";
 
-  // Before/after images for the viewer - Real jawline filler results
+  // Before/after images for the viewer - Real jawline filler results from #cosmejaw gallery
   const beforeAfterImages = [
     {
       src: jawlineFiller1ml,
@@ -42,6 +54,66 @@ const JawlineFiller = () => {
       src: jawlineFiller2ml,
       alt: "2ml Jawline filler before and after London Cosmedocs Harley Street dramatic jawline enhancement results",
       caption: "2ml jawline filler transformation demonstrating significant jawline definition and facial balance"
+    },
+    {
+      src: jawlineGallery1,
+      alt: "Comparison image of jawline and chin before and after filler treatments London Harley Street Cosmedocs",
+      caption: "Jawline and chin enhancements with fillers - comprehensive lower face transformation"
+    },
+    {
+      src: jawlineGallery2,
+      alt: "Lower face rejuvenation featuring chin, lips, and jawline fillers London Cosmedocs results",
+      caption: "Lower face rejuvenation: chin, lips, and jawline fillers for complete facial harmony"
+    },
+    {
+      src: jawlineGallery3,
+      alt: "Jawline filler before and after London Harley Street jaw enhancement with fillers",
+      caption: "Jaw enhancement with jawline filler - natural definition and improved contours"
+    },
+    {
+      src: jawlineGallery4,
+      alt: "Before and after photo showcasing filler enhancements in the jawline, lips, chin and tear trough London",
+      caption: "Full face makeover: tear trough, lips, chin and jaw filler transformation"
+    },
+    {
+      src: jawlineGallery5,
+      alt: "Jawline and chin fillers before and after London Cosmedocs lower face enhancement dermal fillers",
+      caption: "Jawline and chin fillers transformation - lower face enhancement using dermal fillers"
+    },
+    {
+      src: jawlineGallery6,
+      alt: "Jawline filler before and after 1ml jaw line filler per side London Harley Street",
+      caption: "1ml jawline filler per side - precise enhancement for natural definition"
+    },
+    {
+      src: jawlineGallery7,
+      alt: "Jawline filler with chin enhancement before and after London Cosmedocs combined treatment",
+      caption: "Jawline filler with chin enhancement - combined treatment for optimal facial balance"
+    },
+    {
+      src: jawlineGallery8,
+      alt: "Jawline and chin fillers before and after transformation London Harley Street Cosmedocs",
+      caption: "Jawline & chin fillers transformation - expert technique for natural results"
+    },
+    {
+      src: jawlineGallery9,
+      alt: "Before and after of jaw filler London jawline enhancement with fillers Cosmedocs",
+      caption: "Jawline enhancement with fillers - dramatic improvement in facial structure"
+    },
+    {
+      src: jawlineGallery10,
+      alt: "Jawline filler before and after London Harley Street jawline refinement with fillers",
+      caption: "Jawline refinement with fillers - subtle yet impactful enhancement"
+    },
+    {
+      src: jawlineGallery11,
+      alt: "Before and after photos showcasing the enhancement of the lower facial profile with jawline and chin fillers London",
+      caption: "Improved jawline with fillers - enhanced lower facial profile and definition"
+    },
+    {
+      src: jawlineGallery12,
+      alt: "A dramatic before and after showcase of jawline and chin angle enhancement with fillers London Cosmedocs",
+      caption: "Jawline reimagined: enhanced angles and definition with expert filler placement"
     }
   ];
 
