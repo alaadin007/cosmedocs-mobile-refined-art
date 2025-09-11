@@ -216,7 +216,7 @@ const JawlineFiller = () => {
                 className="text-left"
               >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Expert Jawline
+                Jawline
                 <span className="block text-purple-300">Filler London</span>
               </h1>
               <p className="text-xl text-white mb-8">

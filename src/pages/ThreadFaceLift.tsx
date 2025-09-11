@@ -152,10 +152,10 @@ export function ThreadFaceLift() {
               transition={{ duration: 0.8 }}
               className="text-left"
             >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Expert PDO Thread
-              <span className="block text-purple-300">Face Lift London</span>
-            </h1>
+             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+               PDO Thread
+               <span className="block text-purple-300">Face Lift London</span>
+             </h1>
             <p className="text-xl text-white mb-8">
               Non-surgical face thread lift with premium PDO threading for natural facial rejuvenation
             </p>
