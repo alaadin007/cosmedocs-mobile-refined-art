@@ -674,100 +674,93 @@ const TearTroughFiller = () => {
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Dark Circles Reduction</h3>
-                        <p className="text-gray-300">Improves dark circles and discoloration by restoring volume and reducing shadows</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Wrinkle Smoothing</h3>
-                        <p className="text-gray-300">Softens and smoothes fine lines and wrinkles around the eye area</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Eye Bag Minimization</h3>
-                        <p className="text-gray-300">Reduces the appearance of puffy eye bags and under-eye hollowness</p>
-                      </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Dark Circles Reduction</h3>
+                      <p className="text-gray-300">Improves dark circles and discoloration by restoring volume and reducing shadows</p>
                     </div>
                   </div>
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Wrinkle Smoothing</h3>
+                      <p className="text-gray-300">Softens and smoothes fine lines and wrinkles around the eye area</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Instant Results</h3>
-                        <p className="text-gray-300">Visible improvements immediately after treatment with natural-looking results</p>
-                      </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Eye Bag Minimization</h3>
+                      <p className="text-gray-300">Reduces the appearance of puffy eye bags and under-eye hollowness</p>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Skin Quality Enhancement</h3>
-                        <p className="text-gray-300">Boosts hydration and stimulates collagen production for healthier skin</p>
-                      </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Instant Results</h3>
+                      <p className="text-gray-300">Visible improvements immediately after treatment with natural-looking results</p>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Confidence Boost</h3>
-                        <p className="text-gray-300">Achieve a more refreshed, youthful appearance that enhances self-confidence</p>
-                      </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Skin Quality Enhancement</h3>
+                      <p className="text-gray-300">Boosts hydration and stimulates collagen production for healthier skin</p>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Evidence-Based Treatment</h3>
-                        <p className="text-gray-300">Expert analysis with proven results - no fluff, just facts</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Natural Enhancement</h3>
-                        <p className="text-gray-300">Subtle results that maintain your unique facial features</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Evidence-Based Treatment</h3>
-                        <p className="text-gray-300">Expert analysis with no fluff - just facts and proven results</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Natural Looking Results</h3>
-                        <p className="text-gray-300">Subtle enhancement that maintains your unique facial features</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">Treatment Combination</h3>
-                        <p className="text-gray-300">Can be combined with other treatments for comprehensive facial rejuvenation</p>
-                      </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Natural Enhancement</h3>
+                      <p className="text-gray-300">Subtle results that maintain your unique facial features</p>
                     </div>
                   </div>
                 </motion.div>
@@ -776,151 +769,6 @@ const TearTroughFiller = () => {
             </div>
           </div>
         </section>
-        {/* Video Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Treatment Journey</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Your comprehensive treatment experience from consultation to final results, designed for comfort and optimal outcomes.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              {/* Timeline */}
-              <div className="relative">
-                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-purple-500/20"></div>
-                
-                <div className="space-y-8">
-                  {/* Consultation */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="relative flex items-start space-x-6"
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
-                      1
-                    </div>
-                    <Card className="flex-1 bg-black border-purple-500/20">
-                      <CardHeader>
-                        <CardTitle className="text-white text-lg">Initial Consultation</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-gray-300 mb-3">
-                          Comprehensive facial assessment and treatment planning with our expert practitioners.
-                        </p>
-                        <ul className="text-sm text-gray-300 space-y-1">
-                          <li>• Medical history review</li>
-                          <li>• Facial anatomy analysis</li>
-                          <li>• Treatment goals discussion</li>
-                          <li>• Before photos taken</li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-
-                  {/* Treatment Day */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    viewport={{ once: true }}
-                    className="relative flex items-start space-x-6"
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
-                      2
-                    </div>
-                    <Card className="flex-1 bg-black border-purple-500/20">
-                      <CardHeader>
-                        <CardTitle className="text-white text-lg">Treatment Day</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-gray-300 mb-3">
-                          Precise filler placement using advanced injection techniques for optimal results.
-                        </p>
-                        <ul className="text-sm text-gray-300 space-y-1">
-                          <li>• Topical numbing cream applied</li>
-                          <li>• Sterile preparation of treatment area</li>
-                          <li>• Precise filler injection using cannula technique</li>
-                          <li>• Immediate assessment and minor adjustments</li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-
-                  {/* Recovery Period */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="relative flex items-start space-x-6"
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
-                      3
-                    </div>
-                    <Card className="flex-1 bg-black border-purple-500/20">
-                      <CardHeader>
-                        <CardTitle className="text-white text-lg">Recovery Period (1-2 weeks)</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-gray-300 mb-3">
-                          Minimal downtime with gradual improvement as any minor swelling subsides.
-                        </p>
-                        <ul className="text-sm text-gray-300 space-y-1">
-                          <li>• Day 1-3: Possible mild swelling and bruising</li>
-                          <li>• Day 4-7: Significant improvement visible</li>
-                          <li>• Day 8-14: Final results become apparent</li>
-                          <li>• Follow aftercare instructions carefully</li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-
-                  {/* Follow-up */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    viewport={{ once: true }}
-                    className="relative flex items-start space-x-6"
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm z-10">
-                      4
-                    </div>
-                    <Card className="flex-1 bg-black border-purple-500/20">
-                      <CardHeader>
-                        <CardTitle className="text-white text-lg">Follow-up & Maintenance</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-gray-300 mb-3">
-                          Regular check-ins to ensure optimal results and plan future treatments.
-                        </p>
-                        <ul className="text-sm text-gray-300 space-y-1">
-                          <li>• 2-week assessment appointment</li>
-                          <li>• 6-month progress review</li>
-                          <li>• 12-18 month touch-up as needed</li>
-                          <li>• Ongoing skincare recommendations</li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-
         {/* Video Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
