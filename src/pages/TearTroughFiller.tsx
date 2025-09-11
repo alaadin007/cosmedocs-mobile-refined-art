@@ -773,71 +773,11 @@ const TearTroughFiller = () => {
                 </motion.div>
               </div>
 
-              {/* Treatment Facts */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="mt-12"
-              >
-                <Card className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-purple-500/20">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Treatment Facts & Timeline</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      <div className="text-center">
-                        <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                          <Syringe className="text-purple-600" size={20} />
-                        </div>
-                        <h4 className="text-purple-300 font-semibold mb-1">Anaesthetic</h4>
-                        <p className="text-gray-300 text-sm">Local</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                          <Clock className="text-purple-600" size={20} />
-                        </div>
-                        <h4 className="text-purple-300 font-semibold mb-1">Procedure Time</h4>
-                        <p className="text-gray-300 text-sm">10-25 mins</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                          <Calendar className="text-purple-600" size={20} />
-                        </div>
-                        <h4 className="text-purple-300 font-semibold mb-1">Results Last</h4>
-                        <p className="text-gray-300 text-sm">9-12 months</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                          <Activity className="text-purple-600" size={20} />
-                        </div>
-                        <h4 className="text-purple-300 font-semibold mb-1">Full Recovery</h4>
-                        <p className="text-gray-300 text-sm">1 week</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                          <CheckCircle className="text-purple-600" size={20} />
-                        </div>
-                        <h4 className="text-purple-300 font-semibold mb-1">Back To Work</h4>
-                        <p className="text-gray-300 text-sm">After Treatment</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                          <ShieldCheck className="text-purple-600" size={20} />
-                        </div>
-                        <h4 className="text-purple-300 font-semibold mb-1">Risks</h4>
-                        <p className="text-gray-300 text-sm">Bruising, Swelling (rare)</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
             </div>
           </div>
         </section>
-        {/* Tear Trough Filler Treatment Journey */}
-        <section className="py-20">
+        {/* Video Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
