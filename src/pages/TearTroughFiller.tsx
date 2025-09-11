@@ -626,6 +626,37 @@ const TearTroughFiller = () => {
                 </Card>
               </motion.div>
             </div>
+
+            {/* Treatment Summary */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <Card className="bg-black border-purple-500/20 p-6">
+                <h3 className="text-xl font-semibold mb-6 text-center text-white">Our Under Eye Treatment Options</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <h4 className="text-purple-300 font-semibold mb-2">Tear Trough Fillers</h4>
+                    <p className="text-gray-300 text-sm">Volume restoration and shadow reduction for natural contour enhancement</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-blue-300 font-semibold mb-2">Dark Circle Treatment</h4>
+                    <p className="text-gray-300 text-sm">Skin thickening and vein camouflage for pigmentation improvement</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-pink-300 font-semibold mb-2">Eye Bag Reduction</h4>
+                    <p className="text-gray-300 text-sm">Puffiness reduction with smooth contours for youthful appearance</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-green-300 font-semibold mb-2">Wrinkle Treatment</h4>
+                    <p className="text-gray-300 text-sm">Line smoothing with collagen stimulation and instant hydration</p>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
@@ -858,7 +889,7 @@ const TearTroughFiller = () => {
 
 
         {/* Video Section */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
