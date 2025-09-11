@@ -568,11 +568,17 @@ const JawlineFiller = () => {
                     <CardTitle className="text-white text-2xl">1ml Jawline Filler Transformation</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <img 
-                      src={jawlineFiller1ml} 
-                      alt="1ml jawline filler before and after results London Harley Street Cosmedocs"
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    <div className="relative group cursor-pointer">
+                      <img 
+                        src={jawlineFiller1ml} 
+                        alt="1ml jawline filler before and after results London Harley Street Cosmedocs"
+                        className="w-full h-80 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">1ml Jawline Filler Results</p>
+                      </div>
+                    </div>
                     <div className="space-y-3">
                       <p className="text-gray-300">
                         <strong className="text-white">Perfect for:</strong> First-time treatments, subtle enhancement, natural definition
@@ -586,6 +592,9 @@ const JawlineFiller = () => {
                       <p className="text-gray-300">
                         <strong className="text-white">Best for:</strong> Women often lose jaw angle bone thickness earlier than men, making 1ml ideal for early intervention
                       </p>
+                      <div className="mt-4 p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
+                        <p className="text-purple-300 font-semibold text-center">From £350</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -603,11 +612,17 @@ const JawlineFiller = () => {
                     <CardTitle className="text-white text-2xl">2ml Jawline Filler Transformation</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <img 
-                      src={jawlineFiller2ml} 
-                      alt="2ml jawline filler before and after results London Harley Street Cosmedocs dramatic enhancement"
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    <div className="relative group cursor-pointer">
+                      <img 
+                        src={jawlineFiller2ml} 
+                        alt="2ml jawline filler before and after results London Harley Street Cosmedocs dramatic enhancement"
+                        className="w-full h-80 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">2ml Jawline Filler Results</p>
+                      </div>
+                    </div>
                     <div className="space-y-3">
                       <p className="text-gray-300">
                         <strong className="text-white">Perfect for:</strong> Dramatic enhancement, masculine jawlines, significant volume loss
@@ -621,6 +636,9 @@ const JawlineFiller = () => {
                       <p className="text-gray-300">
                         <strong className="text-white">Best for:</strong> Young men and women wanting more noticeable change, lifting early jowls caused by volume loss
                       </p>
+                      <div className="mt-4 p-3 bg-purple-900/20 rounded-lg border border-purple-500/20">
+                        <p className="text-purple-300 font-semibold text-center">From £650</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
