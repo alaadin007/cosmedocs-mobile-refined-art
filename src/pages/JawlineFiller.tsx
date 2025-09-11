@@ -12,6 +12,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import jawlineFiller1ml from "@/assets/jawline-filler-1ml-before-after.png";
+import jawlineFiller1mlTransformation from "@/assets/jawline-filler-1ml-transformation.jpg";
+import jawlineFiller2ml from "@/assets/jawline-filler-2ml-before-after.png";
+import howJawFillerWorks from "@/assets/how-jaw-filler-works-illustration.jpg";
 
 const JawlineFiller = () => {
   const seoData = generateSEOMetadata(
@@ -22,10 +26,23 @@ const JawlineFiller = () => {
 
   const bookingUrl = "https://med.as.me/harleystreet";
 
-  // Before/after images for the viewer - Placeholder for actual jawline images
+  // Before/after images for the viewer - Real jawline filler results
   const beforeAfterImages = [
-    // Note: These images need to be replaced with actual jawline filler before/after photos
-    // Current images have been moved to NonSurgicalNoseJob.tsx as they were nose filler results
+    {
+      src: jawlineFiller1ml,
+      alt: "1ml Jawline filler before and after London Dr Ahmed Haq Cosmedocs Harley Street natural enhancement results",
+      caption: "1ml jawline filler transformation showing natural definition and enhanced facial contours"
+    },
+    {
+      src: jawlineFiller1mlTransformation,
+      alt: "Jawline filler 1ml before after profile view Harley Street London Cosmedocs treatment results subtle enhancement",
+      caption: "Subtle 1ml jawline enhancement achieving natural profile improvement"
+    },
+    {
+      src: jawlineFiller2ml,
+      alt: "2ml Jawline filler before and after London Cosmedocs Harley Street dramatic jawline enhancement results",
+      caption: "2ml jawline filler transformation demonstrating significant jawline definition and facial balance"
+    }
   ];
 
   const leftColumnFaqs = [
@@ -256,14 +273,41 @@ const JawlineFiller = () => {
               </p>
             </motion.div>
 
-            <div className="text-center">
-              <div className="bg-purple-900/20 rounded-lg p-8 border border-purple-500/20 max-w-2xl mx-auto">
-                <h3 className="text-xl font-semibold text-white mb-4">Before & After Gallery Coming Soon</h3>
-                <p className="text-gray-300">
-                  We're currently updating our jawline filler before and after gallery with authentic patient results. 
-                  These images will showcase natural jawline enhancement transformations achieved with our expert techniques.
-                </p>
-              </div>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Jawline Filler Results Gallery"
+                description="Comprehensive gallery of our jawline enhancement treatments"
+              />
             </div>
           </div>
         </section>
@@ -385,6 +429,153 @@ const JawlineFiller = () => {
                 <p className="text-gray-300">
                   The most important benefit of jawline filler treatment at our London clinic is improving 
                   patients' self-confidence at the best jawline filler cost.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Does Jaw Filler Work Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">How Does Jaw Filler Work?</h2>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Jaw fillers enhance volume and definition, creating a clear separation between your face and neck. 
+                  They sculpt the natural bone structure for a sharper, more defined jawline, tailored to your unique features.
+                </p>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Filler can also define your jaw angle, enhance a receding chin, and reduce sagging jowls and give 
+                  projection to no jawline, weak jawline, bad jawline or a soft jawline.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Just 1ml per side post chin and jaw filler can deliver natural, transformative results, 
+                  giving you a beautifully contoured jawline.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <img 
+                  src={howJawFillerWorks} 
+                  alt="How jaw filler works medical illustration showing dermal filler placement in jawline anatomy"
+                  className="w-full h-auto rounded-lg shadow-2xl"
+                />
+                <p className="text-sm text-gray-400 mt-4">
+                  Medical illustration showing how dermal fillers enhance jawline definition and structure
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* 1ml vs 2ml Jawline Filler Comparison */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">1ml vs 2ml Jawline Filler - Choose Your Enhancement</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Select the perfect volume for your jawline goals. Our specialists help achieve 
+                ideal enhancement with premium filler tailored to your jaw structure and desired outcome.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              {/* 1ml Jawline Filler */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">1ml Jawline Filler Transformation</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <img 
+                      src={jawlineFiller1ml} 
+                      alt="1ml jawline filler before and after results London Harley Street Cosmedocs"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                    <div className="space-y-3">
+                      <p className="text-gray-300">
+                        <strong className="text-white">Perfect for:</strong> First-time treatments, subtle enhancement, natural definition
+                      </p>
+                      <p className="text-gray-300">
+                        <strong className="text-white">Results:</strong> Natural improvements enhancing your jawline's definition and overall profile
+                      </p>
+                      <p className="text-gray-300">
+                        <strong className="text-white">Duration:</strong> 12-15 months
+                      </p>
+                      <p className="text-gray-300">
+                        <strong className="text-white">Best for:</strong> Women often lose jaw angle bone thickness earlier than men, making 1ml ideal for early intervention
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* 2ml Jawline Filler */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">2ml Jawline Filler Transformation</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <img 
+                      src={jawlineFiller2ml} 
+                      alt="2ml jawline filler before and after results London Harley Street Cosmedocs dramatic enhancement"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                    <div className="space-y-3">
+                      <p className="text-gray-300">
+                        <strong className="text-white">Perfect for:</strong> Dramatic enhancement, masculine jawlines, significant volume loss
+                      </p>
+                      <p className="text-gray-300">
+                        <strong className="text-white">Results:</strong> 2ml (1ml per side) can significantly improve jawline definition
+                      </p>
+                      <p className="text-gray-300">
+                        <strong className="text-white">Duration:</strong> 15-18 months
+                      </p>
+                      <p className="text-gray-300">
+                        <strong className="text-white">Best for:</strong> Young men and women wanting more noticeable change, lifting early jowls caused by volume loss
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-4">
+                  The results of jawline filler depend on your jaw's natural structure and any age-related bone changes.
+                </p>
+                <p className="text-purple-300 font-semibold">
+                  Our Natural HD Jawline Package starts from £950 - Book your consultation to determine the best option for you.
                 </p>
               </div>
             </div>
