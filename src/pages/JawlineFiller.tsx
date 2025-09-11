@@ -205,7 +205,7 @@ const JawlineFiller = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section - Updated to match PDO Thread design */}
+        {/* Hero Section - Matching ThreadFaceLift style */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -215,37 +215,42 @@ const JawlineFiller = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Expert Jawline
-                  <span className="block text-purple-300">Filler London</span>
-                </h1>
-                <p className="text-xl text-purple-300 mb-8 font-semibold">
-                  a jaw-dropping jawline - slimmer, sleeker & sharper
-                </p>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
-                <div className="mb-8">
-                  <p className="text-lg text-purple-300 font-bold">#cosmejaw</p>
-                  <p className="text-sm text-gray-300">Expert jaw sculpting • CQC Registered • Natural enhancement results</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    onClick={() => window.open(bookingUrl, "_blank")}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                  >
-                    Book Consultation
-                  </Button>
-                  <BeforeAfterImageViewer 
-                    images={beforeAfterImages}
-                    triggerLabel="View Results"
-                    title="Jawline Filler Before and After"
-                    description="Real patient transformations with our expert jawline filler treatments"
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm border-2"
-                  />
-                </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Expert Jawline
+                <span className="block text-purple-300">Filler London</span>
+              </h1>
+              <p className="text-xl text-white mb-8">
+                a jaw-dropping jawline - slimmer, sleeker & sharper
+              </p>
+              <p className="text-xl mb-2">
+                <span className="text-purple-300 font-semibold">Invisible Art</span>
+              </p>
+              <p className="text-white mb-8">
+                Transformation that speaks without saying a word
+              </p>
+              <p className="text-sm text-gray-300 mb-8">
+                #cosmejaw #jawlinefiller #jawsculpting - Expert jaw sculpting with natural enhancement results
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={() => window.open(bookingUrl, "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold"
+                >
+                  Book Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  onClick={() => {
+                    const pricingSection = document.getElementById('pricing-section');
+                    if (pricingSection) {
+                      pricingSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-4 text-lg font-semibold"
+                >
+                  View Price List
+                </Button>
+              </div>
               </motion.div>
               
               <div className="hidden lg:block"></div>
