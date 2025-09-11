@@ -150,6 +150,10 @@ const JawlineFiller = () => {
     {
       question: "Can jawline filler be reversed if needed?",
       answer: "Yes, hyaluronic acid fillers used in jawline treatments can be dissolved with hyaluronidase if needed. This provides flexibility and peace of mind that surgical jaw enhancement cannot offer."
+    },
+    {
+      question: "What aftercare is required following jawline filler treatment?",
+      answer: "Post-treatment care includes: avoid touching your face for 6 hours, sleep with head elevated for first few days, avoid hot showers/saunas/swimming for a few days, refrain from heavy exercise for several days, and avoid alcohol, coffee, and fish oil immediately after treatment. These instructions help minimize swelling and ensure optimal results."
     }
   ];
 
@@ -826,93 +830,6 @@ const JawlineFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Journey Section */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Jaw Filler Treatment Journey</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding what to expect during your jawline enhancement treatment at Cosmedocs.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Treatment Procedure */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white">Treatment Procedure</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">1</div>
-                      <p className="text-gray-300">Topical numbing cream applied to the lower face</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">2</div>
-                      <p className="text-gray-300">Expert assessment of facial anatomy and aesthetic goals</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">3</div>
-                      <p className="text-gray-300">Use of cannula technique to minimize bruising and discomfort</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">4</div>
-                      <p className="text-gray-300">Strategic injection of hyaluronic acid fillers along jawline edges</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Aftercare */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white">Aftercare Instructions</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Avoid touching face for 6 hours post-treatment</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Sleep with head elevated for first few days</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Avoid hot showers, saunas, swimming for few days</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Refrain from heavy exercise for several days</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Avoid alcohol, coffee, and fish oil immediately after</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Video Section */}
         <section className="py-20 bg-accent">
