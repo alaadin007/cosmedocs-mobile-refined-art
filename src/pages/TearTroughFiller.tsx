@@ -142,7 +142,7 @@ const TearTroughFiller = () => {
                   <span className="block text-sm mt-4">Brighten up your eyes, lighten up your dark circles</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  Expert <span className="text-purple-300 font-semibold">under eye filler London</span> treatments for eye bags, dark circles and tear troughs
+                  <span className="text-purple-300 font-medium text-lg">Invisible Art</span> - Under eye transformation that speaks without saying a word
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -178,7 +178,7 @@ const TearTroughFiller = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Tear Trough Filler Treatment</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                <span className="text-purple-300 font-medium">Invisible Art</span> - Under eye transformation that speaks without saying a word
+                Expert <span className="text-purple-300 font-semibold">under eye filler London</span> treatments for eye bags, dark circles and tear troughs
               </p>
             </motion.div>
 
