@@ -538,129 +538,65 @@ const JawlineFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Choose Your Enhancement Level</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">1ml vs 2ml Jawline Filler</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Select the perfect volume for your jawline goals. Our expert assessment will help determine 
-                the ideal treatment plan tailored to your facial structure and aesthetic desires.
+                Choose the perfect volume for your desired transformation. From subtle enhancement to dramatic sculpting.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* 1ml Treatment Option */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {/* 1ml Option */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="space-y-6"
               >
-                <Card className="bg-accent border-none h-full hover:border-purple-500/50 transition-colors duration-300">
-                  <CardHeader className="text-center pb-6">
-                    <div className="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                      1ml
-                    </div>
-                    <CardTitle className="text-white text-2xl mb-2">Subtle Enhancement</CardTitle>
-                    <p className="text-purple-300 text-3xl font-bold">£350</p>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Perfect For</p>
-                          <p className="text-gray-300">First-time treatments, natural definition, subtle jaw enhancement</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Expected Results</p>
-                          <p className="text-gray-300">Natural improvements enhancing your jawline's definition and overall facial profile</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Duration</p>
-                          <p className="text-gray-300">12-15 months of enhanced definition</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Ideal Candidates</p>
-                          <p className="text-gray-300">Those seeking gentle enhancement, early intervention for volume loss</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6 p-4 bg-purple-900/30 rounded-lg border border-purple-500/30">
-                      <p className="text-purple-200 text-center font-medium">Recommended for natural, subtle enhancement</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="text-center">
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-full inline-block mb-4">
+                    <span className="text-2xl font-bold">1ml Jawline Filler</span>
+                  </div>
+                  <h3 className="text-xl text-purple-300 mb-6">Subtle Enhancement</h3>
+                </div>
+                
+                <div className="relative">
+                  <img 
+                    src={jawlineFiller1ml} 
+                    alt="1ml jawline filler before after results London Harley Street subtle enhancement"
+                    className="w-full h-80 object-cover rounded-lg shadow-lg"
+                  />
+                  <p className="text-sm text-gray-300 mt-3 text-center">
+                    Natural jawline definition with 1ml enhancement - perfect for first-time patients
+                  </p>
+                </div>
               </motion.div>
 
-              {/* 2ml Treatment Option */}
+              {/* 2ml Option */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="space-y-6"
               >
-                <Card className="bg-accent border-purple-500/50 h-full hover:border-purple-500 transition-colors duration-300 relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                <div className="text-center">
+                  <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-full inline-block mb-4">
+                    <span className="text-2xl font-bold">2ml Jawline Filler</span>
                   </div>
-                  <CardHeader className="text-center pb-6">
-                    <div className="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                      2ml
-                    </div>
-                    <CardTitle className="text-white text-2xl mb-2">Dramatic Enhancement</CardTitle>
-                    <p className="text-purple-300 text-3xl font-bold">£650</p>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Perfect For</p>
-                          <p className="text-gray-300">Dramatic enhancement, masculine jawlines, significant transformation</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Expected Results</p>
-                          <p className="text-gray-300">Significant jawline definition with noticeable facial structure improvement</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Duration</p>
-                          <p className="text-gray-300">15-18 months of enhanced definition</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <p className="text-white font-semibold">Ideal Candidates</p>
-                          <p className="text-gray-300">Those wanting noticeable change, lifting early jowls, strong jawline definition</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6 p-4 bg-purple-900/30 rounded-lg border border-purple-500/30">
-                      <p className="text-purple-200 text-center font-medium">Recommended for dramatic, noticeable enhancement</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                  <h3 className="text-xl text-purple-300 mb-6">Dramatic Transformation</h3>
+                </div>
+                
+                <div className="relative">
+                  <img 
+                    src={jawlineFiller2ml} 
+                    alt="2ml jawline filler before after results London Harley Street dramatic transformation"
+                    className="w-full h-80 object-cover rounded-lg shadow-lg"
+                  />
+                  <p className="text-sm text-gray-300 mt-3 text-center">
+                    Strong, defined jaw angles with 2ml enhancement - ideal for significant sculpting
+                  </p>
+                </div>
               </motion.div>
             </div>
 
