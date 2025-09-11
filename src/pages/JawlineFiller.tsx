@@ -215,11 +215,14 @@ const JawlineFiller = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-white">
                   Jawline Filler
                   <span className="block text-purple-300">London</span>
                   <span className="block text-sm mt-4 text-gray-400">#cosmejaw</span>
                 </h1>
+                <p className="text-xl text-purple-300 mb-8 font-semibold">
+                  a jaw-dropping jawline - slimmer, sleeker & sharper
+                </p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   Dr. Ahmed Haq | Harley Street
                   <br />
