@@ -645,24 +645,6 @@ const TearTroughFiller = () => {
                 </div>
               </div>
 
-              {/* Journey Summary */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="mt-12"
-              >
-                <Card className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-purple-500/20 p-6">
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold mb-2 text-white">Your Journey to Refreshed Eyes</h3>
-                    <p className="text-gray-300">
-                      From consultation to final results, our comprehensive approach ensures you achieve natural-looking, 
-                      long-lasting improvements to your under-eye area with minimal disruption to your daily routine.
-                    </p>
-                  </div>
-                </Card>
-              </motion.div>
             </div>
           </div>
         </section>
