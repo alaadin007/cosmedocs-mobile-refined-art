@@ -5,6 +5,9 @@ import { Instagram, Clock, Zap, Shield, Calendar, Heart, Award, Activity, Syring
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
+import oneMLImage from "@/assets/1ml-cheek-fillers-before-after.png";
+import twoMLImage from "@/assets/2ml-cheek-fillers-before-after.png";
+import menCheekImage from "@/assets/cheek-filler-treatment-man.png";
 import { useState, useEffect } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -378,9 +381,9 @@ const CheekFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">1ml & 2ml Cheek Filler</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">1ml & 2ml Cheek Filler Before And After</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Compare 1ml vs 2ml cheek filler before and after results. See how different volumes create natural enhancement versus dramatic cheekbone definition.
+                If it is the 'natural look' you are looking for then 1 ml of facial filler can help you achieve that. Similarly, below, 1ml cheek filler before and after clearly shows gradual and natural cheek augmentation. Nevertheless, the filler amount depends on your facial structure and aesthetic goals.
               </p>
             </motion.div>
 
@@ -393,19 +396,16 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">1ml Cheek Filler Before & After</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="mb-6">
                   <img 
-                    src="/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png"
-                    alt="1ml cheek filler before and after London natural enhancement"
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
-                  <img 
-                    src="/lovable-uploads/95608275-de36-4458-901d-2cc2ce2136de.png"
-                    alt="1ml cheek dermal filler before after subtle cheekbone enhancement"
-                    className="w-full h-48 object-cover rounded-lg"
+                    src={oneMLImage}
+                    alt="1ml cheek filler before and after London natural enhancement Cosmedocs"
+                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                 </div>
-                <p className="text-gray-300">Perfect for subtle enhancement and natural volume restoration. 1ml provides gentle lifting without dramatic change.</p>
+                <p className="text-gray-300">
+                  Cheek filler treatment can create a noticeable difference in the face and provide a refreshing and youthful look to men and women of any age.
+                </p>
               </motion.div>
 
               <motion.div
@@ -416,19 +416,16 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">2ml Cheek Filler Before & After</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="mb-6">
                   <img 
-                    src="/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png"
-                    alt="2ml cheek filler before and after dramatic cheekbone definition"
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
-                  <img 
-                    src="/lovable-uploads/2dc938fb-78b2-4af7-a0cb-190492553cbb.png"
-                    alt="2ml cheek dermal filler before after enhanced volume"
-                    className="w-full h-48 object-cover rounded-lg"
+                    src={twoMLImage}
+                    alt="2ml cheek filler before and after dramatic cheekbone definition London"
+                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                 </div>
-                <p className="text-gray-300">Ideal for significant volume restoration and pronounced cheekbone definition. 2ml creates more dramatic transformation.</p>
+                <p className="text-gray-300">
+                  From correcting volume loss to a visible cheek lift to reducing sagging jowls, cheek filler is an ideal approach.
+                </p>
               </motion.div>
             </div>
           </div>
@@ -444,9 +441,9 @@ const CheekFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">3ml & 4ml Cheek Filler for Men</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">3ml & 4ml Cheek Fillers For Men</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Masculine cheek enhancement with 3ml and 4ml volumes. Before and after results showing how higher volumes create strong, defined masculine features.
+                Masculine cheek enhancement with higher volumes. Before and after results showing how 3ml and 4ml create strong, defined masculine features.
               </p>
             </motion.div>
 
@@ -459,19 +456,21 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">3ml Cheek Filler Men Before & After</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="mb-6">
                   <img 
-                    src="/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png"
-                    alt="3ml male cheek filler before and after masculine enhancement London"
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
-                  <img 
-                    src="/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png"
-                    alt="3ml men cheek dermal filler before after strong cheekbones"
-                    className="w-full h-48 object-cover rounded-lg"
+                    src={menCheekImage}
+                    alt="3ml male cheek filler before and after masculine enhancement London Cosmedocs"
+                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                 </div>
-                <p className="text-gray-300">3ml provides substantial masculine enhancement while maintaining natural appearance. Perfect for creating strong cheekbone structure.</p>
+                <div className="text-left max-w-md mx-auto">
+                  <p className="text-gray-300 mb-4">
+                    <strong className="text-white">Before:</strong> Cheek volume loss, lacking midface definition.
+                  </p>
+                  <p className="text-gray-300">
+                    <strong className="text-white">After:</strong> Transformation with 3ml cheek filler, enhancing symmetry and rejuvenating facial profile.
+                  </p>
+                </div>
               </motion.div>
 
               <motion.div
@@ -482,19 +481,16 @@ const CheekFiller = () => {
                 className="text-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">4ml Cheek Filler Men Before & After</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="mb-6">
                   <img 
-                    src="/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png"
-                    alt="4ml male cheek filler before and after dramatic masculine transformation"
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
-                  <img 
-                    src="/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png"
-                    alt="4ml men cheek dermal filler before after maximum enhancement"
-                    className="w-full h-48 object-cover rounded-lg"
+                    src={menCheekImage}
+                    alt="4ml male cheek filler before and after dramatic masculine transformation London"
+                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                 </div>
-                <p className="text-gray-300">Maximum volume restoration for men seeking dramatic cheekbone enhancement. 4ml creates the most pronounced masculine definition.</p>
+                <p className="text-gray-300">
+                  This patient came for cheek filler men and was treated with 4 ml cheek filler to add cheek volume to his hollow cheeks and correct lateral volume loss.
+                </p>
               </motion.div>
             </div>
 
