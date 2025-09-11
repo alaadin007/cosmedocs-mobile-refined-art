@@ -226,14 +226,12 @@ const JawlineFiller = () => {
                   Create a jaw-dropping jawline - slimmer, sleeker & sharper
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href={bookingUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl inline-flex items-center justify-center"
+                  <Button 
+                    onClick={() => window.open(bookingUrl, "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
                   >
                     Book Consultation
-                  </a>
+                  </Button>
                   <Button 
                     variant="outline" 
                     className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
