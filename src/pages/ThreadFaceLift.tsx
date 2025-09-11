@@ -157,7 +157,6 @@ export function ThreadFaceLift() {
             <p className="text-white mb-8">
               Transformation that speaks without saying a word
             </p>
-            <p className="text-2xl text-purple-300 font-bold mb-2">Starting from £800</p>
             <p className="text-sm text-gray-300 mb-8">
               #threadlift - Natural lifting results lasting 2-3 years
             </p>
