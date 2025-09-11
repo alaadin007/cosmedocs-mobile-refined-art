@@ -21,8 +21,8 @@ import threadLiftImage2 from '@/assets/thread-lift-before-after-2.png';
 import pdoThreadLiftImage from '@/assets/pdo-thread-lift-before-after.jpg';
 
 const seoData = generateSEOMetadata(
-  "PDO Thread Face Lift London | Non-Surgical Facelift - CosmeDocs",
-  "Transform your face with PDO Thread Face Lift in London. Non-surgical facelift with natural-looking results. Expert practitioners, 2-3 years results. Book consultation.",
+  "PDO Thread Face Lift London | Thread Lift Before and After - CosmeDocs",
+  "Expert PDO thread lifting in London. See real thread lift before and after results. Threading face lift treatments with 2-3 year results. PDO threads London specialists.",
   "/thread-face-lift"
 );
 
@@ -80,28 +80,36 @@ const beforeAfterImages = [
 
 const faqData = [
   {
-    question: "How long do PDO thread lift results last?",
-    answer: "PDO thread lift results typically last 2-3 years. The threads gradually dissolve over 12-18 months, but the collagen stimulation continues to provide lifting effects for up to 3 years."
+    question: "How long do thread lifts before and after results last?",
+    answer: "Thread lift before and after results typically last 2-3 years. The PDO threads gradually dissolve over 12-18 months, but the collagen stimulation continues to provide lifting effects for up to 3 years. You'll see continued improvement even after 3 months thread lift healing."
   },
   {
-    question: "Is PDO thread lift painful?",
-    answer: "The procedure is performed under local anaesthetic, so discomfort is minimal. You may experience mild soreness for a few days after treatment, which can be managed with over-the-counter pain relief."
+    question: "Is PDO threading painful for facial thread lift?",
+    answer: "The facial threading procedure is performed under local anaesthetic, so discomfort is minimal. You may experience mild soreness for a few days after treatment, which can be managed with over-the-counter pain relief."
   },
   {
-    question: "How soon can I see results from thread face lift?",
-    answer: "Results are visible immediately after treatment, with continued improvement over 2-3 months as collagen production increases and swelling subsides."
+    question: "How soon can I see thread face lift before after results?",
+    answer: "Thread face lift before after results are visible immediately after treatment, with continued improvement over 2-3 months as collagen production increases and swelling subsides. Many clients see dramatic changes even 2 weeks after thread lift."
   },
   {
-    question: "What is the recovery time for PDO threads?",
-    answer: "Most patients return to work within 0-2 days. Full recovery takes about one week, during which you should avoid strenuous exercise and facial massage."
+    question: "What is the recovery time for PDO threads before after treatment?",
+    answer: "Most patients return to work within 0-2 days after their threading face lift. Full recovery takes about one week, during which you should avoid strenuous exercise and facial massage to optimize PDO threads before after results."
   },
   {
-    question: "Are there any side effects?",
-    answer: "Common side effects include mild swelling, bruising, and tenderness at insertion points. Serious complications are rare when performed by qualified practitioners."
+    question: "Are there any side effects from face threads treatment?",
+    answer: "Common side effects from threads face treatment include mild swelling, bruising, and tenderness at insertion points. Serious complications are rare when thread lifting is performed by qualified practitioners."
   },
   {
-    question: "Who is a good candidate for thread face lift?",
-    answer: "Ideal candidates are those with mild to moderate skin laxity, typically aged 30-60, who want facial rejuvenation without surgery. A consultation will determine your suitability."
+    question: "Who is a good candidate for facial threads facelift?",
+    answer: "Ideal candidates for facial threads facelift are those with mild to moderate skin laxity, typically aged 30-60, who want facial rejuvenation without surgery. A consultation will determine your suitability for face threading before and after treatment."
+  },
+  {
+    question: "What's the difference between mono threads before and after vs lifting threads?",
+    answer: "Mono threads before and after results focus on skin texture and tightening, while lifting threads provide more dramatic face lift threading results. Both contribute to natural facial thread lift outcomes when used appropriately."
+  },
+  {
+    question: "Can I see before and after PDO thread lift eyes results?",
+    answer: "Yes, before and after PDO thread lift eyes treatments show excellent results for reducing under-eye sagging and lifting the brow area. Eye area thread lifting provides subtle yet effective rejuvenation."
   }
 ];
 
@@ -146,10 +154,10 @@ export function ThreadFaceLift() {
             >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Expert PDO Thread
-              <span className="block text-purple-300">Face Lift</span>
+              <span className="block text-purple-300">Face Lift London</span>
             </h1>
             <p className="text-xl text-white mb-8">
-              Non-surgical facial lifting with premium PDO threads
+              Non-surgical face thread lift with premium PDO threading for natural facial rejuvenation
             </p>
             <p className="text-xl mb-2">
               <span className="text-purple-300 font-semibold">Invisible Art</span>
@@ -158,7 +166,7 @@ export function ThreadFaceLift() {
               Transformation that speaks without saying a word
             </p>
             <p className="text-sm text-gray-300 mb-8">
-              #threadlift - Natural lifting results lasting 2-3 years
+              #threadlift #pdothreads #facethreadlift - Natural threading face lift results lasting 2-3 years
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
@@ -185,7 +193,7 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-8 text-white">PDO Thread Lift Treatment</h2>
+            <h2 className="text-3xl font-bold mb-8 text-white">PDO Threading & Face Thread Lift Treatment London</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -258,10 +266,11 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">PDO Thread Lift Before and After Results</h2>
+            <h2 className="text-3xl font-bold mb-4">PDO Threads Before and After Results London</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Explore authentic PDO thread lift before and after results from our London clinic. 
-              Our thread lift treatments provide natural facial rejuvenation with 2-3 years lasting results.
+              Explore authentic PDO threads before and after results from our London clinic. 
+              See real thread face lift before after transformations, including mono threads before and after, 
+              and collagen threads before and after results showing natural facial thread lift outcomes.
             </p>
           </motion.div>
 
@@ -315,18 +324,19 @@ export function ThreadFaceLift() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-6">What Is PDO Thread Face Lift?</h2>
+              <h2 className="text-3xl font-bold mb-6">What Are PDO Threads? Face Lift Using Threads Explained</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  A PDO thread face lift is a non-surgical cosmetic procedure that uses specialized threads 
-                  made from polydioxanone (PDO) to lift and tighten sagging skin. These medical-grade threads 
-                  are inserted under the skin to create an immediate lifting effect while stimulating natural 
-                  collagen production for long-term rejuvenation.
+                  A PDO thread face lift is a revolutionary non-surgical threading face lift procedure that uses 
+                  specialized PDO lifting threads made from polydioxanone to lift and tighten sagging facial skin. 
+                  These medical-grade threads for face treatment are inserted under the skin to create an immediate 
+                  lifting effect while stimulating natural collagen production for long-term facial rejuvenation.
                 </p>
                 <p>
-                  PDO threads have been safely used in surgical procedures for decades and are completely 
-                  biocompatible and biodegradable. The treatment is ideal for addressing early signs of aging, 
-                  including sagging jowls, loose neck skin, and loss of facial definition.
+                  PDO threads London treatments have been safely used in surgical procedures for decades and are 
+                  completely biocompatible and biodegradable. This face threading lift treatment is ideal for 
+                  addressing early signs of aging, including sagging jowls, loose neck skin, and loss of facial definition. 
+                  The threading facelift process offers a non-surgical alternative to traditional surgical procedures.
                 </p>
               </div>
             </motion.div>
@@ -365,23 +375,24 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4 text-white">What Can Be Treated?</h2>
+            <h2 className="text-3xl font-bold mb-4 text-white">What Areas Can Thread Lifts Treat?</h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              PDO thread lifts can address multiple areas of concern for comprehensive facial rejuvenation
+              Face lift using threads can address multiple areas for comprehensive facial threading lift rejuvenation. 
+              Our threads face treatments provide natural-looking thread facelift results across various facial zones.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { area: "Sagging Facial Skin", description: "Lift and tighten loose, sagging skin across the face" },
-              { area: "Cheeks", description: "Restore volume and lift to the mid-face area" },
-              { area: "Forehead and Brow Area", description: "Smooth forehead lines and lift drooping brows" },
-              { area: "Around the Eyes", description: "Address crow's feet and under-eye sagging" },
-              { area: "Neck, Jawline, and Jowls", description: "Define jawline and tighten neck skin" },
-              { area: "Deep Wrinkles and Folds", description: "Soften nasolabial folds and marionette lines" },
-              { area: "Drooping Mouth Corners", description: "Lift downturned mouth corners for a youthful appearance" },
-              { area: "Lines Around the Mouth", description: "Reduce smoker's lines and perioral wrinkles" },
-              { area: "Body Areas", description: "Treat abdomen, arms, and other body areas requiring lifting" }
+              { area: "Sagging Facial Skin", description: "Lift and tighten loose, sagging skin with PDO threading across the face" },
+              { area: "Cheek Lift with Threads", description: "Restore volume and lift to the mid-face area using PDO threads" },
+              { area: "Forehead and Brow Threading", description: "Smooth forehead lines and lift drooping brows with thread lifting" },
+              { area: "PDO Thread Lift Eyes", description: "Address crow's feet and under-eye sagging with specialized eye threads" },
+              { area: "Neck, Jawline Thread Lift", description: "Define jawline and tighten neck skin with facial threads" },
+              { area: "Deep Wrinkles Treatment", description: "Soften nasolabial folds and marionette lines using threading techniques" },
+              { area: "Facial Threading Lift", description: "Lift downturned mouth corners for a youthful appearance with threads" },
+              { area: "Perioral Thread Treatment", description: "Reduce smoker's lines and perioral wrinkles with PDO threads" },
+              { area: "Body Thread Lifting", description: "Treat abdomen, arms, and other body areas requiring thread lifting" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -414,10 +425,11 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4 text-white">PDO Thread Lift Pricing London</h2>
+            <h2 className="text-3xl font-bold mb-4 text-white">Thread Face Lift Cost & Thread Lift Cost UK</h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              Transparent pricing for premium PDO thread lift treatments. All prices include consultation, 
-              treatment, and aftercare support from our expert medical team.
+              Transparent thread lift cost pricing for premium PDO threads London treatments. 
+              Our thread face lift price includes consultation, facial threading lift procedure, 
+              and aftercare support from our expert medical team.
             </p>
           </motion.div>
 
@@ -430,11 +442,11 @@ export function ThreadFaceLift() {
             >
               <Card className="bg-accent border-purple-500 h-full text-center">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl">Full Face Thread Lift</CardTitle>
+                  <CardTitle className="text-white text-2xl">Complete Threads Face Lift</CardTitle>
                   <div className="text-purple-300 text-4xl font-bold">£2,750</div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-300">Comprehensive lifting for dramatic facial rejuvenation</p>
+                  <p className="text-gray-300">Comprehensive face lift by threading for dramatic facial thread lift results</p>
                   <div className="space-y-2 text-left">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
@@ -464,11 +476,11 @@ export function ThreadFaceLift() {
                   <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
                 </div>
                 <CardHeader className="pt-8">
-                  <CardTitle className="text-white text-2xl">Jawline Definition</CardTitle>
+                  <CardTitle className="text-white text-2xl">Cheek Lift with Threads</CardTitle>
                   <div className="text-white text-4xl font-bold">£650-£950</div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-purple-100">Perfect for mild jowling and jawline enhancement</p>
+                  <p className="text-purple-100">Perfect for cheek lift with threads and facial threading enhancement</p>
                   <div className="space-y-2 text-left">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-white" size={16} />
@@ -527,14 +539,14 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="mt-12"
           >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Small PDO Threads For Skin Tightening</h3>
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">PDO Mono Threads & Facial Threading Lift Prices</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { area: "Lower Facial Slimming", price: "£650" },
-                { area: "Chin Lift / Tightening", price: "£500-£750" },
-                { area: "Tear Trough / Under Eye Circles", price: "£400" },
-                { area: "Eyebrow Thread Lift (lateral)", price: "£600" },
-                { area: "Tear Trough & Eye Brow Lift", price: "£900" }
+                { area: "Face Threading Lift (Lower Face)", price: "£650" },
+                { area: "Face Lift Threading Cost (Chin)", price: "£500-£750" },
+                { area: "PDO Thread Before and After (Under Eye)", price: "£400" },
+                { area: "Facial Threading (Eyebrow Lift)", price: "£600" },
+                { area: "Face Threads Before and After (Combined)", price: "£900" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -559,7 +571,8 @@ export function ThreadFaceLift() {
             className="text-center mt-12"
           >
             <p className="text-gray-300 mb-6">
-              *Consultation fee is deducted from treatment cost if you proceed on the same day
+              *Thread face lift price includes consultation fee when proceeding same day. 
+              Contact us for detailed thread lift cost UK information and threading face lift pricing options.
             </p>
             <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
               Book Your Consultation
@@ -579,16 +592,21 @@ export function ThreadFaceLift() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-6 text-white">
-                What Is The PDO Thread Face Lift Procedure?
+                PDO Threading Procedure: How Thread Lifting Works
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  During the PDO thread face lift procedure, a medical professional uses a thin needle or cannula to insert the threads into the skin. These threads create a scaffolding effect that lifts and supports sagging skin. Some types of lifting threads have small hooks that aid in uplifting the skin. See video below.
+                  During the PDO threading procedure, our experienced medical professional uses a thin needle or cannula 
+                  to insert the PDO lifting threads into the skin. These threads in face create a scaffolding effect 
+                  that lifts and supports sagging facial skin. Some types of lifting threads have small hooks that aid 
+                  in uplifting the skin for enhanced thread facelift results. See the thread lifting procedure video below.
                 </p>
                 <p>
-                  As the threads dissolve over time, they stimulate collagen production, enhancing skin tightness and elasticity.
+                  As the threads dissolve over time (usually 2 weeks after thread lift treatment), they continue to 
+                  stimulate collagen production, enhancing skin tightness and elasticity for long-lasting thread lift 
+                  before after results.
                 </p>
-                <h3 className="text-xl font-semibold text-white mt-6 mb-4">The specific benefits of PDO threads include:</h3>
+                <h3 className="text-xl font-semibold text-white mt-6 mb-4">The specific benefits of PDO thread lift include:</h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
@@ -608,7 +626,10 @@ export function ThreadFaceLift() {
                   </div>
                 </div>
                 <p className="mt-4">
-                  The PDO thread lift is designed to reposition the skin and trigger the body's natural response to foreign objects by producing collagen and improving blood circulation, which tightens the tissue.
+                  The PDO thread lift London treatment is designed to reposition the facial skin and trigger the body's 
+                  natural response by producing collagen and improving blood circulation, which tightens the tissue. 
+                  Results continue to improve even 3 months after thread lift treatment, with optimal thread lift after 
+                  3 months outcomes visible as swelling subsides and collagen remodeling continues.
                 </p>
               </div>
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold mt-8">
@@ -779,10 +800,11 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Ready for Your PDO Thread Lift Transformation?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready for Your Thread Face Lift Transformation?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Book your consultation with our expert cosmetic doctors and discover how PDO thread lifts 
-              can enhance your natural beauty with subtle, long-lasting results.
+              Book your consultation with our expert cosmetic doctors and discover how PDO threading 
+              can enhance your natural beauty with subtle, long-lasting thread lift results. See our 
+              impressive thread lifts before and after gallery and join thousands of satisfied clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
@@ -797,21 +819,52 @@ export function ThreadFaceLift() {
       </section>
 
       {/* Hidden SEO Content */}
-      <div className="hidden">
-        <h2>PDO Thread Face Lift London - Expert Non-Surgical Facelift Treatment</h2>
+      <div className="sr-only" aria-hidden="true">
+        <h2>PDO Threads Before and After: Complete Thread Face Lift London Guide</h2>
         <p>
-          At CosmeDocs, our PDO thread face lift treatments in London offer a revolutionary non-surgical 
-          approach to facial rejuvenation. Using advanced polydioxanone threads, our expert practitioners 
-          deliver natural-looking lifting results that can last 2-3 years. The PDO thread lift procedure 
-          is perfect for patients seeking to address sagging skin, loss of facial definition, and early 
-          signs of aging without undergoing invasive surgery. Our Harley Street clinic provides the highest 
-          standard of aesthetic medicine, with fully qualified doctors specializing in thread lift techniques. 
-          The treatment stimulates natural collagen production while providing immediate lifting effects, 
-          making it an ideal choice for facial contouring and skin tightening. With minimal downtime and 
-          exceptional safety profile, PDO thread lifts represent the future of non-surgical facial enhancement. 
-          Our comprehensive consultation process ensures each patient receives a personalized treatment plan 
-          tailored to their unique facial anatomy and aesthetic goals. Experience the art of invisible 
-          aesthetics with CosmeDocs' advanced thread lift treatments in the heart of London.
+          Our comprehensive PDO thread lift London clinic specializes in delivering exceptional thread face lift 
+          before after results using premium PDO threading techniques. With extensive experience in facial threading 
+          lift procedures, we provide natural-looking thread facelift transformations that showcase dramatic 
+          PDO threads before after outcomes. Our expert practitioners utilize advanced threading face lift methods 
+          to achieve optimal thread lift before after results, with detailed documentation showing the effectiveness 
+          of our PDO threads London treatments.
+        </p>
+        <p>
+          Whether you're seeking mono threads before and after improvements, comprehensive threads face lift procedures, 
+          or specialized before and after PDO thread lift eyes treatments, our London clinic offers premier face 
+          threading solutions. We provide transparent thread face lift cost information and competitive thread lift 
+          cost UK pricing for all facial threading lift procedures, making professional thread lifting accessible 
+          to clients throughout London and beyond.
+        </p>
+        <p>
+          Our extensive PDO mono threads before and after gallery demonstrates exceptional results from thread lifts 
+          before and after treatments, including targeted cheek lift with threads, complete face lift by threading, 
+          and comprehensive threads face procedures. Clients consistently experience remarkable improvement 2 weeks 
+          after thread lift treatment, with optimal thread lift after 3 months results as the PDO threading settles 
+          and natural collagen production enhances the facial rejuvenation process.
+        </p>
+        <p>
+          The impressive face threading before and after transformations from our London clinic showcase the 
+          remarkable effectiveness of facial threads facelift treatments. Our natural threading face lift outcomes 
+          enhance facial contours without invasive surgery, while our expertise in face lift threading cost-effective 
+          solutions ensures premium PDO threads London treatments remain accessible. From individual facial threads 
+          procedures to comprehensive threadlift treatments, our thread face lift price options accommodate various 
+          budgets while maintaining the highest quality standards.
+        </p>
+        <p>
+          Experience the transformative power of professional thread lifting with our PDO thread lift before and 
+          after portfolio, which demonstrates the exceptional results achievable through expert thread face lift 
+          treatments. Our specialized face threads treatments help clients achieve their aesthetic goals through 
+          natural-looking thread facelift results, enhanced by ongoing collagen threads before and after improvements 
+          that continue developing months after the initial facial threading procedure.
+        </p>
+        <h3>Thread Lift London: Advanced PDO Threading Techniques</h3>
+        <p>
+          Our London clinic's approach to face lift using threads combines cutting-edge PDO lifting threads with 
+          artistic technique to deliver superior threads face lift results. The threading facelift process involves 
+          strategic placement of facial threads to achieve natural-looking enhancement, with comprehensive thread 
+          lift before after documentation demonstrating the effectiveness of our threading approaches across diverse 
+          facial structures and aesthetic goals.
         </p>
       </div>
 
