@@ -305,54 +305,6 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
-      {/* Reveal Your Radiance Section */}
-      <section className="py-20 bg-black">
-        <div className="page-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold mb-6 text-white">
-                🌟 Reveal Your Radiance with PDO Thread Lift 🌟
-              </h2>
-              <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                Are you ready to turn back the clock on ageing and unveil a more youthful, rejuvenated appearance? 
-                Look no further than the transformative power of PDO thread face lift! This non-surgical procedure 
-                utilises bio-stimulating materials to stimulate collagen production, effectively lifting and 
-                tightening sagging skin. Say goodbye to fine lines, wrinkles, and loss of volume, and hello to 
-                a refreshed, revitalised look that lasts.
-              </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
-                Discover Your Transformation
-              </Button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/mHn0TARBHik"
-                  title="PDO Thread Lift Procedure Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full aspect-video"
-                ></iframe>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Treatment Overview */}
       <section className="py-20">
@@ -614,6 +566,55 @@ export function ThreadFaceLift() {
               Book Your Consultation
             </Button>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Reveal Your Radiance Section */}
+      <section className="py-20 bg-black">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">
+                🌟 Reveal Your Radiance with PDO Thread Lift 🌟
+              </h2>
+              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                Are you ready to turn back the clock on ageing and unveil a more youthful, rejuvenated appearance? 
+                Look no further than the transformative power of PDO thread face lift! This non-surgical procedure 
+                utilises bio-stimulating materials to stimulate collagen production, effectively lifting and 
+                tightening sagging skin. Say goodbye to fine lines, wrinkles, and loss of volume, and hello to 
+                a refreshed, revitalised look that lasts.
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
+                Discover Your Transformation
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/mHn0TARBHik"
+                  title="PDO Thread Lift Procedure Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full aspect-video"
+                ></iframe>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
