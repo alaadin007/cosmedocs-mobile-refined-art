@@ -185,7 +185,7 @@ const TearTroughFiller = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Tear Trough Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+            <div className="grid grid-cols-6 gap-2 md:gap-4 lg:gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -193,11 +193,11 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
+                <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
+                  <Clock className="text-purple-600" size={16} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">10-25 minutes including consultation</p>
+                <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Treatment Duration</h3>
+                <p className="text-xs md:text-sm text-gray-300">10-25 minutes including consultation</p>
               </motion.div>
 
               <motion.div
@@ -207,11 +207,11 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
+                <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
+                  <Calendar className="text-purple-600" size={16} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
+                <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Results Duration</h3>
+                <p className="text-xs md:text-sm text-gray-300">12-18 months with premium hyaluronic acid</p>
               </motion.div>
 
               <motion.div
@@ -221,11 +221,11 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
+                <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
+                  <Activity className="text-purple-600" size={16} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+                <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Recovery Time</h3>
+                <p className="text-xs md:text-sm text-gray-300">Minimal downtime, return to work same day</p>
               </motion.div>
 
               <motion.div
@@ -235,11 +235,11 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
+                <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
+                  <Syringe className="text-purple-600" size={16} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+                <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Anaesthesia</h3>
+                <p className="text-xs md:text-sm text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
 
               <motion.div
@@ -249,11 +249,11 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <RefreshCw className="text-purple-600" size={24} />
+                <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
+                  <RefreshCw className="text-purple-600" size={16} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Full Recovery</h3>
-                <p className="text-gray-300">1-2 weeks for complete healing</p>
+                <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Full Recovery</h3>
+                <p className="text-xs md:text-sm text-gray-300">1-2 weeks for complete healing</p>
               </motion.div>
 
               <motion.div
@@ -263,11 +263,11 @@ const TearTroughFiller = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <AlertTriangle className="text-purple-600" size={24} />
+                <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
+                  <AlertTriangle className="text-purple-600" size={16} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Risks</h3>
-                <p className="text-gray-300">Minimal: bruising, swelling (rare complications)</p>
+                <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Risks</h3>
+                <p className="text-xs md:text-sm text-gray-300">Minimal: bruising, swelling (rare complications)</p>
               </motion.div>
             </div>
           </div>
