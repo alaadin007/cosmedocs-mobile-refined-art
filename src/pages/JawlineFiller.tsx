@@ -611,7 +611,7 @@ const JawlineFiller = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-accent">
+        <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -620,95 +620,126 @@ const JawlineFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Jawline Filler Price at Cosmedocs</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                We offer premium-quality jawline fillers that provide lasting results for 15-18 months, 
-                designed to enhance your facial profile with transparent pricing.
+              <h2 className="text-3xl font-bold mb-4 text-white">Jawline Filler Pricing London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for premium jawline enhancement treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border-purple-500/20 h-full text-center">
+                <Card className="bg-accent border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">1mL</CardTitle>
-                    <p className="text-3xl font-bold text-purple-300">£350</p>
+                    <CardTitle className="text-white text-2xl">1ml Jawline Filler</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£350</div>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm">Perfect for subtle enhancement and first-time treatments</p>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Perfect for subtle enhancement and first-time treatments</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border-purple-500/20 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">2mL</CardTitle>
-                    <p className="text-3xl font-bold text-purple-300">£650</p>
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Natural HD Package</CardTitle>
+                    <div className="text-white text-4xl font-bold">£950</div>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm">Ideal for noticeable enhancement and jaw definition</p>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Comprehensive jawline sculpting for dramatic results</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Premium hyaluronic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">2-week follow-up</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border-purple-500/20 h-full text-center">
+                <Card className="bg-accent border-gray-700 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">3mL</CardTitle>
-                    <p className="text-3xl font-bold text-purple-300">£950</p>
-                    <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">POPULAR</span>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£50</div>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm">Our Natural HD Package for dramatic transformation</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-purple-500/20 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">4mL</CardTitle>
-                    <p className="text-3xl font-bold text-purple-300">£1,200</p>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm">Maximum enhancement for comprehensive jaw sculpting</p>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full facial assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
 
-            <div className="text-center">
-              <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 max-w-xl mx-auto mb-8">
-                <p className="text-gray-300 mb-2">
-                  <strong className="text-white">Consultation fee:</strong> £50 (redeemable against your treatment)
-                </p>
-                <p className="text-sm text-gray-400">
-                  All treatments include premium FDA-approved dermal fillers and expert aftercare
-                </p>
-              </div>
-              
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
+            </motion.div>
           </div>
         </section>
 
