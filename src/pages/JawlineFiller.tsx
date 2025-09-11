@@ -538,150 +538,144 @@ const JawlineFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">1ml vs 2ml Jawline Filler - See The Difference</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">Choose Your Enhancement Level</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Compare the visual impact of different filler volumes. These real patient results show the 
-                significant difference between 1ml and 2ml treatments to help you choose the right option.
+                Select the perfect volume for your jawline goals. Our expert assessment will help determine 
+                the ideal treatment plan tailored to your facial structure and aesthetic desires.
               </p>
             </motion.div>
 
-            {/* 1ml Treatment Results */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-20"
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">1ml Jawline Filler Results</h3>
-                <p className="text-purple-300 text-xl font-semibold">Subtle Enhancement - £350</p>
-              </div>
-              
-              <div className="relative group cursor-pointer max-w-4xl mx-auto">
-                <img 
-                  src={jawlineFiller1ml} 
-                  alt="1ml jawline filler before and after results London showing subtle natural enhancement"
-                  className="w-full h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                  onClick={() => {
-                    const modal = document.createElement('div');
-                    modal.className = 'fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4';
-                    modal.innerHTML = `
-                      <div class="relative max-w-6xl w-full max-h-screen overflow-auto">
-                        <button class="absolute top-4 right-4 z-60 text-white hover:text-gray-300 text-3xl font-bold" onclick="this.parentElement.parentElement.remove()">×</button>
-                        <img src="${jawlineFiller1ml}" alt="1ml jawline filler detailed results" class="w-full h-auto rounded-lg">
-                        <div class="text-center mt-6">
-                          <h4 class="text-white text-2xl font-bold mb-2">1ml Jawline Filler Results</h4>
-                          <p class="text-gray-300">Subtle, natural enhancement perfect for first-time treatments</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* 1ml Treatment Option */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full hover:border-purple-500/50 transition-colors duration-300">
+                  <CardHeader className="text-center pb-6">
+                    <div className="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                      1ml
+                    </div>
+                    <CardTitle className="text-white text-2xl mb-2">Subtle Enhancement</CardTitle>
+                    <p className="text-purple-300 text-3xl font-bold">£350</p>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Perfect For</p>
+                          <p className="text-gray-300">First-time treatments, natural definition, subtle jaw enhancement</p>
                         </div>
                       </div>
-                    `;
-                    modal.onclick = (e) => {
-                      if (e.target === modal) modal.remove();
-                    };
-                    document.body.appendChild(modal);
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl"></div>
-                <div className="absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-full font-bold">
-                  1ml Treatment
-                </div>
-                <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
-                  <p className="text-white text-lg font-medium mb-2">Natural Definition & Subtle Enhancement</p>
-                  <p className="text-gray-300">Perfect for first-time patients seeking gentle jawline improvement</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
-                <div className="bg-accent p-6 rounded-lg text-center">
-                  <h4 className="text-white font-semibold mb-2">Best For</h4>
-                  <p className="text-gray-300">First-time treatments, subtle enhancement</p>
-                </div>
-                <div className="bg-accent p-6 rounded-lg text-center">
-                  <h4 className="text-white font-semibold mb-2">Duration</h4>
-                  <p className="text-gray-300">12-15 months</p>
-                </div>
-                <div className="bg-accent p-6 rounded-lg text-center">
-                  <h4 className="text-white font-semibold mb-2">Price</h4>
-                  <p className="text-purple-300 font-bold">£350</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* 2ml Treatment Results */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">2ml Jawline Filler Results</h3>
-                <p className="text-purple-300 text-xl font-semibold">Dramatic Enhancement - £650</p>
-              </div>
-              
-              <div className="relative group cursor-pointer max-w-4xl mx-auto">
-                <img 
-                  src={jawlineFiller2ml} 
-                  alt="2ml jawline filler before and after results London showing dramatic enhancement"
-                  className="w-full h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                  onClick={() => {
-                    const modal = document.createElement('div');
-                    modal.className = 'fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4';
-                    modal.innerHTML = `
-                      <div class="relative max-w-6xl w-full max-h-screen overflow-auto">
-                        <button class="absolute top-4 right-4 z-60 text-white hover:text-gray-300 text-3xl font-bold" onclick="this.parentElement.parentElement.remove()">×</button>
-                        <img src="${jawlineFiller2ml}" alt="2ml jawline filler detailed results" class="w-full h-auto rounded-lg">
-                        <div class="text-center mt-6">
-                          <h4 class="text-white text-2xl font-bold mb-2">2ml Jawline Filler Results</h4>
-                          <p class="text-gray-300">Dramatic enhancement for significant jawline definition</p>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Expected Results</p>
+                          <p className="text-gray-300">Natural improvements enhancing your jawline's definition and overall facial profile</p>
                         </div>
                       </div>
-                    `;
-                    modal.onclick = (e) => {
-                      if (e.target === modal) modal.remove();
-                    };
-                    document.body.appendChild(modal);
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl"></div>
-                <div className="absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-full font-bold">
-                  2ml Treatment
-                </div>
-                <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
-                  <p className="text-white text-lg font-medium mb-2">Dramatic Definition & Masculine Enhancement</p>
-                  <p className="text-gray-300">Significant improvement for noticeable jawline transformation</p>
-                </div>
-              </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Duration</p>
+                          <p className="text-gray-300">12-15 months of enhanced definition</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Ideal Candidates</p>
+                          <p className="text-gray-300">Those seeking gentle enhancement, early intervention for volume loss</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 p-4 bg-purple-900/30 rounded-lg border border-purple-500/30">
+                      <p className="text-purple-200 text-center font-medium">Recommended for natural, subtle enhancement</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
-                <div className="bg-accent p-6 rounded-lg text-center">
-                  <h4 className="text-white font-semibold mb-2">Best For</h4>
-                  <p className="text-gray-300">Dramatic enhancement, masculine jawlines</p>
-                </div>
-                <div className="bg-accent p-6 rounded-lg text-center">
-                  <h4 className="text-white font-semibold mb-2">Duration</h4>
-                  <p className="text-gray-300">15-18 months</p>
-                </div>
-                <div className="bg-accent p-6 rounded-lg text-center">
-                  <h4 className="text-white font-semibold mb-2">Price</h4>
-                  <p className="text-purple-300 font-bold">£650</p>
-                </div>
-              </div>
-            </motion.div>
+              {/* 2ml Treatment Option */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500/50 h-full hover:border-purple-500 transition-colors duration-300 relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="text-center pb-6">
+                    <div className="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                      2ml
+                    </div>
+                    <CardTitle className="text-white text-2xl mb-2">Dramatic Enhancement</CardTitle>
+                    <p className="text-purple-300 text-3xl font-bold">£650</p>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Perfect For</p>
+                          <p className="text-gray-300">Dramatic enhancement, masculine jawlines, significant transformation</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Expected Results</p>
+                          <p className="text-gray-300">Significant jawline definition with noticeable facial structure improvement</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Duration</p>
+                          <p className="text-gray-300">15-18 months of enhanced definition</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <p className="text-white font-semibold">Ideal Candidates</p>
+                          <p className="text-gray-300">Those wanting noticeable change, lifting early jowls, strong jawline definition</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 p-4 bg-purple-900/30 rounded-lg border border-purple-500/30">
+                      <p className="text-purple-200 text-center font-medium">Recommended for dramatic, noticeable enhancement</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
 
             <div className="text-center mt-16">
               <div className="bg-purple-900/20 rounded-lg p-8 border border-purple-500/20 max-w-3xl mx-auto">
-                <h4 className="text-white text-xl font-semibold mb-4">Can't decide between 1ml and 2ml?</h4>
+                <h4 className="text-white text-xl font-semibold mb-4">Not sure which option is right for you?</h4>
                 <p className="text-gray-300 mb-6">
-                  The choice depends on your natural jaw structure, desired enhancement level, and aesthetic goals. 
-                  Our expert team will assess your facial anatomy during consultation to recommend the optimal volume.
+                  Our expert team will assess your facial anatomy, discuss your aesthetic goals, and recommend 
+                  the optimal treatment volume during your consultation.
                 </p>
                 <a 
                   href={bookingUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold shadow-2xl inline-flex items-center justify-center"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold shadow-2xl inline-flex items-center justify-center transition-colors duration-200"
                 >
                   Book Your Consultation
                 </a>
