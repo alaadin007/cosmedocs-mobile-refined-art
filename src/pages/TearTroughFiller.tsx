@@ -185,7 +185,7 @@ const TearTroughFiller = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Tear Trough Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-6 gap-2 md:gap-4 lg:gap-6">
+            <div className="grid grid-cols-5 gap-2 md:gap-4 lg:gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -236,20 +236,6 @@ const TearTroughFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
-                  <Syringe className="text-purple-600" size={16} />
-                </div>
-                <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Anaesthesia</h3>
-                <p className="text-xs md:text-sm text-gray-300">Topical anaesthetic + lidocaine in filler</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-2 md:mb-4">
                   <RefreshCw className="text-purple-600" size={16} />
                 </div>
                 <h3 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">Full Recovery</h3>
@@ -259,7 +245,7 @@ const TearTroughFiller = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -318,14 +304,6 @@ const TearTroughFiller = () => {
               <CarouselNext />
             </Carousel>
 
-            <div className="text-center mt-12">
-              <Button 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold shadow-2xl"
-                onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View Price List
-              </Button>
-            </div>
           </div>
         </section>
 
