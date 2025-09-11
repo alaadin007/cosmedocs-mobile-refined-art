@@ -22,38 +22,10 @@ const JawlineFiller = () => {
 
   const bookingUrl = "https://med.as.me/harleystreet";
 
-  // Before/after images for the viewer
+  // Before/after images for the viewer - Placeholder for actual jawline images
   const beforeAfterImages = [
-    {
-      src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
-      alt: "Jawline filler London progression results by Dr Ahmed Haq at Cosmedocs Harley Street showing gradual jaw enhancement",
-      caption: "Progressive jawline transformation over 3 months showing natural enhancement"
-    },
-    {
-      src: "/lovable-uploads/16fa7311-00af-4ea7-b353-73f981f6d87c.png",
-      alt: "Jawline filler before and after profile view Harley Street London Cosmedocs treatment results",
-      caption: "Dramatic profile enhancement achieving perfect jaw definition"
-    },
-    {
-      src: "/lovable-uploads/717753b3-1c9d-43bd-bdc1-ca245fc3c284.png",
-      alt: "Jawline filler immediate results London Dr Ahmed Haq Cosmedocs Harley Street dermal filler treatment",
-      caption: "Immediate transformation showing sculpted jawline and enhanced definition"
-    },
-    {
-      src: "/lovable-uploads/d5cec131-9f61-4b49-9dba-8658eda2eddf.png",
-      alt: "Jawline filler treatment progression London Harley Street Cosmedocs jaw sculpting results",
-      caption: "Treatment progression showing results developing over time"
-    },
-    {
-      src: "/lovable-uploads/a9ac5188-66f2-420b-9b39-3449dc02ff7b.png",
-      alt: "Jawline filler side profile comparison before after London Cosmedocs Harley Street jaw enhancement",
-      caption: "Side profile showing enhanced jawline projection and masculine definition"
-    },
-    {
-      src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png",
-      alt: "Jawline filler technique showing jaw sculpting correction London Harley Street Cosmedocs",
-      caption: "Advanced technique demonstrating jaw contouring and facial harmony"
-    }
+    // Note: These images need to be replaced with actual jawline filler before/after photos
+    // Current images have been moved to NonSurgicalNoseJob.tsx as they were nose filler results
   ];
 
   const leftColumnFaqs = [
@@ -284,41 +256,14 @@ const JawlineFiller = () => {
               </p>
             </motion.div>
 
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Jawline Filler Results Gallery"
-                description="Comprehensive gallery of our jawline enhancement treatments"
-              />
+            <div className="text-center">
+              <div className="bg-purple-900/20 rounded-lg p-8 border border-purple-500/20 max-w-2xl mx-auto">
+                <h3 className="text-xl font-semibold text-white mb-4">Before & After Gallery Coming Soon</h3>
+                <p className="text-gray-300">
+                  We're currently updating our jawline filler before and after gallery with authentic patient results. 
+                  These images will showcase natural jawline enhancement transformations achieved with our expert techniques.
+                </p>
+              </div>
             </div>
           </div>
         </section>
