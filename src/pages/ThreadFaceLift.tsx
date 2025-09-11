@@ -169,10 +169,16 @@ export function ThreadFaceLift() {
               #threadlift #pdothreads #facethreadlift - Natural threading face lift results lasting 2-3 years
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
-                Book Consultation
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-4 text-lg font-semibold">
+              <Button 
+                variant="outline" 
+                onClick={() => {
+                  const pricingSection = document.getElementById('pricing-section');
+                  if (pricingSection) {
+                    pricingSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-4 text-lg font-semibold"
+              >
                 View Price List
               </Button>
             </div>
@@ -574,7 +580,10 @@ export function ThreadFaceLift() {
               *Thread face lift price includes consultation fee when proceeding same day. 
               Contact us for detailed thread lift cost UK information and threading face lift pricing options.
             </p>
-            <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+            <Button 
+              onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+              className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+            >
               Book Your Consultation
             </Button>
           </motion.div>
@@ -632,7 +641,10 @@ export function ThreadFaceLift() {
                   3 months outcomes visible as swelling subsides and collagen remodeling continues.
                 </p>
               </div>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold mt-8">
+              <Button 
+                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold mt-8"
+              >
                 Book Consultation
               </Button>
             </motion.div>
@@ -807,10 +819,17 @@ export function ThreadFaceLift() {
               impressive thread lifts before and after gallery and join thousands of satisfied clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+              <Button 
+                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+              >
                 Book Free Consultation
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+              <Button 
+                variant="outline" 
+                onClick={() => window.open("tel:0333 0551 503")} 
+                className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+              >
                 Call 0333 0551 503
               </Button>
             </div>
