@@ -218,17 +218,13 @@ const JawlineFiller = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Jawline Filler
                   <span className="block text-purple-300">London</span>
-                  <span className="block text-sm mt-4">£950 Natural HD Package</span>
+                  <span className="block text-sm mt-4 text-gray-400">#cosmejaw</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   Dr. Ahmed Haq | Harley Street
                   <br />
                   Create a jaw-dropping jawline - slimmer, sleeker & sharper
                 </p>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Natural HD Package £950</p>
-                  <p className="text-sm text-gray-300">Slimmer, sleeker & sharper jawline enhancement</p>
-                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
                     href={bookingUrl} 
