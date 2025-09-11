@@ -14,7 +14,7 @@ import {
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import ImageZoomModal from "@/components/ImageZoomModal";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, ShieldCheck } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, ShieldCheck, RefreshCw, AlertTriangle } from "lucide-react";
 
 const TearTroughFiller = () => {
   const [zoomedImage, setZoomedImage] = useState<{
@@ -182,7 +182,7 @@ const TearTroughFiller = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Tear Trough Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -237,6 +237,34 @@ const TearTroughFiller = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
                 <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <RefreshCw className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Full Recovery</h3>
+                <p className="text-gray-300">1-2 weeks for complete healing</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Risks</h3>
+                <p className="text-gray-300">Minimal: bruising, swelling (rare complications)</p>
               </motion.div>
             </div>
           </div>
