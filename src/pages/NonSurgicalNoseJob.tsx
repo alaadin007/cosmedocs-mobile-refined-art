@@ -359,125 +359,9 @@ const NonSurgicalNoseJob = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <p className="text-gray-300 mb-4">Ask about prices, treatments, or get expert advice...</p>
-              <h2 className="text-4xl font-bold mb-4 text-white">Non Surgical Nose Job</h2>
-              <p className="text-purple-300 text-xl mb-8">Leading in non surgical rhinoplasty in London since 2010</p>
-              
-              <div className="flex items-center justify-center space-x-4 mb-8">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                  Contact Us
-                </Button>
-              </div>
-
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <span className="text-white font-semibold">EXCELLENT</span>
-                <div className="flex space-x-1">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <div key={star} className="w-5 h-5 bg-yellow-400 rounded-sm"></div>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-300">229 reviews • Google</p>
-            </motion.div>
-
-            {/* Treatment Details Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthetic</h3>
-                <p className="text-gray-300">Local</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Non-Surgical Nose Job Results</h3>
-                <p className="text-gray-300">12+ months</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Procedure Time</h3>
-                <p className="text-gray-300">10-25 minutes</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Risk & Complications</h3>
-                <p className="text-gray-300">Bruising, Swelling, Infection (Rare)</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Full Recovery</h3>
-                <p className="text-gray-300">1 Week</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Back To Work</h3>
-                <p className="text-gray-300">Immediate</p>
-              </motion.div>
-            </div>
-
-            {/* About CosmeDocs */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h3 className="text-2xl font-bold text-white mb-6">Non-Surgical Nose Job</h3>
+              <h2 className="text-3xl font-bold text-white mb-8">Non-Surgical Nose Job</h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 Established in 2007, our Harley Street Clinic, CosmeDocs has been at the forefront of nonsurgical nose jobs, pioneering advancements that have set new standards. Additionally, our innovative techniques, showcased at leading aesthetic conferences, offer a safe, effective, and affordable alternative to traditional rhinoplasty.
               </p>
@@ -487,15 +371,15 @@ const NonSurgicalNoseJob = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-8">
                 <div className="flex items-center justify-center space-x-2">
                   <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
-                  <span className="text-white">Smooth out bumps</span>
+                  <span className="text-white">smooth out bumps</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
-                  <span className="text-white">Refine the nasal tip</span>
+                  <span className="text-white">refine the nasal tip</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
-                  <span className="text-white">Enhance overall nose definition</span>
+                  <span className="text-white">enhance overall nose definition</span>
                 </div>
               </div>
               <p className="text-gray-300 text-lg leading-relaxed">
