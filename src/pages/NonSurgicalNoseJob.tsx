@@ -463,7 +463,7 @@ const NonSurgicalNoseJob = () => {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-lg"></div>
                     <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                      <h3 className="text-3xl md:text-4xl font-light text-white mb-6 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
+                      <h3 className="text-3xl font-bold text-white mb-6">
                         Nose Fracture Case
                       </h3>
                       <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
