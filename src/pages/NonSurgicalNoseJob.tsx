@@ -435,7 +435,7 @@ const NonSurgicalNoseJob = () => {
         </section>
 
         {/* Nose Fracture Case */}
-        <section className="py-32 bg-black relative overflow-hidden">
+        <section className="py-20 bg-black relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/10 via-transparent to-blue-900/10"></div>
           <div className="page-container relative z-10">
             
