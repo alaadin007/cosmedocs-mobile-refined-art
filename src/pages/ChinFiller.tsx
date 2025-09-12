@@ -44,7 +44,7 @@ const ChinFiller = () => {
 
   const leftColumnFaqs = [{
     question: "How much does chin filler cost in London?",
-    answer: "At Cosmedocs Harley Street, chin filler treatments start from £375 for the first syringe (1.2ml). We offer a £50 discount for additional filler. The cost varies depending on the amount of filler needed to achieve your desired results."
+    answer: "At Cosmedocs Harley Street, chin filler treatments start from £350 for the first syringe (1.2ml), £650 for 2.4ml, and £850 for 3.6ml. The cost varies depending on the amount of filler needed to achieve your desired results."
   }, {
     question: "How long do chin filler results last?",
     answer: "Dermal fillers in the chin last longer than fillers in the lips due to the viscosity (thickness) of the material selected. Chin filler results typically last 12-18 months, sometimes longer, depending on the type and amount of filler used."
@@ -434,7 +434,7 @@ const ChinFiller = () => {
 
 
         {/* Face Types Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -640,7 +640,7 @@ const ChinFiller = () => {
                       <ul className="text-gray-300 text-sm space-y-2">
                         <li>• Topical anesthetic only</li>
                         <li>• 24-48 hours minimal downtime</li>
-                        <li>• From £375 cost-effective</li>
+                        <li>• From £350 cost-effective</li>
                         <li>• 12-18 months duration</li>
                         <li>• Fully reversible</li>
                         <li>• Natural-looking results</li>
@@ -697,7 +697,7 @@ const ChinFiller = () => {
                         <tr>
                           <td className="py-3 px-4 font-medium">Cost Range</td>
                           <td className="py-3 px-4 text-center">£5000-£8000+</td>
-                          <td className="py-3 px-4 text-center">£375-£850</td>
+                          <td className="py-3 px-4 text-center">£350-£850</td>
                         </tr>
                         <tr>
                           <td className="py-3 px-4 font-medium">Results</td>
@@ -818,10 +818,10 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Chin Filler Pricing London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Chin Filler Pricing</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for premium chin enhancement treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
+                Dermal fillers in the chin last longer than filler treatment in the lips due to the viscosity (thickness) of a material selected. 
+                Transparent pricing for premium chin enhancement treatments with expert consultation and aftercare support.
               </p>
             </motion.div>
 
@@ -834,8 +834,8 @@ const ChinFiller = () => {
               >
                 <Card className="bg-black border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Single Treatment</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£375</div>
+                    <CardTitle className="text-white text-2xl">1st Syringe</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">From £350</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">1.2ml Premium Hyaluronic Acid</p>
@@ -868,11 +868,11 @@ const ChinFiller = () => {
                     <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
                   </div>
                   <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Enhanced Treatment</CardTitle>
-                    <div className="text-white text-4xl font-bold">£650</div>
+                    <CardTitle className="text-white text-2xl">2.4ml Treatment</CardTitle>
+                    <div className="text-white text-4xl font-bold">From £650</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">2.4ml Double Volume Enhancement</p>
+                    <p className="text-purple-100">2.4ml Hyaluronic Acid</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
@@ -903,23 +903,23 @@ const ChinFiller = () => {
               >
                 <Card className="bg-black border-gray-700 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                    <CardTitle className="text-white text-2xl">3.6ml Treatment</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">From £850</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <p className="text-gray-300">3.6ml Hyaluronic Acid</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full facial assessment</span>
+                        <span className="text-gray-300 text-sm">Maximum volume enhancement</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                        <span className="text-gray-300 text-sm">Premium FDA-approved filler</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                        <span className="text-gray-300 text-sm">18+ months duration</span>
                       </div>
                     </div>
                   </CardContent>
