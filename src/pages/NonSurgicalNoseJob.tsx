@@ -409,28 +409,6 @@ const NonSurgicalNoseJob = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-3xl font-bold mb-6 text-white">Safe & Reliable Non-Surgical Nose Treatments</h3>
-              <div className="max-w-3xl mx-auto">
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                  <div className="flex items-center justify-center mb-4">
-                    <Heart className="text-purple-400 mr-3" size={32} />
-                    <h4 className="text-xl font-semibold text-white">Premium Safety Standards</h4>
-                  </div>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Our non-surgical nose treatments use only premium hyaluronic acid fillers that can be dissolved if needed, 
-                    providing complete peace of mind with every treatment. Dr. Ahmed Haq's expertise ensures safe, predictable results 
-                    with minimal downtime and maximum satisfaction.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
