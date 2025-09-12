@@ -139,7 +139,7 @@ const ChinFiller = () => {
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
-                  Transformation that speaks without saying a word
+                  Facial transformation that speaks without words
                 </p>
                 <div className="mb-8">
                   <p className="text-sm text-gray-300">#cosmechin - Check out our IG for hundreds more natural, subtle transformations</p>
