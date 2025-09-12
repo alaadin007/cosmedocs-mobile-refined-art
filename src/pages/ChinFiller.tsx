@@ -44,35 +44,35 @@ const ChinFiller = () => {
 
   const leftColumnFaqs = [{
     question: "How much does chin filler cost in London?",
-    answer: "At Cosmedocs Harley Street, chin filler treatments start from £350 for the first syringe (1.2ml). The cost varies depending on the amount of filler needed to achieve your desired results."
+    answer: "At Cosmedocs Harley Street, chin filler treatments start from £375 for the first syringe (1.2ml). We offer a £50 discount for additional filler. The cost varies depending on the amount of filler needed to achieve your desired results."
   }, {
     question: "How long do chin filler results last?",
-    answer: "Chin filler results typically last 12-18 months, sometimes longer. The longevity depends on the type and amount of filler used, your metabolism, and individual factors."
+    answer: "Dermal fillers in the chin last longer than fillers in the lips due to the viscosity (thickness) of the material selected. Chin filler results typically last 12-18 months, sometimes longer, depending on the type and amount of filler used."
   }, {
-    question: "Is chin filler safe?",
-    answer: "Yes, when performed by qualified practitioners like Dr. Ahmed Haq at our Harley Street clinic, chin fillers are very safe. We use premium hyaluronic acid fillers and follow strict safety protocols."
+    question: "Is chin filler London safe?",
+    answer: "Absolutely! At Cosmedocs, only the finest quality dermal filler products are used for non-surgical facial rejuvenation treatments. All procedures are carried out by skilled medical practitioners with vast experience in the field."
   }, {
-    question: "What's the difference between chin filler and chin surgery?",
-    answer: "Chin filler is non-surgical, temporary, and involves minimal downtime. Surgical chin augmentation is permanent but carries surgical risks, longer recovery time, and higher costs."
+    question: "How do chin fillers work?",
+    answer: "The process begins with a detailed consultation to examine your unique facial proportions. Treatment involves cleaning and disinfecting the chin area, applying topical numbing cream, then liquid mentoplasty with a fine needle takes 15-30 minutes to complete."
   }, {
     question: "What is the chin filler aftercare process?",
     answer: "Recovery is minimal with 24-48 hours of minor swelling. Apply ice packs for 10-15 minutes every hour for the first 6 hours, avoid touching the area, and sleep with head elevated. You can return to work immediately but avoid strenuous exercise, saunas, and alcohol for 24-48 hours. We provide comprehensive aftercare including detailed instructions, 24/7 emergency contact, and 2-week follow-up appointments. Final results appear within 2 weeks once swelling subsides."
   }];
   const rightColumnFaqs = [{
-    question: "How painful is chin filler treatment?",
-    answer: "Most patients find chin filler treatment comfortable. We use topical numbing cream and the fillers contain lidocaine for additional comfort during the procedure."
+    question: "What are chin and jawline fillers benefits?",
+    answer: "Natural results with improved facial dimensions, addresses an ageing lower face and undefined jawline, minimal downtime compared to cosmetic surgery, temporary but long-lasting (12-18 months), and high patient satisfaction."
   }, {
-    question: "What happens during a chin filler consultation?",
-    answer: "During your consultation, Dr. Ahmed Haq will assess your facial proportions, discuss your goals, and create a personalized treatment plan to achieve optimal facial harmony."
+    question: "How much dermal chin filler to use?",
+    answer: "Whether to use 1ml chin filler or more depends on individual anatomy. We look at bone structure and soft tissue density. Most individuals are satisfied with 1ml chin and jaw filler. If side walls are deficient, another 0.5-1ml may be required."
   }, {
-    question: "Can I combine chin filler with other treatments?",
-    answer: "Absolutely! Chin filler works beautifully with jawline filler, cheek filler, and other facial treatments. The 3D jawline makeover is one of our most popular combination treatments."
+    question: "Can I have other dermal filler treatments along with chin fillers?",
+    answer: "Yes! Chin filler works beautifully with masseter Botox injections, jawline filler, lip filler enhancement, and non-surgical rhinoplasty. The hyaluronic acid makeover (Cheeks + Chin + Jawline) is one of our most popular combinations."
   }, {
-    question: "How quickly will I see chin filler results?",
-    answer: "Results are visible immediately after treatment, with final results apparent within 2 weeks once any minor swelling subsides."
+    question: "What if I do not like my chin filler results?",
+    answer: "Using the hyaluronidase enzyme, your dermal filler effects can be dissolved as early as within 24 hours, making non-surgical rejuvenation a safer alternative to plastic surgery. We help set realistic expectations beforehand."
   }, {
-    question: "Can chin filler help with a double chin?",
-    answer: "Yes, chin fillers can help minimize the appearance of a double chin by enhancing the chin projection and creating better definition between the chin and neck area."
+    question: "What are chin and jawline fillers side effects?",
+    answer: "Typical side effects include swelling, bruising, and a low chance of infection. Swelling in the chin region is not as prominent as in the lips. Using a cannula, we avoid injuring blood vessels, thereby decreasing complications."
   }];
   return <>
       <Helmet>
@@ -173,7 +173,20 @@ const ChinFiller = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -182,10 +195,10 @@ const ChinFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
+                  <Syringe className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">30 minutes including consultation</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthetic</h3>
+                <p className="text-gray-300">Local / Topical</p>
               </motion.div>
 
               <motion.div
@@ -198,8 +211,8 @@ const ChinFiller = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Calendar className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Chin Filler Results</h3>
+                <p className="text-gray-300">12+ months</p>
               </motion.div>
 
               <motion.div
@@ -210,10 +223,10 @@ const ChinFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
+                  <Clock className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Procedure Time</h3>
+                <p className="text-gray-300">30 mins</p>
               </motion.div>
 
               <motion.div
@@ -224,12 +237,42 @@ const ChinFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
+                  <Shield className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Risk & Complications</h3>
+                <p className="text-gray-300">Swelling, Bruises & Infection (rare)</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Full Recovery</h3>
+                <p className="text-gray-300">24-48 Hours</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Users className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Back To Work</h3>
+                <p className="text-gray-300">Immediate</p>
               </motion.div>
             </div>
+          </div>
+        </section>
           </div>
         </section>
 
@@ -681,7 +724,7 @@ const ChinFiller = () => {
                 <Card className="bg-black border-purple-500 h-full text-center">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">Single Treatment</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£350</div>
+                    <div className="text-purple-300 text-4xl font-bold">£375</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">1.2ml Premium Hyaluronic Acid</p>
@@ -781,7 +824,7 @@ const ChinFiller = () => {
               className="text-center mt-12"
             >
               <p className="text-gray-300 mb-6">
-                *Consultation fee is deducted from treatment cost if you proceed on the same day
+                *Consultation fee is deducted from treatment cost if you proceed on the same day. £50 discount available for additional filler.
               </p>
               <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
                 Book Your Consultation
