@@ -368,65 +368,6 @@ const ChinFiller = () => {
                     Our expert chin enhancement treatments offer multiple advantages for facial harmony and confidence.
                   </p>
                 </div>
-                
-                <div className="bg-black rounded-lg p-6 border border-gray-800">
-                  <h4 className="text-lg font-semibold text-white mb-4">Why Choose Liquid Mentoplasty?</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <p className="text-gray-300">No surgical risks or extensive recovery</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <p className="text-gray-300">Reversible results with hyaluronidase</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-500" size={16} />
-                      <p className="text-gray-300">Enhanced facial balance and profile</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <div className="bg-black rounded-lg p-8 border border-gray-800">
-                  <h4 className="text-xl font-semibold text-white mb-6">Complete Facial Harmony</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">1</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-medium">Profile Balance</h5>
-                        <p className="text-gray-300 text-sm">Perfect nose-to-chin ratio</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">2</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-medium">Jawline Definition</h5>
-                        <p className="text-gray-300 text-sm">Enhanced lower face contours</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">3</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-medium">Lip Support</h5>
-                        <p className="text-gray-300 text-sm">Enhanced lip prominence</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             </div>
           </div>
@@ -652,64 +593,6 @@ const ChinFiller = () => {
             </div>
 
             {/* Comparison Table */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mt-16"
-            >
-              <Card className="bg-accent border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-white text-xl text-center">Quick Comparison</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-gray-300">
-                      <thead>
-                        <tr className="border-b border-gray-700">
-                          <th className="text-left py-3 px-4">Aspect</th>
-                          <th className="text-center py-3 px-4 text-red-400">Genioplasty (Surgery)</th>
-                          <th className="text-center py-3 px-4 text-green-400">Dermal Fillers</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-gray-700">
-                        <tr>
-                          <td className="py-3 px-4 font-medium">Duration</td>
-                          <td className="py-3 px-4 text-center">Permanent</td>
-                          <td className="py-3 px-4 text-center">12-18 months</td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-medium">Recovery Time</td>
-                          <td className="py-3 px-4 text-center">2-4 weeks</td>
-                          <td className="py-3 px-4 text-center">24-48 hours</td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-medium">Anesthesia</td>
-                          <td className="py-3 px-4 text-center">General</td>
-                          <td className="py-3 px-4 text-center">Topical</td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-medium">Reversible</td>
-                          <td className="py-3 px-4 text-center">No</td>
-                          <td className="py-3 px-4 text-center">Yes</td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-medium">Cost Range</td>
-                          <td className="py-3 px-4 text-center">£5000-£8000+</td>
-                          <td className="py-3 px-4 text-center">£350-£850</td>
-                        </tr>
-                        <tr>
-                          <td className="py-3 px-4 font-medium">Results</td>
-                          <td className="py-3 px-4 text-center">6-8 weeks</td>
-                          <td className="py-3 px-4 text-center">Immediate</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </section>
 
