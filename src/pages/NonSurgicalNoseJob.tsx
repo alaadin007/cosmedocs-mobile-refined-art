@@ -801,105 +801,132 @@ const NonSurgicalNoseJob = () => {
         </section>
 
         {/* Non-Surgical Rhinoplasty Benefits */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
+        <section className="py-20 bg-gradient-to-br from-accent via-accent/90 to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-t from-accent/50 to-transparent"></div>
+          <div className="page-container relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical Rhinoplasty Benefits</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Rhinoplasty using dermal fillers can quickly and safely improve:
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Droopy Nose Tip Lift</h3>
-                <p className="text-gray-300">Elevate and enhance the projection of a drooping nasal tip for better facial balance</p>
-              </motion.div>
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="group hover-scale"
+                >
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
+                    <CardContent className="p-8 text-center">
+                      <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-500/25">
+                        <Syringe className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Droopy Nose Tip Lift</h3>
+                      <p className="text-gray-300 leading-relaxed">Elevate and enhance the projection of a drooping nasal tip for better facial balance</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Hooked & Crooked Nose</h3>
-                <p className="text-gray-300">Correct asymmetries and improve the overall shape of hooked or crooked noses</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="group hover-scale"
+                >
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
+                    <CardContent className="p-8 text-center">
+                      <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/25">
+                        <Activity className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Hooked & Crooked Nose</h3>
+                      <p className="text-gray-300 leading-relaxed">Correct asymmetries and improve the overall shape of hooked or crooked noses</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Smooth Humps & Bumps</h3>
-                <p className="text-gray-300">Eliminate unsightly nasal bumps and create a smooth, refined profile</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="group hover-scale"
+                >
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
+                    <CardContent className="p-8 text-center">
+                      <div className="bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/25">
+                        <CheckCircle className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Smooth Humps & Bumps</h3>
+                      <p className="text-gray-300 leading-relaxed">Eliminate unsightly nasal bumps and create a smooth, refined profile</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Raise Low Nasal Bridge</h3>
-                <p className="text-gray-300">Enhance low nasal bridges, particularly beneficial for Asian nose enhancement</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="group hover-scale"
+                >
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
+                    <CardContent className="p-8 text-center">
+                      <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/25">
+                        <Award className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Raise Low Nasal Bridge</h3>
+                      <p className="text-gray-300 leading-relaxed">Enhance low nasal bridges, particularly beneficial for Asian nose enhancement</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Balance Facial Profile</h3>
-                <p className="text-gray-300">Create harmonious facial proportions by improving overall nasal balance</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="group hover-scale"
+                >
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
+                    <CardContent className="p-8 text-center">
+                      <div className="bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/25">
+                        <Users className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Balance Facial Profile</h3>
+                      <p className="text-gray-300 leading-relaxed">Create harmonious facial proportions by improving overall nasal balance</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Nose Definition & Contour</h3>
-                <p className="text-gray-300">Enhance nasal definition and create refined contours for a more sculpted appearance</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className="group hover-scale"
+                >
+                  <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
+                    <CardContent className="p-8 text-center">
+                      <div className="bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-500/25">
+                        <Palette className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Nose Definition & Contour</h3>
+                      <p className="text-gray-300 leading-relaxed">Enhance nasal definition and create refined contours for a more sculpted appearance</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
             </div>
           </div>
         </section>
