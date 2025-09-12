@@ -566,14 +566,6 @@ const NonSurgicalNoseJob = () => {
                   This case demonstrates Dr. Ahmed Haq's expertise in correcting complex deviated noses through strategic dermal filler placement, 
                   achieving significant improvement in nasal symmetry and overall facial harmony without surgical intervention.
                 </p>
-                <a 
-                  href={bookingUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20"
-                >
-                  Discuss Your Case
-                </a>
               </motion.div>
             </div>
           </div>
@@ -590,10 +582,10 @@ const NonSurgicalNoseJob = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Real Patient Experience
+                Non-Surgical Nose Job Patient Review London
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Authentic stories from patients who've experienced the invisible art of transformation
+                Real patient testimonial sharing her complete non-surgical nose reshaping journey at our Harley Street clinic. See firsthand experience with nose botox and dermal filler treatments by Dr. Ahmed Haq.
               </p>
             </motion.div>
             
@@ -623,7 +615,7 @@ const NonSurgicalNoseJob = () => {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                Watch this honest review from one of our patients sharing her complete journey and results
+                Watch this detailed non-surgical nose job before and after review from our London patient. She discusses her consultation experience, treatment process, nose filler results, recovery timeline, and final transformation achieved through our liquid nose job technique.
               </motion.p>
             </div>
           </div>
