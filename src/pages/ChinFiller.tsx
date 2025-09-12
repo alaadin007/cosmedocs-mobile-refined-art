@@ -132,8 +132,8 @@ const ChinFiller = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Expert Chin
-                  <span className="block text-purple-300">Enhancement</span>
+                  Chin Fillers
+                  <span className="block text-purple-300">London</span>
                   <span className="block text-sm mt-4">Transform your profile with precision dermal fillers</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
