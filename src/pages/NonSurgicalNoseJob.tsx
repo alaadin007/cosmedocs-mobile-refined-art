@@ -1194,75 +1194,38 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
-        {/* Location & Contact - Apple Style */}
-        <section className="py-32 bg-[#111]">
-          <div className="page-container">
+        {/* Call to Action */}
+        <section className="py-20 bg-black">
+          <div className="page-container text-center">
             <motion.div
-              className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Visit Us in Harley Street
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Located in the heart of London's prestigious medical district
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Nose Naturally?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with Dr. Ahmed Haq and discover how our advanced #cosmenose technique 
+                can enhance your profile with natural, sophisticated results.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href={bookingUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold inline-flex items-center justify-center transition-all duration-300"
+                >
+                  Book Free Consultation
+                </a>
+                <a 
+                  href="tel:03330551503"
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold border inline-flex items-center justify-center transition-all duration-300"
+                >
+                  Call 0333 0551 503
+                </a>
+              </div>
             </motion.div>
-            
-            <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <h3 className="text-3xl md:text-4xl font-light text-white">London's Premier Medical District</h3>
-                <p className="text-lg text-white/80 font-light leading-relaxed">
-                  Located in the heart of London's prestigious Harley Street medical district, our clinic offers the highest standards of aesthetic medicine in an elegant, professional environment.
-                </p>
-                
-                <div className="space-y-6">
-                  {[
-                    { icon: MapPin, text: "10 Harley Street, London W1G 9PF" },
-                    { icon: Phone, text: "0333 0551 503" },
-                    { icon: Mail, text: "info@cosmedocs.com" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <item.icon className="h-6 w-6 mr-4 text-white/70" />
-                      <span className="text-lg font-light text-white/90">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-                  <CardContent className="p-10 text-center">
-                    <h3 className="text-3xl font-light text-white mb-6">Ready to Transform Your Profile?</h3>
-                    <p className="text-white/80 mb-8 text-lg font-light leading-relaxed">
-                      Book a consultation with Dr. Ahmed Haq and discover how the #cosmenose technique can enhance your natural beauty.
-                    </p>
-                    <a 
-                      href={bookingUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 w-full border border-white/20"
-                    >
-                      Book Your £450 Consultation
-                    </a>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
           </div>
         </section>
 
