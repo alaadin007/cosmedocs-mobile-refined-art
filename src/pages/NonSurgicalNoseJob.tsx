@@ -18,68 +18,66 @@ import {
 const NonSurgicalNoseJob = () => {
   const seoData = generateSEOMetadata(
     "Non-Surgical Nose Job London | Nose Botox & Fillers | £450 | Harley Street",
-    "Leading non-surgical nose job & nose botox treatments in London. Expert nose reshaping without surgery from £450. Liquid nose job specialists at Harley Street clinic.",
+    "Leading non-surgical nose job & nose botox treatments in London. Expert nose reshaping without surgery from £450. Harley Street clinic.",
     "/non-surgical-nose-job"
   );
 
   const bookingUrl = "https://med.as.me/harleystreet";
 
-  // Before/after images for the viewer - updated with new images
   const beforeAfterImages = [
     {
       src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
-      alt: "Non-surgical nose job London progression results by Dr Ahmed Haq at Cosmedocs Harley Street showing gradual improvement",
+      alt: "Non-surgical nose job before after 3 year progression London Harley Street nose botox dermal filler transformation results",
       caption: "Progressive transformation over 3 years showing natural enhancement with #cosmenose technique"
     },
     {
       src: "/lovable-uploads/16fa7311-00af-4ea7-b353-73f981f6d87c.png",
-      alt: "Non-surgical nose job before and after profile view Harley Street London Cosmedocs treatment results",
+      alt: "Liquid nose job before after profile view nose filler cost London Harley Street non-surgical rhinoplasty results",
       caption: "Subtle profile enhancement achieving perfect nasal proportions"
     },
     {
       src: "/lovable-uploads/717753b3-1c9d-43bd-bdc1-ca245fc3c284.png",
-      alt: "Non-surgical nose job immediate results London Dr Ahmed Haq Cosmedocs Harley Street dermal filler treatment",
+      alt: "Non-invasive nose job immediate results nose tip filler London Dr Ahmed Haq Cosmedocs nose reshaping without surgery",
       caption: "Immediate transformation showing refined nasal bridge and tip"
     },
     {
       src: "/lovable-uploads/d5cec131-9f61-4b49-9dba-8658eda2eddf.png",
-      alt: "Non-surgical nose job treatment progression at 5 and 10 minutes London Harley Street Cosmedocs",
+      alt: "Nose injection filler treatment progression 5 and 10 minutes nonsurgical rhinoplasty London Harley Street results",
       caption: "Treatment progression showing results developing over 10 minutes"
     },
     {
       src: "/lovable-uploads/a9ac5188-66f2-420b-9b39-3449dc02ff7b.png",
-      alt: "Non-surgical nose job side profile comparison before after London Cosmedocs Harley Street nose filler treatment",
+      alt: "Non-surgical nose job side profile comparison nose lift botox London Cosmedocs Harley Street before after",
       caption: "Profile view showing enhanced nasal projection and definition"
     },
     {
       src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png",
-      alt: "Non-surgical nose job technique showing raised bridge concealed bump correction London Harley Street Cosmedocs",
+      alt: "Advanced nose reshaping technique raised bridge bump correction liquid nose job London Harley Street Cosmedocs",
       caption: "Advanced technique demonstrating raised bridge and concealed bump correction"
     },
-    // New images added
     {
       src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
-      alt: "Non-surgical nose job before and after profile view London Harley Street Cosmedocs",
+      alt: "Non-surgical nose reshaping before after profile view nose botox London Harley Street nose slimming injection results",
       caption: "Profile transformation showing refined nasal bridge and enhanced projection with #cosmenose technique"
     },
     {
       src: "/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png",
-      alt: "Non-surgical nose job bottom view before after London Cosmedocs Harley Street",
+      alt: "Non-surgical nose job bottom view before after nose tip botox London Cosmedocs Harley Street nasal tip filler",
       caption: "Underneath view demonstrating improved nasal tip projection and symmetry"
     },
     {
       src: "/lovable-uploads/cc387da3-1543-4b06-8b11-a48d29f03456.png",
-      alt: "Non-surgical nose job side profile before after London Harley Street Cosmedocs",
+      alt: "Non-surgical nose job side profile before after pixie tip nose filler London Harley Street Cosmedocs results",
       caption: "Side profile enhancement demonstrating subtle yet significant improvement in nasal contours"
     },
     {
       src: "/lovable-uploads/1cceb92b-eacb-48b4-9c9f-04c4cb2b025e.png",
-      alt: "Non-surgical nose job profile transformation London Cosmedocs Dr Ahmed Haq",
+      alt: "Nose reshaping without surgery profile transformation dermal filler nose London Cosmedocs Dr Ahmed Haq",
       caption: "Natural-looking profile enhancement achieved with advanced dermal filler techniques"
     },
     {
       src: "/lovable-uploads/bf8a69d8-6776-4187-857d-a009e9fd6147.png",
-      alt: "Non-surgical nose job Cosmedocs London Harley Street before after results Dr Ahmed Haq",
+      alt: "Non-surgical rhinoplasty Cosmedocs London Harley Street before after nose job london cost results Dr Ahmed Haq",
       caption: "Remarkable transformation achieving perfect nasal proportions and facial harmony"
     }
   ];
@@ -482,7 +480,7 @@ const NonSurgicalNoseJob = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <img 
                     src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
-                    alt="Complex nose fracture non-surgical reconstruction before after London Harley Street Cosmedocs Dr Ahmed Haq fibrosis cartilage bone treatment cannula technique"
+                    alt="Complex nose fracture non-surgical reconstruction before after nose botox nose filler London Harley Street Cosmedocs Dr Ahmed Haq advanced nose reshaping without surgery fibrosis cartilage bone treatment cannula technique"
                     className="w-full h-auto rounded-3xl shadow-2xl object-cover max-w-full relative z-10 group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     onError={(e) => {
@@ -1268,6 +1266,71 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
+        {/* Related Treatments Section */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Related Aesthetic Treatments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Enhance your results with our complementary aesthetic treatments available at our Harley Street clinic.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border border-white/10 h-full hover:bg-white/10 transition-all duration-300">
+                  <CardContent className="p-8 text-center">
+                    <Syringe className="text-purple-400 mb-4 mx-auto" size={48} />
+                    <h3 className="text-2xl font-bold text-white mb-4">Dermal Fillers London</h3>
+                    <p className="text-gray-300 mb-6">
+                      Comprehensive facial enhancement using premium dermal fillers for lips, cheeks, and jawline contouring.
+                    </p>
+                    <a 
+                      href="/dermal-fillers"
+                      className="inline-flex items-center text-purple-300 hover:text-white transition-colors font-semibold"
+                    >
+                      Learn More About Dermal Fillers →
+                    </a>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border border-white/10 h-full hover:bg-white/10 transition-all duration-300">
+                  <CardContent className="p-8 text-center">
+                    <Activity className="text-purple-400 mb-4 mx-auto" size={48} />
+                    <h3 className="text-2xl font-bold text-white mb-4">Botox Injections London</h3>
+                    <p className="text-gray-300 mb-6">
+                      Advanced anti-aging treatments targeting wrinkles, frown lines, and facial muscle refinement.
+                    </p>
+                    <a 
+                      href="/advanced-upper-face-botox"
+                      className="inline-flex items-center text-purple-300 hover:text-white transition-colors font-semibold"
+                    >
+                      Discover Botox Treatments →
+                    </a>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         {/* Hidden SEO content */}
         <div className="sr-only">
