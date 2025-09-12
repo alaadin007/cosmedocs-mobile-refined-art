@@ -290,117 +290,93 @@ const ChinFiller = () => {
         </section>
 
 
-        {/* What is Chin Filler Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[95px]">
+        {/* What is Liquid Mentoplasty Section */}
+        <section className="py-20 bg-accent text-white">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                What is Liquid Mentoplasty?
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Advanced non-surgical chin enhancement using precision-placed dermal fillers
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">What is Liquid Mentoplasty?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Advanced non-surgical chin enhancement using precision-placed dermal fillers to create perfect facial harmony
               </p>
             </motion.div>
             
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-              <motion.div className="space-y-8" initial={{
-              opacity: 0,
-              x: -40
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8
-            }} viewport={{
-              once: true
-            }}>
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-light text-white">Precision Enhancement</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white">Precision Enhancement</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Liquid mentoplasty represents the art of invisible enhancement. Using premium hyaluronic acid fillers, 
                     we reshape and project weak or retracted chins to create perfect facial harmony. This non-surgical 
                     approach volumizes the chin area while maintaining completely natural results.
                   </p>
                 </div>
                 
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                  <h4 className="text-xl font-light text-white mb-6">Why Choose Liquid Mentoplasty?</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">No surgical risks or extensive recovery</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Immediate return to daily activities</p>
-                      </div>
+                <div className="bg-black rounded-lg p-6 border border-gray-800">
+                  <h4 className="text-lg font-semibold text-white mb-4">Why Choose Liquid Mentoplasty?</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">No surgical risks or extensive recovery</p>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Reversible results with hyaluronidase</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Complete flexibility and control</p>
-                      </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Reversible results with hyaluronidase</p>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Enhanced facial balance and profile</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Harmonious proportions that speak without words</p>
-                      </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Enhanced facial balance and profile</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
               
-              <motion.div className="space-y-8" initial={{
-              opacity: 0,
-              x: 40
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2
-            }} viewport={{
-              once: true
-            }}>
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
-                  <h4 className="text-2xl font-light text-white mb-8">Complete Facial Harmony</h4>
-                  <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="bg-black rounded-lg p-8 border border-gray-800">
+                  <h4 className="text-xl font-semibold text-white mb-6">Complete Facial Harmony</h4>
+                  <div className="space-y-4">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">1</span>
+                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-semibold">1</span>
                       </div>
                       <div>
-                        <h5 className="text-white font-light">Profile Balance</h5>
-                        <p className="text-white/60 text-sm font-light">Perfect nose-to-chin ratio</p>
+                        <h5 className="text-white font-medium">Profile Balance</h5>
+                        <p className="text-gray-300 text-sm">Perfect nose-to-chin ratio</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">2</span>
+                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-semibold">2</span>
                       </div>
                       <div>
-                        <h5 className="text-white font-light">Jawline Definition</h5>
-                        <p className="text-white/60 text-sm font-light">Enhanced lower face contours</p>
+                        <h5 className="text-white font-medium">Jawline Definition</h5>
+                        <p className="text-gray-300 text-sm">Enhanced lower face contours</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">3</span>
+                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-semibold">3</span>
                       </div>
                       <div>
-                        <h5 className="text-white font-light">Lip Support</h5>
-                        <p className="text-white/60 text-sm font-light">Enhanced lip prominence</p>
+                        <h5 className="text-white font-medium">Lip Support</h5>
+                        <p className="text-gray-300 text-sm">Enhanced lip prominence</p>
                       </div>
                     </div>
                   </div>
@@ -411,107 +387,102 @@ const ChinFiller = () => {
         </section>
 
         {/* Treatment Journey Section */}
-        <section className="bg-[#0A0A0A] py-[75px]">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Your Treatment Journey
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Your Treatment Journey</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 From consultation to completion, experience our expert care every step of the way
               </p>
             </motion.div>
             
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
-                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <Users className="h-8 w-8 text-white/70" />
-                  </div>
-                  <h3 className="text-2xl font-light text-white mb-4">Consultation</h3>
-                  <p className="text-white/70 font-light leading-relaxed mb-6">
-                    Comprehensive facial assessment with Dr. Ahmed Haq. We evaluate your unique facial structure 
-                    and create a personalized treatment plan tailored to your aesthetic goals.
-                  </p>
-                  <div className="bg-white/5 rounded-2xl p-4">
-                    <p className="text-white/60 text-sm font-light">
-                      Detailed analysis • Goal setting • Treatment planning
-                    </p>
-                  </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-accent border-gray-800 h-full text-center">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Users className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-white text-xl">Consultation</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300 mb-4">
+                        Comprehensive facial assessment with Dr. Ahmed Haq. We evaluate your unique facial structure 
+                        and create a personalized treatment plan tailored to your aesthetic goals.
+                      </p>
+                      <div className="bg-black rounded-lg p-3">
+                        <p className="text-gray-300 text-sm">
+                          Detailed analysis • Goal setting • Treatment planning
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </motion.div>
                 
-                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: 0.2
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <Syringe className="h-8 w-8 text-white/70" />
-                  </div>
-                  <h3 className="text-2xl font-light text-white mb-4">Treatment</h3>
-                  <p className="text-white/70 font-light leading-relaxed mb-6">
-                    Precise filler placement using advanced injection techniques. Topical anesthesia ensures 
-                    comfort throughout the 30-minute procedure with immediate visible results.
-                  </p>
-                  <div className="bg-white/5 rounded-2xl p-4">
-                    <p className="text-white/60 text-sm font-light">
-                      30 minutes • Minimal discomfort • Immediate results
-                    </p>
-                  </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-accent border-gray-800 h-full text-center">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Syringe className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-white text-xl">Treatment</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300 mb-4">
+                        Precise filler placement using advanced injection techniques. Topical anesthesia ensures 
+                        comfort throughout the 30-minute procedure with immediate visible results.
+                      </p>
+                      <div className="bg-black rounded-lg p-3">
+                        <p className="text-gray-300 text-sm">
+                          30 minutes • Minimal discomfort • Immediate results
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </motion.div>
                 
-                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: 0.4
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <Heart className="h-8 w-8 text-white/70" />
-                  </div>
-                  <h3 className="text-2xl font-light text-white mb-4">Aftercare</h3>
-                  <p className="text-white/70 font-light leading-relaxed mb-6">
-                    Minimal downtime with professional aftercare guidance. Results continue to improve 
-                    over 2 weeks as any minor swelling subsides.
-                  </p>
-                  <div className="bg-white/5 rounded-2xl p-4">
-                    <p className="text-white/60 text-sm font-light">
-                      24-48 hours recovery • Professional support • Lasting results
-                    </p>
-                  </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-accent border-gray-800 h-full text-center">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Heart className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-white text-xl">Aftercare</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300 mb-4">
+                        Minimal downtime with professional aftercare guidance. Results continue to improve 
+                        over 2 weeks as any minor swelling subsides.
+                      </p>
+                      <div className="bg-black rounded-lg p-3">
+                        <p className="text-gray-300 text-sm">
+                          24-48 hours recovery • Professional support • Lasting results
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               </div>
             </div>
@@ -519,148 +490,130 @@ const ChinFiller = () => {
         </section>
 
         {/* Face Types Section */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[75px]">
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Personalized for Every Face
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Personalized for Every Face</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Tailored approaches for different facial structures and aesthetic goals
               </p>
             </motion.div>
             
             <div className="max-w-6xl mx-auto space-y-16">
-              <motion.div className="grid lg:grid-cols-2 gap-12 items-center" initial={{
-              opacity: 0,
-              x: -40
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8
-            }} viewport={{
-              once: true
-            }}>
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="grid lg:grid-cols-2 gap-12 items-center"
+              >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-light text-white">Round Face Enhancement</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white">Round Face Enhancement</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Strategic chin filler placement creates definition and elongates the face, achieving 
                     a naturally slimmed appearance. Our specialized facial profiling expertise transforms 
                     round contours into elegant diamond or heart-shaped profiles.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Enhanced facial definition</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Enhanced facial definition</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Improved facial proportions</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Improved facial proportions</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Natural slimming effect</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Natural slimming effect</p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-                  <h4 className="text-xl font-light text-white mb-4">Round Face Benefits</h4>
-                  <p className="text-white/70 font-light">
+                <div className="bg-black rounded-lg p-6 border border-gray-800">
+                  <h4 className="text-lg font-semibold text-white mb-4">Round Face Benefits</h4>
+                  <p className="text-gray-300">
                     Precise placement redefines cheekbones and jawlines, creating natural diamond 
                     or heart-shaped contours that enhance your inherent beauty.
                   </p>
                 </div>
               </motion.div>
               
-              <motion.div className="grid lg:grid-cols-2 gap-12 items-center" initial={{
-              opacity: 0,
-              x: 40
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8
-            }} viewport={{
-              once: true
-            }}>
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 lg:order-1">
-                  <h4 className="text-xl font-light text-white mb-4">Square Face Softening</h4>
-                  <p className="text-white/70 font-light">
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="grid lg:grid-cols-2 gap-12 items-center"
+              >
+                <div className="bg-black rounded-lg p-6 border border-gray-800 lg:order-1">
+                  <h4 className="text-lg font-semibold text-white mb-4">Square Face Softening</h4>
+                  <p className="text-gray-300">
                     Combined with masseter Botox, chin fillers create softer facial angles, 
                     promoting a more feminine V-shaped lower face appearance.
                   </p>
                 </div>
                 <div className="space-y-6 lg:order-2">
-                  <h3 className="text-3xl font-light text-white">Square Face Refinement</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white">Square Face Refinement</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     For square facial structures, particularly common in Asian features, strategic 
                     chin enhancement combined with jawline treatments significantly softens angular 
                     features, creating harmonious V-shaped contours.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Softened facial angles</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Softened facial angles</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">V-shaped face creation</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">V-shaped face creation</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Enhanced femininity</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Enhanced femininity</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
               
-              <motion.div className="grid lg:grid-cols-2 gap-12 items-center" initial={{
-              opacity: 0,
-              x: -40
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8
-            }} viewport={{
-              once: true
-            }}>
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="grid lg:grid-cols-2 gap-12 items-center"
+              >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-light text-white">Double Chin Reduction</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white">Double Chin Reduction</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Advanced chin enhancement creates better definition between chin and neck areas. 
                     By elongating the facial profile and enhancing the under-chin area, we achieve 
                     a sleeker neck silhouette through optical refinement.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Improved chin-neck definition</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Improved chin-neck definition</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Elongated facial profile</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Elongated facial profile</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <p className="text-white/70 font-light">Sleeker neck appearance</p>
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <p className="text-gray-300">Sleeker neck appearance</p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-                  <h4 className="text-xl font-light text-white mb-4">Profile Enhancement</h4>
-                  <p className="text-white/70 font-light">
+                <div className="bg-black rounded-lg p-6 border border-gray-800">
+                  <h4 className="text-lg font-semibold text-white mb-4">Profile Enhancement</h4>
+                  <p className="text-gray-300">
                     Strategic filler placement creates optical adjustments that make double chin 
                     concerns less prominent while defining the jawline beautifully.
                   </p>
@@ -671,63 +624,188 @@ const ChinFiller = () => {
         </section>
 
 
-        {/* Video Treatment Section - Apple Style */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[75px]">
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Treatment in Action
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Chin Filler Pricing London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for premium chin enhancement treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Single Treatment</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£350</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">1.2ml Premium Hyaluronic Acid</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Expert consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium FDA-approved filler</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">12+ months duration</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Enhanced Treatment</CardTitle>
+                    <div className="text-white text-4xl font-bold">£650</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">2.4ml Double Volume Enhancement</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Double volume treatment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive enhancement</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended results</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full facial assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+                Book Your Consultation
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+        {/* Video Treatment Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Treatment in Action</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Watch our expert technique for chin augmentation using advanced dermal filler methods
               </p>
             </motion.div>
             
             <div className="max-w-4xl mx-auto">
-              <motion.div className="relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2
-            }} viewport={{
-              once: true
-            }}>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative rounded-lg overflow-hidden bg-black border border-gray-800"
+              >
                 <div className="aspect-video">
-                  <iframe className="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/Y3gCG1n2ioo" title="Professional chin filler demonstration - Advanced liquid mentoplasty technique" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+                  <iframe 
+                    className="w-full h-full" 
+                    src="https://www.youtube.com/embed/Y3gCG1n2ioo" 
+                    title="Professional chin filler demonstration - Advanced liquid mentoplasty technique" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen 
+                  />
                 </div>
               </motion.div>
               
-              <motion.div className="text-center mt-8" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: 0.4
-            }} viewport={{
-              once: true
-            }}>
-                <p className="text-white/70 font-light text-lg">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center mt-8"
+              >
+                <p className="text-gray-300 text-lg">
                   Professional chin filler demonstration
                 </p>
-                <p className="text-white/50 text-sm mt-2 font-light">
+                <p className="text-gray-400 text-sm mt-2">
                   Advanced liquid mentoplasty technique
                 </p>
               </motion.div>
@@ -735,247 +813,75 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="bg-black py-[75px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Investment in Your Confidence
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Transparent pricing for premium treatments with lasting results
-              </p>
-            </motion.div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8">
-                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-light text-white mb-2">Single Treatment</h3>
-                    <p className="text-white/60 text-sm font-light">1.2ml Hyaluronic Acid</p>
-                  </div>
-                  <div className="mb-6">
-                    <span className="text-4xl font-light text-white">£350</span>
-                  </div>
-                  <div className="space-y-3 text-left">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Premium HA filler</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Expert consultation</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">12+ months duration</p>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center relative" initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: 0.2
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-black px-4 py-1 rounded-full text-xs font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-light text-white mb-2">Enhanced Treatment</h3>
-                    <p className="text-white/60 text-sm font-light">2.4ml Hyaluronic Acid</p>
-                  </div>
-                  <div className="mb-6">
-                    <span className="text-4xl font-light text-white">£650</span>
-                  </div>
-                  <div className="space-y-3 text-left">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Double volume treatment</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Comprehensive enhancement</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Extended results</p>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 text-center" initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: 0.4
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-light text-white mb-2">Premium Treatment</h3>
-                    <p className="text-white/60 text-sm font-light">3.6ml Hyaluronic Acid</p>
-                  </div>
-                  <div className="mb-6">
-                    <span className="text-4xl font-light text-white">£850</span>
-                  </div>
-                  <div className="space-y-3 text-left">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Maximum transformation</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Complete facial balance</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                      <p className="text-white/70 text-sm font-light">Longest lasting results</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-              
-              <motion.div className="text-center mt-12" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.6
-            }} viewport={{
-              once: true
-            }}>
-                <p className="text-white/60 font-light mb-8">
-                  All treatments include consultation, premium fillers, and comprehensive aftercare
-                </p>
-                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-medium transition-all duration-300 hover:scale-105">
-                  Book Your Consultation
-                </a>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* Benefits Section */}
-        <section className="bg-black py-[75px]">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Why Choose Chin Filler?
-              </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Chin Filler?</h2>
             </motion.div>
             
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-              <motion.div className="space-y-8" initial={{
-              opacity: 0,
-              x: -40
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8
-            }} viewport={{
-              once: true
-            }}>
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-light text-white">Enhanced Facial Balance</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white">Enhanced Facial Balance</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Our aesthetics is invisible art. Chin fillers create subtle yet transformative changes that enhance your natural beauty while maintaining facial harmony.
                   </p>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-white/70 font-light">Immediate visible results with minimal downtime</p>
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <p className="text-gray-300">Immediate visible results with minimal downtime</p>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-white/70 font-light">Non-surgical alternative to chin implants</p>
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <p className="text-gray-300">Non-surgical alternative to chin implants</p>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-white/70 font-light">Reversible treatment with hyaluronidase</p>
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <p className="text-gray-300">Reversible treatment with hyaluronidase</p>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-white/70 font-light">Long-lasting results (12-18 months)</p>
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <p className="text-gray-300">Long-lasting results (12-18 months)</p>
                   </div>
                 </div>
               </motion.div>
               
-              <motion.div className="space-y-8" initial={{
-              opacity: 0,
-              x: 40
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2
-            }} viewport={{
-              once: true
-            }}>
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-light text-white">Expert Technique</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white">Expert Technique</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Bold • Natural • Always Your Way. Dr. Ahmed Haq's expertise ensures precise placement for optimal results that enhance your unique features.
                   </p>
                 </div>
                 
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                  <h4 className="text-xl font-light text-white mb-4">Treatment Areas</h4>
+                <div className="bg-accent rounded-lg p-6 border border-gray-800">
+                  <h4 className="text-lg font-semibold text-white mb-4">Treatment Areas</h4>
                   <div className="space-y-3">
-                    <p className="text-white/70 font-light">• Chin projection and definition</p>
-                    <p className="text-white/70 font-light">• Jawline enhancement</p>
-                    <p className="text-white/70 font-light">• Profile balance correction</p>
-                    <p className="text-white/70 font-light">• Lower face contouring</p>
+                    <p className="text-gray-300">• Chin projection and definition</p>
+                    <p className="text-gray-300">• Jawline enhancement</p>
+                    <p className="text-gray-300">• Profile balance correction</p>
+                    <p className="text-gray-300">• Lower face contouring</p>
                   </div>
                 </div>
               </motion.div>
