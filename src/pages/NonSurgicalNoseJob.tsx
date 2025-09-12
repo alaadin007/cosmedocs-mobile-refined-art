@@ -426,20 +426,6 @@ const NonSurgicalNoseJob = () => {
         {/* Complex Nose Fracture Case - Apple Style */}
         <section className="py-32 bg-accent">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Complex Fracture Reconstruction
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Advanced non-surgical reconstruction of complicated nose fractures using pioneering techniques
-              </p>
-            </motion.div>
             
             <div className="max-w-6xl mx-auto">
               <motion.div 
@@ -486,20 +472,6 @@ const NonSurgicalNoseJob = () => {
         {/* Complicated Deviated Nose Correction */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Complex Deviated Nose Corrections
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Specialized expertise in correcting even the most challenging deviated nose cases using advanced non-surgical techniques
-              </p>
-            </motion.div>
             
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 mb-12">
