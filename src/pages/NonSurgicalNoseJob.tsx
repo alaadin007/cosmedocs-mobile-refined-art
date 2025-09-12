@@ -189,7 +189,7 @@ const NonSurgicalNoseJob = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   Non-Surgical
                   <span className="block text-purple-300">Nose Job London</span>
-                  <span className="block text-sm mt-4">nose reshaping with dermal filler | HARLEY street</span>
+                  <span className="block text-sm mt-4">nose reshaping with dermal filler | Harley Street</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art-</span>
