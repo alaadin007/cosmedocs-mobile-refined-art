@@ -430,7 +430,7 @@ const NonSurgicalNoseJob = () => {
         </section>
 
         {/* Nose Fracture Case */}
-        <section className="py-32 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+        <section className="py-32 bg-accent relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/10 via-transparent to-blue-900/10"></div>
           <div className="page-container relative z-10">
             
@@ -450,61 +450,53 @@ const NonSurgicalNoseJob = () => {
             </motion.div>
             
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-16 mb-12">
-                <motion.div
-                  initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  viewport={{ once: true }}
-                  className="relative group"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                  <div className="relative bg-black/20 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                    <div className="text-center mb-6">
-                      <span className="inline-block px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-medium mb-4">BEFORE</span>
-                    </div>
-                    <img 
-                      src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
-                      alt="Complex nose fracture non-surgical reconstruction before after nose botox nose filler London Harley Street Cosmedocs Dr Ahmed Haq advanced nose reshaping without surgery fibrosis cartilage bone treatment cannula technique"
-                      className="w-full h-auto rounded-2xl mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <p className="text-white/70 text-lg font-light leading-relaxed">Complex fracture case with scar tissue adhesion requiring advanced non-surgical reconstruction techniques</p>
-                  </div>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  viewport={{ once: true }}
-                  className="relative group"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                  <div className="relative bg-black/20 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                    <div className="text-center mb-6">
-                      <span className="inline-block px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-medium mb-4">AFTER</span>
-                    </div>
-                    <img 
-                      src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
-                      alt="Complex nose fracture non-surgical reconstruction after results nose botox nose filler London Harley Street Cosmedocs Dr Ahmed Haq advanced nose reshaping"
-                      className="w-full h-auto rounded-2xl mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <p className="text-white/70 text-lg font-light leading-relaxed">Remarkable transformation achieved through strategic dermal filler placement and advanced #cosmenose technique</p>
-                  </div>
-                </motion.div>
-              </div>
-              
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+              <motion.div 
+                className="grid lg:grid-cols-2 gap-16 items-center"
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                 viewport={{ once: true }}
               >
-                <p className="text-white/80 mb-8 text-lg font-light leading-relaxed max-w-4xl mx-auto">
-                  This challenging nose fracture case demonstrates Dr. Ahmed Haq's expertise in advanced non-surgical reconstruction using pioneering techniques, 
-                  achieving significant improvement in nasal structure and overall facial harmony without surgical intervention.
-                </p>
+                <div className="order-2 lg:order-1 relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <img 
+                    src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
+                    alt="Complex nose fracture non-surgical reconstruction before after nose botox nose filler London Harley Street Cosmedocs Dr Ahmed Haq advanced nose reshaping without surgery fibrosis cartilage bone treatment cannula technique"
+                    className="w-full h-auto rounded-3xl shadow-2xl object-cover max-w-full relative z-10 group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    onError={(e) => {
+                      console.error('Image failed to load:', e.currentTarget.src);
+                      e.currentTarget.style.display = 'block';
+                      e.currentTarget.style.backgroundColor = '#333';
+                      e.currentTarget.style.minHeight = '300px';
+                    }}
+                  />
+                </div>
+                
+                <div className="order-1 lg:order-2 space-y-8">
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-lg"></div>
+                    <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                      <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
+                        This complex case presented unique challenges with scar tissue adhesion affecting the nasal structure. 
+                        The remarkable transformation demonstrates our advanced non-surgical reconstruction capabilities using the innovative #cosmenose technique.
+                      </p>
+                      
+                      <div className="grid grid-cols-2 gap-6 mb-8">
+                        <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                          <p className="text-purple-300 font-semibold text-sm uppercase tracking-wide mb-2">Technique Used</p>
+                          <p className="text-white font-light">Advanced Cannula</p>
+                        </div>
+                        <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                          <p className="text-purple-300 font-semibold text-sm uppercase tracking-wide mb-2">Duration</p>
+                          <p className="text-white font-light">45 Minutes</p>
+                        </div>
+                      </div>
+                      
+                      <FractureDebriefCard />
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
