@@ -192,11 +192,9 @@ const NonSurgicalNoseJob = () => {
                   <span className="block text-sm mt-4">Nose Botox & Dermal Fillers | Harley Street</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <span className="text-purple-300 font-semibold">Invisible Art-</span>
                   <br />
-                  Nose transformation that speaks without saying a word
-                  <br />
-                  <span className="text-base mt-2 block">Premium nose reshaping without surgery using nose botox and nose tip fillers</span>
+                  Premium nose reshaping without surgery using nose botox and nose tip fillers
                 </p>
                 <div className="mb-8">
                   <p className="text-sm text-gray-300">#cosmenose - Advanced liquid nose job techniques | Non-invasive nose surgery alternative</p>
