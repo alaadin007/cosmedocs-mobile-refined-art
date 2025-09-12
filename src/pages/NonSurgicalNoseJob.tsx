@@ -193,8 +193,6 @@ const NonSurgicalNoseJob = () => {
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible art - Premium nose fillers</span>
-                  <br />
-                  Premium nose reshaping without surgery using nose botox and nose fillers
                 </p>
                 <div className="mb-8">
                   <p className="text-sm text-gray-300">#cosmenose - Advanced liquid nose job techniques | Non-invasive nose surgery alternative</p>
