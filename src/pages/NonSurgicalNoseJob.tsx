@@ -445,7 +445,13 @@ const NonSurgicalNoseJob = () => {
                 Nose Fracture Case
               </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Advanced non-surgical reconstruction of complex nose fracture cases using pioneering techniques and expert precision
+                Advanced non-surgical reconstruction of complex nose fracture cases using pioneering techniques and expert precision. 
+                Our specialized approach combines nose botox treatments with strategic dermal filler nose placement to address structural damage 
+                from previous trauma. This non-invasive nose surgery alternative offers remarkable results for patients seeking nose reshaping 
+                without surgery after fracture complications.
+              </p>
+              <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-sm">
+                Expert nose injection techniques | Liquid nose job reconstruction | Non-surgical rhinoplasty for trauma cases
               </p>
             </motion.div>
             
