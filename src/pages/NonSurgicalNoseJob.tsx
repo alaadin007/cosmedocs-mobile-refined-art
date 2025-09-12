@@ -618,7 +618,7 @@ const NonSurgicalNoseJob = () => {
         </section>
 
         {/* Patient Experience Video */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="py-32 bg-accent">
           <div className="page-container">
             <motion.div
               className="text-center mb-20"
