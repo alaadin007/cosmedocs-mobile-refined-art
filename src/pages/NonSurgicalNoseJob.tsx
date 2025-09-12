@@ -389,6 +389,54 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
+        {/* Case Studies Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            {/* Challenging Fracture Case */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <Card className="bg-gray-900 border-purple-400/20">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-white">Challenging Fracture Case</CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-300">
+                  <p className="text-lg leading-relaxed">
+                    This case demonstrates our expertise in addressing complex nasal fractures using advanced non-surgical techniques. 
+                    Through precise filler placement and our signature #cosmenose method, we successfully restored facial harmony 
+                    and improved nasal symmetry without the need for invasive surgery.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Complex Deviated Nose Corrections */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gray-900 border-purple-400/20">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-white">Complex Deviated Nose Corrections</CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-300">
+                  <p className="text-lg leading-relaxed">
+                    Our specialized approach to deviated nose corrections showcases the versatility of non-surgical rhinoplasty. 
+                    Using strategic dermal filler placement and advanced injection techniques, we create optical illusions that 
+                    dramatically improve nasal alignment and overall facial balance, achieving results previously only possible through surgery.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Complex Nose Fracture Case - Apple Style */}
         <section className="py-32 bg-accent">
           <div className="page-container">
