@@ -606,6 +606,236 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical Nose Job Pricing London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for premium non-surgical nose reshaping treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full nasal assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Non-Surgical Nose Job</CardTitle>
+                    <div className="text-white text-4xl font-bold">£450</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Complete nose reshaping with premium dermal fillers</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Premium hyaluronic acid fillers</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">#CosmeNose advanced technique</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">2-week follow-up included</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Botox for Nose</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£200</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Reduce flaring and refine nasal tip</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Reduces nostril flaring</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Lifts drooping nasal tip</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Results last 3-4 months</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+                Book Your Consultation
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits & Comparison Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Non-Surgical Over Surgical Rhinoplasty?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Compare the benefits of non-surgical nose jobs versus traditional surgical rhinoplasty to make an informed decision.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-red-900/20 border-red-500 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Surgical Nose Job</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Higher risks & complications</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Less predictable results</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Results take longer to show</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Long recovery period</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">High cost (£4,000-£8,000)</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-green-900/20 border-green-500 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Non-Surgical Nose Job</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Little to no risks & complications</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Subtle & natural-looking results</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Instantly visible results</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Minimal recovery time</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">Affordable pricing (£450)</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Treatment Information - Apple Style */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
@@ -708,78 +938,6 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
-        {/* Location & Contact - Apple Style */}
-        <section className="py-32 bg-[#111]">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Visit Us in Harley Street
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Located in the heart of London's prestigious medical district
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <h3 className="text-3xl md:text-4xl font-light text-white">London's Premier Medical District</h3>
-                <p className="text-lg text-white/80 font-light leading-relaxed">
-                  Located in the heart of London's prestigious Harley Street medical district, our clinic offers the highest standards of aesthetic medicine in an elegant, professional environment.
-                </p>
-                
-                <div className="space-y-6">
-                  {[
-                    { icon: MapPin, text: "10 Harley Street, London W1G 9PF" },
-                    { icon: Phone, text: "0333 0551 503" },
-                    { icon: Mail, text: "info@cosmedocs.com" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <item.icon className="h-6 w-6 mr-4 text-white/70" />
-                      <span className="text-lg font-light text-white/90">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-                  <CardContent className="p-10 text-center">
-                    <h3 className="text-3xl font-light text-white mb-6">Ready to Transform Your Profile?</h3>
-                    <p className="text-white/80 mb-8 text-lg font-light leading-relaxed">
-                      Book a consultation with Dr. Ahmed Haq and discover how the #cosmenose technique can enhance your natural beauty.
-                    </p>
-                    <a 
-                      href={bookingUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 w-full border border-white/20"
-                    >
-                      Book Your £450 Consultation
-                    </a>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -875,6 +1033,79 @@ const NonSurgicalNoseJob = () => {
             </div>
           </div>
         </section>
+
+        {/* Location & Contact - Apple Style */}
+        <section className="py-32 bg-[#111]">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Visit Us in Harley Street
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Located in the heart of London's prestigious medical district
+              </p>
+            </motion.div>
+            
+            <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <h3 className="text-3xl md:text-4xl font-light text-white">London's Premier Medical District</h3>
+                <p className="text-lg text-white/80 font-light leading-relaxed">
+                  Located in the heart of London's prestigious Harley Street medical district, our clinic offers the highest standards of aesthetic medicine in an elegant, professional environment.
+                </p>
+                
+                <div className="space-y-6">
+                  {[
+                    { icon: MapPin, text: "10 Harley Street, London W1G 9PF" },
+                    { icon: Phone, text: "0333 0551 503" },
+                    { icon: Mail, text: "info@cosmedocs.com" }
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center">
+                      <item.icon className="h-6 w-6 mr-4 text-white/70" />
+                      <span className="text-lg font-light text-white/90">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+                  <CardContent className="p-10 text-center">
+                    <h3 className="text-3xl font-light text-white mb-6">Ready to Transform Your Profile?</h3>
+                    <p className="text-white/80 mb-8 text-lg font-light leading-relaxed">
+                      Book a consultation with Dr. Ahmed Haq and discover how the #cosmenose technique can enhance your natural beauty.
+                    </p>
+                    <a 
+                      href={bookingUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 w-full border border-white/20"
+                    >
+                      Book Your £450 Consultation
+                    </a>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Hidden SEO content */}
         <div className="sr-only">
