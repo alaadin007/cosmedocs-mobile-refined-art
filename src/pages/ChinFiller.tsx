@@ -320,11 +320,9 @@ const ChinFiller = () => {
                 className="space-y-8"
               >
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white">Precision Enhancement</h3>
+                  <h3 className="text-2xl font-bold text-white">Key Benefits</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Liquid mentoplasty represents the art of invisible enhancement. Using premium hyaluronic acid fillers, 
-                    we reshape and project weak or retracted chins to create perfect facial harmony. This non-surgical 
-                    approach volumizes the chin area while maintaining completely natural results.
+                    Our expert chin enhancement treatments offer multiple advantages for facial harmony and confidence.
                   </p>
                 </div>
                 
