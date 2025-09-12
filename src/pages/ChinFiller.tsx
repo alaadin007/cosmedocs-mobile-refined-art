@@ -16,7 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 const ChinFiller = () => {
-  const seoData = generateSEOMetadata("Chin Filler London | From £350 | Dr. Ahmed Haq | Harley Street", "Professional chin filler treatments in London's Harley Street. Transform from a weak chin to a well-defined profile. Expert chin augmentation from £350.", "/chin-filler");
+  const seoData = generateSEOMetadata("1ml Chin Filler London | Before & After Results | From £350", "Expert 1ml chin filler treatments in London. See amazing before and after results. Double chin filler, chin shadow correction. Book consultation.", "/chin-filler");
   const bookingUrl = "https://med.as.me/harleystreet";
   
   const beforeAfterImages = [
@@ -43,8 +43,8 @@ const ChinFiller = () => {
   ];
 
   const leftColumnFaqs = [{
-    question: "How much does chin filler cost in London?",
-    answer: "At Cosmedocs Harley Street, chin filler treatments start from £350 for the first syringe (1.2ml), £650 for 2.4ml, and £850 for 3.6ml. The cost varies depending on the amount of filler needed to achieve your desired results."
+    question: "What is chin injection filler cost in London?",
+    answer: "At Cosmedocs Harley Street, 1ml chin filler treatments start from £350 for 1.2ml, £650 for 2.4ml, and £850 for 3.6ml. Our chin injection filler cost varies depending on the amount needed to achieve your desired results."
   }, {
     question: "How long do chin filler results last?",
     answer: "Dermal fillers in the chin last longer than fillers in the lips due to the viscosity (thickness) of the material selected. Chin filler results typically last 12-18 months, sometimes longer, depending on the type and amount of filler used."
@@ -56,7 +56,7 @@ const ChinFiller = () => {
     answer: "The process begins with a detailed consultation to examine your unique facial proportions. Treatment involves cleaning and disinfecting the chin area, applying topical numbing cream, then liquid mentoplasty with a fine needle takes 15-30 minutes to complete."
   }, {
     question: "What is the chin filler aftercare process?",
-    answer: "Recovery is minimal with 24-48 hours of minor swelling. Apply ice packs for 10-15 minutes every hour for the first 6 hours, avoid touching the area, and sleep with head elevated. You can return to work immediately but avoid strenuous exercise, saunas, and alcohol for 24-48 hours. We provide comprehensive aftercare including detailed instructions, 24/7 emergency contact, and 2-week follow-up appointments. Final results appear within 2 weeks once swelling subsides."
+    answer: "Proper chin filler aftercare is essential for optimal 1ml chin filler before and after results. Apply ice packs for 10-15 minutes every hour for the first 6 hours, avoid touching the filler chin area, and sleep with head elevated. You can return to work immediately but avoid strenuous exercise, saunas, and alcohol for 24-48 hours. We provide comprehensive aftercare including detailed instructions, 24/7 emergency contact, and 2-week follow-up appointments. Final results appear within 2 weeks once swelling subsides."
   }];
   const rightColumnFaqs = [{
     question: "What are chin and jawline fillers benefits?",
@@ -170,20 +170,7 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
-            </motion.div>
-
-        {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">1ml Chin Filler Before and After Results</h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -273,8 +260,6 @@ const ChinFiller = () => {
             </div>
           </div>
         </section>
-          </div>
-        </section>
 
         {/* Before & After Gallery - Carousel Style */}
         <section className="py-20 bg-black">
@@ -286,10 +271,10 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Chin Filler Before and After Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Chin Fillers Before and After London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore authentic chin filler before and after results from our London Harley Street clinic. 
-                Our expert dermal filler treatments enhance chin projection and facial balance with natural-looking results.
+                Explore authentic 1ml chin filler before and after results from our Harley Street clinic. 
+                Our expert dermal fillers chin treatments enhance projection and facial balance, including double chin filler and chin shadow correction.
               </p>
             </motion.div>
 
@@ -343,14 +328,13 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">What is Liquid Mentoplasty?</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">What is 1ml Chin Filler Treatment?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto mb-6">
-                Liquid mentoplasty represents the art of invisible enhancement. Using premium hyaluronic acid fillers, 
-                we reshape and project weak or retracted chins to create perfect facial harmony. This non-surgical 
-                approach volumizes the chin area while maintaining completely natural results.
+                Our 1 ml chin filler London treatment uses premium hyaluronic acid to enhance facial harmony. Liquid mentoplasty represents invisible enhancement, 
+                creating natural before and after chin filler transformations without surgical intervention for chin shadow and chin crease correction.
               </p>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Advanced non-surgical chin enhancement using precision-placed dermal fillers to create perfect facial harmony
+                Advanced 1ml chin filler treatment using precision-placed dermal fillers chin enhancement to create perfect facial harmony
               </p>
             </motion.div>
             
@@ -384,9 +368,9 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Personalized for Every Face</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Round Face Chin Filler Before and After</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Tailored approaches for different facial structures and aesthetic goals
+                Tailored 1 ml chin filler approaches for different facial structures including round face chin filler before and after transformations
               </p>
             </motion.div>
             
