@@ -142,7 +142,6 @@ const ChinFiller = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £350</p>
                   <p className="text-sm text-gray-300">#cosmechin - Check out our IG for hundreds more natural, subtle transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
