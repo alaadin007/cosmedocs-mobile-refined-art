@@ -429,42 +429,10 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
-        {/* Complex Case Studies Section */}
-        <section className="py-16 bg-gradient-to-b from-black via-gray-950 to-accent">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">
-                Complex Cases
-              </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Showcasing our expertise in challenging reconstructive procedures that require advanced techniques and artistic precision
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Challenging Fracture Case */}
         <section className="py-32 bg-accent relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
           <div className="page-container relative z-10">
-            
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Advanced non-surgical reconstruction of complicated nose fractures using pioneering techniques
-              </p>
-            </motion.div>
             
             <div className="max-w-6xl mx-auto">
               <motion.div 
@@ -495,7 +463,7 @@ const NonSurgicalNoseJob = () => {
                     <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-lg"></div>
                     <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                       <h3 className="text-3xl md:text-4xl font-light text-white mb-6 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
-                        Challenging Fracture Case
+                        Complex Deviated Nose Corrections
                       </h3>
                       <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
                         This complex case presented unique challenges with scar tissue adhesion affecting the nasal structure. 
