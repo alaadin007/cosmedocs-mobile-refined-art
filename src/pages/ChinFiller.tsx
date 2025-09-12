@@ -854,51 +854,16 @@ const ChinFiller = () => {
                 className="space-y-8"
               >
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white">Treatment Areas</h3>
+                  <h3 className="text-2xl font-bold text-white">Chin, Cheek & Jawline Enhancement</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Bold • Natural • Always Your Way. Dr. Ahmed Haq's expertise ensures precise placement for optimal results that enhance your unique features.
+                    The chin and jawline need to be considered one entity. Using hyaluronic acid-based dermal filler, a well-defined chin can achieve visual harmony between the nose, neck, and cheeks.
                   </p>
-                </div>
-                
-                <div className="bg-accent rounded-lg p-6 border border-gray-800">
-                  <h4 className="text-lg font-semibold text-white mb-6">Areas We Enhance</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <div>
-                        <h5 className="text-white font-medium">Chin Projection</h5>
-                        <p className="text-gray-300 text-sm">Forward projection for better profile balance</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <div>
-                        <h5 className="text-white font-medium">Chin Definition</h5>
-                        <p className="text-gray-300 text-sm">Enhanced contours and definition</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <div>
-                        <h5 className="text-white font-medium">Jawline Enhancement</h5>
-                        <p className="text-gray-300 text-sm">Improved lower face structure</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <div>
-                        <h5 className="text-white font-medium">Profile Balance</h5>
-                        <p className="text-gray-300 text-sm">Harmonious nose-to-chin proportions</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <div>
-                        <h5 className="text-white font-medium">Lower Face Contouring</h5>
-                        <p className="text-gray-300 text-sm">Overall facial harmony and balance</p>
-                      </div>
-                    </div>
-                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    Female patients benefit from jawline filler and cheek filler to effortlessly achieve softer, heart-shaped, attractive contours.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    In addition to better aesthetic projection, a stronger and more prominent chin can support voluptuous lips, whether natural or achieved through lip fillers.
+                  </p>
                 </div>
               </motion.div>
             </div>
