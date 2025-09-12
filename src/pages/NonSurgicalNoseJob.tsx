@@ -210,9 +210,12 @@ const NonSurgicalNoseJob = () => {
                   >
                     Book Consultation
                   </a>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    View Results
-                  </Button>
+                  <a 
+                    href="#pricing-section"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm border inline-flex items-center justify-center transition-all duration-300"
+                  >
+                    View Price List
+                  </a>
                 </div>
               </motion.div>
               
