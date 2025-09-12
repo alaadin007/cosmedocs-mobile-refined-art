@@ -363,6 +363,8 @@ const NonSurgicalNoseJob = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Non-Surgical Nose Job at Cosmedocs Harley Street</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
+                Non-surgical nose jobs use premium dermal fillers to reshape and refine your nose without invasive surgery or lengthy recovery. 
+                This innovative technique strategically injects hyaluronic acid to smooth bumps, lift the tip, and create perfect facial harmony.<br/><br/>
                 Dr. Ahmed Haq pioneered the innovative #cosmenose technique, delivering natural nose enhancement without surgery. 
                 Our advanced approach combines artistic vision with medical precision for exceptional results.
               </p>
