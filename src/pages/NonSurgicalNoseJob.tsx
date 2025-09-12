@@ -402,15 +402,8 @@ const NonSurgicalNoseJob = () => {
             >
               <Card className="bg-gray-900 border-purple-400/20">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-white">Challenging Fracture Case</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-white text-center">Challenging Fracture Case</CardTitle>
                 </CardHeader>
-                <CardContent className="text-gray-300">
-                  <p className="text-lg leading-relaxed">
-                    This case demonstrates our expertise in addressing complex nasal fractures using advanced non-surgical techniques. 
-                    Through precise filler placement and our signature #cosmenose method, we successfully restored facial harmony 
-                    and improved nasal symmetry without the need for invasive surgery.
-                  </p>
-                </CardContent>
               </Card>
             </motion.div>
 
@@ -423,15 +416,8 @@ const NonSurgicalNoseJob = () => {
             >
               <Card className="bg-gray-900 border-purple-400/20">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-white">Complex Deviated Nose Corrections</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-white text-center">Complex Deviated Nose Corrections</CardTitle>
                 </CardHeader>
-                <CardContent className="text-gray-300">
-                  <p className="text-lg leading-relaxed">
-                    Our specialized approach to deviated nose corrections showcases the versatility of non-surgical rhinoplasty. 
-                    Using strategic dermal filler placement and advanced injection techniques, we create optical illusions that 
-                    dramatically improve nasal alignment and overall facial balance, achieving results previously only possible through surgery.
-                  </p>
-                </CardContent>
               </Card>
             </motion.div>
           </div>
