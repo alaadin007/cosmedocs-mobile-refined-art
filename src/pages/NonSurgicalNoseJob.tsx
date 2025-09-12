@@ -373,59 +373,64 @@ const NonSurgicalNoseJob = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6">What Can Be Treated with Non-Surgical Nose Reshaping?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Nose botox for slimming wide noses and nasal flare reduction</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Nose tip filler for pixie tip lifts and enhanced projection</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Dermal filler nose bridge enhancement and bump smoothing</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Nose lift botox for subtle tip elevation and refinement</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Non-surgical nose job before after transformations tailored to your features</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Nonsurgical rhinoplasty for comprehensive nose reshaping without surgery</p>
-                  </div>
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-3xl font-bold mb-8 text-white">What Can Be Treated with Non-Surgical Nose Reshaping?</h3>
+              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Nose botox for slimming wide noses and nasal flare reduction</p>
                 </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                  <h4 className="text-lg font-semibold mb-3 flex items-center">
-                    <Heart className="text-purple-400 mr-3" size={24} />
-                    Safe & Reversible
-                  </h4>
-                  <p className="text-gray-300">Using premium hyaluronic acid fillers that can be dissolved if needed, providing peace of mind with every treatment.</p>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Nose tip filler for pixie tip lifts and enhanced projection</p>
                 </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Dermal filler nose bridge enhancement and bump smoothing</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Nose lift botox for subtle tip elevation and refinement</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Non-surgical nose job before after transformations tailored to your features</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Nonsurgical rhinoplasty for comprehensive nose reshaping without surgery</p>
+                </div>
+              </div>
+            </motion.div>
 
-              </motion.div>
-            </div>
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-3xl font-bold mb-6 text-white">Safe & Reliable Non-Surgical Nose Treatments</h3>
+              <div className="max-w-3xl mx-auto">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                  <div className="flex items-center justify-center mb-4">
+                    <Heart className="text-purple-400 mr-3" size={32} />
+                    <h4 className="text-xl font-semibold text-white">Premium Safety Standards</h4>
+                  </div>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Our non-surgical nose treatments use only premium hyaluronic acid fillers that can be dissolved if needed, 
+                    providing complete peace of mind with every treatment. Dr. Ahmed Haq's expertise ensures safe, predictable results 
+                    with minimal downtime and maximum satisfaction.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
