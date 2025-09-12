@@ -593,51 +593,24 @@ const ChinFiller = () => {
               >
                 <Card className="bg-red-900/20 border-red-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl flex items-center">
-                      <Syringe className="mr-3 text-red-400" size={24} />
-                      Going Under A Knife — Genioplasty
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <Syringe className="mr-3 text-red-400" size={20} />
+                      Surgical Genioplasty
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-6">
-                    <p className="text-gray-300">
-                      Also known as Mentoplasty, a surgical chin enhancement and augmentation is meant to reshape your chin. 
-                      This invasive approach may involve moving the bone from the jaw forward or placing custom-made silicone implants for better chin projection.
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300 text-sm">
+                      Invasive surgical procedure involving bone repositioning or implant placement for permanent chin enhancement.
                     </p>
                     
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-red-400">Risks of Chin Surgery:</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Possible shifting of chin implant from its original position</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                          <p className="text-gray-300">An unnatural chin, especially in females who prefer a more feminine facial shape</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Possibility of poor cosmetic outcome leading to revision surgery</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Unbearable pain for some patients</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                          <p className="text-gray-300">A relatively expensive option for many clients</p>
-                        </div>
-                      </div>
-                    </div>
-
                     <div className="bg-red-900/30 rounded-lg p-4 border border-red-500/30">
-                      <h5 className="text-red-400 font-semibold mb-2">Surgical Considerations:</h5>
-                      <ul className="text-gray-300 text-sm space-y-1">
+                      <ul className="text-gray-300 text-sm space-y-2">
                         <li>• General anesthesia required</li>
                         <li>• 2-4 weeks recovery time</li>
-                        <li>• Permanent but irreversible results</li>
-                        <li>• Higher cost (£5000-£8000+)</li>
-                        <li>• Risk of complications and scarring</li>
+                        <li>• £5,000-£8,000+ cost</li>
+                        <li>• Permanent but irreversible</li>
+                        <li>• Risk of complications</li>
+                        <li>• Potential implant shifting</li>
                       </ul>
                     </div>
                   </CardContent>
@@ -653,60 +626,25 @@ const ChinFiller = () => {
               >
                 <Card className="bg-green-900/20 border-green-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl flex items-center">
-                      <Heart className="mr-3 text-green-400" size={24} />
-                      Dermal Fillers to the Rescue!
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <Heart className="mr-3 text-green-400" size={20} />
+                      Non-Surgical Fillers
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-6">
-                    <p className="text-gray-300">
-                      Before you completely shut down on self-enhancement and boosting your self-confidence, we have something worthy to share! 
-                      <strong className="text-green-400"> Hyaluronic acid gel dermal fillers</strong> can help you realize your cosmetic goals in under 20 minutes!
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300 text-sm">
+                      Hyaluronic acid-based dermal fillers for natural chin enhancement with minimal downtime and reversible results.
                     </p>
                     
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-green-400">Advantages of Dermal Fillers:</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="text-green-500 mt-1" size={16} />
-                          <p className="text-gray-300">No surgical risks or extensive recovery period</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="text-green-500 mt-1" size={16} />
-                          <p className="text-gray-300">Reversible results with hyaluronidase if needed</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="text-green-500 mt-1" size={16} />
-                          <p className="text-gray-300">Natural-looking enhancement that respects facial femininity</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="text-green-500 mt-1" size={16} />
-                          <p className="text-gray-300">Minimal discomfort during treatment</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="text-green-500 mt-1" size={16} />
-                          <p className="text-gray-300">Affordable and accessible option</p>
-                        </div>
-                      </div>
-                    </div>
-
                     <div className="bg-green-900/30 rounded-lg p-4 border border-green-500/30">
-                      <h5 className="text-green-400 font-semibold mb-2">Non-Surgical Benefits:</h5>
-                      <ul className="text-gray-300 text-sm space-y-1">
+                      <ul className="text-gray-300 text-sm space-y-2">
                         <li>• Topical anesthetic only</li>
                         <li>• 24-48 hours minimal downtime</li>
-                        <li>• Adjustable and reversible results</li>
-                        <li>• Cost-effective (from £375)</li>
-                        <li>• Immediate visible improvement</li>
+                        <li>• From £375 cost-effective</li>
+                        <li>• 12-18 months duration</li>
+                        <li>• Fully reversible</li>
+                        <li>• Natural-looking results</li>
                       </ul>
-                    </div>
-
-                    <div className="bg-purple-900/30 rounded-lg p-4 border border-purple-500/30">
-                      <h5 className="text-purple-400 font-semibold mb-2">Studies Show:</h5>
-                      <p className="text-gray-300 text-sm">
-                        Studies conducted on the efficacy and safety of dermal fillers for chin retrusion showed that the treatment 
-                        showed visible results that were also safe and well tolerated.
-                      </p>
                     </div>
                   </CardContent>
                 </Card>
