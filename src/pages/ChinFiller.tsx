@@ -55,8 +55,8 @@ const ChinFiller = () => {
     question: "What's the difference between chin filler and chin surgery?",
     answer: "Chin filler is non-surgical, temporary, and involves minimal downtime. Surgical chin augmentation is permanent but carries surgical risks, longer recovery time, and higher costs."
   }, {
-    question: "Can chin filler help with a double chin?",
-    answer: "Yes, chin fillers can help minimize the appearance of a double chin by enhancing the chin projection and creating better definition between the chin and neck area."
+    question: "What is the chin filler aftercare process?",
+    answer: "Recovery is minimal with 24-48 hours of minor swelling. Apply ice packs for 10-15 minutes every hour for the first 6 hours, avoid touching the area, and sleep with head elevated. You can return to work immediately but avoid strenuous exercise, saunas, and alcohol for 24-48 hours. We provide comprehensive aftercare including detailed instructions, 24/7 emergency contact, and 2-week follow-up appointments. Final results appear within 2 weeks once swelling subsides."
   }];
   const rightColumnFaqs = [{
     question: "How painful is chin filler treatment?",
@@ -71,8 +71,8 @@ const ChinFiller = () => {
     question: "How quickly will I see chin filler results?",
     answer: "Results are visible immediately after treatment, with final results apparent within 2 weeks once any minor swelling subsides."
   }, {
-    question: "Can chin filler results be reversed?",
-    answer: "Yes, hyaluronic acid chin fillers can be dissolved with hyaluronidase if needed, providing flexibility that surgical options cannot offer."
+    question: "Can chin filler help with a double chin?",
+    answer: "Yes, chin fillers can help minimize the appearance of a double chin by enhancing the chin projection and creating better definition between the chin and neck area."
   }];
   return <>
       <Helmet>
@@ -386,73 +386,6 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Aftercare FAQ Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Chin Filler Aftercare</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Proper aftercare ensures optimal results and minimal downtime after your chin filler treatment
-              </p>
-            </motion.div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="bg-accent rounded-lg border border-gray-800">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-3">How long is the recovery time after chin filler?</h3>
-                      <p className="text-gray-300">Recovery is minimal with professional aftercare guidance. Most patients experience 24-48 hours of minor swelling, with results continuing to improve over 2 weeks as any swelling subsides completely.</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-accent rounded-lg border border-gray-800">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-3">What should I do immediately after treatment?</h3>
-                      <p className="text-gray-300">Apply ice packs for 10-15 minutes every hour for the first 6 hours. Avoid touching or massaging the treated area, and sleep with your head elevated for the first night to minimize swelling.</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-accent rounded-lg border border-gray-800">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-3">When can I return to normal activities?</h3>
-                      <p className="text-gray-300">You can return to work immediately after treatment. However, avoid strenuous exercise, saunas, and alcohol for 24-48 hours to prevent increased swelling and ensure optimal healing.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="bg-accent rounded-lg border border-gray-800">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-3">What aftercare support do you provide?</h3>
-                      <p className="text-gray-300">We provide comprehensive aftercare including detailed post-treatment instructions, 24/7 emergency contact, and follow-up appointments at 2 weeks to assess your results and address any concerns.</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-accent rounded-lg border border-gray-800">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-3">How can I minimize swelling and bruising?</h3>
-                      <p className="text-gray-300">Avoid blood-thinning medications and supplements before treatment. Post-treatment, use arnica cream, apply cold compresses, and avoid lying flat for extended periods. Most swelling resolves within 48-72 hours.</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-accent rounded-lg border border-gray-800">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-3">When will I see final results?</h3>
-                      <p className="text-gray-300">Initial results are visible immediately after treatment. Final results appear within 2 weeks once any minor swelling has completely subsided and the filler has fully integrated with your tissues.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Face Types Section */}
         <section className="py-20 bg-accent">
