@@ -192,7 +192,7 @@ const NonSurgicalNoseJob = () => {
                   <span className="block text-sm mt-4">nose reshaping with dermal filler | Harley Street</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art-</span>
+                  <span className="text-purple-300 font-semibold">Invisible art - Premium nose fillers</span>
                   <br />
                   Premium nose reshaping without surgery using nose botox and nose fillers
                 </p>
