@@ -467,9 +467,6 @@ const NonSurgicalNoseJob = () => {
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">
-                Complex Fracture Reconstruction
-              </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Advanced non-surgical reconstruction of complicated nose fractures using pioneering techniques
               </p>
