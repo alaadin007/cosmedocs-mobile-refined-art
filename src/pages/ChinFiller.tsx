@@ -358,9 +358,6 @@ const ChinFiller = () => {
                 className="space-y-8"
               >
                 <div className="space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    Our expert chin enhancement treatments offer multiple advantages for facial harmony and confidence.
-                  </p>
                 </div>
               </motion.div>
             </div>
