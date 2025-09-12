@@ -1,12 +1,19 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Activity, Syringe, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const NonSurgicalNoseJob = () => {
   const seoData = generateSEOMetadata(
@@ -215,75 +222,137 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
             <motion.div
-              className="text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Transformation Gallery
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing the artistry of invisible enhancement
+              <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Nose Job Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">15-30 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">12-18 months with premium dermal fillers</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Technique</h3>
+                <p className="text-gray-300">Advanced cannula & needle methods</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery - Carousel Style */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before and After Non-Surgical Nose Job Results in London</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Explore authentic before and after non-surgical nose job results from our London Harley Street clinic. 
+                Our advanced #cosmenose technique delivers natural enhancement tailored to your facial features.
               </p>
             </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {beforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  className="group cursor-pointer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  onClick={() => {
-                    const modal = document.createElement('div');
-                    modal.className = 'fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4';
-                    modal.innerHTML = `
-                      <div class="relative max-w-4xl w-full max-h-screen overflow-auto">
-                        <button class="absolute top-4 right-4 z-60 text-white hover:text-gray-300 text-2xl font-bold" onclick="this.parentElement.parentElement.remove()">×</button>
-                        <img src="${image.src}" alt="${image.alt}" class="w-full h-auto rounded-lg">
-                        <p class="text-white text-center mt-4 px-4">${image.caption}</p>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
                       </div>
-                    `;
-                    modal.onclick = (e) => {
-                      if (e.target === modal) modal.remove();
-                    };
-                    document.body.appendChild(modal);
-                  }}
-                >
-                  <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:scale-105">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full aspect-[4/3] object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-white/70 mt-3 text-center font-light">
-                    {image.caption}
-                  </p>
-                </motion.div>
-              ))}
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Non-Surgical Nose Job Results Gallery"
+                description="Comprehensive gallery of our nose enhancement treatments"
+              />
             </div>
           </div>
         </section>
 
         {/* Complex Nose Fracture Case - Apple Style */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="py-32 bg-accent">
           <div className="page-container">
             <motion.div
               className="text-center mb-20"
@@ -342,7 +411,7 @@ const NonSurgicalNoseJob = () => {
         </section>
 
         {/* Dr. Ahmed Haq Section - Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+        <section className="py-32 bg-gradient-to-b from-accent to-black">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
               <motion.div
@@ -706,6 +775,102 @@ const NonSurgicalNoseJob = () => {
                     </a>
                   </CardContent>
                 </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
