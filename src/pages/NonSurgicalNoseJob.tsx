@@ -199,7 +199,6 @@ const NonSurgicalNoseJob = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £450</p>
                   <p className="text-sm text-gray-300">#cosmenose - Advanced cannula & needle techniques for natural enhancement</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
