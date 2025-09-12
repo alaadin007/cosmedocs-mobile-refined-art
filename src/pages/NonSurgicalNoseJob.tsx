@@ -359,64 +359,121 @@ const NonSurgicalNoseJob = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto text-center"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold text-white mb-8">Non-Surgical Nose Job</h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Established in 2007, our Harley Street Clinic, CosmeDocs has been at the forefront of nonsurgical nose jobs, pioneering advancements that have set new standards. Additionally, our innovative techniques, showcased at leading aesthetic conferences, offer a safe, effective, and affordable alternative to traditional rhinoplasty.
+              <h2 className="text-3xl font-bold mb-4">Non-Surgical Nose Job at Cosmedocs Harley Street</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Dr. Ahmed Haq pioneered the innovative #cosmenose technique, delivering natural nose enhancement without surgery. 
+                Our advanced approach combines artistic vision with medical precision for exceptional results.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Whether you want to:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-8">
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
-                  <span className="text-white">smooth out bumps</span>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-6">What Can Be Treated?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Smooth nose bumps and dorsal humps</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Lift and refine the nasal tip</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Correct mild asymmetries</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Improve nasal projection</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Enhance overall facial harmony</p>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
-                  <span className="text-white">refine the nasal tip</span>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                  <h4 className="text-lg font-semibold mb-3 flex items-center">
+                    <GraduationCap className="text-purple-400 mr-3" size={24} />
+                    Expert Practitioner
+                  </h4>
+                  <p className="text-gray-300">Dr. Ahmed Haq has been performing non-surgical nose jobs since 2010, making him one of London's most experienced practitioners.</p>
                 </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
-                  <span className="text-white">enhance overall nose definition</span>
+
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                  <h4 className="text-lg font-semibold mb-3 flex items-center">
+                    <Palette className="text-purple-400 mr-3" size={24} />
+                    Artistic Approach
+                  </h4>
+                  <p className="text-gray-300">Each treatment is tailored to your unique facial anatomy, ensuring natural-looking results that enhance your features.</p>
                 </div>
-              </div>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Hence, our treatments promise impressive outcomes with minimal downtime.
+
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                  <h4 className="text-lg font-semibold mb-3 flex items-center">
+                    <Heart className="text-purple-400 mr-3" size={24} />
+                    Safe & Reversible
+                  </h4>
+                  <p className="text-gray-300">Using premium hyaluronic acid fillers that can be dissolved if needed, providing peace of mind with every treatment.</p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Complex Case Studies Section */}
+        <section className="py-32 bg-gradient-to-b from-black via-gray-950 to-accent">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Complex Cases
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Showcasing our expertise in challenging reconstructive procedures that require advanced techniques and artistic precision
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Case Studies Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            {/* Challenging Fracture Case */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              
-            >
-            </motion.div>
-
-            {/* Complex Deviated Nose Corrections */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Complex Nose Fracture Case - Apple Style */}
-        <section className="py-32 bg-accent">
-          <div className="page-container">
+        {/* Challenging Fracture Case */}
+        <section className="py-32 bg-accent relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
+          <div className="page-container relative z-10">
             
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Complex Fracture Reconstruction
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Advanced non-surgical reconstruction of complicated nose fractures using pioneering techniques
+              </p>
+            </motion.div>
             
             <div className="max-w-6xl mx-auto">
               <motion.div 
@@ -426,11 +483,12 @@ const NonSurgicalNoseJob = () => {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                 viewport={{ once: true }}
               >
-                <div className="order-2 lg:order-1">
+                <div className="order-2 lg:order-1 relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <img 
                     src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
                     alt="Complex nose fracture non-surgical reconstruction before after London Harley Street Cosmedocs Dr Ahmed Haq fibrosis cartilage bone treatment cannula technique"
-                    className="w-full h-auto rounded-2xl shadow-2xl object-cover max-w-full"
+                    className="w-full h-auto rounded-3xl shadow-2xl object-cover max-w-full relative z-10 group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     onError={(e) => {
                       console.error('Image failed to load:', e.currentTarget.src);
@@ -442,27 +500,41 @@ const NonSurgicalNoseJob = () => {
                 </div>
                 
                 <div className="order-1 lg:order-2 space-y-8">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                      Challenging Fracture Case
-                    </h3>
-                    <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
-                      This complex case presented unique challenges with scar tissue adhesion affecting the nasal structure. 
-                      The remarkable transformation demonstrates advanced non-surgical reconstruction capabilities.
-                    </p>
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-lg"></div>
+                    <div className="relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                      <h3 className="text-3xl md:text-4xl font-light text-white mb-6 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
+                        Challenging Fracture Case
+                      </h3>
+                      <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
+                        This complex case presented unique challenges with scar tissue adhesion affecting the nasal structure. 
+                        The remarkable transformation demonstrates our advanced non-surgical reconstruction capabilities using the innovative #cosmenose technique.
+                      </p>
+                      
+                      <div className="grid grid-cols-2 gap-6 mb-8">
+                        <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                          <p className="text-purple-300 font-semibold text-sm uppercase tracking-wide mb-2">Technique Used</p>
+                          <p className="text-white font-light">Advanced Cannula</p>
+                        </div>
+                        <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                          <p className="text-purple-300 font-semibold text-sm uppercase tracking-wide mb-2">Duration</p>
+                          <p className="text-white font-light">45 Minutes</p>
+                        </div>
+                      </div>
+                      
+                      <FractureDebriefCard />
+                    </div>
                   </div>
-                  
-                  <FractureDebriefCard />
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-
         {/* Complex Deviated Nose Corrections */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
+        <section className="py-32 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/10 via-transparent to-blue-900/10"></div>
+          <div className="page-container relative z-10">
             
             <motion.div
               className="text-center mb-20"
@@ -480,20 +552,26 @@ const NonSurgicalNoseJob = () => {
             </motion.div>
             
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 mb-12">
+              <div className="grid lg:grid-cols-2 gap-16 mb-12">
                 <motion.div
                   initial={{ opacity: 0, x: -40 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                   viewport={{ once: true }}
-                  className="text-center"
+                  className="relative group"
                 >
-                  <img 
-                    src="/lovable-uploads/461ed1b4-14e5-4864-863b-2e30db23adfc.png" 
-                    alt="Before non-surgical deviated nose correction London Harley Street Cosmedocs Dr Ahmed Haq complex case treatment"
-                    className="w-full h-auto rounded-2xl mb-6 shadow-xl"
-                  />
-                  <p className="text-white/70 text-lg font-light">Before: Complex deviated nose requiring specialized correction technique</p>
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="relative bg-black/20 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                    <div className="text-center mb-6">
+                      <span className="inline-block px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-medium mb-4">BEFORE</span>
+                    </div>
+                    <img 
+                      src="/lovable-uploads/461ed1b4-14e5-4864-863b-2e30db23adfc.png" 
+                      alt="Before non-surgical deviated nose correction London Harley Street Cosmedocs Dr Ahmed Haq complex case treatment"
+                      className="w-full h-auto rounded-2xl mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <p className="text-white/70 text-lg font-light leading-relaxed">Complex deviated nose requiring specialized correction technique with significant asymmetry challenges</p>
+                  </div>
                 </motion.div>
                 
                 <motion.div
@@ -501,14 +579,20 @@ const NonSurgicalNoseJob = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                   viewport={{ once: true }}
-                  className="text-center"
+                  className="relative group"
                 >
-                  <img 
-                    src="/lovable-uploads/8f4b0286-bd8c-4aaa-8ac1-51ddc5e4c73b.png" 
-                    alt="After non-surgical deviated nose correction London Harley Street Cosmedocs Dr Ahmed Haq complex case results"
-                    className="w-full h-auto rounded-2xl mb-6 shadow-xl"
-                  />
-                  <p className="text-white/70 text-lg font-light">After: Remarkable improvement in nasal symmetry and profile using advanced #cosmenose technique</p>
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="relative bg-black/20 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+                    <div className="text-center mb-6">
+                      <span className="inline-block px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-medium mb-4">AFTER</span>
+                    </div>
+                    <img 
+                      src="/lovable-uploads/8f4b0286-bd8c-4aaa-8ac1-51ddc5e4c73b.png" 
+                      alt="After non-surgical deviated nose correction London Harley Street Cosmedocs Dr Ahmed Haq complex case results"
+                      className="w-full h-auto rounded-2xl mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <p className="text-white/70 text-lg font-light leading-relaxed">Remarkable improvement in nasal symmetry and profile using advanced #cosmenose technique</p>
+                  </div>
                 </motion.div>
               </div>
               
@@ -1271,43 +1355,36 @@ const FractureDebriefCard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
+    >
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <CollapsibleTrigger className="w-full">
-          <CardContent className="p-8">
-            <div className="flex items-center justify-between">
-              <h4 className="text-left font-light text-white text-xl">Dr. Haq's Case Debrief</h4>
-              {isOpen ? (
-                <ChevronUp className="h-6 w-6 text-white/70 flex-shrink-0 ml-4" />
-              ) : (
-                <ChevronDown className="h-6 w-6 text-white/70 flex-shrink-0 ml-4" />
-              )}
-            </div>
-          </CardContent>
+        <CollapsibleTrigger className="w-full p-6 text-left hover:bg-white/5 transition-colors">
+          <div className="flex items-center justify-between">
+            <h4 className="text-lg font-semibold text-white">Treatment Debrief</h4>
+            {isOpen ? (
+              <ChevronUp className="text-purple-300" size={20} />
+            ) : (
+              <ChevronDown className="text-purple-300" size={20} />
+            )}
+          </div>
         </CollapsibleTrigger>
         <CollapsibleContent>
-          <div className="px-8 pb-8">
-            <div className="space-y-4 text-white/80 font-light leading-relaxed">
-              <p>
-                <strong className="text-white">Dr. Ahmed Haq's Assessment:</strong> "This case presented significant challenges due to the complex nature of the fracture and subsequent healing complications."
-              </p>
-              <p>
-                <strong className="text-white">The Challenge:</strong> The scar tissue had formed strong adhesions, effectively 'sticking' to both the cartilage and underlying bone structures, creating a rigid, immobile area that was particularly difficult to treat.
-              </p>
-              <p>
-                <strong className="text-white">The Technique:</strong> Using an advanced cannula approach, I performed careful dissection to gradually lift the skin away from the hard structures beneath. This required exceptional precision to avoid complications while creating the necessary space for reconstruction.
-              </p>
-              <p>
-                <strong className="text-white">The Process:</strong> Treatment was carried out over multiple sessions, with gradual filling allowing the tissues to adapt progressively. This staged approach ensures optimal safety and natural-looking results.
-              </p>
-              <p>
-                <strong className="text-white">The Outcome:</strong> The patient achieved remarkable improvement in both function and aesthetics, demonstrating the potential of advanced non-surgical reconstruction techniques.
-              </p>
-            </div>
+          <div className="px-6 pb-6">
+            <p className="text-white/80 leading-relaxed font-light">
+              This challenging case involved a patient with previous nose fracture complications including 
+              fibrosis adhesion to the cartilage and bone. Using advanced cannula dissection techniques 
+              and gradual dermal filler reconstruction over multiple sessions, we achieved remarkable 
+              results that restored both function and aesthetic appearance.
+            </p>
           </div>
         </CollapsibleContent>
       </Collapsible>
-    </Card>
+    </motion.div>
   );
 };
 
@@ -1321,21 +1398,18 @@ const FAQItem = ({ question, answer, index }: { question: string; answer: string
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
       viewport={{ once: true }}
+      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
     >
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <CollapsibleTrigger className="w-full">
-          <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <h3 className="text-left font-light text-white text-lg">{question}</h3>
-                {isOpen ? (
-                  <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />
-                )}
-              </div>
-            </CardContent>
-          </Card>
+        <CollapsibleTrigger className="w-full p-6 text-left hover:bg-white/5 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-semibold text-white pr-4">{question}</h3>
+            {isOpen ? (
+              <ChevronUp className="text-purple-300 flex-shrink-0" size={20} />
+            ) : (
+              <ChevronDown className="text-purple-300 flex-shrink-0" size={20} />
+            )}
+          </div>
         </CollapsibleTrigger>
         <CollapsibleContent>
           <div className="px-6 pb-6">
