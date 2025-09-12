@@ -182,7 +182,7 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">1ml Chin Filler Before and After Results</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -340,13 +340,13 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">What is 1ml Chin Filler Treatment?</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">What is Chin Filler Treatment?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto mb-6">
                 Our 1 ml chin filler London treatment uses premium hyaluronic acid to enhance facial harmony. Liquid mentoplasty represents invisible enhancement, 
                 creating natural before and after chin filler transformations without surgical intervention for chin shadow and chin crease correction.
               </p>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Advanced 1ml chin filler treatment using precision-placed dermal fillers chin enhancement to create perfect facial harmony
+                It is an Advanced 1ml chin filler treatment using precision-placed dermal fillers chin enhancement to create perfect facial harmony
               </p>
             </motion.div>
             
