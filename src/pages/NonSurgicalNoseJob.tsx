@@ -902,42 +902,6 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
-        {/* FAQ Section - Two Columns Apple Style */}
-        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Everything you need to know about non-surgical nose enhancement
-              </p>
-            </motion.div>
-            
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
-              {/* Left Column */}
-              <div className="space-y-4">
-                {leftColumnFaqs.map((faq, index) => (
-                  <FAQItem key={`left-${index}`} question={faq.question} answer={faq.answer} index={index} />
-                ))}
-              </div>
-              
-              {/* Right Column */}
-              <div className="space-y-4">
-                {rightColumnFaqs.map((faq, index) => (
-                  <FAQItem key={`right-${index}`} question={faq.question} answer={faq.answer} index={index + 5} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -1030,6 +994,42 @@ const NonSurgicalNoseJob = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section - Two Columns Apple Style */}
+        <section className="py-32 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Everything you need to know about non-surgical nose enhancement
+              </p>
+            </motion.div>
+            
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
+              {/* Left Column */}
+              <div className="space-y-4">
+                {leftColumnFaqs.map((faq, index) => (
+                  <FAQItem key={`left-${index}`} question={faq.question} answer={faq.answer} index={index} />
+                ))}
+              </div>
+              
+              {/* Right Column */}
+              <div className="space-y-4">
+                {rightColumnFaqs.map((faq, index) => (
+                  <FAQItem key={`right-${index}`} question={faq.question} answer={faq.answer} index={index + 5} />
+                ))}
+              </div>
             </div>
           </div>
         </section>
