@@ -1,16 +1,47 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Play, Syringe, Clock, Heart, Shield, CalendarDays } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Play, Syringe, Clock, Heart, Shield, CalendarDays, Activity, GraduationCap, CheckCircle, Palette } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 const ChinFiller = () => {
   const seoData = generateSEOMetadata("Chin Filler London | From £350 | Dr. Ahmed Haq | Harley Street", "Professional chin filler treatments in London's Harley Street. Transform from a weak chin to a well-defined profile. Expert chin augmentation from £350.", "/chin-filler");
   const bookingUrl = "https://med.as.me/harleystreet";
+  
+  const beforeAfterImages = [
+    {
+      src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
+      alt: "Chin filler before and after profile balancing natural results Cosmedocs",
+      caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
+    },
+    {
+      src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
+      alt: "Chin augmentation before after London jawline definition facial enhancement",
+      caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
+    },
+    {
+      src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
+      alt: "Chin filler profile enhancement side view transformation Harley Street",
+      caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
+    },
+    {
+      src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
+      alt: "Liquid mentoplasty before after chin enhancement non surgical results",
+      caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
+    }
+  ];
+
   const leftColumnFaqs = [{
     question: "How much does chin filler cost in London?",
     answer: "At Cosmedocs Harley Street, chin filler treatments start from £350 for the first syringe (1.2ml). The cost varies depending on the amount of filler needed to achieve your desired results."
@@ -42,25 +73,6 @@ const ChinFiller = () => {
   }, {
     question: "Can chin filler results be reversed?",
     answer: "Yes, hyaluronic acid chin fillers can be dissolved with hyaluronidase if needed, providing flexibility that surgical options cannot offer."
-  }];
-  const treatmentDetails = [{
-    title: "Anaesthetic",
-    detail: "Local / Topical"
-  }, {
-    title: "Procedure Time",
-    detail: "30 minutes"
-  }, {
-    title: "Results Duration",
-    detail: "12+ months"
-  }, {
-    title: "Recovery",
-    detail: "24-48 hours"
-  }, {
-    title: "Back to Work",
-    detail: "Immediate"
-  }, {
-    title: "Risks",
-    detail: "Minimal - swelling, bruising"
   }];
   return <>
       <Helmet>
@@ -148,97 +160,131 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Details Section */}
-        <section className="py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
-            <motion.div className="text-center mb-16" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-4xl md:text-5xl font-thin text-white mb-6 tracking-tight">
-                Treatment Overview
-              </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
             </motion.div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                <CardContent className="p-0">
-                  <Syringe className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                    Anaesthetic
-                  </h3>
-                  <p className="text-white text-sm font-light">
-                    Local / Topical
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                <CardContent className="p-0">
-                  <Clock className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                    Procedure Time
-                  </h3>
-                  <p className="text-white text-sm font-light">
-                    30 minutes
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                <CardContent className="p-0">
-                  <CalendarDays className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                    Results Duration
-                  </h3>
-                  <p className="text-white text-sm font-light">
-                    12+ months
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                <CardContent className="p-0">
-                  <Heart className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                    Recovery
-                  </h3>
-                  <p className="text-white text-sm font-light">
-                    24-48 hours
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                <CardContent className="p-0">
-                  <Users className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                    Back to Work
-                  </h3>
-                  <p className="text-white text-sm font-light">
-                    Immediate
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                <CardContent className="p-0">
-                  <Shield className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                  <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                    Risks
-                  </h3>
-                  <p className="text-white text-sm font-light">
-                    Minimal - swelling, bruising
-                  </p>
-                </CardContent>
-              </Card>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery - Carousel Style */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Chin Filler Before and After Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Explore authentic chin filler before and after results from our London Harley Street clinic. 
+                Our expert dermal filler treatments enhance chin projection and facial balance with natural-looking results.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Chin Filler Results Gallery"
+                description="Comprehensive gallery of our chin enhancement treatments"
+              />
             </div>
           </div>
         </section>
@@ -624,48 +670,6 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Transformation Gallery */}
-        <section className="bg-[#0A0A0A] py-[75px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Transformation Gallery
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing enhanced chin projection and facial harmony
-              </p>
-            </motion.div>
-            
-            <BeforeAfterGrid images={[{
-            src: "/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png",
-            alt: "Chin filler before and after profile balancing natural results Cosmedocs",
-            caption: "Profile balancing with chin filler achieving natural, harmonious results that enhance facial proportions."
-          }, {
-            src: "/lovable-uploads/b5887047-e750-44bd-9d26-3e04579e09b3.png",
-            alt: "Chin augmentation before after London jawline definition facial enhancement",
-            caption: "Chin augmentation creating improved jawline definition and enhanced facial contours."
-          }, {
-            src: "/lovable-uploads/b6640de3-1759-4566-bbd1-0570a29cbce2.png",
-            alt: "Chin filler profile enhancement side view transformation Harley Street",
-            caption: "Side profile transformation showing enhanced chin projection and improved facial balance."
-          }, {
-            src: "/lovable-uploads/e664cc15-e198-4807-8fea-24b0b4507a84.png",
-            alt: "Liquid mentoplasty before after chin enhancement non surgical results",
-            caption: "Liquid mentoplasty demonstrating non-surgical chin enhancement with natural-looking results."
-          }]} initialDisplay={4} loadMoreIncrement={4} />
-          </div>
-        </section>
 
         {/* Video Treatment Section - Apple Style */}
         <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[75px]">
@@ -979,81 +983,159 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[75px]">
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Frequently Asked Questions
-              </h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
-            
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                {leftColumnFaqs.map((faq, index) => <FAQItem key={index} question={faq.question} answer={faq.answer} />)}
-              </div>
-              
-              <div className="space-y-6">
-                {rightColumnFaqs.map((faq, index) => <FAQItem key={index} question={faq.question} answer={faq.answer} />)}
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about chin filler treatments at our London clinic.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  {leftColumnFaqs.map((faq, index) => (
+                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                  ))}
+                </div>
+                <div className="space-y-4">
+                  {rightColumnFaqs.map((faq, index) => (
+                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8
-            }} viewport={{
-              once: true
-            }}>
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
-                  Ready to Transform Your Profile?
-                </h2>
-                <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
-                  Book your consultation at our Harley Street clinic and discover how chin filler can enhance your natural beauty
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-medium transition-all duration-300 hover:scale-105">
-                    Book Consultation
-                  </a>
-                  <a href="tel:03330551503" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Call: 0333 055 1503
-                  </a>
-                </div>
-                
-                <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-white/60">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5" />
-                    <span className="font-light">10 Harley Street, London W1G 9PF</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="h-5 w-5" />
-                    <span className="font-light">CQC Registered Clinic</span>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready for Enhanced Chin Definition?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how chin fillers 
+                can enhance your facial balance with subtle, sophisticated results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
@@ -1069,20 +1151,27 @@ const FAQItem = ({
   answer: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  return <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <CollapsibleTrigger className="w-full text-left">
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
-          <div className="flex justify-between items-center">
-            <h3 className="text-lg font-light text-white pr-4">{question}</h3>
-            {isOpen ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />}
-          </div>
+  return (
+    <div className="bg-black rounded-lg border border-gray-800">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-6 py-4 text-left hover:bg-gray-900 rounded-lg transition-colors"
+      >
+        <div className="flex justify-between items-center">
+          <span className="text-white font-medium">{question}</span>
+          {isOpen ? (
+            <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
+          ) : (
+            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+          )}
         </div>
-      </CollapsibleTrigger>
-      <CollapsibleContent>
-        <div className="px-6 pb-6 pt-2">
-          <p className="text-white/80 font-light leading-relaxed">{answer}</p>
+      </button>
+      {isOpen && (
+        <div className="px-6 pb-4">
+          <p className="text-gray-300">{answer}</p>
         </div>
-      </CollapsibleContent>
-    </Collapsible>;
+      )}
+    </div>
+  );
 };
 export default ChinFiller;
