@@ -410,27 +410,12 @@ const NonSurgicalNoseJob = () => {
               >
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                   <h4 className="text-lg font-semibold mb-3 flex items-center">
-                    <GraduationCap className="text-purple-400 mr-3" size={24} />
-                    Expert Practitioner
-                  </h4>
-                  <p className="text-gray-300">Dr. Ahmed Haq has been performing non-surgical nose jobs since 2010, making him one of London's most experienced practitioners.</p>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                  <h4 className="text-lg font-semibold mb-3 flex items-center">
-                    <Palette className="text-purple-400 mr-3" size={24} />
-                    Artistic Approach
-                  </h4>
-                  <p className="text-gray-300">Each treatment is tailored to your unique facial anatomy, ensuring natural-looking results that enhance your features.</p>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                  <h4 className="text-lg font-semibold mb-3 flex items-center">
                     <Heart className="text-purple-400 mr-3" size={24} />
                     Safe & Reversible
                   </h4>
                   <p className="text-gray-300">Using premium hyaluronic acid fillers that can be dissolved if needed, providing peace of mind with every treatment.</p>
                 </div>
+
               </motion.div>
             </div>
           </div>
