@@ -735,9 +735,6 @@ const NonSurgicalNoseJob = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
-                Book Your Consultation
-              </Button>
             </motion.div>
           </div>
         </section>
