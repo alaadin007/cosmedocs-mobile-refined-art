@@ -96,6 +96,7 @@ import MoleSkinTagRemoval from "./pages/MoleSkinTagRemoval";
 import EczemaTreatment from "./pages/EczemaTreatment";
 import PsoriasisTreatment from "./pages/PsoriasisTreatment";
 import HyperpigmentationTreatment from "./pages/HyperpigmentationTreatment";
+import BotoxPriceLondon from "./pages/BotoxPriceLondon";
 
 const queryClient = new QueryClient();
 
@@ -205,8 +206,9 @@ const App = () => {
                <Route path="/eczema-treatment" element={<EczemaTreatment />} />
                 <Route path="/psoriasis-treatment" element={<PsoriasisTreatment />} />
                 <Route path="/hyperpigmentation-treatment" element={<HyperpigmentationTreatment />} />
-                 <Route path="/aesthetic-training" element={<AestheticTraining />} />
-                 <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
+                  <Route path="/aesthetic-training" element={<AestheticTraining />} />
+                  <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
+                  <Route path="/botox-price-london" element={<BotoxPriceLondon />} />
                
                {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />

@@ -16,6 +16,17 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Botox Price London: Complete Guide to Costs & Expert Treatment",
+      description: "Discover comprehensive Botox prices in London. Learn why master injectors offer better value despite higher costs, with expert insights on safety and results.",
+      category: "Price Guide",
+      readTime: "12 min read",
+      date: "January 18, 2025",
+      slug: "/botox-price-london",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+      author: "By Dr. Ahmed Haq"
+    },
+    {
       title: "Inside the Mind of an Aesthetic Doctor: The Art of Cheeks, Lips and Chin Fillers",
       description: "Discover the artistic approach to facial aesthetics through the expert perspective of Dr Ahmed Haq. Learn about the nuanced techniques behind cheeks, lips and chin fillers.",
       category: "Expert Insight",
