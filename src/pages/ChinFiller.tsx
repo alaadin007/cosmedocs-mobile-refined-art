@@ -386,7 +386,7 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Journey Section */}
+        {/* Aftercare FAQ Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -396,94 +396,59 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Your Treatment Journey</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Chin Filler Aftercare</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                From consultation to completion, experience our expert care every step of the way
+                Proper aftercare ensures optimal results and minimal downtime after your chin filler treatment
               </p>
             </motion.div>
             
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-3 gap-8">
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-accent border-gray-800 h-full text-center">
-                    <CardHeader>
-                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Users className="h-8 w-8 text-white" />
-                      </div>
-                      <CardTitle className="text-white text-xl">Consultation</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 mb-4">
-                        Comprehensive facial assessment with Dr. Ahmed Haq. We evaluate your unique facial structure 
-                        and create a personalized treatment plan tailored to your aesthetic goals.
-                      </p>
-                      <div className="bg-black rounded-lg p-3">
-                        <p className="text-gray-300 text-sm">
-                          Detailed analysis • Goal setting • Treatment planning
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-accent border-gray-800 h-full text-center">
-                    <CardHeader>
-                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Syringe className="h-8 w-8 text-white" />
-                      </div>
-                      <CardTitle className="text-white text-xl">Treatment</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 mb-4">
-                        Precise filler placement using advanced injection techniques. Topical anesthesia ensures 
-                        comfort throughout the 30-minute procedure with immediate visible results.
-                      </p>
-                      <div className="bg-black rounded-lg p-3">
-                        <p className="text-gray-300 text-sm">
-                          30 minutes • Minimal discomfort • Immediate results
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-accent border-gray-800 h-full text-center">
-                    <CardHeader>
-                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Heart className="h-8 w-8 text-white" />
-                      </div>
-                      <CardTitle className="text-white text-xl">Aftercare</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 mb-4">
-                        Minimal downtime with professional aftercare guidance. Results continue to improve 
-                        over 2 weeks as any minor swelling subsides.
-                      </p>
-                      <div className="bg-black rounded-lg p-3">
-                        <p className="text-gray-300 text-sm">
-                          24-48 hours recovery • Professional support • Lasting results
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="bg-accent rounded-lg border border-gray-800">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-3">How long is the recovery time after chin filler?</h3>
+                      <p className="text-gray-300">Recovery is minimal with professional aftercare guidance. Most patients experience 24-48 hours of minor swelling, with results continuing to improve over 2 weeks as any swelling subsides completely.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-accent rounded-lg border border-gray-800">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-3">What should I do immediately after treatment?</h3>
+                      <p className="text-gray-300">Apply ice packs for 10-15 minutes every hour for the first 6 hours. Avoid touching or massaging the treated area, and sleep with your head elevated for the first night to minimize swelling.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-accent rounded-lg border border-gray-800">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-3">When can I return to normal activities?</h3>
+                      <p className="text-gray-300">You can return to work immediately after treatment. However, avoid strenuous exercise, saunas, and alcohol for 24-48 hours to prevent increased swelling and ensure optimal healing.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="bg-accent rounded-lg border border-gray-800">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-3">What aftercare support do you provide?</h3>
+                      <p className="text-gray-300">We provide comprehensive aftercare including detailed post-treatment instructions, 24/7 emergency contact, and follow-up appointments at 2 weeks to assess your results and address any concerns.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-accent rounded-lg border border-gray-800">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-3">How can I minimize swelling and bruising?</h3>
+                      <p className="text-gray-300">Avoid blood-thinning medications and supplements before treatment. Post-treatment, use arnica cream, apply cold compresses, and avoid lying flat for extended periods. Most swelling resolves within 48-72 hours.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-accent rounded-lg border border-gray-800">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-3">When will I see final results?</h3>
+                      <p className="text-gray-300">Initial results are visible immediately after treatment. Final results appear within 2 weeks once any minor swelling has completely subsided and the filler has fully integrated with your tissues.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -624,8 +589,137 @@ const ChinFiller = () => {
         </section>
 
 
+        {/* Why Choose Chin Filler */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Chin Filler?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Discover the benefits of non-surgical chin enhancement and the areas we can transform
+              </p>
+            </motion.div>
+            
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white">Key Benefits</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Our aesthetics is invisible art. Chin fillers create subtle yet transformative changes that enhance your natural beauty while maintaining facial harmony.
+                  </p>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Immediate Results</h4>
+                      <p className="text-gray-300 text-sm">Visible enhancement with minimal downtime</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Non-Surgical Alternative</h4>
+                      <p className="text-gray-300 text-sm">Avoid risks and extensive recovery of chin implants</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Reversible Treatment</h4>
+                      <p className="text-gray-300 text-sm">Can be dissolved with hyaluronidase if needed</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Long-Lasting Results</h4>
+                      <p className="text-gray-300 text-sm">Enhanced facial balance for 12-18 months</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Enhanced Confidence</h4>
+                      <p className="text-gray-300 text-sm">Improved profile and facial harmony</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white">Treatment Areas</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Bold • Natural • Always Your Way. Dr. Ahmed Haq's expertise ensures precise placement for optimal results that enhance your unique features.
+                  </p>
+                </div>
+                
+                <div className="bg-accent rounded-lg p-6 border border-gray-800">
+                  <h4 className="text-lg font-semibold text-white mb-6">Areas We Enhance</h4>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <div>
+                        <h5 className="text-white font-medium">Chin Projection</h5>
+                        <p className="text-gray-300 text-sm">Forward projection for better profile balance</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <div>
+                        <h5 className="text-white font-medium">Chin Definition</h5>
+                        <p className="text-gray-300 text-sm">Enhanced contours and definition</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <div>
+                        <h5 className="text-white font-medium">Jawline Enhancement</h5>
+                        <p className="text-gray-300 text-sm">Improved lower face structure</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <div>
+                        <h5 className="text-white font-medium">Profile Balance</h5>
+                        <p className="text-gray-300 text-sm">Harmonious nose-to-chin proportions</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <div>
+                        <h5 className="text-white font-medium">Lower Face Contouring</h5>
+                        <p className="text-gray-300 text-sm">Overall facial harmony and balance</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
+        <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -648,7 +742,7 @@ const ChinFiller = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-purple-500 h-full text-center">
+                <Card className="bg-black border-purple-500 h-full text-center">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">Single Treatment</CardTitle>
                     <div className="text-purple-300 text-4xl font-bold">£350</div>
@@ -717,7 +811,7 @@ const ChinFiller = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-700 h-full text-center">
+                <Card className="bg-black border-gray-700 h-full text-center">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
                     <div className="text-purple-300 text-4xl font-bold">£50</div>
@@ -813,81 +907,6 @@ const ChinFiller = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Chin Filler?</h2>
-            </motion.div>
-            
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white">Enhanced Facial Balance</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Our aesthetics is invisible art. Chin fillers create subtle yet transformative changes that enhance your natural beauty while maintaining facial harmony.
-                  </p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="text-purple-500 mt-1" size={16} />
-                    <p className="text-gray-300">Immediate visible results with minimal downtime</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="text-purple-500 mt-1" size={16} />
-                    <p className="text-gray-300">Non-surgical alternative to chin implants</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="text-purple-500 mt-1" size={16} />
-                    <p className="text-gray-300">Reversible treatment with hyaluronidase</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="text-purple-500 mt-1" size={16} />
-                    <p className="text-gray-300">Long-lasting results (12-18 months)</p>
-                  </div>
-                </div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white">Expert Technique</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Bold • Natural • Always Your Way. Dr. Ahmed Haq's expertise ensures precise placement for optimal results that enhance your unique features.
-                  </p>
-                </div>
-                
-                <div className="bg-accent rounded-lg p-6 border border-gray-800">
-                  <h4 className="text-lg font-semibold text-white mb-4">Treatment Areas</h4>
-                  <div className="space-y-3">
-                    <p className="text-gray-300">• Chin projection and definition</p>
-                    <p className="text-gray-300">• Jawline enhancement</p>
-                    <p className="text-gray-300">• Profile balance correction</p>
-                    <p className="text-gray-300">• Lower face contouring</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
