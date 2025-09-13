@@ -81,8 +81,11 @@ const ChinFiller = () => {
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:image" content={seoData.image} />
+        <meta property="og:site_name" content="Cosmedocs Clinic" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
