@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Syringe, Star, Clock, Shield, Heart, Briefcase, Activity, CheckCircle, Smile } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Syringe, Star, Clock, Shield, Heart, Briefcase, Activity, CheckCircle, Smile, GraduationCap, Palette } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -779,77 +779,104 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Why Choose CosmeDocs Section */}
+        {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <h2 className="text-3xl font-bold mb-6">Profhilo Treatment Summary</h2>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-primary pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
-                    <p className="text-gray-300">30 minutes per session</p>
-                  </div>
-                  <div className="border-l-4 border-primary pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
-                    <p className="text-gray-300">Immediate | 6-12 months</p>
-                  </div>
-                  <div className="border-l-4 border-primary pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
-                    <p className="text-gray-300">Immediate return to work</p>
-                  </div>
-                  <div className="border-l-4 border-primary pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Anaesthesia</h3>
-                    <p className="text-gray-300">Local anaesthetic available</p>
-                  </div>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-accent border-none">
-                  <CardHeader>
-                    <CardTitle className="text-white">Why Choose Cosmedocs?</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p className="text-gray-300">GMC registered medical professionals</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p className="text-gray-300">Premier Harley Street location</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p className="text-gray-300">Natural, invisible art aesthetic philosophy</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p className="text-gray-300">Comprehensive aftercare and support</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p className="text-gray-300">Expert bio-remodelling techniques</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved bio-remodelling treatments</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-[#0A0A0A]">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -879,46 +906,29 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Final CTA Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A] relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-20" />
-          <div className="page-container relative z-10">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
             <motion.div
-              className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-8 tracking-tight">
-                Ready to Begin Your Journey?
-              </h2>
-              <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
-                Experience the transformative power of Profhilo bio-remodelling at London's premier Harley Street clinic
+              <h2 className="text-3xl font-bold mb-4">Ready for Beautiful, Natural Skin?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how Profhilo 
+                can rejuvenate your skin with subtle, sophisticated bio-remodelling results.
               </p>
-              
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-6 justify-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <a 
-                  href={bookingUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl"
-                >
-                  Book Consultation
-                </a>
-                <a 
-                  href="#pricing"
-                  className="group bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20"
-                >
-                  View Price List
-                </a>
-              </motion.div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
