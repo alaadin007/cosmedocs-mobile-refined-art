@@ -179,17 +179,11 @@ const ProfhiloTreatment = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Profhilo
-                  <span className="block text-purple-300">Bio-Remodelling</span>
-                  <span className="block text-sm mt-4">Advanced injectable skincare for natural skin rejuvenation</span>
+                  <span className="text-purple-300">Profhilo Bio-Remodelling</span>
+                  <span className="block text-sm mt-4">Invisible art - advanced injectable skincare for natural skin rejuvenation</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £350</p>
+                  <p className="text-2xl text-purple-300 font-bold">Advanced Bio-Remodelling</p>
                   <p className="text-sm text-gray-300">#cosmeprofhilo - Check out our IG for hundreds more natural, subtle transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
