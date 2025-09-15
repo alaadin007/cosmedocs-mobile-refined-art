@@ -255,93 +255,62 @@ const BotoxCalfReduction = () => {
         </section>
 
         {/* What is Botox Calf Reduction Section */}
-        <section className="py-20 bg-gradient-to-b from-black via-purple-950/20 to-black relative overflow-hidden">
-          {/* Background decorative elements */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-48 h-48 bg-purple-600 rounded-full blur-3xl"></div>
-          </div>
-          
-          <div className="page-container relative z-10">
+        <section className="py-20 bg-accent">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center">
-                  <Syringe className="text-white" size={24} />
-                </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-white">What is Botox Calf Reduction?</h2>
-              </div>
-              <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-700 mx-auto rounded-full"></div>
+              <h2 className="text-3xl font-bold mb-4 text-white">What is Botox Calf Reduction?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the innovative non-surgical approach to achieving slimmer, more contoured calves
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-8"
+                className="space-y-6"
               >
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Heart className="text-white" size={20} />
-                    </div>
-                    <div>
-                      <h3 className="text-white text-xl font-semibold mb-2">Non-Surgical Innovation</h3>
-                      <p className="text-gray-300 leading-relaxed">
-                        Botox calf reduction is a revolutionary non-surgical cosmetic procedure that uses botulinum toxin injections to 
-                        temporarily weaken the gastrocnemius muscle in the calves, creating a slimmer, more contoured appearance to the lower legs.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Activity className="text-white" size={20} />
-                    </div>
-                    <div>
-                      <h3 className="text-white text-xl font-semibold mb-2">Precision Treatment</h3>
-                      <p className="text-gray-300 leading-relaxed">
-                        The procedure works by strategically injecting Botox into specific points of the calf muscle, 
-                        causing controlled muscle relaxation. Over time, the treated muscle gradually reduces in size, 
-                        resulting in visibly slimmer and more proportionate calves.
-                      </p>
-                    </div>
-                  </div>
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">The Treatment</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Botox calf reduction is a non-surgical cosmetic procedure that uses botulinum toxin injections to 
+                    temporarily weaken the gastrocnemius muscle in the calves. This creates a slimmer, more contoured 
+                    appearance to the lower legs without invasive surgery.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    The procedure works by strategically injecting Botox into specific points of the calf muscle, 
+                    causing controlled muscle relaxation. Over time, the treated muscle gradually reduces in size, 
+                    resulting in visibly slimmer and more proportionate calves.
+                  </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
-                  <div className="flex items-center gap-3 mb-6">
-                    <CheckCircle className="text-purple-400" size={24} />
-                    <h3 className="text-white text-xl font-semibold">Key Benefits</h3>
-                  </div>
-                  <div className="grid grid-cols-1 gap-4">
-                    {[
-                      "Non-surgical alternative to calf reduction surgery",
-                      "Minimal downtime with immediate activity return",
-                      "Natural-looking results that develop gradually",
-                      "Reversible effects lasting 6-12 months"
-                    ].map((benefit, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="flex items-center gap-3 group"
-                      >
-                        <div className="w-2 h-2 bg-purple-400 rounded-full group-hover:scale-125 transition-transform"></div>
-                        <span className="text-gray-300 group-hover:text-white transition-colors">{benefit}</span>
-                      </motion.div>
-                    ))}
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">Key Benefits</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                      <span className="text-gray-300">Non-surgical alternative to calf reduction surgery</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                      <span className="text-gray-300">Minimal downtime with immediate activity return</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                      <span className="text-gray-300">Natural-looking results that develop gradually</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                      <span className="text-gray-300">Reversible effects lasting 6-12 months</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -351,74 +320,48 @@ const BotoxCalfReduction = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="space-y-8"
               >
-                <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-3xl p-8 border border-purple-500/20 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute top-4 right-4 w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center">
-                    <Palette className="text-purple-300" size={24} />
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-6">Treatment Process</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">1</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Muscle Targeting</h4>
+                        <p className="text-gray-300 text-sm">Botox is precisely injected into the gastrocnemius muscle using advanced techniques</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">2</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Muscle Relaxation</h4>
+                        <p className="text-gray-300 text-sm">The toxin blocks nerve signals, causing controlled muscle relaxation</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">3</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Gradual Results</h4>
+                        <p className="text-gray-300 text-sm">Results develop over 2-4 weeks as the muscle naturally reduces in size</p>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <h3 className="text-white text-2xl font-semibold mb-8">The Science Behind Calf Reduction</h3>
-                  
-                  <div className="space-y-8">
-                    {[
-                      {
-                        step: "1",
-                        title: "Precise Muscle Targeting",
-                        description: "Botox is precisely injected into the gastrocnemius muscle, the largest muscle in the calf, using advanced injection techniques"
-                      },
-                      {
-                        step: "2", 
-                        title: "Controlled Muscle Relaxation",
-                        description: "The toxin blocks nerve signals, causing the muscle to relax and gradually reduce in size without affecting mobility"
-                      },
-                      {
-                        step: "3",
-                        title: "Natural Gradual Reduction",
-                        description: "Results develop over 2-4 weeks as the muscle naturally reduces in bulk and definition, creating elegant contours"
-                      }
-                    ].map((item, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="flex items-start space-x-4 group"
-                      >
-                        <div className="bg-gradient-to-br from-purple-500 to-purple-700 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                          <span className="text-white text-lg font-bold">{item.step}</span>
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="text-white font-semibold mb-2 group-hover:text-purple-300 transition-colors">{item.title}</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
-                        </div>
-                      </motion.div>
-                    ))}
+
+                  <div className="mt-8 pt-6 border-t border-purple-500/20">
+                    <p className="text-purple-300 font-medium italic text-center">
+                      "Our aesthetics is invisible art - transformation that speaks without saying a word"
+                    </p>
                   </div>
                 </div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  viewport={{ once: true }}
-                  className="text-center bg-gradient-to-r from-purple-600/20 to-purple-800/20 rounded-2xl p-8 border border-purple-500/20 backdrop-blur-sm"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="text-white" size={24} />
-                  </div>
-                  <blockquote className="text-purple-300 font-semibold text-lg italic leading-relaxed">
-                    "Our aesthetics is invisible art"
-                    <br />
-                    <span className="text-white font-normal">
-                      Bold • Natural • Always Your Way
-                    </span>
-                  </blockquote>
-                  <p className="text-gray-400 text-sm mt-4">
-                    Transformation that speaks without saying a word
-                  </p>
-                </motion.div>
               </motion.div>
             </div>
           </div>
