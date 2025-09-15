@@ -280,7 +280,7 @@ const Microneedling = () => {
           </div>
         </section>
 
-        {/* Microneedling Treatment Information Section */}
+        {/* How Does Microneedling Work Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -290,13 +290,13 @@ const Microneedling = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Treatment</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">How Does Microneedling Work?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Powerful natural collagen induction therapy for comprehensive skin rejuvenation
+                Understanding the science behind collagen induction therapy
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -304,67 +304,8 @@ const Microneedling = () => {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-4">What is Microneedling Treatment?</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
-                    invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
-                    skin with small needles.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
-                    dermal remodelling, without causing any scars.
-                  </p>
-                </div>
-
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-4">Clinical Collagen Induction Therapy</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    As the ageing process begins, your skin's collagen levels start to decline. However, when your skin is 
-                    in the healing and repairing mode, new and more collagen can be created.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Using your body's self-healing response, microneedling procedure boosts the collagen production (the elastic 
-                    fibres that make skin firmer, smoother, and rejuvenated).
-                  </p>
-                </div>
-
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-4">Treatment Benefits</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Corrects fine lines and wrinkles through collagen boost</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Addresses sun damage and hyperpigmentation</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Fades acne and acne scars effectively</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Minimises large open pores</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Rejuvenates hands, neck and décolletage</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
                 <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-2xl p-8 border border-purple-500/20">
-                  <h3 className="text-white text-2xl font-semibold mb-6">How Does Microneedling Work?</h3>
+                  <h3 className="text-white text-2xl font-semibold mb-6">The Treatment Process</h3>
                   <div className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
                       After applying a topical numbing cream, the skin is thoroughly cleansed. The eDermastamp single-use, 
@@ -394,8 +335,195 @@ const Microneedling = () => {
                     </div>
                   </div>
                 </div>
+              </motion.div>
 
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+                  {/* Microneedling Treatment Video */}
+                  <div className="relative">
+                    <iframe
+                      width="100%"
+                      height="315"
+                      src="https://www.youtube.com/embed/tjbOemp3Dro"
+                      title="Microneedling Treatment Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full aspect-video"
+                    ></iframe>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <p className="text-white text-sm font-medium">Professional Microneedling Treatment Demonstration</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Benefits</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Discover how microneedling can transform your skin through natural collagen induction
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-6 hover-scale"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Fine Lines & Wrinkles</h3>
+                <p className="text-gray-300 text-center">
+                  Corrects fine lines and wrinkles through natural collagen boost, promoting firmer, more youthful skin
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-6 hover-scale"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Sun Damage</h3>
+                <p className="text-gray-300 text-center">
+                  Addresses sun damage and hyperpigmentation, evening out skin tone and reducing age spots
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-6 hover-scale"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Acne Scars</h3>
+                <p className="text-gray-300 text-center">
+                  Fades acne and acne scars effectively by breaking down scar tissue and promoting skin renewal
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-6 hover-scale"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Pore Reduction</h3>
+                <p className="text-gray-300 text-center">
+                  Minimizes large open pores by boosting collagen around each pore, making them appear smaller
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-6 hover-scale"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Body Areas</h3>
+                <p className="text-gray-300 text-center">
+                  Rejuvenates hands, neck and décolletage by rebuilding collagen in these delicate areas
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-6 hover-scale"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Hair Growth</h3>
+                <p className="text-gray-300 text-center">
+                  Reverses hair loss and boosts hair growth when combined with topical treatments like minoxidil
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Cards Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">About Microneedling Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
+                  <h3 className="text-white text-xl font-semibold mb-4">What is Microneedling Treatment?</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
+                    invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
+                    skin with small needles.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
+                    dermal remodelling, without causing any scars.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
                   <h3 className="text-white text-xl font-semibold mb-4">Why Choose Microneedling?</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles. 
@@ -410,33 +538,6 @@ const Microneedling = () => {
                 </div>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                {/* Microneedling Treatment Video */}
-                <div className="relative">
-                  <iframe
-                    width="100%"
-                    height="315"
-                    src="https://www.youtube.com/embed/tjbOemp3Dro"
-                    title="Microneedling Treatment Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full aspect-video"
-                  ></iframe>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <p className="text-white text-sm font-medium">Professional Microneedling Treatment Demonstration</p>
-                </div>
-              </div>
-            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
