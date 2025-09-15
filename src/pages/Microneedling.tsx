@@ -458,15 +458,15 @@ const Microneedling = () => {
               </p>
             </motion.div>
 
-            <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-center mb-12"
+                className="space-y-6"
               >
-                <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 max-w-4xl mx-auto">
+                <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8">
                   <p className="text-gray-300 leading-relaxed mb-6">
                     An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
                     In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
@@ -481,8 +481,8 @@ const Microneedling = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="relative"
