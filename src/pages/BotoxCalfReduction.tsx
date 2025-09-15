@@ -265,42 +265,39 @@ const BotoxCalfReduction = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">What is Botox Calf Reduction?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding the innovative non-surgical approach to achieving slimmer, more contoured calves
-              </p>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Botox calf reduction is a non-surgical cosmetic procedure that uses botulinum toxin injections to 
+                  temporarily weaken the gastrocnemius muscle in the calves. This creates a slimmer, more contoured 
+                  appearance to the lower legs without invasive surgery.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  The procedure works by strategically injecting Botox into specific points of the calf muscle, 
+                  causing controlled muscle relaxation. Over time, the treated muscle gradually reduces in size, 
+                  resulting in visibly slimmer and more proportionate calves.
+                </p>
+              </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-4">The Treatment</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Botox calf reduction is a non-surgical cosmetic procedure that uses botulinum toxin injections to 
-                    temporarily weaken the gastrocnemius muscle in the calves. This creates a slimmer, more contoured 
-                    appearance to the lower legs without invasive surgery.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    The procedure works by strategically injecting Botox into specific points of the calf muscle, 
-                    causing controlled muscle relaxation. Over time, the treated muscle gradually reduces in size, 
-                    resulting in visibly slimmer and more proportionate calves.
-                  </p>
-                </div>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">How Does the Treatment Work?</h2>
+            </motion.div>
 
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-6">Treatment Process</h3>
+                  <h3 className="text-white text-xl font-semibold mb-6">Step-by-Step Treatment Process</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
