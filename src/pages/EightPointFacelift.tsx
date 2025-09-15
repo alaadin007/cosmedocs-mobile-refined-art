@@ -412,24 +412,24 @@ export default function EightPointFacelift() {
         </section>
 
         {/* The 8 Points */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 bg-black">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl font-bold mb-6 text-white">
                 The Strategic 8 Points
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Each point is carefully selected to restore volume and create a lifting effect for natural-looking rejuvenation
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {eightPoints.map((point, index) => (
                 <motion.div
                   key={index}
@@ -437,21 +437,13 @@ export default function EightPointFacelift() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  className="bg-accent border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-500/40 transition-all duration-300"
                 >
-                  <Card className="h-full border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
-                     <CardHeader className="text-center pb-4">
-                       <point.icon className={`w-8 h-8 mx-auto mb-2 ${point.iconColor}`} />
-                       <div className="text-3xl font-bold text-primary mb-2">
-                        {point.number}
-                      </div>
-                      <CardTitle className="text-lg">{point.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <CardDescription className="text-center">
-                        {point.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
+                  <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-purple-600 text-lg font-bold">{point.number}</span>
+                  </div>
+                  <h3 className="text-white text-lg font-semibold mb-3">{point.title}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{point.description}</p>
                 </motion.div>
               ))}
             </div>
