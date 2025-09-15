@@ -13,7 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-// Import before/after images
+// Import actual before/after images from Cosmedocs
 import beforeAfter1 from "@/assets/8-point-facelift-before-after-1.jpg";
 import beforeAfter2 from "@/assets/8-point-facelift-before-after-2.jpg";
 import beforeAfter3 from "@/assets/8-point-facelift-before-after-3.jpg";
@@ -42,22 +42,22 @@ export default function EightPointFacelift() {
     }
   };
 
-  // Before/after images for the gallery
+  // Actual before/after images from Cosmedocs website
   const beforeAfterImages = [
     {
       src: beforeAfter1,
-      alt: "8 Point Face Lift before and after results showing natural facial rejuvenation",
-      caption: "8 Point Face Lift Results - Enhanced facial contours and natural lift"
+      alt: "PDO thread lift before and after procedure. Final results in a few weeks once swelling settles",
+      caption: "PDO Thread Lift: Before and After Comparison"
     },
     {
       src: beforeAfter2,
-      alt: "Non-surgical facelift before and after showing improved facial definition",
-      caption: "Non-Surgical Facelift - Restored volume and youthful appearance"
+      alt: "Thread face lift before and after image 2 weeks later",
+      caption: "Combination PDO Thread lift before and after combined with skin treatment"
     },
     {
       src: beforeAfter3,
-      alt: "Liquid facelift treatment before and after showing natural enhancement",
-      caption: "Liquid Facelift - Comprehensive facial rejuvenation with dermal fillers"
+      alt: "0.5ml Lip Filler Combined With Multiple Other Areas (Hyaluronic acid makeover)",
+      caption: "0.5ml Lip Filler, Tear Trough, Chin & Jawline Enhancement"
     }
   ];
 
