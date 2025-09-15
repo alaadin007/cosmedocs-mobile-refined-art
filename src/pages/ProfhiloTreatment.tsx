@@ -27,29 +27,34 @@ const ProfhiloTreatment = () => {
   // Before/after images for the viewer
   const beforeAfterImages = [
     {
-      src: "/lovable-uploads/e70c5134-7f36-4127-af82-0d196d38b142.png",
-      alt: "Profhilo nasolabial treatment before and after results London Harley Street Cosmedocs",
-      caption: "Nasolabial area bio-remodelling showing improved skin texture and reduced lines"
+      src: "/src/assets/profhilo-face-before-after.jpg",
+      alt: "Profhilo face treatment before and after results London Harley Street Cosmedocs",
+      caption: "Complete facial bio-remodelling with improved skin texture and hydration"
     },
     {
-      src: "/lovable-uploads/8ac4de22-e5b3-4cd3-b79b-0e6e4e3a8b59.png",
-      alt: "Professional Profhilo treatment transformation London Harley Street natural anti-ageing",
-      caption: "Complete facial bio-remodelling demonstrating the invisible art of skin rejuvenation"
+      src: "/src/assets/profhilo-neck-before-after-03.jpg",
+      alt: "Profhilo neck treatment before and after transformation London",
+      caption: "Neck area bio-remodelling showing enhanced skin texture and firmness"
     },
     {
-      src: "/lovable-uploads/5d6f3c28-2a84-4f15-8b73-4e9a1c8f2d5b.png",
-      alt: "Profhilo skin lifting treatment London before after face neck enhancement",
-      caption: "Comprehensive skin lifting and tightening across face and neck areas"
+      src: "/src/assets/profhilo-cheek-before-after.jpg",
+      alt: "Profhilo cheek treatment before and after sun damaged skin improvement",
+      caption: "Significant improvement in severe sun-damaged skin with wrinkles after Profhilo"
     },
     {
-      src: "/lovable-uploads/b7e9f48a-1c3d-4a5e-9b2f-8d6c5e7a9f1b.png",
-      alt: "Profhilo injection therapy London Harley Street hydration boost natural glow",
-      caption: "Injectable hydration therapy delivering natural glow and skin rejuvenation"
+      src: "/src/assets/profhilo-arm-before-after.jpg",
+      alt: "Profhilo arm treatment before and after skin thickness improvement",
+      caption: "Enhanced skin thickness and reduced wrinkles on the arm with Profhilo"
     },
     {
-      src: "/lovable-uploads/d36a6f86-9526-4705-a008-410d58fb8264.png",
-      alt: "Profhilo treatment 1 month results London Harley Street bio-remodelling",
-      caption: "One month post-treatment showing significant skin improvement"
+      src: "/src/assets/profhilo-neck-before-after-2.jpg",
+      alt: "Profhilo neck and lower face treatment enhanced skin texture",
+      caption: "Enhanced skin texture following Profhilo neck and lower face treatment"
+    },
+    {
+      src: "/src/assets/profhilo-neck-before-after-02.jpg",
+      alt: "Profhilo neck treatment enhancing skin texture before and after",
+      caption: "Enhanced skin texture following Profhilo neck treatment"
     }
   ];
 
