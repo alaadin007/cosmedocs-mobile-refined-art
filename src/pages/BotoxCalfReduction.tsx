@@ -271,74 +271,26 @@ const BotoxCalfReduction = () => {
                   temporarily weaken the gastrocnemius muscle in the calves. This creates a slimmer, more contoured 
                   appearance to the lower legs without invasive surgery.
                 </p>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed mb-6">
                   The procedure works by strategically injecting Botox into specific points of the calf muscle, 
                   causing controlled muscle relaxation. Over time, the treated muscle gradually reduces in size, 
                   resulting in visibly slimmer and more proportionate calves.
                 </p>
+                
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">Muscle Targeting</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    The gastrocnemius muscle is the primary target for calf reduction. This large, superficial muscle 
+                    forms the bulk of the calf and is responsible for the prominent appearance that some patients wish to reduce.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Botox is precisely injected into specific points of this muscle using advanced injection techniques. 
+                    The treatment strategically weakens the muscle fibers, leading to a gradual reduction in muscle mass 
+                    and a more refined calf contour over the following weeks.
+                  </p>
+                </div>
               </div>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">How Does the Treatment Work?</h2>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-6">Step-by-Step Treatment Process</h3>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-purple-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-sm font-bold">1</span>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-semibold mb-2">Muscle Targeting</h4>
-                        <p className="text-gray-300 text-sm">Botox is precisely injected into the gastrocnemius muscle using advanced techniques</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-purple-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-sm font-bold">2</span>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-semibold mb-2">Muscle Relaxation</h4>
-                        <p className="text-gray-300 text-sm">The toxin blocks nerve signals, causing controlled muscle relaxation</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-purple-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-sm font-bold">3</span>
-                      </div>
-                      <div>
-                        <h4 className="text-white font-semibold mb-2">Gradual Results</h4>
-                        <p className="text-gray-300 text-sm">Results develop over 2-4 weeks as the muscle naturally reduces in size</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-purple-500/20">
-                    <p className="text-purple-300 font-medium italic text-center">
-                      "Our aesthetics is invisible art - transformation that speaks without saying a word"
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
           </div>
         </section>
 
