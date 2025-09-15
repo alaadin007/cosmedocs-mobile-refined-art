@@ -169,6 +169,82 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
+        {/* Conditions Treated */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold text-center mb-12 text-white">Conditions We Treat</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-bold mb-4 text-white">Primary Conditions</h3>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Chronic neck and shoulder tension</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Myofascial pain syndrome</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Tension-type headaches</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Chronic lower back pain</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Fibromyalgia-related muscle pain</span>
+                    </li>
+                  </ul>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-bold mb-4 text-white">Secondary Benefits</h3>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Improved range of motion</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Enhanced sleep quality</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Reduced dependency on pain medications</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Better overall quality of life</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Increased daily activity tolerance</span>
+                    </li>
+                  </ul>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+
         {/* What is Trigger Point Botox */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -196,7 +272,7 @@ const TriggerPointBotox = () => {
         </section>
 
         {/* Benefits Grid */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -333,82 +409,6 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
-        {/* Conditions Treated */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold text-center mb-12 text-white">Conditions We Treat</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-xl font-bold mb-4 text-white">Primary Conditions</h3>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Chronic neck and shoulder tension</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Myofascial pain syndrome</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Tension-type headaches</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Chronic lower back pain</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Fibromyalgia-related muscle pain</span>
-                    </li>
-                  </ul>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-xl font-bold mb-4 text-white">Secondary Benefits</h3>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Improved range of motion</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Enhanced sleep quality</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Reduced dependency on pain medications</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Better overall quality of life</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Increased daily activity tolerance</span>
-                    </li>
-                  </ul>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
