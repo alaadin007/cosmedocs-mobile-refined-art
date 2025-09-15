@@ -355,25 +355,22 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">What Is Profhilo?</h2>
-                <p className="text-gray-300 max-w-4xl mx-auto">
+               <h2 className="text-3xl font-bold mb-6">What Is Profhilo?</h2>
+                <p className="text-gray-300 max-w-4xl mx-auto mb-8">
                   Advanced skin bio-remodelling treatment that stimulates natural collagen and elastin production
                 </p>
+                <div className="max-w-4xl mx-auto mb-12">
+                  <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
+                    Profhilo before and after demonstrate its powerful results as a skin booster. This treatment of the skin results in bio-remodelling and rejuvenation. It causes the production of new collagen, elastic and hyaluronic acid in the deeper skin layers.
+                  </p>
+                  <p className="text-white/80 font-light leading-relaxed text-lg">
+                    This cutting-edge and highly favoured anti-ageing treatment delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow.
+                  </p>
+                </div>
               </motion.div>
               
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-8">
-                  <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
-                    <p className="text-white/80 font-light leading-relaxed mb-6">
-                      Profhilo before and after demonstrate its powerful results as a skin booster. This treatment of the skin results in bio-remodelling and rejuvenation. It causes the production of new collagen, elastic and hyaluronic acid in the deeper skin layers.
-                    </p>
-                    <p className="text-white/80 font-light leading-relaxed">
-                      This cutting-edge and highly favoured anti-ageing treatment delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="relative">
+              <div className="flex justify-center">
+                <div className="max-w-md">
                   <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
                     <h4 className="text-2xl font-light text-white mb-6">How Profhilo Works</h4>
                     <div className="space-y-6">
