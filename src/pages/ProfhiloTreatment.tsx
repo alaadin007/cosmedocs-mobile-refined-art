@@ -27,7 +27,7 @@ import profhiloInjectionPointsFace from "@/assets/profhilo-injection-points-face
 const ProfhiloTreatment = () => {
   const seoData = generateSEOMetadata(
     "Profhilo Treatment London | £350 | Bio-Remodelling | Cosmedocs Harley Street",
-    "Expert Profhilo bio-remodelling treatments in London's Harley Street. Injectable skincare for dewy rejuvenation from £350. Book your consultation today.",
+    "Profhilo London from £350. See profhilo before and after results. Expert profhilo treatment, neck injections & skin booster. Book consultation.",
     "/profhilo-treatment"
   );
 
@@ -134,6 +134,7 @@ const ProfhiloTreatment = () => {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
+        <meta name="keywords" content="profhilo neck before and after, profhilo before and after neck, profhilo for neck, profhilo before after, profilo before and after, profhilo neck, profhilo treatment before and after, profhilo skin booster before and after, prophilo before and after, profhilo gone wrong pictures, profilo facial, profhilo results, profhilo after 1 week, how much is profhilo, profhilo results week by week, profhilo before and after, profhilo before and after 40s, profhilo before and after jowls, before and after profhilo, profhilo price, profilo, does profhilo hurt, gone wrong profhilo before and after eyes, profhilo before and after eyes, profhilo structura before and after, before and after profhilo injection points, profhilo under eyes, profhilo treatment london, profhilo london, what does profhilo do, profhilo treatment, profhilo injection, how long does profhilo last, how long does profhilo take to work, profhilo injection points, profhilo neck injection points, profhilo cost, profhilo treatment price uk, is profhilo worth it, skin booster, skin booster injection, profhilo skin booster" />
         
         {/* Local SEO */}
         <meta name="geo.region" content="GB-LND" />
@@ -352,10 +353,10 @@ const ProfhiloTreatment = () => {
                 <h2 className="text-3xl font-bold mb-6">What Is Profhilo?</h2>
                 <div className="max-w-4xl mx-auto mb-12">
                   <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
-                    Profhilo before and after demonstrate its powerful results as a skin booster. This treatment of the skin results in bio-remodelling and rejuvenation. It causes the production of new collagen, elastic and hyaluronic acid in the deeper skin layers.
+                    Profhilo before and after demonstrate its powerful results as a skin booster injection. Profhilo treatment before and after results show dramatic improvement in skin quality. Profhilo neck before and after results are particularly impressive, with profhilo for neck treatments showing excellent skin tightening. What does profhilo do? It causes the production of new collagen, elastic and hyaluronic acid in the deeper skin layers.
                   </p>
                   <p className="text-white/80 font-light leading-relaxed text-lg">
-                    This cutting-edge and highly favoured anti-ageing treatment delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow.
+                    This cutting-edge profhilo treatment delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow. Profhilo before and after 40s clients show remarkable rejuvenation, with profhilo before and after jowls improvement being particularly noticeable. How long does profhilo last? Results typically last 6-12 months with progressive improvement.
                   </p>
                 </div>
               </motion.div>
@@ -535,10 +536,10 @@ const ProfhiloTreatment = () => {
                 <h2 className="text-3xl font-bold mb-6 text-white">Injectable Moisturiser, Intense Skin Quencher</h2>
                 <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed">
-                    Unlike your typical topical skin moisturizer, a Profhilo treatment slowly releases pure Hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey.
+                    Unlike your typical topical skin moisturizer, a profhilo treatment London slowly releases pure Hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey. Profhilo results become visible after 1 week, with profhilo results week by week showing progressive improvement.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    Secondly, this intense and long-lasting skin hydrating therapy complements your anti-wrinkle injections.
+                    This intense and long-lasting profhilo skin booster injection complements your <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle injections</a>. Profhilo injection points include face and profhilo neck injection points for comprehensive bio-remodelling.
                   </p>
                 </div>
               </motion.div>
