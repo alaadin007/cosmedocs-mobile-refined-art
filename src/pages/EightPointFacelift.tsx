@@ -399,11 +399,8 @@ export default function EightPointFacelift() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                8 Point Face Lift Treatment Objective
+                What is 8 Point Face Lift?
               </h2>
-              <p className="text-xl text-primary font-semibold mb-6">
-                Replace lost volume in 8 key points contributing to a sunken and tired appearance.
-              </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 The 8 point face lift treatment is designed to restore lost volume and lift the face. 
                 This non-surgical facelift treatment is also called 'liquid facelift treatment' because dermal fillers are used 
