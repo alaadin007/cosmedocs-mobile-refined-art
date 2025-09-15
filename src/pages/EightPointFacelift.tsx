@@ -2,6 +2,9 @@ import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+import { generateSEOMetadata } from '@/utils/seo';
+import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle, Diamond, Eye, Smile, Gem, Droplets, Sparkles } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -9,9 +12,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { motion } from "framer-motion";
-import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle, Diamond, Eye, Smile, Gem, Droplets, Sparkles } from 'lucide-react';
 
 export default function EightPointFacelift() {
   const seoData = generateSEOMetadata(
