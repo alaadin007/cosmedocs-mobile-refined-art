@@ -584,135 +584,7 @@ export default function EightPointFacelift() {
           </div>
         </section>
 
-        {/* Ideal Candidates & Results */}
-        <section className="py-20 px-6 bg-primary/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Ideal Candidates</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">
-                      The 8 point face lift treatment is ideal for patients in their late 30s and early 40s who have 
-                      decreased facial volume with mild jowling. In the case of heavy jowls, PDO thread lift treatment 
-                      is recommended, as this non-surgical facelift treatment will not improve them significantly.
-                    </p>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">Perfect for:</h4>
-                      <ul className="space-y-1">
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Late 30s to early 40s age group</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Decreased facial volume</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Mild jowling concerns</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Desire for non-surgical solution</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Results Timeline & Recovery</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold mb-2">Results Timeline:</h4>
-                      <p className="text-muted-foreground">
-                        The 8 Point facelift treatment gives immediate results that last for about 12-18 months. 
-                        Full results are visible after 1-2 weeks when minor swelling and bruising subsides.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Recovery & Downtime:</h4>
-                      <p className="text-muted-foreground">
-                        There is no or little downtime. Routine activities can be resumed immediately after treatment. 
-                        Minor bruising and swelling may occur but are temporary and fade within a few days.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <div className="mt-12">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Key Benefits</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2">
-                      <ul className="space-y-3">
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Immediate visible results</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Non-surgical approach</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Minimal downtime</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Natural-looking enhancement</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Long-lasting effects (12-18 months)</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Customized to your individual needs</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Restores facial volume and definition</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Cost-effective alternative to surgery</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        {/* Pricing Section */}
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
@@ -731,13 +603,81 @@ export default function EightPointFacelift() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Basic Package</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£800</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Essential 8 point face lift treatment</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium dermal fillers</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">RECOMMENDED</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Complete Package</CardTitle>
+                    <div className="text-white text-4xl font-bold">£1200</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Comprehensive facial rejuvenation treatment</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended treatment session</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Premium quality fillers</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Follow-up appointments</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="mx-auto"
               >
                 <Card className="bg-accent border-gray-700 h-full text-center">
                   <CardHeader>
