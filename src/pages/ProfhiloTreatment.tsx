@@ -414,6 +414,51 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
+        {/* Profhilo Injection Points Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Profhilo Injection Points</h2>
+                <div className="space-y-6">
+                  <p className="text-gray-300 leading-relaxed">
+                    The latest injectable skin remodelling treatment corrects the ageing signs and their source.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    To achieve remarkable results, experts use the BAP (Bio Aesthetic Points) technique.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    This reduces the required injections and ensures an even and efficient dispersal of the hyaluronic acid into the skin layers, enabling Profhilo to battle signs of ageing more efficiently.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Moreover, the BAP approach ensures your comfort throughout the process.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <img 
+                  src="/src/assets/profhilo-injection-points.jpg" 
+                  alt="Profhilo injection points diagram showing BAP technique on face"
+                  className="rounded-3xl shadow-2xl w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Profhilo Vs Dermal Fillers Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
