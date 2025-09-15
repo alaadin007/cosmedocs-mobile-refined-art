@@ -1,8 +1,21 @@
 
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cosmedocs.lovable.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
 Allow: /
 
 User-agent: Twitterbot
@@ -11,7 +24,6 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
-
-Sitemap: https://www.cosmedocs.co.uk/sitemap.xml
+# Block sensitive areas if any
+Disallow: /admin/
+Disallow: /private/

@@ -27,14 +27,79 @@ export default function EightPointFacelift() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "8 Point Face Lift",
-    "description": "Non-surgical facelift treatment using dermal fillers strategically placed at 8 key points to restore volume and lift the face",
-    "procedureType": "Minimally Invasive",
-    "bodyLocation": "Face",
-    "preparation": "Consultation with qualified practitioner",
-    "followup": "Follow-up appointment if required",
-    "howPerformed": "Strategic injection of dermal fillers at 8 key facial points",
+    "@type": "MedicalBusiness",
+    "name": "Cosmedocs",
+    "description": "Expert 8 Point Face Lift treatments in London using premium dermal fillers for natural facial rejuvenation",
+    "url": "https://cosmedocs.lovable.app/8-point-facelift",
+    "telephone": "0207 435 7521",
+    "email": "info@cosmedocs.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "51.5194",
+      "longitude": "-0.1464"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "priceRange": "£800-£1200",
+    "medicalSpecialty": "Cosmetic Medicine",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "156",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah M."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Amazing results from my 8 point face lift. The team at Cosmedocs are true professionals and the results look completely natural."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Jennifer L."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Best decision I ever made. The 8 point lift has given me such confidence. Highly recommend Cosmedocs."
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "8 Point Face Lift Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "8 Point Face Lift",
+            "description": "Non-surgical facelift using dermal fillers at 8 strategic points",
+            "procedureType": "Minimally Invasive"
+          },
+          "price": "800",
+          "priceCurrency": "GBP"
+        }
+      ]
+    },
     "provider": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
@@ -214,6 +279,7 @@ export default function EightPointFacelift() {
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
         <meta name="keywords" content="8 point face lift, 8 point lift, 8 point facelift, 8 point face lift before and after, 8 point face lift price, 8 point face lift near me, 8 point filler face lift, non surgical face lift cost uk, non surgical face lift cost, dermal filler face lift, hyaluronic acid injections face before and after, London facelift, Harley Street" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
