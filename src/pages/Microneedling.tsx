@@ -280,6 +280,84 @@ const Microneedling = () => {
           </div>
         </section>
 
+        {/* About Microneedling Treatment Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">About Microneedling Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
+                  <h3 className="text-white text-xl font-semibold mb-4">What is Microneedling Treatment?</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
+                    invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
+                    skin with small needles.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
+                    dermal remodelling, without causing any scars.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
+                  <h3 className="text-white text-xl font-semibold mb-4">Why Choose Microneedling?</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles. 
+                    It also helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
+                    promotes new collagen fibres.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Clinical collagen induction therapy serves your skin in more ways than you can imagine! From correcting 
+                    pitted acne scarring to stretch marks, skin laxity and unwanted fine lines with minimal discomfort and 
+                    practically no recovery.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 max-w-4xl mx-auto">
+                <h3 className="text-white text-xl font-bold mb-4">Professional Microneedling at Cosmedocs</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
+                  In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
+                  helps your skincare topicals perform their best.
+                </p>
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+                  Book Consultation
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* How Does Microneedling Work Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -483,83 +561,6 @@ const Microneedling = () => {
           </div>
         </section>
 
-        {/* Treatment Cards Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">About Microneedling Treatment</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
-                  <h3 className="text-white text-xl font-semibold mb-4">What is Microneedling Treatment?</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
-                    invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
-                    skin with small needles.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
-                    dermal remodelling, without causing any scars.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
-                  <h3 className="text-white text-xl font-semibold mb-4">Why Choose Microneedling?</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles. 
-                    It also helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
-                    promotes new collagen fibres.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Clinical collagen induction therapy serves your skin in more ways than you can imagine! From correcting 
-                    pitted acne scarring to stretch marks, skin laxity and unwanted fine lines with minimal discomfort and 
-                    practically no recovery.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 max-w-4xl mx-auto">
-                <h3 className="text-white text-xl font-bold mb-4">Professional Microneedling at Cosmedocs</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
-                  In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
-                  helps your skincare topicals perform their best.
-                </p>
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
-                  Book Consultation
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
