@@ -304,24 +304,11 @@ const Microneedling = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center mb-8"
-            >
-              <h3 className="text-2xl font-bold mb-4 text-white">Why Choose Microneedling?</h3>
-              <p className="text-gray-300 max-w-3xl mx-auto mb-8">
-                Discover why microneedling is the preferred choice for natural skin rejuvenation
-              </p>
-            </motion.div>
-
             <div className="max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
