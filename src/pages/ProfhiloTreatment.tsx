@@ -490,7 +490,9 @@ const ProfhiloTreatment = () => {
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
               >
-                <h3 className="text-2xl font-bold mb-4 text-white">Dermal Fillers</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white">
+                  <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">Dermal Fillers</a>
+                </h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="text-gray-500 mt-1" size={16} />
