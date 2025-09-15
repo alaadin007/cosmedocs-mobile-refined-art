@@ -338,6 +338,106 @@ const Microneedling = () => {
           </div>
         </section>
 
+        {/* Benefits and Treatment Process Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Benefits & Treatment Process</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Discover the comprehensive benefits and understand our professional treatment approach
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-accent border border-purple-500/20 rounded-xl p-6 h-full">
+                  <h3 className="text-white text-xl font-semibold mb-6">Microneedling Benefits</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Corrects fine lines and wrinkles through collagen boost</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Addresses sun damage and hyperpigmentation</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Fades acne and acne scars effectively</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Minimizes large open pores</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Rejuvenates hands, neck and décolletage</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Enhances skincare product absorption</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Safe for all skin types and tones</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-xl p-6 border border-purple-500/20 h-full">
+                  <h3 className="text-white text-xl font-semibold mb-6">Treatment Process</h3>
+                  <div className="space-y-4">
+                    <p className="text-gray-300 leading-relaxed">
+                      After applying a topical numbing cream, the skin is thoroughly cleansed. The eDermastamp single-use, 
+                      sterile needle microneedling device is then set to the correct speed, needle lengths and depth for the 
+                      treatment area.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      With microneedling treatment, the depth is within the papillary dermal layer of the skin, where collagen 
+                      and elastin fibres are located. The tiny holes close over almost immediately as the channels are small.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      The 'micro tears' to the dermis encourages the skin to repair itself by activating skin's healing process 
+                      and promoting collagen production and elastin and generating new skin cells.
+                    </p>
+                    
+                    <div className="mt-6 pt-4 border-t border-purple-500/20">
+                      <div className="grid grid-cols-2 gap-4 text-center">
+                        <div>
+                          <div className="text-xl font-bold text-purple-300 mb-1">30</div>
+                          <div className="text-sm text-gray-300">Minutes</div>
+                        </div>
+                        <div>
+                          <div className="text-xl font-bold text-purple-300 mb-1">15-18</div>
+                          <div className="text-sm text-gray-300">Months Results</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* How Does Microneedling Work Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
