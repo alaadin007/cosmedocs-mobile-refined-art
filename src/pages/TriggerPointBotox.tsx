@@ -244,6 +244,7 @@ const TriggerPointBotox = () => {
               </div>
             </motion.div>
           </div>
+        </section>
 
         {/* What is Trigger Point Botox */}
         <section className="py-20 bg-black">
