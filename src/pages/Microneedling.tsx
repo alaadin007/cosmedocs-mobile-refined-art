@@ -319,7 +319,7 @@ const Microneedling = () => {
                     promotes new collagen fibres. Microneedling for skin tightening delivers exceptional results with minimal downtime.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    How much is microneedling UK? Our derma needling therapy serves your skin in more ways than you can imagine! From correcting 
+                    Our derma needling therapy serves your skin in more ways than you can imagine! From correcting 
                     pitted acne scarring to stretch marks, skin laxity and unwanted fine lines with minimal discomfort and 
                     practically no recovery. Benefits of microneedling face include improved texture, reduced pore size, and enhanced collagen production.
                   </p>
