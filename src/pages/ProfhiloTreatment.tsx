@@ -172,12 +172,20 @@ const ProfhiloTreatment = () => {
                   <p className="text-sm text-gray-300">#cosmeprofhilo - Check out our IG for hundreds more natural, subtle transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <a 
+                    href="https://med.as.me/harleystreet" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl inline-flex items-center justify-center transition-all duration-300"
+                  >
                     Book Consultation
-                  </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  </a>
+                  <a 
+                    href="#pricing" 
+                    className="border border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm inline-flex items-center justify-center transition-all duration-300"
+                  >
                     View Price List
-                  </Button>
+                  </a>
                 </div>
               </motion.div>
               
@@ -1100,6 +1108,9 @@ const ProfhiloTreatment = () => {
             </motion.div>
           </div>
         </section>
+        
+        {/* Final CTA Section */}
+        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A] relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-20" />
           <div className="page-container relative z-10">
             <motion.div
@@ -1132,10 +1143,10 @@ const ProfhiloTreatment = () => {
                   Book Consultation
                 </a>
                 <a 
-                  href="tel:03330551503"
+                  href="#pricing"
                   className="group bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20"
                 >
-                  Call 0333 0551 503
+                  View Price List
                 </a>
               </motion.div>
             </motion.div>
