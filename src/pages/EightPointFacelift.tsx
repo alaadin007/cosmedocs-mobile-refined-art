@@ -100,7 +100,7 @@ export default function EightPointFacelift() {
     },
     {
       number: "04",
-      title: "Smile Enhancement",
+      title: "Downward Smile",
       description: "Lift downward smile lines for a more youthful appearance",
       icon: Smile,
       iconColor: "text-yellow-400"
@@ -133,6 +133,14 @@ export default function EightPointFacelift() {
       icon: Droplets,
       iconColor: "text-blue-300"
     }
+  ];
+
+  const idealCandidates = [
+    "Patients in their late 30s and early 40s",
+    "Decreased facial volume with mild jowling",
+    "Those seeking non-surgical facelift options",
+    "People with mild skin laxity",
+    "Those wanting natural-looking rejuvenation"
   ];
 
   const faqData = [
@@ -212,7 +220,10 @@ export default function EightPointFacelift() {
                   <p className="text-sm text-gray-300">Non-surgical facelift using dermal fillers at 8 strategic points</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
                     Book Consultation
                   </Button>
                   <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
@@ -420,6 +431,128 @@ export default function EightPointFacelift() {
                   </Card>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Ideal Candidates Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Ideal Candidates for 8 Point Facelift</h2>
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                  The 8 point face lift treatment is ideal for patients in their late 30s and early 40s who have 
+                  decreased facial volume with mild jowling. In the case of heavy jowls, <a href="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline">PDO thread lift treatment</a> is recommended.
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-6">Perfect Candidates</h3>
+                  <ul className="space-y-3">
+                    {idealCandidates.map((candidate, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                        <span className="text-gray-300">{candidate}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-xl p-8 border border-purple-500/20"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-6">Treatment Areas</h3>
+                  <div className="space-y-3 text-gray-300">
+                    <p>• <a href="/cheek-fillers" className="text-purple-300 hover:text-purple-200 underline">Cheek Structure</a> and volume enhancement</p>
+                    <p>• Dark circles and under eye hollows</p>
+                    <p>• <a href="/jawline-fillers" className="text-purple-300 hover:text-purple-200 underline">Jawline</a> definition and jowl improvement</p>
+                    <p>• <a href="/non-surgical-nose-job" className="text-purple-300 hover:text-purple-200 underline">Nose</a> to mouth contours</p>
+                    <p>• <a href="/tear-trough-filler" className="text-purple-300 hover:text-purple-200 underline">Tear troughs</a> and tired appearance</p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Results & Recovery Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Results & Recovery</h2>
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                  Understanding what to expect from your 8 Point Face Lift treatment
+                </p>
+              </motion.div>
+
+              <div className="grid lg:grid-cols-3 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="bg-accent rounded-xl p-8 border border-purple-500/20"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">Immediate Results</h3>
+                  <p className="text-gray-300 mb-4">
+                    The 8 Point facelift treatment gives immediate results that are visible right after treatment.
+                  </p>
+                  <p className="text-purple-300 font-semibold">Duration: 12-18 months</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-accent rounded-xl p-8 border border-purple-500/20"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">Minimal Downtime</h3>
+                  <p className="text-gray-300 mb-4">
+                    There is no or little downtime. Routine activities can be resumed immediately after treatment.
+                  </p>
+                  <p className="text-purple-300 font-semibold">Back to work: Immediately</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-accent rounded-xl p-8 border border-purple-500/20"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">Side Effects</h3>
+                  <p className="text-gray-300 mb-4">
+                    Minimal side effects including minor bruising and swelling that fade within a few days.
+                  </p>
+                  <p className="text-purple-300 font-semibold">Full recovery: 1 week</p>
+                </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -826,7 +959,11 @@ export default function EightPointFacelift() {
                 Book your consultation today and discover how the 8 Point Face Lift can help you achieve natural, youthful results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-lg px-8">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8"
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                >
                   Book Consultation Now
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
