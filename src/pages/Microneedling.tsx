@@ -519,78 +519,157 @@ const Microneedling = () => {
           </div>
         </section>
 
-        {/* Main Content Section */}
-        <section className="py-20">
+
+        {/* Microneedling Treatment Information Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Treatment</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Powerful natural collagen induction therapy for comprehensive skin rejuvenation
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="prose prose-lg prose-invert max-w-none"
+                className="space-y-6"
               >
-                <h2 className="text-3xl font-bold mb-6">Achieve Flawless Skin with Advanced Microneedling</h2>
-                
-                <p className="text-gray-300 mb-6">
-                  At Cosmedocs, we understand that flawless skin is not just about perfection—it's about confidence, radiance, and feeling comfortable in your own skin. Our advanced microneedling treatments represent the pinnacle of non-invasive skin rejuvenation, offering a scientifically-proven approach to achieving the smooth, luminous complexion you've always desired.
-                </p>
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">What is Microneedling Treatment?</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
+                    invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
+                    skin with small needles.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
+                    dermal remodelling, without causing any scars.
+                  </p>
+                </div>
 
-                <p className="text-gray-300 mb-6">
-                  Microneedling, also known as collagen induction therapy, harnesses your body's natural healing mechanisms to transform your skin from within. Using state-of-the-art medical-grade devices, our expert practitioners create controlled micro-channels in the skin, triggering a cascade of regenerative processes that result in visibly improved texture, tone, and overall skin quality.
-                </p>
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">Clinical Collagen Induction Therapy</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    As the ageing process begins, your skin's collagen levels start to decline. However, when your skin is 
+                    in the healing and repairing mode, new and more collagen can be created.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Using your body's self-healing response, microneedling procedure boosts the collagen production (the elastic 
+                    fibres that make skin firmer, smoother, and rejuvenated).
+                  </p>
+                </div>
 
-                <h3 className="text-2xl font-bold mb-4 text-purple-300">The Science Behind Flawless Skin</h3>
-                
-                <p className="text-gray-300 mb-6">
-                  Our microneedling treatments work on a cellular level to address the fundamental causes of skin imperfections. The precisely controlled micro-injuries stimulate fibroblast activity, dramatically increasing collagen and elastin production—the building blocks of youthful, resilient skin. This natural regeneration process continues for months after treatment, ensuring long-lasting improvements that enhance your skin's inherent beauty.
-                </p>
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">Treatment Benefits</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Corrects fine lines and wrinkles through collagen boost</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Addresses sun damage and hyperpigmentation</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Fades acne and acne scars effectively</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Minimises large open pores</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                      <span className="text-gray-300">Rejuvenates hands, neck and décolletage</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
 
-                <p className="text-gray-300 mb-6">
-                  What sets our approach apart is our commitment to 'invisible art'—achieving transformative results that look completely natural. We don't believe in dramatic, artificial changes. Instead, we focus on revealing your skin's best possible version, enhancing what nature gave you while addressing specific concerns with surgical precision.
-                </p>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-2xl p-8 border border-purple-500/20">
+                  <h3 className="text-white text-2xl font-semibold mb-6">How Does Microneedling Work?</h3>
+                  <div className="space-y-4">
+                    <p className="text-gray-300 leading-relaxed">
+                      After applying a topical numbing cream, the skin is thoroughly cleansed. The eDermastamp single-use, 
+                      sterile needle microneedling device is then set to the correct speed, needle lengths and depth for the 
+                      treatment area.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      With microneedling treatment, the depth is within the papillary dermal layer of the skin, where collagen 
+                      and elastin fibres are located. The tiny holes close over almost immediately as the channels are small.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      The 'micro tears' to the dermis encourages the skin to repair itself by activating skin's healing process 
+                      and promoting collagen production and elastin and generating new skin cells.
+                    </p>
+                  </div>
 
-                <h3 className="text-2xl font-bold mb-4 text-purple-300">Comprehensive Skin Transformation</h3>
-                
-                <p className="text-gray-300 mb-6">
-                  Our microneedling treatments excel in addressing a wide spectrum of skin concerns. From stubborn acne scarring and enlarged pores to fine lines, wrinkles, and uneven texture, this versatile treatment delivers remarkable improvements across all skin types and tones. Patients consistently report not just visual improvements, but enhanced skin feel, increased firmness, and a natural, healthy glow that speaks to improved skin health at the deepest level.
-                </p>
+                  <div className="mt-8 pt-6 border-t border-purple-500/20">
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-purple-300 mb-1">30</div>
+                        <div className="text-sm text-gray-300">Minutes</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-purple-300 mb-1">15-18</div>
+                        <div className="text-sm text-gray-300">Months Results</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                <p className="text-gray-300 mb-6">
-                  The beauty of microneedling lies in its ability to work with your skin's natural processes rather than against them. Unlike more aggressive treatments that can cause trauma or lengthy downtime, our carefully calibrated approach stimulates renewal while maintaining skin integrity. This means you can achieve significant improvements while continuing your normal activities with minimal disruption.
-                </p>
-
-                <h3 className="text-2xl font-bold mb-4 text-purple-300">Our Expert Approach</h3>
-                
-                <p className="text-gray-300 mb-6">
-                  At Cosmedocs, every microneedling treatment begins with a comprehensive skin analysis and consultation. Our experienced practitioners assess your unique skin characteristics, concerns, and goals to develop a personalized treatment plan. We consider factors such as skin type, sensitivity, lifestyle, and desired outcomes to ensure optimal results while maintaining the highest safety standards.
-                </p>
-
-                <p className="text-gray-300 mb-6">
-                  Our practitioners are not just skilled technicians—they are artists who understand the nuances of facial anatomy and skin physiology. With over a million injections performed since 2007 and our role as trainers for the prestigious Harley Street Institute, we bring unparalleled expertise to every treatment. This experience allows us to achieve consistently superior results while minimizing any discomfort or side effects.
-                </p>
-
-                <h3 className="text-2xl font-bold mb-4 text-purple-300">Advanced Treatment Protocols</h3>
-                
-                <p className="text-gray-300 mb-6">
-                  We utilize the latest microneedling technology and techniques to maximize treatment efficacy. Our protocols often incorporate complementary treatments such as specialized serums, growth factors, or combination therapies to enhance results. The depth and pattern of needling are precisely calibrated based on the specific area being treated and the particular concerns being addressed.
-                </p>
-
-                <p className="text-gray-300 mb-6">
-                  For patients seeking comprehensive skin transformation, we frequently recommend combining microneedling with other advanced treatments such as chemical peels or skin boosters. These carefully planned combination approaches can accelerate results and address multiple skin concerns simultaneously, creating a truly customized rejuvenation experience.
-                </p>
-
-                <h3 className="text-2xl font-bold mb-4 text-purple-300">The Cosmedocs Difference</h3>
-                
-                <p className="text-gray-300 mb-6">
-                  What distinguishes Cosmedocs is our unwavering commitment to excellence and our philosophy of 'bold, natural, always your way.' We believe that the best cosmetic treatments are those that enhance rather than alter, that boost confidence while maintaining authenticity. Our microneedling treatments embody this philosophy, delivering transformative results that look and feel completely natural.
-                </p>
-
-                <p className="text-gray-300 mb-6">
-                  Our commitment extends beyond the treatment itself to comprehensive aftercare and ongoing support. We provide detailed post-treatment instructions, high-quality skincare recommendations, and follow-up consultations to ensure optimal healing and long-lasting results. This holistic approach ensures that your investment in flawless skin continues to pay dividends long after your treatment.
-                </p>
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">Why Choose Microneedling?</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles. 
+                    It also helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
+                    promotes new collagen fibres.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Clinical collagen induction therapy serves your skin in more ways than you can imagine! From correcting 
+                    pitted acne scarring to stretch marks, skin laxity and unwanted fine lines with minimal discomfort and 
+                    practically no recovery.
+                  </p>
+                </div>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 max-w-4xl mx-auto">
+                <h3 className="text-white text-xl font-bold mb-4">Professional Microneedling at Cosmedocs</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
+                  In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
+                  helps your skincare topicals perform their best.
+                </p>
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+                  Book Consultation
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </section>
 
