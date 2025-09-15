@@ -291,28 +291,6 @@ const BotoxCalfReduction = () => {
                     resulting in visibly slimmer and more proportionate calves.
                   </p>
                 </div>
-
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-4">Key Benefits</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                      <span className="text-gray-300">Non-surgical alternative to calf reduction surgery</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                      <span className="text-gray-300">Minimal downtime with immediate activity return</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                      <span className="text-gray-300">Natural-looking results that develop gradually</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
-                      <span className="text-gray-300">Reversible effects lasting 6-12 months</span>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
 
               <motion.div
@@ -367,7 +345,7 @@ const BotoxCalfReduction = () => {
           </div>
         </section>
 
-        {/* Comparison Section */}
+        {/* Botox Vs Surgical Calf Reduction Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -377,207 +355,96 @@ const BotoxCalfReduction = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Botox vs Surgical Calf Reduction</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Compare the benefits and considerations of both treatment options to make an informed decision
-              </p>
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox Vs. Surgical Calf Reduction</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Botox Calf Reduction */}
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="bg-purple-900/20 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20"
               >
-                <div className="bg-gradient-to-br from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-6 h-full">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
-                      <Syringe className="text-white" size={20} />
-                    </div>
-                    <h3 className="text-white text-xl font-bold">Botox Calf Reduction</h3>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                      <div>
-                        <p className="text-white font-medium">Non-invasive treatment</p>
-                        <p className="text-gray-300 text-sm">Simple injection procedure</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                      <div>
-                        <p className="text-white font-medium">Minimal downtime</p>
-                        <p className="text-gray-300 text-sm">Return to activities immediately</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                      <div>
-                        <p className="text-white font-medium">Reversible effects</p>
-                        <p className="text-gray-300 text-sm">Results last 6-12 months</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                      <div>
-                        <p className="text-white font-medium">No scarring</p>
-                        <p className="text-gray-300 text-sm">Injection marks fade within hours</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                      <div>
-                        <p className="text-white font-medium">Local anaesthetic only</p>
-                        <p className="text-gray-300 text-sm">Minimal discomfort during treatment</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                      <div>
-                        <p className="text-white font-medium">Lower cost</p>
-                        <p className="text-gray-300 text-sm">Starting from £400</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
-                      <div>
-                        <p className="text-white font-medium">Gradual, natural results</p>
-                        <p className="text-gray-300 text-sm">Develops over 2-4 weeks</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 pt-4 border-t border-purple-500/20">
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">
-                      Choose Botox Treatment
-                    </Button>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold mb-4 text-purple-300">Botox Calf Reduction</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Non-invasive injection treatment</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Minimal downtime - return to activities immediately</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Reversible effects lasting 6-12 months</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>No scarring or permanent marks</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Local anaesthetic only</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Starting from £400</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Gradual, natural-looking results</span>
+                  </li>
+                </ul>
               </motion.div>
 
-              {/* Surgical Calf Reduction */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
               >
-                <div className="bg-gray-800/50 border border-gray-600/30 rounded-xl p-6 h-full">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
-                      <Activity className="text-white" size={20} />
-                    </div>
-                    <h3 className="text-white text-xl font-bold">Surgical Calf Reduction</h3>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-4 h-4 bg-orange-500 rounded-full mt-1 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white font-medium">Invasive surgical procedure</p>
-                        <p className="text-gray-300 text-sm">Requires muscle removal or cutting</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-4 h-4 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white font-medium">Extended recovery time</p>
-                        <p className="text-gray-300 text-sm">4-6 weeks healing period</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-4 h-4 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white font-medium">Permanent changes</p>
-                        <p className="text-gray-300 text-sm">Results cannot be reversed</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-4 h-4 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white font-medium">Visible scarring</p>
-                        <p className="text-gray-300 text-sm">Permanent surgical marks</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-4 h-4 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white font-medium">General anaesthesia</p>
-                        <p className="text-gray-300 text-sm">Higher risks and complications</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-4 h-4 bg-red-500 rounded-full mt-1 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white font-medium">Higher cost</p>
-                        <p className="text-gray-300 text-sm">£3,000-£8,000+ plus hospital fees</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-4 h-4 bg-orange-500 rounded-full mt-1 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white font-medium">Immediate dramatic results</p>
-                        <p className="text-gray-300 text-sm">Visible once swelling subsides</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 pt-4 border-t border-gray-600/20">
-                    <p className="text-gray-400 text-center text-sm">
-                      Surgical option available through specialist clinics
-                    </p>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Surgical Calf Reduction</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Invasive surgical procedure</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>4-6 weeks recovery period</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Permanent changes - cannot be reversed</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Visible surgical scarring</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>General anaesthesia required</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>£3,000-£8,000+ plus hospital fees</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Immediate dramatic results</span>
+                  </li>
+                </ul>
               </motion.div>
             </div>
 
-            {/* Summary */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mt-12 text-center"
-            >
-              <div className="bg-purple-600/20 border border-purple-500/30 rounded-xl p-8 max-w-4xl mx-auto">
-                <h3 className="text-white text-xl font-bold mb-4">Why Choose Botox Calf Reduction?</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  For most patients seeking calf contouring, Botox offers the perfect balance of effectiveness, 
-                  safety, and convenience. With minimal downtime, no scarring, and reversible results, 
-                  it's the preferred choice for achieving naturally slimmer calves.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                  <div className="bg-purple-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-purple-300 mb-1">30-45</div>
-                    <div className="text-sm text-gray-300">Minutes treatment</div>
-                  </div>
-                  <div className="bg-purple-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-purple-300 mb-1">0</div>
-                    <div className="text-sm text-gray-300">Days downtime</div>
-                  </div>
-                  <div className="bg-purple-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-purple-300 mb-1">6-12</div>
-                    <div className="text-sm text-gray-300">Months results</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            <div className="text-center mt-12">
+              <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold">
+                Choose Botox Calf Reduction
+              </Button>
+            </div>
           </div>
         </section>
 
