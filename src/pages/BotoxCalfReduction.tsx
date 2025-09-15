@@ -115,7 +115,7 @@ const BotoxCalfReduction = () => {
                     Book Consultation
                   </Button>
                   <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    View Results
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
