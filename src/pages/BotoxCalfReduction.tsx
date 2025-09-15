@@ -109,7 +109,6 @@ const BotoxCalfReduction = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £400</p>
                   <p className="text-sm text-gray-300">Achieve naturally slimmer, more refined calf contours that enhance your overall leg proportions.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -656,6 +655,10 @@ const BotoxCalfReduction = () => {
 
             <div className="max-w-4xl mx-auto space-y-6">
               {[
+                {
+                  question: "What are the benefits of calf reduction with botox?",
+                  answer: "Botox calf reduction offers multiple benefits: non-surgical approach with no scarring, minimal downtime allowing immediate return to activities, natural-looking gradual results, reversible effects lasting 6-12 months, no general anesthesia required, and significantly lower cost compared to surgical alternatives. It's ideal for achieving slimmer, more proportionate calves safely and effectively."
+                },
                 {
                   question: "How does botox calf reduction work?",
                   answer: "Botox is injected into the gastrocnemius muscle to temporarily relax it, causing a gradual reduction in muscle bulk and creating slimmer calf contours."
