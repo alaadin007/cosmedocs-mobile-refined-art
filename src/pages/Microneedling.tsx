@@ -15,6 +15,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 
 const Microneedling = () => {
+  const bookingUrl = "https://med.as.me/harleystreet";
   const seoData = generateSEOMetadata(
     "Microneedling London Price | Face Needling Treatment Cost UK | Cosmedocs",
     "Professional microneedling London from £250. Face needling therapy for wrinkles, acne scars & skin tightening. Book micro needle treatment today.",
@@ -119,21 +120,20 @@ const Microneedling = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Flawless Skin
-                  <span className="block text-purple-300">Microneedling</span>
-                  <span className="block text-sm mt-4">Advanced collagen induction therapy</span>
+                  Microneedling Price
+                  <span className="block text-purple-300">London</span>
+                  <span className="block text-sm mt-4">Professional micro needle treatment for flawless skin rejuvenation</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
                   Transformation that speaks without saying a word
                 </p>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Microneedling London Price from £250</p>
-                  <p className="text-sm text-gray-300">Professional micro needle treatment for skin tightening and rejuvenation</p>
-                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    onClick={() => window.open(bookingUrl, "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
                     Book Consultation
                   </Button>
                   <Button 
@@ -628,7 +628,10 @@ const Microneedling = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              <Button 
+                onClick={() => window.open(bookingUrl, "_blank")}
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+              >
                 Book Your Consultation
               </Button>
             </motion.div>
@@ -786,7 +789,10 @@ const Microneedling = () => {
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book a consultation with our expert practitioners and discover how microneedling can transform your skin.
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+              <Button 
+                onClick={() => window.open(bookingUrl, "_blank")}
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+              >
                 Book Consultation
               </Button>
             </motion.div>
