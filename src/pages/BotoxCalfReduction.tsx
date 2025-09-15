@@ -254,6 +254,115 @@ const BotoxCalfReduction = () => {
           </div>
         </section>
 
+        {/* What is Botox Calf Reduction Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">What is Botox Calf Reduction?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Botox calf reduction is a non-surgical cosmetic procedure that uses botulinum toxin injections to 
+                  temporarily weaken the gastrocnemius muscle in the calves. This innovative treatment creates a 
+                  slimmer, more contoured appearance to the lower legs without the need for invasive surgery.
+                </p>
+                
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  The procedure works by strategically injecting Botox into specific points of the calf muscle, 
+                  causing controlled muscle relaxation. Over the following weeks and months, the treated muscle 
+                  gradually reduces in size, resulting in visibly slimmer and more proportionate calves.
+                </p>
+
+                <div className="bg-purple-600/20 border border-purple-500/30 rounded-lg p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">Treatment Benefits</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                      <span className="text-gray-300">Non-surgical alternative to calf reduction surgery</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                      <span className="text-gray-300">Minimal downtime and immediate return to activities</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                      <span className="text-gray-300">Natural-looking results that develop gradually</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                      <span className="text-gray-300">Reversible effects lasting 6-12 months</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-2xl p-8 border border-purple-500/20">
+                  <h3 className="text-white text-2xl font-semibold mb-6">The Science Behind Calf Reduction</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">1</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Muscle Targeting</h4>
+                        <p className="text-gray-300 text-sm">Botox is precisely injected into the gastrocnemius muscle, the largest muscle in the calf</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">2</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Muscle Relaxation</h4>
+                        <p className="text-gray-300 text-sm">The toxin blocks nerve signals, causing the muscle to relax and gradually reduce in size</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-white text-sm font-bold">3</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Gradual Reduction</h4>
+                        <p className="text-gray-300 text-sm">Results develop over 2-4 weeks as the muscle naturally reduces in bulk and definition</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <p className="text-purple-300 font-semibold italic">
+                    "Our aesthetics is invisible art - transformation that speaks without saying a word"
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
