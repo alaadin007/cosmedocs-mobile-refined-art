@@ -21,7 +21,7 @@ import beforeAfter3 from "@/assets/8-point-facelift-before-after-3.jpg";
 export default function EightPointFacelift() {
   const seoData = generateSEOMetadata(
     "8 Point Face Lift London | Non-Surgical Facelift | Cosmedocs",
-    "Transform your appearance with our 8 Point Face Lift treatment in London. Non-surgical facelift using dermal fillers to restore volume and lift. Book your consultation today.",
+    "8 point face lift London - non surgical facelift using dermal fillers. Expert hyaluronic acid injections for natural facial rejuvenation.",
     "/8-point-facelift"
   );
 
@@ -213,6 +213,7 @@ export default function EightPointFacelift() {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
+        <meta name="keywords" content="8 point face lift, 8 point lift, 8 point facelift, 8 point face lift before and after, 8 point face lift price, 8 point face lift near me, 8 point filler face lift, non surgical face lift cost uk, non surgical face lift cost, dermal filler face lift, hyaluronic acid injections face before and after, London facelift, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
