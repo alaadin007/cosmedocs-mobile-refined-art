@@ -363,32 +363,30 @@ const ProfhiloTreatment = () => {
                 </div>
               </motion.div>
               
-              <div className="flex justify-center">
-                <div className="max-w-md">
-                  <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
-                    <h4 className="text-white text-xl font-semibold mb-6 text-center">How Profhilo Works</h4>
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-4">
-                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
-                          <span className="text-purple-600 text-sm font-medium">1</span>
-                        </div>
-                        <div>
-                          <h5 className="text-white font-medium mb-2">Hydrating and Nourishing</h5>
-                          <p className="text-gray-300 font-light">
-                            First stage focuses on deeply hydrating and nourishing your skin layers
-                          </p>
-                        </div>
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
+                  <h4 className="text-white text-xl font-semibold mb-6 text-center">How Profhilo Works</h4>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
+                        <span className="text-purple-600 text-sm font-medium">1</span>
                       </div>
-                      <div className="flex items-start gap-4">
-                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
-                          <span className="text-purple-600 text-sm font-medium">2</span>
-                        </div>
-                        <div>
-                          <h5 className="text-white font-medium mb-2">Neo-Collagenesis</h5>
-                          <p className="text-gray-300 font-light">
-                            Stimulates synthesis of new collagen and elastin for long-term skin improvement
-                          </p>
-                        </div>
+                      <div>
+                        <h5 className="text-white font-medium mb-2">Hydrating and Nourishing</h5>
+                        <p className="text-gray-300 font-light">
+                          First stage focuses on deeply hydrating and nourishing your skin layers
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
+                        <span className="text-purple-600 text-sm font-medium">2</span>
+                      </div>
+                      <div>
+                        <h5 className="text-white font-medium mb-2">Neo-Collagenesis</h5>
+                        <p className="text-gray-300 font-light">
+                          Stimulates synthesis of new collagen and elastin for long-term skin improvement
+                        </p>
                       </div>
                     </div>
                   </div>
