@@ -403,9 +403,7 @@ export default function EightPointFacelift() {
                 Replace lost volume in 8 key points contributing to a sunken and tired appearance.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Ageing takes its toll on us through the progressive loss of collagen, elastin, and subcutaneous fats. 
-                This brings about continuous changes in our facial profile in the form of facial volume loss, lines and wrinkles, 
-                folds, and sagging facial skin. The 8 point face lift treatment is designed to restore lost volume and lift the face. 
+                The 8 point face lift treatment is designed to restore lost volume and lift the face. 
                 This non-surgical facelift treatment is also called 'liquid facelift treatment' because dermal fillers are used 
                 strategically to give volume to the face and create a lifting impact for a completely rejuvenated appearance.
               </p>
