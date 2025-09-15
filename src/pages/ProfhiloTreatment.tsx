@@ -394,29 +394,6 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Injectable Moisturiser Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">Injectable Moisturiser, Intense Skin Quencher</h2>
-                <div className="space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    Unlike your typical topical skin moisturizer, a Profhilo treatment slowly releases pure Hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Secondly, this intense and long-lasting skin hydrating therapy complements your anti-wrinkle injections.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Profhilo Injection Points Section */}
         <section className="py-20 bg-black">
@@ -543,6 +520,31 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
+
+
+        {/* Injectable Moisturiser Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Injectable Moisturiser, Intense Skin Quencher</h2>
+                <div className="space-y-6">
+                  <p className="text-gray-300 leading-relaxed">
+                    Unlike your typical topical skin moisturizer, a Profhilo treatment slowly releases pure Hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Secondly, this intense and long-lasting skin hydrating therapy complements your anti-wrinkle injections.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         {/* Aftercare Section */}
         <section className="py-20 bg-black">
