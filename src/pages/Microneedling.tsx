@@ -276,6 +276,201 @@ const Microneedling = () => {
           </div>
         </section>
 
+        {/* Multiple Benefits of Microneedling Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Multiple Benefits of Microneedling</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Discover the comprehensive skin transformation benefits of advanced microneedling therapy
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <CheckCircle className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Collagen Production</h3>
+                <p className="text-gray-300">
+                  Stimulates natural collagen and elastin production, improving skin firmness, elasticity, and overall texture for a youthful appearance.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Activity className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Acne Scar Reduction</h3>
+                <p className="text-gray-300">
+                  Effectively reduces the appearance of acne scars, ice pick scars, and rolling scars by promoting skin remodeling and cellular renewal.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Palette className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Pore Minimization</h3>
+                <p className="text-gray-300">
+                  Tightens and refines enlarged pores, creating smoother skin texture and a more even complexion for flawless-looking skin.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Clock className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Anti-Aging Effects</h3>
+                <p className="text-gray-300">
+                  Reduces fine lines and wrinkles while improving skin tone and radiance, delivering natural anti-aging benefits without surgery.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Heart className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Enhanced Product Absorption</h3>
+                <p className="text-gray-300">
+                  Creates micro-channels that dramatically improve skincare product penetration, maximizing the effectiveness of serums and treatments.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Award className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Stretch Mark Improvement</h3>
+                <p className="text-gray-300">
+                  Significantly improves the appearance of stretch marks by stimulating collagen formation and skin regeneration in affected areas.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Users className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Suitable for All Skin Types</h3>
+                <p className="text-gray-300">
+                  Safe and effective for all skin types and tones, with minimal risk of pigmentation changes or adverse reactions.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Calendar className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Long-Lasting Results</h3>
+                <p className="text-gray-300">
+                  Provides long-lasting improvements that continue to develop over months, with results typically lasting 6-12 months or longer.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+              >
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <Syringe className="text-white" size={20} />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-3">Minimal Downtime</h3>
+                <p className="text-gray-300">
+                  Quick recovery with only 24-48 hours of mild redness, allowing you to return to normal activities with minimal disruption.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 max-w-4xl mx-auto">
+                <h3 className="text-white text-xl font-bold mb-4">Transform Your Skin with Microneedling</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Experience the multiple benefits of advanced microneedling therapy at our Harley Street clinic. 
+                  Our expert practitioners use state-of-the-art techniques to deliver comprehensive skin transformation 
+                  with natural-looking, long-lasting results.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                  <div className="bg-purple-600/20 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-purple-300 mb-1">45-60</div>
+                    <div className="text-sm text-gray-300">Minutes treatment</div>
+                  </div>
+                  <div className="bg-purple-600/20 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-purple-300 mb-1">24-48</div>
+                    <div className="text-sm text-gray-300">Hours recovery</div>
+                  </div>
+                  <div className="bg-purple-600/20 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-purple-300 mb-1">6-12</div>
+                    <div className="text-sm text-gray-300">Months results</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Main Content Section */}
         <section className="py-20">
           <div className="page-container">
