@@ -157,7 +157,7 @@ const Microneedling = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Microneedling Treatment</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -276,7 +276,7 @@ const Microneedling = () => {
           </div>
         </section>
 
-        {/* Multiple Benefits of Microneedling Section */}
+        {/* Microneedling Vs Alternative Treatments Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -286,188 +286,90 @@ const Microneedling = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Multiple Benefits of Microneedling</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Discover the comprehensive skin transformation benefits of advanced microneedling therapy
-              </p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Vs. Other Skin Treatments</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+                className="bg-purple-900/20 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20"
               >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <CheckCircle className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Collagen Production</h3>
-                <p className="text-gray-300">
-                  Stimulates natural collagen and elastin production, improving skin firmness, elasticity, and overall texture for a youthful appearance.
-                </p>
+                <h3 className="text-2xl font-bold mb-4 text-purple-300">Microneedling</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Stimulates natural collagen and elastin production</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Minimal downtime with 24-48 hours recovery</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Safe for all skin types and tones</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Long-lasting results for 6-12 months</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Enhances skincare product absorption</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Addresses multiple skin concerns simultaneously</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Natural healing process with no chemicals</span>
+                  </li>
+                </ul>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
+                className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
               >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Activity className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Acne Scar Reduction</h3>
-                <p className="text-gray-300">
-                  Effectively reduces the appearance of acne scars, ice pick scars, and rolling scars by promoting skin remodeling and cellular renewal.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
-              >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Palette className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Pore Minimization</h3>
-                <p className="text-gray-300">
-                  Tightens and refines enlarged pores, creating smoother skin texture and a more even complexion for flawless-looking skin.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
-              >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Clock className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Anti-Aging Effects</h3>
-                <p className="text-gray-300">
-                  Reduces fine lines and wrinkles while improving skin tone and radiance, delivering natural anti-aging benefits without surgery.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
-              >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Heart className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Enhanced Product Absorption</h3>
-                <p className="text-gray-300">
-                  Creates micro-channels that dramatically improve skincare product penetration, maximizing the effectiveness of serums and treatments.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
-              >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Award className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Stretch Mark Improvement</h3>
-                <p className="text-gray-300">
-                  Significantly improves the appearance of stretch marks by stimulating collagen formation and skin regeneration in affected areas.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
-              >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Users className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Suitable for All Skin Types</h3>
-                <p className="text-gray-300">
-                  Safe and effective for all skin types and tones, with minimal risk of pigmentation changes or adverse reactions.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
-              >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Calendar className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Long-Lasting Results</h3>
-                <p className="text-gray-300">
-                  Provides long-lasting improvements that continue to develop over months, with results typically lasting 6-12 months or longer.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6"
-              >
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                  <Syringe className="text-white" size={20} />
-                </div>
-                <h3 className="text-white text-xl font-semibold mb-3">Minimal Downtime</h3>
-                <p className="text-gray-300">
-                  Quick recovery with only 24-48 hours of mild redness, allowing you to return to normal activities with minimal disruption.
-                </p>
+                <h3 className="text-2xl font-bold mb-4 text-white">Other Skin Treatments</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Chemical peels - potential for skin sensitivity</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Laser treatments - higher cost and downtime</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>IPL - not suitable for all skin tones</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Dermabrasion - more aggressive with longer recovery</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Topical treatments - limited penetration depth</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Fractional treatments - higher discomfort levels</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Radiofrequency - may require multiple modalities</span>
+                  </li>
+                </ul>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 max-w-4xl mx-auto">
-                <h3 className="text-white text-xl font-bold mb-4">Transform Your Skin with Microneedling</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  Experience the multiple benefits of advanced microneedling therapy at our Harley Street clinic. 
-                  Our expert practitioners use state-of-the-art techniques to deliver comprehensive skin transformation 
-                  with natural-looking, long-lasting results.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                  <div className="bg-purple-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-purple-300 mb-1">45-60</div>
-                    <div className="text-sm text-gray-300">Minutes treatment</div>
-                  </div>
-                  <div className="bg-purple-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-purple-300 mb-1">24-48</div>
-                    <div className="text-sm text-gray-300">Hours recovery</div>
-                  </div>
-                  <div className="bg-purple-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-purple-300 mb-1">6-12</div>
-                    <div className="text-sm text-gray-300">Months results</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -481,69 +383,17 @@ const Microneedling = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">The Microneedling Procedure</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Procedure</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Understanding your microneedling treatment journey from consultation to recovery
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-4">Pre-Treatment Preparation</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Your microneedling journey begins with a comprehensive consultation where our expert practitioners 
-                    assess your skin type, concerns, and medical history to create a personalized treatment plan.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">Skin analysis and treatment planning</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">Pre-treatment skincare recommendations</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">Medical history review and consent</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                  <h3 className="text-white text-xl font-semibold mb-4">During Your Treatment</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Our skilled practitioners ensure your comfort throughout the procedure using advanced techniques 
-                    and medical-grade equipment for optimal results and minimal discomfort.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">Comfortable treatment environment</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">Professional monitoring throughout</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">Immediate aftercare instructions</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
                 <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-2xl p-8 border border-purple-500/20">
@@ -615,57 +465,57 @@ const Microneedling = () => {
                   </div>
                 </div>
               </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="mt-12"
+              >
+                <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8">
+                  <h3 className="text-white text-xl font-bold mb-6 text-center">What to Expect After Your Treatment</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Clock className="text-white" size={24} />
+                      </div>
+                      <h4 className="text-white font-semibold mb-2">First 24 Hours</h4>
+                      <p className="text-gray-300 text-sm">
+                        Mild redness and slight swelling, similar to a sunburn. Skin may feel tight and sensitive.
+                      </p>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Calendar className="text-white" size={24} />
+                      </div>
+                      <h4 className="text-white font-semibold mb-2">Days 2-7</h4>
+                      <p className="text-gray-300 text-sm">
+                        Gradual reduction in redness. Skin may feel dry and start to peel gently as it regenerates.
+                      </p>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Award className="text-white" size={24} />
+                      </div>
+                      <h4 className="text-white font-semibold mb-2">Weeks 2-6</h4>
+                      <p className="text-gray-300 text-sm">
+                        Progressive improvement in skin texture, tone, and appearance as new collagen forms.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-center mt-8">
+                    <p className="text-purple-300 font-medium italic">
+                      "Our aesthetics is invisible art - transformation that speaks without saying a word"
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mt-12"
-            >
-              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8">
-                <h3 className="text-white text-xl font-bold mb-6 text-center">What to Expect After Your Treatment</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Clock className="text-white" size={24} />
-                    </div>
-                    <h4 className="text-white font-semibold mb-2">First 24 Hours</h4>
-                    <p className="text-gray-300 text-sm">
-                      Mild redness and slight swelling, similar to a sunburn. Skin may feel tight and sensitive.
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Calendar className="text-white" size={24} />
-                    </div>
-                    <h4 className="text-white font-semibold mb-2">Days 2-7</h4>
-                    <p className="text-gray-300 text-sm">
-                      Gradual reduction in redness. Skin may feel dry and start to peel gently as it regenerates.
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Award className="text-white" size={24} />
-                    </div>
-                    <h4 className="text-white font-semibold mb-2">Weeks 2-6</h4>
-                    <p className="text-gray-300 text-sm">
-                      Progressive improvement in skin texture, tone, and appearance as new collagen forms.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="text-center mt-8">
-                  <p className="text-purple-300 font-medium italic">
-                    "Our aesthetics is invisible art - transformation that speaks without saying a word"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -792,270 +642,29 @@ const Microneedling = () => {
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">
-                        <a 
-                          href="https://www.harleystreetinstitute.com" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-purple-300 hover:text-purple-200 underline"
-                        >
-                          Harley Street Institute
-                        </a> trainers - we train the professionals
-                      </p>
+                      <p className="text-gray-300">Trainers for Harley Street Institute</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Medical-grade microneedling devices only</p>
+                      <p className="text-gray-300">Medical-grade equipment and sterile environment</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">'Invisible art' philosophy for natural results</p>
+                      <p className="text-gray-300">Comprehensive consultation and personalized treatment plans</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Comprehensive aftercare and follow-up support</p>
+                      <p className="text-gray-300">Ongoing aftercare support and follow-up</p>
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Pricing London</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for advanced microneedling treatments. All prices include consultation, 
-                treatment, and comprehensive aftercare support from our expert practitioners.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-purple-500 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Single Session</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£250</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Individual microneedling treatment session</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Consultation included</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Medical-grade equipment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
-                  </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Treatment Course</CardTitle>
-                    <div className="text-white text-4xl font-bold">£650</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">Three sessions for optimal skin transformation</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Three treatment sessions</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">4-6 week intervals</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Follow-up consultations</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-gray-700 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£50</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional skin assessment and treatment planning</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Comprehensive skin analysis</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <p className="text-gray-300 mb-6">
-                *Consultation fee is deducted from treatment cost if you proceed on the same day
-              </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
-                Book Your Consultation
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
-                  >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium medical-grade equipment only</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1066,21 +675,29 @@ const Microneedling = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about microneedling treatments at our London clinic.
+                Everything you need to know about our advanced microneedling treatments
               </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-accent rounded-lg border-gray-800">
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
-                      <span className="text-white font-medium">{faq.question}</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <AccordionItem value={`item-${index}`} className="bg-background rounded-lg border border-gray-800">
+                      <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                        <span className="text-lg font-semibold">{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4">
+                        <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
                 ))}
               </Accordion>
             </div>
@@ -1088,7 +705,7 @@ const Microneedling = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-accent">
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1099,23 +716,18 @@ const Microneedling = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Ready for Flawless Skin?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how microneedling 
-                can transform your skin for natural, radiant beauty.
+                Book a consultation with our expert practitioners and discover how microneedling can transform your skin.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
-              </div>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                Book Consultation
+              </Button>
             </motion.div>
           </div>
         </section>
 
-        {/* Hidden SEO content for search engines */}
+        {/* Hidden SEO Content */}
         <div className="sr-only">
+          <h2>Microneedling London Harley Street Cosmedocs</h2>
           <p>
             Microneedling London Harley Street expert treatments for flawless skin rejuvenation. Professional collagen induction therapy using advanced medical-grade devices for natural skin transformation. Cosmedocs offers the finest microneedling treatments in London, combining scientific precision with artistic excellence to achieve remarkable improvements in skin texture, tone, and quality. Our experienced practitioners specialize in addressing acne scars, fine lines, enlarged pores, and overall skin rejuvenation through carefully calibrated microneedling protocols. Located in the heart of Harley Street, our clinic provides comprehensive microneedling consultations and personalized treatment plans designed to deliver optimal results while maintaining the highest safety standards. Each microneedling session is performed by qualified medical professionals using premium equipment and proven techniques that stimulate natural collagen production for long-lasting skin improvements. Discover why patients choose Cosmedocs for their microneedling treatments and experience the transformative power of professional skin rejuvenation in London's premier medical district.
           </p>
