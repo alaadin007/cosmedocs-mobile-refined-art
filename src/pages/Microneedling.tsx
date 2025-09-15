@@ -471,6 +471,204 @@ const Microneedling = () => {
           </div>
         </section>
 
+        {/* Microneedling Procedure Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">The Microneedling Procedure</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding your microneedling treatment journey from consultation to recovery
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">Pre-Treatment Preparation</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Your microneedling journey begins with a comprehensive consultation where our expert practitioners 
+                    assess your skin type, concerns, and medical history to create a personalized treatment plan.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300">Skin analysis and treatment planning</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300">Pre-treatment skincare recommendations</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300">Medical history review and consent</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <h3 className="text-white text-xl font-semibold mb-4">During Your Treatment</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Our skilled practitioners ensure your comfort throughout the procedure using advanced techniques 
+                    and medical-grade equipment for optimal results and minimal discomfort.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300">Comfortable treatment environment</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300">Professional monitoring throughout</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300">Immediate aftercare instructions</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-2xl p-8 border border-purple-500/20">
+                  <h3 className="text-white text-2xl font-semibold mb-6">Step-by-Step Treatment Process</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-sm font-bold">1</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Skin Cleansing & Preparation</h4>
+                        <p className="text-gray-300 text-sm">Thorough cleansing of the treatment area and application of markings to ensure comprehensive coverage</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-sm font-bold">2</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Topical Anaesthetic Application</h4>
+                        <p className="text-gray-300 text-sm">Professional-grade numbing cream applied 20-30 minutes before treatment for maximum comfort</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-sm font-bold">3</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Precision Microneedling</h4>
+                        <p className="text-gray-300 text-sm">Medical-grade device creates controlled micro-channels at specific depths based on your skin needs</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-sm font-bold">4</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Serum Application</h4>
+                        <p className="text-gray-300 text-sm">Specialized serums applied to enhance healing and maximize treatment benefits</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-white text-sm font-bold">5</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Post-Treatment Care</h4>
+                        <p className="text-gray-300 text-sm">Cooling mask application and comprehensive aftercare guidance for optimal healing</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-purple-500/20">
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-purple-300 mb-1">45-60</div>
+                        <div className="text-sm text-gray-300">Minutes</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-purple-300 mb-1">24-48</div>
+                        <div className="text-sm text-gray-300">Hours Recovery</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8">
+                <h3 className="text-white text-xl font-bold mb-6 text-center">What to Expect After Your Treatment</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Clock className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-white font-semibold mb-2">First 24 Hours</h4>
+                    <p className="text-gray-300 text-sm">
+                      Mild redness and slight swelling, similar to a sunburn. Skin may feel tight and sensitive.
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Calendar className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-white font-semibold mb-2">Days 2-7</h4>
+                    <p className="text-gray-300 text-sm">
+                      Gradual reduction in redness. Skin may feel dry and start to peel gently as it regenerates.
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Award className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-white font-semibold mb-2">Weeks 2-6</h4>
+                    <p className="text-gray-300 text-sm">
+                      Progressive improvement in skin texture, tone, and appearance as new collagen forms.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-center mt-8">
+                  <p className="text-purple-300 font-medium italic">
+                    "Our aesthetics is invisible art - transformation that speaks without saying a word"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Main Content Section */}
         <section className="py-20">
           <div className="page-container">
