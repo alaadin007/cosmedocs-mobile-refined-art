@@ -230,17 +230,12 @@ export default function EightPointFacelift() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  8 Point
-                  <span className="block text-purple-300">Face Lift</span>
-                  <span className="block text-sm mt-4">Elevate, Enhance, and Embrace Youthful Radiance!</span>
+                  <span className="text-purple-300">8 Point Face Lift London</span>
+                  <span className="block text-sm mt-4">Invisible art - natural facial rejuvenation that speaks without words</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
                 <div className="mb-8">
-                  <p className="text-sm text-gray-300">Non-surgical facelift using dermal fillers at 8 strategic points</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Facial Enhancement</p>
+                  <p className="text-sm text-gray-300">Non-surgical facelift using dermal fillers at 8 strategic points for natural transformation</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
