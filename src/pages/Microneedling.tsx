@@ -290,38 +290,42 @@ const Microneedling = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">About Microneedling Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">About Microneedling Treatment</h2>
+              <div className="max-w-4xl mx-auto text-left">
+                <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+                  Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
+                  invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
+                  skin with small needles.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-12 text-lg">
+                  These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
+                  dermal remodelling, without causing any scars.
+                </p>
+              </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
-                  <h3 className="text-white text-xl font-semibold mb-4">What is Microneedling Treatment?</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
-                    invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
-                    skin with small needles.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
-                    dermal remodelling, without causing any scars.
-                  </p>
-                </div>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center mb-8"
+            >
+              <h3 className="text-2xl font-bold mb-4 text-white">Why Choose Microneedling?</h3>
+              <p className="text-gray-300 max-w-3xl mx-auto mb-8">
+                Discover why microneedling is the preferred choice for natural skin rejuvenation
+              </p>
+            </motion.div>
 
+            <div className="max-w-3xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 h-full">
-                  <h3 className="text-white text-xl font-semibold mb-4">Why Choose Microneedling?</h3>
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
+                  <h4 className="text-white text-xl font-semibold mb-6 text-center">Clinical Benefits</h4>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles. 
                     It also helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
