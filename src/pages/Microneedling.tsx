@@ -329,6 +329,74 @@ const Microneedling = () => {
           </div>
         </section>
 
+        {/* How Does Microneedling Work Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">How Does Microneedling Work?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the science behind collagen induction therapy
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8">
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
+                    How long does microneedling take? In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
+                    helps your skincare topicals perform their best. Cost for microneedling includes comprehensive aftercare support.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    What is microneedling facial therapy? Microneedling therapy uses your body's natural healing response to deliver a wide range of skin benefits. 
+                    From correcting pitted acne scarring to stretch marks, skin laxity and unwanted fine lines, microneedling for wrinkles provides 
+                    lacklustre complexion improvement with minimal discomfort and practically no recovery. Face needling delivers exceptional results.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+                  {/* Microneedling Treatment Video */}
+                  <div className="relative">
+                    <iframe
+                      width="100%"
+                      height="315"
+                      src="https://www.youtube.com/embed/tjbOemp3Dro"
+                      title="Microneedling Treatment Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full aspect-video"
+                    ></iframe>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <p className="text-white text-sm font-medium">Professional Microneedling Treatment Demonstration</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Benefits and Treatment Process Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -431,73 +499,6 @@ const Microneedling = () => {
           </div>
         </section>
 
-        {/* How Does Microneedling Work Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">How Does Microneedling Work?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding the science behind collagen induction therapy
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8">
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
-                    How long does microneedling take? In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
-                    helps your skincare topicals perform their best. Cost for microneedling includes comprehensive aftercare support.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    What is microneedling facial therapy? Microneedling therapy uses your body's natural healing response to deliver a wide range of skin benefits. 
-                    From correcting pitted acne scarring to stretch marks, skin laxity and unwanted fine lines, microneedling for wrinkles provides 
-                    lacklustre complexion improvement with minimal discomfort and practically no recovery. Face needling delivers exceptional results.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                  {/* Microneedling Treatment Video */}
-                  <div className="relative">
-                    <iframe
-                      width="100%"
-                      height="315"
-                      src="https://www.youtube.com/embed/tjbOemp3Dro"
-                      title="Microneedling Treatment Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full aspect-video"
-                    ></iframe>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <p className="text-white text-sm font-medium">Professional Microneedling Treatment Demonstration</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
