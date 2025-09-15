@@ -22,6 +22,7 @@ import profhiloCheekBeforeAfter from "@/assets/profhilo-cheek-before-after.jpg";
 import profhiloArmBeforeAfter from "@/assets/profhilo-arm-before-after.jpg";
 import profhiloNeckBeforeAfter2 from "@/assets/profhilo-neck-before-after-2.jpg";
 import profhiloNeckBeforeAfter02 from "@/assets/profhilo-neck-before-after-02.jpg";
+import profhiloInjectionPointsFace from "@/assets/profhilo-injection-points-face.jpg";
 
 const ProfhiloTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -465,7 +466,7 @@ const ProfhiloTreatment = () => {
                 className="relative"
               >
                 <img 
-                  src="/src/assets/profhilo-injection-points.jpg" 
+                  src={profhiloInjectionPointsFace} 
                   alt="Profhilo injection points diagram showing BAP technique on face"
                   className="rounded-3xl shadow-2xl w-full"
                 />
