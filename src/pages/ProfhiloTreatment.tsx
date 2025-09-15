@@ -555,49 +555,6 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Profhilo Treatment Consultation Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-6">Before Your Treatment</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Your Profhilo journey begins with our comprehensive consultation process
-              </p>
-            </motion.div>
-            
-            <div className="max-w-2xl mx-auto">
-              <motion.div
-                className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-center mb-6">
-                  <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-full w-20 h-20 flex items-center justify-center border border-white/20 mx-auto mb-4">
-                    <span className="text-4xl">📋</span>
-                  </div>
-                  <h3 className="text-2xl font-light text-white mb-4">Consultation Process</h3>
-                </div>
-                
-                <div className="space-y-4">
-                  <p className="text-white/70 font-light leading-relaxed">
-                    The first step is consultation with a medical professional, followed by a comprehensive skin examination and progress photos.
-                  </p>
-                  <p className="text-white/70 font-light leading-relaxed">
-                    At Cosmedocs, adherence to a strict Profhilo treatment protocol is essential for optimal results.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Aftercare Section */}
         <section className="py-20 bg-accent">
