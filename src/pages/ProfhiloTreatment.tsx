@@ -729,59 +729,70 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* Why Choose CosmeDocs Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose CosmeDocs for Profhilo?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                London's premier Harley Street clinic for expert Profhilo bio-remodelling treatments
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  title: "Medical Experts",
-                  description: "GMC registered practitioners with extensive aesthetic medicine experience",
-                  icon: Award
-                },
-                {
-                  title: "Harley Street Location", 
-                  description: "Prime location in London's most prestigious medical district",
-                  icon: MapPin
-                },
-                {
-                  title: "Natural Results",
-                  description: "'Invisible art' for natural results - Bold • Natural • Always Your Way",
-                  icon: Smile
-                },
-                {
-                  title: "Patient Care",
-                  description: "Comprehensive aftercare and follow-up support throughout your journey",
-                  icon: Heart
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="text-purple-600" size={24} />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Profhilo Treatment Summary</h2>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-primary pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
+                    <p className="text-gray-300">30 minutes per session</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-300 text-sm">{item.description}</p>
-                </motion.div>
-              ))}
+                  <div className="border-l-4 border-primary pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
+                    <p className="text-gray-300">Immediate | 6-12 months</p>
+                  </div>
+                  <div className="border-l-4 border-primary pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
+                    <p className="text-gray-300">Immediate return to work</p>
+                  </div>
+                  <div className="border-l-4 border-primary pl-6">
+                    <h3 className="text-xl font-semibold mb-2">Anaesthesia</h3>
+                    <p className="text-gray-300">Local anaesthetic available</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none">
+                  <CardHeader>
+                    <CardTitle className="text-white">Why Choose Cosmedocs?</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <p className="text-gray-300">GMC registered medical professionals</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <p className="text-gray-300">Premier Harley Street location</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <p className="text-gray-300">Natural, invisible art aesthetic philosophy</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <p className="text-gray-300">Comprehensive aftercare and support</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <p className="text-gray-300">Expert bio-remodelling techniques</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
