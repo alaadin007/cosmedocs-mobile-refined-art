@@ -557,61 +557,86 @@ const ProfhiloTreatment = () => {
 
 
         {/* Aftercare Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-6">Profhilo Aftercare</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Essential guidelines to ensure optimal results and proper healing
-              </p>
-            </motion.div>
-            
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <motion.div
-                className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
-                  <span className="text-2xl">⚠️</span>
-                  What to Expect
-                </h3>
+                <h2 className="text-3xl font-bold mb-6">Recovery Timeline</h2>
+                <p className="text-gray-300 mb-6">
+                  Understanding what to expect during your Profhilo healing process
+                </p>
                 <div className="space-y-4">
-                  <p className="text-gray-300 leading-relaxed">
-                    Mild bruising or swelling around injection sites may occur but usually subsides within a few days.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Two treatments suggested one month apart for maximum performance with final results becoming visible gradually.
-                  </p>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">First 24 Hours</h4>
+                    <p className="text-gray-300">Mild redness and minor swelling at injection sites may occur</p>
+                  </div>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">1-3 Days</h4>
+                    <p className="text-gray-300">Any bruising or swelling begins to subside, skin feels refreshed</p>
+                  </div>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">5-7 Days</h4>
+                    <p className="text-gray-300">Initial plumping and hydration effects become visible</p>
+                  </div>
+                  <div className="bg-accent rounded-lg p-4">
+                    <h4 className="font-semibold text-purple-300 mb-2">4-6 Weeks</h4>
+                    <p className="text-gray-300">Progressive improvement in skin texture, firmness, and glow</p>
+                  </div>
                 </div>
               </motion.div>
 
               <motion.div
-                className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
-                  <span className="text-2xl">✅</span>
-                  Post-Treatment Care
-                </h3>
+                <h2 className="text-3xl font-bold mb-6">Profhilo Aftercare Guide</h2>
+                <p className="text-gray-300 mb-6">
+                  Essential guidelines to ensure optimal results and proper healing from your 
+                  Profhilo bio-remodelling treatment.
+                </p>
                 <div className="space-y-4">
-                  <p className="text-gray-300 leading-relaxed">
-                    Avoid touching or rubbing the treated area for the first 24 hours.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Avoid strenuous exercise for 24 hours following treatment to ensure optimal healing.
-                  </p>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">First 24 Hours</h4>
+                      <p className="text-gray-300">Avoid touching or rubbing the treated area to prevent irritation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Exercise Restrictions</h4>
+                      <p className="text-gray-300">Avoid strenuous exercise for 24 hours to ensure optimal healing</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Heat Avoidance</h4>
+                      <p className="text-gray-300">Avoid saunas, steam rooms, and excessive sun exposure for 48 hours</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Hydration Support</h4>
+                      <p className="text-gray-300">Maintain good hydration and use gentle skincare products</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Follow-up Treatment</h4>
+                      <p className="text-gray-300">Schedule second session 4-6 weeks apart for maximum results</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
