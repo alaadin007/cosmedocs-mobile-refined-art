@@ -290,7 +290,7 @@ const Microneedling = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">About Microneedling Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">What is Microneedling?</h2>
               <div className="max-w-4xl mx-auto text-left">
                 <p className="text-gray-300 leading-relaxed mb-6 text-lg">
                   Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
