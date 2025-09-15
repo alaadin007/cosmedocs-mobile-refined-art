@@ -32,19 +32,19 @@ const ProfhiloTreatment = () => {
       caption: "Nasolabial area bio-remodelling showing improved skin texture and reduced lines"
     },
     {
-      src: "/lovable-uploads/44cfb88a-2a8d-4598-8993-1535528ecbb8.png",
-      alt: "Profhilo lip area treatment before and after London Cosmedocs bio-remodelling",
-      caption: "Lip area rejuvenation with natural hydration and enhanced definition"
+      src: "/lovable-uploads/8ac4de22-e5b3-4cd3-b79b-0e6e4e3a8b59.png",
+      alt: "Professional Profhilo treatment transformation London Harley Street natural anti-ageing",
+      caption: "Complete facial bio-remodelling demonstrating the invisible art of skin rejuvenation"
     },
     {
-      src: "/lovable-uploads/3d2b453f-86db-4e3b-9703-d1ce579ed960.png",
-      alt: "Profhilo profile treatment before and after London Harley Street",
-      caption: "Profile improvement showing enhanced skin quality and firmness"
+      src: "/lovable-uploads/5d6f3c28-2a84-4f15-8b73-4e9a1c8f2d5b.png",
+      alt: "Profhilo skin lifting treatment London before after face neck enhancement",
+      caption: "Comprehensive skin lifting and tightening across face and neck areas"
     },
     {
-      src: "/lovable-uploads/a65d2bfb-9ce1-4bd9-92fb-5f514a24aab1.png",
-      alt: "Profhilo neck and jawline treatment before and after London Cosmedocs",
-      caption: "Neck and jawline bio-remodelling with visible skin tightening"
+      src: "/lovable-uploads/b7e9f48a-1c3d-4a5e-9b2f-8d6c5e7a9f1b.png",
+      alt: "Profhilo injection therapy London Harley Street hydration boost natural glow",
+      caption: "Injectable hydration therapy delivering natural glow and skin rejuvenation"
     },
     {
       src: "/lovable-uploads/d36a6f86-9526-4705-a008-410d58fb8264.png",
@@ -130,9 +130,8 @@ const ProfhiloTreatment = () => {
             "telephone": "0333 0551 503",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
+              "streetAddress": "Harley Street",
               "addressLocality": "London",
-              "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
             "geo": {
@@ -233,7 +232,7 @@ const ProfhiloTreatment = () => {
                   <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">Up to 6 months with progressive improvement</p>
+                <p className="text-gray-300">Immediate | 6-12 months with progressive improvement</p>
               </motion.div>
 
               <motion.div
@@ -267,7 +266,6 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-
         {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -314,7 +312,6 @@ const ProfhiloTreatment = () => {
             </Carousel>
 
             <div className="text-center mt-12">
-              <BeforeAfterGrid images={beforeAfterImages} />
               <div className="text-center mt-8">
                 <p className="text-gray-400 text-sm">
                   Individual results may vary. Results shown after 2 treatment sessions spaced 4 weeks apart. 
@@ -336,34 +333,20 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                 viewport={{ once: true }}
               >
-              <h2 className="text-3xl font-bold mb-6">
-                What Is Profhilo?
-              </h2>
-              <p className="text-gray-300 max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold mb-6">What Is Profhilo?</h2>
+                <p className="text-gray-300 max-w-4xl mx-auto">
                   Advanced skin bio-remodelling treatment that stimulates natural collagen and elastin production
                 </p>
               </motion.div>
               
-              <motion.div 
-                className="grid lg:grid-cols-2 gap-16 items-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                viewport={{ once: true }}
-              >
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                      Injectable Moisturiser
-                    </h3>
-                    <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
-                      Unlike typical topical moisturisers, Profhilo slowly releases pure hyaluronic acid when injected 
-                      directly into your skin layers. It spreads like thin honey, providing intense and long-lasting 
-                      skin hydration that complements your existing treatments.
+                  <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
+                    <p className="text-white/80 font-light leading-relaxed mb-6">
+                      Profhilo before and after demonstrate its powerful results as a skin booster. This treatment of the skin results in bio-remodelling and rejuvenation. It causes the production of new collagen, elastic and hyaluronic acid in the deeper skin layers.
                     </p>
-                    <p className="text-lg text-white/80 font-light leading-relaxed">
-                      This cutting-edge treatment delays the appearance of wrinkles and skin laxity while promoting 
-                      a naturally radiant glow through bio-remodelling and rejuvenation.
+                    <p className="text-white/80 font-light leading-relaxed">
+                      This cutting-edge and highly favoured anti-ageing treatment delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow.
                     </p>
                   </div>
                 </div>
@@ -377,9 +360,9 @@ const ProfhiloTreatment = () => {
                           <span className="text-white text-sm font-medium">1</span>
                         </div>
                         <div>
-                          <h5 className="text-white font-medium mb-2">Hydration Phase</h5>
-                          <p className="text-white/70 text-sm">
-                            Immediately hydrates and nourishes your skin at the deeper layers
+                          <h5 className="text-white font-medium mb-2">Hydrating and Nourishing</h5>
+                          <p className="text-white/70 font-light">
+                            First stage focuses on deeply hydrating and nourishing your skin layers
                           </p>
                         </div>
                       </div>
@@ -388,21 +371,45 @@ const ProfhiloTreatment = () => {
                           <span className="text-white text-sm font-medium">2</span>
                         </div>
                         <div>
-                          <h5 className="text-white font-medium mb-2">Bio-Remodelling</h5>
-                          <p className="text-white/70 text-sm">
-                            Stimulates synthesis of new collagen and elastin (neo-collagenesis)
+                          <h5 className="text-white font-medium mb-2">Neo-Collagenesis</h5>
+                          <p className="text-white/70 font-light">
+                            Stimulates synthesis of new collagen and elastin for long-term skin improvement
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Injectable Moisturiser Section */}
+        <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Injectable Moisturiser, Intense Skin Quencher</h2>
+                <div className="space-y-6">
+                  <p className="text-gray-300 leading-relaxed">
+                    Unlike your typical topical skin moisturizer, a Profhilo treatment slowly releases pure Hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Secondly, this intense and long-lasting skin hydrating therapy complements your anti-wrinkle injections.
+                  </p>
+                </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Before & After Gallery */}
+        {/* Profhilo Vs Dermal Fillers Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -412,56 +419,78 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Before & After Profhilo Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Witness the transformative power of Profhilo bio-remodelling. Our aesthetics is invisible art - 
-                creating natural, bold transformations that speak without saying a word.
-              </p>
+              <h2 className="text-3xl font-bold mb-6 text-white">Profhilo Vs. Dermal Fillers</h2>
             </motion.div>
 
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-purple-900/20 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20"
+              >
+                <h3 className="text-2xl font-bold mb-4 text-purple-300">Profhilo</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Non-crosslinked hyaluronic acid for bio-remodelling</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Delivers natural hydration to deeper skin layers</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Skin tightening, brightening, and collagen boost</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <span>Injectable skin hydration therapy</span>
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
+              >
+                <h3 className="text-2xl font-bold mb-4 text-white">Dermal Fillers</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Cross-linked hyaluronic acid to volumise and fill</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Adds volume to specific areas</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Contours, reshapes and reverses volume loss</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-gray-500 mt-1" size={16} />
+                    <span>Targeted area enhancement</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
 
             <div className="text-center mt-12">
-              <BeforeAfterGrid images={beforeAfterImages} />
-              <div className="text-center mt-8">
-                <p className="text-gray-400 text-sm">
-                  Individual results may vary. Results shown after 2 treatment sessions spaced 4 weeks apart. 
-                  Full effects visible in 6-8 weeks.
-                </p>
-              </div>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Even though Profhilo and dermal fillers both contain hyaluronic acid as their core element, they are technically not alike. 
+                Profhilo provides injectable skin hydration, while dermal fillers add volume and contour.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Profhilo Treatment Procedure Section */}
         <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A] relative overflow-hidden">
-          {/* Background elements */}
           <div className="absolute inset-0">
             <div className="absolute top-0 left-1/3 w-72 h-72 bg-white/[0.015] rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-white/[0.01] rounded-full blur-3xl" />
@@ -475,9 +504,7 @@ const ProfhiloTreatment = () => {
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6">
-                Profhilo Treatment Procedure
-              </h2>
+              <h2 className="text-3xl font-bold mb-6">Profhilo Treatment Procedure</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 A comprehensive guide to your Profhilo bio-remodelling journey
               </p>
@@ -525,16 +552,13 @@ const ProfhiloTreatment = () => {
                     transition={{ duration: 0.8, delay: index * 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                     viewport={{ once: true }}
                   >
-                    {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
                     
-                    {/* Connection line to next step */}
                     {index < 2 && (
                       <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-white/20 to-transparent" />
                     )}
                     
                     <div className="relative z-10">
-                      {/* Number badge with enhanced styling */}
                       <div className="relative mb-6">
                         <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-full w-20 h-20 flex items-center justify-center border border-white/20 group-hover:border-white/30 transition-all duration-300">
                           <span className="text-white text-2xl font-light">{step.number}</span>
@@ -564,7 +588,7 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
+        <section id="pricing" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -601,11 +625,15 @@ const ProfhiloTreatment = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
+                        <span className="text-gray-300 text-sm">10 injection points</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                        <span className="text-gray-300 text-sm">Progress photos</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare guidance</span>
                       </div>
                     </div>
                   </CardContent>
@@ -618,32 +646,29 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">RECOMMENDED</span>
-                  </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Treatment Course</CardTitle>
-                    <div className="text-white text-4xl font-bold">£600</div>
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Follow-up Sessions</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£300</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">Two sessions for optimal bio-remodelling results</p>
+                    <p className="text-gray-300">Subsequent treatments (4-6 weeks apart)</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Two treatment sessions</span>
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Progress review</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">4-week interval timing</span>
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Bio-remodelling treatment</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Results monitoring</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Follow-up consultations</span>
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Ongoing support</span>
                       </div>
                     </div>
                   </CardContent>
@@ -656,242 +681,50 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-700 h-full text-center">
+                <Card className="bg-gradient-to-br from-purple-900 to-purple-800 border-2 border-purple-400 h-full text-center relative overflow-hidden">
+                  <div className="absolute top-0 right-0 bg-purple-400 text-black px-3 py-1 text-xs font-semibold">
+                    SPECIAL OFFER
+                  </div>
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                    <CardTitle className="text-white text-2xl">Glow & Go Package</CardTitle>
+                    <div className="text-purple-200 text-4xl font-bold">£900</div>
+                    <p className="text-purple-200 text-sm">Save £200</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional skin assessment and treatment planning</p>
+                    <p className="text-purple-100">Three sessions + free Hydrafacial (worth £200)</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full skin analysis</span>
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-purple-100 text-sm">Complete treatment course</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-purple-100 text-sm">Free Hydrafacial session</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-purple-100 text-sm">Priority booking</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <p className="text-gray-300 mb-6">
-                *Consultation fee is deducted from treatment cost if you proceed on the same day
-              </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
-                Book Your Consultation
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Profhilo Injection Points Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Profhilo Injection Points
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Strategic BAP (Bio Aesthetic Points) technique for optimal results
-              </p>
-            </motion.div>
             
-            <motion.div 
-              className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                    BAP Technique
-                  </h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed mb-6">
-                    The latest injectable skin remodelling treatment corrects the ageing signs and their source.
-                  </p>
-                  <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
-                    To achieve remarkable results, experts use the <strong>BAP (Bio Aesthetic Points)</strong> technique, 
-                    which reduces the required injections and ensures an even and efficient dispersal of the hyaluronic acid 
-                    into the skin layers.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
-                  <h4 className="text-2xl font-light text-white mb-6">Key Benefits</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-white/10 rounded-full p-2 mt-1">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                      </div>
-                      <p className="text-white/80 font-light">
-                        Enables Profhilo to battle signs of ageing more efficiently
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="bg-white/10 rounded-full p-2 mt-1">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                      </div>
-                      <p className="text-white/80 font-light">
-                        Ensures your comfort throughout the process
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="bg-white/10 rounded-full p-2 mt-1">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                      </div>
-                      <p className="text-white/80 font-light">
-                        Reduces the required number of injections
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-8">
-                <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
-                  <h4 className="text-2xl font-light text-white mb-6">Treatment Areas</h4>
-                  <div className="space-y-6">
-                    <div>
-                      <h5 className="text-white font-medium mb-2">Face Treatment</h5>
-                      <p className="text-white/70 text-sm leading-relaxed">
-                        10 strategic injection points - 5 on each side of the face for optimal HA distribution
-                      </p>
-                    </div>
-                    <div>
-                      <h5 className="text-white font-medium mb-2">Neck Treatment</h5>
-                      <p className="text-white/70 text-sm leading-relaxed">
-                        Targeted points to address sagging skin and improve texture in the neck and décolletage area
-                      </p>
-                    </div>
-                    <div>
-                      <h5 className="text-white font-medium mb-2">Hand Treatment</h5>
-                      <p className="text-white/70 text-sm leading-relaxed">
-                        Specific injection points to treat skin laxity and reduce wrinkles and fine lines on hands
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-32 bg-black relative overflow-hidden">
-          {/* Subtle background elements */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-white/[0.01] rounded-full blur-3xl" />
-          </div>
-          
-          <div className="page-container relative z-10">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Benefits of Profhilo
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Advanced bio-remodelling delivers comprehensive skin rejuvenation
+            <div className="text-center mt-8">
+              <p className="text-gray-400 text-sm">
+                Consultation fee: FREE when booking treatment • All prices include VAT
               </p>
-            </motion.div>
-            
-            <motion.div 
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              {[
-                {
-                  title: "Superior Hydration",
-                  description: "Better moisturising effects than topical skincare",
-                  icon: "💧"
-                },
-                {
-                  title: "Anti-Ageing Power",
-                  description: "Addresses ageing wrinkles & creases",
-                  icon: "✨"
-                },
-                {
-                  title: "Skin Plumping",
-                  description: "Plumps up crepey skin on face, neck, hands",
-                  icon: "🌟"
-                },
-                {
-                  title: "Collagen Boost",
-                  description: "Boosts skin's elastin and collagen production",
-                  icon: "🧬"
-                },
-                {
-                  title: "Skin Tightening",
-                  description: "Delivers the effect of tighter skin",
-                  icon: "🎯"
-                },
-                {
-                  title: "Universal Suitability",
-                  description: "Suitable for all skin types and ethnicities",
-                  icon: "🌍"
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  className="group relative bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/5"
-                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  viewport={{ once: true }}
-                >
-                  {/* Subtle gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-                  
-                  <div className="relative z-10">
-                    <div className="text-3xl mb-4 opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                      {benefit.icon}
-                    </div>
-                    <h3 className="text-xl font-medium text-white mb-3 group-hover:text-white transition-colors duration-300">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-white/70 font-light leading-relaxed group-hover:text-white/80 transition-colors duration-300">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
+        {/* Why Choose CosmeDocs Section */}
+        <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -900,168 +733,85 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose CosmeDocs for Profhilo?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                London's premier Harley Street clinic for expert Profhilo bio-remodelling treatments
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
-                  >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium FDA-approved products only</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Smile className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  title: "Medical Experts",
+                  description: "GMC registered practitioners with extensive aesthetic medicine experience",
+                  icon: Award
+                },
+                {
+                  title: "Harley Street Location", 
+                  description: "Prime location in London's most prestigious medical district",
+                  icon: MapPin
+                },
+                {
+                  title: "Natural Results",
+                  description: "'Invisible art' for natural results - Bold • Natural • Always Your Way",
+                  icon: Smile
+                },
+                {
+                  title: "Patient Care",
+                  description: "Comprehensive aftercare and follow-up support throughout your journey",
+                  icon: Heart
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="text-purple-600" size={24} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-300 text-sm">{item.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A]">
+        <section className="py-20 bg-[#0A0A0A]">
           <div className="page-container">
-            <motion.div
-              className="text-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Everything you need to know about Profhilo bio-remodelling treatment
-              </p>
-            </motion.div>
-            
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Left Column */}
-                <motion.div
-                  className="space-y-6"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  {leftColumnFaqs.map((faq, index) => (
-                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                  ))}
-                </motion.div>
-                
-                {/* Right Column */}
-                <motion.div
-                  className="space-y-6"
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  {rightColumnFaqs.map((faq, index) => (
-                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                  ))}
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20">
-          <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Naturally Rejuvenated Skin?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert practitioners and discover how Profhilo bio-remodelling can enhance your natural beauty with invisible art techniques.
+              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Everything you need to know about Profhilo bio-remodelling treatment
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
-                  Book Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0333 0551 503
-                </Button>
-              </div>
             </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="space-y-4">
+                {leftColumnFaqs.map((faq, index) => (
+                  <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                ))}
+              </div>
+              <div className="space-y-4">
+                {rightColumnFaqs.map((faq, index) => (
+                  <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
-        
+
         {/* Final CTA Section */}
         <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A] relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-20" />
@@ -1115,16 +865,21 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <CollapsibleTrigger className="flex w-full items-center justify-between p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300 text-left">
-        <h3 className="text-lg font-medium text-white pr-4">{question}</h3>
-        {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0" />
-        ) : (
-          <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-        )}
+      <CollapsibleTrigger asChild>
+        <Button
+          variant="ghost"
+          className="w-full justify-between text-left p-6 h-auto bg-white/5 hover:bg-white/10 rounded-xl border border-white/10"
+        >
+          <span className="text-white font-medium text-base">{question}</span>
+          {isOpen ? (
+            <ChevronUp className="h-5 w-5 text-white" />
+          ) : (
+            <ChevronDown className="h-5 w-5 text-white" />
+          )}
+        </Button>
       </CollapsibleTrigger>
       <CollapsibleContent className="px-6 pb-6">
-        <p className="text-white/80 font-light leading-relaxed">{answer}</p>
+        <p className="text-gray-300 leading-relaxed">{answer}</p>
       </CollapsibleContent>
     </Collapsible>
   );
