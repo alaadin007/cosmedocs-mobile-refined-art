@@ -339,7 +339,7 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* What is Profhilo Section */}
-        <section className="py-32 bg-[#0A0A0A]">
+        <section className="py-32 bg-accent">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
               <motion.div
@@ -349,10 +349,7 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                 viewport={{ once: true }}
               >
-               <h2 className="text-3xl font-bold mb-6">What Is Profhilo?</h2>
-                <p className="text-gray-300 max-w-4xl mx-auto mb-8">
-                  Advanced skin bio-remodelling treatment that stimulates natural collagen and elastin production
-                </p>
+                <h2 className="text-3xl font-bold mb-6">What Is Profhilo?</h2>
                 <div className="max-w-4xl mx-auto mb-12">
                   <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
                     Profhilo before and after demonstrate its powerful results as a skin booster. This treatment of the skin results in bio-remodelling and rejuvenation. It causes the production of new collagen, elastic and hyaluronic acid in the deeper skin layers.
