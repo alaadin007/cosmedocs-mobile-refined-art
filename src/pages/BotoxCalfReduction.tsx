@@ -49,6 +49,8 @@ const BotoxCalfReduction = () => {
     }
   ];
 
+  const bookingUrl = "https://med.as.me/harleystreet";
+
   return (
     <>
       <Helmet>
@@ -111,7 +113,10 @@ const BotoxCalfReduction = () => {
                   <p className="text-sm text-gray-300">Achieve naturally slimmer, more refined calf contours that enhance your overall leg proportions.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    onClick={() => window.open(bookingUrl, "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
                     Book Consultation
                   </Button>
                   <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
