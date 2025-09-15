@@ -454,51 +454,11 @@ const Microneedling = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-2xl p-8 border border-purple-500/20">
-                  <h3 className="text-white text-2xl font-semibold mb-6">The Treatment Process</h3>
-                  <div className="space-y-4">
-                    <p className="text-gray-300 leading-relaxed">
-                      After applying a topical numbing cream, the skin is thoroughly cleansed. The eDermastamp single-use, 
-                      sterile needle microneedling device is then set to the correct speed, needle lengths and depth for the 
-                      treatment area.
-                    </p>
-                    <p className="text-gray-300 leading-relaxed">
-                      With microneedling treatment, the depth is within the papillary dermal layer of the skin, where collagen 
-                      and elastin fibres are located. The tiny holes close over almost immediately as the channels are small.
-                    </p>
-                    <p className="text-gray-300 leading-relaxed">
-                      The 'micro tears' to the dermis encourages the skin to repair itself by activating skin's healing process 
-                      and promoting collagen production and elastin and generating new skin cells.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-purple-500/20">
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-2xl font-bold text-purple-300 mb-1">30</div>
-                        <div className="text-sm text-gray-300">Minutes</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-purple-300 mb-1">15-18</div>
-                        <div className="text-sm text-gray-300">Months Results</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="relative"
               >
