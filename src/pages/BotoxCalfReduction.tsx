@@ -4,7 +4,15 @@ import { motion } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
+import { Clock, Calendar, Activity, Syringe, Award, Users, CheckCircle, Palette, Heart } from "lucide-react";
 
 const BotoxCalfReduction = () => {
   const seoData = generateSEOMetadata(
@@ -117,8 +125,81 @@ const BotoxCalfReduction = () => {
           </div>
         </section>
 
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Botox Calf Reduction Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30-45 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">6-12 months with gradual muscle relaxation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to normal activities immediately</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Local anaesthetic for comfort</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Before & After Gallery */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -134,25 +215,33 @@ const BotoxCalfReduction = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {beforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative group cursor-pointer"
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                </motion.div>
-              ))}
-            </div>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
 
             <div className="text-center mt-12">
               <BeforeAfterImageViewer 
@@ -165,70 +254,104 @@ const BotoxCalfReduction = () => {
           </div>
         </section>
 
-        {/* Treatment Summary */}
-        <section className="py-20">
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <h2 className="text-3xl font-bold mb-6">Calf Reduction Treatment Summary</h2>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
-                    <p className="text-gray-300">30-45 minutes including consultation</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
-                    <p className="text-gray-300">6-12 months with gradual muscle relaxation</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
-                    <p className="text-gray-300">Minimal downtime - return to normal activities immediately</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Full Results</h3>
-                    <p className="text-gray-300">Visible within 6-8 weeks as muscle gradually reduces</p>
-                  </div>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="space-y-6"
+                className="text-center"
               >
-                <h2 className="text-3xl font-bold mb-6">Why Choose Cosmedocs?</h2>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300">Expert practitioners with advanced botox techniques</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300">Harley Street excellence and highest safety standards</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300">Personalized treatment plans for natural-looking results</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-purple-300 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300">Invisible art philosophy - Bold • Natural • Always Your Way</p>
-                  </div>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Users className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium botox products and techniques</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
