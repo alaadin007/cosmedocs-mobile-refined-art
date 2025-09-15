@@ -365,6 +365,7 @@ const ProfhiloTreatment = () => {
               
               <div className="max-w-4xl mx-auto">
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
+                  <p className="text-gray-300 text-center mb-4 italic">"Advanced skin bio-remodelling treatment that stimulates natural collagen and elastin production"</p>
                   <h4 className="text-white text-xl font-semibold mb-6 text-center">How Profhilo Works</h4>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
