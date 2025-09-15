@@ -656,6 +656,33 @@ const Microneedling = () => {
             </div>
 
             <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+                {/* Microneedling Treatment Video */}
+                <div className="relative">
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/tjbOemp3Dro"
+                    title="Microneedling Treatment Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full aspect-video"
+                  ></iframe>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                  <p className="text-white text-sm font-medium">Professional Microneedling Treatment Demonstration</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
