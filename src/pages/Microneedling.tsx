@@ -120,7 +120,7 @@ const Microneedling = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Microneedling Price
+                  Microneedling
                   <span className="block text-purple-300">London</span>
                   <span className="block text-sm mt-4">Professional micro needle treatment for flawless skin rejuvenation</span>
                 </h1>
