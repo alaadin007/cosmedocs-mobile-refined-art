@@ -13,6 +13,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+// Import before/after images
+import beforeAfter1 from "@/assets/8-point-facelift-before-after-1.jpg";
+import beforeAfter2 from "@/assets/8-point-facelift-before-after-2.jpg";
+import beforeAfter3 from "@/assets/8-point-facelift-before-after-3.jpg";
+
 export default function EightPointFacelift() {
   const seoData = generateSEOMetadata(
     "8 Point Face Lift London | Non-Surgical Facelift | Cosmedocs",
@@ -36,6 +41,25 @@ export default function EightPointFacelift() {
       "url": "https://www.cosmedocs.com"
     }
   };
+
+  // Before/after images for the gallery
+  const beforeAfterImages = [
+    {
+      src: beforeAfter1,
+      alt: "8 Point Face Lift before and after results showing natural facial rejuvenation",
+      caption: "8 Point Face Lift Results - Enhanced facial contours and natural lift"
+    },
+    {
+      src: beforeAfter2,
+      alt: "Non-surgical facelift before and after showing improved facial definition",
+      caption: "Non-Surgical Facelift - Restored volume and youthful appearance"
+    },
+    {
+      src: beforeAfter3,
+      alt: "Liquid facelift treatment before and after showing natural enhancement",
+      caption: "Liquid Facelift - Comprehensive facial rejuvenation with dermal fillers"
+    }
+  ];
 
   const treatmentInfo = [
     {
@@ -329,8 +353,7 @@ export default function EightPointFacelift() {
 
             <Carousel className="w-full max-w-5xl mx-auto">
               <CarouselContent>
-                {/* Placeholder images for 8 Point Face Lift - you can replace with actual images */}
-                {[1,2,3].map((index) => (
+                {beforeAfterImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -339,12 +362,14 @@ export default function EightPointFacelift() {
                       viewport={{ once: true }}
                       className="relative group cursor-pointer p-2"
                     >
-                      <div className="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <p className="text-gray-400">Before & After #{index}</p>
-                      </div>
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                       <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">8 Point Face Lift Results - Natural Enhancement</p>
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
                       </div>
                     </motion.div>
                   </CarouselItem>
