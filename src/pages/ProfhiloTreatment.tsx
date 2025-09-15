@@ -395,7 +395,7 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* Injectable Moisturiser Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
