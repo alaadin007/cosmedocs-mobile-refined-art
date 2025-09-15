@@ -389,11 +389,6 @@ const BotoxCalfReduction = () => {
               </motion.div>
             </div>
 
-            <div className="text-center mt-12">
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold">
-                Choose Botox Calf Reduction
-              </Button>
-            </div>
           </div>
         </section>
 
