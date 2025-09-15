@@ -371,27 +371,27 @@ const ProfhiloTreatment = () => {
               
               <div className="flex justify-center">
                 <div className="max-w-md">
-                  <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
-                    <h4 className="text-2xl font-light text-white mb-6">How Profhilo Works</h4>
+                  <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
+                    <h4 className="text-white text-xl font-semibold mb-6 text-center">How Profhilo Works</h4>
                     <div className="space-y-6">
                       <div className="flex items-start gap-4">
-                        <div className="bg-white/10 rounded-full p-3 mt-1">
-                          <span className="text-white text-sm font-medium">1</span>
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
+                          <span className="text-purple-600 text-sm font-medium">1</span>
                         </div>
                         <div>
                           <h5 className="text-white font-medium mb-2">Hydrating and Nourishing</h5>
-                          <p className="text-white/70 font-light">
+                          <p className="text-gray-300 font-light">
                             First stage focuses on deeply hydrating and nourishing your skin layers
                           </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
-                        <div className="bg-white/10 rounded-full p-3 mt-1">
-                          <span className="text-white text-sm font-medium">2</span>
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
+                          <span className="text-purple-600 text-sm font-medium">2</span>
                         </div>
                         <div>
                           <h5 className="text-white font-medium mb-2">Neo-Collagenesis</h5>
-                          <p className="text-white/70 font-light">
+                          <p className="text-gray-300 font-light">
                             Stimulates synthesis of new collagen and elastin for long-term skin improvement
                           </p>
                         </div>
