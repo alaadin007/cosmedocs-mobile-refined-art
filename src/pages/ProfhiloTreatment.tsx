@@ -15,6 +15,14 @@ import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
 
+// Import before/after images
+import profhiloFaceBeforeAfter from "@/assets/profhilo-face-before-after.jpg";
+import profhiloNeckBeforeAfter03 from "@/assets/profhilo-neck-before-after-03.jpg";
+import profhiloCheekBeforeAfter from "@/assets/profhilo-cheek-before-after.jpg";
+import profhiloArmBeforeAfter from "@/assets/profhilo-arm-before-after.jpg";
+import profhiloNeckBeforeAfter2 from "@/assets/profhilo-neck-before-after-2.jpg";
+import profhiloNeckBeforeAfter02 from "@/assets/profhilo-neck-before-after-02.jpg";
+
 const ProfhiloTreatment = () => {
   const seoData = generateSEOMetadata(
     "Profhilo Treatment London | £350 | Bio-Remodelling | Cosmedocs Harley Street",
@@ -27,32 +35,32 @@ const ProfhiloTreatment = () => {
   // Before/after images for the viewer
   const beforeAfterImages = [
     {
-      src: "/src/assets/profhilo-face-before-after.jpg",
+      src: profhiloFaceBeforeAfter,
       alt: "Profhilo face treatment before and after results London Harley Street Cosmedocs",
       caption: "Complete facial bio-remodelling with improved skin texture and hydration"
     },
     {
-      src: "/src/assets/profhilo-neck-before-after-03.jpg",
+      src: profhiloNeckBeforeAfter03,
       alt: "Profhilo neck treatment before and after transformation London",
       caption: "Neck area bio-remodelling showing enhanced skin texture and firmness"
     },
     {
-      src: "/src/assets/profhilo-cheek-before-after.jpg",
+      src: profhiloCheekBeforeAfter,
       alt: "Profhilo cheek treatment before and after sun damaged skin improvement",
       caption: "Significant improvement in severe sun-damaged skin with wrinkles after Profhilo"
     },
     {
-      src: "/src/assets/profhilo-arm-before-after.jpg",
+      src: profhiloArmBeforeAfter,
       alt: "Profhilo arm treatment before and after skin thickness improvement",
       caption: "Enhanced skin thickness and reduced wrinkles on the arm with Profhilo"
     },
     {
-      src: "/src/assets/profhilo-neck-before-after-2.jpg",
+      src: profhiloNeckBeforeAfter2,
       alt: "Profhilo neck and lower face treatment enhanced skin texture",
       caption: "Enhanced skin texture following Profhilo neck and lower face treatment"
     },
     {
-      src: "/src/assets/profhilo-neck-before-after-02.jpg",
+      src: profhiloNeckBeforeAfter02,
       alt: "Profhilo neck treatment enhancing skin texture before and after",
       caption: "Enhanced skin texture following Profhilo neck treatment"
     }
