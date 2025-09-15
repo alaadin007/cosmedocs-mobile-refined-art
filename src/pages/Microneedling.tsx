@@ -16,8 +16,8 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 
 const Microneedling = () => {
   const seoData = generateSEOMetadata(
-    "Microneedling London Harley Street | Expert Skin Rejuvenation | Cosmedocs",
-    "Professional microneedling treatments in London. Advanced skin rejuvenation for flawless skin texture, acne scars, and anti-aging. Expert treatments at Harley Street clinic.",
+    "Microneedling London Price | Face Needling Treatment Cost UK | Cosmedocs",
+    "Professional microneedling London from £250. Face needling therapy for wrinkles, acne scars & skin tightening. Book micro needle treatment today.",
     "/microneedling"
   );
 
@@ -85,7 +85,7 @@ const Microneedling = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="microneedling London, Harley Street microneedling, collagen induction therapy, skin rejuvenation, acne scars, fine lines, skin texture, flawless skin, cosmetic dermatology" />
+        <meta name="keywords" content="microneedling london price, micro needle price, microneedling cost, how much is microneedling uk, microneedle cost, microneedling with skin booster, microneedling skin tightening, micro needle for face, microneedling treatment, benefits of microneedling face, face microneedling, face needling therapy, needle facial treatment, cost for microneedling, what is microneedling facial, micro needling facial, what does microneedling do, microneedling for wrinkles, micro needling face, skin needling, microneedling london, microneedling for face, micro needle treatment, cost of microneedling, microneedling face, derma needling, microneedling facial, microneedling price uk, micro needling for face, microneedling price, needling treatment, microneedling procedure, facial micro needling, microneedling uk, microneedling on face, needle treatment, micro needling cost, microneedling, micro needle facial, micro needling uk, microneedling for skin tightening, skin microneedling, how many sessions of microneedling, microneedling cost uk, facial microneedling, microneedling collagen, body microneedling, how much does microneedling cost, how long does microneedling take, microneedling reviews, micro needle therapy, microneedling how much, what is microneedling, micro derma needling, medical microneedling, best microneedling london, face needling, what is micro needling" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -129,8 +129,8 @@ const Microneedling = () => {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £250</p>
-                  <p className="text-sm text-gray-300">Professional microneedling for radiant, rejuvenated skin</p>
+                  <p className="text-2xl text-purple-300 font-bold">Microneedling London Price from £250</p>
+                  <p className="text-sm text-gray-300">Professional micro needle treatment for skin tightening and rejuvenation</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
@@ -293,13 +293,13 @@ const Microneedling = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">What is Microneedling?</h2>
               <div className="max-w-4xl mx-auto text-left">
                 <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-                  Microneedling (also known as skin needling or percutaneous collagen induction therapy) is a minimally 
-                  invasive treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
-                  skin with small needles.
+                  Microneedling (also known as skin needling, face needling therapy, or percutaneous collagen induction therapy) is a minimally 
+                  invasive micro needle treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
+                  skin with small needles. This needle facial treatment is perfect for face microneedling and skin tightening.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-12 text-lg">
                   These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
-                  dermal remodelling, without causing any scars.
+                  dermal remodelling, without causing any scars. Medical microneedling cost UK starts from £250 for professional facial microneedling treatment.
                 </p>
               </div>
             </motion.div>
@@ -314,14 +314,14 @@ const Microneedling = () => {
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
                   <h4 className="text-white text-xl font-semibold mb-6 text-center">Why Choose Microneedling?</h4>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles. 
-                    It also helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
-                    promotes new collagen fibres.
+                    This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles through microneedling collagen induction. 
+                    What does microneedling do? It helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
+                    promotes new collagen fibres. Microneedling for skin tightening delivers exceptional results with minimal downtime.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    Clinical collagen induction therapy serves your skin in more ways than you can imagine! From correcting 
+                    How much is microneedling UK? Our derma needling therapy serves your skin in more ways than you can imagine! From correcting 
                     pitted acne scarring to stretch marks, skin laxity and unwanted fine lines with minimal discomfort and 
-                    practically no recovery.
+                    practically no recovery. Benefits of microneedling face include improved texture, reduced pore size, and enhanced collagen production.
                   </p>
                 </div>
               </motion.div>
@@ -339,9 +339,9 @@ const Microneedling = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Benefits & Treatment Process</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Microneedling Price UK & Benefits</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Discover the comprehensive benefits and understand our professional treatment approach
+                Discover the comprehensive benefits and understand our professional microneedling cost UK pricing
               </p>
             </motion.div>
 
@@ -353,11 +353,11 @@ const Microneedling = () => {
                 viewport={{ once: true }}
               >
                 <div className="bg-accent border border-purple-500/20 rounded-xl p-6 h-full">
-                  <h3 className="text-white text-xl font-semibold mb-6">Microneedling Benefits</h3>
+                  <h3 className="text-white text-xl font-semibold mb-6">Microneedling Benefits for Face</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Corrects fine lines and wrinkles through collagen boost</span>
+                      <span className="text-gray-300">Corrects fine lines and wrinkles through microneedling collagen boost</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
@@ -365,7 +365,7 @@ const Microneedling = () => {
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Fades acne and acne scars effectively</span>
+                      <span className="text-gray-300">Fades acne and acne scars effectively through micro needle therapy</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
@@ -373,15 +373,15 @@ const Microneedling = () => {
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Rejuvenates hands, neck and décolletage</span>
+                      <span className="text-gray-300">Rejuvenates hands, neck and décolletage with body microneedling</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Enhances skincare product absorption</span>
+                      <span className="text-gray-300">Enhances skincare product absorption - cream for microneedling works better</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
-                      <span className="text-gray-300">Safe for all skin types and tones</span>
+                      <span className="text-gray-300">Safe for all skin types and tones - what is micro needling's safest form</span>
                     </div>
                   </div>
                 </div>
@@ -394,27 +394,29 @@ const Microneedling = () => {
                 viewport={{ once: true }}
               >
                 <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-xl p-6 border border-purple-500/20 h-full">
-                  <h3 className="text-white text-xl font-semibold mb-6">Treatment Process</h3>
+                  <h3 className="text-white text-xl font-semibold mb-6">Microneedling Procedure & Cost</h3>
                   <div className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
                       After applying a topical numbing cream, the skin is thoroughly cleansed. The eDermastamp single-use, 
                       sterile needle microneedling device is then set to the correct speed, needle lengths and depth for the 
-                      treatment area.
+                      treatment area. How much does microneedling cost? Our facial micro needling starts from £250.
                     </p>
                     <p className="text-gray-300 leading-relaxed">
-                      With microneedling treatment, the depth is within the papillary dermal layer of the skin, where collagen 
-                      and elastin fibres are located. The tiny holes close over almost immediately as the channels are small.
+                      With microneedling treatment, the depth is within the papillary dermal layer of the skin, where microneedling collagen 
+                      and elastin fibres are located. The tiny holes close over almost immediately as the channels are small. 
+                      What is a microneedling facial? It's professional needle treatment for optimal skin rejuvenation.
                     </p>
                     <p className="text-gray-300 leading-relaxed">
                       The 'micro tears' to the dermis encourages the skin to repair itself by activating skin's healing process 
-                      and promoting collagen production and elastin and generating new skin cells.
+                      and promoting collagen production and elastin generation. How many sessions of microneedling are needed? 
+                      Typically 3-6 sessions for optimal results, with microneedling reviews showing excellent satisfaction.
                     </p>
                     
                     <div className="mt-6 pt-4 border-t border-purple-500/20">
                       <div className="grid grid-cols-2 gap-4 text-center">
                         <div>
-                          <div className="text-xl font-bold text-purple-300 mb-1">30</div>
-                          <div className="text-sm text-gray-300">Minutes</div>
+                          <div className="text-xl font-bold text-purple-300 mb-1">30-40</div>
+                          <div className="text-sm text-gray-300">Minutes Treatment</div>
                         </div>
                         <div>
                           <div className="text-xl font-bold text-purple-300 mb-1">15-18</div>
@@ -456,13 +458,13 @@ const Microneedling = () => {
                 <div className="bg-gradient-to-r from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8">
                   <p className="text-gray-300 leading-relaxed mb-6">
                     An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
-                    In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
-                    helps your skincare topicals perform their best.
+                    How long does microneedling take? In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
+                    helps your skincare topicals perform their best. Cost for microneedling includes comprehensive aftercare support.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    Microneedling therapy uses your body's natural healing response to deliver a wide range of skin benefits. 
-                    From correcting pitted acne scarring to stretch marks, skin laxity and unwanted fine lines, wrinkles and 
-                    lacklustre complexion with minimal discomfort and practically no recovery.
+                    What is microneedling facial therapy? Microneedling therapy uses your body's natural healing response to deliver a wide range of skin benefits. 
+                    From correcting pitted acne scarring to stretch marks, skin laxity and unwanted fine lines, microneedling for wrinkles provides 
+                    lacklustre complexion improvement with minimal discomfort and practically no recovery. Face needling delivers exceptional results.
                   </p>
                 </div>
               </motion.div>
