@@ -2,6 +2,13 @@ import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle, Diamond, Eye, Smile, Gem, Droplets, Sparkles } from 'lucide-react';
@@ -288,6 +295,58 @@ export default function EightPointFacelift() {
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
                 <p className="text-gray-300">Local anaesthetic for comfort</p>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the transformative results achieved with our expert 8 Point Face Lift treatments. 
+                Each patient receives personalized care for optimal facial rejuvenation.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {/* Placeholder images for 8 Point Face Lift - you can replace with actual images */}
+                {[1,2,3].map((index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <div className="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                        <p className="text-gray-400">Before & After #{index}</p>
+                      </div>
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">8 Point Face Lift Results - Natural Enhancement</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-3 text-lg font-semibold">
+                View All Before & After Photos
+              </Button>
             </div>
           </div>
         </section>

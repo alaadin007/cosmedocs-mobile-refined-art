@@ -307,6 +307,63 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before & After Profhilo Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Witness the transformative power of Profhilo bio-remodelling. Our aesthetics is invisible art - 
+                creating natural, bold transformations that speak without saying a word.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <BeforeAfterGrid images={beforeAfterImages} />
+              <div className="text-center mt-8">
+                <p className="text-gray-400 text-sm">
+                  Individual results may vary. Results shown after 2 treatment sessions spaced 4 weeks apart. 
+                  Full effects visible in 6-8 weeks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* What is Profhilo Section */}
         <section className="py-32 bg-[#0A0A0A]">
           <div className="page-container">
@@ -1018,8 +1075,31 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-32 bg-[#0A0A0A] relative overflow-hidden">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready for Naturally Rejuvenated Skin?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert practitioners and discover how Profhilo bio-remodelling can enhance your natural beauty with invisible art techniques.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
           <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-20" />
           <div className="page-container relative z-10">
             <motion.div
