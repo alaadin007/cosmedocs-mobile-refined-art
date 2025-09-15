@@ -325,7 +325,7 @@ const Microneedling = () => {
                 viewport={{ once: true }}
               >
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
-                  <h4 className="text-white text-xl font-semibold mb-6 text-center">Clinical Benefits</h4>
+                  <h4 className="text-white text-xl font-semibold mb-6 text-center">Why Choose Microneedling?</h4>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     This minimally invasive skin perfecting procedure improves skin texture and minimises wrinkles. 
                     It also helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
