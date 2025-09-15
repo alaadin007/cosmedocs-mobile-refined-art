@@ -525,47 +525,59 @@ export default function EightPointFacelift() {
                 </p>
               </motion.div>
 
-              <div className="grid lg:grid-cols-3 gap-8">
+              <div className="max-w-4xl mx-auto">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="bg-accent rounded-xl p-8 border border-purple-500/20"
+                  className="bg-accent border border-purple-500/20 rounded-xl p-8"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-4">Immediate Results</h3>
-                  <p className="text-gray-300 mb-4">
-                    The 8 Point facelift treatment gives immediate results that are visible right after treatment.
-                  </p>
-                  <p className="text-purple-300 font-semibold">Duration: 12-18 months</p>
-                </motion.div>
+                  <div className="space-y-8">
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Results Timeline:</h3>
+                      <p className="text-gray-300 leading-relaxed">
+                        The 8 Point facelift treatment gives immediate results that last for about 12-18 months. Full results are visible after 1-2 weeks when minor swelling and bruising subsides.
+                      </p>
+                    </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-accent rounded-xl p-8 border border-purple-500/20"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-4">Minimal Downtime</h3>
-                  <p className="text-gray-300 mb-4">
-                    There is no or little downtime. Routine activities can be resumed immediately after treatment.
-                  </p>
-                  <p className="text-purple-300 font-semibold">Back to work: Immediately</p>
-                </motion.div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Recovery & Downtime:</h3>
+                      <p className="text-gray-300 leading-relaxed">
+                        There is no or little downtime. Routine activities can be resumed immediately after treatment. Minor bruising and swelling may occur but are temporary and fade within a few days.
+                      </p>
+                    </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="bg-accent rounded-xl p-8 border border-purple-500/20"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-4">Side Effects</h3>
-                  <p className="text-gray-300 mb-4">
-                    Minimal side effects including minor bruising and swelling that fade within a few days.
-                  </p>
-                  <p className="text-purple-300 font-semibold">Full recovery: 1 week</p>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-4">Key Benefits:</h3>
+                      <ul className="space-y-2 text-gray-300">
+                        <li className="flex items-start gap-3">
+                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                          <span>Immediate visible results</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                          <span>Non-surgical approach</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                          <span>Minimal downtime</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                          <span>Natural-looking enhancement</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                          <span>Long-lasting effects (12-18 months)</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                          <span>Customized to your needs</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </motion.div>
               </div>
             </div>
