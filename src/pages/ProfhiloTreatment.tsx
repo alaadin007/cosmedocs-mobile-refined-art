@@ -78,6 +78,10 @@ const ProfhiloTreatment = () => {
     {
       question: "Are there any Profhilo side effects?",
       answer: "Profhilo is very safe with minimal side effects. You may experience slight redness, bruising, and swelling at injection sites, which typically resolve within 1-2 days."
+    },
+    {
+      question: "What happens during a Profhilo treatment?",
+      answer: "Profhilo is a speedy treatment with no downtime, lasting under 30 minutes. Topical numbing cream is applied followed by injection with a very thin needle. High-concentration HA is injected in 10 strategic locations, five on each side of the face. Some patients may experience a slight prick sensation during injection."
     }
   ];
 
@@ -101,6 +105,10 @@ const ProfhiloTreatment = () => {
     {
       question: "Who is an ideal candidate for Profhilo?",
       answer: "Profhilo is suitable for men and women with slight to mild signs of ageing. Patients over 25 can benefit as preventative care, with optimal results for those aged 30-50 showing dull skin, fine lines, or volume loss."
+    },
+    {
+      question: "What should I expect after Profhilo treatment?",
+      answer: "Two treatments are suggested one month apart for maximum performance with final results becoming visible gradually. Mild bruising or swelling around injection sites may occur but usually subsides within a few days."
     }
   ];
 
@@ -539,100 +547,108 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
-        {/* Profhilo Treatment Procedure Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-[#0A0A0A] relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/3 w-72 h-72 bg-white/[0.015] rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-white/[0.01] rounded-full blur-3xl" />
-          </div>
-          
-          <div className="page-container relative z-10">
+        {/* Profhilo Treatment Consultation Section */}
+        <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
+          <div className="page-container">
             <motion.div
-              className="text-center mb-24"
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6">Profhilo Treatment Procedure</h2>
+              <h2 className="text-3xl font-bold mb-6">Before Your Treatment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                A comprehensive guide to your Profhilo bio-remodelling journey
+                Your Profhilo journey begins with our comprehensive consultation process
               </p>
             </motion.div>
             
-            <div className="max-w-7xl mx-auto">
-              <div className="grid lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    number: "1",
-                    title: "Before Your Treatment",
-                    content: [
-                      "The first step is consultation with a medical professional, followed by a comprehensive skin examination and progress photos.",
-                      "At Cosmedocs, adherence to a strict Profhilo treatment protocol is essential for optimal results."
-                    ],
-                    icon: "📋"
-                  },
-                  {
-                    number: "2", 
-                    title: "During Your Treatment",
-                    content: [
-                      "• Profhilo is a speedy treatment with no downtime, lasting under 30 minutes",
-                      "• Topical numbing cream applied followed by injection with a very thin needle", 
-                      "• High-concentration HA injected in 10 strategic locations, five on each side of the face",
-                      "• Some patients may experience a slight prick sensation during injection"
-                    ],
-                    icon: "💉"
-                  },
-                  {
-                    number: "3",
-                    title: "After Your Treatment", 
-                    content: [
-                      "Mild bruising or swelling around injection sites may occur but usually subsides within a few days.",
-                      "Avoid touching or rubbing the area and strenuous exercise for 24 hours following treatment.",
-                      "Two treatments suggested one month apart for maximum performance with final results becoming visible gradually."
-                    ],
-                    icon: "✨"
-                  }
-                ].map((step, index) => (
-                  <motion.div
-                    key={index}
-                    className="group relative bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/5"
-                    initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 0.8, delay: index * 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-                    
-                    {index < 2 && (
-                      <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-white/20 to-transparent" />
-                    )}
-                    
-                    <div className="relative z-10">
-                      <div className="relative mb-6">
-                        <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-full w-20 h-20 flex items-center justify-center border border-white/20 group-hover:border-white/30 transition-all duration-300">
-                          <span className="text-white text-2xl font-light">{step.number}</span>
-                        </div>
-                        <div className="absolute -top-2 -right-2 text-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-300">
-                          {step.icon}
-                        </div>
-                      </div>
-                      
-                      <h3 className="text-2xl font-light text-white mb-6 group-hover:text-white transition-colors duration-300">
-                        {step.title}
-                      </h3>
-                      
-                      <div className="space-y-4">
-                        {step.content.map((text, textIndex) => (
-                          <p key={textIndex} className="text-white/70 font-light leading-relaxed group-hover:text-white/80 transition-colors duration-300">
-                            {text}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+            <div className="max-w-2xl mx-auto">
+              <motion.div
+                className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-center mb-6">
+                  <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-full w-20 h-20 flex items-center justify-center border border-white/20 mx-auto mb-4">
+                    <span className="text-4xl">📋</span>
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-4">Consultation Process</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <p className="text-white/70 font-light leading-relaxed">
+                    The first step is consultation with a medical professional, followed by a comprehensive skin examination and progress photos.
+                  </p>
+                  <p className="text-white/70 font-light leading-relaxed">
+                    At Cosmedocs, adherence to a strict Profhilo treatment protocol is essential for optimal results.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Aftercare Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold mb-6">Profhilo Aftercare</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Essential guidelines to ensure optimal results and proper healing
+              </p>
+            </motion.div>
+            
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+              <motion.div
+                className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
+                  <span className="text-2xl">⚠️</span>
+                  What to Expect
+                </h3>
+                <div className="space-y-4">
+                  <p className="text-gray-300 leading-relaxed">
+                    Mild bruising or swelling around injection sites may occur but usually subsides within a few days.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Two treatments suggested one month apart for maximum performance with final results becoming visible gradually.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-3xl p-8"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
+                  <span className="text-2xl">✅</span>
+                  Post-Treatment Care
+                </h3>
+                <div className="space-y-4">
+                  <p className="text-gray-300 leading-relaxed">
+                    Avoid touching or rubbing the treated area for the first 24 hours.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Avoid strenuous exercise for 24 hours following treatment to ensure optimal healing.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
