@@ -637,7 +637,7 @@ export default function EightPointFacelift() {
               >
                 <Card className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-2xl">Results & Recovery</CardTitle>
+                    <CardTitle className="text-2xl">Results Timeline & Recovery</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
@@ -654,15 +654,57 @@ export default function EightPointFacelift() {
                         Minor bruising and swelling may occur but are temporary and fade within a few days.
                       </p>
                     </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <div className="mt-12">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">Key Benefits</CardTitle>
+                  </CardHeader>
+                  <CardContent>
                     <div className="space-y-2">
-                      <h4 className="font-semibold">Key Benefits:</h4>
-                      <ul className="space-y-1">
-                        {benefits.map((benefit, index) => (
-                          <li key={index} className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-primary" />
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
+                      <ul className="space-y-3">
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Immediate visible results</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Non-surgical approach</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Minimal downtime</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Natural-looking enhancement</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Long-lasting effects (12-18 months)</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Customized to your individual needs</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Restores facial volume and definition</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <span>Cost-effective alternative to surgery</span>
+                        </li>
                       </ul>
                     </div>
                   </CardContent>
