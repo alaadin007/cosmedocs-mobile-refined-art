@@ -240,7 +240,6 @@ export default function EightPointFacelift() {
                   Transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £800</p>
                   <p className="text-sm text-gray-300">Non-surgical facelift using dermal fillers at 8 strategic points</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -250,8 +249,15 @@ export default function EightPointFacelift() {
                   >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    Call: 0207 435 7521
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      pricingSection?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
