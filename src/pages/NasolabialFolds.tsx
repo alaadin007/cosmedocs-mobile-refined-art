@@ -395,6 +395,145 @@ const NasolabialFolds = () => {
         </section>
 
 
+        {/* Combination Treatment Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">Combination Treatments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Enhance your nasolabial fold treatment with complementary procedures for comprehensive facial rejuvenation. 
+                Our expert practitioners design personalized treatment plans to achieve natural, harmonious results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6 hover:bg-black/80 transition-colors border border-purple-500/20"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-purple-300">Cheek Enhancement</h3>
+                <p className="text-gray-300 mb-4">
+                  <AutoLinkedText>Cheek fillers</AutoLinkedText> combined with nasolabial fold treatment restore volume and lift the midface, 
+                  reducing the depth of smile lines naturally by addressing the underlying volume loss.
+                </p>
+                <Link to="/cheek-filler" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
+                  Learn more <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6 hover:bg-black/80 transition-colors border border-purple-500/20"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-purple-300">Marionette Lines</h3>
+                <p className="text-gray-300 mb-4">
+                  Treating both <AutoLinkedText>nasolabial folds and marionette lines</AutoLinkedText> creates a unified approach 
+                  to lower face rejuvenation, smoothing all vertical lines for a more youthful appearance.
+                </p>
+                <Link to="/marionette-lines" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
+                  Learn more <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6 hover:bg-black/80 transition-colors border border-purple-500/20"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-purple-300">Tear Trough Treatment</h3>
+                <p className="text-gray-300 mb-4">
+                  <AutoLinkedText>Tear trough fillers</AutoLinkedText> address under-eye hollowing while nasolabial fold treatment 
+                  focuses on smile lines, creating a comprehensive anti-aging approach for the entire midface area.
+                </p>
+                <Link to="/tear-trough-filler" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
+                  Learn more <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6 hover:bg-black/80 transition-colors border border-purple-500/20"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-purple-300">Lip Enhancement</h3>
+                <p className="text-gray-300 mb-4">
+                  <AutoLinkedText>Lip fillers</AutoLinkedText> can be combined with nasolabial fold treatment to create a balanced 
+                  lower face enhancement, improving proportions and creating natural harmony between all facial features.
+                </p>
+                <Link to="/lip-fillers" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
+                  Learn more <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6 hover:bg-black/80 transition-colors border border-purple-500/20"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-purple-300">Jawline Definition</h3>
+                <p className="text-gray-300 mb-4">
+                  <AutoLinkedText>Jawline fillers</AutoLinkedText> enhance facial structure while nasolabial fold treatment 
+                  smooths smile lines, creating a comprehensive approach to facial contouring and anti-aging.
+                </p>
+                <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
+                  Learn more <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6 hover:bg-black/80 transition-colors border border-purple-500/20"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-purple-300">Anti-Wrinkle Injections</h3>
+                <p className="text-gray-300 mb-4">
+                  Combining anti-wrinkle injections for dynamic lines with dermal fillers for static nasolabial folds 
+                  provides comprehensive facial rejuvenation addressing both muscle movement and volume loss.
+                </p>
+                <Link to="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 inline-flex items-center gap-2">
+                  Learn more <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Interested in a combination treatment plan? Our experts will assess your unique needs and design 
+                a personalized approach for optimal, natural-looking results.
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3">
+                Book Combination Consultation
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Nasolabial Filler Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
