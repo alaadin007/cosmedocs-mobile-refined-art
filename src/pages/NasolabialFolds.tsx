@@ -1,4 +1,7 @@
 import React from 'react';
+import smileLinesResult1 from '@/assets/smile-lines-before-after-1.png';
+import smileLinesResult2 from '@/assets/smile-lines-before-after-2.png';
+import smileLinesResult3 from '@/assets/smile-lines-before-after-3.png';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,17 +24,17 @@ const NasolabialFolds = () => {
   const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Reduce nasolabial folds (smile lines) with expert dermal filler treatments in London. Smooth nose-to-mouth lines for natural, youthful results. Book consultation today.", "/nasolabial-folds");
   const beforeAfterImages = [
     { 
-      src: "/src/assets/smile-lines-before-after-1.png", 
+      src: smileLinesResult1, 
       alt: "Nasolabial folds before and after dermal filler treatment case 1",
       caption: "Before & After: Smooth nasolabial folds with natural-looking results"
     },
     { 
-      src: "/src/assets/smile-lines-before-after-2.png", 
+      src: smileLinesResult2, 
       alt: "Nasolabial folds before and after dermal filler treatment case 2",
       caption: "Before & After: Expert filler technique for age-reversing transformation"
     },
     { 
-      src: "/src/assets/smile-lines-before-after-3.png", 
+      src: smileLinesResult3, 
       alt: "Smile line filler grading system showing treatment depth classification",
       caption: "Professional grading system: From mild to severe nasolabial fold correction"
     },
@@ -51,7 +54,7 @@ const NasolabialFolds = () => {
     {
       title: "Smile Lines Treatment Results",
       images: [{
-        src: "/src/assets/smile-lines-before-after-1.png",
+        src: smileLinesResult1,
         alt: "Nasolabial folds before and after dermal filler treatment case 1",
         caption: "Before & After: Smooth nasolabial folds with natural-looking results"
       }]
@@ -59,7 +62,7 @@ const NasolabialFolds = () => {
     {
       title: "Advanced Smile Lines Correction",
       images: [{
-        src: "/src/assets/smile-lines-before-after-2.png",
+        src: smileLinesResult2,
         alt: "Nasolabial folds before and after dermal filler treatment case 2",
         caption: "Before & After: Expert filler technique for age-reversing transformation"
       }]
@@ -67,7 +70,7 @@ const NasolabialFolds = () => {
     {
       title: "Nasolabial Fold Grading System",
       images: [{
-        src: "/src/assets/smile-lines-before-after-3.png",
+        src: smileLinesResult3,
         alt: "Smile line filler grading system showing treatment depth classification",
         caption: "Professional grading system: From mild to severe nasolabial fold correction"
       }]
