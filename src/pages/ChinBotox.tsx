@@ -490,66 +490,6 @@ const ChinBotox = () => {
                 </Card>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="mt-12"
-            >
-              <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Popular Combination Packages</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-purple-300">The Complete Lower Face</h4>
-                    <p className="text-gray-300">Chin Botox + DAO Botox + Jawline Filler</p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300 text-sm">Smooth chin texture</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300 text-sm">Lifted mouth corners</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300 text-sm">Defined jawline</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-purple-300">The Full Face Refresh</h4>
-                    <p className="text-gray-300">Chin Botox + Forehead + Frown + Crow's Feet</p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300 text-sm">Complete facial smoothing</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300 text-sm">Maximum value pricing</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300 text-sm">Single visit convenience</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="text-center mt-8">
-                  <Button 
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
-                  >
-                    Discuss Combination Options
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
