@@ -507,6 +507,384 @@ const ChinBotox = () => {
           </div>
         </section>
 
+        {/* What Causes a Gummy Smile Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">What Causes a Gummy Smile?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Understanding the main factors behind excessive gum display helps determine the most effective treatment approach 
+                for your individual needs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500/30 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Excess Gum Tissue</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      When the gums cover too much of the teeth, making teeth appear small compared to the gum tissue visible when smiling.
+                    </p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Excessive gingival display</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Altered gum-to-tooth ratio</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Gum overgrowth issues</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500/30 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Overactive Upper Lip Muscles</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Hyperactive levator muscles that lift the upper lip too high when smiling, exposing excessive gum tissue.
+                    </p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Levator labii superioris hyperactivity</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Excessive lip elevation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatable with Botox</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500/30 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Small or Short Teeth</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Naturally short teeth, worn down teeth, or incomplete tooth eruption that makes gums appear more prominent.
+                    </p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Altered tooth eruption</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Tooth wear or grinding</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Genetic tooth size variation</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* DAO vs Chin Botox Comparison */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">DAO Botox vs Chin Botox: Understanding the Difference</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Both treatments rejuvenate the lower face but target different muscles and concerns. Understanding the difference 
+                helps you choose the right treatment for your specific needs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center">DAO Botox</CardTitle>
+                    <p className="text-purple-300 text-center">Depressor Anguli Oris Treatment</p>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Muscle Treated:</h4>
+                      <p className="text-gray-300">DAO muscle that pulls mouth corners downward</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Purpose:</h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300 text-sm">Lifts corners of the mouth</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300 text-sm">Reduces sad or frowning appearance</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300 text-sm">Softens marionette lines</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-purple-900/20 rounded-lg p-4">
+                      <p className="text-purple-200 font-medium text-center">Result: More lifted, youthful mouth expression</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center">Chin Botox</CardTitle>
+                    <p className="text-purple-300 text-center">Mentalis Muscle Treatment</p>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Muscle Treated:</h4>
+                      <p className="text-gray-300">Mentalis muscle that causes chin dimpling</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Purpose:</h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300 text-sm">Smooths chin dimpling texture</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300 text-sm">Relaxes protruding chin</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300 text-sm">Improves lower face balance</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-purple-900/20 rounded-lg p-4">
+                      <p className="text-purple-200 font-medium text-center">Result: Smoother, more refined chin profile</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-12 text-center"
+            >
+              <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Combined Treatment Benefits</h3>
+                <p className="text-gray-300 mb-6">
+                  When DAO and chin Botox are performed together, they create comprehensive lower face rejuvenation 
+                  with natural, harmonious results that enhance your overall facial expression.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Lifted mouth corners + smooth chin</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Balanced lower facial proportions</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">More youthful, approachable expression</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Single appointment convenience</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Gummy Smile vs Smile Lines Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Can Botox for Gummy Smile Help with Smile Lines?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Understanding the difference between gummy smile treatment and smile line treatment helps you choose 
+                the right approach for your specific concerns.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-green-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Gummy Smile Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      <strong className="text-white">Target Area:</strong> Injected around the upper lip (levator labii superioris muscle)
+                    </p>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Purpose:</strong> Relaxes muscle to prevent upper lip from lifting too high and exposing excess gum
+                    </p>
+                    <div className="space-y-2">
+                      <h4 className="text-white font-semibold">Treats:</h4>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-green-500" size={16} />
+                        <span className="text-gray-300 text-sm">Excessive gum display when smiling</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-green-500" size={16} />
+                        <span className="text-gray-300 text-sm">Overactive upper lip elevation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-green-500" size={16} />
+                        <span className="text-gray-300 text-sm">Unbalanced smile proportions</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-orange-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Smile Lines (Nasolabial Folds)</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      <strong className="text-white">Target Area:</strong> Creases running from sides of nose to mouth corners
+                    </p>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Primary Treatment:</strong> Dermal fillers are more effective than Botox for these lines
+                    </p>
+                    <div className="space-y-2">
+                      <h4 className="text-white font-semibold">Caused by:</h4>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-orange-500" size={16} />
+                        <span className="text-gray-300 text-sm">Volume loss in cheeks</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-orange-500" size={16} />
+                        <span className="text-gray-300 text-sm">Skin laxity and aging</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-orange-500" size={16} />
+                        <span className="text-gray-300 text-sm">Repetitive facial movements</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <div className="bg-red-900/20 border-l-4 border-red-500 p-6 rounded-r-lg">
+                <h3 className="text-xl font-bold text-white mb-4">⚠️ Important Answer</h3>
+                <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                  <strong>Botox for gummy smile will NOT improve smile lines.</strong> These are completely different treatments 
+                  targeting different areas and concerns.
+                </p>
+                <div className="bg-black/30 rounded-lg p-4">
+                  <h4 className="text-purple-300 font-semibold mb-2">Combination Approach Often Recommended:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <span className="text-gray-300">Botox for gummy smile</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                      <span className="text-gray-300">Fillers for smile lines</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Chin Botox and Downturned Lips Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
