@@ -315,6 +315,64 @@ const GummySmileBotox = () => {
           </div>
         </section>
 
+        {/* Effectiveness and Causes Section */}
+        <section className="py-20">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Effectiveness of Botox for Gummy Teeth</h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  In a 2016 study conducted in a dermatology clinic, 99.6 per cent of the women saw a significant difference in their smiles after two weeks.
+                </p>
+                <div className="bg-purple-900/30 border-l-4 border-purple-500 p-6 rounded-r-lg">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="text-purple-300 text-4xl font-bold">99.6%</div>
+                    <div className="text-white font-semibold">Success Rate</div>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Patients experienced significant improvement in their smile aesthetics within just 2 weeks of treatment
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Common Causes Of A Gummy Smile</h2>
+                <p className="text-gray-300 mb-6">
+                  Among many causes behind your gummy smile, the most common ones are as follows:
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Extended or enlarged gums</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Hyperactive upper lip that elevates excessively when smiling</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Vertical Maxillary Axis or overgrowth of upper jaw</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Smaller teeth in comparison to gums due to genetic factors</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* How Botox Works Section */}
         <section className="py-20">
           <div className="page-container">
