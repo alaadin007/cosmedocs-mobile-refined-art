@@ -113,14 +113,6 @@ const GummySmileBotox = () => {
       <div className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('/lovable-uploads/13ac9c3a-f117-440d-a458-ac5bc69b4d64.png')`
-            }}
-          >
-            <div className="absolute inset-0 bg-black/70"></div>
-          </div>
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
