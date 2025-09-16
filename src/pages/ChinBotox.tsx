@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
-import { Check, Clock, Calendar, Activity, Syringe, CheckCircle } from "lucide-react";
+import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 
 const ChinBotox = () => {
@@ -56,7 +56,7 @@ const ChinBotox = () => {
     },
     {
       question: "Can chin botox be combined with other treatments?",
-      answer: "Yes, chin botox works excellently with other facial treatments like dermal fillers, jawline contouring, or other botox areas. Our doctors can create a comprehensive treatment plan tailored to your aesthetic goals."
+      answer: "Yes! Chin botox works excellently with other facial treatments like dermal fillers for comprehensive facial enhancement. Our doctors can create a personalized treatment plan combining multiple procedures for optimal results."
     }
   ];
 
@@ -71,13 +71,13 @@ const ChinBotox = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="chin botox London, DAO muscle botox, sad mouth corners, chin dimpling, mentalis muscle, Harley Street, cosmetic treatment, facial enhancement" />
+        <meta name="keywords" content="chin botox London, DAO muscle treatment, chin dimpling, downturned mouth corners, mentalis muscle botox, cosmetic botox, Harley Street clinic, chin smoothing" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert chin botox and DAO muscle treatments in London",
+            "description": "Expert chin botox treatments in London",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
@@ -96,7 +96,7 @@ const ChinBotox = () => {
       <div className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -105,45 +105,23 @@ const ChinBotox = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Chin Botox
-                  <span className="block text-purple-300">DAO Muscle Treatment</span>
-                  <span className="block text-sm mt-4">Professional treatment for natural-looking results</span>
+                  <span className="text-purple-300">Chin Botox London</span>
+                  <span className="block text-sm mt-4">Invisible art - smooth chin enhancement that speaks without words</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Expert Practitioners</span>
-                  <br />
-                  Transform sad mouth corners and chin dimpling with invisible art philosophy
-                </p>
-                
-                {/* Animated Tagline */}
-                <motion.p 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="text-lg md:text-xl text-gray-400 mb-8 relative"
-                >
-                  <span className="relative inline-block">
-                    <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-pulse">
-                      art • science • bit of magic
-                    </span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 blur-sm rounded-lg animate-pulse opacity-50"></span>
-                  </span>
-                </motion.p>
-                
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">From £175</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert DAO Muscle Treatment</p>
                   <p className="text-sm text-gray-300">15-20 minutes • Results last 4-6 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
                     onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                   >
                     Book Consultation
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
                     onClick={() => {
                       const pricingSection = document.getElementById('pricing-section');
                       if (pricingSection) {
@@ -289,158 +267,8 @@ const ChinBotox = () => {
           </div>
         </section>
 
-        {/* Before & After Section */}
-        <section className="py-16 bg-gray-900">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-glow">Chin Botox Results</h2>
-              <p className="text-xl text-gray-300">Real transformation from our Harley Street clinic</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="bg-gray-800 rounded-2xl overflow-hidden">
-                <img 
-                  src="/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png"
-                  alt="Chin botox before and after treatment"
-                  className="w-full h-auto"
-                />
-                <div className="p-6">
-                  <p className="text-gray-300 text-center leading-relaxed">
-                    <strong className="text-primary-glow">Chin Botox Treatment:</strong> Smooth, refined chin texture eliminating dimpling and cobblestone appearance. Natural results achieved with precision DAO muscle botox - transformation that speaks without saying a word.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Main Content */}
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              <div className="lg:col-span-2">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="prose prose-lg prose-invert max-w-none"
-                >
-                  <h2 className="text-3xl font-bold mb-6 text-primary-glow">Understanding Chin Botox and DAO Muscle Treatment</h2>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    Chin botox represents a sophisticated approach to facial aesthetics, specifically targeting the complex interplay of muscles that affect your lower facial expression. At Cosmedocs, our expert cosmetic doctors understand that the chin and mouth area significantly impact your overall facial harmony and emotional expression.
-                  </p>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    The treatment primarily focuses on two key muscle groups: the mentalis muscle in the chin and the DAO (Depressor Anguli Oris) muscle that controls mouth corner positioning. When these muscles become overactive, they create unwanted aesthetic concerns including persistent chin dimpling, downturned mouth corners, and an overall sad or stern facial expression that doesn't reflect your true emotions.
-                  </p>
-
-                  <Accordion type="single" collapsible className="space-y-4 mt-8">
-                    <AccordionItem value="dao-science" className="bg-gray-800 border-gray-700 rounded-lg px-6">
-                      <AccordionTrigger className="text-white hover:text-primary-glow text-left">
-                        <h3 className="text-xl font-bold text-primary-glow">The Science Behind DAO Muscle Treatment</h3>
-                      </AccordionTrigger>
-                      <AccordionContent className="text-gray-300 leading-relaxed space-y-4">
-                        <p>
-                          The DAO muscle, short for Depressor Anguli Oris, is a triangular muscle that originates from the mandible and inserts into the corner of the mouth. Its primary function is to depress the angle of the mouth, creating facial expressions associated with sadness, disappointment, or sternness. While this muscle serves important emotional expression purposes, chronic overactivity can result in a permanently downturned appearance, creating what's commonly known as "sad mouth corners."
-                        </p>
-                        <p>
-                          Our chin botox treatment involves precise injections of botulinum toxin into strategic points along the DAO muscle and mentalis muscle. This carefully calibrated approach temporarily relaxes these muscles, allowing the opposing elevator muscles to create a subtle lifting effect on the mouth corners. The result is a more neutral, pleasant resting facial expression that better reflects your natural personality.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem value="technique" className="bg-gray-800 border-gray-700 rounded-lg px-6">
-                      <AccordionTrigger className="text-white hover:text-primary-glow text-left">
-                        <h3 className="text-xl font-bold text-primary-glow">Advanced Technique and Natural Results</h3>
-                      </AccordionTrigger>
-                      <AccordionContent className="text-gray-300 leading-relaxed space-y-4">
-                        <p>
-                          At Cosmedocs, we employ advanced injection techniques developed through years of experience in facial anatomy and aesthetic medicine. Our doctors understand that successful chin botox requires not just technical skill, but an artistic eye for facial proportions and muscle dynamics. Each treatment is customized based on your unique facial structure, muscle strength, and aesthetic goals.
-                        </p>
-                        <p>
-                          The treatment process begins with a comprehensive consultation where we analyze your facial expressions, both at rest and during movement. This detailed assessment allows us to identify the specific muscles contributing to your concerns and develop a targeted treatment plan. We consider factors such as your natural facial asymmetries, speaking patterns, and desired level of correction to ensure optimal results.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem value="benefits" className="bg-gray-800 border-gray-700 rounded-lg px-6">
-                      <AccordionTrigger className="text-white hover:text-primary-glow text-left">
-                        <h3 className="text-xl font-bold text-primary-glow">Benefits Beyond Aesthetics</h3>
-                      </AccordionTrigger>
-                      <AccordionContent className="text-gray-300 leading-relaxed space-y-4">
-                        <p>
-                          While the aesthetic improvements from chin botox are immediately apparent, many clients discover additional benefits that extend beyond appearance. Reducing chronic muscle tension in the lower face can alleviate jaw strain and contribute to overall facial comfort. Additionally, the psychological impact of achieving a more pleasant resting expression often enhances confidence and social interactions.
-                        </p>
-                        <p>
-                          Our approach to chin botox embodies Cosmedocs' philosophy of "invisible art" – creating subtle, natural enhancements that improve your appearance without obvious artificial intervention. The goal is not to eliminate all facial expression, but rather to optimize your natural features for a more balanced, youthful, and approachable appearance that truly represents who you are.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                </motion.div>
-              </div>
-
-              <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-gray-800 border-gray-700 sticky top-6">
-                    <CardHeader>
-                      <CardTitle className="text-primary-glow">Treatment Information</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4 text-gray-300">
-                      <div>
-                        <strong className="text-white">Duration:</strong> 15-20 minutes
-                      </div>
-                      <div>
-                        <strong className="text-white">Results visible:</strong> 3-5 days
-                      </div>
-                      <div>
-                        <strong className="text-white">Duration of results:</strong> 3-4 months
-                      </div>
-                      <div>
-                        <strong className="text-white">Pain level:</strong> Minimal discomfort
-                      </div>
-                      <div>
-                        <strong className="text-white">Downtime:</strong> None required
-                      </div>
-                      <div>
-                        <strong className="text-white">Price from:</strong> £175 (standalone) or +£50 (with other areas)
-                      </div>
-                      <Button 
-                        className="w-full mt-4 bg-primary hover:bg-primary-glow"
-                        onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                      >
-                        Book Consultation
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
         {/* Related Chin Treatments Section */}
-        <section className="py-20 bg-gray-900/50">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -449,7 +277,7 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-glow">Related Chin Treatments</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Related Chin Treatments</h2>
               <p className="text-xl text-gray-300">Complete your chin transformation with our complementary treatments</p>
             </motion.div>
 
@@ -458,48 +286,133 @@ const ChinBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
             >
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4 text-primary-glow">V-Line Chin Contouring</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      Achieve the perfect V-shaped jawline with our advanced contouring treatment. This complementary procedure works beautifully alongside chin botox to create a refined, elegant chin profile that enhances your natural beauty.
-                    </p>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center text-sm text-gray-400">
-                        <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                        Enhanced jawline definition
-                      </div>
-                      <div className="flex items-center text-sm text-gray-400">
-                        <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                        Natural, elegant contouring
-                      </div>
-                      <div className="flex items-center text-sm text-gray-400">
-                        <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                        Complements chin botox treatment
-                      </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white">V-Line Chin Contouring</h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Enhance your chin botox results with our signature V-Line treatment. Using advanced dermal fillers, 
+                    we create defined jawline contours that complement the smooth chin texture achieved with botox.
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      Enhanced jawline definition
                     </div>
-                    <Button 
-                      className="bg-primary hover:bg-primary-glow rounded-full px-6 py-3"
-                      onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                    >
-                      Learn More About V-Line
-                    </Button>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      Natural, elegant contouring
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      Complements chin botox treatment
+                    </div>
                   </div>
-                  
-                  <div className="relative">
-                    <img 
-                      src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
-                      alt="V-Line chin contouring before and after results"
-                      className="w-full h-auto rounded-lg shadow-xl"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                  </div>
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
+                    Learn More About V-Line
+                  </Button>
+                </div>
+                
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
+                    alt="V-Line chin contouring before and after results"
+                    className="w-full h-auto rounded-lg shadow-xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Doctors</h3>
+                <p className="text-gray-300">GMC-registered cosmetic doctors</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">15+ years in cosmetic medicine</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Safety First</h3>
+                <p className="text-gray-300">Premium products and protocols</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -643,7 +556,7 @@ const ChinBotox = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -652,34 +565,26 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-glow">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300">Everything you need to know about chin botox treatment</p>
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about chin botox treatments at our London clinic.
+              </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
+            <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem 
-                    key={index} 
-                    value={`item-${index}`}
-                    className="bg-gray-800 border-gray-700 rounded-lg px-6"
-                  >
-                    <AccordionTrigger className="text-white hover:text-primary-glow text-left">
-                      {faq.question}
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-300 leading-relaxed">
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
-            </motion.div>
+            </div>
           </div>
         </section>
 
