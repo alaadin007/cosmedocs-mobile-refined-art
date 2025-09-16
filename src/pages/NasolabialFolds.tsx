@@ -29,7 +29,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Eye } from 'lucide-react';
 const NasolabialFolds = () => {
-  const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Reduce nasolabial folds (smile lines) with expert dermal filler treatments in London. Smooth nose-to-mouth lines for natural, youthful results. Book consultation today.", "/nasolabial-folds");
+  const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Expert nasolabial fold filler & dermal fillers for smile lines in London. Before & after results. Natural face filler treatments.", "/nasolabial-folds");
   const beforeAfterImages = [
     { 
       src: smileLinesResult1, 
@@ -138,7 +138,7 @@ const NasolabialFolds = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="nasolabial folds filler London, smile lines treatment, laugh lines, dermal fillers, facial rejuvenation, Harley Street clinic" />
+        <meta name="keywords" content="nasolabial fold filler, nasolabial fillers, smile lines filler before and after, face filler before and after, dermal fillers before and after, fillers for nasolabial folds, nasolabial lines filler, botox smile lines before after, dermal filler nasolabial folds, facial filler, hyaluronic acid fillers for face, lower face filler, skin fillers before and after, nasolabial fillers before after" />
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
@@ -309,8 +309,7 @@ const NasolabialFolds = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Before and After Nasolabial Folds Treatment in London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore authentic before and after nasolabial folds filler results from our London clinic. 
-                Our expert dermal filler treatments smooth smile lines for natural, age-reversing transformation.
+                Explore authentic face filler before and after results from our London clinic showcasing smile lines filler before and after transformations. Our dermal fillers before and after gallery demonstrates how fillers for nasolabial folds create natural, age-reversing results. See real nasolabial fillers before after cases and lower face filler improvements.
               </p>
             </motion.div>
 
@@ -370,10 +369,10 @@ const NasolabialFolds = () => {
               }}>
                 <h2 className="text-4xl font-bold mb-6">What are Nasolabial Folds (Smile Line/Laugh Lines)?</h2>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  Nasolabial folds, commonly known as smile lines or laugh lines, are the natural creases that run from the sides of your nose down to the corners of your mouth. While these lines are normal, they can become more pronounced with age.
+                  Nasolabial folds, commonly known as smile lines or laugh lines, are the natural creases that run from the sides of your nose down to the corners of your mouth. These facial filler areas become more pronounced with age due to volume loss and decreased skin elasticity. Our nasolabial fold filler treatments use premium hyaluronic acid injections to restore lost volume and smooth these lines effectively.
                 </p>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                  <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> uses premium hyaluronic acid to restore volume and smooth these lines, creating a natural transition that maintains your ability to express emotions while reducing the appearance of aging.
+                  <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> provides dramatic smile line filler before and after results. We use advanced facial filler techniques with skin fillers before and after tracking to ensure optimal nasolabial fillers before after outcomes. The dermal filler nasolabial folds procedure creates natural transitions while maintaining your ability to express emotions.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                   <div className="flex flex-col items-center space-y-2">
@@ -874,11 +873,210 @@ const NasolabialFolds = () => {
           </div>
         </section>
 
+        {/* Benefits Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">Benefits of Nasolabial Fold Fillers</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Our nasolabial fold filler treatments offer numerous advantages for facial rejuvenation and anti-aging
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-xl p-6"
+              >
+                <CheckCircle className="text-green-400 mb-4" size={24} />
+                <h3 className="text-xl font-semibold mb-3 text-white">Immediate Results</h3>
+                <p className="text-gray-300">
+                  See instant improvement in your smile lines filler before and after appearance with immediate visible results from our face filler treatments.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-xl p-6"
+              >
+                <CheckCircle className="text-green-400 mb-4" size={24} />
+                <h3 className="text-xl font-semibold mb-3 text-white">Natural Enhancement</h3>
+                <p className="text-gray-300">
+                  Our nasolabial fillers provide natural-looking results that enhance your features without appearing overdone or artificial.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-xl p-6"
+              >
+                <CheckCircle className="text-green-400 mb-4" size={24} />
+                <h3 className="text-xl font-semibold mb-3 text-white">Long-lasting Results</h3>
+                <p className="text-gray-300">
+                  Enjoy 12-18 months of smooth, youthful-looking skin with our premium hyaluronic acid fillers for face rejuvenation.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-xl p-6"
+              >
+                <CheckCircle className="text-green-400 mb-4" size={24} />
+                <h3 className="text-xl font-semibold mb-3 text-white">Minimal Downtime</h3>
+                <p className="text-gray-300">
+                  Return to normal activities immediately with minimal recovery time from our lower face filler treatments.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-xl p-6"
+              >
+                <CheckCircle className="text-green-400 mb-4" size={24} />
+                <h3 className="text-xl font-semibold mb-3 text-white">Reversible Treatment</h3>
+                <p className="text-gray-300">
+                  Hyaluronic acid fillers can be dissolved if needed, providing peace of mind with your filler face enhancement.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-xl p-6"
+              >
+                <CheckCircle className="text-green-400 mb-4" size={24} />
+                <h3 className="text-xl font-semibold mb-3 text-white">Expert Precision</h3>
+                <p className="text-gray-300">
+                  Our skilled practitioners ensure optimal placement for beautiful dermal fillers before and after results every time.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Aftercare Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">Aftercare for Nasolabial Fold Fillers</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Follow these essential aftercare guidelines to ensure optimal healing and the best nasolabial fillers before after results
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold mb-4 text-purple-300">First 24 Hours</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Avoid touching or massaging the treated area
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Apply ice for 10-15 minutes to reduce swelling
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Sleep with head elevated to minimize swelling
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Avoid strenuous exercise or activities
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold mb-4 text-purple-300">First Week</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Avoid excessive sun exposure and heat
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Use gentle skincare products only
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Avoid alcohol for 24-48 hours
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                    Stay hydrated and maintain healthy lifestyle
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-12 text-center"
+            >
+              <div className="bg-black rounded-xl p-8 max-w-2xl mx-auto">
+                <h3 className="text-xl font-semibold mb-4 text-purple-300">Long-term Care</h3>
+                <p className="text-gray-300 mb-6">
+                  To maintain your beautiful fillers for nasolabial folds results, schedule follow-up appointments as recommended. 
+                  Use quality skincare with SPF daily and consider complementary treatments for optimal facial rejuvenation.
+                </p>
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3">
+                  Schedule Follow-up
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Hidden SEO content */}
         <div className="sr-only">
-          <h3>Expert Nasolabial Folds Treatment in London</h3>
+          <h3>Expert Nasolabial Fold Filler Treatment in London</h3>
           <p>
-            Cosmedocs offers advanced nasolabial fold dermal filler treatments at our prestigious Harley Street clinic in London. Our experienced cosmetic doctors specialize in smoothing smile lines and laugh lines using premium hyaluronic acid fillers for natural, long-lasting results. Nasolabial folds develop naturally with age due to volume loss, decreased collagen production, and repetitive facial expressions. These lines can make you appear older or more tired than you feel. Our expert treatment approach involves strategic placement of dermal fillers along the nasolabial folds to restore volume and create smooth transitions from the nose to mouth area. The procedure typically takes 30-45 minutes with immediate visible improvements and results lasting 12-18 months. We use ultra-fine needles and premium fillers containing lidocaine for maximum comfort during treatment. Most patients experience minimal discomfort and return to normal activities immediately. Some temporary swelling or bruising may occur but resolves within 2-7 days. Our consultation includes comprehensive facial assessment to determine optimal treatment approach for your individual needs. We pride ourselves on achieving natural-looking results that enhance your features while maintaining your ability to express emotions naturally. Book your consultation today to discover how nasolabial fold fillers can restore your youthful confidence.
+            Cosmedocs offers advanced nasolabial fold filler and dermal filler nasolabial folds treatments at our prestigious Harley Street clinic in London. Our experienced cosmetic doctors specialize in smoothing smile lines filler before and after results using premium hyaluronic acid fillers for face rejuvenation. See dramatic face filler before and after transformations with our expert nasolabial fillers before after gallery. We provide comprehensive fillers for nasolabial folds treatments including botox smile lines before after options and lower face filler enhancements. Our full face fillers before and after results showcase natural-looking improvements with skin fillers before and after documentation. Celebrity nasolabial fold filler techniques ensure optimal nasolabial lines filler placement. We address concerns about too much filler in nasolabial folds and nasolabial fold filler gone wrong cases through expert consultation. Our hyaluronic acid injections face before and after gallery demonstrates safe, effective treatments. Learn about nasolabial fold filler cost and botox laugh lines before and after options. We also treat filler for nasolabial folds and marionette lines comprehensively. Discover how to get rid of nasolabial folds without fillers through our alternative treatments. Our nasolabial fold fillers before and after results show natural enhancement with cheek filler nasolabial combination treatments. Book consultation for filler in nasolabial folds and explore our dermal filler face lift options.
           </p>
         </div>
       </div>
