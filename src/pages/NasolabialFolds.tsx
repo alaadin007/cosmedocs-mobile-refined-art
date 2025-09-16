@@ -460,6 +460,38 @@ const NasolabialFolds = () => {
                       <p className="text-gray-300 text-sm">Can be dissolved if needed</p>
                     </div>
                   </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Boost Confidence</h4>
+                      <p className="text-gray-300 text-sm">Enhanced self-esteem with youthful appearance</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Pain-Free Treatment</h4>
+                      <p className="text-gray-300 text-sm">Minimal discomfort with topical anaesthetic</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Cost-Effective</h4>
+                      <p className="text-gray-300 text-sm">More affordable than surgical alternatives</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Expert Application</h4>
+                      <p className="text-gray-300 text-sm">Precise placement by qualified practitioners</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
