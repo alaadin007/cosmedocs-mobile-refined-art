@@ -5,6 +5,11 @@ import smileLinesResult3 from '@/assets/smile-lines-before-after-3.png';
 import smileLineSideView from '@/assets/smile-line-fillers-side-view.png';
 import smileLineFrontView from '@/assets/smile-line-filler-front-view.png';
 import smileLinesUnderEyesCheeks from '@/assets/smile-line-fillers-under-eyes-cheeks.jpg';
+import nasolabialGradingSystem from '@/assets/gallery/nasolabial-fold-grading-system.png';
+import nasolabialBefore1 from '@/assets/gallery/nasolabial-filler-before-1.jpg';
+import nasolabialAfter1 from '@/assets/gallery/nasolabial-filler-after-1.jpg';
+import nasolabialBefore2 from '@/assets/gallery/nasolabial-filler-before-2.jpg';
+import nasolabialAfter2 from '@/assets/gallery/nasolabial-filler-after-2.jpg';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -41,6 +46,31 @@ const NasolabialFolds = () => {
       alt: "Smile line filler grading system showing treatment depth classification",
       caption: "Professional grading system: From mild to severe nasolabial fold correction"
     },
+    {
+      src: nasolabialGradingSystem,
+      alt: "Nasolabial fold grading system from 0 to 4 showing severity levels",
+      caption: "Clinical grading system: Assessing nasolabial fold depth for optimal treatment planning"
+    },
+    {
+      src: nasolabialBefore1,
+      alt: "Nasolabial folds before dermal filler treatment - case 1",
+      caption: "Before: Pronounced smile lines affecting facial harmony"
+    },
+    {
+      src: nasolabialAfter1,
+      alt: "Nasolabial folds after dermal filler treatment - case 1",
+      caption: "After: Smooth, natural-looking smile line correction"
+    },
+    {
+      src: nasolabialBefore2,
+      alt: "Nasolabial folds before dermal filler treatment - case 2",
+      caption: "Before: Deep laugh lines creating aged appearance"
+    },
+    {
+      src: nasolabialAfter2,
+      alt: "Nasolabial folds after dermal filler treatment - case 2",
+      caption: "After: Rejuvenated appearance with preserved natural expressions"
+    },
     { 
       src: "/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png", 
       alt: "Nasolabial folds dermal filler treatment results showing smooth skin",
@@ -54,7 +84,7 @@ const NasolabialFolds = () => {
     {
       src: smileLinesUnderEyesCheeks,
       alt: "Smile line fillers under eyes and cheeks comprehensive treatment results",
-      caption: "Smile line fillers under eyes and cheeks"
+      caption: "Comprehensive facial rejuvenation: Smile lines, under eyes and cheeks"
     }
   ];
 
