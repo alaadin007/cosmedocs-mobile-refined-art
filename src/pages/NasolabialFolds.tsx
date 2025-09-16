@@ -76,11 +76,6 @@ const NasolabialFolds = () => {
       alt: "Nasolabial folds dermal filler treatment results showing smooth skin",
       caption: "Expert dermal filler technique for natural rejuvenation"
     },
-    { 
-      src: "/lovable-uploads/bd7c2222-e959-4253-af8d-c3a54757661d.png", 
-      alt: "Professional nasolabial folds treatment demonstration",
-      caption: "Advanced injection techniques for optimal smile line correction"
-    },
     {
       src: smileLinesUnderEyesCheeks,
       alt: "Smile line fillers under eyes and cheeks comprehensive treatment results",
