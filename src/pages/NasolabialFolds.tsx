@@ -374,20 +374,6 @@ const NasolabialFolds = () => {
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                   <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> provides dramatic smile line filler before and after results. We use advanced facial filler techniques with skin fillers before and after tracking to ensure optimal nasolabial fillers before after outcomes. The dermal filler nasolabial folds procedure creates natural transitions while maintaining your ability to express emotions.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                  <div className="flex flex-col items-center space-y-2">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <p className="text-gray-300 text-center">Instant visible improvement</p>
-                  </div>
-                  <div className="flex flex-col items-center space-y-2">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <p className="text-gray-300 text-center">Maintains natural expressions</p>
-                  </div>
-                  <div className="flex flex-col items-center space-y-2">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <p className="text-gray-300 text-center">Long-lasting natural results</p>
-                  </div>
-                </div>
               </motion.div>
             </div>
           </div>
