@@ -290,55 +290,37 @@ const ChinBotox = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-6"
               >
-                <h3 className="text-2xl font-bold text-white">Understanding the Mentalis Muscle</h3>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  The mentalis muscle is located in your chin and contracts when you speak, smile, or show emotion. 
-                  When overactive, it creates an uneven, dimpled, or "pebble" texture that can age your appearance 
-                  and detract from your natural beauty.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="text-white font-semibold">Dimpled Chin Treatment</h4>
-                      <p className="text-gray-300 text-sm">Smooths the irregular texture for elegant refinement</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="text-white font-semibold">Pebble Chin Correction</h4>
-                      <p className="text-gray-300 text-sm">Eliminates cobblestone appearance for smooth contours</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="text-white font-semibold">Muscle Relaxation</h4>
-                      <p className="text-gray-300 text-sm">Reduces overactive contractions for balanced proportions</p>
-                    </div>
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center">Understanding the Mentalis Muscle</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      The mentalis muscle is located in your chin and contracts when you speak, smile, or show emotion. 
+                      When overactive, it creates an uneven, dimpled, or "pebble" texture that can age your appearance 
+                      and detract from your natural beauty.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 text-center">
+                  <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas</h4>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="text-purple-300 font-medium">Mentalis Muscle</div>
+                    <div className="text-purple-300 font-medium">Chin Dimples</div>
+                    <div className="text-purple-300 font-medium">Pebble Texture</div>
+                    <div className="text-purple-300 font-medium">Muscle Overactivity</div>
                   </div>
                 </div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="relative"
-                >
-                  <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 text-center">
-                    <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas</h4>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div className="text-purple-300 font-medium">Mentalis Muscle</div>
-                      <div className="text-purple-300 font-medium">Chin Dimples</div>
-                      <div className="text-purple-300 font-medium">Pebble Texture</div>
-                      <div className="text-purple-300 font-medium">Muscle Overactivity</div>
-                    </div>
-                  </div>
-                </motion.div>
               </motion.div>
             </div>
           </div>
@@ -852,7 +834,6 @@ const ChinBotox = () => {
               </motion.div>
             </div>
           </div>
-        </section>
         </section>
 
         {/* Why Choose Cosmedocs */}
