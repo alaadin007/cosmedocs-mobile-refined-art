@@ -543,12 +543,9 @@ const NasolabialFolds = () => {
                   </div>
 
                   <div className="pt-4 border-t border-gray-700">
-                    <p className="text-gray-300 text-sm mb-4">
+                    <p className="text-gray-300 text-sm">
                       Follow-up appointments help maintain optimal results
                     </p>
-                    <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-2 text-sm w-full">
-                      Schedule Follow-up
-                    </Button>
                   </div>
                 </div>
               </motion.div>
@@ -685,13 +682,10 @@ const NasolabialFolds = () => {
               viewport={{ once: true }}
               className="text-center mt-12"
             >
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Interested in a combination treatment plan? Our experts will assess your unique needs and design 
                 a personalized approach for optimal, natural-looking results.
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3">
-                Book Combination Consultation
-              </Button>
             </motion.div>
           </div>
         </section>
