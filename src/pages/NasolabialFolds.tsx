@@ -52,16 +52,6 @@ const NasolabialFolds = () => {
       caption: "Advanced injection techniques for optimal smile line correction"
     },
     {
-      src: smileLineSideView,
-      alt: "Smile line fillers side view before and after results from Cosmedocs",
-      caption: "Smile line fillers (side view)"
-    },
-    {
-      src: smileLineFrontView,
-      alt: "Smile line filler front view before and after transformation from Cosmedocs",
-      caption: "Smile line filler (front view)"
-    },
-    {
       src: smileLinesUnderEyesCheeks,
       alt: "Smile line fillers under eyes and cheeks comprehensive treatment results",
       caption: "Smile line fillers under eyes and cheeks"
