@@ -424,32 +424,8 @@ const NasolabialFolds = () => {
                   <div className="flex items-start gap-3">
                     <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
                     <div>
-                      <h4 className="font-semibold text-white mb-1">Immediate Results</h4>
-                      <p className="text-gray-300 text-sm">Instant visible improvement after treatment</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
-                    <div>
                       <h4 className="font-semibold text-white mb-1">Natural Enhancement</h4>
                       <p className="text-gray-300 text-sm">Subtle, authentic-looking results</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Long-lasting</h4>
-                      <p className="text-gray-300 text-sm">12-18 months duration with premium fillers</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
-                    <div>
-                      <h4 className="font-semibold text-white mb-1">Minimal Downtime</h4>
-                      <p className="text-gray-300 text-sm">Return to activities immediately</p>
                     </div>
                   </div>
 
