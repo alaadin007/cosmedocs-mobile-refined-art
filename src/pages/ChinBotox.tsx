@@ -493,7 +493,7 @@ const ChinBotox = () => {
           </div>
         </section>
 
-        {/* Who is a Good Candidate */}
+        {/* Aftercare & Recovery Guide */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -503,9 +503,10 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Who is a Good Candidate for Chin Botox?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Chin Botox Aftercare & Recovery</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Chin botox is ideal for those seeking to address specific chin concerns with minimal downtime and natural results.
+                Proper aftercare ensures optimal results and minimizes any potential side effects. Follow our 
+                comprehensive guide for the best chin botox experience and longest-lasting results.
               </p>
             </motion.div>
 
@@ -518,29 +519,37 @@ const ChinBotox = () => {
               >
                 <Card className="bg-black/50 border-green-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl text-center text-green-400">Ideal Candidates</CardTitle>
+                    <CardTitle className="text-white text-xl text-center text-green-400">Immediate Aftercare (First 24 Hours)</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="text-green-400" size={20} />
-                        <span className="text-gray-300">Chin dimpling when speaking or smiling</span>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-green-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">Stay Upright</p>
+                          <p className="text-sm text-gray-300">Remain upright for 4 hours post-treatment to prevent migration</p>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="text-green-400" size={20} />
-                        <span className="text-gray-300">Pebble or cobblestone chin texture</span>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-green-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">Gentle Ice Application</p>
+                          <p className="text-sm text-gray-300">Apply ice wrapped in cloth for 10 minutes if swelling occurs</p>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="text-green-400" size={20} />
-                        <span className="text-gray-300">Overactive mentalis muscle</span>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-green-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">Avoid Touching</p>
+                          <p className="text-sm text-gray-300">Don't massage or touch the treated area for 24 hours</p>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="text-green-400" size={20} />
-                        <span className="text-gray-300">Desire for subtle enhancement</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="text-green-400" size={20} />
-                        <span className="text-gray-300">Realistic expectations</span>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-green-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">Normal Activities</p>
+                          <p className="text-sm text-gray-300">Return to work and light activities immediately</p>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -553,47 +562,84 @@ const ChinBotox = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black/50 border-red-500/30 h-full">
+                <Card className="bg-black/50 border-orange-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl text-center text-red-400">Not Suitable For</CardTitle>
+                    <CardTitle className="text-white text-xl text-center text-orange-400">First Week Guidelines</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-red-400"></div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-orange-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">Avoid Intense Exercise</p>
+                          <p className="text-sm text-gray-300">Skip heavy workouts for 24-48 hours to prevent swelling</p>
                         </div>
-                        <span className="text-gray-300">Pregnancy or breastfeeding</span>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-red-400"></div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-orange-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">No Facial Treatments</p>
+                          <p className="text-sm text-gray-300">Avoid facials, microdermabrasion, or laser treatments</p>
                         </div>
-                        <span className="text-gray-300">Neuromuscular disorders</span>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-red-400"></div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-orange-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">Gentle Skincare</p>
+                          <p className="text-sm text-gray-300">Use mild cleansers and avoid harsh exfoliants</p>
                         </div>
-                        <span className="text-gray-300">Active skin infections in treatment area</span>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-red-400"></div>
+                      <div className="flex items-start space-x-3">
+                        <Check className="text-orange-400 mt-1" size={16} />
+                        <div>
+                          <p className="font-semibold text-white">Monitor Progress</p>
+                          <p className="text-sm text-gray-300">Results begin appearing within 3-5 days</p>
                         </div>
-                        <span className="text-gray-300">Allergies to botulinum toxin</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-red-400"></div>
-                        </div>
-                        <span className="text-gray-300">Unrealistic expectations</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Recovery Timeline & Expected Results</h3>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">Day 1-2</div>
+                    <p className="text-gray-300 text-sm">Minimal swelling, normal speaking</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">Day 3-5</div>
+                    <p className="text-gray-300 text-sm">Initial results becoming visible</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">Week 2</div>
+                    <p className="text-gray-300 text-sm">Full effects achieved</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">3-4 Months</div>
+                    <p className="text-gray-300 text-sm">Results gradually fade</p>
+                  </div>
+                </div>
+                
+                <div className="text-center mt-8">
+                  <Button 
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+                  >
+                    Book Your Treatment
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
