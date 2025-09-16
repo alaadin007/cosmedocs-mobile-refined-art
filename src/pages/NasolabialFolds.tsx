@@ -2,6 +2,9 @@ import React from 'react';
 import smileLinesResult1 from '@/assets/smile-lines-before-after-1.png';
 import smileLinesResult2 from '@/assets/smile-lines-before-after-2.png';
 import smileLinesResult3 from '@/assets/smile-lines-before-after-3.png';
+import smileLineSideView from '@/assets/smile-line-fillers-side-view.png';
+import smileLineFrontView from '@/assets/smile-line-filler-front-view.png';
+import smileLinesUnderEyesCheeks from '@/assets/smile-line-fillers-under-eyes-cheeks.jpg';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -61,6 +64,21 @@ const NasolabialFolds = () => {
     {
       src: "/lovable-uploads/a4df5f90-dda5-48a2-9bd2-19728aa1a275.png",
       alt: "Smile line fillers under eyes and cheeks enhancement",
+      caption: "Smile line fillers under eyes and cheeks"
+    },
+    {
+      src: smileLineSideView,
+      alt: "Smile line fillers side view before and after results from Cosmedocs",
+      caption: "Smile line fillers (side view)"
+    },
+    {
+      src: smileLineFrontView,
+      alt: "Smile line filler front view before and after transformation from Cosmedocs",
+      caption: "Smile line filler (front view)"
+    },
+    {
+      src: smileLinesUnderEyesCheeks,
+      alt: "Smile line fillers under eyes and cheeks comprehensive treatment results",
       caption: "Smile line fillers under eyes and cheeks"
     }
   ];
