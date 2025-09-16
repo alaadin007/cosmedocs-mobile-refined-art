@@ -4,6 +4,13 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import AutoLinkedText from '@/components/AutoLinkedText';
 import PopularTreatments from '@/components/PopularTreatments';
@@ -12,6 +19,34 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Eye } from 'lucide-react';
 const NasolabialFolds = () => {
   const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Reduce nasolabial folds (smile lines) with expert dermal filler treatments in London. Smooth nose-to-mouth lines for natural, youthful results. Book consultation today.", "/nasolabial-folds");
+  const beforeAfterImages = [
+    { 
+      src: "/src/assets/smile-lines-before-after-1.png", 
+      alt: "Nasolabial folds before and after dermal filler treatment case 1",
+      caption: "Before & After: Smooth nasolabial folds with natural-looking results"
+    },
+    { 
+      src: "/src/assets/smile-lines-before-after-2.png", 
+      alt: "Nasolabial folds before and after dermal filler treatment case 2",
+      caption: "Before & After: Expert filler technique for age-reversing transformation"
+    },
+    { 
+      src: "/src/assets/smile-lines-before-after-3.png", 
+      alt: "Smile line filler grading system showing treatment depth classification",
+      caption: "Professional grading system: From mild to severe nasolabial fold correction"
+    },
+    { 
+      src: "/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png", 
+      alt: "Nasolabial folds dermal filler treatment results showing smooth skin",
+      caption: "Expert dermal filler technique for natural rejuvenation"
+    },
+    { 
+      src: "/lovable-uploads/bd7c2222-e959-4253-af8d-c3a54757661d.png", 
+      alt: "Professional nasolabial folds treatment demonstration",
+      caption: "Advanced injection techniques for optimal smile line correction"
+    }
+  ];
+
   const treatmentCases = [
     {
       title: "Smile Lines Treatment Results",
@@ -312,71 +347,57 @@ const NasolabialFolds = () => {
         </section>
 
         {/* Before & After Gallery */}
-        <section className="py-20">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6
-          }} viewport={{
-            once: true
-          }} className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-6">Nasolabial Folds Transformation Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                See how our expert <AutoLinkedText>dermal filler treatments</AutoLinkedText> smooth nasolabial folds for natural, age-reversing results.
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before and After Nasolabial Folds Treatment in London</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Explore authentic before and after nasolabial folds filler results from our London clinic. 
+                Our expert dermal filler treatments smooth smile lines for natural, age-reversing transformation.
               </p>
             </motion.div>
 
-            <div className="space-y-12">
-              {treatmentCases.map((treatmentCase, caseIndex) => (
-                <motion.div
-                  key={caseIndex}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: caseIndex * 0.2 }}
-                  viewport={{ once: true }}
-                  className="space-y-6"
-                >
-                  <h3 className="text-2xl font-bold text-center text-purple-300">{treatmentCase.title}</h3>
-                  
-                  {/* Scrollable container */}
-                  <div className="overflow-x-auto pb-4">
-                    <div className="flex gap-6 min-w-max px-4">
-                      {treatmentCase.images.map((image, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                          viewport={{ once: true }}
-                          className="relative group cursor-pointer overflow-hidden rounded-lg flex-shrink-0 w-80"
-                        >
-                          <img 
-                            src={image.src} 
-                            alt={image.alt} 
-                            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" 
-                          />
-                          <div className="absolute bottom-4 left-4 right-4 p-3 bg-black/80 backdrop-blur-sm rounded-lg">
-                            <p className="text-white text-sm font-medium">{image.caption}</p>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
 
             <div className="text-center mt-12">
-              <Link to="/before-after-gallery">
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-lg font-semibold">
-                  View Complete Gallery
-                </Button>
-              </Link>
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Nasolabial Folds Results Gallery"
+                description="Comprehensive gallery of our nasolabial folds treatments"
+              />
             </div>
           </div>
         </section>
