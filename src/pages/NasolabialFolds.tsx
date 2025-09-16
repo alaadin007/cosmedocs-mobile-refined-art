@@ -182,7 +182,7 @@ const NasolabialFolds = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
                   Nasolabial Folds
                   <span className="block text-purple-300">Dermal Fillers</span>
-                  <span className="block text-sm mt-4 font-normal">Smooth smile lines for natural rejuvenation</span>
+                  <span className="block text-sm mt-4 font-normal">Invisible art - Smooth smile lines for natural rejuvenation</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
                   <span className="text-purple-300 font-semibold">Our aesthetics is invisible art</span>
