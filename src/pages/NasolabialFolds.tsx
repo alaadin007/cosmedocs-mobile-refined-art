@@ -9,7 +9,7 @@ import AutoLinkedText from '@/components/AutoLinkedText';
 import PopularTreatments from '@/components/PopularTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Eye } from 'lucide-react';
 const NasolabialFolds = () => {
   const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Reduce nasolabial folds (smile lines) with expert dermal filler treatments in London. Smooth nose-to-mouth lines for natural, youthful results. Book consultation today.", "/nasolabial-folds");
   const treatmentCases = [
@@ -190,7 +190,7 @@ const NasolabialFolds = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Nasolabial Folds Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -245,6 +245,20 @@ const NasolabialFolds = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
                 <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Eye className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Visible Results</h3>
+                <p className="text-gray-300">Instant visible improvement after treatment</p>
               </motion.div>
             </div>
           </div>
