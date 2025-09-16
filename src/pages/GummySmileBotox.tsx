@@ -44,10 +44,6 @@ const GummySmileBotox = () => {
 
   const faqs = [
     {
-      question: "What causes a gummy smile?",
-      answer: "A gummy smile is caused by several factors including an overactive upper lip muscle (levator labii superioris), excessive gum tissue, short upper lip, or vertical maxillary excess. Our expert assessment determines the underlying cause to provide the most effective treatment approach."
-    },
-    {
       question: "How does Botox treat a gummy smile?",
       answer: "Botox works by relaxing the overactive muscles that lift the upper lip too high when smiling. By strategically injecting small amounts of Botox into the levator labii superioris muscle, we reduce the lip's elevation, resulting in less gum display and a more balanced smile."
     },
@@ -80,6 +76,8 @@ const GummySmileBotox = () => {
       answer: "Gummy smile Botox treatment starts from £150-£300 depending on the number of units required. We provide transparent pricing during your consultation based on your specific needs."
     }
   ];
+
+  const bookingUrl = "https://med.as.me/harleystreet";
 
   return (
     <>
@@ -142,11 +140,23 @@ const GummySmileBotox = () => {
                   <p className="text-sm text-gray-300 drop-shadow-lg">Quick 15-minute treatment • Natural results • Expert precision</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
-                    Book Free Consultation
+                  <Button 
+                    onClick={() => window.open(bookingUrl, "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
+                    Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    View Before & After
+                  <Button 
+                    variant="outline" 
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                  >
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
@@ -587,7 +597,10 @@ const GummySmileBotox = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              <Button 
+                onClick={() => window.open(bookingUrl, "_blank")}
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+              >
                 Book Your Consultation
               </Button>
             </motion.div>
@@ -645,8 +658,11 @@ const GummySmileBotox = () => {
                 can enhance your natural beauty with subtle, sophisticated results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
-                  Book Free Consultation
+                <Button 
+                  onClick={() => window.open(bookingUrl, "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
+                  Book Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
                   Call 0333 0551 503
