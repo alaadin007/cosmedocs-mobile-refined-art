@@ -643,67 +643,8 @@ const ChinBotox = () => {
           </div>
         </section>
 
-        {/* Related Chin Treatments Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Related Chin Treatments</h2>
-              <p className="text-xl text-gray-300">Complete your chin transformation with our complementary treatments</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white">V-Line Chin Contouring</h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Enhance your chin botox results with our signature V-Line treatment. Using advanced dermal fillers, 
-                    we create defined jawline contours that complement the smooth chin texture achieved with botox.
-                  </p>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Enhanced jawline definition
-                    </div>
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Natural, elegant contouring
-                    </div>
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Complements chin botox treatment
-                    </div>
-                  </div>
-                  <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3"
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                  >
-                    Learn More About V-Line
-                  </Button>
-                </div>
-                
-                <div className="relative max-w-md mx-auto">
-                  <img 
-                    src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
-                    alt="V-Line chin contouring before and after results"
-                    className="w-full h-auto max-h-96 object-cover rounded-lg shadow-xl"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        
+        {/* Why Choose Cosmedocs */}
 
 
 
@@ -933,6 +874,68 @@ const ChinBotox = () => {
               >
                 Book Your Consultation
               </Button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Related Chin Treatments Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Related Chin Treatments</h2>
+              <p className="text-xl text-gray-300">Complete your chin transformation with our complementary treatments</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white">V-Line Chin Contouring</h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Enhance your chin botox results with our signature V-Line treatment. Using advanced dermal fillers, 
+                    we create defined jawline contours that complement the smooth chin texture achieved with botox.
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      Enhanced jawline definition
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      Natural, elegant contouring
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      Complements chin botox treatment
+                    </div>
+                  </div>
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
+                    Learn More About V-Line
+                  </Button>
+                </div>
+                
+                <div className="relative max-w-md mx-auto">
+                  <img 
+                    src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
+                    alt="V-Line chin contouring before and after results"
+                    className="w-full h-auto max-h-96 object-cover rounded-lg shadow-xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
