@@ -41,35 +41,10 @@ const NasolabialFolds = () => {
       alt: "Nasolabial folds before and after dermal filler treatment case 2",
       caption: "Before & After: Expert filler technique for age-reversing transformation"
     },
-    { 
-      src: smileLinesResult3, 
-      alt: "Smile line filler grading system showing treatment depth classification",
-      caption: "Professional grading system: From mild to severe nasolabial fold correction"
-    },
     {
       src: nasolabialGradingSystem,
       alt: "Nasolabial fold grading system from 0 to 4 showing severity levels",
       caption: "Clinical grading system: Assessing nasolabial fold depth for optimal treatment planning"
-    },
-    {
-      src: nasolabialBefore1,
-      alt: "Nasolabial folds before dermal filler treatment - case 1",
-      caption: "Before: Pronounced smile lines affecting facial harmony"
-    },
-    {
-      src: nasolabialAfter1,
-      alt: "Nasolabial folds after dermal filler treatment - case 1",
-      caption: "After: Smooth, natural-looking smile line correction"
-    },
-    {
-      src: nasolabialBefore2,
-      alt: "Nasolabial folds before dermal filler treatment - case 2",
-      caption: "Before: Deep laugh lines creating aged appearance"
-    },
-    {
-      src: nasolabialAfter2,
-      alt: "Nasolabial folds after dermal filler treatment - case 2",
-      caption: "After: Rejuvenated appearance with preserved natural expressions"
     },
     { 
       src: "/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png", 
