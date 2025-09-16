@@ -297,20 +297,28 @@ const GummySmileBotox = () => {
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                 <AutoLinkedText>The ideal smile shows minimal gum tissue - typically 1-3mm above the upper teeth. When more than 4mm of gum is visible, it's considered a gummy smile that can benefit from targeted Botox treatment.</AutoLinkedText>
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <p className="text-gray-300 text-center">Overactive upper lip muscles</p>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <p className="text-gray-300 text-center">Short upper lip anatomy</p>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <p className="text-gray-300 text-center">Excessive gum tissue growth</p>
-                </div>
-              </div>
+              
+              <Card className="bg-black/50 border-purple-500/30 p-6 max-w-2xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="text-white text-xl text-center">Main Contributing Factors</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="flex flex-col items-center space-y-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300 text-center text-sm">Overactive upper lip muscles</p>
+                    </div>
+                    <div className="flex flex-col items-center space-y-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300 text-center text-sm">Short upper lip anatomy</p>
+                    </div>
+                    <div className="flex flex-col items-center space-y-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300 text-center text-sm">Excessive gum tissue growth</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </section>
@@ -327,7 +335,7 @@ const GummySmileBotox = () => {
               >
                 <h2 className="text-3xl font-bold mb-6 text-white">Effectiveness of Botox for Gummy Teeth</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  In a 2016 study conducted in a dermatology clinic, 99.6 per cent of the women saw a significant difference in their smiles after two weeks.
+                  In a <a href="https://pubmed.ncbi.nlm.nih.gov/28621277/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">2016 study conducted in a dermatology clinic</a>, 99.6 per cent of the women saw a significant difference in their smiles after two weeks.
                 </p>
                 <div className="bg-purple-900/30 border-l-4 border-purple-500 p-6 rounded-r-lg">
                   <div className="flex items-center space-x-3 mb-3">
