@@ -322,7 +322,7 @@ const NasolabialFolds = () => {
             }} viewport={{
               once: true
             }}>
-                <h2 className="text-4xl font-bold mb-6">About Nasolabial Folds Treatment</h2>
+                <h2 className="text-4xl font-bold mb-6">What are Nasolabial Folds (Smile Line/Laugh Lines)?</h2>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   Nasolabial folds, commonly known as smile lines or laugh lines, are the natural creases that run from the sides of your nose down to the corners of your mouth. While these lines are normal, they can become more pronounced with age.
                 </p>
@@ -345,19 +345,6 @@ const NasolabialFolds = () => {
                 </div>
               </motion.div>
 
-              <motion.div initial={{
-              opacity: 0,
-              x: 30
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.6
-            }} viewport={{
-              once: true
-            }} className="relative">
-                <img src="/lovable-uploads/7d9d621d-c4ee-4c23-82fb-56ee04ef333f.png" alt="Nasolabial folds dermal filler treatment results" className="rounded-lg shadow-2xl w-full" />
-              </motion.div>
             </div>
           </div>
         </section>
