@@ -123,21 +123,13 @@ const GummySmileBotox = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
-                  Gummy Smile
-                  <span className="block text-purple-300">Botox Treatment</span>
-                  <span className="block text-sm mt-4 font-normal">Transform excessive gum display into perfect smile proportions</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Gummy Smile Botox London</span>
+                  <span className="block text-sm mt-4">Invisible art - natural smile enhancement that speaks without words</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
-                  <span className="text-purple-300 font-semibold">Our aesthetics is invisible art</span>
-                  <br />
-                  <span className="text-lg">Bold • Natural • Always Your Way</span>
-                  <br />
-                  Reduce gum display with precision Botox injections
-                </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">Starting from £150</p>
-                  <p className="text-sm text-gray-300 drop-shadow-lg">Quick 15-minute treatment • Natural results • Expert precision</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Gummy Smile Correction</p>
+                  <p className="text-sm text-gray-300">Quick 15-minute treatment • Natural results • Expert precision</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -148,13 +140,8 @@ const GummySmileBotox = () => {
                   </Button>
                   <Button 
                     variant="outline" 
-                    onClick={() => {
-                      const pricingSection = document.getElementById('pricing-section');
-                      if (pricingSection) {
-                        pricingSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
                     className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     View Price List
                   </Button>
