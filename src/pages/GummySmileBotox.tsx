@@ -382,7 +382,7 @@ const GummySmileBotox = () => {
         </section>
 
         {/* How Botox Works Section */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -391,7 +391,7 @@ const GummySmileBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6">How Gummy Smile Botox Works</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">How Gummy Smile Botox Works</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
                 Our precise <AutoLinkedText>Botox injections</AutoLinkedText> target the levator labii superioris muscle, which controls upper lip elevation. By carefully relaxing this muscle, we reduce excessive lip lift during smiling, creating perfect smile proportions.
               </p>
@@ -404,7 +404,7 @@ const GummySmileBotox = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
+                <Card className="bg-black/50 border-purple-500/30 h-full">
                   <CardHeader>
                     <CardTitle className="text-white text-xl">Step 1: Assessment</CardTitle>
                   </CardHeader>
@@ -422,7 +422,7 @@ const GummySmileBotox = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
+                <Card className="bg-black/50 border-purple-500/30 h-full">
                   <CardHeader>
                     <CardTitle className="text-white text-xl">Step 2: Precision Injection</CardTitle>
                   </CardHeader>
@@ -440,7 +440,7 @@ const GummySmileBotox = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
+                <Card className="bg-black/50 border-purple-500/30 h-full">
                   <CardHeader>
                     <CardTitle className="text-white text-xl">Step 3: Natural Results</CardTitle>
                   </CardHeader>
