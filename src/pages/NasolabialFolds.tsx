@@ -47,6 +47,21 @@ const NasolabialFolds = () => {
       src: "/lovable-uploads/bd7c2222-e959-4253-af8d-c3a54757661d.png", 
       alt: "Professional nasolabial folds treatment demonstration",
       caption: "Advanced injection techniques for optimal smile line correction"
+    },
+    {
+      src: "/lovable-uploads/64ee3f9e-7616-464d-962f-0a5ba656a82c.png",
+      alt: "Smile line filler front view before and after results",
+      caption: "Smile line filler (front view)"
+    },
+    {
+      src: "/lovable-uploads/e3020fef-05e0-4022-b981-0fe5dc9a2c53.png",
+      alt: "Smile line fillers side view before and after transformation",
+      caption: "Smile line fillers (side view)"
+    },
+    {
+      src: "/lovable-uploads/a4df5f90-dda5-48a2-9bd2-19728aa1a275.png",
+      alt: "Smile line fillers under eyes and cheeks enhancement",
+      caption: "Smile line fillers under eyes and cheeks"
     }
   ];
 
