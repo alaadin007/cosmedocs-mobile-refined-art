@@ -300,7 +300,7 @@ const GummySmileBotox = () => {
               
               <Card className="bg-black/50 border-purple-500/30 p-6 max-w-2xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-white text-xl text-center">Main Contributing Factors</CardTitle>
+                  <CardTitle className="text-white text-xl text-center">Key Smile Factors</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -382,35 +382,38 @@ const GummySmileBotox = () => {
         </section>
 
         {/* How Botox Works Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">How Gummy Smile Botox Works</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">The Science Behind Gummy Smile Correction</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-                Our precise <AutoLinkedText>Botox injections</AutoLinkedText> target the levator labii superioris muscle, which controls upper lip elevation. By carefully relaxing this muscle, we reduce excessive lip lift during smiling, creating perfect smile proportions.
+                Our targeted <AutoLinkedText>Botox treatment</AutoLinkedText> uses neurotoxin to precisely weaken the levator labii superioris muscle, reducing the upward pull of your upper lip during smiling for natural, balanced results.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black/50 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Step 1: Assessment</CardTitle>
+                <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/50 h-full backdrop-blur-sm">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <CardTitle className="text-white text-xl">Muscle Analysis</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-300">
-                      Comprehensive facial analysis to identify muscle activity patterns and determine optimal injection points for your unique anatomy.
+                    <p className="text-gray-300 text-center">
+                      Expert evaluation of your facial anatomy and muscle movement patterns to identify the precise injection sites for optimal results.
                     </p>
                   </CardContent>
                 </Card>
@@ -422,13 +425,16 @@ const GummySmileBotox = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black/50 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Step 2: Precision Injection</CardTitle>
+                <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/50 h-full backdrop-blur-sm">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <CardTitle className="text-white text-xl">Targeted Injection</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-300">
-                      Strategic Botox placement into the levator labii superioris muscle using ultra-fine needles for maximum comfort and precision.
+                    <p className="text-gray-300 text-center">
+                      Micro-precise Botox delivery using the finest needles to weaken specific muscle fibers responsible for excessive lip elevation.
                     </p>
                   </CardContent>
                 </Card>
@@ -440,18 +446,48 @@ const GummySmileBotox = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black/50 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Step 3: Natural Results</CardTitle>
+                <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/50 h-full backdrop-blur-sm">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <CardTitle className="text-white text-xl">Gradual Enhancement</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-300">
-                      Gradual muscle relaxation over 7-14 days creates balanced smile proportions while maintaining natural facial expressions.
+                    <p className="text-gray-300 text-center">
+                      Progressive muscle relaxation over 5-10 days reveals your refined smile with perfect tooth-to-gum ratio and natural expression.
                     </p>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 text-center"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-4">Why Choose Botox for Gummy Smile?</h3>
+              <p className="text-gray-300 text-lg mb-6">
+                Unlike surgical alternatives, Botox offers a non-invasive solution with immediate recovery and adjustable results tailored to your aesthetic goals.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div className="text-center">
+                  <div className="text-purple-300 text-3xl font-bold mb-2">15 min</div>
+                  <p className="text-gray-300">Treatment time</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-purple-300 text-3xl font-bold mb-2">0 days</div>
+                  <p className="text-gray-300">Recovery period</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-purple-300 text-3xl font-bold mb-2">3-4 months</div>
+                  <p className="text-gray-300">Result duration</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
