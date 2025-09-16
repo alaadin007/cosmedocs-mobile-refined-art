@@ -19,8 +19,8 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 
 const GummySmileBotox = () => {
   const seoData = generateSEOMetadata(
-    "Gummy Smile Botox London | Fix Excessive Gum Display | Cosmedocs",
-    "Transform your gummy smile with expert Botox injections in London. Reduce excessive gum display for a perfect smile balance. Book consultation at our Harley Street clinic.",
+    "Gummy Smile Botox | Fix Excessive Gum Display | Cosmedocs",
+    "Gummy smile botox before and after results. Expert botox for gummy smile treatment. Fix excessive gum display naturally. Book consultation.",
     "/gummy-smile-botox"
   );
 
@@ -90,7 +90,7 @@ const GummySmileBotox = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="gummy smile botox London, excessive gum display treatment, smile correction, cosmetic botox, Harley Street clinic, gummy smile fix" />
+        <meta name="keywords" content="gummy smile botox before and after, botox for gummy smile, gummy smile with botox, botox and gummy smile, how to fix a gummy smile, showing gum, gummy smile, gum smile, how to get rid of gummy smile, botox on mouth, gummy smile botox, botox gummy smile, Harley Street clinic" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -124,7 +124,7 @@ const GummySmileBotox = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Gummy Smile Botox London</span>
+                  <span className="text-purple-300">Gummy Smile Botox</span>
                   <span className="block text-sm mt-4">Invisible art - natural smile enhancement that speaks without words</span>
                 </h1>
                 <div className="mb-8">
