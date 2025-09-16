@@ -356,41 +356,40 @@ const NasolabialFolds = () => {
         {/* Treatment Overview */}
         <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl mx-auto text-center">
               <motion.div initial={{
-              opacity: 0,
-              x: -30
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.6
-            }} viewport={{
-              once: true
-            }}>
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6
+              }} viewport={{
+                once: true
+              }}>
                 <h2 className="text-4xl font-bold mb-6">What are Nasolabial Folds (Smile Line/Laugh Lines)?</h2>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   Nasolabial folds, commonly known as smile lines or laugh lines, are the natural creases that run from the sides of your nose down to the corners of your mouth. While these lines are normal, they can become more pronounced with age.
                 </p>
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                   <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> uses premium hyaluronic acid to restore volume and smooth these lines, creating a natural transition that maintains your ability to express emotions while reducing the appearance of aging.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Instant visible improvement</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                  <div className="flex flex-col items-center space-y-2">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <p className="text-gray-300 text-center">Instant visible improvement</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Maintains natural expressions</p>
+                  <div className="flex flex-col items-center space-y-2">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <p className="text-gray-300 text-center">Maintains natural expressions</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Long-lasting natural results</p>
+                  <div className="flex flex-col items-center space-y-2">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <p className="text-gray-300 text-center">Long-lasting natural results</p>
                   </div>
                 </div>
               </motion.div>
-
             </div>
           </div>
         </section>
