@@ -26,18 +26,33 @@ const GummySmileBotox = () => {
 
   const beforeAfterImages = [
     { 
+      src: "/src/assets/gummy-smile-before-1.jpg", 
+      alt: "Gummy smile before treatment showing excessive gum display", 
+      caption: "Before: Excessive gum display affecting smile confidence and facial harmony" 
+    },
+    { 
+      src: "/src/assets/gummy-smile-after-2.jpg", 
+      alt: "After gummy smile Botox treatment showing balanced smile proportions", 
+      caption: "After: Perfect smile proportions achieved with strategic Botox placement" 
+    },
+    { 
+      src: "/src/assets/gummy-smile-before-2.jpg", 
+      alt: "Gummy smile before Botox correction", 
+      caption: "Before: Upper lip elevation revealing excessive gum tissue during smiling" 
+    },
+    { 
       src: "/lovable-uploads/13ac9c3a-f117-440d-a458-ac5bc69b4d64.png", 
-      alt: "Gummy smile before and after Botox treatment", 
+      alt: "Dramatic gummy smile transformation results", 
       caption: "Dramatic reduction in gum display after targeted Botox injections - achieving perfect smile proportions" 
     },
     { 
       src: "/lovable-uploads/6979990b-3579-4571-b139-3501a368919b.png", 
-      alt: "Gummy smile correction results", 
+      alt: "Natural-looking gummy smile correction results", 
       caption: "Natural-looking smile enhancement with reduced gum visibility" 
     },
     { 
       src: "/lovable-uploads/4208979a-6544-4949-898f-4915a9791946.png", 
-      alt: "Gummy smile Botox before after", 
+      alt: "Precision gummy smile Botox before after results", 
       caption: "Precise Botox placement creating harmonious smile proportions" 
     }
   ];
@@ -318,14 +333,17 @@ const GummySmileBotox = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative"
+                className="flex justify-center"
               >
-                <img 
-                  src="/lovable-uploads/13ac9c3a-f117-440d-a458-ac5bc69b4d64.png" 
-                  alt="Gummy smile before and after treatment"
-                  className="rounded-lg shadow-2xl w-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Book Your Consultation</h3>
+                  <p className="text-gray-300 mb-6">
+                    Ready to transform your smile? Our expert team will assess your unique case and create a personalized treatment plan.
+                  </p>
+                  <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-3">
+                    Schedule Consultation
+                  </Button>
+                </div>
               </motion.div>
             </div>
           </div>
