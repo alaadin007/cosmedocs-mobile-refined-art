@@ -238,7 +238,7 @@ const GummySmileBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Gummy Smile Transformation Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See how our expert gummy smile <AutoLinkedText>Botox treatments</AutoLinkedText> create perfectly balanced smiles with natural-looking results.
+                See how our expert gummy smile <AutoLinkedText linkClassName="text-purple-400 hover:text-purple-300 underline transition-colors">Botox treatments</AutoLinkedText> create perfectly balanced smiles with natural-looking results.
               </p>
             </motion.div>
 
@@ -296,7 +296,7 @@ const GummySmileBotox = () => {
                 A gummy smile occurs when excessive gum tissue is visible when you smile, creating an imbalanced appearance between your teeth and gums. This condition affects up to 25% of adults and can significantly impact confidence and self-esteem.
               </p>
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                <AutoLinkedText>The ideal smile shows minimal gum tissue - typically 1-3mm above the upper teeth. When more than 4mm of gum is visible, it's considered a gummy smile that can benefit from targeted Botox treatment.</AutoLinkedText>
+                <AutoLinkedText linkClassName="text-purple-400 hover:text-purple-300 underline transition-colors">The ideal smile shows minimal gum tissue - typically 1-3mm above the upper teeth. When more than 4mm of gum is visible, it's considered a gummy smile that can benefit from targeted Botox treatment.</AutoLinkedText>
               </p>
               
             </motion.div>
@@ -315,7 +315,7 @@ const GummySmileBotox = () => {
               >
                 <h2 className="text-3xl font-bold mb-6 text-white">Effectiveness of Botox for Gummy Teeth</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  In a <a href="https://pubmed.ncbi.nlm.nih.gov/28621277/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">2016 study conducted in a dermatology clinic</a>, 99.6 per cent of the women saw a significant difference in their smiles after two weeks.
+                  In a <a href="https://pubmed.ncbi.nlm.nih.gov/28621277/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">2016 study conducted in a dermatology clinic</a>, 99.6 per cent of the women saw a significant difference in their smiles after two weeks.
                 </p>
                 <div className="bg-purple-900/30 border-l-4 border-purple-500 p-6 rounded-r-lg">
                   <div className="flex items-center space-x-3 mb-3">
@@ -608,7 +608,7 @@ const GummySmileBotox = () => {
             >
               <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                Get expert answers about gummy smile <AutoLinkedText>Botox treatment</AutoLinkedText> from our experienced cosmetic doctors.
+                Get expert answers about gummy smile <AutoLinkedText linkClassName="text-purple-400 hover:text-purple-300 underline transition-colors">Botox treatment</AutoLinkedText> from our experienced cosmetic doctors.
               </p>
             </motion.div>
 
@@ -620,7 +620,7 @@ const GummySmileBotox = () => {
                       <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4 text-gray-300">
-                      <AutoLinkedText>{faq.answer}</AutoLinkedText>
+                      <AutoLinkedText linkClassName="text-purple-400 hover:text-purple-300 underline transition-colors">{faq.answer}</AutoLinkedText>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
