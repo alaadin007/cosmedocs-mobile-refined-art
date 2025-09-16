@@ -602,142 +602,9 @@ const ChinBotox = () => {
               </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="mt-12"
-            >
-              <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Recovery Timeline & Expected Results</h3>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">Day 1-2</div>
-                    <p className="text-gray-300 text-sm">Minimal swelling, normal speaking</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">Day 3-5</div>
-                    <p className="text-gray-300 text-sm">Initial results becoming visible</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">Week 2</div>
-                    <p className="text-gray-300 text-sm">Full effects achieved</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">3-4 Months</div>
-                    <p className="text-gray-300 text-sm">Results gradually fade</p>
-                  </div>
-                </div>
-                
-                <div className="text-center mt-8">
-                  <Button 
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
-                  >
-                    Book Your Treatment
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
-        
-        {/* Why Choose Cosmedocs */}
-
-
-
-
-
-
-
-        {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Expert Doctors</h3>
-                <p className="text-gray-300">GMC-registered cosmetic doctors</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">15+ years in cosmetic medicine</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Safety First</h3>
-                <p className="text-gray-300">Premium products and protocols</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
@@ -937,6 +804,93 @@ const ChinBotox = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Doctors</h3>
+                <p className="text-gray-300">GMC-registered cosmetic doctors</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">15+ years in cosmetic medicine</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Safety First</h3>
+                <p className="text-gray-300">Premium products and protocols</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
