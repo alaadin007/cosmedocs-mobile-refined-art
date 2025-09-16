@@ -329,6 +329,266 @@ const ChinBotox = () => {
           </div>
         </section>
 
+        {/* What is Chin Botox Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">What is Chin Botox?</h2>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                  Chin botox is a specialized cosmetic treatment that targets the mentalis muscle and DAO (Depressor Anguli Oris) muscle 
+                  in the lower face. This precise injection technique addresses common concerns including chin dimpling, downturned mouth 
+                  corners, and excessive muscle activity that creates an aged or unhappy appearance.
+                </p>
+                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                  The treatment works by temporarily relaxing overactive muscles, creating a smoother chin texture and naturally lifting 
+                  the corners of the mouth. Results appear within 3-5 days and last approximately 3-4 months, providing a subtle yet 
+                  transformative enhancement to your facial expression.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Targets mentalis and DAO muscles</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Smooths chin dimpling and cobblestone texture</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Lifts downturned mouth corners naturally</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Creates more youthful facial expression</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png"
+                    alt="What is chin botox treatment explanation"
+                    className="w-full h-auto rounded-lg shadow-xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Indications Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Who is a Good Candidate for Chin Botox?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Chin botox is ideal for individuals experiencing specific facial concerns that affect their appearance and confidence. 
+                Our expert assessment determines the best treatment approach for your unique needs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Chin Dimpling</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Visible dimples or cobblestone texture when speaking, smiling, or expressing emotions due to overactive mentalis muscle.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Peau d'orange appearance</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Chin muscle hyperactivity</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Textural irregularities</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Downturned Mouth</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Mouth corners that naturally turn downward, creating a sad or stern expression even when relaxed.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">DAO muscle overactivity</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Unintentional sad appearance</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Marionette line formation</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Aging Concerns</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Age-related changes in facial expression and muscle tone that affect overall facial harmony and youthfulness.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Loss of facial support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Muscle hypercontraction</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Facial asymmetry</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Chin Botox and Downturned Lips Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Chin Botox and Downturned Lips Treatment</h2>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                  The combination of chin botox and downturned lips treatment addresses the complex muscle interactions in the lower face. 
+                  The DAO (Depressor Anguli Oris) muscle connects the chin area to the mouth corners, making this a highly effective 
+                  dual treatment approach for comprehensive facial rejuvenation.
+                </p>
+                <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                  When performed together, these treatments create natural-looking results that enhance your overall facial expression. 
+                  The mentalis muscle relaxation smooths the chin while DAO muscle treatment lifts the mouth corners, creating a more 
+                  youthful and approachable appearance.
+                </p>
+                
+                <div className="bg-purple-900/30 border-l-4 border-purple-500 p-6 rounded-r-lg">
+                  <h3 className="text-xl font-bold text-white mb-4">Treatment Benefits</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Comprehensive lower face rejuvenation</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Natural mouth corner elevation</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Smooth chin texture enhancement</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Improved facial harmony and balance</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-purple-500/30 p-6">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl text-center">Combined Treatment Approach</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-6">
+                      <div className="text-center">
+                        <h4 className="text-purple-300 font-semibold mb-2">Mentalis Muscle</h4>
+                        <p className="text-gray-300 text-sm">Smooths chin dimpling and cobblestone texture</p>
+                      </div>
+                      
+                      <div className="flex justify-center">
+                        <div className="w-12 h-0.5 bg-purple-500"></div>
+                      </div>
+                      
+                      <div className="text-center">
+                        <h4 className="text-purple-300 font-semibold mb-2">DAO Muscle</h4>
+                        <p className="text-gray-300 text-sm">Lifts downturned mouth corners naturally</p>
+                      </div>
+                      
+                      <div className="bg-purple-900/20 rounded-lg p-4 text-center">
+                        <p className="text-purple-200 font-medium">Result: Enhanced facial expression with natural, youthful appearance</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
