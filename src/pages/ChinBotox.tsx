@@ -16,8 +16,8 @@ import { generateSEOMetadata } from "@/utils/seo";
 
 const ChinBotox = () => {
   const seoData = generateSEOMetadata(
-    "Chin Botox London | DAO Muscle Treatment | Cosmedocs Harley Street",
-    "Expert chin botox treatment in London for sad mouth corners. Professional DAO muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
+    "Chin Botox London | Dimpled Chin Treatment | Cosmedocs Harley Street",
+    "Expert chin botox treatment in London for dimpled and pebble chin. Professional mentalis muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
     "/chin-botox"
   );
 
@@ -28,11 +28,11 @@ const ChinBotox = () => {
   const faqs = [
     {
       question: "What is chin botox and how does it work?",
-      answer: "Chin botox involves injecting botulinum toxin into the mentalis muscle and DAO (Depressor Anguli Oris) muscle. This relaxes overactive muscles that cause chin dimpling and downturned mouth corners, creating a smoother, more youthful appearance."
+      answer: "Chin botox involves injecting botulinum toxin into the mentalis muscle to relax overactive contractions that cause chin dimpling, pebble chin texture, and excessive chin protrusion. This creates a smoother, more refined chin appearance."
     },
     {
-      question: "What is the DAO muscle and why treat it?",
-      answer: "The DAO (Depressor Anguli Oris) muscle pulls down the corners of your mouth, creating a sad or stern expression. Treating this muscle with botox helps lift the mouth corners, creating a more pleasant, relaxed facial expression naturally."
+      question: "What causes chin dimpling and pebble chin texture?",
+      answer: "Chin dimpling is caused by overactive mentalis muscle contractions when you speak, smile, or show emotion. This creates an uneven, cobblestone-like texture that can age your appearance and affect facial harmony."
     },
     {
       question: "How long do chin botox results last?",
@@ -71,7 +71,7 @@ const ChinBotox = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="chin botox London, DAO muscle treatment, chin dimpling, downturned mouth corners, mentalis muscle botox, cosmetic botox, Harley Street clinic, chin smoothing" />
+        <meta name="keywords" content="chin botox London, dimpled chin treatment, pebble chin, mentalis muscle botox, chin smoothing, cosmetic botox, Harley Street clinic, chin enhancement" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -109,8 +109,8 @@ const ChinBotox = () => {
                   <span className="block text-sm mt-4">Invisible art - smooth chin enhancement that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert DAO Muscle Treatment</p>
-                  <p className="text-sm text-gray-300">15-20 minutes • Results last 4-6 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Dimpled Chin Treatment</p>
+                  <p className="text-sm text-gray-300">15-20 minutes • Results last 3-4 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -267,7 +267,7 @@ const ChinBotox = () => {
           </div>
         </section>
 
-        {/* DAO vs Chin Botox Comparison */}
+        {/* What is Chin Botox */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -277,51 +277,214 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">DAO Botox vs Chin Botox: Understanding the Difference</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Chin Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Both treatments rejuvenate the lower face but target different muscles and concerns. Understanding the difference 
-                helps you choose the right treatment for your specific needs.
+                Chin botox is a minimally invasive treatment that targets the mentalis muscle responsible for chin dimpling, 
+                pebble chin texture, and excessive chin protrusion. Our invisible art approach creates natural smoothness.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <h3 className="text-2xl font-bold text-white">Understanding the Mentalis Muscle</h3>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  The mentalis muscle is located in your chin and contracts when you speak, smile, or show emotion. 
+                  When overactive, it creates an uneven, dimpled, or "pebble" texture that can age your appearance 
+                  and detract from your natural beauty.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="text-white font-semibold">Dimpled Chin Treatment</h4>
+                      <p className="text-gray-300 text-sm">Smooths the irregular texture for elegant refinement</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="text-white font-semibold">Pebble Chin Correction</h4>
+                      <p className="text-gray-300 text-sm">Eliminates cobblestone appearance for smooth contours</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="text-white font-semibold">Muscle Relaxation</h4>
+                      <p className="text-gray-300 text-sm">Reduces overactive contractions for balanced proportions</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8">
+                  <h4 className="text-white text-xl font-bold mb-4 text-center">Chin Botox Benefits</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Smoother chin texture</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Reduced dimpling when speaking</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">More balanced facial proportions</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Natural, subtle enhancement</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Quick 15-minute treatment</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Results visible within days</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Chin Botox Works */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Chin Botox Works</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Our precise injection technique targets specific points in the mentalis muscle to achieve optimal 
+                smoothing while maintaining natural chin movement and expression.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <span className="text-purple-600 text-2xl font-bold">1</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Assessment</h3>
+                <p className="text-gray-300">
+                  Our expert doctors analyze your chin muscle activity and determine the optimal injection points 
+                  for your unique facial anatomy and aesthetic goals.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <span className="text-purple-600 text-2xl font-bold">2</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Injection</h3>
+                <p className="text-gray-300">
+                  Using ultra-fine needles, we precisely inject small amounts of botulinum toxin into specific 
+                  points of the mentalis muscle to relax overactive contractions.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <span className="text-purple-600 text-2xl font-bold">3</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Results</h3>
+                <p className="text-gray-300">
+                  Within 3-5 days, you'll notice smoother chin texture with full results visible after 2 weeks. 
+                  The effect gradually returns over 3-4 months.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who is a Good Candidate */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Who is a Good Candidate for Chin Botox?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Chin botox is ideal for those seeking to address specific chin concerns with minimal downtime and natural results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black/50 border-purple-500/30 h-full">
+                <Card className="bg-black/50 border-green-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl text-center">DAO Botox</CardTitle>
-                    <p className="text-purple-300 text-center">Depressor Anguli Oris Treatment</p>
+                    <CardTitle className="text-white text-xl text-center text-green-400">Ideal Candidates</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Muscle Treated:</h4>
-                      <p className="text-gray-300">DAO muscle that pulls mouth corners downward</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Purpose:</h4>
-                      <div className="space-y-2">
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">Lifts corners of the mouth</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">Reduces sad or frowning appearance</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">Softens marionette lines</span>
-                        </div>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-green-400" size={20} />
+                        <span className="text-gray-300">Chin dimpling when speaking or smiling</span>
                       </div>
-                    </div>
-                    
-                    <div className="bg-purple-900/20 rounded-lg p-4">
-                      <p className="text-purple-200 font-medium text-center">Result: More lifted, youthful mouth expression</p>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-green-400" size={20} />
+                        <span className="text-gray-300">Pebble or cobblestone chin texture</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-green-400" size={20} />
+                        <span className="text-gray-300">Overactive mentalis muscle</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-green-400" size={20} />
+                        <span className="text-gray-300">Desire for subtle enhancement</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="text-green-400" size={20} />
+                        <span className="text-gray-300">Realistic expectations</span>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -333,76 +496,47 @@ const ChinBotox = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black/50 border-purple-500/30 h-full">
+                <Card className="bg-black/50 border-red-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl text-center">Chin Botox</CardTitle>
-                    <p className="text-purple-300 text-center">Mentalis Muscle Treatment</p>
+                    <CardTitle className="text-white text-xl text-center text-red-400">Not Suitable For</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Muscle Treated:</h4>
-                      <p className="text-gray-300">Mentalis muscle that causes chin dimpling</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-white font-semibold mb-2">Purpose:</h4>
-                      <div className="space-y-2">
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">Smooths chin dimpling texture</span>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-0.5 bg-red-400"></div>
                         </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">Relaxes protruding chin</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300 text-sm">Improves lower face balance</span>
-                        </div>
+                        <span className="text-gray-300">Pregnancy or breastfeeding</span>
                       </div>
-                    </div>
-                    
-                    <div className="bg-purple-900/20 rounded-lg p-4">
-                      <p className="text-purple-200 font-medium text-center">Result: Smoother, more refined chin profile</p>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-0.5 bg-red-400"></div>
+                        </div>
+                        <span className="text-gray-300">Neuromuscular disorders</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-0.5 bg-red-400"></div>
+                        </div>
+                        <span className="text-gray-300">Active skin infections in treatment area</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-0.5 bg-red-400"></div>
+                        </div>
+                        <span className="text-gray-300">Allergies to botulinum toxin</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-5 h-5 border-2 border-red-400 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-0.5 bg-red-400"></div>
+                        </div>
+                        <span className="text-gray-300">Unrealistic expectations</span>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="mt-12 text-center"
-            >
-              <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Combined Treatment Benefits</h3>
-                <p className="text-gray-300 mb-6">
-                  When DAO and chin Botox are performed together, they create comprehensive lower face rejuvenation 
-                  with natural, harmonious results that enhance your overall facial expression.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="text-purple-400" size={20} />
-                    <span className="text-gray-300">Lifted mouth corners + smooth chin</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="text-purple-400" size={20} />
-                    <span className="text-gray-300">Balanced lower facial proportions</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="text-purple-400" size={20} />
-                    <span className="text-gray-300">More youthful, approachable expression</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="text-purple-400" size={20} />
-                    <span className="text-gray-300">Single appointment convenience</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
