@@ -61,7 +61,11 @@ const GummySmileBotox = () => {
     },
     {
       question: "When will I see results from gummy smile Botox?",
-      answer: "Initial results begin to appear within 3-5 days, with full effects visible after 10-14 days. The improvement in smile proportions becomes increasingly noticeable as the Botox takes full effect."
+      answer: "Initial results begin to appear within 3-5 days, with full effects visible after 10-14 days. The improvement in smile proportions becomes increasingly noticeable as the Botox takes full effect. Gradual muscle relaxation over 5-10 days reveals your refined smile with perfect tooth-to-gum ratio and natural expression."
+    },
+    {
+      question: "How long does the gradual enhancement process take?",
+      answer: "The enhancement unfolds in stages: Days 1-3 show minimal change, Days 4-7 reveal initial muscle relaxation and subtle gum reduction, Days 8-14 demonstrate full results with optimal smile proportions. This progressive transformation ensures natural-looking results that enhance your facial harmony."
     },
     {
       question: "Are there any side effects of gummy smile Botox?",
@@ -381,113 +385,91 @@ const GummySmileBotox = () => {
           </div>
         </section>
 
-        {/* How Botox Works Section */}
-        <section className="py-20 bg-black">
+        {/* Surgical vs Botox Comparison */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">The Science Behind Gummy Smile Correction</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-                Our targeted <AutoLinkedText>Botox treatment</AutoLinkedText> uses neurotoxin to precisely weaken the levator labii superioris muscle, reducing the upward pull of your upper lip during smiling for natural, balanced results.
+              <h2 className="text-3xl font-bold mb-4 text-white">Surgical Options vs Botox for Gummy Smile</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the key differences between surgical correction and Botox treatment to help you make an informed decision for your gummy smile
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+              {/* Surgical Options */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/50 h-full backdrop-blur-sm">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-2xl font-bold">1</span>
-                    </div>
-                    <CardTitle className="text-white text-xl">Muscle Analysis</CardTitle>
+                <Card className="bg-red-900/20 border-red-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <Syringe className="mr-3 text-red-400" size={20} />
+                      Surgical Correction
+                    </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center">
-                      Expert evaluation of your facial anatomy and muscle movement patterns to identify the precise injection sites for optimal results.
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300 text-sm">
+                      Invasive procedures including lip lengthening surgery, crown lengthening, or orthognathic surgery for permanent gummy smile correction.
                     </p>
+                    
+                    <div className="bg-red-900/30 rounded-lg p-4 border border-red-500/30">
+                      <ul className="text-gray-300 text-sm space-y-2">
+                        <li>• General anesthesia required</li>
+                        <li>• 2-6 weeks recovery time</li>
+                        <li>• £3,000-£15,000+ cost</li>
+                        <li>• Permanent but irreversible</li>
+                        <li>• Risk of surgical complications</li>
+                        <li>• Potential scarring</li>
+                        <li>• Extensive downtime needed</li>
+                      </ul>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
+              {/* Botox Treatment */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/50 h-full backdrop-blur-sm">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-2xl font-bold">2</span>
-                    </div>
-                    <CardTitle className="text-white text-xl">Targeted Injection</CardTitle>
+                <Card className="bg-green-900/20 border-green-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <Heart className="mr-3 text-green-400" size={20} />
+                      Botox Treatment
+                    </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center">
-                      Micro-precise Botox delivery using the finest needles to weaken specific muscle fibers responsible for excessive lip elevation.
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300 text-sm">
+                      Non-invasive neurotoxin injections that relax the upper lip muscles for natural gummy smile reduction with minimal downtime.
                     </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 border-purple-500/50 h-full backdrop-blur-sm">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-2xl font-bold">3</span>
+                    
+                    <div className="bg-green-900/30 rounded-lg p-4 border border-green-500/30">
+                      <ul className="text-gray-300 text-sm space-y-2">
+                        <li>• Topical anesthetic only</li>
+                        <li>• Immediate return to activities</li>
+                        <li>• £150-£300 cost-effective</li>
+                        <li>• 3-4 months duration</li>
+                        <li>• Fully reversible</li>
+                        <li>• Natural-looking results</li>
+                        <li>• No surgical risks</li>
+                      </ul>
                     </div>
-                    <CardTitle className="text-white text-xl">Gradual Enhancement</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center">
-                      Progressive muscle relaxation over 5-10 days reveals your refined smile with perfect tooth-to-gum ratio and natural expression.
-                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/20 to-purple-800/20 border border-purple-500/30 rounded-xl p-8 text-center"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-4">Why Choose Botox for Gummy Smile?</h3>
-              <p className="text-gray-300 text-lg mb-6">
-                Unlike surgical alternatives, Botox offers a non-invasive solution with immediate recovery and adjustable results tailored to your aesthetic goals.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                <div className="text-center">
-                  <div className="text-purple-300 text-3xl font-bold mb-2">15 min</div>
-                  <p className="text-gray-300">Treatment time</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-purple-300 text-3xl font-bold mb-2">0 days</div>
-                  <p className="text-gray-300">Recovery period</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-purple-300 text-3xl font-bold mb-2">3-4 months</div>
-                  <p className="text-gray-300">Result duration</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
