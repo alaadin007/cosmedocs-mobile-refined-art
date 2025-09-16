@@ -184,12 +184,13 @@ const NasolabialFolds = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
                   Nasolabial Folds
                   <span className="block text-purple-300">Dermal Fillers</span>
-                  <span className="block text-sm mt-4 font-normal">Invisible art - Smooth smile lines for natural rejuvenation</span>
+                  <span className="block text-sm mt-4 font-bold">Invisible art - Smooth smile lines for natural rejuvenation</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
                   Transform prominent smile lines into subtle, youthful contours
                 </p>
                 <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">Transform prominent smile lines</p>
                   <p className="text-sm text-gray-300 drop-shadow-lg">30-45 minutes • Results last 12-18 months • Immediate improvement</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
