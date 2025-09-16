@@ -173,11 +173,6 @@ const NasolabialFolds = () => {
       <div className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: `url('/lovable-uploads/bd7c2222-e959-4253-af8d-c3a54757661d.png')`
-        }}>
-            <div className="absolute inset-0 bg-black/70"></div>
-          </div>
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div initial={{
