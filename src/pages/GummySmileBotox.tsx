@@ -26,33 +26,18 @@ const GummySmileBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/src/assets/gummy-smile-before-1.jpg", 
-      alt: "Gummy smile before treatment showing excessive gum display", 
-      caption: "Before: Excessive gum display affecting smile confidence and facial harmony" 
-    },
-    { 
-      src: "/src/assets/gummy-smile-after-2.jpg", 
-      alt: "After gummy smile Botox treatment showing balanced smile proportions", 
-      caption: "After: Perfect smile proportions achieved with strategic Botox placement" 
-    },
-    { 
-      src: "/src/assets/gummy-smile-before-2.jpg", 
-      alt: "Gummy smile before Botox correction", 
-      caption: "Before: Upper lip elevation revealing excessive gum tissue during smiling" 
-    },
-    { 
       src: "/lovable-uploads/13ac9c3a-f117-440d-a458-ac5bc69b4d64.png", 
-      alt: "Dramatic gummy smile transformation results", 
+      alt: "Gummy smile before and after Botox treatment", 
       caption: "Dramatic reduction in gum display after targeted Botox injections - achieving perfect smile proportions" 
     },
     { 
       src: "/lovable-uploads/6979990b-3579-4571-b139-3501a368919b.png", 
-      alt: "Natural-looking gummy smile correction results", 
+      alt: "Gummy smile correction results", 
       caption: "Natural-looking smile enhancement with reduced gum visibility" 
     },
     { 
       src: "/lovable-uploads/4208979a-6544-4949-898f-4915a9791946.png", 
-      alt: "Precision gummy smile Botox before after results", 
+      alt: "Gummy smile Botox before after", 
       caption: "Precise Botox placement creating harmonious smile proportions" 
     }
   ];
@@ -423,148 +408,7 @@ const GummySmileBotox = () => {
           </div>
         </section>
 
-        {/* How Botox Works Section */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-6">How Gummy Smile Botox Works</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-                Our precise <AutoLinkedText>Botox injections</AutoLinkedText> target the levator labii superioris muscle, which controls upper lip elevation. By carefully relaxing this muscle, we reduce excessive lip lift during smiling, creating perfect smile proportions.
-              </p>
-            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Step 1: Assessment</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Comprehensive facial analysis to identify muscle activity patterns and determine optimal injection points for your unique anatomy.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Step 2: Precision Injection</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Strategic Botox placement into the levator labii superioris muscle using ultra-fine needles for maximum comfort and precision.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Step 3: Natural Results</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Gradual muscle relaxation over 7-14 days creates balanced smile proportions while maintaining natural facial expressions.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Details */}
-        <section className="py-20">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-4xl font-bold mb-6">Treatment Summary</h2>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
-                    <p className="text-gray-300">15-20 minutes including consultation and assessment</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
-                    <p className="text-gray-300">3-4 months with gradual muscle activity return</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
-                    <p className="text-gray-300">Immediate return to activities, avoid exercise for 24 hours</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Anaesthesia</h3>
-                    <p className="text-gray-300">Topical anaesthetic available, most patients don't require it</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none">
-                  <CardHeader>
-                    <CardTitle className="text-white">Why Choose Cosmedocs for Gummy Smile Treatment?</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Specialist cosmetic doctors with extensive experience</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Precise injection techniques for natural results</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Comprehensive facial assessment and treatment planning</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Harley Street clinic with premium medical standards</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Ongoing support and aftercare guidance</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ Section */}
         <section className="py-20 bg-accent">
