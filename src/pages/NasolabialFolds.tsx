@@ -28,7 +28,9 @@ import PopularTreatments from '@/components/PopularTreatments';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Eye } from 'lucide-react';
+
 const NasolabialFolds = () => {
+  const bookingUrl = "https://med.as.me/harleystreet";
   const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Expert nasolabial fold filler & dermal fillers for smile lines in London. Before & after results. Natural face filler treatments.", "/nasolabial-folds");
   const beforeAfterImages = [
     { 
@@ -185,22 +187,29 @@ const NasolabialFolds = () => {
                   <span className="block text-sm mt-4 font-normal">Invisible art - Smooth smile lines for natural rejuvenation</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
-                  <span className="text-purple-300 font-semibold">Our aesthetics is invisible art</span>
-                  <br />
-                  <span className="text-lg">Bold • Natural • Always Your Way</span>
-                  <br />
                   Transform prominent smile lines into subtle, youthful contours
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">From £350/ml</p>
                   <p className="text-sm text-gray-300 drop-shadow-lg">30-45 minutes • Results last 12-18 months • Immediate improvement</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
-                    Book Free Consultation
+                  <Button 
+                    onClick={() => window.open(bookingUrl, "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
+                    Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    View Before & After
+                  <Button 
+                    variant="outline" 
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                  >
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
