@@ -316,11 +316,11 @@ const ChinBotox = () => {
                   </Button>
                 </div>
                 
-                <div className="relative">
+                <div className="relative max-w-md mx-auto">
                   <img 
                     src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
                     alt="V-Line chin contouring before and after results"
-                    className="w-full h-auto rounded-lg shadow-xl"
+                    className="w-full h-auto max-h-96 object-cover rounded-lg shadow-xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
                 </div>
