@@ -393,7 +393,7 @@ const NasolabialFolds = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits and Aftercare Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -403,192 +403,180 @@ const NasolabialFolds = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Benefits of Nasolabial Fold Fillers</h2>
+              <h2 className="text-4xl font-bold mb-6">Benefits & Aftercare</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Our nasolabial fold filler treatments offer numerous advantages for facial rejuvenation and anti-aging
+                Discover the advantages of nasolabial fold fillers and essential aftercare guidelines for optimal results
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-xl p-6"
-              >
-                <CheckCircle className="text-green-400 mb-4" size={24} />
-                <h3 className="text-xl font-semibold mb-3 text-white">Immediate Results</h3>
-                <p className="text-gray-300">
-                  See instant improvement in your smile lines filler before and after appearance with immediate visible results from our face filler treatments.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-xl p-6"
-              >
-                <CheckCircle className="text-green-400 mb-4" size={24} />
-                <h3 className="text-xl font-semibold mb-3 text-white">Natural Enhancement</h3>
-                <p className="text-gray-300">
-                  Our nasolabial fillers provide natural-looking results that enhance your features without appearing overdone or artificial.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-xl p-6"
-              >
-                <CheckCircle className="text-green-400 mb-4" size={24} />
-                <h3 className="text-xl font-semibold mb-3 text-white">Long-lasting Results</h3>
-                <p className="text-gray-300">
-                  Enjoy 12-18 months of smooth, youthful-looking skin with our premium hyaluronic acid fillers for face rejuvenation.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-xl p-6"
-              >
-                <CheckCircle className="text-green-400 mb-4" size={24} />
-                <h3 className="text-xl font-semibold mb-3 text-white">Minimal Downtime</h3>
-                <p className="text-gray-300">
-                  Return to normal activities immediately with minimal recovery time from our lower face filler treatments.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-xl p-6"
-              >
-                <CheckCircle className="text-green-400 mb-4" size={24} />
-                <h3 className="text-xl font-semibold mb-3 text-white">Reversible Treatment</h3>
-                <p className="text-gray-300">
-                  Hyaluronic acid fillers can be dissolved if needed, providing peace of mind with your filler face enhancement.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-xl p-6"
-              >
-                <CheckCircle className="text-green-400 mb-4" size={24} />
-                <h3 className="text-xl font-semibold mb-3 text-white">Expert Precision</h3>
-                <p className="text-gray-300">
-                  Our skilled practitioners ensure optimal placement for beautiful dermal fillers before and after results every time.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Aftercare Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6">Aftercare for Nasolabial Fold Fillers</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Follow these essential aftercare guidelines to ensure optimal healing and the best nasolabial fillers before after results
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Benefits Column */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-black rounded-xl p-6"
               >
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">First 24 Hours</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Avoid touching or massaging the treated area
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Apply ice for 10-15 minutes to reduce swelling
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Sleep with head elevated to minimize swelling
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Avoid strenuous exercise or activities
-                  </li>
-                </ul>
+                <h3 className="text-3xl font-bold mb-8 text-white text-center">Benefits of Nasolabial Fold Fillers</h3>
+                
+                <div className="grid grid-cols-1 gap-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <CheckCircle className="text-green-400 mb-4" size={24} />
+                    <h4 className="text-xl font-semibold mb-3 text-white">Immediate Results</h4>
+                    <p className="text-gray-300">
+                      See instant improvement in your smile lines filler before and after appearance with immediate visible results from our face filler treatments.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <CheckCircle className="text-green-400 mb-4" size={24} />
+                    <h4 className="text-xl font-semibold mb-3 text-white">Natural Enhancement</h4>
+                    <p className="text-gray-300">
+                      Our nasolabial fillers provide natural-looking results that enhance your features without appearing overdone or artificial.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <CheckCircle className="text-green-400 mb-4" size={24} />
+                    <h4 className="text-xl font-semibold mb-3 text-white">Long-lasting Results</h4>
+                    <p className="text-gray-300">
+                      Enjoy 12-18 months of smooth, youthful-looking skin with our premium hyaluronic acid fillers for face rejuvenation.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <CheckCircle className="text-green-400 mb-4" size={24} />
+                    <h4 className="text-xl font-semibold mb-3 text-white">Minimal Downtime</h4>
+                    <p className="text-gray-300">
+                      Return to normal activities immediately with minimal recovery time from our lower face filler treatments.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <CheckCircle className="text-green-400 mb-4" size={24} />
+                    <h4 className="text-xl font-semibold mb-3 text-white">Expert Precision</h4>
+                    <p className="text-gray-300">
+                      Our skilled practitioners ensure optimal placement for beautiful dermal fillers before and after results every time.
+                    </p>
+                  </motion.div>
+                </div>
               </motion.div>
 
+              {/* Aftercare Column */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-black rounded-xl p-6"
               >
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">First Week</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Avoid excessive sun exposure and heat
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Use gentle skincare products only
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Avoid alcohol for 24-48 hours
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
-                    Stay hydrated and maintain healthy lifestyle
-                  </li>
-                </ul>
+                <h3 className="text-3xl font-bold mb-8 text-white text-center">Aftercare Guidelines</h3>
+                
+                <div className="space-y-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <h4 className="text-xl font-semibold mb-4 text-purple-300">First 24 Hours</h4>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Avoid touching or massaging the treated area
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Apply ice for 10-15 minutes to reduce swelling
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Sleep with head elevated to minimize swelling
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Avoid strenuous exercise or activities
+                      </li>
+                    </ul>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <h4 className="text-xl font-semibold mb-4 text-purple-300">First Week</h4>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Avoid excessive sun exposure and heat
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Use gentle skincare products only
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Avoid alcohol for 24-48 hours
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={16} />
+                        Stay hydrated and maintain healthy lifestyle
+                      </li>
+                    </ul>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="bg-accent rounded-xl p-6"
+                  >
+                    <h4 className="text-xl font-semibold mb-4 text-purple-300">Long-term Care</h4>
+                    <p className="text-gray-300 mb-4">
+                      To maintain your beautiful fillers for nasolabial folds results, schedule follow-up appointments as recommended. 
+                      Use quality skincare with SPF daily and consider complementary treatments for optimal facial rejuvenation.
+                    </p>
+                    <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 w-full">
+                      Schedule Follow-up
+                    </Button>
+                  </motion.div>
+                </div>
               </motion.div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mt-12 text-center"
-            >
-              <div className="bg-black rounded-xl p-8 max-w-2xl mx-auto">
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">Long-term Care</h3>
-                <p className="text-gray-300 mb-6">
-                  To maintain your beautiful fillers for nasolabial folds results, schedule follow-up appointments as recommended. 
-                  Use quality skincare with SPF daily and consider complementary treatments for optimal facial rejuvenation.
-                </p>
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3">
-                  Schedule Follow-up
-                </Button>
-              </div>
-            </motion.div>
           </div>
         </section>
 
