@@ -321,44 +321,24 @@ const ChinBotox = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8">
-                  <h4 className="text-white text-xl font-bold mb-4 text-center">Chin Botox Benefits</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Smoother chin texture</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Reduced dimpling when speaking</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">More balanced facial proportions</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Natural, subtle enhancement</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Quick 15-minute treatment</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Results visible within days</span>
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="relative"
+                >
+                  <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 text-center">
+                    <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas</h4>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="text-purple-300 font-medium">Mentalis Muscle</div>
+                      <div className="text-purple-300 font-medium">Chin Dimples</div>
+                      <div className="text-purple-300 font-medium">Pebble Texture</div>
+                      <div className="text-purple-300 font-medium">Muscle Overactivity</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
           </div>
@@ -561,44 +541,37 @@ const ChinBotox = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="relative"
               >
-                <Card className="bg-black/50 border-orange-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl text-center text-orange-400">First Week Guidelines</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <Check className="text-orange-400 mt-1" size={16} />
-                        <div>
-                          <p className="font-semibold text-white">Avoid Intense Exercise</p>
-                          <p className="text-sm text-gray-300">Skip heavy workouts for 24-48 hours to prevent swelling</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Check className="text-orange-400 mt-1" size={16} />
-                        <div>
-                          <p className="font-semibold text-white">No Facial Treatments</p>
-                          <p className="text-sm text-gray-300">Avoid facials, microdermabrasion, or laser treatments</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Check className="text-orange-400 mt-1" size={16} />
-                        <div>
-                          <p className="font-semibold text-white">Gentle Skincare</p>
-                          <p className="text-sm text-gray-300">Use mild cleansers and avoid harsh exfoliants</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <Check className="text-orange-400 mt-1" size={16} />
-                        <div>
-                          <p className="font-semibold text-white">Monitor Progress</p>
-                          <p className="text-sm text-gray-300">Results begin appearing within 3-5 days</p>
-                        </div>
-                      </div>
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8">
+                  <h4 className="text-white text-xl font-bold mb-4 text-center">Chin Botox Benefits</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Smoother chin texture</span>
                     </div>
-                  </CardContent>
-                </Card>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Reduced dimpling when speaking</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">More balanced facial proportions</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Natural, subtle enhancement</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Quick 15-minute treatment</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-400" size={20} />
+                      <span className="text-gray-300">Results visible within days</span>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
 
@@ -746,65 +719,140 @@ const ChinBotox = () => {
         </section>
 
         {/* Related Chin Treatments Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Related Chin Treatments</h2>
-              <p className="text-xl text-gray-300">Complete your chin transformation with our complementary treatments</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Complete Your Transformation</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your chin botox results with our complementary treatments for comprehensive facial harmony
+              </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white">V-Line Chin Contouring</h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Enhance your chin botox results with our signature V-Line treatment. Using advanced dermal fillers, 
-                    we create defined jawline contours that complement the smooth chin texture achieved with botox.
-                  </p>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Enhanced jawline definition
-                    </div>
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Natural, elegant contouring
-                    </div>
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      Complements chin botox treatment
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full overflow-hidden">
+                  <div className="relative h-48">
+                    <img 
+                      src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
+                      alt="V-Line chin contouring treatment"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-xl font-bold text-white">V-Line Contouring</h3>
                     </div>
                   </div>
-                  <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3"
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                  >
-                    Learn More About V-Line
-                  </Button>
-                </div>
-                
-                <div className="relative max-w-md mx-auto">
-                  <img 
-                    src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
-                    alt="V-Line chin contouring before and after results"
-                    className="w-full h-auto max-h-96 object-cover rounded-lg shadow-xl"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                </div>
-              </div>
-            </motion.div>
+                  <CardContent className="p-6">
+                    <p className="text-gray-300 mb-4">
+                      Define your jawline with precision dermal filler placement for elegant facial proportions.
+                    </p>
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-purple-400 mr-2 flex-shrink-0" />
+                        Enhanced jawline definition
+                      </div>
+                      <div className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-purple-400 mr-2 flex-shrink-0" />
+                        Complements chin botox perfectly
+                      </div>
+                    </div>
+                    <Button 
+                      className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full"
+                      onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                    >
+                      Learn More
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border-blue-500/30 h-full">
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Syringe className="text-blue-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Lip Filler</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-300 mb-6">
+                      Balance your chin enhancement with subtle lip volume for perfect facial proportions.
+                    </p>
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center justify-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />
+                        Natural volume enhancement
+                      </div>
+                      <div className="flex items-center justify-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />
+                        Harmonious facial balance
+                      </div>
+                    </div>
+                    <Button 
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-full"
+                      onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                    >
+                      Explore Treatment
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-green-900/30 to-blue-900/30 border-green-500/30 h-full">
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Activity className="text-green-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Facial Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-300 mb-6">
+                      Complete your rejuvenation with forehead, frown lines, and crow's feet treatment.
+                    </p>
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center justify-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        Full facial smoothing
+                      </div>
+                      <div className="flex items-center justify-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        Comprehensive treatment
+                      </div>
+                    </div>
+                    <Button 
+                      className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full"
+                      onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                    >
+                      Book Consultation
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
           </div>
+        </section>
         </section>
 
         {/* Why Choose Cosmedocs */}
