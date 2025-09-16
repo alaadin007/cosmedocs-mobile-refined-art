@@ -447,7 +447,7 @@ const GummySmileBotox = () => {
                   <Card className="bg-accent border-primary h-full">
                     <CardHeader>
                       <CardTitle className="text-white text-xl flex items-center">
-                        <Heart className="mr-3 text-primary" size={24} />
+                        <Heart className="mr-3 text-purple-400" size={24} />
                         Botox Treatment
                       </CardTitle>
                     </CardHeader>
@@ -456,15 +456,15 @@ const GummySmileBotox = () => {
                         Non-invasive neurotoxin injections that relax the upper lip muscles for natural gummy smile reduction with minimal downtime.
                       </p>
                       
-                      <div className="bg-primary/10 rounded-lg p-6 border border-primary/30">
+                      <div className="bg-purple-900/10 rounded-lg p-6 border border-purple-500/30">
                         <ul className="text-gray-300 space-y-3">
-                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Topical anesthetic only</li>
-                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Immediate return to activities</li>
-                          <li className="flex items-center"><span className="text-primary mr-3">•</span> £150-£300 cost-effective</li>
-                          <li className="flex items-center"><span className="text-primary mr-3">•</span> 3-4 months duration</li>
-                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Fully reversible</li>
-                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Natural-looking results</li>
-                          <li className="flex items-center"><span className="text-primary mr-3">•</span> No surgical risks</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Topical anesthetic only</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Immediate return to activities</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> £150-£300 cost-effective</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> 3-4 months duration</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Fully reversible</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Natural-looking results</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> No surgical risks</li>
                         </ul>
                       </div>
                     </CardContent>
