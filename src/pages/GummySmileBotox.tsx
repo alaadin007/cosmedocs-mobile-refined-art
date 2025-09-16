@@ -283,54 +283,35 @@ const GummySmileBotox = () => {
         {/* What is Gummy Smile Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-4xl font-bold mb-6">What is a Gummy Smile?</h2>
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  A gummy smile occurs when excessive gum tissue is visible when you smile, creating an imbalanced appearance between your teeth and gums. This condition affects up to 25% of adults and can significantly impact confidence and self-esteem.
-                </p>
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  <AutoLinkedText>The ideal smile shows minimal gum tissue - typically 1-3mm above the upper teeth. When more than 4mm of gum is visible, it's considered a gummy smile that can benefit from targeted Botox treatment.</AutoLinkedText>
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Overactive upper lip muscles</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Short upper lip anatomy</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Excessive gum tissue growth</p>
-                  </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <h2 className="text-4xl font-bold mb-6">What is a Gummy Smile?</h2>
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                A gummy smile occurs when excessive gum tissue is visible when you smile, creating an imbalanced appearance between your teeth and gums. This condition affects up to 25% of adults and can significantly impact confidence and self-esteem.
+              </p>
+              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                <AutoLinkedText>The ideal smile shows minimal gum tissue - typically 1-3mm above the upper teeth. When more than 4mm of gum is visible, it's considered a gummy smile that can benefit from targeted Botox treatment.</AutoLinkedText>
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <p className="text-gray-300 text-center">Overactive upper lip muscles</p>
                 </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="flex justify-center"
-              >
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Book Your Consultation</h3>
-                  <p className="text-gray-300 mb-6">
-                    Ready to transform your smile? Our expert team will assess your unique case and create a personalized treatment plan.
-                  </p>
-                  <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-3">
-                    Schedule Consultation
-                  </Button>
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <p className="text-gray-300 text-center">Short upper lip anatomy</p>
                 </div>
-              </motion.div>
-            </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <p className="text-gray-300 text-center">Excessive gum tissue growth</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
