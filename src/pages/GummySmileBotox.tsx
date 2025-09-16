@@ -401,74 +401,76 @@ const GummySmileBotox = () => {
               </p>
             </motion.div>
             
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-              {/* Surgical Options */}
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-red-900/20 border-red-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl flex items-center">
-                      <Syringe className="mr-3 text-red-400" size={20} />
-                      Surgical Correction
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300 text-sm">
-                      Invasive procedures including lip lengthening surgery, crown lengthening, or orthognathic surgery for permanent gummy smile correction.
-                    </p>
-                    
-                    <div className="bg-red-900/30 rounded-lg p-4 border border-red-500/30">
-                      <ul className="text-gray-300 text-sm space-y-2">
-                        <li>• General anesthesia required</li>
-                        <li>• 2-6 weeks recovery time</li>
-                        <li>• £3,000-£15,000+ cost</li>
-                        <li>• Permanent but irreversible</li>
-                        <li>• Risk of surgical complications</li>
-                        <li>• Potential scarring</li>
-                        <li>• Extensive downtime needed</li>
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+            <div className="page-container">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Surgical Options */}
+                <motion.div
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-accent border-red-500/30 h-full">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center">
+                        <Syringe className="mr-3 text-red-400" size={24} />
+                        Surgical Correction
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <p className="text-gray-300">
+                        Invasive procedures including lip lengthening surgery, crown lengthening, or orthognathic surgery for permanent gummy smile correction.
+                      </p>
+                      
+                      <div className="bg-red-900/20 rounded-lg p-6 border border-red-500/30">
+                        <ul className="text-gray-300 space-y-3">
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> General anesthesia required</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> 2-6 weeks recovery time</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> £3,000-£15,000+ cost</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Permanent but irreversible</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Risk of surgical complications</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Potential scarring</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Extensive downtime needed</li>
+                        </ul>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
-              {/* Botox Treatment */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-green-900/20 border-green-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl flex items-center">
-                      <Heart className="mr-3 text-green-400" size={20} />
-                      Botox Treatment
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300 text-sm">
-                      Non-invasive neurotoxin injections that relax the upper lip muscles for natural gummy smile reduction with minimal downtime.
-                    </p>
-                    
-                    <div className="bg-green-900/30 rounded-lg p-4 border border-green-500/30">
-                      <ul className="text-gray-300 text-sm space-y-2">
-                        <li>• Topical anesthetic only</li>
-                        <li>• Immediate return to activities</li>
-                        <li>• £150-£300 cost-effective</li>
-                        <li>• 3-4 months duration</li>
-                        <li>• Fully reversible</li>
-                        <li>• Natural-looking results</li>
-                        <li>• No surgical risks</li>
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                {/* Botox Treatment */}
+                <motion.div
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-accent border-primary h-full">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center">
+                        <Heart className="mr-3 text-primary" size={24} />
+                        Botox Treatment
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <p className="text-gray-300">
+                        Non-invasive neurotoxin injections that relax the upper lip muscles for natural gummy smile reduction with minimal downtime.
+                      </p>
+                      
+                      <div className="bg-primary/10 rounded-lg p-6 border border-primary/30">
+                        <ul className="text-gray-300 space-y-3">
+                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Topical anesthetic only</li>
+                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Immediate return to activities</li>
+                          <li className="flex items-center"><span className="text-primary mr-3">•</span> £150-£300 cost-effective</li>
+                          <li className="flex items-center"><span className="text-primary mr-3">•</span> 3-4 months duration</li>
+                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Fully reversible</li>
+                          <li className="flex items-center"><span className="text-primary mr-3">•</span> Natural-looking results</li>
+                          <li className="flex items-center"><span className="text-primary mr-3">•</span> No surgical risks</li>
+                        </ul>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
             </div>
           </div>
         </section>
