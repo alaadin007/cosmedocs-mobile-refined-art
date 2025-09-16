@@ -302,27 +302,6 @@ const GummySmileBotox = () => {
                 <AutoLinkedText>The ideal smile shows minimal gum tissue - typically 1-3mm above the upper teeth. When more than 4mm of gum is visible, it's considered a gummy smile that can benefit from targeted Botox treatment.</AutoLinkedText>
               </p>
               
-              <Card className="bg-black/50 border-purple-500/30 p-6 max-w-2xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-white text-xl text-center">Key Smile Factors</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="flex flex-col items-center space-y-2">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300 text-center text-sm">Overactive upper lip muscles</p>
-                    </div>
-                    <div className="flex flex-col items-center space-y-2">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300 text-center text-sm">Short upper lip anatomy</p>
-                    </div>
-                    <div className="flex flex-col items-center space-y-2">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300 text-center text-sm">Excessive gum tissue growth</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </motion.div>
           </div>
         </section>
@@ -378,6 +357,10 @@ const GummySmileBotox = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-gray-300">Smaller teeth in comparison to gums due to genetic factors</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-300">Short upper lip anatomy creating excessive gum exposure</p>
                   </div>
                 </div>
               </motion.div>
