@@ -14,35 +14,27 @@ const NasolabialFolds = () => {
   const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Smile Lines Treatment | Cosmedocs", "Reduce nasolabial folds (smile lines) with expert dermal filler treatments in London. Smooth nose-to-mouth lines for natural, youthful results. Book consultation today.", "/nasolabial-folds");
   const treatmentCases = [
     {
-      title: "Treatment Case 1",
+      title: "Smile Lines Treatment Results",
       images: [{
-        src: "/lovable-uploads/66b2380a-e35d-4cc3-a1ff-6c17776eb379.png",
-        alt: "Nasolabial folds before treatment showing prominent smile lines",
-        caption: "Before: Visible nasolabial folds creating tired appearance"
-      }, {
-        src: "/lovable-uploads/ad7bb9c5-b7d5-415f-bad6-3b790df6abc8.png",
-        alt: "During nasolabial folds dermal filler injection procedure",
-        caption: "During: Expert dermal filler injection technique"
-      }, {
-        src: "/lovable-uploads/c4f1a760-712a-4b3e-84b5-b2534cf4dd77.png",
-        alt: "Nasolabial folds after treatment showing smooth results",
-        caption: "After: Natural, youthful appearance with smooth smile lines"
+        src: "/src/assets/smile-lines-before-after-1.png",
+        alt: "Nasolabial folds before and after dermal filler treatment case 1",
+        caption: "Before & After: Smooth nasolabial folds with natural-looking results"
       }]
     },
     {
-      title: "Treatment Case 2",
+      title: "Advanced Smile Lines Correction",
       images: [{
-        src: "/lovable-uploads/de38851a-ee5c-47ce-a020-12d33fc4fb0d.png",
-        alt: "Nasolabial folds before treatment showing deep smile lines",
-        caption: "Before: Deep nasolabial folds affecting facial expression"
-      }, {
-        src: "/lovable-uploads/f52bdef0-c07a-44dc-a09a-5d7c6f199af9.png",
-        alt: "During nasolabial folds dermal filler injection procedure",
-        caption: "During: Precise dermal filler injection technique"
-      }, {
-        src: "/lovable-uploads/b4f8ed85-0bfd-4f11-9831-1b4088d7df24.png",
-        alt: "Nasolabial folds after treatment showing smooth results",
-        caption: "After: Smooth, natural-looking nasolabial area"
+        src: "/src/assets/smile-lines-before-after-2.png",
+        alt: "Nasolabial folds before and after dermal filler treatment case 2",
+        caption: "Before & After: Expert filler technique for age-reversing transformation"
+      }]
+    },
+    {
+      title: "Nasolabial Fold Grading System",
+      images: [{
+        src: "/src/assets/smile-lines-before-after-3.png",
+        alt: "Smile line filler grading system showing treatment depth classification",
+        caption: "Professional grading system: From mild to severe nasolabial fold correction"
       }]
     }
   ];
