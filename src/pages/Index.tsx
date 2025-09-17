@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { Eye, HelpCircle, Sparkles, Brain, Heart, Clock, Shield, Stethoscope, Package, Star } from "lucide-react";
+import { Eye, HelpCircle, Sparkles, Brain, Heart, Clock, Shield, Stethoscope, Package, Star, BookOpen } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";

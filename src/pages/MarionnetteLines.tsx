@@ -166,11 +166,18 @@ const MarionnetteLines = () => {
                   <p className="text-sm text-gray-300 drop-shadow-lg">30-45 minutes • Results last 12-18 months • Instant transformation</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
-                    Book Free Consultation
-                  </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    View Before & After
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                >
+                  Book Free Consultation
+                </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
@@ -292,53 +299,6 @@ const MarionnetteLines = () => {
           </div>
         </section>
 
-        {/* Liquid Facelift Explanation */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-6">The Liquid Facelift Advantage</h2>
-              <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-                Our marionette line treatment is often part of a comprehensive liquid facelift approach, designed specifically for younger individuals who want to address early signs of aging without surgery. This non-invasive procedure combines multiple <AutoLinkedText>dermal filler treatments</AutoLinkedText> to restore facial volume, smooth lines, and enhance natural contours.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card className="bg-gray-900 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-purple-300">Volume Restoration</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">Strategic placement of dermal fillers to restore lost volume in cheeks and address the root cause of marionette lines and nasolabial folds.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gray-900 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-purple-300">Comprehensive Approach</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">Treatment addresses marionette lines, nasolabial folds, and can include <AutoLinkedText>lip enhancement</AutoLinkedText> for harmonious facial rejuvenation.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gray-900 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-purple-300">Natural Results</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">Achieve a refreshed, youthful appearance that looks natural and maintains your ability to express emotions authentically.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -390,6 +350,53 @@ const MarionnetteLines = () => {
                 title="Marionette Lines & Liquid Facelift Results"
                 description="Comprehensive collection of our marionette line and facial rejuvenation treatments"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Liquid Facelift Explanation */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-6">The Liquid Facelift Advantage</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
+                Our marionette line treatment is often part of a comprehensive liquid facelift approach, designed specifically for younger individuals who want to address early signs of aging without surgery. This non-invasive procedure combines multiple <AutoLinkedText>dermal filler treatments</AutoLinkedText> to restore facial volume, smooth lines, and enhance natural contours.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <Card className="bg-gray-900 border-gray-800">
+                <CardHeader>
+                  <CardTitle className="text-purple-300">Volume Restoration</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">Strategic placement of dermal fillers to restore lost volume in cheeks and address the root cause of marionette lines and nasolabial folds.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900 border-gray-800">
+                <CardHeader>
+                  <CardTitle className="text-purple-300">Comprehensive Approach</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">Treatment addresses marionette lines, nasolabial folds, and can include <AutoLinkedText>lip enhancement</AutoLinkedText> for harmonious facial rejuvenation.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900 border-gray-800">
+                <CardHeader>
+                  <CardTitle className="text-purple-300">Natural Results</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">Achieve a refreshed, youthful appearance that looks natural and maintains your ability to express emotions authentically.</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -627,7 +634,7 @@ const MarionnetteLines = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -636,8 +643,8 @@ const MarionnetteLines = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Get expert answers about marionette line treatments and liquid facelifts from our experienced practitioners.
               </p>
             </motion.div>
@@ -645,8 +652,8 @@ const MarionnetteLines = () => {
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-gray-900 rounded-lg border-gray-800">
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-800 rounded-lg">
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
                       <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4 text-gray-300">
@@ -835,7 +842,10 @@ const MarionnetteLines = () => {
                 can transform your appearance with our liquid facelift approach.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                >
                   Book Free Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
