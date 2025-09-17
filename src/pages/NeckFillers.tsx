@@ -18,15 +18,15 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 const NeckFillers = () => {
   const seoData = generateSEOMetadata(
     "Neck Fillers London | Say Bye to Sag | Cosmedocs Harley Street",
-    "Professional neck filler treatments in London. Smooth neck wrinkles and sagging skin with premium dermal fillers. Expert cosmetic doctors at Harley Street clinic.",
+    "Neck fillers London - treat wrinkly neck, horizontal neck lines & botox for neck lines. See neck fillers before and after results.",
     "/neck-fillers"
   );
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   
   const beforeAfterImages = [
-    { src: "/lovable-uploads/bb3c489c-72d1-457d-b7f8-297e490cd639.png", alt: "Neck fillers before and after showing dramatic reduction in horizontal neck lines", caption: "Dramatic improvement in neck lines and skin texture with dermal fillers" },
-    { src: "/lovable-uploads/3ab5c4cb-18a8-491d-a52e-ad5ce159af83.png", alt: "Professional neck filler results showing smoother neck contour", caption: "Professional neck filler treatment results showing enhanced neck profile" },
+    { src: "/lovable-uploads/bb3c489c-72d1-457d-b7f8-297e490cd639.png", alt: "Neck fillers before and after results showing dramatic reduction in horizontal neck lines and wrinkly neck", caption: "Neck fillers before and after - see how to get rid of neck lines with professional treatment" },
+    { src: "/lovable-uploads/3ab5c4cb-18a8-491d-a52e-ad5ce159af83.png", alt: "Neck filler treatment results showing smoother lines on neck and reduced neck folds", caption: "Professional neck lines treatment results showing enhanced neck profile and reduced neck wrinkles" },
   ];
 
   const faqs = [
@@ -39,8 +39,8 @@ const NeckFillers = () => {
       answer: "Most patients report minimal discomfort during neck filler injections. We use topical numbing cream or ice packs to minimise any potential pain during the procedure, ensuring a comfortable experience."
     },
     {
-      question: "Can neck fillers treat tech neck wrinkles?",
-      answer: "Yes, neck fillers are excellent for treating tech neck wrinkles caused by repetitive movements from looking down at devices. The treatment smooths horizontal neck lines and improves skin texture."
+      question: "Can neck fillers treat tech neck lines and horizontal neck lines?",
+      answer: "Yes, neck fillers are excellent for treating tech neck lines caused by repetitive movements from looking down at devices. The treatment smooths horizontal neck lines and improves skin texture, effectively addressing lines on neck from daily habits."
     },
     {
       question: "What's the recovery time after neck fillers?",
@@ -51,8 +51,8 @@ const NeckFillers = () => {
       answer: "Neck fillers are effective for mild to moderate skin laxity and sagging. For more advanced cases like pronounced turkey neck, additional treatments such as a neck lift surgery or skin-tightening procedures might be more appropriate."
     },
     {
-      question: "What issues can neck fillers address?",
-      answer: "Neck fillers can address horizontal neck lines (necklace lines), tech neck wrinkles caused by device use, loose skin and mild sagging, wrinkles and creases in the neck area, and loss of volume and elasticity in the neck skin."
+      question: "What neck lines and neck folds can neck fillers address?",
+      answer: "Neck fillers can address horizontal neck lines (necklace lines), tech neck lines caused by device use, neck folds and loose skin, neck wrinkles and creases in the neck area, and loss of volume in wrinkly neck skin - essentially helping you understand how to get rid of neck lines non-surgically."
     },
     {
       question: "Who is a good candidate for neck fillers?",
@@ -75,8 +75,8 @@ const NeckFillers = () => {
       answer: "Yes, hyaluronic acid fillers used for neck injections are reversible. If you're not satisfied with results or encounter complications, the filler can be dissolved using hyaluronidase, ensuring flexibility and peace of mind."
     },
     {
-      question: "What treatments can be combined with neck fillers?",
-      answer: "Neck fillers work excellently with Botox for muscle relaxation, skin boosters and polynucleotides for hydration, Profhilo for enhanced skin quality, and PDO threads for additional lifting effects."
+      question: "What treatments can be combined with neck filler for optimal neck line results?",
+      answer: "Neck filler works excellently with botox for neck lines to relax muscles, skin boosters for hydration, Profhilo for enhanced skin quality, and PDO threads for a neck lift non surgical procedure effect, creating comprehensive neck lines treatment."
     },
     {
       question: "What should I do before my neck filler treatment?",
