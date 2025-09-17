@@ -137,7 +137,7 @@ const TempleFiller = () => {
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+        <section className="py-20 bg-gradient-to-b from-background to-purple-50/30 dark:to-purple-950/20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -146,25 +146,25 @@ const TempleFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-light mb-6">Temple Filler Treatment Overview</h2>
-              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Professional temple enhancement using premium dermal fillers to restore volume and create natural-looking facial harmony
+              <h2 className="text-3xl font-light mb-4">Treatment Overview</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Professional temple enhancement with precision and artistry
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                className="text-center p-6"
               >
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-primary" size={24} />
+                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <Clock className="text-purple-600 dark:text-purple-400" size={20} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Treatment Duration</h3>
-                <p className="text-muted-foreground text-sm">30-45 minutes including consultation</p>
+                <h3 className="font-medium mb-1 text-sm">Duration</h3>
+                <p className="text-muted-foreground text-xs">30-45 mins</p>
               </motion.div>
 
               <motion.div
@@ -172,13 +172,13 @@ const TempleFiller = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                className="text-center p-6"
               >
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-primary" size={24} />
+                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <Calendar className="text-purple-600 dark:text-purple-400" size={20} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Results Duration</h3>
-                <p className="text-muted-foreground text-sm">12-18 months with premium hyaluronic acid</p>
+                <h3 className="font-medium mb-1 text-sm">Results</h3>
+                <p className="text-muted-foreground text-xs">12-18 months</p>
               </motion.div>
 
               <motion.div
@@ -186,13 +186,13 @@ const TempleFiller = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                className="text-center p-6"
               >
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-primary" size={24} />
+                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <Activity className="text-purple-600 dark:text-purple-400" size={20} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Recovery Time</h3>
-                <p className="text-muted-foreground text-sm">Minimal downtime, return to work same day</p>
+                <h3 className="font-medium mb-1 text-sm">Recovery</h3>
+                <p className="text-muted-foreground text-xs">Same day</p>
               </motion.div>
 
               <motion.div
@@ -200,13 +200,13 @@ const TempleFiller = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                className="text-center p-6"
               >
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-primary" size={24} />
+                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <Syringe className="text-purple-600 dark:text-purple-400" size={20} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Anaesthesia</h3>
-                <p className="text-muted-foreground text-sm">Topical anaesthetic + lidocaine in filler</p>
+                <h3 className="font-medium mb-1 text-sm">Comfort</h3>
+                <p className="text-muted-foreground text-xs">Topical anaesthetic</p>
               </motion.div>
             </div>
           </div>
@@ -363,7 +363,7 @@ const TempleFiller = () => {
               </motion.div>
             </div>
 
-            {/* Enhanced Treatment Summary & Results */}
+            {/* Treatment Results Summary */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -371,66 +371,49 @@ const TempleFiller = () => {
               viewport={{ once: true }}
               className="mt-20"
             >
-              <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 border border-border/50">
-                <div className="text-center mb-12">
-                  <div className="bg-primary/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                    <Award className="text-primary" size={32} />
-                  </div>
-                  <h3 className="text-3xl font-light mb-4">Treatment Summary & Results</h3>
-                  <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                    Complete transformation achieved through expert temple filler treatment with premium hyaluronic acid dermal fillers
+              <div className="bg-gradient-to-r from-purple-50/50 to-purple-100/50 dark:from-purple-950/20 dark:to-purple-900/20 rounded-xl p-8 border border-purple-200/30 dark:border-purple-800/30">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-light mb-3">Treatment Results</h3>
+                  <p className="text-muted-foreground text-sm max-w-xl mx-auto">
+                    Expert temple enhancement achieving natural volume restoration
                   </p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/30">
-                    <h4 className="text-xl font-semibold mb-6 flex items-center">
-                      <Palette className="text-primary mr-3" size={20} />
-                      Treatment Details
-                    </h4>
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center py-3 border-b border-border/30">
-                        <span className="text-sm font-medium">Treatment Type</span>
-                        <span className="text-sm text-muted-foreground">Temple Dermal Filler</span>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-purple-900 dark:text-purple-100 mb-4">Key Improvements</h4>
+                    {[
+                      "Volume restoration",
+                      "Enhanced symmetry", 
+                      "Natural contours",
+                      "Facial harmony"
+                    ].map((result, index) => (
+                      <div key={index} className="flex items-center text-sm">
+                        <CheckCircle className="text-purple-600 mr-3 flex-shrink-0" size={14} />
+                        <span>{result}</span>
                       </div>
-                      <div className="flex justify-between items-center py-3 border-b border-border/30">
-                        <span className="text-sm font-medium">Product Used</span>
-                        <span className="text-sm text-muted-foreground">Premium Hyaluronic Acid</span>
-                      </div>
-                      <div className="flex justify-between items-center py-3 border-b border-border/30">
-                        <span className="text-sm font-medium">Technique</span>
-                        <span className="text-sm text-muted-foreground">Multi-point Precision</span>
-                      </div>
-                      <div className="flex justify-between items-center py-3 border-b border-border/30">
-                        <span className="text-sm font-medium">Duration</span>
-                        <span className="text-sm text-muted-foreground">45 minutes</span>
-                      </div>
-                      <div className="flex justify-between items-center py-3">
-                        <span className="text-sm font-medium">Recovery</span>
-                        <span className="text-sm text-muted-foreground">Minimal downtime</span>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                   
-                  <div className="bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/30">
-                    <h4 className="text-xl font-semibold mb-6 flex items-center">
-                      <Star className="text-primary mr-3" size={20} />
-                      Results Achieved
-                    </h4>
-                    <div className="space-y-4">
-                      {[
-                        "Significant temple volume restoration",
-                        "Enhanced facial symmetry",
-                        "Reduced temple hollowing appearance",
-                        "Youthful facial contours",
-                        "Natural-looking enhancement",
-                        "Improved overall facial harmony"
-                      ].map((result, index) => (
-                        <div key={index} className="flex items-center">
-                          <CheckCircle className="text-primary mr-3 flex-shrink-0" size={16} />
-                          <span className="text-sm">{result}</span>
-                        </div>
-                      ))}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium text-purple-900 dark:text-purple-100 mb-4">Treatment Details</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Product</span>
+                        <span>Premium HA</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Technique</span>
+                        <span>Multi-point</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Duration</span>
+                        <span>45 minutes</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Results</span>
+                        <span>12-18 months</span>
+                      </div>
                     </div>
                   </div>
                 </div>
