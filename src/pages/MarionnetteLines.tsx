@@ -260,45 +260,6 @@ const MarionnetteLines = () => {
           </div>
         </section>
 
-        {/* Treatment Overview */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-4xl font-bold mb-6">The Science Behind Marionette Lines</h2>
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive facial expressions over time.
-                </p>
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  Our expert approach addresses both marionette lines and related nasolabial concerns. It's important to understand that nasolabial creases and folds represent different types of volume loss: creases are typically surface-level lines from repeated smiling, while folds result from deeper volume loss in the cheeks causing skin to fall.
-                </p>
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  <AutoLinkedText>Our liquid facelift approach</AutoLinkedText> is particularly effective for younger individuals in their 30s, offering a non-surgical solution that can take 10 years off your appearance through strategic dermal filler placement.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <img 
-                  src="/lovable-uploads/765101d1-1ff9-4425-9d8a-da5eb0bcaa17.png" 
-                  alt="Marionette lines treatment results"
-                  className="rounded-lg shadow-2xl w-full"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -350,6 +311,45 @@ const MarionnetteLines = () => {
                 title="Marionette Lines & Liquid Facelift Results"
                 description="Comprehensive collection of our marionette line and facial rejuvenation treatments"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Overview */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-4xl font-bold mb-6">The Science Behind Marionette Lines</h2>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                  Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive facial expressions over time.
+                </p>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                  Our expert approach addresses both marionette lines and related nasolabial concerns. It's important to understand that nasolabial creases and folds represent different types of volume loss: creases are typically surface-level lines from repeated smiling, while folds result from deeper volume loss in the cheeks causing skin to fall.
+                </p>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                  <AutoLinkedText>Our liquid facelift approach</AutoLinkedText> is particularly effective for younger individuals in their 30s, offering a non-surgical solution that can take 10 years off your appearance through strategic dermal filler placement.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <img 
+                  src="/lovable-uploads/765101d1-1ff9-4425-9d8a-da5eb0bcaa17.png" 
+                  alt="Marionette lines treatment results"
+                  className="rounded-lg shadow-2xl w-full"
+                />
+              </motion.div>
             </div>
           </div>
         </section>
