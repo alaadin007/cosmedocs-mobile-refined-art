@@ -133,14 +133,7 @@ const MarionnetteLines = () => {
       <div className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('/lovable-uploads/bd7c2222-e959-4253-af8d-c3a54757661d.png')`
-            }}
-          >
-            <div className="absolute inset-0 bg-black/70"></div>
-          </div>
+          <div className="absolute inset-0 bg-black"></div>
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -155,10 +148,6 @@ const MarionnetteLines = () => {
                   <span className="block text-sm mt-4 font-normal">Transform your appearance with our liquid facelift</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
-                  <span className="text-purple-300 font-semibold">Our aesthetics is invisible art</span>
-                  <br />
-                  <span className="text-lg">Bold • Natural • Always Your Way</span>
-                  <br />
                   Smooth away years with expert marionette line treatment
                 </p>
                 <div className="mb-8">
