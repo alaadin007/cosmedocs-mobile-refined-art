@@ -826,7 +826,7 @@ const EarLobeRejuvenation = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Before & After Gallery of Ear Lobe Fillers</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Watch actual ear lobe rejuvenation treatment results from our Harley Street clinic.
               </p>
