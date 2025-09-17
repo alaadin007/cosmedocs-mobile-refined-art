@@ -435,10 +435,46 @@ const EarLobeRejuvenation = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Treatment Benefits Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto mb-16"
+            >
+              <div className="bg-black rounded-lg p-8 border border-gray-800">
+                <h3 className="text-2xl font-bold mb-6 text-purple-300 text-center">Treatment Benefits</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
+                    </div>
+                    <h4 className="font-semibold text-white mb-2">Immediate Results</h4>
+                    <p className="text-gray-300 text-sm">Visible improvement right after treatment</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
+                    </div>
+                    <h4 className="font-semibold text-white mb-2">Natural Enhancement</h4>
+                    <p className="text-gray-300 text-sm">Subtle, natural-looking volume restoration</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
+                    </div>
+                    <h4 className="font-semibold text-white mb-2">Minimal Downtime</h4>
+                    <p className="text-gray-300 text-sm">Quick procedure with fast recovery</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
@@ -447,63 +483,27 @@ const EarLobeRejuvenation = () => {
                   Earlobes are particularly susceptible to aging due to their delicate structure and constant 
                   exposure to gravity. Understanding the causes helps us provide the most effective treatments.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Natural Aging</h4>
-                      <p className="text-gray-300 text-sm">Loss of collagen and elasticity over time</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-black rounded-lg p-6 border border-gray-800">
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
                     </div>
+                    <h4 className="font-semibold text-white mb-2">Natural Aging</h4>
+                    <p className="text-gray-300 text-sm">Loss of collagen and elasticity over time</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Heavy Earrings</h4>
-                      <p className="text-gray-300 text-sm">Weight causes stretching and volume loss</p>
+                  <div className="bg-black rounded-lg p-6 border border-gray-800">
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
                     </div>
+                    <h4 className="font-semibold text-white mb-2">Heavy Earrings</h4>
+                    <p className="text-gray-300 text-sm">Weight causes stretching and volume loss</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Gravity Effects</h4>
-                      <p className="text-gray-300 text-sm">Constant downward pull on delicate skin</p>
+                  <div className="bg-black rounded-lg p-6 border border-gray-800">
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
                     </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">Treatment Benefits</h3>
-                <p className="text-gray-300 mb-6">
-                  Our ear lobe rejuvenation treatment offers multiple benefits for those looking to restore 
-                  their earlobes to a more youthful appearance.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Immediate Results</h4>
-                      <p className="text-gray-300 text-sm">Visible improvement right after treatment</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Natural Enhancement</h4>
-                      <p className="text-gray-300 text-sm">Subtle, natural-looking volume restoration</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Minimal Downtime</h4>
-                      <p className="text-gray-300 text-sm">Quick procedure with fast recovery</p>
-                    </div>
+                    <h4 className="font-semibold text-white mb-2">Gravity Effects</h4>
+                    <p className="text-gray-300 text-sm">Constant downward pull on delicate skin</p>
                   </div>
                 </div>
               </motion.div>
