@@ -254,10 +254,10 @@ const EarLobeRejuvenation = () => {
                   <span className="block text-purple-300">Rejuvenation</span>
                   <span className="block text-sm mt-4">Restore youthful volume to aging earlobes</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                </p>
                 <div className="mb-8">
+                  <p className="text-xl text-gray-200 mb-4 max-w-xl">
+                    <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  </p>
                   <p className="text-sm text-gray-300">Rejuvenation, new collagen, plumping using hyaluronic acid that stimulates your own collagen</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
