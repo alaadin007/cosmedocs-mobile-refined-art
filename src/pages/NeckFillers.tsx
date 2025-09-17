@@ -137,7 +137,6 @@ const NeckFillers = () => {
                   <span className="text-purple-300 font-semibold">Invisible Art-</span> fix neck wrinkles and tech neck lines with premium dermal fillers
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £325</p>
                   <p className="text-sm text-gray-300">Smooth neck wrinkles and tech neck lines with premium dermal fillers</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
