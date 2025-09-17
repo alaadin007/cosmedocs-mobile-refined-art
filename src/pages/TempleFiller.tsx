@@ -213,11 +213,107 @@ const TempleFiller = () => {
         <section className="py-20 bg-secondary/10">
           <div className="page-container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-light mb-6">Temple Filler Treatment Journey</h2>
+              <h2 className="text-4xl font-light mb-6">Your Temple Filler Journey</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Witness the complete transformation process from initial consultation through to final results. 
-                This comprehensive case study showcases the precision and artistry of professional temple filler treatment.
+                Understanding temple volume loss and discovering the transformative benefits of professional treatment.
               </p>
+            </div>
+            
+            {/* Two Column Layout for Understanding and Benefits */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-16">
+              {/* Understanding Temple Volume Loss Card */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-purple-500/20 rounded-full p-3">
+                        <Activity className="text-purple-300" size={24} />
+                      </div>
+                      <CardTitle className="text-2xl text-white">Understanding Temple Volume Loss</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-gray-300">
+                    <p className="leading-relaxed">
+                      Temple volume loss is a natural part of aging that begins as early as our mid-20s. The temples contain 
+                      minimal subcutaneous fat, making volume depletion particularly noticeable in this area.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p>Loss of facial fat pads and bone remodeling creates hollow temples</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p>Collagen breakdown reduces skin elasticity and support</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p>Genetics and lifestyle factors accelerate the aging process</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p>Creates an aged, tired appearance affecting facial harmony</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Temple Filler Benefits Card */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-green-900/20 to-teal-900/20 border-green-500/20 h-full">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-green-500/20 rounded-full p-3">
+                        <Star className="text-green-300" size={24} />
+                      </div>
+                      <CardTitle className="text-2xl text-white">Temple Filler Benefits</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-gray-300">
+                    <p className="leading-relaxed">
+                      Temple filler treatment offers immediate and long-lasting rejuvenation, restoring youthful 
+                      facial proportions with natural-looking results.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                        <p><strong>Instant Volume Restoration:</strong> Immediate correction of temple hollowing</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                        <p><strong>Enhanced Facial Symmetry:</strong> Improved overall facial balance and harmony</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                        <p><strong>Youthful Appearance:</strong> Softens signs of aging for a refreshed look</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                        <p><strong>Long-lasting Results:</strong> Effects last 12-18 months with premium fillers</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                        <p><strong>Minimal Downtime:</strong> Quick treatment with immediate return to activities</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={16} />
+                        <p><strong>Natural Results:</strong> Subtle enhancement that looks authentically you</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
             
             <div className="grid lg:grid-cols-3 gap-12">
