@@ -326,12 +326,17 @@ const MarionnetteLines = () => {
               className="max-w-4xl mx-auto text-center"
             >
               <h2 className="text-4xl font-bold mb-6">What are Marionette Lines?</h2>
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                 Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive facial expressions over time.
               </p>
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                <AutoLinkedText>Our liquid facelift approach</AutoLinkedText> is particularly effective for younger individuals in their 30s, offering a non-surgical solution that can take 10 years off your appearance through strategic dermal filler placement.
-              </p>
+              
+              <Card className="bg-black border-purple-500 border-2 p-6">
+                <CardContent className="p-0">
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    <AutoLinkedText>Our liquid facelift approach</AutoLinkedText> is particularly effective for younger individuals in their 30s, offering a non-surgical solution that can take 10 years off your appearance through strategic dermal filler placement.
+                  </p>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </section>
