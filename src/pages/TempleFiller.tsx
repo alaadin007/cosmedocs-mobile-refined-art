@@ -366,19 +366,32 @@ const TempleFiller = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="mt-20 max-w-4xl mx-auto"
+              className="mt-16 flex justify-center"
             >
-              <div className="bg-black rounded-xl p-8 border border-purple-800/30">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-light mb-3 text-white">Treatment Results</h3>
-                  <p className="text-gray-300 text-sm max-w-xl mx-auto">
-                    Expert temple enhancement achieving natural volume restoration
+              <Card className="bg-card/50 backdrop-blur-sm border border-primary/20 overflow-hidden max-w-md">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Star className="text-primary" size={20} />
+                  </div>
+                  <CardTitle className="text-lg font-semibold text-white">Treatment Results</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    Professional temple enhancement achieving natural volume restoration
                   </p>
-                </div>
+                </CardHeader>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-purple-300 mb-4">Key Improvements</h4>
+                <CardContent className="pt-0">
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="text-center p-3 rounded-lg bg-primary/10">
+                      <div className="text-xl font-bold text-primary mb-1">12-18</div>
+                      <div className="text-xs text-muted-foreground">Months Duration</div>
+                    </div>
+                    <div className="text-center p-3 rounded-lg bg-primary/10">
+                      <div className="text-xl font-bold text-primary mb-1">45</div>
+                      <div className="text-xs text-muted-foreground">Minute Treatment</div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
                     {[
                       "Volume restoration",
                       "Enhanced symmetry", 
@@ -386,35 +399,13 @@ const TempleFiller = () => {
                       "Facial harmony"
                     ].map((result, index) => (
                       <div key={index} className="flex items-center text-sm">
-                        <CheckCircle className="text-purple-400 mr-3 flex-shrink-0" size={14} />
-                        <span className="text-gray-300">{result}</span>
+                        <CheckCircle className="text-primary mr-2 flex-shrink-0" size={14} />
+                        <span className="text-muted-foreground">{result}</span>
                       </div>
                     ))}
                   </div>
-                  
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-purple-300 mb-4">Treatment Details</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Product</span>
-                        <span className="text-gray-300">Premium HA</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Technique</span>
-                        <span className="text-gray-300">Multi-point</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Duration</span>
-                        <span className="text-gray-300">45 minutes</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Results</span>
-                        <span className="text-gray-300">12-18 months</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </section>
