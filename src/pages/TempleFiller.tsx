@@ -137,34 +137,31 @@ const TempleFiller = () => {
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-20 bg-gradient-to-b from-background to-purple-50/30 dark:to-purple-950/20">
+        <section className="py-16 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl font-light mb-4">Treatment Overview</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Professional temple enhancement with precision and artistry
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Temple Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center p-6"
+                className="text-center"
               >
-                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                  <Clock className="text-purple-600 dark:text-purple-400" size={20} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
                 </div>
-                <h3 className="font-medium mb-1 text-sm">Duration</h3>
-                <p className="text-muted-foreground text-xs">30-45 mins</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30-45 minutes including consultation</p>
               </motion.div>
 
               <motion.div
@@ -172,13 +169,13 @@ const TempleFiller = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6"
+                className="text-center"
               >
-                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                  <Calendar className="text-purple-600 dark:text-purple-400" size={20} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
                 </div>
-                <h3 className="font-medium mb-1 text-sm">Results</h3>
-                <p className="text-muted-foreground text-xs">12-18 months</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
               </motion.div>
 
               <motion.div
@@ -186,13 +183,13 @@ const TempleFiller = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-center p-6"
+                className="text-center"
               >
-                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                  <Activity className="text-purple-600 dark:text-purple-400" size={20} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
                 </div>
-                <h3 className="font-medium mb-1 text-sm">Recovery</h3>
-                <p className="text-muted-foreground text-xs">Same day</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
               </motion.div>
 
               <motion.div
@@ -200,13 +197,13 @@ const TempleFiller = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-center p-6"
+                className="text-center"
               >
-                <div className="bg-purple-100 dark:bg-purple-900/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                  <Syringe className="text-purple-600 dark:text-purple-400" size={20} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
                 </div>
-                <h3 className="font-medium mb-1 text-sm">Comfort</h3>
-                <p className="text-muted-foreground text-xs">Topical anaesthetic</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
             </div>
           </div>
