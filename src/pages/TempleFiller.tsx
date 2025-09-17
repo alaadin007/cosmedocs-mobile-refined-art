@@ -213,7 +213,7 @@ const TempleFiller = () => {
         <section className="py-20 bg-secondary/10">
           <div className="page-container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-light mb-6">Your Temple Filler Journey</h2>
+              <h2 className="text-4xl font-light mb-6">Temple Fillers & Benefits</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Understanding temple volume loss and discovering the transformative benefits of professional treatment.
               </p>
