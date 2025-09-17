@@ -371,17 +371,17 @@ const TempleFiller = () => {
               viewport={{ once: true }}
               className="mt-20"
             >
-              <div className="bg-gradient-to-r from-purple-50/50 to-purple-100/50 dark:from-purple-950/20 dark:to-purple-900/20 rounded-xl p-8 border border-purple-200/30 dark:border-purple-800/30">
+              <div className="bg-black rounded-xl p-8 border border-purple-800/30">
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-light mb-3">Treatment Results</h3>
-                  <p className="text-muted-foreground text-sm max-w-xl mx-auto">
+                  <h3 className="text-2xl font-light mb-3 text-white">Treatment Results</h3>
+                  <p className="text-gray-300 text-sm max-w-xl mx-auto">
                     Expert temple enhancement achieving natural volume restoration
                   </p>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-purple-900 dark:text-purple-100 mb-4">Key Improvements</h4>
+                    <h4 className="text-lg font-medium text-purple-300 mb-4">Key Improvements</h4>
                     {[
                       "Volume restoration",
                       "Enhanced symmetry", 
@@ -389,30 +389,30 @@ const TempleFiller = () => {
                       "Facial harmony"
                     ].map((result, index) => (
                       <div key={index} className="flex items-center text-sm">
-                        <CheckCircle className="text-purple-600 mr-3 flex-shrink-0" size={14} />
-                        <span>{result}</span>
+                        <CheckCircle className="text-purple-400 mr-3 flex-shrink-0" size={14} />
+                        <span className="text-gray-300">{result}</span>
                       </div>
                     ))}
                   </div>
                   
                   <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-purple-900 dark:text-purple-100 mb-4">Treatment Details</h4>
+                    <h4 className="text-lg font-medium text-purple-300 mb-4">Treatment Details</h4>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Product</span>
-                        <span>Premium HA</span>
+                        <span className="text-gray-400">Product</span>
+                        <span className="text-gray-300">Premium HA</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Technique</span>
-                        <span>Multi-point</span>
+                        <span className="text-gray-400">Technique</span>
+                        <span className="text-gray-300">Multi-point</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Duration</span>
-                        <span>45 minutes</span>
+                        <span className="text-gray-400">Duration</span>
+                        <span className="text-gray-300">45 minutes</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Results</span>
-                        <span>12-18 months</span>
+                        <span className="text-gray-400">Results</span>
+                        <span className="text-gray-300">12-18 months</span>
                       </div>
                     </div>
                   </div>
