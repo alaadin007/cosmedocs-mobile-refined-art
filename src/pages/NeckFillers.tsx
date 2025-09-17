@@ -303,6 +303,209 @@ const NeckFillers = () => {
           </div>
         </section>
 
+        {/* Treatment Overview */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6">Neckline Filler Treatment</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+                Neck fillers, also known as neck injections or neck contouring, are a non-surgical cosmetic 
+                procedure designed to improve the overall look of the neck. This treatment targets neck wrinkles, 
+                neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen 
+                and elastin production.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* What Causes Neck Wrinkles */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Causes Neck Wrinkles?</h3>
+                <p className="text-gray-300 mb-6">
+                  Necklines, often referred to as neck wrinkles, are creases or folds that develop on the neck skin. 
+                  These lines can appear as horizontal neck lines or vertical neck lines, varying in depth and severity.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Ageing</h4>
+                      <p className="text-gray-300 text-sm">Natural loss of collagen and elasticity</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Sun Exposure</h4>
+                      <p className="text-gray-300 text-sm">Damages neck skin, accelerating wrinkle formation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Tech Neck</h4>
+                      <p className="text-gray-300 text-sm">Daily actions like looking down at devices lead to tech neck lines</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Genetics & Lifestyle</h4>
+                      <p className="text-gray-300 text-sm">Predisposition to lines and smoking depleting skin elasticity</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* How Dermal Fillers Help */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">How Dermal Fillers Help</h3>
+                <p className="text-gray-300 mb-6">
+                  Dermal fillers provide an effective solution for treating neck wrinkles and neck lines. 
+                  Using hyaluronic acid fillers, these treatments restore hydration and stimulate collagen production.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Replenish lost volume in the neck area</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Smooth out horizontal and vertical neck lines</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Improve neck skin texture and elasticity</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-gray-300">Reduce tech neck wrinkles and sagging skin</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits and Aftercare Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Benefits of Neck Fillers */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold mb-8 text-white">Benefits of Neck Fillers</h3>
+                <p className="text-gray-300 mb-8">
+                  Experience the transformative benefits of professional neck filler treatment at Cosmedocs.
+                </p>
+                
+                <div className="grid grid-cols-1 gap-6">
+                  {[
+                    "Smooths Horizontal Neck Lines",
+                    "Enhances Skin Quality",
+                    "Non-Invasive Rejuvenation",
+                    "Improves Neck Contour",
+                    "Natural-Looking Results",
+                    "Long-Lasting Effects"
+                  ].map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-black rounded-lg p-4 border border-gray-800 flex items-center space-x-4"
+                    >
+                      <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
+                      </div>
+                      <h4 className="text-white font-semibold">{benefit}</h4>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Aftercare */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold mb-8 text-white">Aftercare</h3>
+                <p className="text-gray-300 mb-8">
+                  Follow these essential aftercare guidelines to ensure optimal results and minimize any potential side effects.
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="bg-black rounded-lg p-6 border border-gray-800">
+                    <h4 className="text-xl font-semibold text-white mb-4">Immediate Aftercare (24-48 hours)</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Apply ice packs for 10-15 minutes to reduce swelling</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Avoid strenuous exercise and excessive heat</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Sleep with your head elevated</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Avoid touching or massaging the treated area</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-black rounded-lg p-6 border border-gray-800">
+                    <h4 className="text-xl font-semibold text-white mb-4">First Week</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Use gentle skincare products</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Avoid saunas, steam rooms, and prolonged sun exposure</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Stay hydrated and maintain a healthy diet</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Contact clinic if you experience unusual symptoms</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-accent">
@@ -440,104 +643,6 @@ const NeckFillers = () => {
           </div>
         </section>
 
-        {/* Treatment Overview */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6">Neckline Filler Treatment</h2>
-              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
-                Neck fillers, also known as neck injections or neck contouring, are a non-surgical cosmetic 
-                procedure designed to improve the overall look of the neck. This treatment targets neck wrinkles, 
-                neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen 
-                and elastin production.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* What Causes Neck Wrinkles */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Causes Neck Wrinkles?</h3>
-                <p className="text-gray-300 mb-6">
-                  Necklines, often referred to as neck wrinkles, are creases or folds that develop on the neck skin. 
-                  These lines can appear as horizontal neck lines or vertical neck lines, varying in depth and severity.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Ageing</h4>
-                      <p className="text-gray-300 text-sm">Natural loss of collagen and elasticity</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Sun Exposure</h4>
-                      <p className="text-gray-300 text-sm">Damages neck skin, accelerating wrinkle formation</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Tech Neck</h4>
-                      <p className="text-gray-300 text-sm">Daily actions like looking down at devices lead to tech neck lines</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Genetics & Lifestyle</h4>
-                      <p className="text-gray-300 text-sm">Predisposition to lines and smoking depleting skin elasticity</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* How Dermal Fillers Help */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">How Dermal Fillers Help</h3>
-                <p className="text-gray-300 mb-6">
-                  Dermal fillers provide an effective solution for treating neck wrinkles and neck lines. 
-                  Using hyaluronic acid fillers, these treatments restore hydration and stimulate collagen production.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Replenish lost volume in the neck area</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Smooth out horizontal and vertical neck lines</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Improve neck skin texture and elasticity</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Reduce tech neck wrinkles and sagging skin</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
@@ -635,48 +740,6 @@ const NeckFillers = () => {
           </div>
         </section>
 
-        {/* Treatment Benefits */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Benefits of Neck Fillers</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Experience the transformative benefits of professional neck filler treatment at Cosmedocs.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                "Smooths Horizontal Neck Lines",
-                "Enhances Skin Quality",
-                "Non-Invasive Rejuvenation",
-                "Improves Neck Contour",
-                "Natural-Looking Results",
-                "Long-Lasting Effects"
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-black rounded-lg p-6 text-center border border-gray-800"
-                >
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
-                  </div>
-                  <h3 className="text-white font-semibold">{benefit}</h3>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Treatment Summary */}
         <section className="py-20">
