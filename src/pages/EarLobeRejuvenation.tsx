@@ -371,7 +371,7 @@ const EarLobeRejuvenation = () => {
                viewport={{ once: true }}
                className="text-center mb-16"
              >
-               <h2 className="text-4xl font-bold mb-6">Real Patient Results</h2>
+               <h2 className="text-4xl font-bold mb-6">Ear Lobe Rejuvenation Before & After</h2>
                <p className="text-gray-300 max-w-4xl mx-auto text-lg">
                  Witness the transformative power of our ear lobe rejuvenation treatments with real before and after results from our patients.
                </p>
@@ -589,7 +589,7 @@ const EarLobeRejuvenation = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Before & After Gallery of Ear Lobe Fillers</h2>
+              <h2 className="text-3xl font-bold mb-4">Ear Lobe Fillers Procedure</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Watch actual ear lobe rejuvenation treatment results from our Harley Street clinic.
               </p>
