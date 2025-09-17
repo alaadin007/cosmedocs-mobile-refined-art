@@ -256,11 +256,8 @@ const EarLobeRejuvenation = () => {
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Bold • Natural • Always Your Way
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £500</p>
                   <p className="text-sm text-gray-300">Rejuvenation, new collagen, plumping using hyaluronic acid that stimulates your own collagen</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
