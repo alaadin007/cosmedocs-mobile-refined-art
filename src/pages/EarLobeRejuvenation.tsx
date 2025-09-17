@@ -435,41 +435,6 @@ const EarLobeRejuvenation = () => {
               </p>
             </motion.div>
 
-            {/* Treatment Benefits Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto mb-16"
-            >
-              <div className="bg-black rounded-lg p-8 border border-gray-800">
-                <h3 className="text-2xl font-bold mb-6 text-purple-300 text-center">Treatment Benefits</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
-                    </div>
-                    <h4 className="font-semibold text-white mb-2">Immediate Results</h4>
-                    <p className="text-gray-300 text-sm">Visible improvement right after treatment</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
-                    </div>
-                    <h4 className="font-semibold text-white mb-2">Natural Enhancement</h4>
-                    <p className="text-gray-300 text-sm">Subtle, natural-looking volume restoration</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
-                    </div>
-                    <h4 className="font-semibold text-white mb-2">Minimal Downtime</h4>
-                    <p className="text-gray-300 text-sm">Quick procedure with fast recovery</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
 
             <div className="max-w-4xl mx-auto">
               <motion.div
