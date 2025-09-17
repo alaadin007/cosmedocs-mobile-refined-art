@@ -362,18 +362,12 @@ const MarionnetteLines = () => {
                 <CardHeader>
                   <CardTitle className="text-purple-300">Volume Restoration</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">Strategic placement of dermal fillers to restore lost volume in cheeks and address the root cause of marionette lines and nasolabial folds.</p>
-                </CardContent>
               </Card>
 
               <Card className="bg-gray-900 border-gray-800">
                 <CardHeader>
                   <CardTitle className="text-purple-300">Natural Results</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">Achieve a refreshed, youthful appearance that looks natural and maintains your ability to express emotions authentically.</p>
-                </CardContent>
               </Card>
             </div>
           </div>
