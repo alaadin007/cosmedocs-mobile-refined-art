@@ -1,10 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, QrCode } from "lucide-react";
+import QRCode from "qrcode";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 import LiquidGlassMenu from "@/components/LiquidGlassMenu";
@@ -20,6 +21,8 @@ const Home2 = () => {
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
   const [isFacialAssessmentOpen, setIsFacialAssessmentOpen] = useState(false);
   const [isAllTreatmentsOpen, setIsAllTreatmentsOpen] = useState(false);
+  const [showQRCode, setShowQRCode] = useState(false);
+  const [qrCodeDataUrl, setQrCodeDataUrl] = useState("");
   const isMobile = useIsMobile();
 
   const menuItems = [
@@ -32,6 +35,26 @@ const Home2 = () => {
 
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.`;
+
+  // Generate QR code for WhatsApp
+  useEffect(() => {
+    const generateQRCode = async () => {
+      try {
+        const qrDataUrl = await QRCode.toDataURL(whatsappUrl, {
+          width: 200,
+          margin: 1,
+          color: {
+            dark: '#000000',
+            light: '#FFFFFF'
+          }
+        });
+        setQrCodeDataUrl(qrDataUrl);
+      } catch (error) {
+        console.error('Error generating QR code:', error);
+      }
+    };
+    generateQRCode();
+  }, [whatsappUrl]);
 
   const contactGroups = [
     {
@@ -235,6 +258,41 @@ const Home2 = () => {
                 >
                   Comprehensive Facial Assessment
                 </Button>
+              </motion.div>
+
+              {/* WhatsApp QR Code */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+                className="pt-8"
+              >
+                <Button
+                  onClick={() => setShowQRCode(!showQRCode)}
+                  className="bg-green-600/20 text-white hover:bg-green-600/30 backdrop-blur-sm rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 hover:scale-105 border border-green-500/30 flex items-center gap-2"
+                >
+                  <QrCode className="h-4 w-4" />
+                  WhatsApp QR Code
+                </Button>
+                
+                {showQRCode && qrCodeDataUrl && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-4 inline-block bg-white p-4 rounded-2xl shadow-2xl"
+                  >
+                    <img 
+                      src={qrCodeDataUrl} 
+                      alt="WhatsApp QR Code" 
+                      className="w-48 h-48"
+                    />
+                    <p className="text-center text-gray-700 text-sm mt-2 font-medium">
+                      Scan to chat on WhatsApp
+                    </p>
+                  </motion.div>
+                )}
               </motion.div>
             </motion.div>
           </div>
