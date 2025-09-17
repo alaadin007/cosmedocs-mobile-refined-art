@@ -314,6 +314,14 @@ const TempleFiller = () => {
                   </CardContent>
                 </Card>
               </motion.div>
+             </div>
+            
+            {/* Temple Filler Before & After Heading */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-light mb-6 text-white">Temple Filler Before & After</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Witness the complete transformation process from initial consultation through to final results.
+              </p>
             </div>
             
             <div className="grid lg:grid-cols-3 gap-12">
