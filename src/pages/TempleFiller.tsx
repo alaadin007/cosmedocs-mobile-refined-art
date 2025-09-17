@@ -368,7 +368,7 @@ const TempleFiller = () => {
               viewport={{ once: true }}
               className="mt-16 flex justify-center"
             >
-              <Card className="bg-card/50 backdrop-blur-sm border border-primary/20 overflow-hidden max-w-md">
+              <Card className="bg-card/50 backdrop-blur-sm border border-primary/20 overflow-hidden max-w-lg">
                 <CardHeader className="text-center pb-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Star className="text-primary" size={20} />
