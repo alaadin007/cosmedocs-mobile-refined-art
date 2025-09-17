@@ -269,7 +269,16 @@ const EarLobeRejuvenation = () => {
                   >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                  >
                     View Price List
                   </Button>
                 </div>
@@ -354,44 +363,6 @@ const EarLobeRejuvenation = () => {
         </section>
 
         {/* Before & After Gallery */}
-        <section className="py-12 md:py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div 
-              className="text-center mb-8 md:mb-16" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8 }} 
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-thin text-white mb-6 tracking-tight">
-                Treatment Overview
-              </h2>
-            </motion.div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {treatmentDetails.map((detail, index) => (
-                <Card key={index} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    {index === 0 && <Syringe className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 1 && <Clock className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 2 && <CalendarDays className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 3 && <Heart className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 4 && <Users className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 5 && <Shield className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      {detail.title}
-                    </h3>
-                    <p className="text-white text-sm font-light">
-                      {detail.detail}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -442,6 +413,184 @@ const EarLobeRejuvenation = () => {
                 title="Ear Lobe Rejuvenation Results Gallery"
                 description="Comprehensive gallery of our ear lobe enhancement treatments"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* What is Ear Lobe Rejuvenation Section - Moved Here */}
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[95px]">
+          <div className="page-container">
+            <motion.div 
+              className="text-center mb-20" 
+              initial={{ opacity: 0, y: 30 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8 }} 
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+                What is Ear Lobe Rejuvenation?
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                Advanced non-surgical ear lobe restoration using precision-placed dermal fillers
+              </p>
+            </motion.div>
+            
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+              <motion.div 
+                className="space-y-8" 
+                initial={{ opacity: 0, x: -40 }} 
+                whileInView={{ opacity: 1, x: 0 }} 
+                transition={{ duration: 0.8 }} 
+                viewport={{ once: true }}
+              >
+                <div className="space-y-6">
+                  <h3 className="text-3xl font-light text-white">Precision Restoration</h3>
+                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                    Ear lobe rejuvenation represents the art of invisible enhancement. Using premium hyaluronic acid fillers, 
+                    we restore volume and firmness to aging, drooping earlobes. This innovative treatment stimulates your own 
+                    collagen production while immediately plumping and rejuvenating the ear lobe tissue for naturally youthful results.
+                  </p>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                  <h4 className="text-xl font-light text-white mb-6">Why Choose Ear Lobe Rejuvenation?</h4>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-white/90 font-light">Reverses age-related drooping and thinning</p>
+                        <p className="text-white/60 text-sm font-light mt-1">Restores youthful ear lobe volume</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-white/90 font-light">Stimulates natural collagen production</p>
+                        <p className="text-white/60 text-sm font-light mt-1">Long-lasting improvements in skin quality</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-white/90 font-light">Non-surgical with immediate results</p>
+                        <p className="text-white/60 text-sm font-light mt-1">Quick treatment with minimal downtime</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                className="space-y-8" 
+                initial={{ opacity: 0, x: 40 }} 
+                whileInView={{ opacity: 1, x: 0 }} 
+                transition={{ duration: 0.8, delay: 0.2 }} 
+                viewport={{ once: true }}
+              >
+                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
+                  <h4 className="text-2xl font-light text-white mb-8">Common Signs of Ear Lobe Aging</h4>
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-light">1</span>
+                      </div>
+                      <div>
+                        <h5 className="text-white font-light">Drooping & Sagging</h5>
+                        <p className="text-white/60 text-sm font-light">Loss of structural support over time</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-light">2</span>
+                      </div>
+                      <div>
+                        <h5 className="text-white font-light">Volume Loss</h5>
+                        <p className="text-white/60 text-sm font-light">Thinning and deflation of ear lobe tissue</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-light">3</span>
+                      </div>
+                      <div>
+                        <h5 className="text-white font-light">Piercing Damage</h5>
+                        <p className="text-white/60 text-sm font-light">Heavy earrings causing stretching</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits and Aftercare Two-Column Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Benefits Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold mb-8 text-white">Benefits of Ear Lobe Rejuvenation</h3>
+                <div className="space-y-6">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-xl font-light text-white mb-3">Immediate Volume Restoration</h4>
+                    <p className="text-white/70 font-light">
+                      Instantly plumps and firms sagging ear lobes, restoring the youthful fullness that was lost over time.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-xl font-light text-white mb-3">Collagen Stimulation</h4>
+                    <p className="text-white/70 font-light">
+                      Hyaluronic acid stimulates your body's natural collagen production, creating long-lasting skin quality improvements.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-xl font-light text-white mb-3">Enhanced Earring Support</h4>
+                    <p className="text-white/70 font-light">
+                      Restored ear lobe structure provides better support for earrings and prevents further stretching damage.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Aftercare Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold mb-8 text-white">Aftercare Instructions</h3>
+                <div className="space-y-6">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-xl font-light text-white mb-3">First 24 Hours</h4>
+                    <p className="text-white/70 font-light">
+                      Avoid touching or massaging the treated area. Apply ice if needed for any swelling. Sleep with head slightly elevated.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-xl font-light text-white mb-3">First Week</h4>
+                    <p className="text-white/70 font-light">
+                      Avoid wearing heavy earrings. Clean the area gently with mild soap. Avoid strenuous exercise for 24-48 hours.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <h4 className="text-xl font-light text-white mb-3">Long-term Care</h4>
+                    <p className="text-white/70 font-light">
+                      Choose lighter earrings to maintain results. Book follow-up consultation at 2 weeks. Maintain good skincare routine.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -575,7 +724,10 @@ const EarLobeRejuvenation = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+                onClick={() => window.open(bookingUrl, '_blank')}
+              >
                 Book Your Consultation
               </Button>
             </motion.div>
@@ -808,247 +960,6 @@ const EarLobeRejuvenation = () => {
           </div>
         </section>
 
-        {/* Treatment Details Section */}
-        <section className="py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div 
-              className="text-center mb-16" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8 }} 
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-thin text-white mb-6 tracking-tight">
-                Treatment Overview
-              </h2>
-            </motion.div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {treatmentDetails.map((detail, index) => (
-                <Card key={index} className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    {index === 0 && <Syringe className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 1 && <Clock className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 2 && <CalendarDays className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 3 && <Heart className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 4 && <Users className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    {index === 5 && <Shield className="h-5 w-5 text-white/60 mx-auto mb-2" />}
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      {detail.title}
-                    </h3>
-                    <p className="text-white text-sm font-light">
-                      {detail.detail}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* What is Ear Lobe Rejuvenation Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[95px]">
-          <div className="page-container">
-            <motion.div 
-              className="text-center mb-20" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8 }} 
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                What is Ear Lobe Rejuvenation?
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Advanced non-surgical ear lobe restoration using precision-placed dermal fillers
-              </p>
-            </motion.div>
-            
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-              <motion.div 
-                className="space-y-8" 
-                initial={{ opacity: 0, x: -40 }} 
-                whileInView={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8 }} 
-                viewport={{ once: true }}
-              >
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-light text-white">Precision Restoration</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
-                    Ear lobe rejuvenation represents the art of invisible enhancement. Using premium hyaluronic acid fillers, 
-                    we restore volume and firmness to aging, drooping earlobes. This innovative treatment stimulates your own 
-                    collagen production while immediately plumping and rejuvenating the ear lobe tissue for naturally youthful results.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                  <h4 className="text-xl font-light text-white mb-6">Why Choose Ear Lobe Rejuvenation?</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Reverses age-related drooping and thinning</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Restores youthful ear lobe volume</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Stimulates natural collagen production</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Long-lasting improvements in skin quality</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Non-surgical with immediate results</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Quick treatment with minimal downtime</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                className="space-y-8" 
-                initial={{ opacity: 0, x: 40 }} 
-                whileInView={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8, delay: 0.2 }} 
-                viewport={{ once: true }}
-              >
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
-                  <h4 className="text-2xl font-light text-white mb-8">Common Signs of Ear Lobe Aging</h4>
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">1</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-light">Drooping & Sagging</h5>
-                        <p className="text-white/60 text-sm font-light">Loss of structural support over time</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">2</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-light">Volume Loss</h5>
-                        <p className="text-white/60 text-sm font-light">Thinning and deflation of ear lobe tissue</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">3</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-light">Piercing Damage</h5>
-                        <p className="text-white/60 text-sm font-light">Heavy earrings causing stretching</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-24 bg-gradient-to-b from-[#0A0A0A] to-black">
-          <div className="page-container">
-            <motion.div 
-              className="text-center mb-20" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8 }} 
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Benefits of Treatment
-              </h2>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div 
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                initial={{ opacity: 0, y: 40 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8 }} 
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-light text-white mb-4">Immediate Volume Restoration</h3>
-                <p className="text-white/70 font-light">
-                  Instantly plumps and firms sagging ear lobes, restoring the youthful fullness that was lost over time.
-                </p>
-              </motion.div>
-              
-              <motion.div 
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                initial={{ opacity: 0, y: 40 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.1 }} 
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-light text-white mb-4">Collagen Stimulation</h3>
-                <p className="text-white/70 font-light">
-                  Hyaluronic acid stimulates your body's natural collagen production, creating long-lasting skin quality improvements.
-                </p>
-              </motion.div>
-              
-              <motion.div 
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                initial={{ opacity: 0, y: 40 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.2 }} 
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-light text-white mb-4">Enhanced Earring Support</h3>
-                <p className="text-white/70 font-light">
-                  Restored ear lobe structure provides better support for earrings and prevents further stretching damage.
-                </p>
-              </motion.div>
-              
-              <motion.div 
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                initial={{ opacity: 0, y: 40 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.3 }} 
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-light text-white mb-4">Quick & Comfortable</h3>
-                <p className="text-white/70 font-light">
-                  30-minute treatment with minimal discomfort and no downtime required for this simple procedure.
-                </p>
-              </motion.div>
-              
-              <motion.div 
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                initial={{ opacity: 0, y: 40 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.4 }} 
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-light text-white mb-4">Natural Results</h3>
-                <p className="text-white/70 font-light">
-                  Subtle enhancement that restores natural ear lobe proportions without looking artificial or overdone.
-                </p>
-              </motion.div>
-              
-              <motion.div 
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                initial={{ opacity: 0, y: 40 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.5 }} 
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-light text-white mb-4">Reversible Treatment</h3>
-                <p className="text-white/70 font-light">
-                  Hyaluronic acid fillers can be dissolved if needed, providing complete peace of mind and control.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ Section */}
         <section className="py-24 bg-gradient-to-b from-black to-[#0A0A0A]">
@@ -1135,7 +1046,10 @@ const EarLobeRejuvenation = () => {
                 can restore youthful volume and firmness to your ear lobes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  onClick={() => window.open(bookingUrl, '_blank')}
+                >
                   Book Free Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
