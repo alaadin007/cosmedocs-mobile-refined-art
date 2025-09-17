@@ -337,6 +337,90 @@ const AestheticsAtGlance = () => {
             </CardContent>
           </Card>
         </motion.div>
+
+        {/* Supermodel Case Study Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-700/50">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Real Results: A Year-Long Journey
+              </h2>
+              <p className="text-lg text-center mb-8 text-gray-300">
+                From over 30,000 patients treated with 1M+ injections, here's one supermodel's transformation journey 
+                showcasing improvements in skin quality, wrinkle reduction, and volume restoration over 12 months.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="/src/assets/supermodel-before.jpg" 
+                      alt="Before treatment - baseline skin condition"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-purple-400 mb-2">Before Treatment</h3>
+                  <p className="text-sm text-gray-400">Baseline assessment showing natural aging signs</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="/src/assets/supermodel-progress.jpg" 
+                      alt="Progress at 6 months - visible improvements"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-purple-400 mb-2">6 Month Progress</h3>
+                  <p className="text-sm text-gray-400">Improved skin texture and subtle volume enhancement</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="/src/assets/supermodel-after-1.jpg" 
+                      alt="After treatment - natural rejuvenation"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-purple-400 mb-2">12 Month Results</h3>
+                  <p className="text-sm text-gray-400">Natural rejuvenation with enhanced facial harmony</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="aspect-square rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src="/src/assets/supermodel-after-2.jpg" 
+                      alt="Final results - invisible art philosophy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-purple-400 mb-2">Maintained Results</h3>
+                  <p className="text-sm text-gray-400">Our 'invisible art' philosophy in action</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <p className="text-gray-300 mb-4">
+                  This transformation demonstrates our comprehensive approach combining skin treatments, 
+                  precise injections, and ongoing care to achieve naturally beautiful results.
+                </p>
+                <Button 
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3"
+                >
+                  Start Your Journey
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
 
       {/* Hidden SEO Content */}
