@@ -388,6 +388,142 @@ const MarionnetteLines = () => {
           </div>
         </section>
 
+        {/* Benefits and Aftercare */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">Treatment Benefits & Aftercare</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Understand the benefits of marionette line treatment and important aftercare guidelines for optimal results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Benefits Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900 border-purple-500 border-2 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-purple-300 text-2xl">Treatment Benefits</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Instant Results</h4>
+                        <p className="text-gray-300 text-sm">Visible improvement immediately after treatment</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Natural Appearance</h4>
+                        <p className="text-gray-300 text-sm">Maintains facial expressions while reducing lines</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Long-lasting Results</h4>
+                        <p className="text-gray-300 text-sm">Results last 12-18 months with premium fillers</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Minimal Downtime</h4>
+                        <p className="text-gray-300 text-sm">Return to normal activities immediately</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Non-surgical Solution</h4>
+                        <p className="text-gray-300 text-sm">Achieve facelift-like results without surgery</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Reversible Treatment</h4>
+                        <p className="text-gray-300 text-sm">Can be dissolved if desired using hyaluronidase</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Aftercare Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900 border-purple-500 border-2 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-purple-300 text-2xl">Aftercare Guidelines</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <Clock className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">First 24 Hours</h4>
+                        <p className="text-gray-300 text-sm">Avoid strenuous exercise and excessive heat</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Activity className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">First 48 Hours</h4>
+                        <p className="text-gray-300 text-sm">Avoid alcohol, aspirin, and blood-thinning medications</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Syringe className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Gentle Skincare</h4>
+                        <p className="text-gray-300 text-sm">Use gentle products and avoid harsh scrubbing</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Follow-up Care</h4>
+                        <p className="text-gray-300 text-sm">2-week follow-up appointment to assess results</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Ice Application</h4>
+                        <p className="text-gray-300 text-sm">Apply ice packs for 10-15 minutes to reduce swelling</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Award className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Professional Support</h4>
+                        <p className="text-gray-300 text-sm">24/7 aftercare support from our medical team</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
