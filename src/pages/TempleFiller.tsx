@@ -369,7 +369,7 @@ const TempleFiller = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="mt-20"
+              className="mt-20 max-w-4xl mx-auto"
             >
               <div className="bg-black rounded-xl p-8 border border-purple-800/30">
                 <div className="text-center mb-8">
