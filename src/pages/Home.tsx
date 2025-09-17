@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Link } from "react-router-dom";
 import PopularTreatments from "@/components/PopularTreatments";
 import AnimatedDots from "@/components/AnimatedDots";
 import LiquidGlassFacialAssessment from "@/components/LiquidGlassFacialAssessment";
@@ -153,12 +154,12 @@ const Home = () => {
                     variant="outline"
                     className="bg-transparent border-amber-500 text-amber-400 hover:bg-amber-500/10 px-6 py-3 rounded-full font-medium transition-all duration-300"
                   >
-                    <a 
-                      href="/aesthetics-at-a-glance"
+                    <Link 
+                      to="/aesthetics-at-a-glance"
                       className="inline-block"
                     >
                       Read Our Aesthetics Guide
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </motion.div>
