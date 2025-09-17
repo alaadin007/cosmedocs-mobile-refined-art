@@ -128,23 +128,18 @@ const Index = () => {
                        Book a Consultation
                      </a>
                      
-                     {/* AI Facial Analysis Button */}
+                     {/* Aesthetics at a Glance Ebook Link */}
                      <motion.div
                        initial={{ opacity: 0, y: 10 }}
                        animate={{ opacity: 1, y: 0 }}
                        transition={{ delay: 1.1, duration: 0.6 }}
                      >
-                       <Button
-                         onClick={() => setIsAnalysisOpen(true)}
-                         variant="outline"
-                         size="lg"
-                         className="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-full px-8 py-6 text-sm font-medium transition-all duration-300"
-                       >
-                         <Sparkles className="h-4 w-4 mr-2" />
-                         AI Facial Analysis
-                       </Button>
+                       <a href="/aesthetics-at-glance" className="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-full px-8 py-6 text-sm font-medium transition-all duration-300 inline-flex items-center justify-center">
+                         <BookOpen className="h-4 w-4 mr-2" />
+                         Read Our Free Ebook
+                       </a>
                         <p className="text-xs text-gray-400 mt-2">
-                          Free assessment • Instant results • 
+                          "Aesthetics at a Glance" • Complete skin guide • 
                           <a href="/prescription-skincare" className="text-primary hover:text-primary/80 transition-colors ml-1">
                             Prescription Medical Skincare
                           </a>
