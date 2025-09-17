@@ -129,7 +129,7 @@ const NeckFillers = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">neck fillers</span>
+                  <span className="text-purple-300">Neck Fillers</span>
                   <span className="block text-sm mt-4">Invisible art - fix neck wrinkles and tech neck lines with premium dermal fillers</span>
                 </h1>
                 <div className="mb-8">
