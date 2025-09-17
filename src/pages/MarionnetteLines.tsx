@@ -21,7 +21,7 @@ import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Award, Gra
 const MarionnetteLines = () => {
   const seoData = generateSEOMetadata(
     "Marionette Lines Filler London | 10 Years Younger | Liquid Facelift | Cosmedocs",
-    "Transform marionette lines with expert dermal filler treatments in London. Part of our liquid facelift for younger individuals in their 30s. Book consultation today.",
+    "Expert marionette lines filler treatment in London. See before and after results. Best dermal fillers for marionette lines. Book consultation.",
     "/marionette-lines"
   );
 
@@ -61,15 +61,15 @@ const MarionnetteLines = () => {
   const faqs = [
     {
       question: "What are marionette lines and how do they develop?",
-      answer: "Marionette lines are vertical creases that extend from the corners of the mouth down towards the chin, resembling the lines on a marionette puppet's face. They develop due to natural aging, volume loss in the cheeks, decreased collagen production, and repetitive facial expressions. These lines can make you appear sad or aged, even when you're feeling happy."
+      answer: "Marionette lines are vertical creases that extend from the corners of the mouth down towards the chin, resembling the lines on a marionette puppet's face. These lines on face develop due to natural aging, volume loss in the cheeks, decreased collagen production, and repetitive facial expressions. Marionette line can make you appear sad or aged, even when you're feeling happy."
     },
     {
-      question: "How are marionette lines different from nasolabial folds?",
-      answer: "While both are age-related facial lines, marionette lines run from the mouth corners to the chin, whereas nasolabial folds run from the nose to the mouth corners. Nasolabial creases are typically caused by repeated smiling and skin wrinkling, while nasolabial folds result from volume loss in the cheeks causing skin to fall. Both can be effectively treated with strategic dermal filler placement."
+      question: "Can I use botox on marionette lines or do I need fillers?",
+      answer: "While botox for marionette lines can help with some muscle activity, dermal fillers marionette lines treatment is generally more effective. Marionette lines botox may provide limited results as these are primarily caused by volume loss rather than muscle activity. Filler for marionette lines is the gold standard treatment as it directly addresses the structural changes causing these lines."
     },
     {
-      question: "What is the '10 years younger' marionette line treatment?",
-      answer: "The '10 years younger' treatment is our comprehensive approach to marionette lines that can dramatically reduce the appearance of aging. By strategically placing dermal fillers along the marionette lines and addressing related volume loss, we can restore a more youthful appearance that can take years off your face, hence the name."
+      question: "How to get rid of marionette lines effectively?",
+      answer: "The best treatment for marionette lines is dermal filler marionette lines treatment. Our expert practitioners use premium hyaluronic acid fillers marionette lines to restore volume and smooth these lines. This treatment for marionette lines can dramatically reduce their appearance and is considered the most effective way to remove marionette lines non-surgically."
     },
     {
       question: "Is marionette line treatment part of a liquid facelift?",
@@ -92,8 +92,8 @@ const MarionnetteLines = () => {
       answer: "There's minimal downtime with most patients returning to normal activities immediately. Some temporary swelling, redness, or minor bruising may occur but typically resolves within 3-7 days. We recommend avoiding strenuous exercise for 24-48 hours post-treatment."
     },
     {
-      question: "How much does marionette line filler treatment cost?",
-      answer: "Marionette line filler treatment starts from £325 per ml. The exact cost depends on the amount of filler needed and whether additional treatments are combined. During your consultation, we'll provide a detailed treatment plan with transparent pricing."
+      question: "How much does marionette lines filler cost UK treatment?",
+      answer: "Marionette lines filler cost UK starts from £325 per ml at our London clinic. The exact filler marionette lines cost depends on the amount of filler needed and whether additional treatments are combined. During your consultation, we'll provide a detailed treatment plan with transparent pricing for your marionette line filler treatment."
     }
   ];
 
@@ -259,9 +259,9 @@ const MarionnetteLines = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6">Marionette Lines Transformation Results</h2>
+              <h2 className="text-4xl font-bold mb-6">Marionette Lines Before and After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                See the dramatic improvements achieved through our expert marionette line treatments and liquid facelift procedures.
+                See the dramatic before and after marionette lines improvements achieved through our expert dermal fillers for marionette lines treatments and liquid facelift procedures.
               </p>
             </motion.div>
 
@@ -316,7 +316,7 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6">What are Marionette Lines?</h2>
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive facial expressions over time.
+                Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These marionettes lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive facial expressions over time.
               </p>
               
               <Card className="bg-black border-purple-500 border-2 p-6">
