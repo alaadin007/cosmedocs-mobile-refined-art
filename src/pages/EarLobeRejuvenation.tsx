@@ -417,105 +417,92 @@ const EarLobeRejuvenation = () => {
           </div>
         </section>
 
-        {/* What is Ear Lobe Rejuvenation Section - Moved Here */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[95px]">
+        {/* What is Ear Lobe Rejuvenation */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <motion.div 
-              className="text-center mb-20" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8 }} 
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-16"
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                What is Ear Lobe Rejuvenation?
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Advanced non-surgical ear lobe restoration using precision-placed dermal fillers
+              <h2 className="text-4xl font-bold mb-6">What is Ear Lobe Rejuvenation?</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+                Ear lobe rejuvenation is a non-surgical cosmetic procedure that restores volume, firmness, 
+                and shape to aging or stretched earlobes. Using premium hyaluronic acid fillers, we can 
+                effectively reverse the effects of aging, heavy earrings, and natural volume loss.
               </p>
             </motion.div>
-            
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-              <motion.div 
-                className="space-y-8" 
-                initial={{ opacity: 0, x: -40 }} 
-                whileInView={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8 }} 
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-light text-white">Precision Restoration</h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
-                    Ear lobe rejuvenation represents the art of invisible enhancement. Using premium hyaluronic acid fillers, 
-                    we restore volume and firmness to aging, drooping earlobes. This innovative treatment stimulates your own 
-                    collagen production while immediately plumping and rejuvenating the ear lobe tissue for naturally youthful results.
-                  </p>
-                </div>
-                
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                  <h4 className="text-xl font-light text-white mb-6">Why Choose Ear Lobe Rejuvenation?</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Reverses age-related drooping and thinning</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Restores youthful ear lobe volume</p>
-                      </div>
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">Why Do Earlobes Age?</h3>
+                <p className="text-gray-300 mb-6">
+                  Earlobes are particularly susceptible to aging due to their delicate structure and constant 
+                  exposure to gravity. Understanding the causes helps us provide the most effective treatments.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Natural Aging</h4>
+                      <p className="text-gray-300 text-sm">Loss of collagen and elasticity over time</p>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Stimulates natural collagen production</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Long-lasting improvements in skin quality</p>
-                      </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Heavy Earrings</h4>
+                      <p className="text-gray-300 text-sm">Weight causes stretching and volume loss</p>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-white/90 font-light">Non-surgical with immediate results</p>
-                        <p className="text-white/60 text-sm font-light mt-1">Quick treatment with minimal downtime</p>
-                      </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Gravity Effects</h4>
+                      <p className="text-gray-300 text-sm">Constant downward pull on delicate skin</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
-              
-              <motion.div 
-                className="space-y-8" 
-                initial={{ opacity: 0, x: 40 }} 
-                whileInView={{ opacity: 1, x: 0 }} 
-                transition={{ duration: 0.8, delay: 0.2 }} 
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
-                  <h4 className="text-2xl font-light text-white mb-8">Common Signs of Ear Lobe Aging</h4>
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">1</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-light">Drooping & Sagging</h5>
-                        <p className="text-white/60 text-sm font-light">Loss of structural support over time</p>
-                      </div>
+                <h3 className="text-2xl font-bold mb-6 text-purple-300">Treatment Benefits</h3>
+                <p className="text-gray-300 mb-6">
+                  Our ear lobe rejuvenation treatment offers multiple benefits for those looking to restore 
+                  their earlobes to a more youthful appearance.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Immediate Results</h4>
+                      <p className="text-gray-300 text-sm">Visible improvement right after treatment</p>
                     </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">2</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-light">Volume Loss</h5>
-                        <p className="text-white/60 text-sm font-light">Thinning and deflation of ear lobe tissue</p>
-                      </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Natural Enhancement</h4>
+                      <p className="text-gray-300 text-sm">Subtle, natural-looking volume restoration</p>
                     </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-light">3</span>
-                      </div>
-                      <div>
-                        <h5 className="text-white font-light">Piercing Damage</h5>
-                        <p className="text-white/60 text-sm font-light">Heavy earrings causing stretching</p>
-                      </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <div>
+                      <h4 className="font-semibold text-white">Minimal Downtime</h4>
+                      <p className="text-gray-300 text-sm">Quick procedure with fast recovery</p>
                     </div>
                   </div>
                 </div>
@@ -524,11 +511,11 @@ const EarLobeRejuvenation = () => {
           </div>
         </section>
 
-        {/* Benefits and Aftercare Two-Column Section */}
-        <section className="py-20 bg-accent">
+        {/* Benefits & Aftercare Section */}
+        <section className="py-20 bg-black">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Benefits Column */}
+              {/* Benefits */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -536,58 +523,91 @@ const EarLobeRejuvenation = () => {
                 viewport={{ once: true }}
               >
                 <h3 className="text-3xl font-bold mb-8 text-white">Benefits of Ear Lobe Rejuvenation</h3>
-                <div className="space-y-6">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                    <h4 className="text-xl font-light text-white mb-3">Immediate Volume Restoration</h4>
-                    <p className="text-white/70 font-light">
-                      Instantly plumps and firms sagging ear lobes, restoring the youthful fullness that was lost over time.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                    <h4 className="text-xl font-light text-white mb-3">Collagen Stimulation</h4>
-                    <p className="text-white/70 font-light">
-                      Hyaluronic acid stimulates your body's natural collagen production, creating long-lasting skin quality improvements.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                    <h4 className="text-xl font-light text-white mb-3">Enhanced Earring Support</h4>
-                    <p className="text-white/70 font-light">
-                      Restored ear lobe structure provides better support for earrings and prevents further stretching damage.
-                    </p>
-                  </div>
+                <p className="text-gray-300 mb-8">
+                  Experience the transformative benefits of professional ear lobe rejuvenation at Cosmedocs.
+                </p>
+                
+                <div className="grid grid-cols-1 gap-6">
+                  {[
+                    "Restores Natural Volume",
+                    "Improves Earlobe Shape", 
+                    "Reduces Visible Aging",
+                    "Enhances Earring Support",
+                    "Natural-Looking Results",
+                    "Long-Lasting Effects"
+                  ].map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-black rounded-lg p-4 border border-gray-800 flex items-center space-x-4"
+                    >
+                      <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
+                      </div>
+                      <h4 className="text-white font-semibold">{benefit}</h4>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
 
-              {/* Aftercare Column */}
+              {/* Aftercare */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <h3 className="text-3xl font-bold mb-8 text-white">Aftercare Instructions</h3>
+                <p className="text-gray-300 mb-8">
+                  Follow these essential aftercare guidelines to ensure optimal results and minimize any potential side effects.
+                </p>
+                
                 <div className="space-y-6">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                    <h4 className="text-xl font-light text-white mb-3">First 24 Hours</h4>
-                    <p className="text-white/70 font-light">
-                      Avoid touching or massaging the treated area. Apply ice if needed for any swelling. Sleep with head slightly elevated.
-                    </p>
+                  <div className="bg-black rounded-lg p-6 border border-gray-800">
+                    <h4 className="text-xl font-semibold text-white mb-4">Immediate Aftercare (24-48 hours)</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Keep earlobes clean and dry</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Avoid wearing earrings for 24 hours</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Apply ice if swelling occurs</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Avoid touching or massaging the area</p>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                    <h4 className="text-xl font-light text-white mb-3">First Week</h4>
-                    <p className="text-white/70 font-light">
-                      Avoid wearing heavy earrings. Clean the area gently with mild soap. Avoid strenuous exercise for 24-48 hours.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                    <h4 className="text-xl font-light text-white mb-3">Long-term Care</h4>
-                    <p className="text-white/70 font-light">
-                      Choose lighter earrings to maintain results. Book follow-up consultation at 2 weeks. Maintain good skincare routine.
-                    </p>
+
+                  <div className="bg-black rounded-lg p-6 border border-gray-800">
+                    <h4 className="text-xl font-semibold text-white mb-4">First Week</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Choose lightweight earrings when you resume wearing them</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Avoid sleeping on your sides</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Avoid excessive heat and sun exposure</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Contact clinic if you notice unusual symptoms</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
