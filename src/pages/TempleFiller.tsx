@@ -334,96 +334,77 @@ const TempleFiller = () => {
           </div>
         </section>
 
-        {/* Introduction */}
+        {/* Comprehensive Treatment Journey */}
         <section className="py-20 bg-secondary/10">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-light mb-8">Temple Filler Treatment in London</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-                Temple filler represents one of the most sophisticated approaches to facial rejuvenation available in London today. 
-                This advanced treatment addresses age-related volume loss in the temporal region, restoring youthful contours and 
-                enhancing overall facial harmony through precise dermal filler placement.
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-light mb-8">Your Temple Filler Journey</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-12 max-w-4xl mx-auto">
+                Temple filler represents one of the most sophisticated approaches to facial rejuvenation. This advanced treatment 
+                addresses age-related volume loss in the temporal region, restoring youthful contours through precise dermal filler placement.
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Treatment Overview */}
-        <section className="py-20">
-          <div className="page-container">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
               <div>
-                <h2 className="text-4xl font-light mb-6">Understanding Temple Volume Loss</h2>
+                <h3 className="text-3xl font-light mb-6">Understanding Temple Volume Loss</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   The temporal region is one of the first areas to show signs of aging, with volume loss typically beginning 
-                  in the late twenties. As we age, the natural fat pads in our temples diminish, creating a hollowed appearance 
-                  that can make the face appear gaunt, tired, or older than our chronological age.
+                  in the late twenties. As natural fat pads diminish, temples create a hollowed appearance that can make 
+                  the face appear gaunt or tired.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Temple filler treatment has emerged as the gold standard for addressing this concern in London's aesthetic 
-                  medicine landscape. Using premium hyaluronic acid-based dermal fillers, we can restore lost volume, 
-                  improve facial proportions, and create a more youthful, refreshed appearance that looks entirely natural.
+                  Using premium hyaluronic acid-based dermal fillers, we restore lost volume, improve facial proportions, 
+                  and create a more youthful, refreshed appearance that looks entirely natural.
                 </p>
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4">
                   <Award className="h-6 w-6 text-primary" />
                   <span className="text-sm font-medium">Award-winning aesthetic practitioners</span>
                 </div>
               </div>
-              <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
                 {[
-                  { icon: CheckCircle, title: "Volume Restoration", desc: "Replenish lost temple volume for youthful contours" },
-                  { icon: Star, title: "Enhanced Symmetry", desc: "Improve facial balance and proportion" },
-                  { icon: Heart, title: "Natural Results", desc: "Subtle enhancement that looks completely natural" },
-                  { icon: Shield, title: "Safe & Effective", desc: "Proven techniques with excellent safety profile" }
+                  { icon: CheckCircle, title: "Volume Restoration", desc: "Replenish lost temple volume" },
+                  { icon: Star, title: "Enhanced Symmetry", desc: "Improve facial balance" },
+                  { icon: Heart, title: "Natural Results", desc: "Subtle, natural enhancement" },
+                  { icon: Shield, title: "Safe & Effective", desc: "Proven, safe techniques" }
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <item.icon className="h-6 w-6 text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-1">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm">{item.desc}</p>
-                    </div>
+                  <div key={index} className="text-center p-4 bg-card rounded-lg">
+                    <item.icon className="h-8 w-8 text-primary mx-auto mb-2" />
+                    <h4 className="font-semibold mb-1 text-sm">{item.title}</h4>
+                    <p className="text-muted-foreground text-xs">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Treatment Process */}
-        <section className="py-20 bg-secondary/10">
-          <div className="page-container">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-light mb-6">The Temple Filler Process</h2>
-              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Our temple filler treatment follows a meticulous process designed to ensure optimal results and patient safety. 
-                Each step is carefully planned and executed by our experienced aesthetic practitioners.
-              </p>
-            </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: "01",
-                  title: "Comprehensive Consultation",
-                  description: "Detailed assessment of facial anatomy, medical history, and aesthetic goals. We use advanced imaging to plan your treatment and discuss realistic expectations."
-                },
-                {
-                  step: "02", 
-                  title: "Precision Treatment",
-                  description: "Using premium dermal fillers and advanced injection techniques, we carefully restore temple volume. The procedure typically takes 30-45 minutes with minimal discomfort."
-                },
-                {
-                  step: "03",
-                  title: "Aftercare & Follow-up",
-                  description: "Comprehensive aftercare instructions and follow-up appointments to monitor results. We're available for any questions throughout your healing journey."
-                }
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-6xl font-light text-primary mb-4">{item.step}</div>
-                  <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              ))}
+            <div className="bg-card rounded-lg p-8">
+              <h3 className="text-3xl font-light mb-8 text-center">Treatment Process</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    step: "01",
+                    title: "Consultation & Assessment",
+                    description: "Detailed facial analysis, medical history review, and treatment planning using advanced imaging technology."
+                  },
+                  {
+                    step: "02", 
+                    title: "Precision Treatment",
+                    description: "30-45 minute procedure using premium dermal fillers and advanced injection techniques with minimal discomfort."
+                  },
+                  {
+                    step: "03",
+                    title: "Aftercare & Results",
+                    description: "Immediate results with comprehensive aftercare support and follow-up to monitor your transformation."
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-4xl font-light text-primary mb-4">{item.step}</div>
+                    <h4 className="text-lg font-semibold mb-4">{item.title}</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
