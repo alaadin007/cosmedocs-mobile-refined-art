@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { generateSEOMetadata } from '@/utils/seo';
-import { ArrowRight, Star, CheckCircle, Clock, Heart, Shield, Award, MapPin, GraduationCap, Palette } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Clock, Heart, Shield, Award, MapPin, GraduationCap, Palette, Calendar, Activity, Syringe } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { Button } from '@/components/ui/button';
 
@@ -128,6 +129,79 @@ const TempleFiller = () => {
               </motion.div>
               
               <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Temple Filler Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30-45 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -638,11 +712,23 @@ const TempleFiller = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-secondary/10">
+        <section className="py-20 bg-accent">
           <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about temple filler treatments at our London clinic.
+              </p>
+            </motion.div>
+
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl font-light text-center mb-16">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <Accordion type="single" collapsible className="space-y-4">
                 {[
                   {
                     question: "How long do temple filler results last?",
@@ -663,14 +749,26 @@ const TempleFiller = () => {
                   {
                     question: "How much does temple filler cost in London?",
                     answer: "Temple filler costs vary depending on the amount of product needed and treatment complexity. We provide detailed pricing during your consultation based on your specific requirements."
+                  },
+                  {
+                    question: "What causes temple volume loss?",
+                    answer: "Temple volume loss is a natural part of aging that typically begins in the late twenties. As we age, the fat pads in our temples diminish, creating a hollowed appearance that can make the face appear gaunt or tired."
+                  },
+                  {
+                    question: "Who is a good candidate for temple fillers?",
+                    answer: "Good candidates include individuals experiencing temple volume loss, facial asymmetry, or those seeking non-surgical facial rejuvenation. A consultation will determine if temple fillers are right for you."
                   }
                 ].map((faq, index) => (
-                  <div key={index} className="border-b border-border pb-6">
-                    <h3 className="text-xl font-semibold mb-3">{faq.question}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                  </div>
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
             </div>
           </div>
         </section>
