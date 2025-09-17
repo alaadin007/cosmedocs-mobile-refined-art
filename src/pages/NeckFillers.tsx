@@ -304,7 +304,7 @@ const NeckFillers = () => {
         </section>
 
         {/* Treatment Overview */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -403,7 +403,7 @@ const NeckFillers = () => {
         </section>
 
         {/* Benefits and Aftercare Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Benefits of Neck Fillers */}
