@@ -143,10 +143,17 @@ const NeckFillers = () => {
                   <p className="text-sm text-gray-300">Smooth neck wrinkles and tech neck lines with premium dermal fillers</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     View Price List
                   </Button>
                 </div>
@@ -230,7 +237,7 @@ const NeckFillers = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
+        {/* Neck Filler Before & After */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -240,7 +247,7 @@ const NeckFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Neck Filler Before & After</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 See the transformative results achieved with our expert neck filler treatments. 
                 Each patient receives personalized care for optimal neck contouring outcomes.
@@ -295,6 +302,7 @@ const NeckFillers = () => {
             />
           </div>
         </section>
+
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-accent">
