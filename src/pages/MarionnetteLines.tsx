@@ -357,22 +357,13 @@ const MarionnetteLines = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Card className="bg-gray-900 border-gray-800">
                 <CardHeader>
                   <CardTitle className="text-purple-300">Volume Restoration</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300">Strategic placement of dermal fillers to restore lost volume in cheeks and address the root cause of marionette lines and nasolabial folds.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gray-900 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-purple-300">Comprehensive Approach</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">Treatment addresses marionette lines, nasolabial folds, and can include <AutoLinkedText>lip enhancement</AutoLinkedText> for harmonious facial rejuvenation.</p>
                 </CardContent>
               </Card>
 
