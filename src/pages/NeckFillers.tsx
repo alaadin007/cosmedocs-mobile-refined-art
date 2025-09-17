@@ -133,7 +133,7 @@ const NeckFillers = () => {
                   <span className="block text-sm mt-4">Invisible art - fix neck wrinkles and tech neck lines with premium dermal fillers</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert neck filler treatments for smoother, wrinkle-less skin, say bye to sag and get smoother, wrinkle free skin</p>
+                  <p className="text-2xl text-purple-300 font-bold">say bye to sag and get smoother, wrinkle free skin</p>
                   <p className="text-sm text-gray-300">#cosmeneck - Check out our IG for hundreds more authentic looking neck enhancement transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
