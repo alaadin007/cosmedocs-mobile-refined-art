@@ -290,111 +290,311 @@ const AestheticsAtGlance = () => {
                 </CardContent>
               </Card>
             </motion.div>
-
-            {/* Supermodel Case Study */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
-            >
-              <Card className="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 border-amber-500/30">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-amber-400">Supermodel Case Study</CardTitle>
-                  <p className="text-amber-200 text-sm">One Year Journey: Skin, Wrinkles & Volume</p>
-                </CardHeader>
-                <CardContent className="p-6 space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    Follow the remarkable transformation of a supermodel over one year of treatment. This case study demonstrates the power of our comprehensive approach to skin rejuvenation, combining advanced treatments for optimal results.
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <img 
-                        src={supermodelBefore} 
-                        alt="Before treatment" 
-                        className="w-full h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-xs text-amber-200 text-center">Before Treatment</p>
-                    </div>
-                    <div className="space-y-2">
-                      <img 
-                        src={supermodelProgress} 
-                        alt="Mid-treatment progress" 
-                        className="w-full h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-xs text-amber-200 text-center">6 Month Progress</p>
-                    </div>
-                    <div className="space-y-2">
-                      <img 
-                        src={supermodelAfter1} 
-                        alt="After treatment - result 1" 
-                        className="w-full h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-xs text-amber-200 text-center">12 Month Results</p>
-                    </div>
-                    <div className="space-y-2">
-                      <img 
-                        src={supermodelAfter2} 
-                        alt="After treatment - result 2" 
-                        className="w-full h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-xs text-amber-200 text-center">Final Results</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-amber-900/20 p-4 rounded-lg">
-                    <h4 className="font-semibold text-amber-300 mb-2">Treatment Summary:</h4>
-                    <ul className="text-sm text-amber-100 space-y-1">
-                      <li>• Comprehensive skin rejuvenation protocol</li>
-                      <li>• Strategic volume restoration</li>
-                      <li>• Advanced wrinkle reduction techniques</li>
-                      <li>• Personalized maintenance program</li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </div>
 
-        {/* Conclusion */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
-          className="mt-12"
-        >
-          <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
-            <CardHeader>
-              <CardTitle className="text-3xl text-center text-white">Conclusion: Your Simple Skin Blueprint</CardTitle>
-            </CardHeader>
-            <CardContent className="p-8 text-gray-300 leading-relaxed space-y-6">
-              <p>
-                In this guide, we've walked through the simple 3-step approach to healthier, more vibrant skin by targeting the three key cellular players: keratinocytes (with exfoliation), melanocytes (with brightening), and fibroblasts (with collagen stimulation). We've also touched on the role of professional treatments like Botox and fillers for addressing movement and volume concerns that topical products alone can't tackle.
-              </p>
-              <p>
-                Remember, skin improvement is a journey, not a sprint. Start with one step at a time, be consistent, and give your skin time to respond. Most importantly, always consult with a qualified dermatologist or aesthetic practitioner before starting any new treatment regimen, especially if you have sensitive skin or specific concerns.
-              </p>
-              <p>
-                At Cosmedocs, our aesthetics is invisible art – bold, natural, always your way. We believe in transformation that speaks without saying a word, helping you achieve your most confident, radiant self through evidence-based treatments and personalized care.
-              </p>
-              
-              <div className="bg-purple-900/30 p-6 rounded-lg mt-8">
-                <h3 className="text-xl font-semibold text-purple-300 mb-4">Ready to Start Your Journey?</h3>
-                <p className="text-gray-300 mb-4">
-                  Book a consultation with our expert team to create your personalized treatment plan.
+        {/* Supermodel Case Study - Treatment Journey Style */}
+        <section className="py-20 bg-gradient-to-r from-amber-50/5 to-yellow-50/5 mt-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-4xl font-light mb-6 text-amber-400">Supermodel Case Study</h2>
+                <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
+                  Witness the complete transformation process of a supermodel over one year of treatment. 
+                  This comprehensive case study showcases the precision and artistry of our aesthetic approach combining skin rejuvenation, wrinkle treatment, and volume restoration.
                 </p>
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white">
-                  Book Consultation
-                </Button>
+              </motion.div>
+            </div>
+            
+            <div className="grid lg:grid-cols-4 gap-8">
+              {/* Before Treatment */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-amber-900/30 to-red-900/20 rounded-xl overflow-hidden shadow-xl border border-amber-500/30">
+                  <div className="p-6 border-b border-amber-500/30">
+                    <div className="bg-amber-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Target className="text-amber-300" size={24} />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-2 text-amber-300">Initial Assessment</h3>
+                    <p className="text-amber-200 text-sm">Before any treatment began</p>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                      <img 
+                        src={supermodelBefore} 
+                        alt="Initial consultation showing natural aging signs"
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="text-sm text-amber-200 leading-relaxed">
+                      Initial consultation showing natural aging signs and areas for enhancement. Even supermodels benefit from professional aesthetic care.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-amber-500/10">
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded-full">Baseline Assessment</span>
+                      <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded-full">Natural Aging</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Progress - 6 Months */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/20 rounded-xl overflow-hidden shadow-xl border border-blue-500/30">
+                  <div className="p-6 border-b border-blue-500/30">
+                    <div className="bg-blue-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Lightbulb className="text-blue-300" size={24} />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-2 text-blue-300">Mid-Treatment</h3>
+                    <p className="text-blue-200 text-sm">6 months progress review</p>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                      <img 
+                        src={supermodelProgress}
+                        alt="Mid-treatment progress - 6 months in"
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="text-sm text-blue-200 leading-relaxed">
+                      Mid-treatment progress showing significant improvement in skin quality, texture, and overall facial harmony after 6 months of treatment.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-blue-500/10">
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Progressive Results</span>
+                      <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">6 Month Mark</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Final Results 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/20 rounded-xl overflow-hidden shadow-xl border border-green-500/30">
+                  <div className="p-6 border-b border-green-500/30">
+                    <div className="bg-green-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Award className="text-green-300" size={24} />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-2 text-green-300">Final Results</h3>
+                    <p className="text-green-200 text-sm">One year transformation</p>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                      <img 
+                        src={supermodelAfter1}
+                        alt="Final results - enhanced volume and contour"
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="text-sm text-green-200 leading-relaxed">
+                      Final results showing enhanced volume and contour restoration. Natural-looking enhancement that maintains facial harmony and authenticity.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-green-500/10">
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Volume Restored</span>
+                      <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Natural Results</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Final Results 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/20 rounded-xl overflow-hidden shadow-xl border border-purple-500/30">
+                  <div className="p-6 border-b border-purple-500/30">
+                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Sparkles className="text-purple-300" size={24} />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-2 text-purple-300">Aesthetic Perfection</h3>
+                    <p className="text-purple-200 text-sm">Complete transformation</p>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                      <img 
+                        src={supermodelAfter2}
+                        alt="Natural enhancement maintaining facial harmony"
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="text-sm text-purple-200 leading-relaxed">
+                      Natural enhancement maintaining perfect facial harmony. The epitome of invisible art - bold, natural, and always authentically beautiful.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-purple-500/10">
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Invisible Art</span>
+                      <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Perfect Harmony</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Treatment Summary */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mt-16"
+            >
+              <div className="bg-gradient-to-r from-amber-900/10 to-yellow-900/10 rounded-2xl p-8 border border-amber-500/20">
+                <div className="text-center mb-8">
+                  <div className="bg-amber-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                    <Award className="text-amber-400" size={32} />
+                  </div>
+                  <h3 className="text-3xl font-light mb-4 text-amber-400">Complete Transformation Summary</h3>
+                  <p className="text-amber-200 max-w-2xl mx-auto">
+                    One year journey showcasing the power of comprehensive aesthetic medicine combining skin rejuvenation, wrinkle treatment, and volume restoration
+                  </p>
+                </div>
+                
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10">
+                    <h4 className="text-xl font-semibold mb-4 flex items-center text-amber-300">
+                      <Sparkles className="text-amber-400 mr-3" size={20} />
+                      Skin Quality
+                    </h4>
+                    <div className="space-y-2 text-sm text-amber-200">
+                      <p>• Enhanced texture and luminosity</p>
+                      <p>• Improved hydration levels</p>
+                      <p>• Reduced fine lines and wrinkles</p>
+                      <p>• Overall skin rejuvenation</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10">
+                    <h4 className="text-xl font-semibold mb-4 flex items-center text-amber-300">
+                      <Heart className="text-amber-400 mr-3" size={20} />
+                      Volume Restoration
+                    </h4>
+                    <div className="space-y-2 text-sm text-amber-200">
+                      <p>• Strategic volume enhancement</p>
+                      <p>• Natural facial contouring</p>
+                      <p>• Maintained facial proportions</p>
+                      <p>• Age-appropriate results</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-amber-500/10">
+                    <h4 className="text-xl font-semibold mb-4 flex items-center text-amber-300">
+                      <Award className="text-amber-400 mr-3" size={20} />
+                      Our Philosophy
+                    </h4>
+                    <div className="space-y-2 text-sm text-amber-200">
+                      <p>• Invisible art aesthetic</p>
+                      <p>• Bold yet natural results</p>
+                      <p>• Always authentically you</p>
+                      <p>• Transformation that speaks</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        <div className="container mx-auto px-4 pb-12">
+          {/* Conclusion */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <Card className="bg-gradient-to-br from-gray-900/50 to-black/30 border-gray-500/30">
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Skin?</h2>
+                <p className="text-gray-300 leading-relaxed mb-8">
+                  This guide is just the beginning. While good skincare can work wonders, sometimes you need professional help to achieve your aesthetic goals. At Cosmedocs, our expert practitioners combine the latest scientific knowledge with artistic precision to help you achieve the beautiful, natural-looking results you deserve.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="bg-purple-600 hover:bg-purple-700 text-white"
+                    onClick={() => window.open('tel:02071830250', '_self')}
+                  >
+                    Book Consultation
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10"
+                    onClick={handleShare}
+                  >
+                    Share This Guide
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
 
         {/* Hidden SEO Content */}
-        <div className="hidden">
-          <p>Discover the comprehensive guide to aesthetic medicine and skin care with Cosmedocs' expert insights. Our aesthetics at a glance ebook covers everything from lazy skin syndrome to advanced cellular rejuvenation techniques. Learn about keratinocytes, melanocytes, and fibroblasts - the three key cell types that determine your skin's health and appearance. This professional guide includes detailed information about chemical exfoliation with AHAs and PHAs, pigment control with vitamin C and antioxidants, and collagen stimulation through retinoids and professional treatments. Understanding the science behind beautiful skin helps you make informed decisions about your skincare routine and aesthetic treatments. From microneedling and polynucleotide injections to Botox and dermal fillers, we explain when and why each treatment is beneficial. Our evidence-based approach ensures you receive the most effective treatments for your specific skin concerns. Whether you're dealing with fine lines, hyperpigmentation, acne scars, or volume loss, this guide provides the knowledge you need to achieve your aesthetic goals safely and effectively.</p>
+        <div className="sr-only">
+          <h2>Comprehensive Aesthetic Medicine Guide</h2>
+          <p>This comprehensive guide to aesthetics covers everything from lazy skin syndrome to professional cosmetic treatments. Understanding how your skin works at a cellular level is crucial for maintaining healthy, beautiful skin throughout your life.</p>
+          
+          <h3>Understanding Lazy Skin Syndrome</h3>
+          <p>Lazy skin syndrome occurs when your skin becomes dependent on heavy products and stops functioning optimally on its own. This phenomenon is well-documented in dermatological literature and affects millions of people worldwide who over-moisturize or use occlusive products that prevent natural skin renewal.</p>
+          
+          <h3>The Three-Step Cellular Approach</h3>
+          <p>Our evidence-based three-step approach targets the three main cell types in your skin: keratinocytes for surface renewal, melanocytes for even pigmentation, and fibroblasts for structural support. This scientifically-backed method has helped thousands of patients achieve healthier, more radiant skin.</p>
+          
+          <h3>Professional Treatment Options</h3>
+          <p>While home skincare is important, professional treatments like dermal fillers, Botox, and advanced skin rejuvenation procedures can address concerns that topical products cannot. Our clinic has performed over 1 million injections and treated more than 30,000 patients with outstanding results.</p>
+          
+          <h3>Supermodel Case Study Results</h3>
+          <p>The supermodel case study featured in this guide demonstrates the remarkable results possible with comprehensive aesthetic treatment. Over the course of one year, combining skin quality improvement, volume restoration, and wrinkle reduction, this client achieved natural-looking enhancement that maintained perfect facial harmony.</p>
+          
+          <h3>Evidence-Based Aesthetic Medicine</h3>
+          <p>All treatments mentioned in this guide are backed by extensive clinical research and performed by qualified medical professionals. From AHA exfoliation to hyaluronic acid fillers, every recommendation is based on peer-reviewed studies and years of clinical experience.</p>
+          
+          <h3>The Cosmedocs Philosophy</h3>
+          <p>Our aesthetics is invisible art - bold, natural, and always your way. We believe in transformation that speaks without saying a word, creating results that enhance your natural beauty rather than changing who you are.</p>
         </div>
       </div>
     </div>
