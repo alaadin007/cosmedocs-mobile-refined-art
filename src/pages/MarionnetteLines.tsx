@@ -151,7 +151,7 @@ const MarionnetteLines = () => {
                   Smooth away years with expert marionette line treatment
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">From £325/ml</p>
+                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">marionette line treatment with dermal fillers</p>
                   <p className="text-sm text-gray-300 drop-shadow-lg">30-45 minutes • Results last 12-18 months • Instant transformation</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
