@@ -133,6 +133,7 @@ const NeckFillers = () => {
                   <span className="block text-purple-300">Sag!</span>
                   <span className="block text-sm mt-4">Expert neck filler treatments for smoother, youthful skin</span>
                 </h1>
+                <p className="text-2xl text-purple-300 font-bold mb-6">smoother and wrinkle-less neck</p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
