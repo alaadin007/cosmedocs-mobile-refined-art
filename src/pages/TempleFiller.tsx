@@ -115,7 +115,10 @@ const TempleFiller = () => {
                   <p className="text-sm text-gray-300">#cosmetemple - Check out our IG for authentic temple restoration transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
                     Book Consultation
                   </Button>
                   <Button 
@@ -202,6 +205,131 @@ const TempleFiller = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
                 <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & During & After Gallery Section */}
+        <section className="py-20 bg-secondary/10">
+          <div className="page-container">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-light mb-6">Temple Filler Treatment Journey</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Witness the complete transformation process from initial consultation through to final results. 
+                This comprehensive case study showcases the precision and artistry of professional temple filler treatment.
+              </p>
+            </div>
+            
+            {/* Before Images */}
+            <div className="mb-16">
+              <h3 className="text-3xl font-light text-center mb-8">Before Treatment</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {beforeAfterImages.before.map((image, index) => (
+                  <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h4 className="font-semibold mb-2 text-lg">Before Assessment #{index + 1}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{image.caption}</p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Temple Volume Loss</span>
+                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Facial Aging</span>
+                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Before Photos</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* During Treatment */}
+            <div className="mb-16">
+              <h3 className="text-3xl font-light text-center mb-8">During Treatment</h3>
+              <div className="max-w-2xl mx-auto">
+                <div className="bg-card rounded-lg overflow-hidden shadow-lg">
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img 
+                      src={beforeAfterImages.during.src}
+                      alt={beforeAfterImages.during.alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="font-semibold mb-2 text-xl">Professional Treatment Process</h4>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{beforeAfterImages.during.caption}</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Professional Injection</span>
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Medical Grade Fillers</span>
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Expert Technique</span>
+                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Safe Procedure</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* After Results */}
+            <div className="mb-8">
+              <h3 className="text-3xl font-light text-center mb-8">After Treatment Results</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {beforeAfterImages.after.map((image, index) => (
+                  <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h4 className="font-semibold mb-2 text-lg">Result View #{index + 1}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{image.caption}</p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">Volume Restored</span>
+                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">Natural Results</span>
+                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">After Photos</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Treatment Summary */}
+            <div className="bg-card rounded-lg p-8 mt-12">
+              <h3 className="text-2xl font-light mb-6 text-center">Treatment Summary & Results</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-semibold mb-4">Treatment Details</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• <strong>Treatment:</strong> Temple Dermal Filler Enhancement</li>
+                    <li>• <strong>Product Used:</strong> Premium Hyaluronic Acid Filler</li>
+                    <li>• <strong>Technique:</strong> Multi-point Precision Injection</li>
+                    <li>• <strong>Duration:</strong> 45 minutes including consultation</li>
+                    <li>• <strong>Anaesthetic:</strong> Topical numbing applied</li>
+                    <li>• <strong>Recovery:</strong> Minimal downtime, immediate return to activities</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-4">Results Achieved</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Significant temple volume restoration</li>
+                    <li>• Enhanced facial symmetry and proportion</li>
+                    <li>• Reduced appearance of temple hollowing</li>
+                    <li>• More youthful, refreshed facial contours</li>
+                    <li>• Natural-looking enhancement</li>
+                    <li>• Improved overall facial harmony</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -354,130 +482,6 @@ const TempleFiller = () => {
           </div>
         </section>
 
-        {/* Before & During & After Gallery Section */}
-        <section className="py-20 bg-secondary/10">
-          <div className="page-container">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-light mb-6">Temple Filler Treatment Journey</h2>
-              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Witness the complete transformation process from initial consultation through to final results. 
-                This comprehensive case study showcases the precision and artistry of professional temple filler treatment.
-              </p>
-            </div>
-            
-            {/* Before Images */}
-            <div className="mb-16">
-              <h3 className="text-3xl font-light text-center mb-8">Before Treatment</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                {beforeAfterImages.before.map((image, index) => (
-                  <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg">
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h4 className="font-semibold mb-2 text-lg">Before Assessment #{index + 1}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{image.caption}</p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Temple Volume Loss</span>
-                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Facial Aging</span>
-                        <span className="text-xs bg-secondary/20 px-2 py-1 rounded">Before Photos</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* During Treatment */}
-            <div className="mb-16">
-              <h3 className="text-3xl font-light text-center mb-8">During Treatment</h3>
-              <div className="max-w-2xl mx-auto">
-                <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-                  <div className="aspect-[16/9] overflow-hidden">
-                    <img 
-                      src={beforeAfterImages.during.src}
-                      alt={beforeAfterImages.during.alt}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h4 className="font-semibold mb-2 text-xl">Professional Treatment Process</h4>
-                    <p className="text-muted-foreground leading-relaxed mb-4">{beforeAfterImages.during.caption}</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Professional Injection</span>
-                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Medical Grade Fillers</span>
-                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Expert Technique</span>
-                      <span className="text-xs bg-primary/20 px-2 py-1 rounded">Safe Procedure</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* After Results */}
-            <div className="mb-8">
-              <h3 className="text-3xl font-light text-center mb-8">After Treatment Results</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                {beforeAfterImages.after.map((image, index) => (
-                  <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg">
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img 
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h4 className="font-semibold mb-2 text-lg">Result View #{index + 1}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{image.caption}</p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">Volume Restored</span>
-                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">Natural Results</span>
-                        <span className="text-xs bg-green-500/20 px-2 py-1 rounded">After Photos</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Treatment Summary */}
-            <div className="bg-card rounded-lg p-8 mt-12">
-              <h3 className="text-2xl font-light mb-6 text-center">Treatment Summary & Results</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold mb-4">Treatment Details</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• <strong>Treatment:</strong> Temple Dermal Filler Enhancement</li>
-                    <li>• <strong>Product Used:</strong> Premium Hyaluronic Acid Filler</li>
-                    <li>• <strong>Technique:</strong> Multi-point Precision Injection</li>
-                    <li>• <strong>Duration:</strong> 45 minutes including consultation</li>
-                    <li>• <strong>Anaesthetic:</strong> Topical numbing applied</li>
-                    <li>• <strong>Recovery:</strong> Minimal downtime, immediate return to activities</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-4">Results Achieved</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Significant temple volume restoration</li>
-                    <li>• Enhanced facial symmetry and proportion</li>
-                    <li>• Reduced appearance of temple hollowing</li>
-                    <li>• More youthful, refreshed facial contours</li>
-                    <li>• Natural-looking enhancement</li>
-                    <li>• Improved overall facial harmony</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
@@ -608,7 +612,10 @@ const TempleFiller = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+              >
                 Book Your Consultation
               </Button>
             </motion.div>
@@ -789,7 +796,10 @@ const TempleFiller = () => {
                 can restore volume and enhance your natural beauty with subtle, sophisticated results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                >
                   Book Free Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
