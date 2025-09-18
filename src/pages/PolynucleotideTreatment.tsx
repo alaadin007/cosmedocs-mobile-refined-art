@@ -1,10 +1,16 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Clock, Shield, Star, CheckCircle, Syringe, Heart, Zap, Activity } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import BeforeAfterGrid from "@/components/BeforeAfterGrid";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import PopularTreatments from "@/components/PopularTreatments";
@@ -141,7 +147,11 @@ const PolynucleotideTreatment = () => {
                   >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     View Price List
                   </Button>
                 </div>
@@ -152,95 +162,312 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Treatment Summary Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]">
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
-            <motion.div className="max-w-6xl mx-auto" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    <Syringe className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      Anaesthetic
-                    </h3>
-                    <p className="text-white text-base font-light">
-                      Local
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    <Star className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      Treatment Results
-                    </h3>
-                    <p className="text-white text-base font-light leading-tight">
-                      Immediate, gets better over 6-9 Months
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    <Clock className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      Procedure Time
-                    </h3>
-                    <p className="text-white text-base font-light">
-                      20 Minutes
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    <Shield className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      Risk & Complications
-                    </h3>
-                    <p className="text-white text-base font-light leading-tight">
-                      Bruises, Swelling and Infection (rare)
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    <Heart className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      Full Recovery
-                    </h3>
-                    <p className="text-white text-base font-light">
-                      Immediate
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center p-3">
-                  <CardContent className="p-0">
-                    <Users className="h-5 w-5 text-white/60 mx-auto mb-2" />
-                    <h3 className="text-white/60 text-xs font-light uppercase tracking-wide mb-2">
-                      Back To Work
-                    </h3>
-                    <p className="text-white text-base font-light">
-                      Immediate
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Polynucleotide Treatment</h2>
             </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">20 minutes per session</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">6-9 months, improving over time</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Immediate return to activities</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Sessions Needed</h3>
+                <p className="text-gray-300">3 sessions for optimal results</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Polynucleotide Treatment Pricing</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for advanced regenerative DNA therapy. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Single Session</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£450</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Perfect for trying polynucleotide therapy</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium DNA fragments</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">3 Session Package</CardTitle>
+                    <div className="text-white text-4xl font-bold">£1,200</div>
+                    <div className="text-purple-100 text-sm">Save £150</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Recommended for optimal regenerative results</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Premium DNA therapy</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Progress tracking</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Expert assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Detailed skin assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Personalized treatment plan</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">No obligation</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+                onClick={() => window.open(bookingUrl, '_blank')}
+              >
+                Book Your Consultation
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Users className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved DNA therapy</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
+                <p className="text-gray-300">Prestigious Harley Street medical district</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Safety</h3>
+                <p className="text-gray-300">Comprehensive safety protocols and aftercare</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -261,9 +488,7 @@ const PolynucleotideTreatment = () => {
             }} viewport={{
               once: true
             }}>
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                  What Are Polynucleotides?
-                </h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">What Are Polynucleotides?</h2>
                 <p className="text-xl text-white/70 font-light max-w-4xl mx-auto leading-relaxed">
                   Polynucleotide therapy is revolutionizing aesthetic medicine in London, offering a natural approach to skin 
                   restoration and hair regeneration. Supported by over three decades of clinical research, this advanced 
@@ -324,9 +549,7 @@ const PolynucleotideTreatment = () => {
             }} viewport={{
               once: true
             }}>
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                  Comprehensive Treatment Areas
-                </h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">Comprehensive Treatment Areas</h2>
                 <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
                   Targeted polynucleotide therapy for multiple aesthetic concerns across face, body, and scalp
                 </p>
@@ -403,15 +626,45 @@ const PolynucleotideTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Regenerative Results
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing the power of DNA regenerative therapy
+              <h2 className="text-3xl font-bold mb-4 text-white">Before and After Polynucleotide Treatment London</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Explore authentic before and after polynucleotide treatment results from our London clinic. 
+                Our regenerative DNA therapy provides natural skin rejuvenation and hair restoration with lasting results.
               </p>
             </motion.div>
-            
-            <BeforeAfterGrid images={beforeAfterImages} initialDisplay={4} loadMoreIncrement={4} />
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="p-1"
+                    >
+                      <Card className="border-0 bg-transparent">
+                        <CardContent className="p-0">
+                          <div className="relative overflow-hidden rounded-lg group">
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                              <p className="text-white text-sm font-medium">{image.caption}</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
         </section>
 
@@ -430,9 +683,7 @@ const PolynucleotideTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                The Science of Regeneration
-              </h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">The Science of Regeneration</h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
                 Understanding how polynucleotide therapy activates your natural healing mechanisms
               </p>
@@ -496,9 +747,7 @@ const PolynucleotideTreatment = () => {
             }} viewport={{
               once: true
             }}>
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                  Ideal Candidates
-                </h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">Ideal Candidates</h2>
                 <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
                   Polynucleotide therapy delivers optimal results for these specific concerns and conditions
                 </p>
@@ -589,9 +838,7 @@ const PolynucleotideTreatment = () => {
             }} viewport={{
               once: true
             }}>
-                <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                  Treatment Results & Benefits
-                </h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">Treatment Results & Benefits</h2>
                 <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
                   Experience comprehensive skin and hair regeneration with polynucleotide DNA therapy
                 </p>
@@ -758,9 +1005,7 @@ const PolynucleotideTreatment = () => {
           }} viewport={{
             once: true
           }} className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Frequently Asked Questions
-              </h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
                 Everything you need to know about polynucleotide DNA therapy
               </p>
