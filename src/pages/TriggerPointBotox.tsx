@@ -322,12 +322,10 @@ const TriggerPointBotox = () => {
                 <h3 className="text-xl font-bold mb-6 text-white">Key Benefits</h3>
                 <div className="space-y-4">
                   {[
-                    { icon: Shield, title: "Long-lasting Relief", desc: "3-6 months of pain reduction" },
-                    { icon: Clock, title: "Quick Treatment", desc: "15-30 minute procedure" },
-                    { icon: CheckCircle, title: "Targeted Approach", desc: "Precise trigger point treatment" },
-                    { icon: Star, title: "Non-surgical", desc: "Minimally invasive option" },
-                    { icon: Users, title: "Expert Care", desc: "Medical professional administered" },
-                    { icon: Award, title: "Proven Results", desc: "Clinically tested treatment" }
+                    { icon: Shield, title: "Relieve Chronic Pain", desc: "Relieve chronic muscle pain and tightness" },
+                    { icon: Activity, title: "Improve Mobility", desc: "Improve mobility and posture" },
+                    { icon: Star, title: "Reduce Headaches", desc: "Reduce tension headaches and referred pain" },
+                    { icon: CheckCircle, title: "Enhance Function", desc: "Enhance overall muscle function" }
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start gap-3 p-3 bg-accent/50 rounded-lg">
                       <benefit.icon className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
