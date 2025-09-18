@@ -170,7 +170,7 @@ const TriggerPointBotox = () => {
         </section>
 
         {/* Conditions Treated */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -259,7 +259,7 @@ const TriggerPointBotox = () => {
         </section>
 
         {/* What is Trigger Point Botox */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
