@@ -844,6 +844,32 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready for a Complete Facial Transformation?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how our dermal filler makeover 
+                can enhance your natural beauty with sophisticated, long-lasting results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6" asChild>
+                  <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Free Consultation</a>
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6" asChild>
+                  <a href="tel:03330551503">Call 0333 0551 503</a>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
