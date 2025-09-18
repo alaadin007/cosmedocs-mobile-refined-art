@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight, Star, Clock, Shield, Users, Check } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Clock, Shield, Users, Check, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
@@ -151,15 +152,15 @@ export default function NefertitiBotoxFacelift() {
                   <p className="text-sm text-gray-300">15-20 minutes • Results last 3-4 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold">
-                    Book Consultation
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold" asChild>
+                    <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Consultation</a>
                   </Button>
                   <Button 
                     variant="outline" 
                     className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
-                    onClick={() => setIsRelatedTreatmentsOpen(true)}
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    View Related Treatments
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
@@ -169,33 +170,82 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Quick Info */}
-        <section className="py-12 bg-gray-900/30 w-full">
-          <div className="px-4 w-full max-w-none">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-light mb-2">15-20min</div>
-                <div className="text-sm text-gray-400">Treatment Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-light mb-2">3-5 days</div>
-                <div className="text-sm text-gray-400">Takes Effect</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-light mb-2">3-4 months</div>
-                <div className="text-sm text-gray-400">Results Last</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-light mb-2">None</div>
-                <div className="text-sm text-gray-400">Downtime</div>
-              </div>
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Nefertiti Lift Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">15-20 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">3-4 months with premium Botox</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">No downtime, return to activities immediately</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Areas</h3>
+                <p className="text-gray-300">Platysma muscle bands in neck and jawline</p>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Treatment Summary */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        {/* What is Nefertiti Botox */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -203,24 +253,19 @@ export default function NefertitiBotoxFacelift() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Nefertiti Lift Treatment Summary</h2>
+                <h2 className="text-3xl font-bold mb-6">What is Nefertiti Botox?</h2>
                 <div className="space-y-6">
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
-                    <p className="text-gray-300">15-20 minutes including consultation</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
-                    <p className="text-gray-300">3-4 months with premium Botox</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
-                    <p className="text-gray-300">No downtime, return to activities immediately</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Areas</h3>
-                    <p className="text-gray-300">Platysma muscle bands in neck and jawline</p>
-                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    The Nefertiti Lift is a revolutionary non-surgical treatment that uses strategic Botox 
+                    injections to enhance the jawline and smooth the neck area. Named after the Egyptian 
+                    queen known for her elegant neck and defined jawline, this treatment targets the 
+                    platysma muscle bands in the neck.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    By relaxing the downward-pulling platysma muscles, the treatment allows the natural 
+                    lifting muscles of the jaw to work more effectively, creating a more defined jawline 
+                    and smoother neck contour without surgery.
+                  </p>
                 </div>
               </motion.div>
 
@@ -235,9 +280,6 @@ export default function NefertitiBotoxFacelift() {
                     <CardTitle className="text-white">How the Nefertiti Lift Works</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300 mb-4">
-                      By relaxing the platysma muscle—a thin sheet of muscle that pulls downward on the lower face—we allow the natural lifting muscles of the jaw to rebalance facial tension.
-                    </p>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                       <p className="text-gray-300">Sharper, more defined jawline</p>
@@ -267,7 +309,7 @@ export default function NefertitiBotoxFacelift() {
 
         {/* Before & After Gallery */}
         <section className="py-20 bg-gray-900/50">
-          <div className="container mx-auto px-4">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -275,34 +317,42 @@ export default function NefertitiBotoxFacelift() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Real Patient Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Before and After Nefertiti Lift Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 See the natural, beautiful results achieved with our expert Nefertiti Lift treatments. 
                 Each patient receives a personalized approach for optimal outcomes.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {beforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative group cursor-pointer"
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                </motion.div>
-              ))}
-            </div>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
 
-            <div className="text-center">
+            <div className="text-center mt-12">
               <BeforeAfterImageViewer 
                 images={beforeAfterImages}
                 triggerLabel="View All Before & After Photos"
@@ -313,9 +363,9 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Pricing */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -323,56 +373,231 @@ export default function NefertitiBotoxFacelift() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Treatment Investment</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Transparent pricing for professional Nefertiti Lift treatment with expert practitioners.
+              <h2 className="text-3xl font-bold mb-4 text-white">Nefertiti Lift Pricing</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for professional Nefertiti Lift treatment. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
               >
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4">Nefertiti Lift</h3>
-                  <div className="text-4xl font-bold text-purple-300 mb-4">£300-500</div>
-                  <p className="text-gray-300 mb-6">
-                    Complete jawline and neck contouring treatment
-                  </p>
-                  <ul className="text-sm text-gray-300 space-y-3 mb-8 text-left max-w-sm mx-auto">
-                    <li className="flex items-center">
-                      <Check className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                      Comprehensive consultation included
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                      Precise Botox placement technique
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                      Results lasting 3-4 months
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                      No downtime required
-                    </li>
-                  </ul>
-                  <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-full py-6">
-                    Book Consultation
-                  </Button>
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Essential Nefertiti</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£300</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Basic neck band treatment for mild concerns</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium Botox treatment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Complete Nefertiti</CardTitle>
+                    <div className="text-white text-4xl font-bold">£400</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Comprehensive jawline and neck contouring</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Full jawline enhancement</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">2-week follow-up</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full facial assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold" asChild>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Your Consultation</a>
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved Botox only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-900/50">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-black">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -389,7 +614,7 @@ export default function NefertitiBotoxFacelift() {
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-accent rounded-lg border-gray-800">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
                       <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
@@ -405,7 +630,7 @@ export default function NefertitiBotoxFacelift() {
 
         {/* Call to Action */}
         <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
+          <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -419,8 +644,10 @@ export default function NefertitiBotoxFacelift() {
                 can enhance your natural beauty with subtle, sophisticated results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
-                  Book Free Consultation
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6" asChild>
+                  <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                    Book Free Consultation
+                  </a>
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
                   Call 0333 0551 503
