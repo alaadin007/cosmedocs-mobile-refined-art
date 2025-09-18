@@ -355,7 +355,11 @@ const TriggerPointBotox = () => {
               viewport={{ once: true }}
               className="max-w-6xl mx-auto"
             >
-              <h2 className="text-3xl font-bold text-center mb-12 text-white">What Happens During a Trigger Point Injection?</h2>
+              <h2 className="text-3xl font-bold text-center mb-6 text-white">What Happens During a Trigger Point Injection?</h2>
+              
+              <p className="text-gray-300 text-lg leading-relaxed text-center mb-12 max-w-4xl mx-auto">
+                Many patients imagine injections to be a rushed, uncomfortable experience — but a Trigger Point Injection (TPI) is actually a gentle and highly targeted procedure. Here's what makes the process unique:
+              </p>
               
               <div className="grid md:grid-cols-2 gap-12 items-start">
                 {/* Content Column */}
@@ -366,9 +370,6 @@ const TriggerPointBotox = () => {
                   viewport={{ once: true }}
                   className="space-y-6"
                 >
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Many patients imagine injections to be a rushed, uncomfortable experience — but a Trigger Point Injection (TPI) is actually a gentle and highly targeted procedure. Here's what makes the process unique:
-                  </p>
                   
                   <div className="space-y-6">
                     <div>
