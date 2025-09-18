@@ -294,6 +294,208 @@ const NonSurgicalFacelift = () => {
           </div>
         </section>
 
+        {/* Non-Surgical & Liquid Facelift Procedure Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical & Liquid Facelift Procedure</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding how our non-surgical facelift works and what makes liquid facelifts 
+                so effective for natural facial rejuvenation without surgery.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* What is a Non-Surgical Facelift */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl mb-4">What is a Non-Surgical Facelift?</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      A non-surgical facelift, also known as a <strong className="text-purple-300">liquid facelift</strong>, 
+                      is an innovative cosmetic procedure that uses advanced injectable treatments to rejuvenate and lift 
+                      the face without the need for surgery or general anaesthesia.
+                    </p>
+                    <p className="text-gray-300">
+                      This comprehensive approach combines <strong className="text-purple-300">dermal fillers</strong> and 
+                      <strong className="text-purple-300"> Botox</strong> injections to address multiple signs of aging 
+                      simultaneously, creating natural-looking results that restore youthful contours and smooth away 
+                      wrinkles and fine lines.
+                    </p>
+                    <div className="space-y-3 mt-6">
+                      <h4 className="text-white font-semibold">Key Benefits:</h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">No surgical incisions or scarring</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Minimal downtime and recovery</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Natural-looking, gradual results</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Customizable to individual needs</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* How Non-Surgical Facelift is Done */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-gray-700 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl mb-4">How is it Done?</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Our non-surgical facelift procedure is performed by expert cosmetic doctors using 
+                      a precise, layered approach that addresses facial aging at multiple levels.
+                    </p>
+                    
+                    <div className="space-y-4">
+                      <div className="border-l-4 border-purple-500 pl-4">
+                        <h4 className="text-white font-semibold mb-2">1. Comprehensive Assessment</h4>
+                        <p className="text-gray-300 text-sm">
+                          Detailed facial analysis to identify areas of volume loss, muscle activity, 
+                          and skin quality to create a personalized treatment plan.
+                        </p>
+                      </div>
+                      
+                      <div className="border-l-4 border-purple-500 pl-4">
+                        <h4 className="text-white font-semibold mb-2">2. Strategic Filler Placement</h4>
+                        <p className="text-gray-300 text-sm">
+                          Premium hyaluronic acid fillers are injected into specific areas to restore 
+                          volume, lift sagging skin, and enhance facial contours naturally.
+                        </p>
+                      </div>
+                      
+                      <div className="border-l-4 border-purple-500 pl-4">
+                        <h4 className="text-white font-semibold mb-2">3. Botox Integration</h4>
+                        <p className="text-gray-300 text-sm">
+                          Botulinum toxin is used to relax dynamic wrinkles in the forehead, around 
+                          the eyes, and other areas where muscle movement creates lines.
+                        </p>
+                      </div>
+                      
+                      <div className="border-l-4 border-purple-500 pl-4">
+                        <h4 className="text-white font-semibold mb-2">4. Immediate Results</h4>
+                        <p className="text-gray-300 text-sm">
+                          See instant improvement with full results developing over 2-4 weeks as 
+                          products settle and integrate naturally with your facial tissues.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            {/* Liquid Facelift vs Traditional Surgery */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <Card className="bg-purple-600 border-purple-400">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl text-center mb-4">
+                    Liquid Facelift vs Traditional Surgery
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="text-white font-semibold mb-4 text-center">Liquid Facelift</h4>
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-white" size={16} />
+                          <span className="text-purple-100 text-sm">30-90 minute procedure</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-white" size={16} />
+                          <span className="text-purple-100 text-sm">Local anaesthetic only</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-white" size={16} />
+                          <span className="text-purple-100 text-sm">Return to work same day</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-white" size={16} />
+                          <span className="text-purple-100 text-sm">Results last 12-18 months</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-white" size={16} />
+                          <span className="text-purple-100 text-sm">£1,200-£3,000 cost range</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-white" size={16} />
+                          <span className="text-purple-100 text-sm">Gradual, natural-looking results</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-4 text-center">Traditional Surgery</h4>
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-2">
+                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
+                          <span className="text-purple-100 text-sm">3-6 hour procedure</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
+                          <span className="text-purple-100 text-sm">General anaesthesia required</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
+                          <span className="text-purple-100 text-sm">2-4 weeks recovery time</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
+                          <span className="text-purple-100 text-sm">Permanent surgical results</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
+                          <span className="text-purple-100 text-sm">£8,000-£15,000+ cost range</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
+                          <span className="text-purple-100 text-sm">Dramatic, immediate results</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
