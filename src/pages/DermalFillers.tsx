@@ -661,9 +661,7 @@ const DermalFillerMakeover = () => {
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
           <h2>Dermal Filler Makeover London Full Face Rejuvenation Cosmedocs Natural Results Hyaluronic Acid</h2>
-          <p>
-            Dermal filler makeover London, full face rejuvenation, Cosmedocs, dermal fillers, facial enhancement, natural results, personalized treatment plans, expert practitioners, cheek fillers, temple fillers, under-eye fillers, nasolabial folds, marionette lines, lip fillers, jawline fillers, youthful appearance, refreshed appearance, invisible art, bold natural always your way, aesthetic medicine, minimal transformation, quiet enhancement, before after results, patient transformations, hyaluronic acid, HA fillers, biodegradable fillers, natural breakdown, lymphatic system, enzyme breakdown, hyaluronidase, facial contouring, anti-ageing treatments, consultation, professional medical treatment, FDA approved fillers, safety protocols, facial anatomy, injection techniques, premium fillers, medical grade, side effects, temporary results, maintenance treatments, facial rejuvenation, volume restoration, structural enhancement, biocompatible substance, humectant properties, skin hydration, wrinkle smoothing, facial proportions, natural integration.
-          </p>
+          <p>Professional dermal filler makeover treatments in London by expert cosmetic doctors at Cosmedocs. Experience the art of invisible aesthetic medicine with our comprehensive facial rejuvenation using premium hyaluronic acid dermal fillers. Our bespoke treatment plans address multiple facial areas including cheeks, jawline, lips, nasolabial folds, and tear troughs for natural-looking results that enhance your unique features. With over 2 million treatments completed, our Harley Street trained practitioners deliver sophisticated outcomes that speak without saying a word - embodying our philosophy of bold, natural, always your way aesthetic medicine.</p>
         </div>
       </div>
     </>
