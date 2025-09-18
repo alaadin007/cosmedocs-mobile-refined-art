@@ -81,6 +81,7 @@ import ChemicalPeel from "./pages/ChemicalPeel";
 import PrescriptionSkincare from "./pages/PrescriptionSkincare";
 import Microneedling from "./pages/Microneedling";
 import TearTroughFiller from "./pages/TearTroughFiller";
+import TrapBotox from "./pages/TrapBotox";
 import VideoUpload from "./pages/VideoUpload";
 import ExperimentalTreatment from "./pages/ExperimentalTreatment";
 import TempleFiller from "./pages/TempleFiller";
@@ -182,8 +183,9 @@ const App = () => {
               <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
               <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
               <Route path="/profhilo-treatment" element={<ProfhiloTreatment />} />
-              <Route path="/chin-botox" element={<ChinBotox />} />
-              <Route path="/hydrafacial-london" element={<HydraFacial />} />
+               <Route path="/chin-botox" element={<ChinBotox />} />
+               <Route path="/trap-botox" element={<TrapBotox />} />
+               <Route path="/hydrafacial-london" element={<HydraFacial />} />
               <Route path="/prp-treatment" element={<PRPTreatment />} />
               <Route path="/prp-treatment-london" element={<PRPTreatment />} />
               

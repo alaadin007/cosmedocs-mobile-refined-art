@@ -26,6 +26,7 @@ const TREATMENT_ROUTES = [
   '/trigger-point-botox',
   '/gummy-smile-botox',
   '/chin-botox',
+  '/trap-botox',
   '/botox-calf-reduction',
   
   // Filler treatments
