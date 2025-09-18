@@ -378,6 +378,90 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
+        {/* Other Dermal Filler Treatments */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Other Dermal Filler Treatments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive range of dermal filler treatments for targeted facial enhancement
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Lip Fillers",
+                  description: "Enhanced lip volume and definition with natural-looking results",
+                  price: "From £280",
+                  link: "/lip-fillers"
+                },
+                {
+                  title: "Cheek Fillers",
+                  description: "Restore youthful volume and create defined cheekbones",
+                  price: "From £350",
+                  link: "/cheek-fillers"
+                },
+                {
+                  title: "Jawline Fillers",
+                  description: "Define and sculpt your jawline for enhanced facial structure",
+                  price: "From £400",
+                  link: "/jawline-fillers"
+                },
+                {
+                  title: "Tear Trough Fillers",
+                  description: "Reduce under-eye hollowing and dark circles",
+                  price: "From £350",
+                  link: "/tear-trough-fillers"
+                },
+                {
+                  title: "Non-Surgical Nose Job",
+                  description: "Reshape and refine nose contours without surgery",
+                  price: "From £300",
+                  link: "/non-surgical-nose-job"
+                },
+                {
+                  title: "Temple Fillers",
+                  description: "Restore temple volume for improved facial proportions",
+                  price: "From £350",
+                  link: "/temple-fillers"
+                }
+              ].map((treatment, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors group">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl">{treatment.title}</CardTitle>
+                      <div className="text-2xl font-bold text-purple-300">{treatment.price}</div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300 mb-4">{treatment.description}</p>
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white group-hover:scale-105 transition-transform"
+                        asChild
+                      >
+                        <Link to={treatment.link}>Learn More</Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
