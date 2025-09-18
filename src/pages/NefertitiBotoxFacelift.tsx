@@ -263,6 +263,9 @@ export default function NefertitiBotoxFacelift() {
                     into the muscles along the lower jawline and neck. Botox in neck and jawline relaxes 
                     the muscles, lifting the area subtly and redefining the jawline.
                   </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    The treatment specifically targets the platysma muscle, which is a thin, broad muscle that extends from the chest and shoulders up to the jawline. When this muscle becomes overactive or tense, it can create vertical bands in the neck (often called "turkey neck") and contribute to the appearance of vertical lines and sagging skin. By relaxing the platysma muscle with precise Botox injections, the Nefertiti lift helps smooth these vertical neck bands and reduces the downward pull on the jawline.
+                  </p>
                 </div>
               </motion.div>
 
