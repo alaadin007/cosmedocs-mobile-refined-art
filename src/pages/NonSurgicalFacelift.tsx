@@ -135,7 +135,6 @@ const NonSurgicalFacelift = () => {
                   Advanced dermal fillers and Botox for natural facial rejuvenation
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">From £1,200</p>
                   <p className="text-sm text-gray-300">Comprehensive liquid facelift combining multiple treatments</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
