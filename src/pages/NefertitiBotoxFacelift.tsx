@@ -362,7 +362,7 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Combining with Dermal Fillers Section */}
+        {/* Recovery and Aftercare Section */}
         <section className="py-20 bg-gray-900/50">
           <div className="page-container">
             <motion.div
@@ -642,7 +642,7 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Why Choose Cosmedocs */}
+        {/* Nefertiti Neck Lift Treatment Video */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
