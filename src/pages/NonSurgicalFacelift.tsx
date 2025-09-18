@@ -415,84 +415,175 @@ const NonSurgicalFacelift = () => {
               </motion.div>
             </div>
 
-            {/* Liquid Facelift vs Traditional Surgery */}
+          </div>
+        </section>
+
+        {/* Liquid Facelift vs Traditional Surgery Comparison */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="mt-12"
+              className="text-center mb-12"
             >
-              <Card className="bg-purple-600 border-purple-400">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center mb-4">
-                    Liquid Facelift vs Traditional Surgery
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h4 className="text-white font-semibold mb-4 text-center">Liquid Facelift</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-white" size={16} />
-                          <span className="text-purple-100 text-sm">30-90 minute procedure</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-white" size={16} />
-                          <span className="text-purple-100 text-sm">Local anaesthetic only</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-white" size={16} />
-                          <span className="text-purple-100 text-sm">Return to work same day</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-white" size={16} />
-                          <span className="text-purple-100 text-sm">Results last 12-18 months</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-white" size={16} />
-                          <span className="text-purple-100 text-sm">£1,200-£3,000 cost range</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-white" size={16} />
-                          <span className="text-purple-100 text-sm">Gradual, natural-looking results</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-4 text-center">Traditional Surgery</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-center space-x-2">
-                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
-                          <span className="text-purple-100 text-sm">3-6 hour procedure</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
-                          <span className="text-purple-100 text-sm">General anaesthesia required</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
-                          <span className="text-purple-100 text-sm">2-4 weeks recovery time</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
-                          <span className="text-purple-100 text-sm">Permanent surgical results</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
-                          <span className="text-purple-100 text-sm">£8,000-£15,000+ cost range</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="w-4 h-4 border border-purple-200 rounded"></span>
-                          <span className="text-purple-100 text-sm">Dramatic, immediate results</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <h2 className="text-3xl font-bold mb-4 text-white">Liquid Facelift vs Traditional Surgery</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Compare the benefits of non-surgical liquid facelifts against traditional surgical procedures 
+                to understand which option best suits your needs and lifestyle.
+              </p>
             </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Liquid Facelift */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center mb-4">
+                      <span className="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-semibold mr-2">RECOMMENDED</span>
+                      <br />
+                      <span className="mt-2 block">Liquid Facelift</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="bg-white rounded-full p-1">
+                          <CheckCircle className="text-purple-600" size={16} />
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">30-90 minute procedure</span>
+                          <p className="text-purple-100 text-sm">Quick, efficient treatment</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="bg-white rounded-full p-1">
+                          <CheckCircle className="text-purple-600" size={16} />
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">Local anaesthetic only</span>
+                          <p className="text-purple-100 text-sm">No general anaesthesia risks</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="bg-white rounded-full p-1">
+                          <CheckCircle className="text-purple-600" size={16} />
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">Return to work same day</span>
+                          <p className="text-purple-100 text-sm">Minimal disruption to life</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="bg-white rounded-full p-1">
+                          <CheckCircle className="text-purple-600" size={16} />
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">Results last 12-18 months</span>
+                          <p className="text-purple-100 text-sm">Long-lasting, renewable results</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="bg-white rounded-full p-1">
+                          <CheckCircle className="text-purple-600" size={16} />
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">£1,200-£3,000 cost</span>
+                          <p className="text-purple-100 text-sm">Affordable, cost-effective</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="bg-white rounded-full p-1">
+                          <CheckCircle className="text-purple-600" size={16} />
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">Natural-looking results</span>
+                          <p className="text-purple-100 text-sm">Gradual, subtle enhancement</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Traditional Surgery */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center mb-4">Traditional Surgery</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-6 h-6 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                          <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">3-6 hour procedure</span>
+                          <p className="text-gray-400 text-sm">Extensive surgical time required</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-6 h-6 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                          <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">General anaesthesia</span>
+                          <p className="text-gray-400 text-sm">Higher risks and complications</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-6 h-6 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                          <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">2-4 weeks recovery</span>
+                          <p className="text-gray-400 text-sm">Extended time off work</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-6 h-6 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                          <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">Permanent results</span>
+                          <p className="text-gray-400 text-sm">Cannot be reversed if unsatisfied</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-6 h-6 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                          <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">£8,000-£15,000+ cost</span>
+                          <p className="text-gray-400 text-sm">Significant financial investment</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-6 h-6 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                          <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                        </div>
+                        <div>
+                          <span className="text-white font-medium">Dramatic results</span>
+                          <p className="text-gray-400 text-sm">Significant, immediate change</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
           </div>
         </section>
 
