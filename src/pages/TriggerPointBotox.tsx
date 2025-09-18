@@ -599,34 +599,6 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Experience Pain Relief?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Book your trigger point botox consultation today and take the first step towards chronic pain relief with our expert medical team.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold">
-                  Book Consultation
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
-                >
-                  Call 0333 0551 503
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Hidden SEO Content */}
         <div style={{ position: 'absolute', left: '-9999px', visibility: 'hidden' }}>
@@ -645,21 +617,25 @@ const TriggerPointBotox = () => {
           </p>
         </div>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-purple-600 text-white">
+        {/* Call to Action */}
+        <section className="py-20">
           <div className="page-container text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Find Relief?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Take the first step toward freedom from chronic muscle tension and pain.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Book Consultation
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready to Experience Pain Relief?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert medical team and discover how trigger point botox 
+                can provide lasting relief from chronic muscle tension and pain.
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                Book Free Consultation
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600">
-                Call 0333 0551 503
-              </Button>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>
