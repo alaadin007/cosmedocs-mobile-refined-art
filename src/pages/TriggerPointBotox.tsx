@@ -296,13 +296,11 @@ const TriggerPointBotox = () => {
                 <h3 className="text-xl font-bold mb-6 text-white">Commonly Treated Muscles</h3>
                 <div className="space-y-3">
                   {[
-                    { name: "Masseter", desc: "Jaw muscle for TMJ and teeth grinding" },
-                    { name: "Trapezius", desc: "Neck and shoulders for tension headaches" },
-                    { name: "Levator Scapulae", desc: "Neck muscle for posture-related tension" },
-                    { name: "Temporalis", desc: "Head muscle for jaw pain and headaches" },
-                    { name: "Sternocleidomastoid", desc: "Front neck muscle for stiffness" },
-                    { name: "Quadratus Lumborum", desc: "Lower back muscle for support" },
-                    { name: "Gluteus Medius", desc: "Hip muscle for lower back pain" }
+                     { name: "Levator Scapulae", desc: "Neck muscle for chronic neck pain and posture-related tension" },
+                     { name: "Temporalis", desc: "Head muscle for tension headaches and jaw pain" },
+                     { name: "Sternocleidomastoid", desc: "Front neck muscle for shoulder tension and stiffness" },
+                     { name: "Quadratus Lumborum", desc: "Lower back muscle for myofascial pain syndrome" },
+                     { name: "Gluteus Medius", desc: "Hip muscle for musculoskeletal disorders and lower back pain" }
                   ].map((muscle, index) => (
                     <div key={index} className="border-l-2 border-purple-300 pl-4 py-2">
                       <h4 className="font-semibold text-purple-300 text-sm">{muscle.name}</h4>
