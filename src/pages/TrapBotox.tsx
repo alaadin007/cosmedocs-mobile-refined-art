@@ -93,16 +93,8 @@ const TrapBotox = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section with Background Image */}
+        {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('/lovable-uploads/49549549-49f4-494f-949f-494f494f494f.png')`
-            }}
-          >
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -111,16 +103,13 @@ const TrapBotox = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
-                  Trap
-                  <span className="block text-purple-300">Botox</span>
-                  <span className="block text-sm mt-4">Elegant shoulder slimming & neck contouring</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Trap Botox London</span>
+                  <span className="block text-sm mt-4">Invisible art - elegant shoulder slimming & neck contouring</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
-                  Achieve refined shoulders and enhanced neck definition
-                </p>
                 <div className="mb-8">
-                  <p className="text-sm text-gray-300 drop-shadow-lg">#trapbotox - See our before & after gallery for real patient results</p>
+                  <p className="text-2xl text-purple-300 font-bold">Refined Shoulder Contouring</p>
+                  <p className="text-sm text-gray-300">#trapbotox - See our before & after gallery for real patient results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
