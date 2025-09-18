@@ -113,7 +113,7 @@ export default function NefertitiBotoxFacelift() {
       <div className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -122,21 +122,20 @@ export default function NefertitiBotoxFacelift() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Nefertiti
-                  <span className="block text-purple-300">Lift</span>
-                  <span className="block text-sm mt-4">Non-surgical jawline & neck contouring</span>
+                  <span className="text-purple-300">Nefertiti Lift London</span>
+                  <span className="block text-sm mt-4">Invisible art - non-surgical jawline & neck contouring</span>
                 </h1>
-                
                 <div className="mb-8">
-                  <p className="text-sm text-gray-300">15-20 minutes • Results last 3-4 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Jawline Definition</p>
+                  <p className="text-sm text-gray-300">#nefertitilift - See our transformations for precise neck and jawline contouring</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold" asChild>
-                    <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Consultation</a>
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                    Book Consultation
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
                     onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     View Price List
