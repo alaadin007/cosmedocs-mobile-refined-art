@@ -283,27 +283,38 @@ const TriggerPointBotox = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="max-w-3xl mx-auto"
+                className="max-w-5xl mx-auto"
               >
-                <h3 className="text-2xl font-bold mb-8 text-white text-center">Key Benefits</h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    { icon: Shield, title: "Relieve Chronic Pain", desc: "Relieve chronic muscle pain and tightness" },
-                    { icon: Activity, title: "Improve Mobility", desc: "Improve mobility and posture" },
-                    { icon: Star, title: "Reduce Headaches", desc: "Reduce tension headaches and referred pain" },
-                    { icon: CheckCircle, title: "Enhance Function", desc: "Enhance overall muscle function" },
-                    { icon: Star, title: "Non-surgical", desc: "Minimally invasive option" },
-                    { icon: Users, title: "Expert Care", desc: "Medical professional administered" },
-                    { icon: Award, title: "Proven Results", desc: "Clinically tested treatment" }
-                  ].map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3 p-4 bg-accent/30 rounded-lg">
-                      <benefit.icon className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-white text-sm">{benefit.title}</h4>
-                        <p className="text-gray-400 text-xs">{benefit.desc}</p>
-                      </div>
-                    </div>
-                  ))}
+                <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/20">
+                  <h3 className="text-2xl font-bold mb-8 text-white text-center">Key Benefits</h3>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {[
+                      { icon: Shield, title: "Relieve Chronic Pain", desc: "Effectively relieve chronic muscle pain and persistent tightness" },
+                      { icon: Activity, title: "Improve Mobility", desc: "Enhance mobility, flexibility and overall posture" },
+                      { icon: Star, title: "Reduce Headaches", desc: "Significantly reduce tension headaches and referred pain" },
+                      { icon: CheckCircle, title: "Enhance Function", desc: "Restore and enhance overall muscle function" },
+                      { icon: Star, title: "Non-surgical", desc: "Minimally invasive, non-surgical treatment option" },
+                      { icon: Users, title: "Expert Care", desc: "Administered by qualified medical professionals" },
+                      { icon: Award, title: "Proven Results", desc: "Clinically tested and evidence-based treatment" }
+                    ].map((benefit, index) => (
+                      <motion.div 
+                        key={index} 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="group"
+                      >
+                        <div className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-purple-600/10 to-purple-800/10 rounded-xl border border-purple-300/20 hover:border-purple-300/40 transition-all duration-300 hover:transform hover:scale-105 h-full">
+                          <div className="bg-purple-600/20 rounded-full p-3 mb-4 group-hover:bg-purple-600/30 transition-colors duration-300">
+                            <benefit.icon className="h-6 w-6 text-purple-300" />
+                          </div>
+                          <h4 className="font-bold text-white text-base mb-2">{benefit.title}</h4>
+                          <p className="text-gray-400 text-sm leading-relaxed">{benefit.desc}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
