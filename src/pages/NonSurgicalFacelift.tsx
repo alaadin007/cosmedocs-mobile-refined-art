@@ -340,7 +340,7 @@ const NonSurgicalFacelift = () => {
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="text-purple-500" size={16} />
-                          <span className="text-gray-300 text-sm">Revive temple volume loss for youthful contours</span>
+                          <span className="text-gray-300 text-sm">Revive temple volume loss for natural contours</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="text-purple-500" size={16} />
