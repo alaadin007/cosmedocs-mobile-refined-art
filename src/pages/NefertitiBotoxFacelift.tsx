@@ -243,6 +243,61 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before and After Nefertiti Lift Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the natural, beautiful results achieved with our expert Nefertiti Lift treatments. 
+                Each patient receives a personalized approach for optimal outcomes.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative overflow-hidden rounded-lg bg-gray-900"
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700" />
+              <CarouselNext className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Nefertiti Lift Results Gallery"
+                description="Comprehensive gallery of our jawline enhancement treatments"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* What is Nefertiti Botox */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -765,6 +820,27 @@ export default function NefertitiBotoxFacelift() {
                   The Nefertiti Neck Lift Video with Botox In Neck Injections Demonstrates A Quick, Painless Treatment.
                 </p>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Combining with Dermal Fillers Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6">Combining with Dermal Fillers for Enhanced Results</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                The Nefertiti neck lift with Botox in neck can be combined with dermal fillers and other 
+                collagen-stimulating treatments for optimal results. Fillers can be strategically added to areas, 
+                enhancing the lifting effect of Botox. This combination approach can address a range of ageing signs, 
+                offering a more comprehensive facial rejuvenation.
+              </p>
             </motion.div>
           </div>
         </section>
