@@ -215,10 +215,6 @@ const TriggerPointBotox = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Jaw pain and tension</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
                       <span>Hip-related musculoskeletal pain</span>
                     </li>
                   </ul>
