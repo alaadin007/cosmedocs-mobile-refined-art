@@ -346,6 +346,40 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
+        {/* Treatment Details */}
+        <section className="w-full py-24 bg-gray-900/50">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Treatment Details</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to know about our dermal filler makeover treatments
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <Card className="p-8 bg-gray-800/50 shadow-lg border-gray-700">
+                <CardContent className="p-0">
+                  <h3 className="text-2xl font-semibold mb-6 text-white">What is a Dermal Filler Makeover?</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    A dermal filler makeover is a comprehensive treatment plan designed to rejuvenate the entire face using a combination of dermal fillers.
+                    It addresses multiple areas to create a balanced and harmonious result that enhances your natural features.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="p-8 bg-gray-800/50 shadow-lg border-gray-700">
+                <CardContent className="p-0">
+                  <h3 className="text-2xl font-semibold mb-6 text-white">What Areas Can Be Treated?</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Common treatment areas include cheeks, temples, under-eye area, nasolabial folds, marionette lines, lips, and jawline.
+                    The specific areas treated will depend on your individual needs and aesthetic goals.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Comprehensive Treatment Areas */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -529,40 +563,6 @@ const DermalFillerMakeover = () => {
                 <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Your Consultation</a>
               </Button>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Treatment Details */}
-        <section className="w-full py-24 bg-gray-900/50">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Treatment Details</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to know about our dermal filler makeover treatments
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <Card className="p-8 bg-gray-800/50 shadow-lg border-gray-700">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-semibold mb-6 text-white">What is a Dermal Filler Makeover?</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    A dermal filler makeover is a comprehensive treatment plan designed to rejuvenate the entire face using a combination of dermal fillers.
-                    It addresses multiple areas to create a balanced and harmonious result that enhances your natural features.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-8 bg-gray-800/50 shadow-lg border-gray-700">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-semibold mb-6 text-white">What Areas Can Be Treated?</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Common treatment areas include cheeks, temples, under-eye area, nasolabial folds, marionette lines, lips, and jawline.
-                    The specific areas treated will depend on your individual needs and aesthetic goals.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </section>
 
