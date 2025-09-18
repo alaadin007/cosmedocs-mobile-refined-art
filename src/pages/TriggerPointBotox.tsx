@@ -399,6 +399,13 @@ const TriggerPointBotox = () => {
                         While the goal is to reduce pain, the real benefit is freedom of movement. Patients often notice they can turn their head more easily, sit more comfortably at a desk, or even sleep better the same night.
                       </p>
                     </div>
+                    
+                    <div>
+                      <h3 className="text-xl font-bold mb-3 text-purple-300">Lasting Muscle Reset</h3>
+                      <p className="text-gray-300">
+                        TPIs don't just numb pain; they interrupt the cycle of spasm and tension in the muscle. This helps prevent the trigger point from "firing" again, allowing the muscle to heal and function normally over time.
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
 
