@@ -353,44 +353,61 @@ const TriggerPointBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Simple 2-Step Process</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-white">Treatment Process</h2>
+              <div className="space-y-12">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="grid md:grid-cols-2 gap-8 items-center"
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">Initial Consultation & Assessment</h3>
+                    <p className="text-gray-300 mb-4">
+                      Comprehensive consultation with detailed medical history and physical examination. We identify specific trigger points through palpation and movement assessment.
+                    </p>
+                    <p className="text-gray-300">
+                      We discuss your pain patterns, previous treatments, and establish realistic expectations for your trigger point botox therapy.
+                    </p>
+                  </div>
+                  <div>
+                    <img 
+                      src="/lovable-uploads/91daaa52-6dff-448b-b375-8ce52b2d0f41.png" 
+                      alt="Medical consultation and trigger point assessment"
+                      className="rounded-lg shadow-lg w-full h-80 object-cover"
+                    />
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="grid md:grid-cols-2 gap-8 items-center"
+                >
+                  <div className="md:order-2">
+                    <h3 className="text-2xl font-bold mb-4 text-white">Precision Injection Technique</h3>
+                    <p className="text-gray-300 mb-4">
+                      Advanced injection techniques deliver botulinum toxin directly into identified trigger points using fine needles for precise placement.
+                    </p>
+                    <p className="text-gray-300">
+                      The 15-30 minute procedure is well-tolerated, with local anesthetic available if needed.
+                    </p>
+                  </div>
+                  <div className="md:order-1">
+                    <img 
+                      src="/lovable-uploads/cda46474-143e-4d79-ab59-9a967c212d0e.png" 
+                      alt="Precise trigger point botox injection procedure"
+                      className="rounded-lg shadow-lg w-full h-80 object-cover"
+                    />
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
-            
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-lg p-6 text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">1</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-white">Consultation & Assessment</h3>
-                <p className="text-gray-300 text-sm">
-                  Detailed evaluation to identify trigger points and discuss your pain patterns. We'll create a personalized treatment plan.
-                </p>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-lg p-6 text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-600 font-bold text-lg">2</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-white">Precision Injection</h3>
-                <p className="text-gray-300 text-sm">
-                  Quick 15-30 minute procedure using fine needles for precise botox placement into trigger points.
-                </p>
-              </motion.div>
-            </div>
           </div>
         </section>
 
