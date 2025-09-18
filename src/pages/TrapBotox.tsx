@@ -117,12 +117,9 @@ const TrapBotox = () => {
                   <span className="block text-sm mt-4">Elegant shoulder slimming & neck contouring</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
-                  <span className="text-purple-300 font-semibold">Transform Your Silhouette</span>
-                  <br />
                   Achieve refined shoulders and enhanced neck definition
                 </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold drop-shadow-lg">Starting from £350</p>
                   <p className="text-sm text-gray-300 drop-shadow-lg">#trapbotox - See our before & after gallery for real patient results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
