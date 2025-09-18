@@ -299,7 +299,7 @@ export default function NefertitiBotoxFacelift() {
         </section>
 
         {/* What is Nefertiti Botox */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
@@ -440,7 +440,7 @@ export default function NefertitiBotoxFacelift() {
         </section>
 
         {/* Recovery and Aftercare Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -537,7 +537,7 @@ export default function NefertitiBotoxFacelift() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
+        <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -673,7 +673,7 @@ export default function NefertitiBotoxFacelift() {
         </section>
 
         {/* Nefertiti Neck Lift Treatment Video */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
