@@ -250,6 +250,8 @@ const TrapBotox = () => {
               </motion.div>
             </div>
           </div>
+        </section>
+
         {/* What is Trapezius Botox */}
         <section className="py-20 bg-gray-900/30">
           <div className="page-container">
