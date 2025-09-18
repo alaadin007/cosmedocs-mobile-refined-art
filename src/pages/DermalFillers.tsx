@@ -394,7 +394,7 @@ const DermalFillerMakeover = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -485,6 +485,37 @@ const DermalFillerMakeover = () => {
                       <li className="flex items-center text-gray-300">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                         VIP aftercare support
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 border-blue-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Consultation Only</CardTitle>
+                    <div className="text-3xl font-bold text-blue-300">£50</div>
+                    <p className="text-gray-300">Expert assessment</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Detailed facial analysis
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Personalized treatment plan
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        No commitment required
                       </li>
                     </ul>
                   </CardContent>
