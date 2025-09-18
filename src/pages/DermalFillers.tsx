@@ -688,26 +688,6 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
-        {/* Other Dermal Filler Treatments */}
-        <section className="w-full py-24 bg-gray-900/50">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Other Dermal Filler Treatments</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enhance your natural beauty with specialized dermal filler treatments for individual facial areas
-              </p>
-            </div>
-
-            {/* Consultation Info */}
-            <div className="text-center mb-12">
-              <Card className="inline-block bg-purple-600/20 border-purple-500/30 p-6">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-semibold text-white mb-2">Consultation</h3>
-                  <p className="text-2xl font-bold text-purple-300">£50</p>
-                  <p className="text-sm text-gray-300">(off any treatment)</p>
-                </CardContent>
-              </Card>
-            </div>
 
             {/* Anti-Ageing Treatments */}
             <div className="mb-16">
