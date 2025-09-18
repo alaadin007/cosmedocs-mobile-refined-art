@@ -544,36 +544,6 @@ const DermalFillerMakeover = () => {
                 </Card>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Premium Transform</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£1,800</div>
-                    <p className="text-gray-300">5-6ml dermal filler</p>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Full face rejuvenation
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Personalized treatment plan
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        VIP aftercare support
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
