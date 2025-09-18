@@ -446,7 +446,7 @@ const TriggerPointBotox = () => {
 
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
+        <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
