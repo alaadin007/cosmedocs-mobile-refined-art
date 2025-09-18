@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Award, GraduationCap, CheckCircle, Palette, Heart } from 'lucide-react';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import { generateSEOMetadata } from '@/utils/seo';
 
@@ -486,8 +487,8 @@ const TrapBotox = () => {
           </div>
         </section>
 
-        {/* Treatment Journey */}
-        <section className="py-20 bg-gray-900/30">
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -496,52 +497,88 @@ const TrapBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Journey of Trap Botox</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Your comprehensive treatment experience from consultation to results
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto space-y-12">
-              {[
-                {
-                  step: "1",
-                  title: "Consultation & Evaluation",
-                  description: "In your consultation at Cosmedocs, our experienced practitioner assesses your medical history and symptoms, focusing on muscle pain and tension. Then, after the consultation, the practitioner performs a physical exam on problematic areas in traps, gauges their severity, and devises a treatment plan accordingly."
-                },
-                {
-                  step: "2", 
-                  title: "Treatment Procedure",
-                  description: "The Botox for Trapezius treatment involves carefully and strategically injecting approximately 40 units of Botulinum Toxin into each of your trapezius muscles. At Cosmedocs, the expert practitioner usually starts the procedure by marking the exact areas that need attention, ensuring precise and effective results. The entire process takes just a few minutes."
-                },
-                {
-                  step: "3",
-                  title: "No Downtime",
-                  description: "There is no need for extended appointments or downtime – A significant benefit of this procedure with no recovery time, which makes this procedure very convenient for busy lifestyles."
-                },
-                {
-                  step: "4",
-                  title: "Results and Maintenance",
-                  description: "The onset of relief from Botox injections may vary, with some experiencing improvement within 5-10 days after shoulder Botox. The effects typically last approximately 4-6 months, and the procedure can be repeated after this duration according to your preference."
-                }
-              ].map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="flex items-start space-x-6"
-                >
-                  <div className="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg shrink-0">
-                    {step.step}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{step.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 2 million treatments completed</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved Botox only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
             </div>
           </div>
         </section>
