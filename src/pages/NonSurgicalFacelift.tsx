@@ -386,19 +386,7 @@ const NonSurgicalFacelift = () => {
                         </div>
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="text-purple-500" size={16} />
-                          <span className="text-gray-300 text-sm">Minimal downtime and recovery</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-purple-500" size={16} />
-                          <span className="text-gray-300 text-sm">Natural-looking, gradual results</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-purple-500" size={16} />
                           <span className="text-gray-300 text-sm">Customizable to individual facial needs</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <CheckCircle className="text-purple-500" size={16} />
-                          <span className="text-gray-300 text-sm">Immediate visible improvement with full results in 2-4 weeks</span>
                         </div>
                       </div>
                     </div>
