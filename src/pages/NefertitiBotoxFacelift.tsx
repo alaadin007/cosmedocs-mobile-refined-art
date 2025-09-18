@@ -256,15 +256,15 @@ export default function NefertitiBotoxFacelift() {
                 <h2 className="text-3xl font-bold mb-6">What is Nefertiti Botox?</h2>
                 <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed">
-                    The Nefertiti Lift is a revolutionary non-surgical treatment that uses strategic Botox 
-                    injections to enhance the jawline and smooth the neck area. Named after the Egyptian 
-                    queen known for her elegant neck and defined jawline, this treatment targets the 
-                    platysma muscle bands in the neck.
+                    The Nefertiti Botox in Neck Lift, inspired by the Egyptian queen's iconic jawline 
+                    and neck, is a non-invasive treatment for early jowls and a less defined jawline. 
+                    This procedure employs Botox injections to ease muscles that contribute to facial 
+                    sagging, enhancing jawline definition and neck smoothness.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    By relaxing the downward-pulling platysma muscles, the treatment allows the natural 
-                    lifting muscles of the jaw to work more effectively, creating a more defined jawline 
-                    and smoother neck contour without surgery.
+                    During the Nefertiti neck lift, small amounts of Botox are strategically injected 
+                    into the muscles along the lower jawline and neck. Botox in neck and jawline relaxes 
+                    the muscles, lifting the area subtly and redefining the jawline.
                   </p>
                 </div>
               </motion.div>
@@ -277,28 +277,172 @@ export default function NefertitiBotoxFacelift() {
               >
                 <Card className="bg-gray-900/50 border-none">
                   <CardHeader>
-                    <CardTitle className="text-white">How the Nefertiti Lift Works</CardTitle>
+                    <CardTitle className="text-white">Who Can Benefit from the Nefertiti Neck Lift?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Sharper, more defined jawline</p>
+                      <p className="text-gray-300">Individuals with an undefined jawline</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Improved neck contour and smoothing</p>
+                      <p className="text-gray-300">People experiencing wrinkles and sagging in the neck</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Reduction in neck bands and sagging</p>
+                      <p className="text-gray-300">Patients with sagging jowls</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Subtle lift with no downtime required</p>
+                      <p className="text-gray-300">Those who have facial sagging due to weight loss</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Natural-looking enhancement that maintains authenticity</p>
+                      <p className="text-gray-300">Individuals who frequently tense their neck, leading to "Turkey Neck"</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Combining with Dermal Fillers Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6">Combining with Dermal Fillers for Enhanced Results</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                The Nefertiti neck lift with Botox in neck can be combined with dermal fillers and other 
+                collagen-stimulating treatments for optimal results. Fillers can be strategically added to areas, 
+                enhancing the lifting effect of Botox. This combination approach can address a range of ageing signs, 
+                offering a more comprehensive facial rejuvenation.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <Card className="bg-black/50 border-gray-800 h-full">
+                  <CardContent className="p-6">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Heart className="text-purple-600" size={24} />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3">Enhanced Jawline</h3>
+                    <p className="text-gray-300">Dermal fillers add volume and structure to complement the lifting effect of Botox</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <Card className="bg-black/50 border-gray-800 h-full">
+                  <CardContent className="p-6">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Palette className="text-purple-600" size={24} />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3">Comprehensive Rejuvenation</h3>
+                    <p className="text-gray-300">Address multiple signs of aging with a customized treatment plan</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <Card className="bg-black/50 border-gray-800 h-full">
+                  <CardContent className="p-6">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="text-purple-600" size={24} />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3">Optimal Results</h3>
+                    <p className="text-gray-300">Strategic combination approach for maximum effectiveness and natural outcomes</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Recovery and Aftercare Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Recovery and Aftercare</h2>
+                <div className="space-y-6">
+                  <p className="text-gray-300 leading-relaxed">
+                    One advantage of the Nefertiti neck lift is the minimal recovery time. Patients can 
+                    typically return to their normal activities immediately after the procedure. Some minor 
+                    swelling or bruising may occur, but it generally resolves quickly.
+                  </p>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <Check className="text-green-500" size={20} />
+                      <p className="text-gray-300">Return to work immediately</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="text-green-500" size={20} />
+                      <p className="text-gray-300">Minimal to no downtime required</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="text-green-500" size={20} />
+                      <p className="text-gray-300">Quick healing with minimal side effects</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900/50 border-none">
+                  <CardHeader>
+                    <CardTitle className="text-white">Longevity of Results</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      The Nefertiti Botox Facelift results can be seen within a few days and typically 
+                      last 3 to 6 months. Regular maintenance sessions are recommended to sustain the 
+                      youthful, lifted appearance of the jawline. With repeated injections, treatment 
+                      lasts longer.
+                    </p>
+                    <div className="bg-purple-900/30 p-4 rounded-lg">
+                      <h4 className="text-white font-semibold mb-2">Results Timeline:</h4>
+                      <ul className="space-y-2 text-gray-300">
+                        <li>• Initial results: 3-5 days</li>
+                        <li>• Full results: 14 days</li>
+                        <li>• Duration: 3-6 months</li>
+                        <li>• Enhanced longevity with regular treatments</li>
+                      </ul>
                     </div>
                   </CardContent>
                 </Card>
