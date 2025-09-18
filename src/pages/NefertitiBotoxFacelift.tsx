@@ -304,36 +304,6 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Nefertiti Neck Lift Treatment Video */}
-        <section className="py-20 bg-gray-950">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Nefertiti Neck Lift With Botox in Neck Treatment Video</h2>
-              <div className="max-w-4xl mx-auto">
-                <div className="relative aspect-video rounded-lg overflow-hidden bg-black">
-                  <video 
-                    controls 
-                    className="w-full h-full object-cover"
-                    poster="/placeholder.svg"
-                  >
-                    <source src="https://www.cosmedocs.com/wp-content/uploads/2024/05/Nefertiti-2-ad.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <p className="text-gray-300 mt-4">
-                  The Nefertiti Neck Lift Video with Botox In Neck Injections Demonstrates A Quick, Painless Treatment.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Combining with Dermal Fillers Section */}
         <section className="py-20 bg-gray-900/50">
           <div className="page-container">
@@ -763,6 +733,36 @@ export default function NefertitiBotoxFacelift() {
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Nefertiti Neck Lift Treatment Video */}
+        <section className="py-20 bg-gray-950">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Nefertiti Neck Lift With Botox in Neck Treatment Video</h2>
+              <div className="max-w-4xl mx-auto">
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-black">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/placeholder.svg"
+                  >
+                    <source src="https://www.cosmedocs.com/wp-content/uploads/2024/05/Nefertiti-2-ad.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p className="text-gray-300 mt-4">
+                  The Nefertiti Neck Lift Video with Botox In Neck Injections Demonstrates A Quick, Painless Treatment.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
