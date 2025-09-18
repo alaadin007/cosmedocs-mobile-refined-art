@@ -130,9 +130,7 @@ const NonSurgicalFacelift = () => {
                   <span className="block text-sm mt-4">Invisible art - natural facial rejuvenation without surgery</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Comprehensive Liquid Facelift</span>
-                  <br />
-                  Advanced dermal fillers and Botox for natural facial rejuvenation
+                  <span className="text-purple-300 font-semibold">Advanced dermal fillers and Botox for natural facial rejuvenation</span>
                 </p>
                 <div className="mb-8">
                   <p className="text-sm text-gray-300">Comprehensive liquid facelift combining multiple treatments</p>
