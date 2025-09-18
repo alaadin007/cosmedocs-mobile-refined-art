@@ -257,7 +257,7 @@ const TriggerPointBotox = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-3xl font-bold text-center mb-12 text-white">What is Trigger Point Botox?</h2>
-              <div className="prose prose-lg mx-auto text-gray-300 space-y-6">
+              <div className="prose prose-lg mx-auto text-gray-300 space-y-6 mb-12">
                 <p>
                   Trigger point botox is a specialized medical treatment that uses botulinum toxin injections to relieve chronic muscle tension, spasms, and pain. Unlike cosmetic botox applications, trigger point botox specifically targets hyperirritable spots in skeletal muscle known as trigger points, which are associated with palpable nodules in taut bands of muscle fibers.
                 </p>
@@ -265,6 +265,35 @@ const TriggerPointBotox = () => {
                   These trigger points can cause significant discomfort, referred pain, and limited range of motion. Our expert practitioners at Cosmedocs use precise injection techniques to deliver botulinum toxin directly into these problematic areas, effectively relaxing the muscle and providing long-lasting relief from chronic pain conditions.
                 </p>
               </div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="max-w-3xl mx-auto"
+              >
+                <h3 className="text-2xl font-bold mb-8 text-white text-center">Key Benefits</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {[
+                    { icon: Shield, title: "Relieve Chronic Pain", desc: "Relieve chronic muscle pain and tightness" },
+                    { icon: Activity, title: "Improve Mobility", desc: "Improve mobility and posture" },
+                    { icon: Star, title: "Reduce Headaches", desc: "Reduce tension headaches and referred pain" },
+                    { icon: CheckCircle, title: "Enhance Function", desc: "Enhance overall muscle function" },
+                    { icon: Star, title: "Non-surgical", desc: "Minimally invasive option" },
+                    { icon: Users, title: "Expert Care", desc: "Medical professional administered" },
+                    { icon: Award, title: "Proven Results", desc: "Clinically tested treatment" }
+                  ].map((benefit, index) => (
+                    <div key={index} className="flex items-start gap-3 p-4 bg-accent/30 rounded-lg">
+                      <benefit.icon className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white text-sm">{benefit.title}</h4>
+                        <p className="text-gray-400 text-xs">{benefit.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -279,64 +308,31 @@ const TriggerPointBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Benefits & Targeted Muscles</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Commonly Treated Muscles</h2>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Muscles Treated Column */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold mb-6 text-white">Commonly Treated Muscles</h3>
-                <div className="space-y-3">
-                  {[
-                     { name: "Levator Scapulae", desc: "Neck muscle for chronic neck pain and posture-related tension" },
-                     { name: "Temporalis", desc: "Head muscle for tension headaches and jaw pain" },
-                     { name: "Sternocleidomastoid", desc: "Front neck muscle for shoulder tension and stiffness" },
-                     { name: "Quadratus Lumborum", desc: "Lower back muscle for myofascial pain syndrome" },
-                     { name: "Gluteus Medius", desc: "Hip muscle for musculoskeletal disorders and lower back pain" }
-                  ].map((muscle, index) => (
-                    <div key={index} className="border-l-2 border-purple-300 pl-4 py-2">
-                      <h4 className="font-semibold text-purple-300 text-sm">{muscle.name}</h4>
-                      <p className="text-gray-400 text-xs">{muscle.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Benefits Column */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold mb-6 text-white">Key Benefits</h3>
-                <div className="space-y-4">
-                  {[
-                    { icon: Shield, title: "Relieve Chronic Pain", desc: "Relieve chronic muscle pain and tightness" },
-                    { icon: Activity, title: "Improve Mobility", desc: "Improve mobility and posture" },
-                    { icon: Star, title: "Reduce Headaches", desc: "Reduce tension headaches and referred pain" },
-                    { icon: CheckCircle, title: "Enhance Function", desc: "Enhance overall muscle function" },
-                    
-                    { icon: Star, title: "Non-surgical", desc: "Minimally invasive option" },
-                    { icon: Users, title: "Expert Care", desc: "Medical professional administered" },
-                    { icon: Award, title: "Proven Results", desc: "Clinically tested treatment" }
-                  ].map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3 p-3 bg-accent/50 rounded-lg">
-                      <benefit.icon className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-white text-sm">{benefit.title}</h4>
-                        <p className="text-gray-400 text-xs">{benefit.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-2xl mx-auto"
+            >
+              <div className="space-y-3">
+                {[
+                   { name: "Levator Scapulae", desc: "Neck muscle for chronic neck pain and posture-related tension" },
+                   { name: "Temporalis", desc: "Head muscle for tension headaches and jaw pain" },
+                   { name: "Sternocleidomastoid", desc: "Front neck muscle for shoulder tension and stiffness" },
+                   { name: "Quadratus Lumborum", desc: "Lower back muscle for myofascial pain syndrome" },
+                   { name: "Gluteus Medius", desc: "Hip muscle for musculoskeletal disorders and lower back pain" }
+                ].map((muscle, index) => (
+                  <div key={index} className="border-l-2 border-purple-300 pl-4 py-2">
+                    <h4 className="font-semibold text-purple-300 text-sm">{muscle.name}</h4>
+                    <p className="text-gray-400 text-xs">{muscle.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
