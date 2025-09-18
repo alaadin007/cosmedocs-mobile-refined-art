@@ -860,7 +860,7 @@ const NonSurgicalFacelift = () => {
           </div>
         </section>
 
-        {/* Treatment Areas */}
+        {/* FAQ Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
