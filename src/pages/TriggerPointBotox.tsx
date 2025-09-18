@@ -264,9 +264,6 @@ const TriggerPointBotox = () => {
                 <p>
                   These trigger points can cause significant discomfort, referred pain, and limited range of motion. Our expert practitioners at Cosmedocs use precise injection techniques to deliver botulinum toxin directly into these problematic areas, effectively relaxing the muscle and providing long-lasting relief from chronic pain conditions.
                 </p>
-                <p>
-                  The treatment is particularly effective for conditions such as chronic neck pain, shoulder tension, tension headaches, myofascial pain syndrome, and various musculoskeletal disorders that haven't responded well to conventional treatments.
-                </p>
               </div>
             </motion.div>
           </div>
