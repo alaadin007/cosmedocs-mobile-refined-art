@@ -72,85 +72,6 @@ const DermalFillerMakeover = () => {
     }
   ];
 
-  const antiAgeingTreatments = [
-    {
-      title: "Marionette Lines",
-      price: "£325/ml",
-      description: "Smooth vertical lines from mouth corners to chin for a more youthful appearance.",
-      features: ["Long-lasting results", "Natural appearance", "Minimal downtime"]
-    },
-    {
-      title: "Nasolabial Folds",
-      price: "£325/ml",
-      description: "Reduce smile lines for a smoother transition from nose to mouth.",
-      features: ["Instant results", "12-18 months duration", "Natural enhancement"]
-    },
-    {
-      title: "Jawline (High Def/Jowls)",
-      price: "£350/ml",
-      description: "Define and contour jawline while addressing jowl sagging.",
-      features: ["Sculpted definition", "Youthful contour", "Professional technique"]
-    },
-    {
-      title: "Cheek Volume",
-      price: "£350/ml",
-      description: "Restore youthful cheek fullness and enhance facial proportions.",
-      features: ["Natural volume", "Lifted appearance", "Long-lasting results"]
-    },
-    {
-      title: "Tear Trough / Under Eye",
-      price: "£425",
-      description: "Address under-eye hollowing and dark circles for refreshed eyes.",
-      features: ["Refreshed look", "Reduced shadows", "Expert technique required"]
-    },
-    {
-      title: "Profhilo",
-      price: "£350",
-      description: "Bio-remodelling treatment for skin hydration and firmness.",
-      features: ["Skin bio-remodelling", "Hydration boost", "Natural glow"]
-    }
-  ];
-
-  const facialContouringTreatments = [
-    {
-      title: "0.5ml Lip Filler (Natural)",
-      price: "£300",
-      description: "Subtle lip enhancement for naturally fuller lips.",
-      features: ["Natural enhancement", "Subtle volume", "Perfect proportions"]
-    },
-    {
-      title: "1ml Lip Filler (Bold & Plump)",
-      price: "£350",
-      description: "More dramatic lip enhancement for fuller, plumper lips.",
-      features: ["Bold results", "Dramatic volume", "Long-lasting effect"]
-    },
-    {
-      title: "Non Surgical Nose Job",
-      price: "£450",
-      description: "Reshape and refine nose contours without surgery.",
-      features: ["No surgery required", "Immediate results", "Reversible treatment"]
-    },
-    {
-      title: "Forehead Filler",
-      price: "£400",
-      description: "Smooth forehead bumps and dips for an even surface.",
-      features: ["Smooth surface", "Natural appearance", "Expert precision"]
-    },
-    {
-      title: "Temples Hollowing",
-      price: "£350/ml",
-      description: "Restore temple volume for a more youthful facial shape.",
-      features: ["Youthful restoration", "Natural volume", "Facial harmony"],
-      link: "/temple-filler-london"
-    },
-    {
-      title: "Redensity 1",
-      price: "£250/ml",
-      description: "Skin quality improvement with micro-injections.",
-      features: ["Skin quality boost", "Hydration enhancement", "Natural glow"]
-    }
-  ];
-
   return (
     <>
       <Helmet>
@@ -167,7 +88,7 @@ const DermalFillerMakeover = () => {
       </Helmet>
 
       <div className="min-h-screen bg-black text-white">
-        {/* Hero Section - Matching Face Botox Style */}
+        {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center bg-black">
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -188,7 +109,6 @@ const DermalFillerMakeover = () => {
                   Full face rejuvenation with personalized treatment plans and invisible art philosophy
                 </p>
 
-                {/* Animated Tagline */}
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -346,36 +266,64 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
-        {/* Treatment Details */}
-        <section className="w-full py-24 bg-gray-900/50">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Treatment Details</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to know about our dermal filler makeover treatments
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <Card className="p-8 bg-gray-800/50 shadow-lg border-gray-700">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-semibold mb-6 text-white">What is a Dermal Filler Makeover?</h3>
+        {/* What is a Dermal Filler Makeover */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">What is a Dermal Filler Makeover?</h2>
+                <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed">
-                    A dermal filler makeover is a comprehensive treatment plan designed to rejuvenate the entire face using a combination of dermal fillers.
-                    It addresses multiple areas to create a balanced and harmonious result that enhances your natural features.
+                    A dermal filler makeover is a comprehensive treatment plan designed to rejuvenate the entire face using a combination of premium hyaluronic acid dermal fillers. This holistic approach addresses multiple areas to create a balanced and harmonious result that enhances your natural features.
                   </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-8 bg-gray-800/50 shadow-lg border-gray-700">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-semibold mb-6 text-white">What Areas Can Be Treated?</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Common treatment areas include cheeks, temples, under-eye area, nasolabial folds, marionette lines, lips, and jawline.
-                    The specific areas treated will depend on your individual needs and aesthetic goals.
+                    During the treatment, strategic injections are placed in key areas such as cheeks, temples, under-eye area, nasolabial folds, marionette lines, lips, and jawline. Each injection is carefully planned to restore volume, smooth wrinkles, and enhance facial contours for a naturally youthful appearance.
                   </p>
-                </CardContent>
-              </Card>
+                  <p className="text-gray-300 leading-relaxed">
+                    The treatment uses hyaluronic acid, a naturally occurring substance that attracts and retains moisture, providing immediate volume while integrating seamlessly with your existing facial structure for natural-looking, long-lasting results.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900/50 border-none">
+                  <CardHeader>
+                    <CardTitle className="text-white">Who Can Benefit from Dermal Filler Makeover?</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Individuals seeking overall facial rejuvenation</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">People experiencing volume loss due to aging</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Those wanting to enhance facial contours</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Patients seeking non-surgical facial enhancement</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Individuals wanting long-lasting natural results</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -442,8 +390,7 @@ const DermalFillerMakeover = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Dermal Filler Makeover Pricing</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for premium dermal filler makeover treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
+                Transparent pricing for comprehensive facial rejuvenation treatments
               </p>
             </motion.div>
 
@@ -451,30 +398,30 @@ const DermalFillerMakeover = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-purple-500 h-full text-center">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Mini Makeover</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£650</div>
+                    <CardTitle className="text-white text-xl">Essential Refresh</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£350</div>
+                    <p className="text-gray-300">1ml dermal filler</p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">2-3 areas with 1-2ml filler</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Consultation included</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
-                      </div>
-                    </div>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Single area treatment
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Premium hyaluronic acid
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Expert consultation
+                      </li>
+                    </ul>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -482,37 +429,33 @@ const DermalFillerMakeover = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
-                  </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Full Makeover</CardTitle>
-                    <div className="text-white text-4xl font-bold">£1,200</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">4-5 areas with 3-4ml filler</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Premium hyaluronic acid</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">2-week follow-up</span>
-                      </div>
+                <Card className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-purple-400/50 h-full transform scale-105">
+                  <CardHeader>
+                    <div className="text-center mb-2">
+                      <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Most Popular</span>
                     </div>
+                    <CardTitle className="text-white text-xl">Complete Makeover</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£1,200</div>
+                    <p className="text-gray-300">3-4ml dermal filler</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Multiple area treatment
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Comprehensive consultation
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Follow-up appointment
+                      </li>
+                    </ul>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -520,37 +463,37 @@ const DermalFillerMakeover = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-700 h-full text-center">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                    <CardTitle className="text-white text-xl">Premium Transform</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£1,800</div>
+                    <p className="text-gray-300">5-6ml dermal filler</p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full facial assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
-                      </div>
-                    </div>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Full face rejuvenation
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Personalized treatment plan
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        VIP aftercare support
+                      </li>
+                    </ul>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
@@ -567,7 +510,7 @@ const DermalFillerMakeover = () => {
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -588,10 +531,10 @@ const DermalFillerMakeover = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
+                  <Users className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
+                <p className="text-gray-300">Over 2 million treatments completed</p>
               </motion.div>
 
               <motion.div
@@ -628,7 +571,7 @@ const DermalFillerMakeover = () => {
                   <CheckCircle className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
+                <p className="text-gray-300">Premium FDA-approved fillers only</p>
               </motion.div>
 
               <motion.div
@@ -641,8 +584,8 @@ const DermalFillerMakeover = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Palette className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Results</h3>
+                <p className="text-gray-300">Natural, elegant outcomes</p>
               </motion.div>
 
               <motion.div
@@ -672,10 +615,10 @@ const DermalFillerMakeover = () => {
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto space-y-4">
+            <div className="space-y-4">
               {faqItems.map((faq, index) => (
-                <Collapsible key={index} className="bg-gray-800/50 rounded-2xl border border-gray-700">
-                  <CollapsibleTrigger className="flex w-full items-center justify-between p-6 text-left hover:bg-gray-700/30 transition-colors rounded-2xl">
+                <Collapsible key={index}>
+                  <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-gray-800/50 p-6 text-left transition-colors hover:bg-gray-700/50">
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     <Plus className="h-5 w-5 text-purple-400 shrink-0" />
                   </CollapsibleTrigger>
@@ -684,142 +627,6 @@ const DermalFillerMakeover = () => {
                   </CollapsibleContent>
                 </Collapsible>
               ))}
-            </div>
-          </div>
-        </section>
-
-
-            {/* Anti-Ageing Treatments */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">Anti-Ageing Treatments</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {antiAgeingTreatments.map((treatment, index) => {
-                  // Map treatment titles to their respective pages
-                  const getPageLink = (title: string) => {
-                    switch (title) {
-                      case "Marionette Lines":
-                        return "/marionette-lines";
-                      case "Nasolabial Folds":
-                        return "/nasolabial-folds";
-                      case "Jawline (High Def/Jowls)":
-                        return "/jawline-filler";
-                      case "Cheek Volume":
-                        return "/cheek-filler";
-                      case "Tear Trough / Under Eye":
-                        return "/tear-trough-filler";
-                      case "Profhilo":
-                        return "/profhilo-treatment";
-                      default:
-                        return null;
-                    }
-                  };
-
-                  const pageLink = getPageLink(treatment.title);
-
-                  return (
-                    <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
-                      <CardContent className="p-0">
-                        <div className="flex justify-between items-start mb-4">
-                          <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
-                          <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
-                        </div>
-                        <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
-                        <div className="space-y-2 mb-4">
-                          {treatment.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center text-sm">
-                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
-                              <span className="text-gray-400">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                        {pageLink ? (
-                          <Link to={pageLink}>
-                            <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
-                              Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                          </Link>
-                        ) : (
-                          <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
-                            Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        )}
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Facial Contouring Treatments */}
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">Facial Contouring</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {facialContouringTreatments.map((treatment, index) => {
-                  // Map treatment titles to their respective pages
-                  const getPageLink = (title: string) => {
-                    switch (title) {
-                      case "0.5ml Lip Filler (Natural)":
-                      case "1ml Lip Filler (Bold & Plump)":
-                        return "/lip-fillers";
-                      case "Non Surgical Nose Job":
-                        return "/non-surgical-nose-job";
-                      case "Forehead Filler":
-                        return "/forehead-fillers";
-                      case "Temples Hollowing":
-                        return "/temple-filler-london";
-                      default:
-                        return null;
-                    }
-                  };
-
-                  const pageLink = getPageLink(treatment.title);
-
-                  const CardComponent = (
-                    <Card key={index} className="p-6 bg-gray-800/50 border-gray-700 hover:bg-gray-700/30 transition-colors">
-                      <CardContent className="p-0">
-                        <div className="flex justify-between items-start mb-4">
-                          <h4 className="text-lg font-semibold text-white">{treatment.title}</h4>
-                          <span className="text-xl font-bold text-yellow-400">{treatment.price}</span>
-                        </div>
-                        <p className="text-gray-300 text-sm mb-4">{treatment.description}</p>
-                        <div className="space-y-2 mb-4">
-                          {treatment.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center text-sm">
-                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 shrink-0" />
-                              <span className="text-gray-400">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                        {pageLink ? (
-                          <Link to={pageLink}>
-                            <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
-                              Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                          </Link>
-                        ) : (
-                          <Button variant="ghost" className="text-gray-400 hover:text-white p-0 h-auto">
-                            Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        )}
-                      </CardContent>
-                    </Card>
-                  );
-
-                  return treatment.link ? (
-                    <Link key={index} to={treatment.link} className="block hover:no-underline">
-                      {CardComponent}
-                    </Link>
-                  ) : (
-                    CardComponent
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold">
-                View All Dermal Filler Treatments
-              </Button>
             </div>
           </div>
         </section>
