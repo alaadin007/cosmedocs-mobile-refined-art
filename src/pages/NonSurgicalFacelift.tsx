@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Eye } from "lucide-react";
 
 const NonSurgicalFacelift = () => {
   const seoData = generateSEOMetadata(
@@ -178,7 +178,7 @@ const NonSurgicalFacelift = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Facelift Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -233,6 +233,20 @@ const NonSurgicalFacelift = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
                 <p className="text-gray-300">Topical anaesthetic + lidocaine in products</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Eye className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Visible Results</h3>
+                <p className="text-gray-300">Immediate visible improvement with full results in 2-4 weeks</p>
               </motion.div>
             </div>
           </div>
