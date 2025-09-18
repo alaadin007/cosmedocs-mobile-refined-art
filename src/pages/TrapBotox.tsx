@@ -289,7 +289,7 @@ const TrapBotox = () => {
                 className="text-center"
               >
                 <img 
-                  src="/lovable-uploads/trapezius-muscle-anatomy.png" 
+                  src="/src/assets/trapezius-muscle-treatment.png" 
                   alt="Trapezius muscle anatomy diagram showing injection points"
                   className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                 />
@@ -579,7 +579,7 @@ const TrapBotox = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-accent">
+        <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -588,40 +588,41 @@ const TrapBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Pricing</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Trap Botox Pricing London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for professional trap botox treatments
+                Transparent pricing for professional trap botox treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                <Card className="bg-accent border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Trapezius Botox</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£350 - £650</div>
-                    <p className="text-gray-300">Professional treatment</p>
+                    <CardTitle className="text-white text-2xl">Trapezius Botox</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£350</div>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                        Expert consultation included
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                        Precise injection technique
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                        Follow-up care included
-                      </li>
-                    </ul>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Standard trap botox treatment for shoulder slimming</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium botox product</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -629,30 +630,68 @@ const TrapBotox = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 border-blue-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Full Barbie Botox</CardTitle>
-                    <div className="text-3xl font-bold text-blue-300">£650</div>
-                    <p className="text-gray-300">Shoulder reduction package</p>
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Full Barbie Botox</CardTitle>
+                    <div className="text-white text-4xl font-bold">£650</div>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                        Comprehensive shoulder slimming
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                        Multiple injection points
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                        Complete neck contouring
-                      </li>
-                    </ul>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Comprehensive shoulder reduction treatment</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Maximum units for best results</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">4-week follow-up</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Expert assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">30-minute consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatment planning</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">No obligation</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
