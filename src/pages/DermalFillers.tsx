@@ -4,7 +4,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Clock, Star, Award, Eye, Zap, ArrowRight, Users, BookOpen, Plus, Minus } from 'lucide-react';
+import { CheckCircle, Clock, Star, Award, Eye, Zap, ArrowRight, Users, BookOpen, Plus, Minus, Calendar, Activity, Syringe, GraduationCap, Palette, Heart } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Link } from 'react-router-dom';
@@ -211,13 +211,90 @@ const DermalFillerMakeover = () => {
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold" asChild>
                     <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Consultation</a>
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     View Price List
                   </Button>
                 </div>
               </motion.div>
 
               <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Dermal Filler Makeover Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">45-60 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -239,38 +316,169 @@ const DermalFillerMakeover = () => {
               </p>
             </motion.div>
 
-            <div className="relative w-full">
-              <Carousel
-                className="w-full max-w-6xl mx-auto"
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-              >
-                <CarouselContent className="-ml-2 md:-ml-4">
-                  {beforeAfterImages.map((image, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                      <div className="bg-gray-800/50 rounded-2xl shadow-lg overflow-hidden h-full">
-                        <div className="aspect-square w-full">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="p-6">
-                          <p className="text-gray-300 text-center leading-relaxed">
-                            {image.caption}
-                          </p>
-                        </div>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden md:flex -left-12 bg-white/10 hover:bg-white/20 border-2 border-gray-600 text-white" />
-                <CarouselNext className="hidden md:flex -right-12 bg-white/10 hover:bg-white/20 border-2 border-gray-600 text-white" />
-              </Carousel>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Dermal Filler Makeover Pricing</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for premium dermal filler makeover treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Mini Makeover</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£650</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">2-3 areas with 1-2ml filler</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Full Makeover</CardTitle>
+                    <div className="text-white text-4xl font-bold">£1,200</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">4-5 areas with 3-4ml filler</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Premium hyaluronic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">2-week follow-up</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-gray-700 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full facial assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold" asChild>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Your Consultation</a>
+              </Button>
+            </motion.div>
           </div>
         </section>
 
@@ -278,7 +486,7 @@ const DermalFillerMakeover = () => {
         <section className="w-full py-24 bg-gray-900/50">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Treatment Details</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Treatment Details</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to know about our dermal filler makeover treatments
               </p>
@@ -308,11 +516,107 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="w-full py-24 bg-gray-900/30">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to know about dermal filler makeovers and hyaluronic acid treatments
               </p>
@@ -490,65 +794,6 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="w-full py-24 bg-gray-900/30">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Benefits of a Dermal Filler Makeover</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the transformative benefits of our comprehensive facial rejuvenation approach
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="p-8 bg-gray-800/50 border-gray-700">
-                <CardContent className="p-0 text-center">
-                  <CheckCircle className="h-12 w-12 text-purple-400 mb-6 mx-auto" />
-                  <h3 className="text-xl font-semibold mb-4 text-white">Full Facial Rejuvenation</h3>
-                  <p className="text-gray-300 leading-relaxed">Addresses multiple areas for a comprehensive and balanced result.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-8 bg-gray-800/50 border-gray-700">
-                <CardContent className="p-0 text-center">
-                  <Eye className="h-12 w-12 text-purple-400 mb-6 mx-auto" />
-                  <h3 className="text-xl font-semibold mb-4 text-white">Natural-Looking Results</h3>
-                  <p className="text-gray-300 leading-relaxed">Enhances your features without appearing overdone or artificial.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-8 bg-gray-800/50 border-gray-700">
-                <CardContent className="p-0 text-center">
-                  <Zap className="h-12 w-12 text-purple-400 mb-6 mx-auto" />
-                  <h3 className="text-xl font-semibold mb-4 text-white">Personalized Treatment Plans</h3>
-                  <p className="text-gray-300 leading-relaxed">Tailored to your unique facial structure and aesthetic goals.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="w-full py-24 bg-gradient-to-r from-purple-600 to-blue-600">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready for Your Transformation?</h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                Book your consultation today and discover how a dermal filler makeover can help you achieve a more youthful and refreshed appearance.
-              </p>
-              <Button
-                size="lg"
-                className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg rounded-full font-semibold"
-                asChild
-              >
-                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
-                  Book Your Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
