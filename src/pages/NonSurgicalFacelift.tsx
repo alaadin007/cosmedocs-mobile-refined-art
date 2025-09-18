@@ -369,44 +369,48 @@ const NonSurgicalFacelift = () => {
               >
                 <Card className="bg-black border-gray-700 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl mb-4">How is it Done?</CardTitle>
+                    <CardTitle className="text-white text-2xl mb-4">Treatments Used in Liquid Facelift</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      Our non-surgical facelift procedure is performed by expert cosmetic doctors using 
-                      a precise, layered approach that addresses facial aging at multiple levels.
+                      Our comprehensive non-surgical facelift combines premium treatments 
+                      for natural, long-lasting results without surgery.
                     </p>
                     
                     <div className="space-y-4">
                       <div className="border-l-4 border-purple-500 pl-4">
-                        <h4 className="text-white font-semibold mb-2">1. Comprehensive Assessment</h4>
-                        <p className="text-gray-300 text-sm">
-                          Detailed facial analysis to identify areas of volume loss, muscle activity, 
-                          and skin quality to create a personalized treatment plan.
-                        </p>
+                        <h4 className="text-white font-semibold mb-2">Dermal Fillers</h4>
+                        <div className="space-y-1">
+                          <p className="text-purple-300 text-sm font-medium">• Juvederm Ultra & Voluma</p>
+                          <p className="text-purple-300 text-sm font-medium">• Restylane Lyft & Refyne</p>
+                          <p className="text-purple-300 text-sm font-medium">• Radiesse for deep volume</p>
+                          <p className="text-gray-300 text-sm">Restore volume, lift sagging areas, enhance contours</p>
+                        </div>
                       </div>
                       
                       <div className="border-l-4 border-purple-500 pl-4">
-                        <h4 className="text-white font-semibold mb-2">2. Strategic Filler Placement</h4>
-                        <p className="text-gray-300 text-sm">
-                          Premium hyaluronic acid fillers are injected into specific areas to restore 
-                          volume, lift sagging skin, and enhance facial contours naturally.
-                        </p>
+                        <h4 className="text-white font-semibold mb-2">Botulinum Toxin</h4>
+                        <div className="space-y-1">
+                          <p className="text-purple-300 text-sm font-medium">• Botox Cosmetic</p>
+                          <p className="text-purple-300 text-sm font-medium">• Azzalure</p>
+                          <p className="text-gray-300 text-sm">Smooth dynamic wrinkles and prevent new lines forming</p>
+                        </div>
                       </div>
                       
                       <div className="border-l-4 border-purple-500 pl-4">
-                        <h4 className="text-white font-semibold mb-2">3. Botox Integration</h4>
-                        <p className="text-gray-300 text-sm">
-                          Botulinum toxin is used to relax dynamic wrinkles in the forehead, around 
-                          the eyes, and other areas where muscle movement creates lines.
-                        </p>
+                        <h4 className="text-white font-semibold mb-2">Skin Boosters</h4>
+                        <div className="space-y-1">
+                          <p className="text-purple-300 text-sm font-medium">• Profhilo</p>
+                          <p className="text-purple-300 text-sm font-medium">• Seventy Hyal</p>
+                          <p className="text-gray-300 text-sm">Improve skin quality, hydration and elasticity</p>
+                        </div>
                       </div>
                       
                       <div className="border-l-4 border-purple-500 pl-4">
-                        <h4 className="text-white font-semibold mb-2">4. Immediate Results</h4>
+                        <h4 className="text-white font-semibold mb-2">Combination Approach</h4>
                         <p className="text-gray-300 text-sm">
-                          See instant improvement with full results developing over 2-4 weeks as 
-                          products settle and integrate naturally with your facial tissues.
+                          Multiple treatments strategically combined in one session for 
+                          comprehensive facial rejuvenation and natural-looking results.
                         </p>
                       </div>
                     </div>
