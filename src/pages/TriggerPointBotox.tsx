@@ -285,13 +285,13 @@ const TriggerPointBotox = () => {
                   <h3 className="text-2xl font-bold mb-8 text-white text-center">Key Benefits</h3>
                   <div className="grid md:grid-cols-3 gap-6">
                     {[
-                      { icon: Shield, title: "Relieve Chronic Pain", desc: "Effectively relieve chronic muscle pain and persistent tightness" },
-                      { icon: Activity, title: "Improve Mobility", desc: "Enhance mobility, flexibility and overall posture" },
-                      { icon: Star, title: "Reduce Headaches", desc: "Significantly reduce tension headaches and referred pain" },
-                      { icon: CheckCircle, title: "Enhance Function", desc: "Restore and enhance overall muscle function" },
-                      { icon: Star, title: "Non-surgical", desc: "Minimally invasive, non-surgical treatment option" },
-                      { icon: Users, title: "Expert Care", desc: "Administered by qualified medical professionals" },
-                      { icon: Award, title: "Proven Results", desc: "Clinically tested and evidence-based treatment" }
+                      { title: "Relieve Chronic Pain", desc: "Effectively relieve chronic muscle pain and persistent tightness" },
+                      { title: "Improve Mobility", desc: "Enhance mobility, flexibility and overall posture" },
+                      { title: "Reduce Headaches", desc: "Significantly reduce tension headaches and referred pain" },
+                      { title: "Enhance Function", desc: "Restore and enhance overall muscle function" },
+                      { title: "Non-surgical", desc: "Minimally invasive, non-surgical treatment option" },
+                      { title: "Expert Care", desc: "Administered by qualified medical professionals" },
+                      { title: "Proven Results", desc: "Clinically tested and evidence-based treatment" }
                     ].map((benefit, index) => (
                       <motion.div 
                         key={index} 
@@ -301,12 +301,9 @@ const TriggerPointBotox = () => {
                         viewport={{ once: true }}
                         className="group"
                       >
-                        <div className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-purple-600/10 to-purple-800/10 rounded-xl border border-purple-300/20 hover:border-purple-300/40 transition-all duration-300 hover:transform hover:scale-105 h-full">
-                          <div className="bg-purple-600/20 rounded-full p-3 mb-4 group-hover:bg-purple-600/30 transition-colors duration-300">
-                            <benefit.icon className="h-6 w-6 text-purple-300" />
-                          </div>
-                          <h4 className="font-bold text-white text-base mb-2">{benefit.title}</h4>
-                          <p className="text-gray-400 text-sm leading-relaxed">{benefit.desc}</p>
+                        <div className="text-center p-6 bg-white/5 rounded-xl border border-purple-300/20 hover:border-purple-300/40 transition-all duration-300 hover:bg-white/10 h-full">
+                          <h4 className="font-bold text-white text-base mb-3">{benefit.title}</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed">{benefit.desc}</p>
                         </div>
                       </motion.div>
                     ))}
