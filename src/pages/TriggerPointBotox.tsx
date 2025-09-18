@@ -298,43 +298,6 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Commonly Treated Muscles</h2>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-2xl mx-auto"
-            >
-              <div className="space-y-3">
-                {[
-                   { name: "Levator Scapulae", desc: "Neck muscle for chronic neck pain and posture-related tension" },
-                   { name: "Temporalis", desc: "Head muscle for tension headaches and jaw pain" },
-                   { name: "Sternocleidomastoid", desc: "Front neck muscle for shoulder tension and stiffness" },
-                   { name: "Quadratus Lumborum", desc: "Lower back muscle for myofascial pain syndrome" },
-                   { name: "Gluteus Medius", desc: "Hip muscle for musculoskeletal disorders and lower back pain" }
-                ].map((muscle, index) => (
-                  <div key={index} className="border-l-2 border-purple-300 pl-4 py-2">
-                    <h4 className="font-semibold text-purple-300 text-sm">{muscle.name}</h4>
-                    <p className="text-gray-400 text-xs">{muscle.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Treatment Process */}
         <section className="py-20 bg-black">
