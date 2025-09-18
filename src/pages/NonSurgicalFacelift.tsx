@@ -340,6 +340,34 @@ const NonSurgicalFacelift = () => {
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Revive temple volume loss for youthful contours</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Fix wrinkles and dynamic lines naturally</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Achieve a crease-less, smooth complexion</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Restore cheek volume and lift sagging skin</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Eliminate under-eye hollows and dark circles</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Define jawline and reduce jowls naturally</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Smooth nasolabial folds and marionette lines</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
                           <span className="text-gray-300 text-sm">No surgical incisions or scarring</span>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -352,7 +380,11 @@ const NonSurgicalFacelift = () => {
                         </div>
                         <div className="flex items-center space-x-2">
                           <CheckCircle className="text-purple-500" size={16} />
-                          <span className="text-gray-300 text-sm">Customizable to individual needs</span>
+                          <span className="text-gray-300 text-sm">Customizable to individual facial needs</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-500" size={16} />
+                          <span className="text-gray-300 text-sm">Immediate visible improvement with full results in 2-4 weeks</span>
                         </div>
                       </div>
                     </div>
