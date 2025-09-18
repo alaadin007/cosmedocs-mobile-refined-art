@@ -824,27 +824,6 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Combining with Dermal Fillers Section */}
-        <section className="py-20 bg-gray-900/50">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6">Combining with Dermal Fillers for Enhanced Results</h2>
-              <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                The Nefertiti neck lift with Botox in neck can be combined with dermal fillers and other 
-                collagen-stimulating treatments for optimal results. Fillers can be strategically added to areas, 
-                enhancing the lifting effect of Botox. This combination approach can address a range of ageing signs, 
-                offering a more comprehensive facial rejuvenation.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -938,6 +917,27 @@ export default function NefertitiBotoxFacelift() {
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Combining with Dermal Fillers Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6">Combining with Dermal Fillers for Enhanced Results</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                The Nefertiti neck lift with Botox in neck can be combined with dermal fillers and other 
+                collagen-stimulating treatments for optimal results. Fillers can be strategically added to areas, 
+                enhancing the lifting effect of Botox. This combination approach can address a range of ageing signs, 
+                offering a more comprehensive facial rejuvenation.
+              </p>
+            </motion.div>
           </div>
         </section>
 
