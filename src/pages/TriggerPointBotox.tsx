@@ -287,59 +287,122 @@ const TriggerPointBotox = () => {
                 Experience targeted muscle tension relief with our specialized trigger point botox treatments.
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Shield,
-                  title: "Long-lasting Relief",
-                  description: "Provides 3-6 months of sustained muscle tension relief and pain reduction"
-                },
-                {
-                  icon: Clock,
-                  title: "Quick Procedure",
-                  description: "Treatment typically takes 15-30 minutes with minimal downtime required"
-                },
-                {
-                  icon: CheckCircle,
-                  title: "Targeted Treatment",
-                  description: "Precisely targets specific trigger points for maximum therapeutic benefit"
-                },
-                {
-                  icon: Star,
-                  title: "Non-surgical",
-                  description: "Minimally invasive alternative to surgical interventions for chronic pain"
-                },
-                {
-                  icon: Users,
-                  title: "Expert Care",
-                  description: "Performed by experienced medical professionals in clinical settings"
-                },
-                {
-                  icon: Award,
-                  title: "Proven Results",
-                  description: "Clinically proven treatment with high patient satisfaction rates"
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="text-center bg-accent border-none h-full">
-                    <CardHeader>
-                      <benefit.icon className="h-12 w-12 text-purple-300 mx-auto mb-4" />
-                      <CardTitle className="text-xl text-white">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-gray-300">
-                        {benefit.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+            
+            <div className="grid md:grid-cols-2 gap-16">
+              {/* Benefits Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="grid gap-8">
+                  {[
+                    {
+                      icon: Shield,
+                      title: "Long-lasting Relief",
+                      description: "Provides 3-6 months of sustained muscle tension relief and pain reduction"
+                    },
+                    {
+                      icon: Clock,
+                      title: "Quick Procedure",
+                      description: "Treatment typically takes 15-30 minutes with minimal downtime required"
+                    },
+                    {
+                      icon: CheckCircle,
+                      title: "Targeted Treatment",
+                      description: "Precisely targets specific trigger points for maximum therapeutic benefit"
+                    },
+                    {
+                      icon: Star,
+                      title: "Non-surgical",
+                      description: "Minimally invasive alternative to surgical interventions for chronic pain"
+                    },
+                    {
+                      icon: Users,
+                      title: "Expert Care",
+                      description: "Performed by experienced medical professionals in clinical settings"
+                    },
+                    {
+                      icon: Award,
+                      title: "Proven Results",
+                      description: "Clinically proven treatment with high patient satisfaction rates"
+                    }
+                  ].map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <Card className="text-center bg-accent border-none h-full">
+                        <CardHeader>
+                          <benefit.icon className="h-12 w-12 text-purple-300 mx-auto mb-4" />
+                          <CardTitle className="text-xl text-white">{benefit.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-gray-300">
+                            {benefit.description}
+                          </CardDescription>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Muscles Treated Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-8 text-white">Which Muscles Can Be Treated with Trigger Point Injections?</h3>
+                <div className="bg-accent rounded-lg p-8">
+                  <p className="text-gray-300 mb-6">
+                    Trigger points can develop in almost any muscle, but some areas are more commonly affected and treated with Trigger Point Injections (TPIs). These injections help relieve chronic pain, stiffness, and muscle tension in the following muscles:
+                  </p>
+                  <div className="space-y-4">
+                    {[
+                      {
+                        name: "Masseter",
+                        description: "the main jaw muscle, often linked to jaw clenching, teeth grinding, and TMJ pain."
+                      },
+                      {
+                        name: "Levator Scapulae",
+                        description: "located along the side of the neck, commonly tense from poor posture or stress."
+                      },
+                      {
+                        name: "Gluteus Medius",
+                        description: "a stabilising muscle in the hip, often associated with lower back or hip pain."
+                      },
+                      {
+                        name: "Quadratus Lumborum",
+                        description: "a deep lower back muscle that supports posture, frequently a source of back pain."
+                      },
+                      {
+                        name: "Trapezius",
+                        description: "spanning the neck and shoulders, often contributes to tension headaches and upper back pain."
+                      },
+                      {
+                        name: "Sternocleidomastoid",
+                        description: "at the front of the neck, can cause neck stiffness and referred pain."
+                      },
+                      {
+                        name: "Temporalis",
+                        description: "on the side of the head, commonly linked to jaw pain and tension headaches."
+                      }
+                    ].map((muscle, index) => (
+                      <div key={index} className="border-l-2 border-purple-300 pl-4">
+                        <h4 className="font-semibold text-purple-300">{muscle.name}:</h4>
+                        <p className="text-gray-300 text-sm">{muscle.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
