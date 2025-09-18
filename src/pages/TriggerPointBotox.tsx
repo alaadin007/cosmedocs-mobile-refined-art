@@ -353,57 +353,82 @@ const TriggerPointBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
+              className="max-w-6xl mx-auto"
             >
-              <h2 className="text-3xl font-bold text-center mb-12 text-white">Treatment Process</h2>
-              <div className="space-y-12">
+              <h2 className="text-3xl font-bold text-center mb-12 text-white">What Happens During a Trigger Point Injection?</h2>
+              
+              <div className="grid md:grid-cols-2 gap-12 items-start">
+                {/* Content Column */}
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-center"
+                  className="space-y-6"
                 >
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4 text-white">Initial Consultation & Assessment</h3>
-                    <p className="text-gray-300 mb-4">
-                      Comprehensive consultation with detailed medical history and physical examination. We identify specific trigger points through palpation and movement assessment.
-                    </p>
-                    <p className="text-gray-300">
-                      We discuss your pain patterns, previous treatments, and establish realistic expectations for your trigger point botox therapy.
-                    </p>
-                  </div>
-                  <div>
-                    <img 
-                      src="/lovable-uploads/91daaa52-6dff-448b-b375-8ce52b2d0f41.png" 
-                      alt="Medical consultation and trigger point assessment"
-                      className="rounded-lg shadow-lg w-full h-80 object-cover"
-                    />
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Many patients imagine injections to be a rushed, uncomfortable experience — but a Trigger Point Injection (TPI) is actually a gentle and highly targeted procedure. Here's what makes the process unique:
+                  </p>
+                  
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-xl font-bold mb-3 text-purple-300">Pinpoint Precision</h3>
+                      <p className="text-gray-300">
+                        Your clinician carefully feels for the exact area of muscle tension — often described by patients as a "knot" or "tight band." Once located, it's marked directly on your skin (as shown in the image) to ensure the injection reaches the precise source of pain.
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-xl font-bold mb-3 text-purple-300">Instant Feedback</h3>
+                      <p className="text-gray-300">
+                        Unlike many other treatments, TPIs often give immediate relief. Patients sometimes describe it as a "release" or a sudden ease of movement, almost as if the muscle can finally breathe again.
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-xl font-bold mb-3 text-purple-300">Tailored to Your Body</h3>
+                      <p className="text-gray-300">
+                        No two trigger points are alike. The angle, depth, and dosage are adjusted for your muscle's unique pattern of tension, whether it's in the neck, shoulders, back, or jaw.
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-xl font-bold mb-3 text-purple-300">Beyond Pain Relief</h3>
+                      <p className="text-gray-300">
+                        While the goal is to reduce pain, the real benefit is freedom of movement. Patients often notice they can turn their head more easily, sit more comfortably at a desk, or even sleep better the same night.
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
 
+                {/* Images Column */}
                 <motion.div
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-center"
+                  className="space-y-8"
                 >
-                  <div className="md:order-2">
-                    <h3 className="text-2xl font-bold mb-4 text-white">Precision Injection Technique</h3>
-                    <p className="text-gray-300 mb-4">
-                      Advanced injection techniques deliver botulinum toxin directly into identified trigger points using fine needles for precise placement.
-                    </p>
-                    <p className="text-gray-300">
-                      The 15-30 minute procedure is well-tolerated, with local anesthetic available if needed.
-                    </p>
-                  </div>
-                  <div className="md:order-1">
+                  <div>
                     <img 
-                      src="/lovable-uploads/cda46474-143e-4d79-ab59-9a967c212d0e.png" 
-                      alt="Precise trigger point botox injection procedure"
+                      src="/lovable-uploads/91daaa52-6dff-448b-b375-8ce52b2d0f41.png" 
+                      alt="Medical consultation and trigger point assessment - marking trigger points for precise treatment"
                       className="rounded-lg shadow-lg w-full h-80 object-cover"
                     />
+                    <p className="text-gray-400 text-sm mt-2 text-center">
+                      Precise trigger point identification and marking ensures accurate treatment
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <img 
+                      src="/lovable-uploads/cda46474-143e-4d79-ab59-9a967c212d0e.png" 
+                      alt="Precise trigger point botox injection procedure showing gentle technique"
+                      className="rounded-lg shadow-lg w-full h-80 object-cover"
+                    />
+                    <p className="text-gray-400 text-sm mt-2 text-center">
+                      Gentle injection technique for immediate muscle tension relief
+                    </p>
                   </div>
                 </motion.div>
               </div>
