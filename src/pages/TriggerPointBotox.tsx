@@ -326,7 +326,7 @@ const TriggerPointBotox = () => {
                     { icon: Activity, title: "Improve Mobility", desc: "Improve mobility and posture" },
                     { icon: Star, title: "Reduce Headaches", desc: "Reduce tension headaches and referred pain" },
                     { icon: CheckCircle, title: "Enhance Function", desc: "Enhance overall muscle function" },
-                    { icon: CheckCircle, title: "Targeted Approach", desc: "Precise trigger point treatment" },
+                    
                     { icon: Star, title: "Non-surgical", desc: "Minimally invasive option" },
                     { icon: Users, title: "Expert Care", desc: "Medical professional administered" },
                     { icon: Award, title: "Proven Results", desc: "Clinically tested treatment" }
