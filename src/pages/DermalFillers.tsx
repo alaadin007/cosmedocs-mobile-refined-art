@@ -346,6 +346,56 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
+        {/* Comprehensive Treatment Areas */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Comprehensive Treatment Areas</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Our dermal filler treatments target multiple facial areas for complete rejuvenation 
+                and natural-looking results that enhance your overall facial harmony.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { area: "Cheek Enhancement", description: "Restore youthful volume and create natural lift for defined cheekbones" },
+                { area: "Nasolabial Folds", description: "Smooth smile lines from nose to mouth corners for a more youthful appearance" },
+                { area: "Marionette Lines", description: "Address downward lines from mouth corners to chin for improved facial contour" },
+                { area: "Jawline Definition", description: "Create sharp, masculine or feminine jawline definition with strategic placement" },
+                { area: "Tear Trough", description: "Reduce under-eye hollowing and dark circles for a refreshed, rested look" },
+                { area: "Lip Enhancement", description: "Add volume, shape, and definition to lips for natural or dramatic results" },
+                { area: "Temple Hollowing", description: "Restore temple volume lost with aging for improved facial proportions" },
+                { area: "Non-Surgical Nose Job", description: "Reshape and refine nose contours without surgery for immediate results" },
+                { area: "Forehead Enhancement", description: "Smooth bumps and irregularities for an even, youthful forehead surface" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
+                    <CardHeader>
+                      <CardTitle className="text-white text-lg">{item.area}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
