@@ -130,9 +130,9 @@ const NonSurgicalFacelift = () => {
                   <span className="block text-sm mt-4">Invisible art - natural facial rejuvenation without surgery</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
+                  <span className="text-purple-300 font-semibold">Comprehensive Liquid Facelift</span>
                   <br />
-                  Bold • Natural • Always Your Way
+                  Advanced dermal fillers and Botox for natural facial rejuvenation
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">From £1,200</p>
