@@ -272,7 +272,7 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
-        {/* Benefits Grid */}
+        {/* Benefits Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -282,124 +282,60 @@ const TriggerPointBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Benefits of Trigger Point Botox</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Experience targeted muscle tension relief with our specialized trigger point botox treatments.
-              </p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Benefits & Targeted Muscles</h2>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-16">
-              {/* Muscles Treated Column - First */}
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Muscles Treated Column */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-8 text-white">Which Muscles Can Be Treated with Trigger Point Injections?</h3>
-                <div className="bg-accent rounded-lg p-8">
-                  <p className="text-gray-300 mb-6">
-                    Trigger points can develop in almost any muscle, but some areas are more commonly affected and treated with Trigger Point Injections (TPIs). These injections help relieve chronic pain, stiffness, and muscle tension in the following muscles:
-                  </p>
-                  <div className="space-y-4">
-                    {[
-                      {
-                        name: "Masseter",
-                        description: "the main jaw muscle, often linked to jaw clenching, teeth grinding, and TMJ pain."
-                      },
-                      {
-                        name: "Levator Scapulae",
-                        description: "located along the side of the neck, commonly tense from poor posture or stress."
-                      },
-                      {
-                        name: "Gluteus Medius",
-                        description: "a stabilising muscle in the hip, often associated with lower back or hip pain."
-                      },
-                      {
-                        name: "Quadratus Lumborum",
-                        description: "a deep lower back muscle that supports posture, frequently a source of back pain."
-                      },
-                      {
-                        name: "Trapezius",
-                        description: "spanning the neck and shoulders, often contributes to tension headaches and upper back pain."
-                      },
-                      {
-                        name: "Sternocleidomastoid",
-                        description: "at the front of the neck, can cause neck stiffness and referred pain."
-                      },
-                      {
-                        name: "Temporalis",
-                        description: "on the side of the head, commonly linked to jaw pain and tension headaches."
-                      }
-                    ].map((muscle, index) => (
-                      <div key={index} className="border-l-2 border-purple-300 pl-4">
-                        <h4 className="font-semibold text-purple-300">{muscle.name}:</h4>
-                        <p className="text-gray-300 text-sm">{muscle.description}</p>
-                      </div>
-                    ))}
-                  </div>
+                <h3 className="text-xl font-bold mb-6 text-white">Commonly Treated Muscles</h3>
+                <div className="space-y-3">
+                  {[
+                    { name: "Masseter", desc: "Jaw muscle for TMJ and teeth grinding" },
+                    { name: "Trapezius", desc: "Neck and shoulders for tension headaches" },
+                    { name: "Levator Scapulae", desc: "Neck muscle for posture-related tension" },
+                    { name: "Temporalis", desc: "Head muscle for jaw pain and headaches" },
+                    { name: "Sternocleidomastoid", desc: "Front neck muscle for stiffness" },
+                    { name: "Quadratus Lumborum", desc: "Lower back muscle for support" },
+                    { name: "Gluteus Medius", desc: "Hip muscle for lower back pain" }
+                  ].map((muscle, index) => (
+                    <div key={index} className="border-l-2 border-purple-300 pl-4 py-2">
+                      <h4 className="font-semibold text-purple-300 text-sm">{muscle.name}</h4>
+                      <p className="text-gray-400 text-xs">{muscle.desc}</p>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
 
-              {/* Benefits Column - Second */}
+              {/* Benefits Column */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="grid gap-8">
+                <h3 className="text-xl font-bold mb-6 text-white">Key Benefits</h3>
+                <div className="space-y-4">
                   {[
-                    {
-                      icon: Shield,
-                      title: "Long-lasting Relief",
-                      description: "Provides 3-6 months of sustained muscle tension relief and pain reduction"
-                    },
-                    {
-                      icon: Clock,
-                      title: "Quick Procedure",
-                      description: "Treatment typically takes 15-30 minutes with minimal downtime required"
-                    },
-                    {
-                      icon: CheckCircle,
-                      title: "Targeted Treatment",
-                      description: "Precisely targets specific trigger points for maximum therapeutic benefit"
-                    },
-                    {
-                      icon: Star,
-                      title: "Non-surgical",
-                      description: "Minimally invasive alternative to surgical interventions for chronic pain"
-                    },
-                    {
-                      icon: Users,
-                      title: "Expert Care",
-                      description: "Performed by experienced medical professionals in clinical settings"
-                    },
-                    {
-                      icon: Award,
-                      title: "Proven Results",
-                      description: "Clinically proven treatment with high patient satisfaction rates"
-                    }
+                    { icon: Shield, title: "Long-lasting Relief", desc: "3-6 months of pain reduction" },
+                    { icon: Clock, title: "Quick Treatment", desc: "15-30 minute procedure" },
+                    { icon: CheckCircle, title: "Targeted Approach", desc: "Precise trigger point treatment" },
+                    { icon: Star, title: "Non-surgical", desc: "Minimally invasive option" },
+                    { icon: Users, title: "Expert Care", desc: "Medical professional administered" },
+                    { icon: Award, title: "Proven Results", desc: "Clinically tested treatment" }
                   ].map((benefit, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <Card className="text-center bg-accent border-none h-full">
-                        <CardHeader>
-                          <benefit.icon className="h-12 w-12 text-purple-300 mx-auto mb-4" />
-                          <CardTitle className="text-xl text-white">{benefit.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          <CardDescription className="text-gray-300">
-                            {benefit.description}
-                          </CardDescription>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
+                    <div key={index} className="flex items-start gap-3 p-3 bg-accent/50 rounded-lg">
+                      <benefit.icon className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white text-sm">{benefit.title}</h4>
+                        <p className="text-gray-400 text-xs">{benefit.desc}</p>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </motion.div>
