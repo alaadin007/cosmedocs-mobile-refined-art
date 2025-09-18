@@ -716,7 +716,318 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
+        {/* Treatment Duration Table */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">How Long Do Dermal Fillers Last?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Duration varies by treatment area and individual factors. Here's what you can expect:
+              </p>
+            </motion.div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full bg-black/50 rounded-lg overflow-hidden">
+                <thead className="bg-purple-900/50">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Treatment Area</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Typical Duration</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-700">
+                  {[
+                    { area: "Lip Enhancement", duration: "6-8 months" },
+                    { area: "Cheek Enhancement", duration: "6 months to 2 years" },
+                    { area: "Jawline Definition", duration: "15-24 months" },
+                    { area: "Tear Trough/Under Eyes", duration: "6-18 months" },
+                    { area: "Nasolabial Folds", duration: "6-18 months" },
+                    { area: "Marionette Lines", duration: "6-12 months" },
+                    { area: "Non-Surgical Nose Job", duration: "12-18 months" },
+                    { area: "Chin Enhancement", duration: "15-24 months" },
+                    { area: "Temple Enhancement", duration: "6-12 months" }
+                  ].map((item, index) => (
+                    <tr key={index} className="hover:bg-gray-800/30">
+                      <td className="px-6 py-4 text-gray-300 font-medium">{item.area}</td>
+                      <td className="px-6 py-4 text-purple-300 font-semibold">{item.duration}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-8 text-center"
+            >
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Results vary based on filler type, injection technique, metabolism, and treatment area. 
+                Our expert practitioners will discuss expected duration during your consultation.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Factors Affecting Duration */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">6 Key Factors That Affect Filler Duration</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding these factors helps set realistic expectations for your treatment results
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Type of Filler Used",
+                  description: "Different hyaluronic acid formulations have varying longevity and density",
+                  icon: Syringe
+                },
+                {
+                  title: "Amount of Filler",
+                  description: "Higher volumes typically provide longer-lasting results",
+                  icon: Activity
+                },
+                {
+                  title: "Filler Consistency", 
+                  description: "Thicker fillers generally last longer than thinner formulations",
+                  icon: Eye
+                },
+                {
+                  title: "Treatment Area",
+                  description: "Areas with more movement (lips) break down faster than static areas",
+                  icon: Palette
+                },
+                {
+                  title: "Metabolic Rate",
+                  description: "Individual metabolism affects how quickly the body breaks down hyaluronic acid",
+                  icon: Zap
+                },
+                {
+                  title: "Injection Technique",
+                  description: "Expert placement and technique optimize filler longevity and results",
+                  icon: GraduationCap
+                }
+              ].map((factor, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
+                    <CardHeader>
+                      <div className="flex items-center space-x-3 mb-2">
+                        <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+                          <factor.icon className="text-purple-600" size={20} />
+                        </div>
+                        <CardTitle className="text-white text-lg">{factor.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">{factor.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Dermal Fillers Are Popular */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Dermal Fillers Are So Popular</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Discover why millions choose dermal fillers for facial rejuvenation worldwide
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Little to No Downtime - 'Lunchtime Facelift'",
+                  description: "Unlike surgical solutions, dermal fillers require minimal recovery time. Return to work immediately without stitches, bandages, or general anesthesia."
+                },
+                {
+                  title: "Natural-Looking Results",
+                  description: "Achieve subtle, natural enhancement that enhances your features without drastic changes or obvious signs of treatment."
+                },
+                {
+                  title: "Boosts Collagen Production",
+                  description: "Hyaluronic acid fillers stimulate natural collagen and elastin production, improving skin quality over time."
+                },
+                {
+                  title: "Long-Lasting Effects",
+                  description: "Results typically last 6-18 months depending on the treatment area, providing excellent value for investment."
+                },
+                {
+                  title: "Ideal for Scar Improvement",
+                  description: "Effectively treat depressed scars by elevating them to skin level, providing relief for long-term scar sufferers."
+                },
+                {
+                  title: "Non-Surgical Solution",
+                  description: "Achieve your beauty goals without incisions, scalpels, or anesthesia - making beauty enhancement more accessible."
+                },
+                {
+                  title: "Minimal Risks and Side Effects",
+                  description: "When performed by qualified practitioners, dermal fillers have minimal risks with temporary, manageable side effects."
+                },
+                {
+                  title: "Confidence Restoration",
+                  description: "Restore lost confidence in your appearance without significant pain, long downtime, or major lifestyle disruption."
+                }
+              ].map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black/50 border-gray-700 h-full">
+                    <CardHeader>
+                      <CardTitle className="text-white text-lg flex items-start space-x-3">
+                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
+                        <span>{benefit.title}</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">{benefit.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Dermal Fillers vs Botox */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Dermal Fillers vs Botox</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Both are injectable treatments that address aging signs, but they work differently to achieve aesthetic goals
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Dermal Fillers</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Add volume and structure to the skin</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Restore lost facial volume</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Smooth wrinkles and enhance contours</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Treat static lines and sagging skin</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Results last 6-18 months</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 border-blue-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Relaxes muscles to prevent wrinkles</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Treats dynamic expression lines</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Prevents formation of new wrinkles</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Best for forehead lines and crow's feet</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">Results last 3-4 months</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-8 text-center"
+            >
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Many patients achieve optimal results by combining both treatments. Our expert practitioners 
+                can recommend the best approach for your specific aesthetic goals during consultation.
+              </p>
+            </motion.div>
+          </div>
+        </section>
         <section className="py-20">
           <div className="page-container text-center">
             <motion.div
