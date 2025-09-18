@@ -6,7 +6,7 @@ import { generateSEOMetadata } from '../utils/seo';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Clock, Shield, Star, Users, Award, Calendar, Activity, Syringe } from 'lucide-react';
+import { CheckCircle, Clock, Shield, Star, Users, Award, Calendar, Activity, Syringe, GraduationCap, Palette, Heart } from 'lucide-react';
 
 const TriggerPointBotox = () => {
   const seoData = generateSEOMetadata(
@@ -442,28 +442,98 @@ const TriggerPointBotox = () => {
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-center mb-12 text-white">Why Choose Cosmedocs for Trigger Point Botox?</h2>
-              <div className="prose prose-lg mx-auto text-gray-300 space-y-6">
-                <p>
-                  At Cosmedocs, our aesthetics is invisible art - Bold, Natural, Always Your Way. This philosophy extends to our trigger point botox treatments, where we focus on providing genuine relief while maintaining your natural movement and function. Our approach is minimal, quiet, and transformative without being obvious.
-                </p>
-                <p>
-                  With over 17 years of experience and more than 1 million injections performed, our team of medical professionals brings unparalleled expertise to trigger point botox therapy. Located in the prestigious Harley Street medical district, our clinic combines cutting-edge techniques with a comfortable, professional environment.
-                </p>
-                <p>
-                  We understand that chronic pain affects every aspect of your life. Our comprehensive approach addresses not just the immediate symptoms but works toward long-term improvement in your quality of life. Each treatment plan is tailored to your specific needs, ensuring optimal outcomes and patient satisfaction.
-                </p>
-              </div>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved botox only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
