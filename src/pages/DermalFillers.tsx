@@ -87,10 +87,10 @@ const DermalFillerMakeover = () => {
         <meta name="twitter:description" content={seoData.description} />
       </Helmet>
 
-      <div className="min-h-screen bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center bg-black">
-          <div className="container mx-auto px-4 relative z-10">
+      <div className="bg-black text-white">
+        {/* Hero Section - Updated to match LipFillers design */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -99,30 +99,27 @@ const DermalFillerMakeover = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Dermal Filler
-                  <span className="block text-purple-300">Makeover</span>
-                  <span className="block text-sm mt-4">Professional treatment for natural-looking results</span>
+                  <span className="text-purple-300">Dermal Filler Makeover</span>
+                  <span className="block text-sm mt-4">Invisible art - natural enhancement that speaks without words</span>
                 </h1>
-                <p className="text-sm text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Expert Practitioners</span>
-                  <br />
-                  Full face rejuvenation with personalized treatment plans and invisible art philosophy
-                </p>
-
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Expert Practitioners</p>
+                  <p className="text-sm text-gray-300">Full face rejuvenation with personalized treatment plans and invisible art philosophy</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold" asChild>
+                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl" asChild>
                     <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Consultation</a>
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
                     onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     View Price List
                   </Button>
                 </div>
               </motion.div>
-
+              
               <div className="hidden lg:block"></div>
             </div>
           </div>
