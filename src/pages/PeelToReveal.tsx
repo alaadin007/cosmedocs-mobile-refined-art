@@ -1,11 +1,20 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Zap, Sparkles, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp } from "lucide-react";
+import { Clock, Zap, Sparkles, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Activity, Droplets, Shield, Star } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+
 const PeelToReveal = () => {
   const seoData = generateSEOMetadata("Peel to Reveal London | £120 | Deep Skin Rejuvenation | Harley Street", "Revolutionary Peel to Reveal treatment in London's Harley Street. Deep skin cleansing, repairing & rejuvenation with powerful antioxidants. From £120.", "/peel-to-reveal");
   const bookingUrl = "https://med.as.me/harleystreet";
@@ -24,9 +33,49 @@ const PeelToReveal = () => {
     alt: "Peel to Reveal results demonstrating smoother complexion and refined skin",
     caption: "Smoother complexion with refined skin texture and tone"
   }];
-  const [isOpenIngredients, setIsOpenIngredients] = useState(false);
-  const [isOpenProcess, setIsOpenProcess] = useState(false);
-  const [showMoreImages, setShowMoreImages] = useState(false);
+
+  const treatmentSteps = [{
+    step: "01",
+    title: "Cleanse",
+    description: "Deep cleansing removes impurities and prepares skin for treatment with powerful cleansing agents."
+  }, {
+    step: "02",
+    title: "Revitalise",
+    description: "Antioxidant cocktail including Glutathione boosts skin immunity and cellular repair mechanisms."
+  }, {
+    step: "03",
+    title: "Exfoliate",
+    description: "Multi-acid fusion (Glycolic, Lactic, Salicylic, TCA) removes dead skin cells and promotes renewal."
+  }, {
+    step: "04",
+    title: "Stimulate",
+    description: "Natural extracts from papaya, licorice, and bearberry brighten and smooth skin texture."
+  }, {
+    step: "05",
+    title: "Restore",
+    description: "Final restoration phase locks in benefits and reveals clearer, brighter, more radiant skin."
+  }];
+
+  const benefits = [{
+    title: "Treats Multiple Skin Concerns",
+    description: "Addresses dullness, pigmentation, melasma, sun damage, fine lines, acne, enlarged pores, whiteheads, and blackheads simultaneously."
+  }, {
+    title: "Powerful Antioxidant Fusion",
+    description: "Contains Glutathione, Kojic, Mandelic, and Azelaic acids combined with natural extracts for comprehensive skin renewal."
+  }, {
+    title: "Minimal Downtime Required",
+    description: "Return to work immediately with minimal skin changes. Apply light cover-up straight after treatment."
+  }, {
+    title: "Fast Results",
+    description: "Notice improvements within 10 days with clearer, brighter, and more radiant skin."
+  }, {
+    title: "Suitable for All Skin Types",
+    description: "Controllable depth and intensity allows customized treatment based on individual skin needs and concerns."
+  }, {
+    title: "Modern Fusion Technology",
+    description: "CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) combines multiple acids with antioxidants for optimal results."
+  }];
+
   const leftColumnFaqs = [{
     question: "How much does Peel to Reveal cost?",
     answer: "Peel to Reveal Lite starts from £120, and Peel to Reveal Plus is £250. We offer 25% off your second treatment if performed within 6 months, making it an affordable ongoing skincare solution."
@@ -39,10 +88,8 @@ const PeelToReveal = () => {
   }, {
     question: "Is there any downtime after Peel to Reveal?",
     answer: "Minimal downtime is required. You can return to work immediately with minimal skin changes and apply light cover-up straight after. Some mild redness may occur for a few hours, with gentle peeling starting day 3-4."
-  }, {
-    question: "How soon will I see results?",
-    answer: "You'll notice improvements within 10 days, with clearer, brighter, and more radiant skin. The powerful antioxidant cocktail and natural extracts work to reveal your skin's natural glow progressively."
   }];
+
   const rightColumnFaqs = [{
     question: "What makes Peel to Reveal different from other peels?",
     answer: "Peel to Reveal is a modern fusion peel combining multiple acids (Glycolic, Lactic, Salicylic, TCA) with powerful antioxidants like Glutathione. This CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) treats over a dozen skin issues at once."
@@ -53,13 +100,27 @@ const PeelToReveal = () => {
     question: "Are there any side effects?",
     answer: "Common minor side effects include mild redness for a few hours, gentle peeling/flaking of old skin starting day 3-4 lasting a few days, and temporary dry skin for 7-10 days. These are normal signs of skin renewal."
   }, {
-    question: "Who is suitable for Peel to Reveal?",
-    answer: "Peel to Reveal is suitable for anyone from their mid-20s onwards experiencing skin dullness, ageing signs, or specific concerns like acne or pigmentation. It's designed for all skin types with minimal side effects."
-  }, {
     question: "How often should I have Peel to Reveal treatments?",
     answer: "For optimal results, treatments can be repeated every 4-6 weeks. The frequency depends on your skin concerns and goals. Our practitioners will create a personalized treatment plan during your consultation."
   }];
-  return <>
+
+  const [openFaqs, setOpenFaqs] = useState<Record<string, boolean>>({});
+  
+  const toggleFaq = (question: string) => {
+    setOpenFaqs(prev => {
+      const isCurrentlyOpen = prev[question];
+      // Close all FAQs
+      const newState: Record<string, boolean> = {};
+      // If the clicked FAQ was closed, open only that one
+      if (!isCurrentlyOpen) {
+        newState[question] = true;
+      }
+      return newState;
+    });
+  };
+
+  return (
+    <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -117,24 +178,25 @@ const PeelToReveal = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Peel to
-                  <span className="block text-purple-300">Reveal</span>
-                  <span className="block text-sm mt-4">Revolutionary skin treatment for deep cleansing & rejuvenation</span>
+                  <span className="text-purple-300">Peel to Reveal London</span>
+                  <span className="block text-sm mt-4">Invisible art - revolutionary skin transformation that speaks without words</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £120</p>
-                  <p className="text-sm text-gray-300">#cosmepeel - Check out our IG for hundreds more natural, subtle transformations</p>
+                  <p className="text-2xl text-purple-300 font-bold">Deep Skin Rejuvenation</p>
+                  <p className="text-sm text-gray-300">Fusion peel technology for clearer, brighter skin in 10 days</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={() => window.open(bookingUrl, '_blank')}
+                  >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     View Price List
                   </Button>
                 </div>
@@ -145,23 +207,412 @@ const PeelToReveal = () => {
           </div>
         </section>
 
-        {/* Introduction Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[45px]">
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
-            <motion.div className="max-w-5xl mx-auto" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Peel to Reveal Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">10-15 minutes per session</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Timeline</h3>
+                <p className="text-gray-300">Visible in 10 days</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime required</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Technology</h3>
+                <p className="text-gray-300">CRES fusion system</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Peel to Reveal Before & After Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See real transformations from our Peel to Reveal treatments at Cosmedocs London. 
+                Advanced fusion technology delivers dramatic skin improvements and renewed radiance.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Peel to Reveal Results Gallery"
+                description="Comprehensive gallery of our skin transformation treatments"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Benefits */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-white">Peel to Reveal Benefits</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience comprehensive skin transformation with our revolutionary fusion peel technology
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-white/5 backdrop-blur-sm border-white/10 h-full hover:bg-white/10 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
+                      <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Steps */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4">The CRES Process</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our 5-step CRES system delivers comprehensive skin rejuvenation and renewal
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              {treatmentSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
+                    {step.step}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3 text-white">{step.title}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{step.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-white">Peel to Reveal Pricing</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for revolutionary skin transformation treatments in London
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Peel to Reveal Lite</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="text-3xl font-bold text-purple-300">£120</div>
+                    <p className="text-gray-300">Perfect for first-time treatment</p>
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Now
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/10 backdrop-blur-sm border-purple-300 hover:bg-white/15 transition-all duration-300 text-center h-full relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Peel to Reveal Plus</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="text-3xl font-bold text-purple-300">£250</div>
+                    <p className="text-gray-300">Advanced fusion treatment</p>
+                    <Button 
+                      className="w-full bg-purple-600 text-white hover:bg-purple-700 rounded-full"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Treatment
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Second Treatment</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="text-3xl font-bold text-purple-300">25% Off</div>
+                    <p className="text-gray-300">Within 6 months</p>
+                    <p className="text-sm text-gray-400">Ongoing skincare solution</p>
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Package
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to know about Peel to Reveal treatments
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="space-y-4">
+                {leftColumnFaqs.map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card 
+                      className={`bg-white/5 backdrop-blur-sm border-white/10 cursor-pointer transition-all duration-300 ${
+                        openFaqs[faq.question] ? 'bg-white/10 border-purple-300' : 'hover:bg-white/8'
+                      }`}
+                      onClick={() => toggleFaq(faq.question)}
+                    >
+                      <CardContent className="p-6">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                          {openFaqs[faq.question] ? 
+                            <ChevronUp className="h-5 w-5 text-purple-300 flex-shrink-0" /> : 
+                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+                          }
+                        </div>
+                        {openFaqs[faq.question] && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="mt-4 pt-4 border-t border-white/10"
+                          >
+                            <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                          </motion.div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="space-y-4">
+                {rightColumnFaqs.map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card 
+                      className={`bg-white/5 backdrop-blur-sm border-white/10 cursor-pointer transition-all duration-300 ${
+                        openFaqs[faq.question] ? 'bg-white/10 border-purple-300' : 'hover:bg-white/8'
+                      }`}
+                      onClick={() => toggleFaq(faq.question)}
+                    >
+                      <CardContent className="p-6">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                          {openFaqs[faq.question] ? 
+                            <ChevronUp className="h-5 w-5 text-purple-300 flex-shrink-0" /> : 
+                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
+                          }
+                        </div>
+                        {openFaqs[faq.question] && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="mt-4 pt-4 border-t border-white/10"
+                          >
+                            <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                          </motion.div>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Information Section - Moved to bottom before CTA */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div 
+              className="max-w-5xl mx-auto" 
+              initial={{ opacity: 0, y: 30 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }} 
+              viewport={{ once: true }}
+            >
               <h2 className="text-4xl md:text-5xl font-thin text-white mb-12 text-center tracking-tight">
-                Reverse the Signs of Aging
+                Understanding Skin Aging
               </h2>
               
               <div className="space-y-8 text-lg text-white/80 font-light leading-relaxed">
@@ -196,694 +647,48 @@ const PeelToReveal = () => {
                     </div>
                   </div>
                 </div>
-                
-                <p className="text-center text-xl">
-                  <span className="text-white font-light">Peel to Reveal is a modern fusion skin peel</span> using multiple superficial to medium peeling agents such as Glycolic, Lactic, Salicylic Acids and TCA, treating more than a dozen skin issues at once. Combined with powerful antioxidants including Glutathione, it's probably the quickest skin rejuvenation treatment for any skin type with minimal side effects.
-                </p>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Treatment Benefits Section */}
-        <section className="bg-[#0A0A0A] py-[28px]">
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-black">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Reveal Your Best Skin
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Ready for Clearer, Brighter Skin?
               </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                A revolutionary fusion peel that treats multiple skin concerns simultaneously with minimal downtime
+              <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Book your Peel to Reveal consultation at Cosmedocs Harley Street and experience the transformation.
               </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-              {/* Duration */}
-              <motion.div className="text-center" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.1
-            }} viewport={{
-              once: true
-            }}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
-                  <Clock className="h-12 w-12 text-white mx-auto mb-6" />
-                  <h3 className="text-2xl font-light text-white mb-4">Duration</h3>
-                  <p className="text-white/70 font-light leading-relaxed">
-                    Treatment time of 10-15 minutes with controllable depth and intensity
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Powerful Antioxidants */}
-              <motion.div className="text-center" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2
-            }} viewport={{
-              once: true
-            }}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
-                  <Zap className="h-12 w-12 text-white mx-auto mb-6" />
-                  <h3 className="text-2xl font-light text-white mb-4">Powerful Antioxidants</h3>
-                  <p className="text-white/70 font-light leading-relaxed">
-                    Cocktail of powerful antioxidants, immune boosters, natural extracts & skin brighteners
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Results */}
-              <motion.div className="text-center" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.3
-            }} viewport={{
-              once: true
-            }}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
-                  <Sparkles className="h-12 w-12 text-white mx-auto mb-6" />
-                  <h3 className="text-2xl font-light text-white mb-4">Clearer & Brighter</h3>
-                  <p className="text-white/70 font-light leading-relaxed">
-                    Multiple skin indications treated simultaneously. 10 days to clearer, brighter skin
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Downtime */}
-              <motion.div className="text-center" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.4
-            }} viewport={{
-              once: true
-            }}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
-                  <Calendar className="h-12 w-12 text-white mx-auto mb-6" />
-                  <h3 className="text-2xl font-light text-white mb-4">Minimal Downtime</h3>
-                  <p className="text-white/70 font-light leading-relaxed">
-                    Return to work directly with minimal skin changes. Apply light cover-up straight after
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Before & After Gallery */}
-        <section className="py-16 bg-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div className="text-center mb-12" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Transformation Results
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Real patient transformations showcasing the power of our revolutionary peel treatment
-              </p>
-            </motion.div>
-            
-            {/* Images Grid */}
-            <div className="max-w-6xl mx-auto">
-              {/* First Row - Always Visible */}
-              <motion.div className="grid md:grid-cols-3 gap-8 mb-8" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8
-            }} viewport={{
-              once: true
-            }}>
-                {beforeAfterImages.slice(0, 3).map((image, index) => <motion.div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300" initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.1
-              }} viewport={{
-                once: true
-              }}>
-                    <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4">
-                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <p className="text-white/80 text-center font-light text-sm leading-relaxed">
-                      {image.caption}
-                    </p>
-                  </motion.div>)}
-              </motion.div>
-
-              {/* Second Row - Conditional */}
-              {beforeAfterImages.length > 3 && <motion.div className={`grid md:grid-cols-3 gap-8 mb-12 transition-all duration-500 ${showMoreImages ? 'opacity-100 max-h-none' : 'opacity-0 max-h-0 overflow-hidden'}`} initial={{
-              opacity: 0,
-              y: 40
-            }} animate={{
-              opacity: showMoreImages ? 1 : 0,
-              y: showMoreImages ? 0 : 40
-            }} transition={{
-              duration: 0.8
-            }}>
-                  {beforeAfterImages.slice(3).map((image, index) => <motion.div key={index + 3} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300" initial={{
-                opacity: 0,
-                y: 30
-              }} animate={{
-                opacity: showMoreImages ? 1 : 0,
-                y: showMoreImages ? 0 : 30
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.1
-              }}>
-                      <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4">
-                        <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                      </div>
-                      <p className="text-white/80 text-center font-light text-sm leading-relaxed">
-                        {image.caption}
-                      </p>
-                    </motion.div>)}
-                </motion.div>}
-
-              {/* Load More Button */}
-              {beforeAfterImages.length > 3 && <div className="text-center">
-                  <button onClick={() => setShowMoreImages(!showMoreImages)} className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-10 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 hover:scale-105">
-                    {showMoreImages ? 'Show Less' : 'Load More Results'}
-                    <ChevronDown className={`h-5 w-5 ml-2 transition-transform duration-300 ${showMoreImages ? 'rotate-180' : ''}`} />
-                  </button>
-                </div>}
-            </div>
-          </div>
-        </section>
-
-        {/* CRES System Explanation */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[32px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                CRES System Technology
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Formulated to Cleanse, Revitalise, Exfoliate & Stimulate for complete facial rejuvenation
-              </p>
-            </motion.div>
-            
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Performance Ingredients - Enhanced UI */}
-                <motion.div initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.2
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/30 shadow-2xl">
-                    <h3 className="text-3xl font-light text-white mb-8 text-center">Performance Ingredients</h3>
-                    
-                    <div className="space-y-6">
-                      {/* Cleanse Phase */}
-                      <Collapsible>
-                        <CollapsibleTrigger className="w-full group">
-                          <div className="bg-white/10 hover:bg-white/20 rounded-2xl p-6 border border-white/20 transition-all duration-300 cursor-pointer">
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-4">
-                                <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                                <h4 className="text-xl font-light text-white">Cleanse</h4>
-                              </div>
-                              <ChevronDown className="h-5 w-5 text-white/70 group-data-[state=open]:rotate-180 transition-transform duration-300" />
-                            </div>
-                          </div>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="mt-3">
-                          <div className="bg-white/5 rounded-xl p-6 border border-white/10 ml-7">
-                            <div className="space-y-3 text-white/80">
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
-                                <span className="font-light">Salicylic Acid</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
-                                <span className="font-light">Tea Tree Oil</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
-                                <span className="font-light">Willow Bark Extract</span>
-                              </div>
-                            </div>
-                          </div>
-                        </CollapsibleContent>
-                      </Collapsible>
-
-                      {/* Revitalise Phase */}
-                      <Collapsible>
-                        <CollapsibleTrigger className="w-full group">
-                          <div className="bg-white/10 hover:bg-white/20 rounded-2xl p-6 border border-white/20 transition-all duration-300 cursor-pointer">
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-4">
-                                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                                <h4 className="text-xl font-light text-white">Revitalise</h4>
-                              </div>
-                              <ChevronDown className="h-5 w-5 text-white/70 group-data-[state=open]:rotate-180 transition-transform duration-300" />
-                            </div>
-                          </div>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="mt-3">
-                          <div className="bg-white/5 rounded-xl p-6 border border-white/10 ml-7">
-                            <div className="space-y-3 text-white/80">
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
-                                <span className="font-light">Glutathione</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
-                                <span className="font-light">Kojic/Mandelic/Azelaic Acids</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
-                                <span className="font-light">Natural Extracts (Papaya, Licorice, Bearberry)</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-green-300 rounded-full"></span>
-                                <span className="font-light">Arginine</span>
-                              </div>
-                            </div>
-                          </div>
-                        </CollapsibleContent>
-                      </Collapsible>
-
-                      {/* Exfoliate & Stimulate Phase */}
-                      <Collapsible>
-                        <CollapsibleTrigger className="w-full group">
-                          <div className="bg-white/10 hover:bg-white/20 rounded-2xl p-6 border border-white/20 transition-all duration-300 cursor-pointer">
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-4">
-                                <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                <h4 className="text-xl font-light text-white">Exfoliate & Stimulate</h4>
-                              </div>
-                              <ChevronDown className="h-5 w-5 text-white/70 group-data-[state=open]:rotate-180 transition-transform duration-300" />
-                            </div>
-                          </div>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="mt-3">
-                          <div className="bg-white/5 rounded-xl p-6 border border-white/10 ml-7">
-                            <div className="space-y-3 text-white/80">
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
-                                <span className="font-light">TCA</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
-                                <span className="font-light">Lactic Acid</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
-                                <span className="font-light">Glycolic Acid</span>
-                              </div>
-                              <div className="flex items-center space-x-3">
-                                <span className="w-2 h-2 bg-purple-300 rounded-full"></span>
-                                <span className="font-light">Malic/Citric Acids</span>
-                              </div>
-                            </div>
-                          </div>
-                        </CollapsibleContent>
-                      </Collapsible>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Treatment Benefits - Enhanced UI */}
-                <motion.div initial={{
-                opacity: 0,
-                y: 40
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.8,
-                delay: 0.4
-              }} viewport={{
-                once: true
-              }}>
-                  <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/30 shadow-2xl h-full">
-                    <h3 className="text-3xl font-light text-white mb-8 text-center">Treatment Benefits</h3>
-                    
-                    <div className="space-y-4">
-                      {[{
-                      icon: "🛡️",
-                      text: "Anti-inflammatory, anti-fungal, anti-microbial"
-                    }, {
-                      icon: "🧽",
-                      text: "Deep pore cleansing"
-                    }, {
-                      icon: "⚡",
-                      text: "Neutralise free radicals"
-                    }, {
-                      icon: "✨",
-                      text: "Decrease skin dullness and melasma"
-                    }, {
-                      icon: "🩸",
-                      text: "Improve skin blood flow"
-                    }, {
-                      icon: "🎯",
-                      text: "Improve skin texture, pores, and acne"
-                    }, {
-                      icon: "🔄",
-                      text: "Increase cellular turnover"
-                    }, {
-                      icon: "🏗️",
-                      text: "Stimulate collagen production"
-                    }, {
-                      icon: "📈",
-                      text: "Improve fine lines and wrinkles"
-                    }].map((benefit, index) => <motion.div key={index} className="bg-white/10 hover:bg-white/15 rounded-xl p-4 border border-white/20 transition-all duration-300 cursor-pointer group" initial={{
-                      opacity: 0,
-                      x: -20
-                    }} whileInView={{
-                      opacity: 1,
-                      x: 0
-                    }} transition={{
-                      duration: 0.5,
-                      delay: index * 0.1
-                    }} viewport={{
-                      once: true
-                    }}>
-                          <div className="flex items-center space-x-4">
-                            <span className="text-2xl">{benefit.icon}</span>
-                            <span className="text-white/80 font-light group-hover:text-white transition-colors duration-300">
-                              {benefit.text}
-                            </span>
-                          </div>
-                        </motion.div>)}
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-32 bg-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Treatment Options
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Choose the perfect treatment level for your skin needs
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
-              {/* Peel to Reveal Lite */}
-              <motion.div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.1
-            }} viewport={{
-              once: true
-            }}>
-                <h3 className="text-3xl font-light text-white mb-4">Peel to Reveal Lite</h3>
-                <div className="text-4xl font-thin text-white mb-6">£120</div>
-                <p className="text-white/70 font-light mb-8 leading-relaxed">
-                  Perfect introduction to our revolutionary peel treatment. Gentle yet effective for first-time users or maintenance treatments.
-                </p>
-                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/15 backdrop-blur-sm text-white hover:bg-white/25 rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 w-full">
-                  Book Lite Treatment
-                </a>
-              </motion.div>
-
-              {/* Peel to Reveal Plus */}
-              <motion.div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/30 relative overflow-hidden" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2
-            }} viewport={{
-              once: true
-            }}>
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-light text-white border border-white/30">
-                  Most Popular
-                </div>
-                <h3 className="text-3xl font-light text-white mb-4">Peel to Reveal Plus</h3>
-                <div className="text-4xl font-thin text-white mb-6">£250</div>
-                <p className="text-white/70 font-light mb-8 leading-relaxed">
-                  Our comprehensive treatment with maximum strength formulation for optimal results and complete skin transformation.
-                </p>
-                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-8 py-4 inline-flex items-center justify-center text-lg font-light transition-all duration-300 border border-white/20 w-full">
-                  Book Plus Treatment
-                </a>
-                <p className="text-white/60 font-light text-sm mt-4 text-center">
-                  25% off your next treatment within 6 months
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[15px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
-                Everything you need to know about our Peel to Reveal treatment
-              </p>
-            </motion.div>
-            
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
-              {/* Left Column */}
-              <div className="space-y-4">
-                {leftColumnFaqs.map((faq, index) => <FAQItem key={`left-${index}`} question={faq.question} answer={faq.answer} index={index} />)}
-              </div>
-              
-              {/* Right Column */}
-              <div className="space-y-4">
-                {rightColumnFaqs.map((faq, index) => <FAQItem key={`right-${index}`} question={faq.question} answer={faq.answer} index={index + 5} />)}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-32 bg-black">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Ready to Reveal Your Best Skin?
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto mb-12">
-                Book your Peel to Reveal consultation today and discover the transformative power of our revolutionary treatment
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
-                  Book Your Treatment
-                </a>
-                <a href="tel:03330551503" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 rounded-full px-12 py-5 inline-flex items-center justify-center text-xl font-light transition-all duration-300 border border-white/20">
-                  <Phone className="h-5 w-5 mr-3" />
-                  Call Now
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg font-semibold rounded-full shadow-2xl"
+                  onClick={() => window.open(bookingUrl, '_blank')}
+                >
+                  Book Free Consultation
+                </Button>
+                <a 
+                  href="tel:03330551503" 
+                  className="text-purple-300 hover:text-white font-semibold text-lg transition-colors duration-300"
+                >
+                  Call 0333 0551 503
                 </a>
               </div>
             </motion.div>
-            
-            <motion.div className="text-center space-y-4" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 0.2
-          }} viewport={{
-            once: true
-          }}>
-              <div className="flex items-center justify-center space-x-2 text-white/70">
-                <MapPin className="h-5 w-5" />
-                <span className="font-light">10 Harley Street, London W1G 9PF</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2 text-white/70">
-                <Phone className="h-5 w-5" />
-                <span className="font-light">0333 0551 503</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2 text-white/70">
-                <Mail className="h-5 w-5" />
-                <span className="font-light">info@cosmedocs.com</span>
-              </div>
-            </motion.div>
           </div>
         </section>
-
-        {/* Hidden SEO Content */}
-        <div className="hidden">
-          <h2>Peel to Reveal - Revolutionary Skin Rejuvenation Treatment in London</h2>
-          <p>Transform your skin with our revolutionary Peel to Reveal treatment at Cosmedocs Harley Street. This innovative fusion peel combines the power of multiple active ingredients including Glycolic Acid, Lactic Acid, Salicylic Acid, and TCA (Trichloroacetic Acid) with powerful antioxidants like Glutathione to deliver comprehensive skin rejuvenation in just 10-15 minutes.</p>
-          
-          <p>Our CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) addresses multiple skin concerns simultaneously, making it one of the most effective treatments for achieving clearer, brighter, and more radiant skin. Unlike traditional chemical peels that target single issues, Peel to Reveal treats over a dozen skin conditions at once, including general skin dullness, premature aging, pigmentation, melasma, uneven skin tone and texture, sun damage, fine lines, wrinkles, acne, enlarged pores, whiteheads, and blackheads.</p>
-
-          <p>The treatment begins with a thorough cleansing phase using Salicylic Acid, Tea Tree Oil, and Willow Bark Extract to deeply cleanse pores and remove impurities. The revitalisation phase introduces Glutathione, a powerful antioxidant naturally produced by the liver, along with Kojic Acid, Mandelic Acid, and Azelaic Acid, complemented by natural extracts from papaya, licorice, and bearberry. Finally, the exfoliation and stimulation phase employs TCA, Lactic Acid, Glycolic Acid, and Malic/Citric Acids to promote cellular turnover and stimulate collagen production.</p>
-
-          <p>What sets Peel to Reveal apart is its minimal downtime and immediate return to daily activities. Patients can resume work immediately after treatment with only minimal skin changes that can be easily concealed with light makeup. The treatment offers controllable depth and intensity, allowing our experienced practitioners to customize the procedure based on individual skin types and concerns.</p>
-
-          <p>Results become apparent within 10 days, with patients experiencing clearer, brighter, and more radiant skin. The treatment's anti-inflammatory, anti-fungal, and antimicrobial properties provide comprehensive skin health benefits while neutralizing free radicals that contribute to premature aging. Improved skin blood flow enhances natural radiance, while increased cellular turnover reveals fresh, healthy skin cells.</p>
-
-          <p>Our Harley Street clinic offers two treatment options: Peel to Reveal Lite at £120, perfect for first-time users or maintenance treatments, and Peel to Reveal Plus at £250, our comprehensive treatment with maximum strength formulation for optimal results. We offer a 25% discount on the second treatment when performed within 6 months, making ongoing skin care more affordable.</p>
-
-          <p>The treatment is suitable for all skin types and ages, particularly beneficial for individuals from their mid-20s onwards experiencing signs of aging or specific skin concerns. Common minor side effects include mild redness for a few hours post-treatment, gentle peeling or flaking of old skin starting on day 3-4 and lasting a few days, and temporary dry skin for 7-10 days. These effects are normal indicators of the skin renewal process and resolve naturally.</p>
-
-          <p>Located in the prestigious Harley Street medical district, Cosmedocs has established itself as a renowned leader in cosmetic treatments and aesthetic medicine. Our modern, well-equipped clinic serves patients from across London and beyond, offering the latest innovations in skin rejuvenation technology. We also provide comprehensive training to physicians worldwide, sharing our expertise in advanced aesthetic procedures.</p>
-
-          <p>The Peel to Reveal treatment represents a significant advancement in cosmetic dermatology, offering a safe, effective, and convenient solution for comprehensive skin rejuvenation. By combining multiple proven ingredients and techniques in a single treatment session, we deliver exceptional results that traditional single-ingredient peels cannot match. Book your consultation today to discover how Peel to Reveal can transform your skin and restore your natural radiance.</p>
-        </div>
       </div>
-    </>;
+    </>
+  );
 };
 
-// FAQ Item Component
-const FAQItem = ({
-  question,
-  answer,
-  index
-}: {
-  question: string;
-  answer: string;
-  index: number;
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return <motion.div initial={{
-    opacity: 0,
-    y: 20
-  }} whileInView={{
-    opacity: 1,
-    y: 0
-  }} transition={{
-    delay: index * 0.05,
-    duration: 0.6,
-    ease: [0.25, 0.46, 0.45, 0.94]
-  }} viewport={{
-    once: true
-  }}>
-      <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <CollapsibleTrigger className="w-full">
-          <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <h3 className="text-left font-light text-white text-lg">{question}</h3>
-                {isOpen ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />}
-              </div>
-            </CardContent>
-          </Card>
-        </CollapsibleTrigger>
-        <CollapsibleContent>
-          <div className="px-6 pb-6">
-            <p className="text-white/80 leading-relaxed font-light">{answer}</p>
-          </div>
-        </CollapsibleContent>
-      </Collapsible>
-    </motion.div>;
-};
 export default PeelToReveal;
