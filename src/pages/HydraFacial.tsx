@@ -681,11 +681,11 @@ const HydraFacial = () => {
               }} viewport={{
                 once: true
               }}>
-                  <div className="flex flex-col gap-4">
+                  <div className="space-y-4">
                     {treatmentSteps.map((step, index) => (
                       <motion.div 
                         key={index} 
-                        className="flex items-center space-x-3"
+                        className="flex items-start space-x-3"
                         initial={{
                           opacity: 0,
                           x: -20
@@ -702,8 +702,11 @@ const HydraFacial = () => {
                           once: true
                         }}
                       >
-                        <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
-                        <span className="text-white/90 text-sm">{step.title}</span>
+                        <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <h4 className="text-white font-medium text-sm mb-1">{step.title}</h4>
+                          <p className="text-gray-400 text-xs leading-relaxed">{step.description}</p>
+                        </div>
                       </motion.div>
                     ))}
                   </div>
