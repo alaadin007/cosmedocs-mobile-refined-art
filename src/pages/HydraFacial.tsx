@@ -681,26 +681,32 @@ const HydraFacial = () => {
               }} viewport={{
                 once: true
               }}>
-                  {treatmentSteps.map((step, index) => <motion.div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300" initial={{
-                  opacity: 0,
-                  y: 20
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  duration: 0.6,
-                  delay: index * 0.1
-                }} viewport={{
-                  once: true
-                }}>
-                      <div className="flex items-start space-x-6">
-                        <div className="text-primary text-3xl font-thin flex-shrink-0">{step.step}</div>
-                        <div>
-                          <h3 className="text-xl font-light text-white mb-3">{step.title}</h3>
-                          <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
-                        </div>
-                      </div>
-                    </motion.div>)}
+                  <div className="flex flex-col gap-4">
+                    {treatmentSteps.map((step, index) => (
+                      <motion.div 
+                        key={index} 
+                        className="flex items-center space-x-3"
+                        initial={{
+                          opacity: 0,
+                          x: -20
+                        }} 
+                        whileInView={{
+                          opacity: 1,
+                          x: 0
+                        }} 
+                        transition={{
+                          duration: 0.5,
+                          delay: index * 0.1
+                        }} 
+                        viewport={{
+                          once: true
+                        }}
+                      >
+                        <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                        <span className="text-white/90 text-sm">{step.title}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </motion.div>
                 
                 {/* Right Column - Treatment Video */}
