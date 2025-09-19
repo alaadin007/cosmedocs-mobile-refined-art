@@ -434,36 +434,29 @@ const HydraFacial = () => {
                       </p>
                    </div>
                    
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                     {benefits.slice(0, 6).map((benefit, index) => (
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     {benefits.map((benefit, index) => (
                        <motion.div 
                          key={index} 
-                         className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 border border-white/10"
+                         className="flex items-center space-x-3"
                          initial={{
                            opacity: 0,
-                           y: 20
+                           x: -20
                          }} 
                          whileInView={{
                            opacity: 1,
-                           y: 0
+                           x: 0
                          }} 
                          transition={{
-                           duration: 0.4,
+                           duration: 0.5,
                            delay: index * 0.1
                          }} 
                          viewport={{
                            once: true
                          }}
                        >
-                         <div className="flex items-center space-x-3 mb-2">
-                           <div className="bg-primary/20 rounded-full p-1.5 flex-shrink-0">
-                             <Star className="h-3 w-3 text-primary" />
-                           </div>
-                           <h4 className="text-white font-medium text-sm">{benefit.title}</h4>
-                         </div>
-                         <p className="text-gray-400 text-xs leading-relaxed pl-7">
-                           {benefit.description.split('.')[0]}.
-                         </p>
+                         <Star className="h-5 w-5 text-primary flex-shrink-0" />
+                         <span className="text-white/90 text-sm">{benefit.title}</span>
                        </motion.div>
                      ))}
                    </div>
