@@ -336,14 +336,6 @@ const HydraFacial = () => {
               <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
 
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="HydraFacial Results Gallery"
-                description="Comprehensive gallery of our HydraFacial treatments"
-              />
-            </div>
           </div>
         </section>
 
