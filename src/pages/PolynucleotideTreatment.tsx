@@ -418,122 +418,108 @@ const PolynucleotideTreatment = () => {
                 Targeted polynucleotide therapy for multiple aesthetic concerns across face, body, and scalp
               </p>
             </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Zap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Facial Rejuvenation</h3>
-                <div className="text-gray-300 space-y-2">
-                  <p>• Wrinkle-prone facial areas</p>
-                  <p>• Deep forehead lines</p>
-                  <p>• Sunken cheeks restoration</p>
-                  <p>• Undefined jawline enhancement</p>
-                  <p>• Acne scarring improvement</p>
-                </div>
-              </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Zap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Body & Neck</h3>
-                <div className="text-gray-300 space-y-2">
-                  <p>• Sagging neck skin tightening</p>
-                  <p>• Aging hands rejuvenation</p>
-                  <p>• Sagging arm skin firming</p>
-                  <p>• Rough, dry knees smoothing</p>
-                  <p>• Lackluster décolletage renewal</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Zap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Eyes & Hair</h3>
-                <div className="text-gray-300 space-y-2">
-                  <p>• Tired under-eyes brightening</p>
-                  <p>• Dark circles reduction</p>
-                  <p>• Hair follicle regeneration</p>
-                  <p>• Scalp health optimization</p>
-                  <p>• Androgenic alopecia treatment</p>
-                </div>
-              </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { area: "Facial Rejuvenation", description: "Wrinkle-prone facial areas, deep forehead lines, and sunken cheeks restoration" },
+                { area: "Under-Eye Enhancement", description: "Tired under-eyes brightening and dark circles reduction for refreshed appearance" },
+                { area: "Jawline Definition", description: "Undefined jawline enhancement and facial contouring for improved structure" },
+                { area: "Neck & Décolletage", description: "Sagging neck skin tightening and lackluster décolletage renewal" },
+                { area: "Hand Rejuvenation", description: "Aging hands rejuvenation and skin texture improvement" },
+                { area: "Hair Restoration", description: "Hair follicle regeneration and scalp health optimization for alopecia treatment" },
+                { area: "Acne Scarring", description: "Acne scarring improvement and skin texture enhancement" },
+                { area: "Body Firming", description: "Sagging arm skin firming and rough, dry knees smoothing" },
+                { area: "Skin Quality", description: "Overall skin texture, hydration, and cellular regeneration enhancement" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
+                    <CardHeader>
+                      <CardTitle className="text-white text-lg flex items-start space-x-3">
+                        <Zap className="text-purple-400 mt-1 shrink-0" size={20} />
+                        <span>{item.area}</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* The Science of Regeneration Section */}
+        {/* The Science of Regeneration Section - with image */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">The Science of Regeneration</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding how polynucleotide therapy activates your natural healing mechanisms
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              {/* Content Column */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
+                className="space-y-8"
               >
-                <img 
-                  src="/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png" 
-                  alt="Polynucleotide DNA therapy mechanism demonstration showing cellular regeneration and collagen stimulation process" 
-                  className="w-full h-auto rounded-lg shadow-2xl"
-                />
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-3xl font-bold mb-6 text-white">Mechanism of Action</h3>
-                <div className="space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    Polynucleotides function as natural repair catalysts, working at the cellular level to restore 
-                    skin's foundational structure. These purified DNA fragments stimulate fibroblast activity, 
-                    enhance collagen and elastin production, and improve cellular hydration mechanisms.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Unlike temporary volumizing treatments, polynucleotides create lasting change by reactivating 
-                    your skin's dormant regenerative pathways. This results in genuine improvement in skin quality, 
-                    texture, and resilience that continues to enhance over 6-9 months.
+                <div>
+                  <h2 className="text-4xl font-bold mb-6 text-white">
+                    The Science of <span className="text-purple-300">Regeneration</span>
+                  </h2>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                    Understanding how polynucleotide therapy activates your natural healing mechanisms. 
+                    These purified DNA fragments function as cellular messengers, stimulating fibroblast 
+                    activity and enhancing collagen production for lasting skin transformation.
                   </p>
                 </div>
-                
-                {/* Regenerative science content removed */}
+
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+                      <Activity className="text-purple-600" size={20} />
+                    </div>
+                    <h3 className="text-white font-semibold">Mechanism of Action</h3>
+                    <p className="text-gray-400 text-sm">Catalyzes natural repair processes</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+                      <Star className="text-purple-600" size={20} />
+                    </div>
+                    <h3 className="text-white font-semibold">Lasting Results</h3>
+                    <p className="text-gray-400 text-sm">Genuine improvement that continues enhancing</p>
+                  </div>
+                </div>
+
+                <Button 
+                  className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-3 text-lg font-semibold"
+                  onClick={() => window.open(bookingUrl, '_blank')}
+                >
+                  Learn About the Science
+                </Button>
+              </motion.div>
+
+              {/* Image Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative rounded-2xl overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png"
+                    alt="Polynucleotide DNA therapy mechanism demonstration showing cellular regeneration and collagen stimulation process"
+                    className="w-full h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent"></div>
+                </div>
               </motion.div>
             </div>
           </div>
