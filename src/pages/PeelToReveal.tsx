@@ -358,30 +358,20 @@ const PeelToReveal = () => {
                   This advanced treatment delivers visible results in just 10 days with minimal downtime, making it perfect for busy professionals seeking effective skin rejuvenation without disruption to their daily routine.
                 </p>
               </div>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Understanding Aging Card */}
-        <section className="py-16 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-3xl font-bold text-white mb-4">Understanding Aging</CardTitle>
-                </CardHeader>
-                <CardContent className="p-8">
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Our skin cells become dormant and cellular regeneration slows down as we age, leaving dull, damaged, dead skin cells on the surface. Collagen, elastin, hyaluronic acid and other structural elements vital for skin health start to decrease from our mid-20s, and increasing layers of dead skin and micro-pigmentation cause unevenly toned skins with an irregular texture and enlarged pores.
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Understanding Aging Card */}
+              <div className="mt-12 max-w-4xl mx-auto">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-3xl font-bold text-white mb-4">Understanding Aging</CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-8">
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      Our skin cells become dormant and cellular regeneration slows down as we age, leaving dull, damaged, dead skin cells on the surface. Collagen, elastin, hyaluronic acid and other structural elements vital for skin health start to decrease from our mid-20s, and increasing layers of dead skin and micro-pigmentation cause unevenly toned skins with an irregular texture and enlarged pores.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </motion.div>
           </div>
         </section>
