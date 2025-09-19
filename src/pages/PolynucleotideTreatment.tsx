@@ -763,27 +763,92 @@ const PolynucleotideTreatment = () => {
               </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto mt-16"
-            >
-              <Card className="bg-gray-900/50 border-none">
-                <CardContent className="p-8 text-center">
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    <span className="text-yellow-400">⭐</span> Optimal protocol: 1 session every 3 weeks, 
-                    minimum of 3 sessions recommended for first-time patients. Full regenerative effects 
-                    visible in 6-9 months as your body naturally produces enhanced collagen and elastin.
+          </div>
+        </section>
+
+        {/* Treatment Protocol & Combination Therapy Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              {/* Optimal Protocol Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div>
+                  <h3 className="text-3xl font-bold mb-6 text-white">
+                    Optimal <span className="text-purple-300">Protocol</span>
+                  </h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    1 session every 3 weeks, minimum of 3 sessions recommended for first-time patients. 
+                    Full regenerative effects visible in 6-9 months as your body naturally produces 
+                    enhanced collagen and elastin.
                   </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Polynucleotide therapy combines beautifully with Microneedling, PRP, Profhilo, Botox, 
-                    and dermal fillers to enhance overall aesthetic outcomes and provide comprehensive rejuvenation.
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+                    <Calendar className="text-purple-600" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold">3-Week Intervals</h4>
+                    <p className="text-gray-400 text-sm">Optimal spacing for regeneration</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+                    <Clock className="text-purple-600" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold">6-9 Month Results</h4>
+                    <p className="text-gray-400 text-sm">Full regenerative effects timeline</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Combination Therapy Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div>
+                  <h3 className="text-3xl font-bold mb-6 text-white">
+                    Combination <span className="text-purple-300">Therapy</span>
+                  </h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Polynucleotide therapy combines beautifully with Microneedling, PRP, Profhilo, 
+                    Botox, and dermal fillers to enhance overall aesthetic outcomes and provide 
+                    comprehensive rejuvenation.
                   </p>
-                </CardContent>
-              </Card>
-            </motion.div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Microneedling & PRP</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Profhilo Enhancement</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Botox & Dermal Fillers</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Comprehensive Rejuvenation</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
