@@ -336,6 +336,56 @@ const PeelToReveal = () => {
           </div>
         </section>
 
+        {/* What is Peel to Reveal Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-8 text-white">What is Peel to Reveal?</h2>
+              <div className="max-w-4xl mx-auto text-gray-300 text-lg leading-relaxed space-y-6">
+                <p>
+                  Peel to Reveal is a revolutionary fusion peel treatment that combines advanced chemical exfoliation with powerful antioxidants to deliver comprehensive skin renewal. Using our proprietary CRES (Cleanse, Revitalise, Exfoliate, Stimulate) system, this innovative treatment addresses multiple skin concerns simultaneously.
+                </p>
+                <p>
+                  The treatment features a unique blend of multi-acid formulations including Glycolic, Lactic, Salicylic, and TCA acids, enhanced with potent antioxidants like Glutathione, Kojic, Mandelic, and Azelaic acids. Natural extracts from papaya, licorice, and bearberry further boost the treatment's brightening and smoothing effects.
+                </p>
+                <p>
+                  Unlike traditional single-acid peels, Peel to Reveal's fusion technology allows for controllable depth and intensity, making it suitable for all skin types while delivering dramatic results with minimal downtime. The treatment effectively addresses dullness, pigmentation, melasma, sun damage, fine lines, acne, enlarged pores, and uneven texture in just one session.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Understanding Aging Card */}
+        <section className="py-16 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-3xl font-bold text-white mb-4">Understanding Aging</CardTitle>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <p className="text-gray-300 text-lg leading-relaxed text-center">
+                    Our skin cells become dormant and cellular regeneration slows down as we age, leaving dull, damaged, dead skin cells on the surface. Collagen, elastin, hyaluronic acid and other structural elements vital for skin health start to decrease from our mid-20s, and increasing layers of dead skin and micro-pigmentation cause unevenly toned skins with an irregular texture and enlarged pores.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Treatment Benefits */}
         <section className="py-20 bg-accent">
           <div className="page-container">
