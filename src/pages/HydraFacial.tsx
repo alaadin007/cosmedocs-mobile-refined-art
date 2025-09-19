@@ -388,10 +388,6 @@ const HydraFacial = () => {
                         </div>
                       </div>
                     </div>
-                    
-                    <p className="mt-6 text-center text-purple-300 font-medium">
-                      ✨ Perfect for all ages 18+ seeking healthier, more radiant skin
-                    </p>
                   </div>
                 </div>
               </motion.div>
