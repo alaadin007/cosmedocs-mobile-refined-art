@@ -354,14 +354,11 @@ const PeelToReveal = () => {
                 <p>
                   The treatment features a unique blend of multi-acid formulations including Glycolic, Lactic, Salicylic, and TCA acids, enhanced with potent antioxidants like Glutathione, Kojic, Mandelic, and Azelaic acids. Natural extracts from papaya, licorice, and bearberry further boost the treatment's brightening and smoothing effects.
                 </p>
-                <p>
-                  This advanced treatment delivers visible results in just 10 days with minimal downtime, making it perfect for busy professionals seeking effective skin rejuvenation without disruption to their daily routine.
-                </p>
               </div>
 
               {/* Understanding Aging Card */}
               <div className="mt-12 max-w-4xl mx-auto">
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                <Card className="bg-white/5 backdrop-blur-sm border-purple-400/30 hover:border-purple-400/50 hover:bg-white/10 transition-all duration-300">
                   <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-bold text-white mb-4">Understanding Aging</CardTitle>
                   </CardHeader>
