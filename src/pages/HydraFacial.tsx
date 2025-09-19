@@ -392,86 +392,94 @@ const HydraFacial = () => {
                 </div>
               </motion.div>
               
-               <motion.div className="text-center mb-20" initial={{
-               opacity: 0,
-               y: 30
-             }} whileInView={{
-               opacity: 1,
-               y: 0
-             }} transition={{
-               duration: 0.8,
-               ease: [0.25, 0.46, 0.45, 0.94]
-             }} viewport={{
-               once: true
-             }}>
-                 <h2 className="text-3xl font-bold mb-4">HydraFacial Benefits</h2>
-                 <p className="text-gray-300 max-w-3xl mx-auto">
-                   Discover why HydraFacial is the preferred choice for immediate, visible skin transformation using advanced vortex technology
-                 </p>
-               </motion.div>
+            </div>
+          </div>
+        </section>
 
-               <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
-               opacity: 0,
-               y: 40
-             }} whileInView={{
-               opacity: 1,
-               y: 0
-             }} transition={{
-               duration: 0.8,
-               delay: 0.2,
-               ease: [0.25, 0.46, 0.45, 0.94]
-             }} viewport={{
-               once: true
-             }}>
-                 <div className="space-y-6">
-                   <div>
-                      <h3 className="text-2xl font-semibold text-white mb-4">
-                        Award-Winning Vortex Technology
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed mb-8">
-                        HydraFacial uses patented Vortex-Fusion technology that creates a fluid vortex effect, 
-                        dislodging impurities while infusing skin with hydrating solutions.
-                      </p>
-                   </div>
-                   
-                   <div className="flex flex-col gap-4">
-                     {benefits.map((benefit, index) => (
-                       <motion.div 
-                         key={index} 
-                         className="flex items-center space-x-3"
-                         initial={{
-                           opacity: 0,
-                           x: -20
-                         }} 
-                         whileInView={{
-                           opacity: 1,
-                           x: 0
-                         }} 
-                         transition={{
-                           duration: 0.5,
-                           delay: index * 0.1
-                         }} 
-                         viewport={{
-                           once: true
-                         }}
-                       >
-                         <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
-                         <span className="text-white/90 text-sm">{benefit.title}</span>
-                       </motion.div>
-                     ))}
-                   </div>
-                 </div>
-                 
-                 <div className="relative">
-                   <img 
-                     alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment" 
-                     className="w-full h-auto rounded-2xl shadow-2xl" 
-                     src="/lovable-uploads/b624113a-809b-46ae-a8ff-1b78e1f48f1d.png" 
-                   />
-                 </div>
-               </motion.div>
-             </div>
-           </div>
+        {/* HydraFacial Benefits Section */}
+        <section className="bg-black py-[50px]">
+          <div className="page-container">
+            <div className="max-w-6xl mx-auto">
+              <motion.div className="text-center mb-20" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }} viewport={{
+                once: true
+              }}>
+                <h2 className="text-3xl font-bold mb-4">HydraFacial Benefits</h2>
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                  Discover why HydraFacial is the preferred choice for immediate, visible skin transformation using advanced vortex technology
+                </p>
+              </motion.div>
+
+              <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
+                opacity: 0,
+                y: 40
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }} viewport={{
+                once: true
+              }}>
+                <div className="space-y-6">
+                  <div>
+                     <h3 className="text-2xl font-semibold text-white mb-4">
+                       Award-Winning Vortex Technology
+                     </h3>
+                     <p className="text-gray-300 leading-relaxed mb-8">
+                       HydraFacial uses patented Vortex-Fusion technology that creates a fluid vortex effect, 
+                       dislodging impurities while infusing skin with hydrating solutions.
+                     </p>
+                  </div>
+                  
+                  <div className="flex flex-col gap-4">
+                    {benefits.map((benefit, index) => (
+                      <motion.div 
+                        key={index} 
+                        className="flex items-center space-x-3"
+                        initial={{
+                          opacity: 0,
+                          x: -20
+                        }} 
+                        whileInView={{
+                          opacity: 1,
+                          x: 0
+                        }} 
+                        transition={{
+                          duration: 0.5,
+                          delay: index * 0.1
+                        }} 
+                        viewport={{
+                          once: true
+                        }}
+                      >
+                        <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                        <span className="text-white/90 text-sm">{benefit.title}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="relative">
+                  <img 
+                    alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment" 
+                    className="w-full h-auto rounded-2xl shadow-2xl" 
+                    src="/lovable-uploads/b624113a-809b-46ae-a8ff-1b78e1f48f1d.png" 
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
          </section>
 
          {/* HydraFacial Treatment Steps */}
