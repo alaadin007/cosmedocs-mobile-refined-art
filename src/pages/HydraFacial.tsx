@@ -340,7 +340,7 @@ const HydraFacial = () => {
         </section>
 
         {/* What is HydraFacial & Who Is It For Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[46px]">
+        <section className="bg-accent py-[46px]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
               <motion.div className="text-center mb-20" initial={{
@@ -646,7 +646,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Treatment Steps Section */}
-        <section className="bg-[#0A0A0A] py-[29px]">
+        <section className="bg-accent py-[29px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
