@@ -1,10 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Zap, Sparkles, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Activity, Droplets, Shield, Star } from "lucide-react";
+import { Clock, Zap, Sparkles, Calendar, MapPin, Phone, Mail, Activity, Droplets, Shield, Star } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
-import { useState } from "react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -94,48 +93,41 @@ const PeelToReveal = () => {
     description: "CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) combines multiple acids with antioxidants for optimal results."
   }];
 
-  const leftColumnFaqs = [{
-    question: "How much does Peel to Reveal cost?",
-    answer: "Peel to Reveal Lite starts from £120, and Peel to Reveal Plus is £250. We offer 25% off your second treatment if performed within 6 months, making it an affordable ongoing skincare solution."
-  }, {
-    question: "How long does the Peel to Reveal treatment take?",
-    answer: "The treatment takes only 10-15 minutes, making it perfect for lunch breaks or busy schedules. The controllable depth and intensity allow for customized treatment based on your skin needs."
-  }, {
-    question: "What skin concerns does Peel to Reveal address?",
-    answer: "Peel to Reveal treats multiple skin concerns simultaneously including dullness, pigmentation, melasma, sun damage, fine lines, acne, enlarged pores, whiteheads, and blackheads. It's suitable for all skin types."
-  }, {
-    question: "Is there any downtime after Peel to Reveal?",
-    answer: "Minimal downtime is required. You can return to work immediately with minimal skin changes and apply light cover-up straight after. Some mild redness may occur for a few hours, with gentle peeling starting day 3-4."
-  }];
+  const faqs = [
+    {
+      question: "How much does Peel to Reveal cost?",
+      answer: "Peel to Reveal Lite starts from £120, and Peel to Reveal Plus is £250. We offer 25% off your second treatment if performed within 6 months, making it an affordable ongoing skincare solution."
+    },
+    {
+      question: "How long does the Peel to Reveal treatment take?",
+      answer: "The treatment takes only 10-15 minutes, making it perfect for lunch breaks or busy schedules. The controllable depth and intensity allow for customized treatment based on your skin needs."
+    },
+    {
+      question: "What skin concerns does Peel to Reveal address?",
+      answer: "Peel to Reveal treats multiple skin concerns simultaneously including dullness, pigmentation, melasma, sun damage, fine lines, acne, enlarged pores, whiteheads, and blackheads. It's suitable for all skin types."
+    },
+    {
+      question: "Is there any downtime after Peel to Reveal?",
+      answer: "Minimal downtime is required. You can return to work immediately with minimal skin changes and apply light cover-up straight after. Some mild redness may occur for a few hours, with gentle peeling starting day 3-4."
+    },
+    {
+      question: "What makes Peel to Reveal different from other peels?",
+      answer: "Peel to Reveal is a modern fusion peel combining multiple acids (Glycolic, Lactic, Salicylic, TCA) with powerful antioxidants like Glutathione. This CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) treats over a dozen skin issues at once."
+    },
+    {
+      question: "What are the key ingredients in Peel to Reveal?",
+      answer: "The treatment includes Salicylic Acid, Tea Tree Oil, Glutathione, Kojic/Mandelic/Azelaic acids, TCA, Lactic and Glycolic acids, plus natural extracts from papaya, licorice, and bearberry for comprehensive skin rejuvenation."
+    },
+    {
+      question: "Are there any side effects?",
+      answer: "Common minor side effects include mild redness for a few hours, gentle peeling/flaking of old skin starting day 3-4 lasting a few days, and temporary dry skin for 7-10 days. These are normal signs of skin renewal."
+    },
+    {
+      question: "How often should I have Peel to Reveal treatments?",
+      answer: "For optimal results, treatments can be repeated every 4-6 weeks. The frequency depends on your skin concerns and goals. Our practitioners will create a personalized treatment plan during your consultation."
+    }
+  ];
 
-  const rightColumnFaqs = [{
-    question: "What makes Peel to Reveal different from other peels?",
-    answer: "Peel to Reveal is a modern fusion peel combining multiple acids (Glycolic, Lactic, Salicylic, TCA) with powerful antioxidants like Glutathione. This CRES system (Cleanse, Revitalise, Exfoliate, Stimulate) treats over a dozen skin issues at once."
-  }, {
-    question: "What are the key ingredients in Peel to Reveal?",
-    answer: "The treatment includes Salicylic Acid, Tea Tree Oil, Glutathione, Kojic/Mandelic/Azelaic acids, TCA, Lactic and Glycolic acids, plus natural extracts from papaya, licorice, and bearberry for comprehensive skin rejuvenation."
-  }, {
-    question: "Are there any side effects?",
-    answer: "Common minor side effects include mild redness for a few hours, gentle peeling/flaking of old skin starting day 3-4 lasting a few days, and temporary dry skin for 7-10 days. These are normal signs of skin renewal."
-  }, {
-    question: "How often should I have Peel to Reveal treatments?",
-    answer: "For optimal results, treatments can be repeated every 4-6 weeks. The frequency depends on your skin concerns and goals. Our practitioners will create a personalized treatment plan during your consultation."
-  }];
-
-  const [openFaqs, setOpenFaqs] = useState<Record<string, boolean>>({});
-  
-  const toggleFaq = (question: string) => {
-    setOpenFaqs(prev => {
-      const isCurrentlyOpen = prev[question];
-      // Close all FAQs
-      const newState: Record<string, boolean> = {};
-      // If the clicked FAQ was closed, open only that one
-      if (!isCurrentlyOpen) {
-        newState[question] = true;
-      }
-      return newState;
-    });
-  };
 
   return (
     <>
@@ -559,151 +551,35 @@ const PeelToReveal = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to know about Peel to Reveal treatments
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about Peel to Reveal treatments at our London clinic.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <div className="space-y-4">
-                {leftColumnFaqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card 
-                      className={`bg-white/5 backdrop-blur-sm border-white/10 cursor-pointer transition-all duration-300 ${
-                        openFaqs[faq.question] ? 'bg-white/10 border-purple-300' : 'hover:bg-white/8'
-                      }`}
-                      onClick={() => toggleFaq(faq.question)}
-                    >
-                      <CardContent className="p-6">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                          {openFaqs[faq.question] ? 
-                            <ChevronUp className="h-5 w-5 text-purple-300 flex-shrink-0" /> : 
-                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-                          }
-                        </div>
-                        {openFaqs[faq.question] && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-4 pt-4 border-t border-white/10"
-                          >
-                            <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                          </motion.div>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
-
-              <div className="space-y-4">
-                {rightColumnFaqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card 
-                      className={`bg-white/5 backdrop-blur-sm border-white/10 cursor-pointer transition-all duration-300 ${
-                        openFaqs[faq.question] ? 'bg-white/10 border-purple-300' : 'hover:bg-white/8'
-                      }`}
-                      onClick={() => toggleFaq(faq.question)}
-                    >
-                      <CardContent className="p-6">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                          {openFaqs[faq.question] ? 
-                            <ChevronUp className="h-5 w-5 text-purple-300 flex-shrink-0" /> : 
-                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-                          }
-                        </div>
-                        {openFaqs[faq.question] && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-4 pt-4 border-t border-white/10"
-                          >
-                            <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                          </motion.div>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
+              </Accordion>
             </div>
-          </div>
-        </section>
-
-        {/* Additional Information Section - Moved to bottom before CTA */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div 
-              className="max-w-5xl mx-auto" 
-              initial={{ opacity: 0, y: 30 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }} 
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-thin text-white mb-12 text-center tracking-tight">
-                Understanding Skin Aging
-              </h2>
-              
-              <div className="space-y-8 text-lg text-white/80 font-light leading-relaxed">
-                <p>
-                  Our skin cells become dormant and cellular regeneration slows down as we age, leaving dull, damaged, dead skin cells on the surface. Collagen, elastin, hyaluronic acid and other structural elements vital for skin health start to decrease from our mid-20s, and increasing layers of dead skin and micro-pigmentation cause unevenly toned skins with an irregular texture and enlarged pores.
-                </p>
-                
-                <p>
-                  Although make-up, moisturisers and other beauty products may temporarily conceal some of these signs of ageing, they cannot reverse them and may accelerate the process. Our cosmetic doctors from Harley Street, London, are passionate about skincare and have formulated an in-clinic skin peel treatment called Peel To Reveal.
-                </p>
-                
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 my-12">
-                  <h3 className="text-2xl font-light text-white mb-6">When is Peel to Reveal used?</h3>
-                  <div className="grid md:grid-cols-2 gap-6 text-white/70">
-                    <div>
-                      <h4 className="text-lg font-light text-white mb-3">Ideal for treating:</h4>
-                      <ul className="space-y-2">
-                        <li>• General skin dullness & aging (mid-20s onwards)</li>
-                        <li>• Pigmentation and melasma</li>
-                        <li>• Uneven skin tone and texture</li>
-                        <li>• Sun damage and fine lines</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-light text-white mb-3">Also effective for:</h4>
-                      <ul className="space-y-2">
-                        <li>• Acne and enlarged pores</li>
-                        <li>• Whiteheads and blackheads</li>
-                        <li>• Wrinkles and age spots</li>
-                        <li>• Skin rejuvenation maintenance</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
