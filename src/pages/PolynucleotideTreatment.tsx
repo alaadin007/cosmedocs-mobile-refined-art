@@ -131,18 +131,12 @@ const PolynucleotideTreatment = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Polynucleotide
-                  <span className="block text-purple-300">DNA Therapy</span>
-                  <span className="block text-sm mt-4">Revolutionary regenerative medicine for skin & cellular renewal</span>
+                  <span className="text-purple-300">Advanced Polynucleotide Therapy London</span>
+                  <span className="block text-sm mt-4">Invisible art - regenerative DNA medicine that speaks without words</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Starting from £450</p>
-                  <p className="text-sm text-gray-300">#cosmepolynucleotide - Check out our IG for hundreds more natural, subtle transformations</p>
+                  <p className="text-2xl text-purple-300 font-bold">Revolutionary DNA Regeneration</p>
+                  <p className="text-sm text-gray-300">#cosmepolynucleotide - Check out our IG for hundreds more natural regenerative transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
