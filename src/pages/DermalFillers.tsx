@@ -769,32 +769,6 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="w-full py-24 bg-gray-900/30">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to know about dermal filler makeovers and hyaluronic acid treatments
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {faqItems.map((faq, index) => (
-                <Collapsible key={index}>
-                  <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-gray-800/50 p-6 text-left transition-colors hover:bg-gray-700/50">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    <Plus className="h-5 w-5 text-purple-400 shrink-0" />
-                  </CollapsibleTrigger>
-                  <CollapsibleContent className="px-6 pb-6">
-                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                  </CollapsibleContent>
-                </Collapsible>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Other Dermal Filler Treatments */}
         <section className="py-20 bg-gray-900/30">
           <div className="page-container">
@@ -1038,6 +1012,32 @@ const DermalFillerMakeover = () => {
                 <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Your Consultation</a>
               </Button>
             </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="w-full py-24 bg-gray-900/30">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to know about dermal filler makeovers and hyaluronic acid treatments
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {faqItems.map((faq, index) => (
+                <Collapsible key={index}>
+                  <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-gray-800/50 p-6 text-left transition-colors hover:bg-gray-700/50">
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    <Plus className="h-5 w-5 text-purple-400 shrink-0" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="px-6 pb-6">
+                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  </CollapsibleContent>
+                </Collapsible>
+              ))}
+            </div>
           </div>
         </section>
 
