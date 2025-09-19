@@ -909,7 +909,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="bg-accent py-[35px]">
+        <section className="bg-black py-[35px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -999,7 +999,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
