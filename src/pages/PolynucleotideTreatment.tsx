@@ -686,7 +686,7 @@ const PolynucleotideTreatment = () => {
         </section>
 
         {/* Treatment Results & Benefits Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -701,25 +701,40 @@ const PolynucleotideTreatment = () => {
               </p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Skin Regeneration</h3>
-                <div className="text-gray-300 space-y-2">
-                  <p>• Deep skin nourishment</p>
-                  <p>• Age-defying radiance</p>
-                  <p>• Collagen boost for firmness</p>
-                  <p>• Elasticity rebound</p>
-                  <p>• Cellular skin repair</p>
-                </div>
+                <Card className="bg-black border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl mb-4">Skin Regeneration</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Deep skin nourishment</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Age-defying radiance</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Collagen boost for firmness</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Elasticity rebound</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Cellular skin repair</span>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -727,19 +742,34 @@ const PolynucleotideTreatment = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Star className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Under-Eye Enhancement</h3>
-                <div className="text-gray-300 space-y-2">
-                  <p>• Under-eye rejuvenation</p>
-                  <p>• Dark circles reduction</p>
-                  <p>• Puffiness minimization</p>
-                  <p>• Texture improvement</p>
-                  <p>• Brightness restoration</p>
-                </div>
+                <Card className="bg-black border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl mb-4">Under-Eye Enhancement</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Under-eye rejuvenation</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Dark circles reduction</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Puffiness minimization</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Texture improvement</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Brightness restoration</span>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -747,22 +777,71 @@ const PolynucleotideTreatment = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Hair & Scalp</h3>
-                <div className="text-gray-300 space-y-2">
-                  <p>• Revitalized scalp & hair</p>
-                  <p>• Hair follicle regeneration</p>
-                  <p>• Scalp health improvement</p>
-                  <p>• Natural hair growth</p>
-                  <p>• Androgenic alopecia treatment</p>
-                </div>
+                <Card className="bg-black border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl mb-4">Hair & Scalp</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Revitalized scalp & hair</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Hair follicle regeneration</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Scalp health improvement</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Natural hair growth</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Androgenic alopecia treatment</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl mb-4">Overall Enhancement</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Comprehensive rejuvenation</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Long-lasting results</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Natural-looking improvement</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Progressive enhancement</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Minimal downtime</span>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
-
           </div>
         </section>
 
