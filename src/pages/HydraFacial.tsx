@@ -410,7 +410,7 @@ const HydraFacial = () => {
                  </p>
                </motion.div>
 
-               <motion.div className="grid lg:grid-cols-2 gap-16 items-start" initial={{
+               <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
                opacity: 0,
                y: 40
              }} whileInView={{
