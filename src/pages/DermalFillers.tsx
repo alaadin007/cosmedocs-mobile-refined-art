@@ -248,15 +248,16 @@ const DermalFillerMakeover = () => {
         {/* What is a Dermal Filler Makeover */}
         <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
                 <h2 className="text-3xl font-bold mb-6 text-white">What is a Dermal Filler Makeover?</h2>
-                <div className="space-y-6">
+                <div className="space-y-6 text-left">
                   <p className="text-gray-300 leading-relaxed">
                     A dermal filler makeover is a comprehensive treatment plan designed to rejuvenate the entire face using a combination of premium hyaluronic acid dermal fillers. This holistic approach addresses multiple areas to create a balanced and harmonious result that enhances your natural features.
                   </p>
@@ -267,41 +268,6 @@ const DermalFillerMakeover = () => {
                     The treatment uses hyaluronic acid, a naturally occurring substance that attracts and retains moisture, providing immediate volume while integrating seamlessly with your existing facial structure for natural-looking, long-lasting results.
                   </p>
                 </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gray-900/50 border-none">
-                  <CardHeader>
-                    <CardTitle className="text-white">Who Can Benefit from Dermal Filler Makeover?</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Individuals seeking overall facial rejuvenation</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">People experiencing volume loss due to aging</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Those wanting to enhance facial contours</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Patients seeking non-surgical facial enhancement</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Individuals wanting long-lasting natural results</p>
-                    </div>
-                  </CardContent>
-                </Card>
               </motion.div>
             </div>
           </div>
