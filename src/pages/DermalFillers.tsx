@@ -378,224 +378,6 @@ const DermalFillerMakeover = () => {
           </div>
         </section>
 
-        {/* Other Dermal Filler Treatments */}
-        <section className="py-20 bg-gray-900/30">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Other Dermal Filler Treatments</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Explore our comprehensive range of dermal filler treatments for targeted facial enhancement
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Lip Fillers",
-                  description: "Enhanced lip volume and definition with natural-looking results",
-                  price: "From £280",
-                  link: "/lip-fillers"
-                },
-                {
-                  title: "Cheek Fillers",
-                  description: "Restore youthful volume and create defined cheekbones",
-                  price: "From £350",
-                  link: "/cheek-fillers"
-                },
-                {
-                  title: "Jawline Fillers",
-                  description: "Define and sculpt your jawline for enhanced facial structure",
-                  price: "From £400",
-                  link: "/jawline-fillers"
-                },
-                {
-                  title: "Tear Trough Fillers",
-                  description: "Reduce under-eye hollowing and dark circles",
-                  price: "From £350",
-                  link: "/tear-trough-fillers"
-                },
-                {
-                  title: "Non-Surgical Nose Job",
-                  description: "Reshape and refine nose contours without surgery",
-                  price: "From £300",
-                  link: "/non-surgical-nose-job"
-                },
-                {
-                  title: "Temple Fillers",
-                  description: "Restore temple volume for improved facial proportions",
-                  price: "From £350",
-                  link: "/temple-fillers"
-                }
-              ].map((treatment, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors group">
-                    <CardHeader>
-                      <CardTitle className="text-white text-xl">{treatment.title}</CardTitle>
-                      <div className="text-2xl font-bold text-purple-300">{treatment.price}</div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 mb-4">{treatment.description}</p>
-                      <Button 
-                        variant="outline" 
-                        className="w-full border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white group-hover:scale-105 transition-transform"
-                        asChild
-                      >
-                        <Link to={treatment.link}>Learn More</Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Dermal Filler Makeover Pricing</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for comprehensive facial rejuvenation treatments
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Essential Refresh</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£350</div>
-                    <p className="text-gray-300">1ml dermal filler</p>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Single area treatment
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Premium hyaluronic acid
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Expert consultation
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-purple-400/50 h-full transform scale-105">
-                  <CardHeader>
-                    <div className="text-center mb-2">
-                      <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Most Popular</span>
-                    </div>
-                    <CardTitle className="text-white text-xl">Complete Makeover</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£1,200</div>
-                    <p className="text-gray-300">3-4ml dermal filler</p>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Multiple area treatment
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Comprehensive consultation
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Follow-up appointment
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 border-blue-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Consultation Only</CardTitle>
-                    <div className="text-3xl font-bold text-blue-300">£50</div>
-                    <p className="text-gray-300">Expert assessment</p>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Detailed facial analysis
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        Personalized treatment plan
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        No commitment required
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <p className="text-gray-300 mb-6">
-                *Consultation fee is deducted from treatment cost if you proceed on the same day
-              </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold" asChild>
-                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Your Consultation</a>
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-
-
-
         {/* Treatment Duration Table */}
         <section className="py-20 bg-gray-900/30">
           <div className="page-container">
@@ -1028,6 +810,252 @@ const DermalFillerMakeover = () => {
                 </Collapsible>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Other Dermal Filler Treatments */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Other Dermal Filler Treatments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive range of dermal filler treatments for targeted facial enhancement
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Lip Fillers",
+                  description: "Enhanced lip volume and definition with natural-looking results",
+                  price: "From £280",
+                  link: "/lip-fillers"
+                },
+                {
+                  title: "Cheek Fillers",
+                  description: "Restore youthful volume and create defined cheekbones",
+                  price: "From £350",
+                  link: "/cheek-fillers"
+                },
+                {
+                  title: "Jawline Fillers",
+                  description: "Define and sculpt your jawline for enhanced facial structure",
+                  price: "From £400",
+                  link: "/jawline-fillers"
+                },
+                {
+                  title: "Tear Trough Fillers",
+                  description: "Reduce under-eye hollowing and dark circles",
+                  price: "From £350",
+                  link: "/tear-trough-fillers"
+                },
+                {
+                  title: "Non-Surgical Nose Job",
+                  description: "Reshape and refine nose contours without surgery",
+                  price: "From £300",
+                  link: "/non-surgical-nose-job"
+                },
+                {
+                  title: "Temple Fillers",
+                  description: "Restore temple volume for improved facial proportions",
+                  price: "From £350",
+                  link: "/temple-fillers"
+                }
+              ].map((treatment, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors group">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl">{treatment.title}</CardTitle>
+                      <div className="text-2xl font-bold text-purple-300">{treatment.price}</div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300 mb-4">{treatment.description}</p>
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white group-hover:scale-105 transition-transform"
+                        asChild
+                      >
+                        <Link to={treatment.link}>Learn More</Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Dermal Filler Makeover Pricing</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for comprehensive facial rejuvenation treatments
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Essential Refresh</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£350</div>
+                    <p className="text-gray-300">1ml dermal filler</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Single area treatment
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Premium hyaluronic acid
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Expert consultation
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-purple-400/50 h-full transform scale-105">
+                  <CardHeader>
+                    <div className="text-center mb-2">
+                      <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Most Popular</span>
+                    </div>
+                    <CardTitle className="text-white text-xl">Complete Makeover</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£1,200</div>
+                    <p className="text-gray-300">3-4ml dermal filler</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Multiple area treatment
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Comprehensive consultation
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Follow-up appointment
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 border-green-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Premium Experience</CardTitle>
+                    <div className="text-3xl font-bold text-green-300">£2,000+</div>
+                    <p className="text-gray-300">5+ ml dermal filler</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Full facial rejuvenation
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Multiple treatment sessions
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        VIP aftercare package
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 border-blue-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Consultation Only</CardTitle>
+                    <div className="text-3xl font-bold text-blue-300">£50</div>
+                    <p className="text-gray-300">Expert assessment</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Detailed facial analysis
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        Personalized treatment plan
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        No commitment required
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold" asChild>
+                <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">Book Your Consultation</a>
+              </Button>
+            </motion.div>
           </div>
         </section>
 
