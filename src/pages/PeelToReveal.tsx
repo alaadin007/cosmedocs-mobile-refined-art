@@ -57,8 +57,8 @@ const PeelToReveal = () => {
   }];
 
   const benefits = [{
-    title: "Treats Multiple Skin Concerns",
-    description: "Addresses dullness, pigmentation, melasma, sun damage, fine lines, acne, enlarged pores, whiteheads, and blackheads simultaneously."
+    title: "Ideal for Treating",
+    description: "General skin dullness & aging (mid-20s onwards), pigmentation and melasma, uneven skin tone and texture, sun damage and fine lines. Also effective for acne and enlarged pores, whiteheads and blackheads, wrinkles and age spots, plus skin rejuvenation maintenance."
   }, {
     title: "Powerful Antioxidant Fusion",
     description: "Contains Glutathione, Kojic, Mandelic, and Azelaic acids combined with natural extracts for comprehensive skin renewal."
