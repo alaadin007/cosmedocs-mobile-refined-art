@@ -410,7 +410,7 @@ const HydraFacial = () => {
                  </p>
                </motion.div>
 
-               <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
+               <motion.div className="grid lg:grid-cols-2 gap-16 items-start" initial={{
                opacity: 0,
                y: 40
              }} whileInView={{
@@ -423,47 +423,47 @@ const HydraFacial = () => {
              }} viewport={{
                once: true
              }}>
-                 <div className="space-y-8">
+                 <div className="space-y-6">
                    <div>
-                      <h3 className="text-2xl font-semibold text-white mb-6">
+                      <h3 className="text-2xl font-semibold text-white mb-4">
                         Award-Winning Vortex Technology
                       </h3>
                       <p className="text-gray-300 leading-relaxed mb-8">
-                        HydraFacial uses patented Vortex-Fusion technology with a spiral design that creates a fluid vortex effect, 
-                        easily dislodging and removing impurities while infusing skin with hydrating solutions and serums.
+                        HydraFacial uses patented Vortex-Fusion technology that creates a fluid vortex effect, 
+                        dislodging impurities while infusing skin with hydrating solutions.
                       </p>
                    </div>
                    
-                   <div className="space-y-4">
-                     {benefits.map((benefit, index) => (
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     {benefits.slice(0, 6).map((benefit, index) => (
                        <motion.div 
                          key={index} 
-                         className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-4 hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-300"
+                         className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300 border border-white/10"
                          initial={{
                            opacity: 0,
-                           x: -20
+                           y: 20
                          }} 
                          whileInView={{
                            opacity: 1,
-                           x: 0
+                           y: 0
                          }} 
                          transition={{
-                           duration: 0.5,
+                           duration: 0.4,
                            delay: index * 0.1
                          }} 
                          viewport={{
                            once: true
                          }}
                        >
-                         <div className="flex items-start space-x-3">
-                           <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-lg p-2 flex-shrink-0 mt-1">
-                             <Star className="h-4 w-4 text-primary" />
+                         <div className="flex items-center space-x-3 mb-2">
+                           <div className="bg-primary/20 rounded-full p-1.5 flex-shrink-0">
+                             <Star className="h-3 w-3 text-primary" />
                            </div>
-                           <div>
-                             <h4 className="text-white font-medium mb-2">{benefit.title}</h4>
-                             <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-                           </div>
+                           <h4 className="text-white font-medium text-sm">{benefit.title}</h4>
                          </div>
+                         <p className="text-gray-400 text-xs leading-relaxed pl-7">
+                           {benefit.description.split('.')[0]}.
+                         </p>
                        </motion.div>
                      ))}
                    </div>
