@@ -732,30 +732,6 @@ const HydraFacial = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[50px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-3xl font-bold mb-4">HydraFacial Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Real patient transformations showcasing the power of vortex technology
-              </p>
-            </motion.div>
-            
-            {/* This section was replaced with the carousel above */}
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section className="bg-black py-[35px]">
