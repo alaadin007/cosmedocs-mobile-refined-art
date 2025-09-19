@@ -453,41 +453,7 @@ const PolynucleotideTreatment = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-3xl font-bold mb-6 text-white">Advanced DNA Technology</h3>
-                <div className="space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    These biocompatible DNA fragments work as natural cellular messengers, stimulating your skin's 
-                    innate repair processes. Unlike synthetic alternatives, polynucleotides integrate seamlessly 
-                    with your biology to enhance collagen synthesis, improve skin texture, and restore youthful vitality.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    The treatment addresses multiple aesthetic concerns simultaneously - from fine lines and wrinkles 
-                    to hair thinning and skin laxity. This versatility makes it an ideal foundation treatment that 
-                    can be enhanced with complementary procedures for comprehensive rejuvenation.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <img 
-                  src="/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png" 
-                  alt="Polynucleotide treatment demonstration showing precision injection technique for under-eye rejuvenation" 
-                  className="w-full h-auto rounded-lg shadow-2xl"
-                />
-              </motion.div>
-            </div>
+            {/* Advanced DNA Technology content moved to separate section */}
 
             {/* Central Card */}
             <motion.div
@@ -510,6 +476,69 @@ const PolynucleotideTreatment = () => {
                 </CardContent>
               </Card>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Advanced DNA Technology Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Advanced DNA Technology</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Discover how cutting-edge polynucleotide therapy harnesses the power of DNA fragments to revolutionize skin regeneration
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex flex-col justify-center"
+              >
+                <div className="space-y-6">
+                  <p className="text-gray-300 leading-relaxed text-lg">
+                    These biocompatible DNA fragments work as natural cellular messengers, stimulating your skin's 
+                    innate repair processes. Unlike synthetic alternatives, polynucleotides integrate seamlessly 
+                    with your biology to enhance collagen synthesis, improve skin texture, and restore youthful vitality.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed text-lg">
+                    The treatment addresses multiple aesthetic concerns simultaneously - from fine lines and wrinkles 
+                    to hair thinning and skin laxity. This versatility makes it an ideal foundation treatment that 
+                    can be enhanced with complementary procedures for comprehensive rejuvenation.
+                  </p>
+                  <div className="pt-6">
+                    <Button 
+                      className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-3"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Learn More About DNA Therapy
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-center"
+              >
+                <img 
+                  src="/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png" 
+                  alt="Polynucleotide treatment demonstration showing precision injection technique for under-eye rejuvenation" 
+                  className="w-full h-auto rounded-lg shadow-2xl max-w-md mx-auto"
+                />
+              </motion.div>
+            </div>
           </div>
         </section>
 
