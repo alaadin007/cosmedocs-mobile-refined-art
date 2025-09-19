@@ -583,36 +583,31 @@ const PeelToReveal = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-black">
-          <div className="page-container">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center max-w-4xl mx-auto"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready for Clearer, Brighter Skin?
-              </h2>
-              <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Book your Peel to Reveal consultation at Cosmedocs Harley Street and experience the transformation.
+              <h2 className="text-3xl font-bold mb-4">Ready for Clearer, Brighter Skin?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how Peel to Reveal 
+                can transform your skin with our revolutionary fusion technology.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  size="lg" 
-                  className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg font-semibold rounded-full shadow-2xl"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
                   onClick={() => window.open(bookingUrl, '_blank')}
                 >
                   Book Free Consultation
                 </Button>
-                <a 
-                  href="tel:03330551503" 
-                  className="text-purple-300 hover:text-white font-semibold text-lg transition-colors duration-300"
-                >
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
                   Call 0333 0551 503
-                </a>
+                </Button>
               </div>
             </motion.div>
           </div>
