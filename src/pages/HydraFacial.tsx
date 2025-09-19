@@ -392,160 +392,100 @@ const HydraFacial = () => {
                 </div>
               </motion.div>
               
-              <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <div className="space-y-8">
-                  <div>
-                     <h3 className="text-2xl font-semibold text-white mb-6">
-                       Award-Winning Vortex Technology
-                     </h3>
-                     <p className="text-gray-300 leading-relaxed mb-8">
-                       HydraFacial uses patented Vortex-Fusion technology with a spiral design that creates a fluid vortex effect, 
-                       easily dislodging and removing impurities while infusing skin with hydrating solutions and serums.
-                     </p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {benefits.slice(0, 4).map((benefit, index) => <motion.div key={index} className="flex items-center space-x-3" initial={{
-                    opacity: 0,
-                    x: -20
-                  }} whileInView={{
-                    opacity: 1,
-                    x: 0
-                  }} transition={{
-                    duration: 0.5,
-                    delay: index * 0.1
-                  }} viewport={{
-                    once: true
-                  }}>
-                        <Star className="h-5 w-5 text-primary" />
-                        <span className="text-white/90 text-sm">{benefit.title}</span>
-                      </motion.div>)}
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  <img alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment" className="w-full h-auto rounded-2xl shadow-2xl" src="/lovable-uploads/b624113a-809b-46ae-a8ff-1b78e1f48f1d.png" />
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+               <motion.div className="text-center mb-20" initial={{
+               opacity: 0,
+               y: 30
+             }} whileInView={{
+               opacity: 1,
+               y: 0
+             }} transition={{
+               duration: 0.8,
+               ease: [0.25, 0.46, 0.45, 0.94]
+             }} viewport={{
+               once: true
+             }}>
+                 <h2 className="text-3xl font-bold mb-4">HydraFacial Benefits</h2>
+                 <p className="text-gray-300 max-w-3xl mx-auto">
+                   Discover why HydraFacial is the preferred choice for immediate, visible skin transformation using advanced vortex technology
+                 </p>
+               </motion.div>
 
-        {/* Benefits Section - Accordion Style */}
-        <section className="py-16 bg-gradient-to-b from-black to-[#0A0A0A]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-3xl font-bold mb-4">Treatment Benefits</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Discover why HydraFacial is the preferred choice for immediate, visible skin transformation
-              </p>
-            </motion.div>
-            
-            {/* Two-Column Accordion Layout */}
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Left Column */}
-                <motion.div initial={{
-                  opacity: 0,
-                  x: -40
-                }} whileInView={{
-                  opacity: 1,
-                  x: 0
-                }} transition={{
-                  duration: 0.8,
-                  ease: [0.25, 0.46, 0.45, 0.94]
-                }} viewport={{
-                  once: true
-                }}>
-                  <Accordion type="single" collapsible className="space-y-4">
-                    {benefits.slice(0, Math.ceil(benefits.length / 2)).map((benefit, index) => (
-                      <AccordionItem 
-                        key={`left-${index}`} 
-                        value={`left-${index}`}
-                        className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-300"
-                      >
-                        <AccordionTrigger className="px-6 py-4 text-left text-white hover:text-primary/90 hover:no-underline group">
-                          <div className="flex items-center space-x-4 w-full">
-                            <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-xl p-3 group-hover:from-primary/40 group-hover:to-primary/30 transition-all duration-300 flex-shrink-0">
-                              <Star className="h-5 w-5 text-primary" />
-                            </div>
-                            <span className="text-lg font-light leading-tight">{benefit.title}</span>
-                          </div>
-                        </AccordionTrigger>
-                        <AccordionContent className="px-6 pb-6">
-                          <p className="text-white/70 font-light leading-relaxed pl-2">
-                            {benefit.description}
-                          </p>
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </motion.div>
+               <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
+               opacity: 0,
+               y: 40
+             }} whileInView={{
+               opacity: 1,
+               y: 0
+             }} transition={{
+               duration: 0.8,
+               delay: 0.2,
+               ease: [0.25, 0.46, 0.45, 0.94]
+             }} viewport={{
+               once: true
+             }}>
+                 <div className="space-y-8">
+                   <div>
+                      <h3 className="text-2xl font-semibold text-white mb-6">
+                        Award-Winning Vortex Technology
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed mb-8">
+                        HydraFacial uses patented Vortex-Fusion technology with a spiral design that creates a fluid vortex effect, 
+                        easily dislodging and removing impurities while infusing skin with hydrating solutions and serums.
+                      </p>
+                   </div>
+                   
+                   <div className="space-y-4">
+                     {benefits.map((benefit, index) => (
+                       <motion.div 
+                         key={index} 
+                         className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-4 hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-300"
+                         initial={{
+                           opacity: 0,
+                           x: -20
+                         }} 
+                         whileInView={{
+                           opacity: 1,
+                           x: 0
+                         }} 
+                         transition={{
+                           duration: 0.5,
+                           delay: index * 0.1
+                         }} 
+                         viewport={{
+                           once: true
+                         }}
+                       >
+                         <div className="flex items-start space-x-3">
+                           <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-lg p-2 flex-shrink-0 mt-1">
+                             <Star className="h-4 w-4 text-primary" />
+                           </div>
+                           <div>
+                             <h4 className="text-white font-medium mb-2">{benefit.title}</h4>
+                             <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                           </div>
+                         </div>
+                       </motion.div>
+                     ))}
+                   </div>
+                 </div>
+                 
+                 <div className="relative">
+                   <img 
+                     alt="HydraFacial vortex technology London Cosmedocs Harley Street advanced skincare treatment" 
+                     className="w-full h-auto rounded-2xl shadow-2xl" 
+                     src="/lovable-uploads/b624113a-809b-46ae-a8ff-1b78e1f48f1d.png" 
+                   />
+                 </div>
+               </motion.div>
+             </div>
+           </div>
+         </section>
 
-                {/* Right Column */}
-                <motion.div initial={{
-                  opacity: 0,
-                  x: 40
-                }} whileInView={{
-                  opacity: 1,
-                  x: 0
-                }} transition={{
-                  duration: 0.8,
-                  delay: 0.2,
-                  ease: [0.25, 0.46, 0.45, 0.94]
-                }} viewport={{
-                  once: true
-                }}>
-                  <Accordion type="single" collapsible className="space-y-4">
-                    {benefits.slice(Math.ceil(benefits.length / 2)).map((benefit, index) => (
-                      <AccordionItem 
-                        key={`right-${index}`} 
-                        value={`right-${index}`}
-                        className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:from-white/15 hover:to-white/10 hover:border-white/30 transition-all duration-300"
-                      >
-                        <AccordionTrigger className="px-6 py-4 text-left text-white hover:text-primary/90 hover:no-underline group">
-                          <div className="flex items-center space-x-4 w-full">
-                            <div className="bg-gradient-to-r from-primary/30 to-primary/20 rounded-xl p-3 group-hover:from-primary/40 group-hover:to-primary/30 transition-all duration-300 flex-shrink-0">
-                              <Star className="h-5 w-5 text-primary" />
-                            </div>
-                            <span className="text-lg font-light leading-tight">{benefit.title}</span>
-                          </div>
-                        </AccordionTrigger>
-                        <AccordionContent className="px-6 pb-6">
-                          <p className="text-white/70 font-light leading-relaxed pl-2">
-                            {benefit.description}
-                          </p>
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </motion.div>
-              </div>
-            </div>
-          </div>
+         {/* HydraFacial Treatment Steps */}
+         <section className="py-16 bg-gradient-to-b from-black to-[#0A0A0A]">
+           <div className="page-container">
+             {/* Treatment steps content will go here */}
+           </div>
         </section>
 
         {/* Alternative Option 2: Two Column Layout */}
