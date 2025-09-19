@@ -806,7 +806,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Aftercare & Results Timeline Section */}
-        <section className="bg-[#0A0A0A] py-[50px]">
+        <section className="bg-accent py-[50px]">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Left Column - Aftercare */}
@@ -901,7 +901,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="bg-black py-[35px]">
+        <section className="bg-accent py-[35px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
