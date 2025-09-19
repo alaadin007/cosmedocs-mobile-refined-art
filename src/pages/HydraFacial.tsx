@@ -434,7 +434,7 @@ const HydraFacial = () => {
                       </p>
                    </div>
                    
-                   <div className="flex gap-8 overflow-x-auto pb-4">
+                   <div className="flex flex-col gap-4">
                      {benefits.map((benefit, index) => (
                        <motion.div 
                          key={index} 
