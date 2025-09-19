@@ -202,13 +202,21 @@ const HydraFacial = () => {
                   <p className="text-sm text-gray-300">Zero downtime • Instant glow • Suitable for all skin types</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
+                  <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
                     <button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl w-full sm:w-auto">
-                      Book HydraFacial
+                      Book Consultation
                     </button>
                   </a>
-                  <button className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm border w-full sm:w-auto">
-                    View Treatment Details
+                  <button 
+                    onClick={() => {
+                      const pricingSection = document.querySelector('[data-pricing-section]');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm border w-full sm:w-auto"
+                  >
+                    View Price List
                   </button>
                 </div>
               </motion.div>
@@ -903,7 +911,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="bg-black py-[35px]">
+        <section className="bg-black py-[35px]" data-pricing-section>
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
@@ -1138,12 +1146,12 @@ const HydraFacial = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href={bookingUrl} 
+                  href="https://med.as.me/harleystreet" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-lg font-semibold transition-all duration-300"
                 >
-                  Book HydraFacial
+                  Book Consultation
                 </a>
                 <a
                   href="tel:03330551503"
