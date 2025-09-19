@@ -57,14 +57,32 @@ const PeelToReveal = () => {
   }];
 
   const benefits = [{
-    title: "Ideal for Treating",
-    description: "General skin dullness & aging (mid-20s onwards), pigmentation and melasma, uneven skin tone and texture, sun damage and fine lines. Also effective for acne and enlarged pores, whiteheads and blackheads, wrinkles and age spots, plus skin rejuvenation maintenance."
+    title: "Skin Dullness & Aging",
+    description: "Targets general skin dullness and aging concerns from mid-20s onwards, restoring natural radiance and vitality."
+  }, {
+    title: "Pigmentation and Melasma",
+    description: "Effectively reduces hyperpigmentation, melasma patches, and uneven skin discoloration for a clearer complexion."
+  }, {
+    title: "Uneven Skin Tone and Texture",
+    description: "Smooths irregular texture and evens skin tone for a refined, polished appearance."
+  }, {
+    title: "Sun Damage and Fine Lines",
+    description: "Repairs UV damage and reduces the appearance of fine lines for rejuvenated, youthful-looking skin."
+  }, {
+    title: "Acne and Enlarged Pores",
+    description: "Controls acne breakouts and minimizes enlarged pores for clearer, smoother skin texture."
+  }, {
+    title: "Whiteheads and Blackheads",
+    description: "Deep cleanses and removes comedones, preventing future blockages and congestion."
+  }, {
+    title: "Wrinkles and Age Spots",
+    description: "Diminishes wrinkles and age spots, promoting cellular renewal for more youthful skin."
+  }, {
+    title: "Skin Rejuvenation Maintenance",
+    description: "Maintains optimal skin health and prevents future aging signs with regular treatment sessions."
   }, {
     title: "Powerful Antioxidant Fusion",
     description: "Contains Glutathione, Kojic, Mandelic, and Azelaic acids combined with natural extracts for comprehensive skin renewal."
-  }, {
-    title: "Minimal Downtime Required",
-    description: "Return to work immediately with minimal skin changes. Apply light cover-up straight after treatment."
   }, {
     title: "Fast Results",
     description: "Notice improvements within 10 days with clearer, brighter, and more radiant skin."
