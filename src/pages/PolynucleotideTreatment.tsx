@@ -235,7 +235,63 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before and After Polynucleotide DNA Therapy Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Explore authentic before and after polynucleotide treatment results from our London clinic. 
+                Our regenerative DNA therapy stimulates natural collagen production for remarkable skin transformation.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-12">
+              <BeforeAfterImageViewer 
+                images={beforeAfterImages}
+                triggerLabel="View All Before & After Photos"
+                title="Polynucleotide Treatment Results Gallery"
+                description="Comprehensive gallery of our DNA therapy treatments"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section - Updated to match lip filler design */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -252,14 +308,14 @@ const PolynucleotideTreatment = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-purple-500 h-full text-center">
+                <Card className="bg-accent border-none h-full text-center">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">Single Session</CardTitle>
                     <div className="text-purple-300 text-4xl font-bold">£450</div>
@@ -329,7 +385,7 @@ const PolynucleotideTreatment = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-700 h-full text-center">
+                <Card className="bg-accent border-none h-full text-center">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
                     <div className="text-purple-300 text-4xl font-bold">£50</div>
@@ -473,139 +529,158 @@ const PolynucleotideTreatment = () => {
 
 
         {/* What Are Polynucleotides Section */}
-        <section className="bg-[#0A0A0A] py-[4px]">
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <motion.div className="text-center mb-20" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <h2 className="text-3xl font-bold mb-4 text-white">What Are Polynucleotides?</h2>
-                <p className="text-xl text-white/70 font-light max-w-4xl mx-auto leading-relaxed">
-                  Polynucleotide therapy is revolutionizing aesthetic medicine in London, offering a natural approach to skin 
-                  restoration and hair regeneration. Supported by over three decades of clinical research, this advanced 
-                  treatment utilizes purified DNA fragments from salmon to harmonize with your body's innate healing mechanisms.
-                </p>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">What Are Polynucleotides?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Polynucleotide therapy is revolutionizing aesthetic medicine in London, offering a natural approach to skin 
+                restoration and hair regeneration. Supported by over three decades of clinical research, this advanced 
+                treatment utilizes purified DNA fragments from salmon to harmonize with your body's innate healing mechanisms.
+              </p>
+            </motion.div>
 
-              <motion.div className="grid lg:grid-cols-2 gap-16 items-center mb-16" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold mb-6 text-white">Advanced DNA Technology</h3>
                 <div className="space-y-6">
-                  <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                    Advanced DNA Technology
-                  </h3>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     These biocompatible DNA fragments work as natural cellular messengers, stimulating your skin's 
                     innate repair processes. Unlike synthetic alternatives, polynucleotides integrate seamlessly 
                     with your biology to enhance collagen synthesis, improve skin texture, and restore youthful vitality.
                   </p>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     The treatment addresses multiple aesthetic concerns simultaneously - from fine lines and wrinkles 
                     to hair thinning and skin laxity. This versatility makes it an ideal foundation treatment that 
                     can be enhanced with complementary procedures for comprehensive rejuvenation.
                   </p>
                 </div>
-                
-                <div>
-                  <img src="/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png" alt="Polynucleotide treatment demonstration showing precision injection technique for under-eye rejuvenation" className="w-full h-auto rounded-2xl shadow-2xl" />
-                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="/lovable-uploads/e328b8fe-f278-418a-b7d5-fa2992d038e0.png" 
+                  alt="Polynucleotide treatment demonstration showing precision injection technique for under-eye rejuvenation" 
+                  className="w-full h-auto rounded-lg shadow-2xl"
+                />
               </motion.div>
             </div>
+
+            {/* Central Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto mt-16"
+            >
+              <Card className="bg-gray-900/50 border-purple-500 border-2">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-white text-2xl">Revolutionary Regenerative Medicine</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-gray-300 leading-relaxed">
+                    Polynucleotide therapy represents the pinnacle of regenerative aesthetic medicine. By harnessing your body's 
+                    natural healing mechanisms through carefully sourced DNA fragments, this treatment delivers comprehensive 
+                    skin restoration that continues improving for months after treatment.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
         {/* Treatment Areas Section */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[8px]">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <motion.div className="text-center mb-20" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <h2 className="text-3xl font-bold mb-4 text-white">Comprehensive Treatment Areas</h2>
-                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                  Targeted polynucleotide therapy for multiple aesthetic concerns across face, body, and scalp
-                </p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Comprehensive Treatment Areas</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Targeted polynucleotide therapy for multiple aesthetic concerns across face, body, and scalp
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Facial Rejuvenation</h3>
+                <div className="text-gray-300 space-y-2">
+                  <p>• Wrinkle-prone facial areas</p>
+                  <p>• Deep forehead lines</p>
+                  <p>• Sunken cheeks restoration</p>
+                  <p>• Undefined jawline enhancement</p>
+                  <p>• Acne scarring improvement</p>
+                </div>
               </motion.div>
-              
-              <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl font-light">Facial Rejuvenation</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-white/80 space-y-2">
-                    <p className="font-light">• Wrinkle-prone facial areas</p>
-                    <p className="font-light">• Deep forehead lines</p>
-                    <p className="font-light">• Sunken cheeks restoration</p>
-                    <p className="font-light">• Undefined jawline enhancement</p>
-                    <p className="font-light">• Acne scarring improvement</p>
-                  </CardContent>
-                </Card>
 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl font-light">Body & Neck</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-white/80 space-y-2">
-                    <p className="font-light">• Sagging neck skin tightening</p>
-                    <p className="font-light">• Aging hands rejuvenation</p>
-                    <p className="font-light">• Sagging arm skin firming</p>
-                    <p className="font-light">• Rough, dry knees smoothing</p>
-                    <p className="font-light">• Lackluster décolletage renewal</p>
-                  </CardContent>
-                </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Body & Neck</h3>
+                <div className="text-gray-300 space-y-2">
+                  <p>• Sagging neck skin tightening</p>
+                  <p>• Aging hands rejuvenation</p>
+                  <p>• Sagging arm skin firming</p>
+                  <p>• Rough, dry knees smoothing</p>
+                  <p>• Lackluster décolletage renewal</p>
+                </div>
+              </motion.div>
 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl font-light">Eyes & Hair</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-white/80 space-y-2">
-                    <p className="font-light">• Tired under-eyes brightening</p>
-                    <p className="font-light">• Dark circles reduction</p>
-                    <p className="font-light">• Hair follicle regeneration</p>
-                    <p className="font-light">• Scalp health optimization</p>
-                    <p className="font-light">• Androgenic alopecia treatment</p>
-                  </CardContent>
-                </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Eyes & Hair</h3>
+                <div className="text-gray-300 space-y-2">
+                  <p>• Tired under-eyes brightening</p>
+                  <p>• Dark circles reduction</p>
+                  <p>• Hair follicle regeneration</p>
+                  <p>• Scalp health optimization</p>
+                  <p>• Androgenic alopecia treatment</p>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -668,62 +743,57 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Regenerative Science Section - Apple Style */}
-        <section className="bg-[#0A0A0A] py-[66px]">
+        {/* The Science of Regeneration Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94]
-          }} viewport={{
-            once: true
-          }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
               <h2 className="text-3xl font-bold mb-4 text-white">The Science of Regeneration</h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Understanding how polynucleotide therapy activates your natural healing mechanisms
               </p>
             </motion.div>
             
-            <div className="max-w-6xl mx-auto">
-              <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <div className="order-2 lg:order-1">
-                  <img src="/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png" alt="Polynucleotide DNA therapy mechanism demonstration showing cellular regeneration and collagen stimulation process" className="w-full h-auto rounded-2xl shadow-2xl" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="/lovable-uploads/dd86f9a2-6530-4c94-8776-c6ede86882bb.png" 
+                  alt="Polynucleotide DNA therapy mechanism demonstration showing cellular regeneration and collagen stimulation process" 
+                  className="w-full h-auto rounded-lg shadow-2xl"
+                />
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-3xl font-bold mb-6 text-white">Mechanism of Action</h3>
+                <div className="space-y-6">
+                  <p className="text-gray-300 leading-relaxed">
+                    Polynucleotides function as natural repair catalysts, working at the cellular level to restore 
+                    skin's foundational structure. These purified DNA fragments stimulate fibroblast activity, 
+                    enhance collagen and elastin production, and improve cellular hydration mechanisms.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Unlike temporary volumizing treatments, polynucleotides create lasting change by reactivating 
+                    your skin's dormant regenerative pathways. This results in genuine improvement in skin quality, 
+                    texture, and resilience that continues to enhance over 6-9 months.
+                  </p>
                 </div>
                 
-                <div className="order-1 lg:order-2 space-y-8">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                      Mechanism of Action
-                    </h3>
-                    <p className="text-lg text-white/80 font-light leading-relaxed mb-6">
-                      Polynucleotides function as natural repair catalysts, working at the cellular level to restore 
-                      skin's foundational structure. These purified DNA fragments stimulate fibroblast activity, 
-                      enhance collagen and elastin production, and improve cellular hydration mechanisms.
-                    </p>
-                    <p className="text-lg text-white/80 font-light leading-relaxed">
-                      Unlike temporary volumizing treatments, polynucleotides create lasting change by reactivating 
-                      your skin's dormant regenerative pathways. This results in genuine improvement in skin quality, 
-                      texture, and resilience that continues to enhance over 6-9 months.
-                    </p>
-                  </div>
-                  
+                <div className="mt-8">
                   <RegenerativeScienceCard />
                 </div>
               </motion.div>
@@ -731,90 +801,159 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
 
-        {/* Who Is It For Section */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[60px]">
+        {/* Ideal Candidates Section */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <motion.div className="text-center mb-20" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <h2 className="text-3xl font-bold mb-4 text-white">Ideal Candidates</h2>
-                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                  Polynucleotide therapy delivers optimal results for these specific concerns and conditions
-                </p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Ideal Candidates</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Polynucleotide therapy delivers optimal results for these specific concerns and conditions
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl mb-4">Aging Concerns</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Early aging signs</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Deep wrinkles and lines</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Loss of skin firmness</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Collagen deficiency</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Sagging skin areas</span>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
-              
-              <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-lg font-light">Aging Concerns</CardTitle>
+                    <CardTitle className="text-white text-xl mb-4">Skin Quality</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-white/80 space-y-1 text-sm">
-                    <p>• Early aging signs</p>
-                    <p>• Deep wrinkles and lines</p>
-                    <p>• Loss of skin firmness</p>
-                    <p>• Collagen deficiency</p>
-                    <p>• Sagging skin areas</p>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Dull, tired-looking skin</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Uneven skin tone</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Dry, damaged skin</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Thinning, fragile areas</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Sun damage effects</span>
+                    </div>
                   </CardContent>
                 </Card>
+              </motion.div>
 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-lg font-light">Skin Quality</CardTitle>
+                    <CardTitle className="text-white text-xl mb-4">Pigmentation</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-white/80 space-y-1 text-sm">
-                    <p>• Dull, tired-looking skin</p>
-                    <p>• Uneven skin tone</p>
-                    <p>• Dry, damaged skin</p>
-                    <p>• Thinning, fragile areas</p>
-                    <p>• Sun damage effects</p>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Hyperpigmentation</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Dark spots</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Acne scars</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Uneven texture</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Fine line development</span>
+                    </div>
                   </CardContent>
                 </Card>
+              </motion.div>
 
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-lg font-light">Pigmentation</CardTitle>
+                    <CardTitle className="text-white text-xl mb-4">Hair Loss</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-white/80 space-y-1 text-sm">
-                    <p>• Hyperpigmentation</p>
-                    <p>• Dark spots</p>
-                    <p>• Acne scars</p>
-                    <p>• Uneven texture</p>
-                    <p>• Fine line development</p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg font-light">Hair Loss</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-white/80 space-y-1 text-sm">
-                    <p>• Androgenic alopecia</p>
-                    <p>• Thinning or weak hair</p>
-                    <p>• Bald spots or patches</p>
-                    <p>• Dry, itchy scalp</p>
-                    <p>• Damaged follicles</p>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Androgenic alopecia</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Thinning or weak hair</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Bald spots or patches</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Dry, itchy scalp</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="text-purple-500" size={16} />
+                      <span className="text-gray-300">Damaged follicles</span>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -822,107 +961,105 @@ const PolynucleotideTreatment = () => {
           </div>
         </section>
         
-        {/* Targeted Treatments Section */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[66px]">
+        {/* Treatment Results & Benefits Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <motion.div className="text-center mb-20" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <h2 className="text-3xl font-bold mb-4 text-white">Treatment Results & Benefits</h2>
-                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                  Experience comprehensive skin and hair regeneration with polynucleotide DNA therapy
-                </p>
-              </motion.div>
-              
-              <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" initial={{
-              opacity: 0,
-              y: 40
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.2,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl font-light">Skin Regeneration</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-white/80 space-y-2">
-                    <p className="font-light">• Deep skin nourishment</p>
-                    <p className="font-light">• Age-defying radiance</p>
-                    <p className="font-light">• Collagen boost for firmness</p>
-                    <p className="font-light">• Elasticity rebound</p>
-                    <p className="font-light">• Cellular skin repair</p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl font-light">Under-Eye Enhancement</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-white/80 space-y-2">
-                    <p className="font-light">• Under-eye rejuvenation</p>
-                    <p className="font-light">• Dark circles reduction</p>
-                    <p className="font-light">• Puffiness minimization</p>
-                    <p className="font-light">• Texture improvement</p>
-                    <p className="font-light">• Brightness restoration</p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl font-light">Hair & Scalp</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-white/80 space-y-2">
-                    <p className="font-light">• Revitalized scalp & hair</p>
-                    <p className="font-light">• Hair follicle regeneration</p>
-                    <p className="font-light">• Scalp health improvement</p>
-                    <p className="font-light">• Natural hair growth</p>
-                    <p className="font-light">• Androgenic alopecia treatment</p>
-                  </CardContent>
-                </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Results & Benefits</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Experience comprehensive skin and hair regeneration with polynucleotide DNA therapy
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Skin Regeneration</h3>
+                <div className="text-gray-300 space-y-2">
+                  <p>• Deep skin nourishment</p>
+                  <p>• Age-defying radiance</p>
+                  <p>• Collagen boost for firmness</p>
+                  <p>• Elasticity rebound</p>
+                  <p>• Cellular skin repair</p>
+                </div>
               </motion.div>
 
-              <motion.div className="text-center space-y-6" initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.4,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }} viewport={{
-              once: true
-            }}>
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto">
-                  <p className="text-lg text-white/80 font-light leading-relaxed mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Star className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Under-Eye Enhancement</h3>
+                <div className="text-gray-300 space-y-2">
+                  <p>• Under-eye rejuvenation</p>
+                  <p>• Dark circles reduction</p>
+                  <p>• Puffiness minimization</p>
+                  <p>• Texture improvement</p>
+                  <p>• Brightness restoration</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Hair & Scalp</h3>
+                <div className="text-gray-300 space-y-2">
+                  <p>• Revitalized scalp & hair</p>
+                  <p>• Hair follicle regeneration</p>
+                  <p>• Scalp health improvement</p>
+                  <p>• Natural hair growth</p>
+                  <p>• Androgenic alopecia treatment</p>
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto mt-16"
+            >
+              <Card className="bg-gray-900/50 border-none">
+                <CardContent className="p-8 text-center">
+                  <p className="text-gray-300 leading-relaxed mb-6">
                     <span className="text-yellow-400">⭐</span> Optimal protocol: 1 session every 3 weeks, 
                     minimum of 3 sessions recommended for first-time patients. Full regenerative effects 
                     visible in 6-9 months as your body naturally produces enhanced collagen and elastin.
                   </p>
-                  <p className="text-lg text-white/80 font-light leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     Polynucleotide therapy combines beautifully with Microneedling, PRP, Profhilo, Botox, 
                     and dermal fillers to enhance overall aesthetic outcomes and provide comprehensive rejuvenation.
                   </p>
-                </div>
-              </motion.div>
-            </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
