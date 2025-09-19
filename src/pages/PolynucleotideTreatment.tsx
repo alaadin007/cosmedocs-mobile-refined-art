@@ -72,7 +72,8 @@ const PolynucleotideTreatment = () => {
     answer: "Polynucleotides are natural DNA fragments that stimulate cellular repair, boost collagen synthesis, and enhance skin regeneration. They work with your body's natural healing processes to restore youthful skin from within."
   }];
 
-  return <>
+  return (
+    <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -642,9 +643,7 @@ const PolynucleotideTreatment = () => {
                   </p>
                 </div>
                 
-                <div className="mt-8">
-                  <RegenerativeScienceCard />
-                </div>
+                {/* Regenerative science content removed */}
               </motion.div>
             </div>
           </div>
