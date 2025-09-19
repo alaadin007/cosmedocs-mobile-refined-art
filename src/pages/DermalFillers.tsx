@@ -103,7 +103,7 @@ const DermalFillerMakeover = () => {
                   <span className="block text-purple-300">Makeover</span>
                   <span className="block text-sm mt-4">Professional treatment for natural-looking results</span>
                 </h1>
-                <p className="text-lg text-gray-200 mb-8 max-w-xl">
+                <p className="text-sm text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Expert Practitioners</span>
                   <br />
                   Full face rejuvenation with personalized treatment plans and invisible art philosophy
