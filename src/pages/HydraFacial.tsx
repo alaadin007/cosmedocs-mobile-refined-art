@@ -707,10 +707,8 @@ const HydraFacial = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                HydraFacial Treatment Steps
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4">HydraFacial Treatment Steps</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 A multi-step procedure designed to improve your skin health with precision and care
               </p>
             </motion.div>
