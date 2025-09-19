@@ -392,7 +392,7 @@ const PeelToReveal = () => {
         </section>
 
         {/* Treatment Benefits */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -429,7 +429,7 @@ const PeelToReveal = () => {
         </section>
 
         {/* Treatment Steps */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
