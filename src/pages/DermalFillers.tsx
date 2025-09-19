@@ -345,7 +345,10 @@ const DermalFillerMakeover = () => {
                 >
                   <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
                     <CardHeader>
-                      <CardTitle className="text-white text-lg">{item.area}</CardTitle>
+                      <CardTitle className="text-white text-lg flex items-start space-x-3">
+                        <Zap className="text-purple-400 mt-1 shrink-0" size={20} />
+                        <span>{item.area}</span>
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-300">{item.description}</p>
@@ -553,7 +556,7 @@ const DermalFillerMakeover = () => {
                   <Card className="bg-black/50 border-gray-700 h-full">
                     <CardHeader>
                       <CardTitle className="text-white text-lg flex items-start space-x-3">
-                        <CheckCircle className="text-green-400 mt-1 shrink-0" size={20} />
+                        <CheckCircle className="text-purple-400 mt-1 shrink-0" size={20} />
                         <span>{benefit.title}</span>
                       </CardTitle>
                     </CardHeader>
