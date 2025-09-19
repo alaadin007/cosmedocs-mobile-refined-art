@@ -732,6 +732,173 @@ const HydraFacial = () => {
           </div>
         </section>
 
+        {/* Combination Treatments Section */}
+        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[50px]">
+          <div className="page-container">
+            <motion.div className="text-center mb-16" initial={{
+              opacity: 0,
+              y: 30
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }} viewport={{
+              once: true
+            }}>
+              <h2 className="text-3xl font-bold mb-4">Combination Treatments</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Enhance your HydraFacial results with our complementary treatments for optimal skin transformation
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-2xl p-8 text-center"
+              >
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-8 h-8 bg-purple-400 rounded-full"></div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Chemical Peels</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Combine HydraFacial with gentle chemical peels for deeper exfoliation and enhanced skin renewal
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-2xl p-8 text-center"
+              >
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-8 h-8 bg-purple-400 rounded-full"></div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Skin Boosters</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Amplify hydration and nutrition with professional skin boosters following your HydraFacial treatment
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-2xl p-8 text-center"
+              >
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-8 h-8 bg-purple-400 rounded-full"></div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Microneedling</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Stimulate collagen production and enhance product absorption when paired with HydraFacial
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Aftercare & Results Timeline Section */}
+        <section className="bg-[#0A0A0A] py-[50px]">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Left Column - Aftercare */}
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-8">HydraFacial Aftercare</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Immediate Post-Treatment</h4>
+                      <p className="text-gray-300 text-sm">Avoid direct sun exposure for 24 hours and apply SPF 30+ sunscreen</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">First 48 Hours</h4>
+                      <p className="text-gray-300 text-sm">Keep skin hydrated with gentle moisturizers and avoid harsh products</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Ongoing Care</h4>
+                      <p className="text-gray-300 text-sm">Maintain results with daily SPF and gentle skincare routine</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">What to Avoid</h4>
+                      <p className="text-gray-300 text-sm">Skip retinoids, AHAs, and BHAs for 48 hours post-treatment</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Right Column - Results Timeline */}
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-8">Results Timeline</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-purple-400 text-xs font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Immediate Glow</h4>
+                      <p className="text-gray-300 text-sm">Experience instant radiance and hydration immediately after treatment</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-purple-400 text-xs font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Peak Results (3-7 Days)</h4>
+                      <p className="text-gray-300 text-sm">Skin continues to improve with enhanced texture, tone, and luminosity</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-purple-400 text-xs font-bold">4</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Next Session</h4>
+                      <p className="text-gray-300 text-sm">Recommended every 4-6 weeks for optimal results and skin maintenance</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-purple-400 text-xs font-bold">∞</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium mb-2">Long-term Benefits</h4>
+                      <p className="text-gray-300 text-sm">Cumulative improvements with regular treatments over 3-6 months</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         {/* Pricing Section */}
         <section className="bg-black py-[35px]">
