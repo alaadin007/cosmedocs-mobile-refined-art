@@ -355,7 +355,7 @@ const PeelToReveal = () => {
                   The treatment features a unique blend of multi-acid formulations including Glycolic, Lactic, Salicylic, and TCA acids, enhanced with potent antioxidants like Glutathione, Kojic, Mandelic, and Azelaic acids. Natural extracts from papaya, licorice, and bearberry further boost the treatment's brightening and smoothing effects.
                 </p>
                 <p>
-                  Unlike traditional single-acid peels, Peel to Reveal's fusion technology allows for controllable depth and intensity, making it suitable for all skin types while delivering dramatic results with minimal downtime. The treatment effectively addresses dullness, pigmentation, melasma, sun damage, fine lines, acne, enlarged pores, and uneven texture in just one session.
+                  This advanced treatment delivers visible results in just 10 days with minimal downtime, making it perfect for busy professionals seeking effective skin rejuvenation without disruption to their daily routine.
                 </p>
               </div>
             </motion.div>
@@ -398,7 +398,7 @@ const PeelToReveal = () => {
             >
               <h2 className="text-4xl font-bold mb-4 text-white">Peel to Reveal Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience comprehensive skin transformation with our revolutionary fusion peel technology
+                Unlike traditional single-acid peels, Peel to Reveal's fusion technology allows for controllable depth and intensity, making it suitable for all skin types while delivering dramatic results with minimal downtime. The treatment effectively addresses:
               </p>
             </motion.div>
 
