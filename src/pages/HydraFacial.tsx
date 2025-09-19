@@ -339,7 +339,7 @@ const HydraFacial = () => {
           </div>
         </section>
 
-        {/* What is HydraFacial Section */}
+        {/* What is HydraFacial & Who Is It For Section */}
         <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[46px]">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
@@ -356,12 +356,48 @@ const HydraFacial = () => {
               once: true
             }}>
                 <h2 className="text-3xl font-bold mb-6 text-white">
-                  What is HydraFacial?
+                  What is HydraFacial & Who Is HydraFacial For?
                 </h2>
-                <p className="text-gray-300 max-w-4xl mx-auto">
-                  A superior treatment that delivers long-lasting skin health, tailored to your unique concerns. 
-                  Whether your skin is dry, oily, or somewhere in between, this treatment caters to all skin types and tones.
-                </p>
+                <div className="text-gray-300 max-w-4xl mx-auto space-y-6">
+                  <p>
+                    HydraFacial is a superior multi-step treatment that delivers long-lasting skin health, tailored to your unique concerns. 
+                    This award-winning facial uses patented vortex technology to cleanse, extract, and hydrate your skin simultaneously.
+                  </p>
+                  
+                  <div className="bg-white/5 rounded-lg p-6 mt-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Ideal Candidates & Skin Types</h3>
+                    <p className="mb-4">HydraFacial is perfect for anyone looking to improve their skin health and is suitable for:</p>
+                    
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <h4 className="font-semibold text-purple-300 mb-2">Skin Types:</h4>
+                        <ul className="space-y-1">
+                          <li>• <strong>Oily skin</strong> - Reduces excess sebum and shine</li>
+                          <li>• <strong>Dry skin</strong> - Deep hydration and moisture restoration</li>
+                          <li>• <strong>Sensitive skin</strong> - Gentle, soothing treatment</li>
+                          <li>• <strong>Acne-prone skin</strong> - Unclogs pores and prevents breakouts</li>
+                          <li>• <strong>Aging skin</strong> - Improves texture and reduces fine lines</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-purple-300 mb-2">Best For:</h4>
+                        <ul className="space-y-1">
+                          <li>• Enlarged pores and blackheads</li>
+                          <li>• Uneven skin tone and texture</li>
+                          <li>• Fine lines and early aging signs</li>
+                          <li>• Dull, tired-looking complexion</li>
+                          <li>• Hyperpigmentation and dark spots</li>
+                          <li>• Dehydrated or congested skin</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <p className="mt-4 text-center text-purple-300 font-medium">
+                      ✨ Perfect for all ages 18+ seeking healthier, more radiant skin
+                    </p>
+                  </div>
+                </div>
               </motion.div>
               
               <motion.div className="grid lg:grid-cols-2 gap-16 items-center" initial={{
