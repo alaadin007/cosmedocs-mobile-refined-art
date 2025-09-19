@@ -1111,38 +1111,4 @@ const PolynucleotideTreatment = () => {
   );
 };
 
-// RegenerativeScienceCard component
-const RegenerativeScienceCard = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3, duration: 0.6 }}
-      viewport={{ once: true }}
-    >
-      <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <CollapsibleTrigger className="w-full">
-          <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <h3 className="text-left font-light text-white text-lg">How does DNA therapy work at the cellular level?</h3>
-                {isOpen ? <ChevronUp className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" /> : <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0 ml-4" />}
-              </div>
-            </CardContent>
-          </Card>
-        </CollapsibleTrigger>
-        <CollapsibleContent>
-          <div className="px-6 pb-6">
-            <p className="text-white/80 leading-relaxed font-light">
-              Polynucleotides activate adenosine receptors within skin cells, triggering a cascade of regenerative processes. 
-              This leads to increased vascular perfusion, enhanced cellular metabolism, and accelerated wound healing. 
-              The therapy essentially resets your skin's biological clock, restoring the regenerative capacity 
-              that naturally diminishes with age.
-            </p>
-          </div>
-        </CollapsibleContent>
-      </Collapsible>
-    </motion.div>
-  );
+export default PolynucleotideTreatment;

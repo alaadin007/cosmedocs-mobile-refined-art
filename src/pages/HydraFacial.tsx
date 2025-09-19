@@ -195,7 +195,7 @@ const HydraFacial = () => {
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
-                  Transformation that speaks without saying a word
+                  Glowing transformation that speaks without saying a word
                 </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Starting from £175</p>
