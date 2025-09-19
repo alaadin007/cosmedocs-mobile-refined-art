@@ -482,12 +482,6 @@ const HydraFacial = () => {
           </div>
          </section>
 
-         {/* HydraFacial Treatment Steps */}
-         <section className="py-16 bg-gradient-to-b from-black to-[#0A0A0A]">
-           <div className="page-container">
-             {/* Treatment steps content will go here */}
-           </div>
-        </section>
 
         {/* Alternative Option 2: Two Column Layout */}
         <section className="py-32 bg-[#0A0A0A] hidden">
