@@ -43,10 +43,12 @@ const BeforeAfterImageViewer = ({
   const isMobile = useIsMobile();
 
   const goToNext = () => {
+    console.log('goToNext called, current index:', currentIndex, 'total images:', images.length);
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   const goToPrevious = () => {
+    console.log('goToPrevious called, current index:', currentIndex, 'total images:', images.length);
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
@@ -69,7 +71,10 @@ const BeforeAfterImageViewer = ({
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       {triggerLabel && (
         <DialogTrigger asChild>
-          <button className={`flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium ${className}`}>
+          <button 
+            className={`flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium ${className}`}
+            onClick={() => console.log('Trigger button clicked!')}
+          >
             <Eye className="h-4 w-4 mr-1" />
             <span>{triggerLabel}</span>
           </button>
@@ -114,7 +119,12 @@ const BeforeAfterImageViewer = ({
             
             {/* Navigation buttons - larger touch targets for mobile */}
             <button 
-              onClick={goToPrevious}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Previous button clicked!');
+                goToPrevious();
+              }}
               className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 rounded-r-full p-3 h-12 w-12 flex items-center justify-center transition-colors"
               aria-label="Previous image"
             >
@@ -122,7 +132,12 @@ const BeforeAfterImageViewer = ({
             </button>
             
             <button 
-              onClick={goToNext}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Next button clicked!');
+                goToNext();
+              }}
               className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 rounded-l-full p-3 h-12 w-12 flex items-center justify-center transition-colors"
               aria-label="Next image"
             >
