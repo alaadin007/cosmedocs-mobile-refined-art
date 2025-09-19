@@ -364,26 +364,26 @@ const HydraFacial = () => {
                     This award-winning facial uses patented vortex technology to cleanse, extract, and hydrate your skin simultaneously.
                   </p>
                   
-                  <div className="bg-white/5 rounded-lg p-6 mt-8">
+                  <div className="bg-black/20 rounded-lg p-6 mt-8">
                     <h3 className="text-xl font-semibold text-white mb-4">Ideal Candidates & Skin Types</h3>
                     <p className="mb-4">HydraFacial is perfect for anyone looking to improve their skin health and is suitable for:</p>
                     
                     <div className="text-center">
                       <h4 className="font-semibold text-purple-300 mb-4">All Skin Types:</h4>
                       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-2xl mx-auto">
-                        <div className="bg-white/10 rounded-lg p-3">
+                        <div className="bg-black/30 rounded-lg p-3">
                           <span className="text-sm font-medium">Oily Skin</span>
                         </div>
-                        <div className="bg-white/10 rounded-lg p-3">
+                        <div className="bg-black/30 rounded-lg p-3">
                           <span className="text-sm font-medium">Dry Skin</span>
                         </div>
-                        <div className="bg-white/10 rounded-lg p-3">
+                        <div className="bg-black/30 rounded-lg p-3">
                           <span className="text-sm font-medium">Sensitive Skin</span>
                         </div>
-                        <div className="bg-white/10 rounded-lg p-3">
+                        <div className="bg-black/30 rounded-lg p-3">
                           <span className="text-sm font-medium">Acne-Prone</span>
                         </div>
-                        <div className="bg-white/10 rounded-lg p-3">
+                        <div className="bg-black/30 rounded-lg p-3">
                           <span className="text-sm font-medium">Aging Skin</span>
                         </div>
                       </div>
