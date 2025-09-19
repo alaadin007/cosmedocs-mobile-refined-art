@@ -455,7 +455,7 @@ const HydraFacial = () => {
                            once: true
                          }}
                        >
-                         <Star className="h-5 w-5 text-primary flex-shrink-0" />
+                         <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
                          <span className="text-white/90 text-sm">{benefit.title}</span>
                        </motion.div>
                      ))}
