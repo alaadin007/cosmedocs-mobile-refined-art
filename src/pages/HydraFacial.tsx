@@ -366,13 +366,13 @@ const HydraFacial = () => {
             }}>
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                      Award-Winning Vortex Technology
-                    </h3>
-                    <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
-                      HydraFacial uses patented Vortex-Fusion technology with a spiral design that creates a fluid vortex effect, 
-                      easily dislodging and removing impurities while infusing skin with hydrating solutions and serums.
-                    </p>
+                     <h3 className="text-2xl font-semibold text-white mb-6">
+                       Award-Winning Vortex Technology
+                     </h3>
+                     <p className="text-gray-300 leading-relaxed mb-8">
+                       HydraFacial uses patented Vortex-Fusion technology with a spiral design that creates a fluid vortex effect, 
+                       easily dislodging and removing impurities while infusing skin with hydrating solutions and serums.
+                     </p>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -417,10 +417,8 @@ const HydraFacial = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                Treatment Benefits
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4">Treatment Benefits</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Discover why HydraFacial is the preferred choice for immediate, visible skin transformation
               </p>
             </motion.div>
@@ -768,10 +766,8 @@ const HydraFacial = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-                HydraFacial Results
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4">HydraFacial Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Real patient transformations showcasing the power of vortex technology
               </p>
             </motion.div>
