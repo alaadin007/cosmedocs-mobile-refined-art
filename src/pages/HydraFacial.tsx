@@ -355,10 +355,6 @@ const HydraFacial = () => {
                   The treatment uses a unique spiral design HydroPeel tip that creates a vortex effect to easily 
                   dislodge and remove impurities while simultaneously delivering hydrating skin solutions.
                 </p>
-                <p>
-                  At Cosmedocs, our expert practitioners customize each HydraFacial treatment to your specific 
-                  skin needs, ensuring optimal results for every skin type and concern.
-                </p>
               </div>
 
               {/* Skin Types Card */}
@@ -367,42 +363,36 @@ const HydraFacial = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8"
+                className="bg-white/10 backdrop-blur-sm border-2 border-purple-300/30 rounded-xl p-8"
               >
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Skin Types</h3>
-                <p className="text-gray-300 text-center mb-8">
-                  HydraFacial is suitable for virtually everyone and addresses multiple skin concerns across all skin types:
+                <h3 className="text-3xl font-bold text-white mb-6 text-center">Skin Types</h3>
+                <p className="text-gray-300 text-center mb-8 text-lg">
+                  HydraFacial is suitable for virtually everyone and addresses multiple skin concerns across all skin types
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                    <h4 className="text-lg font-semibold text-white mb-2">Oily Skin</h4>
-                    <p className="text-gray-300 text-sm">Deep cleansing helps unclog pores and reduce excess sebum production</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-white">Oily Skin</h4>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                    <h4 className="text-lg font-semibold text-white mb-2">Dry Skin</h4>
-                    <p className="text-gray-300 text-sm">Intensive hydration restores moisture balance and plumpness</p>
+                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-white">Dry Skin</h4>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                    <h4 className="text-lg font-semibold text-white mb-2">Sensitive Skin</h4>
-                    <p className="text-gray-300 text-sm">Gentle, soothing treatment perfect for reactive skin types</p>
+                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-white">Sensitive Skin</h4>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                    <h4 className="text-lg font-semibold text-white mb-2">Acne-Prone Skin</h4>
-                    <p className="text-gray-300 text-sm">Extracts impurities and reduces inflammation for clearer skin</p>
+                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-white">Acne-Prone</h4>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                    <h4 className="text-lg font-semibold text-white mb-2">Aging Skin</h4>
-                    <p className="text-gray-300 text-sm">Reduces fine lines, improves texture, and restores radiance</p>
+                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-white">Aging Skin</h4>
                   </div>
 
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
-                    <h4 className="text-lg font-semibold text-white mb-2">Combination Skin</h4>
-                    <p className="text-gray-300 text-sm">Balances different skin zones for overall improved complexion</p>
+                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-white">Combination</h4>
                   </div>
                 </div>
               </motion.div>
@@ -570,7 +560,7 @@ const HydraFacial = () => {
         </section>
 
         {/* Combination Treatments */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -579,28 +569,28 @@ const HydraFacial = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-8 text-white">Combination Treatments</h2>
+              <h2 className="text-4xl font-bold mb-8">Combination Treatments</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Enhance your HydraFacial results with complementary treatments for comprehensive skin rejuvenation
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">HydraFacial + Dermaplaning</h3>
                 <p className="text-gray-300 mb-4">
                   Dermaplaning removes dead skin cells and vellus hair, allowing deeper penetration of HydraFacial serums.
                 </p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Smoother skin texture</li>
-                  <li>• Better product absorption</li>
-                  <li>• Instant glow and radiance</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Smoother skin texture</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Better product absorption</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Instant glow and radiance</li>
                 </ul>
               </motion.div>
 
@@ -609,16 +599,16 @@ const HydraFacial = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">HydraFacial + Chemical Peels</h3>
                 <p className="text-gray-300 mb-4">
                   Combine gentle chemical peels with HydraFacial for enhanced exfoliation and renewal.
                 </p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Deeper exfoliation</li>
-                  <li>• Improved skin renewal</li>
-                  <li>• Enhanced brightening effects</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Deeper exfoliation</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Improved skin renewal</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced brightening effects</li>
                 </ul>
               </motion.div>
 
@@ -627,16 +617,16 @@ const HydraFacial = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">HydraFacial + Microneedling</h3>
                 <p className="text-gray-300 mb-4">
                   Microneedling enhances HydraFacial benefits by creating channels for deeper serum penetration.
                 </p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Collagen stimulation</li>
-                  <li>• Improved texture</li>
-                  <li>• Enhanced serum absorption</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Collagen stimulation</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Improved texture</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced serum absorption</li>
                 </ul>
               </motion.div>
             </div>
