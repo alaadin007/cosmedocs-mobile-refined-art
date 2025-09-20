@@ -358,7 +358,7 @@ const ChemicalPeel = () => {
                 </p>
               </div>
 
-              {/* Skin Types Card */}
+              {/* Types of Peels Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -366,34 +366,40 @@ const ChemicalPeel = () => {
                 viewport={{ once: true }}
                 className="bg-purple-600/10 backdrop-blur-sm border-2 border-purple-400/40 rounded-xl p-8"
               >
-                <h3 className="text-3xl font-bold text-purple-300 mb-6 text-center">Skin Concerns Treated</h3>
+                <h3 className="text-3xl font-bold text-purple-300 mb-6 text-center">Types of Peels</h3>
                 <p className="text-gray-300 text-center mb-8 text-lg">
-                  Chemical peels effectively address multiple skin concerns across various skin types
+                  We offer various chemical peel types to address different skin concerns and depths
                 </p>
                 
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Acne & Scars</h4>
+                    <h4 className="text-lg font-semibold text-purple-200">Light Peels</h4>
+                    <p className="text-sm text-gray-300 mt-2">Glycolic & Lactic Acid</p>
                   </div>
                   
                   <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Pigmentation</h4>
+                    <h4 className="text-lg font-semibold text-purple-200">Medium Peels</h4>
+                    <p className="text-sm text-gray-300 mt-2">TCA & Jessner's Peel</p>
                   </div>
                   
                   <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Fine Lines</h4>
+                    <h4 className="text-lg font-semibold text-purple-200">Deep Peels</h4>
+                    <p className="text-sm text-gray-300 mt-2">Phenol Peels</p>
                   </div>
                   
                   <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Sun Damage</h4>
+                    <h4 className="text-lg font-semibold text-purple-200">Salicylic Acid</h4>
+                    <p className="text-sm text-gray-300 mt-2">BHA for Acne Skin</p>
                   </div>
                   
                   <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Texture Issues</h4>
+                    <h4 className="text-lg font-semibold text-purple-200">Mandelic Acid</h4>
+                    <p className="text-sm text-gray-300 mt-2">Gentle for Sensitive Skin</p>
                   </div>
 
                   <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-purple-200">Dull Skin</h4>
+                    <h4 className="text-lg font-semibold text-purple-200">Combination Peels</h4>
+                    <p className="text-sm text-gray-300 mt-2">Customized Solutions</p>
                   </div>
                 </div>
               </motion.div>
