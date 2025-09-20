@@ -386,23 +386,46 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-          <Card className="bg-gradient-to-br from-purple-900/30 to-purple-600/20 border-purple-500 border-2 backdrop-blur-sm shadow-2xl">
-            <CardContent className="p-12">
-              <h3 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">PRGF / PRP: Help Your Body Heal Itself</h3>
-              <p className="text-lg text-gray-200 leading-relaxed mb-8">
-                Thanks to this process, the effects or any injury, trauma or degenerative process (including aging) can be countered in:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
-                <div className="text-purple-200 font-medium">• Tendons</div>
-                <div className="text-purple-200 font-medium">• Muscles</div>
-                <div className="text-purple-200 font-medium">• Hair growth and hair regrowth</div>
-                <div className="text-purple-200 font-medium">• Skin</div>
-                <div className="text-purple-200 font-medium">• Cartilage</div>
+          <Card className="bg-gradient-to-br from-purple-900/40 to-black/60 border-purple-400/30 border backdrop-blur-lg shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] group">
+            <CardContent className="p-12 relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-300/10 to-transparent rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-purple-200 via-white to-purple-100 bg-clip-text text-transparent">
+                  PRGF / PRP: Help Your Body Heal Itself
+                </h3>
+                
+                <p className="text-lg text-gray-200 leading-relaxed mb-8">
+                  Thanks to this process, the effects or any injury, trauma or degenerative process (including aging) can be countered in:
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                  {[
+                    { icon: "🦴", text: "Tendons" },
+                    { icon: "💪", text: "Muscles" },
+                    { icon: "💇‍♀️", text: "Hair growth and hair regrowth" },
+                    { icon: "✨", text: "Skin" },
+                    { icon: "🦴", text: "Cartilage" }
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center space-x-3 p-4 bg-white/5 rounded-xl border border-purple-400/20 hover:bg-white/10 hover:border-purple-300/40 transition-all duration-300 group/item">
+                      <span className="text-2xl group-hover/item:scale-110 transition-transform duration-300">{item.icon}</span>
+                      <span className="text-purple-100 font-medium">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="bg-gradient-to-r from-purple-600/20 to-purple-400/20 rounded-xl p-6 border border-purple-400/30">
+                  <p className="text-xl text-purple-100 font-light leading-relaxed text-center">
+                    Simply put, PRGF is the most effective way for your body to, quite literally, heal itself and it's a procedure commonly adopted by celebrities to heal scars and reverse the signs of aging.
+                  </p>
+                </div>
+                
+                <div className="flex justify-center mt-8">
+                  <div className="w-24 h-1 bg-gradient-to-r from-purple-400 via-purple-300 to-purple-500 rounded-full animate-pulse"></div>
+                </div>
               </div>
-              <p className="text-xl text-purple-200 font-medium">
-                Simply put, PRGF is the most effective way for your body to, quite literally, heal itself and it's a procedure commonly adopted by celebrities to heal scars and reverse the signs of aging.
-              </p>
-              <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto rounded-full mt-6"></div>
             </CardContent>
           </Card>
             </motion.div>
