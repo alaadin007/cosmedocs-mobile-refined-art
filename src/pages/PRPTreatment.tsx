@@ -351,7 +351,7 @@ const PRPTreatment = () => {
         </section>
 
         {/* About PRP */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[85px]">
+        <section className="bg-accent py-[85px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
             opacity: 0,
