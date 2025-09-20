@@ -451,28 +451,6 @@ const PRPTreatment = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="bg-gradient-to-b from-[#0A0A0A] to-black py-[85px]">
-          <div className="page-container">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
-                PRP Benefits
-              </h2>
-              <p className="text-xl text-white/70 font-normal max-w-3xl mx-auto">
-                Comprehensive rejuvenation using your body's natural healing properties
-              </p>
-            </motion.div>
-
-        {/* Benefits Section */}
         <section className="py-20 bg-accent text-white">
           <div className="page-container">
             <motion.div
@@ -642,8 +620,6 @@ const PRPTreatment = () => {
                 </Card>
               </motion.div>
             </div>
-          </div>
-        </section>
           </div>
         </section>
 
