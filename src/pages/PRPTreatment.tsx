@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star, Activity, Syringe } from "lucide-react";
+import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star, Activity, Syringe, CheckCircle } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -509,8 +509,8 @@ const PRPTreatment = () => {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <Star className="h-4 w-4 text-white" />
+                    <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-white" />
                     </div>
                     <div className="flex-1">
                       <p className="text-white font-medium">{benefit}</p>
