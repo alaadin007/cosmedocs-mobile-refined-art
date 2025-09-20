@@ -124,7 +124,7 @@ const MoleSkinTagRemoval = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Expert Mole & Skin Tag Removal London</span>
+                  <span className="text-purple-300">Mole & Skin Tag Removal</span>
                   <span className="block text-sm mt-4">Invisible art - safe removal that speaks without words</span>
                 </h1>
                 <div className="mb-8">
