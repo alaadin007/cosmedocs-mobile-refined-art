@@ -370,7 +370,7 @@ const HydraFacial = () => {
                   HydraFacial is suitable for virtually everyone and addresses multiple skin concerns across all skin types
                 </p>
                 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div className="grid grid-cols-3 gap-4">
                   <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
                     <h4 className="text-lg font-semibold text-white">Oily Skin</h4>
                   </div>
