@@ -263,7 +263,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
+              <h2 className="text-3xl font-bold mb-6 text-white">
                 PRGF / PRP Treatment
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -286,7 +286,7 @@ const PRPTreatment = () => {
           }}>
               <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
                 <CardContent className="p-12">
-                  <h3 className="text-3xl font-light mb-8">Help Your Body Heal Itself</h3>
+                  <h3 className="text-3xl font-bold mb-8 text-white">Help Your Body Heal Itself</h3>
                   <p className="text-lg text-white/80 leading-relaxed mb-8">
                     PRP works by using platelets from your own blood for both stimulation and acceleration of tissue regeneration and healing. 
                     This natural process can counter the effects of injury, trauma, or degenerative processes including aging in tendons, 
@@ -316,7 +316,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
+              <h2 className="text-3xl font-bold mb-6 text-white">
                 Treatment Options
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -370,7 +370,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
+              <h2 className="text-3xl font-bold mb-6 text-white">
                 PRP Benefits
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -443,7 +443,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-                <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
+                <h2 className="text-3xl font-bold mb-6 text-white">
                   PRP in Action
                 </h2>
                 <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -759,7 +759,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-5xl md:text-6xl text-white mb-8 tracking-tight font-bold">
+              <h2 className="text-3xl font-bold mb-8 text-white">
                 Ready to Begin?
               </h2>
               <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
