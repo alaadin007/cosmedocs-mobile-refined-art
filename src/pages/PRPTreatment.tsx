@@ -369,7 +369,8 @@ const PRPTreatment = () => {
                 PRGF / PRP Treatment
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP).
+                PRGF / PRP<br/>
+                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP). It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing.
               </p>
             </motion.div>
 
