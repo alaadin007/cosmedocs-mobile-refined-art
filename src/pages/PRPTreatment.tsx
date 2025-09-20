@@ -1,7 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star } from "lucide-react";
+import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star, Activity, Syringe } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateSEOMetadata } from "@/utils/seo";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -127,7 +135,7 @@ const PRPTreatment = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section - Updated to match LipFillers design */}
+        {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -138,15 +146,9 @@ const PRPTreatment = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  PRP Treatment
-                  <span className="block text-purple-300">Vampire Facial</span>
-                  <span className="block text-sm mt-4">Natural skin rejuvenation using your body's healing power</span>
+                  <span className="text-purple-300">PRP Treatment London</span>
+                  <span className="block text-sm mt-4">Invisible art - natural skin rejuvenation using your body's healing power</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Price on consultation</p>
                   <p className="text-sm text-gray-300">#cosmeprp - Check out our IG for hundreds more natural, subtle transformations</p>
@@ -158,7 +160,11 @@ const PRPTreatment = () => {
                   >
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     View Price List
                   </Button>
                 </div>
@@ -169,7 +175,80 @@ const PRPTreatment = () => {
           </div>
         </section>
 
-        {/* Treatment Overview */}
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">PRP Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Procedure Time</h3>
+                <p className="text-gray-300">30 minutes</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">18 months</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">24-48 hours</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthetic</h3>
+                <p className="text-gray-300">Local numbing</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* About PRP */}
         <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[85px]">
           <div className="page-container">
             <motion.div className="text-center mb-20" initial={{
@@ -193,29 +272,6 @@ const PRPTreatment = () => {
               </p>
             </motion.div>
 
-            {/* Treatment Specifications */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-20">
-              {treatmentSpecs.map((spec, index) => <motion.div key={spec.title} className="text-center" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.6,
-              delay: index * 0.1
-            }} viewport={{
-              once: true
-            }}>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                    <spec.icon className="h-8 w-8 text-white mx-auto mb-4" />
-                    <h3 className="text-sm font-light text-white/80 mb-2">{spec.title}</h3>
-                    <p className="text-lg font-light text-white">{spec.value}</p>
-                  </div>
-                </motion.div>)}
-            </div>
-
-            {/* About PRP */}
             <motion.div className="max-w-4xl mx-auto text-center" initial={{
             opacity: 0,
             y: 30
@@ -413,109 +469,278 @@ const PRPTreatment = () => {
           </section>}
 
         {/* Before & After Gallery */}
-        <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[16px]">
-          <div className="page-container py-[85px]">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
-                Before & After
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                See the transformative results achieved with our PRP treatments
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before and After PRP Treatment Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Explore authentic before and after PRP treatment results from our London clinic. 
+                Our natural healing approach delivers transformative skin rejuvenation and hair restoration using your body's own platelets.
               </p>
             </motion.div>
 
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 0.2
-          }} viewport={{
-            once: true
-          }}>
-              <BeforeAfterGrid images={[{
-              src: "/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png",
-              alt: "PRP facial treatment before and after",
-              caption: "PRP facial rejuvenation showing improved skin texture and reduced fine lines after 3 sessions"
-            }, {
-              src: "/lovable-uploads/b4495de4-9009-4381-8105-a36d078fcb76.png",
-              alt: "PRP hair treatment results",
-              caption: "PRP hair restoration demonstrating increased hair density and thickness after 6 months"
-            }, {
-              src: "/lovable-uploads/8785b0dd-a50d-4e0a-b691-3254b6c5f925.png",
-              alt: "PRP under-eye treatment before and after",
-              caption: "Under-eye PRP treatment reducing dark circles and improving skin elasticity"
-            }, {
-              src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png",
-              alt: "PRP acne scarring treatment results",
-              caption: "PRP therapy for acne scarring showing significant improvement in skin texture and tone"
-            }]} initialDisplay={4} loadMoreIncrement={4} />
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="relative group cursor-pointer p-2"
+                  >
+                    <img 
+                      src="/lovable-uploads/c1c5edd5-4262-4f61-8d28-74a0e9c48653.png"
+                      alt="PRP facial treatment before and after"
+                      className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                    <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                      <p className="text-white text-sm font-medium">PRP facial rejuvenation showing improved skin texture and reduced fine lines after 3 sessions</p>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="relative group cursor-pointer p-2"
+                  >
+                    <img 
+                      src="/lovable-uploads/b4495de4-9009-4381-8105-a36d078fcb76.png"
+                      alt="PRP hair treatment results"
+                      className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                    <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                      <p className="text-white text-sm font-medium">PRP hair restoration demonstrating increased hair density and thickness after 6 months</p>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="relative group cursor-pointer p-2"
+                  >
+                    <img 
+                      src="/lovable-uploads/8785b0dd-a50d-4e0a-b691-3254b6c5f925.png"
+                      alt="PRP under-eye treatment before and after"
+                      className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                    <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                      <p className="text-white text-sm font-medium">Under-eye PRP treatment reducing dark circles and improving skin elasticity</p>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="relative group cursor-pointer p-2"
+                  >
+                    <img 
+                      src="/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png"
+                      alt="PRP acne scarring treatment results"
+                      className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                    <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                      <p className="text-white text-sm font-medium">PRP therapy for acne scarring showing significant improvement in skin texture and tone</p>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-accent text-white" id="pricing-section">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">PRP Treatment Pricing</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for our comprehensive PRP treatments. All consultations include expert assessment and personalized treatment planning.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">PRP Facial (Vampire Facial)</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Complete facial rejuvenation using your body's natural healing properties for glowing, youthful skin.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Price on consultation</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Includes comprehensive assessment</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Treatment plan included</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">PRP Hair Treatment</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Stimulate hair follicles and promote new hair growth for thicker, healthier hair naturally.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Price on consultation</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Scalp assessment included</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Follow-up care plan</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">PRP Intimate Rejuvenation</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Non-surgical intimate wellness treatment for enhanced confidence and comfort.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Price on consultation</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Private consultation included</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-white">Aftercare support</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                onClick={() => window.open(bookingUrl, "_blank")}
+              >
+                Book Free Consultation
+              </Button>
+              <p className="text-sm text-gray-300 mt-4">
+                All treatments include comprehensive consultation and aftercare guidance
+              </p>
             </motion.div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="bg-black py-px">
-          <div className="page-container py-[75px]">
-            <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-5xl md:text-6xl text-white mb-6 tracking-tight font-bold">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Everything you need to know about PRP treatment
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Everything you need to know about PRP treatment and what to expect during your journey.
               </p>
             </motion.div>
 
-            <div className="max-w-7xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
-                {faqs.map((faq, index) => <motion.div key={index} initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.6,
-                delay: index * 0.1
-              }} viewport={{
-                once: true
-              }}>
-                  <Collapsible open={openFaq === index} onOpenChange={() => setOpenFaq(openFaq === index ? null : index)}>
-                    <CollapsibleTrigger className="w-full bg-white/5 hover:bg-white/10 border border-white/20 rounded-lg p-6 text-left transition-all duration-300">
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-lg font-light text-white pr-4">{faq.question}</h3>
-                        {openFaq === index ? <ChevronUp className="h-5 w-5 text-white/60 flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-white/60 flex-shrink-0" />}
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="bg-white/5 border border-white/20 border-t-0 rounded-b-lg p-6">
-                      <p className="text-white/80 leading-relaxed">{faq.answer}</p>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </motion.div>)}
-              </div>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <AccordionItem value={`item-${index}`} className="border-gray-700">
+                      <AccordionTrigger className="text-white hover:text-purple-300 text-left">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-gray-300">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
