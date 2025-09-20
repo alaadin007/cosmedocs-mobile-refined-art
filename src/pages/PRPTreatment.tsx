@@ -390,8 +390,7 @@ const PRPTreatment = () => {
             <CardContent className="p-12">
               <h3 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">PRGF / PRP: Help Your Body Heal Itself</h3>
               <p className="text-lg text-gray-200 leading-relaxed mb-8">
-                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP).
-                It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing. Thanks to this process, the effects or any injury, trauma or degenerative process (including aging) can be countered in:
+                Thanks to this process, the effects or any injury, trauma or degenerative process (including aging) can be countered in:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
                 <div className="text-purple-200 font-medium">• Tendons</div>
