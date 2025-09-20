@@ -655,44 +655,86 @@ const PRPTreatment = () => {
           </div>
         </section>
 
-        {/* Video Section */}
-        {videos && videos.length > 0 && <section className="bg-gradient-to-b from-black to-[#0A0A0A] py-[85px]">
-            <div className="page-container">
-              <motion.div className="text-center mb-20" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-                <h2 className="text-3xl font-bold mb-6 text-white">
-                  PRP in Action
-                </h2>
-                <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                  Watch our experts perform PRP treatments and see the process in detail
+        {/* PRP in Action */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Text Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">PRP in Action</h2>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Watch our experts perform PRP treatments and see the precise process that delivers exceptional results.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Blood Collection</h4>
+                      <p className="text-gray-300">A small amount of blood is drawn from your arm, similar to a routine blood test</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Centrifuge Processing</h4>
+                      <p className="text-gray-300">The blood is processed in a specialized centrifuge to separate and concentrate the platelets</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Platelet Extraction</h4>
+                      <p className="text-gray-300">The platelet-rich plasma is carefully extracted, containing concentrated growth factors</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Precise Injection</h4>
+                      <p className="text-gray-300">Using ultra-fine needles, the PRP is injected into targeted areas for optimal results</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300 italic">
+                  "The entire process takes about 30 minutes and harnesses your body's natural healing mechanisms for transformative results."
                 </p>
               </motion.div>
 
-              <motion.div className="max-w-4xl mx-auto" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 0.2
-          }} viewport={{
-            once: true
-          }}>
-                <TreatmentVideoPlayer video={videos[0]} treatmentName="PRP Treatment" showControls={true} className="rounded-2xl overflow-hidden border border-white/20" />
+              {/* Image Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                {videos && videos.length > 0 ? (
+                  <TreatmentVideoPlayer 
+                    video={videos[0]} 
+                    treatmentName="PRP Treatment" 
+                    showControls={true} 
+                    className="rounded-2xl overflow-hidden border border-white/20 shadow-2xl" 
+                  />
+                ) : (
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                    <p className="text-white/70">PRP Treatment Process</p>
+                  </div>
+                )}
               </motion.div>
             </div>
-          </section>}
+          </div>
+        </section>
 
 
         {/* Pricing Section */}
