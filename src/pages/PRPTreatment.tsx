@@ -145,12 +145,12 @@ const PRPTreatment = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 leading-tight text-white">
-                  <span className="text-purple-300 font-extralight">PRP Treatment London</span>
-                  <span className="block text-base md:text-lg mt-4 font-light">Invisible art - natural skin rejuvenation using your body's healing power</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">PRP Treatment London</span>
+                  <span className="block text-sm mt-4">Invisible art - natural skin rejuvenation using your body's healing power</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-xl md:text-2xl text-purple-300 font-light">Natural Regeneration</p>
+                  <p className="text-2xl text-purple-300 font-bold">Natural Regeneration</p>
                   <p className="text-sm text-gray-300">#cosmeprp - Check out our IG for hundreds more natural, subtle transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
