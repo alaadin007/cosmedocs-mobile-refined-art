@@ -334,7 +334,6 @@ const PeelToReveal = () => {
               <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
               <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
-
           </div>
         </section>
 
@@ -420,7 +419,7 @@ const PeelToReveal = () => {
         </section>
 
         {/* Peel to Reveal Aftercare & Results Timeline */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Aftercare */}
@@ -430,7 +429,7 @@ const PeelToReveal = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 backdrop-blur-sm border-2 border-purple-400/50 rounded-xl p-8">
+                <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-xl p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center">
                       <Shield className="text-purple-600" size={28} />
@@ -446,90 +445,90 @@ const PeelToReveal = () => {
                   </p>
 
                   <div className="space-y-6">
-                    <div className="bg-gradient-to-r from-red-900/20 to-red-800/10 border border-red-400/30 rounded-lg p-5">
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-5">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-red-100 rounded-full w-8 h-8 flex items-center justify-center">
-                          <span className="text-red-600 font-bold text-sm">24h</span>
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center">
+                          <span className="text-purple-600 font-bold text-sm">24h</span>
                         </div>
                         <h3 className="text-lg font-semibold text-white">First 24-48 Hours</h3>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Avoid direct sun exposure completely</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Use gentle, fragrance-free cleanser</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Apply provided moisturizer frequently</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">No makeup or active skincare</span>
                         </div>
                         <div className="flex items-center space-x-3 sm:col-span-2">
-                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Avoid touching or picking at skin</span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-orange-900/20 to-orange-800/10 border border-orange-400/30 rounded-lg p-5">
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-5">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-orange-100 rounded-full w-8 h-8 flex items-center justify-center">
-                          <span className="text-orange-600 font-bold text-sm">3-7</span>
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center">
+                          <span className="text-purple-600 font-bold text-sm">3-7</span>
                         </div>
                         <h3 className="text-lg font-semibold text-white">Days 3-7 (Peeling Phase)</h3>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">SPF 50+ mandatory when outdoors</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Allow natural peeling process</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Keep skin hydrated with gentle products</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Avoid exfoliants and harsh treatments</span>
                         </div>
                         <div className="flex items-center space-x-3 sm:col-span-2">
-                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Light cover-up makeup allowed from day 3</span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-green-900/20 to-green-800/10 border border-green-400/30 rounded-lg p-5">
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-5">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-green-100 rounded-full w-8 h-8 flex items-center justify-center">
-                          <CheckCircle className="text-green-600" size={20} />
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center">
+                          <CheckCircle className="text-purple-600" size={20} />
                         </div>
                         <h3 className="text-lg font-semibold text-white">Ongoing Care</h3>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Daily SPF protection essential</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Resume normal skincare after 10 days</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Stay well-hydrated</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
                           <span className="text-gray-300 text-sm">Follow practitioner's recommendations</span>
                         </div>
                       </div>
@@ -607,7 +606,7 @@ const PeelToReveal = () => {
         </section>
 
         {/* Treatment Steps */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -894,28 +893,30 @@ const PeelToReveal = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20">
+        <section className="py-20 bg-black">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Clearer, Brighter Skin?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how Peel to Reveal 
-                can transform your skin with our revolutionary fusion technology.
+              <h2 className="text-4xl font-bold mb-8 text-white">Ready to Transform Your Skin?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your Peel to Reveal consultation today and discover the power of advanced fusion technology for radiant, youthful skin.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
                   onClick={() => window.open(bookingUrl, '_blank')}
                 >
-                  Book Free Consultation
+                  Book Your Consultation
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
+                  onClick={() => window.open('tel:0333 0551 503', '_self')}
+                >
                   Call 0333 0551 503
                 </Button>
               </div>
