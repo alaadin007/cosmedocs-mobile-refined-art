@@ -351,39 +351,74 @@ const PRPTreatment = () => {
         </section>
 
         {/* About PRP */}
-        <section className="py-20 bg-accent">
+        <section className="bg-accent py-[85px]">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">PRGF / PRP Treatment</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+            <motion.div className="text-center mb-20" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94]
+          }} viewport={{
+            once: true
+          }}>
+              <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">
+                PRGF / PRP Treatment
+              </h2>
+              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+                PRGF / PRP<br/>
                 Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP). It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing.
               </p>
             </motion.div>
 
-            {/* Central Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto mt-16"
-            >
-              <Card className="bg-gray-900/50 border-purple-500 border-2">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-white text-2xl">Help Your Body Heal Itself</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-300 leading-relaxed">
-                    Thanks to this process, the effects of any injury, trauma or degenerative process (including aging) can be countered in:
-                  </p>
-                </CardContent>
-              </Card>
+            <motion.div className="max-w-4xl mx-auto text-center" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.2
+          }} viewport={{
+            once: true
+          }}>
+          <Card className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 border border-purple-400/20 backdrop-blur-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
+            <CardContent className="p-16">
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                  <Droplets className="w-10 h-10 text-white" />
+                </div>
+              </div>
+              
+              <h3 className="text-3xl md:text-4xl font-light mb-6 bg-gradient-to-r from-purple-300 via-white to-purple-200 bg-clip-text text-transparent text-center">
+                PRGF / PRP: Help Your Body Heal Itself
+              </h3>
+              
+              <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
+                Thanks to this process, the effects of any injury, trauma or degenerative process (including aging) can be countered in:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div className="bg-purple-800/20 rounded-lg p-4 text-center border border-purple-400/10">
+                  <div className="text-purple-300 font-medium text-lg">Tendons</div>
+                </div>
+                <div className="text-purple-200 font-medium">• Muscles</div>
+                <div className="text-purple-200 font-medium">• Hair growth and hair regrowth</div>
+                <div className="text-purple-200 font-medium">• Skin</div>
+                <div className="text-purple-200 font-medium">• Cartilage</div>
+              </div>
+              
+              <p className="text-xl text-purple-200 font-light">
+                Simply put, PRGF is the most effective way for your body to, quite literally, heal itself and it's a procedure commonly adopted by celebrities to heal scars and reverse the signs of aging.
+              </p>
+              
+              <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </CardContent>
+          </Card>
             </motion.div>
           </div>
         </section>
