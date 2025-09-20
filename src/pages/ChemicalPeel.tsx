@@ -654,85 +654,129 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4 text-white">Chemical Peel Pricing</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for professional chemical peel treatments in London
+              <h2 className="text-3xl font-bold mb-4 text-white">Chemical Peel Pricing London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for professional chemical peel treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
+                <Card className="bg-accent border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Light Peels</CardTitle>
+                    <CardTitle className="text-white text-2xl">Light Peels</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£120</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="text-3xl font-bold text-purple-300">£120</div>
-                    <p className="text-gray-300">Gentle surface exfoliation</p>
-                    <Button 
-                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
-                      onClick={() => window.open(bookingUrl, '_blank')}
-                    >
-                      Book Now
-                    </Button>
+                    <p className="text-gray-300">Perfect for sensitive skin and first-time treatments</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Glycolic or lactic acid</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Minimal downtime</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/10 backdrop-blur-sm border-purple-300 hover:bg-white/15 transition-all duration-300 text-center h-full relative">
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Medium Peels</CardTitle>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Medium Peels</CardTitle>
+                    <div className="text-white text-4xl font-bold">£170</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="text-3xl font-bold text-purple-300">£170</div>
-                    <p className="text-gray-300">Moderate depth resurfacing</p>
-                    <Button 
-                      className="w-full bg-purple-600 text-white hover:bg-purple-700 rounded-full"
-                      onClick={() => window.open(bookingUrl, '_blank')}
-                    >
-                      Book Treatment
-                    </Button>
+                    <p className="text-purple-100">Ideal for moderate skin concerns and visible results</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">TCA or Jessner's peel</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">2-week follow-up</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
+                <Card className="bg-accent border-gray-700 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Deep Peels</CardTitle>
+                    <CardTitle className="text-white text-2xl">Deep Peels</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£200</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="text-3xl font-bold text-purple-300">£200</div>
-                    <p className="text-gray-300">Intensive skin rejuvenation</p>
-                    <Button 
-                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
-                      onClick={() => window.open(bookingUrl, '_blank')}
-                    >
-                      Book Consultation
-                    </Button>
+                    <p className="text-gray-300">Advanced treatment for significant skin rejuvenation</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full medical assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Phenol or high-strength TCA</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Comprehensive aftercare plan</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6">
+                *All treatments include consultation, personalized assessment, and post-treatment care
+              </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+                Book Your Consultation
+              </Button>
+            </motion.div>
           </div>
         </section>
 
