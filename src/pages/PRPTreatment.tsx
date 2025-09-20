@@ -331,7 +331,7 @@ const PRPTreatment = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                 Treatment Options
               </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Discover how PRP can address your specific concerns with targeted treatment approaches
               </p>
             </motion.div>
