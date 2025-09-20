@@ -188,8 +188,8 @@ const PeelToReveal = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Peel to Reveal London</span>
-                  <span className="block text-sm mt-4">Invisible art - revolutionary skin transformation that speaks without words</span>
+                  <span className="text-purple-300">Peel to Reveal</span>
+                  <span className="block text-sm mt-4">Invisible art - revolutionary skin transformation with chemical peel that speaks without words</span>
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Deep Skin Rejuvenation</p>
