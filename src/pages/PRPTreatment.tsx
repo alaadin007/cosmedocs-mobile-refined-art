@@ -480,54 +480,178 @@ const PRPTreatment = () => {
               </p>
             </motion.div>
 
-            <motion.div className="grid md:grid-cols-2 gap-6" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 0.2
-          }} viewport={{
-            once: true
-          }}>
-              {benefits.map((benefit, index) => <motion.div key={index} className="group relative overflow-hidden" initial={{
-              opacity: 0,
-              scale: 0.9
-            }} whileInView={{
-              opacity: 1,
-              scale: 1
-            }} transition={{
-              duration: 0.6,
-              delay: index * 0.1
-            }} viewport={{
-              once: true
-            }} whileHover={{
-              scale: 1.02
-            }}>
-                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-white/10">
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-                    
-                    {/* Content */}
-                    <div className="relative z-10 flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <Star className="h-6 w-6 text-primary group-hover:text-white transition-colors duration-300" />
+        {/* Benefits Section */}
+        <section className="py-20 bg-accent text-white">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">
+                PRP Benefits
+              </h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Comprehensive rejuvenation using your body's natural healing properties for transformative results
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                      <Star className="h-4 w-4 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white font-medium">{benefit}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Aftercare & Results Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Care & Timeline</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Essential information about caring for your skin after PRP treatment and understanding your results timeline
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Aftercare Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl flex items-center space-x-3">
+                      <Shield className="h-6 w-6 text-purple-400" />
+                      <span>Post-Treatment Care</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Proper aftercare ensures optimal results and minimizes any potential side effects from your PRP treatment.
+                    </p>
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">First 24 Hours</h4>
+                          <p className="text-gray-300 text-sm">Avoid touching the treated area, apply ice packs if needed, and stay well-hydrated</p>
+                        </div>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
-                          {benefit}
-                        </p>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">First Week</h4>
+                          <p className="text-gray-300 text-sm">Avoid strenuous exercise, saunas, and direct sun exposure. Use gentle skincare products</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">Ongoing Care</h4>
+                          <p className="text-gray-300 text-sm">Maintain a good skincare routine, use SPF protection, and follow our specialist recommendations</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">What to Expect</h4>
+                          <p className="text-gray-300 text-sm">Mild soreness and bruising are normal and will subside within 2-3 days</p>
+                        </div>
                       </div>
                     </div>
-                    
-                    {/* Decorative elements */}
-                    <div className="absolute top-2 right-2 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
-                    <div className="absolute bottom-2 left-2 w-8 h-8 bg-gradient-to-br from-white/5 to-transparent rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
-                  </div>
-                </motion.div>)}
-            </motion.div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Results & Timeline Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl flex items-center space-x-3">
+                      <Calendar className="h-6 w-6 text-purple-400" />
+                      <span>Results & Timeline</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Understanding when you'll see results and planning your treatment journey for optimal outcomes.
+                    </p>
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">Initial Results</h4>
+                          <p className="text-gray-300 text-sm">Visible improvements appear within 2-6 weeks as your body begins natural regeneration</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">Peak Results</h4>
+                          <p className="text-gray-300 text-sm">Optimal results typically develop over 3-6 months as collagen production increases</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">Results Duration</h4>
+                          <p className="text-gray-300 text-sm">Effects last approximately 18 months for skin treatments, similar for hair restoration</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">Next Session</h4>
+                          <p className="text-gray-300 text-sm">Follow-up treatments recommended every 4-6 weeks for 3 sessions, then maintenance every 6-12 months</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div>
+                          <h4 className="text-white font-medium mb-1">Long-term Benefits</h4>
+                          <p className="text-gray-300 text-sm">Regular maintenance sessions help sustain results and continue natural regeneration processes</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
           </div>
         </section>
 
