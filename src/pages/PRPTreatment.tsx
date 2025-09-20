@@ -188,7 +188,7 @@ const PRPTreatment = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">PRP Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -231,19 +231,6 @@ const PRPTreatment = () => {
                 <p className="text-gray-300">24-48 hours</p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Shield className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthetic</h3>
-                <p className="text-gray-300">Local numbing</p>
-              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
