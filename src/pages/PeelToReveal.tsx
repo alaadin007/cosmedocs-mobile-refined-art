@@ -335,14 +335,6 @@ const PeelToReveal = () => {
               <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
 
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Peel to Reveal Results Gallery"
-                description="Comprehensive gallery of our skin transformation treatments"
-              />
-            </div>
           </div>
         </section>
 
@@ -361,21 +353,29 @@ const PeelToReveal = () => {
                 <p>
                   Peel to Reveal is a revolutionary fusion peel treatment that combines advanced chemical exfoliation with powerful antioxidants to deliver comprehensive skin renewal. Using our proprietary CRES (Cleanse, Revitalise, Exfoliate, Stimulate) system, this innovative treatment addresses multiple skin concerns simultaneously.
                 </p>
-                <p>
-                  The treatment features a unique blend of multi-acid formulations including Glycolic, Lactic, Salicylic, and TCA acids, enhanced with potent antioxidants like Glutathione, Kojic, Mandelic, and Azelaic acids. Natural extracts from papaya, licorice, and bearberry further boost the treatment's brightening and smoothing effects.
-                </p>
               </div>
 
               {/* Understanding Aging Card */}
               <div className="mt-12 max-w-4xl mx-auto">
-                <Card className="bg-white/5 backdrop-blur-sm border-purple-400/30 hover:border-purple-400/50 hover:bg-white/10 transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-3xl font-bold text-white mb-4">Understanding Aging</CardTitle>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 backdrop-blur-sm border-2 border-purple-400 hover:border-purple-300 hover:bg-gradient-to-br hover:from-purple-900/30 hover:to-purple-800/20 transition-all duration-300 shadow-xl">
+                  <CardHeader className="text-center pb-4">
+                    <div className="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                      <Activity className="text-purple-600" size={32} />
+                    </div>
+                    <CardTitle className="text-3xl font-bold text-white mb-2">Understanding Skin Aging</CardTitle>
+                    <p className="text-purple-300 font-medium">The science behind cellular regeneration</p>
                   </CardHeader>
-                  <CardContent className="p-8">
-                    <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Our skin cells become dormant and cellular regeneration slows down as we age, leaving dull, damaged, dead skin cells on the surface. Collagen, elastin, hyaluronic acid and other structural elements vital for skin health start to decrease from our mid-20s, and increasing layers of dead skin and micro-pigmentation cause unevenly toned skins with an irregular texture and enlarged pores.
-                    </p>
+                  <CardContent className="p-8 pt-4">
+                    <div className="space-y-4">
+                      <p className="text-gray-300 text-lg leading-relaxed text-center">
+                        As we age, skin cells become dormant and cellular regeneration slows down dramatically, leaving dull, damaged, dead skin cells on the surface. This natural process begins earlier than most people realize.
+                      </p>
+                      <div className="bg-white/5 rounded-lg p-6 border border-purple-400/30">
+                        <p className="text-gray-300 text-base leading-relaxed text-center">
+                          Collagen, elastin, and hyaluronic acid - the vital structural elements for healthy skin - start to decrease from our mid-20s. Increasing layers of dead skin and micro-pigmentation cause uneven skin tone with irregular texture and enlarged pores.
+                        </p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
