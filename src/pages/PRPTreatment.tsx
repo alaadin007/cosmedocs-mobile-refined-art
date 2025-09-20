@@ -146,7 +146,7 @@ const PRPTreatment = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">PRP Treatment London</span>
+                  <span className="text-purple-300">PRP London</span>
                   <span className="block text-sm mt-4">Invisible art - natural skin rejuvenation using your body's healing power</span>
                 </h1>
                 <div className="mb-8">
