@@ -199,8 +199,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Clock className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Procedure Time</h3>
-                <p className="text-gray-300">30 minutes</p>
+                <h3 className="text-lg font-bold text-white mb-2">Procedure Time</h3>
+                <p className="text-gray-300 font-normal">30 minutes</p>
               </motion.div>
 
               <motion.div
@@ -213,8 +213,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Calendar className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">18 months</p>
+                <h3 className="text-lg font-bold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300 font-normal">18 months</p>
               </motion.div>
 
               <motion.div
@@ -227,8 +227,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">24-48 hours</p>
+                <h3 className="text-lg font-bold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300 font-normal">24-48 hours</p>
               </motion.div>
 
               <motion.div
@@ -241,8 +241,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Shield className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Anaesthetic</h3>
-                <p className="text-gray-300">Local numbing</p>
+                <h3 className="text-lg font-bold text-white mb-2">Anaesthetic</h3>
+                <p className="text-gray-300 font-normal">Local numbing</p>
               </motion.div>
             </div>
           </div>
@@ -259,7 +259,7 @@ const PRPTreatment = () => {
               className="text-center mb-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Before and After PRP Treatment Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto font-normal">
                 Explore authentic before and after PRP treatment results from our London clinic. 
                 Our natural healing approach delivers transformative skin rejuvenation and hair restoration using your body's own platelets.
               </p>
@@ -413,7 +413,7 @@ const PRPTreatment = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                 Treatment Options
               </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+              <p className="text-xl text-white/70 font-normal max-w-3xl mx-auto">
                 Discover how PRP can address your specific concerns with targeted treatment approaches
               </p>
             </motion.div>
@@ -433,14 +433,14 @@ const PRPTreatment = () => {
             }}>
                 <Card className="bg-gradient-to-b from-purple-900/20 to-gray-900/50 border-purple-500/30 text-white h-full hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
                   <CardHeader className="border-b border-purple-500/20">
-                    <CardTitle className="text-xl md:text-2xl font-light text-white">{type.title}</CardTitle>
+                    <CardTitle className="text-xl md:text-2xl font-bold text-white">{type.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6 pt-6">
-                    <p className="text-gray-300 leading-relaxed">{type.description}</p>
+                    <p className="text-gray-300 leading-relaxed font-normal">{type.description}</p>
                     <div className="space-y-3">
                       {type.benefits.map((benefit, idx) => <div key={idx} className="flex items-start space-x-3">
                           <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
-                            <span className="text-white/70 text-sm">{benefit}</span>
+                            <span className="text-white/70 text-sm font-normal">{benefit}</span>
                           </div>)}
                       </div>
                     </CardContent>
@@ -467,7 +467,7 @@ const PRPTreatment = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                 PRP Benefits
               </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+              <p className="text-xl text-white/70 font-normal max-w-3xl mx-auto">
                 Comprehensive rejuvenation using your body's natural healing properties
               </p>
             </motion.div>
@@ -485,7 +485,7 @@ const PRPTreatment = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
                 PRP Benefits
               </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto font-normal">
                 Comprehensive rejuvenation using your body's natural healing properties for transformative results
               </p>
             </motion.div>
@@ -505,7 +505,7 @@ const PRPTreatment = () => {
                       <CheckCircle className="h-4 w-4 text-white" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-white font-medium">{benefit}</p>
+                      <p className="text-white font-normal">{benefit}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -525,7 +525,7 @@ const PRPTreatment = () => {
               className="text-center mb-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Treatment Care & Timeline</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto font-normal">
                 Essential information about caring for your skin after PRP treatment and understanding your results timeline
               </p>
             </motion.div>
@@ -540,42 +540,42 @@ const PRPTreatment = () => {
               >
                 <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl md:text-2xl font-light flex items-center space-x-3">
+                    <CardTitle className="text-white text-xl md:text-2xl font-bold flex items-center space-x-3">
                       <Shield className="h-6 w-6 text-purple-400" />
                       <span>Post-Treatment Care</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 font-normal">
                       Proper aftercare ensures optimal results and minimizes any potential side effects from your PRP treatment.
                     </p>
                     <div className="space-y-4">
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">First 24 Hours</h4>
-                          <p className="text-gray-300 text-sm">Avoid touching the treated area, apply ice packs if needed, and stay well-hydrated</p>
+                           <h4 className="text-white font-bold mb-1">First 24 Hours</h4>
+                           <p className="text-gray-300 text-sm font-normal">Avoid touching the treated area, apply ice packs if needed, and stay well-hydrated</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">First Week</h4>
-                          <p className="text-gray-300 text-sm">Avoid strenuous exercise, saunas, and direct sun exposure. Use gentle skincare products</p>
+                           <h4 className="text-white font-bold mb-1">First Week</h4>
+                           <p className="text-gray-300 text-sm font-normal">Avoid strenuous exercise, saunas, and direct sun exposure. Use gentle skincare products</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">Ongoing Care</h4>
-                          <p className="text-gray-300 text-sm">Maintain a good skincare routine, use SPF protection, and follow our specialist recommendations</p>
+                           <h4 className="text-white font-bold mb-1">Ongoing Care</h4>
+                           <p className="text-gray-300 text-sm font-normal">Maintain a good skincare routine, use SPF protection, and follow our specialist recommendations</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">What to Expect</h4>
-                          <p className="text-gray-300 text-sm">Mild soreness and bruising are normal and will subside within 2-3 days</p>
+                           <h4 className="text-white font-bold mb-1">What to Expect</h4>
+                           <p className="text-gray-300 text-sm font-normal">Mild soreness and bruising are normal and will subside within 2-3 days</p>
                         </div>
                       </div>
                     </div>
@@ -592,49 +592,49 @@ const PRPTreatment = () => {
               >
                 <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl flex items-center space-x-3">
+                    <CardTitle className="text-white text-2xl font-bold flex items-center space-x-3">
                       <Calendar className="h-6 w-6 text-purple-400" />
                       <span>Results & Timeline</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">
-                      Understanding when you'll see results and planning your treatment journey for optimal outcomes.
-                    </p>
+                     <p className="text-gray-300 font-normal">
+                       Understanding when you'll see results and planning your treatment journey for optimal outcomes.
+                     </p>
                     <div className="space-y-4">
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">Initial Results</h4>
-                          <p className="text-gray-300 text-sm">Visible improvements appear within 2-6 weeks as your body begins natural regeneration</p>
+                           <h4 className="text-white font-bold mb-1">Initial Results</h4>
+                           <p className="text-gray-300 text-sm font-normal">Visible improvements appear within 2-6 weeks as your body begins natural regeneration</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">Peak Results</h4>
-                          <p className="text-gray-300 text-sm">Optimal results typically develop over 3-6 months as collagen production increases</p>
+                           <h4 className="text-white font-bold mb-1">Peak Results</h4>
+                           <p className="text-gray-300 text-sm font-normal">Optimal results typically develop over 3-6 months as collagen production increases</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">Results Duration</h4>
-                          <p className="text-gray-300 text-sm">Effects last approximately 18 months for skin treatments, similar for hair restoration</p>
+                           <h4 className="text-white font-bold mb-1">Results Duration</h4>
+                           <p className="text-gray-300 text-sm font-normal">Effects last approximately 18 months for skin treatments, similar for hair restoration</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">Next Session</h4>
-                          <p className="text-gray-300 text-sm">Follow-up treatments recommended every 4-6 weeks for 3 sessions, then maintenance every 6-12 months</p>
+                           <h4 className="text-white font-bold mb-1">Next Session</h4>
+                           <p className="text-gray-300 text-sm font-normal">Follow-up treatments recommended every 4-6 weeks for 3 sessions, then maintenance every 6-12 months</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                          <h4 className="text-white font-medium mb-1">Long-term Benefits</h4>
-                          <p className="text-gray-300 text-sm">Regular maintenance sessions help sustain results and continue natural regeneration processes</p>
+                           <h4 className="text-white font-bold mb-1">Long-term Benefits</h4>
+                           <p className="text-gray-300 text-sm font-normal">Regular maintenance sessions help sustain results and continue natural regeneration processes</p>
                         </div>
                       </div>
                     </div>
@@ -660,7 +660,7 @@ const PRPTreatment = () => {
                 className="space-y-6"
               >
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">PRP in Action</h2>
-                <p className="text-gray-300 text-lg leading-relaxed">
+                <p className="text-gray-300 text-lg leading-relaxed font-normal">
                   Watch our experts perform PRP treatments and see the precise process that delivers exceptional results.
                 </p>
                 
@@ -668,37 +668,37 @@ const PRPTreatment = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-light mb-2">Blood Collection</h4>
-                      <p className="text-gray-300">A small amount of blood is drawn from your arm, similar to a routine blood test</p>
+                      <h4 className="text-white font-bold mb-2">Blood Collection</h4>
+                      <p className="text-gray-300 font-normal">A small amount of blood is drawn from your arm, similar to a routine blood test</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-light mb-2">Centrifuge Processing</h4>
-                      <p className="text-gray-300">The blood is processed in a specialized centrifuge to separate and concentrate the platelets</p>
+                      <h4 className="text-white font-bold mb-2">Centrifuge Processing</h4>
+                      <p className="text-gray-300 font-normal">The blood is processed in a specialized centrifuge to separate and concentrate the platelets</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-light mb-2">Platelet Extraction</h4>
-                      <p className="text-gray-300">The platelet-rich plasma is carefully extracted, containing concentrated growth factors</p>
+                      <h4 className="text-white font-bold mb-2">Platelet Extraction</h4>
+                      <p className="text-gray-300 font-normal">The platelet-rich plasma is carefully extracted, containing concentrated growth factors</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-light mb-2">Precise Injection</h4>
-                      <p className="text-gray-300">Using ultra-fine needles, the PRP is injected into targeted areas for optimal results</p>
+                      <h4 className="text-white font-bold mb-2">Precise Injection</h4>
+                      <p className="text-gray-300 font-normal">Using ultra-fine needles, the PRP is injected into targeted areas for optimal results</p>
                     </div>
                   </div>
                 </div>
                 
-                <p className="text-gray-300 italic">
+                <p className="text-gray-300 italic font-normal">
                   "The entire process takes about 30 minutes and harnesses your body's natural healing mechanisms for transformative results."
                 </p>
               </motion.div>
@@ -740,7 +740,7 @@ const PRPTreatment = () => {
               className="text-center mb-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">PRP Treatment Investment</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto font-normal">
                 Our comprehensive PRP treatments provide natural healing and rejuvenation using your body's own platelets. 
                 All treatments include consultation, procedure, and aftercare support from our expert medical team.
               </p>
@@ -759,19 +759,19 @@ const PRPTreatment = () => {
                     <div className="text-purple-300 text-lg font-bold">Price on consultation</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Natural skin rejuvenation and anti-aging</p>
+                    <p className="text-gray-300 font-normal">Natural skin rejuvenation and anti-aging</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full facial assessment</span>
+                        <span className="text-gray-300 text-sm font-normal">Full facial assessment</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Professional application</span>
+                        <span className="text-gray-300 text-sm font-normal">Professional application</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare guidance</span>
+                        <span className="text-gray-300 text-sm font-normal">Aftercare guidance</span>
                       </div>
                     </div>
                   </CardContent>
@@ -793,7 +793,7 @@ const PRPTreatment = () => {
                     <div className="text-white text-lg font-bold">Price on consultation</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">Hair restoration and density improvement</p>
+                    <p className="text-purple-100 font-normal">Hair restoration and density improvement</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
@@ -828,7 +828,7 @@ const PRPTreatment = () => {
                     <div className="text-purple-300 text-lg font-bold">£50</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <p className="text-gray-300 font-normal">Professional assessment and treatment planning</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
@@ -855,7 +855,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mt-12"
             >
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6 font-normal">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
               <Button 
@@ -892,8 +892,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Award className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+                <h3 className="text-lg font-bold text-white mb-2">Experience</h3>
+                <p className="text-gray-300 font-normal">Over 1 million injections performed since 2007</p>
               </motion.div>
 
               <motion.div
@@ -906,8 +906,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Training</h3>
-                <p className="text-gray-300">
+                <h3 className="text-lg font-bold text-white mb-2">Training</h3>
+                <p className="text-gray-300 font-normal">
                   <a 
                     href="https://www.harleystreetinstitute.com" 
                     target="_blank" 
@@ -929,8 +929,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Your own blood - completely natural and safe</p>
+                <h3 className="text-lg font-bold text-white mb-2">Quality</h3>
+                <p className="text-gray-300 font-normal">Your own blood - completely natural and safe</p>
               </motion.div>
 
               <motion.div
@@ -943,8 +943,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Palette className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
+                <h3 className="text-lg font-bold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300 font-normal">'Invisible art' for natural results</p>
               </motion.div>
 
               <motion.div
@@ -957,8 +957,8 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-light text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+                <h3 className="text-lg font-bold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300 font-normal">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
@@ -975,7 +975,7 @@ const PRPTreatment = () => {
               className="text-center mb-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto font-normal">
                 Everything you need to know about PRP treatment and what to expect during your journey.
               </p>
             </motion.div>
