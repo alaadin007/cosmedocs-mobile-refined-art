@@ -302,7 +302,7 @@ const MoleSkinTagRemoval = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
+                <Card className="bg-accent border-purple-500 h-full">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">What Are Moles?</CardTitle>
                   </CardHeader>
@@ -329,7 +329,7 @@ const MoleSkinTagRemoval = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
+                <Card className="bg-accent border-purple-500 h-full">
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">What Are Skin Tags?</CardTitle>
                   </CardHeader>
