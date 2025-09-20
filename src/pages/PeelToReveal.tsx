@@ -422,6 +422,125 @@ const PeelToReveal = () => {
           </div>
         </section>
 
+        {/* Peel to Reveal Aftercare & Results Timeline */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Aftercare */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Peel to Reveal Aftercare</h2>
+                <p className="text-gray-300 mb-6">
+                  Follow these essential guidelines to ensure optimal healing and maximize your Peel to Reveal results:
+                </p>
+
+                <div className="space-y-4">
+                  <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-2">First 24-48 Hours</h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Avoid direct sun exposure completely</li>
+                      <li>• Use gentle, fragrance-free cleanser</li>
+                      <li>• Apply provided moisturizer frequently</li>
+                      <li>• No makeup or active skincare products</li>
+                      <li>• Avoid touching or picking at skin</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-2">Days 3-7 (Peeling Phase)</h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• SPF 50+ mandatory when outdoors</li>
+                      <li>• Allow natural peeling process</li>
+                      <li>• Keep skin hydrated with gentle products</li>
+                      <li>• Avoid exfoliants and harsh treatments</li>
+                      <li>• Light cover-up makeup allowed from day 3</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-2">Ongoing Care</h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Daily SPF protection essential</li>
+                      <li>• Resume normal skincare after 10 days</li>
+                      <li>• Stay well-hydrated</li>
+                      <li>• Follow practitioner's product recommendations</li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Results Timeline */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Results Timeline</h2>
+                <p className="text-gray-300 mb-6">
+                  Track your skin transformation journey and know what to expect at each stage:
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">0</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">Immediately After</h3>
+                      <p className="text-gray-300 text-sm">Skin may appear slightly red, feeling tight and refreshed</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">3</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">Day 3-4</h3>
+                      <p className="text-gray-300 text-sm">Gentle peeling begins, revealing fresh skin underneath</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">7</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">One Week</h3>
+                      <p className="text-gray-300 text-sm">Peeling complete, skin feels smoother and looks brighter</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">10</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">Full Results</h3>
+                      <p className="text-gray-300 text-sm">Dramatic improvement in skin tone, texture, and radiance visible</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">30</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">Next Session Due</h3>
+                      <p className="text-gray-300 text-sm">Optimal time for follow-up treatment (4-6 weeks interval)</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Treatment Steps */}
         <section className="py-20 bg-accent">
           <div className="page-container">
