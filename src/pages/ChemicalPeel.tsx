@@ -417,11 +417,8 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mb-6">
-                <Award className="text-white" size={32} />
-              </div>
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Professional Skin Resurfacing Technology
+                Benefits of Chemical Peel
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Chemical peels use controlled acids to precisely remove damaged skin layers, stimulating natural 
