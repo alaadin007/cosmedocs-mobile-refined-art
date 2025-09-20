@@ -225,8 +225,8 @@ const HydraFacial = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
+                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-300" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
                 <p className="text-gray-300">45-60 minutes including consultation</p>
@@ -239,8 +239,8 @@ const HydraFacial = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
+                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-300" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
                 <p className="text-gray-300">Monthly treatments recommended</p>
@@ -253,8 +253,8 @@ const HydraFacial = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
+                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-300" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
                 <p className="text-gray-300">Zero downtime, immediate results</p>
@@ -267,8 +267,8 @@ const HydraFacial = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Droplets className="text-purple-600" size={24} />
+                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Droplets className="text-purple-300" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Technology</h3>
                 <p className="text-gray-300">Patented vortex technology</p>
@@ -322,14 +322,6 @@ const HydraFacial = () => {
               <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
 
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="HydraFacial Results Gallery"
-                description="Comprehensive gallery of our HydraFacial treatments"
-              />
-            </div>
           </div>
         </section>
 
@@ -363,36 +355,36 @@ const HydraFacial = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm border-2 border-purple-300/30 rounded-xl p-8"
+                className="bg-purple-600/10 backdrop-blur-sm border-2 border-purple-400/40 rounded-xl p-8"
               >
-                <h3 className="text-3xl font-bold text-white mb-6 text-center">Skin Types</h3>
+                <h3 className="text-3xl font-bold text-purple-300 mb-6 text-center">Skin Types</h3>
                 <p className="text-gray-300 text-center mb-8 text-lg">
                   HydraFacial is suitable for virtually everyone and addresses multiple skin concerns across all skin types
                 </p>
                 
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-white">Oily Skin</h4>
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Oily Skin</h4>
                   </div>
                   
-                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-white">Dry Skin</h4>
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Dry Skin</h4>
                   </div>
                   
-                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-white">Sensitive Skin</h4>
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Sensitive Skin</h4>
                   </div>
                   
-                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-white">Acne-Prone</h4>
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Acne-Prone</h4>
                   </div>
                   
-                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-white">Aging Skin</h4>
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Aging Skin</h4>
                   </div>
 
-                  <div className="bg-purple-600/20 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4 text-center hover:bg-purple-600/30 transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-white">Combination</h4>
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Combination</h4>
                   </div>
                 </div>
               </motion.div>
