@@ -187,7 +187,7 @@ const ChemicalPeel = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Professional Chemical Peels London</span>
+                  <span className="text-purple-300">Chemical Peels London</span>
                   <span className="block text-sm mt-4">Invisible art - transformative skin resurfacing that speaks without words</span>
                 </h1>
                 <div className="mb-8">
