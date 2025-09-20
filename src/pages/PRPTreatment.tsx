@@ -510,7 +510,7 @@ const PRPTreatment = () => {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
                       <CheckCircle className="h-4 w-4 text-white" />
                     </div>
                     <div className="flex-1">
@@ -1014,42 +1014,30 @@ const PRPTreatment = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-black to-[#0A0A0A] py-[75px]">
-          <div className="page-container">
-            <motion.div className="text-center max-w-4xl mx-auto" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <h2 className="text-3xl font-bold mb-8 text-white">
-                Ready to Begin?
-              </h2>
-              <p className="text-xl text-white/70 font-light mb-12 max-w-2xl mx-auto">
-                Book your consultation with our PRP specialists at Harley Street and discover how your body's natural healing power can transform your skin.
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready for Natural Rejuvenation?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert doctors and discover how PRP can harness your body's natural healing power for transformative results.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white/95 backdrop-blur-sm text-black hover:bg-white rounded-full px-12 py-6 inline-flex items-center justify-center text-xl font-light transition-all duration-500 border border-white/20 hover:scale-[1.02] hover:shadow-2xl">
-                  Book Consultation
-                </a>
-                
-                <div className="flex items-center justify-center gap-4 text-white/80">
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    <span className="font-light">0333 0551 503</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-5 w-5" />
-                    <span className="font-light">Harley Street</span>
-                  </div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  onClick={() => window.open(bookingUrl, "_blank")}
+                >
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
               </div>
             </motion.div>
           </div>
