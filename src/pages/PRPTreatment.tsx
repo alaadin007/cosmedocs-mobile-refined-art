@@ -185,7 +185,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">PRP Treatment</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">PRP Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -258,7 +258,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-4">Before and After PRP Treatment Results</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Before and After PRP Treatment Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Explore authentic before and after PRP treatment results from our London clinic. 
                 Our natural healing approach delivers transformative skin rejuvenation and hair restoration using your body's own platelets.
@@ -410,7 +410,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                 Treatment Options
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -464,7 +464,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                 PRP Benefits
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -482,7 +482,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-4 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
                 PRP Benefits
               </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
@@ -524,7 +524,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-4 text-white">Treatment Care & Timeline</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Treatment Care & Timeline</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Essential information about caring for your skin after PRP treatment and understanding your results timeline
               </p>
@@ -659,7 +659,7 @@ const PRPTreatment = () => {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">PRP in Action</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">PRP in Action</h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   Watch our experts perform PRP treatments and see the precise process that delivers exceptional results.
                 </p>
@@ -739,7 +739,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-4 text-white">PRP Treatment Investment</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">PRP Treatment Investment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Our comprehensive PRP treatments provide natural healing and rejuvenation using your body's own platelets. 
                 All treatments include consultation, procedure, and aftercare support from our expert medical team.
@@ -878,7 +878,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -974,7 +974,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Everything you need to know about PRP treatment and what to expect during your journey.
               </p>
@@ -1015,7 +1015,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-2xl md:text-3xl font-light mb-4">Ready for Natural Rejuvenation?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready for Natural Rejuvenation?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert doctors and discover how PRP can harness your body's natural healing power for transformative results.
               </p>
