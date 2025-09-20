@@ -824,6 +824,101 @@ const HydraFacial = () => {
           </div>
         </section>
 
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved technology and serums</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
         {/* FAQ Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -832,126 +927,56 @@ const HydraFacial = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to know about HydraFacial treatments
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about HydraFacial treatments at our London clinic.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <div className="space-y-4">
-                {leftColumnFaqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card 
-                      className={`bg-white/5 backdrop-blur-sm border-white/10 cursor-pointer transition-all duration-300 ${
-                        openFaqs[faq.question] ? 'bg-white/10 border-purple-300' : 'hover:bg-white/8'
-                      }`}
-                      onClick={() => toggleFaq(faq.question)}
-                    >
-                      <CardContent className="p-6">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                          {openFaqs[faq.question] ? 
-                            <ChevronUp className="h-5 w-5 text-purple-300 flex-shrink-0" /> : 
-                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-                          }
-                        </div>
-                        {openFaqs[faq.question] && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-4 pt-4 border-t border-white/10"
-                          >
-                            <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                          </motion.div>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {[...leftColumnFaqs, ...rightColumnFaqs].map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
-
-              <div className="space-y-4">
-                {rightColumnFaqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card 
-                      className={`bg-white/5 backdrop-blur-sm border-white/10 cursor-pointer transition-all duration-300 ${
-                        openFaqs[faq.question] ? 'bg-white/10 border-purple-300' : 'hover:bg-white/8'
-                      }`}
-                      onClick={() => toggleFaq(faq.question)}
-                    >
-                      <CardContent className="p-6">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                          {openFaqs[faq.question] ? 
-                            <ChevronUp className="h-5 w-5 text-purple-300 flex-shrink-0" /> : 
-                            <ChevronDown className="h-5 w-5 text-white/70 flex-shrink-0" />
-                          }
-                        </div>
-                        {openFaqs[faq.question] && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-4 pt-4 border-t border-white/10"
-                          >
-                            <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                          </motion.div>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
+              </Accordion>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-black">
-          <div className="page-container">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center max-w-4xl mx-auto"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready for Glowing, Hydrated Skin?
-              </h2>
-              <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Book your HydraFacial consultation at Cosmedocs Harley Street and experience the transformation.
+              <h2 className="text-3xl font-bold mb-4">Ready for Glowing, Hydrated Skin?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how HydraFacial 
+                can transform your skin with our revolutionary vortex technology.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  size="lg" 
-                  className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg font-semibold rounded-full shadow-2xl"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
                   onClick={() => window.open(bookingUrl, '_blank')}
                 >
                   Book Free Consultation
                 </Button>
-                <a 
-                  href="tel:03330551503" 
-                  className="text-purple-300 hover:text-white font-semibold text-lg transition-colors duration-300"
-                >
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
                   Call 0333 0551 503
-                </a>
+                </Button>
               </div>
             </motion.div>
           </div>
