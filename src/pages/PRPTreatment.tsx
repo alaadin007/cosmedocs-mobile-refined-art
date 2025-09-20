@@ -369,8 +369,7 @@ const PRPTreatment = () => {
                 PRGF / PRP Treatment
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge advanced Platelet-Rich Plasma system, 
-                using your body's natural healing abilities to regenerate skin, hair, and tissue.
+                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP).
               </p>
             </motion.div>
 
@@ -388,15 +387,20 @@ const PRPTreatment = () => {
           }}>
           <Card className="bg-gradient-to-br from-purple-900/30 to-purple-600/20 border-purple-500 border-2 backdrop-blur-sm shadow-2xl">
             <CardContent className="p-12">
-              <h3 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">Help Your Body Heal Itself</h3>
+              <h3 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">PRGF / PRP: Help Your Body Heal Itself</h3>
               <p className="text-lg text-gray-200 leading-relaxed mb-8">
-                PRP works by using platelets from your own blood for both stimulation and acceleration of tissue regeneration and healing. 
-                This natural process can counter the effects of injury, trauma, or degenerative processes including aging in tendons, 
-                muscles, hair growth, skin, and cartilage.
+                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP).
+                It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing. Thanks to this process, the effects or any injury, trauma or degenerative process (including aging) can be countered in:
               </p>
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+                <div className="text-purple-200 font-medium">• Tendons</div>
+                <div className="text-purple-200 font-medium">• Muscles</div>
+                <div className="text-purple-200 font-medium">• Hair growth and hair regrowth</div>
+                <div className="text-purple-200 font-medium">• Skin</div>
+                <div className="text-purple-200 font-medium">• Cartilage</div>
+              </div>
               <p className="text-xl text-purple-200 font-medium">
-                Simply put, PRGF is the most effective way for your body to heal itself naturally - 
-                a procedure commonly adopted by celebrities to heal scars and reverse signs of aging.
+                Simply put, PRGF is the most effective way for your body to, quite literally, heal itself and it's a procedure commonly adopted by celebrities to heal scars and reverse the signs of aging.
               </p>
               <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto rounded-full mt-6"></div>
             </CardContent>
