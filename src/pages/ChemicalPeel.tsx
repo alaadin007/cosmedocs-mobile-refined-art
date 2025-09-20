@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, Calendar, Shield, Activity, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { Palette, Star, Clock, Users, Calendar, Shield, Activity, Award, GraduationCap, CheckCircle, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import {
   Carousel,
@@ -13,16 +13,20 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
+import { useVideoManagement } from "@/hooks/useVideoManagement";
 import { useState } from "react";
 
 const ChemicalPeel = () => {
-  const seoData = generateSEOMetadata(
-    "Chemical Peel London | £120 | Cosmedocs | Harley Street",
-    "Professional chemical peel treatments in London's Harley Street. Expert skin resurfacing for acne, pigmentation & anti-aging. From £120. Book your session today.",
-    "/chemical-peel"
-  );
+  const {
+    videos,
+    getVideosByTreatment
+  } = useVideoManagement();
+  const [selectedVideo, setSelectedVideo] = useState<any>(null);
+  const seoData = generateSEOMetadata("Chemical Peel London | £120 | Cosmedocs | Harley Street", "Professional chemical peel treatments in London's Harley Street. Expert skin resurfacing for acne, pigmentation & anti-aging. From £120. Book your session today.", "/chemical-peel");
 
+  // Get Chemical Peel specific videos
+  const chemicalPeelVideos = getVideosByTreatment('Chemical Peel');
   const bookingUrl = "https://med.as.me/harleystreet";
 
   // Before/after images for Chemical Peel
@@ -42,6 +46,51 @@ const ChemicalPeel = () => {
     src: "/lovable-uploads/5dfb6e21-7126-47d6-850b-d01c94e0988a.png",
     alt: "Chemical peel profile view results London treatment",
     caption: "Visible enhancement in skin quality and texture from profile view after treatment"
+  }];
+
+  const treatmentSteps = [{
+    step: "01",
+    title: "Skin Assessment",
+    description: "Thorough consultation to determine the best peel type and strength for your skin concerns."
+  }, {
+    step: "02", 
+    title: "Pre-Treatment",
+    description: "Gentle cleansing and preparation of the skin to ensure optimal peel penetration."
+  }, {
+    step: "03",
+    title: "Acid Application",
+    description: "Careful application of chemical solution to target areas, monitored for optimal timing."
+  }, {
+    step: "04",
+    title: "Neutralization",
+    description: "Safe neutralization of acids followed by soothing treatments to calm the skin."
+  }, {
+    step: "05",
+    title: "Aftercare Plan",
+    description: "Comprehensive aftercare instructions and products to maximize results and healing."
+  }];
+
+  const benefits = [{
+    title: "Reduces Acne & Breakouts",
+    description: "Unclogs pores and reduces bacteria that cause acne while preventing future breakouts through deep exfoliation."
+  }, {
+    title: "Brightens & Evens Skin Tone",
+    description: "Removes damaged surface layers to reveal brighter, more even-toned skin beneath, reducing hyperpigmentation."
+  }, {
+    title: "Smooths Fine Lines & Wrinkles",
+    description: "Stimulates collagen production and removes damaged skin cells to reduce visible signs of aging."
+  }, {
+    title: "Improves Skin Texture",
+    description: "Removes rough, damaged skin cells to reveal smoother, softer skin with improved overall texture."
+  }, {
+    title: "Minimizes Pore Appearance",
+    description: "Deep exfoliation helps unclog and minimize the appearance of enlarged pores for refined skin."
+  }, {
+    title: "Treats Sun Damage",
+    description: "Effectively addresses sun spots, age spots, and photodamage by removing damaged pigmented cells."
+  }, {
+    title: "Stimulates Cell Renewal",
+    description: "Accelerates natural skin cell turnover for fresher, younger-looking skin and improved healing."
   }];
 
   const faqs = [
@@ -87,28 +136,42 @@ const ChemicalPeel = () => {
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="chemical peel London, skin resurfacing, acne treatment, pigmentation, anti-aging, Harley Street, skin rejuvenation, glycolic acid, salicylic acid" />
+        <meta property="og:image" content={seoData.image} />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+        
+        {/* Local SEO */}
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.5074;-0.1278" />
+        <meta name="ICBM" content="51.5074, -0.1278" />
+        
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Cosmedocs",
-            "description": "Expert chemical peel treatments in London",
-            "url": seoData.canonical,
-            "telephone": "0333 0551 503",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
-          })}
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          "name": "Cosmedocs - Chemical Peel London",
+          "description": "Professional chemical peel treatments in London's Harley Street for skin resurfacing and rejuvenation",
+          "url": "https://cosmedocs.com/chemical-peel",
+          "telephone": "0333 0551 503",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10 Harley Street",
+            "addressLocality": "London",
+            "postalCode": "W1G 9PF",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+          },
+          "medicalSpecialty": "Dermatology",
+          "priceRange": "£120"
+        })}
         </script>
       </Helmet>
 
@@ -271,97 +334,6 @@ const ChemicalPeel = () => {
           </div>
         </section>
 
-        {/* Treatment Types Section */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Types of Chemical Peels</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Choose from our comprehensive range of chemical peels, each designed to address specific skin concerns and deliver optimal results.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Light Peels</CardTitle>
-                    <p className="text-purple-300 font-bold text-lg">From £120</p>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• Salicylic Acid Peels</li>
-                      <li>• Glycolic Acid Peels</li>
-                      <li>• Lactic Acid Peels</li>
-                    </ul>
-                    <p className="text-sm text-gray-400">
-                      Ideal for mild skin concerns, improving texture and reducing pigmentation with minimal downtime.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Medium Peels</CardTitle>
-                    <p className="text-purple-300 font-bold text-lg">From £170</p>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• TCA Peels</li>
-                      <li>• Jessner's Peel</li>
-                      <li>• The Perfect Peel</li>
-                    </ul>
-                    <p className="text-sm text-gray-400">
-                      More intensive treatment for sun damage, acne scars, and deeper skin concerns.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Deep Peels</CardTitle>
-                    <p className="text-purple-300 font-bold text-lg">From £200</p>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• Phenol Peels</li>
-                      <li>• Peel to Reveal</li>
-                    </ul>
-                    <p className="text-sm text-gray-400">
-                      Most dramatic results for deep wrinkles, severe sun damage, and significant skin rejuvenation.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* What is Chemical Peel & Who Is Chemical Peel For */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -376,257 +348,103 @@ const ChemicalPeel = () => {
               
               <div className="space-y-6 text-gray-300 text-lg mb-12">
                 <p>
-                  Chemical Peel at Cosmedocs offers you an ideal non-invasive solution for resurfacing and regenerating your skin. 
-                  This treatment is highly effective in addressing various skin complaints such as fine lines, wrinkles, 
-                  pigmentation issues, acne, and dull skin through controlled chemical exfoliation.
+                  Chemical peels are professional skin resurfacing treatments that use controlled acids to remove 
+                  damaged layers of skin, revealing healthier, smoother skin underneath. These treatments range 
+                  from light surface peels to deeper resurfacing procedures.
                 </p>
                 <p>
-                  With a gentle exfoliation of the outermost layer of skin cells, our process reveals a fresher and 
-                  revitalized complexion. The treatment uses carefully selected acids that penetrate the skin to remove 
-                  damaged cells and stimulate new cell regeneration.
-                </p>
-                <p>
-                  Chemical peels are versatile and can be tailored to meet specific skin concerns and needs. From mild 
-                  peels for subtle improvements to deeper peels for more dramatic skin rejuvenation experience, there 
-                  is a peel suitable for everyone at our Harley Street clinic.
+                  During the treatment, a chemical solution is applied to the skin, causing it to exfoliate and 
+                  eventually peel off. The new skin is typically smoother, less wrinkled, and more even in tone.
                 </p>
               </div>
 
-              <h3 className="text-3xl font-bold mb-6 text-center text-white">Who Is Chemical Peel For?</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-purple-300">Ideal Candidates:</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Adults seeking skin rejuvenation and texture improvement</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Those with acne, acne scars, or enlarged pores</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Individuals with sun damage and pigmentation issues</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>People with fine lines and early signs of aging</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Those seeking improved skin tone and texture</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-purple-300">Considerations:</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start gap-2">
-                      <Heart className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>All skin types and tones can benefit from chemical peels</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Consultation required to determine best peel type</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Pregnancy and certain medications may require postponement</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Recent Accutane use requires waiting period</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="text-purple-300 mt-1 flex-shrink-0" size={16} />
-                      <span>Active skin infections or severe scarring may not be suitable</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Skin Concerns Corrected */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Skin Concerns Corrected by Chemical Peel</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Chemical peels effectively address a wide range of skin concerns, delivering visible improvements.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  "Ageing skin (age spots, fine lines and wrinkles)",
-                  "Photo-damage (Sun damage and sun spots)",
-                  "Acne and acne marks",
-                  "Mild acne scarring",
-                  "Enlarged pores",
-                  "Rough skin texture",
-                  "Dull complexion or uneven skin tone",
-                  "Melasma & hyperpigmentation"
-                ].map((concern, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center p-4 bg-accent rounded-lg border border-gray-800 hover:border-purple-500/50 transition-colors"
-                  >
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-4 flex-shrink-0"></div>
-                    <p className="text-gray-300">{concern}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* How Chemical Peels Work */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">How do Chemical Peels Work?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Our professional three-step process ensures safe, effective treatment tailored to your skin's needs.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="bg-black p-6 rounded-lg border border-gray-800">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-purple-400">1</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Consultation & Analysis</h3>
-                  <p className="text-gray-300">
-                    During your in-depth skin consultation, our skilled skincare experts thoroughly analyse your skin health and conditions to assess your expectations.
-                  </p>
-                </div>
-                
-                <div className="bg-black p-6 rounded-lg border border-gray-800">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-purple-400">2</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Application Process</h3>
-                  <p className="text-gray-300">
-                    We cleanse and disinfect your skin, then apply a specially formulated chemical peel solution to the outermost layer, tailored to your specific needs.
-                  </p>
-                </div>
-                
-                <div className="bg-black p-6 rounded-lg border border-gray-800">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-2xl font-bold text-purple-400">3</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Healing & Results</h3>
-                  <p className="text-gray-300">
-                    Small scabs form and gradually fall off within days, revealing fresh, radiant, and irresistibly smooth new skin with a youthful glow.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Treatment Summary */}
-        <section className="py-20">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Skin Types Card */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="bg-purple-600/10 backdrop-blur-sm border-2 border-purple-400/40 rounded-xl p-8"
               >
-                <h2 className="text-3xl font-bold mb-6">Chemical Peel Treatment Summary</h2>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
-                    <p className="text-gray-300">30-60 minutes depending on peel type</p>
+                <h3 className="text-3xl font-bold text-purple-300 mb-6 text-center">Skin Concerns Treated</h3>
+                <p className="text-gray-300 text-center mb-8 text-lg">
+                  Chemical peels effectively address multiple skin concerns across various skin types
+                </p>
+                
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Acne & Scars</h4>
                   </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
-                    <p className="text-gray-300">3-5 days for light peels, up to 2 weeks for deep peels</p>
+                  
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Pigmentation</h4>
                   </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Results Duration</h3>
-                    <p className="text-gray-300">Several months to years depending on peel depth</p>
+                  
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Fine Lines</h4>
                   </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Frequency</h3>
-                    <p className="text-gray-300">Monthly for light peels, less frequent for deeper peels</p>
+                  
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Sun Damage</h4>
+                  </div>
+                  
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Texture Issues</h4>
+                  </div>
+
+                  <div className="bg-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-lg p-4 text-center hover:bg-purple-600/40 transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-purple-200">Dull Skin</h4>
                   </div>
                 </div>
               </motion.div>
+            </motion.div>
+          </div>
+        </section>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-none">
-                  <CardHeader>
-                    <CardTitle className="text-white">Skin Concerns Treated</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Aging skin, fine lines & wrinkles</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Sun damage & age spots</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Acne & acne scarring</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Enlarged pores & rough texture</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Melasma & hyperpigmentation</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+        {/* Chemical Peel Benefits - Professional Skin Resurfacing */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mb-6">
+                <Award className="text-white" size={32} />
+              </div>
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Professional Skin Resurfacing Technology
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Chemical peels use controlled acids to precisely remove damaged skin layers, stimulating natural 
+                cell renewal and revealing healthier, younger-looking skin with improved texture and tone.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:from-purple-600/20 hover:to-blue-600/20 hover:border-purple-300/30 transition-all duration-300 text-center"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <CheckCircle className="text-white" size={24} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white group-hover:text-purple-200 transition-colors duration-300">{benefit.title}</h3>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20">
+        {/* Chemical Peel Steps */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -635,46 +453,190 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Chemical Peel Benefits</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Discover the transformative benefits of professional chemical peel treatments for healthier, more radiant skin.
+              <h2 className="text-4xl font-bold mb-4 text-white">The Chemical Peel Process</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our 5-step chemical peel treatment delivers comprehensive skin rejuvenation
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  title: "Collagen Boost",
-                  description: "Encourages natural collagen and elastin production for firmer skin"
-                },
-                {
-                  title: "Enhanced Absorption",
-                  description: "Boosts efficiency of your skincare products post-treatment"
-                },
-                {
-                  title: "Reduced Blemishes",
-                  description: "Remarkably reduces acne, scars, and skin imperfections"
-                },
-                {
-                  title: "Even Skin Tone",
-                  description: "Improves tone, texture, and years of accumulated sun damage"
-                }
-              ].map((benefit, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {treatmentSteps.map((step, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">{index + 1}</span>
+                  <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-lg font-bold">{step.step}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300 text-sm">{step.description}</p>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Chemical Peel Aftercare & Results Timeline */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Aftercare */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Chemical Peel Aftercare</h2>
+                <p className="text-gray-300 mb-6">
+                  Follow these essential guidelines to ensure optimal healing and maximize your chemical peel results:
+                </p>
+
+                <div className="space-y-4">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-2">First 24-48 Hours</h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Avoid direct sun exposure completely</li>
+                      <li>• No makeup or skincare products</li>
+                      <li>• Gentle cleansing with cool water only</li>
+                      <li>• Apply recommended healing ointment</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-2">First 1-2 Weeks</h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Daily SPF 50+ sunscreen application</li>
+                      <li>• Avoid picking or peeling skin</li>
+                      <li>• Use gentle, fragrance-free moisturizer</li>
+                      <li>• No active ingredients or exfoliants</li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Results Timeline */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Results Timeline</h2>
+                <p className="text-gray-300 mb-6">
+                  Understanding the healing process and when to expect visible improvements:
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">3</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">3-5 Days</h3>
+                      <p className="text-gray-300 text-sm">Peeling begins, revealing fresh new skin underneath</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">7</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">One Week</h3>
+                      <p className="text-gray-300 text-sm">Improved skin texture and brightness become visible</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">30</span>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">One Month</h3>
+                      <p className="text-gray-300 text-sm">Full results visible with optimal skin renewal</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Combination Treatments */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-8">Combination Treatments</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your chemical peel results with complementary treatments for comprehensive skin rejuvenation
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">Chemical Peel + Microneedling</h3>
+                <p className="text-gray-300 mb-4">
+                  Combine peels with microneedling for enhanced collagen production and deeper skin renewal.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced collagen stimulation</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Improved scar reduction</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Deeper skin rejuvenation</li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">Chemical Peel + HydraFacial</h3>
+                <p className="text-gray-300 mb-4">
+                  Follow peels with HydraFacial for gentle hydration and nourishment during the healing process.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Optimal skin hydration</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced healing process</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Improved overall results</li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">Chemical Peel + LED Therapy</h3>
+                <p className="text-gray-300 mb-4">
+                  LED light therapy accelerates healing and reduces inflammation after chemical peel treatments.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Faster healing process</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Reduced inflammation</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced skin repair</li>
+                </ul>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -689,115 +651,186 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Chemical Peel Pricing London</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Professional chemical peel treatments with transparent pricing at our Harley Street clinic.
+              <h2 className="text-4xl font-bold mb-4 text-white">Chemical Peel Pricing</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for professional chemical peel treatments in London
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-800 h-full text-center">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-white text-xl mb-2">Light Peels</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300 mb-2">£120</div>
-                    <p className="text-gray-400 text-sm">Per session</p>
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Light Peels</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <ul className="text-gray-300 space-y-2 text-left">
-                      <li>• Glycolic Acid Peels</li>
-                      <li>• Salicylic Acid Peels</li>
-                      <li>• Lactic Acid Peels</li>
-                      <li>• Minimal downtime</li>
-                      <li>• Suitable for all skin types</li>
-                    </ul>
-                    <Button className="w-full bg-white text-black hover:bg-gray-200">
-                      Book Light Peel
+                    <div className="text-3xl font-bold text-purple-300">£120</div>
+                    <p className="text-gray-300">Gentle surface exfoliation</p>
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Now
                     </Button>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-b from-purple-900/50 to-pink-900/50 border-purple-500 h-full text-center relative">
+                <Card className="bg-white/10 backdrop-blur-sm border-purple-300 hover:bg-white/15 transition-all duration-300 text-center h-full relative">
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">POPULAR</span>
+                    <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                   </div>
-                  <CardHeader className="pb-4 pt-6">
-                    <CardTitle className="text-white text-xl mb-2">Medium Peels</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300 mb-2">£170</div>
-                    <p className="text-gray-400 text-sm">Per session</p>
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Medium Peels</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <ul className="text-gray-300 space-y-2 text-left">
-                      <li>• TCA Peels</li>
-                      <li>• Jessner's Peel</li>
-                      <li>• The Perfect Peel</li>
-                      <li>• 3-7 days recovery</li>
-                      <li>• Dramatic improvements</li>
-                    </ul>
-                    <Button className="w-full bg-white text-black hover:bg-gray-200">
-                      Book Medium Peel
+                    <div className="text-3xl font-bold text-purple-300">£170</div>
+                    <p className="text-gray-300">Moderate depth resurfacing</p>
+                    <Button 
+                      className="w-full bg-purple-600 text-white hover:bg-purple-700 rounded-full"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Treatment
                     </Button>
                   </CardContent>
                 </Card>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-800 h-full text-center">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-white text-xl mb-2">Deep Peels</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300 mb-2">£200</div>
-                    <p className="text-gray-400 text-sm">Per session</p>
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 text-center h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Deep Peels</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <ul className="text-gray-300 space-y-2 text-left">
-                      <li>• Phenol Peels</li>
-                      <li>• Peel to Reveal</li>
-                      <li>• Maximum results</li>
-                      <li>• 1-2 weeks recovery</li>
-                      <li>• Long-lasting effects</li>
-                    </ul>
-                    <Button className="w-full bg-white text-black hover:bg-gray-200">
-                      Book Deep Peel
+                    <div className="text-3xl font-bold text-purple-300">£200</div>
+                    <p className="text-gray-300">Intensive skin rejuvenation</p>
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
+                      onClick={() => window.open(bookingUrl, '_blank')}
+                    >
+                      Book Consultation
                     </Button>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
+          </div>
+        </section>
 
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mt-12"
+              className="text-center mb-12"
             >
-              <p className="text-gray-400 mb-4">Course packages available for better value</p>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                View Full Price List
-              </Button>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium medical-grade peel formulations</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">"Invisible art" for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -815,8 +848,8 @@ const ChemicalPeel = () => {
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-white/5 rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/10 rounded-lg">
                       <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4 text-gray-300">
@@ -830,7 +863,7 @@ const ChemicalPeel = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -839,13 +872,16 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Radiant, Rejuvenated Skin?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready for Transformative Skin Resurfacing?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert skin specialists and discover how chemical peels 
-                can transform your skin with professional, safe, and effective treatments.
+                Book your consultation with our expert cosmetic doctors and discover how chemical peels 
+                can reveal smoother, brighter, more youthful-looking skin.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  onClick={() => window.open(bookingUrl, '_blank')}
+                >
                   Book Free Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
@@ -855,13 +891,6 @@ const ChemicalPeel = () => {
             </motion.div>
           </div>
         </section>
-
-        {/* Hidden SEO content for search engines */}
-        <div className="sr-only">
-          <p>
-            Chemical peel treatments in London offer professional skin resurfacing solutions for a wide range of skin concerns. At Cosmedocs Harley Street, our expert practitioners provide comprehensive chemical peel treatments including glycolic acid peels, salicylic acid peels, TCA peels, and our signature Peel to Reveal treatment. Chemical peels are highly effective for treating acne, acne scarring, sun damage, age spots, fine lines, wrinkles, enlarged pores, rough skin texture, and hyperpigmentation. Our range includes light peels for subtle improvements, medium peels for more significant results, and deep peels for dramatic skin transformation. Professional chemical peel treatments stimulate collagen production, improve skin texture, reduce blemishes, and create a more even skin tone. The treatment process involves applying specially formulated chemical solutions to remove damaged skin layers, revealing fresh, healthy skin underneath. Recovery time varies from minimal downtime for light peels to up to two weeks for deeper treatments. Our experienced practitioners ensure safe, effective treatments tailored to individual skin types and concerns. Chemical peel benefits include enhanced skincare product absorption, reduced signs of aging, improved skin clarity, and long-lasting results. At our London clinic, we combine chemical peels with other treatments like dermaplaning for enhanced results. Our 'invisible art' philosophy ensures natural-looking skin improvements that enhance your confidence. Professional chemical peels are suitable for all skin types when performed by qualified practitioners using appropriate formulations and safety protocols.
-          </p>
-        </div>
       </div>
     </>
   );
