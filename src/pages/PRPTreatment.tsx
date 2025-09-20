@@ -145,12 +145,12 @@ const PRPTreatment = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">PRP Treatment London</span>
-                  <span className="block text-sm mt-4">Invisible art - natural skin rejuvenation using your body's healing power</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 leading-tight text-white">
+                  <span className="text-purple-300 font-extralight">PRP Treatment London</span>
+                  <span className="block text-base md:text-lg mt-4 font-light">Invisible art - natural skin rejuvenation using your body's healing power</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Natural Regeneration</p>
+                  <p className="text-xl md:text-2xl text-purple-300 font-light">Natural Regeneration</p>
                   <p className="text-sm text-gray-300">#cosmeprp - Check out our IG for hundreds more natural, subtle transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -185,7 +185,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">PRP Treatment</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">PRP Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -199,7 +199,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Clock className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Procedure Time</h3>
+                <h3 className="text-lg font-light text-white mb-2">Procedure Time</h3>
                 <p className="text-gray-300">30 minutes</p>
               </motion.div>
 
@@ -213,7 +213,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Calendar className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <h3 className="text-lg font-light text-white mb-2">Results Duration</h3>
                 <p className="text-gray-300">18 months</p>
               </motion.div>
 
@@ -227,7 +227,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <h3 className="text-lg font-light text-white mb-2">Recovery Time</h3>
                 <p className="text-gray-300">24-48 hours</p>
               </motion.div>
 
@@ -241,7 +241,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Shield className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthetic</h3>
+                <h3 className="text-lg font-light text-white mb-2">Anaesthetic</h3>
                 <p className="text-gray-300">Local numbing</p>
               </motion.div>
             </div>
@@ -258,7 +258,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Before and After PRP Treatment Results</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-4">Before and After PRP Treatment Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Explore authentic before and after PRP treatment results from our London clinic. 
                 Our natural healing approach delivers transformative skin rejuvenation and hair restoration using your body's own platelets.
@@ -365,7 +365,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">
                 PRGF / PRP Treatment
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -388,7 +388,7 @@ const PRPTreatment = () => {
           }}>
           <Card className="bg-gradient-to-br from-purple-900/30 to-purple-600/20 border-purple-500 border-2 backdrop-blur-sm shadow-2xl">
             <CardContent className="p-12">
-              <h3 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">Help Your Body Heal Itself</h3>
+              <h3 className="text-2xl md:text-3xl font-light mb-8 bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">Help Your Body Heal Itself</h3>
               <p className="text-lg text-gray-200 leading-relaxed mb-8">
                 PRP works by using platelets from your own blood for both stimulation and acceleration of tissue regeneration and healing. 
                 This natural process can counter the effects of injury, trauma, or degenerative processes including aging in tendons, 
@@ -419,7 +419,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">
                 Treatment Options
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -442,7 +442,7 @@ const PRPTreatment = () => {
             }}>
                 <Card className="bg-gradient-to-b from-purple-900/20 to-gray-900/50 border-purple-500/30 text-white h-full hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
                   <CardHeader className="border-b border-purple-500/20">
-                    <CardTitle className="text-2xl font-semibold text-white">{type.title}</CardTitle>
+                    <CardTitle className="text-xl md:text-2xl font-light text-white">{type.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6 pt-6">
                     <p className="text-gray-300 leading-relaxed">{type.description}</p>
@@ -473,7 +473,7 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-3xl font-bold mb-6 text-white">
+              <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">
                 PRP Benefits
               </h2>
               <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
@@ -491,7 +491,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">
+              <h2 className="text-2xl md:text-3xl font-light mb-4 text-white">
                 PRP Benefits
               </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
@@ -533,7 +533,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Care & Timeline</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-4 text-white">Treatment Care & Timeline</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Essential information about caring for your skin after PRP treatment and understanding your results timeline
               </p>
@@ -549,7 +549,7 @@ const PRPTreatment = () => {
               >
                 <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl flex items-center space-x-3">
+                    <CardTitle className="text-white text-xl md:text-2xl font-light flex items-center space-x-3">
                       <Shield className="h-6 w-6 text-purple-400" />
                       <span>Post-Treatment Care</span>
                     </CardTitle>
@@ -668,7 +668,7 @@ const PRPTreatment = () => {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl font-bold mb-6 text-white">PRP in Action</h2>
+                <h2 className="text-2xl md:text-3xl font-light mb-6 text-white">PRP in Action</h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   Watch our experts perform PRP treatments and see the precise process that delivers exceptional results.
                 </p>
@@ -677,7 +677,7 @@ const PRPTreatment = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-2">Blood Collection</h4>
+                      <h4 className="text-white font-light mb-2">Blood Collection</h4>
                       <p className="text-gray-300">A small amount of blood is drawn from your arm, similar to a routine blood test</p>
                     </div>
                   </div>
@@ -685,7 +685,7 @@ const PRPTreatment = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-2">Centrifuge Processing</h4>
+                      <h4 className="text-white font-light mb-2">Centrifuge Processing</h4>
                       <p className="text-gray-300">The blood is processed in a specialized centrifuge to separate and concentrate the platelets</p>
                     </div>
                   </div>
@@ -693,7 +693,7 @@ const PRPTreatment = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-2">Platelet Extraction</h4>
+                      <h4 className="text-white font-light mb-2">Platelet Extraction</h4>
                       <p className="text-gray-300">The platelet-rich plasma is carefully extracted, containing concentrated growth factors</p>
                     </div>
                   </div>
@@ -701,7 +701,7 @@ const PRPTreatment = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-3"></div>
                     <div>
-                      <h4 className="text-white font-semibold mb-2">Precise Injection</h4>
+                      <h4 className="text-white font-light mb-2">Precise Injection</h4>
                       <p className="text-gray-300">Using ultra-fine needles, the PRP is injected into targeted areas for optimal results</p>
                     </div>
                   </div>
@@ -748,7 +748,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">PRP Treatment Investment</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-4 text-white">PRP Treatment Investment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Our comprehensive PRP treatments provide natural healing and rejuvenation using your body's own platelets. 
                 All treatments include consultation, procedure, and aftercare support from our expert medical team.
@@ -887,7 +887,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -901,7 +901,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Award className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <h3 className="text-lg font-light text-white mb-2">Experience</h3>
                 <p className="text-gray-300">Over 1 million injections performed since 2007</p>
               </motion.div>
 
@@ -915,7 +915,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <h3 className="text-lg font-light text-white mb-2">Training</h3>
                 <p className="text-gray-300">
                   <a 
                     href="https://www.harleystreetinstitute.com" 
@@ -938,7 +938,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <h3 className="text-lg font-light text-white mb-2">Quality</h3>
                 <p className="text-gray-300">Your own blood - completely natural and safe</p>
               </motion.div>
 
@@ -952,7 +952,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Palette className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <h3 className="text-lg font-light text-white mb-2">Philosophy</h3>
                 <p className="text-gray-300">'Invisible art' for natural results</p>
               </motion.div>
 
@@ -966,7 +966,7 @@ const PRPTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <h3 className="text-lg font-light text-white mb-2">Aftercare</h3>
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
@@ -983,7 +983,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Everything you need to know about PRP treatment and what to expect during your journey.
               </p>
@@ -1024,7 +1024,7 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Natural Rejuvenation?</h2>
+              <h2 className="text-2xl md:text-3xl font-light mb-4">Ready for Natural Rejuvenation?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert doctors and discover how PRP can harness your body's natural healing power for transformative results.
               </p>
