@@ -150,7 +150,7 @@ const PRPTreatment = () => {
                   <span className="block text-sm mt-4">Invisible art - natural skin rejuvenation using your body's healing power</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Price on consultation</p>
+                  <p className="text-2xl text-purple-300 font-bold">Natural Regeneration</p>
                   <p className="text-sm text-gray-300">#cosmeprp - Check out our IG for hundreds more natural, subtle transformations</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -165,7 +165,7 @@ const PRPTreatment = () => {
                     className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
                     onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    View Price List
+                    View Pricing
                   </Button>
                 </div>
               </motion.div>
