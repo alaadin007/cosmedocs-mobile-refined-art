@@ -430,42 +430,110 @@ const PeelToReveal = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Peel to Reveal Aftercare</h2>
-                <p className="text-gray-300 mb-6">
-                  Follow these essential guidelines to ensure optimal healing and maximize your Peel to Reveal results:
-                </p>
-
-                <div className="space-y-4">
-                  <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">First 24-48 Hours</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Avoid direct sun exposure completely</li>
-                      <li>• Use gentle, fragrance-free cleanser</li>
-                      <li>• Apply provided moisturizer frequently</li>
-                      <li>• No makeup or active skincare products</li>
-                      <li>• Avoid touching or picking at skin</li>
-                    </ul>
+                <div className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 backdrop-blur-sm border-2 border-purple-400/50 rounded-xl p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center">
+                      <Shield className="text-purple-600" size={28} />
+                    </div>
+                    <div>
+                      <h2 className="text-3xl font-bold text-white">Peel to Reveal Aftercare</h2>
+                      <p className="text-purple-300 font-medium">Your complete recovery guide</p>
+                    </div>
                   </div>
+                  
+                  <p className="text-gray-300 mb-8 text-lg">
+                    Follow these essential guidelines to ensure optimal healing and maximize your transformation results:
+                  </p>
 
-                  <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">Days 3-7 (Peeling Phase)</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• SPF 50+ mandatory when outdoors</li>
-                      <li>• Allow natural peeling process</li>
-                      <li>• Keep skin hydrated with gentle products</li>
-                      <li>• Avoid exfoliants and harsh treatments</li>
-                      <li>• Light cover-up makeup allowed from day 3</li>
-                    </ul>
-                  </div>
+                  <div className="space-y-6">
+                    <div className="bg-gradient-to-r from-red-900/20 to-red-800/10 border border-red-400/30 rounded-lg p-5">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-red-100 rounded-full w-8 h-8 flex items-center justify-center">
+                          <span className="text-red-600 font-bold text-sm">24h</span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-white">First 24-48 Hours</h3>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Avoid direct sun exposure completely</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Use gentle, fragrance-free cleanser</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Apply provided moisturizer frequently</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">No makeup or active skincare</span>
+                        </div>
+                        <div className="flex items-center space-x-3 sm:col-span-2">
+                          <CheckCircle className="text-red-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Avoid touching or picking at skin</span>
+                        </div>
+                      </div>
+                    </div>
 
-                  <div className="bg-white/5 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">Ongoing Care</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Daily SPF protection essential</li>
-                      <li>• Resume normal skincare after 10 days</li>
-                      <li>• Stay well-hydrated</li>
-                      <li>• Follow practitioner's product recommendations</li>
-                    </ul>
+                    <div className="bg-gradient-to-r from-orange-900/20 to-orange-800/10 border border-orange-400/30 rounded-lg p-5">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-orange-100 rounded-full w-8 h-8 flex items-center justify-center">
+                          <span className="text-orange-600 font-bold text-sm">3-7</span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-white">Days 3-7 (Peeling Phase)</h3>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">SPF 50+ mandatory when outdoors</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Allow natural peeling process</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Keep skin hydrated with gentle products</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Avoid exfoliants and harsh treatments</span>
+                        </div>
+                        <div className="flex items-center space-x-3 sm:col-span-2">
+                          <CheckCircle className="text-orange-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Light cover-up makeup allowed from day 3</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-r from-green-900/20 to-green-800/10 border border-green-400/30 rounded-lg p-5">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="bg-green-100 rounded-full w-8 h-8 flex items-center justify-center">
+                          <CheckCircle className="text-green-600" size={20} />
+                        </div>
+                        <h3 className="text-lg font-semibold text-white">Ongoing Care</h3>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Daily SPF protection essential</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Resume normal skincare after 10 days</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Stay well-hydrated</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-green-400 flex-shrink-0" size={16} />
+                          <span className="text-gray-300 text-sm">Follow practitioner's recommendations</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
