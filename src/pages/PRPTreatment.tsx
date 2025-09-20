@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star, Activity, Syringe, CheckCircle } from "lucide-react";
+import { Clock, Users, Calendar, MapPin, Phone, ChevronDown, ChevronUp, Droplets, Heart, Shield, Star, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -386,20 +386,21 @@ const PRPTreatment = () => {
           }} viewport={{
             once: true
           }}>
-              <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-                <CardContent className="p-12">
-                  <h3 className="text-3xl font-bold mb-8 text-white">Help Your Body Heal Itself</h3>
-                  <p className="text-lg text-white/80 leading-relaxed mb-8">
-                    PRP works by using platelets from your own blood for both stimulation and acceleration of tissue regeneration and healing. 
-                    This natural process can counter the effects of injury, trauma, or degenerative processes including aging in tendons, 
-                    muscles, hair growth, skin, and cartilage.
-                  </p>
-                  <p className="text-xl text-white/90 font-light">
-                    Simply put, PRGF is the most effective way for your body to heal itself naturally - 
-                    a procedure commonly adopted by celebrities to heal scars and reverse signs of aging.
-                  </p>
-                </CardContent>
-              </Card>
+          <Card className="bg-gradient-to-br from-purple-900/30 to-purple-600/20 border-purple-500 border-2 backdrop-blur-sm shadow-2xl">
+            <CardContent className="p-12">
+              <h3 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">Help Your Body Heal Itself</h3>
+              <p className="text-lg text-gray-200 leading-relaxed mb-8">
+                PRP works by using platelets from your own blood for both stimulation and acceleration of tissue regeneration and healing. 
+                This natural process can counter the effects of injury, trauma, or degenerative processes including aging in tendons, 
+                muscles, hair growth, skin, and cartilage.
+              </p>
+              <p className="text-xl text-purple-200 font-medium">
+                Simply put, PRGF is the most effective way for your body to heal itself naturally - 
+                a procedure commonly adopted by celebrities to heal scars and reverse signs of aging.
+              </p>
+              <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto rounded-full mt-6"></div>
+            </CardContent>
+          </Card>
             </motion.div>
           </div>
         </section>
@@ -439,15 +440,15 @@ const PRPTreatment = () => {
             }} viewport={{
               once: true
             }}>
-                  <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full hover:bg-white/10 transition-all duration-300">
-                    <CardHeader>
-                      <CardTitle className="text-2xl font-light text-white">{type.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-6">
-                      <p className="text-white/80 leading-relaxed">{type.description}</p>
-                      <div className="space-y-3">
-                        {type.benefits.map((benefit, idx) => <div key={idx} className="flex items-start space-x-3">
-                            <div className="w-2 h-2 bg-white/60 rounded-full mt-2 flex-shrink-0" />
+                <Card className="bg-gradient-to-b from-purple-900/20 to-gray-900/50 border-purple-500/30 text-white h-full hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
+                  <CardHeader className="border-b border-purple-500/20">
+                    <CardTitle className="text-2xl font-semibold text-white">{type.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6 pt-6">
+                    <p className="text-gray-300 leading-relaxed">{type.description}</p>
+                    <div className="space-y-3">
+                      {type.benefits.map((benefit, idx) => <div key={idx} className="flex items-start space-x-3">
+                          <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
                             <span className="text-white/70 text-sm">{benefit}</span>
                           </div>)}
                       </div>
@@ -738,7 +739,7 @@ const PRPTreatment = () => {
 
 
         {/* Pricing Section */}
-        <section className="py-20 bg-accent text-white" id="pricing-section">
+        <section className="py-20 bg-black" id="pricing-section">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -747,39 +748,39 @@ const PRPTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">PRP Treatment Pricing</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">PRP Treatment Investment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for our comprehensive PRP treatments. All consultations include expert assessment and personalized treatment planning.
+                Our comprehensive PRP treatments provide natural healing and rejuvenation using your body's own platelets. 
+                All treatments include consultation, procedure, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
+                <Card className="bg-accent border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">PRP Facial (Vampire Facial)</CardTitle>
+                    <CardTitle className="text-white text-2xl">PRP Facial</CardTitle>
+                    <div className="text-purple-300 text-lg font-bold">Price on consultation</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">
-                      Complete facial rejuvenation using your body's natural healing properties for glowing, youthful skin.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Price on consultation</span>
+                    <p className="text-gray-300">Natural skin rejuvenation and anti-aging</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Full facial assessment</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Includes comprehensive assessment</span>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Professional application</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Treatment plan included</span>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare guidance</span>
                       </div>
                     </div>
                   </CardContent>
@@ -789,29 +790,35 @@ const PRPTreatment = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
                     <CardTitle className="text-white text-2xl">PRP Hair Treatment</CardTitle>
+                    <div className="text-white text-lg font-bold">Price on consultation</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">
-                      Stimulate hair follicles and promote new hair growth for thicker, healthier hair naturally.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Price on consultation</span>
+                    <p className="text-purple-100">Hair restoration and density improvement</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Scalp analysis</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Scalp assessment included</span>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Multi-point injection</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Follow-up care plan</span>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Follow-up sessions</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Progress monitoring</span>
                       </div>
                     </div>
                   </CardContent>
@@ -819,31 +826,30 @@ const PRPTreatment = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none h-full">
+                <Card className="bg-accent border-gray-700 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">PRP Intimate Rejuvenation</CardTitle>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-lg font-bold">£50</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">
-                      Non-surgical intimate wellness treatment for enhanced confidence and comfort.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Price on consultation</span>
+                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Comprehensive assessment</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Private consultation included</span>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Treatment recommendations</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-white">Aftercare support</span>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
                       </div>
                     </div>
                   </CardContent>
@@ -852,22 +858,118 @@ const PRPTreatment = () => {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center mt-12"
             >
+              <p className="text-gray-300 mb-6">
+                *Consultation fee is deducted from treatment cost if you proceed on the same day
+              </p>
               <Button 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
                 onClick={() => window.open(bookingUrl, "_blank")}
               >
-                Book Free Consultation
+                Book Your Consultation
               </Button>
-              <p className="text-sm text-gray-300 mt-4">
-                All treatments include comprehensive consultation and aftercare guidance
-              </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Your own blood - completely natural and safe</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
