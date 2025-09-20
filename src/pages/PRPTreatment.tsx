@@ -380,19 +380,15 @@ const PRPTreatment = () => {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-gray-300 leading-relaxed mb-8">
-                    Thanks to this process, the effects of any injury, trauma or degenerative process (including aging) can be countered in:
+                    PRGF represents revolutionary regenerative medicine that harnesses your body's natural healing mechanisms 
+                    through carefully sourced platelet-rich plasma. This advanced treatment delivers comprehensive 
+                    tissue restoration by accelerating regeneration across multiple areas including tendons, muscles, 
+                    skin, cartilage, and promoting hair growth.
                   </p>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                    <div className="text-purple-300 font-medium">• Tendons</div>
-                    <div className="text-purple-300 font-medium">• Muscles</div>
-                    <div className="text-purple-300 font-medium">• Hair growth and hair regrowth</div>
-                    <div className="text-purple-300 font-medium">• Skin</div>
-                    <div className="text-purple-300 font-medium">• Cartilage</div>
-                  </div>
-                  
                   <p className="text-gray-300 leading-relaxed">
-                    Simply put, PRGF is the most effective way for your body to, quite literally, heal itself and it's a procedure commonly adopted by celebrities to heal scars and reverse the signs of aging.
+                    Simply put, PRGF is the most effective way for your body to heal itself naturally - 
+                    a procedure commonly adopted by celebrities to heal scars and reverse the signs of aging.
                   </p>
                 </CardContent>
               </Card>
