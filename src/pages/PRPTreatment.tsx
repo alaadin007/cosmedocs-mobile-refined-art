@@ -200,7 +200,8 @@ const PRPTreatment = () => {
                   <Clock className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Procedure Time</h3>
-                <p className="text-gray-300">30 minutes</p>
+                <p className="text-gray-300">30 minutes including consultation and preparation. 
+                Quick and efficient treatment with minimal time away from daily activities.</p>
               </motion.div>
 
               <motion.div
@@ -214,7 +215,8 @@ const PRPTreatment = () => {
                   <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">18 months</p>
+                <p className="text-gray-300">18 months of natural rejuvenation benefits. 
+                Long-lasting results that gradually improve over time with your body's natural healing process.</p>
               </motion.div>
 
               <motion.div
@@ -228,7 +230,8 @@ const PRPTreatment = () => {
                   <Heart className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">24-48 hours</p>
+                <p className="text-gray-300">24-48 hours for initial healing and minimal side effects. 
+                Most patients experience only mild soreness and can resume normal activities immediately.</p>
               </motion.div>
 
               <motion.div
@@ -242,7 +245,8 @@ const PRPTreatment = () => {
                   <Shield className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthetic</h3>
-                <p className="text-gray-300">Local numbing</p>
+                <p className="text-gray-300">Local numbing cream applied before treatment for maximum comfort. 
+                Gentle procedure with minimal discomfort throughout the entire PRP injection process.</p>
               </motion.div>
             </div>
           </div>
@@ -735,7 +739,8 @@ const PRPTreatment = () => {
                     <div className="text-purple-300 text-lg font-bold">Price on consultation</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Natural skin rejuvenation and anti-aging</p>
+                    <p className="text-gray-300">Natural skin rejuvenation and anti-aging treatment using your body's own healing factors. 
+                    Stimulates collagen production and improves skin texture, tone, and overall appearance for youthful radiance.</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
@@ -769,7 +774,8 @@ const PRPTreatment = () => {
                     <div className="text-white text-lg font-bold">Price on consultation</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">Hair restoration and density improvement</p>
+                     <p className="text-purple-100">Hair restoration and density improvement through natural regeneration processes. 
+                     Stimulates dormant hair follicles and promotes new growth for thicker, healthier hair over time.</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
@@ -804,7 +810,8 @@ const PRPTreatment = () => {
                     <div className="text-purple-300 text-lg font-bold">£50</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                     <p className="text-gray-300">Professional assessment and treatment planning with our expert medical team. 
+                     Comprehensive evaluation to determine the best PRP approach for your specific needs and desired outcomes.</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
@@ -869,7 +876,8 @@ const PRPTreatment = () => {
                   <Award className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+                <p className="text-gray-300">Over 1 million injections performed since 2007 with exceptional results. 
+                Extensive expertise in PRP treatments and regenerative medicine for optimal patient outcomes.</p>
               </motion.div>
 
               <motion.div
@@ -906,7 +914,8 @@ const PRPTreatment = () => {
                   <CheckCircle className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Your own blood - completely natural and safe</p>
+                <p className="text-gray-300">Your own blood - completely natural and safe with no risk of allergic reactions. 
+                Premium processing techniques ensure the highest concentration of growth factors for maximum effectiveness.</p>
               </motion.div>
 
               <motion.div
@@ -920,7 +929,8 @@ const PRPTreatment = () => {
                   <Palette className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
+                <p className="text-gray-300">"Invisible art" for natural results that enhance your inherent beauty. 
+                Subtle enhancement philosophy ensuring you look like the best version of yourself, never overdone.</p>
               </motion.div>
 
               <motion.div
@@ -934,7 +944,8 @@ const PRPTreatment = () => {
                   <Heart className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up support throughout your healing journey. 
+                Detailed guidance and 24/7 access to our medical team for any questions or concerns post-treatment.</p>
               </motion.div>
             </div>
           </div>
