@@ -332,7 +332,9 @@ const PRPTreatment = () => {
                 Treatment Options
               </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Discover how PRP can address your specific concerns with targeted treatment approaches
+                Discover how PRP can address your specific concerns with targeted treatment approaches. 
+                Our comprehensive range of Platelet-Rich Plasma treatments harnesses your body's natural healing power to deliver exceptional results. 
+                Whether you're seeking facial rejuvenation, hair restoration, or intimate wellness enhancement, each treatment is carefully tailored to meet your individual needs and aesthetic goals.
               </p>
             </motion.div>
 
