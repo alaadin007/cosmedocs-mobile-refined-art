@@ -79,6 +79,8 @@ const MoleSkinTagRemoval = () => {
     }
   ];
 
+  const bookingUrl = "https://med.as.me/harleystreet";
+
   return (
     <>
       <Helmet>
@@ -132,7 +134,10 @@ const MoleSkinTagRemoval = () => {
                   <p className="text-sm text-gray-300">Safe, effective removal with minimal scarring and comprehensive aftercare</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    onClick={() => window.open(bookingUrl, "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
                     Book Consultation
                   </Button>
                   <Button 
@@ -735,7 +740,10 @@ const MoleSkinTagRemoval = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              <Button 
+                onClick={() => window.open(bookingUrl, "_blank")}
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold"
+              >
                 Book Your Consultation
               </Button>
             </motion.div>
@@ -895,7 +903,10 @@ const MoleSkinTagRemoval = () => {
                 can address your concerns with minimal scarring and optimal healing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                <Button 
+                  onClick={() => window.open(bookingUrl, "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
                   Book Free Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
