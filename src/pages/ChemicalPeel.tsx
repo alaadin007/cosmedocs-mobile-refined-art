@@ -571,7 +571,7 @@ const ChemicalPeel = () => {
         </section>
 
         {/* Combination Treatments */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
