@@ -277,23 +277,6 @@ const NeckFillers = () => {
               <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
 
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Neck Filler Results Gallery"
-                description="Comprehensive gallery of our neck enhancement treatments"
-              />
-            </div>
-
-            <BeforeAfterImageViewer 
-              images={beforeAfterImages}
-              isOpen={selectedImageIndex !== null}
-              onOpenChange={(open) => !open && setSelectedImageIndex(null)}
-              startIndex={selectedImageIndex || 0}
-              title="Neck Filler Results Gallery"
-              description="Professional neck enhancement treatments"
-            />
           </div>
         </section>
 

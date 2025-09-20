@@ -265,14 +265,6 @@ export default function NefertitiBotoxFacelift() {
               <CarouselNext className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700" />
             </Carousel>
 
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Nefertiti Lift Results Gallery"
-                description="Comprehensive gallery of our jawline enhancement treatments"
-              />
-            </div>
           </div>
         </section>
 

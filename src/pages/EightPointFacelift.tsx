@@ -447,11 +447,6 @@ export default function EightPointFacelift() {
               <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
 
-            <div className="text-center mt-12">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-3 text-lg font-semibold">
-                View All Before & After Photos
-              </Button>
-            </div>
           </div>
         </section>
 

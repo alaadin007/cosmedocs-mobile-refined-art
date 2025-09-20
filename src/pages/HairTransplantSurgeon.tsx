@@ -194,23 +194,6 @@ const HairTransplantSurgeon = () => {
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View All Before & After Photos"
-                title="Hair Transplant Results Gallery"
-                description="Comprehensive gallery of our hair restoration treatments"
-              />
-            </div>
-
-            <BeforeAfterImageViewer 
-              images={beforeAfterImages}
-              isOpen={selectedImageIndex !== null}
-              onOpenChange={(open) => !open && setSelectedImageIndex(null)}
-              startIndex={selectedImageIndex || 0}
-              title="Hair Transplant Results Gallery"
-              description="Professional hair restoration treatments"
-            />
           </div>
         </section>
 
