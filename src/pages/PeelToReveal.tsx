@@ -359,9 +359,6 @@ const PeelToReveal = () => {
               <div className="mt-12 max-w-4xl mx-auto">
                 <Card className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 backdrop-blur-sm border-2 border-purple-400 hover:border-purple-300 hover:bg-gradient-to-br hover:from-purple-900/30 hover:to-purple-800/20 transition-all duration-300 shadow-xl">
                   <CardHeader className="text-center pb-4">
-                    <div className="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <Activity className="text-purple-600" size={32} />
-                    </div>
                     <CardTitle className="text-3xl font-bold text-white mb-2">Understanding Skin Aging</CardTitle>
                     <p className="text-purple-300 font-medium">The science behind cellular regeneration</p>
                   </CardHeader>
