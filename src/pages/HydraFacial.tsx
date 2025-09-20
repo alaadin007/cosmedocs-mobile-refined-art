@@ -336,72 +336,77 @@ const HydraFacial = () => {
         {/* What is HydraFacial & Who Is HydraFacial For */}
         <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* What is HydraFacial */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">What is HydraFacial?</h2>
-                <div className="space-y-4 text-gray-300">
-                  <p>
-                    HydraFacial is a revolutionary facial treatment that combines cleansing, exfoliation, extraction, 
-                    hydration, and antioxidant protection in one comprehensive session. Using patented vortex technology, 
-                    this non-invasive treatment delivers immediate results with no downtime.
-                  </p>
-                  <p>
-                    The treatment uses a unique spiral design HydroPeel tip that creates a vortex effect to easily 
-                    dislodge and remove impurities while simultaneously delivering hydrating skin solutions.
-                  </p>
-                  <p>
-                    At Cosmedocs, our expert practitioners customize each HydraFacial treatment to your specific 
-                    skin needs, ensuring optimal results for every skin type and concern.
-                  </p>
-                </div>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-8 text-center text-white">What is HydraFacial?</h2>
+              
+              <div className="space-y-6 text-gray-300 text-lg mb-12">
+                <p>
+                  HydraFacial is a revolutionary facial treatment that combines cleansing, exfoliation, extraction, 
+                  hydration, and antioxidant protection in one comprehensive session. Using patented vortex technology, 
+                  this non-invasive treatment delivers immediate results with no downtime.
+                </p>
+                <p>
+                  The treatment uses a unique spiral design HydroPeel tip that creates a vortex effect to easily 
+                  dislodge and remove impurities while simultaneously delivering hydrating skin solutions.
+                </p>
+                <p>
+                  At Cosmedocs, our expert practitioners customize each HydraFacial treatment to your specific 
+                  skin needs, ensuring optimal results for every skin type and concern.
+                </p>
+              </div>
 
-              {/* Ideal Candidates */}
+              {/* Skin Types Card */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8"
               >
-                <h2 className="text-3xl font-bold mb-6 text-white">Who Is HydraFacial For?</h2>
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Skin Types</h3>
+                <p className="text-gray-300 text-center mb-8">
                   HydraFacial is suitable for virtually everyone and addresses multiple skin concerns across all skin types:
                 </p>
                 
-                <div className="space-y-4">
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">Oily Skin</h3>
-                    <p className="text-gray-300">Deep cleansing helps unclog pores and reduce excess sebum production</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                    <h4 className="text-lg font-semibold text-white mb-2">Oily Skin</h4>
+                    <p className="text-gray-300 text-sm">Deep cleansing helps unclog pores and reduce excess sebum production</p>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">Dry Skin</h3>
-                    <p className="text-gray-300">Intensive hydration restores moisture balance and plumpness</p>
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                    <h4 className="text-lg font-semibold text-white mb-2">Dry Skin</h4>
+                    <p className="text-gray-300 text-sm">Intensive hydration restores moisture balance and plumpness</p>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">Sensitive Skin</h3>
-                    <p className="text-gray-300">Gentle, soothing treatment perfect for reactive skin types</p>
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                    <h4 className="text-lg font-semibold text-white mb-2">Sensitive Skin</h4>
+                    <p className="text-gray-300 text-sm">Gentle, soothing treatment perfect for reactive skin types</p>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">Acne-Prone Skin</h3>
-                    <p className="text-gray-300">Extracts impurities and reduces inflammation for clearer skin</p>
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                    <h4 className="text-lg font-semibold text-white mb-2">Acne-Prone Skin</h4>
+                    <p className="text-gray-300 text-sm">Extracts impurities and reduces inflammation for clearer skin</p>
                   </div>
                   
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <h3 className="text-lg font-semibold text-white mb-2">Aging Skin</h3>
-                    <p className="text-gray-300">Reduces fine lines, improves texture, and restores radiance</p>
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                    <h4 className="text-lg font-semibold text-white mb-2">Aging Skin</h4>
+                    <p className="text-gray-300 text-sm">Reduces fine lines, improves texture, and restores radiance</p>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                    <h4 className="text-lg font-semibold text-white mb-2">Combination Skin</h4>
+                    <p className="text-gray-300 text-sm">Balances different skin zones for overall improved complexion</p>
                   </div>
                 </div>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
