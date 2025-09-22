@@ -336,138 +336,66 @@ export default function PsoriasisTreatment() {
         </section>
 
         {/* Symptoms and Treatment Reasons */}
-        <section className="py-20 bg-gradient-to-r from-purple-900/10 to-black">
+        <section className="py-20">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Symptoms of Psoriasis */}
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-8"
               >
-                <div className="text-center lg:text-left">
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6"
-                  >
-                    <Target className="text-white" size={24} />
-                  </motion.div>
-                  <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
-                    Symptoms of Psoriasis
-                  </h2>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Understanding the different symptoms is crucial for effective treatment and early intervention.
-                  </p>
-                </div>
+                <h2 className="text-3xl font-bold mb-6">Symptoms of Psoriasis</h2>
+                <p className="text-gray-300 mb-6">
+                  Understanding the different symptoms is crucial for effective treatment.
+                </p>
                 
-                <div className="bg-black/40 rounded-2xl p-8 border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/40 transition-all duration-300">
-                  <h3 className="text-xl font-bold mb-6 text-white flex items-center">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
-                    Main Symptoms Include:
-                  </h3>
-                  <div className="grid gap-4">
-                    {[
-                      { text: "Inflamed, scaly skin", delay: 0.1 },
-                      { text: "Thick, raised patches", delay: 0.2 }, 
-                      { text: "Silvery-colored skin", delay: 0.3 },
-                      { text: "Small, scaly spots", delay: 0.4 },
-                      { text: "Hair loss (on the scalp)", delay: 0.5 },
-                      { text: "Pitted, crumbly nails", delay: 0.6 },
-                      { text: "Blisters", delay: 0.7 }
-                    ].map((symptom, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: symptom.delay }}
-                        viewport={{ once: true }}
-                        className="flex items-center space-x-4 p-3 rounded-lg hover:bg-purple-900/20 transition-colors duration-200 group"
-                      >
-                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full group-hover:scale-125 transition-transform duration-200"></div>
-                        <p className="text-gray-300 group-hover:text-white transition-colors duration-200">{symptom.text}</p>
-                      </motion.div>
-                    ))}
-                  </div>
+                <h3 className="text-xl font-bold mb-6">Main Symptoms Include:</h3>
+                <div className="space-y-4">
+                  {[
+                    "Inflamed, scaly skin",
+                    "Thick, raised patches", 
+                    "Silvery-colored skin",
+                    "Small, scaly spots",
+                    "Hair loss (on the scalp)",
+                    "Pitted, crumbly nails",
+                    "Blisters"
+                  ].map((symptom, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300">{symptom}</p>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
 
               {/* Why Do People Seek Treatment for Psoriasis */}
               <motion.div
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-8"
               >
-                <div className="text-center lg:text-left">
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full mb-6"
-                  >
-                    <HandHeart className="text-white" size={24} />
-                  </motion.div>
-                  <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-pink-300 to-orange-300 bg-clip-text text-transparent">
-                    Why Seek Treatment?
-                  </h2>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Psoriasis affects more than just the skin - it impacts overall quality of life, confidence, and wellbeing.
-                  </p>
+                <h2 className="text-3xl font-bold mb-6">Why Do People Seek Treatment for Psoriasis?</h2>
+                <p className="text-gray-300 mb-6">
+                  Psoriasis affects more than just the skin - it impacts overall quality of life, confidence, and wellbeing.
+                </p>
+                <div className="space-y-4">
+                  {[
+                    "To manage and control symptoms",
+                    "To reduce the severity of flare-ups", 
+                    "To alleviate pain associated with psoriasis",
+                    "To enhance self-confidence and self-esteem",
+                    "To decrease stress, anxiety, and unhappiness",
+                    "To lower the risk of developing related health issues, such as psoriatic arthritis, heart disease, and depression"
+                  ].map((reason, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">{reason}</p>
+                    </div>
+                  ))}
                 </div>
-
-                <div className="bg-black/40 rounded-2xl p-8 border border-pink-500/20 backdrop-blur-sm hover:border-pink-500/40 transition-all duration-300">
-                  <h3 className="text-xl font-bold mb-6 text-white flex items-center">
-                    <div className="w-3 h-3 bg-pink-500 rounded-full mr-3"></div>
-                    Key Benefits of Treatment:
-                  </h3>
-                  <div className="grid gap-4">
-                    {[
-                      { text: "To manage and control symptoms", delay: 0.1 },
-                      { text: "To reduce the severity of flare-ups", delay: 0.2 }, 
-                      { text: "To alleviate pain associated with psoriasis", delay: 0.3 },
-                      { text: "To enhance self-confidence and self-esteem", delay: 0.4 },
-                      { text: "To decrease stress, anxiety, and unhappiness", delay: 0.5 },
-                      { text: "To lower the risk of developing related health issues, such as psoriatic arthritis, heart disease, and depression", delay: 0.6 }
-                    ].map((reason, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: reason.delay }}
-                        viewport={{ once: true }}
-                        className="flex items-start space-x-4 p-3 rounded-lg hover:bg-pink-900/20 transition-colors duration-200 group"
-                      >
-                        <div className="w-2 h-2 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full mt-2 group-hover:scale-125 transition-transform duration-200 flex-shrink-0"></div>
-                        <p className="text-gray-300 group-hover:text-white transition-colors duration-200 leading-relaxed">{reason.text}</p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Call to Action Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <div className="text-center">
-                    <Sparkles className="text-purple-300 mx-auto mb-3" size={32} />
-                    <h3 className="text-xl font-bold text-white mb-2">Ready to Transform Your Skin?</h3>
-                    <p className="text-gray-300 text-sm mb-4">Start your journey to clearer, healthier skin today</p>
-                    <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 rounded-full px-6 py-2 text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
-                      Book Consultation
-                    </Button>
-                  </div>
-                </motion.div>
               </motion.div>
             </div>
           </div>
