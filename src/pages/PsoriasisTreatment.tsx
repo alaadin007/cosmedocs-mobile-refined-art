@@ -430,137 +430,98 @@ export default function PsoriasisTreatment() {
             </motion.div>
 
             {/* Treatment Categories Grid */}
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8 mb-16">
               {/* Topical Treatments */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-6"
               >
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Topical Treatments</h3>
-                  <p className="text-gray-300">Medical-grade treatments for mild to moderate psoriasis</p>
-                </div>
-
-                <div className="space-y-4">
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Emollients & Moisturizers</h4>
-                      <p className="text-gray-300 text-sm">Soothe dry skin and reduce scaling</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Topical Steroids</h4>
-                      <p className="text-gray-300 text-sm">Reduce inflammation and itching</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Vitamin D Analogues</h4>
-                      <p className="text-gray-300 text-sm">Regulate cell turnover and growth</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Calcineurin Inhibitors</h4>
-                      <p className="text-gray-300 text-sm">For face and sensitive skin areas</p>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardHeader className="text-center pb-4">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Shield className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Topical Treatments</CardTitle>
+                    <p className="text-gray-300">Medical-grade treatments for mild to moderate psoriasis</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {[
+                      { name: "Emollients & Moisturizers", desc: "Soothe dry skin and reduce scaling" },
+                      { name: "Topical Steroids", desc: "Reduce inflammation and itching" },
+                      { name: "Vitamin D Analogues", desc: "Regulate cell turnover and growth" },
+                      { name: "Calcineurin Inhibitors", desc: "For face and sensitive skin areas" }
+                    ].map((treatment, index) => (
+                      <div key={index} className="p-3 rounded-lg bg-black/20 hover:bg-purple-900/20 transition-colors duration-200">
+                        <h4 className="text-white font-semibold mb-1">{treatment.name}</h4>
+                        <p className="text-gray-300 text-sm">{treatment.desc}</p>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
               </motion.div>
 
               {/* Light Therapy */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="space-y-6"
               >
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Light Therapy</h3>
-                  <p className="text-gray-300">Phototherapy for moderate to severe psoriasis</p>
-                </div>
-
-                <div className="space-y-4">
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Narrowband UVB</h4>
-                      <p className="text-gray-300 text-sm">Most effective phototherapy treatment</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">PUVA Therapy</h4>
-                      <p className="text-gray-300 text-sm">Psoralens plus ultraviolet A light</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Targeted Phototherapy</h4>
-                      <p className="text-gray-300 text-sm">Precise treatment for localized areas</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Home Light Units</h4>
-                      <p className="text-gray-300 text-sm">Convenient maintenance therapy</p>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardHeader className="text-center pb-4">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Sparkles className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Light Therapy</CardTitle>
+                    <p className="text-gray-300">Phototherapy for moderate to severe psoriasis</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {[
+                      { name: "Narrowband UVB", desc: "Most effective phototherapy treatment" },
+                      { name: "PUVA Therapy", desc: "Psoralens plus ultraviolet A light" },
+                      { name: "Targeted Phototherapy", desc: "Precise treatment for localized areas" },
+                      { name: "Home Light Units", desc: "Convenient maintenance therapy" }
+                    ].map((treatment, index) => (
+                      <div key={index} className="p-3 rounded-lg bg-black/20 hover:bg-purple-900/20 transition-colors duration-200">
+                        <h4 className="text-white font-semibold mb-1">{treatment.name}</h4>
+                        <p className="text-gray-300 text-sm">{treatment.desc}</p>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
               </motion.div>
 
               {/* Systemic Treatments */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="space-y-6"
               >
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Systemic Medications</h3>
-                  <p className="text-gray-300">Advanced treatments for severe psoriasis</p>
-                </div>
-
-                <div className="space-y-4">
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Methotrexate</h4>
-                      <p className="text-gray-300 text-sm">Oral medication for severe cases</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Biologics</h4>
-                      <p className="text-gray-300 text-sm">Targeted immune system therapy</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">Cyclosporin</h4>
-                      <p className="text-gray-300 text-sm">Immunosuppressant for quick results</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <h4 className="text-lg font-semibold text-white mb-2">JAK Inhibitors</h4>
-                      <p className="text-gray-300 text-sm">Latest oral treatment options</p>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardHeader className="text-center pb-4">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Stethoscope className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Systemic Medications</CardTitle>
+                    <p className="text-gray-300">Advanced treatments for severe psoriasis</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {[
+                      { name: "Methotrexate", desc: "Oral medication for severe cases" },
+                      { name: "Biologics", desc: "Targeted immune system therapy" },
+                      { name: "Cyclosporin", desc: "Immunosuppressant for quick results" },
+                      { name: "JAK Inhibitors", desc: "Latest oral treatment options" }
+                    ].map((treatment, index) => (
+                      <div key={index} className="p-3 rounded-lg bg-black/20 hover:bg-purple-900/20 transition-colors duration-200">
+                        <h4 className="text-white font-semibold mb-1">{treatment.name}</h4>
+                        <p className="text-gray-300 text-sm">{treatment.desc}</p>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
 
@@ -570,10 +531,13 @@ export default function PsoriasisTreatment() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="mt-16 text-center"
+              className="text-center"
             >
-              <Card className="bg-gradient-to-r from-purple-900/20 to-black/40 border border-purple-500/30">
+              <Card className="bg-black/40 border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
                 <CardContent className="p-8">
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                    <HandHeart className="text-purple-600" size={24} />
+                  </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Our Treatment Philosophy</h3>
                   <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
                     At Cosmedocs, we believe in <span className="text-purple-300 font-semibold">invisible art</span> — 
