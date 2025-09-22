@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, Phone, Clock, ShieldCheck, Award, Users, Activity, Syringe } from "lucide-react";
+import { Calendar, Phone, Clock, ShieldCheck, Award, Users, Activity, Syringe, CheckCircle } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -486,7 +486,7 @@ const LipFillerDissolve = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-accent">
+        <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -495,32 +495,41 @@ const LipFillerDissolve = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Lip Filler Dissolve Treatment Pricing</h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Transparent, competitive pricing for professional lip filler dissolve treatments in London.
+              <h2 className="text-3xl font-bold mb-4 text-white">Lip Filler Dissolve Pricing London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for professional lip filler dissolve treatments. All prices include consultation, 
+                treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border border-purple-500/20 text-center hover:border-purple-500/40 transition-all duration-300">
+                <Card className="bg-accent border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white">Standard Dissolve</CardTitle>
+                    <CardTitle className="text-white text-2xl">Standard Dissolve</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£250</div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold text-purple-300 mb-2">£250</div>
-                    <p className="text-gray-300 text-sm mb-4">per treatment session</p>
-                    <ul className="text-sm text-gray-300 space-y-2">
-                      <li>• Single area treatment</li>
-                      <li>• Up to 1ml hyaluronidase</li>
-                      <li>• 15-30 minutes</li>
-                      <li>• Immediate results</li>
-                    </ul>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Single area treatment with up to 1ml hyaluronidase</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Medical-grade hyaluronidase</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -528,23 +537,37 @@ const LipFillerDissolve = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border border-purple-500/20 text-center hover:border-purple-500/40 transition-all duration-300 transform scale-105">
-                  <CardHeader>
-                    <div className="bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2 inline-block">MOST POPULAR</div>
-                    <CardTitle className="text-white">Complex Correction</CardTitle>
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Complex Correction</CardTitle>
+                    <div className="text-white text-4xl font-bold">£350</div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold text-purple-300 mb-2">£350</div>
-                    <p className="text-gray-300 text-sm mb-4">per treatment session</p>
-                    <ul className="text-sm text-gray-300 space-y-2">
-                      <li>• Multiple area treatment</li>
-                      <li>• Up to 2ml hyaluronidase</li>
-                      <li>• 30-45 minutes</li>
-                      <li>• Comprehensive correction</li>
-                    </ul>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Multiple areas with up to 2ml hyaluronidase</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Premium hyaluronidase</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Follow-up assessment</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -552,46 +575,54 @@ const LipFillerDissolve = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border border-purple-500/20 text-center hover:border-purple-500/40 transition-all duration-300">
+                <Card className="bg-accent border-gray-700 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white">Emergency Dissolve</CardTitle>
+                    <CardTitle className="text-white text-2xl">Emergency Dissolve</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">£450</div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold text-purple-300 mb-2">£450</div>
-                    <p className="text-gray-300 text-sm mb-4">immediate treatment</p>
-                    <ul className="text-sm text-gray-300 space-y-2">
-                      <li>• Same-day appointment</li>
-                      <li>• Vascular emergency</li>
-                      <li>• Unlimited hyaluronidase</li>
-                      <li>• Extended monitoring</li>
-                    </ul>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Same-day emergency treatment for complications</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Immediate assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Unlimited hyaluronidase</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Extended monitoring</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-center mt-8"
+              className="text-center mt-12"
             >
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
-                Book Free Consultation
-              </Button>
-              <p className="text-gray-300 text-sm mt-4">
-                All prices include VAT. Follow-up consultations available.
+              <p className="text-gray-300 mb-6">
+                *All prices include VAT. Follow-up consultations available at no extra charge
               </p>
+              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+                Book Your Consultation
+              </Button>
             </motion.div>
           </div>
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-accent text-white">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -600,63 +631,78 @@ const LipFillerDissolve = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs for Lip Filler Dissolve</h2>
-              <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                At Cosmedocs, our aesthetic philosophy is invisible art—natural corrections that restore without words. 
-                Our expert practitioners combine advanced dissolving techniques with artistic precision for optimal results.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <ShieldCheck className="text-purple-600" size={32} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Expert Medical Team</h3>
-                <p className="text-gray-300">
-                  Our experienced aesthetic doctors specialize in filler correction and dissolving procedures, 
-                  ensuring safe and effective treatment for all complications.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300 text-sm">Over 1 million injections performed since 2007</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <Award className="text-purple-600" size={32} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <ShieldCheck className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Premium Products</h3>
-                <p className="text-gray-300">
-                  We use only medical-grade hyaluronidase enzyme from trusted manufacturers, 
-                  ensuring safe and effective dissolving with predictable results.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Safety</h3>
+                <p className="text-gray-300 text-sm">Medical-grade products and emergency protocols</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <Users className="text-purple-600" size={32} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Comprehensive Care</h3>
-                <p className="text-gray-300">
-                  From emergency dissolving to aesthetic correction, we provide complete care 
-                  including assessment, treatment, and planning for future enhancements.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Expertise</h3>
+                <p className="text-gray-300 text-sm">Specialist filler correction and dissolving techniques</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Users className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Care</h3>
+                <p className="text-gray-300 text-sm">Comprehensive consultation and aftercare support</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Availability</h3>
+                <p className="text-gray-300 text-sm">Same-day emergency dissolving appointments</p>
               </motion.div>
             </div>
           </div>
