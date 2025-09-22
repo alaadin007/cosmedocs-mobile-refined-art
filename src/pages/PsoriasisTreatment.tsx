@@ -253,10 +253,6 @@ export default function PsoriasisTreatment() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">What is Psoriasis?</h2>
-              <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Psoriasis is a chronic autoimmune skin condition that causes skin cells to build up rapidly on the 
-                surface, leading to thick, scaly, and often painful patches.
-              </p>
             </motion.div>
 
             {/* What is Psoriasis Cards */}
@@ -372,28 +368,6 @@ export default function PsoriasisTreatment() {
                     </div>
                   ))}
                 </div>
-
-                <div className="mt-8 bg-accent rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4 text-white">Types of Psoriasis</h3>
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Plaque Psoriasis (80-90% of cases)</h4>
-                      <p className="text-gray-300">Raised, thickened, silvery plaques of varying sizes, often itchy</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Guttate Psoriasis</h4>
-                      <p className="text-gray-300">Small, scaly pink bumps, usually on torso, arms, and legs</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Inverse Psoriasis</h4>
-                      <p className="text-gray-300">Smooth, red patches in skin folds like armpits and genitals</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Pustular Psoriasis</h4>
-                      <p className="text-gray-300">Sore, pus-filled bumps on hands and feet</p>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
 
               {/* Why Do People Seek Treatment for Psoriasis */}
@@ -421,36 +395,6 @@ export default function PsoriasisTreatment() {
                       <p className="text-gray-300">{reason}</p>
                     </div>
                   ))}
-                </div>
-
-                <div className="bg-accent rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4 text-white">Why Choose Cosmedocs for Psoriasis Treatment?</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300 text-sm">Expert dermatologists with extensive psoriasis experience</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300 text-sm">Comprehensive range of treatment options from topical to systemic</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300 text-sm">Evidence-based treatments with proven clinical outcomes</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300 text-sm">Personalized treatment plans tailored to your specific needs</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300 text-sm">Ongoing support and monitoring throughout your treatment journey</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300 text-sm">Our "invisible art" philosophy for natural-looking skin health restoration</p>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             </div>
