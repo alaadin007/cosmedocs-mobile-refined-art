@@ -489,6 +489,26 @@ export default function AcneTreatment() {
                 </Card>
               </motion.div>
             </div>
+
+            {/* Additional Information Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-8"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-white text-lg">Acne-Related Conditions – Pigmentation And Scarring</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">
+                    Acne patients may experience some sort of pigmentation, discolouration and scarring. Other related conditions may include discolouration and the appearance of reddened spots that often persist after the healing of the breakout.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
