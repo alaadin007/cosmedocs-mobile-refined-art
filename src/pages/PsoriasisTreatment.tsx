@@ -339,6 +339,124 @@ export default function PsoriasisTreatment() {
           </div>
         </section>
 
+        {/* Symptoms and Treatment Reasons */}
+        <section className="py-20">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Symptoms of Psoriasis */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Symptoms of Psoriasis</h2>
+                <p className="text-gray-300 mb-6">
+                  Understanding the different symptoms and types of psoriasis is crucial for effective treatment
+                </p>
+                
+                <h3 className="text-xl font-bold mb-6">Main Symptoms Include:</h3>
+                <div className="space-y-4">
+                  {[
+                    "Inflamed, scaly skin",
+                    "Thick, raised patches", 
+                    "Silvery-colored skin",
+                    "Small, scaly spots",
+                    "Hair loss (on the scalp)",
+                    "Pitted, crumbly nails",
+                    "Blisters"
+                  ].map((symptom, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300">{symptom}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 bg-accent rounded-lg p-6">
+                  <h3 className="text-xl font-bold mb-4 text-white">Types of Psoriasis</h3>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <h4 className="font-semibold text-purple-300">Plaque Psoriasis (80-90% of cases)</h4>
+                      <p className="text-gray-300">Raised, thickened, silvery plaques of varying sizes, often itchy</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-300">Guttate Psoriasis</h4>
+                      <p className="text-gray-300">Small, scaly pink bumps, usually on torso, arms, and legs</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-300">Inverse Psoriasis</h4>
+                      <p className="text-gray-300">Smooth, red patches in skin folds like armpits and genitals</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-purple-300">Pustular Psoriasis</h4>
+                      <p className="text-gray-300">Sore, pus-filled bumps on hands and feet</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Why Do People Seek Treatment for Psoriasis */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Why Do People Seek Treatment for Psoriasis?</h2>
+                <p className="text-gray-300 mb-6">
+                  Psoriasis affects more than just the skin - it impacts overall quality of life, confidence, and wellbeing.
+                </p>
+                <div className="space-y-4 mb-8">
+                  {[
+                    "To manage and control symptoms",
+                    "To reduce the severity of flare-ups", 
+                    "To alleviate pain associated with psoriasis",
+                    "To enhance self-confidence and self-esteem",
+                    "To decrease stress, anxiety, and unhappiness",
+                    "To lower the risk of developing related health issues, such as psoriatic arthritis, heart disease, and depression"
+                  ].map((reason, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300">{reason}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-accent rounded-lg p-6">
+                  <h3 className="text-xl font-bold mb-4 text-white">Why Choose Cosmedocs for Psoriasis Treatment?</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">Expert dermatologists with extensive psoriasis experience</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">Comprehensive range of treatment options from topical to systemic</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">Evidence-based treatments with proven clinical outcomes</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">Personalized treatment plans tailored to your specific needs</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">Ongoing support and monitoring throughout your treatment journey</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <p className="text-gray-300 text-sm">Our "invisible art" philosophy for natural-looking skin health restoration</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Comprehensive Treatment Approach */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -674,149 +792,6 @@ export default function PsoriasisTreatment() {
           </div>
         </section>
 
-        {/* Additional Sections - Symptoms of Psoriasis */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Symptoms of Psoriasis</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding the different symptoms and types of psoriasis is crucial for effective treatment
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold mb-6">Main Symptoms Include:</h3>
-                <div className="space-y-4">
-                  {[
-                    "Inflamed, scaly skin",
-                    "Thick, raised patches", 
-                    "Silvery-colored skin",
-                    "Small, scaly spots",
-                    "Hair loss (on the scalp)",
-                    "Pitted, crumbly nails",
-                    "Blisters"
-                  ].map((symptom, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300">{symptom}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4 text-white">Types of Psoriasis</h3>
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Plaque Psoriasis (80-90% of cases)</h4>
-                      <p className="text-gray-300">Raised, thickened, silvery plaques of varying sizes, often itchy</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Guttate Psoriasis</h4>
-                      <p className="text-gray-300">Small, scaly pink bumps, usually on torso, arms, and legs</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Inverse Psoriasis</h4>
-                      <p className="text-gray-300">Smooth, red patches in skin folds like armpits and genitals</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-300">Pustular Psoriasis</h4>
-                      <p className="text-gray-300">Sore, pus-filled bumps on hands and feet</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why do people seek treatment for psoriasis */}
-        <section className="py-20">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Why Do People Seek Treatment for Psoriasis?</h2>
-                <p className="text-gray-300 mb-6">
-                  Psoriasis affects more than just the skin - it impacts overall quality of life, confidence, and wellbeing.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "To manage and control symptoms",
-                    "To reduce the severity of flare-ups", 
-                    "To alleviate pain associated with psoriasis",
-                    "To enhance self-confidence and self-esteem",
-                    "To decrease stress, anxiety, and unhappiness",
-                    "To lower the risk of developing related health issues, such as psoriatic arthritis, heart disease, and depression"
-                  ].map((reason, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">{reason}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-lg p-8"
-              >
-                <h3 className="text-xl font-bold mb-6 text-white">Why Choose Cosmedocs for Psoriasis Treatment?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Expert dermatologists with extensive psoriasis experience</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Comprehensive range of treatment options from topical to systemic</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Evidence-based treatments with proven clinical outcomes</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Personalized treatment plans tailored to your specific needs</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Ongoing support and monitoring throughout your treatment journey</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Our "invisible art" philosophy for natural-looking skin health restoration</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ Section */}
         <section className="py-20 bg-accent">
