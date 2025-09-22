@@ -419,7 +419,7 @@ const HyperpigmentationTreatment = () => {
           </div>
         </section>
 
-        {/* Detailed Treatment Information */}
+        {/* Comprehensive Treatment Approach */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -427,81 +427,218 @@ const HyperpigmentationTreatment = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Comprehensive Treatment Approach</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Our multi-modal approach combines the best of cosmeceuticals and advanced procedures.
+              <h2 className="text-4xl font-bold mb-6 text-white">Comprehensive Treatment Approach</h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Our multi-modal approach combines the best of cosmeceuticals and advanced procedures 
+                for optimal hyperpigmentation results. Every treatment is tailored to your skin type and condition.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* Treatment Categories Grid */}
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Topical & Cosmeceutical Treatments */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-6"
+                className="space-y-8"
               >
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Cosmeceuticals & Prescription Skin Care</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-medium mb-2 text-white">Broad Spectrum Sunscreen</h4>
-                      <p className="text-sm text-gray-300">SPF 30 and above is highly recommended during sun exposure to prevent further skin damage due to UV rays exposure.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium mb-2 text-white">Hydroquinone & Kojic Acid</h4>
-                      <p className="text-sm text-gray-300">Very effective cosmeceutical skin lightener products. Hydroquinone is referred to as the 'Gold Standard' for treating hyperpigmentation. Enhanced when used in combination with antioxidants, hydroxy acids retinoids.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium mb-2 text-white">Vitamin A Products</h4>
-                      <p className="text-sm text-gray-300">Including Retinol and Tretinoin that help in skin rejuvenation and resurfacing and increase cell turnover.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium mb-2 text-white">Alpha Hydroxy Acids</h4>
-                      <p className="text-sm text-gray-300">Exfoliate skin and smooth while increasing cell turnover for even skin tone.</p>
-                    </div>
+                <div className="text-center mb-8">
+                  <div className="inline-block p-4 bg-purple-500/20 rounded-full mb-4">
+                    <span className="text-4xl">💊</span>
                   </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Topical & Cosmeceutical Treatments</h3>
+                  <p className="text-gray-300">Medical-grade products for targeted skin lightening</p>
                 </div>
 
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Microdermabrasion</h3>
-                  <p className="text-sm text-gray-300">
-                    For mild pigmentation, microdermabrasion proves to be an effective treatment. It improves rough and sun damaged skin through skin exfoliation and lightens pigmentation. Also aids in diffusing active care products into skin. Highly effective when used in combination with chemical skin peel treatment.
-                  </p>
+                <div className="space-y-6">
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">☀️</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Broad Spectrum Sunscreen</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed">
+                            SPF 30 and above protection essential for preventing further UV damage 
+                            and maintaining treatment results.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">🏆</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">
+                            Hydroquinone & Kojic Acid 
+                            <span className="text-xs text-purple-300 ml-2">GOLD STANDARD</span>
+                          </h4>
+                          <p className="text-gray-300 text-sm leading-relaxed">
+                            Most effective cosmeceutical skin lighteners. Enhanced when combined 
+                            with antioxidants, hydroxy acids, and retinoids for superior results.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">🔬</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Vitamin A Products</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed">
+                            Retinol and Tretinoin accelerate skin rejuvenation, resurfacing, 
+                            and cellular turnover for improved pigmentation.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">✨</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Alpha Hydroxy Acids</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed">
+                            Gentle exfoliation and increased cell turnover for smoother, 
+                            more even-toned skin texture.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </motion.div>
 
+              {/* Professional Procedures */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-6"
+                className="space-y-8"
               >
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Skin Peel Treatment</h3>
-                  <p className="text-sm text-gray-300">
-                    Chemical skin peels give improved results when other topical therapies are unable to provide desired results. Essential natural ingredients including Lactic, Salicylic and Glycolic Acid help in skin resurfacing and increase cell turnover. Available in varying depths and strengths to suit different skin types.
-                  </p>
+                <div className="text-center mb-8">
+                  <div className="inline-block p-4 bg-purple-500/20 rounded-full mb-4">
+                    <span className="text-4xl">⚡</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Professional Procedures</h3>
+                  <p className="text-gray-300">Advanced in-clinic treatments for enhanced results</p>
                 </div>
 
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-purple-300">IPL Treatment</h3>
-                  <p className="text-sm text-gray-300">
-                    Intense Pulse Light uses broad spectrum light contrary to single wavelength lasers. Helps in clearing dark spots, age spots and hyperpigmentation caused by sun damage and ageing. Usually needs 3-6 treatment sessions to clear skin and give even skin tone. No downtime required.
-                  </p>
-                </div>
+                <div className="space-y-6">
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">💡</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">IPL Treatment</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                            Broad spectrum light therapy targeting dark spots, age spots, and sun damage. 
+                            Typically 3-6 sessions needed with no downtime required.
+                          </p>
+                          <div className="text-xs text-purple-300">✓ No downtime • ✓ 3-6 sessions • ✓ All skin types</div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
 
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-purple-300">Dermaroller Treatment</h3>
-                  <p className="text-sm text-gray-300">
-                    Micro-needling uses a special dermaroller device which gently rejuvenates skin and improves pigmentation. Helps in reduction of pigmentation by increasing cell turnover while powerful anti-oxidants and skin brighteners are infused into the skin.
-                  </p>
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">🧪</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Chemical Peels</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                            Professional-grade peels with Lactic, Salicylic, and Glycolic acids. 
+                            Available in varying depths to suit different skin types and conditions.
+                          </p>
+                          <div className="text-xs text-purple-300">✓ Customizable depth • ✓ Natural ingredients • ✓ Improved results</div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">🔄</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Microdermabrasion</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                            Effective for mild pigmentation. Improves rough, sun-damaged skin through 
+                            exfoliation while enhancing product absorption.
+                          </p>
+                          <div className="text-xs text-purple-300">✓ Mild pigmentation • ✓ Enhanced absorption • ✓ Combines with peels</div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
+                          <span className="text-xl">📍</span>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Dermaroller Treatment</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                            Micro-needling technology promoting skin rejuvenation while infusing 
+                            powerful antioxidants and brightening agents into the skin.
+                          </p>
+                          <div className="text-xs text-purple-300">✓ Micro-needling • ✓ Antioxidant infusion • ✓ Cell turnover</div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </motion.div>
             </div>
+
+            {/* Treatment Philosophy */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-16 text-center"
+            >
+              <Card className="bg-gradient-to-r from-purple-900/20 to-black/40 border border-purple-500/30">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Treatment Philosophy</h3>
+                  <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                    At Cosmedocs, we believe in <span className="text-purple-300 font-semibold">invisible art</span> — 
+                    transformation that speaks without saying a word. Our comprehensive approach ensures 
+                    natural-looking results that enhance your confidence while maintaining skin health.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
