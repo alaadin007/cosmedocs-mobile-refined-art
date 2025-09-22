@@ -1,39 +1,40 @@
-import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import PopularTreatments from "@/components/PopularTreatments";
+import { motion } from "framer-motion";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Syringe, Calendar, Clock, AlertTriangle, RotateCcw, Briefcase, User, UserCheck, Shirt } from "lucide-react";
+import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { Stethoscope, Target, Sparkles, HandHeart, Shield, Clock } from "lucide-react";
 
-const AcneTreatment = () => {
+export default function AcneTreatment() {
   const seoData = generateSEOMetadata(
-    "Acne Treatment London | Expert Dermatology | Cosmedocs Harley Street",
-    "Professional acne treatment in London by expert dermatologists. Clear, blemish-free skin with advanced acne therapies. Book consultation at Harley Street clinic.",
-    "/acne-treatment"
+    "Acne Treatment | Expert Dermatology Care - Cosmedocs",
+    "Professional acne treatment by expert dermatologists. Clear, blemish-free skin with advanced acne therapies. Book consultation today.",
+    "https://cosmedocs.com/acne-treatment"
   );
 
-  const treatmentDetails = [
-    { label: "Anaesthetic", value: "Local", icon: Syringe },
-    { label: "Acne Results", value: "15-18 months", icon: Calendar },
-    { label: "Procedure Time", value: "30 mins", icon: Clock },
-    { label: "Risk & Complications", value: "Swelling, Redness, Itching, Bruising", icon: AlertTriangle },
-    { label: "Full Recovery", value: "24-48 hours, no downtime", icon: RotateCcw },
-    { label: "Back To Work", value: "After Treatment", icon: Briefcase }
-  ];
-
   const beforeAfterImages = [
-    { src: "/placeholder.svg", alt: "Acne treatment before and after - severe to clear", caption: "Dramatic improvement from severe acne to clear, healthy skin" },
-    { src: "/placeholder.svg", alt: "Acne scarring treatment results", caption: "Significant reduction in acne scarring and improved skin texture" },
-    { src: "/placeholder.svg", alt: "Hormonal acne treatment", caption: "Hormonal acne successfully treated with minimal scarring" },
-    { src: "/placeholder.svg", alt: "Cystic acne transformation", caption: "Cystic acne transformation showing clear, smooth skin" }
+    {
+      src: "/images/acne-before-after-1.jpg",
+      alt: "Acne treatment before and after - severe to clear",
+      caption: "Dramatic improvement from severe acne to clear, healthy skin"
+    },
+    {
+      src: "/images/acne-before-after-2.jpg", 
+      alt: "Acne scarring treatment results",
+      caption: "Significant reduction in acne scarring and improved skin texture"
+    },
+    {
+      src: "/images/acne-before-after-3.jpg",
+      alt: "Hormonal acne treatment",
+      caption: "Hormonal acne successfully treated with minimal scarring"
+    }
   ];
 
   const faqs = [
     {
-      question: "How long does acne treatment take to work?",
+      question: "How long does treatment take to show results?",
       answer: "Results typically begin to show within 4-6 weeks, with significant improvement visible after 3 months. Full treatment results are usually achieved within 15-18 months, depending on the severity of acne and individual response."
     },
     {
@@ -55,18 +56,10 @@ const AcneTreatment = () => {
     {
       question: "Can acne scars be treated?",
       answer: "Yes, we offer advanced acne scar treatments including laser therapy, chemical peels, and dermal fillers. The best approach depends on the type and severity of scarring, which we'll assess during your consultation."
-    },
-    {
-      question: "How do I prevent acne from returning?",
-      answer: "We provide comprehensive aftercare including personalized skincare routines, lifestyle recommendations, and maintenance treatments. Our approach focuses on long-term skin health and prevention strategies."
-    },
-    {
-      question: "When can I return to normal activities?",
-      answer: "Most patients can return to work and normal activities immediately after treatment. We recommend avoiding intense physical activity for 24 hours and following our specific aftercare instructions for optimal results."
     }
   ];
 
-  const jsonLd = {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
     "name": "Acne Treatment",
@@ -77,15 +70,17 @@ const AcneTreatment = () => {
     "followup": "Regular follow-up appointments",
     "howPerformed": "Advanced acne therapies and treatments",
     "provider": {
-      "@type": "MedicalBusiness",
+      "@type": "MedicalOrganization",
       "name": "Cosmedocs",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      }
+      "url": "https://cosmedocs.com"
+    },
+    "location": {
+      "@type": "Place", 
+      "name": "UK"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "Acne treatment consultation and therapy"
     }
   };
 
@@ -95,19 +90,28 @@ const AcneTreatment = () => {
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
         <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph tags */}
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
+        <meta property="og:image" content="https://cosmedocs.com/images/acne-treatment-og.jpg" />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="acne treatment London, dermatology, clear skin, acne therapy, Harley Street, cosmetic dermatology, acne scarring, cystic acne" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content="https://cosmedocs.com/images/acne-treatment-og.jpg" />
+        
+        {/* Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
+          {JSON.stringify(structuredData)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section - Matching LipFillers style */}
+        {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -118,25 +122,23 @@ const AcneTreatment = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Clear Skin
-                  <span className="block text-purple-300">Solution</span>
-                  <span className="block text-sm mt-4">Say hello to blemish-free, clear & clean skin</span>
+                  <span className="text-purple-300">Expert Acne Treatment</span>
+                  <span className="block text-sm mt-4">Invisible art - natural skin transformation that speaks without words</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Our Aesthetics is Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Advanced Acne Therapy</p>
-                  <p className="text-sm text-gray-300">Long-lasting results for all types of acne and scarring</p>
+                  <p className="text-2xl text-purple-300 font-bold">Advanced Dermatological Care</p>
+                  <p className="text-sm text-gray-300">Comprehensive treatment for all types of acne</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    View Treatment Options
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
@@ -146,7 +148,115 @@ const AcneTreatment = () => {
           </div>
         </section>
 
-        {/* Treatment Details */}
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Acne Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30 minutes - ongoing therapy</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Target className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">4-6 weeks to 15-18 months</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Return to Activities</h3>
+                <p className="text-gray-300">Immediate return to normal activities</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <HandHeart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Comfort Level</h3>
+                <p className="text-gray-300">Minimal discomfort with anaesthetic</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural skin health restoration</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before and After Gallery */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before and After Acne Treatment Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See authentic transformations from our clinic. Our comprehensive treatments significantly reduce 
+                acne symptoms and improve skin health for naturally clear, comfortable skin.
+              </p>
+            </motion.div>
+
+            <BeforeAfterImageViewer images={beforeAfterImages} />
+          </div>
+        </section>
+
+        {/* What is Acne - Two Column Layout */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -156,40 +266,12 @@ const AcneTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Treatment Details</h2>
+              <h2 className="text-3xl font-bold mb-4">What is Acne?</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Comprehensive acne treatment with minimal downtime and maximum results
+                Understanding acne helps us create targeted treatment plans for optimal skin clearing results.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-6 gap-4">
-              {treatmentDetails.map((detail, index) => {
-                const IconComponent = detail.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="bg-black border-gray-800 h-full">
-                      <CardContent className="p-4 text-center">
-                        <IconComponent className="w-8 h-8 mb-3 mx-auto text-purple-300" />
-                        <h3 className="text-sm font-semibold mb-2 text-purple-300">{detail.label}</h3>
-                        <p className="text-xs text-gray-300">{detail.value}</p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* What is Acne Treatment */}
-        <section className="py-20">
-          <div className="page-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -197,34 +279,38 @@ const AcneTreatment = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">What is Acne Treatment?</h2>
-                <div className="space-y-4 text-gray-300">
-                  <p>
-                    Acne is the most common chronic skin disease, causing lesions, spots, and oily skin primarily on the face, 
-                    chest, and back due to infected skin pores. While it especially affects adolescents, acne is not age-specific.
-                  </p>
-                  <p>
-                    Our comprehensive acne treatment approach addresses:
-                  </p>
-                  <ul className="space-y-2 ml-6">
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <span>Active acne lesions and breakouts</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <span>Acne scarring and texture issues</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <span>Hormonal and cystic acne</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <span>Prevention of future breakouts</span>
-                    </li>
-                  </ul>
-                </div>
+                <Card className="bg-black/50 backdrop-blur-sm border-purple-500/20 h-full hover:border-purple-500/40 transition-colors">
+                  <CardContent className="p-8">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-bold text-white mb-4">Understanding Acne</h3>
+                      <p className="text-gray-300">
+                        Acne is the most common chronic skin disease, causing lesions, spots, and oily skin primarily on the face, 
+                        chest, and back due to infected skin pores. While it especially affects adolescents, acne is not age-specific.
+                      </p>
+                      <p className="text-gray-300">
+                        Our comprehensive acne treatment approach addresses:
+                      </p>
+                      <ul className="space-y-3">
+                        <li className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <span className="text-gray-300">Active acne lesions and breakouts</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <span className="text-gray-300">Acne scarring and texture issues</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <span className="text-gray-300">Hormonal and cystic acne</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <span className="text-gray-300">Prevention of future breakouts</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -233,30 +319,32 @@ const AcneTreatment = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-none">
-                  <CardHeader>
-                    <CardTitle className="text-white">Why Choose Cosmedocs for Acne Treatment?</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Expert dermatologists with extensive acne treatment experience</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Advanced treatment technologies and techniques</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Personalized treatment plans for every skin type</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Comprehensive aftercare and follow-up support</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Long-term skin health and maintenance programs</p>
+                <Card className="bg-black/50 backdrop-blur-sm border-purple-500/20 h-full hover:border-purple-500/40 transition-colors">
+                  <CardContent className="p-8">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-bold text-white mb-4">Why Choose Cosmedocs for Acne Treatment?</h3>
+                      <div className="space-y-4">
+                        <div className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <p className="text-gray-300">Expert dermatologists with extensive acne treatment experience</p>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <p className="text-gray-300">Advanced treatment technologies and techniques</p>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <p className="text-gray-300">Personalized treatment plans for every skin type</p>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <p className="text-gray-300">Comprehensive aftercare and follow-up support</p>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <p className="text-gray-300">Long-term skin health and maintenance programs</p>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -265,8 +353,271 @@ const AcneTreatment = () => {
           </div>
         </section>
 
-        {/* Types of Acne */}
+        {/* Comprehensive Treatment Approach */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl font-bold mb-4">Comprehensive Treatment Approach</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Our multi-faceted approach combines the latest dermatological advances with personalized care for optimal acne management.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                      <Stethoscope className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Assessment & Diagnosis</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Comprehensive skin analysis to identify acne type, severity, and contributing factors for personalized treatment planning.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Detailed skin examination</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Acne severity grading</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Contributing factor analysis</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                      <Target className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Targeted Therapies</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Evidence-based treatments specifically chosen for your acne type and severity level.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Topical medications</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Oral treatments</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Advanced procedures</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                      <Sparkles className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Advanced Technologies</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      State-of-the-art treatments for enhanced results and faster skin clearing.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Laser therapy</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Chemical peels</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Light therapies</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                      <HandHeart className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Holistic Care</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Addressing both physical symptoms and emotional impact for comprehensive healing.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Lifestyle guidance</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Skincare education</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Emotional support</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                      <Shield className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Long-term Management</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Ongoing support and maintenance strategies to prevent recurrence and maintain clear skin.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Maintenance protocols</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Regular monitoring</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Prevention strategies</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                      <Clock className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Continuous Monitoring</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Regular follow-ups and treatment adjustments to ensure optimal results and skin health.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Progress tracking</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Treatment optimization</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Side effect management</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about acne treatment at our clinic.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Types of Acne */}
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -349,21 +700,21 @@ const AcneTreatment = () => {
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Pustules:</span>
-                          <span className="text-gray-300"> Pimples with pus at their tips</span>
+                          <span className="text-gray-300"> Pus-filled lesions that are red at the base</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Nodules:</span>
-                          <span className="text-gray-300"> Solid, painful lumps under the skin</span>
+                          <span className="text-gray-300"> Large, painful, solid lesions deep beneath the skin surface</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Cysts:</span>
-                          <span className="text-gray-300"> Large, painful, pus-filled lumps under the skin</span>
+                          <span className="text-gray-300"> Deep, painful, pus-filled lesions that can cause scarring</span>
                         </div>
                       </li>
                     </ul>
@@ -374,8 +725,8 @@ const AcneTreatment = () => {
           </div>
         </section>
 
-        {/* Common Areas Where Acne Develops */}
-        <section className="py-20">
+        {/* Acne Causes */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -384,26 +735,46 @@ const AcneTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Common Areas Where Acne Develops</h2>
+              <h2 className="text-3xl font-bold mb-4">What Causes Acne?</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding where acne commonly occurs helps us target treatment effectively for each affected area.
+                Understanding the root causes helps us develop effective, personalized treatment strategies.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-gray-800 h-full text-center">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-3">Excess Oil Production</h3>
+                    <p className="text-gray-300 text-sm">
+                      Overactive sebaceous glands produce too much oil, clogging pores and creating an environment for acne bacteria.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-800 text-center h-full">
+                <Card className="bg-black border-gray-800 h-full text-center">
                   <CardContent className="p-6">
-                    <User className="w-12 h-12 mb-4 mx-auto text-purple-300" />
-                    <h3 className="text-xl font-semibold mb-3 text-purple-300">Facial Acne</h3>
-                    <p className="text-gray-300">
-                      Affects every acne patient. The most visible and common area where acne develops, 
-                      requiring specialized facial treatment approaches.
+                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-3">Hormonal Changes</h3>
+                    <p className="text-gray-300 text-sm">
+                      Fluctuations in hormones, especially during puberty, menstruation, or stress, can trigger increased oil production.
                     </p>
                   </CardContent>
                 </Card>
@@ -415,13 +786,14 @@ const AcneTreatment = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-800 text-center h-full">
+                <Card className="bg-black border-gray-800 h-full text-center">
                   <CardContent className="p-6">
-                    <UserCheck className="w-12 h-12 mb-4 mx-auto text-purple-300" />
-                    <h3 className="text-xl font-semibold mb-3 text-purple-300">Back Acne</h3>
-                    <p className="text-gray-300">
-                      Almost 50% of acne patients experience back acne. Often more severe due to 
-                      thicker skin and increased sebaceous gland activity.
+                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-3">Bacterial Growth</h3>
+                    <p className="text-gray-300 text-sm">
+                      P. acnes bacteria thrive in clogged pores, leading to inflammation and the formation of inflamed acne lesions.
                     </p>
                   </CardContent>
                 </Card>
@@ -433,13 +805,14 @@ const AcneTreatment = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-accent border-gray-800 text-center h-full">
+                <Card className="bg-black border-gray-800 h-full text-center">
                   <CardContent className="p-6">
-                    <Shirt className="w-12 h-12 mb-4 mx-auto text-purple-300" />
-                    <h3 className="text-xl font-semibold mb-3 text-purple-300">Chest Acne</h3>
-                    <p className="text-gray-300">
-                      One in 6 acne patients experience chest acne. Less common but can be particularly 
-                      challenging to treat due to clothing friction.
+                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-3">Genetic Factors</h3>
+                    <p className="text-gray-300 text-sm">
+                      Family history and genetics play a significant role in determining susceptibility to acne and its severity.
                     </p>
                   </CardContent>
                 </Card>
@@ -449,7 +822,7 @@ const AcneTreatment = () => {
         </section>
 
         {/* Treatment Options */}
-        <section className="py-20 bg-accent">
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -458,144 +831,80 @@ const AcneTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Treatment Through Which Acne is Addressed</h2>
+              <h2 className="text-3xl font-bold mb-4">Acne Treatment Options</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Our expert dermatologists offer comprehensive acne treatment options tailored to your specific skin type and acne severity.
+                Our comprehensive range of treatments addresses every type and severity of acne with proven, effective solutions.
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-800 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-purple-300">Skin Peels</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="space-y-3">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Comedo Extractions:</span>
-                          <span className="text-gray-300"> Gently remove blackheads, milia and soft closed comedones</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Light Chemical Peels:</span>
-                          <span className="text-gray-300"> Using alpha-hydroxy, beta-hydroxy, or glycolic acids</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Glycolic Peels:</span>
-                          <span className="text-gray-300"> Reduce comedones and prevent acne reproduction</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Jessner's Peel:</span>
-                          <span className="text-gray-300"> Combination treatment more effective than single acid peels</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-800 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-purple-300">Advanced Treatments</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="space-y-3">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Microdermabrasion:</span>
-                          <span className="text-gray-300"> Removes dead skin cells, ideal for non-inflamed acne</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Phototherapy:</span>
-                          <span className="text-gray-300"> Blue and red light therapy to kill bacteria and reduce inflammation</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Corticosteroid Injections:</span>
-                          <span className="text-gray-300"> For cystic acne to reduce inflammation and scarring</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
-                          <span className="text-white font-medium">Systemic Treatment:</span>
-                          <span className="text-gray-300"> Oral antibiotics and hormonal treatments for severe cases</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="mt-8"
             >
-              <Card className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-none">
-                <CardHeader>
-                  <CardTitle className="text-white text-center">Systemic Treatment Options</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-300 text-center mb-6">
-                    For severe acne cases, we offer prescription-only medicines that can be taken orally or by injection:
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-3">
-                      <h4 className="text-purple-300 font-semibold">Oral Antibiotics</h4>
+              <Card className="bg-accent border-none">
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                      <h3 className="text-xl font-bold text-purple-300 mb-4">Topical Treatments</h3>
                       <ul className="space-y-2">
                         <li className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">Erythromycin</span>
+                          <span className="text-gray-300">Retinoids (tretinoin, adapalene)</span>
                         </li>
                         <li className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">Tetracycline</span>
+                          <span className="text-gray-300">Benzoyl peroxide</span>
                         </li>
                         <li className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">Minocycline</span>
+                          <span className="text-gray-300">Topical antibiotics</span>
                         </li>
                         <li className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                          <span className="text-gray-300">Doxycycline</span>
+                          <span className="text-gray-300">Salicylic acid</span>
+                        </li>
+                        <li className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Azelaic acid</span>
                         </li>
                       </ul>
                     </div>
-                    <div className="space-y-3">
-                      <h4 className="text-purple-300 font-semibold">Hormonal Treatments</h4>
+                    
+                    <div>
+                      <h3 className="text-xl font-bold text-purple-300 mb-4">Advanced Procedures</h3>
                       <ul className="space-y-2">
+                        <li className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Chemical peels</span>
+                        </li>
+                        <li className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Laser therapy</span>
+                        </li>
+                        <li className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Light therapy (LED)</span>
+                        </li>
+                        <li className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Microneedling</span>
+                        </li>
+                        <li className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Professional extractions</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-xl font-bold text-purple-300 mb-4">Oral Medications</h3>
+                      <ul className="space-y-2">
+                        <li className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                          <span className="text-gray-300">Oral antibiotics</span>
+                        </li>
                         <li className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
                           <span className="text-gray-300">Birth control pills</span>
@@ -614,40 +923,6 @@ const AcneTreatment = () => {
                 </CardContent>
               </Card>
             </motion.div>
-          </div>
-        </section>
-
-
-        {/* FAQ Section */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about acne treatment at our London clinic.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-accent rounded-lg border-gray-800">
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
-                      <span className="text-white font-medium">{faq.question}</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
           </div>
         </section>
 
@@ -678,40 +953,44 @@ const AcneTreatment = () => {
           </div>
         </section>
 
-        {/* Popular Treatments */}
-        <PopularTreatments />
-
-        {/* Hidden SEO content for search engines */}
+        {/* Hidden SEO Content */}
         <div className="sr-only">
+          <h2>Comprehensive Acne Treatment</h2>
           <p>
-            Professional acne treatment in London at Cosmedocs Harley Street clinic. Our expert dermatologists provide 
-            comprehensive acne therapy for all skin types and severities. Advanced treatments for active acne, cystic acne, 
-            hormonal acne, and acne scarring. Clear, blemish-free skin with minimal downtime and maximum results.
+            Acne is a chronic inflammatory skin condition that affects millions of people worldwide. 
+            At Cosmedocs, we understand the physical and emotional impact that acne can have on your daily life. 
+            Our team of expert dermatologists specializes in providing comprehensive, evidence-based treatments 
+            that target the root causes of acne while addressing the visible symptoms.
           </p>
+          
+          <h3>Understanding Acne and Its Types</h3>
           <p>
-            Acne vulgaris affects millions of people worldwide, causing physical and emotional distress. Our evidence-based 
-            approach combines the latest dermatological advances with personalized care. We treat comedonal acne, inflammatory 
-            acne, nodular acne, and severe cystic acne using targeted therapies that address the root causes.
+            Acne manifests in several forms, each requiring specialized treatment approaches. Comedonal acne includes 
+            blackheads and whiteheads that form when pores become clogged. Inflammatory acne presents as papules, 
+            pustules, nodules, and cysts that are red, swollen, and often painful. Our dermatologists are experienced 
+            in diagnosing and treating all types of acne, ensuring you receive the most appropriate care for your 
+            specific condition.
           </p>
+          
+          <h3>Advanced Treatment Options</h3>
           <p>
-            Our acne treatment protocols include topical medications, oral therapies, chemical peels, laser treatments, 
-            and advanced light therapies. Each treatment plan is customized based on acne severity, skin type, previous 
-            treatments, and individual patient needs. We also address post-inflammatory hyperpigmentation and acne scarring.
+            Our treatment arsenal includes topical therapies such as retinoids, benzoyl peroxide, and topical antibiotics 
+            for mild to moderate cases. For more extensive acne, we offer chemical peels, laser therapy, and LED light 
+            treatments that have proven highly effective in reducing inflammation and preventing new breakouts. In severe 
+            cases, we provide oral medications including antibiotics, hormonal treatments, and isotretinoin for 
+            comprehensive acne management.
           </p>
+          
+          <h3>Personalized Care Approach</h3>
           <p>
-            Prevention is key to long-term acne management. Our dermatologists provide comprehensive skincare education, 
-            lifestyle modifications, and maintenance protocols to prevent future breakouts. Regular follow-up appointments 
-            ensure optimal results and skin health maintenance.
-          </p>
-          <p>
-            Cosmedocs uses only proven, safe, and effective acne treatments. Our clinic follows strict safety protocols 
-            and maintains the highest standards of care. Patient safety and satisfaction are our top priorities in every 
-            acne treatment we provide.
+            Every patient's acne journey is unique, which is why we develop personalized treatment plans tailored to 
+            your specific needs, skin type, and treatment goals. Our holistic approach considers not only the physical 
+            aspects of the condition but also the psychological impact, providing support and guidance throughout your 
+            treatment journey. We work closely with you to monitor progress, adjust treatments as needed, and ensure 
+            optimal long-term outcomes for clear, healthy skin.
           </p>
         </div>
       </div>
     </>
   );
-};
-
-export default AcneTreatment;
+}
