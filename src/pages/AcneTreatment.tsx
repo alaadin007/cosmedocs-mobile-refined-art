@@ -389,24 +389,24 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Stethoscope className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Assessment & Diagnosis</CardTitle>
+                    <CardTitle className="text-white text-xl">Topical Treatments</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Comprehensive skin analysis to identify acne type, severity, and contributing factors for personalized treatment planning.
+                      Advanced topical therapies targeting acne-causing bacteria and reducing inflammation.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Detailed skin examination</span>
+                        <span>Retinoids (tretinoin, adapalene)</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Acne severity grading</span>
+                        <span>Benzoyl peroxide</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Contributing factor analysis</span>
+                        <span>Topical antibiotics</span>
                       </li>
                     </ul>
                   </CardContent>
@@ -424,24 +424,24 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Target className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Targeted Therapies</CardTitle>
+                    <CardTitle className="text-white text-xl">Advanced Procedures</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Evidence-based treatments specifically chosen for your acne type and severity level.
+                      Professional treatments for faster results and acne scar prevention.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Topical medications</span>
+                        <span>Chemical peels</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Oral treatments</span>
+                        <span>Laser therapy</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Advanced procedures</span>
+                        <span>Light therapy (LED)</span>
                       </li>
                     </ul>
                   </CardContent>
@@ -459,129 +459,24 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Sparkles className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Advanced Technologies</CardTitle>
+                    <CardTitle className="text-white text-xl">Oral Medications</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      State-of-the-art treatments for enhanced results and faster skin clearing.
+                      Systemic treatments for moderate to severe acne cases.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Laser therapy</span>
+                        <span>Oral antibiotics</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Chemical peels</span>
+                        <span>Hormonal treatments</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Light therapies</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                      <HandHeart className="text-purple-600" size={24} />
-                    </div>
-                    <CardTitle className="text-white text-xl">Holistic Care</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Addressing both physical symptoms and emotional impact for comprehensive healing.
-                    </p>
-                    <ul className="space-y-2 text-sm text-gray-400">
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Lifestyle guidance</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Skincare education</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Emotional support</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                      <Shield className="text-purple-600" size={24} />
-                    </div>
-                    <CardTitle className="text-white text-xl">Long-term Management</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Ongoing support and maintenance strategies to prevent recurrence and maintain clear skin.
-                    </p>
-                    <ul className="space-y-2 text-sm text-gray-400">
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Maintenance protocols</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Regular monitoring</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Prevention strategies</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 h-full hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                      <Clock className="text-purple-600" size={24} />
-                    </div>
-                    <CardTitle className="text-white text-xl">Continuous Monitoring</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 mb-4">
-                      Regular follow-ups and treatment adjustments to ensure optimal results and skin health.
-                    </p>
-                    <ul className="space-y-2 text-sm text-gray-400">
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Progress tracking</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Treatment optimization</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>Side effect management</span>
+                        <span>Isotretinoin (Accutane)</span>
                       </li>
                     </ul>
                   </CardContent>
