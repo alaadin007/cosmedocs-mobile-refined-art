@@ -312,44 +312,48 @@ const HyperpigmentationTreatment = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">What is Hyperpigmentation?</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Melanin production is a complex biological process controlled by specialized cells called melanocytes. 
-                When this delicate system becomes imbalanced, targeted medical interventions can restore your skin's 
-                natural harmony and radiance.
+                Melanin is the natural pigment that gives your skin its color. When melanocytes (pigment-producing cells) 
+                become overactive, they create excess melanin in certain areas, leading to uneven skin tone and dark patches.
               </p>
             </motion.div>
 
-            {/* Scientific Explanation Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* What is Hyperpigmentation Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
                   <CardHeader className="text-center pb-4">
                     <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">🧬</span>
+                      <span className="text-2xl">🎨</span>
                     </div>
-                    <CardTitle className="text-white text-xl">The Melanin Process</CardTitle>
+                    <CardTitle className="text-white text-2xl">What is Hyperpigmentation?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Melanocytes produce melanin through a process called melanogenesis. When functioning normally, 
-                      these cells create even pigmentation that protects your skin from UV damage.
+                    <p className="text-gray-300 leading-relaxed">
+                      Hyperpigmentation is a common skin condition where patches of skin become darker than 
+                      the surrounding areas. This occurs when melanin, the pigment that gives skin its color, 
+                      is produced in excess in certain areas.
                     </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Tyrosinase enzyme activation</span>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Affects all skin types and ethnicities</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Melanin synthesis pathway</span>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Can appear as dark spots, patches, or areas</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Melanin transfer to keratinocytes</span>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Usually harmless but aesthetically concerning</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Most common on face, hands, and sun-exposed areas</p>
                       </div>
                     </div>
                   </CardContent>
@@ -357,135 +361,46 @@ const HyperpigmentationTreatment = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
                   <CardHeader className="text-center pb-4">
                     <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">⚠️</span>
+                      <span className="text-2xl">🔬</span>
                     </div>
-                    <CardTitle className="text-white text-xl">When Things Go Wrong</CardTitle>
+                    <CardTitle className="text-white text-2xl">How is Hyperpigmentation Formed?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Hyperpigmentation occurs when melanocytes become hyperactive or increase in number, 
-                      creating localized areas of excess melanin production that appear as dark patches.
+                    <p className="text-gray-300 leading-relaxed">
+                      Hyperpigmentation forms when melanocytes (pigment-producing cells) become overactive 
+                      and produce excess melanin. This can be triggered by various internal and external factors 
+                      that stimulate melanin production.
                     </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">UV radiation triggers</span>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">UV radiation and sun exposure</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Hormonal fluctuations</span>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Hormonal changes (pregnancy, birth control)</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Inflammatory responses</span>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Post-inflammatory response (acne, injury)</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Genetic predisposition</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">🎯</span>
-                    </div>
-                    <CardTitle className="text-white text-xl">How We Restore Balance</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Our treatments work by regulating melanocyte activity, breaking down excess melanin deposits, 
-                      and promoting healthy cell turnover to reveal naturally even-toned skin.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Tyrosinase inhibition</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Melanin fragmentation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Accelerated cell renewal</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-400 text-xs">Protective barrier restoration</span>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Genetic predisposition and aging</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
-
-            {/* Detailed Scientific Explanation */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="max-w-5xl mx-auto"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-black/50 border border-purple-500/30">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6 text-center">The Science of Skin Restoration</h3>
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-purple-300 mb-3">Understanding Melanocyte Dysfunction</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        When melanocytes become hyperactive due to triggers like UV exposure, hormonal changes, or 
-                        inflammation, they produce excess melanin in localized areas. This creates the characteristic 
-                        dark patches of hyperpigmentation.
-                      </p>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        The enzyme tyrosinase plays a crucial role in this process, converting the amino acid 
-                        tyrosine into melanin. When this enzyme becomes overactive, it leads to uneven pigmentation.
-                      </p>
-                    </div>
-                    
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-purple-300 mb-3">Our Treatment Mechanisms</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        Our multi-modal approach targets hyperpigmentation at the cellular level. Light-based 
-                        treatments fragment melanin deposits, while topical agents inhibit tyrosinase activity 
-                        and promote healthy cell turnover.
-                      </p>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        Chemical peels and microdermabrasion accelerate the natural exfoliation process, 
-                        removing pigmented cells while our prescription skincare prevents future overproduction.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-8 p-6 bg-black/30 rounded-lg border border-purple-500/20">
-                    <p className="text-center text-gray-300 italic">
-                      "At Cosmedocs, we understand that beautiful skin is healthy skin. Our treatments don't just 
-                      mask pigmentation—they restore your skin's natural balance for lasting, invisible transformation."
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </section>
 
