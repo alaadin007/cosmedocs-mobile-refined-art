@@ -256,7 +256,7 @@ const LipFillerDissolve = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">What is Lip Filler Dissolve?</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">What is Lip Filler Dissolve Procedure?</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Lip filler dissolve uses hyaluronidase enzyme to safely break down hyaluronic acid-based fillers. 
                 This treatment corrects unwanted results, complications, or simply restores your natural lip shape.
