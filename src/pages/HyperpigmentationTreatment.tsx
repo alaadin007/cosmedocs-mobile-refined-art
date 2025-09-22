@@ -651,68 +651,6 @@ const HyperpigmentationTreatment = () => {
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Our philosophy of invisible art ensures natural-looking results that enhance your confidence.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Expert Medical Team</h3>
-                <p className="text-gray-300 text-sm">Qualified doctors with extensive experience in hyperpigmentation treatment</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <ShieldCheck className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Premium Products</h3>
-                <p className="text-gray-300 text-sm">Medical-grade treatments and prescription skincare for optimal results</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Natural Philosophy</h3>
-                <p className="text-gray-300 text-sm">Bold • Natural • Always Your Way - transformation that speaks without words</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black text-white">
           <div className="page-container">
             <motion.div
@@ -885,38 +823,6 @@ const HyperpigmentationTreatment = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about hyperpigmentation treatment answered by our experts.
-              </p>
-            </motion.div>
-
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="w-full">
-                {faqData.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-800">
-                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
 
         {/* Call to Action */}
         <section className="py-20 bg-purple-600 text-white">
