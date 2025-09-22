@@ -37,20 +37,44 @@ const HyperpigmentationTreatment = () => {
 
   const faqData = [
     {
-      question: "What is hyperpigmentation?",
-      answer: "Hyperpigmentation is a skin condition causing darkening of certain areas due to overproduction of melanin, the skin pigment. It's common across all ethnicities but particularly noticeable in lighter complexions."
+      question: "Do these hyperpigmentation treatments completely cure hyperpigmentation?",
+      answer: "No, you should have realistic expectations. These hyperpigmentation treatments do not completely eliminate hyperpigmentation however it will be significantly lightened and will almost become invisible."
     },
     {
-      question: "What treatment options are available?",
-      answer: "We offer multiple treatments including IPL therapy, chemical peels, microdermabrasion, dermaroller treatment, and prescription skincare with hydroquinone and kojic acid."
+      question: "Which hyperpigmentation treatment is best for me?",
+      answer: "The choice of the hyperpigmentation treatment depends largely on the types of skin and extent of skin condition. The doctor will conduct a complete examination of the skin in initial consultation and will recommend a hyperpigmentation treatment which will suit best to your condition and skin type."
     },
     {
-      question: "How many treatments will I need?",
-      answer: "This depends on the severity of your hyperpigmentation. Most patients see 40-50% improvement after the first session, with significant reduction after 2-3 treatments."
+      question: "How many hyperpigmentation treatments do I require to improve my skin condition?",
+      answer: "This is largely determined by the severity of your hyperpigmentation. However, 40%-50% improvement is mostly observed after the first treatment session. You can have significant reduction in hyperpigmentation after receiving 2-3 treatments."
     },
     {
-      question: "Do these treatments completely cure hyperpigmentation?",
-      answer: "While treatments don't completely eliminate hyperpigmentation, they significantly lighten it to become almost invisible. Results vary based on individual skin condition and type."
+      question: "What causes hyperpigmentation?",
+      answer: "The overactivity of pigment-producing cells called melanocytes is responsible for hyperpigmentation. This can also occur in many ways, including sun exposure, hormonal changes, acne, and breakouts that may result in hyperpigmentation."
+    },
+    {
+      question: "Can hyperpigmentation go away naturally?",
+      answer: "It's more or less permanent in some situations. There are treatments available that will help. Some won't fully remove black marks, but they will significantly lighten them."
+    },
+    {
+      question: "There are dark spots on my skin, is it hyperpigmentation?",
+      answer: "There is a possibility of hyperpigmentation. If you observe any darker area on your body as compared to rest of skin, it is most likely to be hyperpigmentation."
+    },
+    {
+      question: "What measures can I take to prevent hyperpigmentation?",
+      answer: "You can take some preventive measures in your daily life: Whenever you go out wear SPF 30 or higher and avoid excessive sun exposure. By adopting a regular skin exfoliation regime you can remove the accumulation of dead skin cells which are contributing factor to hyperpigmentation. Avoid picking on your acne or skin that can develop dark spots. There are some medications which can cause skin discoloration, so its better to consult your doctor about it."
+    },
+    {
+      question: "Will retinol remove dark spots?",
+      answer: "Surprisingly, Retinol is one of the best ingredients for fading dark spots."
+    },
+    {
+      question: "Can a dermatologist remove dark spots?",
+      answer: "A dermatologist can offer creams or procedures to lighten dark spots, or in some cases, eliminate them."
+    },
+    {
+      question: "How long after IPL treatment do you see results?",
+      answer: "IPL uses the intense pulse light that usually needs 3-6 treatments sessions to clear and even out skin tone. The treatment has no downtime."
     },
     {
       question: "What are the side effects?",
@@ -612,6 +636,229 @@ const HyperpigmentationTreatment = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Natural Philosophy</h3>
                 <p className="text-gray-300 text-sm">Bold • Natural • Always Your Way - transformation that speaks without words</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Reviews Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Client Reviews</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See what our clients say about their hyperpigmentation treatment experience.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-lg p-6 border border-gray-800"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-lg">★</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-300 italic mb-4">
+                  "I've had three facial areas treated with Anti-Wrinkle Injection at CosmeDocs in recent years, 
+                  and find the treatment swift, thorough and effective. Also, Dr Haq's pleasant and friendly manner 
+                  makes the treatment as painless as possible!"
+                </p>
+                <p className="text-purple-300 font-semibold">- Verified Client</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-black rounded-lg p-6 border border-gray-800"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-lg">★</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-300 italic mb-4">
+                  "I had a facial aesthetic treatment with cosmodocs. I found the price very reasonable. 
+                  Even better the results were excellent. I will definitely use this service again."
+                </p>
+                <p className="text-purple-300 font-semibold">- Verified Client</p>
+              </motion.div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                Read More Reviews
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Possible Side Effects Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Possible Side Effects</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                All hyperpigmentation treatments are custom tailored according to skin type and severity. 
+                In professional hands at Cosmedocs, side effects are minimal.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-accent rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-4">Common Side Effects</h3>
+                  <p className="text-gray-300 mb-6">
+                    The following mild side effects may occur with chemical skin peels, microdermabrasion, 
+                    dermaroller, and IPL treatments:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300">Mild redness of skin</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300">Slight itching sensation</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <p className="text-gray-300">Temporary discomfort</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-accent rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-4">Professional Care</h3>
+                  <p className="text-gray-300 mb-6">
+                    At Cosmedocs, our experienced medical professionals ensure:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <p className="text-gray-300">Customized treatment protocols</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <p className="text-gray-300">Minimal side effects</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <p className="text-gray-300">Expert aftercare guidance</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Hyperpigmentation Occurs & Downtime */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid md:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Why Hyperpigmentation Occurs</h2>
+                <p className="text-gray-300 mb-6">
+                  There are two major reasons due to which hyperpigmentation occurs:
+                </p>
+                <div className="space-y-4">
+                  <div className="bg-black rounded-lg p-4">
+                    <h4 className="font-semibold text-white mb-2">High Melanocyte Concentration</h4>
+                    <p className="text-gray-300 text-sm">
+                      The concentrations of melanocytes, which are responsible for producing melanin 
+                      within skin, become very high.
+                    </p>
+                  </div>
+                  <div className="bg-black rounded-lg p-4">
+                    <h4 className="font-semibold text-white mb-2">Hyperactivation of Melanocytes</h4>
+                    <p className="text-gray-300 text-sm">
+                      Existing melanocytes become overactive, producing excess melanin in localized areas.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Downtime</h2>
+                <p className="text-gray-300 mb-6">
+                  Almost all hyperpigmentation treatments have minimal to no downtime:
+                </p>
+                <div className="bg-black rounded-lg p-6">
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <ShieldCheck className="text-green-500" size={20} />
+                      <p className="text-gray-300">Instant resumption of daily activities</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <ShieldCheck className="text-green-500" size={20} />
+                      <p className="text-gray-300">No severe problems or complications</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <ShieldCheck className="text-green-500" size={20} />
+                      <p className="text-gray-300">Return to work same day</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <ShieldCheck className="text-green-500" size={20} />
+                      <p className="text-gray-300">Minimal impact on routine activities</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-purple-900/50 rounded-lg p-4 border border-purple-500">
+                  <h4 className="font-semibold text-purple-300 mb-2">Prevention Measures</h4>
+                  <div className="space-y-2 text-sm text-gray-300">
+                    <p>• Wear SPF 30 or higher daily</p>
+                    <p>• Avoid excessive sun exposure</p>
+                    <p>• Regular skin exfoliation regime</p>
+                    <p>• Avoid picking acne or skin</p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
