@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from "@/utils/seo";
@@ -110,7 +111,7 @@ export default function PsoriasisTreatment() {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section - Matching LipFillers style */}
+        {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -121,25 +122,23 @@ export default function PsoriasisTreatment() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Expert Psoriasis
-                  <span className="block text-purple-300">Treatment</span>
-                  <span className="block text-sm mt-4">Professional dermatological care for all types of psoriasis</span>
+                  <span className="text-purple-300">Expert Psoriasis Treatment London</span>
+                  <span className="block text-sm mt-4">Invisible art - natural skin transformation that speaks without words</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Transformation that speaks without saying a word
-                </p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Consultation from £150</p>
-                  <p className="text-sm text-gray-300">Comprehensive treatment plans tailored to your specific needs</p>
+                  <p className="text-2xl text-purple-300 font-bold">Advanced Dermatological Care</p>
+                  <p className="text-sm text-gray-300">Comprehensive treatment for all types of psoriasis</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
                     Book Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
-                    Call: 020 7851 6616
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
@@ -149,36 +148,155 @@ export default function PsoriasisTreatment() {
           </div>
         </section>
 
-
         {/* Treatment Summary */}
-        <section className="py-20">
+        <section className="py-16 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Psoriasis Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">15 minutes - ongoing therapy</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Target className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">2-4 weeks to 3-6 months</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <HandHeart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Types</h3>
+                <p className="text-gray-300">Topical, light therapy, systemic</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Before and After Psoriasis Treatment Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See authentic transformations from our London clinic. Our comprehensive treatments significantly reduce 
+                psoriasis symptoms and improve skin health for naturally clear, comfortable skin.
+              </p>
+            </motion.div>
+
+            <BeforeAfterImageViewer images={beforeAfterImages} />
+          </div>
+        </section>
+
+        {/* What is Psoriasis */}
+        <section className="py-20 bg-accent text-white">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">What is Psoriasis?</h2>
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Psoriasis is a chronic autoimmune skin condition that causes skin cells to build up rapidly on the 
+                surface, leading to thick, scaly, and often painful patches.
+              </p>
+            </motion.div>
+
+            {/* What is Psoriasis Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Psoriasis Treatment Summary</h2>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Duration</h3>
-                    <p className="text-gray-300">Varies by type: 15 minutes for topical consultation to ongoing therapy sessions</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Results Timeline</h3>
-                    <p className="text-gray-300">Improvement typically seen within 2-4 weeks, optimal results in 3-6 months</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Recovery Time</h3>
-                    <p className="text-gray-300">Minimal downtime for topical treatments, gradual improvement with ongoing care</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-6">
-                    <h3 className="text-xl font-semibold mb-2">Treatment Types</h3>
-                    <p className="text-gray-300">Topical therapies, phototherapy, and systemic medications</p>
-                  </div>
-                </div>
+                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-white text-2xl">Understanding Psoriasis</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300 leading-relaxed">
+                      Psoriasis is a chronic autoimmune condition where the immune system causes skin cells to 
+                      grow too quickly. This results in thick, scaly patches that can be itchy, painful, and 
+                      emotionally distressing.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Affects 2-3% of the global population</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Can appear at any age, most common 15-35</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Often runs in families (genetic component)</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Commonly affects elbows, knees, scalp</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -187,19 +305,377 @@ export default function PsoriasisTreatment() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-accent rounded-lg p-8">
-                  <img 
-                    src="/lovable-uploads/a996e10f-5573-47a6-a71d-cde73371153e.png" 
-                    alt="Psoriasis on elbow showing typical symptoms" 
-                    className="w-full rounded-lg"
-                  />
-                </div>
+                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-white text-2xl">Types of Psoriasis</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300 leading-relaxed">
+                      There are several types of psoriasis, each with distinct characteristics and treatment 
+                      requirements. Understanding your type is crucial for effective management.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Plaque psoriasis (80-90% of cases)</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Guttate psoriasis (small, scaly spots)</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Inverse psoriasis (smooth, red patches)</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Pustular psoriasis (pus-filled bumps)</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
           </div>
         </section>
-        {/* Symptoms of Psoriasis */}
-        <section className="py-20">
+
+        {/* Comprehensive Treatment Approach */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">Comprehensive Treatment Approach</h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Our multi-modal approach combines topical therapies, light treatments, and systemic medications 
+                for optimal psoriasis management. Every treatment is tailored to your condition's severity and type.
+              </p>
+            </motion.div>
+
+            {/* Treatment Categories Grid */}
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Topical Treatments */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Topical Treatments</h3>
+                  <p className="text-gray-300">Medical-grade treatments for mild to moderate psoriasis</p>
+                </div>
+
+                <div className="space-y-4">
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Emollients & Moisturizers</h4>
+                      <p className="text-gray-300 text-sm">Soothe dry skin and reduce scaling</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Topical Steroids</h4>
+                      <p className="text-gray-300 text-sm">Reduce inflammation and itching</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Vitamin D Analogues</h4>
+                      <p className="text-gray-300 text-sm">Regulate cell turnover and growth</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Calcineurin Inhibitors</h4>
+                      <p className="text-gray-300 text-sm">For face and sensitive skin areas</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
+
+              {/* Light Therapy */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Light Therapy</h3>
+                  <p className="text-gray-300">Phototherapy for moderate to severe psoriasis</p>
+                </div>
+
+                <div className="space-y-4">
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Narrowband UVB</h4>
+                      <p className="text-gray-300 text-sm">Most effective phototherapy treatment</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">PUVA Therapy</h4>
+                      <p className="text-gray-300 text-sm">Psoralens plus ultraviolet A light</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Targeted Phototherapy</h4>
+                      <p className="text-gray-300 text-sm">Precise treatment for localized areas</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Home Light Units</h4>
+                      <p className="text-gray-300 text-sm">Convenient maintenance therapy</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
+
+              {/* Systemic Treatments */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Systemic Medications</h3>
+                  <p className="text-gray-300">Advanced treatments for severe psoriasis</p>
+                </div>
+
+                <div className="space-y-4">
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Methotrexate</h4>
+                      <p className="text-gray-300 text-sm">Oral medication for severe cases</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Biologics</h4>
+                      <p className="text-gray-300 text-sm">Targeted immune system therapy</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">Cyclosporin</h4>
+                      <p className="text-gray-300 text-sm">Immunosuppressant for quick results</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">JAK Inhibitors</h4>
+                      <p className="text-gray-300 text-sm">Latest oral treatment options</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Treatment Philosophy */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-16 text-center"
+            >
+              <Card className="bg-gradient-to-r from-purple-900/20 to-black/40 border border-purple-500/30">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Treatment Philosophy</h3>
+                  <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                    At Cosmedocs, we believe in <span className="text-purple-300 font-semibold">invisible art</span> — 
+                    transformation that speaks without saying a word. Our comprehensive approach ensures 
+                    natural-looking results that enhance your confidence while maintaining skin health.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Treatment Pricing</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Transparent pricing for all psoriasis treatments. All consultations include detailed assessment and personalized treatment plan.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-lg p-8 border border-gray-800"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">Consultation</h3>
+                <div className="text-3xl font-bold text-purple-300 mb-4">From £150</div>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• Comprehensive skin assessment</li>
+                  <li>• Detailed medical history review</li>
+                  <li>• Personalized treatment plan</li>
+                  <li>• Redeemable against treatment</li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-lg p-8 border border-purple-500 relative"
+              >
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Topical Treatment Plan</h3>
+                <div className="text-3xl font-bold text-purple-300 mb-4">From £200</div>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• Prescription topical medications</li>
+                  <li>• Regular follow-up appointments</li>
+                  <li>• Treatment monitoring and adjustment</li>
+                  <li>• Ongoing support and advice</li>
+                </ul>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-accent rounded-lg p-8 border border-gray-800"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">Light Therapy</h3>
+                <div className="text-3xl font-bold text-purple-300 mb-4">From £300</div>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• Professional phototherapy sessions</li>
+                  <li>• Narrowband UVB or PUVA treatment</li>
+                  <li>• Multiple sessions as required</li>
+                  <li>• Progress monitoring included</li>
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Stethoscope className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Expertise</h3>
+                <p className="text-gray-300">Specialized dermatologists with extensive psoriasis experience</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Target className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Personalized</h3>
+                <p className="text-gray-300">Treatment plans tailored to your specific psoriasis type</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Advanced</h3>
+                <p className="text-gray-300">Latest treatment options including biologics and light therapy</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <HandHeart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Support</h3>
+                <p className="text-gray-300">Ongoing care and emotional support throughout treatment</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural skin health restoration</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Sections - Symptoms of Psoriasis */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -246,7 +722,7 @@ export default function PsoriasisTreatment() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-accent rounded-lg p-6">
+                <div className="bg-black rounded-lg p-6">
                   <h3 className="text-xl font-bold mb-4 text-white">Types of Psoriasis</h3>
                   <div className="space-y-3 text-sm">
                     <div>
@@ -267,78 +743,6 @@ export default function PsoriasisTreatment() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Psoriasis can be treated by */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Psoriasis Can Be Treated By</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Our comprehensive approach offers multiple treatment options tailored to your condition's severity
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-black rounded-lg p-6"
-              >
-                <h3 className="text-xl font-bold mb-4 text-purple-300">Topical Creams & Gels</h3>
-                <p className="text-gray-300 mb-4">Best for mild to moderate psoriasis. Various options available:</p>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  <li>• Emollients (moisturizers) - soothe dry skin</li>
-                  <li>• Topical steroids - reduce inflammation</li>
-                  <li>• Vitamin D analogues - regulate cell turnover</li>
-                  <li>• Tar preparations - slow cell turnover</li>
-                  <li>• Calcineurin inhibitors - for face and skin folds</li>
-                </ul>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-black rounded-lg p-6"
-              >
-                <h3 className="text-xl font-bold mb-4 text-purple-300">Light Therapy</h3>
-                <p className="text-gray-300 mb-4">Phototherapy uses controlled UV light to reduce inflammation:</p>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  <li>• Narrowband ultraviolet B (UVB)</li>
-                  <li>• Psoralens plus ultraviolet A (PUVA)</li>
-                  <li>• Can complement topical treatments</li>
-                  <li>• Regular sessions necessary</li>
-                </ul>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-black rounded-lg p-6"
-              >
-                <h3 className="text-xl font-bold mb-4 text-purple-300">Medication (Severe Cases)</h3>
-                <p className="text-gray-300 mb-4">For severe psoriasis unresponsive to other treatments:</p>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  <li>• Methotrexate (oral)</li>
-                  <li>• Cyclosporin (oral)</li>
-                  <li>• Biologics (injections)</li>
-                  <li>• Thorough consultation required</li>
-                </ul>
               </motion.div>
             </div>
           </div>
