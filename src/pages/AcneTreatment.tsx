@@ -322,27 +322,38 @@ export default function AcneTreatment() {
                 <Card className="bg-black/50 backdrop-blur-sm border-purple-500/20 h-full hover:border-purple-500/40 transition-colors">
                   <CardContent className="p-8">
                     <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-white mb-4">Why Choose Cosmedocs for Acne Treatment?</h3>
+                      <h3 className="text-xl font-bold text-white mb-4">What Causes Acne?</h3>
+                      <p className="text-gray-300 mb-4">
+                        Understanding the root causes helps us develop effective, personalized treatment strategies.
+                      </p>
                       <div className="space-y-4">
                         <div className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Expert dermatologists with extensive acne treatment experience</p>
+                          <div>
+                            <span className="text-white font-medium">Excess Oil Production:</span>
+                            <span className="text-gray-300"> Overactive sebaceous glands produce too much oil, clogging pores</span>
+                          </div>
                         </div>
                         <div className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Advanced treatment technologies and techniques</p>
+                          <div>
+                            <span className="text-white font-medium">Hormonal Changes:</span>
+                            <span className="text-gray-300"> Fluctuations during puberty, menstruation, or stress trigger breakouts</span>
+                          </div>
                         </div>
                         <div className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Personalized treatment plans for every skin type</p>
+                          <div>
+                            <span className="text-white font-medium">Bacterial Growth:</span>
+                            <span className="text-gray-300"> P. acnes bacteria thrive in clogged pores, causing inflammation</span>
+                          </div>
                         </div>
                         <div className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Comprehensive aftercare and follow-up support</p>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <p className="text-gray-300">Long-term skin health and maintenance programs</p>
+                          <div>
+                            <span className="text-white font-medium">Genetic Factors:</span>
+                            <span className="text-gray-300"> Family history plays a significant role in acne susceptibility</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -725,101 +736,6 @@ export default function AcneTreatment() {
           </div>
         </section>
 
-        {/* Acne Causes */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">What Causes Acne?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding the root causes helps us develop effective, personalized treatment strategies.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-800 h-full text-center">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Excess Oil Production</h3>
-                    <p className="text-gray-300 text-sm">
-                      Overactive sebaceous glands produce too much oil, clogging pores and creating an environment for acne bacteria.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-800 h-full text-center">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Hormonal Changes</h3>
-                    <p className="text-gray-300 text-sm">
-                      Fluctuations in hormones, especially during puberty, menstruation, or stress, can trigger increased oil production.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-800 h-full text-center">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Bacterial Growth</h3>
-                    <p className="text-gray-300 text-sm">
-                      P. acnes bacteria thrive in clogged pores, leading to inflammation and the formation of inflamed acne lesions.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-800 h-full text-center">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Genetic Factors</h3>
-                    <p className="text-gray-300 text-sm">
-                      Family history and genetics play a significant role in determining susceptibility to acne and its severity.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Treatment Options */}
         <section className="py-20">
