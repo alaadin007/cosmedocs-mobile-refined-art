@@ -947,51 +947,55 @@ const HyperpigmentationTreatment = () => {
                   </div>
                 </div>
               </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="md:col-span-2 mt-8"
+              >
+                <div className="bg-purple-900/50 rounded-lg p-6 border border-purple-500">
+                  <h3 className="text-xl font-semibold text-purple-300 mb-4">Prevention Measures</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                    <div className="space-y-2">
+                      <p>• Wear SPF 30 or higher daily</p>
+                      <p>• Avoid excessive sun exposure</p>
+                    </div>
+                    <div className="space-y-2">
+                      <p>• Regular skin exfoliation regime</p>
+                      <p>• Avoid picking acne or skin</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Why Hyperpigmentation Occurs & Downtime */}
+        {/* Downtime Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="grid md:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">Why Hyperpigmentation Occurs</h2>
-                <p className="text-gray-300 mb-6">
-                  There are two major reasons due to which hyperpigmentation occurs:
-                </p>
-                <div className="space-y-4">
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-white mb-2">High Melanocyte Concentration</h4>
-                    <p className="text-gray-300 text-sm">
-                      The concentrations of melanocytes, which are responsible for producing melanin 
-                      within skin, become very high.
-                    </p>
-                  </div>
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-white mb-2">Hyperactivation of Melanocytes</h4>
-                    <p className="text-gray-300 text-sm">
-                      Existing melanocytes become overactive, producing excess melanin in localized areas.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Downtime</h2>
+              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
+                Almost all hyperpigmentation treatments have minimal to no downtime:
+              </p>
+            </motion.div>
 
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6 text-white">Downtime</h2>
-                <p className="text-gray-300 mb-6">
-                  Almost all hyperpigmentation treatments have minimal to no downtime:
-                </p>
                 <div className="bg-accent rounded-lg p-6">
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
@@ -1010,16 +1014,6 @@ const HyperpigmentationTreatment = () => {
                       <ShieldCheck className="text-green-500" size={20} />
                       <p className="text-gray-300">Minimal impact on routine activities</p>
                     </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 bg-purple-900/50 rounded-lg p-4 border border-purple-500">
-                  <h4 className="font-semibold text-purple-300 mb-2">Prevention Measures</h4>
-                  <div className="space-y-2 text-sm text-gray-300">
-                    <p>• Wear SPF 30 or higher daily</p>
-                    <p>• Avoid excessive sun exposure</p>
-                    <p>• Regular skin exfoliation regime</p>
-                    <p>• Avoid picking acne or skin</p>
                   </div>
                 </div>
               </motion.div>
