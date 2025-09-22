@@ -815,7 +815,7 @@ const HyperpigmentationTreatment = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -826,18 +826,18 @@ const HyperpigmentationTreatment = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about hyperpigmentation treatment answered by our experts.
+                Get answers to common questions about hyperpigmentation treatments at our London clinic.
               </p>
             </motion.div>
 
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="w-full">
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
                 {faqData.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-800">
-                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
-                      {faq.question}
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -847,27 +847,26 @@ const HyperpigmentationTreatment = () => {
           </div>
         </section>
 
-
         {/* Call to Action */}
-        <section className="py-20 bg-purple-600 text-white">
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Skin?</h2>
-              <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-                Book your consultation today and discover how our expert hyperpigmentation treatments can restore your confidence with beautifully even skin.
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how hyperpigmentation treatments 
+                can restore your confidence with beautifully even, natural-looking skin.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-8">
-                  <Calendar className="mr-2 h-5 w-5" />
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                   Book Free Consultation
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 px-8">
-                  <Phone className="mr-2 h-5 w-5" />
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
                   Call 0333 0551 503
                 </Button>
               </div>
