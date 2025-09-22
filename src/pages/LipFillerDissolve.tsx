@@ -591,7 +591,7 @@ const LipFillerDissolve = () => {
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black text-white">
+        <section className="py-20 bg-accent text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -663,7 +663,7 @@ const LipFillerDissolve = () => {
         </section>
 
         {/* Client Reviews */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
