@@ -620,6 +620,63 @@ export default function AcneTreatment() {
             </div>
           </div>
         </section>
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Acne Treatment Pricing</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Professional acne treatment with personalized care plans. Every treatment includes comprehensive consultation, 
+                assessment, and ongoing support from our expert dermatologists.
+              </p>
+            </motion.div>
+
+            <div className="flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="max-w-md"
+              >
+                <Card className="bg-black border-purple-500 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Acne Treatment</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">Price on Consultation</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Customized treatment plan based on your specific acne type and severity</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Comprehensive skin assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Personalized treatment plan</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Ongoing support and monitoring</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span className="text-gray-300 text-sm">Follow-up appointments included</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
