@@ -326,10 +326,7 @@ const HyperpigmentationTreatment = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">🎨</span>
-                    </div>
+                  <CardHeader className="pb-4">
                     <CardTitle className="text-white text-2xl">What is Hyperpigmentation?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -367,10 +364,7 @@ const HyperpigmentationTreatment = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl">🔬</span>
-                    </div>
+                  <CardHeader className="pb-4">
                     <CardTitle className="text-white text-2xl">How is Hyperpigmentation Formed?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -404,40 +398,6 @@ const HyperpigmentationTreatment = () => {
           </div>
         </section>
 
-        {/* Treatment Methods */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Hyperpigmentation Treatment Options</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Comprehensive treatment solutions available at our clinic for effective hyperpigmentation management.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {treatmentMethods.map((method, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-accent rounded-lg p-8 border border-gray-800 hover:border-purple-500 transition-colors"
-                >
-                  <div className="text-4xl mb-4">{method.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{method.title}</h3>
-                  <p className="text-gray-300">{method.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Comprehensive Treatment Approach */}
         <section className="py-20 bg-accent">
@@ -466,10 +426,7 @@ const HyperpigmentationTreatment = () => {
                 viewport={{ once: true }}
                 className="space-y-8"
               >
-                <div className="text-center mb-8">
-                  <div className="inline-block p-4 bg-purple-500/20 rounded-full mb-4">
-                    <span className="text-4xl">💊</span>
-                  </div>
+                <div className="mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Topical & Cosmeceutical Treatments</h3>
                   <p className="text-gray-300">Medical-grade products for targeted skin lightening</p>
                 </div>
@@ -477,71 +434,51 @@ const HyperpigmentationTreatment = () => {
                 <div className="space-y-6">
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">☀️</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Broad Spectrum Sunscreen</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed">
-                            SPF 30 and above protection essential for preventing further UV damage 
-                            and maintaining treatment results.
-                          </p>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Broad Spectrum Sunscreen</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          SPF 30 and above protection essential for preventing further UV damage 
+                          and maintaining treatment results.
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">🏆</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">
-                            Hydroquinone & Kojic Acid 
-                            <span className="text-xs text-purple-300 ml-2">GOLD STANDARD</span>
-                          </h4>
-                          <p className="text-gray-300 text-sm leading-relaxed">
-                            Most effective cosmeceutical skin lighteners. Enhanced when combined 
-                            with antioxidants, hydroxy acids, and retinoids for superior results.
-                          </p>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">
+                          Hydroquinone & Kojic Acid 
+                          <span className="text-xs text-purple-300 ml-2">GOLD STANDARD</span>
+                        </h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Most effective cosmeceutical skin lighteners. Enhanced when combined 
+                          with antioxidants, hydroxy acids, and retinoids for superior results.
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">🔬</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Vitamin A Products</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed">
-                            Retinol and Tretinoin accelerate skin rejuvenation, resurfacing, 
-                            and cellular turnover for improved pigmentation.
-                          </p>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Vitamin A Products</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Retinol and Tretinoin accelerate skin rejuvenation, resurfacing, 
+                          and cellular turnover for improved pigmentation.
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">✨</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Alpha Hydroxy Acids</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed">
-                            Gentle exfoliation and increased cell turnover for smoother, 
-                            more even-toned skin texture.
-                          </p>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Alpha Hydroxy Acids</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Gentle exfoliation and increased cell turnover for smoother, 
+                          more even-toned skin texture.
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
@@ -556,10 +493,7 @@ const HyperpigmentationTreatment = () => {
                 viewport={{ once: true }}
                 className="space-y-8"
               >
-                <div className="text-center mb-8">
-                  <div className="inline-block p-4 bg-purple-500/20 rounded-full mb-4">
-                    <span className="text-4xl">⚡</span>
-                  </div>
+                <div className="mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Professional Procedures</h3>
                   <p className="text-gray-300">Advanced in-clinic treatments for enhanced results</p>
                 </div>
@@ -567,72 +501,52 @@ const HyperpigmentationTreatment = () => {
                 <div className="space-y-6">
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">💡</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">IPL Treatment</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                            Broad spectrum light therapy targeting dark spots, age spots, and sun damage. 
-                            Typically 3-6 sessions needed with no downtime required.
-                          </p>
-                          <div className="text-xs text-purple-300">✓ No downtime • ✓ 3-6 sessions • ✓ All skin types</div>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">IPL Treatment</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                          Broad spectrum light therapy targeting dark spots, age spots, and sun damage. 
+                          Typically 3-6 sessions needed with no downtime required.
+                        </p>
+                        <div className="text-xs text-purple-300">✓ No downtime • ✓ 3-6 sessions • ✓ All skin types</div>
                       </div>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">🧪</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Chemical Peels</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                            Professional-grade peels with Lactic, Salicylic, and Glycolic acids. 
-                            Available in varying depths to suit different skin types and conditions.
-                          </p>
-                          <div className="text-xs text-purple-300">✓ Customizable depth • ✓ Natural ingredients • ✓ Improved results</div>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Chemical Peels</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                          Professional-grade peels with Lactic, Salicylic, and Glycolic acids. 
+                          Available in varying depths to suit different skin types and conditions.
+                        </p>
+                        <div className="text-xs text-purple-300">✓ Customizable depth • ✓ Natural ingredients • ✓ Improved results</div>
                       </div>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">🔄</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Microdermabrasion</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                            Effective for mild pigmentation. Improves rough, sun-damaged skin through 
-                            exfoliation while enhancing product absorption.
-                          </p>
-                          <div className="text-xs text-purple-300">✓ Mild pigmentation • ✓ Enhanced absorption • ✓ Combines with peels</div>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Microdermabrasion</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                          Effective for mild pigmentation. Improves rough, sun-damaged skin through 
+                          exfoliation while enhancing product absorption.
+                        </p>
+                        <div className="text-xs text-purple-300">✓ Mild pigmentation • ✓ Enhanced absorption • ✓ Combines with peels</div>
                       </div>
                     </CardContent>
                   </Card>
 
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center shrink-0">
-                          <span className="text-xl">📍</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-2">Dermaroller Treatment</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                            Micro-needling technology promoting skin rejuvenation while infusing 
-                            powerful antioxidants and brightening agents into the skin.
-                          </p>
-                          <div className="text-xs text-purple-300">✓ Micro-needling • ✓ Antioxidant infusion • ✓ Cell turnover</div>
-                        </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Dermaroller Treatment</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                          Micro-needling technology promoting skin rejuvenation while infusing 
+                          powerful antioxidants and brightening agents into the skin.
+                        </p>
+                        <div className="text-xs text-purple-300">✓ Micro-needling • ✓ Antioxidant infusion • ✓ Cell turnover</div>
                       </div>
                     </CardContent>
                   </Card>
