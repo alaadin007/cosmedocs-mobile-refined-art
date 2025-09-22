@@ -713,7 +713,7 @@ const HyperpigmentationTreatment = () => {
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-accent text-white">
+        <section className="py-20 bg-black text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -722,7 +722,7 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs for Hyperpigmentation Treatment</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 At Cosmedocs, our aesthetic philosophy is invisible art—natural transformations that speak without words. 
                 Our expert practitioners combine advanced technology with artistic precision to deliver subtle yet remarkable results.
@@ -740,10 +740,10 @@ const HyperpigmentationTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <ShieldCheck className="text-purple-600" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Expert Practitioners</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Expert Medical Team</h3>
                 <p className="text-gray-300">
-                  Our experienced aesthetic doctors specialize in melanin regulation and pigmentation correction, 
-                  ensuring safe and effective treatments for all skin types.
+                  Qualified doctors with extensive experience in hyperpigmentation treatment and melanin regulation 
+                  for all skin types and concerns.
                 </p>
               </motion.div>
 
@@ -757,10 +757,10 @@ const HyperpigmentationTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <Award className="text-purple-600" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Advanced Technology</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Premium Products</h3>
                 <p className="text-gray-300">
-                  State-of-the-art IPL systems and medical-grade treatments deliver superior results with 
-                  minimal downtime and maximum comfort.
+                  Medical-grade treatments and prescription skincare using the latest technology 
+                  for optimal pigmentation correction results.
                 </p>
               </motion.div>
 
@@ -774,10 +774,10 @@ const HyperpigmentationTreatment = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <Users className="text-purple-600" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Personalized Care</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Natural Philosophy</h3>
                 <p className="text-gray-300">
-                  Every treatment plan is tailored to your specific skin type, pigmentation concerns, 
-                  and aesthetic goals for optimal results.
+                  Bold • Natural • Always Your Way - transformation that speaks without words, 
+                  enhancing your natural beauty with invisible art.
                 </p>
               </motion.div>
             </div>
@@ -785,95 +785,6 @@ const HyperpigmentationTreatment = () => {
         </section>
 
         {/* Client Reviews */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Client Reviews</h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                See what our clients say about their hyperpigmentation treatment experience at Cosmedocs.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        ★★★★★
-                      </div>
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">
-                      "The IPL treatment at Cosmedocs completely transformed my melasma. After 4 sessions, 
-                      the dark patches on my face have significantly faded. The staff is professional and the results speak for themselves."
-                    </p>
-                    <p className="text-white font-semibold">Sarah M.</p>
-                    <p className="text-purple-300 text-sm">Verified Patient</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        ★★★★★
-                      </div>
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">
-                      "I was skeptical about chemical peels, but the results exceeded my expectations. 
-                      My acne scars and hyperpigmentation have visibly improved. The treatment was comfortable and professional."
-                    </p>
-                    <p className="text-white font-semibold">James T.</p>
-                    <p className="text-purple-300 text-sm">Verified Patient</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-accent border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        ★★★★★
-                      </div>
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">
-                      "The prescription skincare regime combined with IPL has given me the even skin tone I've always wanted. 
-                      The team at Cosmedocs is knowledgeable and creates a personalized approach."
-                    </p>
-                    <p className="text-white font-semibold">Rachel K.</p>
-                    <p className="text-purple-300 text-sm">Verified Patient</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Possible Side Effects Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -883,41 +794,32 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Possible Side Effects</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                All hyperpigmentation treatments are custom tailored according to skin type and severity. 
-                In professional hands at Cosmedocs, side effects are minimal.
+              <h2 className="text-3xl font-bold mb-4 text-white">Client Reviews</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See what our clients say about their hyperpigmentation treatment experience.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="bg-black rounded-lg p-6 border border-gray-800"
               >
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">Common Side Effects</h3>
-                  <p className="text-gray-300 mb-6">
-                    The following mild side effects may occur with chemical skin peels, microdermabrasion, 
-                    dermaroller, and IPL treatments:
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300">Mild redness of skin</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300">Slight itching sensation</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300">Temporary discomfort</p>
-                    </div>
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-lg">★</span>
+                    ))}
                   </div>
                 </div>
+                <p className="text-gray-300 italic mb-4">
+                  "The IPL treatment at Cosmedocs completely transformed my melasma. After 4 sessions, 
+                  the dark patches on my face have significantly faded. The staff is professional and the results speak for themselves!"
+                </p>
+                <p className="text-purple-300 font-semibold">- Verified Client</p>
               </motion.div>
 
               <motion.div
@@ -925,55 +827,32 @@ const HyperpigmentationTreatment = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="bg-black rounded-lg p-6 border border-gray-800"
               >
-                <div className="bg-black rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">Professional Care</h3>
-                  <p className="text-gray-300 mb-6">
-                    At Cosmedocs, our experienced medical professionals ensure:
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <p className="text-gray-300">Customized treatment protocols</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <p className="text-gray-300">Minimal side effects</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <p className="text-gray-300">Expert aftercare guidance</p>
-                    </div>
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-lg">★</span>
+                    ))}
                   </div>
                 </div>
+                <p className="text-gray-300 italic mb-4">
+                  "I was skeptical about chemical peels, but the results exceeded my expectations. 
+                  My acne scars and hyperpigmentation have visibly improved. The treatment was comfortable and professional."
+                </p>
+                <p className="text-purple-300 font-semibold">- Verified Client</p>
               </motion.div>
+            </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="md:col-span-2 mt-8"
-              >
-                <div className="bg-purple-900/50 rounded-lg p-6 border border-purple-500">
-                  <h3 className="text-xl font-semibold text-purple-300 mb-4">Prevention Measures</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
-                    <div className="space-y-2">
-                      <p>• Wear SPF 30 or higher daily</p>
-                      <p>• Avoid excessive sun exposure</p>
-                    </div>
-                    <div className="space-y-2">
-                      <p>• Regular skin exfoliation regime</p>
-                      <p>• Avoid picking acne or skin</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+            <div className="text-center mt-8">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                Read More Reviews
+              </Button>
             </div>
           </div>
         </section>
 
-        {/* Downtime Section */}
+        {/* FAQ Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -983,40 +862,25 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Downtime</h2>
-              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
-                Almost all hyperpigmentation treatments have minimal to no downtime:
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Common questions about hyperpigmentation treatment answered by our experts.
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-accent rounded-lg p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <ShieldCheck className="text-green-500" size={20} />
-                      <p className="text-gray-300">Instant resumption of daily activities</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <ShieldCheck className="text-green-500" size={20} />
-                      <p className="text-gray-300">No severe problems or complications</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <ShieldCheck className="text-green-500" size={20} />
-                      <p className="text-gray-300">Return to work same day</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <ShieldCheck className="text-green-500" size={20} />
-                      <p className="text-gray-300">Minimal impact on routine activities</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqData.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-800">
+                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
