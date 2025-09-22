@@ -346,28 +346,35 @@ export default function PsoriasisTreatment() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Symptoms of Psoriasis</h2>
-                <p className="text-gray-300 mb-6">
-                  Understanding the different symptoms is crucial for effective treatment.
-                </p>
-                
-                <h3 className="text-xl font-bold mb-6">Main Symptoms Include:</h3>
-                <div className="space-y-4">
-                  {[
-                    "Inflamed, scaly skin",
-                    "Thick, raised patches", 
-                    "Silvery-colored skin",
-                    "Small, scaly spots",
-                    "Hair loss (on the scalp)",
-                    "Pitted, crumbly nails",
-                    "Blisters"
-                  ].map((symptom, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <p className="text-gray-300">{symptom}</p>
+                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Symptoms of Psoriasis</CardTitle>
+                    <p className="text-gray-300">
+                      Understanding the different symptoms is crucial for effective treatment.
+                    </p>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div>
+                      <h3 className="text-xl font-bold mb-4 text-white">Main Symptoms Include:</h3>
+                      <div className="space-y-3">
+                        {[
+                          "Inflamed, scaly skin",
+                          "Thick, raised patches", 
+                          "Silvery-colored skin",
+                          "Small, scaly spots",
+                          "Hair loss (on the scalp)",
+                          "Pitted, crumbly nails",
+                          "Blisters"
+                        ].map((symptom, index) => (
+                          <div key={index} className="flex items-center space-x-3">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <p className="text-gray-300">{symptom}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               {/* Why Do People Seek Treatment for Psoriasis */}
@@ -377,25 +384,29 @@ export default function PsoriasisTreatment() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Why Do People Seek Treatment for Psoriasis?</h2>
-                <p className="text-gray-300 mb-6">
-                  Psoriasis affects more than just the skin - it impacts overall quality of life, confidence, and wellbeing.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    "To manage and control symptoms",
-                    "To reduce the severity of flare-ups", 
-                    "To alleviate pain associated with psoriasis",
-                    "To enhance self-confidence and self-esteem",
-                    "To decrease stress, anxiety, and unhappiness",
-                    "To lower the risk of developing related health issues, such as psoriatic arthritis, heart disease, and depression"
-                  ].map((reason, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">{reason}</p>
-                    </div>
-                  ))}
-                </div>
+                <Card className="bg-black/40 border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Why Do People Seek Treatment for Psoriasis?</CardTitle>
+                    <p className="text-gray-300">
+                      Psoriasis affects more than just the skin - it impacts overall quality of life, confidence, and wellbeing.
+                    </p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {[
+                      "To manage and control symptoms",
+                      "To reduce the severity of flare-ups", 
+                      "To alleviate pain associated with psoriasis",
+                      "To enhance self-confidence and self-esteem",
+                      "To decrease stress, anxiety, and unhappiness",
+                      "To lower the risk of developing related health issues, such as psoriatic arthritis, heart disease, and depression"
+                    ].map((reason, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300">{reason}</p>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
           </div>
