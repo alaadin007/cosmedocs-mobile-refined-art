@@ -267,9 +267,6 @@ export default function AcneTreatment() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">What is Acne?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding acne helps us create targeted treatment plans for optimal skin clearing results.
-              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
