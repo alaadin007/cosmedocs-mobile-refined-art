@@ -339,30 +339,114 @@ const MigraineBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Migraines?</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">How Does Botox Work for Migraines?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Understanding the science behind migraine relief through targeted nerve intervention
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Science Behind Botox */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30 border-2">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-white text-2xl flex items-center justify-center gap-3">
+                    <Activity className="text-purple-400" size={28} />
+                    The Science of Pain Prevention
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="px-8 pb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5 }}
+                      viewport={{ once: true }}
+                      className="text-center"
+                    >
+                      <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-purple-300 text-2xl font-bold">1</span>
+                      </div>
+                      <h4 className="text-white font-semibold mb-3">Targeted Injection</h4>
+                      <p className="text-gray-300 text-sm">
+                        Botox is precisely injected into specific muscle groups in the forehead, temples, neck, and shoulders
+                      </p>
+                    </motion.div>
+                    
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      viewport={{ once: true }}
+                      className="text-center"
+                    >
+                      <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-purple-300 text-2xl font-bold">2</span>
+                      </div>
+                      <h4 className="text-white font-semibold mb-3">Nerve Blocking</h4>
+                      <p className="text-gray-300 text-sm">
+                        Blocks the release of neurotransmitters that carry pain signals from nerve endings to the brain
+                      </p>
+                    </motion.div>
+                    
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                      viewport={{ once: true }}
+                      className="text-center"
+                    >
+                      <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-purple-300 text-2xl font-bold">3</span>
+                      </div>
+                      <h4 className="text-white font-semibold mb-3">Prevention</h4>
+                      <p className="text-gray-300 text-sm">
+                        Stops the pain network before it can generate migraine sensations, providing lasting relief
+                      </p>
+                    </motion.div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardContent className="p-8">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl flex items-center gap-3">
+                      <Heart className="text-purple-400" size={24} />
+                      FDA-Approved Mechanism
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Botox works by blocking the release of specific chemicals involved in transmitting pain. When Botox is injected into the muscles of the forehead, neck, and shoulders, it enters the nerve endings in the injected area.
+                      Botox works by blocking the release of specific chemicals involved in transmitting pain. When injected into targeted muscles, it enters nerve endings and prevents the release of neurotransmitters that carry pain signals to the brain.
                     </p>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      There, it blocks the release of neurotransmitters that transmit pain signals to the brain. By preventing these chemicals from being released, Botox effectively stops the pain network before it can generate the sensation of pain associated with a migraine.
+                      This creates a protective barrier against migraine triggers, effectively stopping the pain cascade before it begins. The treatment is particularly effective for chronic migraine sufferers who experience frequent, debilitating episodes.
                     </p>
-                    <div className="bg-purple-900/50 rounded-lg p-4">
-                      <p className="text-purple-200 font-medium italic">
-                        "When botulinum toxin is injected into the muscles of the face, neck, and head, the medication relaxes them. Furthermore, Botox for migraine affects the nerves by blocking the neurotransmission or pain signals between the brain and nerves triggering symptoms of migraine." - Johns Hopkins Medicine
-                      </p>
+                    <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 border border-purple-500/30">
+                      <div className="flex items-start gap-3">
+                        <GraduationCap className="text-purple-400 mt-1" size={20} />
+                        <div>
+                          <p className="text-purple-200 font-medium mb-2">Johns Hopkins Medicine</p>
+                          <p className="text-gray-300 italic text-sm leading-relaxed">
+                            "When botulinum toxin is injected into the muscles of the face, neck, and head, the medication relaxes them. Botox for migraine affects the nerves by blocking neurotransmission or pain signals between the brain and nerves."
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -374,29 +458,55 @@ const MigraineBotox = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Treatment Protocol</CardTitle>
+                    <CardTitle className="text-white text-xl flex items-center gap-3">
+                      <Award className="text-purple-400" size={24} />
+                      Clinical Protocol
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-4 text-gray-300">
-                      <li className="flex items-start space-x-2">
-                        <CheckCircle className="text-purple-400 mt-1" size={16} />
-                        <span>Up to 31 injection sites in the upper face, temples, neck, and shoulders</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <CheckCircle className="text-purple-400 mt-1" size={16} />
-                        <span>Treatment repeated every 4-5 months for optimal results</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <CheckCircle className="text-purple-400 mt-1" size={16} />
-                        <span>Each session takes about 15 minutes</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <CheckCircle className="text-purple-400 mt-1" size={16} />
-                        <span>Injections are relatively painless</span>
-                      </li>
-                    </ul>
+                    <div className="space-y-6">
+                      <div className="bg-purple-900/30 rounded-lg p-4">
+                        <h4 className="text-purple-300 font-semibold mb-3">Treatment Specifications</h4>
+                        <ul className="space-y-3 text-gray-300">
+                          <li className="flex items-start space-x-3">
+                            <CheckCircle className="text-purple-400 mt-1" size={16} />
+                            <span><strong>31 injection sites</strong> across strategic trigger points</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <CheckCircle className="text-purple-400 mt-1" size={16} />
+                            <span><strong>15-minute sessions</strong> with minimal discomfort</span>
+                          </li>
+                          <li className="flex items-start space-x-3">
+                            <CheckCircle className="text-purple-400 mt-1" size={16} />
+                            <span><strong>Repeated every 12 weeks</strong> for optimal prevention</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="bg-purple-900/30 rounded-lg p-4">
+                        <h4 className="text-purple-300 font-semibold mb-3">Key Benefits</h4>
+                        <ul className="space-y-2 text-gray-300 text-sm">
+                          <li className="flex items-center space-x-2">
+                            <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                            <span>Reduces migraine frequency by up to 50%</span>
+                          </li>
+                          <li className="flex items-center space-x-2">
+                            <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                            <span>Decreases headache intensity and duration</span>
+                          </li>
+                          <li className="flex items-center space-x-2">
+                            <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                            <span>Improves overall quality of life</span>
+                          </li>
+                          <li className="flex items-center space-x-2">
+                            <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                            <span>No systemic side effects</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
