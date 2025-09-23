@@ -453,9 +453,6 @@ const FrownLineBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Frown Lines?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Understanding the science behind frown line botox helps you make informed decisions about your treatment.
-              </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
