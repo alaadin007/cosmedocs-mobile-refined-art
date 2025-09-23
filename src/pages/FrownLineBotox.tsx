@@ -18,8 +18,6 @@ import { generateSEOMetadata } from "@/utils/seo";
 import frownLinesBeforeAfter1 from "@/assets/frown-lines-before-after-1.jpg";
 import frownLinesInjectionSites from "@/assets/frown-lines-injection-sites.jpg";
 import frownLinesBeforeAfter3 from "@/assets/frown-lines-before-after-3.jpg";
-import frownLinesBeforeAfter2 from "@/assets/frown-lines-before-after-2.jpg";
-import frownLinesBeforeAfter4 from "@/assets/frown-lines-before-after-4.jpg";
 
 const FrownLineBotox = () => {
   const seoData = generateSEOMetadata(
@@ -35,19 +33,9 @@ const FrownLineBotox = () => {
       caption: "Baby Botox Treatment: Smooth frown lines with natural expression preserved. Expert glabellar muscle relaxation." 
     },
     { 
-      src: frownLinesBeforeAfter2, 
-      alt: "Before and after frown lines at Harley Street Botox clinic", 
-      caption: "Professional frown lines treatment at our Harley Street clinic showing natural-looking results." 
-    },
-    { 
       src: frownLinesBeforeAfter3, 
       alt: "Comprehensive frown lines and forehead treatment",
       caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and frown lines treatment for complete upper face rejuvenation and natural results." 
-    },
-    { 
-      src: frownLinesBeforeAfter4, 
-      alt: "Harley Street Botox treatment results on frown lines", 
-      caption: "Expert frown lines botox treatment demonstrating our invisible art approach to facial aesthetics." 
     }
   ];
 
@@ -344,13 +332,28 @@ const FrownLineBotox = () => {
             >
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding Glabellar Lines</CardTitle>
+                  <CardTitle className="text-white text-2xl text-center">Understanding Glabellar Lines & Key Treatment Areas</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
                     Glabellar lines form between the eyebrows from repeated contractions of the corrugator and procerus muscles. 
                     These lines can make you appear angry, worried, or tired even when you're not, affecting your overall facial harmony.
                   </p>
+                  
+                  <div className="grid md:grid-cols-3 gap-4 mt-6">
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Corrugator Supercilii</h4>
+                      <p className="text-gray-300 text-sm">Primary muscle causing vertical frown lines</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Procerus Muscle</h4>
+                      <p className="text-gray-300 text-sm">Creates horizontal lines at the bridge of the nose</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Depressor Supercilii</h4>
+                      <p className="text-gray-300 text-sm">Contributes to brow depression and deep furrows</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
