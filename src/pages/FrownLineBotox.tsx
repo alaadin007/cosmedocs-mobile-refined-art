@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -34,7 +35,7 @@ const FrownLineBotox = () => {
     { 
       src: "/src/assets/frown-lines-before-after-3.jpg", 
       alt: "Comprehensive frown lines and forehead treatment", 
-      caption: "Combined forehead and frown lines treatment for complete upper face rejuvenation and natural results." 
+      caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and frown lines treatment for complete upper face rejuvenation and natural results." 
     }
   ];
 
@@ -65,7 +66,7 @@ const FrownLineBotox = () => {
     },
     {
       question: "Can frown line botox be combined with other treatments?",
-      answer: "Yes! Frown line botox works excellently with forehead botox, crow's feet treatment, and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized treatment plans."
+      answer: "Yes! Frown line botox works excellently with <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead botox</Link>, <Link to='/crows-feet-botox' className='text-purple-400 hover:text-purple-300 underline'>crow's feet treatment</Link>, and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized treatment plans."
     },
     {
       question: "What's the difference between static and dynamic lines?",
