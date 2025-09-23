@@ -21,7 +21,21 @@ const FrownLineBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Frown line botox before and after treatment", caption: "Frown Line Botox Treatment: Smooth, relaxed glabellar lines with natural expression preserved. Expert muscle relaxation - transformation that speaks without saying a word." }
+    { 
+      src: "/src/assets/frown-lines-before-after-1.jpg", 
+      alt: "Frown line botox before and after - baby botox treatment", 
+      caption: "Baby Botox Treatment: Smooth frown lines with natural expression preserved. Expert glabellar muscle relaxation." 
+    },
+    { 
+      src: "/src/assets/frown-lines-injection-sites.jpg", 
+      alt: "Frown lines injection sites illustration", 
+      caption: "Strategic injection sites for frown lines botox treatment targeting corrugator and procerus muscles." 
+    },
+    { 
+      src: "/src/assets/frown-lines-before-after-3.jpg", 
+      alt: "Comprehensive frown lines and forehead treatment", 
+      caption: "Combined forehead and frown lines treatment for complete upper face rejuvenation and natural results." 
+    }
   ];
 
   const faqs = [
@@ -52,6 +66,26 @@ const FrownLineBotox = () => {
     {
       question: "Can frown line botox be combined with other treatments?",
       answer: "Yes! Frown line botox works excellently with forehead botox, crow's feet treatment, and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized treatment plans."
+    },
+    {
+      question: "What's the difference between static and dynamic lines?",
+      answer: "Dynamic frown lines appear when you make facial movements like frowning or concentrating and disappear when relaxed. Static frown lines are visible even when your face is at rest, developing over time as repeated expressions weaken skin elasticity."
+    },
+    {
+      question: "When can I see results from my frown lines Botox?",
+      answer: "For some people, results can become visible in as little as 2 days. Many people notice improvements in about 7 to 14 days after their frown line treatment. Everyone is different and results take time to fully develop."
+    },
+    {
+      question: "How much Botox is needed for frown lines?",
+      answer: "The amount depends on the depth of your frown lines and muscle strength. Typically, 15-25 units are used to effectively relax the glabellar muscles. A consultation will determine the exact number of units required for your desired look."
+    },
+    {
+      question: "Can frown lines become permanent?",
+      answer: "Yes, frown lines can become permanent if left untreated, especially as skin loses elasticity with age. Repeated frowning can cause lines to settle deeply into skin. Preventative Botox treatments can help stop them from becoming permanent."
+    },
+    {
+      question: "How can I prevent frown lines from appearing?",
+      answer: "Use topical retinoids to boost collagen production, apply sunscreen to protect from UV damage, wear sunglasses, quit smoking, get adequate sleep, and maintain a healthy diet. These lifestyle changes support healthy skin and prevent premature aging."
     }
   ];
 
@@ -310,8 +344,301 @@ const FrownLineBotox = () => {
           </div>
         </section>
 
+        {/* What to Expect */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Frown Lines Botox — What to Expect?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your frown lines treatment, begin your glabellar lines treatment. The doctor uses very fine needles to inject botulinum toxin into the corrugator and procerus muscles in targeted areas such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300 mb-6">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Corrugator muscles</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Procerus muscle</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Glabellar region</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Between eyebrows</span>
+                      </li>
+                    </ul>
+                    <p className="text-purple-300 font-medium">
+                      Following the botox treatment you may continue normal daily activities immediately.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      Frown lines botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Bruising at injection sites</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Swelling around treated area</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Mild discomfort</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary redness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Infection (rare)</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Causes of Frown Lines */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Causes of Frown Lines</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
+                Frown lines develop due to a combination of factors that affect the skin and underlying muscles over time.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                "Reduced collagen production",
+                "Excessive sun damage", 
+                "Natural skin sagging",
+                "Frequent facial expressions",
+                "Genetic skin factors",
+                "Dehydration",
+                "Smoking"
+              ].map((cause, index) => (
+                <motion.div
+                  key={cause}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-lg p-6 border border-purple-500/30"
+                >
+                  <p className="text-white font-medium text-center">{cause}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How Botox Works for Frown Lines */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Frown Lines?</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl flex items-center justify-center gap-3">
+                      <Heart className="text-purple-400" size={28} />
+                      Muscle Relaxation Mechanism
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-8 pb-8">
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6 text-center">
+                      Botox relaxes the muscles causing frown lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. It works by blocking nerve signals that cause muscle contractions.
+                    </p>
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      Typically, 15-25 units are used to effectively relax the facial muscles in the glabellar area, with results lasting 4-6 months and requiring maintenance sessions for optimal effects.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Types of Frown Lines */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Types of Frown Lines</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Dynamic Frown Lines</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Dynamic frown lines appear when you make facial movements or expressions like frowning, squinting, or concentrating. These lines are temporary and disappear when your face is relaxed.
+                    </p>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      Botox is highly effective for dynamic lines as it relaxes the muscles to reduce their appearance.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Static Frown Lines</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Static frown lines are visible even when your face is at rest. They develop over time as repeated expressions weaken the skin's elasticity, causing permanent creases.
+                    </p>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      Botox prevents static lines from becoming deeper and may require combination with dermal fillers for optimal results.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Treatment Options */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Frown Lines</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                We have a range of effective treatments to target frown lines and achieve a smoother, more relaxed expression other than Frown lines Botox.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Enhanced Results with Dermal Fillers</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      While Botox effectively treats dynamic wrinkles by relaxing underlying muscles, dermal fillers can further enhance the results. Fillers, injected to add volume and smooth out lines, are particularly useful for static wrinkles that Botox alone can't fully address.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Combination Treatment</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Combining Botox with dermal fillers offers a comprehensive approach to frown lines. Botox reduces muscle activity causing the lines, while fillers add volume to deep-set lines, resulting in smoother, more youthful skin.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
+        <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
