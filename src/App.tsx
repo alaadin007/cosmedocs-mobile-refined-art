@@ -192,7 +192,16 @@ const App = () => {
               <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
               <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
               <Route path="/profhilo-treatment" element={<ProfhiloTreatment />} />
-               <Route path="/chin-botox" element={<ChinBotox />} />
+              <Route path="/chin-botox" element={<ChinBotox />} />
+              <Route path="/frown-line-botox" element={<FrownLineBotox />} />
+              <Route path="/crows-feet-botox" element={<CrowsFeetBotox />} />
+              <Route path="/forehead-lines-botox" element={<ForeheadLinesBotox />} />
+              <Route path="/bunny-lines-botox" element={<BunnyLinesBotox />} />
+              <Route path="/nasal-flaring-botox" element={<NasalFlaringBotox />} />
+              <Route path="/lip-flip" element={<LipFlip />} />
+              <Route path="/migraine-botox" element={<MigraineBotox />} />
+              <Route path="/bruxism-botox" element={<BruxismBotox />} />
+              <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
                <Route path="/trap-botox" element={<TrapBotox />} />
                <Route path="/hydrafacial-london" element={<HydraFacial />} />
               <Route path="/prp-treatment" element={<PRPTreatment />} />
