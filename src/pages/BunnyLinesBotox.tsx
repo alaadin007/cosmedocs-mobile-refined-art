@@ -21,7 +21,26 @@ const BunnyLinesBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Bunny lines botox before and after treatment", caption: "Bunny Lines Botox Treatment: Smooth, refined nose bridge with natural expressions preserved. Expert nasalis muscle relaxation - transformation that speaks without saying a word." }
+    { 
+      src: "/src/assets/bunny-lines-before-after-1.jpg", 
+      alt: "Bunny lines botox before and after - nose bridge smoothing", 
+      caption: "Bunny Lines Botox Treatment: Smooth, refined nose bridge with natural expressions preserved. Expert nasalis muscle relaxation." 
+    },
+    { 
+      src: "/src/assets/bunny-lines-before-after-2.jpg", 
+      alt: "Effective bunny lines botox treatment results", 
+      caption: "Clear, line-free nose achieved with minimal downtime. Professional botox treatment for natural-looking results." 
+    },
+    { 
+      src: "/src/assets/bunny-lines-before-after-3.jpg", 
+      alt: "Forehead and bunny lines comprehensive treatment", 
+      caption: "Combined forehead and bunny lines treatment for complete upper face rejuvenation." 
+    },
+    { 
+      src: "/src/assets/bunny-lines-before-after-4.jpg", 
+      alt: "Nose wrinkles botox before after comparison", 
+      caption: "Comparison showing significant reduction in nose wrinkles and bunny lines with expert botox treatment." 
+    }
   ];
 
   const faqs = [
@@ -52,6 +71,18 @@ const BunnyLinesBotox = () => {
     {
       question: "Can bunny lines botox be combined with other treatments?",
       answer: "Yes! Bunny lines botox works excellently with upper face botox treatments and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized combination treatment plans for optimal results."
+    },
+    {
+      question: "Are there any side effects associated with Bunny Lines Botox?",
+      answer: "Side effects of Botox injections are generally mild and temporary and may include redness, swelling, bruising, and mild discomfort at the injection sites. These side effects typically resolve on their own within a few days."
+    },
+    {
+      question: "Will bunny lines Botox affect my ability to flare my nostrils?",
+      answer: "Bunny lines Botox specifically targets the muscles around the nose and should not affect your ability to flare your nostrils or make other facial expressions involving the nose. Our provider at Cosmedocs carefully administers the injections to preserve your natural facial movement."
+    },
+    {
+      question: "Can bunny lines Botox also treat other areas of the face?",
+      answer: "While bunny lines Botox specifically targets the muscles responsible for bunny lines, it can indirectly improve the appearance of adjacent areas of the face, such as the upper nose and between the eyebrows, by reducing overall facial tension and smoothing wrinkles."
     }
   ];
 
@@ -307,6 +338,255 @@ const BunnyLinesBotox = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* How Does Botox for Bunny Lines Work */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox for Bunny Lines Work?</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl flex items-center justify-center gap-3">
+                      <Heart className="text-purple-400" size={28} />
+                      Neuromuscular Blocking Mechanism
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-8 pb-8">
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6 text-center">
+                      Botox, scientifically known as Botulinum toxin, works by temporarily relaxing muscles to diminish wrinkles. When used for bunny lines, Botox is typically injected along the bridge of the nose, targeting specific muscles like the nasalis.
+                    </p>
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      By blocking nerve signals through neuromuscular blocking, Botox weakens or temporarily paralyzes the muscles, resulting in a reduced appearance of bunny lines and smoother skin around the nose.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Journey */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Nose Wrinkles Treatment Journey</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                During your Bunny Lines treatment at Cosmedocs, you can expect a comprehensive approach to achieving natural-looking results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Consultation & Assessment</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Initially, a consultation with a qualified practitioner is conducted to assess your muscle and expression dynamics, skin condition, and desired outcomes.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Customised Treatment Plan</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      A personalized treatment plan is devised, considering any unique facial expressions and potentially related areas, such as frown lines or nasal flaring, to achieve a balanced and natural-looking result.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Injection Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      The injection process is quick, typically taking only a few minutes. The practitioner uses a fine needle to inject small amounts of Botox into the targeted areas. There's no downtime following the procedure.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Results and Maintenance */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Results and Maintenance of Botox for Nose Wrinkles</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Effect of Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="text-purple-300 font-semibold mb-2">Onset of Results:</h4>
+                    <p className="text-gray-300">
+                      The effects of Botox usually become noticeable within a few days after treatment. Full results will be visible in about one to two weeks.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Lasting of Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="text-purple-300 font-semibold mb-2">Duration of Effects:</h4>
+                    <p className="text-gray-300">
+                      The smoothing effects of Botox for bunny lines typically last between three to six months. As the effects wear off, muscle activity will gradually return, and the lines may reappear.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Maintenance of Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="text-purple-300 font-semibold mb-2">Maintenance Treatments:</h4>
+                    <p className="text-gray-300">
+                      Follow-up treatments are recommended every four to six months to maintain a smooth appearance. Regular treatments can lead to longer-lasting results over time.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Botox for Bunny Lines */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Why Choose Botox for Bunny Lines?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Smoother, Youthful Skin",
+                  description: "Botox injections precisely target the underlying muscles responsible for bunny lines. Moreover, it relaxes those muscles, smoothing away wrinkles for more radiant skin."
+                },
+                {
+                  title: "Minimally Invasive Treatment", 
+                  description: "Botox is a minimally invasive treatment that requires no downtime. It also allows you to resume your daily activities immediately after your appointment."
+                },
+                {
+                  title: "Quick, Convenient Procedure",
+                  description: "Healthcare professionals administer Botox injections quickly during in-office appointments, offering a convenient solution for individuals with busy lifestyles."
+                },
+                {
+                  title: "Long-Lasting Results",
+                  description: "While results may vary, many clients experience a noticeable improvement in the appearance of bunny lines for up to six months or longer with regular treatments."
+                },
+                {
+                  title: "Customized Treatment Plans",
+                  description: "At Cosmedocs, we craft personalized treatment plans. We address your unique concerns and goals. Our aim? Natural-looking results, tailored to your facial anatomy."
+                }
+              ].map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center gap-3">
+                        <CheckCircle className="text-purple-400" size={24} />
+                        {benefit.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">{benefit.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
