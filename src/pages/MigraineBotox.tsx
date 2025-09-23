@@ -52,6 +52,26 @@ const MigraineBotox = () => {
     {
       question: "Can migraine botox be combined with other treatments?",
       answer: "Yes! Migraine botox can be combined with other headache prevention strategies and cosmetic botox treatments. Our doctors coordinate comprehensive treatment plans for both therapeutic and aesthetic benefits."
+    },
+    {
+      question: "How many Botox shots are typically needed to treat chronic migraine headaches?",
+      answer: "There are up to 31 possible injection sites in the upper face, temples, neck, and shoulders. The clinician's experience is crucial in determining which trigger points to include, thereby reducing the dose and cost. Botox works to prevent headaches and chronic migraines with different doses depending on whether the individual is experiencing an on or off phase."
+    },
+    {
+      question: "How long does Botox for migraines take to start working?",
+      answer: "Injections of Botox work from several days to two weeks however, chronic migraines do take longer to subside. While some patients do not start to see an improvement until after their second treatment 3-4 months later."
+    },
+    {
+      question: "Who makes a good candidate for Botox headache/migraine treatment?",
+      answer: "If you are someone who frequently experiences severe migraine headaches, your healthcare provider may recommend Botox injections. However, they will only administer Botox if you have 14 or fewer headache days each month. Consulting with our Botox experts can determine if Botox injections are suitable for chronic headaches."
+    },
+    {
+      question: "How often do I need to receive Botox treatment for migraines?",
+      answer: "Generally, the Botox treatment is repeated after every 4-6 months for effective results against spells of chronic migraine."
+    },
+    {
+      question: "Why visit a cosmetic doctor for migraines?",
+      answer: "Cosmetic doctors have long used Botox for medical conditions such as bruxism (teeth clenching) and excessive sweating. Cosmedocs offers Botox injections for migraines with extensive experience. We welcome patients and provide the best care at lower costs."
     }
   ];
 
@@ -219,8 +239,7 @@ const MigraineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Migraine Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Migraine botox is an FDA-approved therapeutic treatment that prevents chronic migraines by blocking nerve signals 
-                that trigger muscle contractions and pain. Our invisible art approach provides relief while maintaining natural expressions.
+                Cosmedocs has been utilizing Botox to achieve aesthetic balance and symmetry for a decade. Although this treatment was initially designed for wrinkle treatment, it was accidentally discovered to be effective in treating migraines. Our invisible art approach provides relief while maintaining natural expressions.
               </p>
             </motion.div>
 
@@ -233,13 +252,20 @@ const MigraineBotox = () => {
             >
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding Chronic Migraines</CardTitle>
+                  <CardTitle className="text-white text-2xl text-center">Understanding Migraines</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Chronic migraines affect millions of people worldwide, causing debilitating headaches for 15+ days per month. 
-                    Botox treatment targets specific trigger points in head and neck muscles to prevent migraine onset and reduce frequency.
+                  <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
+                    Migraines are not just ordinary headaches. They are complex neurological events characterized by intense, debilitating headaches, often accompanied by nausea, vomiting, and sensitivity to light and sound.
                   </p>
+                  <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
+                    People with chronic migraines experience 15 or more headache days per month, with migraines occurring on at least eight days.
+                  </p>
+                  <div className="bg-purple-900/50 rounded-lg p-6 max-w-2xl mx-auto">
+                    <p className="text-purple-200 font-semibold text-center">
+                      Did you know that migraine is the 3rd most common illness globally and the 6th most crippling problem for many people worldwide? Moreover, over 190,000 migraine attacks are routinely experienced in England alone.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -261,6 +287,323 @@ const MigraineBotox = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Migraine Triggers */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Triggers for Migraines</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
+                It is important to understand that migraines can have various causes. Some of the factors are:
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                "Fatigue",
+                "Stress and bright sunlight", 
+                "Changes in sleep patterns or diet",
+                "Hormones",
+                "Oral contraceptives",
+                "Strong odours",
+                "Nitrates in certain foods or alcohol"
+              ].map((trigger, index) => (
+                <motion.div
+                  key={trigger}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-lg p-6 border border-purple-500/30"
+                >
+                  <p className="text-white font-medium text-center">{trigger}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How Botox Works */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Migraines?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardContent className="p-8">
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      Botox works by blocking the release of specific chemicals involved in transmitting pain. When Botox is injected into the muscles of the forehead, neck, and shoulders, it enters the nerve endings in the injected area.
+                    </p>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      There, it blocks the release of neurotransmitters that transmit pain signals to the brain. By preventing these chemicals from being released, Botox effectively stops the pain network before it can generate the sensation of pain associated with a migraine.
+                    </p>
+                    <div className="bg-purple-900/50 rounded-lg p-4">
+                      <p className="text-purple-200 font-medium italic">
+                        "When botulinum toxin is injected into the muscles of the face, neck, and head, the medication relaxes them. Furthermore, Botox for migraine affects the nerves by blocking the neurotransmission or pain signals between the brain and nerves triggering symptoms of migraine." - Johns Hopkins Medicine
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Protocol</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-4 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <CheckCircle className="text-purple-400 mt-1" size={16} />
+                        <span>Up to 31 injection sites in the upper face, temples, neck, and shoulders</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <CheckCircle className="text-purple-400 mt-1" size={16} />
+                        <span>Treatment repeated every 4-5 months for optimal results</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <CheckCircle className="text-purple-400 mt-1" size={16} />
+                        <span>Each session takes about 15 minutes</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <CheckCircle className="text-purple-400 mt-1" size={16} />
+                        <span>Injections are relatively painless</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Types of Headaches */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Different Types of Headaches / Migraine</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Aura Migraine or Complicated Migraine</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      During a migraine, sensory and visual problems can occur, known as aura. These problems include:
+                    </p>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Difficulty speaking</li>
+                      <li>• Seeing black spots and zigzags</li>
+                      <li>• Experiencing tingling numbness on one side of the body</li>
+                    </ul>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      Aura typically starts right before or during a migraine and lasts 10 to 30 minutes.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Aura-free Migraine or Common Migraine</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Pulsating pain on one side of the head characterizes a headache without an aura. Most patients report symptoms such as:
+                    </p>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Sensitivity to light</li>
+                      <li>• Sound sensitivity</li>
+                      <li>• Pain that becomes worse with strenuous activity</li>
+                      <li>• Vomiting or nauseous feeling</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Chronic Migraine</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      If you have a headache for more than 15 days in a row over several weeks, it may indicate chronic migraine. Although the intensity of the headache and symptoms may vary, chronic migraines usually follow a pattern.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Cluster Headaches</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Cluster headaches cause excruciating burning and pounding pain on the sides of the head then above the eyes and behind the ears, making them one of the most painful types of headaches.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* What to Expect */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Migraine — What to Expect?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After a detailed consultation with a headache specialist at Cosmedocs for your migraine headaches, begin your migraine treatment. The doctor uses a very fine needle to inject botulinum toxin into the target muscles under your skin in multiple "trigger points" such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300 mb-6">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Face</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Forehead</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Temples</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Neck</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Back of the head</span>
+                      </li>
+                    </ul>
+                    <p className="text-purple-300 font-medium">
+                      Following the botox treatment you may continue normal daily activities.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After receiving Botox, it causes minimal to no pain for most people. Medical experts consider it a safe treatment. However, your Botox for migraine treatment may have some slight side effects, such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Bruising, redness, or swelling around the injection sites</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Dryness in mouth</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Fatigue or tiredness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary muscle weakness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Tension or stiffness in the neck</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
           </div>
         </section>
 
