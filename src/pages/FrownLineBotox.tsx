@@ -14,10 +14,7 @@ import {
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 
-// Import images properly
-import frownLinesBeforeAfter1 from "@/assets/frown-lines-before-after-1.jpg";
-import frownLinesInjectionSites from "@/assets/frown-lines-injection-sites.jpg";
-import frownLinesBeforeAfter3 from "@/assets/frown-lines-before-after-3.jpg";
+// Using placeholder images - you need to add actual frown line images to src/assets/
 
 const FrownLineBotox = () => {
   const seoData = generateSEOMetadata(
@@ -28,14 +25,14 @@ const FrownLineBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: frownLinesBeforeAfter1, 
+      src: "/placeholder.svg", 
       alt: "Frown line botox before and after - baby botox treatment", 
       caption: "Baby Botox Treatment: Smooth frown lines with natural expression preserved. Expert glabellar muscle relaxation." 
     },
     { 
-      src: frownLinesBeforeAfter3, 
+      src: "/placeholder.svg", 
       alt: "Comprehensive frown lines and forehead treatment",
-      caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and frown lines treatment for complete upper face rejuvenation and natural results." 
+      caption: "Combined forehead and frown lines treatment for complete upper face rejuvenation and natural results." 
     }
   ];
 
@@ -314,7 +311,7 @@ const FrownLineBotox = () => {
               className="mb-12 text-center"
             >
               <img 
-                src={frownLinesInjectionSites} 
+                src="/placeholder.svg" 
                 alt="Frown lines injection sites illustration"
                 className="mx-auto rounded-lg shadow-lg max-w-md w-full"
               />
