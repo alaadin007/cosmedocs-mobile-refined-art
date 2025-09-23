@@ -18,6 +18,8 @@ import { generateSEOMetadata } from "@/utils/seo";
 import frownLinesBeforeAfter1 from "@/assets/frown-lines-before-after-1.jpg";
 import frownLinesInjectionSites from "@/assets/frown-lines-injection-sites.jpg";
 import frownLinesBeforeAfter3 from "@/assets/frown-lines-before-after-3.jpg";
+import frownLinesBeforeAfter2 from "@/assets/frown-lines-before-after-2.jpg";
+import frownLinesBeforeAfter4 from "@/assets/frown-lines-before-after-4.jpg";
 
 const FrownLineBotox = () => {
   const seoData = generateSEOMetadata(
@@ -33,9 +35,19 @@ const FrownLineBotox = () => {
       caption: "Baby Botox Treatment: Smooth frown lines with natural expression preserved. Expert glabellar muscle relaxation." 
     },
     { 
+      src: frownLinesBeforeAfter2, 
+      alt: "Before and after frown lines at Harley Street Botox clinic", 
+      caption: "Professional frown lines treatment at our Harley Street clinic showing natural-looking results." 
+    },
+    { 
       src: frownLinesBeforeAfter3, 
       alt: "Comprehensive frown lines and forehead treatment",
       caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and frown lines treatment for complete upper face rejuvenation and natural results." 
+    },
+    { 
+      src: frownLinesBeforeAfter4, 
+      alt: "Harley Street Botox treatment results on frown lines", 
+      caption: "Expert frown lines botox treatment demonstrating our invisible art approach to facial aesthetics." 
     }
   ];
 
