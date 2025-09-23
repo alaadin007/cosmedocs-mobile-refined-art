@@ -27,11 +27,6 @@ const BunnyLinesBotox = () => {
       caption: "Bunny Lines Botox Treatment: Smooth, refined nose bridge with natural expressions preserved. Expert nasalis muscle relaxation." 
     },
     { 
-      src: "/src/assets/bunny-lines-before-after-2.jpg", 
-      alt: "Effective bunny lines botox treatment results", 
-      caption: "Clear, line-free nose achieved with minimal downtime. Professional botox treatment for natural-looking results." 
-    },
-    { 
       src: "/src/assets/bunny-lines-before-after-3.jpg", 
       alt: "Forehead and bunny lines comprehensive treatment", 
       caption: "Combined forehead and bunny lines treatment for complete upper face rejuvenation." 
@@ -704,17 +699,18 @@ const BunnyLinesBotox = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Bunny Lines Only</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£175</div>
+                    <CardTitle className="text-white text-xl">Bunny Lines Treatment</CardTitle>
+                    <div className="text-2xl font-bold text-purple-300">£175</div>
+                    <div className="text-sm text-purple-400">Standalone Treatment</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -728,9 +724,25 @@ const BunnyLinesBotox = () => {
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Expert consultation</span>
+                        <span className="text-gray-300">Expert consultation included</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Natural-looking results</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Follow-up care included</span>
                       </li>
                     </ul>
+                    <div className="mt-6">
+                      <Button 
+                        className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full"
+                        onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                      >
+                        Book Treatment
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -741,57 +753,43 @@ const BunnyLinesBotox = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Add-On Treatment</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£100</div>
-                    <div className="text-sm text-purple-400">With Other Areas</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Combined with upper face</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Package discount</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Comprehensive treatment</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Full Face Package</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£399</div>
+                    <CardTitle className="text-white text-xl">Expert Consultation</CardTitle>
+                    <div className="text-2xl font-bold text-purple-300">£50</div>
+                    <div className="text-sm text-purple-400">Initial Assessment</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Bunny lines included</span>
+                        <span className="text-gray-300">Detailed facial assessment</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">All facial areas</span>
+                        <span className="text-gray-300">Muscle movement analysis</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Maximum value</span>
+                        <span className="text-gray-300">Treatment suitability check</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Personalized treatment plan</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">No obligation quote</span>
                       </li>
                     </ul>
+                    <div className="mt-6">
+                      <Button 
+                        className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
+                        onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                      >
+                        Book Consultation
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
