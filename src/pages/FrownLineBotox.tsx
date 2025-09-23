@@ -358,23 +358,6 @@ const FrownLineBotox = () => {
               </Card>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-2xl mx-auto">
-                <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas</h4>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="text-purple-300 font-medium">Corrugator Muscle</div>
-                  <div className="text-purple-300 font-medium">Procerus Muscle</div>
-                  <div className="text-purple-300 font-medium">Vertical Lines</div>
-                  <div className="text-purple-300 font-medium">Glabellar Region</div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
