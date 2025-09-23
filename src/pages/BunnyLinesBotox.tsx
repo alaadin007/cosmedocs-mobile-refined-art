@@ -127,7 +127,7 @@ const BunnyLinesBotox = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Bunny Lines Botox London</span>
+                  <span className="text-purple-300">Bunny Lines Botox</span>
                   <span className="block text-sm mt-4">Invisible art - smooth nose bridge that speaks without words</span>
                 </h1>
                 <div className="mb-8">
