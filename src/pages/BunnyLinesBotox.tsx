@@ -382,82 +382,8 @@ const BunnyLinesBotox = () => {
           </div>
         </section>
 
-        {/* Treatment Journey */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Nose Wrinkles Treatment Journey</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                During your Bunny Lines treatment at Cosmedocs, you can expect a comprehensive approach to achieving natural-looking results.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Consultation & Assessment</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Initially, a consultation with a qualified practitioner is conducted to assess your muscle and expression dynamics, skin condition, and desired outcomes.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Customised Treatment Plan</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      A personalized treatment plan is devised, considering any unique facial expressions and potentially related areas, such as frown lines or nasal flaring, to achieve a balanced and natural-looking result.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Injection Process</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      The injection process is quick, typically taking only a few minutes. The practitioner uses a fine needle to inject small amounts of Botox into the targeted areas. There's no downtime following the procedure.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* Results and Maintenance */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
