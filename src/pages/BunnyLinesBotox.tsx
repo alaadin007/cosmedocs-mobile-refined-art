@@ -297,28 +297,9 @@ const BunnyLinesBotox = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">What is Bunny Lines Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Bunny lines botox targets the nasalis muscle on either side of your nose that creates diagonal wrinkles when you scrunch or smile. 
-                Our invisible art approach smooths these lines while preserving your natural, beautiful expressions.
+                These lines form from repeated contractions of the nasalis muscle during facial expressions and can become more prominent over time, 
+                affecting the smooth appearance of your nose bridge. Our invisible art approach smooths these lines while preserving your natural, beautiful expressions.
               </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding Bunny Lines Formation</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Bunny lines form from repeated contractions of the nasalis muscle when you smile, laugh, or scrunch your nose. 
-                    These diagonal lines can become more prominent over time, affecting the smooth appearance of your nose bridge and overall facial harmony.
-                  </p>
-                </CardContent>
-              </Card>
             </motion.div>
 
             <motion.div
@@ -437,49 +418,8 @@ const BunnyLinesBotox = () => {
           </div>
         </section>
 
-        {/* Bunny Lines Triggers */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Common Causes of Bunny Lines</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                Understanding what causes bunny lines helps in preventing their formation and maintaining treatment results.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {[
-                "Frequent smiling and laughing",
-                "Nose scrunching habits", 
-                "Sun exposure and aging",
-                "Genetic predisposition",
-                "Repetitive facial expressions",
-                "Loss of skin elasticity",
-                "Environmental factors"
-              ].map((cause, index) => (
-                <motion.div
-                  key={cause}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-lg p-6 border border-purple-500/30"
-                >
-                  <p className="text-white font-medium text-center">{cause}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* How Does Botox for Bunny Lines Work */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -545,15 +485,10 @@ const BunnyLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      These are wrinkles that appear when you make facial expressions such as smiling, laughing, or scrunching your nose. They include:
+                      Wrinkles that only appear during facial expressions and disappear when your face is at rest.
                     </p>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Expression-related lines</li>
-                      <li>• Diagonal nose creases</li>
-                      <li>• Temporary muscle contractions</li>
-                    </ul>
                     <p className="text-purple-300 mt-4 font-medium">
-                      These lines disappear when your face is at rest and respond excellently to Botox treatment.
+                      These lines respond excellently to Botox treatment and are the most common type treated.
                     </p>
                   </CardContent>
                 </Card>
@@ -571,13 +506,8 @@ const BunnyLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      These are permanent wrinkles that remain visible even when your face is relaxed. They develop from:
+                      Permanent wrinkles visible even when your face is relaxed, caused by repeated muscle movements and loss of skin elasticity over time.
                     </p>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Repeated muscle movements over time</li>
-                      <li>• Loss of skin elasticity</li>
-                      <li>• Natural aging process</li>
-                    </ul>
                     <p className="text-purple-300 mt-4 font-medium">
                       These lines may require combination treatments with dermal fillers for optimal results.
                     </p>
