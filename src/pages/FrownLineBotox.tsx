@@ -33,11 +33,6 @@ const FrownLineBotox = () => {
       caption: "Baby Botox Treatment: Smooth frown lines with natural expression preserved. Expert glabellar muscle relaxation." 
     },
     { 
-      src: frownLinesInjectionSites, 
-      alt: "Frown lines injection sites illustration", 
-      caption: "Strategic injection sites for frown lines botox treatment targeting corrugator and procerus muscles." 
-    },
-    { 
       src: frownLinesBeforeAfter3, 
       alt: "Comprehensive frown lines and forehead treatment",
       caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and frown lines treatment for complete upper face rejuvenation and natural results." 
@@ -307,6 +302,24 @@ const FrownLineBotox = () => {
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Frown line botox targets the corrugator and procerus muscles between your eyebrows that create vertical glabellar lines. 
                 Our invisible art approach smooths existing lines while preserving natural facial expressions.
+              </p>
+            </motion.div>
+
+            {/* Injection Sites Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12 text-center"
+            >
+              <img 
+                src={frownLinesInjectionSites} 
+                alt="Frown lines injection sites illustration"
+                className="mx-auto rounded-lg shadow-lg max-w-md w-full"
+              />
+              <p className="text-sm text-gray-300 mt-4 italic">
+                Strategic injection sites for frown lines botox treatment targeting corrugator and procerus muscles.
               </p>
             </motion.div>
 
