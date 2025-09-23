@@ -790,7 +790,7 @@ const MigraineBotox = () => {
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
                     <CardTitle className="text-white text-xl">Expert Consultation</CardTitle>
-                    <div className="text-2xl font-bold text-purple-300">Complimentary</div>
+                    <div className="text-2xl font-bold text-purple-300">£50</div>
                     <div className="text-sm text-purple-400">Initial Assessment</div>
                   </CardHeader>
                   <CardContent>
