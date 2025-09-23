@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -51,7 +52,7 @@ const MigraineBotox = () => {
     },
     {
       question: "Can migraine botox be combined with other treatments?",
-      answer: "Yes! Migraine botox can be combined with other headache prevention strategies and cosmetic botox treatments. Our doctors coordinate comprehensive treatment plans for both therapeutic and aesthetic benefits."
+      answer: "Yes! Migraine botox can be combined with other headache prevention strategies and <Link to='/face-botox' className='text-purple-400 hover:text-purple-300 underline'>cosmetic botox treatments</Link>. Our doctors coordinate comprehensive treatment plans for both therapeutic and aesthetic benefits."
     },
     {
       question: "How many Botox shots are typically needed to treat chronic migraine headaches?",
@@ -71,7 +72,7 @@ const MigraineBotox = () => {
     },
     {
       question: "Why visit a cosmetic doctor for migraines?",
-      answer: "Cosmetic doctors have long used Botox for medical conditions such as bruxism (teeth clenching) and excessive sweating. Cosmedocs offers Botox injections for migraines with extensive experience. We welcome patients and provide the best care at lower costs."
+      answer: "Cosmetic doctors have long used Botox for medical conditions such as <Link to='/bruxism-botox' className='text-purple-400 hover:text-purple-300 underline'>bruxism (teeth clenching)</Link> and <Link to='/excessive-sweat-botox' className='text-purple-400 hover:text-purple-300 underline'>excessive sweating</Link>. Cosmedocs offers Botox injections for migraines with extensive experience. We welcome patients and provide the best care at lower costs."
     }
   ];
 
