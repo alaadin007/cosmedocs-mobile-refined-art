@@ -637,27 +637,19 @@ const BunnyLinesBotox = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">Why Choose Botox for Bunny Lines?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Smoother, Youthful Skin",
-                  description: "Botox injections precisely target the underlying muscles responsible for bunny lines. Moreover, it relaxes those muscles, smoothing away wrinkles for more radiant skin."
+                  title: "Precise Muscle Targeting",
+                  description: "Botox specifically targets nasalis muscles that create bunny lines, smoothing wrinkles while preserving natural expressions."
                 },
                 {
-                  title: "Minimally Invasive Treatment", 
-                  description: "Botox is a minimally invasive treatment that requires no downtime. It also allows you to resume your daily activities immediately after your appointment."
+                  title: "Quick & Convenient", 
+                  description: "5-10 minute treatment with no downtime. Resume daily activities immediately after your appointment."
                 },
                 {
-                  title: "Quick, Convenient Procedure",
-                  description: "Healthcare professionals administer Botox injections quickly during in-office appointments, offering a convenient solution for individuals with busy lifestyles."
-                },
-                {
-                  title: "Long-Lasting Results",
-                  description: "While results may vary, many clients experience a noticeable improvement in the appearance of bunny lines for up to six months or longer with regular treatments."
-                },
-                {
-                  title: "Customized Treatment Plans",
-                  description: "At Cosmedocs, we craft personalized treatment plans. We address your unique concerns and goals. Our aim? Natural-looking results, tailored to your facial anatomy."
+                  title: "Natural-Looking Results",
+                  description: "Results last 3-4 months with gradual improvement. Customized treatment plans for your unique facial anatomy."
                 }
               ].map((benefit, index) => (
                 <motion.div
