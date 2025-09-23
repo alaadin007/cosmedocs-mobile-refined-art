@@ -290,8 +290,108 @@ const MigraineBotox = () => {
           </div>
         </section>
 
-        {/* Migraine Triggers */}
+        {/* What to Expect */}
         <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Migraine — What to Expect?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After a detailed consultation with a headache specialist at Cosmedocs for your migraine headaches, begin your migraine treatment. The doctor uses a very fine needle to inject botulinum toxin into the target muscles under your skin in multiple "trigger points" such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300 mb-6">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Face</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Forehead</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Temples</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Neck</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Back of the head</span>
+                      </li>
+                    </ul>
+                    <p className="text-purple-300 font-medium">
+                      Following the botox treatment you may continue normal daily activities.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After receiving Botox, it causes minimal to no pain for most people. Medical experts consider it a safe treatment. However, your Botox for migraine treatment may have some slight side effects, such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Bruising, redness, or swelling around the injection sites</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Dryness in mouth</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Fatigue or tiredness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary muscle weakness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Tension or stiffness in the neck</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Migraine Triggers */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -479,106 +579,6 @@ const MigraineBotox = () => {
                     <p className="text-gray-300">
                       Cluster headaches cause excruciating burning and pounding pain on the sides of the head then above the eyes and behind the ears, making them one of the most painful types of headaches.
                     </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* What to Expect */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Migraine — What to Expect?</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a headache specialist at Cosmedocs for your migraine headaches, begin your migraine treatment. The doctor uses a very fine needle to inject botulinum toxin into the target muscles under your skin in multiple "trigger points" such as:
-                    </p>
-                    <ul className="space-y-3 text-gray-300 mb-6">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Face</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Forehead</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Temples</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Neck</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span>Back of the head</span>
-                      </li>
-                    </ul>
-                    <p className="text-purple-300 font-medium">
-                      Following the botox treatment you may continue normal daily activities.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After receiving Botox, it causes minimal to no pain for most people. Medical experts consider it a safe treatment. However, your Botox for migraine treatment may have some slight side effects, such as:
-                    </p>
-                    <ul className="space-y-3 text-gray-300">
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Bruising, redness, or swelling around the injection sites</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Dryness in mouth</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Fatigue or tiredness</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Temporary muscle weakness</span>
-                      </li>
-                      <li className="flex items-start space-x-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>Tension or stiffness in the neck</span>
-                      </li>
-                    </ul>
                   </CardContent>
                 </Card>
               </motion.div>
