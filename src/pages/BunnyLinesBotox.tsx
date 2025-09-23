@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,7 @@ const BunnyLinesBotox = () => {
     { 
       src: "/src/assets/bunny-lines-before-after-3.jpg", 
       alt: "Forehead and bunny lines comprehensive treatment", 
-      caption: "Combined forehead and bunny lines treatment for complete upper face rejuvenation." 
+      caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and bunny lines treatment for complete upper face rejuvenation." 
     },
     { 
       src: "/src/assets/bunny-lines-before-after-4.jpg", 
@@ -65,7 +66,7 @@ const BunnyLinesBotox = () => {
     },
     {
       question: "Can bunny lines botox be combined with other treatments?",
-      answer: "Yes! Bunny lines botox works excellently with upper face botox treatments and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized combination treatment plans for optimal results."
+      answer: "Yes! Bunny lines botox works excellently with <Link to='/advanced-upper-face-botox' className='text-purple-400 hover:text-purple-300 underline'>upper face botox treatments</Link> and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized combination treatment plans for optimal results."
     },
     {
       question: "Are there any side effects associated with Bunny Lines Botox?",
