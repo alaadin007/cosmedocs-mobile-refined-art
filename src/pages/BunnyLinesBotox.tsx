@@ -341,6 +341,143 @@ const BunnyLinesBotox = () => {
           </div>
         </section>
 
+        {/* What to Expect */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Bunny Lines Botox — What to Expect?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your bunny lines treatment, begin your nose wrinkle treatment. The doctor uses a very fine needle to inject botulinum toxin into the nasalis muscle in targeted areas such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300 mb-6">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Nose bridge sides</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Nasalis muscle</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Upper nose area</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Scrunch line areas</span>
+                      </li>
+                    </ul>
+                    <p className="text-purple-300 font-medium">
+                      Following the botox treatment you may continue normal daily activities immediately.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After receiving bunny lines Botox, it causes minimal to no pain for most people. Medical experts consider it a safe treatment. However, your bunny lines botox treatment may have some slight side effects, such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Redness at injection sites</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Swelling around nose area</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Mild bruising</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary numbness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Mild discomfort</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bunny Lines Triggers */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Common Causes of Bunny Lines</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
+                Understanding what causes bunny lines helps in preventing their formation and maintaining treatment results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                "Frequent smiling and laughing",
+                "Nose scrunching habits", 
+                "Sun exposure and aging",
+                "Genetic predisposition",
+                "Repetitive facial expressions",
+                "Loss of skin elasticity",
+                "Environmental factors"
+              ].map((cause, index) => (
+                <motion.div
+                  key={cause}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-lg p-6 border border-purple-500/30"
+                >
+                  <p className="text-white font-medium text-center">{cause}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* How Does Botox for Bunny Lines Work */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -382,8 +519,113 @@ const BunnyLinesBotox = () => {
           </div>
         </section>
 
-        {/* Results and Maintenance */}
+        {/* Types of Nose Wrinkles */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Different Types of Nose Wrinkles</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Dynamic Bunny Lines</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      These are wrinkles that appear when you make facial expressions such as smiling, laughing, or scrunching your nose. They include:
+                    </p>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Expression-related lines</li>
+                      <li>• Diagonal nose creases</li>
+                      <li>• Temporary muscle contractions</li>
+                    </ul>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      These lines disappear when your face is at rest and respond excellently to Botox treatment.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Static Bunny Lines</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      These are permanent wrinkles that remain visible even when your face is relaxed. They develop from:
+                    </p>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Repeated muscle movements over time</li>
+                      <li>• Loss of skin elasticity</li>
+                      <li>• Natural aging process</li>
+                    </ul>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      These lines may require combination treatments with dermal fillers for optimal results.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Compensatory Bunny Lines</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      These lines can develop as a result of compensatory muscle activity following Botox treatments in other facial areas, particularly the glabella (frown lines). The nasalis muscle may become overactive to compensate for restricted movement elsewhere.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Nasal Flare Lines</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      These lines appear when the nostrils flare during breathing or emotional expressions. They can be treated alongside bunny lines for comprehensive nose area rejuvenation and natural-looking results.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Results and Maintenance */}
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
