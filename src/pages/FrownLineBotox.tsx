@@ -661,53 +661,6 @@ const FrownLineBotox = () => {
                 viewport={{ once: true }}
                 className="space-y-8"
               >
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-6">Main Causes of Frown Lines</h3>
-                  <div className="space-y-4 text-gray-300">
-                    <div className="flex items-start space-x-3">
-                      <span className="text-purple-300 mt-1">•</span>
-                      <div>
-                        <h4 className="text-white font-semibold">Repeated Facial Expressions</h4>
-                        <p className="text-sm">Frowning, concentrating, and squinting create muscle contractions that form lines over time</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <span className="text-purple-300 mt-1">•</span>
-                      <div>
-                        <h4 className="text-white font-semibold">Reduced Collagen Production</h4>
-                        <p className="text-sm">Natural aging process decreases collagen, leading to less skin elasticity and firmness</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <span className="text-purple-300 mt-1">•</span>
-                      <div>
-                        <h4 className="text-white font-semibold">Excessive Sun Damage</h4>
-                        <p className="text-sm">UV exposure breaks down collagen and elastin fibers, accelerating wrinkle formation</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <span className="text-purple-300 mt-1">•</span>
-                      <div>
-                        <h4 className="text-white font-semibold">Natural Skin Sagging</h4>
-                        <p className="text-sm">Gravity and loss of skin support structures contribute to deepening lines</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <span className="text-purple-300 mt-1">•</span>
-                      <div>
-                        <h4 className="text-white font-semibold">Genetic Skin Factors</h4>
-                        <p className="text-sm">Inherited skin characteristics affect how quickly and severely lines develop</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <span className="text-purple-300 mt-1">•</span>
-                      <div>
-                        <h4 className="text-white font-semibold">Lifestyle Factors</h4>
-                        <p className="text-sm">Dehydration, smoking, and stress accelerate skin aging and line formation</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
                 <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-6 border border-purple-500/20">
                   <h3 className="text-2xl font-bold text-white mb-6">Our Comprehensive Solution</h3>
@@ -788,17 +741,18 @@ const FrownLineBotox = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Frown Lines Only</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£175</div>
+                    <CardTitle className="text-white text-xl">Frown Lines Treatment</CardTitle>
+                    <div className="text-2xl font-bold text-purple-300">£175</div>
+                    <div className="text-sm text-purple-400">Standalone Treatment</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -812,9 +766,25 @@ const FrownLineBotox = () => {
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Expert consultation</span>
+                        <span className="text-gray-300">Expert consultation included</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Natural-looking results</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Follow-up care included</span>
                       </li>
                     </ul>
+                    <div className="mt-6">
+                      <Button 
+                        className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full"
+                        onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                      >
+                        Book Treatment
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -825,57 +795,43 @@ const FrownLineBotox = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Upper Face Package</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£299</div>
-                    <div className="text-sm text-purple-400">Most Popular</div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Frown lines</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Forehead lines</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Crow's feet</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Full Face Package</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£399</div>
+                    <CardTitle className="text-white text-xl">Expert Consultation</CardTitle>
+                    <div className="text-2xl font-bold text-purple-300">£50</div>
+                    <div className="text-sm text-purple-400">Initial Assessment</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Upper face areas</span>
+                        <span className="text-gray-300">Detailed muscle assessment</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Lower face areas</span>
+                        <span className="text-gray-300">Facial movement analysis</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Comprehensive treatment</span>
+                        <span className="text-gray-300">Treatment suitability check</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Personalized treatment plan</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">No obligation quote</span>
                       </li>
                     </ul>
+                    <div className="mt-6">
+                      <Button 
+                        className="w-full bg-white text-black hover:bg-gray-200 rounded-full"
+                        onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                      >
+                        Book Consultation
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
