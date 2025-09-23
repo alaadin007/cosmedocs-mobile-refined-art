@@ -637,6 +637,98 @@ const FrownLineBotox = () => {
           </div>
         </section>
 
+        {/* Reasons & Solution For Frown Lines */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Reasons & Solution For Frown Lines:</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Frown lines may develop for various reasons but mainly due to repeated facial expressions.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Main Causes of Frown Lines:</h3>
+                  <ul className="space-y-4 text-gray-300 text-lg">
+                    <li className="flex items-start">
+                      <span className="text-purple-300 mr-3">•</span>
+                      Frowning and facial expressions
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-300 mr-3">•</span>
+                      Squinting in bright light
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-300 mr-3">•</span>
+                      Concentrating and focus
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-300 mr-3">•</span>
+                      Dehydration affecting skin elasticity
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-300 mr-3">•</span>
+                      Smoking reducing skin quality
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-6 border border-purple-500/30">
+                  <h4 className="text-xl font-bold text-white mb-4">The Solution:</h4>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    These lines are only visible when we are young and disappear when we cease frowning. However, 
+                    frown lines may get deeper and more noticeable with age, even when one is not furrowing, 
+                    creating the false appearance that one is upset.
+                  </p>
+                  <p className="text-purple-300 text-lg mt-4 font-medium">
+                    Opting to refrain from smoking and prioritizing adequate hydration, combined with 
+                    <strong> Botox treatment for frown lines</strong>, offers the most beneficial approach for your skincare regimen!
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-6 border border-purple-500/30">
+                  <h4 className="text-xl font-bold text-white mb-4 text-center">Watch: Frown Lines Treatment Process</h4>
+                  <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/placeholder.svg"
+                    >
+                      <source src="https://www.cosmedocs.com/wp-content/uploads/2021/09/Frown_Trim-1.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-gray-300 text-sm mt-4 text-center">
+                    See how our expert doctors perform precise frown line Botox treatments for natural, 
+                    effective results.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
