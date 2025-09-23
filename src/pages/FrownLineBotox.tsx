@@ -473,31 +473,9 @@ const FrownLineBotox = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
-                    <div className="space-y-6">
-                      <p className="text-gray-300 text-lg leading-relaxed text-center">
-                        Botox relaxes the muscles causing frown lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. It works by blocking nerve signals that cause muscle contractions.
-                      </p>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-black/20 rounded-lg p-4">
-                          <h4 className="text-white font-semibold mb-2">Treatment Details</h4>
-                          <ul className="text-gray-300 space-y-1 text-sm">
-                            <li>• 15-25 units typically used</li>
-                            <li>• Targets glabellar muscles</li>
-                            <li>• Blocks nerve signals effectively</li>
-                            <li>• Precise injection technique</li>
-                          </ul>
-                        </div>
-                        <div className="bg-black/20 rounded-lg p-4">
-                          <h4 className="text-white font-semibold mb-2">Results Timeline</h4>
-                          <ul className="text-gray-300 space-y-1 text-sm">
-                            <li>• Results last 4-6 months</li>
-                            <li>• Effects visible in 3-5 days</li>
-                            <li>• Full results after 2 weeks</li>
-                            <li>• Maintenance sessions recommended</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      Botox relaxes the muscles causing frown lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. It works by blocking nerve signals that cause muscle contractions.
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
