@@ -14,6 +14,11 @@ import {
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 
+// Import images properly
+import frownLinesBeforeAfter1 from "@/assets/frown-lines-before-after-1.jpg";
+import frownLinesInjectionSites from "@/assets/frown-lines-injection-sites.jpg";
+import frownLinesBeforeAfter3 from "@/assets/frown-lines-before-after-3.jpg";
+
 const FrownLineBotox = () => {
   const seoData = generateSEOMetadata(
     "Frown Line Botox London | Glabellar Lines Treatment | Cosmedocs Harley Street",
@@ -23,18 +28,18 @@ const FrownLineBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/src/assets/frown-lines-before-after-1.jpg", 
+      src: frownLinesBeforeAfter1, 
       alt: "Frown line botox before and after - baby botox treatment", 
       caption: "Baby Botox Treatment: Smooth frown lines with natural expression preserved. Expert glabellar muscle relaxation." 
     },
     { 
-      src: "/src/assets/frown-lines-injection-sites.jpg", 
+      src: frownLinesInjectionSites, 
       alt: "Frown lines injection sites illustration", 
       caption: "Strategic injection sites for frown lines botox treatment targeting corrugator and procerus muscles." 
     },
     { 
-      src: "/src/assets/frown-lines-before-after-3.jpg", 
-      alt: "Comprehensive frown lines and forehead treatment", 
+      src: frownLinesBeforeAfter3, 
+      alt: "Comprehensive frown lines and forehead treatment",
       caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and frown lines treatment for complete upper face rejuvenation and natural results." 
     }
   ];
