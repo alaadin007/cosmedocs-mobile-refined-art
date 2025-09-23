@@ -643,9 +643,6 @@ const BunnyLinesBotox = () => {
                   title: "Smooth Nose Wrinkles"
                 },
                 {
-                  title: "Smoother, Youthful Skin"
-                },
-                {
                   title: "Minimally Invasive Treatment"
                 },
                 {
