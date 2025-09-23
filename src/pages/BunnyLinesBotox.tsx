@@ -637,7 +637,7 @@ const BunnyLinesBotox = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">Why Choose Botox for Bunny Lines?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
                 {
                   title: "Smoother, Youthful Skin"
@@ -653,6 +653,15 @@ const BunnyLinesBotox = () => {
                 },
                 {
                   title: "Customized Treatment Plans"
+                },
+                {
+                  title: "Prevents Deeper Lines"
+                },
+                {
+                  title: "FDA Approved & Safe"
+                },
+                {
+                  title: "Boosts Confidence"
                 }
               ].map((benefit, index) => (
                 <motion.div
