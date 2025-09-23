@@ -148,7 +148,7 @@ const LipFillerDissolve = () => {
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Professional Hyaluronidase Treatment</p>
-                  <p className="text-sm text-gray-300">#lipdissolve - Check out our IG for hundreds more filler correction transformations</p>
+                  <p className="text-sm text-gray-300">Expert correction of unwanted filler results • Safe dissolving in 24-48 hours • Return to natural lip shape</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
