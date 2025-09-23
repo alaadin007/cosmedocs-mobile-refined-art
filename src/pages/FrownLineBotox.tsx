@@ -661,63 +661,76 @@ const FrownLineBotox = () => {
                 viewport={{ once: true }}
                 className="space-y-8"
               >
-                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-3xl p-8 border border-purple-500/20">
-                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                    <span className="bg-purple-500 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">1</span>
-                    Primary Causes
-                  </h3>
-                  <div className="grid grid-cols-1 gap-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-purple-500/20 rounded-lg p-2 mt-1">
-                        <span className="text-purple-300 text-sm">💭</span>
-                      </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">Main Causes of Frown Lines</h3>
+                  <div className="space-y-4 text-gray-300">
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
                       <div>
-                        <h4 className="text-white font-semibold">Repeated Expressions</h4>
-                        <p className="text-gray-300 text-sm">Frowning, concentrating, and squinting create muscle memory</p>
+                        <h4 className="text-white font-semibold">Repeated Facial Expressions</h4>
+                        <p className="text-sm">Frowning, concentrating, and squinting create muscle contractions that form lines over time</p>
                       </div>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-purple-500/20 rounded-lg p-2 mt-1">
-                        <span className="text-purple-300 text-sm">☀️</span>
-                      </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
                       <div>
-                        <h4 className="text-white font-semibold">Sun Damage & Aging</h4>
-                        <p className="text-gray-300 text-sm">UV exposure and natural collagen loss accelerate line formation</p>
+                        <h4 className="text-white font-semibold">Reduced Collagen Production</h4>
+                        <p className="text-sm">Natural aging process decreases collagen, leading to less skin elasticity and firmness</p>
                       </div>
                     </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-purple-500/20 rounded-lg p-2 mt-1">
-                        <span className="text-purple-300 text-sm">💧</span>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <div>
+                        <h4 className="text-white font-semibold">Excessive Sun Damage</h4>
+                        <p className="text-sm">UV exposure breaks down collagen and elastin fibers, accelerating wrinkle formation</p>
                       </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <div>
+                        <h4 className="text-white font-semibold">Natural Skin Sagging</h4>
+                        <p className="text-sm">Gravity and loss of skin support structures contribute to deepening lines</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <div>
+                        <h4 className="text-white font-semibold">Genetic Skin Factors</h4>
+                        <p className="text-sm">Inherited skin characteristics affect how quickly and severely lines develop</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
                       <div>
                         <h4 className="text-white font-semibold">Lifestyle Factors</h4>
-                        <p className="text-gray-300 text-sm">Dehydration, smoking, and stress compound the problem</p>
+                        <p className="text-sm">Dehydration, smoking, and stress accelerate skin aging and line formation</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-3xl p-8 border border-green-500/20">
-                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                    <span className="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">✓</span>
-                    Our Comprehensive Solution
-                  </h3>
-                  <div className="space-y-4">
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-6 border border-purple-500/20">
+                  <h3 className="text-2xl font-bold text-white mb-6">Our Comprehensive Solution</h3>
+                  <div className="space-y-4 text-gray-300">
                     <div className="flex items-start space-x-3">
-                      <span className="text-green-400 mt-1">•</span>
-                      <p className="text-gray-300"><strong className="text-white">Precision Botox:</strong> Targeted muscle relaxation for immediate smoothing</p>
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Precision Botox Treatment:</strong> Targeted muscle relaxation for immediate smoothing of existing lines</p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <span className="text-green-400 mt-1">•</span>
-                      <p className="text-gray-300"><strong className="text-white">Prevention Strategy:</strong> Stop new lines before they form</p>
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Prevention Strategy:</strong> Stop new lines from forming by relaxing overactive muscles</p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <span className="text-green-400 mt-1">•</span>
-                      <p className="text-gray-300"><strong className="text-white">Natural Results:</strong> Preserve facial expressions while smoothing lines</p>
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Natural Results:</strong> Preserve facial expressions while smoothing unwanted lines</p>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <span className="text-green-400 mt-1">•</span>
-                      <p className="text-gray-300"><strong className="text-white">Expert Technique:</strong> Harley Street standards with invisible art philosophy</p>
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Expert Technique:</strong> Harley Street standards with our invisible art philosophy</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Long-lasting Results:</strong> 3-4 months of smoother, more youthful appearance</p>
                     </div>
                   </div>
                 </div>
