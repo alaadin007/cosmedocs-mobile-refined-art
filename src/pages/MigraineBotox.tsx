@@ -342,9 +342,6 @@ const MigraineBotox = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 text-white">How Does Botox Work for Migraines?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Understanding the science behind migraine relief through targeted nerve intervention
-              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
