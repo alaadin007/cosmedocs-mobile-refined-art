@@ -441,48 +441,8 @@ const FrownLineBotox = () => {
           </div>
         </section>
 
-        {/* Causes of Frown Lines */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Causes of Frown Lines</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                Frown lines develop due to a combination of factors that affect the skin and underlying muscles over time.
-              </p>
-            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {[
-                "Reduced collagen production",
-                "Excessive sun damage", 
-                "Natural skin sagging",
-                "Frequent facial expressions",
-                "Genetic skin factors",
-                "Dehydration",
-                "Smoking"
-              ].map((cause, index) => (
-                <motion.div
-                  key={cause}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-lg p-6 border border-purple-500/30"
-                >
-                  <p className="text-white font-medium text-center">{cause}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* How Botox Works for Frown Lines */}
+        {/* How Does Botox Work for Frown Lines */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -493,6 +453,9 @@ const FrownLineBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Frown Lines?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Understanding the science behind frown line botox helps you make informed decisions about your treatment.
+              </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
@@ -510,12 +473,31 @@ const FrownLineBotox = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6 text-center">
-                      Botox relaxes the muscles causing frown lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. It works by blocking nerve signals that cause muscle contractions.
-                    </p>
-                    <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Typically, 15-25 units are used to effectively relax the facial muscles in the glabellar area, with results lasting 4-6 months and requiring maintenance sessions for optimal effects.
-                    </p>
+                    <div className="space-y-6">
+                      <p className="text-gray-300 text-lg leading-relaxed text-center">
+                        Botox relaxes the muscles causing frown lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. It works by blocking nerve signals that cause muscle contractions.
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-black/20 rounded-lg p-4">
+                          <h4 className="text-white font-semibold mb-2">Treatment Details</h4>
+                          <ul className="text-gray-300 space-y-1 text-sm">
+                            <li>• 15-25 units typically used</li>
+                            <li>• Targets glabellar muscles</li>
+                            <li>• Blocks nerve signals effectively</li>
+                            <li>• Precise injection technique</li>
+                          </ul>
+                        </div>
+                        <div className="bg-black/20 rounded-lg p-4">
+                          <h4 className="text-white font-semibold mb-2">Results Timeline</h4>
+                          <ul className="text-gray-300 space-y-1 text-sm">
+                            <li>• Results last 4-6 months</li>
+                            <li>• Effects visible in 3-5 days</li>
+                            <li>• Full results after 2 weeks</li>
+                            <li>• Maintenance sessions recommended</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
