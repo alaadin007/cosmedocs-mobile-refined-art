@@ -697,9 +697,6 @@ const FrownLineBotox = () => {
                 className="relative"
               >
                 <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-8 border border-purple-500/30 overflow-hidden">
-                  <div className="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                    LIVE
-                  </div>
                   <h4 className="text-2xl font-bold text-white mb-6 text-center">Expert Treatment Process</h4>
                   <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
                     <video 
