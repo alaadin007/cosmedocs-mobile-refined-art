@@ -14,7 +14,12 @@ import {
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 
-// Using placeholder images - you need to add actual frown line images to src/assets/
+// Import images properly
+import frownLinesBeforeAfter1 from "@/assets/frown-lines-before-after-1.jpg";
+import frownLinesBeforeAfter2 from "@/assets/frown-lines-before-after-2.jpg";
+import frownLinesBeforeAfter3 from "@/assets/frown-lines-before-after-3.jpg";
+import frownLinesBeforeAfter4 from "@/assets/frown-lines-before-after-4.jpg";
+import frownLinesInjectionSites from "@/assets/frown-lines-injection-sites.jpg";
 
 const FrownLineBotox = () => {
   const seoData = generateSEOMetadata(
@@ -25,14 +30,24 @@ const FrownLineBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/placeholder.svg", 
-      alt: "Frown line botox before and after - baby botox treatment", 
-      caption: "Baby Botox Treatment: Smooth frown lines with natural expression preserved. Expert glabellar muscle relaxation." 
+      src: frownLinesBeforeAfter1, 
+      alt: "Frown lines smoothed by Botox, visible in before and after photos", 
+      caption: "Frown Line Transformation with Botox: Smooth glabellar lines with natural expression preserved. Expert muscle relaxation." 
     },
     { 
-      src: "/placeholder.svg", 
-      alt: "Comprehensive frown lines and forehead treatment",
-      caption: "Combined forehead and frown lines treatment for complete upper face rejuvenation and natural results." 
+      src: frownLinesBeforeAfter2, 
+      alt: "Before and after frown lines at Harley Street Botox clinic", 
+      caption: "Frown Lines Botox Treatment: Professional treatment at our Harley Street clinic showing natural-looking results." 
+    },
+    { 
+      src: frownLinesBeforeAfter3, 
+      alt: "Frown lines before and after treatment for men", 
+      caption: "Frown Lines and Forehead Lines Treatment For Men: Comprehensive upper face rejuvenation with masculine results." 
+    },
+    { 
+      src: frownLinesBeforeAfter4, 
+      alt: "Harley Street Botox treatment results on frown lines", 
+      caption: "Botox Frown Line Before and After: Expert treatment demonstrating our invisible art approach to facial aesthetics." 
     }
   ];
 
@@ -311,7 +326,7 @@ const FrownLineBotox = () => {
               className="mb-12 text-center"
             >
               <img 
-                src="/placeholder.svg" 
+                src={frownLinesInjectionSites} 
                 alt="Frown lines injection sites illustration"
                 className="mx-auto rounded-lg shadow-lg max-w-md w-full"
               />
