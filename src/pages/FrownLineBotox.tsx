@@ -637,7 +637,7 @@ const FrownLineBotox = () => {
           </div>
         </section>
 
-        {/* Reasons & Solution For Frown Lines */}
+        {/* Why Frown Lines Form & Our Solution */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -645,58 +645,81 @@ const FrownLineBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Reasons & Solution For Frown Lines:</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Frown lines may develop for various reasons but mainly due to repeated facial expressions.
+              <h2 className="text-4xl font-bold mb-6 text-white">Why Frown Lines Form & Our Solution</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-xl leading-relaxed">
+                Understanding the root causes of frown lines helps us deliver targeted, effective treatments that address both existing lines and prevent future formation.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                className="space-y-8"
               >
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">Main Causes of Frown Lines:</h3>
-                  <ul className="space-y-4 text-gray-300 text-lg">
-                    <li className="flex items-start">
-                      <span className="text-purple-300 mr-3">•</span>
-                      Frowning and facial expressions
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-300 mr-3">•</span>
-                      Squinting in bright light
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-300 mr-3">•</span>
-                      Concentrating and focus
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-300 mr-3">•</span>
-                      Dehydration affecting skin elasticity
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-300 mr-3">•</span>
-                      Smoking reducing skin quality
-                    </li>
-                  </ul>
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-3xl p-8 border border-purple-500/20">
+                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                    <span className="bg-purple-500 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">1</span>
+                    Primary Causes
+                  </h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-500/20 rounded-lg p-2 mt-1">
+                        <span className="text-purple-300 text-sm">💭</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Repeated Expressions</h4>
+                        <p className="text-gray-300 text-sm">Frowning, concentrating, and squinting create muscle memory</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-500/20 rounded-lg p-2 mt-1">
+                        <span className="text-purple-300 text-sm">☀️</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Sun Damage & Aging</h4>
+                        <p className="text-gray-300 text-sm">UV exposure and natural collagen loss accelerate line formation</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-purple-500/20 rounded-lg p-2 mt-1">
+                        <span className="text-purple-300 text-sm">💧</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Lifestyle Factors</h4>
+                        <p className="text-gray-300 text-sm">Dehydration, smoking, and stress compound the problem</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-6 border border-purple-500/30">
-                  <h4 className="text-xl font-bold text-white mb-4">The Solution:</h4>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    These lines are only visible when we are young and disappear when we cease frowning. However, 
-                    frown lines may get deeper and more noticeable with age, even when one is not furrowing, 
-                    creating the false appearance that one is upset.
-                  </p>
-                  <p className="text-purple-300 text-lg mt-4 font-medium">
-                    Opting to refrain from smoking and prioritizing adequate hydration, combined with 
-                    <strong> Botox treatment for frown lines</strong>, offers the most beneficial approach for your skincare regimen!
-                  </p>
+                <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-3xl p-8 border border-green-500/20">
+                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                    <span className="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">✓</span>
+                    Our Comprehensive Solution
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <span className="text-green-400 mt-1">•</span>
+                      <p className="text-gray-300"><strong className="text-white">Precision Botox:</strong> Targeted muscle relaxation for immediate smoothing</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-green-400 mt-1">•</span>
+                      <p className="text-gray-300"><strong className="text-white">Prevention Strategy:</strong> Stop new lines before they form</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-green-400 mt-1">•</span>
+                      <p className="text-gray-300"><strong className="text-white">Natural Results:</strong> Preserve facial expressions while smoothing lines</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-green-400 mt-1">•</span>
+                      <p className="text-gray-300"><strong className="text-white">Expert Technique:</strong> Harley Street standards with invisible art philosophy</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
@@ -707,9 +730,12 @@ const FrownLineBotox = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-6 border border-purple-500/30">
-                  <h4 className="text-xl font-bold text-white mb-4 text-center">Watch: Frown Lines Treatment Process</h4>
-                  <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
+                <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-8 border border-purple-500/30 overflow-hidden">
+                  <div className="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                    LIVE
+                  </div>
+                  <h4 className="text-2xl font-bold text-white mb-6 text-center">Expert Treatment Process</h4>
+                  <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
                     <video 
                       controls 
                       className="w-full h-full object-cover"
@@ -719,10 +745,14 @@ const FrownLineBotox = () => {
                       Your browser does not support the video tag.
                     </video>
                   </div>
-                  <p className="text-gray-300 text-sm mt-4 text-center">
-                    See how our expert doctors perform precise frown line Botox treatments for natural, 
-                    effective results.
-                  </p>
+                  <div className="mt-6 bg-black/30 rounded-2xl p-4">
+                    <p className="text-white text-center font-medium mb-2">What You'll See:</p>
+                    <div className="flex flex-wrap justify-center gap-2 text-xs">
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Precise Injection Technique</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Muscle Assessment</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Immediate Results</span>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
