@@ -28,6 +28,15 @@ const TREATMENT_ROUTES = [
   '/chin-botox',
   '/trap-botox',
   '/botox-calf-reduction',
+  '/frown-line-botox',
+  '/crows-feet-botox',
+  '/forehead-lines-botox',
+  '/bunny-lines-botox',
+  '/nasal-flaring-botox',
+  '/lip-flip',
+  '/migraine-botox',
+  '/bruxism-botox',
+  '/excessive-sweat-botox',
   
   // Filler treatments
   '/marionette-lines',

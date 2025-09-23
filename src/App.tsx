@@ -99,6 +99,15 @@ import PsoriasisTreatment from "./pages/PsoriasisTreatment";
 import HyperpigmentationTreatment from "./pages/HyperpigmentationTreatment";
 import BotoxPriceLondon from "./pages/BotoxPriceLondon";
 import AestheticsAtGlance from "./pages/AestheticsAtGlance";
+import FrownLineBotox from "./pages/FrownLineBotox";
+import CrowsFeetBotox from "./pages/CrowsFeetBotox";
+import ForeheadLinesBotox from "./pages/ForeheadLinesBotox";
+import BunnyLinesBotox from "./pages/BunnyLinesBotox";
+import NasalFlaringBotox from "./pages/NasalFlaringBotox";
+import LipFlip from "./pages/LipFlip";
+import MigraineBotox from "./pages/MigraineBotox";
+import BruxismBotox from "./pages/BruxismBotox";
+import ExcessiveSweatBotox from "./pages/ExcessiveSweatBotox";
 
 const queryClient = new QueryClient();
 

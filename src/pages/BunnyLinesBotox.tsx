@@ -1,0 +1,505 @@
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
+import { generateSEOMetadata } from "@/utils/seo";
+
+const BunnyLinesBotox = () => {
+  const seoData = generateSEOMetadata(
+    "Bunny Lines Botox London | Nose Wrinkle Treatment | Cosmedocs Harley Street",
+    "Expert bunny lines botox treatment in London for nose wrinkles and scrunch lines. Professional nasalis muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
+    "/bunny-lines-botox"
+  );
+
+  const beforeAfterImages = [
+    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Bunny lines botox before and after treatment", caption: "Bunny Lines Botox Treatment: Smooth, refined nose bridge with natural expressions preserved. Expert nasalis muscle relaxation - transformation that speaks without saying a word." }
+  ];
+
+  const faqs = [
+    {
+      question: "What are bunny lines and how does botox help?",
+      answer: "Bunny lines are diagonal wrinkles that appear on either side of your nose when you scrunch it or smile. Botox relaxes the nasalis muscle that creates these lines, smoothing the nose bridge while maintaining natural facial expressions."
+    },
+    {
+      question: "How long do bunny lines botox results last?",
+      answer: "Bunny lines botox results typically last 3-4 months. The nasalis muscle gradually regains movement, requiring maintenance treatments to sustain smooth nose bridge appearance and prevent line reformation."
+    },
+    {
+      question: "Is bunny lines botox painful?",
+      answer: "Bunny lines botox involves minimal discomfort. Most clients describe it as brief pinching sensations along the nose bridge. The treatment takes 5-10 minutes with our doctors using precise injection techniques for comfort."
+    },
+    {
+      question: "What can I expect after bunny lines botox treatment?",
+      answer: "You may experience mild swelling or slight redness at injection sites for a few hours. Results begin appearing within 3-7 days, with full effects visible after 2 weeks. Normal activities can be resumed immediately with specific care instructions."
+    },
+    {
+      question: "Am I a good candidate for bunny lines botox?",
+      answer: "Ideal candidates have prominent nose wrinkles when smiling or scrunching, are in good health, and want natural-looking results. A consultation will assess your nose muscle activity and determine treatment suitability."
+    },
+    {
+      question: "How much does bunny lines botox cost?",
+      answer: "Bunny lines botox at Cosmedocs costs £100 when added to other botox treatments, or £175 as a standalone procedure. We provide transparent pricing during consultation with package discounts available."
+    },
+    {
+      question: "Can bunny lines botox be combined with other treatments?",
+      answer: "Yes! Bunny lines botox works excellently with upper face botox treatments and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized combination treatment plans for optimal results."
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href={seoData.canonical} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:image" content={seoData.image} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="keywords" content="bunny lines botox London, nose wrinkle treatment, nasalis muscle botox, nose scrunch lines, cosmetic botox, Harley Street clinic" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs",
+            "description": "Expert bunny lines botox treatments in London",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "medicalSpecialty": "Cosmetic Medicine",
+            "priceRange": "££"
+          })}
+        </script>
+      </Helmet>
+
+      <div className="bg-black text-white">
+        {/* Hero Section */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Bunny Lines Botox London</span>
+                  <span className="block text-sm mt-4">Invisible art - smooth nose bridge that speaks without words</span>
+                </h1>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Expert Nose Wrinkle Treatment</p>
+                  <p className="text-sm text-gray-300">5-10 minutes • Results last 3-4 months</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
+                    Book Consultation
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                  >
+                    View Price List
+                  </Button>
+                </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Bunny Lines Botox Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">5-10 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">3-4 months with gradual muscle return</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Immediate return to activities</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic if required</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Bunny Lines Botox Before and After Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See how our expert bunny lines botox treatments smooth nose wrinkles while maintaining natural facial expressions.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+          </div>
+        </section>
+
+        {/* What is Bunny Lines Botox */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Bunny Lines Botox?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Bunny lines botox targets the nasalis muscle on either side of your nose that creates diagonal wrinkles when you scrunch or smile. 
+                Our invisible art approach smooths these lines while preserving your natural, beautiful expressions.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl text-center">Understanding Bunny Lines Formation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 text-lg leading-relaxed text-center">
+                    Bunny lines form from repeated contractions of the nasalis muscle when you smile, laugh, or scrunch your nose. 
+                    These diagonal lines can become more prominent over time, affecting the smooth appearance of your nose bridge and overall facial harmony.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-2xl mx-auto">
+                <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="text-purple-300 font-medium">Nasalis Muscle</div>
+                  <div className="text-purple-300 font-medium">Diagonal Lines</div>
+                  <div className="text-purple-300 font-medium">Nose Bridge</div>
+                  <div className="text-purple-300 font-medium">Scrunch Lines</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Bunny Lines Botox Pricing</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Transparent pricing for professional bunny lines botox treatments at our Harley Street clinic.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-white text-xl">Bunny Lines Only</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£175</div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Both sides of nose</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Nasalis muscle treatment</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Expert consultation</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-white text-xl">Add-On Treatment</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£100</div>
+                    <div className="text-sm text-purple-400">With Other Areas</div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Combined with upper face</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Package discount</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Comprehensive treatment</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-white text-xl">Full Face Package</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£399</div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Bunny lines included</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">All facial areas</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Maximum value</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Common questions about bunny lines botox treatments answered by our expert doctors.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 rounded-lg px-6">
+                    <AccordionTrigger className="text-white hover:text-purple-300 text-left">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Smooth Your Bunny Lines?</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+                Book your expert consultation today and discover how our invisible art approach can refine your nose bridge naturally.
+              </p>
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+              >
+                Book Free Consultation
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only">
+          <h3>Expert Bunny Lines Botox Treatment in London</h3>
+          <p>Cosmedocs offers professional bunny lines botox treatments targeting nose wrinkles and scrunch lines. Our experienced cosmetic doctors use advanced botulinum toxin injection techniques to smooth bunny lines while preserving natural facial expressions. Located in prestigious Harley Street, our clinic provides comprehensive nose area assessments and personalized treatment plans.</p>
+          
+          <h4>Why Choose Cosmedocs for Bunny Lines Botox?</h4>
+          <p>Our invisible art philosophy ensures natural-looking results that enhance your nose bridge without obvious signs of treatment. We specialize in precise nasalis muscle targeting using the latest injection techniques for optimal outcomes. Our doctors have extensive experience in nasal anatomy and aesthetic medicine, ensuring safe and effective treatments that maintain natural expressions.</p>
+          
+          <h4>Understanding Bunny Line Development</h4>
+          <p>Bunny lines develop from repeated contractions of the nasalis muscle during smiling, laughing, and nose scrunching. These diagonal wrinkles become more pronounced over time, creating permanent lines that can affect nose bridge smoothness. Professional botox treatment relaxes this muscle, smoothing existing lines and preventing further development while maintaining natural nasal expressions.</p>
+          
+          <h4>Treatment Process and Nose Care</h4>
+          <p>Our bunny lines botox treatment begins with a detailed nose area consultation and muscle analysis. The injection process takes 5-10 minutes using specialized techniques for the delicate nasal area. Results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide specific nose area aftercare instructions and ongoing support throughout your treatment journey.</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BunnyLinesBotox;
