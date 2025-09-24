@@ -126,7 +126,7 @@ const LipFlip = () => {
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Upper Lip Enhancement</p>
-                  <p className="text-sm text-gray-300">10-15 minutes • Results last 3-4 months</p>
+                  <p className="text-sm text-gray-300">10-15 minutes • 2-3 months duration</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -362,21 +362,10 @@ const LipFlip = () => {
                     <CardTitle className="text-white text-xl">Botox Lip Flip Procedure</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      The injection points for lip flip are usually along the upper border of the upper lip, targeting the orbicularis oris muscle.
-                    </p>
-                    <p className="text-gray-300 mb-6">
-                      Botox acts as a muscle relaxant, facilitating the lip flip by calming the segments of the lip muscle responsible for curling it upwards.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Upper lip border targeting</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Orbicularis oris muscle relaxation</span>
-                      </div>
+                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                       Strategic injection points along the upper lip border create precise muscle relaxation for optimal enhancement results.
+                     </p>
+                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-400" size={16} />
                         <span className="text-gray-300">Natural lip enhancement</span>
@@ -791,25 +780,32 @@ const LipFlip = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-black">
+        {/* Call to Action */}
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready for Enhanced Lips?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Experience invisible art - lips that speak without words. Book your expert consultation today and discover how our natural approach creates transformation that speaks — without saying a word.
+              <h2 className="text-3xl font-bold mb-4">Ready for Enhanced, Natural Lips?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how lip flip botox 
+                can enhance your natural beauty with subtle, sophisticated results.
               </p>
-              <Button 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-              >
-                Book Free Consultation
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                >
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
