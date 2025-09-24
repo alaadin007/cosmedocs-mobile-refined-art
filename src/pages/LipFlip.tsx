@@ -287,36 +287,6 @@ const LipFlip = () => {
                 A lip flip uses botox to relax the orbicularis oris muscle around your upper lip, creating the appearance of fuller, more defined lips by allowing more of the upper lip to show without adding volume.
               </p>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Key Benefits of Lip Flip</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid md:grid-cols-3 gap-4 mt-6">
-                    <div className="text-center">
-                      <h4 className="text-purple-300 font-semibold mb-2">Natural Enhancement</h4>
-                      <p className="text-gray-300 text-sm">Subtle results that enhance your natural lip shape</p>
-                    </div>
-                    <div className="text-center">
-                      <h4 className="text-purple-300 font-semibold mb-2">No Volume Added</h4>
-                      <p className="text-gray-300 text-sm">Creates fullness appearance without dermal fillers</p>
-                    </div>
-                    <div className="text-center">
-                      <h4 className="text-purple-300 font-semibold mb-2">Quick Treatment</h4>
-                      <p className="text-gray-300 text-sm">5-10 minute procedure with minimal downtime</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </section>
 
@@ -361,16 +331,32 @@ const LipFlip = () => {
                   <CardHeader>
                     <CardTitle className="text-white text-xl">Botox Lip Flip Procedure</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                   <CardContent>
                      <p className="text-gray-300 text-lg leading-relaxed mb-6">
                        Strategic injection points along the upper lip border create precise muscle relaxation for optimal enhancement results.
                      </p>
+                     
+                     <div className="grid md:grid-cols-3 gap-4 mb-6">
+                       <div className="text-center">
+                         <h4 className="text-purple-300 font-semibold mb-2">Natural Enhancement</h4>
+                         <p className="text-gray-300 text-sm">Subtle results that enhance your natural lip shape</p>
+                       </div>
+                       <div className="text-center">
+                         <h4 className="text-purple-300 font-semibold mb-2">No Volume Added</h4>
+                         <p className="text-gray-300 text-sm">Creates fullness appearance without dermal fillers</p>
+                       </div>
+                       <div className="text-center">
+                         <h4 className="text-purple-300 font-semibold mb-2">Quick Treatment</h4>
+                         <p className="text-gray-300 text-sm">5-10 minute procedure with minimal downtime</p>
+                       </div>
+                     </div>
+                     
                      <div className="space-y-3">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Natural lip enhancement</span>
-                      </div>
-                    </div>
+                       <div className="flex items-center space-x-2">
+                         <CheckCircle className="text-purple-400" size={16} />
+                         <span className="text-gray-300">Natural lip enhancement</span>
+                       </div>
+                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
