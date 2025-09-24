@@ -27,17 +27,17 @@ const CrowsFeetBotox = () => {
     { 
       src: beforeAfter1, 
       alt: "Botox for crow's feet before and after treatment", 
-      caption: "Crow's Feet Botox Treatment: Smooth, youthful eye area with preserved natural smile. Expert orbital muscle relaxation - transformation that speaks without saying a word." 
+      caption: "Invisible Art - Crease less eyes that speak without words. Expert orbital muscle relaxation creating transformation that speaks — without saying a word." 
     },
     { 
       src: beforeAfter2, 
       alt: "Forehead crow's feet and frown lines treatment before after", 
-      caption: "Combined Upper Face Treatment: Comprehensive crow's feet, forehead lines and frown lines botox for complete eye area rejuvenation." 
+      caption: "Bold • Natural • Always Your Way - Comprehensive upper face treatment creating quiet, not loud transformation around the eyes." 
     },
     { 
       src: beforeAfter3, 
       alt: "Comparison of crow's feet lines before and after Botox treatment", 
-      caption: "Crow's Feet Before and After: Significant improvement in eye wrinkles showing fresh, smooth, and crease-less skin around the eyes." 
+      caption: "Aesthetic medicine that's minimal - Eyes that speak without words showing fresh, smooth, and crease-less transformation." 
     }
   ];
 
@@ -118,7 +118,7 @@ const CrowsFeetBotox = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Crow's Feet Botox</span>
-                  <span className="block text-sm mt-4">Invisible art - youthful eyes that speak without words</span>
+                  <span className="block text-sm mt-4">Invisible art - crease less eyes that speak without words</span>
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Eye Wrinkle Treatment</p>
@@ -234,9 +234,9 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Crow's Feet Botox Before and After Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Invisible Art - Crease Less Eyes That Speak Without Words</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Check out our Botox Crow's Feet Treatment at Cosmedocs. Our before-and-after images show significant improvements in the appearance of the skin, resulting in fresh, smooth, and crease-less skin around the eyes.
+                Our aesthetics is invisible art. Bold • Natural • Always Your Way. Our before-and-after images show transformation that speaks — without saying a word, resulting in fresh, smooth, and crease-less eyes.
               </p>
             </motion.div>
 
@@ -280,10 +280,10 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is Crow's Feet Botox?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Invisible Art - Crow's Feet Botox</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Crow's feet botox targets the orbicularis oculi muscle around your eyes that creates fine lines and wrinkles when smiling or squinting. 
-                Our invisible art approach smooths these lines while preserving your natural, beautiful smile.
+                Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. Invisible, not exaggerated. 
+                Our crow's feet botox targets the orbicularis oculi muscle around your eyes, creating transformation that speaks — without saying a word.
               </p>
             </motion.div>
 
@@ -810,9 +810,9 @@ const CrowsFeetBotox = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Smooth Your Crow's Feet?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Ready for Crease Less Eyes?</h2>
               <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Book your expert consultation today and discover how our invisible art approach can rejuvenate your eye area naturally.
+                Experience invisible art - eyes that speak without words. Book your expert consultation today and discover how our natural approach creates transformation that speaks — without saying a word.
               </p>
               <Button 
                 className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
