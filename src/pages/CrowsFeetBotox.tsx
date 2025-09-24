@@ -270,6 +270,22 @@ const CrowsFeetBotox = () => {
               </p>
             </motion.div>
 
+            {/* Injection Sites Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12 text-center"
+            >
+              <div className="mx-auto rounded-lg shadow-lg max-w-md w-full bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 p-8">
+                <h3 className="text-white text-xl font-bold mb-4">Orbicularis Oculi Treatment Areas</h3>
+                <p className="text-gray-300 text-sm">
+                  Strategic injection sites around the eye area targeting the orbicularis oculi muscle for smooth, natural results.
+                </p>
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -279,13 +295,28 @@ const CrowsFeetBotox = () => {
             >
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding Crow's Feet Formation</CardTitle>
+                  <CardTitle className="text-white text-2xl text-center">Understanding Crow's Feet Formation & Key Treatment Areas</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
                     Crow's feet develop from repeated contractions of the orbicularis oculi muscle when you smile, laugh, or squint. 
                     Over time, these dynamic expressions create permanent lines that can age your appearance and affect eye contour.
                   </p>
+                  
+                  <div className="grid md:grid-cols-3 gap-4 mt-6">
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Orbicularis Oculi</h4>
+                      <p className="text-gray-300 text-sm">Primary muscle causing crow's feet around eyes</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Lateral Canthal Lines</h4>
+                      <p className="text-gray-300 text-sm">Lines extending from outer corners of eyes</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Smile Lines</h4>
+                      <p className="text-gray-300 text-sm">Expression lines that form during smiling and laughing</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -307,6 +338,338 @@ const CrowsFeetBotox = () => {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* What to Expect */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Crow's Feet Botox — What to Expect?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your crow's feet treatment, we begin your orbital muscle treatment. The doctor uses very fine needles to inject botulinum toxin into the orbicularis oculi muscle in targeted areas such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300 mb-6">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Orbicularis oculi muscle</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Lateral canthal area</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Eye corner regions</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Outer eye zones</span>
+                      </li>
+                    </ul>
+                    <p className="text-purple-300 font-medium">
+                      Following the botox treatment you may continue normal daily activities immediately.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      Crow's feet botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Bruising around injection sites</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Swelling around eye area</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Mild discomfort</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary redness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Eye dryness (rare)</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Does Botox Work for Crow's Feet */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Crow's Feet?</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl flex items-center justify-center gap-3">
+                      <Heart className="text-purple-400" size={28} />
+                      Muscle Relaxation Mechanism
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-8 pb-8">
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      Botox relaxes the orbicularis oculi muscle causing crow's feet, resulting in smoother, more youthful-looking eyes. It works by blocking nerve signals that cause muscle contractions, preventing the formation of eye wrinkles while maintaining natural smile expressions.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Types of Crow's Feet */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Types of Crow's Feet</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Dynamic Crow's Feet</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Dynamic crow's feet appear when you make facial expressions like smiling, laughing, or squinting. These lines are temporary and disappear when your face is relaxed and at rest.
+                    </p>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      Botox is highly effective for dynamic lines as it relaxes the orbital muscles to reduce their appearance.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Static Crow's Feet</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Static crow's feet are visible even when your face is at rest. They develop over time as repeated expressions weaken the skin's elasticity around the eyes, causing permanent creases.
+                    </p>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      Botox prevents static lines from becoming deeper and may require combination with dermal fillers for optimal results.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Treatment Options */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Crow's Feet</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                We have a range of effective treatments to target crow's feet and achieve smoother, more youthful eyes alongside Crow's Feet Botox.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Enhanced Results with Dermal Fillers</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      While Botox effectively treats dynamic wrinkles by relaxing orbital muscles, dermal fillers can further enhance the results. Fillers, injected to add volume and smooth out deeper lines around the eyes, are particularly useful for static wrinkles that Botox alone can't fully address.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Combination Treatment</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Combining Botox with dermal fillers offers a comprehensive approach to crow's feet. Botox reduces muscle activity causing the lines, while fillers add volume to deep-set lines around the eyes, resulting in smoother, more youthful eye contour.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Crow's Feet Form & Our Solution */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">Why Crow's Feet Form & Our Solution</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-xl leading-relaxed">
+                Understanding the root causes of crow's feet helps us deliver targeted, effective treatments that address both existing lines and prevent future formation around the eye area.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-6 border border-purple-500/20">
+                  <h3 className="text-2xl font-bold text-white mb-6">Our Comprehensive Solution</h3>
+                  <div className="space-y-4 text-gray-300">
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Precision Botox Treatment:</strong> Targeted orbital muscle relaxation for immediate smoothing of existing lines</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Prevention Strategy:</strong> Stop new crow's feet from forming by relaxing overactive eye muscles</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Natural Results:</strong> Preserve beautiful smile expressions while smoothing unwanted eye wrinkles</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Expert Technique:</strong> Harley Street standards with our invisible art philosophy</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Long-lasting Results:</strong> 3-4 months of smoother, more youthful eye appearance</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-8 border border-purple-500/30 overflow-hidden">
+                  <h4 className="text-2xl font-bold text-white mb-6 text-center">Expert Treatment Process</h4>
+                  <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/placeholder.svg"
+                    >
+                      <source src="https://www.cosmedocs.com/wp-content/uploads/2021/09/Crows_Feet_Trim-1.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="mt-6">
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Precise Eye Area Technique</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Orbital Muscle Assessment</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Natural Results</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
