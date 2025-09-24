@@ -147,7 +147,7 @@ const PrescriptionSkincare = () => {
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">£60 Every 3 Months</p>
-                  <p className="text-sm text-gray-300">Clinically proven actives from pharmaceutical giants</p>
+                  <p className="text-sm text-gray-300">Clinically proven actives from pharmaceutical giants by GMC-registered Doctors</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
