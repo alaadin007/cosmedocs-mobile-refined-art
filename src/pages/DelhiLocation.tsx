@@ -608,7 +608,7 @@ const DelhiLocation = () => {
                 className="relative"
               >
                 <img 
-                  src="/lovable-uploads/d7bad7e3-fa9f-4357-8e4c-04ed2a494412.png" 
+                  src="/lovable-uploads/4fcf12b3-f695-4dd7-8ddd-3c5a0da3be9b.png" 
                   alt="Dr. Geetika - Aesthetic Medicine Specialist in Delhi"
                   className="rounded-lg shadow-2xl w-full"
                 />
