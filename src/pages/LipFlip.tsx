@@ -336,21 +336,6 @@ const LipFlip = () => {
                        Strategic injection points along the upper lip border create precise muscle relaxation for optimal enhancement results.
                      </p>
                      
-                     <div className="grid md:grid-cols-3 gap-4 mb-6">
-                       <div className="text-center">
-                         <h4 className="text-purple-300 font-semibold mb-2">Natural Enhancement</h4>
-                         <p className="text-gray-300 text-sm">Subtle results that enhance your natural lip shape</p>
-                       </div>
-                       <div className="text-center">
-                         <h4 className="text-purple-300 font-semibold mb-2">No Volume Added</h4>
-                         <p className="text-gray-300 text-sm">Creates fullness appearance without dermal fillers</p>
-                       </div>
-                       <div className="text-center">
-                         <h4 className="text-purple-300 font-semibold mb-2">Quick Treatment</h4>
-                         <p className="text-gray-300 text-sm">5-10 minute procedure with minimal downtime</p>
-                       </div>
-                     </div>
-                     
                      <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/30">
                        <h4 className="text-purple-300 font-semibold mb-4">Key Treatment Benefits:</h4>
                        <div className="grid md:grid-cols-2 gap-3">
