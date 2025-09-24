@@ -21,7 +21,21 @@ const CrowsFeetBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Crow's feet botox before and after treatment", caption: "Crow's Feet Botox Treatment: Smooth, youthful eye area with preserved natural smile. Expert orbital muscle relaxation - transformation that speaks without saying a word." }
+    { 
+      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      alt: "Botox for crow's feet before and after treatment", 
+      caption: "Crow's Feet Botox Treatment: Smooth, youthful eye area with preserved natural smile. Expert orbital muscle relaxation - transformation that speaks without saying a word." 
+    },
+    { 
+      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      alt: "Forehead crow's feet and frown lines treatment before after", 
+      caption: "Combined Upper Face Treatment: Comprehensive crow's feet, forehead lines and frown lines botox for complete eye area rejuvenation." 
+    },
+    { 
+      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      alt: "Comparison of crow's feet lines before and after Botox treatment", 
+      caption: "Crow's Feet Before and After: Significant improvement in eye wrinkles showing fresh, smooth, and crease-less skin around the eyes." 
+    }
   ];
 
   const faqs = [
@@ -218,8 +232,8 @@ const CrowsFeetBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">Crow's Feet Botox Before and After Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See how our expert crow's feet botox treatments smooth eye wrinkles while maintaining natural smile expressions.
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Check out our Botox Crow's Feet Treatment at Cosmedocs. Our before-and-after images show significant improvements in the appearance of the skin, resulting in fresh, smooth, and crease-less skin around the eyes.
               </p>
             </motion.div>
 
@@ -502,7 +516,82 @@ const CrowsFeetBotox = () => {
           </div>
         </section>
 
-        {/* Other Treatment Options */}
+        {/* Units of Crow's Feet Botox Section - Two Columns */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20">
+                  <h2 className="text-3xl font-bold text-white mb-6">Units of Crow's Feet Botox</h2>
+                  <div className="space-y-6 text-gray-300">
+                    <p className="text-lg leading-relaxed">
+                      Everyone is unique, so the number of Botox units needed to treat crow's feet can vary from person to person.
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-6 border border-purple-500/30">
+                        <h3 className="text-xl font-bold text-purple-300 mb-3">For Men</h3>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-white mb-2">15 Units</div>
+                          <p className="text-sm text-gray-300">per eye area</p>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-6 border border-purple-500/30">
+                        <h3 className="text-xl font-bold text-purple-300 mb-3">For Women</h3>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-white mb-2">10-12 Units</div>
+                          <p className="text-sm text-gray-300">per eye area</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 p-4 bg-purple-900/20 rounded-lg border border-purple-500/20">
+                      <p className="text-sm text-gray-300 text-center">
+                        <strong className="text-purple-300">Note:</strong> The exact number of units required will be determined during your consultation based on your individual needs and muscle activity.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-8 border border-purple-500/30 overflow-hidden">
+                  <h3 className="text-2xl font-bold text-white mb-6 text-center">Expert Crow's Feet Treatment</h3>
+                  <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/placeholder.svg"
+                    >
+                      <source src="https://www.cosmedocs.com/wp-content/uploads/2021/09/Crows_Feet_Trim-1.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="mt-6">
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Precise Eye Technique</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Natural Smile Preserved</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Expert Results</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
