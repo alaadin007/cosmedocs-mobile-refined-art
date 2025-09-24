@@ -23,17 +23,17 @@ const BunnyLinesBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/src/assets/bunny-lines-before-after-1.jpg", 
+      src: "/placeholder.svg", 
       alt: "Bunny lines botox before and after - nose bridge smoothing", 
       caption: "Bunny Lines Botox Treatment: Smooth, refined nose bridge with natural expressions preserved. Expert nasalis muscle relaxation." 
     },
     { 
-      src: "/src/assets/bunny-lines-before-after-3.jpg", 
+      src: "/placeholder.svg", 
       alt: "Forehead and bunny lines comprehensive treatment", 
       caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and bunny lines treatment for complete upper face rejuvenation." 
     },
     { 
-      src: "/src/assets/bunny-lines-before-after-4.jpg", 
+      src: "/placeholder.svg", 
       alt: "Nose wrinkles botox before after comparison", 
       caption: "Comparison showing significant reduction in nose wrinkles and bunny lines with expert botox treatment." 
     }
