@@ -234,9 +234,9 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Invisible Art - Crease Less Eyes That Speak Without Words</h2>
+              <h2 className="text-3xl font-bold mb-4">Crow's Feet Before and After</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Our aesthetics is invisible art. Bold • Natural • Always Your Way. Our before-and-after images show transformation that speaks — without saying a word, resulting in fresh, smooth, and crease-less eyes.
+                Check out our Botox Crow's Feet Treatment at Cosmedocs. Our before-and-after images show significant improvements in the appearance of the skin, resulting in fresh, smooth, and crease-less eyes.
               </p>
             </motion.div>
 
@@ -280,10 +280,10 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Invisible Art - Crow's Feet Botox</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Crow's Feet Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. Invisible, not exaggerated. 
-                Our crow's feet botox targets the orbicularis oculi muscle around your eyes, creating transformation that speaks — without saying a word.
+                Crow's feet botox targets the orbicularis oculi muscle around your eyes that creates fine lines and wrinkles when smiling or squinting. 
+                Our treatment smooths these lines while preserving your natural, beautiful smile.
               </p>
             </motion.div>
 
