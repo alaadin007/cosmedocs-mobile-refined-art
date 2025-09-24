@@ -39,7 +39,7 @@ function verifyRouteDetection() {
     '/blog', '/blog/vitamin-c-ferulic-acid-benefits',
     
     // Locations
-    '/birmingham', '/manchester', '/cardiff', '/delhi', '/barbados'
+    '/birmingham', '/manchester', '/cardiff', '/delhi', '/karachi', '/barbados'
   ];
   
   const detectedPaths = detectedRoutes.map(route => route.path);

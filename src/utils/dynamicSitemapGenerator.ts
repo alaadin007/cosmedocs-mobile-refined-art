@@ -78,7 +78,7 @@ function extractAllRoutes(): { pages: string[], treatments: string[], blog: stri
         '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
         '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog'
       ],
-      locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/barbados']
+      locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/karachi', '/barbados']
     };
   }
 }

@@ -50,7 +50,7 @@ const ROUTE_REGISTRY = {
     '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/blog/beauty-ethnic-neutrality',
     '/blog', '/blog/vitamin-c-ferulic-acid-benefits'
   ],
-  locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/barbados']
+  locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/karachi', '/barbados']
 };
 
 /**
@@ -113,7 +113,7 @@ function categorizeRoute(path: string): 'page' | 'treatment' | 'blog' | 'locatio
   ];
   
   const locationPatterns = [
-    'birmingham', 'manchester', 'cardiff', 'delhi', 'barbados'
+    'birmingham', 'manchester', 'cardiff', 'delhi', 'karachi', 'barbados'
   ];
   
   // Check if it's a location route
@@ -201,7 +201,7 @@ function isTreatmentRoute(path: string): boolean {
 }
 
 function isLocationRoute(path: string): boolean {
-  const locations = ['birmingham', 'manchester', 'cardiff', 'delhi', 'barbados'];
+  const locations = ['birmingham', 'manchester', 'cardiff', 'delhi', 'karachi', 'barbados'];
   return locations.some(location => path.includes(location));
 }
 

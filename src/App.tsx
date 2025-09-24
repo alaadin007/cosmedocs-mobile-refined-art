@@ -65,6 +65,7 @@ import GummySmileBotox from "./pages/GummySmileBotox";
 import MarionnetteLines from "./pages/MarionnetteLines";
 import NasolabialFolds from "./pages/NasolabialFolds";
 import DelhiLocation from "./pages/DelhiLocation";
+import KarachiLocation from "./pages/KarachiLocation";
 import BarbadosHome from "./pages/BarbadosHome";
 import PolynucleotideTreatment from "./pages/PolynucleotideTreatment";
 import ProfhiloTreatment from "./pages/ProfhiloTreatment";
@@ -187,8 +188,9 @@ const App = () => {
               <Route path="/birmingham" element={<BirminghamHome />} />
               <Route path="/manchester" element={<ManchesterHome />} />
               <Route path="/cardiff" element={<CardiffHome />} />
-              <Route path="/delhi" element={<DelhiLocation />} />
-              <Route path="/barbados" element={<BarbadosHome />} />
+               <Route path="/delhi" element={<DelhiLocation />} />
+               <Route path="/karachi" element={<KarachiLocation />} />
+               <Route path="/barbados" element={<BarbadosHome />} />
               <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
               <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
               <Route path="/profhilo-treatment" element={<ProfhiloTreatment />} />
