@@ -233,9 +233,9 @@ const LipFlip = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Invisible Art - Enhanced Lips That Speak Without Words</h2>
+              <h2 className="text-3xl font-bold mb-4">Lip Flip Before and After</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Our aesthetics is invisible art. Bold • Natural • Always Your Way. Our before-and-after images show transformation that speaks — without saying a word.
+                Check out our Lip Flip Botox Treatment at Cosmedocs. Our before-and-after images show significant improvements in upper lip enhancement, resulting in natural, fuller-looking lips.
               </p>
             </motion.div>
 
@@ -279,10 +279,9 @@ const LipFlip = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Invisible Art - Lip Flip Enhancement</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Lip Flip Enhancement?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Aesthetic medicine by Cosmedocs is minimal. Quiet, not loud. Invisible, not exaggerated. 
-                Our lip flip uses botox to relax the orbicularis oris muscle, creating transformation that speaks — without saying a word.
+                A lip flip uses botox to relax the orbicularis oris muscle around your upper lip, creating the appearance of fuller, more defined lips by allowing more of the upper lip to show.
               </p>
             </motion.div>
 
