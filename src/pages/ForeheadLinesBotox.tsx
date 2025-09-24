@@ -154,7 +154,7 @@ const ForeheadLinesBotox = () => {
                   <span className="block text-sm mt-4">Invisible art - smooth forehead lines that speak without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Horizontal Wrinkle Treatment • London</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Horizontal Wrinkle Treatment</p>
                   <p className="text-sm text-gray-300">10-15 minutes • Results last 3-4 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
