@@ -12,6 +12,9 @@ import {
 } from "@/components/ui/carousel";
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import lipFlipImage1 from "@/assets/before-after/lip-flip-1.jpg";
+import lipFlipImage2 from "@/assets/before-after/lip-flip-2.jpg";
+import lipFlipImage3 from "@/assets/before-after/lip-flip-3.jpg";
 
 const LipFlip = () => {
   const seoData = generateSEOMetadata(
@@ -22,19 +25,19 @@ const LipFlip = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      src: lipFlipImage1, 
+      alt: "Botox lip flip injection points diagram", 
+      caption: "Lip Flip Injection Points - Strategic placement for natural upper lip enhancement and muscle relaxation." 
+    },
+    { 
+      src: lipFlipImage2, 
       alt: "Lip flip botox before and after treatment", 
-      caption: "Invisible Art - Enhanced lips that speak without words. Natural upper lip enhancement with preserved lip movement." 
+      caption: "Natural Lip Enhancement - Subtle lip flip results showing fuller appearance without added volume." 
     },
     { 
-      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
-      alt: "Upper lip enhancement with lip flip botox", 
-      caption: "Bold • Natural • Always Your Way - Subtle lip enhancement creating fuller appearance without volume." 
-    },
-    { 
-      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
-      alt: "Natural lip flip results before and after", 
-      caption: "Aesthetic medicine that's minimal - Lip flip transformation showing natural, enhanced lip definition." 
+      src: lipFlipImage3, 
+      alt: "Non-invasive lip enhancement before and after", 
+      caption: "Bold • Natural • Always Your Way - Non-invasive lip enhancement with natural-looking definition." 
     }
   ];
 
@@ -69,7 +72,7 @@ const LipFlip = () => {
     },
     {
       question: "How much does a lip flip cost?",
-      answer: "Lip flip botox at Cosmedocs starts from £150. We provide transparent pricing during consultation with package discounts available for multiple areas."
+      answer: "Lip flip botox at Cosmedocs costs £175. We provide transparent pricing during consultation with package discounts available for multiple areas."
     }
   ];
 
@@ -307,6 +310,127 @@ const LipFlip = () => {
           </div>
         </section>
 
+        {/* Botox Lip Flip Injection Points */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox Lip Flip Injection Points</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <img 
+                  src={lipFlipImage1} 
+                  alt="Lip flip injection points diagram"
+                  className="mx-auto rounded-lg shadow-lg max-w-md w-full"
+                />
+                <p className="text-sm text-gray-300 mt-4 italic">
+                  Strategic injection sites for lip flip botox treatment targeting orbicularis oris muscle.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Botox Lip Flip Procedure</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      The injection points for lip flip are usually along the upper border of the upper lip, targeting the orbicularis oris muscle.
+                    </p>
+                    <p className="text-gray-300 mb-6">
+                      Botox acts as a muscle relaxant, facilitating the lip flip by calming the segments of the lip muscle responsible for curling it upwards.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Upper lip border targeting</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Orbicularis oris muscle relaxation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Natural lip enhancement</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Units Information */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Many Botox Units Are Needed for Lip Flip?</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center">Botox Units for Lip Flip Treatment</CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-8 pb-8">
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div className="text-center">
+                        <h4 className="text-purple-300 font-semibold mb-4 text-lg">Typical Dosage</h4>
+                        <p className="text-gray-300 text-lg mb-4">4-6 units of Botox</p>
+                        <p className="text-gray-300 text-sm">
+                          The exact amount depends on your lip anatomy, muscle strength, and desired enhancement level.
+                        </p>
+                      </div>
+                      <div className="text-center">
+                        <h4 className="text-purple-300 font-semibold mb-4 text-lg">Treatment Areas</h4>
+                        <ul className="text-gray-300 text-sm space-y-2">
+                          <li>• Upper lip border (2-3 injection points)</li>
+                          <li>• Orbicularis oris muscle targeting</li>
+                          <li>• Minimal units for natural results</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p className="text-gray-300 text-center mt-6 italic">
+                      Our expert doctors will determine the precise number of units needed during your consultation for optimal, natural-looking results.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* What to Expect */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -459,7 +583,7 @@ const LipFlip = () => {
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
                     <CardTitle className="text-white text-xl">Lip Flip</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£150</div>
+                    <div className="text-3xl font-bold text-purple-300">£175</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -469,7 +593,7 @@ const LipFlip = () => {
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Natural-looking results</span>
+                        <span className="text-gray-300">4-6 units of Botox</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
