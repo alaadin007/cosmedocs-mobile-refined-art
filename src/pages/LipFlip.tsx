@@ -293,9 +293,6 @@ const LipFlip = () => {
                 <p>
                   Moreover, this procedure enhances the Cupid&apos;s bow and creates the illusion of fuller lips without adding volume. Hence, Botox lip lift is supposed to give a natural pucker and looks incredibly stunning for anyone seeking a noticeable tip lip. The treatment also costs less than a face filler.
                 </p>
-                <p className="text-purple-300 font-semibold">
-                  non surgical upper lip enhancement
-                </p>
               </div>
             </motion.div>
           </div>
