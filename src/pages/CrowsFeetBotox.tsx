@@ -12,6 +12,9 @@ import {
 } from "@/components/ui/carousel";
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import beforeAfter1 from "@/assets/before-after/crows-feet-botox-1.png";
+import beforeAfter2 from "@/assets/before-after/crows-feet-botox-2.jpg";
+import beforeAfter3 from "@/assets/before-after/crows-feet-botox-3.jpeg";
 
 const CrowsFeetBotox = () => {
   const seoData = generateSEOMetadata(
@@ -22,17 +25,17 @@ const CrowsFeetBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      src: beforeAfter1, 
       alt: "Botox for crow's feet before and after treatment", 
       caption: "Crow's Feet Botox Treatment: Smooth, youthful eye area with preserved natural smile. Expert orbital muscle relaxation - transformation that speaks without saying a word." 
     },
     { 
-      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      src: beforeAfter2, 
       alt: "Forehead crow's feet and frown lines treatment before after", 
       caption: "Combined Upper Face Treatment: Comprehensive crow's feet, forehead lines and frown lines botox for complete eye area rejuvenation." 
     },
     { 
-      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      src: beforeAfter3, 
       alt: "Comparison of crow's feet lines before and after Botox treatment", 
       caption: "Crow's Feet Before and After: Significant improvement in eye wrinkles showing fresh, smooth, and crease-less skin around the eyes." 
     }
