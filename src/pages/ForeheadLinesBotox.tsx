@@ -121,7 +121,7 @@ const ForeheadLinesBotox = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Forehead Botox</span>
-                  <span className="block text-sm mt-4">Smooth forehead lines that speak without words</span>
+                  <span className="block text-sm mt-4">Invisible art - smooth forehead lines that speak without words</span>
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Horizontal Wrinkle Treatment • London</p>
