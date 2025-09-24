@@ -435,12 +435,11 @@ const ForeheadLinesBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Frown Lines</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Botox for forehead lines is one of the most amazing treatments, however, to target forehead lines and achieve a creaseless forehead, 
-                there are a variety of ways to complement your treatment.
+              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Forehead Lines</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
+                While Botox for forehead lines is highly effective, we offer complementary treatments to achieve comprehensive forehead rejuvenation and maintain long-lasting results.
               </p>
             </motion.div>
 
@@ -450,16 +449,24 @@ const ForeheadLinesBotox = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="group"
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Dermal Fillers</CardTitle>
+                <Card className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-purple-500/40 h-full hover:border-purple-400/60 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                  <CardHeader className="text-center pb-4">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors duration-300">
+                      <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                      </svg>
+                    </div>
+                    <CardTitle className="text-white text-xl">Dermal Fillers</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-300 text-center">
-                    <p>
-                      Filler for forehead lines works by filling in the creases and smoothing the skin, which diminishes the appearance of wrinkles and lines. 
-                      This non-surgical treatment can give your forehead a relaxed and rejuvenated appearance, with minimal downtime and provide immediate results.
+                    <p className="leading-relaxed">
+                      Strategic filler placement smooths deep static lines by restoring volume and structure. This immediate treatment complements Botox by addressing lines that persist at rest, creating a comprehensive anti-aging approach.
                     </p>
+                    <div className="mt-4 pt-4 border-t border-purple-500/30">
+                      <span className="text-purple-300 text-sm font-medium">Immediate Results • 6-12 Months Duration</span>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -469,19 +476,38 @@ const ForeheadLinesBotox = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="group"
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Microneedling</CardTitle>
+                <Card className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-purple-500/40 h-full hover:border-purple-400/60 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                  <CardHeader className="text-center pb-4">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors duration-300">
+                      <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+                      </svg>
+                    </div>
+                    <CardTitle className="text-white text-xl">Microneedling</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-300 text-center">
-                    <p className="mb-4">Microneedling is a minimally invasive procedure that reduces forehead lines by:</p>
-                    <ul className="space-y-2 text-sm">
-                      <li>• Boosting collagen production</li>
-                      <li>• Rejuvenating skin texture and firmness</li>
-                      <li>• Decreasing line depth</li>
-                      <li>• Improving skin tone</li>
-                    </ul>
+                    <p className="mb-4 leading-relaxed">
+                      Advanced collagen induction therapy that naturally regenerates skin from within:
+                    </p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Stimulates natural collagen production</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Improves skin texture and firmness</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Reduces fine line depth</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-purple-500/30">
+                      <span className="text-purple-300 text-sm font-medium">Progressive Results • 3-6 Sessions</span>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -491,24 +517,56 @@ const ForeheadLinesBotox = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="group"
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Laser Resurfacing</CardTitle>
+                <Card className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-purple-500/40 h-full hover:border-purple-400/60 transition-all duration-300 group-hover:transform group-hover:scale-105">
+                  <CardHeader className="text-center pb-4">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors duration-300">
+                      <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <CardTitle className="text-white text-xl">Laser Resurfacing</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-300 text-center">
-                    <p className="mb-4">Laser resurfacing can reduce forehead lines by:</p>
-                    <ul className="space-y-2 text-sm">
-                      <li>• Stimulating collagen</li>
-                      <li>• Smoothing out wrinkles</li>
-                      <li>• Reducing pigmentation</li>
-                      <li>• Tightening the skin</li>
-                      <li>• Improving skin texture</li>
-                    </ul>
+                    <p className="mb-4 leading-relaxed">
+                      Precision laser technology for comprehensive skin renewal and line reduction:
+                    </p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Advanced collagen stimulation</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Skin tightening and smoothing</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>Enhanced texture and tone</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-purple-500/30">
+                      <span className="text-purple-300 text-sm font-medium">Long-lasting Results • 1-3 Sessions</span>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl p-6 max-w-3xl mx-auto border border-purple-500/30">
+                <p className="text-gray-300 text-lg">
+                  <span className="text-purple-300 font-semibold">Expert Combination Therapy:</span> Our doctors create personalized treatment plans combining these approaches for optimal forehead rejuvenation and long-lasting results.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
