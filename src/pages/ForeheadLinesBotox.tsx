@@ -295,21 +295,6 @@ const ForeheadLinesBotox = () => {
               </p>
             </motion.div>
 
-            {/* Injection Sites Section - matching frown lines structure */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-12 text-center"
-            >
-              <div className="mx-auto rounded-lg shadow-lg max-w-md w-full bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 p-8">
-                <h3 className="text-white text-xl font-bold mb-4">Frontalis Muscle Treatment Areas</h3>
-                <p className="text-gray-300 text-sm">
-                  Strategic injection sites across the forehead targeting the frontalis muscle for smooth, natural results.
-                </p>
-              </div>
-            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -352,47 +337,53 @@ const ForeheadLinesBotox = () => {
           </div>
         </section>
 
-        {/* Baby Botox Section - Two Columns */}
+        {/* Baby Botox Section - One Column */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">Baby Botox for Forehead Lines</h2>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Worry lines or forehead wrinkles are common among people in their 20s, 30s, 40s, 50s, and even teenage years! 
-                  Many patients do not wish to have a shiny forehead or a 'frozen look'. The results are almost instant, 
-                  and they still have some control over their facial muscles, hence more forehead mobility.
-                </p>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Baby Botox for Forehead Lines</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
+                Worry lines or forehead wrinkles are common among people in their 20s, 30s, 40s, 50s, and even teenage years! 
+                Many patients do not wish to have a shiny forehead or a 'frozen look'. The results are almost instant, 
+                and they still have some control over their facial muscles, hence more forehead mobility.
+              </p>
+            </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">Types of Lines</h2>
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="text-purple-300 font-bold mb-3">Dynamic Lines</h4>
-                    <p className="text-gray-300">
-                      These appear only when you raise your eyebrows or express surprise. They are caused by repeated frontalis muscle contractions.
-                    </p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl text-center">Types of Lines</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-bold mb-3">Dynamic Lines</h4>
+                      <p className="text-gray-300">
+                        These appear only when you raise your eyebrows or express surprise. They are caused by repeated frontalis muscle contractions.
+                      </p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-bold mb-3">Static Lines</h4>
+                      <p className="text-gray-300">
+                        These lines are visible even when your face is relaxed. They develop over time due to collagen loss, sun damage, and loss of skin elasticity.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-purple-300 font-bold mb-3">Static Lines</h4>
-                    <p className="text-gray-300">
-                      These lines are visible even when your face is relaxed. They develop over time due to collagen loss, sun damage, and loss of skin elasticity.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
