@@ -337,6 +337,139 @@ const ForeheadLinesBotox = () => {
           </div>
         </section>
 
+        {/* What to Expect */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Forehead Lines Botox — What to Expect?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your forehead lines treatment, we begin your frontalis muscle treatment. The doctor uses very fine needles to inject botulinum toxin into the frontalis muscle in targeted areas such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300 mb-6">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Frontalis muscle</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Upper forehead region</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Central forehead area</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Horizontal line zones</span>
+                      </li>
+                    </ul>
+                    <p className="text-purple-300 font-medium">
+                      Following the botox treatment you may continue normal daily activities immediately.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      Forehead lines botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Bruising at injection sites</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Swelling around treated area</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Mild discomfort</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary redness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Infection (rare)</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Does Botox Work for Forehead Lines */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Forehead Lines?</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl flex items-center justify-center gap-3">
+                      <Heart className="text-purple-400" size={28} />
+                      Muscle Relaxation Mechanism
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-8 pb-8">
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      Botox relaxes the frontalis muscle causing forehead lines, resulting in a smoother, more refreshed appearance. It works by blocking nerve signals that cause muscle contractions, preventing the formation of horizontal lines while maintaining natural brow movement.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
         {/* Baby Botox Section - One Column */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -384,6 +517,89 @@ const ForeheadLinesBotox = () => {
                 </CardContent>
               </Card>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Why Forehead Lines Form & Our Solution */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">Why Forehead Lines Form & Our Solution</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-xl leading-relaxed">
+                Understanding the root causes of forehead lines helps us deliver targeted, effective treatments that address both existing lines and prevent future formation.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-6 border border-purple-500/20">
+                  <h3 className="text-2xl font-bold text-white mb-6">Our Comprehensive Solution</h3>
+                  <div className="space-y-4 text-gray-300">
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Precision Botox Treatment:</strong> Targeted frontalis muscle relaxation for immediate smoothing of existing lines</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Prevention Strategy:</strong> Stop new horizontal lines from forming by relaxing overactive muscles</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Natural Results:</strong> Preserve natural brow movement while smoothing unwanted lines</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Expert Technique:</strong> Harley Street standards with our invisible art philosophy</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="text-purple-300 mt-1">•</span>
+                      <p><strong className="text-white">Long-lasting Results:</strong> 3-4 months of smoother, more youthful forehead appearance</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-8 border border-purple-500/30 overflow-hidden">
+                  <h4 className="text-2xl font-bold text-white mb-6 text-center">Expert Treatment Process</h4>
+                  <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/placeholder.svg"
+                    >
+                      <source src="https://www.cosmedocs.com/wp-content/uploads/2021/09/Forehead_Trim-1.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="mt-6">
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Precise Injection Technique</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Muscle Assessment</span>
+                      <span className="bg-purple-500/30 px-3 py-1 rounded-full text-purple-200">Immediate Results</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
