@@ -351,10 +351,41 @@ const LipFlip = () => {
                        </div>
                      </div>
                      
-                     <div className="space-y-3">
-                       <div className="flex items-center space-x-2">
-                         <CheckCircle className="text-purple-400" size={16} />
-                         <span className="text-gray-300">Natural lip enhancement</span>
+                     <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/30">
+                       <h4 className="text-purple-300 font-semibold mb-4">Key Treatment Benefits:</h4>
+                       <div className="grid md:grid-cols-2 gap-3">
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">Upper lip muscle relaxation</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">Reveals more pink lip tissue</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">No needles near lip tissue</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">Maintains natural lip mobility</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">Reversible treatment effects</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">Minimal risk of complications</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">Perfect for first-time patients</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <CheckCircle className="text-purple-400 flex-shrink-0" size={18} />
+                           <span className="text-gray-300">Can combine with lip fillers</span>
+                         </div>
                        </div>
                      </div>
                   </CardContent>
