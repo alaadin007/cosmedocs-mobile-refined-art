@@ -388,86 +388,76 @@ const LipFlip = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Lip Flip vs Lip Filler</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Lip Flip vs Lip Filler Enhancement</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Both treatments enhance your lips, but they work differently to achieve aesthetic goals
+                Understanding the key differences between lip flip botox and dermal fillers to help you choose the best enhancement for your lips
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+              {/* Lip Flip Botox */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                <Card className="bg-accent border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Lip Flip Botox</CardTitle>
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <Syringe className="mr-3 text-purple-400" size={24} />
+                      Lip Flip Botox
+                    </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Relaxes muscle to show more upper lip</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">No volume added to lips</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Subtle, natural enhancement</p>
-                    </div>
-                     <div className="flex items-start space-x-3">
-                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                       <p className="text-gray-300">Quick 10-minute procedure</p>
-                     </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Results last 2-3 months</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Cost: £175</p>
+                  <CardContent className="space-y-6">
+                    <p className="text-gray-300">
+                      Non-invasive muscle relaxation technique that reveals more of the upper lip without adding volume for natural enhancement.
+                    </p>
+                    
+                    <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/30">
+                      <ul className="text-gray-300 space-y-3">
+                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Relaxes muscle to show more lip</li>
+                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> No volume added to lips</li>
+                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> 10-minute quick procedure</li>
+                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Results last 2-3 months</li>
+                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Cost: £175</li>
+                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Subtle, natural enhancement</li>
+                        <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Immediate return to activities</li>
+                      </ul>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
+              {/* Lip Filler */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-pink-900/30 to-purple-900/30 border-pink-500/30 h-full">
+                <Card className="bg-accent border-pink-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Lip Filler</CardTitle>
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <Heart className="mr-3 text-pink-400" size={24} />
+                      Lip Filler
+                    </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Adds hyaluronic acid volume</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Increases lip size and shape</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Dramatic or subtle options</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">30-45 minute treatment</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Results last 6-12 months</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">Cost: £350-£550</p>
+                  <CardContent className="space-y-6">
+                    <p className="text-gray-300">
+                      Hyaluronic acid injections that add volume and shape to lips for dramatic or subtle enhancement results.
+                    </p>
+                    
+                    <div className="bg-pink-900/20 rounded-lg p-6 border border-pink-500/30">
+                      <ul className="text-gray-300 space-y-3">
+                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Adds hyaluronic acid volume</li>
+                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Increases lip size and shape</li>
+                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> 30-45 minute treatment</li>
+                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Results last 6-12 months</li>
+                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Cost: £350-£550</li>
+                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> Dramatic or subtle options</li>
+                        <li className="flex items-center"><span className="text-pink-400 mr-3">•</span> 24-48 hours minor swelling</li>
+                      </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -479,7 +469,7 @@ const LipFlip = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="mt-8 text-center"
+              className="mt-12 text-center"
             >
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Many patients achieve optimal results by combining both treatments. Our expert practitioners 
