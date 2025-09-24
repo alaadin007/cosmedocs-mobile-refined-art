@@ -328,20 +328,6 @@ const ForeheadLinesBotox = () => {
                     When overactive, it creates deep horizontal lines across the forehead that can make you appear tired or older than you are.
                   </p>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                    <div className="text-center">
-                      <h4 className="text-purple-300 font-bold mb-3">Dynamic Lines</h4>
-                      <p className="text-gray-300 text-sm">
-                        These appear only when you raise your eyebrows or express surprise. They are caused by repeated frontalis muscle contractions.
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <h4 className="text-purple-300 font-bold mb-3">Static Lines</h4>
-                      <p className="text-gray-300 text-sm">
-                        These lines are visible even when your face is relaxed. They develop over time due to collagen loss, sun damage, and loss of skin elasticity.
-                      </p>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -366,23 +352,47 @@ const ForeheadLinesBotox = () => {
           </div>
         </section>
 
-        {/* Baby Botox Section */}
+        {/* Baby Botox Section - Two Columns */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">Baby Botox for Forehead Lines</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Worry lines or forehead wrinkles are common among people in their 20s, 30s, 40s, 50s, and even teenage years! 
-                Many patients do not wish to have a shiny forehead or a 'frozen look'. The results are almost instant, 
-                and they still have some control over their facial muscles, hence more forehead mobility.
-              </p>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Baby Botox for Forehead Lines</h2>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Worry lines or forehead wrinkles are common among people in their 20s, 30s, 40s, 50s, and even teenage years! 
+                  Many patients do not wish to have a shiny forehead or a 'frozen look'. The results are almost instant, 
+                  and they still have some control over their facial muscles, hence more forehead mobility.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Types of Lines</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-purple-300 font-bold mb-3">Dynamic Lines</h4>
+                    <p className="text-gray-300">
+                      These appear only when you raise your eyebrows or express surprise. They are caused by repeated frontalis muscle contractions.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-purple-300 font-bold mb-3">Static Lines</h4>
+                    <p className="text-gray-300">
+                      These lines are visible even when your face is relaxed. They develop over time due to collagen loss, sun damage, and loss of skin elasticity.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -411,15 +421,14 @@ const ForeheadLinesBotox = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto"
             >
               {[
-                { icon: "☀️", title: "Sun damage" },
-                { icon: "😰", title: "Stress" },
-                { icon: "🚬", title: "Smoking" },
-                { icon: "🍷", title: "Drinking alcohol" },
-                { icon: "💧", title: "Dehydration" },
-                { icon: "🧬", title: "Genetic factors" }
+                { title: "Sun damage" },
+                { title: "Stress" },
+                { title: "Smoking" },
+                { title: "Drinking alcohol" },
+                { title: "Dehydration" },
+                { title: "Genetic factors" }
               ].map((cause, index) => (
                 <div key={index} className="text-center p-6 bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-lg border border-purple-500/30">
-                  <div className="text-4xl mb-4">{cause.icon}</div>
                   <h4 className="text-white font-semibold">{cause.title}</h4>
                 </div>
               ))}
@@ -437,7 +446,7 @@ const ForeheadLinesBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Addressing Lines and Wrinkles at CosmeDocs</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Frown Lines</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Botox for forehead lines is one of the most amazing treatments, however, to target forehead lines and achieve a creaseless forehead, 
                 there are a variety of ways to complement your treatment.
@@ -571,7 +580,7 @@ const ForeheadLinesBotox = () => {
           </div>
         </section>
 
-        {/* Why Choose CosmeDocs Section */}
+        {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -581,15 +590,10 @@ const ForeheadLinesBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Why Choose CosmeDocs</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Our aesthetics is invisible art. Bold • Natural • Always Your Way. 
-                Aesthetic medicine by CosmeDocs is minimal. Quiet, not loud. Invisible, not exaggerated. 
-                It's transformation that speaks — without saying a word.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -600,8 +604,8 @@ const ForeheadLinesBotox = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Award className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Expert Practitioners</h3>
-                <p className="text-gray-300">GMC-registered doctors with years of aesthetic medicine experience</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
               </motion.div>
 
               <motion.div
@@ -614,8 +618,17 @@ const ForeheadLinesBotox = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Advanced Training</h3>
-                <p className="text-gray-300">Continuous education and latest injection techniques</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
               </motion.div>
 
               <motion.div
@@ -626,10 +639,10 @@ const ForeheadLinesBotox = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
+                  <CheckCircle className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Natural Results</h3>
-                <p className="text-gray-300">Invisible art approach for enhancement that looks effortless</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
               </motion.div>
 
               <motion.div
@@ -640,10 +653,24 @@ const ForeheadLinesBotox = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Patient Care</h3>
-                <p className="text-gray-300">Comprehensive aftercare and ongoing support</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
@@ -799,25 +826,28 @@ const ForeheadLinesBotox = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-black">
+        {/* Call to Action */}
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Smooth Your Forehead Lines?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Book your expert consultation today and discover how our invisible art approach can transform your forehead naturally.
+              <h2 className="text-3xl font-bold mb-4">Ready to Smooth Your Forehead Lines?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your expert consultation today and discover how our invisible art approach can transform your forehead naturally with smooth, natural results.
               </p>
-              <Button 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-              >
-                Book Free Consultation
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
