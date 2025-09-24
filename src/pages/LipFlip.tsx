@@ -284,7 +284,7 @@ const LipFlip = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Lip Flip Enhancement?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                A lip flip uses botox to relax the orbicularis oris muscle around your upper lip, creating the appearance of fuller, more defined lips by allowing more of the upper lip to show.
+                A lip flip uses botox to relax the orbicularis oris muscle around your upper lip, creating the appearance of fuller, more defined lips by allowing more of the upper lip to show without adding volume.
               </p>
             </motion.div>
 
@@ -297,13 +297,23 @@ const LipFlip = () => {
             >
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding the Lip Flip Technique</CardTitle>
+                  <CardTitle className="text-white text-2xl text-center">Key Benefits of Lip Flip</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    The lip flip relaxes the muscle that causes the upper lip to curl inward, allowing more pink lip tissue to show. 
-                    This creates the illusion of fuller lips without adding volume through dermal fillers.
-                  </p>
+                <CardContent className="space-y-6">
+                  <div className="grid md:grid-cols-3 gap-4 mt-6">
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Natural Enhancement</h4>
+                      <p className="text-gray-300 text-sm">Subtle results that enhance your natural lip shape</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">No Volume Added</h4>
+                      <p className="text-gray-300 text-sm">Creates fullness appearance without dermal fillers</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Quick Treatment</h4>
+                      <p className="text-gray-300 text-sm">5-10 minute procedure with minimal downtime</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
