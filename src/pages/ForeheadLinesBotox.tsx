@@ -13,6 +13,12 @@ import {
 } from "@/components/ui/carousel";
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import foreheadRejuvenationImage from "@/assets/forehead-rejuvenation-before-after.jpeg";
+import foreheadFillerImage from "@/assets/forehead-filler-before-after.jpeg";
+import foreheadLineImage from "@/assets/forehead-line-before-after.jpeg";
+import foreheadIndentationImage from "@/assets/forehead-indentation-before-after.jpeg";
+import botoxForeheadImage from "@/assets/botox-forehead-before-after.jpeg";
+import foreheadBotoxResultsImage from "@/assets/forehead-botox-results.jpg";
 
 const ForeheadLinesBotox = () => {
   const seoData = generateSEOMetadata(
@@ -23,32 +29,32 @@ const ForeheadLinesBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/src/assets/forehead-rejuvenation-before-after.jpeg", 
+      src: foreheadRejuvenationImage, 
       alt: "Forehead fillers and botox for skin rejuvenation", 
       caption: "Forehead Filler and Botox Combination: Complete rejuvenation achieving smooth, youthful forehead contours - our aesthetics is invisible art." 
     },
     { 
-      src: "/src/assets/forehead-filler-before-after.jpeg", 
+      src: foreheadFillerImage, 
       alt: "Forehead fillers before and after comparison in patient with concavity", 
       caption: "Forehead Filler For Concave Dips: Natural volume restoration creating seamless facial harmony - bold, natural, always your way." 
     },
     { 
-      src: "/src/assets/forehead-line-before-after.jpeg", 
+      src: foreheadLineImage, 
       alt: "Forehead filler for sleep lines", 
       caption: "Forehead Line Reduction with Fillers: Precision treatment smoothing deep lines while maintaining natural expression - quiet, not loud." 
     },
     { 
-      src: "/src/assets/forehead-indentation-before-after.jpeg", 
+      src: foreheadIndentationImage, 
       alt: "Before and after images showing the reduction of dips using forehead filler", 
       caption: "Forehead Indentation Correction: Expert volumization technique eliminating concave areas for flawless forehead contour - invisible, not exaggerated." 
     },
     { 
-      src: "/src/assets/botox-forehead-before-after.jpeg", 
+      src: botoxForeheadImage, 
       alt: "Frown lines before and after Botox treatment showing smoothing effect", 
       caption: "Erase the Frown Botox Results: Advanced muscle relaxation technique creating serene, worry-free expression - transformation that speaks without saying a word." 
     },
     { 
-      src: "/src/assets/forehead-botox-results.jpg", 
+      src: foreheadBotoxResultsImage, 
       alt: "Combined effects of dermal fillers and Botox applied to forehead for facial rejuvenation", 
       caption: "Forehead Botox Before and After: Comprehensive anti-aging approach delivering natural, refreshed appearance - aesthetic medicine by Cosmedocs is minimal." 
     }
