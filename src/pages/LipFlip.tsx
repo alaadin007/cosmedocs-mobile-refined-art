@@ -283,9 +283,20 @@ const LipFlip = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Lip Flip Enhancement?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                A lip flip uses botox to relax the orbicularis oris muscle around your upper lip, creating the appearance of fuller, more defined lips by allowing more of the upper lip to show without adding volume.
-              </p>
+              <div className="text-gray-300 max-w-4xl mx-auto text-lg space-y-4">
+                <p>
+                  What is Lip Flip Botox? A Botox lip flip, a non-invasive technique, involves injecting a small amount of botulinum toxin (Botox) into the upper lip muscles.
+                </p>
+                <p>
+                  Unlike fillers, it relaxes muscles, causing the upper lip to subtly roll outward.
+                </p>
+                <p>
+                  Moreover, this procedure enhances the Cupid&apos;s bow and creates the illusion of fuller lips without adding volume. Hence, Botox lip lift is supposed to give a natural pucker and looks incredibly stunning for anyone seeking a noticeable tip lip. The treatment also costs less than a face filler.
+                </p>
+                <p className="text-purple-300 font-semibold">
+                  non surgical upper lip enhancement
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
