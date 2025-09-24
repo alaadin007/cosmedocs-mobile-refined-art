@@ -192,7 +192,7 @@ const LipFlip = () => {
                   <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">3-4 months</p>
+                <p className="text-gray-300">2-3 months</p>
               </motion.div>
 
               <motion.div
@@ -429,10 +429,10 @@ const LipFlip = () => {
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                       <p className="text-gray-300">Subtle, natural enhancement</p>
                     </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">5-10 minute treatment</p>
-                    </div>
+                     <div className="flex items-start space-x-3">
+                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                       <p className="text-gray-300">Quick 10-minute procedure</p>
+                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                       <p className="text-gray-300">Results last 2-3 months</p>
@@ -640,43 +640,6 @@ const LipFlip = () => {
           </div>
         </section>
 
-        {/* How Does Botox Work for Lip Flip */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Lip Flip?</h2>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl flex items-center justify-center gap-3">
-                      <Heart className="text-purple-400" size={28} />
-                      Muscle Relaxation for Lip Enhancement
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-8 pb-8">
-                    <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Botox relaxes the orbicularis oris muscle that causes the upper lip to curl inward, allowing more of the pink lip tissue to be visible. This creates a fuller lip appearance without adding volume, resulting in natural-looking enhancement that maintains lip mobility.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
