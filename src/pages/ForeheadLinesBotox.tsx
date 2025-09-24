@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,11 @@ const ForeheadLinesBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Forehead lines botox before and after treatment", caption: "Forehead Lines Botox Treatment: Smooth, youthful forehead with natural brow position preserved. Expert frontalis muscle relaxation - transformation that speaks without saying a word." }
+    { 
+      src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", 
+      alt: "Forehead lines botox before and after treatment", 
+      caption: "Forehead Lines Botox Treatment: Smooth, youthful forehead with natural brow position preserved. Expert frontalis muscle relaxation - transformation that speaks without saying a word." 
+    }
   ];
 
   const faqs = [
@@ -283,44 +288,26 @@ const ForeheadLinesBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What are Forehead Lines?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Forehead Lines Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                The horizontal creases across the forehead are called forehead lines, sometimes worry lines, furrows, or wrinkles. 
-                Frequent facial expressions like lifting the eyebrows or expressing emotions like surprise or concern lead to these lines. 
-                Their depth and prominence fluctuate, becoming increasingly apparent with time.
+                Forehead lines botox targets the frontalis muscle across your forehead that creates horizontal wrinkles when raising eyebrows or expressing surprise. 
+                Our invisible art approach smooths existing lines while preserving natural brow movement.
               </p>
             </motion.div>
 
+            {/* Injection Sites Section - matching frown lines structure */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              transition={{ duration: 0.6 }}
+              className="mb-12 text-center"
             >
-              <h3 className="text-2xl font-bold mb-8 text-white">Understanding Forehead Lines</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Dynamic Lines</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center">
-                      These appear only when you frown, raise your eyebrows or squint. They are caused by repeated muscle contractions.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Static Lines</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-center">
-                      These lines are visible even when your face is relaxed. They develop over time due to collagen loss, sun damage, and loss of skin elasticity.
-                    </p>
-                  </CardContent>
-                </Card>
+              <div className="mx-auto rounded-lg shadow-lg max-w-md w-full bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 p-8">
+                <h3 className="text-white text-xl font-bold mb-4">Frontalis Muscle Treatment Areas</h3>
+                <p className="text-gray-300 text-sm">
+                  Strategic injection sites across the forehead targeting the frontalis muscle for smooth, natural results.
+                </p>
               </div>
             </motion.div>
 
@@ -333,13 +320,28 @@ const ForeheadLinesBotox = () => {
             >
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding the Frontalis Muscle</CardTitle>
+                  <CardTitle className="text-white text-2xl text-center">Understanding Horizontal Lines & Key Treatment Areas</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
                     The frontalis muscle is responsible for raising your eyebrows and creating expressions of surprise or concern. 
                     When overactive, it creates deep horizontal lines across the forehead that can make you appear tired or older than you are.
                   </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-bold mb-3">Dynamic Lines</h4>
+                      <p className="text-gray-300 text-sm">
+                        These appear only when you raise your eyebrows or express surprise. They are caused by repeated frontalis muscle contractions.
+                      </p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-bold mb-3">Static Lines</h4>
+                      <p className="text-gray-300 text-sm">
+                        These lines are visible even when your face is relaxed. They develop over time due to collagen loss, sun damage, and loss of skin elasticity.
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
