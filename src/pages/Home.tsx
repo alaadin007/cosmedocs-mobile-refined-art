@@ -197,6 +197,26 @@ const Home = () => {
 
         {/* Featured Treatments Section */}
         <PopularTreatments />
+        
+        {/* View All Treatments Button */}
+        <section className="py-12 bg-gradient-to-b from-[#0A0A0A] to-black">
+          <div className="page-container">
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Button
+                onClick={() => setIsAllTreatmentsOpen(true)}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full font-medium text-lg transition-all duration-300 hover:scale-105"
+              >
+                View All Treatments
+              </Button>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Harley Street Institute Section */}
         <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-black" aria-labelledby="institute-heading">
