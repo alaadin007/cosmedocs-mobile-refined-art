@@ -608,7 +608,7 @@ const DelhiLocation = () => {
                 className="relative"
               >
                 <img 
-                  src="/lovable-uploads/e4c683bf-e91e-4ad8-9524-e86b59a7552c.png" 
+                  src="/lovable-uploads/d7bad7e3-fa9f-4357-8e4c-04ed2a494412.png" 
                   alt="Dr. Geetika - Aesthetic Medicine Specialist in Delhi"
                   className="rounded-lg shadow-2xl w-full"
                 />
@@ -643,7 +643,7 @@ const DelhiLocation = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl">
                   <img 
-                    src="/lovable-uploads/e4c683bf-e91e-4ad8-9524-e86b59a7552c.png" 
+                    src="/lovable-uploads/0e7d6308-98d0-4d70-9ed4-e2af2be0e17f.png" 
                     alt="Dr. Geetika receiving Fellowship certificate at Harley Street Institute"
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -664,7 +664,7 @@ const DelhiLocation = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl">
                   <img 
-                    src="/lovable-uploads/e4c683bf-e91e-4ad8-9524-e86b59a7552c.png" 
+                    src="/lovable-uploads/ff5d7b76-998f-49b1-8139-9f42cb469027.png" 
                     alt="Dr. Geetika performing advanced aesthetic procedure"
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -685,7 +685,7 @@ const DelhiLocation = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl">
                   <img 
-                    src="/lovable-uploads/e4c683bf-e91e-4ad8-9524-e86b59a7552c.png" 
+                    src="/lovable-uploads/c47cf752-b777-49da-b470-f6c1f7e3a292.png" 
                     alt="Dr. Geetika collaborating with Harley Street Institute mentors"
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -706,7 +706,7 @@ const DelhiLocation = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl">
                   <img 
-                    src="/lovable-uploads/e4c683bf-e91e-4ad8-9524-e86b59a7552c.png" 
+                    src="/lovable-uploads/1c79267b-6464-48f8-898d-da2e831dacfa.png" 
                     alt="Dr. Geetika performing advanced aesthetic treatments"
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
