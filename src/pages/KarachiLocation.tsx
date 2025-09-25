@@ -8,6 +8,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { generateSEOMetadata } from '@/utils/seo';
 import PopularTreatments from '@/components/PopularTreatments';
 import drKhadijaImage from '@/assets/dr-khadija-treatment-new.jpg';
+import drKhadijaClinic1 from '@/assets/dr-khadija-clinic-1.jpg';
+import drKhadijaClinic2 from '@/assets/dr-khadija-clinic-2.jpg';
+import drKhadijaClinic3 from '@/assets/dr-khadija-clinic-3.jpg';
+import drKhadijaClinic4 from '@/assets/dr-khadija-clinic-4.jpg';
 
 const KarachiLocation = () => {
   const seoData = generateSEOMetadata(
@@ -646,10 +650,10 @@ const KarachiLocation = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { image: "/src/assets/dr-khadija-fellowship.jpg", title: "Dr. Khadija receiving Fellowship certificate at Harley Street Institute" },
-                { image: "/src/assets/dr-khadija-treatment-2.jpg", title: "Dr. Khadija performing advanced aesthetic procedure" },
-                { image: "/src/assets/dr-khadija-treatment-1.jpg", title: "Dr. Khadija collaborating with team during treatment" },
-                { image: "/src/assets/dr-khadija-treatment-4.jpg", title: "Dr. Khadija performing lip enhancement treatment" }
+                { image: drKhadijaClinic1, title: "Dr. Khadija receiving Fellowship certificate at Harley Street Institute" },
+                { image: drKhadijaClinic2, title: "Dr. Khadija performing advanced aesthetic procedure" },
+                { image: drKhadijaClinic3, title: "Dr. Khadija collaborating with team during treatment" },
+                { image: drKhadijaClinic4, title: "Dr. Khadija performing lip enhancement treatment" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
