@@ -10,7 +10,7 @@ const corsHeaders = {
 const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY')!;
-const scraperApiKey = Deno.env.get('SCRAPER_API_KEY')!;
+const supadataApiKey = Deno.env.get('SUPADATA_API_KEY')!;
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -46,23 +46,30 @@ serve(async (req) => {
       });
     }
 
-    // Scrape the product page using ScraperAPI
+    // Scrape the product page using Supadata API
     console.log('Scraping product page...');
     
-    // Validate ScraperAPI key
-    if (!scraperApiKey) {
-      throw new Error('SCRAPER_API_KEY not configured');
+    // Validate Supadata API key
+    if (!supadataApiKey) {
+      throw new Error('SUPADATA_API_KEY not configured');
     }
     
-    const scraperResponse = await fetch(`http://api.scraperapi.com?api_key=${scraperApiKey}&url=${encodeURIComponent(productUrl)}&render=true`);
+    const supadataResponse = await fetch(`https://api.supadata.ai/v1/web/scrape?url=${encodeURIComponent(productUrl)}`, {
+      method: 'GET',
+      headers: {
+        'x-api-key': supadataApiKey,
+        'Content-Type': 'application/json'
+      }
+    });
     
-    if (!scraperResponse.ok) {
-      const errorText = await scraperResponse.text();
-      console.error('ScraperAPI error:', errorText);
-      throw new Error(`Failed to scrape page: ${scraperResponse.status} - ${errorText}`);
+    if (!supadataResponse.ok) {
+      const errorText = await supadataResponse.text();
+      console.error('Supadata API error:', errorText);
+      throw new Error(`Failed to scrape page: ${supadataResponse.status} - ${errorText}`);
     }
 
-    const htmlContent = await scraperResponse.text();
+    const scrapedData = await supadataResponse.json();
+    const htmlContent = scrapedData.content || '';
     console.log('Successfully scraped page content');
 
     // Extract relevant product information from HTML
