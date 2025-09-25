@@ -8,10 +8,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { generateSEOMetadata } from '@/utils/seo';
 import PopularTreatments from '@/components/PopularTreatments';
 import drKhadijaImage from '@/assets/dr-khadija-treatment-new.jpg';
-import drKhadijaClinic1 from '@/assets/dr-khadija-clinic-1.jpg';
-import drKhadijaClinic2 from '@/assets/dr-khadija-clinic-2.jpg';
-import drKhadijaClinic3 from '@/assets/dr-khadija-clinic-3.jpg';
-import drKhadijaClinic4 from '@/assets/dr-khadija-clinic-4.jpg';
+import khFellowship from '@/assets/karachi-hsi-fellowship.png';
+import khTreat1 from '@/assets/karachi-hsi-treatment-1.png';
+import khTreat2 from '@/assets/karachi-hsi-treatment-2.png';
+import khTreat3 from '@/assets/karachi-hsi-treatment-3.png';
+import khRhinoplasty from '@/assets/karachi-hsi-before-after-rhinoplasty.png';
 
 const KarachiLocation = () => {
   const seoData = generateSEOMetadata(
@@ -650,10 +651,11 @@ const KarachiLocation = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { image: drKhadijaClinic1, title: "Dr. Khadija receiving Fellowship certificate at Harley Street Institute" },
-                { image: drKhadijaClinic2, title: "Dr. Khadija performing advanced aesthetic procedure" },
-                { image: drKhadijaClinic3, title: "Dr. Khadija collaborating with team during treatment" },
-                { image: drKhadijaClinic4, title: "Dr. Khadija performing lip enhancement treatment" }
+                { image: khFellowship, title: "Fellowship in Aesthetic Medicine — Harley Street Institute" },
+                { image: khTreat3, title: "Precise botulinum toxin treatment at Cosmedocs Karachi" },
+                { image: khTreat2, title: "Dermal filler procedure under clinical lighting" },
+                { image: khTreat1, title: "Advanced aesthetic injection training — Harley Street Institute" },
+                { image: drKhadijaImage, title: "Dr Khadija performing facial aesthetics — Karachi clinic" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -667,6 +669,7 @@ const KarachiLocation = () => {
                     <img 
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -697,12 +700,7 @@ const KarachiLocation = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { beforeAfter: "/src/assets/dr-khadija-rhinoplasty-result.jpg", treatment: "Non-Surgical Rhinoplasty", description: "Natural nose reshaping with dermal fillers for refined profile" },
-                { beforeAfter: "/src/assets/before-after-polynucleotide-face.jpg", treatment: "Polynucleotide Face & Eye Rejuvenation", description: "Advanced skin rejuvenation with polynucleotides for natural anti-aging" },
-                { beforeAfter: "/src/assets/before-after-polynucleotide-eyes.jpg", treatment: "Polynucleotide Eye Rejuvenation", description: "Targeted under-eye treatment for youthful, refreshed appearance" },
-                { beforeAfter: "/src/assets/before-after-jawline-fillers.jpg", treatment: "Chin & Jawline Contouring", description: "Dermal fillers for enhanced facial definition and profile" },
-                { beforeAfter: "/src/assets/lip-enhancement-treatment.jpg", treatment: "Lip Enhancement", description: "Natural lip augmentation for subtle definition" },
-                { beforeAfter: "/src/assets/anti-wrinkle-treatment.jpg", treatment: "Anti-Wrinkle Treatment", description: "Forehead lines smoothed with precise Botox application" }
+                { beforeAfter: khRhinoplasty, treatment: "Non‑surgical Rhinoplasty", description: "Natural nose reshaping with dermal fillers for a refined profile" }
               ].map((result, index) => (
                 <motion.div
                   key={index}
@@ -713,7 +711,7 @@ const KarachiLocation = () => {
                   className="bg-gray-900/50 rounded-2xl overflow-hidden"
                 >
                   <div className="relative">
-                    <img src={result.beforeAfter} alt={`${result.treatment} - Before and After comparison`} className="w-full h-48 object-cover" />
+                    <img src={result.beforeAfter} alt={`${result.treatment} - Before and After comparison`} loading="lazy" className="w-full h-48 object-cover" />
                   </div>
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-2">{result.treatment}</h3>
