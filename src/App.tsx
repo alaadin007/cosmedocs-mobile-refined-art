@@ -35,10 +35,7 @@ import AcneTreatment from "./pages/AcneTreatment";
 import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
 import DermalFillers from "./pages/DermalFillers";
 import NefertitiBotoxFacelift from "./pages/NefertitiBotoxFacelift";
-import AdvancedUpperFaceBotox from "./pages/AdvancedUpperFaceBotox";
-import FaceBotoxAreas from "./pages/FaceBotoxAreas";
 import FaceBotox from "./pages/FaceBotox";
-import LowerFaceBotox from "./pages/LowerFaceBotox";
 import AdvancedConsultation from "./pages/AdvancedConsultation";
 import FellowshipInvitation from "./pages/FellowshipInvitation";
 import LongTermAestheticCareBlog from "./pages/LongTermAestheticCareBlog";
@@ -164,10 +161,10 @@ const App = () => {
               
               <Route path="/nefertiti-botox-facelift" element={<NefertitiBotoxFacelift />} />
               <Route path="/nefertiti-botox-face-jaw-lift" element={<NefertitiBotoxFacelift />} />
-              <Route path="/advanced-upper-face-botox" element={<AdvancedUpperFaceBotox />} />
-              <Route path="/face-botox-areas" element={<FaceBotoxAreas />} />
+              <Route path="/advanced-upper-face-botox" element={<Navigate to="/face-botox" replace />} />
+              <Route path="/face-botox-areas" element={<Navigate to="/face-botox" replace />} />
               <Route path="/face-botox" element={<FaceBotox />} />
-              <Route path="/lower-face-botox" element={<LowerFaceBotox />} />
+              <Route path="/lower-face-botox" element={<Navigate to="/face-botox" replace />} />
               <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
               <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
               <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />
