@@ -7,7 +7,7 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.3 (519615d)"
@@ -197,6 +197,7 @@ export type Database = {
       product_analyses: {
         Row: {
           active_ingredients: Json | null
+          analysis_data: Json | null
           benefits: string[] | null
           category: string | null
           category_ratings: Json | null
@@ -207,8 +208,10 @@ export type Database = {
           issues: string[] | null
           last_scraped: string | null
           last_updated: string | null
+          overall_score: number | null
           ph_level: number | null
           price: string | null
+          product_brand: string | null
           product_name: string | null
           product_url: string
           rating: number | null
@@ -221,6 +224,7 @@ export type Database = {
         }
         Insert: {
           active_ingredients?: Json | null
+          analysis_data?: Json | null
           benefits?: string[] | null
           category?: string | null
           category_ratings?: Json | null
@@ -231,8 +235,10 @@ export type Database = {
           issues?: string[] | null
           last_scraped?: string | null
           last_updated?: string | null
+          overall_score?: number | null
           ph_level?: number | null
           price?: string | null
+          product_brand?: string | null
           product_name?: string | null
           product_url?: string
           rating?: number | null
@@ -245,6 +251,7 @@ export type Database = {
         }
         Update: {
           active_ingredients?: Json | null
+          analysis_data?: Json | null
           benefits?: string[] | null
           category?: string | null
           category_ratings?: Json | null
@@ -255,8 +262,10 @@ export type Database = {
           issues?: string[] | null
           last_scraped?: string | null
           last_updated?: string | null
+          overall_score?: number | null
           ph_level?: number | null
           price?: string | null
+          product_brand?: string | null
           product_name?: string | null
           product_url?: string
           rating?: number | null

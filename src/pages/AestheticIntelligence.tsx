@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface ProductAnalysis {
   id: string;
-  product_name: string;
+  product_name: string | null;
   product_brand: string | null;
   product_url: string;
   analysis_data: any;
