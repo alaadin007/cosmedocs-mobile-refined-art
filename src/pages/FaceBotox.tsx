@@ -1065,7 +1065,7 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* What Makes A Good Botox Clinic Section */}
+        {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -1075,96 +1075,88 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">What Makes A Good Botox London Clinic?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                At CosmeDocs, located in the heart of Harley Street, we are recognised as a leading Botox London clinic due to several distinguishing features.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-purple-500/20 rounded-full">
-                      <Award className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">Expertise & Experience</h3>
-                  </div>
-                  <p className="text-gray-300">
-                    Our highly trained and certified professionals specialise in administering Botox injections. They possess extensive knowledge of facial anatomy and tailor each treatment precisely to meet your needs.
-                  </p>
-                </CardContent>
-              </Card>
 
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-purple-500/20 rounded-full">
-                      <Shield className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">Quality of Care</h3>
-                  </div>
-                  <p className="text-gray-300">
-                    As a trusted Harley Street Botox provider, we are committed to patient safety. We use only the highest quality, FDA-approved Botox products and adhere to stringent sanitary protocols.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
 
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-purple-500/20 rounded-full">
-                      <Users className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">Personalised Treatments</h3>
-                  </div>
-                  <p className="text-gray-300">
-                    We understand that each client has unique concerns and goals. Our personalised Botox treatments are designed to deliver natural-looking results that enhance your features and maintain your natural expressions.
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
 
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-purple-500/20 rounded-full">
-                      <Star className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">Patient Satisfaction</h3>
-                  </div>
-                  <p className="text-gray-300">
-                    Our high patient satisfaction rates reflect our commitment to excellence. CosmeDocs is renowned for delivering consistent, outstanding results, as evidenced by our numerous positive testimonials.
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved Botox only</p>
+              </motion.div>
 
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-purple-500/20 rounded-full">
-                      <Heart className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">Follow-Up Care</h3>
-                  </div>
-                  <p className="text-gray-300">
-                    We believe in comprehensive care beyond the treatment room. Our aftercare service includes detailed advice on post-treatment care and scheduling follow-up appointments to ensure optimal results and satisfaction.
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
 
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-purple-500/20 rounded-full">
-                      <MapPin className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">Harley Street Location</h3>
-                  </div>
-                  <p className="text-gray-300">
-                    Located in the heart of London's prestigious Harley Street, our clinic provides a professional and welcoming environment for your aesthetic journey.
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
             </div>
           </div>
         </section>
