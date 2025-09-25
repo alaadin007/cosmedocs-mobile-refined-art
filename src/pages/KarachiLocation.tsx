@@ -648,7 +648,7 @@ const KarachiLocation = () => {
                 { image: "/src/assets/dr-khadija-fellowship.jpg", title: "Dr. Khadija receiving Fellowship certificate at Harley Street Institute" },
                 { image: "/src/assets/dr-khadija-treatment-2.jpg", title: "Dr. Khadija performing advanced aesthetic procedure" },
                 { image: "/src/assets/dr-khadija-treatment-1.jpg", title: "Dr. Khadija collaborating with team during treatment" },
-                { image: "/src/assets/dr-khadija-treatment-3.jpg", title: "Dr. Khadija performing precise injection treatments" }
+                { image: "/src/assets/dr-khadija-treatment-4.jpg", title: "Dr. Khadija performing lip enhancement treatment" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -693,11 +693,11 @@ const KarachiLocation = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { beforeAfter: "/src/assets/dr-khadija-rhinoplasty-result.jpg", treatment: "Non-Surgical Rhinoplasty", description: "Natural nose reshaping with dermal fillers for refined profile" },
+                { beforeAfter: "/src/assets/before-after-polynucleotide-face.jpg", treatment: "Polynucleotide Face & Eye Rejuvenation", description: "Advanced skin rejuvenation with polynucleotides for natural anti-aging" },
+                { beforeAfter: "/src/assets/before-after-polynucleotide-eyes.jpg", treatment: "Polynucleotide Eye Rejuvenation", description: "Targeted under-eye treatment for youthful, refreshed appearance" },
+                { beforeAfter: "/src/assets/before-after-jawline-fillers.jpg", treatment: "Chin & Jawline Contouring", description: "Dermal fillers for enhanced facial definition and profile" },
                 { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Lip Enhancement", description: "Natural lip augmentation for subtle definition" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Anti-Wrinkle Treatment", description: "Forehead lines smoothed with precise Botox application" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Facial Contouring", description: "Cheek enhancement with dermal fillers" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Jawline Definition", description: "Non-surgical jaw enhancement" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Under-Eye Rejuvenation", description: "Tear trough treatment for youthful eyes" }
+                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Anti-Wrinkle Treatment", description: "Forehead lines smoothed with precise Botox application" }
               ].map((result, index) => (
                 <motion.div
                   key={index}
