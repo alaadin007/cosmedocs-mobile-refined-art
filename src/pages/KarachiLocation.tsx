@@ -7,7 +7,7 @@ import { Star, Clock, Shield, Award, Check, ArrowRight, Phone, Mail, MessageCirc
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { generateSEOMetadata } from '@/utils/seo';
 import PopularTreatments from '@/components/PopularTreatments';
-import drKhadijaImage from '@/assets/dr-khadija-karachi.jpg';
+import drKhadijaImage from '@/assets/dr-khadija-treatment-new.jpg';
 
 const KarachiLocation = () => {
   const seoData = generateSEOMetadata(
