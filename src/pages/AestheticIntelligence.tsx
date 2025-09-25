@@ -29,10 +29,19 @@ interface ProductInput {
 const AestheticIntelligence = () => {
   const [productInputs, setProductInputs] = useState<ProductInput[]>([{ url: '' }]);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
   const [analyses, setAnalyses] = useState<ProductAnalysis[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedAnalysis, setExpandedAnalysis] = useState<string | null>(null);
   const { toast } = useToast();
+
+  const analysisSteps = [
+    { title: "Web Scraping Initiated", description: "Extracting ingredient data from product page..." },
+    { title: "Chemical Structure Analysis", description: "Analyzing molecular composition and carbon ring structures..." },
+    { title: "Concentration Assessment", description: "Evaluating active ingredient concentrations and bioavailability..." },
+    { title: "Interaction Matrix Calculation", description: "Computing ingredient synergies and contraindications..." },
+    { title: "CosmeDocs AI Evaluation", description: "Generating professional dermatological assessment..." }
+  ];
 
   useEffect(() => {
     fetchPreviousAnalyses();
@@ -88,14 +97,32 @@ const AestheticIntelligence = () => {
     }
 
     setIsAnalyzing(true);
+    setCurrentStep(0);
 
     try {
-      const promises = validInputs.map(async (input) => {
+      const promises = validInputs.map(async (input, index) => {
+        // Simulate step progression for better UX
+        for (let step = 0; step < analysisSteps.length; step++) {
+          setCurrentStep(step);
+          // Add delay between steps for visual effect
+          if (step < analysisSteps.length - 1) {
+            await new Promise(resolve => setTimeout(resolve, 1500));
+          }
+        }
+
         const { data, error } = await supabase.functions.invoke('product-analyzer', {
           body: { productUrl: input.url }
         });
 
-        if (error) throw error;
+        if (error) {
+          console.error('Analysis error:', error);
+          throw error;
+        }
+        
+        if (!data.success) {
+          throw new Error(data.error || 'Analysis failed');
+        }
+        
         return data;
       });
 
@@ -116,11 +143,12 @@ const AestheticIntelligence = () => {
       console.error('Error analyzing products:', error);
       toast({
         title: "Analysis Failed",
-        description: "Failed to analyze products. Please try again.",
+        description: error instanceof Error ? error.message : "Failed to analyze products. Please try again.",
         variant: "destructive",
       });
     } finally {
       setIsAnalyzing(false);
+      setCurrentStep(0);
     }
   };
 
@@ -326,10 +354,10 @@ const AestheticIntelligence = () => {
                       className="flex items-center gap-2 bg-primary hover:bg-primary/90 h-11 px-6"
                     >
                       {isAnalyzing ? (
-                        <>
+                        <div className="flex items-center gap-2">
                           <Loader2 className="h-4 w-4 animate-spin" />
-                          Analyzing...
-                        </>
+                          <span>Step {currentStep + 1}/5: {analysisSteps[currentStep]?.title}</span>
+                        </div>
                       ) : (
                         <>
                           <Beaker className="h-4 w-4" />
@@ -337,6 +365,61 @@ const AestheticIntelligence = () => {
                         </>
                       )}
                     </Button>
+                  )}
+
+                  {/* Analysis Progress */}
+                  {isAnalyzing && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="mt-6 p-6 bg-card border rounded-lg"
+                    >
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-3">
+                          <div className="relative">
+                            <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                            <div className="absolute inset-0 animate-pulse">
+                              <Beaker className="h-6 w-6 text-primary/30" />
+                            </div>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-lg">{analysisSteps[currentStep]?.title}</h3>
+                            <p className="text-muted-foreground text-sm">{analysisSteps[currentStep]?.description}</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-sm">
+                            <span>Progress</span>
+                            <span>{currentStep + 1}/{analysisSteps.length}</span>
+                          </div>
+                          <div className="w-full bg-muted rounded-full h-2">
+                            <motion.div 
+                              className="bg-primary h-2 rounded-full"
+                              initial={{ width: 0 }}
+                              animate={{ width: `${((currentStep + 1) / analysisSteps.length) * 100}%` }}
+                              transition={{ duration: 0.5 }}
+                            />
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-5 gap-2 mt-4">
+                          {analysisSteps.map((step, index) => (
+                            <div 
+                              key={index}
+                              className={`text-center p-2 rounded-lg text-xs transition-all ${
+                                index <= currentStep 
+                                  ? 'bg-primary/10 text-primary border border-primary/20' 
+                                  : 'bg-muted text-muted-foreground'
+                              }`}
+                            >
+                              <div className="font-medium">{step.title.split(' ')[0]}</div>
+                              <div className="opacity-75">{step.title.split(' ').slice(1).join(' ')}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
                   )}
                 </div>
 

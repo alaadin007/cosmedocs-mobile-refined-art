@@ -51,8 +51,11 @@ serve(async (req) => {
     
     // Validate Supadata API key
     if (!supadataApiKey) {
+      console.error('SUPADATA_API_KEY is not configured');
       throw new Error('SUPADATA_API_KEY not configured');
     }
+    
+    console.log('Using Supadata API key (first 10 chars):', supadataApiKey.substring(0, 10) + '...');
     
     const supadataResponse = await fetch(`https://api.supadata.ai/v1/web/scrape?url=${encodeURIComponent(productUrl)}`, {
       method: 'GET',
@@ -171,6 +174,12 @@ Provide a complete analysis following the CosmeDocs methodology and return the r
 
   } catch (error) {
     console.error('Error in product-analyzer function:', error);
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : 'No stack trace',
+      supadataKeyExists: !!supadataApiKey,
+      openAIKeyExists: !!openAIApiKey
+    });
     return new Response(JSON.stringify({ 
       success: false, 
       error: error instanceof Error ? error.message : 'Unknown error' 
