@@ -216,14 +216,15 @@ Provide a comprehensive analysis following the Three-Cell Approach, scoring rubr
     }
 
     // Store the analysis in the database
+    const productData = analysisData.products[0]; // Get the first product from the analysis
     const { error: insertError } = await supabase
       .from('product_analyses')
       .insert({
-        product_name: analysisData.product_name || inferredName,
-        product_brand: analysisData.brand || 'Unknown Brand',
+        product_name: productData.name || inferredName,
+        product_brand: productData.brand || 'Unknown Brand',
         product_url: productUrl,
         analysis_data: analysisData,
-        overall_score: analysisData.overall_score || 0
+        overall_score: productData.scores.final_score_0to10 || 0
       });
 
     if (insertError) {
