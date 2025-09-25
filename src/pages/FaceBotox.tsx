@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check, Activity, Syringe, GraduationCap, Palette } from "lucide-react";
+import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check, Activity, Syringe, GraduationCap, Palette, Brain, Droplets, RefreshCw, User, Sparkles } from "lucide-react";
 import PopularTreatments from '@/components/PopularTreatments';
 
 export default function FaceBotox() {
@@ -765,8 +765,460 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Professional Training */}
+        {/* Baby Botox/Microtox Section */}
+        <section className="py-20 bg-gray-800">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Natural Baby Botox: Subtle Enhancement</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Microtox, or Baby Botox, employs meticulous microneedle injections with small doses of botulinum toxin for a gentle, natural anti-ageing outcome.
+              </p>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-semibold mb-6 text-white">Perfect for First-Time Clients</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Sparkles className="w-5 h-5 text-purple-400 mt-1" />
+                    <div>
+                      <h4 className="font-semibold mb-2 text-white">Gentle Approach</h4>
+                      <p className="text-gray-300">
+                        Addressing crow's feet, forehead lines, glabella, and bunny lines with precision microneedles.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Eye className="w-5 h-5 text-purple-400 mt-1" />
+                    <div>
+                      <h4 className="font-semibold mb-2 text-white">Natural Expression</h4>
+                      <p className="text-gray-300">
+                        This technique avoids the frozen look, ensuring a natural appearance that maintains your character.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Shield className="w-5 h-5 text-purple-400 mt-1" />
+                    <div>
+                      <h4 className="font-semibold mb-2 text-white">Expert Technique</h4>
+                      <p className="text-gray-300">
+                        Our CosmeDocs clinic in London prioritises achieving an unobtrusive, non-overdone effect most patients desire.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">Baby Botox Benefits</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Subtle, natural-looking results</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Maintains facial expressions</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Perfect introduction to Botox</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Preventative anti-ageing</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Minimal downtime</span>
+                    </li>
+                  </ul>
+                  <div className="mt-6 p-4 bg-purple-900/30 rounded-lg">
+                    <p className="text-sm text-purple-200 italic">
+                      "Retain your character, release only the timeless wrinkles"
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* How Botox Works Section */}
         <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">How Does Botox Work?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the science behind Botox helps you make informed decisions about your treatment.
+              </p>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-gray-900/50 border-gray-700 text-center">
+                <CardContent className="p-6">
+                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">Nerve Activity</h3>
+                  <p className="text-gray-300">
+                    Botox works to reduce nerve activity that leads to muscle contraction, creating dynamic wrinkles.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-gray-700 text-center">
+                <CardContent className="p-6">
+                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
+                    <Activity className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">Multiple Applications</h3>
+                  <p className="text-gray-300">
+                    Effective for wrinkles, sweat production (hyperhidrosis), and capillary dilation (blushing/flushing).
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-gray-700 text-center">
+                <CardContent className="p-6">
+                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
+                    <Target className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">Precise Treatment</h3>
+                  <p className="text-gray-300">
+                    Targeted injections block nerve signals to specific muscles, allowing for precise facial contouring.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Medical Botox Applications */}
+        <section className="py-20 bg-gray-800">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Medical Botox Injections</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Botox isn't just for cosmetic enhancement - it's a proven medical treatment for various conditions.
+              </p>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="bg-gray-900/50 border-blue-500/30 text-center hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-6">
+                  <div className="p-3 bg-blue-500/20 rounded-full w-fit mx-auto mb-4">
+                    <Heart className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Bruxism & TMJ</h3>
+                  <p className="text-sm text-gray-300">
+                    Effective treatment for jaw pain, teeth grinding, and TMJ disorders.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-green-500/30 text-center hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-6">
+                  <div className="p-3 bg-green-500/20 rounded-full w-fit mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-green-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Migraines</h3>
+                  <p className="text-sm text-gray-300">
+                    FDA-approved treatment for chronic migraines and tension headaches.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-orange-500/30 text-center hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-6">
+                  <div className="p-3 bg-orange-500/20 rounded-full w-fit mx-auto mb-4">
+                    <Droplets className="w-8 h-8 text-orange-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Hyperhidrosis</h3>
+                  <p className="text-sm text-gray-300">
+                    Effective solution for excessive sweating in underarms, palms, and feet.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-purple-500/30 text-center hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-6">
+                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
+                    <RefreshCw className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Facial Asymmetry</h3>
+                  <p className="text-sm text-gray-300">
+                    Corrective treatment for conditions like Bell's Palsy and facial imbalances.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* What Makes A Good Botox Clinic Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">What Makes A Good Botox London Clinic?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                At CosmeDocs, located in the heart of Harley Street, we are recognised as a leading Botox London clinic due to several distinguishing features.
+              </p>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-purple-500/20 rounded-full">
+                      <Award className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Expertise & Experience</h3>
+                  </div>
+                  <p className="text-gray-300">
+                    Our highly trained and certified professionals specialise in administering Botox injections. They possess extensive knowledge of facial anatomy and tailor each treatment precisely to meet your needs.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-purple-500/20 rounded-full">
+                      <Shield className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Quality of Care</h3>
+                  </div>
+                  <p className="text-gray-300">
+                    As a trusted Harley Street Botox provider, we are committed to patient safety. We use only the highest quality, FDA-approved Botox products and adhere to stringent sanitary protocols.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-purple-500/20 rounded-full">
+                      <Users className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Personalised Treatments</h3>
+                  </div>
+                  <p className="text-gray-300">
+                    We understand that each client has unique concerns and goals. Our personalised Botox treatments are designed to deliver natural-looking results that enhance your features and maintain your natural expressions.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-purple-500/20 rounded-full">
+                      <Star className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Patient Satisfaction</h3>
+                  </div>
+                  <p className="text-gray-300">
+                    Our high patient satisfaction rates reflect our commitment to excellence. CosmeDocs is renowned for delivering consistent, outstanding results, as evidenced by our numerous positive testimonials.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-purple-500/20 rounded-full">
+                      <Heart className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Follow-Up Care</h3>
+                  </div>
+                  <p className="text-gray-300">
+                    We believe in comprehensive care beyond the treatment room. Our aftercare service includes detailed advice on post-treatment care and scheduling follow-up appointments to ensure optimal results and satisfaction.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-purple-500/20 rounded-full">
+                      <MapPin className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Harley Street Location</h3>
+                  </div>
+                  <p className="text-gray-300">
+                    Located in the heart of London's prestigious Harley Street, our clinic provides a professional and welcoming environment for your aesthetic journey.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Reviews Section */}
+        <section className="py-20 bg-gray-800">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Client Reviews</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Hear what our satisfied clients have to say about their Botox experience at CosmeDocs.
+              </p>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">
+                    "I've had three facial areas treated with Anti-Wrinkle Injection at CosmeDocs in recent years, and find the treatment swift, thorough and effective. Also, Dr Haq's pleasant and friendly manner makes the treatment as painless as possible!"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <User className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white">Sarah M.</p>
+                      <p className="text-sm text-gray-400">Verified Patient</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">
+                    "I had a facial aesthetic treatment with cosmodocs. I found the price very reasonable. Even better the results were excellent. I will definitely use this service again."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <User className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white">James L.</p>
+                      <p className="text-sm text-gray-400">Verified Patient</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center mt-8">
+              <Button variant="outline" className="border-purple-300 text-purple-300 hover:bg-purple-300 hover:text-black">
+                Read More Reviews
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced FAQ Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Common questions about Botox treatments answered by our expert practitioners.
+              </p>
+            </motion.div>
+            
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="safety" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">Is Botox safe?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300">
+                    Botox is approved by the Food & Drug Administration in the US and the UK (MHRA). As a muscle relaxant with an extensive record of application in medicine, botulinum toxin BOTOX has an outstanding safety record. It has been used successfully for young and mature patients in various medical conditions throughout the past 40 years. To ensure successful and safe results from your Botox treatments, they must be performed by trained physicians.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="pain" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">Does Botox hurt?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300">
+                    Botox injections are usually not painful. Many patients report experiencing no discomfort during the procedure. At CosmeDocs, the doctors use the smallest needles in the industry, known as "invisible needles," for London Botox to minimise discomfort. When combined with the application of a numbing cream, most patients report that the injection during the procedure feels like a mosquito bite.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="timeline" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">How long does it take for Botox to work?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300">
+                    The full effects of the Botox treatment typically take up to 14 days to show up and can last for four to six months. Various factors may affect the time frame including the treatment area, thickness of the muscle, and the dose of Botox.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="frequency" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">How often do you need Botox?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300">
+                    Typically, Botox injections last for about 4-6 months. The frequency of Botox treatments varies depending on individual factors such as age, skin condition, and treatment goals. Individuals see increased longevity with subsequent treatments.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="suitable" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">Who is a suitable candidate for Botox injections?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300">
+                    Botox in London is safe and effective for patients 18 years and older. However, our experts suggest this anti-wrinkle treatment to prevent lines and wrinkles from mid-20s onwards. Botox is also an effective preventative aesthetic treatment to delay the onset of wrinkles and ageing. However, there are certain cases in which Botox treatments are not advisable if you are pregnant or breastfeeding.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="cost" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">How much is Botox in London?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300">
+                    Botox London treatment prices vary depending on the practitioner's experience. At CosmeDocs Harley Street Clinic in London, Botox costs start from £175 for one area, £275 for two areas, and £350 for three areas.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Professional Training */}
+        <section className="py-20 bg-gray-800">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 text-white">Professional Training Available</h2>
