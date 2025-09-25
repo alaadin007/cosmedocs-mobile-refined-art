@@ -5,11 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Loader2, Search, Plus, Trash2, Beaker, ChevronDown, ChevronUp } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Loader2, Search, Beaker, Star, ExternalLink, Calendar } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
-import CosmeticAnalysisResults from "@/components/CosmeticAnalysisResults";
 
 interface ProductAnalysis {
   id: string;
@@ -26,14 +25,31 @@ interface ProductInput {
   name?: string;
 }
 
+interface ProductCategory {
+  id: string;
+  name: string;
+  keywords: string[];
+}
+
 const AestheticIntelligence = () => {
-  const [productInputs, setProductInputs] = useState<ProductInput[]>([{ url: '' }]);
+  const [productUrl, setProductUrl] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [analyses, setAnalyses] = useState<ProductAnalysis[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedAnalysis, setExpandedAnalysis] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState('all');
   const { toast } = useToast();
+
+  const categories: ProductCategory[] = [
+    { id: 'all', name: 'All Products', keywords: [] },
+    { id: 'exfoliants', name: 'Exfoliants', keywords: ['acid', 'glycolic', 'salicylic', 'lactic', 'mandelic', 'exfoliat', 'peel'] },
+    { id: 'antioxidants', name: 'Antioxidants', keywords: ['vitamin c', 'vitamin e', 'niacinamide', 'retinol', 'ascorbic', 'tocopherol', 'antioxidant'] },
+    { id: 'stimulants', name: 'Stimulants', keywords: ['peptide', 'retinol', 'copper', 'collagen', 'elastin', 'growth factor'] },
+    { id: 'cleansers', name: 'Cleansers', keywords: ['cleanser', 'wash', 'foam', 'gel', 'oil cleanser', 'micellar'] },
+    { id: 'oil-control', name: 'Oil Control', keywords: ['oil control', 'sebum', 'mattifying', 'pore', 'niacinamide', 'zinc'] },
+    { id: 'moisturisers', name: 'Moisturisers', keywords: ['moistur', 'cream', 'lotion', 'hydrating', 'hyaluronic'] },
+    { id: 'serums', name: 'Serums', keywords: ['serum', 'treatment', 'concentrate', 'essence'] }
+  ];
 
   const analysisSteps = [
     { title: "Web Scraping Initiated", description: "Extracting ingredient data from product page..." },
@@ -67,30 +83,11 @@ const AestheticIntelligence = () => {
     }
   };
 
-  const addProductInput = () => {
-    setProductInputs([...productInputs, { url: '' }]);
-  };
-
-  const removeProductInput = (index: number) => {
-    if (productInputs.length > 1) {
-      const newInputs = productInputs.filter((_, i) => i !== index);
-      setProductInputs(newInputs);
-    }
-  };
-
-  const updateProductInput = (index: number, field: keyof ProductInput, value: string) => {
-    const newInputs = [...productInputs];
-    newInputs[index] = { ...newInputs[index], [field]: value };
-    setProductInputs(newInputs);
-  };
-
-  const analyzeProducts = async () => {
-    const validInputs = productInputs.filter(input => input.url.trim());
-    
-    if (validInputs.length === 0) {
+  const analyzeProduct = async () => {
+    if (!productUrl.trim()) {
       toast({
-        title: "No Products",
-        description: "Please enter at least one product URL",
+        title: "No Product URL",
+        description: "Please enter a product URL to analyse",
         variant: "destructive",
       });
       return;
@@ -100,53 +97,43 @@ const AestheticIntelligence = () => {
     setCurrentStep(0);
 
     try {
-      const promises = validInputs.map(async (input, index) => {
-        // Simulate step progression for better UX
-        for (let step = 0; step < analysisSteps.length; step++) {
-          setCurrentStep(step);
-          // Add delay between steps for visual effect
-          if (step < analysisSteps.length - 1) {
-            await new Promise(resolve => setTimeout(resolve, 1500));
-          }
+      // Simulate step progression for better UX
+      for (let step = 0; step < analysisSteps.length; step++) {
+        setCurrentStep(step);
+        if (step < analysisSteps.length - 1) {
+          await new Promise(resolve => setTimeout(resolve, 1200));
         }
+      }
 
-        const { data, error } = await supabase.functions.invoke('cosmetic-analyzer', {
-          body: { 
-            productUrl: input.url,
-            productName: input.name 
-          }
-        });
-
-        if (error) {
-          console.error('Analysis error:', error);
-          throw error;
-        }
-        
-        if (!data.success) {
-          throw new Error(data.error || 'Analysis failed');
-        }
-        
-        return data;
+      const { data, error } = await supabase.functions.invoke('cosmetic-analyzer', {
+        body: { productUrl: productUrl }
       });
 
-      const results = await Promise.all(promises);
+      if (error) {
+        console.error('Analysis error:', error);
+        throw error;
+      }
+      
+      if (!data.success) {
+        throw new Error(data.error || 'Analysis failed');
+      }
       
       toast({
         title: "Analysis Complete",
-        description: `Successfully analyzed ${results.length} product(s)`,
+        description: "Successfully analysed product",
       });
 
       // Refresh the analyses list
       await fetchPreviousAnalyses();
       
-      // Reset inputs
-      setProductInputs([{ url: '' }]);
+      // Reset input
+      setProductUrl('');
 
     } catch (error) {
-      console.error('Error analyzing products:', error);
+      console.error('Error analysing product:', error);
       toast({
         title: "Analysis Failed",
-        description: error instanceof Error ? error.message : "Failed to analyze products. Please try again.",
+        description: error instanceof Error ? error.message : "Failed to analyse product. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -155,10 +142,40 @@ const AestheticIntelligence = () => {
     }
   };
 
-  const filteredAnalyses = analyses.filter(analysis =>
-    (analysis.product_name && analysis.product_name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-    (analysis.product_brand && analysis.product_brand.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+  const getProductCategory = (analysis: ProductAnalysis): string => {
+    const productName = (analysis.product_name || '').toLowerCase();
+    const analysisData = analysis.analysis_data;
+    let productDescription = '';
+    
+    if (analysisData?.products?.[0]) {
+      const product = analysisData.products[0];
+      productDescription = [
+        product.category || '',
+        product.name || '',
+        ...(product.ingredients?.inci_list || [])
+      ].join(' ').toLowerCase();
+    }
+    
+    const searchText = `${productName} ${productDescription}`;
+    
+    for (const category of categories) {
+      if (category.id === 'all') continue;
+      if (category.keywords.some(keyword => searchText.includes(keyword.toLowerCase()))) {
+        return category.id;
+      }
+    }
+    return 'other';
+  };
+
+  const filteredAnalyses = analyses.filter(analysis => {
+    const matchesSearch = !searchTerm || 
+      (analysis.product_name && analysis.product_name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      (analysis.product_brand && analysis.product_brand.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesCategory = activeCategory === 'all' || getProductCategory(analysis) === activeCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
 
   const getScoreColor = (score: number) => {
     if (score >= 8) return 'text-green-600';
@@ -169,17 +186,22 @@ const AestheticIntelligence = () => {
 
   const formatAnalysisDisplay = (analysisData: any) => {
     if (!analysisData || !analysisData.products || analysisData.products.length === 0) {
-      return { summary: 'No detailed analysis available', details: null };
+      return { 
+        summary: 'No detailed analysis available', 
+        keyActives: [],
+        ingredientCount: 0,
+        category: 'Unknown'
+      };
     }
 
     const product = analysisData.products[0];
     
     return {
-      summary: product.cosmedocs_verdict || 'Analysis completed',
-      keyActives: product.key_actives || [],
-      threeCellAnalysis: product.three_cell_analysis || {},
-      scores: product.scores || {},
-      ingredients: product.ingredients || {}
+      summary: product.human_summary?.bottom_line || product.cosmedocs_verdict || 'Analysis completed',
+      keyActives: product.key_actives?.slice(0, 3) || [],
+      ingredientCount: product.ingredients?.count || 0,
+      category: product.category || 'Product',
+      bestFor: product.human_summary?.best_for || ''
     };
   };
 
@@ -219,341 +241,246 @@ const AestheticIntelligence = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
         <div className="container mx-auto px-4 py-8 max-w-7xl">
+          {/* Hero Section - Clean & Minimal */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="flex items-center justify-center mb-4">
-              <Beaker className="h-8 w-8 text-primary mr-3" />
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            <div className="flex items-center justify-center mb-6">
+              <Beaker className="h-10 w-10 text-primary mr-4" />
+              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                 Aesthetic Intelligence
               </h1>
             </div>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-              The average person uses over 168 chemicals daily through cosmetics, foundations, and skincare products. 
-              Most do nothing beyond temporary hydration, yet contribute to sensitive skin barriers and long-term damage.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              AI-powered skincare analysis. Discover what's really in your products and whether they actually work.
             </p>
-            <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6 max-w-3xl mx-auto mb-6">
-              <h2 className="text-lg font-semibold text-destructive mb-3">The Hidden Truth About Your Products</h2>
-              <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-                <div>
-                  <p className="mb-2">• <strong>80%</strong> of ingredients in most products are fillers</p>
-                  <p className="mb-2">• <strong>15-25</strong> potential allergens in average foundation</p>
-                  <p>• <strong>Only 5-10%</strong> are active ingredients that create change</p>
-                </div>
-                <div>
-                  <p className="mb-2">• <strong>Fragrance</strong> alone contains 50+ undisclosed chemicals</p>
-                  <p className="mb-2">• <strong>pH imbalance</strong> disrupts your acid mantle</p>
-                  <p>• <strong>Barrier damage</strong> from harsh surfactants and alcohols</p>
-                </div>
-              </div>
-            </div>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our AI-powered Three-Cell Approach analyzes every ingredient's impact on keratinocytes, melanocytes, 
-              and fibroblasts. Get professional insights on formulations, efficacy, and safety from CosmeDocs experts.
-            </p>
-            <div className="mt-4 text-sm text-muted-foreground">
-              <span className="font-medium">Our aesthetics is invisible art</span> • 
-              <span className="font-medium"> Bold • Natural • Always Your Way</span>
-            </div>
           </motion.div>
 
-          {/* Enhanced Product URL Search Bar */}
+          {/* Search Section - Clean & Focused */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12"
           >
-            <Card className="mb-8 shadow-lg border-primary/10 bg-card/95 backdrop-blur-sm">
-              <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10">
-                <CardTitle className="flex items-center">
-                  <Search className="h-5 w-5 mr-2 text-primary" />
-                  Product Analysis Tool
-                </CardTitle>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Paste product URLs from any retailer to analyze ingredients, effectiveness, and safety
-                </p>
-              </CardHeader>
-              <CardContent className="space-y-6 pt-6">
-                {/* Quick Search Bar */}
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Search className="h-5 w-5 text-muted-foreground" />
+            <Card className="border-primary/20 shadow-lg bg-card/95 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row gap-4 items-end">
+                  <div className="flex-1">
+                    <label className="text-sm font-medium mb-2 block">Product URL</label>
+                    <div className="relative">
+                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                      <Input
+                        placeholder="Paste any product URL here..."
+                        value={productUrl}
+                        onChange={(e) => setProductUrl(e.target.value)}
+                        className="pl-10 h-12 text-base border-2 focus:border-primary transition-colors"
+                        disabled={isAnalyzing}
+                      />
+                    </div>
                   </div>
-                  <Input
-                    placeholder="Paste product URL here (e.g., https://sephora.com/product-name)"
-                    value={productInputs[0]?.url || ''}
-                    onChange={(e) => updateProductInput(0, 'url', e.target.value)}
-                    className="pl-10 h-12 text-base border-2 border-muted focus:border-primary transition-all duration-200 bg-background/50"
-                  />
                   <Button
-                    onClick={analyzeProducts}
-                    disabled={isAnalyzing || !productInputs[0]?.url.trim()}
-                    className="absolute right-2 top-2 h-8 px-4 bg-primary hover:bg-primary/90"
+                    onClick={analyzeProduct}
+                    disabled={isAnalyzing || !productUrl.trim()}
+                    size="lg"
+                    className="h-12 px-8 bg-primary hover:bg-primary/90 whitespace-nowrap"
                   >
                     {isAnalyzing ? (
-                      <Loader2 className="h-4 w-4 animate-spin" />
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                        Analysing...
+                      </>
                     ) : (
-                      "Analyze"
+                      <>
+                        <Beaker className="h-4 w-4 mr-2" />
+                        Analyse Product
+                      </>
                     )}
                   </Button>
                 </div>
 
-                <Separator />
-
-                {/* Additional Product Inputs */}
-                {productInputs.length > 1 && (
-                  <div className="space-y-4">
-                    <h4 className="text-sm font-medium text-muted-foreground">Additional Products for Routine Analysis</h4>
-                    {productInputs.slice(1).map((input, index) => (
-                      <motion.div
-                        key={index + 1}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex gap-2 items-center"
-                      >
-                        <div className="flex-1 relative">
-                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <span className="text-xs text-muted-foreground font-medium">#{index + 2}</span>
-                          </div>
-                          <Input
-                            placeholder="Additional product URL"
-                            value={input.url}
-                            onChange={(e) => updateProductInput(index + 1, 'url', e.target.value)}
-                            className="pl-8 transition-all duration-200 focus:ring-2 focus:ring-primary/20"
-                          />
-                        </div>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          onClick={() => removeProductInput(index + 1)}
-                          className="text-red-500 hover:text-red-700 hover:bg-red-50 h-10 w-10"
-                        >
-                          <Trash2 className="h-4 w-4" />
-                        </Button>
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                  <Button
-                    variant="outline"
-                    onClick={addProductInput}
-                    className="flex items-center gap-2 h-11"
+                {/* Analysis Progress */}
+                {isAnalyzing && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    className="mt-6 p-4 bg-muted/30 rounded-lg"
                   >
-                    <Plus className="h-4 w-4" />
-                    Add Another Product
-                  </Button>
-                  
-                  {productInputs.filter(input => input.url.trim()).length > 0 && (
-                    <Button
-                      onClick={analyzeProducts}
-                      disabled={isAnalyzing}
-                      className="flex items-center gap-2 bg-primary hover:bg-primary/90 h-11 px-6"
-                    >
-                      {isAnalyzing ? (
-                        <div className="flex items-center gap-2">
-                          <Loader2 className="h-4 w-4 animate-spin" />
-                          <span>Step {currentStep + 1}/5: {analysisSteps[currentStep]?.title}</span>
-                        </div>
-                      ) : (
-                        <>
-                          <Beaker className="h-4 w-4" />
-                          Analyze {productInputs.filter(input => input.url.trim()).length} Product{productInputs.filter(input => input.url.trim()).length !== 1 ? 's' : ''}
-                        </>
-                      )}
-                    </Button>
-                  )}
-
-                  {/* Analysis Progress */}
-                  {isAnalyzing && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="mt-6 p-6 bg-card border rounded-lg"
-                    >
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-3">
-                          <div className="relative">
-                            <Loader2 className="h-6 w-6 animate-spin text-primary" />
-                            <div className="absolute inset-0 animate-pulse">
-                              <Beaker className="h-6 w-6 text-primary/30" />
-                            </div>
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-lg">{analysisSteps[currentStep]?.title}</h3>
-                            <p className="text-muted-foreground text-sm">{analysisSteps[currentStep]?.description}</p>
-                          </div>
-                        </div>
-                        
-                        <div className="space-y-2">
-                          <div className="flex justify-between text-sm">
-                            <span>Progress</span>
-                            <span>{currentStep + 1}/{analysisSteps.length}</span>
-                          </div>
-                          <div className="w-full bg-muted rounded-full h-2">
-                            <motion.div 
-                              className="bg-primary h-2 rounded-full"
-                              initial={{ width: 0 }}
-                              animate={{ width: `${((currentStep + 1) / analysisSteps.length) * 100}%` }}
-                              transition={{ duration: 0.5 }}
-                            />
-                          </div>
-                        </div>
-
-                        <div className="grid grid-cols-5 gap-2 mt-4">
-                          {analysisSteps.map((step, index) => (
-                            <div 
-                              key={index}
-                              className={`text-center p-2 rounded-lg text-xs transition-all ${
-                                index <= currentStep 
-                                  ? 'bg-primary/10 text-primary border border-primary/20' 
-                                  : 'bg-muted text-muted-foreground'
-                              }`}
-                            >
-                              <div className="font-medium">{step.title.split(' ')[0]}</div>
-                              <div className="opacity-75">{step.title.split(' ').slice(1).join(' ')}</div>
-                            </div>
-                          ))}
-                        </div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <Loader2 className="h-5 w-5 animate-spin text-primary" />
+                      <div>
+                        <h4 className="font-medium">{analysisSteps[currentStep]?.title}</h4>
+                        <p className="text-sm text-muted-foreground">{analysisSteps[currentStep]?.description}</p>
                       </div>
-                    </motion.div>
-                  )}
-                </div>
-
-                {/* Help Text */}
-                <div className="bg-muted/30 border border-muted rounded-lg p-4">
-                  <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
-                    <Beaker className="h-4 w-4 text-primary" />
-                    How it works
-                  </h4>
-                  <div className="text-xs text-muted-foreground space-y-1">
-                    <p>• Paste any product URL from retailers like Sephora, Boots, Amazon, brand websites</p>
-                    <p>• Our AI scrapes ingredient lists and analyzes each component</p>
-                    <p>• Get professional insights on efficacy, safety, and value for money</p>
-                    {productInputs.length > 1 && (
-                      <p className="text-primary font-medium">• Multiple products = full routine analysis with conflict detection</p>
-                    )}
-                  </div>
-                </div>
+                    </div>
+                    <div className="w-full bg-background rounded-full h-2">
+                      <motion.div 
+                        className="bg-primary h-2 rounded-full"
+                        initial={{ width: 0 }}
+                        animate={{ width: `${((currentStep + 1) / analysisSteps.length) * 100}%` }}
+                        transition={{ duration: 0.5 }}
+                      />
+                    </div>
+                  </motion.div>
+                )}
               </CardContent>
             </Card>
           </motion.div>
 
-          {/* Search Previous Results */}
+          {/* Results Section with Tabs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>Previous Analyses</CardTitle>
-                <div className="flex gap-2">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold mb-2">Product Analysis Results</h2>
+              <p className="text-muted-foreground">Browse your analysed products by category</p>
+            </div>
+
+            <Tabs value={activeCategory} onValueChange={setActiveCategory} className="space-y-6">
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+                <TabsList className="grid grid-cols-4 lg:grid-cols-8 w-full sm:w-auto">
+                  {categories.map((category) => (
+                    <TabsTrigger key={category.id} value={category.id} className="text-xs px-2">
+                      {category.name}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+                
+                <div className="w-full sm:w-80">
                   <Input
-                    placeholder="Search by product name or brand..."
+                    placeholder="Search products..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="max-w-md"
+                    className="h-10"
                   />
                 </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <AnimatePresence>
-                    {filteredAnalyses.map((analysis) => {
-                      const formattedAnalysis = formatAnalysisDisplay(analysis.analysis_data);
-                      const isExpanded = expandedAnalysis === analysis.id;
+              </div>
 
-                      return (
-                        <motion.div
-                          key={analysis.id}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Card className="border-l-4 border-l-primary/30 hover:shadow-md transition-shadow">
-                            <CardContent className="p-4">
-                              <div className="flex items-start justify-between">
-                                <div className="flex-1">
-                                  <div className="flex items-center gap-3 mb-2">
-                                    <h3 className="font-semibold text-lg">
-                                      {analysis.product_name}
-                                    </h3>
+              {categories.map((category) => (
+                <TabsContent key={category.id} value={category.id} className="mt-6">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <AnimatePresence>
+                      {filteredAnalyses.map((analysis) => {
+                        const formattedAnalysis = formatAnalysisDisplay(analysis.analysis_data);
+                        const actualScore = analysis.analysis_data?.products?.[0]?.scores?.final_score_0to10 || analysis.overall_score || 0;
+
+                        return (
+                          <motion.div
+                            key={analysis.id}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <Card className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary/30 group hover:border-l-primary">
+                              <CardHeader className="pb-3">
+                                <div className="flex items-start justify-between">
+                                  <div className="flex-1 min-w-0">
+                                    <CardTitle className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors">
+                                      {analysis.product_name || 'Unknown Product'}
+                                    </CardTitle>
                                     {analysis.product_brand && (
-                                      <Badge variant="secondary">{analysis.product_brand}</Badge>
+                                      <Badge variant="secondary" className="mt-2 text-xs">
+                                        {analysis.product_brand}
+                                      </Badge>
                                     )}
-                                    <div className="flex items-center gap-2">
-                                      <span className="text-sm text-muted-foreground">Score:</span>
-                                      <span className={`font-bold text-lg ${getScoreColor(analysis.overall_score || 0)}`}>
-                                        {(analysis.overall_score || 0).toFixed(1)}/10
+                                  </div>
+                                  <div className="flex flex-col items-center ml-3">
+                                    <div className="flex items-center">
+                                      <Star className="h-4 w-4 text-yellow-500 mr-1" />
+                                      <span className={`font-bold text-lg ${getScoreColor(actualScore)}`}>
+                                        {actualScore.toFixed(1)}
                                       </span>
                                     </div>
+                                    <span className="text-xs text-muted-foreground">out of 10</span>
                                   </div>
-                                  
-                                  <p className="text-muted-foreground mb-2">
+                                </div>
+                              </CardHeader>
+                              
+                              <CardContent className="pt-0">
+                                <div className="space-y-3">
+                                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                                    <Badge variant="outline" className="text-xs">
+                                      {formattedAnalysis.category}
+                                    </Badge>
+                                    {formattedAnalysis.ingredientCount > 0 && (
+                                      <span className="text-xs">
+                                        {formattedAnalysis.ingredientCount} ingredients
+                                      </span>
+                                    )}
+                                  </div>
+
+                                  <p className="text-sm text-muted-foreground line-clamp-3">
                                     {formattedAnalysis.summary}
                                   </p>
-                                  
-                                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                                    <span>Analyzed: {new Date(analysis.created_at).toLocaleDateString()}</span>
-                                    <a 
-                                      href={analysis.product_url} 
-                                      target="_blank" 
+
+                                  {formattedAnalysis.keyActives.length > 0 && (
+                                    <div>
+                                      <h4 className="text-xs font-medium text-muted-foreground mb-1">Key Actives:</h4>
+                                      <div className="flex flex-wrap gap-1">
+                                        {formattedAnalysis.keyActives.map((active: any, index: number) => (
+                                          <Badge key={index} variant="outline" className="text-xs px-2 py-0">
+                                            {active.ingredient}
+                                          </Badge>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  )}
+
+                                  {formattedAnalysis.bestFor && (
+                                    <div className="bg-muted/30 rounded-lg p-2">
+                                      <p className="text-xs text-muted-foreground">
+                                        <span className="font-medium">Best for:</span> {formattedAnalysis.bestFor}
+                                      </p>
+                                    </div>
+                                  )}
+
+                                  <div className="flex items-center justify-between pt-2 border-t">
+                                    <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                                      <Calendar className="h-3 w-3" />
+                                      {new Date(analysis.created_at).toLocaleDateString('en-GB')}
+                                    </div>
+                                    <a
+                                      href={analysis.product_url}
+                                      target="_blank"
                                       rel="noopener noreferrer"
-                                      className="text-primary hover:underline"
+                                      className="flex items-center gap-1 text-xs text-primary hover:underline"
                                     >
+                                      <ExternalLink className="h-3 w-3" />
                                       View Product
                                     </a>
                                   </div>
                                 </div>
-                                
-                                <Button
-                                  variant="ghost"
-                                  size="sm"
-                                  onClick={() => setExpandedAnalysis(isExpanded ? null : analysis.id)}
-                                  className="ml-4"
-                                >
-                                  {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-                                </Button>
-                              </div>
-
-                              <AnimatePresence>
-                                {isExpanded && (
-                                  <motion.div
-                                    initial={{ opacity: 0, height: 0 }}
-                                    animate={{ opacity: 1, height: "auto" }}
-                                    exit={{ opacity: 0, height: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="mt-4 pt-4 border-t"
-                                  >
-                                    <div className="grid md:grid-cols-2 gap-6">
-                                      <CosmeticAnalysisResults analysis={analysis.analysis_data} />
-                                    </div>
-                                  </motion.div>
-                                )}
-                              </AnimatePresence>
-                            </CardContent>
-                          </Card>
-                        </motion.div>
-                      );
-                    })}
-                  </AnimatePresence>
+                              </CardContent>
+                            </Card>
+                          </motion.div>
+                        );
+                      })}
+                    </AnimatePresence>
+                  </div>
 
                   {filteredAnalyses.length === 0 && (
-                    <div className="text-center py-8 text-muted-foreground">
-                      {searchTerm ? 'No analyses match your search.' : 'No previous analyses found. Start by analyzing your first product!'}
+                    <div className="text-center py-12">
+                      <Beaker className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                      <h3 className="text-lg font-medium mb-2">No products found</h3>
+                      <p className="text-muted-foreground">
+                        {searchTerm 
+                          ? 'Try adjusting your search terms or check a different category.' 
+                          : activeCategory === 'all' 
+                            ? 'Start by analysing your first product above!'
+                            : `No products found in the ${categories.find(c => c.id === activeCategory)?.name.toLowerCase()} category.`
+                        }
+                      </p>
                     </div>
                   )}
-                </div>
-              </CardContent>
-            </Card>
+                </TabsContent>
+              ))}
+            </Tabs>
           </motion.div>
 
           {/* SEO Hidden Content */}
