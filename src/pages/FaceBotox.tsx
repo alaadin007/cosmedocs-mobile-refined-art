@@ -2,10 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check } from "lucide-react";
+import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check, Activity, Syringe, GraduationCap, Palette } from "lucide-react";
 import PopularTreatments from '@/components/PopularTreatments';
 
 export default function FaceBotox() {
@@ -229,100 +236,199 @@ export default function FaceBotox() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-secondary/5">
+      <div className="bg-black text-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 px-6">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5" />
-          <div className="relative container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
-                Comprehensive Face Botox Treatment
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Complete facial rejuvenation including upper face, lower face areas and advanced combination techniques
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <div className="flex items-center gap-2 text-sm bg-card px-4 py-2 rounded-full">
-                  <Clock className="w-4 h-4 text-primary" />
-                  <span>30 minutes</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm bg-card px-4 py-2 rounded-full">
-                  <Users className="w-4 h-4 text-primary" />
-                  <span>From £175</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm bg-card px-4 py-2 rounded-full">
-                  <Award className="w-4 h-4 text-primary" />
-                  <span>Expert Doctors</span>
-                </div>
-              </div>
-              <Button 
-                size="lg" 
-                className="px-8 py-4 text-lg"
-                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                Book Consultation
-              </Button>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Comprehensive Face Botox</span>
+                  <span className="block text-sm mt-4">Advanced anti-wrinkle treatments for natural, lasting results</span>
+                </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Expert Practitioners</span>
+                  <br />
+                  Complete facial rejuvenation including upper face, lower face areas and advanced combination techniques
+                </p>
+                
+                {/* Animated Tagline */}
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="text-lg md:text-xl text-gray-400 mb-8 relative"
+                >
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-pulse">
+                      Bold • Natural • Always Your Way
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 blur-sm rounded-lg animate-pulse opacity-50"></span>
+                  </span>
+                </motion.p>
+                
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">From £175</p>
+                  <p className="text-sm text-gray-300">30 minutes • Results last 4-6 months</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
+                    Book Consultation
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    View Price List
+                  </Button>
+                </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-16 bg-gray-800">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Face Botox Treatment Overview</h2>
             </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30-45 minutes including consultation</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">4-6 months with premium Botox</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic available if needed</p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Enhanced Pricing Section */}
-        <section className="py-16 px-6 bg-gradient-to-br from-primary/5 to-secondary/5">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Face Botox Pricing</h2>
-              <p className="text-lg text-muted-foreground">Transparent pricing for all facial areas</p>
-            </div>
+        <section id="pricing-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Face Botox Pricing</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">Transparent pricing for all facial areas with no hidden costs</p>
+            </motion.div>
             
-            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-center bg-card rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                  className="text-center bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300"
                 >
-                  <div className="text-3xl font-bold mb-3 text-primary">£175</div>
-                  <div className="text-lg mb-2">1 Area</div>
-                  <div className="text-sm text-muted-foreground">Single treatment area</div>
+                  <div className="text-3xl font-bold mb-3 text-purple-300">£175</div>
+                  <div className="text-lg text-white mb-2">1 Area</div>
+                  <div className="text-sm text-gray-400">Single treatment area</div>
                 </motion.div>
                 
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-center bg-card rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                  className="text-center bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300"
                 >
-                  <div className="text-3xl font-bold mb-3 text-primary">£275</div>
-                  <div className="text-lg mb-2">2 Areas</div>
-                  <div className="text-sm text-muted-foreground">Two treatment areas</div>
+                  <div className="text-3xl font-bold mb-3 text-purple-300">£275</div>
+                  <div className="text-lg text-white mb-2">2 Areas</div>
+                  <div className="text-sm text-gray-400">Two treatment areas</div>
                 </motion.div>
                 
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-center bg-card rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                  className="text-center bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300"
                 >
-                  <div className="text-3xl font-bold mb-3 text-primary">£350</div>
-                  <div className="text-lg mb-2">3 Areas</div>
-                  <div className="text-sm text-muted-foreground">Three treatment areas</div>
+                  <div className="text-3xl font-bold mb-3 text-purple-300">£350</div>
+                  <div className="text-lg text-white mb-2">3 Areas</div>
+                  <div className="text-sm text-gray-400">Three treatment areas</div>
                 </motion.div>
                 
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-center bg-secondary/20 border border-secondary/30 rounded-xl p-6 hover:bg-secondary/30 transition-all duration-300"
+                  className="text-center bg-purple-900/30 border border-purple-400/30 rounded-xl p-6 hover:bg-purple-900/50 transition-all duration-300"
                 >
-                  <div className="text-3xl font-bold mb-3 text-secondary">+£50</div>
-                  <div className="text-lg mb-2">Men Supplement</div>
-                  <div className="text-sm text-muted-foreground">Additional charge for men</div>
+                  <div className="text-3xl font-bold mb-3 text-purple-300">+£50</div>
+                  <div className="text-lg text-white mb-2">Men Supplement</div>
+                  <div className="text-sm text-gray-400">Additional charge for men</div>
                 </motion.div>
               </div>
             </div>
@@ -330,44 +436,100 @@ export default function FaceBotox() {
             {/* Quick Info */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               <div className="text-center">
-                <div className="text-2xl font-bold mb-2">&lt;5min</div>
-                <div className="text-sm text-muted-foreground">Treatment Time</div>
+                <div className="text-2xl font-bold mb-2 text-white">&lt;5min</div>
+                <div className="text-sm text-gray-400">Treatment Time</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold mb-2">5-10 days</div>
-                <div className="text-sm text-muted-foreground">Takes Effect</div>
+                <div className="text-2xl font-bold mb-2 text-white">5-10 days</div>
+                <div className="text-sm text-gray-400">Takes Effect</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold mb-2">4-6 months</div>
-                <div className="text-sm text-muted-foreground">Results Last</div>
+                <div className="text-2xl font-bold mb-2 text-white">4-6 months</div>
+                <div className="text-sm text-gray-400">Results Last</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold mb-2">Immediate</div>
-                <div className="text-sm text-muted-foreground">Return to Work</div>
+                <div className="text-2xl font-bold mb-2 text-white">Immediate</div>
+                <div className="text-sm text-gray-400">Return to Work</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Upper Face Treatment Areas */}
-        <section className="py-16 px-6">
-          <div className="container mx-auto max-w-6xl">
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-gray-800">
+          <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Upper Face Treatment Areas
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4 text-white">Real Results - Before & After</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See the transformation our expert doctors achieve with precision Botox treatments. 
+                Natural, beautiful results that enhance your features.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <div className="text-center mt-8">
+              <Button 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-black"
+                onClick={() => window.open('/before-after-gallery', '_blank')}
+              >
+                View Full Gallery
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Upper Face Treatment Areas */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Upper Face Treatment Areas</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Target the three most common facial areas for natural, lasting results
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {treatmentAreas.map((area, index) => (
                 <motion.div
                   key={area.area}
@@ -376,20 +538,22 @@ export default function FaceBotox() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="p-6 h-full hover:shadow-lg transition-shadow">
-                    <h3 className="text-xl font-semibold mb-3">{area.area}</h3>
-                    <p className="text-muted-foreground mb-4">{area.description}</p>
-                    <div className="space-y-2">
-                      <div className="text-sm">
-                        <span className="font-medium">Units:</span> {area.units}
+                  <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-white">{area.area}</h3>
+                      <p className="text-gray-300 mb-4 text-sm">{area.description}</p>
+                      <div className="space-y-2 text-xs">
+                        <div className="text-gray-400">
+                          <span className="font-medium text-purple-300">Units:</span> {area.units}
+                        </div>
+                        <div className="text-gray-400">
+                          <span className="font-medium text-purple-300">Price:</span> {area.price}
+                        </div>
+                        <div className="text-gray-400">
+                          <span className="font-medium text-purple-300">Duration:</span> {area.duration}
+                        </div>
                       </div>
-                      <div className="text-sm">
-                        <span className="font-medium">Price:</span> {area.price}
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-medium">Duration:</span> {area.duration}
-                      </div>
-                    </div>
+                    </CardContent>
                   </Card>
                 </motion.div>
               ))}
@@ -397,275 +561,57 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Before & After Section */}
-        <section className="py-16 px-6 bg-secondary/5">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Real Results
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                See the transformation our expert doctors achieve with precision botox treatments
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Before & After Carousel */}
-              <div className="relative max-w-lg mx-auto">
-                <div className="relative overflow-hidden rounded-lg aspect-square">
-                  {beforeAfterImages.map((image, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
-                        index === currentImageIndex ? 'translate-x-0' : 
-                        index < currentImageIndex ? '-translate-x-full' : 'translate-x-full'
-                      }`}
-                    >
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
-                  
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-                  >
-                    <ChevronLeft className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-                  >
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-                
-                <div className="mt-4 text-center">
-                  <p className="text-sm text-muted-foreground">
-                    {beforeAfterImages[currentImageIndex]?.caption}
-                  </p>
-                </div>
-                
-                <div className="flex justify-center mt-4 space-x-2">
-                  {beforeAfterImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentImageIndex ? 'bg-primary' : 'bg-muted-foreground/30'
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Instagram Embed */}
-              <div className="flex justify-center">
-                <div className="max-w-lg w-full">
-                  <blockquote 
-                    className="instagram-media" 
-                    data-instgrm-captioned 
-                    data-instgrm-permalink="https://www.instagram.com/reel/DHtX5dCN399/?utm_source=ig_embed&utm_campaign=loading" 
-                    data-instgrm-version="14" 
-                    style={{
-                      background: '#FFF',
-                      border: '0',
-                      borderRadius: '3px',
-                      boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
-                      margin: '1px',
-                      maxWidth: '540px',
-                      minWidth: '326px',
-                      padding: '0',
-                      width: '99.375%'
-                    }}
-                  >
-                    <div style={{ padding: '16px' }}>
-                      <a 
-                        href="https://www.instagram.com/reel/DHtX5dCN399/?utm_source=ig_embed&utm_campaign=loading" 
-                        style={{
-                          background: '#FFFFFF',
-                          lineHeight: '0',
-                          padding: '0 0',
-                          textAlign: 'center',
-                          textDecoration: 'none',
-                          width: '100%'
-                        }} 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                          <div style={{
-                            backgroundColor: '#F4F4F4',
-                            borderRadius: '50%',
-                            flexGrow: '0',
-                            height: '40px',
-                            marginRight: '14px',
-                            width: '40px'
-                          }}></div>
-                          <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            flexGrow: '1',
-                            justifyContent: 'center'
-                          }}>
-                            <div style={{
-                              backgroundColor: '#F4F4F4',
-                              borderRadius: '4px',
-                              flexGrow: '0',
-                              height: '14px',
-                              marginBottom: '6px',
-                              width: '100px'
-                            }}></div>
-                            <div style={{
-                              backgroundColor: '#F4F4F4',
-                              borderRadius: '4px',
-                              flexGrow: '0',
-                              height: '14px',
-                              width: '60px'
-                            }}></div>
-                          </div>
-                        </div>
-                        <div style={{ padding: '19% 0' }}></div>
-                        <div style={{
-                          display: 'block',
-                          height: '50px',
-                          margin: '0 auto 12px',
-                          width: '50px'
-                        }}>
-                          <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                              <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                                <g>
-                                  <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </svg>
-                        </div>
-                        <div style={{ paddingTop: '8px' }}>
-                          <div style={{
-                            color: '#3897f0',
-                            fontFamily: 'Arial,sans-serif',
-                            fontSize: '14px',
-                            fontStyle: 'normal',
-                            fontWeight: '550',
-                            lineHeight: '18px'
-                          }}>
-                            View this post on Instagram
-                          </div>
-                        </div>
-                        <div style={{ padding: '12.5% 0' }}></div>
-                      </a>
-                      <p style={{
-                        color: '#c9c8cd',
-                        fontFamily: 'Arial,sans-serif',
-                        fontSize: '14px',
-                        lineHeight: '17px',
-                        marginBottom: '0',
-                        marginTop: '8px',
-                        overflow: 'hidden',
-                        padding: '8px 0 7px',
-                        textAlign: 'center',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap'
-                      }}>
-                        <a 
-                          href="https://www.instagram.com/reel/DHtX5dCN399/?utm_source=ig_embed&utm_campaign=loading" 
-                          style={{
-                            color: '#c9c8cd',
-                            fontFamily: 'Arial,sans-serif',
-                            fontSize: '14px',
-                            fontStyle: 'normal',
-                            fontWeight: 'normal',
-                            lineHeight: '17px',
-                            textDecoration: 'none'
-                          }} 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          A post shared by COSMEDOCS • Cosmetic Doctors (@cosmedocs)
-                        </a>
-                      </p>
-                    </div>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <Button 
-                variant="outline" 
-                onClick={() => window.open('/before-after-gallery', '_blank')}
-              >
-                View Before & After Gallery
-              </Button>
-            </div>
-          </div>
-        </section>
-
         {/* Lower Face Treatment Areas */}
-        <section className="py-16 px-6">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 bg-gray-800">
+          <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Lower Face Treatment Areas
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4 text-white">Lower Face Treatment Areas</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Comprehensive lower face rejuvenation for balanced facial harmony
               </p>
             </motion.div>
 
             <div className="mb-8">
-              <Card className="p-8">
-                <CardContent className="p-0">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">The Unbalanced Face Problem</h3>
-                      <p className="text-muted-foreground mb-4">
+                      <h3 className="text-xl font-semibold mb-4 text-white">The Unbalanced Face Problem</h3>
+                      <p className="text-gray-300 mb-4">
                         Many clients have been receiving upper face Botox for years, but their lower 
                         face remains hyper-animated. This creates an unnatural imbalance where the 
                         upper face is relaxed while the lower face shows excessive movement.
                       </p>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
+                      <ul className="space-y-2 text-sm text-gray-300">
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
                           <span>Mentalis crease over the chin from habitual muscle use</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
                           <span>Downturned mouth corners creating sad expression</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
                           <span>Horizontal lines along jawline from muscle tension</span>
                         </li>
                       </ul>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">The Solution</h3>
-                      <p className="text-muted-foreground mb-4">
+                      <h3 className="text-xl font-semibold mb-4 text-white">The Solution</h3>
+                      <p className="text-gray-300 mb-4">
                         Strategic lower face Botox creates balance, symmetry, and natural results 
                         by harmonizing upper and lower facial animation.
                       </p>
-                      <div className="bg-primary/10 p-4 rounded-lg">
-                        <p className="text-sm font-medium mb-2">The Result:</p>
-                        <p className="text-sm text-muted-foreground">
+                      <div className="bg-purple-900/30 p-4 rounded-lg">
+                        <p className="text-sm font-medium mb-2 text-purple-300">The Result:</p>
+                        <p className="text-sm text-gray-300">
                           Comprehensive facial harmony that maintains natural expression while 
                           creating a more youthful, balanced appearance.
                         </p>
@@ -685,14 +631,14 @@ export default function FaceBotox() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full p-6 hover:shadow-lg transition-shadow">
-                    <CardContent className="p-0">
-                      <area.icon className="h-8 w-8 text-primary mb-4" />
-                      <h3 className="text-lg font-semibold mb-3">{area.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-4">{area.description}</p>
-                      <div className="bg-accent/50 p-3 rounded text-xs">
-                        <span className="font-medium">Benefit: </span>
-                        <span className="text-muted-foreground">{area.benefit}</span>
+                  <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <area.icon className="h-8 w-8 text-purple-300 mb-4" />
+                      <h3 className="text-lg font-semibold mb-3 text-white">{area.title}</h3>
+                      <p className="text-gray-300 text-sm mb-4">{area.description}</p>
+                      <div className="bg-purple-900/20 p-3 rounded text-xs">
+                        <span className="font-medium text-purple-300">Benefit: </span>
+                        <span className="text-gray-300">{area.benefit}</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -703,16 +649,16 @@ export default function FaceBotox() {
         </section>
 
         {/* Additional Face Areas */}
-        <section className="py-16 px-6 bg-secondary/5">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 bg-black">
+          <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Additional Face Areas</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4 text-white">Additional Face Areas</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Enhance your natural beauty with specialized Botox treatments for additional facial areas
               </p>
             </motion.div>
@@ -726,16 +672,16 @@ export default function FaceBotox() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="p-6 h-full hover:shadow-lg transition-shadow">
-                    <CardContent className="p-0">
+                  <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
+                    <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-lg font-semibold">{area.name}</h3>
-                        <span className="text-primary font-bold">{area.price}</span>
+                        <h3 className="text-lg font-semibold text-white">{area.name}</h3>
+                        <span className="text-purple-300 font-bold">{area.price}</span>
                       </div>
-                      <p className="text-muted-foreground text-sm mb-4">{area.description}</p>
-                      <div className="space-y-2 text-xs text-muted-foreground">
-                        <div><span className="font-medium">Units:</span> {area.units}</div>
-                        <div><span className="font-medium">Duration:</span> {area.duration}</div>
+                      <p className="text-gray-300 text-sm mb-4">{area.description}</p>
+                      <div className="space-y-2 text-xs text-gray-400">
+                        <div><span className="font-medium text-purple-300">Units:</span> {area.units}</div>
+                        <div><span className="font-medium text-purple-300">Duration:</span> {area.duration}</div>
                       </div>
                     </CardContent>
                   </Card>
@@ -746,72 +692,70 @@ export default function FaceBotox() {
         </section>
 
         {/* Advanced Combination Approach */}
-        <section className="py-16 px-6">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 bg-gray-800">
+          <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Advanced Combination Approach
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4 text-white">Advanced Combination Approach</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 For deep wrinkles, we combine Botox with dermal fillers for superior results
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-semibold mb-4">Why Botox Alone Isn't Enough</h3>
-                  <p className="text-muted-foreground mb-4">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">Why Botox Alone Isn't Enough</h3>
+                  <p className="text-gray-300 mb-4">
                     Botox wears off approximately 20% per month. For people with deep wrinkles, 
                     this creates a frustrating cycle where lines reappear at 2-3 months.
                   </p>
                   <div className="space-y-3">
                     {botoxTimeline.map((item) => (
                       <div key={item.month} className="flex items-center gap-3">
-                        <div className="w-16 text-sm font-medium">Month {item.month}:</div>
+                        <div className="w-16 text-sm font-medium text-purple-300">Month {item.month}:</div>
                         <div className="flex-1">
-                          <div className="bg-accent rounded-full h-2 relative overflow-hidden">
+                          <div className="bg-gray-700 rounded-full h-2 relative overflow-hidden">
                             <div 
-                              className="bg-primary h-full transition-all duration-500"
+                              className="bg-purple-300 h-full transition-all duration-500"
                               style={{ width: `${100 - item.percentage}%` }}
                             />
                           </div>
                         </div>
-                        <div className="text-sm text-muted-foreground">{item.percentage}% worn off</div>
+                        <div className="text-sm text-gray-400">{item.percentage}% worn off</div>
                       </div>
                     ))}
                   </div>
                 </CardContent>
               </Card>
               
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-semibold mb-4">The Advanced Solution</h3>
-                  <p className="text-muted-foreground mb-4">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">The Advanced Solution</h3>
+                  <p className="text-gray-300 mb-4">
                     Combining Botox with carefully placed dermal fillers addresses both 
                     muscle movement AND fills the established crease for comprehensive treatment.
                   </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
+                  <ul className="space-y-2 text-sm text-gray-300">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
                       <span>Fill lines halfway for natural appearance</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
                       <span>Stimulate natural collagen production</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
                       <span>Provide stable, long-lasting results</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
                       <span>Results last 18-24 months</span>
                     </li>
                   </ul>
@@ -822,37 +766,37 @@ export default function FaceBotox() {
         </section>
 
         {/* Professional Training */}
-        <section className="py-16 px-6 bg-secondary/5">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 bg-black">
+          <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Professional Training Available</h2>
-              <p className="text-lg text-muted-foreground">Learn advanced face Botox techniques from our experts</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Professional Training Available</h2>
+              <p className="text-gray-300">Learn advanced face Botox techniques from our experts</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <BookOpen className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-4">Online Courses</h3>
-                  <p className="text-muted-foreground mb-4">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <BookOpen className="h-8 w-8 text-purple-300 mb-4" />
+                  <h3 className="text-xl font-semibold mb-4 text-white">Online Courses</h3>
+                  <p className="text-gray-300 mb-4">
                     For medical professionals practicing dermal fillers and Botox, we offer comprehensive 
                     online courses through harleystreetinstitute.com
                   </p>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-purple-300 text-purple-300 hover:bg-purple-300 hover:text-black">
                     Learn More About Online Training
                   </Button>
                 </CardContent>
               </Card>
               
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <Users className="h-8 w-8 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-4">One-to-One Training</h3>
-                  <p className="text-muted-foreground mb-4">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <Users className="h-8 w-8 text-purple-300 mb-4" />
+                  <h3 className="text-xl font-semibold mb-4 text-white">One-to-One Training</h3>
+                  <p className="text-gray-300 mb-4">
                     Book personalized training sessions to learn these advanced procedures 
                     that will significantly increase your client satisfaction rates.
                   </p>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-purple-300 text-purple-300 hover:bg-purple-300 hover:text-black">
                     Book Personal Training
                   </Button>
                 </CardContent>
@@ -862,29 +806,35 @@ export default function FaceBotox() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 px-6 bg-primary/10">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Comprehensive Face Botox?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Transform your entire face with our expert comprehensive Botox treatments. 
-              From upper face to lower face areas and advanced combination techniques.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="px-8 py-4 text-lg"
-                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-              >
-                Book Your Consultation
-              </Button>
-              <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
-                View Price List
-              </Button>
-            </div>
-            <div className="mt-8 text-center">
-              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                <Eye className="h-4 w-4" />
-                <span>Bold • Natural • Always Your Way</span>
+        <section className="py-20 bg-purple-900/20">
+          <div className="page-container">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready for Comprehensive Face Botox?</h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Transform your entire face with our expert comprehensive Botox treatments. 
+                From upper face to lower face areas and advanced combination techniques.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-purple-300 text-black hover:bg-purple-200 px-8 py-4 text-lg font-semibold"
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                >
+                  Book Your Consultation
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold"
+                >
+                  View Price List
+                </Button>
+              </div>
+              <div className="mt-8 text-center">
+                <div className="inline-flex items-center gap-2 text-sm text-gray-400">
+                  <Eye className="h-4 w-4" />
+                  <span>Bold • Natural • Always Your Way</span>
+                </div>
               </div>
             </div>
           </div>
