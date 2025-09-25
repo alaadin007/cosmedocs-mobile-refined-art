@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -39,6 +40,7 @@ const AestheticIntelligence = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const categories: ProductCategory[] = [
     { id: 'all', name: 'All Products', keywords: [] },
@@ -142,6 +144,67 @@ const AestheticIntelligence = () => {
     }
   };
 
+  const extractBrandFromAnalysis = (analysis: ProductAnalysis): string => {
+    // First check if brand is already extracted
+    if (analysis.product_brand && analysis.product_brand !== 'Unknown Brand') {
+      return analysis.product_brand;
+    }
+    
+    // Try to extract from analysis data
+    const analysisData = analysis.analysis_data;
+    if (analysisData?.products?.[0]) {
+      const product = analysisData.products[0];
+      // Look for brand in various places in the analysis
+      if (product.brand) return product.brand;
+      if (product.manufacturer) return product.manufacturer;
+      
+      // Extract from product name or description
+      const productText = `${product.name || ''} ${analysis.product_name || ''}`.toLowerCase();
+      
+      // Common brand patterns
+      const brandPatterns = [
+        /the\s+ordinary/i,
+        /cerave/i,
+        /neutrogena/i,
+        /l'oreal/i,
+        /olay/i,
+        /clinique/i,
+        /estee\s+lauder/i,
+        /paula'?s\s+choice/i,
+        /drunk\s+elephant/i,
+        /dermalogica/i,
+        /skinceuticals/i,
+        /vichy/i,
+        /la\s+roche\s+posay/i,
+        /eucerin/i,
+        /aveeno/i,
+        /cetaphil/i
+      ];
+      
+      for (const pattern of brandPatterns) {
+        const match = productText.match(pattern);
+        if (match) {
+          return match[0].replace(/\b\w/g, l => l.toUpperCase()); // Title case
+        }
+      }
+      
+      // Extract from URL
+      const url = analysis.product_url.toLowerCase();
+      if (url.includes('theordinary')) return 'The Ordinary';
+      if (url.includes('cerave')) return 'CeraVe';
+      if (url.includes('neutrogena')) return 'Neutrogena';
+      if (url.includes('loreal')) return "L'Oreal";
+      if (url.includes('olay')) return 'Olay';
+      if (url.includes('clinique')) return 'Clinique';
+      if (url.includes('paulaschoice')) return "Paula's Choice";
+      if (url.includes('drunkelephant')) return 'Drunk Elephant';
+      if (url.includes('dermalogica')) return 'Dermalogica';
+      if (url.includes('skinceuticals')) return 'SkinCeuticals';
+    }
+    
+    return analysis.product_brand || 'Unknown Brand';
+  };
+
   const getProductCategory = (analysis: ProductAnalysis): string => {
     const productName = (analysis.product_name || '').toLowerCase();
     const analysisData = analysis.analysis_data;
@@ -152,30 +215,38 @@ const AestheticIntelligence = () => {
       productDescription = [
         product.category || '',
         product.name || '',
+        product.cosmedocs_verdict || '',
+        ...(product.key_actives?.map((active: any) => active.ingredient) || []),
         ...(product.ingredients?.inci_list || [])
       ].join(' ').toLowerCase();
     }
     
     const searchText = `${productName} ${productDescription}`;
     
+    // More specific category matching
     for (const category of categories) {
       if (category.id === 'all') continue;
       if (category.keywords.some(keyword => searchText.includes(keyword.toLowerCase()))) {
         return category.id;
       }
     }
-    return 'other';
+    return 'serums'; // Default fallback since most products are treatment products
   };
 
   const filteredAnalyses = analyses.filter(analysis => {
+    const brand = extractBrandFromAnalysis(analysis);
     const matchesSearch = !searchTerm || 
       (analysis.product_name && analysis.product_name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      (analysis.product_brand && analysis.product_brand.toLowerCase().includes(searchTerm.toLowerCase()));
+      (brand && brand.toLowerCase().includes(searchTerm.toLowerCase()));
     
     const matchesCategory = activeCategory === 'all' || getProductCategory(analysis) === activeCategory;
     
     return matchesSearch && matchesCategory;
   });
+
+  const handleProductClick = (analysis: ProductAnalysis) => {
+    navigate(`/product-analysis/${analysis.id}`);
+  };
 
   const getScoreColor = (score: number) => {
     if (score >= 8) return 'text-green-600';
@@ -368,6 +439,7 @@ const AestheticIntelligence = () => {
                       {filteredAnalyses.map((analysis) => {
                         const formattedAnalysis = formatAnalysisDisplay(analysis.analysis_data);
                         const actualScore = analysis.analysis_data?.products?.[0]?.scores?.final_score_0to10 || analysis.overall_score || 0;
+                        const brand = extractBrandFromAnalysis(analysis);
 
                         return (
                           <motion.div
@@ -377,18 +449,22 @@ const AestheticIntelligence = () => {
                             exit={{ opacity: 0, scale: 0.95 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <Card className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary/30 group hover:border-l-primary">
+                            <Card 
+                              className="h-full hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary/30 group hover:border-l-primary cursor-pointer"
+                              onClick={() => handleProductClick(analysis)}
+                            >
                               <CardHeader className="pb-3">
                                 <div className="flex items-start justify-between">
                                   <div className="flex-1 min-w-0">
                                     <CardTitle className="text-lg font-semibold line-clamp-2 group-hover:text-primary transition-colors">
                                       {analysis.product_name || 'Unknown Product'}
                                     </CardTitle>
-                                    {analysis.product_brand && (
-                                      <Badge variant="secondary" className="mt-2 text-xs">
-                                        {analysis.product_brand}
-                                      </Badge>
-                                    )}
+                                    <Badge variant="secondary" className="mt-2 text-xs">
+                                      {brand}
+                                    </Badge>
+                                    <Badge variant="outline" className="mt-1 ml-2 text-xs capitalize">
+                                      {formattedAnalysis.category}
+                                    </Badge>
                                   </div>
                                   <div className="flex flex-col items-center ml-3">
                                     <div className="flex items-center">
