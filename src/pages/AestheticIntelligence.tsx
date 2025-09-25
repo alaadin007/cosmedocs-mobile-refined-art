@@ -228,81 +228,132 @@ const AestheticIntelligence = () => {
             </div>
           </motion.div>
 
-          {/* Product Analysis Tool */}
+          {/* Enhanced Product URL Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Card className="mb-8 shadow-lg border-primary/10 bg-card/95 backdrop-blur-sm">
-              <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10">`
+              <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10">
                 <CardTitle className="flex items-center">
                   <Search className="h-5 w-5 mr-2 text-primary" />
                   Product Analysis Tool
                 </CardTitle>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Paste product URLs from any retailer to analyze ingredients, effectiveness, and safety
+                </p>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {productInputs.map((input, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="flex gap-2 items-end"
-                  >
-                    <div className="flex-1">
-                      <label className="text-sm font-medium mb-1 block">
-                        Product URL {index + 1}
-                      </label>
-                      <Input
-                        placeholder="https://example.com/product-page"
-                        value={input.url}
-                        onChange={(e) => updateProductInput(index, 'url', e.target.value)}
-                        className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
-                      />
-                    </div>
-                    {productInputs.length > 1 && (
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        onClick={() => removeProductInput(index)}
-                        className="text-red-500 hover:text-red-700 hover:bg-red-50"
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
-                    )}
-                  </motion.div>
-                ))}
-
-                <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    onClick={addProductInput}
-                    className="flex items-center gap-2"
-                  >
-                    <Plus className="h-4 w-4" />
-                    Add Product
-                  </Button>
+              <CardContent className="space-y-6 pt-6">
+                {/* Quick Search Bar */}
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Search className="h-5 w-5 text-muted-foreground" />
+                  </div>
+                  <Input
+                    placeholder="Paste product URL here (e.g., https://sephora.com/product-name)"
+                    value={productInputs[0]?.url || ''}
+                    onChange={(e) => updateProductInput(0, 'url', e.target.value)}
+                    className="pl-10 h-12 text-base border-2 border-muted focus:border-primary transition-all duration-200 bg-background/50"
+                  />
                   <Button
                     onClick={analyzeProducts}
-                    disabled={isAnalyzing}
-                    className="flex items-center gap-2 bg-primary hover:bg-primary/90"
+                    disabled={isAnalyzing || !productInputs[0]?.url.trim()}
+                    className="absolute right-2 top-2 h-8 px-4 bg-primary hover:bg-primary/90"
                   >
                     {isAnalyzing ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
-                      <Beaker className="h-4 w-4" />
+                      "Analyze"
                     )}
-                    {isAnalyzing ? 'Analyzing...' : 'Analyze Products'}
                   </Button>
                 </div>
 
+                <Separator />
+
+                {/* Additional Product Inputs */}
                 {productInputs.length > 1 && (
-                  <div className="text-sm text-muted-foreground bg-muted/50 p-3 rounded-lg">
-                    <strong>Full Regime Analysis:</strong> Analyzing multiple products together allows our AI to detect 
-                    ingredient conflicts, duplications, and gaps in your skincare routine.
+                  <div className="space-y-4">
+                    <h4 className="text-sm font-medium text-muted-foreground">Additional Products for Routine Analysis</h4>
+                    {productInputs.slice(1).map((input, index) => (
+                      <motion.div
+                        key={index + 1}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex gap-2 items-center"
+                      >
+                        <div className="flex-1 relative">
+                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <span className="text-xs text-muted-foreground font-medium">#{index + 2}</span>
+                          </div>
+                          <Input
+                            placeholder="Additional product URL"
+                            value={input.url}
+                            onChange={(e) => updateProductInput(index + 1, 'url', e.target.value)}
+                            className="pl-8 transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                          />
+                        </div>
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          onClick={() => removeProductInput(index + 1)}
+                          className="text-red-500 hover:text-red-700 hover:bg-red-50 h-10 w-10"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      </motion.div>
+                    ))}
                   </div>
                 )}
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <Button
+                    variant="outline"
+                    onClick={addProductInput}
+                    className="flex items-center gap-2 h-11"
+                  >
+                    <Plus className="h-4 w-4" />
+                    Add Another Product
+                  </Button>
+                  
+                  {productInputs.filter(input => input.url.trim()).length > 0 && (
+                    <Button
+                      onClick={analyzeProducts}
+                      disabled={isAnalyzing}
+                      className="flex items-center gap-2 bg-primary hover:bg-primary/90 h-11 px-6"
+                    >
+                      {isAnalyzing ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Analyzing...
+                        </>
+                      ) : (
+                        <>
+                          <Beaker className="h-4 w-4" />
+                          Analyze {productInputs.filter(input => input.url.trim()).length} Product{productInputs.filter(input => input.url.trim()).length !== 1 ? 's' : ''}
+                        </>
+                      )}
+                    </Button>
+                  )}
+                </div>
+
+                {/* Help Text */}
+                <div className="bg-muted/30 border border-muted rounded-lg p-4">
+                  <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
+                    <Beaker className="h-4 w-4 text-primary" />
+                    How it works
+                  </h4>
+                  <div className="text-xs text-muted-foreground space-y-1">
+                    <p>• Paste any product URL from retailers like Sephora, Boots, Amazon, brand websites</p>
+                    <p>• Our AI scrapes ingredient lists and analyzes each component</p>
+                    <p>• Get professional insights on efficacy, safety, and value for money</p>
+                    {productInputs.length > 1 && (
+                      <p className="text-primary font-medium">• Multiple products = full routine analysis with conflict detection</p>
+                    )}
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
