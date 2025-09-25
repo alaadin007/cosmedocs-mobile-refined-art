@@ -618,8 +618,8 @@ const KarachiLocation = () => {
                 className="relative"
               >
                 <img 
-                  src="/placeholder.svg" 
-                  alt="Dr. Khadija - Aesthetic Medicine Specialist in Karachi"
+                  src="/src/assets/dr-khadija-treatment-3.jpg" 
+                  alt="Dr. Khadija - Aesthetic Medicine Specialist performing treatment in Karachi"
                   className="rounded-lg shadow-2xl w-full"
                 />
               </motion.div>
@@ -645,10 +645,10 @@ const KarachiLocation = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { image: "/placeholder.svg", title: "Dr. Khadija receiving Fellowship certificate at Harley Street Institute" },
-                { image: "/placeholder.svg", title: "Dr. Khadija performing advanced aesthetic procedure" },
-                { image: "/placeholder.svg", title: "Dr. Khadija collaborating with Harley Street Institute mentors" },
-                { image: "/placeholder.svg", title: "Dr. Khadija performing advanced aesthetic treatments" }
+                { image: "/src/assets/dr-khadija-fellowship.jpg", title: "Dr. Khadija receiving Fellowship certificate at Harley Street Institute" },
+                { image: "/src/assets/dr-khadija-treatment-2.jpg", title: "Dr. Khadija performing advanced aesthetic procedure" },
+                { image: "/src/assets/dr-khadija-treatment-1.jpg", title: "Dr. Khadija collaborating with team during treatment" },
+                { image: "/src/assets/dr-khadija-treatment-3.jpg", title: "Dr. Khadija performing precise injection treatments" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -692,12 +692,12 @@ const KarachiLocation = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
+                { beforeAfter: "/src/assets/dr-khadija-rhinoplasty-result.jpg", treatment: "Non-Surgical Rhinoplasty", description: "Natural nose reshaping with dermal fillers for refined profile" },
                 { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Lip Enhancement", description: "Natural lip augmentation for subtle definition" },
                 { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Anti-Wrinkle Treatment", description: "Forehead lines smoothed with precise Botox application" },
                 { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Facial Contouring", description: "Cheek enhancement with dermal fillers" },
                 { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Jawline Definition", description: "Non-surgical jaw enhancement" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Under-Eye Rejuvenation", description: "Tear trough treatment for youthful eyes" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Skin Quality Enhancement", description: "Profhilo treatment for improved skin texture" }
+                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Under-Eye Rejuvenation", description: "Tear trough treatment for youthful eyes" }
               ].map((result, index) => (
                 <motion.div
                   key={index}
@@ -707,16 +707,22 @@ const KarachiLocation = () => {
                   viewport={{ once: true }}
                   className="bg-gray-900/50 rounded-2xl overflow-hidden"
                 >
-                  <div className="grid grid-cols-2 gap-0">
+                  {result.beforeAfter ? (
                     <div className="relative">
-                      <img src={result.before} alt={`${result.treatment} - Before`} className="w-full h-48 object-cover" />
-                      <div className="absolute top-2 left-2 bg-gray-800/90 text-white px-2 py-1 text-xs rounded">Before</div>
+                      <img src={result.beforeAfter} alt={`${result.treatment} - Before and After comparison`} className="w-full h-48 object-cover" />
                     </div>
-                    <div className="relative">
-                      <img src={result.after} alt={`${result.treatment} - After`} className="w-full h-48 object-cover" />
-                      <div className="absolute top-2 right-2 bg-purple-600/90 text-white px-2 py-1 text-xs rounded">After</div>
+                  ) : (
+                    <div className="grid grid-cols-2 gap-0">
+                      <div className="relative">
+                        <img src={result.before} alt={`${result.treatment} - Before`} className="w-full h-48 object-cover" />
+                        <div className="absolute top-2 left-2 bg-gray-800/90 text-white px-2 py-1 text-xs rounded">Before</div>
+                      </div>
+                      <div className="relative">
+                        <img src={result.after} alt={`${result.treatment} - After`} className="w-full h-48 object-cover" />
+                        <div className="absolute top-2 right-2 bg-purple-600/90 text-white px-2 py-1 text-xs rounded">After</div>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-2">{result.treatment}</h3>
                     <p className="text-gray-300 text-sm">{result.description}</p>
