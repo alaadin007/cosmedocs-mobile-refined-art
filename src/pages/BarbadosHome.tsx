@@ -645,8 +645,8 @@ const BarbadosHome = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { image: "/lovable-uploads/46dcd83a-d3c6-4075-80bf-cff61f052d53.png", title: "Dr. Crystal in clinic" },
-                { image: "/lovable-uploads/cd1978ee-f577-4fe1-9c8f-427f09760900.png", title: "Training in London" },
+                { image: "/src/assets/barbados-clinic-treatment.jpg", title: "Dr. Crystal performing treatment" },
+                { image: "/src/assets/barbados-clinic-team.jpg", title: "Fellowship certification ceremony" },
                 { image: "/lovable-uploads/d984fe9e-6d15-44d4-a96b-2620672e3fc7.png", title: "Treatment results" },
                 { image: "/lovable-uploads/cd1978ee-f577-4fe1-9c8f-427f09760900.png", title: "Clinic environment" }
               ].map((item, index) => (
