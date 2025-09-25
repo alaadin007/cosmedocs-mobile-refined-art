@@ -696,7 +696,7 @@ const KarachiLocation = () => {
                 { beforeAfter: "/src/assets/before-after-polynucleotide-face.jpg", treatment: "Polynucleotide Face & Eye Rejuvenation", description: "Advanced skin rejuvenation with polynucleotides for natural anti-aging" },
                 { beforeAfter: "/src/assets/before-after-polynucleotide-eyes.jpg", treatment: "Polynucleotide Eye Rejuvenation", description: "Targeted under-eye treatment for youthful, refreshed appearance" },
                 { beforeAfter: "/src/assets/before-after-jawline-fillers.jpg", treatment: "Chin & Jawline Contouring", description: "Dermal fillers for enhanced facial definition and profile" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Lip Enhancement", description: "Natural lip augmentation for subtle definition" },
+                { beforeAfter: "/src/assets/lip-enhancement-treatment.jpg", treatment: "Lip Enhancement", description: "Natural lip augmentation for subtle definition" },
                 { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Anti-Wrinkle Treatment", description: "Forehead lines smoothed with precise Botox application" }
               ].map((result, index) => (
                 <motion.div
