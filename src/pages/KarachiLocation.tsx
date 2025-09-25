@@ -7,6 +7,7 @@ import { Star, Clock, Shield, Award, Check, ArrowRight, Phone, Mail, MessageCirc
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { generateSEOMetadata } from '@/utils/seo';
 import PopularTreatments from '@/components/PopularTreatments';
+import drKhadijaImage from '@/assets/dr-khadija-karachi.jpg';
 
 const KarachiLocation = () => {
   const seoData = generateSEOMetadata(
@@ -618,7 +619,7 @@ const KarachiLocation = () => {
                 className="relative"
               >
                 <img 
-                  src="/src/assets/dr-khadija-treatment-3.jpg" 
+                  src={drKhadijaImage} 
                   alt="Dr. Khadija - Aesthetic Medicine Specialist performing treatment in Karachi"
                   className="rounded-lg shadow-2xl w-full"
                 />
