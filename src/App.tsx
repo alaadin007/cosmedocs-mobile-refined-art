@@ -109,6 +109,7 @@ import LipFlip from "./pages/LipFlip";
 import MigraineBotox from "./pages/MigraineBotox";
 import BruxismBotox from "./pages/BruxismBotox";
 import ExcessiveSweatBotox from "./pages/ExcessiveSweatBotox";
+import AestheticIntelligence from "./pages/AestheticIntelligence";
 
 const queryClient = new QueryClient();
 
@@ -203,8 +204,9 @@ const App = () => {
               <Route path="/lip-flip" element={<LipFlip />} />
               <Route path="/migraine-botox" element={<MigraineBotox />} />
               <Route path="/bruxism-botox" element={<BruxismBotox />} />
-              <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
-               <Route path="/trap-botox" element={<TrapBotox />} />
+               <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
+               <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
+                <Route path="/trap-botox" element={<TrapBotox />} />
                <Route path="/hydrafacial-london" element={<HydraFacial />} />
               <Route path="/prp-treatment" element={<PRPTreatment />} />
               <Route path="/prp-treatment-london" element={<PRPTreatment />} />
