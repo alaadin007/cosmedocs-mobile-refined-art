@@ -7,8 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Loader2, Search, Plus, Trash2, Beaker, ChevronDown, ChevronUp } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
+import ProductAnalysisResults from "@/components/ProductAnalysisResults";
 
 interface ProductAnalysis {
   id: string;
@@ -447,59 +448,8 @@ const AestheticIntelligence = () => {
                                     className="mt-4 pt-4 border-t"
                                   >
                                     <div className="grid md:grid-cols-2 gap-6">
-                                      {/* Key Actives */}
-                                      {formattedAnalysis.keyActives && formattedAnalysis.keyActives.length > 0 && (
-                                        <div>
-                                          <h4 className="font-semibold mb-2 text-primary">Key Active Ingredients</h4>
-                                          <div className="space-y-2">
-                                            {formattedAnalysis.keyActives.slice(0, 5).map((active: any, idx: number) => (
-                                              <div key={idx} className="bg-muted/50 p-2 rounded text-sm">
-                                                <div className="font-medium">{active.ingredient}</div>
-                                                <div className="text-muted-foreground">{active.function}</div>
-                                              </div>
-                                            ))}
-                                          </div>
-                                        </div>
-                                      )}
-
-                                      {/* Scores Breakdown */}
-                                      {formattedAnalysis.scores && (
-                                        <div>
-                                          <h4 className="font-semibold mb-2 text-primary">Analysis Scores</h4>
-                                          <div className="space-y-1 text-sm">
-                                            {Object.entries(formattedAnalysis.scores).map(([key, value]) => {
-                                              if (typeof value === 'number' && key.includes('_')) {
-                                                const label = key.replace(/_/g, ' ').replace(/\d+/g, '').trim();
-                                                return (
-                                                  <div key={key} className="flex justify-between">
-                                                    <span className="capitalize">{label}:</span>
-                                                    <span className="font-medium">{value}</span>
-                                                  </div>
-                                                );
-                                              }
-                                              return null;
-                                            })}
-                                          </div>
-                                        </div>
-                                      )}
+                                      <ProductAnalysisResults analysis={analysis.analysis_data} />
                                     </div>
-
-                                    {/* Three Cell Analysis */}
-                                    {formattedAnalysis.threeCellAnalysis && (
-                                      <div className="mt-4">
-                                        <h4 className="font-semibold mb-2 text-primary">Three-Cell Analysis</h4>
-                                        <div className="grid md:grid-cols-3 gap-4 text-sm">
-                                          {Object.entries(formattedAnalysis.threeCellAnalysis).map(([cellType, analysis]: [string, any]) => (
-                                            <div key={cellType} className="bg-muted/30 p-3 rounded">
-                                              <h5 className="font-medium capitalize mb-1">{cellType}</h5>
-                                              <div className="text-muted-foreground">
-                                                {analysis.evidence_summary || analysis.net_direction || 'No analysis available'}
-                                              </div>
-                                            </div>
-                                          ))}
-                                        </div>
-                                      </div>
-                                    )}
                                   </motion.div>
                                 )}
                               </AnimatePresence>
