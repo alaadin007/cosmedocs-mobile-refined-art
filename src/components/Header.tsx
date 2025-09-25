@@ -62,6 +62,12 @@ export default function Header() {
       options: [
         {
           icon: Sparkles,
+          label: "AI Aesthetic Intelligence",
+          action: () => window.location.href = "/aesthetic-intelligence",
+          subtitle: "Product analysis tool"
+        },
+        {
+          icon: Sparkles,
           label: "AI Aesthetic Analysis",
           action: () => setIsAnalysisOpen(true)
         },

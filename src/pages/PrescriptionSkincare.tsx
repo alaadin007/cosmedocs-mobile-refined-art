@@ -159,6 +159,13 @@ const PrescriptionSkincare = () => {
                   <Button 
                     variant="outline" 
                     className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => window.location.href = "/aesthetic-intelligence"}
+                  >
+                    AI Product Analysis
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
                     onClick={() => setIsAnalysisOpen(true)}
                   >
                     AI Skin Analysis
