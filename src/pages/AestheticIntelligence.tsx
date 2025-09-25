@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { Loader2, Search, Plus, Trash2, Beaker, ChevronDown, ChevronUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
-import ProductAnalysisResults from "@/components/ProductAnalysisResults";
+import CosmeticAnalysisResults from "@/components/CosmeticAnalysisResults";
 
 interface ProductAnalysis {
   id: string;
@@ -110,8 +110,11 @@ const AestheticIntelligence = () => {
           }
         }
 
-        const { data, error } = await supabase.functions.invoke('product-analyzer', {
-          body: { productUrl: input.url }
+        const { data, error } = await supabase.functions.invoke('cosmetic-analyzer', {
+          body: { 
+            productUrl: input.url,
+            productName: input.name 
+          }
         });
 
         if (error) {
@@ -153,7 +156,7 @@ const AestheticIntelligence = () => {
   };
 
   const filteredAnalyses = analyses.filter(analysis =>
-    analysis.product_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (analysis.product_name && analysis.product_name.toLowerCase().includes(searchTerm.toLowerCase())) ||
     (analysis.product_brand && analysis.product_brand.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
@@ -531,7 +534,7 @@ const AestheticIntelligence = () => {
                                     className="mt-4 pt-4 border-t"
                                   >
                                     <div className="grid md:grid-cols-2 gap-6">
-                                      <ProductAnalysisResults analysis={analysis.analysis_data} />
+                                      <CosmeticAnalysisResults analysis={analysis.analysis_data} />
                                     </div>
                                   </motion.div>
                                 )}
