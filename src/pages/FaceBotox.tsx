@@ -299,7 +299,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-16 bg-gray-800">
+        <section className="py-16 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -385,7 +385,7 @@ export default function FaceBotox() {
               <p className="text-gray-300 max-w-2xl mx-auto">Transparent pricing for all facial areas with no hidden costs</p>
             </motion.div>
             
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            <div className="bg-accent/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
@@ -456,7 +456,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Before & After Gallery */}
-        <section className="py-20 bg-gray-800">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -562,7 +562,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Lower Face Treatment Areas */}
-        <section className="py-20 bg-gray-800">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -692,7 +692,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Advanced Combination Approach */}
-        <section className="py-20 bg-gray-800">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -766,7 +766,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Baby Botox/Microtox Section */}
-        <section className="py-20 bg-gray-800">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -908,7 +908,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Medical Botox Applications */}
-        <section className="py-20 bg-gray-800">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1080,7 +1080,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Client Reviews Section */}
-        <section className="py-20 bg-gray-800">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1218,7 +1218,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Professional Training */}
-        <section className="py-20 bg-gray-800">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 text-white">Professional Training Available</h2>
