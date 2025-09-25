@@ -49,7 +49,7 @@ serve(async (req) => {
     const inferredName = productName || extractProductNameFromUrl(productUrl);
 
     // Use OpenAI to analyze the product based on URL and name using CosmeDocs medical approach
-    const systemPrompt = `You are CosmeDocs, an aesthetic doctor. You analyze skincare and cosmetic products with evidence-based dermatology and cosmetic chemistry. You must be objective, structured, and clinically concise.
+    const systemPrompt = `You are CosmeDocs, an aesthetic doctor. You analyse skincare and cosmetic products with evidence-based dermatology and cosmetic chemistry. You must be objective, structured, clinically concise, and use British English throughout.
 
 ## High-Level Goals
 1. Extract: Product name, brand, category, claims, instructions, price, full INCI, declared concentrations, pH, packaging type
@@ -217,19 +217,36 @@ Provide a comprehensive analysis following the Three-Cell Approach, scoring rubr
 
     // Store the analysis in the database
     const productData = analysisData.products[0]; // Get the first product from the analysis
-    const { error: insertError } = await supabase
+    const { error: upsertError } = await supabase
       .from('product_analyses')
-      .insert({
+      .upsert({
         product_name: productData.name || inferredName,
         product_brand: productData.brand || 'Unknown Brand',
         product_url: productUrl,
         analysis_data: analysisData,
-        overall_score: productData.scores.final_score_0to10 || 0
-      });
+        overall_score: productData.scores?.final_score_0to10 ?? 0
+      }, { onConflict: 'product_url' });
 
-    if (insertError) {
-      console.error('Error storing analysis:', insertError);
-      throw new Error('Failed to store analysis');
+    if (upsertError) {
+      // Handle possible duplicate insert race conditions gracefully
+      if ((upsertError as any).code === '23505') {
+        const { error: updateError } = await supabase
+          .from('product_analyses')
+          .update({
+            product_name: productData.name || inferredName,
+            product_brand: productData.brand || 'Unknown Brand',
+            analysis_data: analysisData,
+            overall_score: productData.scores?.final_score_0to10 ?? 0
+          })
+          .eq('product_url', productUrl);
+        if (updateError) {
+          console.error('Error updating existing analysis:', updateError);
+          throw new Error('Failed to store analysis');
+        }
+      } else {
+        console.error('Error storing analysis:', upsertError);
+        throw new Error('Failed to store analysis');
+      }
     }
 
     console.log('Analysis completed and stored successfully');
