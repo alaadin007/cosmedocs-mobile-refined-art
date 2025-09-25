@@ -25,14 +25,18 @@ serve(async (req) => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Check if product already analyzed recently
-    const { data: existingAnalysis } = await supabase
+    const { data: existingAnalysis, error: selectError } = await supabase
       .from('product_analyses')
       .select('*')
       .eq('product_url', productUrl)
-      .single();
+      .maybeSingle();
 
-    if (existingAnalysis) {
-      console.log('Found existing analysis');
+    if (selectError) {
+      console.error('Error checking existing analysis:', selectError);
+    }
+
+    if (existingAnalysis && existingAnalysis.analysis_data) {
+      console.log('Found existing analysis, returning cached result');
       return new Response(JSON.stringify({ 
         success: true, 
         data: existingAnalysis.analysis_data,
@@ -44,10 +48,18 @@ serve(async (req) => {
 
     // Scrape the product page using ScraperAPI
     console.log('Scraping product page...');
+    
+    // Validate ScraperAPI key
+    if (!scraperApiKey) {
+      throw new Error('SCRAPER_API_KEY not configured');
+    }
+    
     const scraperResponse = await fetch(`http://api.scraperapi.com?api_key=${scraperApiKey}&url=${encodeURIComponent(productUrl)}&render=true`);
     
     if (!scraperResponse.ok) {
-      throw new Error(`Failed to scrape page: ${scraperResponse.status}`);
+      const errorText = await scraperResponse.text();
+      console.error('ScraperAPI error:', errorText);
+      throw new Error(`Failed to scrape page: ${scraperResponse.status} - ${errorText}`);
     }
 
     const htmlContent = await scraperResponse.text();
@@ -105,7 +117,9 @@ Provide a complete analysis following the CosmeDocs methodology and return the r
     });
 
     if (!openAIResponse.ok) {
-      throw new Error(`OpenAI API error: ${openAIResponse.status}`);
+      const errorText = await openAIResponse.text();
+      console.error('OpenAI API error:', errorText);
+      throw new Error(`OpenAI API error: ${openAIResponse.status} - ${errorText}`);
     }
 
     const openAIData = await openAIResponse.json();
