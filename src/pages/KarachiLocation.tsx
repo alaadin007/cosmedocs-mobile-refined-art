@@ -13,9 +13,6 @@ import khTreat1 from '@/assets/karachi-hsi-treatment-1.png';
 import khTreat2 from '@/assets/karachi-hsi-treatment-2.png';
 import khTreat3 from '@/assets/karachi-hsi-treatment-3.png';
 import khRhinoplasty from '@/assets/karachi-hsi-before-after-rhinoplasty.png';
-import khPolyFaceEye from '@/assets/karachi-polynucleotide-face-eye.png';
-import khPolyEye from '@/assets/karachi-polynucleotide-eye.png';
-import khJawline from '@/assets/karachi-dermal-fillers-jawline.png';
 
 const KarachiLocation = () => {
   const seoData = generateSEOMetadata(
@@ -703,10 +700,7 @@ const KarachiLocation = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { beforeAfter: khRhinoplasty, treatment: "Non‑surgical Rhinoplasty", description: "Natural nose reshaping with dermal fillers for a refined profile" },
-                { beforeAfter: khPolyFaceEye, treatment: "Polynucleotide Face & Eye Rejuvenation", description: "Advanced skin rejuvenation with polynucleotides for natural anti‑ageing" },
-                { beforeAfter: khPolyEye, treatment: "Polynucleotide Eye Rejuvenation", description: "Targeted under‑eye treatment for youthful, refreshed appearance" },
-                { beforeAfter: khJawline, treatment: "Chin & Jawline Contouring", description: "Dermal fillers for enhanced facial definition and profile" }
+                { beforeAfter: khRhinoplasty, treatment: "Non‑surgical Rhinoplasty", description: "Natural nose reshaping with dermal fillers for a refined profile" }
               ].map((result, index) => (
                 <motion.div
                   key={index}
