@@ -1,25 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Users, Award, Calendar, MapPin, Phone } from "lucide-react";
+import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check } from "lucide-react";
+import PopularTreatments from '@/components/PopularTreatments';
 
 export default function FaceBotox() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
   const seoData = generateSEOMetadata(
-    "Face Botox London | Anti-Wrinkle Injections | From £200 | Cosmedocs",
-    "Premium face botox treatments in London's Harley Street. Expert anti-wrinkle injections for forehead, crow's feet & frown lines. Natural results from £200.",
+    "Face Botox London | Comprehensive Treatment Guide | Cosmedocs",
+    "Complete face botox treatment including forehead, frown lines, crow's feet, lower face areas and advanced techniques. Expert practitioners on Harley Street since 2007.",
     "/face-botox"
   );
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
-    "name": "Face Botox Treatment",
-    "alternateName": ["Anti-Wrinkle Injections", "Botulinum Toxin", "Facial Botox"],
-    "description": "Professional face botox treatment for reducing wrinkles and fine lines on the forehead, around eyes, and between eyebrows.",
+    "name": "Comprehensive Face Botox Treatment",
+    "alternateName": ["Anti-Wrinkle Injections", "Botulinum Toxin", "Facial Botox", "Upper Face Botox", "Lower Face Botox"],
+    "description": "Professional comprehensive face botox treatment including upper face, lower face areas and advanced combination techniques.",
     "provider": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
@@ -35,7 +38,7 @@ export default function FaceBotox() {
     },
     "offers": {
       "@type": "Offer",
-      "price": "200",
+      "price": "175",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock"
     },
@@ -46,31 +49,154 @@ export default function FaceBotox() {
     }
   };
 
+  // Combined treatment areas from all pages
   const treatmentAreas = [
     {
       area: "Forehead Lines",
-      description: "Smooth horizontal lines across the forehead",
+      description: "Horizontal lines across the forehead from raising eyebrows. We create smooth, natural appearance while preserving your ability to express emotion.",
       units: "10-20 units",
-      price: "£200-350"
-    },
-    {
-      area: "Crow's Feet",
-      description: "Reduce laugh lines around the eyes",
-      units: "12-24 units",
-      price: "£200-400"
+      price: "£175-350",
+      duration: "4-6 months"
     },
     {
       area: "Frown Lines",
-      description: "Soften the '11' lines between eyebrows",
+      description: "Vertical lines between eyebrows caused by concentration and expression. Our precise technique smooths these lines while maintaining natural facial expression.",
       units: "15-25 units",
-      price: "£250-450"
+      price: "£175-350",
+      duration: "4-6 months"
+    },
+    {
+      area: "Crow's Feet",
+      description: "Fine lines radiating from outer corners of eyes when smiling. Our delicate approach softens lines while keeping your smile authentic.",
+      units: "8-15 units per side",
+      price: "£175-350",
+      duration: "4-6 months"
     },
     {
       area: "Brow Lift",
       description: "Subtle lift to create more open eyes",
       units: "4-8 units",
-      price: "£150-250"
+      price: "£150-250",
+      duration: "4-6 months"
     }
+  ];
+
+  // Lower face treatment areas
+  const lowerFaceTreatmentAreas = [
+    {
+      icon: Target,
+      title: "DAO Muscle (Depressor Anguli Oris)",
+      description: "Targets muscles that pull down the corners of the mouth",
+      benefit: "Lifts downturned mouth corners for a more youthful appearance"
+    },
+    {
+      icon: Shield,
+      title: "Mentalis Crease",
+      description: "Addresses horizontal lines and dimpling over the chin area",
+      benefit: "Smooths chin texture and reduces orange peel appearance"
+    },
+    {
+      icon: Zap,
+      title: "Platysma Muscle",
+      description: "Relaxes the large neck muscle that creates neck bands",
+      benefit: "Defines jawline and reduces appearance of neck aging"
+    },
+    {
+      icon: Heart,
+      title: "Jawline Definition",
+      description: "Strategic placement to enhance facial contours",
+      benefit: "Creates sharper, more defined jawline without surgery"
+    }
+  ];
+
+  // Additional face areas
+  const additionalFaceAreas = [
+    {
+      name: "Chin Botox",
+      price: "£175",
+      description: "Smooth dimpled or cobblestone chin texture for a refined appearance.",
+      units: "15-25 units",
+      duration: "4-6 months"
+    },
+    {
+      name: "Nefertiti Face Lift",
+      price: "£300",
+      description: "Jawline definition and neck smoothing for an elegant profile.",
+      units: "30-50 units",
+      duration: "4-6 months"
+    },
+    {
+      name: "Masseter (Jaw Slimming)",
+      price: "£350",
+      description: "Reduce jaw muscle bulk for a softer, more feminine facial contour.",
+      units: "25-40 units per side",
+      duration: "6-8 months"
+    },
+    {
+      name: "Lip Flip",
+      price: "£175",
+      description: "Subtle upper lip enhancement for a naturally fuller appearance.",
+      units: "4-8 units",
+      duration: "3-4 months"
+    },
+    {
+      name: "Gummy Smile",
+      price: "£50",
+      description: "Reduce excessive gum display when smiling for perfect smile proportions.",
+      units: "2-4 units",
+      duration: "4-6 months"
+    },
+    {
+      name: "Bunny Lines",
+      price: "£50",
+      description: "Smooth fine lines on the nose bridge that appear when scrunching.",
+      units: "4-8 units",
+      duration: "4-6 months"
+    }
+  ];
+
+  // Before/after images
+  const beforeAfterImages = [
+    {
+      src: "/lovable-uploads/d610e5f1-30da-4a26-b87c-a7c38162811f.png",
+      alt: "Before and after frown lines botox treatment",
+      caption: "Frown Lines Treatment: Smooth, natural results with our precision Botox technique."
+    },
+    {
+      src: "/lovable-uploads/35a418d0-b5b2-4c2c-864c-a3546681613f.png", 
+      alt: "Before and after forehead lines botox treatment",
+      caption: "Forehead Lines Treatment: Gentle smoothing while maintaining natural movement."
+    },
+    {
+      src: "/lovable-uploads/4fc6cbae-9029-4158-bc6e-1e30f20ac5a3.png",
+      alt: "Before and after gummy smile botox treatment", 
+      caption: "Gummy Smile Treatment: Delicate enhancement for a perfect smile."
+    }
+  ];
+
+  // Auto-scroll carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % beforeAfterImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [beforeAfterImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % beforeAfterImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + beforeAfterImages.length) % beforeAfterImages.length);
+  };
+
+  // Botox timeline from advanced page
+  const botoxTimeline = [
+    { month: 1, percentage: 20, description: "Botox begins wearing off" },
+    { month: 2, percentage: 40, description: "Lines start reappearing for deep wrinkles" },
+    { month: 3, percentage: 60, description: "Significant movement returns" },
+    { month: 4, percentage: 80, description: "Most effect worn off" },
+    { month: 5, percentage: 100, description: "Complete wear-off" }
   ];
 
   const benefits = [
@@ -97,7 +223,7 @@ export default function FaceBotox() {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        <meta name="keywords" content="face botox london, anti-wrinkle injections, botox harley street, forehead botox, crow's feet botox, frown lines botox, facial rejuvenation, cosmetic botox" />
+        <meta name="keywords" content="face botox london, anti-wrinkle injections, botox harley street, forehead botox, crow's feet botox, frown lines botox, facial rejuvenation, cosmetic botox, comprehensive face botox, lower face botox, advanced botox" />
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
@@ -115,10 +241,10 @@ export default function FaceBotox() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
-                Face Botox Treatment
+                Comprehensive Face Botox Treatment
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Expert anti-wrinkle injections for a naturally refreshed appearance
+                Complete facial rejuvenation including upper face, lower face areas and advanced combination techniques
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="flex items-center gap-2 text-sm bg-card px-4 py-2 rounded-full">
@@ -127,7 +253,7 @@ export default function FaceBotox() {
                 </div>
                 <div className="flex items-center gap-2 text-sm bg-card px-4 py-2 rounded-full">
                   <Users className="w-4 h-4 text-primary" />
-                  <span>From £200</span>
+                  <span>From £175</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm bg-card px-4 py-2 rounded-full">
                   <Award className="w-4 h-4 text-primary" />
@@ -145,7 +271,85 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Treatment Areas */}
+        {/* Enhanced Pricing Section */}
+        <section className="py-16 px-6 bg-gradient-to-br from-primary/5 to-secondary/5">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Face Botox Pricing</h2>
+              <p className="text-lg text-muted-foreground">Transparent pricing for all facial areas</p>
+            </div>
+            
+            <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="text-center bg-card rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-3xl font-bold mb-3 text-primary">£175</div>
+                  <div className="text-lg mb-2">1 Area</div>
+                  <div className="text-sm text-muted-foreground">Single treatment area</div>
+                </motion.div>
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-center bg-card rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-3xl font-bold mb-3 text-primary">£275</div>
+                  <div className="text-lg mb-2">2 Areas</div>
+                  <div className="text-sm text-muted-foreground">Two treatment areas</div>
+                </motion.div>
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-center bg-card rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-3xl font-bold mb-3 text-primary">£350</div>
+                  <div className="text-lg mb-2">3 Areas</div>
+                  <div className="text-sm text-muted-foreground">Three treatment areas</div>
+                </motion.div>
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="text-center bg-secondary/20 border border-secondary/30 rounded-xl p-6 hover:bg-secondary/30 transition-all duration-300"
+                >
+                  <div className="text-3xl font-bold mb-3 text-secondary">+£50</div>
+                  <div className="text-lg mb-2">Men Supplement</div>
+                  <div className="text-sm text-muted-foreground">Additional charge for men</div>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Quick Info */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div className="text-center">
+                <div className="text-2xl font-bold mb-2">&lt;5min</div>
+                <div className="text-sm text-muted-foreground">Treatment Time</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold mb-2">5-10 days</div>
+                <div className="text-sm text-muted-foreground">Takes Effect</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold mb-2">4-6 months</div>
+                <div className="text-sm text-muted-foreground">Results Last</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold mb-2">Immediate</div>
+                <div className="text-sm text-muted-foreground">Return to Work</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Upper Face Treatment Areas */}
         <section className="py-16 px-6">
           <div className="container mx-auto max-w-6xl">
             <motion.div
@@ -156,14 +360,14 @@ export default function FaceBotox() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Treatment Areas
+                Upper Face Treatment Areas
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Our expert doctors target specific areas to deliver natural, beautiful results
+                Target the three most common facial areas for natural, lasting results
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-3 gap-8">
               {treatmentAreas.map((area, index) => (
                 <motion.div
                   key={area.area}
@@ -172,7 +376,7 @@ export default function FaceBotox() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="p-6 h-full">
+                  <Card className="p-6 h-full hover:shadow-lg transition-shadow">
                     <h3 className="text-xl font-semibold mb-3">{area.area}</h3>
                     <p className="text-muted-foreground mb-4">{area.description}</p>
                     <div className="space-y-2">
@@ -181,6 +385,9 @@ export default function FaceBotox() {
                       </div>
                       <div className="text-sm">
                         <span className="font-medium">Price:</span> {area.price}
+                      </div>
+                      <div className="text-sm">
+                        <span className="font-medium">Duration:</span> {area.duration}
                       </div>
                     </div>
                   </Card>
@@ -209,6 +416,59 @@ export default function FaceBotox() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Before & After Carousel */}
+              <div className="relative max-w-lg mx-auto">
+                <div className="relative overflow-hidden rounded-lg aspect-square">
+                  {beforeAfterImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
+                        index === currentImageIndex ? 'translate-x-0' : 
+                        index < currentImageIndex ? '-translate-x-full' : 'translate-x-full'
+                      }`}
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                  
+                  <button
+                    onClick={prevImage}
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+                
+                <div className="mt-4 text-center">
+                  <p className="text-sm text-muted-foreground">
+                    {beforeAfterImages[currentImageIndex]?.caption}
+                  </p>
+                </div>
+                
+                <div className="flex justify-center mt-4 space-x-2">
+                  {beforeAfterImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentImageIndex ? 'bg-primary' : 'bg-muted-foreground/30'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+
               {/* Instagram Embed */}
               <div className="flex justify-center">
                 <div className="max-w-lg w-full">
@@ -340,35 +600,20 @@ export default function FaceBotox() {
                   </blockquote>
                 </div>
               </div>
+            </div>
 
-              {/* Before & After Gallery Preview */}
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <Card className="overflow-hidden">
-                    <div className="aspect-square bg-muted flex items-center justify-center">
-                      <span className="text-muted-foreground text-sm">Before</span>
-                    </div>
-                  </Card>
-                  <Card className="overflow-hidden">
-                    <div className="aspect-square bg-muted flex items-center justify-center">
-                      <span className="text-muted-foreground text-sm">After</span>
-                    </div>
-                  </Card>
-                </div>
-                <div className="text-center">
-                  <Button 
-                    variant="outline" 
-                    onClick={() => window.open('/before-after-gallery', '_blank')}
-                  >
-                    View Full Gallery
-                  </Button>
-                </div>
-              </div>
+            <div className="text-center">
+              <Button 
+                variant="outline" 
+                onClick={() => window.open('/before-after-gallery', '_blank')}
+              >
+                View Before & After Gallery
+              </Button>
             </div>
           </div>
         </section>
 
-        {/* Safety & Suitability */}
+        {/* Lower Face Treatment Areas */}
         <section className="py-16 px-6">
           <div className="container mx-auto max-w-6xl">
             <motion.div
@@ -379,71 +624,120 @@ export default function FaceBotox() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Safety & Suitability
+                Lower Face Treatment Areas
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Your safety is our priority. We ensure every treatment is suitable and safe for you.
+                Comprehensive lower face rejuvenation for balanced facial harmony
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-green-600">Who Can Have Botox?</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Adults aged 18-65 with dynamic wrinkles</li>
-                  <li>• Those seeking wrinkle prevention</li>
-                  <li>• Patients with realistic expectations</li>
-                  <li>• Good general health</li>
-                  <li>• Not pregnant or breastfeeding</li>
-                </ul>
+            <div className="mb-8">
+              <Card className="p-8">
+                <CardContent className="p-0">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4">The Unbalanced Face Problem</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Many clients have been receiving upper face Botox for years, but their lower 
+                        face remains hyper-animated. This creates an unnatural imbalance where the 
+                        upper face is relaxed while the lower face shows excessive movement.
+                      </p>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>Mentalis crease over the chin from habitual muscle use</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>Downturned mouth corners creating sad expression</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>Horizontal lines along jawline from muscle tension</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4">The Solution</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Strategic lower face Botox creates balance, symmetry, and natural results 
+                        by harmonizing upper and lower facial animation.
+                      </p>
+                      <div className="bg-primary/10 p-4 rounded-lg">
+                        <p className="text-sm font-medium mb-2">The Result:</p>
+                        <p className="text-sm text-muted-foreground">
+                          Comprehensive facial harmony that maintains natural expression while 
+                          creating a more youthful, balanced appearance.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
               </Card>
+            </div>
 
-              <Card className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-red-600">Contraindications</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Pregnancy or breastfeeding</li>
-                  <li>• Neuromuscular disorders</li>
-                  <li>• Active skin infections at injection sites</li>
-                  <li>• Allergy to botulinum toxin</li>
-                  <li>• Certain medications (blood thinners)</li>
-                </ul>
-              </Card>
+            <div className="grid md:grid-cols-2 gap-8">
+              {lowerFaceTreatmentAreas.map((area, index) => (
+                <motion.div
+                  key={area.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full p-6 hover:shadow-lg transition-shadow">
+                    <CardContent className="p-0">
+                      <area.icon className="h-8 w-8 text-primary mb-4" />
+                      <h3 className="text-lg font-semibold mb-3">{area.title}</h3>
+                      <p className="text-muted-foreground text-sm mb-4">{area.description}</p>
+                      <div className="bg-accent/50 p-3 rounded text-xs">
+                        <span className="font-medium">Benefit: </span>
+                        <span className="text-muted-foreground">{area.benefit}</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 px-6">
+        {/* Additional Face Areas */}
+        <section className="py-16 px-6 bg-secondary/5">
           <div className="container mx-auto max-w-6xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Why Choose Face Botox?
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Additional Face Areas</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Our aesthetics is invisible art - bold, natural, always your way
+                Enhance your natural beauty with specialized Botox treatments for additional facial areas
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+              {additionalFaceAreas.map((area, index) => (
                 <motion.div
-                  key={index}
+                  key={area.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="p-6 text-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Award className="w-6 h-6 text-primary" />
-                    </div>
-                    <p className="text-muted-foreground">{benefit}</p>
+                  <Card className="p-6 h-full hover:shadow-lg transition-shadow">
+                    <CardContent className="p-0">
+                      <div className="flex justify-between items-start mb-3">
+                        <h3 className="text-lg font-semibold">{area.name}</h3>
+                        <span className="text-primary font-bold">{area.price}</span>
+                      </div>
+                      <p className="text-muted-foreground text-sm mb-4">{area.description}</p>
+                      <div className="space-y-2 text-xs text-muted-foreground">
+                        <div><span className="font-medium">Units:</span> {area.units}</div>
+                        <div><span className="font-medium">Duration:</span> {area.duration}</div>
+                      </div>
+                    </CardContent>
                   </Card>
                 </motion.div>
               ))}
@@ -451,62 +745,7 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Treatment Process */}
-        <section className="py-16 px-6 bg-secondary/5">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Treatment Process
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A seamless journey to natural-looking results
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: "01",
-                  title: "Consultation",
-                  description: "Detailed assessment of your facial anatomy and treatment goals"
-                },
-                {
-                  step: "02",
-                  title: "Treatment",
-                  description: "Precise injections using the finest needles for maximum comfort"
-                },
-                {
-                  step: "03",
-                  title: "Results",
-                  description: "Natural-looking results develop over 7-14 days"
-                }
-              ].map((process, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
-                    {process.step}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{process.title}</h3>
-                  <p className="text-muted-foreground">{process.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Aftercare Instructions */}
+        {/* Advanced Combination Approach */}
         <section className="py-16 px-6">
           <div className="container mx-auto max-w-6xl">
             <motion.div
@@ -517,362 +756,150 @@ export default function FaceBotox() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Aftercare Instructions
+                Advanced Combination Approach
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Follow these guidelines to optimize your results and minimize side effects
+                For deep wrinkles, we combine Botox with dermal fillers for superior results
               </p>
             </motion.div>
 
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <Card className="p-6">
+                <CardContent className="p-0">
+                  <h3 className="text-xl font-semibold mb-4">Why Botox Alone Isn't Enough</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Botox wears off approximately 20% per month. For people with deep wrinkles, 
+                    this creates a frustrating cycle where lines reappear at 2-3 months.
+                  </p>
+                  <div className="space-y-3">
+                    {botoxTimeline.map((item) => (
+                      <div key={item.month} className="flex items-center gap-3">
+                        <div className="w-16 text-sm font-medium">Month {item.month}:</div>
+                        <div className="flex-1">
+                          <div className="bg-accent rounded-full h-2 relative overflow-hidden">
+                            <div 
+                              className="bg-primary h-full transition-all duration-500"
+                              style={{ width: `${100 - item.percentage}%` }}
+                            />
+                          </div>
+                        </div>
+                        <div className="text-sm text-muted-foreground">{item.percentage}% worn off</div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="p-6">
+                <CardContent className="p-0">
+                  <h3 className="text-xl font-semibold mb-4">The Advanced Solution</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Combining Botox with carefully placed dermal fillers addresses both 
+                    muscle movement AND fills the established crease for comprehensive treatment.
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Fill lines halfway for natural appearance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Stimulate natural collagen production</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Provide stable, long-lasting results</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Results last 18-24 months</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Professional Training */}
+        <section className="py-16 px-6 bg-secondary/5">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Professional Training Available</h2>
+              <p className="text-lg text-muted-foreground">Learn advanced face Botox techniques from our experts</p>
+            </div>
+            
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-green-600">Do's</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span>Keep head upright for 4 hours after treatment</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span>Apply ice packs to reduce swelling if needed</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span>Take paracetamol for any discomfort</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span>Use gentle skincare products</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span>Contact us if you have any concerns</span>
-                  </li>
-                </ul>
-              </Card>
-
-              <Card className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-red-600">Don'ts</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <span>Don't exercise for 24 hours</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <span>Avoid alcohol for 24 hours</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <span>Don't rub or massage the treated area</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <span>Avoid facials for 2 weeks</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <span>Don't lie down for 4 hours post-treatment</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-16 px-6 bg-secondary/5">
-          <div className="container mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Everything you need to know about face botox treatment
-              </p>
-            </motion.div>
-
-            <div className="space-y-6">
-              {[
-                {
-                  question: "How long does face botox last?",
-                  answer: "Face botox typically lasts 3-6 months. The duration varies depending on individual metabolism, muscle strength, and lifestyle factors. Regular treatments can help maintain optimal results."
-                },
-                {
-                  question: "Does botox hurt?",
-                  answer: "Most patients describe the sensation as a small pinch. We use the finest needles and can apply topical numbing cream if needed. The entire treatment is usually completed within 15-30 minutes."
-                },
-                {
-                  question: "When will I see results?",
-                  answer: "Initial results begin to appear within 3-5 days, with full effects visible after 10-14 days. Your facial expressions will gradually become smoother and more relaxed."
-                },
-                {
-                  question: "Are there any side effects?",
-                  answer: "Common side effects are mild and temporary, including slight redness, swelling, or bruising at injection sites. Serious complications are extremely rare when performed by qualified practitioners."
-                },
-                {
-                  question: "Can I return to work immediately?",
-                  answer: "Yes, most patients return to normal activities immediately. We recommend avoiding strenuous exercise for 24 hours and not lying down for 4 hours post-treatment."
-                },
-                {
-                  question: "How much does face botox cost?",
-                  answer: "Prices start from £200 per treatment area. The exact cost depends on the number of areas treated and units required. We provide transparent pricing with no hidden fees."
-                }
-              ].map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6">
-                    <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Cosmedocs */}
-        <section className="py-16 px-6">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Why Choose Cosmedocs?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Bold • Natural • Always Your Way - Experience the Cosmedocs difference
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Expert Doctors</h3>
-                <p className="text-muted-foreground">
-                  Highly qualified cosmetic doctors with extensive training in facial anatomy and injection techniques.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <MapPin className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Harley Street Location</h3>
-                <p className="text-muted-foreground">
-                  Premium clinic in London's prestigious medical district, maintaining the highest standards of clinical excellence.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Natural Results</h3>
-                <p className="text-muted-foreground">
-                  Our philosophy of invisible art ensures results that enhance your natural beauty without looking artificial.
-                </p>
-              </motion.div>
-            </div>
-
-            <div className="mt-12 text-center">
-              <Card className="p-8 bg-gradient-to-r from-primary/5 to-secondary/5">
-                <h3 className="text-2xl font-bold mb-4">Our Aesthetics is Invisible Art</h3>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Quiet, not loud. Invisible, not exaggerated. It's transformation that speaks — without saying a word.
-                </p>
-                <div className="flex flex-wrap justify-center gap-6 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span>Established 2007</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-primary" />
-                    <span>CQC Registered</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-primary" />
-                    <span>Thousands of Happy Patients</span>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section className="py-16 px-6 bg-secondary/5">
-          <div className="container mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Transparent Pricing
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Premium face botox treatments with no hidden costs
-              </p>
-            </motion.div>
-
-            <Card className="p-8">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Face Botox Treatment</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li>• Expert consultation included</li>
-                    <li>• Premium botulinum toxin</li>
-                    <li>• Follow-up appointment</li>
-                    <li>• Natural-looking results</li>
-                    <li>• 3-6 months duration</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-4">From £200</div>
-                  <p className="text-muted-foreground mb-6">Per treatment area</p>
-                  <Button 
-                    size="lg" 
-                    className="w-full"
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                  >
-                    Book Your Treatment
+                <CardContent className="p-0">
+                  <BookOpen className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-4">Online Courses</h3>
+                  <p className="text-muted-foreground mb-4">
+                    For medical professionals practicing dermal fillers and Botox, we offer comprehensive 
+                    online courses through harleystreetinstitute.com
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    Learn More About Online Training
                   </Button>
-                </div>
-              </div>
-            </Card>
+                </CardContent>
+              </Card>
+              
+              <Card className="p-6">
+                <CardContent className="p-0">
+                  <Users className="h-8 w-8 text-primary mb-4" />
+                  <h3 className="text-xl font-semibold mb-4">One-to-One Training</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Book personalized training sessions to learn these advanced procedures 
+                    that will significantly increase your client satisfaction rates.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    Book Personal Training
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 px-6 bg-primary text-primary-foreground">
+        {/* Call to Action */}
+        <section className="py-16 px-6 bg-primary/10">
           <div className="container mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready for Natural Results?
-              </h2>
-              <p className="text-xl mb-8 opacity-90">
-                Book your consultation with our expert doctors today
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  <span>0207 935 7990</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  <span>37 Harley Street, London</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5" />
-                  <span>Book Online 24/7</span>
-                </div>
-              </div>
-              <Separator className="my-8 bg-primary-foreground/20" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Comprehensive Face Botox?</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Transform your entire face with our expert comprehensive Botox treatments. 
+              From upper face to lower face areas and advanced combination techniques.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                variant="secondary" 
                 className="px-8 py-4 text-lg"
                 onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
               >
-                Schedule Consultation
+                Book Your Consultation
               </Button>
-            </motion.div>
+              <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
+                View Price List
+              </Button>
+            </div>
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+                <Eye className="h-4 w-4" />
+                <span>Bold • Natural • Always Your Way</span>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Face Botox London - Expert Anti-Wrinkle Treatments</h2>
+        <div className="sr-only" aria-hidden="true">
+          <h2>Comprehensive Face Botox Treatment London Birmingham Manchester Cardiff</h2>
           <p>
-            At Cosmedocs, our philosophy centres on invisible art - aesthetic medicine that's minimal, 
-            quiet, and naturally transformative. Our face botox treatments in London's prestigious 
-            Harley Street represent the pinnacle of anti-wrinkle injection expertise, delivered by 
-            highly qualified cosmetic doctors who understand the delicate balance between enhancement 
-            and authenticity.
-          </p>
-          
-          <h3>Premium Botulinum Toxin Treatments</h3>
-          <p>
-            Our face botox treatments utilise only the highest quality botulinum toxin products, 
-            administered with precision to target specific facial muscles responsible for dynamic 
-            wrinkles. Whether you're seeking to smooth forehead lines, reduce crow's feet, or soften 
-            frown lines between the eyebrows, our expert practitioners deliver results that speak 
-            without saying a word.
-          </p>
-          
-          <h3>Comprehensive Facial Rejuvenation</h3>
-          <p>
-            Face botox at Cosmedocs goes beyond simple wrinkle reduction. Our doctors understand 
-            facial anatomy and muscle movement patterns, allowing them to create subtle lifts, 
-            prevent future wrinkle formation, and maintain natural facial expressions. Each treatment 
-            is tailored to your unique facial structure and aesthetic goals, ensuring results that 
-            enhance your natural beauty rather than masking it.
-          </p>
-          
-          <h3>Harley Street Excellence</h3>
-          <p>
-            Located in the heart of London's medical district, our Harley Street clinic maintains 
-            the highest standards of clinical excellence and patient care. Our face botox treatments 
-            are performed in a sophisticated, medically-approved environment using sterile techniques 
-            and the latest injection technologies to ensure both safety and optimal results.
-          </p>
-          
-          <h3>Natural, Long-Lasting Results</h3>
-          <p>
-            The hallmark of expert face botox treatment is achieving natural-looking results that 
-            last. Our carefully calculated dosing and precise injection techniques ensure that your 
-            facial expressions remain authentic while wrinkles are significantly reduced. Results 
-            typically develop over 7-14 days and can last 3-6 months, making face botox an excellent 
-            investment in your aesthetic well-being.
+            Comprehensive Face Botox treatment at Cosmedocs London offers professional wrinkle reduction for all facial areas including forehead lines, frown lines, crow's feet, lower face areas, and advanced combination treatments. Our expert practitioners on Harley Street have performed over 1 million injections since 2007, delivering natural-looking results through our invisible art philosophy. Face Botox treatment costs £175-£350 for 1-3 areas with transparent pricing structure and £50 supplement for men. Results take 5-10 days to develop and last 4-6 months for standard treatments, up to 18-24 months for advanced combination treatments. The treatment takes less than 5 minutes with comprehensive consultation process. We use premium Botox products including Azzalure and Dysport and follow strict safety protocols to ensure optimal outcomes. Our consultation process includes detailed facial assessment, treatment planning, and aftercare guidance. Cosmedocs specializes in subtle enhancement that preserves natural facial expressions while reducing unwanted lines and wrinkles. We offer comprehensive treatments including upper face areas (forehead lines, frown lines, crow's feet, brow lift), lower face areas (DAO muscle depressor anguli oris, mentalis crease, platysma muscle, jawline definition), and advanced combination treatments with dermal fillers for deep wrinkles. Advanced upper face treatments combine Botox with dermal fillers for superior results lasting 18-24 months using strategic filler placement and advanced cross-linking technology. Lower face treatments address facial imbalance and create harmony between upper and lower facial animation, targeting specific muscle groups for comprehensive rejuvenation. Additional facial areas include chin Botox, Nefertiti facelift, masseter jaw slimming, lip flip, gummy smile, and bunny lines treatments with specialized pricing and techniques. Professional training available through Harley Street Institute for medical professionals including online courses and one-to-one training sessions. Book your consultation today at our Harley Street clinic for expert comprehensive face Botox treatment in London. Contact us at 0333 0551 503 or info@cosmedocs.com for more information about our complete face Botox treatment options and pricing.
           </p>
         </div>
-      </div>
 
-      {/* Instagram Embed Script */}
-      <script async src="//www.instagram.com/embed.js"></script>
+        <PopularTreatments />
+      </div>
     </>
   );
 }
