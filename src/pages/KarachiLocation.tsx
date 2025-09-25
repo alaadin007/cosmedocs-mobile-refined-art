@@ -697,7 +697,7 @@ const KarachiLocation = () => {
                 { beforeAfter: "/src/assets/before-after-polynucleotide-eyes.jpg", treatment: "Polynucleotide Eye Rejuvenation", description: "Targeted under-eye treatment for youthful, refreshed appearance" },
                 { beforeAfter: "/src/assets/before-after-jawline-fillers.jpg", treatment: "Chin & Jawline Contouring", description: "Dermal fillers for enhanced facial definition and profile" },
                 { beforeAfter: "/src/assets/lip-enhancement-treatment.jpg", treatment: "Lip Enhancement", description: "Natural lip augmentation for subtle definition" },
-                { before: "/placeholder.svg", after: "/placeholder.svg", treatment: "Anti-Wrinkle Treatment", description: "Forehead lines smoothed with precise Botox application" }
+                { beforeAfter: "/src/assets/anti-wrinkle-treatment.jpg", treatment: "Anti-Wrinkle Treatment", description: "Forehead lines smoothed with precise Botox application" }
               ].map((result, index) => (
                 <motion.div
                   key={index}
@@ -707,22 +707,9 @@ const KarachiLocation = () => {
                   viewport={{ once: true }}
                   className="bg-gray-900/50 rounded-2xl overflow-hidden"
                 >
-                  {result.beforeAfter ? (
-                    <div className="relative">
-                      <img src={result.beforeAfter} alt={`${result.treatment} - Before and After comparison`} className="w-full h-48 object-cover" />
-                    </div>
-                  ) : (
-                    <div className="grid grid-cols-2 gap-0">
-                      <div className="relative">
-                        <img src={result.before} alt={`${result.treatment} - Before`} className="w-full h-48 object-cover" />
-                        <div className="absolute top-2 left-2 bg-gray-800/90 text-white px-2 py-1 text-xs rounded">Before</div>
-                      </div>
-                      <div className="relative">
-                        <img src={result.after} alt={`${result.treatment} - After`} className="w-full h-48 object-cover" />
-                        <div className="absolute top-2 right-2 bg-purple-600/90 text-white px-2 py-1 text-xs rounded">After</div>
-                      </div>
-                    </div>
-                  )}
+                  <div className="relative">
+                    <img src={result.beforeAfter} alt={`${result.treatment} - Before and After comparison`} className="w-full h-48 object-cover" />
+                  </div>
                   <div className="p-6">
                     <h3 className="font-semibold text-lg mb-2">{result.treatment}</h3>
                     <p className="text-gray-300 text-sm">{result.description}</p>
