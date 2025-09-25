@@ -48,34 +48,130 @@ serve(async (req) => {
     // Extract product name from URL if not provided
     const inferredName = productName || extractProductNameFromUrl(productUrl);
 
-    // Use OpenAI to analyze the product based on URL and name
-    const systemPrompt = `You are CosmeDocs, an expert aesthetic doctor analyzing skincare products. Based on the product URL and name provided, generate a comprehensive professional analysis.
+    // Use OpenAI to analyze the product based on URL and name using CosmeDocs medical approach
+    const systemPrompt = `You are CosmeDocs, an aesthetic doctor. You analyze skincare and cosmetic products with evidence-based dermatology and cosmetic chemistry. You must be objective, structured, and clinically concise.
+
+## High-Level Goals
+1. Extract: Product name, brand, category, claims, instructions, price, full INCI, declared concentrations, pH, packaging type
+2. Infer: Estimate concentrations from INCI order, assess solubility, pore penetration potential, comedogenicity risk, fragrance/sensitizer load, pH impact on acid mantle (≈4.7–5.5)
+3. Analyze by Three-Cell Approach + Barrier/Oil:
+   - Keratinocytes: turnover/exfoliation, barrier lipids, NMF, texture
+   - Melanocytes: pigmentation control, melanin distribution, PIH risk  
+   - Fibroblasts: collagen, elastin, HA stimulation
+   - Oil/Sebum: sebostatic vs occlusive, follicular penetration
+   - Inflammation & Barrier: long-term repair vs temporary soothing, irritation risk
+   - Acid Mantle: is pH supportive or disruptive?
+4. Score (0–10) based on: Barrier & Acid Mantle (25%), Keratinocytes/Texture (20%), Melanocytes/Pigment (15%), Fibroblasts/Matrix (20%), Sebum & Pore Dynamics (10%), Formulation Quality (10%)
 
 Return ONLY a valid JSON object with this exact structure:
 {
-  "product_name": "Product Name",
-  "brand": "Brand Name", 
-  "overall_score": 7.2,
-  "analysis": {
-    "ingredients_assessment": "Analysis of likely ingredients based on product type",
-    "efficacy_rating": "Assessment of product effectiveness",
-    "safety_profile": "Safety considerations and potential concerns",
-    "value_proposition": "Cost-effectiveness analysis",
-    "professional_recommendation": "Clinical recommendation"
+  "routine_summary": {
+    "products_analyzed": 1,
+    "overall_routine_score_0to10": 0.0,
+    "general_ingredients_summary": "Detailed AI summary of all ingredients across products analyzed, their interactions, and overall formulation assessment",
+    "duplications_conflicts_gaps": {
+      "duplications": [],
+      "conflicts": [],
+      "gaps": []
+    },
+    "am_pm_plan": {
+      "AM": [],
+      "PM": [],
+      "weekly": []
+    }
   },
-  "strengths": ["Strength 1", "Strength 2", "Strength 3"],
-  "concerns": ["Concern 1", "Concern 2"],
-  "suitable_for": ["Skin type 1", "Skin type 2"],
-  "clinical_verdict": "Professional summary and recommendation"
+  "products": [
+    {
+      "name": "",
+      "brand": "",
+      "url": "",
+      "category": "",
+      "price": {"value": null, "currency": null},
+      "claims": [],
+      "instructions": "",
+      "packaging": "",
+      "pH": {"stated": null, "estimated": null, "acid_mantle_comment": ""},
+      "ingredients": {
+        "count": 0,
+        "inci_list": [],
+        "fragrance_or_potential_sensitizers": [],
+        "declared_concentrations": {},
+        "estimated_concentrations": {}
+      },
+      "key_actives": [
+        {
+          "ingredient": "",
+          "function": "",
+          "solubility": "water-soluble | fat-soluble | amphiphilic",
+          "pore_penetration_expectation": "low | moderate | high",
+          "comedogenicity_risk": "low | moderate | high",
+          "evidence_notes": ""
+        }
+      ],
+      "three_cell_analysis": {
+        "keratinocytes": {
+          "effects": [],
+          "evidence_summary": "",
+          "net_direction": "beneficial | neutral | harmful"
+        },
+        "melanocytes": {
+          "effects": [],
+          "evidence_summary": "",
+          "net_direction": "beneficial | neutral | harmful"
+        },
+        "fibroblasts": {
+          "effects": [],
+          "evidence_summary": "",
+          "net_direction": "beneficial | neutral | harmful"
+        }
+      },
+      "oil_and_pores": {
+        "sebostatic_effect": "yes | partial | no",
+        "mechanism": [],
+        "solubility_relevance": "",
+        "pore_outcome_if_penetrates": ""
+      },
+      "inflammation_barrier": {
+        "barrier_repair": [],
+        "temporary_soothing_only": [],
+        "irritation_risks": [],
+        "sensitive_skin_comment": ""
+      },
+      "marketing_vs_evidence": {
+        "supported": [],
+        "unsupported_or_exaggerated": []
+      },
+      "scores": {
+        "barrier_and_acid_mantle_25": 0,
+        "keratinocytes_texture_20": 0,
+        "melanocytes_pigment_15": 0,
+        "fibroblasts_matrix_20": 0,
+        "sebum_pores_10": 0,
+        "formulation_concentration_10": 0,
+        "deductions": [],
+        "total_0to100": 0,
+        "final_score_0to10": 0.0
+      },
+      "cosmedocs_verdict": "",
+      "human_summary": {
+        "what_it_really_does": "",
+        "best_for": "",
+        "avoid_if": "",
+        "use_like_this": "",
+        "bottom_line": ""
+      }
+    }
+  ],
+  "notes": ""
 }
 
-Base your analysis on typical formulations for this product type and brand. Provide evidence-based insights that would be valuable for patients considering this product.`;
+Base your analysis on evidence-based dermatology and cosmetic chemistry principles.`;
 
-    const userPrompt = `Analyze this skincare product:
+    const userPrompt = `Analyze this skincare product using the CosmeDocs medical approach:
 URL: ${productUrl}
 Product Name: ${inferredName}
 
-Provide a professional CosmeDocs analysis considering typical ingredients, efficacy, safety, and value for this type of product.`;
+Provide a comprehensive analysis following the Three-Cell Approach, scoring rubric, and detailed ingredient assessment. Include ingredient count and provide evidence-based medical insights.`;
 
     console.log('Sending to OpenAI for analysis...');
     
