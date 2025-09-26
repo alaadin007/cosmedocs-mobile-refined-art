@@ -265,9 +265,7 @@ const BruxismBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-6 text-white">TMJ & Bruxism Botox</h2>
-              <div className="text-gray-300 max-w-3xl mx-auto text-lg mb-8 space-y-4">
-                <p className="text-xl font-semibold text-white">Restore comfort and protect your smile.</p>
-                
+              <div className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
                 <p>
                   Botox for TMJ and bruxism works by gently relaxing the overactive jaw muscles responsible for teeth grinding, clenching, and jaw tension. By reducing strain on the masseter and surrounding muscles, this treatment provides both functional relief and subtle aesthetic benefits.
                 </p>
@@ -308,7 +306,6 @@ const BruxismBotox = () => {
               className="text-center"
             >
               <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-2xl mx-auto">
-                <h4 className="text-white text-xl font-bold mb-4">Treatment Benefits</h4>
                 <p className="text-gray-300 text-center">
                   Safe, minimally invasive, and effective, this treatment targets the root cause of jaw discomfort — offering long-lasting relief and improved quality of life.
                 </p>
