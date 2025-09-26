@@ -253,7 +253,7 @@ export default function FaceBotox() {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Best Botox London</span>
-                  <span className="block text-sm mt-4">Expert face botox treatments for natural, lasting results</span>
+                  <span className="block text-sm mt-4">Face botox treatments for natural, lasting results</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Expert Practitioners</span>
