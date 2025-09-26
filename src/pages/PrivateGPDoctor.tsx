@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Stethoscope, Shield, Clock, MapPin, Phone, Calendar } from "lucide-react";
@@ -134,7 +135,7 @@ export default function PrivateGPDoctor() {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section - Styled like LipFillers */}
+        {/* Hero Section - Updated to match LipFillers design */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -145,24 +146,25 @@ export default function PrivateGPDoctor() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Private GP
-                  <span className="block text-purple-300">Doctor London</span>
-                  <span className="block text-sm mt-4">CQC Regulated Healthcare Excellence</span>
+                  <span className="text-purple-300">Private GP Doctor London</span>
+                  <span className="block text-sm mt-4">CQC Regulated Healthcare Excellence - Your health, our priority</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Your health, our priority</span>
-                  <br />
-                  Comprehensive private healthcare in the heart of Harley Street
-                </p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Harley Street Location</p>
                   <p className="text-sm text-gray-300">Concierge services available to major London hotels</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
                     Book GP Consultation
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     View Services
                   </Button>
                 </div>
@@ -173,8 +175,81 @@ export default function PrivateGPDoctor() {
           </div>
         </section>
 
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Private GP Services</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Consultation Duration</h3>
+                <p className="text-gray-300">30-60 minutes comprehensive assessment</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Availability</h3>
+                <p className="text-gray-300">Same day appointments available</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
+                <p className="text-gray-300">Harley Street + home visits</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Regulation</h3>
+                <p className="text-gray-300">CQC regulated healthcare</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us Section */}
-        <section className="py-20 bg-primary/5">
+        <section id="services-section" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -183,8 +258,8 @@ export default function PrivateGPDoctor() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Why Choose Cosmedocs Private GP?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6">Why Choose Cosmedocs Private GP?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 We stand out for our commitment to excellence in private healthcare, based at the heart of the medical hub in London. 
                 Our team of highly experienced doctors provides a patient-centered approach with comprehensive services, 
                 flexible scheduling, and dedication to confidentiality.
@@ -195,15 +270,17 @@ export default function PrivateGPDoctor() {
               {services.map((service, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-accent p-6 rounded-lg border border-gray-800"
+                  className="relative group cursor-pointer p-2"
                 >
-                  <service.icon className="w-12 h-12 text-purple-300 mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-300">{service.description}</p>
+                  <div className="bg-accent p-6 rounded-lg border border-gray-800 group-hover:scale-105 transition-transform duration-300">
+                    <service.icon className="w-12 h-12 text-purple-300 mb-4" />
+                    <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -211,39 +288,44 @@ export default function PrivateGPDoctor() {
         </section>
 
         {/* Comprehensive Health Services */}
-        <section className="py-20">
+        <section className="py-20 bg-accent text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6">Comprehensive Health Assessments</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4 text-white">Comprehensive Health Assessments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Our specialized clinics provide gender-specific health assessments, focusing on reproductive health, 
                 disease prevention, and lifestyle modifications to support overall wellbeing through all life stages.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-accent p-8 rounded-lg border border-gray-800"
               >
-                <h3 className="text-2xl font-semibold mb-6 text-purple-300">Health Screening Services</h3>
-                <ul className="space-y-3">
-                  {wellnessServices.map((service, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <Shield className="w-5 h-5 text-purple-300 mr-3 flex-shrink-0" />
-                      {service}
-                    </li>
-                  ))}
-                </ul>
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Health Screening Services</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {wellnessServices.map((service, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <div className="bg-purple-100 rounded-full p-1 mt-1">
+                          <Shield className="w-4 h-4 text-purple-600" />
+                        </div>
+                        <span className="text-gray-300">{service}</span>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -251,49 +333,58 @@ export default function PrivateGPDoctor() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-accent p-8 rounded-lg border border-gray-800"
               >
-                <h3 className="text-2xl font-semibold mb-6 text-purple-300">Additional Services</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <Clock className="w-5 h-5 text-purple-300 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Vitamin Injections</h4>
-                      <p className="text-gray-300 text-sm">Vitamin D and B12 injections for optimal health</p>
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Additional Services</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="flex items-start space-x-3">
+                      <div className="bg-purple-100 rounded-full p-2">
+                        <Clock className="w-5 h-5 text-purple-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1 text-white">Vitamin Injections</h4>
+                        <p className="text-gray-300 text-sm">Vitamin D and B12 injections for optimal health</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Calendar className="w-5 h-5 text-purple-300 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Weight Management</h4>
-                      <p className="text-gray-300 text-sm">Comprehensive weight and fat reduction clinic</p>
+                    <div className="flex items-start space-x-3">
+                      <div className="bg-purple-100 rounded-full p-2">
+                        <Calendar className="w-5 h-5 text-purple-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1 text-white">Weight Management</h4>
+                        <p className="text-gray-300 text-sm">Comprehensive weight and fat reduction clinic</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Stethoscope className="w-5 h-5 text-purple-300 mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold mb-1">IV Therapy</h4>
-                      <p className="text-gray-300 text-sm">IV drips for wellness and recovery</p>
+                    <div className="flex items-start space-x-3">
+                      <div className="bg-purple-100 rounded-full p-2">
+                        <Stethoscope className="w-5 h-5 text-purple-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1 text-white">IV Therapy</h4>
+                        <p className="text-gray-300 text-sm">IV drips for wellness and recovery</p>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-primary/5">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Common questions about our private GP services and healthcare offerings.
               </p>
             </motion.div>
@@ -308,7 +399,7 @@ export default function PrivateGPDoctor() {
               <Accordion type="single" collapsible className="space-y-4">
                 {faqItems.map((item, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="bg-accent border-gray-800 rounded-lg px-6">
-                    <AccordionTrigger className="text-left hover:text-purple-300 transition-colors">
+                    <AccordionTrigger className="text-left hover:text-purple-300 transition-colors text-white">
                       {item.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-300 pt-4">
