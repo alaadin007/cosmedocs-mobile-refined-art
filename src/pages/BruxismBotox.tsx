@@ -298,9 +298,15 @@ const BruxismBotox = () => {
                   <CardTitle className="text-white text-2xl text-center">Understanding Bruxism and TMJ</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Bruxism involves unconscious teeth grinding and jaw clenching that can cause dental damage, headaches, and TMJ pain. Professional botox treatment relaxes the overactive masseter muscles, reducing grinding frequency and providing significant relief from associated symptoms while creating aesthetic facial slimming.
-                  </p>
+                  <div className="text-gray-300 text-lg leading-relaxed space-y-4">
+                    <p>
+                      <strong className="text-white">Bruxism Botox:</strong> Helps prevent teeth damage, reduces jaw tightness, and may create a softer, more refined jawline.
+                    </p>
+                    
+                    <p>
+                      <strong className="text-white">TMJ Botox:</strong> Relieves jaw pain, headaches, and stiffness linked to temporomandibular joint disorder.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
