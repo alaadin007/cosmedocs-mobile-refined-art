@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, AlertTriangle, Star, Lightbulb, Beaker, Target, Users } from "lucide-react";
+import { CheckCircle2, AlertTriangle, Star, Lightbulb, Beaker, Target, Users, FlaskConical, GraduationCap } from "lucide-react";
 
 interface CosmeticAnalysisResultsProps {
   analysis: any;
@@ -95,6 +95,17 @@ const CosmeticAnalysisResults = ({ analysis }: CosmeticAnalysisResultsProps) => 
                     <Badge variant="outline">{product.pH.estimated}</Badge>
                   </div>
                 )}
+                {product.ingredients.concentration_transparency && (
+                  <div className="flex justify-between items-centre">
+                    <span className="font-medium">Concentration Transparency:</span>
+                    <Badge 
+                      variant={product.ingredients.concentration_transparency.has_declared_concentrations ? "default" : "destructive"}
+                      className="text-xs"
+                    >
+                      {product.ingredients.concentration_transparency.has_declared_concentrations ? "Good" : "Poor"}
+                    </Badge>
+                  </div>
+                )}
               </div>
             )}
           </CardContent>
@@ -131,6 +142,109 @@ const CosmeticAnalysisResults = ({ analysis }: CosmeticAnalysisResultsProps) => 
             )}
           </CardContent>
         </Card>
+
+        {/* Concentration Analysis */}
+        {product.ingredients?.concentration_transparency && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-centre gap-2">
+                <FlaskConical className="h-5 w-5" />
+                Concentration Analysis
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <div className="flex justify-between items-centre">
+                  <span className="font-medium">Transparency Score:</span>
+                  <Badge 
+                    variant={product.ingredients.concentration_transparency.transparency_score >= 7 ? "default" : 
+                           product.ingredients.concentration_transparency.transparency_score >= 4 ? "secondary" : "destructive"}
+                  >
+                    {product.ingredients.concentration_transparency.transparency_score}/10
+                  </Badge>
+                </div>
+                
+                {product.ingredients.concentration_transparency.missing_concentration_concern && (
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                    <div className="flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 text-amber-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h5 className="font-medium text-amber-800 mb-1">Concentration Concern</h5>
+                        <p className="text-sm text-amber-700">{product.ingredients.concentration_transparency.missing_concentration_concern}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {product.ingredients.concentration_transparency.concentration_analysis && (
+                  <div>
+                    <h5 className="font-medium text-sm text-muted-foreground mb-2">DETAILED ANALYSIS</h5>
+                    <p className="text-sm">{product.ingredients.concentration_transparency.concentration_analysis}</p>
+                  </div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Ingredient Education */}
+        {product.ingredients?.ingredient_education && product.ingredients.ingredient_education.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-centre gap-2">
+                <GraduationCap className="h-5 w-5" />
+                Ingredient Education
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {product.ingredients.ingredient_education.map((ingredient: any, index: number) => (
+                  <div key={index} className="border rounded-lg p-3">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <h4 className="font-medium">{ingredient.ingredient}</h4>
+                        {ingredient.common_name && ingredient.common_name !== ingredient.ingredient && (
+                          <p className="text-sm text-muted-foreground">Also known as: {ingredient.common_name}</p>
+                        )}
+                      </div>
+                      <Badge variant="outline" className="text-xs">
+                        {ingredient.consumer_knowledge_level}
+                      </Badge>
+                    </div>
+                    
+                    {ingredient.what_it_is && (
+                      <div className="mb-2">
+                        <h5 className="font-medium text-xs text-muted-foreground mb-1">WHAT IT IS</h5>
+                        <p className="text-sm">{ingredient.what_it_is}</p>
+                      </div>
+                    )}
+                    
+                    {ingredient.why_its_used && (
+                      <div className="mb-2">
+                        <h5 className="font-medium text-xs text-muted-foreground mb-1">WHY IT'S USED</h5>
+                        <p className="text-sm">{ingredient.why_its_used}</p>
+                      </div>
+                    )}
+                    
+                    {ingredient.vs_alternatives && (
+                      <div className="mb-2">
+                        <h5 className="font-medium text-xs text-muted-foreground mb-1">VS ALTERNATIVES</h5>
+                        <p className="text-sm">{ingredient.vs_alternatives}</p>
+                      </div>
+                    )}
+                    
+                    {ingredient.stability_notes && (
+                      <div className="bg-blue-50 border border-blue-200 rounded p-2 mt-2">
+                        <h5 className="font-medium text-xs text-blue-800 mb-1">STABILITY NOTES</h5>
+                        <p className="text-xs text-blue-700">{ingredient.stability_notes}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Key Actives */}
         {product.key_actives && product.key_actives.length > 0 && (

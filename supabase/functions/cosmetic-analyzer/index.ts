@@ -53,15 +53,17 @@ serve(async (req) => {
 
 ## High-Level Goals
 1. Extract: Product name, brand, category, claims, instructions, price, full INCI, declared concentrations, pH, packaging type
-2. Infer: Estimate concentrations from INCI order, assess solubility, pore penetration potential, comedogenicity risk, fragrance/sensitizer load, pH impact on acid mantle (≈4.7–5.5)
-3. Analyze by Three-Cell Approach + Barrier/Oil:
+2. **CRITICAL CONCENTRATION ANALYSIS**: If no concentrations are declared, this is a major red flag. Estimate from INCI order but heavily penalise lack of transparency. Explain why concentration matters for each active.
+3. **INGREDIENT EDUCATION**: For newer or lesser-known ingredients (e.g., 3-O-ETHYL ASCORBIC ACID, Bakuchiol, etc.), provide detailed explanations including molecular structure, stability, efficacy vs traditional alternatives, and why consumers should know about them.
+4. Infer: Assess solubility, pore penetration potential, comedogenicity risk, fragrance/sensitiser load, pH impact on acid mantle (≈4.7–5.5)
+5. Analyze by Three-Cell Approach + Barrier/Oil:
    - Keratinocytes: turnover/exfoliation, barrier lipids, NMF, texture
    - Melanocytes: pigmentation control, melanin distribution, PIH risk  
    - Fibroblasts: collagen, elastin, HA stimulation
    - Oil/Sebum: sebostatic vs occlusive, follicular penetration
    - Inflammation & Barrier: long-term repair vs temporary soothing, irritation risk
    - Acid Mantle: is pH supportive or disruptive?
-4. Score (0–10) based on: Barrier & Acid Mantle (25%), Keratinocytes/Texture (20%), Melanocytes/Pigment (15%), Fibroblasts/Matrix (20%), Sebum & Pore Dynamics (10%), Formulation Quality (10%)
+6. Score (0–10) based on: Barrier & Acid Mantle (25%), Keratinocytes/Texture (20%), Melanocytes/Pigment (15%), Fibroblasts/Matrix (20%), Sebum & Pore Dynamics (10%), Formulation Quality (10%)
 
 Return ONLY a valid JSON object with this exact structure:
 {
@@ -96,7 +98,24 @@ Return ONLY a valid JSON object with this exact structure:
         "inci_list": [],
         "fragrance_or_potential_sensitizers": [],
         "declared_concentrations": {},
-        "estimated_concentrations": {}
+        "estimated_concentrations": {},
+        "concentration_transparency": {
+          "has_declared_concentrations": false,
+          "transparency_score": 0,
+          "missing_concentration_concern": "",
+          "concentration_analysis": ""
+        },
+        "ingredient_education": [
+          {
+            "ingredient": "",
+            "common_name": "",
+            "what_it_is": "",
+            "why_its_used": "",
+            "stability_notes": "",
+            "vs_alternatives": "",
+            "consumer_knowledge_level": "well-known | emerging | specialist"
+          }
+        ]
       },
       "key_actives": [
         {
@@ -187,7 +206,7 @@ Provide a comprehensive analysis following the Three-Cell Approach, scoring rubr
           { role: 'system', content: systemPrompt },
           { role: 'user', content: userPrompt }
         ],
-        max_tokens: 2000,
+        max_tokens: 3000,
         temperature: 0.3,
       }),
     });
