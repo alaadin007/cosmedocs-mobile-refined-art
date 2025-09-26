@@ -272,17 +272,6 @@ const BruxismBotox = () => {
                   Botox for TMJ and bruxism works by gently relaxing the overactive jaw muscles responsible for teeth grinding, clenching, and jaw tension. By reducing strain on the masseter and surrounding muscles, this treatment provides both functional relief and subtle aesthetic benefits.
                 </p>
                 
-                <p>
-                  <strong className="text-white">Bruxism Botox:</strong> Helps prevent teeth damage, reduces jaw tightness, and may create a softer, more refined jawline.
-                </p>
-                
-                <p>
-                  <strong className="text-white">TMJ Botox:</strong> Relieves jaw pain, headaches, and stiffness linked to temporomandibular joint disorder.
-                </p>
-                
-                <p>
-                  Safe, minimally invasive, and effective, this treatment targets the root cause of jaw discomfort — offering long-lasting relief and improved quality of life.
-                </p>
               </div>
             </motion.div>
 
