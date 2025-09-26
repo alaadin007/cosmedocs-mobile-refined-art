@@ -299,8 +299,7 @@ const BruxismBotox = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Bruxism involves unconscious teeth grinding and jaw clenching, often during sleep or stress. This can cause TMJ disorders, 
-                    dental damage, headaches, and jaw pain. Botox treatment relaxes the overactive masseter muscles, providing significant relief.
+                    Bruxism involves unconscious teeth grinding and jaw clenching that can cause dental damage, headaches, and TMJ pain. Professional botox treatment relaxes the overactive masseter muscles, reducing grinding frequency and providing significant relief from associated symptoms while creating aesthetic facial slimming.
                   </p>
                 </CardContent>
               </Card>
@@ -314,13 +313,10 @@ const BruxismBotox = () => {
               className="text-center"
             >
               <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-2xl mx-auto">
-                <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas</h4>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="text-purple-300 font-medium">Masseter Muscles</div>
-                  <div className="text-purple-300 font-medium">TMJ Joint</div>
-                  <div className="text-purple-300 font-medium">Jaw Tension</div>
-                  <div className="text-purple-300 font-medium">Facial Slimming</div>
-                </div>
+                <h4 className="text-white text-xl font-bold mb-4">Treatment Benefits</h4>
+                <p className="text-gray-300 text-center">
+                  Safe, minimally invasive, and effective, this treatment targets the root cause of jaw discomfort — offering long-lasting relief and improved quality of life.
+                </p>
               </div>
             </motion.div>
           </div>
