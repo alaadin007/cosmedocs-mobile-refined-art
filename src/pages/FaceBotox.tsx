@@ -451,33 +451,6 @@ export default function FaceBotox() {
                 causing them to relax. This FDA-approved treatment has been safely used for both medical and 
                 cosmetic purposes for over 30 years.
               </p>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                  <p className="text-gray-300 text-sm">Originally developed for medical conditions like muscle spasms</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                  <p className="text-gray-300 text-sm">FDA-approved for cosmetic use since 2002</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                  <p className="text-gray-300 text-sm">Temporary effects lasting 3-6 months</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                  <p className="text-gray-300 text-sm">Most popular non-surgical cosmetic treatment worldwide</p>
-                </div>
-              </div>
-
-              <div className="bg-purple-900/20 p-6 rounded-lg max-w-2xl mx-auto mb-12">
-                <p className="text-lg font-medium mb-3 text-purple-300">How it Works:</p>
-                <p className="text-gray-300">
-                  When injected into specific facial muscles, Botox prevents the muscle contractions that 
-                  cause wrinkles, resulting in smoother, more youthful-looking skin.
-                </p>
-              </div>
             </motion.div>
 
             {/* Botox for Men Card */}
@@ -514,29 +487,6 @@ export default function FaceBotox() {
                         <div className="text-2xl font-bold text-purple-300">35-55</div>
                         <div className="text-xs text-gray-400">peak age group for male treatments</div>
                       </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-4 mb-6">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                        <p className="text-gray-300 text-sm">Higher dosages required due to stronger facial muscles</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                        <p className="text-gray-300 text-sm">Focus on maintaining natural masculine expression</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                        <p className="text-gray-300 text-sm">Popular for professional confidence and career enhancement</p>
-                      </div>
-                    </div>
-
-                    <div className="bg-purple-900/20 p-4 rounded-lg">
-                      <p className="text-sm font-medium mb-2 text-purple-300">Popular Areas for Men:</p>
-                      <p className="text-sm text-gray-300">
-                        Forehead lines, frown lines, and crow's feet are the most requested areas for 
-                        professional-looking enhancement without compromising masculine features.
-                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -641,51 +591,7 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Additional Face Areas */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Additional Face Areas</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Enhance your natural beauty with specialized Botox treatments for additional facial areas
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {additionalFaceAreas.map((area, index) => (
-                <motion.div
-                  key={area.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-lg font-semibold text-white">{area.name}</h3>
-                        <span className="text-purple-300 font-bold">{area.price}</span>
-                      </div>
-                      <p className="text-gray-300 text-sm mb-4">{area.description}</p>
-                      <div className="space-y-2 text-xs text-gray-400">
-                        <div><span className="font-medium text-purple-300">Units:</span> {area.units}</div>
-                        <div><span className="font-medium text-purple-300">Duration:</span> {area.duration}</div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
-        {/* Baby Botox/Microtox Section */}
+        {/* Natural Baby Botox: Subtle Enhancement */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -770,6 +676,51 @@ export default function FaceBotox() {
             </div>
           </div>
         </section>
+
+        {/* Additional Face Areas */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Additional Face Areas</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Enhance your natural beauty with specialized Botox treatments for additional facial areas
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {additionalFaceAreas.map((area, index) => (
+                <motion.div
+                  key={area.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-3">
+                        <h3 className="text-lg font-semibold text-white">{area.name}</h3>
+                        <span className="text-purple-300 font-bold">{area.price}</span>
+                      </div>
+                      <p className="text-gray-300 text-sm mb-4">{area.description}</p>
+                      <div className="space-y-2 text-xs text-gray-400">
+                        <div><span className="font-medium text-purple-300">Units:</span> {area.units}</div>
+                        <div><span className="font-medium text-purple-300">Duration:</span> {area.duration}</div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
 
         {/* How Botox Works Section */}
         <section className="py-20 bg-black">
