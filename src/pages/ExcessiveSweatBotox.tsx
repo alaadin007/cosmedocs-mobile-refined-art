@@ -515,6 +515,147 @@ const ExcessiveSweatBotox = () => {
           </div>
         </section>
 
+        {/* Possible Hyperhidrosis Treatment Areas */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Possible Hyperhidrosis Treatment Areas</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                CosmeDocs is one of the first skin clinics in London to use Botox to treat hyperhidrosis.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
+              {[
+                { 
+                  title: "Facial Areas", 
+                  icon: Palette,
+                  description: "Forehead and facial sweating treatment"
+                },
+                { 
+                  title: "Armpit / Underarms", 
+                  icon: Activity,
+                  description: "Most common treatment area for hyperhidrosis"
+                },
+                { 
+                  title: "Palms", 
+                  icon: Heart,
+                  description: "Palmar hyperhidrosis treatment for hands"
+                },
+                { 
+                  title: "Feet", 
+                  icon: CheckCircle,
+                  description: "Plantar hyperhidrosis treatment for feet"
+                }
+              ].map((area, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                    <CardContent className="p-6">
+                      <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <area.icon className="text-purple-600" size={24} />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white mb-2">{area.title}</h3>
+                      <p className="text-gray-300 text-sm">{area.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
+                <CardContent className="p-8">
+                  <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                    Moreover, a medical study suggests the usage of high doses to relax sweat glands has long-lasting results. 
+                    This approach allows anti-sweat injections to treat excessive sweating quite effectively.
+                  </p>
+                  <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4 border border-purple-500/20">
+                    <p className="text-purple-200 font-medium">
+                      CosmeDocs is also a member of the International Hyperhidrosis Society.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Doses Of Botox in Armpit */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Doses Of Botox in Armpit</h2>
+                <div className="space-y-6">
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    The dosage of Botox in armpit depends on the size of the underarm area. We aim to inject a concentrated dose per square centimetre, covering the entire hairy patch area of the underarm.
+                  </p>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Studies have revealed that a higher dose is safe, effective, and long-lasting. We aim to reduce the excess sweating in the armpit by more than 50-75%.
+                  </p>
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                    <CardContent className="p-6">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <Award className="text-purple-400" size={24} />
+                        <h3 className="text-white font-semibold">Treatment Effectiveness</h3>
+                      </div>
+                      <p className="text-gray-300">
+                        Higher doses provide safe, effective, and long-lasting results for excessive sweating reduction.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20">
+                  <img 
+                    src="/lovable-uploads/botox-armpit-injections.jpg" 
+                    alt="Botox in armpit injections showing treatment area" 
+                    className="w-full h-64 object-cover rounded-lg mb-6"
+                  />
+                  <div className="text-center">
+                    <h3 className="text-white font-semibold mb-2">Professional Treatment</h3>
+                    <p className="text-gray-300 text-sm">
+                      Precise injection technique covering the entire treatment area for optimal results.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
