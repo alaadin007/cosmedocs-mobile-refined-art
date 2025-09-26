@@ -312,7 +312,7 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Face Botox Treatment Overview</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Face Botox Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -326,8 +326,8 @@ export default function FaceBotox() {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Clock className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">5min</h3>
-                <p className="text-gray-300">Treatment Time</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">5-15 minutes including consultation</p>
               </motion.div>
 
               <motion.div
@@ -338,10 +338,10 @@ export default function FaceBotox() {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Zap className="text-purple-600" size={24} />
+                  <Calendar className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">5-10 days</h3>
-                <p className="text-gray-300">Takes Effect</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">4-6 months with premium Botox</p>
               </motion.div>
 
               <motion.div
@@ -352,10 +352,10 @@ export default function FaceBotox() {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
+                  <Activity className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">4-6 months</h3>
-                <p className="text-gray-300">Results Last</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
               </motion.div>
 
               <motion.div
@@ -366,10 +366,10 @@ export default function FaceBotox() {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <ArrowRight className="text-purple-600" size={24} />
+                  <Syringe className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Immediate</h3>
-                <p className="text-gray-300">Return to Work</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic available if needed</p>
               </motion.div>
             </div>
           </div>
