@@ -319,7 +319,7 @@ const ExcessiveSweatBotox = () => {
 
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <Check className="text-purple-400 mt-1" size={16} />
                     <div>
                       <h3 className="text-white font-medium mb-1">Minimal Pain</h3>
                       <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort.</p>
@@ -327,7 +327,7 @@ const ExcessiveSweatBotox = () => {
                   </li>
                   
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <Check className="text-purple-400 mt-1" size={16} />
                     <div>
                       <h3 className="text-white font-medium mb-1">Long-Lasting</h3>
                       <p className="text-gray-300 text-sm">Results last 6-12 months for underarms, 4-6 months for hands and feet.</p>
@@ -335,7 +335,7 @@ const ExcessiveSweatBotox = () => {
                   </li>
                   
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <Check className="text-purple-400 mt-1" size={16} />
                     <div>
                       <h3 className="text-white font-medium mb-1">Boosts Confidence</h3>
                       <p className="text-gray-300 text-sm">No more worry about sweat stains or odour in social situations.</p>
@@ -343,7 +343,7 @@ const ExcessiveSweatBotox = () => {
                   </li>
                   
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <Check className="text-purple-400 mt-1" size={16} />
                     <div>
                       <h3 className="text-white font-medium mb-1">FDA Approved</h3>
                       <p className="text-gray-300 text-sm">Clinically proven to reduce excessive sweating by up to 87%.</p>
