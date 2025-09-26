@@ -722,61 +722,6 @@ export default function FaceBotox() {
 
 
 
-        {/* How Botox Works Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">How Does Botox Work?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding the science behind Botox helps you make informed decisions about your treatment.
-              </p>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-gray-900/50 border-gray-700 text-center">
-                <CardContent className="p-6">
-                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Nerve Activity</h3>
-                  <p className="text-gray-300">
-                    Botox works to reduce nerve activity that leads to muscle contraction, creating dynamic wrinkles.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gray-900/50 border-gray-700 text-center">
-                <CardContent className="p-6">
-                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
-                    <Activity className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Multiple Applications</h3>
-                  <p className="text-gray-300">
-                    Effective for wrinkles, sweat production (hyperhidrosis), and capillary dilation (blushing/flushing).
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gray-900/50 border-gray-700 text-center">
-                <CardContent className="p-6">
-                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
-                    <Target className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Precise Treatment</h3>
-                  <p className="text-gray-300">
-                    Targeted injections block nerve signals to specific muscles, allowing for precise facial contouring.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
         {/* Medical Botox Applications */}
         <section className="py-20 bg-accent">
