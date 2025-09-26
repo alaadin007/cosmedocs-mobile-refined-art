@@ -21,7 +21,9 @@ const BruxismBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Bruxism botox before and after treatment", caption: "Bruxism Botox Treatment: Reduced jaw tension and facial slimming with TMJ relief. Expert masseter muscle relaxation - transformation that speaks without saying a word." }
+    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Bruxism botox before and after treatment", caption: "Bruxism Botox Treatment: Reduced jaw tension and facial slimming with TMJ relief. Expert masseter muscle relaxation - transformation that speaks without saying a word." },
+    { src: "/src/assets/masseter-botox-bruxism.jpg", alt: "Before and after photos of masseter Botox for bruxism, showing significant muscle reduction", caption: "Note the remarkable difference in the jawline angle and muscle size before and after masseter Botox treatment." },
+    { src: "/src/assets/botox-for-teeth-grinding.png", alt: "A doctor marking the masseter muscle on a patient's jawline in preparation for Botox treatment", caption: "TMJ Botox: Our doctor marks the masseter muscle for precise Botox for Bruxism treatment." }
   ];
 
   const faqs = [
@@ -502,7 +504,7 @@ const BruxismBotox = () => {
           </div>
         </section>
 
-        {/* Treatment Images and Video */}
+        {/* Treatment Video Demonstration */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -512,55 +514,19 @@ const BruxismBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Professional Treatment Process</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Treatment Video Demonstration</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                See our expert techniques and remarkable results from professional bruxism botox treatments.
+                Watch our expert demonstration of professional bruxism botox treatment techniques.
               </p>
             </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <img 
-                  src="/src/assets/masseter-botox-bruxism.jpg" 
-                  alt="Before and after photos of masseter Botox for bruxism, showing significant muscle reduction"
-                  className="w-full rounded-lg shadow-2xl mb-4"
-                />
-                <p className="text-gray-300 text-sm">
-                  Note the remarkable difference in the jawline angle and muscle size before and after masseter Botox treatment.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <img 
-                  src="/src/assets/botox-for-teeth-grinding.png" 
-                  alt="A doctor marking the masseter muscle on a patient's jawline in preparation for Botox treatment"
-                  className="w-full rounded-lg shadow-2xl mb-4"
-                />
-                <p className="text-gray-300 text-sm">
-                  TMJ Botox: Our doctor marks the masseter muscle for precise Botox for Bruxism treatment.
-                </p>
-              </motion.div>
-            </div>
 
             {/* Treatment Video */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="mt-12 text-center"
+              className="text-center"
             >
               <div className="max-w-4xl mx-auto">
                 <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
