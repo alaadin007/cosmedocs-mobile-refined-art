@@ -130,6 +130,31 @@ For any complex or newer ingredients, provide detailed explanations:
 Example for 3-O-ETHYL ASCORBIC ACID:
 "3-O-Ethyl Ascorbic Acid is a stable, amphiphilic vitamin C derivative that offers several advantages over L-ascorbic acid. Unlike pure vitamin C which requires very acidic pH (≤3.5) and is notoriously unstable, this ethylated form remains stable at neutral pH (4.5-6.5) and penetrates both water and lipid phases of the skin. At effective concentrations (typically 1-5%), it provides antioxidant protection, supports collagen synthesis, and offers brightening effects through tyrosinase inhibition. The ethyl group modification allows better skin penetration whilst maintaining the core vitamin C benefits, making it suitable for sensitive skin types who cannot tolerate the acidity of L-ascorbic acid. Its amphiphilic nature also allows moderate follicular penetration unlike pure L-AA."
 
+CLINICAL CLASSIFICATION SYSTEM:
+Products must be classified into one of two categories:
+
+CLINICALLY ACTIVE: Products containing therapeutic concentrations of proven actives:
+- Retinoids: ≥0.1% retinol, ≥0.05% retinal, ≥0.3% bakuchiol
+- AHAs: ≥5% glycolic/lactic acid at pH ≤4.2, ≥10% mandelic acid
+- BHA: ≥0.5% salicylic acid at correct pH
+- Vitamin C: ≥10% L-ascorbic acid, ≥1% stable derivatives
+- Medical actives: ≥10% azelaic acid, ≥2% niacinamide, ≥1% tranexamic acid
+
+POTENCY LEVELS:
+- MEDICAL_GRADE: Prescription-strength or near-prescription concentrations
+- PROFESSIONAL: Salon/clinic-level formulations with advanced delivery
+- CONSUMER: Effective but gentler concentrations for home use
+
+IRRITATION MANAGEMENT ASSESSMENT:
+Evaluate delivery systems that reduce irritation whilst maintaining efficacy:
+- Encapsulation (liposomes, microspheres)
+- Time-release matrices
+- Buffering with soothing agents (allantoin, bisabolol, centella)
+- pH modulation
+- Gradual-release polymers
+
+A product may score lower due to irritation potential but still be classified as CLINICALLY ACTIVE if it contains therapeutic concentrations. Always note when a formulation includes irritation-mitigation strategies.
+
 SCORING PRINCIPLES:
 - Perfect score (100) requires disclosed concentrations, optimal pH, evidence-based formulation
 - Significant deductions for missing concentration information  
@@ -137,6 +162,7 @@ SCORING PRINCIPLES:
 - Consider ingredient synergies and potential conflicts
 - Account for realistic usage expectations
 - Factor in anti-damage protection as a positive modifier
+- Clinical classification is independent of final score - high-potency products may score lower due to irritation risk
 
 Return ONLY a valid JSON object with this exact structure:
 {
@@ -227,6 +253,17 @@ Return ONLY a valid JSON object with this exact structure:
         "deductions": [{"reason": "", "points": 0}],
         "total_0to100": 0,
         "final_score_0to10": 0.0
+      },
+      "clinical_classification": {
+        "category": "clinically_active | standard_consumer",
+        "potency_level": "medical_grade | professional | consumer",
+        "active_threshold_met": "yes | no",
+        "irritation_management": {
+          "delivery_system": "",
+          "buffering_agents": [],
+          "gradual_release": "yes | no"
+        },
+        "clinical_notes": ""
       },
       "cosmedocs_verdict": ""
     }
