@@ -435,71 +435,69 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* What is Botox & Botox for Men */}
+        {/* What is Botox */}
         <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* What is Botox */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gray-900/50 border-gray-700 h-full">
-                  <CardContent className="p-8">
-                    <h2 className="text-2xl font-bold mb-6 text-white">What is Botox?</h2>
-                    <p className="text-gray-300 mb-4">
-                      Botox (Botulinum toxin) is a purified protein that temporarily blocks nerve signals to muscles, 
-                      causing them to relax. This FDA-approved treatment has been safely used for both medical and 
-                      cosmetic purposes for over 30 years.
-                    </p>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                        <p className="text-gray-300 text-sm">Originally developed for medical conditions like muscle spasms</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                        <p className="text-gray-300 text-sm">FDA-approved for cosmetic use since 2002</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                        <p className="text-gray-300 text-sm">Temporary effects lasting 3-6 months</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
-                        <p className="text-gray-300 text-sm">Most popular non-surgical cosmetic treatment worldwide</p>
-                      </div>
-                    </div>
-                    <div className="bg-purple-900/20 p-4 rounded-lg">
-                      <p className="text-sm font-medium mb-2 text-purple-300">How it Works:</p>
-                      <p className="text-sm text-gray-300">
-                        When injected into specific facial muscles, Botox prevents the muscle contractions that 
-                        cause wrinkles, resulting in smoother, more youthful-looking skin.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">What is Botox?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto mb-8">
+                Botox (Botulinum toxin) is a purified protein that temporarily blocks nerve signals to muscles, 
+                causing them to relax. This FDA-approved treatment has been safely used for both medical and 
+                cosmetic purposes for over 30 years.
+              </p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                  <p className="text-gray-300 text-sm">Originally developed for medical conditions like muscle spasms</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                  <p className="text-gray-300 text-sm">FDA-approved for cosmetic use since 2002</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                  <p className="text-gray-300 text-sm">Temporary effects lasting 3-6 months</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                  <p className="text-gray-300 text-sm">Most popular non-surgical cosmetic treatment worldwide</p>
+                </div>
+              </div>
 
-              {/* Botox for Men */}
+              <div className="bg-purple-900/20 p-6 rounded-lg max-w-2xl mx-auto mb-12">
+                <p className="text-lg font-medium mb-3 text-purple-300">How it Works:</p>
+                <p className="text-gray-300">
+                  When injected into specific facial muscles, Botox prevents the muscle contractions that 
+                  cause wrinkles, resulting in smoother, more youthful-looking skin.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Botox for Men Card */}
+            <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gray-900/50 border-purple-500 h-full">
+                <Card className="bg-gray-900/50 border-purple-500">
                   <CardContent className="p-8">
-                    <h2 className="text-2xl font-bold mb-6 text-white">Botox for Men</h2>
-                    <p className="text-gray-300 mb-6">
+                    <h3 className="text-2xl font-bold mb-6 text-white text-center">Botox for Men</h3>
+                    <p className="text-gray-300 mb-6 text-center">
                       Male Botox treatments have grown dramatically as men seek natural, professional-looking results. 
                       Our approach for men focuses on subtle enhancement that maintains masculine features.
                     </p>
                     
                     {/* Statistics */}
-                    <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                       <div className="text-center bg-purple-900/30 p-4 rounded-lg">
                         <div className="text-2xl font-bold text-purple-300">400%</div>
                         <div className="text-xs text-gray-400">increase in male Botox since 2010</div>
@@ -518,7 +516,7 @@ export default function FaceBotox() {
                       </div>
                     </div>
 
-                    <div className="space-y-3 mb-6">
+                    <div className="grid md:grid-cols-3 gap-4 mb-6">
                       <div className="flex items-start gap-3">
                         <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
                         <p className="text-gray-300 text-sm">Higher dosages required due to stronger facial muscles</p>
@@ -686,79 +684,6 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Advanced Combination Approach */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Advanced Combination Approach</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                For deep wrinkles, we combine Botox with dermal fillers for superior results
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Why Botox Alone Isn't Enough</h3>
-                  <p className="text-gray-300 mb-4">
-                    Botox wears off approximately 20% per month. For people with deep wrinkles, 
-                    this creates a frustrating cycle where lines reappear at 2-3 months.
-                  </p>
-                  <div className="space-y-3">
-                    {botoxTimeline.map((item) => (
-                      <div key={item.month} className="flex items-center gap-3">
-                        <div className="w-16 text-sm font-medium text-purple-300">Month {item.month}:</div>
-                        <div className="flex-1">
-                          <div className="bg-gray-700 rounded-full h-2 relative overflow-hidden">
-                            <div 
-                              className="bg-purple-300 h-full transition-all duration-500"
-                              style={{ width: `${100 - item.percentage}%` }}
-                            />
-                          </div>
-                        </div>
-                        <div className="text-sm text-gray-400">{item.percentage}% worn off</div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-white">The Advanced Solution</h3>
-                  <p className="text-gray-300 mb-4">
-                    Combining Botox with carefully placed dermal fillers addresses both 
-                    muscle movement AND fills the established crease for comprehensive treatment.
-                  </p>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Fill lines halfway for natural appearance</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Stimulate natural collagen production</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Provide stable, long-lasting results</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>Results last 18-24 months</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
         {/* Baby Botox/Microtox Section */}
         <section className="py-20 bg-accent">
@@ -964,6 +889,80 @@ export default function FaceBotox() {
                   <p className="text-sm text-gray-300">
                     Corrective treatment for conditions like Bell's Palsy and facial imbalances.
                   </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Advanced Combination Approach */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Advanced Combination Approach</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                For deep wrinkles, we combine Botox with dermal fillers for superior results
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">Why Botox Alone Isn't Enough</h3>
+                  <p className="text-gray-300 mb-4">
+                    Botox wears off approximately 20% per month. For people with deep wrinkles, 
+                    this creates a frustrating cycle where lines reappear at 2-3 months.
+                  </p>
+                  <div className="space-y-3">
+                    {botoxTimeline.map((item) => (
+                      <div key={item.month} className="flex items-center gap-3">
+                        <div className="w-16 text-sm font-medium text-purple-300">Month {item.month}:</div>
+                        <div className="flex-1">
+                          <div className="bg-gray-700 rounded-full h-2 relative overflow-hidden">
+                            <div 
+                              className="bg-purple-300 h-full transition-all duration-500"
+                              style={{ width: `${100 - item.percentage}%` }}
+                            />
+                          </div>
+                        </div>
+                        <div className="text-sm text-gray-400">{item.percentage}% worn off</div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">The Advanced Solution</h3>
+                  <p className="text-gray-300 mb-4">
+                    Combining Botox with carefully placed dermal fillers addresses both 
+                    muscle movement AND fills the established crease for comprehensive treatment.
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Fill lines halfway for natural appearance</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Stimulate natural collagen production</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Provide stable, long-lasting results</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>Results last 18-24 months</span>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
             </div>
