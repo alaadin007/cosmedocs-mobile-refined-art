@@ -21,8 +21,8 @@ const BruxismBotox = () => {
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png", alt: "Before and after photos of masseter Botox for bruxism, showing significant muscle reduction", caption: "Note the remarkable difference in the jawline angle and muscle size before and after masseter Botox treatment." },
-    { src: "/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png", alt: "A doctor marking the masseter muscle on a patient's jawline in preparation for Botox treatment", caption: "TMJ Botox: Our doctor marks the masseter muscle for precise Botox for Bruxism treatment." }
+    { src: "/src/assets/masseter-botox-bruxism.jpg", alt: "Before and after photos of masseter Botox for bruxism, showing significant muscle reduction", caption: "Note the remarkable difference in the jawline angle and muscle size before and after masseter Botox treatment." },
+    { src: "/src/assets/botox-for-teeth-grinding.png", alt: "A doctor marking the masseter muscle on a patient's jawline in preparation for Botox treatment", caption: "TMJ Botox: Our doctor marks the masseter muscle for precise Botox for Bruxism treatment." }
   ];
 
   const faqs = [
@@ -338,7 +338,7 @@ const BruxismBotox = () => {
                 viewport={{ once: true }}
               >
                 <img 
-                  src="/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png" 
+                  src="/src/assets/bruxism-effects.jpg" 
                   alt="Bruxism teeth grinding long term effects on teeth wear and tear"
                   className="w-full rounded-lg shadow-2xl"
                 />
