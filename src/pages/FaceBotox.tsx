@@ -948,37 +948,6 @@ export default function FaceBotox() {
               </motion.div>
             </div>
 
-            {/* Quick Info */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <div className="text-2xl font-bold mb-2 text-white">5min</div>
-                <div className="text-sm text-gray-400">Treatment Time</div>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Zap className="text-purple-600" size={24} />
-                </div>
-                <div className="text-2xl font-bold mb-2 text-white">5-10 days</div>
-                <div className="text-sm text-gray-400">Takes Effect</div>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <div className="text-2xl font-bold mb-2 text-white">4-6 months</div>
-                <div className="text-sm text-gray-400">Results Last</div>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <ArrowRight className="text-purple-600" size={24} />
-                </div>
-                <div className="text-2xl font-bold mb-2 text-white">Immediate</div>
-                <div className="text-sm text-gray-400">Return to Work</div>
-              </div>
-            </div>
           </div>
         </section>
 
