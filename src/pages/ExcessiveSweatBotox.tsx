@@ -270,102 +270,86 @@ const ExcessiveSweatBotox = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* What Causes Excessive Sweating */}
               <div>
-                <h2 className="text-3xl font-bold mb-8 text-white">What Causes Excessive Sweating?</h2>
-                <p className="text-gray-300 mb-8">
-                  Hyperhidrosis occurs when certain sweat glands work overtime for no apparent reason, producing sweat that your body doesn't need.
+                <h2 className="text-2xl font-bold mb-6 text-white">What Causes Excessive Sweating?</h2>
+                <p className="text-gray-300 mb-6">
+                  Hyperhidrosis occurs when sweat glands work overtime for no apparent reason.
                 </p>
 
-                <div className="space-y-6">
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <GraduationCap className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">Genetics</h3>
-                        <p className="text-gray-300 text-sm">Family history plays a significant role in primary hyperhidrosis, with the condition often running in families.</p>
-                      </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Genetics</h3>
+                      <p className="text-gray-300 text-sm">Family history plays a significant role in primary hyperhidrosis.</p>
                     </div>
-                  </div>
-
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <Heart className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">Emotional Stress</h3>
-                        <p className="text-gray-300 text-sm">Anxiety, stress, and emotional triggers can activate the sympathetic nervous system, leading to increased sweating.</p>
-                      </div>
+                  </li>
+                  
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Emotional Stress</h3>
+                      <p className="text-gray-300 text-sm">Anxiety and stress can trigger increased sweating.</p>
                     </div>
-                  </div>
-
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <Activity className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">Hormonal Changes</h3>
-                        <p className="text-gray-300 text-sm">Pregnancy, menopause, thyroid disorders, and other hormonal fluctuations can trigger excessive sweating episodes.</p>
-                      </div>
+                  </li>
+                  
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Hormonal Changes</h3>
+                      <p className="text-gray-300 text-sm">Pregnancy, menopause, and thyroid disorders can cause excessive sweating.</p>
                     </div>
-                  </div>
-
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <CheckCircle className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">Medical Conditions</h3>
-                        <p className="text-gray-300 text-sm">Certain medications, infections, diabetes, and other medical conditions can cause secondary hyperhidrosis.</p>
-                      </div>
+                  </li>
+                  
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Medical Conditions</h3>
+                      <p className="text-gray-300 text-sm">Certain medications and medical conditions can trigger hyperhidrosis.</p>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
 
               {/* Benefits of Botox for Excessive Sweating */}
               <div>
-                <h2 className="text-3xl font-bold mb-8 text-white">Benefits of Botox for Excessive Sweating</h2>
-                <p className="text-gray-300 mb-8">
-                  Botulinum toxin injections are considered one of the most effective treatments for excessive sweating.
+                <h2 className="text-2xl font-bold mb-6 text-white">Benefits of Botox Treatment</h2>
+                <p className="text-gray-300 mb-6">
+                  Botox injections are an effective treatment for excessive sweating.
                 </p>
 
-                <div className="space-y-6">
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <CheckCircle className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">Little to No Pain</h3>
-                        <p className="text-gray-300 text-sm">Botox injections are virtually painless, comparable to a small pinprick. Topical anaesthetic ensures maximum comfort.</p>
-                      </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Minimal Pain</h3>
+                      <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort.</p>
                     </div>
-                  </div>
-
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <Calendar className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">Long-Lasting Results</h3>
-                        <p className="text-gray-300 text-sm">Experience dramatic sweat reduction lasting 6-12 months for underarms and 4-6 months for hands and feet.</p>
-                      </div>
+                  </li>
+                  
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Long-Lasting</h3>
+                      <p className="text-gray-300 text-sm">Results last 6-12 months for underarms, 4-6 months for hands and feet.</p>
                     </div>
-                  </div>
-
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <Heart className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">Boost Confidence</h3>
-                        <p className="text-gray-300 text-sm">Stop worrying about sweat stains and odour. Regain confidence in social and professional situations.</p>
-                      </div>
+                  </li>
+                  
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Boosts Confidence</h3>
+                      <p className="text-gray-300 text-sm">No more worry about sweat stains or odour in social situations.</p>
                     </div>
-                  </div>
-
-                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                    <div className="flex items-start space-x-4">
-                      <Award className="text-purple-400 mt-1" size={20} />
-                      <div>
-                        <h3 className="text-white font-semibold mb-2">FDA Approved</h3>
-                        <p className="text-gray-300 text-sm">Botox for hyperhidrosis is FDA-approved and clinically proven to reduce excessive sweating by up to 87%.</p>
-                      </div>
+                  </li>
+                  
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">FDA Approved</h3>
+                      <p className="text-gray-300 text-sm">Clinically proven to reduce excessive sweating by up to 87%.</p>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
