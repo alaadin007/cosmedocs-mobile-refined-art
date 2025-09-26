@@ -435,8 +435,119 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Upper Face Treatment Areas */}
+        {/* What is Botox & Botox for Men */}
         <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* What is Botox */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900/50 border-gray-700 h-full">
+                  <CardContent className="p-8">
+                    <h2 className="text-2xl font-bold mb-6 text-white">What is Botox?</h2>
+                    <p className="text-gray-300 mb-4">
+                      Botox (Botulinum toxin) is a purified protein that temporarily blocks nerve signals to muscles, 
+                      causing them to relax. This FDA-approved treatment has been safely used for both medical and 
+                      cosmetic purposes for over 30 years.
+                    </p>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                        <p className="text-gray-300 text-sm">Originally developed for medical conditions like muscle spasms</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                        <p className="text-gray-300 text-sm">FDA-approved for cosmetic use since 2002</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                        <p className="text-gray-300 text-sm">Temporary effects lasting 3-6 months</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                        <p className="text-gray-300 text-sm">Most popular non-surgical cosmetic treatment worldwide</p>
+                      </div>
+                    </div>
+                    <div className="bg-purple-900/20 p-4 rounded-lg">
+                      <p className="text-sm font-medium mb-2 text-purple-300">How it Works:</p>
+                      <p className="text-sm text-gray-300">
+                        When injected into specific facial muscles, Botox prevents the muscle contractions that 
+                        cause wrinkles, resulting in smoother, more youthful-looking skin.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Botox for Men */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900/50 border-purple-500 h-full">
+                  <CardContent className="p-8">
+                    <h2 className="text-2xl font-bold mb-6 text-white">Botox for Men</h2>
+                    <p className="text-gray-300 mb-6">
+                      Male Botox treatments have grown dramatically as men seek natural, professional-looking results. 
+                      Our approach for men focuses on subtle enhancement that maintains masculine features.
+                    </p>
+                    
+                    {/* Statistics */}
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="text-center bg-purple-900/30 p-4 rounded-lg">
+                        <div className="text-2xl font-bold text-purple-300">400%</div>
+                        <div className="text-xs text-gray-400">increase in male Botox since 2010</div>
+                      </div>
+                      <div className="text-center bg-purple-900/30 p-4 rounded-lg">
+                        <div className="text-2xl font-bold text-purple-300">25-40%</div>
+                        <div className="text-xs text-gray-400">higher dosage needed for men</div>
+                      </div>
+                      <div className="text-center bg-purple-900/30 p-4 rounded-lg">
+                        <div className="text-2xl font-bold text-purple-300">92%</div>
+                        <div className="text-xs text-gray-400">satisfaction rate amongst male patients</div>
+                      </div>
+                      <div className="text-center bg-purple-900/30 p-4 rounded-lg">
+                        <div className="text-2xl font-bold text-purple-300">35-55</div>
+                        <div className="text-xs text-gray-400">peak age group for male treatments</div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                        <p className="text-gray-300 text-sm">Higher dosages required due to stronger facial muscles</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                        <p className="text-gray-300 text-sm">Focus on maintaining natural masculine expression</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-purple-500 mt-0.5 flex-shrink-0" size={16} />
+                        <p className="text-gray-300 text-sm">Popular for professional confidence and career enhancement</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-purple-900/20 p-4 rounded-lg">
+                      <p className="text-sm font-medium mb-2 text-purple-300">Additional Charge: +£50</p>
+                      <p className="text-sm text-gray-300">
+                        Due to the increased product requirements and specialised technique for male treatments.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Upper Face Treatment Areas */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
