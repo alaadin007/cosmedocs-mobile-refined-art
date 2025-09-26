@@ -101,23 +101,28 @@ const ExcessiveSweatBotox = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Best Botox London</span>
-                  <span className="block text-sm mt-4">Invisible art - natural lip enhancement that speaks without words</span>
+                  <span className="block text-sm mt-4">Invisible art - confidence that speaks without words</span>
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Hyperhidrosis Treatment</p>
-                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more authentic looking lip enhancement transformations</p>
+                  <p className="text-sm text-gray-300">20-30 minutes • Results last 6-12 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
-                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
                     className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                   >
                     Book Consultation
                   </Button>
                   <Button 
                     variant="outline" 
                     className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
-                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing-section');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     View Price List
                   </Button>

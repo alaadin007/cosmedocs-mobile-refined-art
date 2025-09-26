@@ -252,23 +252,44 @@ export default function FaceBotox() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Best Botox London</span>
-                  <span className="block text-sm mt-4">Invisible art - natural lip enhancement that speaks without words</span>
+                  <span className="text-purple-300">Comprehensive Face Botox</span>
+                  <span className="block text-sm mt-4">Advanced anti-wrinkle treatments for natural, lasting results</span>
                 </h1>
+                <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                  <span className="text-purple-300 font-semibold">Expert Practitioners</span>
+                  <br />
+                  Complete facial rejuvenation including upper face, lower face areas and advanced combination techniques
+                </p>
+                
+                {/* Animated Tagline */}
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="text-lg md:text-xl text-gray-400 mb-8 relative"
+                >
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-pulse">
+                      Bold • Natural • Always Your Way
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 blur-sm rounded-lg animate-pulse opacity-50"></span>
+                  </span>
+                </motion.p>
+                
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Practitioners</p>
-                  <p className="text-sm text-gray-300">#cosmelip - Check out our IG for hundreds more authentic looking lip enhancement transformations</p>
+                  <p className="text-2xl text-purple-300 font-bold">From £175</p>
+                  <p className="text-sm text-gray-300">30 minutes • Results last 4-6 months</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
-                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                   >
                     Book Consultation
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
                     onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     View Price List
