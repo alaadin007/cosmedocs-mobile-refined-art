@@ -124,15 +124,15 @@ const CosmeticAnalysisResults = ({ analysis }: CosmeticAnalysisResultsProps) => 
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-2xl font-bold text-primary">{product.ingredients?.count || 0}</div>
-                  <div className="text-sm text-muted-foreground">Ingredients</div>
+                <div className="text-center p-4 bg-slate-100 border border-slate-200 rounded-lg">
+                  <div className="text-2xl font-bold text-slate-900">{product.ingredients?.count || 0}</div>
+                  <div className="text-sm text-slate-600 font-medium">Ingredients</div>
                 </div>
                 
                 {product.pH?.estimated && (
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-primary">{product.pH.estimated}</div>
-                    <div className="text-sm text-muted-foreground">Estimated pH</div>
+                  <div className="text-center p-4 bg-slate-100 border border-slate-200 rounded-lg">
+                    <div className="text-2xl font-bold text-slate-900">{product.pH.estimated}</div>
+                    <div className="text-sm text-slate-600 font-medium">Estimated pH</div>
                   </div>
                 )}
               </div>
@@ -165,7 +165,7 @@ const CosmeticAnalysisResults = ({ analysis }: CosmeticAnalysisResultsProps) => 
               <CardContent>
                 <div className="space-y-4">
                   {product.key_actives.map((active: any, index: number) => (
-                    <div key={index} className="border rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <div key={index} className="border rounded-lg p-4 hover:bg-slate-50 transition-colors">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-semibold text-lg">{active.ingredient}</h4>
                         <Badge 
@@ -301,7 +301,7 @@ const CosmeticAnalysisResults = ({ analysis }: CosmeticAnalysisResultsProps) => 
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                  <div className="flex justify-between items-center p-3 bg-slate-100 border border-slate-200 rounded-lg">
                     <span className="font-medium">Controls Oil Production:</span>
                     <Badge 
                       variant={product.oil_and_pores.sebostatic_effect === 'yes' ? 'default' : 
@@ -346,7 +346,7 @@ const CosmeticAnalysisResults = ({ analysis }: CosmeticAnalysisResultsProps) => 
               <CardContent>
                 <div className="space-y-4">
                   {product.ingredients.ingredient_education.slice(0, 3).map((ingredient: any, index: number) => (
-                    <div key={index} className="border rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                    <div key={index} className="border rounded-lg p-4 hover:bg-slate-50 transition-colors">
                       <div className="flex justify-between items-start mb-3">
                         <div>
                           <h4 className="font-semibold text-lg">{ingredient.ingredient}</h4>
