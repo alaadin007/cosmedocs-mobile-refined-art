@@ -208,7 +208,7 @@ const ExcessiveSweatBotox = () => {
         </section>
 
         {/* What is Excessive Sweating Botox */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
