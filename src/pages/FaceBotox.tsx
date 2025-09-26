@@ -252,13 +252,13 @@ export default function FaceBotox() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Comprehensive Face Botox</span>
-                  <span className="block text-sm mt-4">Advanced anti-wrinkle treatments for natural, lasting results</span>
+                  <span className="text-purple-300">Best Botox London</span>
+                  <span className="block text-sm mt-4">Expert face botox treatments for natural, lasting results</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Expert Practitioners</span>
                   <br />
-                  Complete facial rejuvenation including upper face, lower face areas and advanced combination techniques
+                  Professional face botox treatments for forehead, frown lines, crow's feet, and facial contouring on Harley Street
                 </p>
                 
                 {/* Animated Tagline */}
@@ -312,7 +312,7 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Face Botox Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Best Face Botox London</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
