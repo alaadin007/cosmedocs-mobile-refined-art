@@ -310,6 +310,233 @@ const ExcessiveSweatBotox = () => {
           </div>
         </section>
 
+        {/* Excessive Sweating Causes */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Excessive Sweating Causes</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Certain sweat glands in hyperhidrosis work overtime for no apparent reason, producing sweat that your body does not need.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {[
+                { title: "Genetics", icon: GraduationCap },
+                { title: "Emotional Stress", icon: Heart },
+                { title: "Hormonal Changes", icon: Activity },
+                { title: "Medical Conditions", icon: CheckCircle }
+              ].map((cause, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <cause.icon className="text-purple-600" size={24} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{cause.title}</h3>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
+                <CardContent className="pt-6">
+                  <p className="text-gray-300 text-center">
+                    Common factors that can worsen sweating include genetics, emotional or mental stress, menopause, 
+                    hormonal imbalance, diabetes, obesity, and certain medications for heart health.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits of Treatment */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Benefits of Botox for Excessive Sweating</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Botulinum toxin injections are considered one of the most effective treatments for excessive sweating, 
+                acting as a medical-grade antiperspirant.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader className="text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Little to No Pain</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center">
+                      Minimal discomfort with topical anaesthetic applied before treatment
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader className="text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Activity className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Immediate Return</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center">
+                      Resume all daily activities immediately after treatment
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader className="text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Calendar className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Long-Lasting Results</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center">
+                      Effects last 4-8 months depending on treatment area
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Assessment and Preparation */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Assessing Excessive Sweating</h2>
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Hyperhidrosis Disease Severity Scale (HDSS)</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      HDSS is a point scale (sweat test) that sets specific benchmarks to rate the seriousness of a patient's condition. 
+                      It evaluates how much excessive sweating interferes with daily activities.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Severity assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Daily impact evaluation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Treatment planning</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">How to Prepare for Treatment</h2>
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardContent className="pt-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
+                          <span className="text-purple-600 font-bold text-sm">1</span>
+                        </div>
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Shave Treatment Areas</h4>
+                          <p className="text-gray-300 text-sm">Arrive with shaved underarms (males and females). Preferably shave a few days before treatment.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
+                          <span className="text-purple-600 font-bold text-sm">2</span>
+                        </div>
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Wear Appropriate Clothing</h4>
+                          <p className="text-gray-300 text-sm">Choose loose fitting top or sleeveless shirt to expose treatment area.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-3">
+                        <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
+                          <span className="text-purple-600 font-bold text-sm">3</span>
+                        </div>
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Consultation Required</h4>
+                          <p className="text-gray-300 text-sm">Professional assessment to determine suitability and treatment plan.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
