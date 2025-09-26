@@ -322,8 +322,8 @@ export default function FaceBotox() {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Clock className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">30-45 minutes including consultation</p>
+                <h3 className="text-lg font-semibold text-white mb-2">5min</h3>
+                <p className="text-gray-300">Treatment Time</p>
               </motion.div>
 
               <motion.div
@@ -334,10 +334,10 @@ export default function FaceBotox() {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
+                  <Zap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">4-6 months with premium Botox</p>
+                <h3 className="text-lg font-semibold text-white mb-2">5-10 days</h3>
+                <p className="text-gray-300">Takes Effect</p>
               </motion.div>
 
               <motion.div
@@ -348,10 +348,10 @@ export default function FaceBotox() {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
+                  <Calendar className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+                <h3 className="text-lg font-semibold text-white mb-2">4-6 months</h3>
+                <p className="text-gray-300">Results Last</p>
               </motion.div>
 
               <motion.div
@@ -362,10 +362,10 @@ export default function FaceBotox() {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
+                  <ArrowRight className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Topical anaesthetic available if needed</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Immediate</h3>
+                <p className="text-gray-300">Return to Work</p>
               </motion.div>
             </div>
           </div>
@@ -924,20 +924,6 @@ export default function FaceBotox() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">Single treatment area - perfect for targeted enhancement</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Consultation included</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium Botox</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -958,24 +944,6 @@ export default function FaceBotox() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-purple-100">Most popular choice for comprehensive facial enhancement</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Premium Botox</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">2-week follow-up</span>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -993,20 +961,6 @@ export default function FaceBotox() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">Complete upper face treatment for maximum results</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full facial assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Premium Botox</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Comprehensive aftercare</span>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -1024,20 +978,6 @@ export default function FaceBotox() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">Additional charge for male treatments due to increased product requirements</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Higher dosage requirements</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Specialised technique</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Same aftercare included</span>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -1046,18 +986,30 @@ export default function FaceBotox() {
             {/* Quick Info */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               <div className="text-center">
-                <div className="text-2xl font-bold mb-2 text-white">&lt;5min</div>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <div className="text-2xl font-bold mb-2 text-white">5min</div>
                 <div className="text-sm text-gray-400">Treatment Time</div>
               </div>
               <div className="text-center">
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="text-purple-600" size={24} />
+                </div>
                 <div className="text-2xl font-bold mb-2 text-white">5-10 days</div>
                 <div className="text-sm text-gray-400">Takes Effect</div>
               </div>
               <div className="text-center">
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
                 <div className="text-2xl font-bold mb-2 text-white">4-6 months</div>
                 <div className="text-sm text-gray-400">Results Last</div>
               </div>
               <div className="text-center">
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <ArrowRight className="text-purple-600" size={24} />
+                </div>
                 <div className="text-2xl font-bold mb-2 text-white">Immediate</div>
                 <div className="text-sm text-gray-400">Return to Work</div>
               </div>
