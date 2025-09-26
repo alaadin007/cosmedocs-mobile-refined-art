@@ -273,33 +273,58 @@ const ExcessiveSweatBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Excessive Sweating Causes</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">What Causes Excessive Sweating?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Certain sweat glands in hyperhidrosis work overtime for no apparent reason, producing sweat that your body does not need.
+                Hyperhidrosis occurs when certain sweat glands work overtime for no apparent reason, producing sweat that your body doesn't need.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {[
-                { title: "Genetics", icon: GraduationCap },
-                { title: "Emotional Stress", icon: Heart },
-                { title: "Hormonal Changes", icon: Activity },
-                { title: "Medical Conditions", icon: CheckCircle }
+                { 
+                  title: "Genetics", 
+                  icon: GraduationCap,
+                  description: "Family history plays a significant role in primary hyperhidrosis, with the condition often running in families.",
+                  gradient: "from-purple-500/20 to-blue-500/20"
+                },
+                { 
+                  title: "Emotional Stress", 
+                  icon: Heart,
+                  description: "Anxiety, stress, and emotional triggers can activate the sympathetic nervous system, leading to increased sweating.",
+                  gradient: "from-pink-500/20 to-purple-500/20"
+                },
+                { 
+                  title: "Hormonal Changes", 
+                  icon: Activity,
+                  description: "Pregnancy, menopause, thyroid disorders, and other hormonal fluctuations can trigger excessive sweating episodes.",
+                  gradient: "from-blue-500/20 to-cyan-500/20"
+                },
+                { 
+                  title: "Medical Conditions", 
+                  icon: CheckCircle,
+                  description: "Certain medications, infections, diabetes, and other medical conditions can cause secondary hyperhidrosis.",
+                  gradient: "from-green-500/20 to-teal-500/20"
+                }
               ].map((cause, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center"
+                  className={`bg-gradient-to-br ${cause.gradient} backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300 group`}
                 >
-                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <cause.icon className="text-purple-600" size={24} />
+                  <div className="flex items-start space-x-6">
+                    <div className="bg-white/10 rounded-xl p-4 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
+                      <cause.icon className="text-white" size={32} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-3">{cause.title}</h3>
+                      <p className="text-gray-300 leading-relaxed">{cause.description}</p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{cause.title}</h3>
                 </motion.div>
               ))}
             </div>
@@ -309,20 +334,18 @@ const ExcessiveSweatBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="mt-12"
+              className="mt-16 text-center"
             >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                <CardContent className="pt-6">
-                  <p className="text-gray-300 text-center">
-                    Common factors that can worsen sweating include genetics, emotional or mental stress, menopause, 
-                    hormonal imbalance, diabetes, obesity, and certain medications for heart health.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-4xl mx-auto border border-purple-500/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Understanding Your Triggers</h3>
+                <p className="text-gray-300 text-lg">
+                  Identifying the underlying cause of your excessive sweating is crucial for effective treatment. 
+                  Our expert consultation will help determine the best approach for your specific condition.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
-
         {/* Benefits of Treatment */}
         <section className="py-20 bg-accent">
           <div className="page-container">
