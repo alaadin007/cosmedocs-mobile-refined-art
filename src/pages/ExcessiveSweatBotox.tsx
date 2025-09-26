@@ -144,7 +144,7 @@ const ExcessiveSweatBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Excessive Sweating Botox Treatment</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Excessive Sweating Botox Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -253,7 +253,7 @@ const ExcessiveSweatBotox = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* What Causes Excessive Sweating */}
               <div>
-                <h2 className="text-2xl font-bold mb-6 text-white">What Causes Excessive Sweating?</h2>
+                <h2 className="text-3xl font-bold mb-6 text-white">What Causes Excessive Sweating?</h2>
                 
                 <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
                   <CardContent className="p-6">
@@ -300,7 +300,7 @@ const ExcessiveSweatBotox = () => {
 
               {/* Benefits of Botox for Excessive Sweating */}
               <div>
-                <h2 className="text-2xl font-bold mb-6 text-white">Benefits of Botox Treatment</h2>
+                <h2 className="text-3xl font-bold mb-6 text-white">Benefits of Botox Treatment</h2>
                 
                 <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
                   <CardContent className="p-6">
@@ -524,7 +524,7 @@ const ExcessiveSweatBotox = () => {
               className="text-center"
             >
               <div className="max-w-4xl mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-6">Watch: Hyperhidrosis Treatment Process</h3>
+                <h3 className="text-3xl font-bold text-white mb-6">Watch: Hyperhidrosis Treatment Process</h3>
                 <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
                   <iframe 
                     width="100%" 
