@@ -807,10 +807,10 @@ export default function FaceBotox() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="bg-gray-900/50 border-blue-500/30 text-center hover:scale-105 transition-transform duration-300">
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="p-3 bg-blue-500/20 rounded-full w-fit mx-auto mb-4">
-                    <Heart className="w-8 h-8 text-blue-400" />
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">Bruxism & TMJ</h3>
                   <p className="text-sm text-gray-300">
@@ -819,10 +819,10 @@ export default function FaceBotox() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gray-900/50 border-green-500/30 text-center hover:scale-105 transition-transform duration-300">
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="p-3 bg-green-500/20 rounded-full w-fit mx-auto mb-4">
-                    <Brain className="w-8 h-8 text-green-400" />
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">Migraines</h3>
                   <p className="text-sm text-gray-300">
@@ -831,10 +831,10 @@ export default function FaceBotox() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gray-900/50 border-orange-500/30 text-center hover:scale-105 transition-transform duration-300">
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="p-3 bg-orange-500/20 rounded-full w-fit mx-auto mb-4">
-                    <Droplets className="w-8 h-8 text-orange-400" />
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">Hyperhidrosis</h3>
                   <p className="text-sm text-gray-300">
@@ -843,10 +843,10 @@ export default function FaceBotox() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gray-900/50 border-purple-500/30 text-center hover:scale-105 transition-transform duration-300">
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="p-3 bg-purple-500/20 rounded-full w-fit mx-auto mb-4">
-                    <RefreshCw className="w-8 h-8 text-purple-400" />
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">Facial Asymmetry</h3>
                   <p className="text-sm text-gray-300">
