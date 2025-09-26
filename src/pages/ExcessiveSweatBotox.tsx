@@ -207,7 +207,6 @@ const ExcessiveSweatBotox = () => {
           </div>
         </section>
 
-
         {/* What is Excessive Sweating Botox */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -346,6 +345,7 @@ const ExcessiveSweatBotox = () => {
             </motion.div>
           </div>
         </section>
+
         {/* Benefits of Treatment */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -379,7 +379,8 @@ const ExcessiveSweatBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-center">
-                      Minimal discomfort with topical anaesthetic applied before treatment
+                      Botox injections for excessive sweating are virtually painless, comparable to a small pinprick. 
+                      Topical anaesthetic ensures maximum comfort during treatment.
                     </p>
                   </CardContent>
                 </Card>
@@ -394,13 +395,14 @@ const ExcessiveSweatBotox = () => {
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
                     <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Activity className="text-purple-600" size={24} />
+                      <Calendar className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Immediate Return</CardTitle>
+                    <CardTitle className="text-white text-xl">Long-Lasting Results</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-center">
-                      Resume all daily activities immediately after treatment
+                      Experience dramatic sweat reduction lasting 6-12 months for underarms and 4-6 months for hands and feet. 
+                      Results improve quality of life significantly.
                     </p>
                   </CardContent>
                 </Card>
@@ -415,13 +417,14 @@ const ExcessiveSweatBotox = () => {
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
                     <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Calendar className="text-purple-600" size={24} />
+                      <Heart className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Long-Lasting Results</CardTitle>
+                    <CardTitle className="text-white text-xl">Boost Confidence</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-center">
-                      Effects last 4-8 months depending on treatment area
+                      Stop worrying about sweat stains and odour. Regain confidence in social and professional situations 
+                      with our life-changing excessive sweating treatment.
                     </p>
                   </CardContent>
                 </Card>
@@ -483,8 +486,8 @@ const ExcessiveSweatBotox = () => {
                           <span className="text-purple-600 font-bold text-sm">1</span>
                         </div>
                         <div>
-                          <h4 className="text-white font-semibold mb-1">Shave Treatment Areas</h4>
-                          <p className="text-gray-300 text-sm">Arrive with shaved underarms (males and females). Preferably shave a few days before treatment.</p>
+                          <h4 className="text-white font-semibold mb-1">Shave Treatment Area</h4>
+                          <p className="text-gray-300 text-sm">For underarm treatment, shave 2-3 days before your appointment to ensure optimal injection placement.</p>
                         </div>
                       </div>
                       
@@ -493,8 +496,8 @@ const ExcessiveSweatBotox = () => {
                           <span className="text-purple-600 font-bold text-sm">2</span>
                         </div>
                         <div>
-                          <h4 className="text-white font-semibold mb-1">Wear Appropriate Clothing</h4>
-                          <p className="text-gray-300 text-sm">Choose loose fitting top or sleeveless shirt to expose treatment area.</p>
+                          <h4 className="text-white font-semibold mb-1">Wear Suitable Clothing</h4>
+                          <p className="text-gray-300 text-sm">Choose loose-fitting or sleeveless top for easy access to treatment areas.</p>
                         </div>
                       </div>
                       
@@ -580,7 +583,7 @@ const ExcessiveSweatBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center mb-8"
             >
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
                 <CardContent className="p-8">
@@ -595,6 +598,31 @@ const ExcessiveSweatBotox = () => {
                   </div>
                 </CardContent>
               </Card>
+            </motion.div>
+
+            {/* YouTube Video */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-white mb-6">Watch: Hyperhidrosis Treatment Process</h3>
+                <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/iyxFwdP15v4" 
+                    title="Hyperhidrosis Treatment with Botox"
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                    className="rounded-2xl"
+                  ></iframe>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -640,14 +668,14 @@ const ExcessiveSweatBotox = () => {
               >
                 <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20">
                   <img 
-                    src="/lovable-uploads/botox-armpit-injections.jpg" 
+                    src="/images/botox-armpit-injections.png" 
                     alt="Botox in armpit injections showing treatment area" 
-                    className="w-full h-64 object-cover rounded-lg mb-6"
+                    className="w-full h-64 object-contain rounded-lg mb-6 bg-white/5"
                   />
                   <div className="text-center">
-                    <h3 className="text-white font-semibold mb-2">Professional Treatment</h3>
+                    <h3 className="text-white font-semibold mb-2">Professional Injection Technique</h3>
                     <p className="text-gray-300 text-sm">
-                      Precise injection technique covering the entire treatment area for optimal results.
+                      Precise injection pattern covering the entire underarm area for optimal sweat reduction results.
                     </p>
                   </div>
                 </div>
@@ -666,13 +694,13 @@ const ExcessiveSweatBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Excessive Sweating Botox Pricing</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox In Armpit Face & Body Treatment Prices</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Transparent pricing for therapeutic excessive sweating botox treatments at our Harley Street clinic.
+                Professional hyperhidrosis treatment pricing at CosmeDocs Harley Street clinic. All treatments include expert consultation and follow-up care.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -681,23 +709,19 @@ const ExcessiveSweatBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Underarms</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£450</div>
+                    <CardTitle className="text-white text-xl">Armpits (Underarms)</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£550</div>
                     <div className="text-sm text-purple-400">Most Popular</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Both underarms</span>
+                        <span className="text-gray-300">Both underarms treated</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Lasts 6-12 months</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">FDA-approved</span>
+                        <span className="text-gray-300">Lasts 4-6 months</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
@@ -723,7 +747,7 @@ const ExcessiveSweatBotox = () => {
                     <ul className="space-y-3">
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Both hands</span>
+                        <span className="text-gray-300">Both hands treated</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
@@ -731,11 +755,7 @@ const ExcessiveSweatBotox = () => {
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Multiple injection points</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Nerve block procedure</span>
+                        <span className="text-gray-300">Multiple injections</span>
                       </li>
                     </ul>
                   </CardContent>
@@ -757,25 +777,86 @@ const ExcessiveSweatBotox = () => {
                     <ul className="space-y-3">
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Both feet</span>
+                        <span className="text-gray-300">Both feet treated</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Lasts 4-6 months</span>
+                        <span className="text-gray-300">Top surface sweating</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Comprehensive coverage</span>
+                        <span className="text-gray-300">Effective results</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-white text-xl">Forehead</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£350</div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Facial sweating</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <Check className="text-purple-400" size={16} />
-                        <span className="text-gray-300">Maximum units</span>
+                        <span className="text-gray-300">Quick treatment</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <Check className="text-purple-400" size={16} />
+                        <span className="text-gray-300">Minimal discomfort</span>
                       </li>
                     </ul>
                   </CardContent>
                 </Card>
               </motion.div>
             </div>
+
+            {/* Additional Treatment Areas */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl text-center">Additional Treatment Areas</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div className="space-y-2">
+                      <div className="text-purple-300 font-semibold">Scalp</div>
+                      <div className="text-white text-lg">£600</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-purple-300 font-semibold">Nose</div>
+                      <div className="text-white text-lg">£200</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-purple-300 font-semibold">Cheeks</div>
+                      <div className="text-white text-lg">£200</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-purple-300 font-semibold">Other Areas</div>
+                      <div className="text-white text-lg">On Consultation</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
@@ -791,7 +872,7 @@ const ExcessiveSweatBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about excessive sweating botox treatments answered by our expert doctors.
+                Common questions about excessive sweating botox treatment answered by our expert practitioners.
               </p>
             </motion.div>
 
@@ -800,11 +881,11 @@ const ExcessiveSweatBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="max-w-3xl mx-auto"
+              className="max-w-4xl mx-auto"
             >
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 rounded-lg px-6">
+                  <AccordionItem key={index} value={`item-${index}`} className="border border-purple-500/30 rounded-lg px-6 bg-gradient-to-br from-purple-900/30 to-pink-900/30">
                     <AccordionTrigger className="text-white hover:text-purple-300 text-left">
                       {faq.question}
                     </AccordionTrigger>
@@ -827,34 +908,19 @@ const ExcessiveSweatBotox = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Stop Excessive Sweating?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Book your expert consultation today and discover how therapeutic botox can transform your confidence and quality of life.
+              <h2 className="text-4xl font-bold mb-6 text-white">Ready to Stop Excessive Sweating?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation today and discover how excessive sweating botox can transform your confidence.
               </p>
               <Button 
                 className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
                 onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
               >
-                Book Free Consultation
+                Book Your Consultation
               </Button>
             </motion.div>
           </div>
         </section>
-
-        {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h3>Expert Excessive Sweating Botox Treatment in London</h3>
-          <p>Cosmedocs offers professional excessive sweating botox treatments for hyperhidrosis affecting underarms, palms, and feet. Our experienced cosmetic doctors use FDA-approved therapeutic botox protocols to dramatically reduce sweat production. Located in prestigious Harley Street, our clinic provides comprehensive assessments and life-changing treatment plans.</p>
-          
-          <h4>Why Choose Cosmedocs for Excessive Sweating Botox?</h4>
-          <p>Our invisible art philosophy ensures effective therapeutic treatment with maximum sweat reduction. We specialize in precise nerve blocking techniques using the latest injection protocols for optimal outcomes. Our doctors have extensive experience in treating hyperhidrosis and understand the life-changing impact of successful treatment.</p>
-          
-          <h4>Understanding Hyperhidrosis Treatment</h4>
-          <p>Hyperhidrosis is a medical condition causing excessive sweating that significantly impacts daily life, work, and social interactions. Professional botox treatment blocks nerve signals to sweat glands, providing dramatic reduction in sweat production and restoring confidence for sufferers of this challenging condition.</p>
-          
-          <h4>Treatment Process and Sweat Management</h4>
-          <p>Our excessive sweating botox treatment begins with a comprehensive hyperhidrosis assessment and medical consultation. The injection process takes 20-30 minutes using specialized techniques and topical anesthesia. Results appear gradually over 1-4 weeks, with optimal effects lasting 6-12 months for underarms. We provide ongoing hyperhidrosis management support and regular follow-up care.</p>
-        </div>
       </div>
     </>
   );
