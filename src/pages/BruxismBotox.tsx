@@ -310,6 +310,443 @@ const BruxismBotox = () => {
           </div>
         </section>
 
+        {/* Causes of Bruxism */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Causes of Bruxism</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Bruxism, commonly known as teeth grinding, can be caused by several factors. Understanding these causes is crucial for effectively managing and treating this condition.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <img 
+                  src="/src/assets/bruxism-effects.jpg" 
+                  alt="Bruxism teeth grinding long term effects on teeth wear and tear"
+                  className="w-full rounded-lg shadow-2xl"
+                />
+                <p className="text-gray-400 text-sm mt-2 text-center">
+                  Botox for Bruxism reduces the pressure on the teeth, reducing long-term wear and tear.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-6">
+                    <h3 className="text-xl font-semibold text-white mb-4">Primary Causes:</h3>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5" />
+                        <span><strong>Stress and Anxiety:</strong> Major contributors leading to involuntary jaw clenching and grinding, especially during sleep</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5" />
+                        <span><strong>Misaligned Teeth:</strong> Can disrupt normal jaw alignment and function</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5" />
+                        <span><strong>Lifestyle Habits:</strong> Smoking, heavy alcohol consumption, and excessive caffeine</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5" />
+                        <span><strong>Medications:</strong> Certain medications and medical conditions can predispose individuals to bruxism</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* TMJ Botox Helps */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">TMJ Botox Helps With:</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Jaw grinding can enlarge the masseter muscle, which is responsible for chewing. Our therapeutic botox provides relief from multiple symptoms.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: <Activity className="w-6 h-6" />, title: "Headaches and Migraines", description: "Reduce tension-related headaches" },
+                { icon: <Heart className="w-6 h-6" />, title: "Earaches", description: "Relieve referred ear pain" },
+                { icon: <CheckCircle className="w-6 h-6" />, title: "Facial Pain", description: "Alleviate jaw and facial discomfort" },
+                { icon: <Activity className="w-6 h-6" />, title: "Neck Pain", description: "Reduce tension in neck muscles" },
+                { icon: <Palette className="w-6 h-6" />, title: "Chipped Teeth & Sensitivity", description: "Prevent dental damage" },
+                { icon: <CheckCircle className="w-6 h-6" />, title: "Chewed Tissue", description: "Protect inside of mouth" },
+                { icon: <Activity className="w-6 h-6" />, title: "Jaw Stiffness", description: "Improve jaw movement" },
+                { icon: <Clock className="w-6 h-6" />, title: "Sleep Disturbance", description: "Reduce sleep bruxism" },
+                { icon: <Activity className="w-6 h-6" />, title: "Shoulder Tension", description: "Relieve muscle tightness" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                    <CardContent className="p-6 text-center">
+                      <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                        <div className="text-purple-400">{item.icon}</div>
+                      </div>
+                      <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                      <p className="text-gray-300 text-sm">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Understanding the Muscles of Mastication */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Understanding the Muscles of Mastication</h2>
+              <h3 className="text-xl text-purple-300 mb-4">Size and Relevance to TMJ, Bruxism and Botox</h3>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                The muscles of mastication are key players in jaw movement and are directly involved in conditions like TMJ and bruxism.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Muscles That Botox Treatments Commonly Target</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="border-l-4 border-purple-400 pl-4">
+                      <h4 className="text-white font-semibold mb-2">1. Masseter Muscle</h4>
+                      <p className="text-gray-300 text-sm">
+                        This is the largest and most powerful muscle of mastication. It plays a significant role in clenching the jaw and is often involved in bruxism. Botox injections in the masseter muscle can also be used for cosmetic jawline slimming.
+                      </p>
+                    </div>
+                    <div className="border-l-4 border-purple-400 pl-4">
+                      <h4 className="text-white font-semibold mb-2">2. Temporalis Muscle</h4>
+                      <p className="text-gray-300 text-sm">
+                        Located over the temples, the temporalis assists in closing the jaw and clenching. If symptoms indicate, administering Botox injections in the temporalis muscle can also effectively treat bruxism (e.g. associated headaches).
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Muscles That Botox Treatments Seldom Target</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="border-l-4 border-gray-400 pl-4">
+                      <h4 className="text-white font-semibold mb-2">1. Medial Pterygoid</h4>
+                      <p className="text-gray-300 text-sm">
+                        This muscle, while smaller than the masseter and temporalis, assists in elevating the jaw and plays a role in grinding movements from side to side. It can be involved in TMJ disorders by contributing to uneven jaw movements and strain.
+                      </p>
+                    </div>
+                    <div className="border-l-4 border-gray-400 pl-4">
+                      <h4 className="text-white font-semibold mb-2">2. Lateral Pterygoid</h4>
+                      <p className="text-gray-300 text-sm">
+                        The smallest of the mastication muscles, the lateral pterygoid helps open the jaw and move it from side to side. Its function is crucial in the mechanics of the TMJ and can be a source of dysfunction in TMJ disorders.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Images and Video */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Professional Treatment Process</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                See our expert techniques and remarkable results from professional bruxism botox treatments.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <img 
+                  src="/src/assets/masseter-botox-bruxism.jpg" 
+                  alt="Before and after photos of masseter Botox for bruxism, showing significant muscle reduction"
+                  className="w-full rounded-lg shadow-2xl mb-4"
+                />
+                <p className="text-gray-300 text-sm">
+                  Note the remarkable difference in the jawline angle and muscle size before and after masseter Botox treatment.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <img 
+                  src="/src/assets/botox-for-teeth-grinding.png" 
+                  alt="A doctor marking the masseter muscle on a patient's jawline in preparation for Botox treatment"
+                  className="w-full rounded-lg shadow-2xl mb-4"
+                />
+                <p className="text-gray-300 text-sm">
+                  TMJ Botox: Our doctor marks the masseter muscle for precise Botox for Bruxism treatment.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Treatment Video */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-12 text-center"
+            >
+              <div className="max-w-4xl mx-auto">
+                <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/5ZRGFLus2SQ"
+                    title="Botox for bruxism treatment demonstration"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0"
+                  ></iframe>
+                </div>
+                <p className="text-gray-300 text-sm mt-4">
+                  Botox for bruxism effectively targets the muscles responsible for jaw tension and teeth grinding. We primarily inject the masseter and/or temporalis muscles.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* High Risk Group for Teeth Grinding */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">High Risk Group for Teeth Grinding</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Some groups of people are more susceptible to bruxism than others. Those at the highest risk include:
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Individuals with Other Sleep Disorders</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Snoring</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Obstructive sleep apnea</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Sleep talking</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Violent behaviour during sleep</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Sleep paralysis</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Hypnagogic/hypnopompic hallucinations</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Individuals Leading Stressful Lifestyles</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Smokers</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>People with high alcohol consumption</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Patients consuming 6+ cups of tea or coffee daily</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>People taking medication for sleep, depression, and/or anxiety</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Energetic personality types</span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <span>Those with family history of bruxism</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Reviews */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Client Reviews</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Hear from our satisfied clients about their bruxism botox experience.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <CheckCircle key={i} className="w-5 h-5 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-300 mb-4">
+                      "I've had three facial areas treated with Anti-Wrinkle Injection at CosmeDocs in recent years, and find the treatment swift, thorough and effective. Also, Dr Haq's pleasant and friendly manner makes the treatment as painless as possible!"
+                    </p>
+                    <p className="text-purple-300 font-semibold">- Verified Client</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <CheckCircle key={i} className="w-5 h-5 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-300 mb-4">
+                      "I had a facial aesthetic treatment with CosmeDocs. I found the price very reasonable. Even better the results were excellent. I will definitely use this service again."
+                    </p>
+                    <p className="text-purple-300 font-semibold">- Verified Client</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
@@ -335,8 +772,8 @@ const BruxismBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Mild Bruxism</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£300</div>
+                    <CardTitle className="text-white text-xl">Standard Treatment</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£350</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -365,9 +802,9 @@ const BruxismBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Moderate Bruxism</CardTitle>
-                    <div className="text-3xl font-bold text-purple-300">£375</div>
-                    <div className="text-sm text-purple-400">Most Common</div>
+                    <CardTitle className="text-white text-xl">For Both Male & Female</CardTitle>
+                    <div className="text-3xl font-bold text-purple-300">£350</div>
+                    <div className="text-sm text-purple-400">Standard Price</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -400,7 +837,7 @@ const BruxismBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Severe Bruxism</CardTitle>
+                    <CardTitle className="text-white text-xl">Complex Cases</CardTitle>
                     <div className="text-3xl font-bold text-purple-300">£450</div>
                   </CardHeader>
                   <CardContent>
