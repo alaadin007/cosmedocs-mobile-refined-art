@@ -534,9 +534,10 @@ export default function FaceBotox() {
                     </div>
 
                     <div className="bg-purple-900/20 p-4 rounded-lg">
-                      <p className="text-sm font-medium mb-2 text-purple-300">Additional Charge: +£50</p>
+                      <p className="text-sm font-medium mb-2 text-purple-300">Popular Areas for Men:</p>
                       <p className="text-sm text-gray-300">
-                        Due to the increased product requirements and specialised technique for male treatments.
+                        Forehead lines, frown lines, and crow's feet are the most requested areas for 
+                        professional-looking enhancement without compromising masculine features.
                       </p>
                     </div>
                   </CardContent>
@@ -777,32 +778,32 @@ export default function FaceBotox() {
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-white">Perfect for First-Time Clients</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-white">How Does Botox Work?</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Sparkles className="w-5 h-5 text-purple-400 mt-1" />
+                    <Syringe className="w-5 h-5 text-purple-400 mt-1" />
                     <div>
-                      <h4 className="font-semibold mb-2 text-white">Gentle Approach</h4>
+                      <h4 className="font-semibold mb-2 text-white">Muscle Relaxation</h4>
                       <p className="text-gray-300">
-                        Addressing crow's feet, forehead lines, glabella, and bunny lines with precision microneedles.
+                        Botox blocks nerve signals to targeted facial muscles, preventing them from contracting and forming wrinkles.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Eye className="w-5 h-5 text-purple-400 mt-1" />
+                    <Brain className="w-5 h-5 text-purple-400 mt-1" />
                     <div>
-                      <h4 className="font-semibold mb-2 text-white">Natural Expression</h4>
+                      <h4 className="font-semibold mb-2 text-white">Nerve Signal Blocking</h4>
                       <p className="text-gray-300">
-                        This technique avoids the frozen look, ensuring a natural appearance that maintains your character.
+                        The botulinum toxin temporarily interrupts communication between nerves and muscles at the injection site.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-purple-400 mt-1" />
+                    <RefreshCw className="w-5 h-5 text-purple-400 mt-1" />
                     <div>
-                      <h4 className="font-semibold mb-2 text-white">Expert Technique</h4>
+                      <h4 className="font-semibold mb-2 text-white">Gradual Recovery</h4>
                       <p className="text-gray-300">
-                        Our CosmeDocs clinic in London prioritises achieving an unobtrusive, non-overdone effect most patients desire.
+                        Over 3-6 months, nerve endings regenerate and muscle function gradually returns, requiring repeat treatments.
                       </p>
                     </div>
                   </div>
@@ -1081,6 +1082,37 @@ export default function FaceBotox() {
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
                         <span className="text-gray-300 text-sm">Comprehensive aftercare</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900 border-gray-600 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Men's Botox</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">+£50</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Additional charge for male treatments due to increased product requirements</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Higher dosage requirements</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Specialised masculine technique</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-500" size={16} />
+                        <span className="text-gray-300 text-sm">Same aftercare included</span>
                       </div>
                     </div>
                   </CardContent>
