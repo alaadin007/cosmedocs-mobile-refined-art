@@ -91,28 +91,32 @@ export default function FaceBotox() {
   // Lower face treatment areas
   const lowerFaceTreatmentAreas = [
     {
-      icon: Target,
-      title: "DAO Muscle (Depressor Anguli Oris)",
-      description: "Targets muscles that pull down the corners of the mouth",
-      benefit: "Lifts downturned mouth corners for a more youthful appearance"
+      area: "DAO Muscle (Depressor Anguli Oris)",
+      description: "Targets muscles that pull down the corners of the mouth, lifting downturned mouth corners for a more youthful appearance.",
+      units: "4-6 units",
+      price: "£100-150",
+      duration: "4-6 months"
     },
     {
-      icon: Shield,
-      title: "Mentalis Crease",
-      description: "Addresses horizontal lines and dimpling over the chin area",
-      benefit: "Smooths chin texture and reduces orange peel appearance"
+      area: "Mentalis Crease",
+      description: "Addresses horizontal lines and dimpling over the chin area, smoothing chin texture and reducing orange peel appearance.",
+      units: "4-8 units",
+      price: "£100-200", 
+      duration: "4-6 months"
     },
     {
-      icon: Zap,
-      title: "Platysma Muscle",
-      description: "Relaxes the large neck muscle that creates neck bands",
-      benefit: "Defines jawline and reduces appearance of neck aging"
+      area: "Platysma Muscle",
+      description: "Relaxes the large neck muscle that creates neck bands, defining jawline and reducing appearance of neck aging.",
+      units: "20-40 units",
+      price: "£200-400",
+      duration: "4-6 months"
     },
     {
-      icon: Heart,
-      title: "Jawline Definition",
-      description: "Strategic placement to enhance facial contours",
-      benefit: "Creates sharper, more defined jawline without surgery"
+      area: "Jawline Definition",
+      description: "Strategic placement to enhance facial contours, creating sharper, more defined jawline without surgery.",
+      units: "15-30 units",
+      price: "£150-300",
+      duration: "4-6 months"
     }
   ];
 
@@ -480,7 +484,7 @@ export default function FaceBotox() {
         </section>
 
         {/* Lower Face Treatment Areas */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -495,68 +499,29 @@ export default function FaceBotox() {
               </p>
             </motion.div>
 
-            <div className="mb-8">
-              <Card className="bg-gray-900/50 border-gray-700">
-                <CardContent className="p-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4 text-white">The Unbalanced Face Problem</h3>
-                      <p className="text-gray-300 mb-4">
-                        Many clients have been receiving upper face Botox for years, but their lower 
-                        face remains hyper-animated. This creates an unnatural imbalance where the 
-                        upper face is relaxed while the lower face shows excessive movement.
-                      </p>
-                      <ul className="space-y-2 text-sm text-gray-300">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                          <span>Mentalis crease over the chin from habitual muscle use</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                          <span>Downturned mouth corners creating sad expression</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                          <span>Horizontal lines along jawline from muscle tension</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4 text-white">The Solution</h3>
-                      <p className="text-gray-300 mb-4">
-                        Strategic lower face Botox creates balance, symmetry, and natural results 
-                        by harmonizing upper and lower facial animation.
-                      </p>
-                      <div className="bg-purple-900/30 p-4 rounded-lg">
-                        <p className="text-sm font-medium mb-2 text-purple-300">The Result:</p>
-                        <p className="text-sm text-gray-300">
-                          Comprehensive facial harmony that maintains natural expression while 
-                          creating a more youthful, balanced appearance.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {lowerFaceTreatmentAreas.map((area, index) => (
                 <motion.div
-                  key={area.title}
+                  key={area.area}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
                     <CardContent className="p-6">
-                      <area.icon className="h-8 w-8 text-purple-300 mb-4" />
-                      <h3 className="text-lg font-semibold mb-3 text-white">{area.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{area.description}</p>
-                      <div className="bg-purple-900/20 p-3 rounded text-xs">
-                        <span className="font-medium text-purple-300">Benefit: </span>
-                        <span className="text-gray-300">{area.benefit}</span>
+                      <h3 className="text-xl font-semibold mb-3 text-white">{area.area}</h3>
+                      <p className="text-gray-300 mb-4 text-sm">{area.description}</p>
+                      <div className="space-y-2 text-xs">
+                        <div className="text-gray-400">
+                          <span className="font-medium text-purple-300">Units:</span> {area.units}
+                        </div>
+                        <div className="text-gray-400">
+                          <span className="font-medium text-purple-300">Price:</span> {area.price}
+                        </div>
+                        <div className="text-gray-400">
+                          <span className="font-medium text-purple-300">Duration:</span> {area.duration}
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
