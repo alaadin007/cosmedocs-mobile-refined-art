@@ -264,119 +264,103 @@ const ExcessiveSweatBotox = () => {
           </div>
         </section>
 
-        {/* What Causes Excessive Sweating */}
+        {/* Combined: Causes & Benefits */}
         <section className="py-20 bg-accent">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">What Causes Excessive Sweating?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding hyperhidrosis helps identify the best treatment approach. Several factors contribute to 
-                excessive sweating that significantly impacts daily life and confidence.
-              </p>
-            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* What Causes Excessive Sweating */}
+              <div>
+                <h2 className="text-2xl font-bold mb-6 text-white">What Causes Excessive Sweating?</h2>
+                
+                <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <p className="text-gray-300 mb-6">
+                      Hyperhidrosis occurs when sweat glands work overtime for no apparent reason.
+                    </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { 
-                  title: "Genetics", 
-                  description: "Family history plays a significant role in primary hyperhidrosis conditions"
-                },
-                { 
-                  title: "Emotional Stress", 
-                  description: "Anxiety and stress can trigger increased sweating in affected areas"
-                },
-                { 
-                  title: "Hormonal Changes", 
-                  description: "Pregnancy, menopause, and thyroid disorders can cause excessive sweating"
-                },
-                { 
-                  title: "Medical Conditions", 
-                  description: "Certain medications and medical conditions can trigger hyperhidrosis"
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-black border-gray-800 h-full hover:border-purple-500 transition-colors">
-                    <CardHeader>
-                      <CardTitle className="text-white text-lg">{item.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300">{item.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+                    <ul className="space-y-4">
+                      <li className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-white font-medium mb-1">Genetics</h3>
+                          <p className="text-gray-300 text-sm">Family history plays a significant role in primary hyperhidrosis.</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-white font-medium mb-1">Emotional Stress</h3>
+                          <p className="text-gray-300 text-sm">Anxiety and stress can trigger increased sweating.</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-white font-medium mb-1">Hormonal Changes</h3>
+                          <p className="text-gray-300 text-sm">Pregnancy, menopause, and thyroid disorders can cause excessive sweating.</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-white font-medium mb-1">Medical Conditions</h3>
+                          <p className="text-gray-300 text-sm">Certain medications and medical conditions can trigger hyperhidrosis.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
 
-        {/* Benefits of Botox Treatment */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Benefits of Botox Treatment</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Botox injections provide effective, clinically proven treatment for excessive sweating with 
-                minimal discomfort and long-lasting results that transform daily life.
-              </p>
-            </motion.div>
+              {/* Benefits of Botox for Excessive Sweating */}
+              <div>
+                <h2 className="text-2xl font-bold mb-6 text-white">Benefits of Botox Treatment</h2>
+                
+                <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <p className="text-gray-300 mb-6">
+                      Botox injections are an effective treatment for excessive sweating.
+                    </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { 
-                  title: "Minimal Pain", 
-                  description: "Quick injections with topical anaesthetic for comfort throughout treatment"
-                },
-                { 
-                  title: "Long-Lasting", 
-                  description: "Results last 6-12 months for underarms, 4-6 months for hands and feet"
-                },
-                { 
-                  title: "Boosts Confidence", 
-                  description: "No more worry about sweat stains or odour in social situations"
-                },
-                { 
-                  title: "FDA Approved", 
-                  description: "Clinically proven to reduce excessive sweating by up to 87%"
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-accent border-gray-800 h-full hover:border-purple-500 transition-colors">
-                    <CardHeader>
-                      <CardTitle className="text-white text-lg flex items-center gap-2">
-                        <Check className="text-purple-400" size={20} />
-                        {item.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300">{item.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+                    <ul className="space-y-4">
+                      <li className="flex items-start space-x-3">
+                        <Check className="text-purple-400 mt-1" size={16} />
+                        <div>
+                          <h3 className="text-white font-medium mb-1">Minimal Pain</h3>
+                          <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort.</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start space-x-3">
+                        <Check className="text-purple-400 mt-1" size={16} />
+                        <div>
+                          <h3 className="text-white font-medium mb-1">Long-Lasting</h3>
+                          <p className="text-gray-300 text-sm">Results last 6-12 months for underarms, 4-6 months for hands and feet.</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start space-x-3">
+                        <Check className="text-purple-400 mt-1" size={16} />
+                        <div>
+                          <h3 className="text-white font-medium mb-1">Boosts Confidence</h3>
+                          <p className="text-gray-300 text-sm">No more worry about sweat stains or odour in social situations.</p>
+                        </div>
+                      </li>
+                      
+                      <li className="flex items-start space-x-3">
+                        <Check className="text-purple-400 mt-1" size={16} />
+                        <div>
+                          <h3 className="text-white font-medium mb-1">FDA Approved</h3>
+                          <p className="text-gray-300 text-sm">Clinically proven to reduce excessive sweating by up to 87%.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
