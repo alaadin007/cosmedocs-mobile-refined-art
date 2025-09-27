@@ -113,6 +113,12 @@ const Treatments = () => {
         {
           title: "Rosacea & Blushing",
           price: "£350- 450"
+        },
+        {
+          title: "T-Zone Oily Skin Botox",
+          price: "£250",
+          description: "Reduces sebum production and controls facial shine",
+          link: "/t-zone-oily-skin-botox"
         }
       ],
       contouringItems: [
@@ -255,6 +261,12 @@ const Treatments = () => {
             {
               title: "Aqualyx Fat Dissolving",
               price: "POC"
+            },
+            {
+              title: "Fat Dissolve/Emsculpt",
+              price: "POC",
+              description: "Non-invasive body contouring and fat reduction",
+              link: "/fat-dissolve"
             },
             {
               title: "PDO Threads",
@@ -514,6 +526,12 @@ const Treatments = () => {
           price: "From £100",
           description: "Medical-grade skincare prescriptions",
           link: "/prescription-skin-care"
+        },
+        {
+          title: "COSMEDERM SERVICES",
+          price: "POC",
+          description: "Comprehensive medical dermatology assessments and treatments",
+          link: "/cosmederm"
         }
       ]
     }
