@@ -49,7 +49,7 @@ const TREATMENT_ROUTES = [
   '/eczema-treatment',
   '/psoriasis-treatment',
   '/fat-dissolve',
-  '/t-zone-oily-skin-botox',
+  '/oily-skin-botox',
   '/cosmederm',
   
   // Advanced/specialized treatments

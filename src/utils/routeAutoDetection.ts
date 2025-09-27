@@ -41,7 +41,7 @@ const ROUTE_REGISTRY = {
     '/hair-transplant-surgeon',
 
     // Newly added treatments
-    '/fat-dissolve', '/t-zone-oily-skin-botox',
+    '/fat-dissolve', '/oily-skin-botox',
     
     // Alternative/redirect routes
     '/dermal-filler-makeover', '/experimental-treatment'

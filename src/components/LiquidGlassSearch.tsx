@@ -19,7 +19,7 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   const [isLoading, setIsLoading] = useState(false);
 
   const pageIndex = [
-    { title: "T‑Zone Oily Skin Botox", path: "/t-zone-oily-skin-botox", keywords: ["t-zone", "oily skin", "sebum", "botox"] },
+    { title: "T‑Zone Oily Skin Botox", path: "/oily-skin-botox", keywords: ["t-zone", "oily skin", "sebum", "botox"] },
     { title: "Fat Dissolve", path: "/fat-dissolve", keywords: ["aqualyx", "fat dissolve", "body", "emsculpt"] },
     { title: "CosmeDerm Medical Dermatology", path: "/cosmederm", keywords: ["cosmederm", "dermatology", "medical dermatology", "skin"] },
   ];

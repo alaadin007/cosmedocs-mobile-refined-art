@@ -202,7 +202,7 @@ const App = () => {
               <Route path="/forehead-lines-botox" element={<ForeheadLinesBotox />} />
               <Route path="/bunny-lines-botox" element={<BunnyLinesBotox />} />
               <Route path="/nasal-flaring-botox" element={<NasalFlaringBotox />} />
-              <Route path="/t-zone-oily-skin-botox" element={<OilySkinBotox />} />
+              <Route path="/oily-skin-botox" element={<OilySkinBotox />} />
               <Route path="/lip-flip" element={<LipFlip />} />
               <Route path="/migraine-botox" element={<MigraineBotox />} />
               <Route path="/bruxism-botox" element={<BruxismBotox />} />

@@ -118,7 +118,7 @@ const Treatments = () => {
           title: "T-Zone Oily Skin Botox",
           price: "£250",
           description: "Reduces sebum production and controls facial shine",
-          link: "/t-zone-oily-skin-botox"
+          link: "/oily-skin-botox"
         }
       ],
       contouringItems: [

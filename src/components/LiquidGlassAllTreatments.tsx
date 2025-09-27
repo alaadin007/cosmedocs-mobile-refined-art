@@ -42,7 +42,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
         { name: "Brow Lift", price: "£50" },
         { name: "Jelly Roll Botox", price: "£175" },
         { name: "Rosacea & Blushing", price: "£350-£450" },
-        { name: "T-Zone Oily Skin Botox", price: "£250", link: "/t-zone-oily-skin-botox" }
+        { name: "T-Zone Oily Skin Botox", price: "£250", link: "/oily-skin-botox" }
       ]
     },
     {
