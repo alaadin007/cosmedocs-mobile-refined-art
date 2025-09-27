@@ -48,6 +48,9 @@ const TREATMENT_ROUTES = [
   '/hair-transplant-surgeon', // ✅ Added Hair Transplant Surgeon page
   '/eczema-treatment',
   '/psoriasis-treatment',
+  '/fat-dissolve',
+  '/t-zone-oily-skin-botox',
+  '/cosmederm',
   
   // Advanced/specialized treatments
   '/advanced-consultation',
