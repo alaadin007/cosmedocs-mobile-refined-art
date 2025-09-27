@@ -254,31 +254,18 @@ const MedicalAnalBleaching = () => {
               >
                 <Card className="bg-accent border-none h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Why Choose Cosmedocs?</CardTitle>
+                    <CardTitle className="text-white text-2xl">Treatment Process</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Expert medical professionals</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Complete privacy and discretion</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Medical-grade treatments</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Natural-looking results</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Aftercare support included</span>
-                      </div>
-                    </div>
+                    <p className="text-gray-300">
+                      Our medical anal bleaching treatment utilises advanced topical solutions specifically 
+                      formulated for intimate areas. The procedure involves careful application by trained 
+                      medical professionals in our sterile treatment rooms.
+                    </p>
+                    <p className="text-gray-300">
+                      Each session includes thorough consultation, skin assessment, and personalised treatment 
+                      planning to ensure optimal results whilst maintaining the highest safety standards.
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -343,7 +330,52 @@ const MedicalAnalBleaching = () => {
                   <CardContent className="p-6 text-center">
                     <Heart className="h-12 w-12 text-purple-400 mx-auto mb-4" />
                     <h3 className="text-lg font-semibold mb-3 text-white">Natural Results</h3>
-                    <p className="text-gray-300 text-sm">Invisible art approach ensuring natural-looking enhancement and improved confidence</p>
+                    <p className="text-gray-300 text-sm">Gradual lightening for natural-looking results that enhance confidence and comfort</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-400 h-full">
+                  <CardContent className="p-6 text-center">
+                    <CheckCircle className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-3 text-white">No Downtime</h3>
+                    <p className="text-gray-300 text-sm">Return to normal activities immediately with minimal recovery requirements</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-400 h-full">
+                  <CardContent className="p-6 text-center">
+                    <Palette className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-3 text-white">Long-lasting Results</h3>
+                    <p className="text-gray-300 text-sm">Results maintain for 12-18 months with proper aftercare and maintenance</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-400 h-full">
+                  <CardContent className="p-6 text-center">
+                    <Syringe className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold mb-3 text-white">Personalised Care</h3>
+                    <p className="text-gray-300 text-sm">Customised treatment plans tailored to individual needs and desired outcomes</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -351,7 +383,7 @@ const MedicalAnalBleaching = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -361,46 +393,10 @@ const MedicalAnalBleaching = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about medical anal bleaching treatment and what to expect.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-700">
-                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Experience the difference of professional medical anal bleaching with expert care and complete discretion.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -409,12 +405,10 @@ const MedicalAnalBleaching = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
+                  <Shield className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Expert Practitioners</h3>
-                <p className="text-gray-300">
-                  Highly qualified medical professionals with extensive training in intimate aesthetic treatments.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Medical Expertise</h3>
+                <p className="text-gray-300">Qualified medical professionals with expertise in intimate treatments</p>
               </motion.div>
 
               <motion.div
@@ -425,12 +419,10 @@ const MedicalAnalBleaching = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
+                  <Star className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Advanced Equipment</h3>
-                <p className="text-gray-300">
-                  State-of-the-art medical equipment and premium products for optimal safety and results.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Complete Privacy</h3>
+                <p className="text-gray-300">Private treatment rooms with absolute discretion and confidentiality</p>
               </motion.div>
 
               <motion.div
@@ -441,34 +433,107 @@ const MedicalAnalBleaching = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Premium Products</h3>
+                <p className="text-gray-300">Medical-grade treatments and advanced technology for optimal results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Natural Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' approach for natural-looking enhancement</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Patient-Centered Care</h3>
-                <p className="text-gray-300">
-                  Compassionate care with complete privacy, discretion, and comprehensive aftercare support.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Comprehensive Care</h3>
+                <p className="text-gray-300">Full aftercare support and follow-up for peace of mind</p>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-20 bg-black">
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                Take the first step towards addressing your concerns with our professional, 
-                discreet medical anal bleaching treatment. Bold. Natural. Always Your Way.
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Get answers to common questions about anal bleaching treatments at our London clinic.
               </p>
-              <Button 
-                size="lg" 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-              >
-                Book Consultation
-              </Button>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready for Professional Treatment?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your confidential consultation with our expert medical professionals and discover 
+                how medical anal bleaching can enhance your confidence with natural-looking results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
+                  Book Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                  onClick={() => window.location.href = 'tel:03330551503'}
+                >
+                  Call 0333 0551 503
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </section>
 
