@@ -42,11 +42,15 @@ const FatDissolve = () => {
   const faqs = [
     {
       question: "How does EMSCULPT work?",
-      answer: "EMSCULPT uses HIFEM (High Intensity Focused Electro Magnetic) energy to develop 'supramaximal' contractions in your muscles. This stimulation is much more than what you can achieve through exercise, equivalent to performing 20,000 squats or sit-ups in 30 minutes."
+      answer: "EMSCULPT uses HIFEM (High Intensity Focused Electro Magnetic) energy to develop 'supramaximal' contractions in your muscles. Through different muscle contraction patterns during the EMSCULPT treatment, muscle work is stimulated much more than what you can achieve through personal exercise training. A single session equals performing about 20,000 squats or sit-ups in 30 minutes."
+    },
+    {
+      question: "What is the procedure?",
+      answer: "There are no special prior-treatment preparations needed. Avoid taking a heavy full meal and empty your bladder before treatment. The procedure is simple and quick using HIFEM energy to produce supramaximal muscle contractions. The treatment is not painful - patients feel strong and frequent muscle contractions. Many patients feel tingling sensations initially but the body adapts quickly."
     },
     {
       question: "What areas can EMSCULPT treat?",
-      answer: "EMSCULPT is FDA approved for abdominal toning, buttock toning and strengthening, and is medically CE marked for fat disruption. Treatment areas include abs, buttocks, arms, thighs, and calves."
+      answer: "EMSCULPT is FDA approved for abdominal toning and strengthening, buttock toning and strengthening, and is medically CE marked for fat disruption. Treatment areas include abs, buttocks, arms, thighs, and calves."
     },
     {
       question: "How many EMSCULPT sessions do I need?",
@@ -54,15 +58,31 @@ const FatDissolve = () => {
     },
     {
       question: "What results can I expect?",
-      answer: "Clinical studies show an average of 19% fat reduction, 16% increase in muscle mass, 96% patient satisfaction rate, and average waist reduction of 4.4cm."
+      answer: "Clinical studies show an average of 19% fat reduction, 16% increase in muscle mass, 96% patient satisfaction rate, and average waist reduction of 4.4cm. Some patients see improvement in muscle tone one day after treatment."
+    },
+    {
+      question: "How much fat can I lose after EMSCULPT treatment series?",
+      answer: "According to clinical research studies, patients lost 20% of their body fat on average and experienced 1.5 inch loss in their waistline on average after taking series of 4 EMSCULPT treatments."
+    },
+    {
+      question: "What is post-treatment like?",
+      answer: "After treatment the area may feel slightly fatigued, similar to after vigorous strength training. This subsides within a few days. You can resume normal activities immediately with no special care instructions needed."
     },
     {
       question: "Is EMSCULPT painful?",
-      answer: "EMSCULPT is not painful. You'll feel strong muscle contractions, and some patients may experience tingling sensations initially. The body adapts to the rhythmic contractions quickly."
+      answer: "EMSCULPT is not painful. You'll feel strong muscle contractions, and some patients may experience tingling sensations initially. The body adapts to the rhythmic contractions quickly. It's similar to preparing for a rigorous strength training workout."
     },
     {
       question: "Who is not suitable for EMSCULPT?",
-      answer: "EMSCULPT is not suitable for pregnant/breastfeeding women, those with pacemakers, metal implants in treatment area, or significant fat stores (over 7cm) as the energy cannot penetrate effectively."
+      answer: "EMSCULPT is not suitable for pregnant/breastfeeding women, those with pacemakers, metal implants in treatment area, cardiac pacemakers, implanted defibrillators, neurostimulators, epilepsy, malignant tumours, hemorrhagic conditions, or recent surgical procedures. People with significant fat stores (over 7cm) may not see significant results as HIFEM energy penetrates up to 7cm."
+    },
+    {
+      question: "Are the results permanent?",
+      answer: "The destruction of fat cells (lipolysis) is permanent with EMSCULPT treatment. However, weight gain after treatment may cause re-growth of remaining fat cells. The improvement in muscle mass lasts about 6 months or more. Periodic treatments can help maintain the effects."
+    },
+    {
+      question: "Can EMSCULPT be combined with other treatments?",
+      answer: "Yes, patients can combine EMSCULPT with other non-invasive fat reduction treatments such as CoolSculpting or Vanquish to improve fat reduction. Sculptra, Ultherapy, or fat transfer can be combined with EMSCULPT for buttock shaping and lifting."
     }
   ];
 
@@ -259,8 +279,75 @@ const FatDissolve = () => {
           </div>
         </section>
 
+        {/* What is EMSCULPT Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">What is EMSCULPT?</h2>
+              <div className="text-gray-300 space-y-6">
+                <p className="text-lg">
+                  EMSCULPT is a revolutionary FDA approved device that builds your muscles while burning your fat. This is the world's first and only technology which offers this without:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
+                    <span>Any downtime</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
+                    <span>Pain</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
+                    <span>Complications</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
+                    <span>Now proven to increase muscle fibres</span>
+                  </div>
+                </div>
+                <p>
+                  This non-surgical fat burning treatment is pain-free and has no downtime. There are thirteen clinical research studies that back the results of EMSCULPT treatment.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Why Patients Love It Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Patients Love It</h2>
+              <div className="text-gray-300 space-y-6">
+                <p className="text-lg">
+                  Patients who are looking for quick and easy way to get rid of their extra body fat and build muscles for a well-toned and sculpted body love EMSCULPT.
+                </p>
+                <p>
+                  There is no need to do intense exercises to sculpt and tone your body. EMSCULPT does it for you in few treatment sessions. Imagine that you are performing 20,000 squats or sit-ups in a single session of 30 minutes.
+                </p>
+                <p>
+                  It helps you to get rid of your extra body fat and build your muscles. You do not need to make changes in your diet or exercise regimen to get results. Only 2 sessions in a week for two weeks and it gives amazing results.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Treatment Benefits */}
-        <section className="py-20 bg-accent text-white">
+        <section className="py-20 bg-black text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -340,6 +427,62 @@ const FatDissolve = () => {
                 </Card>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Rate of Satisfaction Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">Rate of Satisfaction with EMSCULPT Treatment</h2>
+              <div className="text-gray-300 space-y-6 mb-12">
+                <p>Following the EMSCULPT clinical studies, participants reported following results in terms of satisfaction with the treatment outcomes:</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
+                    <span>95.4% of participants reported satisfaction with treatment results</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="text-purple-400 flex-shrink-0" size={20} />
+                    <span>85% reported significant improvement in buttocks lift and muscular tone</span>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-8 text-center text-white">Client Reviews</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card className="bg-black border-purple-400">
+                  <CardContent className="p-6">
+                    <p className="text-gray-300 italic mb-4">
+                      "I've had three facial areas treated with Anti-Wrinkle Injection at CosmeDocs in recent years, and find the treatment swift, thorough and effective. Also, Dr Haq's pleasant and friendly manner makes the treatment as painless as possible!"
+                    </p>
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-purple-400">★</span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-black border-purple-400">
+                  <CardContent className="p-6">
+                    <p className="text-gray-300 italic mb-4">
+                      "I had a facial aesthetic treatment with cosmodocs. I found the price very reasonable. Even better the results were excellent. I will definitely use this service again."
+                    </p>
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-purple-400">★</span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -426,6 +569,118 @@ const FatDissolve = () => {
           </div>
         </section>
 
+        {/* Real Patients Real Confidence */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Real Patients | Real Confidence</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See what our patients have to say about their EMSCULPT experience and results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="relative group cursor-pointer"
+              >
+                <div className="bg-accent rounded-lg p-8 h-64 flex items-center justify-center relative overflow-hidden">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Patient Testimonial 1</h3>
+                    <p className="text-gray-300 text-sm">Click to watch video testimonial</p>
+                  </div>
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="relative group cursor-pointer"
+              >
+                <div className="bg-accent rounded-lg p-8 h-64 flex items-center justify-center relative overflow-hidden">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Patient Testimonial 2</h3>
+                    <p className="text-gray-300 text-sm">Click to watch video testimonial</p>
+                  </div>
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative group cursor-pointer"
+              >
+                <div className="bg-accent rounded-lg p-8 h-64 flex items-center justify-center relative overflow-hidden">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Patient Testimonial 3</h3>
+                    <p className="text-gray-300 text-sm">Click to watch video testimonial</p>
+                  </div>
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why CosmeDocs */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">Why CosmeDocs?</h2>
+              <div className="text-gray-300 space-y-6 mb-12">
+                <p>
+                  CosmeDocs is an established and renowned cosmetic clinic that remained on the forefront of introducing innovative and revolutionary non-surgical cosmetic treatments.
+                </p>
+                <p>
+                  At Cosmedocs, we have a team of trained, highly qualified and experienced cosmetic practitioners who keep their knowledge and skills updated with the latest in the field. We ensure that our patients get the high-quality, safe, clinically researched and tested and state-of-the-art cosmetic treatments.
+                </p>
+                <p>
+                  We have the advanced EMSCULPT equipment, qualified and trained specialist cosmetic practitioners to perform the treatment. Our cosmetic practitioner has the expertise as well as knowledge to deliver meaningful and optimal results of EMSCULPT treatment for the patients.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Why Choose Us */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -436,7 +691,7 @@ const FatDissolve = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Why Choose Cosmedocs</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Renowned cosmetic clinic with modern practices across London. Expert practitioners delivering revolutionary treatments.
               </p>
