@@ -202,10 +202,11 @@ const App = () => {
               <Route path="/forehead-lines-botox" element={<ForeheadLinesBotox />} />
               <Route path="/bunny-lines-botox" element={<BunnyLinesBotox />} />
               <Route path="/nasal-flaring-botox" element={<NasalFlaringBotox />} />
+              <Route path="/t-zone-oily-skin-botox" element={<OilySkinBotox />} />
               <Route path="/lip-flip" element={<LipFlip />} />
               <Route path="/migraine-botox" element={<MigraineBotox />} />
               <Route path="/bruxism-botox" element={<BruxismBotox />} />
-                <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
+              <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
                 <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
                 <Route path="/product-analysis/:id" element={<ProductAnalysisDetail />} />
                 <Route path="/trap-botox" element={<TrapBotox />} />
@@ -216,6 +217,8 @@ const App = () => {
               <Route path="/peel-to-reveal" element={<PeelToReveal />} />
               <Route path="/chemical-peel" element={<ChemicalPeel />} />
               <Route path="/prescription-skincare" element={<PrescriptionSkincare />} />
+              <Route path="/fat-dissolve" element={<FatDissolve />} />
+              <Route path="/cosmederm" element={<CosmeDerm />} />
               <Route path="/tear-trough-filler" element={<TearTroughFiller />} />
               <Route path="/cheek-filler" element={<CheekFiller />} />
             <Route path="/chin-filler" element={<ChinFiller />} />

@@ -14,7 +14,7 @@ const ROUTE_REGISTRY = {
     '/before-after-gallery', '/membership', '/harley-street-consulting-rooms',
     '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
     '/thank-you', '/fellowship-invitation', '/8-point-facelift', '/cosmetalk',
-    '/plastic-surgeon', '/dermatology', '/aesthetic-training', '/hair-transplant-surgeon',
+    '/plastic-surgeon', '/dermatology', '/cosmederm', '/aesthetic-training', '/hair-transplant-surgeon',
     '/home', '/home2', '/team/dr-ahmed-haq', '/team/dr-hena-haq', '/admin/video-upload'
   ],
   treatments: [
@@ -39,6 +39,9 @@ const ROUTE_REGISTRY = {
     
     // Professional services
     '/hair-transplant-surgeon',
+
+    // Newly added treatments
+    '/fat-dissolve', '/t-zone-oily-skin-botox',
     
     // Alternative/redirect routes
     '/dermal-filler-makeover', '/experimental-treatment'
