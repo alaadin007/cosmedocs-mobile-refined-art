@@ -349,85 +349,96 @@ const ClinicalConceptsToFlawlessSkin = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Conditions We Treat</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Conditions We Address</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Comprehensive clinical solutions for a wide range of skin concerns and conditions.
+                Our clinical expertise covers a wide range of skin conditions and concerns 
+                with personalized treatment approaches for optimal results.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Primary Conditions</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Acne and breakouts</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Aging and wrinkles</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Pigmentation and sun damage</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Rosacea and redness</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Sensitive skin and irritation</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Acne & Breakouts</h3>
+                <p className="text-gray-300">Comprehensive treatment for all acne types</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-accent border-none h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Secondary Benefits</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Improved skin texture and tone</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Reduced pore size</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Increased skin hydration</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Enhanced skin radiance</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
-                        <span className="text-gray-300">Healthier, more youthful-looking skin</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aging & Wrinkles</h3>
+                <p className="text-gray-300">Anti-aging solutions for youthful skin</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Pigmentation</h3>
+                <p className="text-gray-300">Even skin tone and brightness</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Rosacea & Sensitivity</h3>
+                <p className="text-gray-300">Gentle care for sensitive skin conditions</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Star className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Texture & Pores</h3>
+                <p className="text-gray-300">Smooth, refined skin texture</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Overall Skin Health</h3>
+                <p className="text-gray-300">Comprehensive skin wellness approach</p>
               </motion.div>
             </div>
           </div>
@@ -443,8 +454,11 @@ const ClinicalConceptsToFlawlessSkin = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Pricing</h2>
-              <p className="text-gray-300">Comprehensive consultation and personalized treatment planning</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Investment in Your Skin</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Begin your journey to flawless skin with our comprehensive consultation 
+                and personalized treatment plan development.
+              </p>
             </motion.div>
 
             <div className="max-w-lg mx-auto">
@@ -467,39 +481,6 @@ const ClinicalConceptsToFlawlessSkin = () => {
                   </Button>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Learn more about our clinical approach to achieving flawless, healthy skin.
-              </p>
-            </motion.div>
-
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-700">
-                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
             </div>
           </div>
         </section>
@@ -596,6 +577,39 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Learn more about our clinical approach to achieving flawless, healthy skin.
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-700">
+                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
