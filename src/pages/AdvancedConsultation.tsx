@@ -416,8 +416,95 @@ const AdvancedConsultation = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Why Choose Dr. Ahmed Haq */}
         <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Dr. Ahmed Haq?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Training</h3>
+                <p className="text-gray-300">15+ years training physicians in advanced aesthetic medicine</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Eye className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Precision</h3>
+                <p className="text-gray-300">Millimeter-level adjustments for natural-looking results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Science-Based</h3>
+                <p className="text-gray-300">Evidence-based approach to facial anatomy and aging</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Invisible Art</h3>
+                <p className="text-gray-300">Natural enhancement that speaks without saying a word</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Personalised Care</h3>
+                <p className="text-gray-300">Comprehensive consultation tailored to your facial structure</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -432,14 +519,14 @@ const AdvancedConsultation = () => {
               </p>
             </motion.div>
 
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="w-full">
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-700">
-                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
-                      {faq.question}
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -449,91 +536,36 @@ const AdvancedConsultation = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Dr. Ahmed Haq</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Experience the difference of advanced aesthetic consultation with millimeter-precision techniques.
+              <h2 className="text-3xl font-bold mb-4">Ready for Advanced Aesthetic Consultation?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Experience Dr. Ahmed Haq's millimeter-precision approach to aesthetic medicine. 
+                Discover how subtle refinements can restore youthfulness naturally.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
+                  Book Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                >
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Expert Training</h3>
-                <p className="text-gray-300">
-                  15+ years training physicians in advanced aesthetic medicine with millimeter-precision techniques.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Eye className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Invisible Art Philosophy</h3>
-                <p className="text-gray-300">
-                  Enhancement so natural that others notice you look refreshed but can't identify what's changed.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Patient-Centered Care</h3>
-                <p className="text-gray-300">
-                  Comprehensive consultation and personalized treatment plans tailored to your unique facial structure.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready for Your Advanced Consultation?</h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                Experience the Cosmedocs difference with Dr. Ahmed Haq's millimeter-precision approach 
-                to aesthetic medicine. Bold. Natural. Always Your Way.
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-              >
-                Book Consultation
-              </Button>
-            </div>
           </div>
         </section>
 
