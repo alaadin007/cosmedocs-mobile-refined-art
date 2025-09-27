@@ -131,7 +131,7 @@ const OilySkinBotox = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">T-Zone Oily Skin Botox</span>
+                  <span className="text-purple-300">Oily Skin Botox</span>
                   <span className="block text-sm mt-4">Putting the squeeze on oily skin in your T-zone</span>
                 </h1>
                 <div className="mb-8">
