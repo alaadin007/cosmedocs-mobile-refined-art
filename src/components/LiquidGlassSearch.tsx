@@ -40,8 +40,9 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   - Masseter (Jawline Slimming): £350
   - Full Face Natural Botox: £500
   - Migraines/Headaches: £450-£550
-  - Trigger Point Botox: £350-£550
-  - Sweat-Tox (Underarms Advanced, Palms): £550
+   - Trigger Point Botox: £350-£550
+   - T-Zone Oily Skin Botox: £250 (reduces sebum production, controls shine)
+   - Sweat-Tox (Underarms Advanced, Palms): £550
   - Sweat-Tox (Scalp): £600
 
   DERMAL FILLERS:
@@ -54,9 +55,16 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   - Jawline (High Def): £350/ml
   - Marionette Lines: £325/ml
   - Nasolabial Folds: £325/ml
-  - Profhilo: £350
-  - HAMA 1 (3 syringes): £1,250
-  - HAMA 2 (4 syringes): £1,500
+   - Profhilo: £350
+   - HAMA 1 (3 syringes): £1,250
+   - HAMA 2 (4 syringes): £1,500
+   - Fat Dissolve/Emsculpt: POC (non-invasive body contouring and fat reduction)
+   
+   MEDICAL DERMATOLOGY (CosmeDerm):
+   - Comprehensive skin health assessments
+   - Medical-grade dermatological treatments
+   - Advanced skin condition management
+   - Clinical dermatology consultations
   
   CONTACT INFORMATION:
   - Location: 10 Harley Street, London W1G 9PF
