@@ -173,6 +173,52 @@ const CosmeDerm = () => {
           </div>
         </section>
 
+        {/* Treatment Gallery */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Our Clinic</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                State-of-the-art facilities at 10 Harley Street providing comprehensive dermatological care.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {treatmentImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+          </div>
+        </section>
+
         {/* About CosmeDerm Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -195,6 +241,126 @@ const CosmeDerm = () => {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+
+        {/* Dr Hassan Mirza Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">About Our Dermatologist</h2>
+              <h3 className="text-2xl text-purple-300 font-bold">Dr Hassan A. Mirza</h3>
+              <p className="text-lg text-gray-300 mb-8">MBBS, MRCP</p>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Skin is personal, so we ensure you are in the best hands throughout your journey with us. 
+                Meet Dr Hassan A. Mirza, a highly experienced Dermatology Consultant currently working within the NHS.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Expert Training</h3>
+                <p className="text-gray-300">
+                  Completed dermatology training in London hospitals with internal medicine training in Sheffield.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Professional Memberships</h3>
+                <p className="text-gray-300">
+                  Proud member of the Royal College of Physicians and British Association of Dermatologists.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <User className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">International Experience</h3>
+                <p className="text-gray-300">
+                  Gained valuable international experience through rotations in Orlando, Florida.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Targeted Treatments */}
+        <section id="treatments-section" className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Targeted Treatments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Comprehensive dermatological solutions for a wide range of skin and hair conditions with a patient-centred approach.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {treatments.map((treatment, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-accent border-none h-full">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl">{treatment.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <p className="text-gray-300">{treatment.description}</p>
+                      <div className="space-y-2">
+                        {treatment.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center space-x-3">
+                            <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
+                            <span className="text-gray-300 text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -293,170 +459,6 @@ const CosmeDerm = () => {
                   </CardContent>
                 </Card>
               </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Dr Hassan Mirza Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">About Our Dermatologist</h2>
-              <h3 className="text-2xl text-purple-300 font-bold">Dr Hassan A. Mirza</h3>
-              <p className="text-lg text-gray-300 mb-8">MBBS, MRCP</p>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Skin is personal, so we ensure you are in the best hands throughout your journey with us. 
-                Meet Dr Hassan A. Mirza, a highly experienced Dermatology Consultant currently working within the NHS.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Expert Training</h3>
-                <p className="text-gray-300">
-                  Completed dermatology training in London hospitals with internal medicine training in Sheffield.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Professional Memberships</h3>
-                <p className="text-gray-300">
-                  Proud member of the Royal College of Physicians and British Association of Dermatologists.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <User className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">International Experience</h3>
-                <p className="text-gray-300">
-                  Gained valuable international experience through rotations in Orlando, Florida.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Gallery */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Our Clinic</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                State-of-the-art facilities at 10 Harley Street providing comprehensive dermatological care.
-              </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {treatmentImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-          </div>
-        </section>
-
-        {/* Targeted Treatments */}
-        <section id="treatments-section" className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Targeted Treatments</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Comprehensive dermatological solutions for a wide range of skin and hair conditions with a patient-centred approach.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {treatments.map((treatment, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-accent border-none h-full">
-                    <CardHeader>
-                      <CardTitle className="text-white text-xl">{treatment.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <p className="text-gray-300">{treatment.description}</p>
-                      <div className="space-y-2">
-                        {treatment.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-3">
-                            <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
-                            <span className="text-gray-300 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
             </div>
           </div>
         </section>
