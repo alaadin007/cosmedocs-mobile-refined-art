@@ -234,135 +234,7 @@ const OilySkinBotox = () => {
         </section>
 
 
-        {/* Treatment Benefits */}
-        <section className="py-20 bg-accent text-white">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Benefits of T-Zone Oily Skin Botox</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Revolutionary approach to managing excess oil production in your T-zone area.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Regulating Sebum Production</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Botox injections can help control excess oil production in the T-zone, reducing shine and promoting a more balanced complexion.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Minimising Pore Size</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      By targeting the muscles responsible for pulling on the skin's surface, Botox can indirectly reduce the appearance of enlarged pores, leading to smoother skin texture.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Preventing Breakouts</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      With its ability to regulate sebum production and minimise pore size, Botox can help prevent acne breakouts in the T-Zone area, promoting clearer and healthier-looking skin.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Reducing Shine</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      By controlling oil production, Botox can help reduce the unwanted shine often associated with oily skin, giving the T-Zone a more matte appearance.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Improving Overall Skin Texture</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      With consistent treatment, Botox can contribute to an overall improvement in the texture and appearance of oily skin in the T-Zone, providing a smoother and more refined complexion.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Longer Lasting Makeup & Enhanced Confidence</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      With reduced oiliness in the T-zone, makeup tends to last longer and stay in place better throughout the day. A less oily T-zone can lead to improved confidence and self-esteem.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Treatment Details with Research */}
+        {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -372,44 +244,43 @@ const OilySkinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Can Botox Change Your Skin Type?</h2>
+              <h2 className="text-3xl font-bold mb-4">T-Zone Oily Skin Before and After</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Research indicates that Botox injections exhibit a comparable impact on sebaceous glands, inhibiting them from producing sebum.
+                See the remarkable results of our T-Zone Oily Skin Botox treatment. Our before-and-after images demonstrate significant improvements in oil control and skin texture.
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-accent rounded-lg p-8 mb-12"
-              >
-                <blockquote className="text-center">
-                  <p className="text-xl text-purple-300 italic mb-4">
-                    "In a study, neurotoxin injections were found to significantly reduce sebum production in the forehead region, leading to a high level of patient satisfaction."
-                  </p>
-                  <cite className="text-gray-400">Clinical Research Study</cite>
-                </blockquote>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <p className="text-gray-300">
-                  Any perceived changes in skin type are usually due to these effects on specific concerns rather than a direct alteration of skin type itself.
-                </p>
-              </motion.div>
-            </div>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
           </div>
         </section>
 
-        {/* Treatment Process Details */}
+        {/* What is T-Zone Oily Skin Botox */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -419,24 +290,215 @@ const OilySkinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">What To Expect During Your Treatment</h2>
-              <p className="text-gray-300">A comprehensive overview of your T-zone oily skin Botox experience</p>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is T-Zone Oily Skin Botox?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                T-Zone oily skin Botox targets sweat glands in the forehead, nose, and chin areas to reduce excess oil production. 
+                Our treatment helps achieve up to 30% reduction in sebum production for a balanced, matte complexion.
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl text-center">Understanding T-Zone Oil Production & Key Treatment Areas</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <p className="text-gray-300 text-lg leading-relaxed text-center">
+                    The T-zone (forehead, nose, and chin) contains the highest concentration of sebaceous glands, making it prone to excessive oil production. 
+                    Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil glands in these problematic areas.
+                  </p>
+                  
+                  <div className="grid md:grid-cols-3 gap-4 mt-6">
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Forehead</h4>
+                      <p className="text-gray-300 text-sm">Primary area for oil reduction and shine control</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Nose</h4>
+                      <p className="text-gray-300 text-sm">Central T-zone area with concentrated sebaceous glands</p>
+                    </div>
+                    <div className="text-center">
+                      <h4 className="text-purple-300 font-semibold mb-2">Chin</h4>
+                      <p className="text-gray-300 text-sm">Lower T-zone area for comprehensive oil control</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+          </div>
+        </section>
+
+        {/* What to Expect */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">T-Zone Oily Skin Botox — What to Expect?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Treatment Process</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your T-zone oily skin treatment, we begin your sebum control treatment. The doctor uses very fine needles to inject botulinum toxin into targeted areas such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300 mb-6">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Forehead sweat glands</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Nose area sebaceous glands</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>Chin oil-producing areas</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-400" size={16} />
+                        <span>T-zone problem areas</span>
+                      </li>
+                    </ul>
+                    <p className="text-purple-300 font-medium">
+                      Following the botox treatment you may continue normal daily activities immediately.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Potential Side Effects</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      T-zone oily skin botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                    </p>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Mild bruising around injection sites</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary swelling in treated areas</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Slight discomfort during injection</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Temporary redness</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-purple-400 mt-1">•</span>
+                        <span>Reduced sweating in treated areas (temporary)</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Does Botox Work for T-Zone Oily Skin */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for T-Zone Oily Skin?</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl flex items-center justify-center gap-3">
+                      <Heart className="text-purple-400" size={28} />
+                      Sebaceous Gland Control Mechanism
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-8 pb-8">
+                    <p className="text-gray-300 text-lg leading-relaxed text-center">
+                      Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil production in the T-zone. This results in up to 30% reduction in sebum production, creating a balanced, matte complexion that lasts 4-6 months while maintaining natural skin function.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Types of T-Zone Oil Issues */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Types of T-Zone Oil Issues</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border-gray-700 h-full">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Consultation</CardTitle>
+                    <CardTitle className="text-white text-xl">Excessive Sebum Production</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-300">
-                      Our healthcare provider assesses your skin type, degree of oiliness, and any specific concerns related to the T-zone area.
+                    <p className="text-gray-300 mb-4">
+                      When sebaceous glands in the T-zone produce excess oil, leading to constant shine, makeup sliding off, and clogged pores throughout the day.
+                    </p>
+                    <p className="text-purple-300 mt-4 font-medium">
+                      Botox is highly effective for controlling sebum production by targeting the glands directly.
                     </p>
                   </CardContent>
                 </Card>
@@ -448,54 +510,16 @@ const OilySkinBotox = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border-gray-700 h-full">
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Treatment Plan</CardTitle>
+                    <CardTitle className="text-white text-xl">Enlarged Pores & Texture Issues</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      A customised treatment plan is devised after assessment of your T-zone area to identify:
+                      Chronic oil production can stretch pores and create rough skin texture, particularly noticeable in the forehead, nose, and chin areas.
                     </p>
-                    <ul className="text-gray-300 space-y-2">
-                      <li>• Areas of excessive oil production</li>
-                      <li>• Enlarged pores</li>
-                      <li>• Potential dynamic wrinkles</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Injection Process</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Precise Botox injections are administered into areas where oil production is most intense, targeting forehead, nose, and chin with careful attention for optimal results.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-gray-700 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Minimal Downtime</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Return to your daily activities immediately. No need to pause your life after the procedure - you can get back to your routine right away.
+                    <p className="text-purple-300 mt-4 font-medium">
+                      By reducing oil production, Botox can help minimise pore appearance and improve overall skin texture.
                     </p>
                   </CardContent>
                 </Card>
