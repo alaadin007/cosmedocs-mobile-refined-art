@@ -502,13 +502,10 @@ const CosmeDerm = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Why Choose CosmeDerm</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                We believe healthy skin is essential for your overall well-being, empowering you to be your authentic self with confidence.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose CosmeDerm?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -519,10 +516,8 @@ const CosmeDerm = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Award className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">NHS Consultant Led</h3>
-                <p className="text-gray-300">
-                  Treatment by experienced NHS dermatology consultant ensuring the highest standards of care.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">NHS Consultant</h3>
+                <p className="text-gray-300">Dr Hassan Mirza MBBS MRCP dermatology specialist</p>
               </motion.div>
 
               <motion.div
@@ -533,12 +528,10 @@ const CosmeDerm = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
+                  <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Flexible Consultations</h3>
-                <p className="text-gray-300">
-                  Choose between convenient online consultations or comprehensive in-person examinations.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Expertise</h3>
+                <p className="text-gray-300">London hospital training with international experience</p>
               </motion.div>
 
               <motion.div
@@ -549,12 +542,38 @@ const CosmeDerm = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Flexible Care</h3>
+                <p className="text-gray-300">Online & in-person consultations available</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Comprehensive</h3>
+                <p className="text-gray-300">Full spectrum dermatological conditions treated</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Patient-Centred Approach</h3>
-                <p className="text-gray-300">
-                  Comprehensive care focusing on your individual needs with innovative treatments and ongoing support.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Patient-Centred</h3>
+                <p className="text-gray-300">Personalised treatment plans for optimal results</p>
               </motion.div>
             </div>
           </div>
