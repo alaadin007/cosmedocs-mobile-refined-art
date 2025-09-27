@@ -569,7 +569,9 @@ const FatDissolve = () => {
           </div>
         </section>
 
-        {/* Real Patients Real Confidence */}
+
+
+        {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -579,125 +581,10 @@ const FatDissolve = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Real Patients | Real Confidence</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See what our patients have to say about their EMSCULPT experience and results.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="relative group cursor-pointer"
-              >
-                <div className="bg-accent rounded-lg p-8 h-64 flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Patient Testimonial 1</h3>
-                    <p className="text-gray-300 text-sm">Click to watch video testimonial</p>
-                  </div>
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="relative group cursor-pointer"
-              >
-                <div className="bg-accent rounded-lg p-8 h-64 flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Patient Testimonial 2</h3>
-                    <p className="text-gray-300 text-sm">Click to watch video testimonial</p>
-                  </div>
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative group cursor-pointer"
-              >
-                <div className="bg-accent rounded-lg p-8 h-64 flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Patient Testimonial 3</h3>
-                    <p className="text-gray-300 text-sm">Click to watch video testimonial</p>
-                  </div>
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why CosmeDocs */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Why CosmeDocs?</h2>
-              <div className="text-gray-300 space-y-6 mb-12">
-                <p>
-                  CosmeDocs is an established and renowned cosmetic clinic that remained on the forefront of introducing innovative and revolutionary non-surgical cosmetic treatments.
-                </p>
-                <p>
-                  At Cosmedocs, we have a team of trained, highly qualified and experienced cosmetic practitioners who keep their knowledge and skills updated with the latest in the field. We ensure that our patients get the high-quality, safe, clinically researched and tested and state-of-the-art cosmetic treatments.
-                </p>
-                <p>
-                  We have the advanced EMSCULPT equipment, qualified and trained specialist cosmetic practitioners to perform the treatment. Our cosmetic practitioner has the expertise as well as knowledge to deliver meaningful and optimal results of EMSCULPT treatment for the patients.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Renowned cosmetic clinic with modern practices across London. Expert practitioners delivering revolutionary treatments.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -708,10 +595,8 @@ const FatDissolve = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Award className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Expert Practitioners</h3>
-                <p className="text-gray-300">
-                  Highly qualified cosmetic practitioners with extensive training in EMSCULPT technology.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">EMSCULPT Expertise</h3>
+                <p className="text-gray-300">Specialist cosmetic practitioners trained in advanced EMSCULPT technology</p>
               </motion.div>
 
               <motion.div
@@ -724,10 +609,8 @@ const FatDissolve = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Advanced Equipment</h3>
-                <p className="text-gray-300">
-                  State-of-the-art EMSCULPT equipment delivering clinically proven results.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Advanced Equipment</h3>
+                <p className="text-gray-300">State-of-the-art EMSCULPT machines delivering clinically proven results</p>
               </motion.div>
 
               <motion.div
@@ -738,36 +621,73 @@ const FatDissolve = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">FDA Approved</h3>
+                <p className="text-gray-300">Clinically researched and tested technology with proven safety record</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Body Sculpting</h3>
+                <p className="text-gray-300">'Invisible art' approach for natural body contouring results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Patient-Centred Care</h3>
-                <p className="text-gray-300">
-                  Personalised treatment plans with comprehensive consultation and aftercare support.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Complete Care</h3>
+                <p className="text-gray-300">Comprehensive consultation and aftercare support included</p>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-900 to-purple-700">
+        {/* Call to Action */}
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Body?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Book your EMSCULPT consultation and discover how you can build muscle and burn fat without surgery.
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your EMSCULPT consultation and discover how you can build muscle and burn fat 
+                without surgery. Revolutionary body contouring with proven results.
               </p>
-              <Button 
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                className="bg-white text-purple-900 hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-              >
-                Book Your Consultation
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
+                  Book Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                  onClick={() => window.location.href = 'tel:03330551503'}
+                >
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
