@@ -1,9 +1,10 @@
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -16,6 +17,22 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   const [query, setQuery] = useState("");
   const [results, setResults] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const pageIndex = [
+    { title: "T‑Zone Oily Skin Botox", path: "/t-zone-oily-skin-botox", keywords: ["t-zone", "oily skin", "sebum", "botox"] },
+    { title: "Fat Dissolve", path: "/fat-dissolve", keywords: ["aqualyx", "fat dissolve", "body", "emsculpt"] },
+    { title: "CosmeDerm Medical Dermatology", path: "/cosmederm", keywords: ["cosmederm", "dermatology", "medical dermatology", "skin"] },
+  ];
+
+  const matchedPages = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [] as typeof pageIndex;
+    return pageIndex.filter(
+      (p) =>
+        p.title.toLowerCase().includes(q) ||
+        p.keywords.some((k) => k.toLowerCase().includes(q))
+    );
+  }, [query]);
 
   const searchContext = `
   You are an AI assistant helping users find information about Cosmedocs, a premium aesthetic medicine clinic on Harley Street, London.
@@ -175,6 +192,26 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                   )}
                 </Button>
               </div>
+
+              {/* Suggested pages */}
+              {!isLoading && !results && matchedPages.length > 0 && (
+                <div className="mb-4">
+                  <h3 className="text-white/80 text-sm mb-2">Suggested pages</h3>
+                  <div className="flex flex-col gap-2">
+                    {matchedPages.slice(0, 6).map((p) => (
+                      <Link
+                        key={p.path}
+                        to={p.path}
+                        onClick={onClose}
+                        className="flex items-center justify-between px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white/90 transition-colors"
+                      >
+                        <span className="text-sm">{p.title}</span>
+                        <span className="text-xs text-white/60">Open</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Results */}
               {results && (
