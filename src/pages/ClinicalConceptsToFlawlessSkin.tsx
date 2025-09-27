@@ -1,10 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { generateSEOMetadata } from '@/utils/seo';
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Shield, Star, Users, Award } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { generateSEOMetadata } from "@/utils/seo";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Shield, Star, Users } from "lucide-react";
 
 const ClinicalConceptsToFlawlessSkin = () => {
   const seoData = generateSEOMetadata(
@@ -13,23 +20,93 @@ const ClinicalConceptsToFlawlessSkin = () => {
     "/clinical-concepts-to-flawless-skin"
   );
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "Clinical Concepts to Flawless Skin",
-    "description": "Expert treatments targeting skin health, rejuvenation, and lasting radiance",
-    "provider": {
-      "@type": "MedicalOrganization",
-      "name": "Cosmedocs",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      }
+  const beforeAfterImages = [
+    { 
+      src: "/lovable-uploads/599a995b-159c-485d-a999-4145a961951f.png", 
+      alt: "Before and after clinical skin treatment showing improved texture and radiance", 
+      caption: "Clinical skin transformation - improved texture, tone, and radiance with personalized treatment" 
+    },
+    { 
+      src: "/lovable-uploads/4e99956b-395a-4499-910f-59a92218f241.png", 
+      alt: "Before and after acne treatment showing clearer skin", 
+      caption: "Advanced acne treatment - clear, healthy skin achieved through clinical protocols" 
+    },
+    { 
+      src: "/lovable-uploads/69999999-e999-4999-9999-999999999999.png", 
+      alt: "Before and after anti-aging treatment showing reduced wrinkles", 
+      caption: "Anti-aging transformation - reduced wrinkles and improved skin quality" 
     }
-  };
+  ];
+
+  const treatments = [
+    {
+      title: "In-Depth Skin Analysis",
+      description: "Thorough assessment using advanced diagnostic tools and visual examination to identify underlying issues and create customized treatment plans."
+    },
+    {
+      title: "Personalized Treatment Plans",
+      description: "Customized combination of in-clinic procedures with tailored home care routines designed for optimal results with minimal downtime."
+    },
+    {
+      title: "Advanced Technologies",
+      description: "Cutting-edge laser therapy, chemical peels, and microdermabrasion combined with pharmaceutical-grade ingredients."
+    },
+    {
+      title: "Acne Treatment",
+      description: "Comprehensive approach to treating acne and breakouts using evidence-based clinical methods for lasting results."
+    },
+    {
+      title: "Anti-Aging Solutions",
+      description: "Scientific approach to addressing aging, wrinkles, and skin texture improvement for youthful-looking skin."
+    },
+    {
+      title: "Pigmentation Correction",
+      description: "Advanced treatments for pigmentation, sun damage, and uneven skin tone using medical-grade technologies."
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "What is clinical skin care and how is it different?",
+      answer: "Clinical skin care goes beyond surface-level treatments, focusing on scientifically-backed methods to improve skin health at a cellular level. It involves thorough assessment of your skin's unique needs, followed by targeted treatments and personalized home care routines using pharmaceutical-grade ingredients."
+    },
+    {
+      question: "What conditions can clinical skin care treat?",
+      answer: "Our clinical approach addresses acne and breakouts, aging and wrinkles, pigmentation and sun damage, rosacea and redness, sensitive skin and irritation. We also improve skin texture, reduce pore size, increase hydration, and enhance overall radiance."
+    },
+    {
+      question: "How does the treatment process work?",
+      answer: "We begin with an in-depth skin analysis using advanced diagnostic tools, evaluating skin type, hydration levels, pore size, pigmentation, and signs of aging. Based on this analysis, we develop a personalized treatment plan combining in-clinic procedures with tailored home care."
+    },
+    {
+      question: "What technologies and treatments do you use?",
+      answer: "We use advanced technologies including laser therapy, chemical peels, microdermabrasion, and pharmaceutical-grade ingredients. Our practitioners stay up-to-date with the latest research and innovations in dermatology to provide evidence-based solutions."
+    },
+    {
+      question: "How long does it take to see results?",
+      answer: "Results vary depending on your specific skin concerns and treatment plan. Many patients see initial improvements within 2-4 weeks, with optimal results typically achieved after 2-3 months of consistent treatment following your personalized protocol."
+    },
+    {
+      question: "Is there any downtime with clinical treatments?",
+      answer: "Our treatment plans are designed to deliver optimal results while minimizing downtime. Most patients can return to normal activities immediately, with some treatments requiring only minimal recovery time. We'll discuss any specific aftercare requirements during consultation."
+    },
+    {
+      question: "What is included in the consultation?",
+      answer: "The comprehensive consultation includes advanced skin analysis, evaluation of skin type and concerns, discussion of your goals, and development of a personalized treatment plan. This £150 consultation provides the foundation for your journey to flawless skin."
+    },
+    {
+      question: "Why choose Cosmedocs for clinical skin care?",
+      answer: "With over 17 years of experience and our prestigious Harley Street location, we combine advanced technologies with expert knowledge. Our medical professionals provide personalized care, prioritizing safety and satisfaction while delivering lasting results."
+    },
+    {
+      question: "Can clinical skin care help with sensitive skin?",
+      answer: "Absolutely. Our clinical approach is particularly beneficial for sensitive skin as we can identify specific triggers and create gentle, effective treatment protocols. We use pharmaceutical-grade products and customize treatments to minimize irritation while maximizing results."
+    },
+    {
+      question: "What makes your approach 'clinical'?",
+      answer: "Our clinical approach is evidence-based, using scientific research and proven methodologies. We address root causes rather than just symptoms, use medical-grade products, and our treatments are performed by qualified medical professionals with extensive training."
+    }
+  ];
 
   return (
     <>
@@ -41,267 +118,351 @@ const ClinicalConceptsToFlawlessSkin = () => {
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content={seoData.image} />
+        <meta name="keywords" content="clinical skin care London, skin health, anti-aging treatments, acne treatment, pigmentation correction, Harley Street, dermatology, pharmaceutical grade skincare, skin analysis" />
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs",
+            "description": "Clinical concepts to flawless skin - expert treatments targeting skin health, rejuvenation, and lasting radiance",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "medicalSpecialty": "Dermatology",
+            "priceRange": "££"
+          })}
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <div className="bg-black text-white">
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="page-container">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                    Clinical Concepts to <span className="text-purple-600">Flawless Skin</span>
-                  </h1>
-                  <p className="text-xl text-gray-600">
-                    Unlock radiant, healthy skin with our expert clinical treatments. 
-                    Personalized solutions for lasting beauty and rejuvenation.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
-                      Book Consultation
-                    </Button>
-                    <Button variant="outline" size="lg">
-                      Learn More
-                    </Button>
-                  </div>
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Clinical Concepts to Flawless Skin</span>
+                  <span className="block text-sm mt-4">Expert clinical treatments for radiant, healthy skin transformation</span>
+                </h1>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Advanced Skin Health Solutions</p>
+                  <p className="text-sm text-gray-300">Scientifically-backed methods for lasting skin health and rejuvenation</p>
                 </div>
-
-                <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">1M+</div>
-                    <div className="text-sm text-gray-600">Injections</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">17+</div>
-                    <div className="text-sm text-gray-600">Years Experience</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">Harley</div>
-                    <div className="text-sm text-gray-600">Street Clinic</div>
-                  </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
+                    Book Consultation
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('treatments-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    View Treatments
+                  </Button>
                 </div>
-              </div>
-
-              <div className="relative">
-                <img
-                  src="/lovable-uploads/599a995b-159c-485d-a999-4145a961951f.png"
-                  alt="Woman receiving clinical skin treatment"
-                  className="rounded-2xl shadow-2xl w-full h-[600px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-              </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
 
-        {/* What is Clinical Skin Care */}
-        <section className="py-16 bg-white">
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">What is Clinical Skin Care?</h2>
-              <div className="prose prose-lg mx-auto text-gray-600">
-                <p>
-                  Clinical skin care goes beyond surface-level treatments, focusing on scientifically-backed methods to improve skin health at a cellular level. It involves a thorough assessment of your skin's unique needs, followed by targeted treatments and personalized home care routines.
-                </p>
-                <p>
-                  At Cosmedocs, our clinical approach combines advanced technologies, pharmaceutical-grade ingredients, and expert knowledge to address a wide range of skin concerns, from aging and acne to pigmentation and sensitivity. We prioritize long-term results and overall skin wellness.
-                </p>
-                <p>
-                  Our experienced practitioners stay up-to-date with the latest research and innovations in dermatology to provide you with the most effective and evidence-based skin care solutions.
-                </p>
-              </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Clinical Skin Care Overview</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Consultation Duration</h3>
+                <p className="text-gray-300">60-90 minutes comprehensive assessment</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Timeline</h3>
+                <p className="text-gray-300">2-4 weeks initial, optimal at 2-3 months</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, immediate activity return</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Approach</h3>
+                <p className="text-gray-300">Evidence-based, pharmaceutical-grade</p>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Grid */}
-        <section className="py-16 bg-gray-50">
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <h2 className="text-3xl font-bold text-center mb-12">Benefits of Our Clinical Approach</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Shield,
-                  title: "Lasting Results",
-                  description: "Addresses the root causes of skin concerns for long-term improvement"
-                },
-                {
-                  icon: Clock,
-                  title: "Personalized Care",
-                  description: "Tailored treatments and home care routines based on your unique skin needs"
-                },
-                {
-                  icon: CheckCircle,
-                  title: "Expert Guidance",
-                  description: "Performed by experienced practitioners with in-depth knowledge of skin health"
-                },
-                {
-                  icon: Star,
-                  title: "Advanced Technologies",
-                  description: "Utilizes cutting-edge technologies and pharmaceutical-grade ingredients"
-                },
-                {
-                  icon: Users,
-                  title: "Comprehensive Solutions",
-                  description: "Addresses a wide range of skin concerns, from aging to acne"
-                },
-                {
-                  icon: Award,
-                  title: "Scientifically Backed",
-                  description: "Based on evidence-based research and proven clinical results"
-                }
-              ].map((benefit, index) => (
-                <Card key={index} className="text-center">
-                  <CardHeader>
-                    <benefit.icon className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                    <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-600">
-                      {benefit.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Clinical Skin Transformation Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See real results from our clinical approach to skin health. Advanced treatments delivering lasting improvements 
+                in skin texture, tone, and overall radiance using evidence-based methods.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+          </div>
+        </section>
+
+        {/* Clinical Treatments */}
+        <section id="treatments-section" className="py-20 bg-accent text-white">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Our Clinical Treatment Approach</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Advanced treatments combining cutting-edge technology with pharmaceutical-grade ingredients for optimal skin health.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {treatments.map((treatment, index) => (
+                <motion.div
+                  key={treatment.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black border-purple-400 h-full hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-semibold mb-3 text-white">{treatment.title}</h3>
+                      <p className="text-gray-300 text-sm leading-relaxed">{treatment.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Treatment Process */}
-        <section className="py-16 bg-white">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Our Treatment Process</h2>
-              <div className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4">In-Depth Skin Analysis</h3>
-                    <p className="text-gray-600 mb-4">
-                      We begin with a thorough assessment of your skin using advanced diagnostic tools and visual examination. This allows us to identify underlying issues and create a customized treatment plan.
-                    </p>
-                    <p className="text-gray-600">
-                      Our skin analysis includes evaluating skin type, hydration levels, pore size, pigmentation, and signs of aging. We also discuss your skin care goals and concerns to ensure we address your specific needs.
-                    </p>
-                  </div>
-                  <div>
-                    <img
-                      src="/lovable-uploads/4e99956b-395a-4499-910f-59a92218f241.png"
-                      alt="In-depth skin analysis with advanced tools"
-                      className="rounded-lg shadow-lg w-full h-80 object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="md:order-2">
-                    <h3 className="text-2xl font-bold mb-4">Personalized Treatment Plan</h3>
-                    <p className="text-gray-600 mb-4">
-                      Based on your skin analysis, we develop a personalized treatment plan that combines in-clinic procedures with a tailored home care routine. Our treatment plans are designed to deliver optimal results while minimizing downtime.
-                    </p>
-                    <p className="text-gray-600">
-                      We use a combination of advanced technologies, such as laser therapy, chemical peels, and microdermabrasion, along with pharmaceutical-grade ingredients to target your specific skin concerns.
-                    </p>
-                  </div>
-                  <div className="md:order-1">
-                    <img
-                      src="/lovable-uploads/69999999-e999-4999-9999-999999999999.png"
-                      alt="Personalized treatment plan for optimal results"
-                      className="rounded-lg shadow-lg w-full h-80 object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Conditions Treated */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Conditions We Treat</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Primary Conditions</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Acne and breakouts</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Aging and wrinkles</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Pigmentation and sun damage</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Rosacea and redness</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Sensitive skin and irritation</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Secondary Benefits</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Improved skin texture and tone</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Reduced pore size</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Increased skin hydration</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Enhanced skin radiance</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Healthier, more youthful-looking skin</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Conditions We Treat</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Comprehensive clinical solutions for a wide range of skin concerns and conditions.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Primary Conditions</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Acne and breakouts</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Aging and wrinkles</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Pigmentation and sun damage</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Rosacea and redness</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Sensitive skin and irritation</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Secondary Benefits</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Improved skin texture and tone</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Reduced pore size</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Increased skin hydration</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Enhanced skin radiance</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={16} />
+                        <span className="text-gray-300">Healthier, more youthful-looking skin</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 bg-white">
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">Treatment Pricing</h2>
-              <Card className="border-2 border-purple-200">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Pricing</h2>
+              <p className="text-gray-300">Comprehensive consultation and personalized treatment planning</p>
+            </motion.div>
+
+            <div className="max-w-lg mx-auto">
+              <Card className="bg-black border-purple-400">
                 <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">Clinical Skin Care Consultation</CardTitle>
-                  <CardDescription>Personalized assessment and treatment plan</CardDescription>
+                  <CardTitle className="text-2xl text-white">Clinical Skin Care Consultation</CardTitle>
+                  <p className="text-gray-300">Personalized assessment and treatment plan</p>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <div className="text-5xl font-bold text-purple-600 mb-4">£150</div>
-                  <p className="text-gray-600 mb-6">
+                  <div className="text-4xl font-bold text-purple-400 mb-4">£150</div>
+                  <p className="text-gray-300 mb-6">
                     Comprehensive skin analysis and customized treatment plan 
                     to address your specific skin concerns.
                   </p>
-                  <Button size="lg" className="bg-purple-600 hover:bg-purple-700 w-full">
+                  <Button 
+                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-4 text-lg font-semibold w-full"
+                  >
                     Book Your Consultation
                   </Button>
                 </CardContent>
@@ -310,60 +471,134 @@ const ClinicalConceptsToFlawlessSkin = () => {
           </div>
         </section>
 
-        {/* Why Choose Cosmedocs */}
-        <section className="py-16 bg-gray-50">
+        {/* FAQ Section */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Why Choose Cosmedocs for Clinical Skin Care?</h2>
-              <div className="prose prose-lg mx-auto text-gray-600">
-                <p>
-                  At Cosmedocs, we believe that healthy skin is the foundation of true beauty. Our clinical approach combines advanced technologies, pharmaceutical-grade ingredients, and expert knowledge to deliver lasting results.
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Learn more about our clinical approach to achieving flawless, healthy skin.
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-700">
+                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs for Clinical Skin Care</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Over 17 years of experience delivering advanced clinical skin care solutions in prestigious Harley Street.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Medical Expertise</h3>
+                <p className="text-gray-300">
+                  Qualified medical professionals with extensive training in dermatology and advanced skin care technologies.
                 </p>
-                <p>
-                  With over 17 years of experience and a commitment to ongoing education, our team of medical professionals provides personalized care that addresses your unique skin needs. We prioritize your safety and satisfaction, ensuring you receive the highest quality skin care solutions.
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Advanced Technologies</h3>
+                <p className="text-gray-300">
+                  Cutting-edge equipment and pharmaceutical-grade ingredients for optimal safety and results.
                 </p>
-                <p>
-                  Located in the prestigious Harley Street medical district, our clinic offers a comfortable and professional environment where you can relax and rejuvenate your skin.
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Personalized Care</h3>
+                <p className="text-gray-300">
+                  Comprehensive assessment and customized treatment plans addressing your unique skin needs and goals.
                 </p>
-              </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6 text-white">Ready for Flawless Skin?</h2>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                Transform your skin with our clinical approach combining advanced technologies, 
+                pharmaceutical-grade ingredients, and expert knowledge. Bold. Natural. Always Your Way.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+              >
+                Book Consultation
+              </Button>
             </div>
           </div>
         </section>
 
         {/* Hidden SEO Content */}
-        <div style={{ position: 'absolute', left: '-9999px', visibility: 'hidden' }}>
-          <h3>Comprehensive Clinical Skin Care Information</h3>
+        <div className="sr-only" aria-hidden="true">
+          <h2>Clinical Skin Care London Birmingham Manchester Cardiff</h2>
           <p>
-            Clinical skin care London specialists at Cosmedocs provide advanced treatments for acne, aging, pigmentation, and rosacea. Our Harley Street clinic offers expert skin analysis, personalized treatment plans, and pharmaceutical-grade products. Professional skin care services for lasting radiance and rejuvenation.
-          </p>
-          <p>
-            Advanced skin care treatments using laser therapy, chemical peels, and microdermabrasion. Our experienced practitioners deliver optimal results with minimal downtime. Clinical skin care consultations available for customized treatment plans.
-          </p>
-          <p>
-            Expert skin care solutions for improving skin texture, tone, and hydration. Our clinic specializes in treating sensitive skin, reducing pore size, and enhancing overall skin health. Professional skin care services for a more youthful-looking complexion.
-          </p>
-          <p>
-            Harley Street skin care clinic offering comprehensive treatments for various skin conditions. Our medical professionals combine expertise with compassionate care to deliver optimal treatment outcomes. Clinical skin care for long-term skin wellness and beauty.
+            Clinical skin care London specialists at Cosmedocs provide advanced treatments for acne, aging, pigmentation, and rosacea. Our Harley Street clinic offers expert skin analysis, personalized treatment plans, and pharmaceutical-grade products. Professional skin care services for lasting radiance and rejuvenation. Advanced skin care treatments using laser therapy, chemical peels, and microdermabrasion. Our experienced practitioners deliver optimal results with minimal downtime. Clinical skin care consultations available for customized treatment plans. Expert skin care solutions for improving skin texture, tone, and hydration. Our clinic specializes in treating sensitive skin, reducing pore size, and enhancing overall skin health. Professional skin care services for a more youthful-looking complexion. Harley Street skin care clinic offering comprehensive treatments for various skin conditions. Our medical professionals combine expertise with compassionate care to deliver optimal treatment outcomes. Clinical skin care for long-term skin wellness and beauty.
           </p>
         </div>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-purple-600 text-white">
-          <div className="page-container text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Unlock Flawless Skin?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Take the first step toward radiant, healthy skin with our expert clinical treatments.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Book Consultation
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600">
-                Call 0333 0551 503
-              </Button>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );
