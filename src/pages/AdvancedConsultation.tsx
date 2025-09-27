@@ -1,12 +1,18 @@
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, Clock, Star, Award, Eye, Zap } from 'lucide-react';
-import PopularTreatments from '@/components/PopularTreatments';
-import { generateSEOMetadata } from '@/utils/seo';
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { generateSEOMetadata } from "@/utils/seo";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Eye, Zap, Star } from "lucide-react";
 
 const AdvancedConsultation = () => {
   const seoData = generateSEOMetadata(
@@ -14,26 +20,6 @@ const AdvancedConsultation = () => {
     "Experience millimeter-precision aesthetic refinements with Dr. Ahmed Haq. Expert consultations for subtle facial optimization, addressing temporal hollowing, lip corner enhancement, and volumizing techniques. 15+ years training physicians in advanced aesthetic medicine.",
     "/advanced-consultation"
   );
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalService",
-    "name": "Advanced Aesthetic Consultation",
-    "provider": {
-      "@type": "Physician",
-      "name": "Dr. Ahmed Haq",
-      "specialty": "Aesthetic Medicine",
-      "yearsOfExperience": "15+"
-    },
-    "description": "Millimeter-precision aesthetic refinements and facial optimization consultations",
-    "serviceType": "Aesthetic Medicine Consultation",
-    "areaServed": "UK",
-    "availableLanguage": "English",
-    "offers": {
-      "@type": "Offer",
-      "description": "Advanced consultation for facial optimization and aesthetic refinements"
-    }
-  };
 
   const refinementTechniques = [
     {
@@ -62,6 +48,49 @@ const AdvancedConsultation = () => {
     }
   ];
 
+  const faqs = [
+    {
+      question: "What makes Dr. Ahmed Haq's consultation approach different?",
+      answer: "Dr. Ahmed Haq brings 15+ years of experience training physicians in advanced aesthetic medicine. His millimeter-precision approach focuses on subtle refinements that restore youthfulness without anyone noticing the enhancement."
+    },
+    {
+      question: "What is the optimal age range for advanced aesthetic consultation?",
+      answer: "The golden age for optimization is 30-60 years. Within this range, Dr. Haq can achieve optimal results. After 60, treatment becomes more challenging and depends on facial structure and lifestyle factors such as sun exposure."
+    },
+    {
+      question: "How does the consultation process work?",
+      answer: "Dr. Haq conducts a comprehensive facial analysis, discussing your concerns and goals. He explains the science behind facial aging and creates a personalized treatment plan using millimeter-precision techniques."
+    },
+    {
+      question: "What areas can be addressed in the consultation?",
+      answer: "The consultation covers lip corner lifting, temporal hollowing correction, chin volumization, jawline definition, perioral enhancement, and midface restoration - all using subtle, natural enhancement techniques."
+    },
+    {
+      question: "Why is the 'apple analogy' important in facial aging?",
+      answer: "The skin (1-2mm thick) is like an apple's skin, while the core represents underlying fat, muscle, and bone. Aging causes volume loss in the 'core', which is why surface treatments alone cannot address the root cause of facial aging."
+    },
+    {
+      question: "What is meant by 'invisible art' in aesthetic medicine?",
+      answer: "Invisible art means creating enhancement so natural that others notice you look refreshed but can't identify what's changed. It's transformation that speaks without saying a word - our aesthetic philosophy."
+    },
+    {
+      question: "How does millimeter precision differ from standard treatments?",
+      answer: "Millimeter adjustments require years of training and deep understanding of facial anatomy. What an experienced physician achieves with precision is vastly different from standard approaches - focusing on optimal results with minimal product."
+    },
+    {
+      question: "Can mild to moderate jowls be addressed?",
+      answer: "Yes, by stopping the sinking process through strategic volume restoration, sagging reverses naturally. We can effectively reverse mild to moderate jowls (grade one) using the principle that 'the face sinks, then sags'."
+    },
+    {
+      question: "What is the investment for advanced consultation treatments?",
+      answer: "Our rejuvenation plans focus on precision rather than quantity. Good aesthetics is not cheap, and cheap aesthetics is not good. Investment varies based on your personalized treatment plan during consultation."
+    },
+    {
+      question: "How long do results from advanced aesthetic treatments last?",
+      answer: "Results vary by treatment area and technique used. Dr. Haq's precision approach often provides longer-lasting results due to strategic placement and optimal product selection for each individual case."
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -70,178 +99,315 @@ const AdvancedConsultation = () => {
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
+        <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="advanced aesthetic consultation London, Dr Ahmed Haq, millimeter precision aesthetic medicine, facial optimization, temporal hollowing, lip corner enhancement, chin volumization, expert aesthetic physician, advanced consultation booking, Harley Street" />
         <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs",
+            "description": "Advanced aesthetic consultation with Dr. Ahmed Haq - millimeter-precision facial optimization",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "medicalSpecialty": "Aesthetic Medicine",
+            "priceRange": "£££"
+          })}
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="bg-black text-white">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+          <div className="page-container relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Advanced Aesthetic Consultation</span>
+                  <span className="block text-sm mt-4">Millimeter-precision aesthetic refinements with Dr. Ahmed Haq</span>
+                </h1>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Superior Edge of Aesthetic Medicine</p>
+                  <p className="text-sm text-gray-300">Subtle refinements that restore youthfulness without anyone noticing</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
+                    Book Consultation
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('techniques-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    View Techniques
+                  </Button>
+                </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Advanced Consultation Overview</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Advanced Aesthetic Consultation
-                  <span className="block text-primary mt-2">with Dr. Ahmed Haq</span>
-                </h1>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Experience the superior edge of millimeter-precision aesthetic medicine. 
-                  Subtle refinements that restore youthfulness to your face without anyone noticing.
-                </p>
-                <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-8">
-                  <div className="flex items-center gap-2">
-                    <Award className="h-5 w-5 text-primary" />
-                    <span>15+ Years Training Physicians</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Eye className="h-5 w-5 text-primary" />
-                    <span>Millimeter Precision</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Zap className="h-5 w-5 text-primary" />
-                    <span>Invisible Art</span>
-                  </div>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Consultation Duration</h3>
+                <p className="text-gray-300">60-90 minutes comprehensive assessment</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">15+ years training physicians</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Eye className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Precision</h3>
+                <p className="text-gray-300">Millimeter-level adjustments</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">Invisible art enhancement</p>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Philosophy Section */}
-        <section className="py-16 bg-accent/30">
+        {/* The Science of Subtle Enhancement */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">The Science of Subtle Enhancement</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <Card className="p-6">
-                  <CardContent className="p-0">
-                    <h3 className="text-xl font-semibold mb-4">Why Millimeter Changes Matter</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">The Science of Subtle Enhancement</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding why millimeter changes matter and the expertise required for truly natural results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Why Millimeter Changes Matter</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
                       The influx of mass industry growth in aesthetic medicine means more practitioners than ever. 
                       While this increases accessibility, the expertise required for truly natural results cannot be rushed.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-gray-300">
                       What an experienced physician can achieve with one syringe is vastly different from someone 
                       with five years experience. Millimeter adjustments require years of training and understanding 
                       of facial anatomy.
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="p-6">
-                  <CardContent className="p-0">
-                    <h3 className="text-xl font-semibold mb-4">The Apple Analogy</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-accent border-none h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">The Apple Analogy</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
                       Consider an apple: the skin represents your facial skin (1-2mm thick), while the core 
                       represents your underlying fat, muscle, and bone structure. When aging occurs, you lose 
                       volume in the "core" - not just skin thickness.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-gray-300">
                       This is why radio frequency and ultrasound devices, which only tighten skin, cannot address 
                       the root cause of facial aging. True rejuvenation requires restoring lost volume.
                     </p>
                   </CardContent>
                 </Card>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Refinement Techniques */}
-        <section className="py-16">
+        {/* Millimeter-Precision Refinements */}
+        <section id="techniques-section" className="py-20 bg-accent text-white">
           <div className="page-container">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Millimeter-Precision Refinements</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {refinementTechniques.map((technique, index) => (
-                  <motion.div
-                    key={technique.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="h-full p-6 hover:shadow-lg transition-shadow">
-                      <CardContent className="p-0">
-                        <h3 className="text-lg font-semibold mb-3">{technique.title}</h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{technique.description}</p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Millimeter-Precision Refinements</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Advanced techniques that address specific areas of facial aging with surgical precision and artistic vision.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {refinementTechniques.map((technique, index) => (
+                <motion.div
+                  key={technique.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-black border-purple-400 h-full hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-semibold mb-3 text-white">{technique.title}</h3>
+                      <p className="text-gray-300 text-sm leading-relaxed">{technique.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Age Range & Expectations */}
-        <section className="py-16 bg-accent/30">
+        {/* Optimal Treatment Window */}
+        <section className="py-20 bg-black">
           <div className="page-container">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Optimal Treatment Window</h2>
-              <Card className="p-8">
-                <CardContent className="p-0 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">Optimal Treatment Window</h2>
+              <Card className="bg-accent border-purple-400">
+                <CardContent className="p-8 text-center">
                   <div className="flex items-center justify-center mb-6">
-                    <Clock className="h-12 w-12 text-primary" />
+                    <Clock className="h-12 w-12 text-purple-400" />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4">30-60 Years: The Golden Age for Optimization</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <h3 className="text-2xl font-semibold mb-4 text-white">30-60 Years: The Golden Age for Optimization</h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
                     If you come to me within the 30-60 age range, I will be able to help you achieve optimal results. 
                     After 60, treatment becomes more challenging and depends on your facial structure and lifestyle factors 
                     such as sun exposure over your lifetime.
                   </p>
-                  <div className="bg-primary/10 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground">
-                      <strong>The Face Sinks, Then Sags:</strong> By stopping the sinking process through strategic volume restoration, 
+                  <div className="bg-purple-400/10 p-4 rounded-lg">
+                    <p className="text-sm text-gray-300">
+                      <strong className="text-purple-300">The Face Sinks, Then Sags:</strong> By stopping the sinking process through strategic volume restoration, 
                       sagging reverses naturally. We can reverse mild to moderate jowls (grade one) effectively.
                     </p>
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* Investment in Quality */}
-        <section className="py-16">
+        {/* Investment in Excellence */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">Investment in Excellence</h2>
-              <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5">
-                <CardContent className="p-0">
-                  <Star className="h-12 w-12 text-primary mx-auto mb-6" />
-                  <blockquote className="text-xl font-medium mb-6">
+              <h2 className="text-3xl font-bold mb-8 text-white">Investment in Excellence</h2>
+              <Card className="bg-black border-purple-400">
+                <CardContent className="p-8">
+                  <Star className="h-12 w-12 text-purple-400 mx-auto mb-6" />
+                  <blockquote className="text-xl font-medium mb-6 text-white">
                     "Good aesthetics is not cheap, and cheap aesthetics is not good."
                   </blockquote>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-gray-300 leading-relaxed mb-6">
                     While industry pricing is typically per milliliter (based on manufacturing), our rejuvenation 
                     plans focus on the small bits required for optimal results. Trying to save money in aesthetic 
                     medicine often costs more in the long run.
                   </p>
                   <div className="grid md:grid-cols-3 gap-6 mt-8">
                     <div className="text-center">
-                      <CheckCircle className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <p className="font-semibold">Precision Planning</p>
-                      <p className="text-sm text-muted-foreground">Tailored to your needs</p>
+                      <CheckCircle className="h-8 w-8 text-purple-400 mx-auto mb-2" />
+                      <p className="font-semibold text-white">Precision Planning</p>
+                      <p className="text-sm text-gray-300">Tailored to your needs</p>
                     </div>
                     <div className="text-center">
-                      <CheckCircle className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <p className="font-semibold">Expert Technique</p>
-                      <p className="text-sm text-muted-foreground">15+ years experience</p>
+                      <CheckCircle className="h-8 w-8 text-purple-400 mx-auto mb-2" />
+                      <p className="font-semibold text-white">Expert Technique</p>
+                      <p className="text-sm text-gray-300">15+ years experience</p>
                     </div>
                     <div className="text-center">
-                      <CheckCircle className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <p className="font-semibold">Natural Results</p>
-                      <p className="text-sm text-muted-foreground">Invisible enhancement</p>
+                      <CheckCircle className="h-8 w-8 text-purple-400 mx-auto mb-2" />
+                      <p className="font-semibold text-white">Natural Results</p>
+                      <p className="text-sm text-gray-300">Invisible enhancement</p>
                     </div>
                   </div>
                 </CardContent>
@@ -250,18 +416,119 @@ const AdvancedConsultation = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Learn more about Dr. Ahmed Haq's advanced aesthetic consultation approach and treatment philosophy.
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-700">
+                    <AccordionTrigger className="text-left text-white hover:text-purple-300">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Dr. Ahmed Haq</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Experience the difference of advanced aesthetic consultation with millimeter-precision techniques.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Expert Training</h3>
+                <p className="text-gray-300">
+                  15+ years training physicians in advanced aesthetic medicine with millimeter-precision techniques.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Eye className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Invisible Art Philosophy</h3>
+                <p className="text-gray-300">
+                  Enhancement so natural that others notice you look refreshed but can't identify what's changed.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">Patient-Centered Care</h3>
+                <p className="text-gray-300">
+                  Comprehensive consultation and personalized treatment plans tailored to your unique facial structure.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
-        <section className="py-16 bg-primary/10">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Ready for Your Consultation?</h2>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <h2 className="text-3xl font-bold mb-6 text-white">Ready for Your Advanced Consultation?</h2>
+              <p className="text-gray-300 mb-8 leading-relaxed">
                 Experience the Cosmedocs difference with Dr. Ahmed Haq's millimeter-precision approach 
                 to aesthetic medicine. Bold. Natural. Always Your Way.
               </p>
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90"
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
                 onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
               >
                 Book Consultation
@@ -291,11 +558,6 @@ const AdvancedConsultation = () => {
             manchester cardiff advanced aesthetic consultation booking natural facial enhancement techniques.
           </p>
         </div>
-
-        <PopularTreatments 
-          title="Complementary Treatments"
-          className="bg-black"
-        />
       </div>
     </>
   );
