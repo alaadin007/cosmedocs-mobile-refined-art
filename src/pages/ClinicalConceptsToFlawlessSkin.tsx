@@ -504,8 +504,8 @@ const ClinicalConceptsToFlawlessSkin = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-20 bg-accent">
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -514,13 +514,10 @@ const ClinicalConceptsToFlawlessSkin = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs for Clinical Skin Care</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Over 17 years of experience delivering advanced clinical skin care solutions in prestigious Harley Street.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -531,10 +528,8 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Award className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Medical Expertise</h3>
-                <p className="text-gray-300">
-                  Qualified medical professionals with extensive training in dermatology and advanced skin care technologies.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 17 years of clinical expertise</p>
               </motion.div>
 
               <motion.div
@@ -547,9 +542,16 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Advanced Technologies</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
                 <p className="text-gray-300">
-                  Cutting-edge equipment and pharmaceutical-grade ingredients for optimal safety and results.
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
                 </p>
               </motion.div>
 
@@ -561,34 +563,73 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Medical-grade pharmaceutical products</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">Personalized Care</h3>
-                <p className="text-gray-300">
-                  Comprehensive assessment and customized treatment plans addressing your unique skin needs and goals.
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready for Flawless Skin?</h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready for Flawless Skin?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Transform your skin with our clinical approach combining advanced technologies, 
-                pharmaceutical-grade ingredients, and expert knowledge. Bold. Natural. Always Your Way.
+                pharmaceutical-grade ingredients, and expert knowledge for lasting radiance and health.
               </p>
-              <Button 
-                size="lg" 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-              >
-                Book Consultation
-              </Button>
-            </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
+                  Book Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                >
+                  Call 0333 0551 503
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </section>
 
