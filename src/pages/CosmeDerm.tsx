@@ -579,32 +579,27 @@ const CosmeDerm = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-900 to-purple-700">
+        {/* Call to Action */}
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Expert Dermatological Care?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Book your consultation with Dr Hassan Mirza and discover personalised solutions for your skin and hair concerns.
+              <h2 className="text-3xl font-bold mb-4">Ready for Healthier, Radiant Skin?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert dermatology team and discover how 
+                CosmeDerm can enhance your natural beauty with professional care.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                  className="bg-white text-purple-900 hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                >
-                  Book Online Consultation
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  Book Free Consultation
                 </Button>
-                <Button 
-                  onClick={() => window.open("tel:08008600178", "_blank")}
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-purple-900 rounded-full px-8 py-6 text-lg font-semibold"
-                >
-                  Call for In-Person Visit
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
                 </Button>
               </div>
             </motion.div>
