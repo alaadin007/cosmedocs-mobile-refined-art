@@ -102,7 +102,7 @@ const MedicalAnalBleaching = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Medical Anal Bleaching London</span>
+                  <span className="text-purple-300">Medical Anal Bleaching</span>
                   <span className="block text-sm mt-4">Professional hyperpigmentation treatment with complete discretion</span>
                 </h1>
                 <div className="mb-8">
