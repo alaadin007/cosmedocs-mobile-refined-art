@@ -173,6 +173,31 @@ const CosmeDerm = () => {
           </div>
         </section>
 
+        {/* About CosmeDerm Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-8 text-white">
+                CosmeDerm: Dermatology Clinic UK
+              </h2>
+              <div className="text-lg text-gray-300 leading-relaxed space-y-6">
+                <p>
+                  We believe that healthy skin is essential for your overall well-being, empowering you to be your authentic self with confidence. Hence, our mission at CosmeDocs the Dermatology Clinic in the UK is to provide effective solutions that restore and enhance the natural beauty of your skin and hair.
+                </p>
+                <p>
+                  Furthermore, with a focus on innovative treatments and a patient-centred approach, we specialise in diagnosing and treating a broad spectrum of conditions—from acne to hair loss and everything in between. Whether you are looking for cosmetic procedures or medical treatments, our team at CosmeDocs: Dermatology Clinic in the UK is dedicated to helping you achieve a healthy version of yourself!
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Consultation Options */}
         <section className="py-16 bg-accent">
           <div className="page-container">
