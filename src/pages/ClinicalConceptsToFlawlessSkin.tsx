@@ -495,7 +495,11 @@ const ClinicalConceptsToFlawlessSkin = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs for Clinical Skin Care?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Experience the difference of medically-led clinical skin care with our evidence-based approach, 
+                advanced diagnostic tools, and pharmaceutical-grade treatments for lasting skin transformation.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -507,10 +511,10 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="text-purple-600" size={24} />
+                  <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-300">Over 17 years of clinical expertise</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Medical Expertise</h3>
+                <p className="text-gray-300">Qualified medical professionals with advanced dermatology training</p>
               </motion.div>
 
               <motion.div
@@ -521,19 +525,10 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="text-purple-600" size={24} />
+                  <Activity className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
-                <p className="text-gray-300">
-                  <a 
-                    href="https://www.harleystreetinstitute.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-purple-200 underline"
-                  >
-                    Harley Street Institute
-                  </a> trainers
-                </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Advanced Analysis</h3>
+                <p className="text-gray-300">State-of-the-art diagnostic tools for comprehensive skin assessment</p>
               </motion.div>
 
               <motion.div
@@ -546,8 +541,8 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
-                <p className="text-gray-300">Medical-grade pharmaceutical products</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Evidence-Based</h3>
+                <p className="text-gray-300">Scientifically-proven treatments with pharmaceutical-grade products</p>
               </motion.div>
 
               <motion.div
@@ -558,10 +553,10 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-600" size={24} />
+                  <Heart className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
-                <p className="text-gray-300">'Invisible art' for natural results</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Personalised Care</h3>
+                <p className="text-gray-300">Tailored treatment plans for your unique skin concerns and goals</p>
               </motion.div>
 
               <motion.div
@@ -572,10 +567,10 @@ const ClinicalConceptsToFlawlessSkin = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
+                  <Shield className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
-                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Long-term Results</h3>
+                <p className="text-gray-300">Sustainable skin health improvements with ongoing support</p>
               </motion.div>
             </div>
           </div>
