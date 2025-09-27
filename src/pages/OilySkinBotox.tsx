@@ -234,51 +234,6 @@ const OilySkinBotox = () => {
         </section>
 
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">T-Zone Oily Skin Before and After</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                See the remarkable results of our T-Zone Oily Skin Botox treatment. Our before-and-after images demonstrate significant improvements in oil control and skin texture.
-              </p>
-            </motion.div>
-
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
-              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
-            </Carousel>
-          </div>
-        </section>
 
         {/* What is T-Zone Oily Skin Botox */}
         <section className="py-20 bg-accent">
@@ -359,13 +314,8 @@ const OilySkinBotox = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Regulating Sebum Production</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Controls excess oil production, reducing shine for a balanced complexion.
-                    </p>
+                  <CardContent className="p-6 flex items-center justify-center">
+                    <h3 className="text-white text-xl font-semibold text-center">Regulating Sebum Production</h3>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -377,13 +327,8 @@ const OilySkinBotox = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Minimising Pore Size</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Reduces enlarged pore appearance for smoother skin texture.
-                    </p>
+                  <CardContent className="p-6 flex items-center justify-center">
+                    <h3 className="text-white text-xl font-semibold text-center">Minimising Pore Size</h3>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -395,13 +340,8 @@ const OilySkinBotox = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Preventing Breakouts</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Helps prevent acne breakouts by controlling oil production and pore size.
-                    </p>
+                  <CardContent className="p-6 flex items-center justify-center">
+                    <h3 className="text-white text-xl font-semibold text-center">Preventing Breakouts</h3>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -413,13 +353,8 @@ const OilySkinBotox = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Reducing Shine</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Creates a matte appearance by eliminating unwanted shine.
-                    </p>
+                  <CardContent className="p-6 flex items-center justify-center">
+                    <h3 className="text-white text-xl font-semibold text-center">Reducing Shine</h3>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -431,13 +366,8 @@ const OilySkinBotox = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Improving Overall Skin Texture</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Provides smoother, more refined skin texture with consistent treatment.
-                    </p>
+                  <CardContent className="p-6 flex items-center justify-center">
+                    <h3 className="text-white text-xl font-semibold text-center">Improving Overall Skin Texture</h3>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -449,13 +379,8 @@ const OilySkinBotox = () => {
                 viewport={{ once: true }}
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white text-xl">Longer Lasting Makeup & Enhanced Confidence</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Makeup lasts longer and enhanced confidence from reduced oiliness.
-                    </p>
+                  <CardContent className="p-6 flex items-center justify-center">
+                    <h3 className="text-white text-xl font-semibold text-center">Longer Lasting Makeup & Enhanced Confidence</h3>
                   </CardContent>
                 </Card>
               </motion.div>
