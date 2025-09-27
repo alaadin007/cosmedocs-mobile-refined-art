@@ -173,6 +173,54 @@ const CosmeDerm = () => {
           </div>
         </section>
 
+        {/* About CosmeDerm Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-8 text-white">
+                CosmeDerm: Dermatology Clinic UK
+              </h2>
+              <div className="text-lg text-gray-300 leading-relaxed space-y-6">
+                <p>
+                  We believe that healthy skin is essential for your overall well-being, empowering you to be your authentic self with confidence. Hence, our mission at CosmeDocs the Dermatology Clinic in the UK is to provide effective solutions that restore and enhance the natural beauty of your skin and hair.
+                </p>
+                <p>
+                  Furthermore, with a focus on innovative treatments and a patient-centred approach, we specialise in diagnosing and treating a broad spectrum of conditions—from acne to hair loss and everything in between. Whether you are looking for cosmetic procedures or medical treatments, our team at CosmeDocs: Dermatology Clinic in the UK is dedicated to helping you achieve a healthy version of yourself!
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-8 text-white">
+                CosmeDerm: Dermatology Clinic UK
+              </h2>
+              <div className="text-lg text-gray-300 leading-relaxed space-y-6">
+                <p>
+                  We believe that healthy skin is essential for your overall well-being, empowering you to be your authentic self with confidence. Hence, our mission at CosmeDocs the Dermatology Clinic in the UK is to provide effective solutions that restore and enhance the natural beauty of your skin and hair.
+                </p>
+                <p>
+                  Furthermore, with a focus on innovative treatments and a patient-centred approach, we specialise in diagnosing and treating a broad spectrum of conditions—from acne to hair loss and everything in between. Whether you are looking for cosmetic procedures or medical treatments, our team at CosmeDocs: Dermatology Clinic in the UK is dedicated to helping you achieve a healthy version of yourself!
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Treatment Gallery */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -243,6 +291,53 @@ const CosmeDerm = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Treatment Gallery */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Our Clinic</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                State-of-the-art facilities at 10 Harley Street providing comprehensive dermatological care.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {treatmentImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+          </div>
+        </section>
+
 
 
         {/* Dr Hassan Mirza Section */}
