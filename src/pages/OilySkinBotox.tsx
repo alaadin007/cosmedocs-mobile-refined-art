@@ -364,7 +364,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      Botox injections can help control excess oil production in the T-zone, reducing shine and promoting a more balanced complexion.
+                      Controls excess oil production, reducing shine for a balanced complexion.
                     </p>
                   </CardContent>
                 </Card>
@@ -382,7 +382,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      By targeting the muscles responsible for pulling on the skin's surface, Botox can indirectly reduce the appearance of enlarged pores, leading to smoother skin texture.
+                      Reduces enlarged pore appearance for smoother skin texture.
                     </p>
                   </CardContent>
                 </Card>
@@ -400,7 +400,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      With its ability to regulate sebum production and minimise pore size, Botox can help prevent acne breakouts in the T-Zone area, promoting clearer and healthier-looking skin.
+                      Helps prevent acne breakouts by controlling oil production and pore size.
                     </p>
                   </CardContent>
                 </Card>
@@ -418,7 +418,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      By controlling oil production, Botox can help reduce the unwanted shine often associated with oily skin, giving the T-Zone a more matte appearance.
+                      Creates a matte appearance by eliminating unwanted shine.
                     </p>
                   </CardContent>
                 </Card>
@@ -436,7 +436,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      With consistent treatment, Botox can contribute to an overall improvement in the texture and appearance of oily skin in the T-Zone, providing a smoother and more refined complexion.
+                      Provides smoother, more refined skin texture with consistent treatment.
                     </p>
                   </CardContent>
                 </Card>
@@ -454,7 +454,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      With reduced oiliness in the T-zone, makeup tends to last longer and stay in place better throughout the day. A less oily T-zone can lead to improved confidence and self-esteem.
+                      Makeup lasts longer and enhanced confidence from reduced oiliness.
                     </p>
                   </CardContent>
                 </Card>
