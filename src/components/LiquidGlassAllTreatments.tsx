@@ -41,7 +41,8 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
         { name: "Chin Botox", price: "£50" },
         { name: "Brow Lift", price: "£50" },
         { name: "Jelly Roll Botox", price: "£175" },
-        { name: "Rosacea & Blushing", price: "£350-£450" }
+        { name: "Rosacea & Blushing", price: "£350-£450" },
+        { name: "T-Zone Oily Skin Botox", price: "£250", link: "/t-zone-oily-skin-botox" }
       ]
     },
     {
@@ -73,7 +74,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
         { name: "Temples Hollowing", price: "£350/ml" },
         { name: "Forehead Filler (Bumps & Dips)", price: "£400" },
         { name: "Redensity 1", price: "£250/ml" },
-        { name: "Aqualyx Fat Dissolving", price: "POC" },
+        { name: "Aqualyx Fat Dissolving", price: "POC", link: "/fat-dissolve" },
         { name: "PDO Threads", price: "Visit page" }
       ]
     },
@@ -106,7 +107,8 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
         { name: "Facial Thread Veins", price: "From £75" },
         { name: "Leg Veins Treatment", price: "£400 per leg" },
         { name: "Skin Tag Removal", price: "£100 for 5 tags" },
-        { name: "IPL/Laser Hair Removal", price: "POC" }
+        { name: "IPL/Laser Hair Removal", price: "POC" },
+        { name: "CosmeDerm Medical Dermatology", price: "POC", link: "/cosmederm" }
       ]
     }
   ];

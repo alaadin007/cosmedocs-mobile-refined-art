@@ -50,6 +50,18 @@ export const treatmentRoutes: Record<string, string> = {
   "eczema treatment": "/eczema-treatment",
   "psoriasis": "/psoriasis-treatment",
   "psoriasis treatment": "/psoriasis-treatment",
+  "fat dissolve": "/fat-dissolve",
+  "fat dissolving": "/fat-dissolve",
+  "emsculpt": "/fat-dissolve",
+  "body contouring": "/fat-dissolve",
+  "t zone oily skin botox": "/t-zone-oily-skin-botox",
+  "oily skin botox": "/t-zone-oily-skin-botox",
+  "t-zone botox": "/t-zone-oily-skin-botox",
+  "sebum control": "/t-zone-oily-skin-botox",
+  "cosmederm": "/cosmederm",
+  "dermatology": "/cosmederm",
+  "medical dermatology": "/cosmederm",
+  "skin clinic": "/cosmederm",
   
   // Other existing treatments
   "non surgical nose job": "/non-surgical-nose-job",
