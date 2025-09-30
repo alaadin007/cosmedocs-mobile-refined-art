@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
@@ -122,7 +122,7 @@ export default function Header() {
         
          <div className="relative flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
           {/* Desktop Menu Button - Left */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-2">
             <Button
               onClick={() => setIsContactMenuOpen(true)}
               variant="ghost"
@@ -131,6 +131,15 @@ export default function Header() {
               title="Menu"
             >
               <Menu className="h-5 w-5" />
+            </Button>
+            <Button
+              onClick={() => setIsSearchOpen(true)}
+              variant="ghost"
+              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 px-3 py-2 rounded-lg flex items-center gap-2"
+              title="Ask anything"
+            >
+              <Brain className="h-5 w-5" />
+              <span className="text-sm">ask anything</span>
             </Button>
           </div>
 
@@ -159,15 +168,26 @@ export default function Header() {
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center justify-between w-full">
             {/* Mobile Menu Button - Left */}
-            <Button
-              onClick={() => setIsContactMenuOpen(true)}
-              variant="ghost"
-              size="icon"
-              className="text-white/90 hover:text-white hover:bg-white/10 p-2 rounded-lg"
-              title="Menu"
-            >
-              <Menu className="h-5 w-5" />
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                onClick={() => setIsContactMenuOpen(true)}
+                variant="ghost"
+                size="icon"
+                className="text-white/90 hover:text-white hover:bg-white/10 p-2 rounded-lg"
+                title="Menu"
+              >
+                <Menu className="h-5 w-5" />
+              </Button>
+              <Button
+                onClick={() => setIsSearchOpen(true)}
+                variant="ghost"
+                className="text-white/90 hover:text-white hover:bg-white/10 px-2 py-2 rounded-lg flex items-center gap-1"
+                title="Ask anything"
+              >
+                <Brain className="h-4 w-4" />
+                <span className="text-xs">ask anything</span>
+              </Button>
+            </div>
             
             {/* Mobile Search - Right */}
             <Button
