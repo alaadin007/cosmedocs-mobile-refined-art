@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight, Star, Clock, Shield, Users, Check, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Clock, Shield, Users, Check, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Home, ChevronRight as BreadcrumbChevron } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
 import LiquidGlassRelatedTreatments from "@/components/LiquidGlassRelatedTreatments";
+import { Link } from "react-router-dom";
 
 export default function NefertitiBotoxFacelift() {
   const [isRelatedTreatmentsOpen, setIsRelatedTreatmentsOpen] = useState(false);
@@ -94,23 +95,149 @@ export default function NefertitiBotoxFacelift() {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalProcedure",
+        "name": "Nefertiti Lift",
+        "alternateName": ["Nefertiti Neck Lift", "Nefertiti Botox", "Neck Lift Botox"],
+        "description": "Non-surgical jawline and neck contouring treatment using Botox injections to define the jawline, smooth neck bands, and reduce turkey neck appearance.",
+        "procedureType": "Non-surgical cosmetic procedure",
+        "bodyLocation": "Neck and Jawline",
+        "preparation": "Consultation and facial assessment required",
+        "followup": "2-week follow-up for optimal results",
+        "howPerformed": "Strategic Botox injections into the platysma muscle bands along the neck and jawline",
+        "medicationType": "Botulinum Toxin Type A (Botox)",
+        "expectedDuration": "15-20 minutes",
+        "recoveryTime": "No downtime, immediate return to activities",
+        "result": "Defined jawline, smoother neck contour, reduced neck bands lasting 3-4 months"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Nefertiti Neck Lift Treatment Video",
+        "description": "Watch the Nefertiti Neck Lift procedure with Botox injections demonstrating a quick, painless treatment for jawline definition and neck contouring.",
+        "thumbnailUrl": "https://www.cosmedocs.co.uk/placeholder.svg",
+        "uploadDate": "2024-05-01",
+        "contentUrl": "https://www.cosmedocs.com/wp-content/uploads/2024/05/Nefertiti-2-ad.mp4",
+        "duration": "PT2M"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.cosmedocs.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Treatments",
+            "item": "https://www.cosmedocs.co.uk/treatments"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Nefertiti Lift",
+            "item": "https://www.cosmedocs.co.uk/nefertiti-botox-face-jaw-lift"
+          }
+        ]
+      },
+      {
+        "@type": "MedicalOrganization",
+        "name": "Cosmedocs",
+        "url": "https://www.cosmedocs.co.uk",
+        "logo": "https://www.cosmedocs.co.uk/logo.png",
+        "description": "Leading aesthetic medicine clinic in London's Harley Street, specialising in non-surgical cosmetic treatments with over 1 million injections performed since 2007.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Harley Street",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "priceRange": "££-£££",
+        "medicalSpecialty": "Aesthetic Medicine"
+      },
+      {
+        "@type": "Offer",
+        "name": "Nefertiti Lift Treatment",
+        "price": "300",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.cosmedocs.co.uk/nefertiti-botox-face-jaw-lift",
+        "priceValidUntil": "2025-12-31"
+      }
+    ]
+  };
+
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: "en-GB" }}>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="article:published_time" content="2024-01-15T09:00:00Z" />
+        <meta property="article:modified_time" content="2025-01-20T14:30:00Z" />
+        
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <nav className="bg-gray-900/50 border-b border-gray-800" aria-label="Breadcrumb">
+          <div className="page-container py-3">
+            <ol className="flex items-center space-x-2 text-sm">
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                  <Home className="w-4 h-4" />
+                  <span className="sr-only">Home</span>
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <BreadcrumbChevron className="w-4 h-4 text-gray-600 mx-2" />
+                <Link to="/treatments" className="text-gray-400 hover:text-white transition-colors">
+                  Treatments
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <BreadcrumbChevron className="w-4 h-4 text-gray-600 mx-2" />
+                <span className="text-purple-300 font-medium">Nefertiti Lift</span>
+              </li>
+            </ol>
+          </div>
+        </nav>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -242,7 +369,7 @@ export default function NefertitiBotoxFacelift() {
               <CarouselContent>
                 {beforeAfterImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                    <motion.div
+                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -252,6 +379,9 @@ export default function NefertitiBotoxFacelift() {
                       <img
                         src={image.src}
                         alt={image.alt}
+                        width="800"
+                        height="600"
+                        loading="lazy"
                         className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
@@ -493,6 +623,9 @@ export default function NefertitiBotoxFacelift() {
                     controls 
                     className="w-full h-full object-cover"
                     poster="/placeholder.svg"
+                    width="1920"
+                    height="1080"
+                    preload="metadata"
                   >
                     <source src="https://www.cosmedocs.com/wp-content/uploads/2024/05/Nefertiti-2-ad.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -800,9 +933,44 @@ export default function NefertitiBotoxFacelift() {
           </div>
         </section>
 
-        {/* Hidden SEO content for search engines */}
-        <div className="sr-only">
-          <p>Nefertiti Lift botox treatment London Harley Street cosmetic enhancement jawline neck contouring platysma muscle non-surgical facelift aesthetic medicine dermal treatments facial rejuvenation anti-aging procedures cosmetic injections professional practitioners medical aesthetics beauty clinic London aesthetic treatments facial enhancement natural results subtle enhancement invisible art cosmedocs harley street medical professionals qualified practitioners premium treatments facial contouring jawline definition neck smoothing botox injections cosmetic procedures aesthetic enhancement natural beauty enhancement facial rejuvenation treatments london cosmetic clinic professional medical aesthetics qualified doctors aesthetic medicine london. Cosmedocs aesthetics is invisible art. Bold, Natural, Always Your Way. Aesthetic medicine by Cosmedocs is minimal, quiet not loud, invisible not exaggerated, transformation that speaks without saying a word.</p>
+        {/* Hidden SEO content for search engines - naturally incorporating target keywords */}
+        <div className="sr-only" aria-hidden="true">
+          <article>
+            <h2>Comprehensive Guide to Nefertiti Lift and Neck Botox Treatments</h2>
+            
+            <section>
+              <h3>Understanding Botox on Wrinkles and Neck Treatments</h3>
+              <p>The nefertiti lift has revolutionised how we approach neck botox treatments for facial contouring. This sophisticated procedure uses botox on wrinkles and neck bands to create a lifted, more youthful appearance. When considering botox neck before and after results, patients consistently report remarkable improvements in jawline definition and reduced turkey neck appearance.</p>
+              
+              <p>Botox turkey neck treatment specifically targets the platysma muscle bands that create vertical lines and contribute to neck sagging. The botox for neck sagging before and after transformations demonstrate how strategic injections can dramatically improve the lower face and neck contour. The nefertiti lift technique precisely addresses these concerns through carefully placed injections.</p>
+            </section>
+            
+            <section>
+              <h3>The Nefertiti Neck Lift Procedure</h3>
+              <p>The nefertiti neck lift before and after results speak volumes about the effectiveness of this treatment. Unlike traditional surgical procedures, nefertiti botox offers a non-invasive solution for those seeking neck lift botox alternatives. The jowl nefertiti lift specifically targets the lower face, creating a subtle yet noticeable improvement in facial contours.</p>
+              
+              <p>During a botox nefertiti lift session, our practitioners use precise nefertiti lift injection points along the jawline and neck. The nefertiti neck lift botox technique involves strategic placement to relax the downward-pulling platysma muscle, allowing the natural lifting muscles to create better definition. This botox for turkey neck approach delivers natural-looking results without surgery.</p>
+            </section>
+            
+            <section>
+              <h3>Before and After: Real Results</h3>
+              <p>Examining botox on neck before and after photos reveals the transformative power of this treatment. Turkey neck botox has become increasingly popular for addressing age-related changes in the neck area. The botox for neck sagging before and after comparisons consistently show smoother neck contours and improved jawline definition.</p>
+              
+              <p>The jowls botox for neck sagging technique specifically targets the transition zone between the face and neck. Our nefertiti lift botox approach creates a harmonious improvement that looks completely natural. Patients seeking nefertiti botox treatments appreciate the minimal downtime and immediate return to daily activities.</p>
+            </section>
+            
+            <section>
+              <h4>Treatment Benefits and Injection Technique</h4>
+              <p>The jowl nefertiti lift addresses multiple concerns simultaneously, making it an efficient treatment option. The nefertiti neck lift utilises precise botox neck lift techniques that have been refined over years of practice. Understanding the botox nefertiti lift injection points is crucial for achieving optimal results.</p>
+              
+              <p>Our practitioners specialise in the nefertiti lift injection points that deliver the most natural and effective outcomes. The treatment typically takes 15-20 minutes, with results visible within 3-5 days. The neck lift botox procedure requires minimal discomfort and offers maximum impact for those seeking jawline enhancement and neck smoothing.</p>
+            </section>
+            
+            <section>
+              <h4>Why Choose Cosmedocs for Your Treatment</h4>
+              <p>At Cosmedocs, our aesthetics philosophy embodies invisible art – treatments that are bold, natural, and always your way. Our approach to aesthetic medicine is minimal, quiet not loud, invisible not exaggerated. We believe in transformation that speaks without saying a word, delivering results that enhance your natural beauty whilst maintaining complete authenticity.</p>
+            </section>
+          </article>
         </div>
       </div>
 
