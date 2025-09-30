@@ -414,7 +414,7 @@ export default function NefertitiBotoxFacelift() {
                     The Nefertiti <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> In Neck Lift, inspired by the Egyptian queen's iconic jawline and neck, is a non-invasive treatment for early jowls and a less defined jawline. This procedure employs Botox injections to ease muscles that contribute to facial sagging, enhancing jawline definition and neck smoothness.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    During the Nefertiti neck lift, small amounts of <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> are strategically injected 
+                    During the Nefertiti neck lift, small amounts of Botox are strategically injected 
                     into the muscles along the lower jawline and neck. Botox in neck and jawline relaxes 
                     the muscles, lifting the area subtly and redefining the jawline.
                   </p>
@@ -474,7 +474,7 @@ export default function NefertitiBotoxFacelift() {
             >
               <h2 className="text-3xl font-bold mb-6">Combining with Dermal Fillers for Enhanced Results</h2>
               <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                The Nefertiti neck lift with <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> in neck can be combined with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> and other 
+                The Nefertiti neck lift with Botox in neck can be combined with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> and other 
                 collagen-stimulating treatments for optimal results. Fillers can be strategically added to areas, 
                 enhancing the lifting effect of Botox. This combination approach can address a range of ageing signs, 
                 offering a more comprehensive facial rejuvenation.
@@ -495,7 +495,7 @@ export default function NefertitiBotoxFacelift() {
                       <Heart className="text-purple-600" size={24} />
                     </div>
                     <h3 className="text-xl font-semibold mb-3">Enhanced Jawline</h3>
-                    <p className="text-gray-300"><Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">Dermal fillers</Link> add volume and structure to complement the lifting effect of Botox</p>
+                    <p className="text-gray-300">Dermal fillers add volume and structure to complement the lifting effect of Botox</p>
                   </CardContent>
                 </Card>
               </motion.div>
