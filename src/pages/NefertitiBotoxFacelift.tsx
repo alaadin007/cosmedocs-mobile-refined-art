@@ -414,9 +414,14 @@ export default function NefertitiBotoxFacelift() {
                     The Nefertiti <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> In Neck Lift, inspired by the Egyptian queen's iconic jawline and neck, is a non-invasive treatment for early jowls and a less defined jawline. This procedure employs Botox injections to ease muscles that contribute to facial sagging, enhancing jawline definition and neck smoothness.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    During the Nefertiti neck lift, small amounts of Botox are strategically injected 
-                    into the muscles along the lower jawline and neck. Botox in neck and jawline relaxes 
-                    the muscles, lifting the area subtly and redefining the jawline.
+                    <a 
+                      href="https://academic.oup.com/asj/article/36/7/NP143/2664538" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-purple-300 hover:text-purple-200 underline"
+                    >
+                      A clinical study published in the Aesthetic Surgery Journal
+                    </a> highlights the effectiveness of botulinum toxin in redefining the jawline and neck contour.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
                     The treatment targets the platysma muscle, which when overactive creates vertical neck bands and "turkey neck" appearance. Precise Botox injections relax this muscle, smoothing vertical lines and reducing downward pull on the jawline for enhanced definition.
