@@ -415,7 +415,7 @@ export default function NefertitiBotoxFacelift() {
                   </p>
                   <p className="text-gray-300 leading-relaxed">
                     <a 
-                      href="https://academic.oup.com/asj/article/36/7/NP143/2664538" 
+                      href="https://pubmed.ncbi.nlm.nih.gov/30698655/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-purple-300 hover:text-purple-200 underline"
