@@ -595,6 +595,16 @@ export default function NefertitiBotoxFacelift() {
                       youthful, lifted appearance of the jawline. With repeated injections, treatment 
                       lasts longer.
                     </p>
+                    <p className="text-gray-300">
+                      <a 
+                        href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11736717/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-300 hover:text-purple-200 underline"
+                      >
+                        A placebo-controlled trial in PMC
+                      </a> demonstrated that Botox injections to the neck significantly improve platysma prominence for up to 4 months.
+                    </p>
                     <div className="bg-purple-900/30 p-4 rounded-lg">
                       <h4 className="text-white font-semibold mb-2">Results Timeline:</h4>
                       <ul className="space-y-2 text-gray-300">
