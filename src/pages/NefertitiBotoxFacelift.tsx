@@ -602,8 +602,8 @@ export default function NefertitiBotoxFacelift() {
                         rel="noopener noreferrer"
                         className="text-purple-300 hover:text-purple-200 underline"
                       >
-                        A placebo-controlled trial in PMC
-                      </a> demonstrated that Botox injections to the neck significantly improve platysma prominence for up to 4 months.
+                        Clinical research published in PMC
+                      </a> confirms that Botox injections to the neck significantly improve platysma prominence for up to 4 months.
                     </p>
                     <div className="bg-purple-900/30 p-4 rounded-lg">
                       <h4 className="text-white font-semibold mb-2">Results Timeline:</h4>
