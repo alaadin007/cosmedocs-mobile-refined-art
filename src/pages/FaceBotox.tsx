@@ -251,8 +251,11 @@ export default function FaceBotox() {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
+                <div className="mb-4 italic text-gray-400 text-sm">
+                  "The best botox I've ever had – natural results every time" – Verified Patient
+                </div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Best Botox London</span>
+                  <span className="text-purple-300">Botox London</span>
                   <span className="block text-sm mt-4">Face botox treatments for natural, lasting results</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
