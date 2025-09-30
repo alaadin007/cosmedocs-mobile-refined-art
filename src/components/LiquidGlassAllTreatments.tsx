@@ -29,7 +29,7 @@ export default function LiquidGlassAllTreatments({ isOpen, onClose }: LiquidGlas
       isPopular: true,
       treatments: [
         { name: "Face Botox (1-3 Areas)", price: "£175-£350", isPopular: true, link: "/face-botox-areas" },
-        { name: "Nefertiti Face Lift", price: "£300", link: "/nefertiti-botox-facelift" },
+        { name: "Nefertiti Face Lift", price: "£300", link: "/nefertiti-botox-face-jaw-lift" },
         { name: "Masseter (Jawline Slimming)", price: "£350" },
         { name: "Full Face Natural Botox", price: "£500" },
         { name: "Migraines / Headaches", price: "£450-£550" },
