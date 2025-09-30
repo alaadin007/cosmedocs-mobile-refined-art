@@ -19,7 +19,7 @@ interface PopularTreatmentsProps {
 }
 
 const PopularTreatments = ({ 
-  title = "Popular Treatments",
+  title = "Popular Treatments and Indications",
   treatments,
   className = "",
   showBeforeAfter = false
@@ -27,33 +27,33 @@ const PopularTreatments = ({
 
   const defaultTreatments: Treatment[] = [
     {
-      title: "Botox",
-      description: "Anti-wrinkle injections for frown lines, crows feet & forehead lines",
+      title: "Botox – The Art of a Natural Pause in Ageing",
+      description: "Subtle muscle relaxation for a refreshed, rested look.\n\n• Frown lines (glabellar lines)\n• Forehead lines\n• Crow's feet (eye wrinkles)\n• Brow lift (non-surgical)\n• Gummy smile correction\n• Jawline slimming (masseter reduction)\n• Excessive sweating (hyperhidrosis)",
       link: "/face-botox-areas"
     },
     {
-      title: "Dermal Fillers",
-      description: "Restore volume and enhance facial features. Pioneer of full face makeover & rejuvenation",
+      title: "Dermal Fillers – Restore Balance, Contour & Confidence",
+      description: "Volume where it matters, definition where it's needed.\n\n• Cheek enhancement & contouring\n• Post-weight loss volume restoration\n• Sunken or hollow cheeks\n• Tear trough (under-eye hollows)\n• Temple hollow correction\n• Nose reshaping (liquid rhinoplasty)\n• Smile line (nasolabial folds) softening\n• Marionette line rejuvenation\n• Jawline & chin sculpting\n• Full-face rejuvenation & makeover",
       link: "/dermal-filler-makeover"
     },
     {
-      title: "Clinical Concepts to Flawless Skin",
-      description: "Revolutionary 9-step protocol for achieving perfect skin health and treating lazy skin syndrome",
+      title: "Clinical Concepts to Flawless Skin – Our Signature 9-Step Protocol",
+      description: "Science-backed skin transformation, beyond the surface.\n\n• Uneven tone & texture\n• Dull, \"lazy\" skin syndrome\n• Enlarged pores & congestion\n• Post-acne scarring\n• Pigmentation & sun damage\n• Early signs of ageing",
       link: "/clinical-concepts-to-flawless-skin"
     },
     {
-      title: "Lip Fillers",
-      description: "Subtle enhancement for natural-looking fullness",
+      title: "Lip Fillers – Elegance in Every Curve",
+      description: "Subtle enhancement, never exaggerated.\n\n• Natural volume restoration\n• Cupid's bow & lip border definition\n• Correcting asymmetry\n• Hydration for smoother, softer lips",
       link: "/lip-fillers"
     },
     {
-      title: "Non-Surgical Nose Job",
-      description: "Reshape without surgery",
+      title: "Non-Surgical Nose Job – Refined Harmony Without Surgery",
+      description: "Reshape in minutes, no downtime.\n\n• Straighten small bumps\n• Lift drooping nasal tip\n• Correct minor asymmetry\n• Enhance nasal bridge",
       link: "/non-surgical-nose-job"
     },
     {
-      title: "Skin Boosters",
-      description: "Deep hydration and rejuvenation",
+      title: "Skin Boosters – Radiance From Within",
+      description: "Hydration, glow, and prevention in one.\n\n• Dry, dehydrated skin\n• Fine lines & crepiness\n• Sun-damaged skin\n• Loss of elasticity\n• Tired, dull complexion\n• Preventative anti-ageing",
       link: "/skin-boosters"
     }
   ];
@@ -75,9 +75,9 @@ const PopularTreatments = ({
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold mb-3">{treatment.title}</h3>
-              <p className="text-gray-400 text-sm mb-4">
+              <div className="text-gray-400 text-sm mb-4 whitespace-pre-line">
                 <AutoLinkedText>{treatment.description}</AutoLinkedText>
-              </p>
+              </div>
               {treatment.link ? (
                 <Link 
                   to={treatment.link}
