@@ -294,7 +294,7 @@ const ForeheadFillers = () => {
                 in deep lines and creases that develop over time due to ageing, sun exposure, and repeated facial expressions.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Clinical studies demonstrate <a href="https://pubmed.ncbi.nlm.nih.gov/40601608/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">high patient satisfaction (≈ 91/100 VAS at 12 months)</a> with forehead filler treatments, 
+                Clinical studies demonstrate <a href="https://pubmed.ncbi.nlm.nih.gov/40601608/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">high patient satisfaction</a> (≈ 91/100 VAS at 12 months) with forehead filler treatments, 
                 reflecting the excellent outcomes and lasting results achieved with this procedure.
               </p>
             </motion.div>
