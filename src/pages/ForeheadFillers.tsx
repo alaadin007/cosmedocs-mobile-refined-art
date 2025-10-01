@@ -288,34 +288,22 @@ const ForeheadFillers = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold mb-6">What Are Dermal Filler on Forehead Treatments?</h2>
-              <p className="text-gray-300 mb-6">
-                Dermal filler forehead treatments involve the injection of best cosmetic wrinkle fillers directly into targeted areas 
-                to address moderate to severe facial wrinkles and indent on forehead areas. These specialized forehead crease filler 
-                treatments use premium ingredients to smooth and volumize the skin for natural-looking results.
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                Forehead dermal fillers are advanced cosmetic treatments designed to restore volume, smooth wrinkles, and enhance the 
+                upper facial contours. These injectable treatments work by replenishing lost volume beneath the skin's surface, filling 
+                in deep lines and creases that develop over time due to ageing, sun exposure, and repeated facial expressions.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold text-white">Hyaluronic Acid-Based Fillers</h4>
-                    <p className="text-gray-300 text-sm">Natural substance that helps lock in moisture and keep skin hydrated</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold text-white">Collagen-Based Fillers</h4>
-                    <p className="text-gray-300 text-sm">Perfect for restoring elasticity and giving skin a youthful bounce</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold text-white">Calcium Hydroxyapatite</h4>
-                    <p className="text-gray-300 text-sm">Ideal for adding volume and structure with a natural look</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                During the procedure, premium dermal fillers are carefully injected into targeted areas of the forehead to address 
+                concerns such as horizontal forehead lines, frown lines between the brows, temple hollowing, and uneven contours. 
+                The treatment is minimally invasive, typically taking just 15-20 minutes, with immediate visible results and no downtime required.
+              </p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Forehead filler treatments provide natural-looking enhancement by working with your facial structure to restore youthful 
+                volume and smoothness. The results are subtle yet transformative, lasting 15-18 months whilst maintaining your unique 
+                facial characteristics. This makes forehead dermal fillers an ideal choice for those seeking effective anti-ageing 
+                solutions without surgery.
+              </p>
             </motion.div>
           </div>
         </section>
