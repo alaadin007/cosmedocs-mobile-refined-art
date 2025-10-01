@@ -703,7 +703,7 @@ const CheekFiller = () => {
         </section>
 
         {/* Aftercare & Treatment Video Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -780,12 +780,12 @@ const CheekFiller = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="space-y-6"
+                className="space-y-6 flex flex-col items-center"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Watch Our Expert Technique</h3>
                 
                 {cheekFillerVideos.length > 0 ? (
-                  <div className="space-y-6">
+                  <div className="space-y-6 flex flex-col items-center w-full max-w-md">
                     {cheekFillerVideos.slice(0, 3).map((video, index) => (
                       <motion.div
                         key={video.id}
