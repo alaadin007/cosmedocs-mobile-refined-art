@@ -620,26 +620,26 @@ const ChinBotox = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="mt-12 bg-black/50 border border-purple-500/30 rounded-xl p-8"
+              className="mt-12 bg-black/50 border border-purple-500/30 rounded-xl p-6"
             >
-              <div className="flex items-start space-x-4">
-                <div className="bg-purple-500/20 rounded-full p-3 flex-shrink-0">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <div className="flex items-start space-x-3">
+                <div className="bg-purple-500/20 rounded-full p-2 flex-shrink-0">
+                  <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-white text-xl font-semibold mb-3">Clinical Research on Mentalis Muscle Injection</h3>
-                  <p className="text-gray-300 mb-4">
-                    Advanced anatomical research combining cadaveric dissections and ultrasound imaging has mapped the precise depth, shape, and thickness of the mentalis muscle. Studies demonstrate that the mentalis typically presents as a dome-shaped structure (in approximately 86% of patients) and is positioned 6.7-10.7 mm below the skin surface in most individuals. This scientific data establishes optimal injection points and techniques for dimpled chin botox, ensuring both safety and superior aesthetic outcomes.
+                  <h3 className="text-white text-lg font-semibold mb-2">Clinical Research on Chin Botox</h3>
+                  <p className="text-gray-300 text-sm mb-3">
+                    Research using dissections and ultrasound confirms optimal injection depth for chin botox is 6.7-10.7 mm below skin surface, ensuring safe and effective treatment.
                   </p>
                   <a 
                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6176474/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors"
+                    className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors text-sm"
                   >
-                    <span className="font-medium">Read the full study: "Effective Locations for Injecting Botulinum Toxin into the Mentalis Muscle"</span>
+                    <span className="font-medium">Read study: Effective Locations for Injecting Botulinum Toxin into the Mentalis Muscle</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
