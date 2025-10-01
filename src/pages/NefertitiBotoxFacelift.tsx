@@ -590,8 +590,7 @@ export default function NefertitiBotoxFacelift() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      The Nefertiti Botox Facelift results can be seen within a few days and typically 
-                      last 3 to 6 months. Regular maintenance sessions are recommended to sustain the 
+                      Regular maintenance sessions are recommended to sustain the 
                       youthful, lifted appearance of the jawline. With repeated injections, treatment 
                       lasts longer.
                     </p>
