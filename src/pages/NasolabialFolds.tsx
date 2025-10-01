@@ -498,6 +498,16 @@ const NasolabialFolds = () => {
               <p className="text-gray-300 max-w-2xl mx-auto text-lg">
                 Key advantages and essential care guidelines for optimal results
               </p>
+              <p className="text-gray-400 max-w-2xl mx-auto text-sm mt-4">
+                <a 
+                  href="https://academic.oup.com/asj" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                >
+                  Research published in the Aesthetic Surgery Journal by Oxford University Press
+                </a> confirms that cross-linked hyaluronic acid fillers demonstrate both effectiveness and safety for treating nasolabial folds, with results lasting up to 12 months.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
