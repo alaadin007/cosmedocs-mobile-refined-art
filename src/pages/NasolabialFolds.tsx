@@ -141,6 +141,7 @@ const NasolabialFolds = () => {
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="nasolabial fold filler, nasolabial fillers, smile lines filler before and after, face filler before and after, dermal fillers before and after, fillers for nasolabial folds, nasolabial lines filler, botox smile lines before after, dermal filler nasolabial folds, facial filler, hyaluronic acid fillers for face, lower face filler, skin fillers before and after, nasolabial fillers before after" />
+        {/* MedicalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
@@ -160,6 +161,108 @@ const NasolabialFolds = () => {
           "priceRange": "££"
         })}
         </script>
+
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.cosmedocs.co.uk"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Dermal Fillers",
+              "item": "https://www.cosmedocs.co.uk/dermal-fillers"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Nasolabial Folds",
+              "item": "https://www.cosmedocs.co.uk/nasolabial-folds"
+            }
+          ]
+        })}
+        </script>
+
+        {/* MedicalProcedure Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalProcedure",
+          "name": "Nasolabial Fold Filler Treatment",
+          "alternateName": ["Smile Lines Filler", "Laugh Lines Treatment"],
+          "description": "Expert nasolabial fold filler treatment using premium hyaluronic acid to smooth smile lines and restore youthful appearance",
+          "procedureType": "Cosmetic",
+          "bodyLocation": {
+            "@type": "AnatomicalStructure",
+            "name": "Nasolabial Folds"
+          },
+          "preparation": "Consultation and face assessment",
+          "followup": "2-week follow-up appointment",
+          "howPerformed": "Dermal filler injection using ultra-fine needles with topical anaesthetic",
+          "status": "Active",
+          "medicationUsed": {
+            "@type": "Drug",
+            "name": "Hyaluronic Acid Dermal Filler"
+          }
+        })}
+        </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        })}
+        </script>
+
+        {/* Offer Schema - Pricing */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Offer",
+          "name": "Nasolabial Fold Filler Treatment",
+          "description": "Premium nasolabial fold filler treatment with consultation and aftercare",
+          "priceSpecification": [
+            {
+              "@type": "PriceSpecification",
+              "price": "350",
+              "priceCurrency": "GBP",
+              "name": "0.5ml Per Side"
+            },
+            {
+              "@type": "PriceSpecification",
+              "price": "400",
+              "priceCurrency": "GBP",
+              "name": "1ml Per Side"
+            }
+          ],
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-01-01",
+          "seller": {
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs"
+          }
+        })}
+        </script>
+
+        <meta property="article:published_time" content="2025-01-15T09:00:00Z" />
+        <meta property="article:modified_time" content="2025-10-01T10:30:00Z" />
+        <meta name="author" content="Cosmedocs Medical Team" />
       </Helmet>
 
       <div className="bg-black text-white">
@@ -182,10 +285,9 @@ const NasolabialFolds = () => {
                   </h2>
                 </Link>
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
-                  Nasolabial Folds
-                  <span className="block text-purple-300">Dermal Fillers</span>
-                  <span className="block text-sm mt-4 font-bold">Invisible art - Smooth smile lines for natural rejuvenation</span>
+                  Nasolabial Folds Dermal Fillers London - Smooth Smile Lines Naturally
                 </h1>
+                <p className="text-lg text-purple-300 font-semibold mb-2">Invisible art - Bold, Natural, Always Your Way</p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
                   Transform prominent smile lines into subtle, youthful contours
                 </p>
@@ -337,6 +439,7 @@ const NasolabialFolds = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -371,10 +474,10 @@ const NasolabialFolds = () => {
               }}>
                 <h2 className="text-4xl font-bold mb-6">What are Nasolabial Folds (Smile Line/Laugh Lines)?</h2>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                  Nasolabial folds, commonly known as smile lines or laugh lines, are the natural creases that run from the sides of your nose down to the corners of your mouth. These facial filler areas become more pronounced with age due to volume loss and decreased skin elasticity. Our nasolabial fold filler treatments use premium hyaluronic acid injections to restore lost volume and smooth these lines effectively.
+                  Nasolabial folds, commonly known as smile lines or laugh lines, are the natural creases that run from the sides of your nose down to the corners of your mouth. These facial filler areas become more pronounced with age due to volume loss and decreased skin elasticity. Our nasolabial fold filler treatments in London, including Harley Street, Mayfair, Kensington, and Chelsea, use premium hyaluronic acid injections to restore lost volume and smooth these lines effectively.
                 </p>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                  <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> provides dramatic smile line filler before and after results. We use advanced facial filler techniques with skin fillers before and after tracking to ensure optimal nasolabial fillers before after outcomes. The dermal filler nasolabial folds procedure creates natural transitions while maintaining your ability to express emotions.
+                  <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> provides dramatic smile line filler results. We use advanced facial filler techniques with comprehensive before and after tracking to ensure optimal outcomes. Whether you're searching for "nasolabial filler near me" or visiting our prestigious Harley Street clinic, our dermal filler nasolabial folds procedure creates natural transitions whilst maintaining your ability to express emotions. Serving patients across Central London, Westminster, and surrounding areas.
                 </p>
               </motion.div>
             </div>
@@ -998,7 +1101,22 @@ const NasolabialFolds = () => {
         <div className="sr-only">
           <h3>Expert Nasolabial Fold Filler Treatment in London</h3>
           <p>
-            Cosmedocs offers advanced nasolabial fold filler and dermal filler nasolabial folds treatments at our prestigious Harley Street clinic in London. Our experienced cosmetic doctors specialize in smoothing smile lines filler before and after results using premium hyaluronic acid fillers for face rejuvenation. See dramatic face filler before and after transformations with our expert nasolabial fillers before after gallery. We provide comprehensive fillers for nasolabial folds treatments including botox smile lines before after options and lower face filler enhancements. Our full face fillers before and after results showcase natural-looking improvements with skin fillers before and after documentation. Celebrity nasolabial fold filler techniques ensure optimal nasolabial lines filler placement. We address concerns about too much filler in nasolabial folds and nasolabial fold filler gone wrong cases through expert consultation. Our hyaluronic acid injections face before and after gallery demonstrates safe, effective treatments. Learn about nasolabial fold filler cost and botox laugh lines before and after options. We also treat filler for nasolabial folds and marionette lines comprehensively. Discover how to get rid of nasolabial folds without fillers through our alternative treatments. Our nasolabial fold fillers before and after results show natural enhancement with cheek filler nasolabial combination treatments. Book consultation for filler in nasolabial folds and explore our dermal filler face lift options.
+            Cosmedocs specialises in advanced nasolabial fold filler treatments at our prestigious Harley Street clinic in Central London. Our experienced cosmetic doctors have over 15 years of expertise in smoothing smile lines and laugh lines using premium hyaluronic acid dermal fillers. We serve patients throughout London, including Mayfair, Kensington, Chelsea, Westminster, Belgravia, and surrounding boroughs.
+          </p>
+          <p>
+            Our comprehensive approach to facial rejuvenation addresses the underlying causes of nasolabial folds, including age-related volume loss and decreased collagen production. Each treatment is personalised to your unique facial anatomy, ensuring natural-looking results that enhance rather than alter your appearance. We believe in invisible art - transformations that speak without saying a word.
+          </p>
+          <p>
+            The procedure typically takes 30-45 minutes and involves carefully placed injections of premium hyaluronic acid filler along the nasolabial fold lines. We use ultra-fine needles combined with topical anaesthetic to ensure maximum comfort throughout the treatment. Results are immediate and continue to improve over the following days as the filler settles naturally into the tissue.
+          </p>
+          <p>
+            Patients choose Cosmedocs for nasolabial fold treatment because of our medical expertise, artistic eye, and commitment to natural-looking results. Our before and after gallery showcases real patient transformations, demonstrating the subtle yet significant improvements achievable with expert filler placement. We offer combination treatments including cheek fillers, marionette line correction, and tear trough treatment for comprehensive lower face rejuvenation.
+          </p>
+          <p>
+            Treatment costs are transparent and competitive, starting from £350 for 0.5ml per side. We provide detailed consultations to assess your individual needs and recommend the appropriate volume of filler for optimal results. All treatments include aftercare support and a two-week follow-up appointment. Located conveniently near Bond Street and Oxford Circus stations, our clinic is easily accessible for patients across Greater London and beyond.
+          </p>
+          <p>
+            Safety is paramount at Cosmedocs. We use only premium, FDA-approved hyaluronic acid fillers from leading manufacturers. All treatments are performed by GMC-registered doctors with extensive experience in aesthetic medicine. We maintain the highest standards of hygiene and clinical practice, ensuring every patient receives safe, effective treatment in a comfortable, professional environment.
           </p>
         </div>
       </div>
