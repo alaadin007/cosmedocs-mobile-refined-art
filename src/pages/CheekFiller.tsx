@@ -694,7 +694,7 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* Cheekbone Dermal Filler Section */}
+        {/* Aftercare & Treatment Video Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -704,120 +704,138 @@ const CheekFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Cheekbone Dermal Filler</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Process & Aftercare</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding the science and artistry behind natural cheek enhancement at our Harley Street clinic.
+                Watch our expert technique and learn how to care for your cheek fillers for optimal results.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Aftercare Column */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-gray-900 rounded-lg p-6"
+                className="space-y-6"
               >
-                <h3 className="text-xl font-bold text-white mb-4">Facial Anatomy</h3>
-                <p className="text-gray-300 mb-4">
-                  The cheek area consists of multiple fat compartments that naturally lose volume with age. 
-                  Our expert practitioners understand the complex anatomy of the zygomatic arch, malar eminence, 
-                  and submalar regions.
-                </p>
-                <div className="text-purple-300">
-                  <CheckCircle className="inline mr-2" size={16} />
-                  <span className="text-sm">3D facial analysis</span>
+                <h3 className="text-2xl font-bold text-white mb-6">Comprehensive Aftercare Guide</h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-gray-900 rounded-lg p-6">
+                    <h4 className="font-semibold text-purple-300 mb-3 flex items-center gap-2">
+                      <Clock size={20} />
+                      First 24 Hours
+                    </h4>
+                    <ul className="text-gray-300 space-y-2 text-sm">
+                      <li>• Avoid touching or massaging the treated area</li>
+                      <li>• No strenuous exercise or activities</li>
+                      <li>• Sleep with head elevated to reduce swelling</li>
+                      <li>• Avoid excessive heat (saunas, hot baths)</li>
+                      <li>• No alcohol consumption</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-gray-900 rounded-lg p-6">
+                    <h4 className="font-semibold text-purple-300 mb-3 flex items-center gap-2">
+                      <Calendar size={20} />
+                      First Week
+                    </h4>
+                    <ul className="text-gray-300 space-y-2 text-sm">
+                      <li>• Minor swelling and bruising are normal</li>
+                      <li>• Apply cold compress if needed (wrapped in cloth)</li>
+                      <li>• Avoid dental treatments or facial treatments</li>
+                      <li>• Stay hydrated to support hyaluronic acid integration</li>
+                      <li>• Avoid sleeping on your face</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-gray-900 rounded-lg p-6">
+                    <h4 className="font-semibold text-purple-300 mb-3 flex items-center gap-2">
+                      <Shield size={20} />
+                      Long-Term Care
+                    </h4>
+                    <ul className="text-gray-300 space-y-2 text-sm">
+                      <li>• Results settle completely within 2-3 weeks</li>
+                      <li>• Use SPF 30+ daily to protect treatment area</li>
+                      <li>• Maintain good skincare routine</li>
+                      <li>• Stay well-hydrated for optimal filler longevity</li>
+                      <li>• Schedule follow-up at 2 weeks if needed</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-6">
+                    <h4 className="font-semibold text-white mb-3">When to Contact Us</h4>
+                    <p className="text-gray-300 text-sm mb-2">
+                      Contact our clinic immediately if you experience:
+                    </p>
+                    <ul className="text-gray-300 space-y-1 text-sm">
+                      <li>• Severe or increasing pain</li>
+                      <li>• Skin colour changes (blanching or darkening)</li>
+                      <li>• Vision changes</li>
+                      <li>• Signs of infection (fever, excessive redness)</li>
+                    </ul>
+                    <p className="text-purple-300 mt-3 text-sm font-semibold">
+                      24/7 Emergency Support Available
+                    </p>
+                  </div>
                 </div>
               </motion.div>
 
+              {/* Treatment Video Column */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-gray-900 rounded-lg p-6"
+                className="space-y-6"
               >
-                <h3 className="text-xl font-bold text-white mb-4">Injection Techniques</h3>
-                <p className="text-gray-300 mb-4">
-                  We employ advanced microcannula and needle techniques for precise filler placement. 
-                  The cannula method reduces bruising and allows for smooth, even distribution of dermal filler.
-                </p>
-                <div className="text-purple-300">
-                  <CheckCircle className="inline mr-2" size={16} />
-                  <span className="text-sm">Minimal discomfort</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gray-900 rounded-lg p-6"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Premium Fillers</h3>
-                <p className="text-gray-300 mb-4">
-                  We exclusively use premium hyaluronic acid fillers from leading Swiss, American, 
-                  and French manufacturers. These advanced formulations provide natural results lasting 15-18 months.
-                </p>
-                <div className="text-purple-300">
-                  <CheckCircle className="inline mr-2" size={16} />
-                  <span className="text-sm">FDA approved products</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-gray-900 rounded-lg p-6"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Natural Results</h3>
-                <p className="text-gray-300 mb-4">
-                  Our "invisible art" philosophy ensures enhancement that looks completely natural. 
-                  Results are visible immediately with final outcome apparent within two weeks.
-                </p>
-                <div className="text-purple-300">
-                  <CheckCircle className="inline mr-2" size={16} />
-                  <span className="text-sm">Immediate results</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-gray-900 rounded-lg p-6"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Safety Protocol</h3>
-                <p className="text-gray-300 mb-4">
-                  All treatments follow strict safety protocols with comprehensive medical history assessment. 
-                  Our clinic maintains full CQC regulation compliance.
-                </p>
-                <div className="text-purple-300">
-                  <CheckCircle className="inline mr-2" size={16} />
-                  <span className="text-sm">CQC regulated clinic</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-gray-900 rounded-lg p-6"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Aftercare Excellence</h3>
-                <p className="text-gray-300 mb-4">
-                  Comprehensive aftercare instructions and follow-up support ensure optimal healing. 
-                  Most patients return to normal activities immediately.
-                </p>
-                <div className="text-purple-300">
-                  <CheckCircle className="inline mr-2" size={16} />
-                  <span className="text-sm">24/7 support available</span>
-                </div>
+                <h3 className="text-2xl font-bold text-white mb-6">Watch Our Expert Technique</h3>
+                
+                {cheekFillerVideos.length > 0 ? (
+                  <div className="space-y-6">
+                    {cheekFillerVideos.slice(0, 3).map((video, index) => (
+                      <motion.div
+                        key={video.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="w-full"
+                      >
+                        <TreatmentVideoPlayer video={video} />
+                      </motion.div>
+                    ))}
+                    
+                    <div className="bg-gray-900 rounded-lg p-6 mt-6">
+                      <h4 className="text-xl font-bold text-white mb-4">Expert Cheek Enhancement</h4>
+                      <p className="text-gray-300 mb-4">
+                        Our cheek filler treatments use advanced cannula techniques to create natural, 
+                        lifted cheek contours. Dr. Ahmed Haq's precision approach ensures minimal 
+                        discomfort and optimal results.
+                      </p>
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-purple-300" size={20} />
+                          <span className="text-gray-300">Cannula technique for safety</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-purple-300" size={20} />
+                          <span className="text-gray-300">Immediate visible results</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <CheckCircle className="text-purple-300" size={20} />
+                          <span className="text-gray-300">15+ months duration</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-gray-900 rounded-lg p-8 text-center">
+                    <Play className="mx-auto mb-4 text-purple-300" size={48} />
+                    <p className="text-gray-300">Treatment videos coming soon</p>
+                  </div>
+                )}
               </motion.div>
             </div>
           </div>
@@ -947,78 +965,6 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* Treatment Videos Section */}
-        {cheekFillerVideos.length > 0 && (
-          <section className="py-20 bg-accent">
-            <div className="page-container">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-3xl font-bold mb-4 text-white">Treatment Videos</h2>
-                <p className="text-gray-300 max-w-2xl mx-auto">
-                  Watch real cheek filler treatments performed by Dr. Ahmed Haq at our Harley Street clinic.
-                </p>
-              </motion.div>
-
-              {/* Videos Section - Single Column Centered */}
-              <div className="flex flex-col items-center space-y-8 max-w-4xl mx-auto">
-                <div className="grid grid-cols-1 gap-6 w-full max-w-md">
-                  {cheekFillerVideos.slice(0, 6).map((video, index) => (
-                    <motion.div
-                      key={video.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex justify-center"
-                    >
-                      <TreatmentVideoPlayer video={video} />
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Description Section - Below Videos */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="space-y-6 text-center max-w-2xl"
-                >
-                  <h3 className="text-2xl font-bold text-white mb-4">Expert Cheek Enhancement</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Our cheek filler treatments use advanced cannula techniques to create natural, 
-                    lifted cheek contours. Dr. Ahmed Haq's precision approach ensures minimal 
-                    discomfort and optimal results.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Watch how our expert injector strategically places premium dermal fillers 
-                    to enhance volume, lift the midface, and create beautiful cheekbone definition 
-                    that looks completely natural.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-center space-x-3">
-                      <CheckCircle className="text-purple-300" size={20} />
-                      <span className="text-gray-300">Cannula technique for safety</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-3">
-                      <CheckCircle className="text-purple-300" size={20} />
-                      <span className="text-gray-300">Immediate visible results</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-3">
-                      <CheckCircle className="text-purple-300" size={20} />
-                      <span className="text-gray-300">15+ months duration</span>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-accent">
