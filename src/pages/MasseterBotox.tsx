@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -12,6 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Zap, Users, Shield, ChevronLeft, ChevronRight, CheckCircle, Award, GraduationCap, Palette, Heart, Calendar, Activity, Syringe, AlertCircle, Sparkles } from "lucide-react";
 import { useState } from "react";
@@ -140,15 +142,16 @@ const MasseterBotox = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="masseter botox london, jaw slimming botox, bruxism treatment, teeth grinding botox, jaw muscle reduction, TMJ treatment, wide jaw reduction, Harley Street, cosmedocs" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert Masseter Botox for jaw slimming and bruxism treatment in London",
+            "description": "Expert Masseter Botox for jaw slimming and bruxism treatment in London - Harley Street aesthetic clinic",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
+            "email": "info@cosmedocs.com",
+            "priceRange": "££",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -156,13 +159,89 @@ const MasseterBotox = () => {
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.5174",
+              "longitude": "-0.1468"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
             "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
+            "sameAs": [
+              "https://www.instagram.com/cosmedocs/",
+              "https://www.facebook.com/cosmedocs/"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Masseter Botox Treatment",
+            "description": "Professional Botox treatment for masseter muscle reduction, jaw slimming, and bruxism (teeth grinding) relief",
+            "procedureType": "Cosmetic and Medical Injectable Treatment",
+            "bodyLocation": "Masseter Muscle (Jaw)",
+            "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
+            "followup": "Follow-up assessment after 2 weeks",
+            "howPerformed": "Botox injections administered into masseter muscles on both sides of jaw",
+            "medicalSpecialty": "Cosmetic Medicine"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Masseter Botox Treatment - Both Sides",
+            "description": "Professional masseter Botox treatment for jaw slimming and bruxism relief",
+            "priceCurrency": "GBP",
+            "price": "350",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container">
+          <Breadcrumb items={[
+            { label: "Home", href: "/" },
+            { label: "Treatments", href: "/treatments" },
+            { label: "Masseter Botox" }
+          ]} />
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -364,7 +443,7 @@ const MasseterBotox = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">What is Masseter Botox Treatment?</h2>
               
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                Masseter Botox treatment helps with both aesthetic and medical issues. It can slim down a square, wide jawline, correct facial asymmetry, and alleviate jaw pain and aches. These symptoms are often related to bruxism, which involves teeth clenching and TMJ (Temporomandibular Joint Disorders).
+                Masseter Botox treatment helps with both aesthetic and medical issues. It can slim down a square, wide jawline, correct facial asymmetry, and alleviate jaw pain and aches. These symptoms are often related to <Link to="/bruxism-botox" className="text-purple-300 hover:text-purple-200 underline">bruxism</Link>, which involves teeth clenching and TMJ (Temporomandibular Joint Disorders). Clinical studies have demonstrated the <a href="https://pubmed.ncbi.nlm.nih.gov/28991284/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">effectiveness of Botox for treating masseter hypertrophy</a> and related conditions.
               </p>
 
               <div className="bg-purple-300/10 border-l-4 border-purple-300 p-6 mb-12 text-left">
@@ -376,7 +455,7 @@ const MasseterBotox = () => {
                <div className="mb-12 text-left">
                  <h3 className="text-2xl font-bold mb-6 text-white text-center">Jawline Slimming Botox</h3>
                  <p className="text-gray-300 text-lg leading-relaxed">
-                   Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour.
+                   Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour. This treatment can be combined with <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline fillers</Link> or <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin fillers</Link> for comprehensive lower face enhancement.
                  </p>
                </div>
 
@@ -791,41 +870,47 @@ const MasseterBotox = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
-                <CardHeader>
-                  <CardTitle>Bruxism Treatment</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-sm mb-4">Specialized Botox treatment for teeth grinding and TMJ disorders</p>
-                  <Button variant="outline" size="sm" className="border-purple-300 text-purple-300">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link to="/bruxism-botox">
+                <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors h-full">
+                  <CardHeader>
+                    <CardTitle>Bruxism Treatment</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm mb-4">Specialised Botox treatment for teeth grinding and TMJ disorders</p>
+                    <Button variant="outline" size="sm" className="border-purple-300 text-purple-300">
+                      Learn More
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
-                <CardHeader>
-                  <CardTitle>Calf Muscle Reduction</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-sm mb-4">Botox treatment for overdeveloped calf muscles</p>
-                  <Button variant="outline" size="sm" className="border-purple-300 text-purple-300">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link to="/botox-calf-reduction">
+                <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors h-full">
+                  <CardHeader>
+                    <CardTitle>Calf Muscle Reduction</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm mb-4">Botox treatment for overdeveloped calf muscles</p>
+                    <Button variant="outline" size="sm" className="border-purple-300 text-purple-300">
+                      Learn More
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
-                <CardHeader>
-                  <CardTitle>Trigger Point Botox</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-sm mb-4">Shoulder and neck trigger point injections for pain relief</p>
-                  <Button variant="outline" size="sm" className="border-purple-300 text-purple-300">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link to="/face-botox">
+                <Card className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors h-full">
+                  <CardHeader>
+                    <CardTitle>Face Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm mb-4">Comprehensive facial Botox for wrinkles and lines</p>
+                    <Button variant="outline" size="sm" className="border-purple-300 text-purple-300">
+                      Learn More
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </section>
@@ -854,13 +939,67 @@ const MasseterBotox = () => {
           </div>
         </section>
 
-        {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Masseter Botox London Harley Street</h2>
-          <p>
-            Masseter Botox treatment at CosmeDocs London provides expert jaw slimming and bruxism treatment with dual medical and cosmetic benefits. Our experienced practitioners use precision injection techniques to reduce masseter muscle size, achieving natural jaw contouring while relieving teeth grinding symptoms. Located in prestigious Harley Street, we offer comprehensive masseter Botox treatments starting from £350 for both sides, including thorough consultation, precise dosing from 25-45 units per side, and complimentary follow-up appointments. Treatment results appear within 1-2 weeks and last 4-6 months, making it an effective solution for wide jaw reduction, facial asymmetry correction, TMJ symptom relief, and severe bruxism management. Our invisible art philosophy ensures natural-looking results that enhance facial harmony while providing significant medical benefits for jaw pain, headaches, and dental damage prevention. CosmeDocs maintains the highest clinical standards with CQC registration, using only premium Botox products and sterile injection techniques. The masseter muscle, known as the strongest muscle in the human body, can be safely and effectively treated to achieve both aesthetic jawline slimming and medical relief from grinding-related symptoms. Our treatment approach considers individual muscle size assessment, facial anatomy evaluation, and personalized dosing strategies to optimize outcomes while minimizing side effects. Patients experience minimal downtime with immediate return to normal activities, though we recommend avoiding strenuous exercise for 24 hours post-treatment. Regular maintenance treatments every 3-6 months help sustain both cosmetic improvements and medical benefits, with many patients requiring fewer sessions over time as muscle memory develops.
-          </p>
-        </div>
+        {/* Additional Information Section - Previously Hidden SEO Content */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center">Masseter Botox London Harley Street</h2>
+              
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="clinic-overview" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    About Our Masseter Botox Treatment
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    Masseter Botox treatment at CosmeDocs London provides expert jaw slimming and <Link to="/bruxism-botox" className="text-purple-300 hover:text-purple-200 underline">bruxism treatment</Link> with dual medical and cosmetic benefits. Our experienced practitioners use precision injection techniques to reduce masseter muscle size, achieving natural jaw contouring whilst relieving teeth grinding symptoms. Located in prestigious Harley Street, we offer comprehensive masseter Botox treatments starting from £350 for both sides, including thorough consultation, precise dosing from 25-45 units per side, and complimentary follow-up appointments.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="treatment-results" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Treatment Results & Duration
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    Treatment results appear within 1-2 weeks and last 4-6 months, making it an effective solution for wide jaw reduction, facial asymmetry correction, TMJ symptom relief, and severe bruxism management. Regular maintenance treatments every 3-6 months help sustain both cosmetic improvements and medical benefits, with many patients requiring fewer sessions over time as muscle memory develops.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="philosophy-approach" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Our Treatment Philosophy & Approach
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    Our invisible art philosophy ensures natural-looking results that enhance facial harmony whilst providing significant medical benefits for jaw pain, headaches, and dental damage prevention. Our treatment approach considers individual muscle size assessment, facial anatomy evaluation, and personalised dosing strategies to optimise outcomes whilst minimising side effects. This can be combined with <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline fillers</Link> for comprehensive facial contouring.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="safety-standards" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Safety Standards & Clinical Excellence
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    CosmeDocs maintains the highest clinical standards with CQC registration, using only premium Botox products and sterile injection techniques. The masseter muscle, known as the strongest muscle in the human body, can be safely and effectively treated to achieve both aesthetic jawline slimming and medical relief from grinding-related symptoms.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="recovery-aftercare" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Recovery & Aftercare
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    Patients experience minimal downtime with immediate return to normal activities, though we recommend avoiding strenuous exercise for 24 hours post-treatment. Our comprehensive aftercare guidance ensures optimal results and patient satisfaction throughout your treatment journey.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Image Zoom Modal */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
