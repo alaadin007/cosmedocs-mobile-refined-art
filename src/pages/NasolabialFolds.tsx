@@ -506,7 +506,7 @@ const NasolabialFolds = () => {
                   className="text-purple-400 hover:text-purple-300 underline transition-colors"
                 >
                   Research published in the Aesthetic Surgery Journal by Oxford University Press
-                </a> confirms that hyaluronic acid fillers demonstrate both effectiveness and safety for treating nasolabial folds, with results lasting up to 12 months.
+                </a> confirms that hyaluronic acid fillers demonstrate both effectiveness and safety for treating nasolabial folds, with results lasting up to 12 months. So the key advantages and essential care guidelines for optimal results are as under:
               </p>
             </motion.div>
 
