@@ -515,8 +515,11 @@ const MasseterBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Is Masseter Botox Right for You?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto mb-4">
                 Masseter Botox London offers dual benefits for jaw slimming and teeth grinding relief. Whether you're seeking facial contouring to reduce a square jaw, treatment for bruxism and TMJ symptoms, or correction of facial asymmetry, our expert jaw botox treatments provide natural-looking results. Discover if masseter muscle reduction is the solution for your cosmetic concerns or medical symptoms.
+              </p>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                <a href="https://academic.oup.com/asj/advance-article/doi/10.1093/asj/sjaf167/8239609?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Large studies show masseter Botox is generally safe, with no significant effect on bone density after repeated treatments over a year</a>.
               </p>
             </motion.div>
 
