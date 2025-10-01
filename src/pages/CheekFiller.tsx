@@ -763,22 +763,6 @@ const CheekFiller = () => {
                       <li>• Schedule follow-up at 2 weeks if needed</li>
                     </ul>
                   </div>
-
-                  <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-6">
-                    <h4 className="font-semibold text-white mb-3">When to Contact Us</h4>
-                    <p className="text-gray-300 text-sm mb-2">
-                      Contact our clinic immediately if you experience:
-                    </p>
-                    <ul className="text-gray-300 space-y-1 text-sm">
-                      <li>• Severe or increasing pain</li>
-                      <li>• Skin colour changes (blanching or darkening)</li>
-                      <li>• Vision changes</li>
-                      <li>• Signs of infection (fever, excessive redness)</li>
-                    </ul>
-                    <p className="text-purple-300 mt-3 text-sm font-semibold">
-                      24/7 Emergency Support Available
-                    </p>
-                  </div>
                 </div>
               </motion.div>
 
