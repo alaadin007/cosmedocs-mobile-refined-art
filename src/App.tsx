@@ -153,7 +153,6 @@ const App = () => {
               <Route path="/pdo-threads" element={<PDOThreads />} />
               <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
               <Route path="/masseter-botox" element={<MasseterBotox />} />
-              <Route path="/treatments/masseter-botox" element={<MasseterBotox />} />
               <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
               <Route path="/medical-anal-bleaching" element={<MedicalAnalBleaching />} />
               

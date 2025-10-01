@@ -131,7 +131,7 @@ const Treatments = () => {
         {
           title: "Masseter (Jawline Slimming, Bruxism Teeth Grinding)",
           price: "£350",
-          link: "/treatments/masseter-botox"
+          link: "/masseter-botox"
         },
         {
           title: "Full Barbie Botox (Shoulder Reduction)",
