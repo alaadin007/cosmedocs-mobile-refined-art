@@ -790,29 +790,6 @@ const CheekFiller = () => {
                         <TreatmentVideoPlayer video={video} />
                       </motion.div>
                     ))}
-                    
-                    <div className="bg-gray-900 rounded-lg p-6 mt-6">
-                      <h4 className="text-xl font-bold text-white mb-4">Expert Cheek Enhancement</h4>
-                      <p className="text-gray-300 mb-4">
-                        Our cheek filler treatments use advanced cannula techniques to create natural, 
-                        lifted cheek contours. Dr. Ahmed Haq's precision approach ensures minimal 
-                        discomfort and optimal results.
-                      </p>
-                      <div className="space-y-3">
-                        <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-purple-300" size={20} />
-                          <span className="text-gray-300">Cannula technique for safety</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-purple-300" size={20} />
-                          <span className="text-gray-300">Immediate visible results</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <CheckCircle className="text-purple-300" size={20} />
-                          <span className="text-gray-300">15+ months duration</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 ) : (
                   <div className="bg-gray-900 rounded-lg p-8 text-center">
