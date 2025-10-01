@@ -66,12 +66,8 @@ const CheekFiller = () => {
     caption: "Sculpted cheekbones and lifted midface with strategic filler placement"
   }, {
     src: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png",
-    alt: "Male cheek filler before after London Harley Street masculine enhancement",
-    caption: "Masculine cheek enhancement for defined facial structure"
-  }, {
-    src: "/lovable-uploads/2dc938fb-78b2-4af7-a0cb-190492553cbb.png",
-    alt: "Apple cheek filler before after London youthful enhancement",
-    caption: "Apple cheek enhancement for youthful, plump appearance"
+    alt: "Cheek filler before after London Harley Street feminine enhancement",
+    caption: "Feminine cheek enhancement creating beautiful fullness and soft contours"
   }];
   
   const treatmentDetails = [{
