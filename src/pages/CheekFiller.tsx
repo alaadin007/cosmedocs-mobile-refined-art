@@ -57,10 +57,6 @@ const CheekFiller = () => {
 
   // Before/after images for cheek fillers
   const beforeAfterImages = [{
-    src: "/lovable-uploads/37f017f9-669c-4ed6-9ca4-28d0984a1965.png",
-    alt: "Cheek filler before and after results London Harley Street Cosmedocs Dr Ahmed Haq",
-    caption: "Natural volume enhancement with 1ml cheek filler creating youthful contours"
-  }, {
     src: "/lovable-uploads/95608275-de36-4458-901d-2cc2ce2136de.png",
     alt: "Cheek enhancement dermal filler before after London Cosmedocs treatment",
     caption: "Sculpted cheekbones and lifted midface with strategic filler placement"
