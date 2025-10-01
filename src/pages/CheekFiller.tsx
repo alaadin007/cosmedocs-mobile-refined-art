@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram, Clock, Zap, Shield, Calendar, Heart, Award, Activity, Syringe, GraduationCap, CheckCircle, Palette, Play } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import { Link } from "react-router-dom";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import TreatmentVideoPlayer from "@/components/TreatmentVideoPlayer";
 import oneMLImage from "@/assets/1ml-cheek-fillers-before-after.png";
@@ -124,7 +125,13 @@ const CheekFiller = () => {
     answer: "Yes, we specialize in cheek filler man treatments. Men cheek filler requires different techniques to maintain masculine features while enhancing cheekbone structure. Our male cheek enhancement creates natural, masculine definition."
   }, {
     question: "What about apple cheek filler and mid face treatments?",
-    answer: "Apple cheek filler targets the anterior cheek for youthful plumpness. Mid face fillers address broader volume loss. Mid cheek filler can lift jowls while apple cheek fillers create that youthful 'apple' shape in the cheeks."
+    answer: (
+      <span>
+        Apple cheek filler targets the anterior cheek for youthful plumpness. Mid face fillers address broader volume loss. Mid cheek filler can lift{" "}
+        <Link to="/jawline-filler" className="text-purple-400 hover:text-purple-300 underline transition-colors">jowls</Link>
+        {" "}while apple cheek fillers create that youthful 'apple' shape in the cheeks.
+      </span>
+    )
   }, {
     question: "Can cheek filler help lift jowls?",
     answer: "Yes, strategic filler in cheeks to lift jowls works by restoring midface volume. Cheek filler to lift jowls creates an overall lifting effect. This cheek lift filler technique addresses multiple areas simultaneously."
@@ -1117,7 +1124,7 @@ const CheekFiller = () => {
           <p>Cheek fillers represent one of the most transformative non-surgical aesthetic treatments available in London's Harley Street. Our expert practitioners utilize advanced dermal filler technology to restore volume, enhance contours, and create natural-looking facial rejuvenation that speaks volumes about our commitment to aesthetic excellence.</p>
           
           <h2>Understanding Facial Volume Loss</h2>
-          <p>Natural aging processes lead to gradual volume loss in the midface region, particularly affecting the cheek area where subcutaneous fat pads diminish over time. This volume depletion results in flattened cheeks, loss of cheekbone definition, and the appearance of nasolabial folds. Professional cheek enhancement treatments address these concerns by strategically restoring volume using premium hyaluronic acid-based dermal fillers.</p>
+          <p>Natural aging processes lead to gradual volume loss in the midface region, particularly affecting the cheek area where subcutaneous fat pads diminish over time. This volume depletion results in flattened cheeks, loss of cheekbone definition, and the appearance of <a href="/nasolabial-folds" className="text-purple-400 hover:text-purple-300 underline">nasolabial folds</a>. Professional cheek enhancement treatments address these concerns by strategically restoring volume using premium hyaluronic acid-based dermal fillers.</p>
           
           <h2>Advanced Injection Techniques</h2>
           <p>Our Harley Street clinic employs both microcannula and precision needle techniques for cheek filler placement. The microcannula method minimizes bruising and discomfort while allowing for smooth, even distribution of filler material. Strategic injection points target specific anatomical landmarks including the zygomatic arch, malar eminence, and submalar region to achieve optimal lifting and contouring effects.</p>
