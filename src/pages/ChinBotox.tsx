@@ -525,10 +525,6 @@ const ChinBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Botox for Dimpled Chin Aftercare & Recovery</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-4">
-                Proper aftercare ensures optimal dimpled chin botox results and minimises any potential side effects. Follow our 
-                comprehensive guide for the best botox chin experience and longest-lasting chin botox before and after results.
-              </p>
-              <p className="text-gray-400 max-w-3xl mx-auto text-sm">
                 <a 
                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6176474/" 
                   target="_blank" 
@@ -537,6 +533,10 @@ const ChinBotox = () => {
                 >
                   Clinical research
                 </a> using dissections and ultrasound confirms optimal injection depth for chin botox is 6.7-10.7 mm below skin surface.
+              </p>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Proper aftercare ensures optimal dimpled chin botox results and minimises any potential side effects. Follow our 
+                comprehensive guide for the best botox chin experience and longest-lasting chin botox before and after results.
               </p>
             </motion.div>
 
