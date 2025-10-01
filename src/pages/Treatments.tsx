@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Treatments = () => {
   const [activeTab, setActiveTab] = useState("botox");
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname === "/skin-boosters") {
+      setActiveTab("skinBoosters");
+    }
+  }, [location.pathname]);
 
   const skinBoosterBeforeAfterImages = [
     {
