@@ -382,15 +382,9 @@ const ForeheadFillers = () => {
                 Forehead filler treatments are minimally invasive, typically taking just 15-20 minutes with immediate visible results and no 
                 downtime required. The procedure can be combined with other treatments such as <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">facial dermal fillers</Link>, <Link to="/cheek-filler" className="text-purple-300 hover:text-purple-200 underline">cheek fillers</Link>, or <Link to="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">lip enhancement</Link> for comprehensive facial rejuvenation.
               </p>
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                Results are subtle yet transformative, lasting 15-18 months whilst maintaining your unique facial characteristics. This makes 
-                forehead dermal fillers an ideal choice for those seeking effective anti-ageing solutions without surgery. The treatment can 
-                be adjusted or reversed if needed, providing flexibility and peace of mind.
-              </p>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Clinical studies demonstrate <a href="https://pubmed.ncbi.nlm.nih.gov/40601608/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">high patient satisfaction</a> with forehead filler treatments, 
-                reflecting the excellent outcomes and lasting results achieved with this procedure. Our Harley Street clinic uses only premium, 
-                FDA-approved fillers from renowned brands like Juvéderm, Teosyal, and Stylage to ensure safety and optimal results.
+                reflecting the excellent outcomes and lasting results achieved with this procedure.
               </p>
             </motion.div>
           </div>
