@@ -293,17 +293,6 @@ const ForeheadFillers = () => {
                 upper facial contours. These injectable treatments work by replenishing lost volume beneath the skin's surface, filling 
                 in deep lines and creases that develop over time due to ageing, sun exposure, and repeated facial expressions.
               </p>
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                During the procedure, premium dermal fillers are carefully injected into targeted areas of the forehead to address 
-                concerns such as horizontal forehead lines, frown lines between the brows, temple hollowing, and uneven contours. 
-                The treatment is minimally invasive, typically taking just 15-20 minutes, with immediate visible results and no downtime required.
-              </p>
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                Forehead filler treatments provide natural-looking enhancement by working with your facial structure to restore youthful 
-                volume and smoothness. The results are subtle yet transformative, lasting 15-18 months whilst maintaining your unique 
-                facial characteristics. This makes forehead dermal fillers an ideal choice for those seeking effective anti-ageing 
-                solutions without surgery.
-              </p>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Clinical studies demonstrate <a href="https://pubmed.ncbi.nlm.nih.gov/40601608/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">high patient satisfaction (≈ 91/100 VAS at 12 months)</a> with forehead filler treatments, 
                 reflecting the excellent outcomes and lasting results achieved with this procedure.
