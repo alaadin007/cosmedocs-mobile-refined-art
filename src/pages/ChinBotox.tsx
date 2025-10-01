@@ -536,8 +536,7 @@ const ChinBotox = () => {
                   rel="noopener noreferrer"
                   className="text-purple-400 hover:text-purple-300 transition-colors ml-1 inline-flex items-center"
                 >
-                  Read study: Effective Locations for Injecting Botulinum Toxin into the Mentalis Muscle
-                  <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
