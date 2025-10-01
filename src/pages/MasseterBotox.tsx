@@ -442,19 +442,19 @@ const MasseterBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-8 text-white">What is Masseter Botox Treatment?</h2>
               
-              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+              <p className="text-gray-300 mb-8 leading-relaxed">
                 Masseter Botox treatment helps with both aesthetic and medical issues. It can slim down a square, wide jawline, correct facial asymmetry, and alleviate jaw pain and aches. These symptoms are often related to <Link to="/bruxism-botox" className="text-purple-300 hover:text-purple-200 underline">bruxism</Link>, which involves teeth clenching and TMJ (Temporomandibular Joint Disorders). Clinical studies have demonstrated the <a href="https://pubmed.ncbi.nlm.nih.gov/28991284/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">effectiveness of Botox for treating masseter hypertrophy</a> and related conditions.
               </p>
 
               <div className="bg-purple-300/10 border-l-4 border-purple-300 p-6 mb-12 text-left">
-                <p className="text-purple-300 font-semibold text-lg">
+                <p className="text-purple-300 font-semibold">
                   Did you know that the strongest muscle in your body is the one that helps you chew? It is known as the 'Masseter Muscle' or jaw muscle.
                 </p>
                </div>
 
                <div className="mb-12 text-left">
                  <h3 className="text-2xl font-bold mb-6 text-white text-center">Jawline Slimming Botox</h3>
-                 <p className="text-gray-300 text-lg leading-relaxed">
+                 <p className="text-gray-300 leading-relaxed">
                    Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour. This treatment can be combined with <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline fillers</Link> or <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin fillers</Link> for comprehensive lower face enhancement.
                  </p>
                </div>
@@ -470,9 +470,9 @@ const MasseterBotox = () => {
                    <div className="mb-4">
                      <h3 className="text-2xl font-bold text-white">Where is the Masseter Muscle?</h3>
                    </div>
-                   <p className="text-gray-300 text-lg leading-relaxed">
-                     The masseter is a muscle on the side of your face. It interlinks the bones in your jaw to your cheekbones, making chewing effortless. It's known for its feathered pattern.
-                   </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      The masseter is a muscle on the side of your face. It interlinks the bones in your jaw to your cheekbones, making chewing effortless. It's known for its feathered pattern.
+                    </p>
                    <div className="mt-4 p-3 bg-purple-600/10 rounded-lg border-l-4 border-purple-400">
                      <p className="text-purple-300 text-sm font-medium">
                        💡 Located on both sides of your jaw, these powerful muscles work together for efficient chewing.
@@ -490,9 +490,9 @@ const MasseterBotox = () => {
                    <div className="mb-4">
                      <h3 className="text-2xl font-bold text-white">What Is Masseter Hypertrophy?</h3>
                    </div>
-                   <p className="text-gray-300 text-lg leading-relaxed">
-                     Masseter hypertrophy occurs when the masseter muscle enlarges, typically due to excessive chewing or teeth grinding (bruxism). This enlargement can cause the jawline to appear more prominent and may result in discomfort from increased muscle tension.
-                   </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      Masseter hypertrophy occurs when the masseter muscle enlarges, typically due to excessive chewing or teeth grinding (bruxism). This enlargement can cause the jawline to appear more prominent and may result in discomfort from increased muscle tension.
+                    </p>
                    <div className="mt-4 p-3 bg-purple-600/10 rounded-lg border-l-4 border-purple-400">
                      <p className="text-purple-300 text-sm font-medium">
                        ⚠️ Common causes include teeth grinding, gum chewing, and jaw clenching during stress.
