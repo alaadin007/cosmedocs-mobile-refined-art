@@ -185,6 +185,92 @@ const CheekFiller = () => {
           "priceRange": "£350-£950"
         })}
         </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://cosmedocs.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://cosmedocs.com/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Cheek Fillers",
+                "item": "https://cosmedocs.com/cheek-filler"
+              }
+            ]
+          })}
+        </script>
+
+        {/* Medical Procedure Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Cheek Filler Treatment",
+            "description": "Non-surgical cheek enhancement using premium hyaluronic acid dermal fillers to restore volume and define cheekbones",
+            "procedureType": "Cosmetic",
+            "bodyLocation": "Cheeks and midface",
+            "preparation": "Consultation and facial analysis, topical anaesthetic applied",
+            "followup": "Follow-up at 2 weeks, results last 15-18 months",
+            "howPerformed": "Strategic injection of hyaluronic acid filler using microcannula or needle technique"
+          })}
+        </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.filter(faq => typeof faq.answer === 'string').map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+
+        {/* Article Schema for E-A-T */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalWebPage",
+            "name": "Cheek Fillers London - Expert Guide",
+            "description": "Comprehensive guide to cheek filler treatments in London",
+            "datePublished": "2024-01-15",
+            "dateModified": "2025-01-31",
+            "author": {
+              "@type": "Person",
+              "name": "Dr. Ahmed Haq",
+              "jobTitle": "Aesthetic Medicine Specialist",
+              "url": "https://cosmedocs.com/team/dr-ahmed-haq"
+            },
+            "reviewedBy": {
+              "@type": "Person",
+              "name": "Dr. Ahmed Haq"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Cosmedocs",
+              "url": "https://cosmedocs.com"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
@@ -198,15 +284,19 @@ const CheekFiller = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Expert Cheek Fillers
-                  <span className="block text-purple-300">London</span>
-                  <span className="block text-sm mt-4">Dermal fillers cheekbones | 1ml vs 2ml cheek filler before and after</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                  Expert Cheek Fillers London
                 </h1>
+                <p className="text-lg text-gray-300 mb-8">
+                  Dermal fillers cheekbones | 1ml vs 2ml cheek filler before and after
+                </p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
                   Transformation that speaks without saying a word
+                </p>
+                <p className="text-sm text-gray-400 mb-6">
+                  Medically reviewed by <Link to="/team/dr-ahmed-haq" className="text-purple-400 hover:text-purple-300 underline">Dr. Ahmed Haq</Link> | Last updated: 31st January 2025
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -352,6 +442,9 @@ const CheekFiller = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        width="400"
+                        height="256"
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -575,6 +668,9 @@ const CheekFiller = () => {
                   <img 
                     src={oneMLImage}
                     alt="1ml cheek filler before and after London natural enhancement Cosmedocs"
+                    width="500"
+                    height="300"
+                    loading="lazy"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                   <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
@@ -598,6 +694,9 @@ const CheekFiller = () => {
                   <img 
                     src={twoMLImage}
                     alt="2ml cheek filler before and after dramatic cheekbone definition London"
+                    width="500"
+                    height="300"
+                    loading="lazy"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                   <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
@@ -641,6 +740,9 @@ const CheekFiller = () => {
                   <img 
                     src="/lovable-uploads/1e8bac0a-c2b4-4629-b56e-cce71b126dfe.png"
                     alt="3ml male cheek filler before and after volume loss correction London"
+                    width="500"
+                    height="300"
+                    loading="lazy"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                   <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
@@ -672,6 +774,9 @@ const CheekFiller = () => {
                   <img 
                     src={menCheekImage}
                     alt="4ml male cheek filler before and after dramatic masculine transformation London"
+                    width="500"
+                    height="300"
+                    loading="lazy"
                     className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                   />
                   <div className="absolute top-2 left-2 bg-black/80 text-white px-3 py-1 rounded text-sm font-semibold">
@@ -931,6 +1036,122 @@ const CheekFiller = () => {
                 Book Free Consultation
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Volume Comparison Table */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Cheek Filler Volume Comparison Guide</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the differences between filler volumes helps you make an informed decision about your treatment.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-6xl mx-auto overflow-x-auto"
+            >
+              <table className="w-full border-collapse bg-gray-900/50 rounded-lg overflow-hidden">
+                <thead>
+                  <tr className="bg-purple-600/20 border-b border-purple-500/30">
+                    <th className="p-4 text-left text-white font-semibold">Feature</th>
+                    <th className="p-4 text-center text-white font-semibold">1ml</th>
+                    <th className="p-4 text-center text-white font-semibold">2ml</th>
+                    <th className="p-4 text-center text-white font-semibold">3ml</th>
+                    <th className="p-4 text-center text-white font-semibold">4ml</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-medium text-white">Best For</td>
+                    <td className="p-4 text-center text-sm">First-time patients, subtle enhancement</td>
+                    <td className="p-4 text-center text-sm">Moderate volume loss, visible lift</td>
+                    <td className="p-4 text-center text-sm">Significant restoration, male patients</td>
+                    <td className="p-4 text-center text-sm">Extensive volume loss, dramatic change</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-medium text-white">Enhancement Level</td>
+                    <td className="p-4 text-center">
+                      <span className="inline-block px-3 py-1 bg-purple-900/30 rounded-full text-sm">Subtle</span>
+                    </td>
+                    <td className="p-4 text-center">
+                      <span className="inline-block px-3 py-1 bg-purple-600/30 rounded-full text-sm">Moderate</span>
+                    </td>
+                    <td className="p-4 text-center">
+                      <span className="inline-block px-3 py-1 bg-purple-500/40 rounded-full text-sm">Noticeable</span>
+                    </td>
+                    <td className="p-4 text-center">
+                      <span className="inline-block px-3 py-1 bg-purple-400/50 rounded-full text-sm">Dramatic</span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-medium text-white">Price</td>
+                    <td className="p-4 text-center text-purple-300 font-bold">£350</td>
+                    <td className="p-4 text-center text-purple-300 font-bold">£650</td>
+                    <td className="p-4 text-center text-purple-300 font-bold">£950</td>
+                    <td className="p-4 text-center text-purple-300 font-bold">£1,200</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-medium text-white">Treatment Time</td>
+                    <td className="p-4 text-center text-sm">20-25 mins</td>
+                    <td className="p-4 text-center text-sm">25-30 mins</td>
+                    <td className="p-4 text-center text-sm">30-40 mins</td>
+                    <td className="p-4 text-center text-sm">40-45 mins</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-medium text-white">Recovery Time</td>
+                    <td className="p-4 text-center text-sm">24-48 hours</td>
+                    <td className="p-4 text-center text-sm">48-72 hours</td>
+                    <td className="p-4 text-center text-sm">3-5 days</td>
+                    <td className="p-4 text-center text-sm">5-7 days</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-medium text-white">Results Duration</td>
+                    <td className="p-4 text-center text-sm">15-18 months</td>
+                    <td className="p-4 text-center text-sm">15-18 months</td>
+                    <td className="p-4 text-center text-sm">18-24 months</td>
+                    <td className="p-4 text-center text-sm">18-24 months</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 font-medium text-white">Ideal Candidates</td>
+                    <td className="p-4 text-center text-sm">Age 25-40, minor hollowing</td>
+                    <td className="p-4 text-center text-sm">Age 35-50, visible volume loss</td>
+                    <td className="p-4 text-center text-sm">Age 45+, men, significant loss</td>
+                    <td className="p-4 text-center text-sm">Advanced ageing, full restoration</td>
+                  </tr>
+                </tbody>
+              </table>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
+                During your consultation, our expert practitioners will assess your facial anatomy and aesthetic goals 
+                to recommend the optimal volume for natural, balanced results.
+              </p>
+              <Button 
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3"
+                onClick={() => window.open(bookingUrl, '_blank')}
+              >
+                Book Your Consultation
+              </Button>
+            </motion.div>
           </div>
         </section>
 
