@@ -688,7 +688,7 @@ const CheekFiller = () => {
             >
               <h3 className="text-xl font-bold text-white mb-4">Men's Cheek Enhancement Specialist</h3>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Dr. Ahmed Haq specializes in masculine cheek enhancement, understanding the anatomical differences that create strong, defined masculine features while maintaining natural movement and expression.
+                <Link to="/team/dr-ahmed-haq" className="text-purple-400 hover:text-purple-300 underline transition-colors">Dr. Ahmed Haq</Link> specializes in masculine cheek enhancement, understanding the anatomical differences that create strong, defined masculine features while maintaining natural movement and expression.
               </p>
             </motion.div>
           </div>
