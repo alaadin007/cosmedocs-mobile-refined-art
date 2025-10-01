@@ -295,78 +295,44 @@ const ForeheadFillers = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* What Are Forehead Fillers */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Are Dermal Filler on Forehead Treatments?</h3>
-                <p className="text-gray-300 mb-6">
-                  Dermal filler forehead treatments involve the injection of best cosmetic wrinkle fillers directly into targeted areas 
-                  to address moderate to severe facial wrinkles and indent on forehead areas. These specialized forehead crease filler 
-                  treatments use premium ingredients to smooth and volumize the skin for natural-looking results.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Hyaluronic Acid-Based Fillers</h4>
-                      <p className="text-gray-300 text-sm">Natural substance that helps lock in moisture and keep skin hydrated</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Collagen-Based Fillers</h4>
-                      <p className="text-gray-300 text-sm">Perfect for restoring elasticity and giving skin a youthful bounce</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Calcium Hydroxyapatite</h4>
-                      <p className="text-gray-300 text-sm">Ideal for adding volume and structure with a natural look</p>
-                    </div>
+            {/* What Are Forehead Fillers */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h3 className="text-2xl font-bold mb-6 text-purple-300">What Are Dermal Filler on Forehead Treatments?</h3>
+              <p className="text-gray-300 mb-6">
+                Dermal filler forehead treatments involve the injection of best cosmetic wrinkle fillers directly into targeted areas 
+                to address moderate to severe facial wrinkles and indent on forehead areas. These specialized forehead crease filler 
+                treatments use premium ingredients to smooth and volumize the skin for natural-looking results.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-white">Hyaluronic Acid-Based Fillers</h4>
+                    <p className="text-gray-300 text-sm">Natural substance that helps lock in moisture and keep skin hydrated</p>
                   </div>
                 </div>
-              </motion.div>
-
-              {/* Forehead Filler Indications */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Can Forehead Fillers Address?</h3>
-                <p className="text-gray-300 mb-6">
-                  Forehead fillers can enhance your appearance by addressing a variety of concerns, helping you achieve 
-                  a more youthful and balanced look.
-                </p>
-                <div className="space-y-3">
-                  {[
-                    "Forehead lines and wrinkles",
-                    "Frown lines",
-                    "Uneven skin texture",
-                    "Hollow temples",
-                    "Sunken forehead",
-                    "Uneven brow height",
-                    "Facial asymmetry",
-                    "Lack of volume in the forehead",
-                    "Deep forehead furrows",
-                    "Depressed scars"
-                  ].map((indication, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <p className="text-gray-300">{indication}</p>
-                    </div>
-                  ))}
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-white">Collagen-Based Fillers</h4>
+                    <p className="text-gray-300 text-sm">Perfect for restoring elasticity and giving skin a youthful bounce</p>
+                  </div>
                 </div>
-              </motion.div>
-            </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 className="font-semibold text-white">Calcium Hydroxyapatite</h4>
+                    <p className="text-gray-300 text-sm">Ideal for adding volume and structure with a natural look</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
