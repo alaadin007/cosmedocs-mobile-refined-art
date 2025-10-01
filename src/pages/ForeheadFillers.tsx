@@ -285,7 +285,7 @@ const ForeheadFillers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto text-center"
             >
               <h2 className="text-3xl font-bold mb-6">Dermal Fillers on Forehead Treatment</h2>
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
