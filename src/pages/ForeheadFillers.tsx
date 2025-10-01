@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -12,6 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 
@@ -84,15 +86,16 @@ const ForeheadFillers = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="dermal fillers forehead, filler in forehead, forehead filler, filler for forehead lines, frown line filler, forehead wrinkle filler, forehead crease filler, fillers before and after forehead, forehead filler before and after, indent in forehead, forehead botox" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert forehead filler treatments in London",
+            "description": "Expert forehead filler treatments in London - Harley Street aesthetic clinic",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
+            "email": "info@cosmedocs.com",
+            "priceRange": "££",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -100,13 +103,89 @@ const ForeheadFillers = () => {
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.5174",
+              "longitude": "-0.1468"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
             "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
+            "sameAs": [
+              "https://www.instagram.com/cosmedocs/",
+              "https://www.facebook.com/cosmedocs/"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Forehead Filler Treatment",
+            "description": "Professional dermal filler treatment for forehead lines, wrinkles, and volume restoration using premium hyaluronic acid fillers",
+            "procedureType": "Cosmetic Injectable Treatment",
+            "bodyLocation": "Forehead",
+            "preparation": "Avoid blood-thinning medications, stay hydrated, avoid alcohol 24 hours prior",
+            "followup": "2-week follow-up appointment included with treatment",
+            "howPerformed": "Injectable dermal fillers carefully administered to targeted forehead areas",
+            "medicalSpecialty": "Cosmetic Medicine"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Forehead Filler Treatment",
+            "description": "Premium forehead dermal filler treatments in London",
+            "priceCurrency": "GBP",
+            "price": "400",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container">
+          <Breadcrumb items={[
+            { label: "Home", href: "/" },
+            { label: "Treatments", href: "/treatments" },
+            { label: "Forehead Fillers" }
+          ]} />
+        </div>
+
         {/* Hero Section - Same style as LipFillers */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -293,9 +372,25 @@ const ForeheadFillers = () => {
                 upper facial contours. These injectable treatments work by replenishing lost volume beneath the skin's surface, filling 
                 in deep lines and creases that develop over time due to ageing, sun exposure, and repeated facial expressions.
               </p>
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                The procedure involves carefully injecting premium hyaluronic acid-based fillers into specific areas of the forehead 
+                to address concerns such as horizontal forehead lines, frown lines between the brows, temple hollowing, and uneven contours. 
+                Unlike <Link to="/face-botox" className="text-purple-300 hover:text-purple-200 underline">Botox treatments</Link> which 
+                relax muscles, dermal fillers add structural volume and immediately smooth the treated areas.
+              </p>
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                Forehead filler treatments are minimally invasive, typically taking just 15-20 minutes with immediate visible results and no 
+                downtime required. The procedure can be combined with other treatments such as <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">facial dermal fillers</Link>, <Link to="/cheek-filler" className="text-purple-300 hover:text-purple-200 underline">cheek fillers</Link>, or <Link to="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">lip enhancement</Link> for comprehensive facial rejuvenation.
+              </p>
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                Results are subtle yet transformative, lasting 15-18 months whilst maintaining your unique facial characteristics. This makes 
+                forehead dermal fillers an ideal choice for those seeking effective anti-ageing solutions without surgery. The treatment can 
+                be adjusted or reversed if needed, providing flexibility and peace of mind.
+              </p>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Clinical studies demonstrate <a href="https://pubmed.ncbi.nlm.nih.gov/40601608/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">high patient satisfaction</a> with forehead filler treatments, 
-                reflecting the excellent outcomes and lasting results achieved with this procedure.
+                reflecting the excellent outcomes and lasting results achieved with this procedure. Our Harley Street clinic uses only premium, 
+                FDA-approved fillers from renowned brands like Juvéderm, Teosyal, and Stylage to ensure safety and optimal results.
               </p>
             </motion.div>
           </div>
@@ -641,7 +736,7 @@ const ForeheadFillers = () => {
                   <div>
                     <h4 className="font-bold text-white mb-3">How It Works</h4>
                     <p className="text-gray-300 text-sm">
-                      Botox temporarily relaxes forehead muscles that cause dynamic wrinkles, preventing the formation of lines when you make facial expressions.
+                      <Link to="/face-botox" className="text-blue-300 hover:text-blue-200 underline">Botox</Link> temporarily relaxes forehead muscles that cause dynamic wrinkles, preventing the formation of lines when you make facial expressions.
                     </p>
                   </div>
 
@@ -934,13 +1029,76 @@ const ForeheadFillers = () => {
           </div>
         </section>
 
-        {/* Hidden SEO Content */}
-        <div className="hidden">
-          <h2>Professional Forehead Filler Treatments in London</h2>
-          <p>
-            Cosmedocs Harley Street clinic offers the most advanced forehead filler treatments in London, utilizing premium hyaluronic acid-based dermal fillers to address forehead wrinkles, lines, and volume loss. Our experienced cosmetic doctors specialize in forehead contouring and enhancement, providing natural-looking results that restore youthful appearance and facial harmony. The forehead filler procedure is minimally invasive, requiring no downtime, with results lasting 15-18 months. Whether you're dealing with forehead indentations, deep furrows, or loss of volume, our expert practitioners create personalized treatment plans to achieve optimal outcomes. The treatment effectively addresses static wrinkles, hollow temples, uneven brow height, and facial asymmetry. Using only FDA-approved fillers from renowned brands like Juvederm, Teosyal, and Stylage, we ensure safety and efficacy in every procedure. Forehead fillers can be combined with Botox for comprehensive facial rejuvenation, targeting both dynamic and static wrinkles. Our invisible art philosophy ensures subtle, natural enhancement that maintains your unique facial characteristics while improving overall appearance. The procedure takes only 15-20 minutes and provides immediate results, making it an ideal lunchtime treatment. Common side effects are minimal and temporary, including mild swelling, redness, or bruising at injection sites. Recovery is immediate with no downtime required, allowing patients to return to normal activities right away. The hyaluronic acid fillers we use can be dissolved if needed, providing peace of mind and flexibility. Our practitioners assess each patient's facial anatomy and aesthetic goals to recommend the optimal filler type and amount. Forehead fillers restore collagen production, improve skin texture, and provide long-lasting volume enhancement. The treatment is suitable for both men and women seeking non-surgical facial rejuvenation. Pre-treatment consultation includes detailed assessment, medical history review, and realistic expectation setting. Post-treatment care instructions help optimize results and minimize potential side effects. Our Harley Street location provides a premium treatment environment with state-of-the-art facilities and the highest safety standards.
-          </p>
-        </div>
+        {/* Additional Information Section - Previously Hidden SEO Content */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center">Professional Forehead Filler Treatments in London</h2>
+              
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="about-clinic" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    About Our Harley Street Clinic
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    Cosmedocs Harley Street clinic offers the most advanced forehead filler treatments in London, utilizing premium hyaluronic acid-based dermal fillers to address forehead wrinkles, lines, and volume loss. Our experienced cosmetic doctors specialize in forehead contouring and enhancement, providing natural-looking results that restore youthful appearance and facial harmony. Our Harley Street location provides a premium treatment environment with state-of-the-art facilities and the highest safety standards.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="treatment-details" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Treatment Details & Procedure
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    The forehead filler procedure is minimally invasive, requiring no downtime, with results lasting 15-18 months. Whether you're dealing with forehead indentations, deep furrows, or loss of volume, our expert practitioners create personalized treatment plans to achieve optimal outcomes. The procedure takes only 15-20 minutes and provides immediate results, making it an ideal lunchtime treatment. Pre-treatment consultation includes detailed assessment, medical history review, and realistic expectation setting.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="treatment-benefits" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    What Can Forehead Fillers Treat?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    The treatment effectively addresses static wrinkles, hollow temples, uneven brow height, and facial asymmetry. Using only FDA-approved fillers from renowned brands like Juvéderm, Teosyal, and Stylage, we ensure safety and efficacy in every procedure. Forehead fillers can be combined with <Link to="/face-botox" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> for comprehensive facial rejuvenation, targeting both dynamic and static wrinkles. Forehead fillers restore collagen production, improve skin texture, and provide long-lasting volume enhancement.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="philosophy" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Our Invisible Art Philosophy
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    Our invisible art philosophy ensures subtle, natural enhancement that maintains your unique facial characteristics whilst improving overall appearance. We believe in transformation that speaks without saying a word - bold, natural, always your way. Our practitioners assess each patient's facial anatomy and aesthetic goals to recommend the optimal filler type and amount for truly personalized results.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="recovery" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Recovery & Side Effects
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    Common side effects are minimal and temporary, including mild swelling, redness, or bruising at injection sites. Recovery is immediate with no downtime required, allowing patients to return to normal activities straight away. The hyaluronic acid fillers we use can be dissolved if needed, providing peace of mind and flexibility. Post-treatment care instructions help optimise results and minimise potential side effects.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="suitability" className="bg-black/50 rounded-lg border border-gray-800 px-6">
+                  <AccordionTrigger className="text-lg font-semibold text-white hover:text-purple-300">
+                    Who Is Suitable for Treatment?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pt-4">
+                    The treatment is suitable for both men and women seeking non-surgical facial rejuvenation. Ideal candidates include those with forehead wrinkles, volume loss, indentations, or those looking to enhance facial harmony. Our comprehensive consultation process ensures you're a suitable candidate and helps set realistic expectations for your treatment outcomes.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </motion.div>
+          </div>
+        </section>
       </div>
     </>
   );
