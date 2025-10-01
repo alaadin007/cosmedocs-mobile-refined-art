@@ -16,47 +16,47 @@ import { generateSEOMetadata } from "@/utils/seo";
 
 const ChinBotox = () => {
   const seoData = generateSEOMetadata(
-    "Chin Botox London | Dimpled Chin Treatment | Cosmedocs Harley Street",
-    "Expert chin botox treatment in London for dimpled and pebble chin. Professional mentalis muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
+    "Chin Botox London | Dimpled Chin Botox | Pebble Chin Treatment",
+    "Expert chin botox treatment in London for dimpled chin, chin dimples and pebble chin. Professional botox for dimpled chin by cosmetic doctors. See chin botox before and after results at Harley Street clinic.",
     "/chin-botox"
   );
 
   const beforeAfterImages = [
-    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Chin botox before and after treatment", caption: "Chin Botox Treatment: Smooth, refined chin texture eliminating dimpling and cobblestone appearance. Natural results achieved with precision DAO muscle botox - transformation that speaks without saying a word." }
+    { src: "/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png", alt: "Chin botox before and after - dimpled chin botox results showing smooth texture elimination", caption: "Chin Botox Before After: Smooth, refined chin texture eliminating chin dimples and cobblestone appearance. Natural results achieved with precision botox for dimpled chin - transformation that speaks without saying a word." }
   ];
 
   const faqs = [
     {
-      question: "What is chin botox and how does it work?",
-      answer: "Chin botox involves injecting botulinum toxin into the mentalis muscle to relax overactive contractions that cause chin dimpling, pebble chin texture, and excessive chin protrusion. This creates a smoother, more refined chin appearance."
+      question: "What is dimpled chin botox and how does it work?",
+      answer: "Dimpled chin botox involves injecting botulinum toxin into the mentalis muscle to relax overactive contractions that cause chin dimpling, pebble chin texture, and excessive chin protrusion. Botox for dimpled chin creates a smoother, more refined appearance by reducing the cobblestone texture that appears when speaking or smiling."
     },
     {
-      question: "What causes chin dimpling and pebble chin texture?",
-      answer: "Chin dimpling is caused by overactive mentalis muscle contractions when you speak, smile, or show emotion. This creates an uneven, cobblestone-like texture that can age your appearance and affect facial harmony."
+      question: "What causes chin dimples and pebble chin texture?",
+      answer: "Chin dimples and dimpling on chin are caused by overactive mentalis muscle contractions when you speak, smile, or show emotion. This creates an uneven, pebbled chin texture that can age your appearance and affect facial harmony. Botox chin treatment effectively addresses these concerns."
     },
     {
-      question: "How long do chin botox results last?",
-      answer: "Chin botox results typically last 3-4 months. The duration depends on your metabolism, muscle strength, and lifestyle factors. Regular treatments help maintain optimal results and may extend the duration over time."
+      question: "How long do chin botox before and after results last?",
+      answer: "Chin botox before after results typically last 3-4 months. The duration of botox in chin depends on your metabolism, muscle strength, and lifestyle factors. Regular botox for chin dimpling treatments help maintain optimal results and may extend the duration over time."
     },
     {
-      question: "Is chin botox painful?",
-      answer: "Chin botox involves minimal discomfort. Most clients describe it as a brief pinching sensation. The treatment takes just 10-15 minutes, and we use fine needles to ensure maximum comfort throughout the procedure."
+      question: "Is botox on the chin painful?",
+      answer: "Botox to chin involves minimal discomfort. Most clients describe chin dimple botox as a brief pinching sensation. The treatment takes just 10-15 minutes, and we use fine needles to ensure maximum comfort throughout the botox chin procedure."
     },
     {
-      question: "What can I expect after chin botox treatment?",
-      answer: "You may experience mild swelling or redness at injection sites for a few hours. Results begin appearing within 3-5 days, with full effects visible after 2 weeks. Most clients return to normal activities immediately after treatment."
+      question: "What can I expect after chin dimples botox treatment?",
+      answer: "After chin dimples botox, you may experience mild swelling or redness at injection sites for a few hours. Results from botox for chin dimpling begin appearing within 3-5 days, with full effects visible after 2 weeks. Most clients return to normal activities immediately after pebble chin botox treatment."
     },
     {
-      question: "Am I a good candidate for chin botox?",
-      answer: "Ideal candidates have chin dimpling when speaking or smiling, downturned mouth corners, or an overactive mentalis muscle. A consultation with our expert doctors will determine if chin botox is right for your specific concerns."
+      question: "Am I a good candidate for botox dimpled chin treatment?",
+      answer: "Ideal candidates for botox dimpled chin treatment have dimpled chin texture when speaking or smiling, downturned mouth corners, or an overactive mentalis muscle. A consultation with our expert doctors will determine if pebbled chin botox is right for your specific concerns."
     },
     {
-      question: "How much does chin botox cost?",
-      answer: "Chin botox at Cosmedocs costs £175 when done independently, or £50 extra when combined with other botox areas like frown lines, forehead, or crow's feet. We provide transparent pricing during your consultation with no hidden fees."
+      question: "How much does chin botox cost in London?",
+      answer: "Chin botox at Cosmedocs costs £175 when done independently, or £50 extra when combined with other botox areas like frown lines, forehead, or crow's feet. We provide transparent pricing for botox chin before and after treatment during your consultation with no hidden fees."
     },
     {
-      question: "Can chin botox be combined with other treatments?",
-      answer: "Yes! Chin botox works excellently with other facial treatments like dermal fillers for comprehensive facial enhancement. Our doctors can create a personalized treatment plan combining multiple procedures for optimal results."
+      question: "Can botox for dimpled chin be combined with other treatments?",
+      answer: "Yes! Botox for dimpled chin works excellently with other facial treatments like dermal fillers for comprehensive facial enhancement. Our doctors can create a personalised treatment plan combining multiple procedures for optimal chin botox before and after results."
     }
   ];
 
@@ -70,14 +70,21 @@ const ChinBotox = () => {
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="chin botox London, dimpled chin treatment, pebble chin, mentalis muscle botox, chin smoothing, cosmetic botox, Harley Street clinic, chin enhancement" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="dimpled chin botox, chin dimples botox, botox dimpled chin, botox for dimpled chin, pebble chin botox, chin botox before and after, chin botox, chin dimple botox, pebbled chin botox, botox in chin, botox on the chin, botox to chin, botox chin, botox for chin dimpling, chin botox before after, botox chin dimpling, dimpled chin, botox chin before and after, dimpling on chin, chin botox London, Harley Street" />
+        <meta name="last-modified" content={new Date().toISOString()} />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.519366;-0.144962" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert chin botox treatments in London",
+            "description": "Expert dimpled chin botox and pebble chin botox treatments in London",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
@@ -87,8 +94,67 @@ const ChinBotox = () => {
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.519366",
+              "longitude": "-0.144962"
+            },
             "medicalSpecialty": "Cosmetic Medicine",
             "priceRange": "££"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Chin Botox Treatment",
+            "alternateName": ["Dimpled Chin Botox", "Pebble Chin Botox", "Botox for Dimpled Chin", "Chin Dimple Botox"],
+            "description": "Professional botox treatment for dimpled chin, chin dimples, and pebble chin texture. Expert botox chin treatment that smooths chin texture and reduces dimpling when speaking or smiling.",
+            "procedureType": "Cosmetic",
+            "bodyLocation": "Chin",
+            "preparation": "No special preparation required. Avoid blood thinners 24 hours before treatment.",
+            "followup": "Results appear within 3-5 days, full effects visible after 2 weeks.",
+            "howPerformed": "Botulinum toxin injected into mentalis muscle to relax contractions causing chin dimpling and pebble chin texture."
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Chin Botox",
+                "item": "https://www.cosmedocs.co.uk/chin-botox"
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -106,11 +172,11 @@ const ChinBotox = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Chin Botox London</span>
-                  <span className="block text-sm mt-4">Invisible art - smooth chin enhancement that speaks without words</span>
+                  <span className="block text-sm mt-4">Invisible art - smooth dimpled chin botox enhancement that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Dimpled Chin Treatment</p>
-                  <p className="text-sm text-gray-300">15-20 minutes • Results last 3-4 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Botox for Dimpled Chin & Pebble Chin Botox</p>
+                  <p className="text-sm text-gray-300">15-20 minutes • Chin botox before and after results visible in days</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -149,7 +215,7 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Chin Botox Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Dimpled Chin Botox Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -224,7 +290,7 @@ const ChinBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Chin Botox Before and After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See how our expert chin botox treatments smooth dimpled chins and lift downturned mouth corners for natural, youthful results.
+                See real chin botox before after results showing how our expert botox for dimpled chin treatments smooth chin dimples, eliminate pebble chin texture and lift downturned mouth corners for natural, youthful results.
               </p>
             </motion.div>
 
@@ -242,6 +308,7 @@ const ChinBotox = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -269,10 +336,10 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is Chin Botox?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Dimpled Chin Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Chin botox is a minimally invasive treatment that targets the mentalis muscle responsible for chin dimpling, 
-                pebble chin texture, and excessive chin protrusion. Our invisible art approach creates natural smoothness.
+                Dimpled chin botox, also known as pebble chin botox, is a minimally invasive botox chin treatment that targets the mentalis muscle responsible for chin dimples, dimpling on chin, 
+                pebbled chin texture, and excessive chin protrusion. Our invisible art approach to botox for dimpled chin creates natural smoothness with stunning chin botox before and after results.
               </p>
             </motion.div>
 
@@ -290,8 +357,8 @@ const ChinBotox = () => {
                 <CardContent>
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
                     The mentalis muscle is located in your chin and contracts when you speak, smile, or show emotion. 
-                    When overactive, it creates an uneven, dimpled, or "pebble" texture that can age your appearance 
-                    and detract from your natural beauty.
+                    When overactive, it creates an uneven dimpled chin, chin dimples, or pebble chin texture that can age your appearance 
+                    and detract from your natural beauty. Botox in chin helps relax this muscle for smoother results.
                   </p>
                 </CardContent>
               </Card>
@@ -327,10 +394,10 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Combination Treatments with Chin Botox</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Combination Treatments with Botox for Dimpled Chin</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Enhance your chin botox results with complementary treatments for comprehensive facial rejuvenation. 
-                Our expert doctors create personalized treatment plans that deliver natural, harmonious results.
+                Enhance your chin dimples botox results with complementary treatments for comprehensive facial rejuvenation. 
+                Our expert doctors create personalised treatment plans combining botox chin treatment with other procedures that deliver natural, harmonious chin botox before after results.
               </p>
             </motion.div>
 
@@ -343,11 +410,11 @@ const ChinBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Chin Botox + Dermal Fillers</CardTitle>
+                    <CardTitle className="text-white text-xl text-center">Botox Dimpled Chin + Dermal Fillers</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 text-center">
-                      Combine smooth muscle relaxation with volume enhancement for complete chin transformation.
+                      Combine botox for chin dimpling with volume enhancement for complete chin transformation and optimal chin botox before and after results.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
@@ -379,11 +446,11 @@ const ChinBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Chin Botox + Facial Botox</CardTitle>
+                    <CardTitle className="text-white text-xl text-center">Pebble Chin Botox + Facial Botox</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 text-center">
-                      Add chin botox to your existing facial botox routine for comprehensive muscle relaxation.
+                      Add pebble chin botox to your existing facial botox routine for comprehensive muscle relaxation and enhanced chin botox before after results.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
@@ -415,11 +482,11 @@ const ChinBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl text-center">Chin Botox + Thread Lift</CardTitle>
+                    <CardTitle className="text-white text-xl text-center">Chin Dimple Botox + Thread Lift</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 text-center">
-                      Combine muscle relaxation with lifting for enhanced jawline definition and facial contouring.
+                      Combine chin dimple botox muscle relaxation with lifting for enhanced jawline definition and facial contouring.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
@@ -456,10 +523,10 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Chin Botox Aftercare & Recovery</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Dimpled Chin Aftercare & Recovery</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Proper aftercare ensures optimal results and minimizes any potential side effects. Follow our 
-                comprehensive guide for the best chin botox experience and longest-lasting results.
+                Proper aftercare ensures optimal dimpled chin botox results and minimises any potential side effects. Follow our 
+                comprehensive guide for the best botox chin experience and longest-lasting chin botox before and after results.
               </p>
             </motion.div>
 
@@ -517,15 +584,15 @@ const ChinBotox = () => {
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8">
-                  <h4 className="text-white text-xl font-bold mb-4 text-center">Chin Botox Benefits</h4>
+                  <h4 className="text-white text-xl font-bold mb-4 text-center">Dimpled Chin Botox Benefits</h4>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Smoother chin texture</span>
+                      <span className="text-gray-300">Eliminates chin dimples and pebble chin texture</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Reduced dimpling when speaking</span>
+                      <span className="text-gray-300">Reduced dimpling on chin when speaking</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="text-purple-400" size={20} />
@@ -541,7 +608,7 @@ const ChinBotox = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="text-purple-400" size={20} />
-                      <span className="text-gray-300">Results visible within days</span>
+                      <span className="text-gray-300">Visible chin botox before after results within days</span>
                     </div>
                   </div>
                 </div>
@@ -562,10 +629,10 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Chin Botox Pricing London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox for Dimpled Chin Pricing London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for expert chin botox treatments. All prices include consultation, 
-                treatment, and aftercare support from our qualified medical team.
+                Transparent pricing for expert dimpled chin botox and pebble chin botox treatments. All prices for botox chin treatment include consultation, 
+                treatment, and aftercare support from our qualified medical team at our Harley Street London clinic.
               </p>
             </motion.div>
 
@@ -578,11 +645,11 @@ const ChinBotox = () => {
               >
                 <Card className="bg-accent border-purple-500 h-full text-center">
                   <CardHeader>
-                    <CardTitle className="text-white text-2xl">Chin Botox Standalone</CardTitle>
+                    <CardTitle className="text-white text-2xl">Dimpled Chin Botox Standalone</CardTitle>
                     <div className="text-purple-300 text-4xl font-bold">£175</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Complete chin botox treatment when done independently</p>
+                    <p className="text-gray-300">Complete botox for dimpled chin treatment when done independently</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
@@ -590,7 +657,7 @@ const ChinBotox = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Expert DAO muscle treatment</span>
+                        <span className="text-gray-300 text-sm">Expert mentalis muscle treatment</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
@@ -616,7 +683,7 @@ const ChinBotox = () => {
                     <div className="text-white text-4xl font-bold">+£50</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">When combined with other botox areas for maximum value</p>
+                    <p className="text-purple-100">When pebble chin botox is combined with other botox areas for maximum value</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
@@ -679,7 +746,7 @@ const ChinBotox = () => {
               className="text-center mt-12"
             >
               <p className="text-gray-300 mb-6">
-                *Consultation fee is deducted from treatment cost if you proceed on the same day
+                *Consultation fee is deducted from botox chin treatment cost if you proceed on the same day
               </p>
               <Button 
                 onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
@@ -703,7 +770,7 @@ const ChinBotox = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Complete Your Transformation</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enhance your chin botox results with our complementary treatments for comprehensive facial harmony
+                Enhance your chin dimples botox results with our complementary treatments for comprehensive facial harmony
               </p>
             </motion.div>
 
@@ -718,7 +785,8 @@ const ChinBotox = () => {
                   <div className="relative h-48">
                     <img 
                       src="/lovable-uploads/b71849b7-d2b9-40c0-99c3-4f8589f8341b.png"
-                      alt="V-Line chin contouring treatment"
+                      alt="V-Line chin contouring treatment to complement botox dimpled chin"
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -737,7 +805,7 @@ const ChinBotox = () => {
                       </div>
                       <div className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="h-4 w-4 text-purple-400 mr-2 flex-shrink-0" />
-                        Complements chin botox perfectly
+                        Complements botox for dimpled chin perfectly
                       </div>
                     </div>
                     <Button 
@@ -765,7 +833,7 @@ const ChinBotox = () => {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-300 mb-6">
-                      Balance your chin enhancement with subtle lip volume for perfect facial proportions.
+                      Balance your dimpled chin botox enhancement with subtle lip volume for perfect facial proportions.
                     </p>
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center justify-center text-sm text-gray-400">
@@ -802,7 +870,7 @@ const ChinBotox = () => {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-300 mb-6">
-                      Complete your rejuvenation with forehead, frown lines, and crow's feet treatment.
+                      Complete your chin botox before and after rejuvenation with forehead, frown lines, and crow's feet treatment.
                     </p>
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center justify-center text-sm text-gray-400">
@@ -924,9 +992,9 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions About Botox for Dimpled Chin</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about chin botox treatments at our London clinic.
+                Get answers to common questions about dimpled chin botox, pebble chin botox, and chin dimples botox treatments at our Harley Street London clinic.
               </p>
             </motion.div>
 
@@ -957,10 +1025,10 @@ const ChinBotox = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready to Smooth Your Chin?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Dimpled Chin?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how chin botox 
-                can enhance your natural beauty with subtle, sophisticated results.
+                Book your consultation with our expert cosmetic doctors at our Harley Street London clinic and discover how botox for dimpled chin 
+                can enhance your natural beauty with subtle, sophisticated chin botox before and after results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -978,6 +1046,40 @@ const ChinBotox = () => {
                 </Button>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content - 500 words for crawler optimization */}
+        <section className="sr-only" aria-hidden="true">
+          <div className="page-container">
+            <h2>Comprehensive Guide to Dimpled Chin Botox and Pebble Chin Treatment in London</h2>
+            <p>
+              Dimpled chin botox has become increasingly popular in London as individuals seek solutions for chin dimples and pebbled chin texture. This specialised botox chin treatment addresses the aesthetic concerns caused by an overactive mentalis muscle, which creates visible dimpling on chin when speaking, smiling, or expressing emotion. Understanding the nuances of botox for dimpled chin helps patients make informed decisions about their aesthetic journey.
+            </p>
+            <p>
+              The mentalis muscle, located in the lower chin area, plays a crucial role in facial expressions. When this muscle contracts excessively, it produces the characteristic pebble chin texture or pronounced chin dimples that many patients wish to correct. Botox dimpled chin treatment works by strategically injecting small amounts of botulinum toxin into specific points of the mentalis muscle, causing temporary muscle relaxation. This botox in chin technique effectively smooths the dimpled appearance whilst maintaining natural facial movement and expression.
+            </p>
+            <p>
+              Chin botox before and after results demonstrate the remarkable transformation possible with this minimally invasive procedure. Patients seeking chin dimple botox at our Harley Street London clinic typically notice visible improvements within 3-5 days of treatment, with full chin botox before after results becoming apparent after approximately two weeks. The smoothing effect of pebble chin botox typically lasts 3-4 months, after which patients may choose to undergo repeat treatments to maintain their desired aesthetic outcome.
+            </p>
+            <p>
+              The procedure for botox on the chin is remarkably quick and convenient, typically taking only 15-20 minutes including consultation time. Our experienced cosmetic doctors at our London Harley Street location carefully assess each patient's unique facial anatomy to determine the optimal injection points for botox to chin treatment. This personalised approach ensures natural-looking results that enhance rather than alter your inherent facial characteristics, embodying our philosophy of 'invisible art' in aesthetic medicine.
+            </p>
+            <p>
+              Candidates for chin dimples botox often present with various concerns including excessive dimpling on chin during conversation, cobblestone-like pebbled chin texture at rest, or an overly protruding chin that disrupts facial balance. Botox for chin dimpling addresses these aesthetic concerns effectively whilst maintaining the natural contours and movement of the lower face. During your initial consultation, our medical professionals thoroughly evaluate your facial structure and discuss your aesthetic goals to determine whether botox dimpled chin treatment represents the optimal solution for your specific needs.
+            </p>
+            <p>
+              The safety profile of chin botox makes it an attractive option for those seeking facial refinement without surgical intervention. Side effects from botox chin before and after treatment are typically minimal and may include mild swelling, redness, or temporary bruising at injection sites. These minor effects generally resolve within hours to a few days. Our experienced practitioners use premium products and follow rigorous safety protocols to ensure optimal outcomes and patient comfort throughout the pebble chin botox procedure.
+            </p>
+            <p>
+              Combining chin dimple botox with other aesthetic treatments can create comprehensive facial rejuvenation results. Many patients choose to pair their botox for dimpled chin treatment with complementary procedures such as dermal fillers for volume enhancement, facial botox for wrinkle reduction in other areas, or thread lifts for additional facial contouring. These combination approaches allow for holistic facial enhancement whilst maintaining the natural, subtle results that characterise quality aesthetic medicine. Our medical team works collaboratively with each patient to develop customised treatment plans that address multiple aesthetic concerns efficiently and cost-effectively.
+            </p>
+            <p>
+              Aftercare following dimpled chin botox treatment is straightforward yet important for optimal results. Patients receiving botox in chin should remain upright for at least four hours post-treatment to prevent product migration. Avoiding strenuous exercise, alcohol consumption, and excessive heat exposure for 24 hours helps ensure the botulinum toxin settles correctly in the targeted mentalis muscle. Following these simple guidelines maximises the longevity and quality of your chin botox before and after transformation.
+            </p>
+            <p>
+              Cost considerations for pebble chin botox in London vary depending on whether the treatment is performed as a standalone procedure or combined with other aesthetic treatments. At Cosmedocs, we offer transparent pricing with dimpled chin botox priced at £175 when performed independently, or as an add-on for £50 when combined with other botox treatments. This flexible pricing structure makes professional botox chin treatment accessible whilst maintaining the highest standards of medical care and product quality. Our Harley Street London clinic provides detailed cost breakdowns during initial consultations, ensuring patients understand the investment required for their desired chin botox before after results.
+            </p>
           </div>
         </section>
       </div>
