@@ -373,12 +373,6 @@ const ForeheadFillers = () => {
                 in deep lines and creases that develop over time due to ageing, sun exposure, and repeated facial expressions.
               </p>
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                The procedure involves carefully injecting premium hyaluronic acid-based fillers into specific areas of the forehead 
-                to address concerns such as horizontal forehead lines, frown lines between the brows, temple hollowing, and uneven contours. 
-                Unlike <Link to="/face-botox" className="text-purple-300 hover:text-purple-200 underline">Botox treatments</Link> which 
-                relax muscles, dermal fillers add structural volume and immediately smooth the treated areas.
-              </p>
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                 Forehead filler treatments are minimally invasive, typically taking just 15-20 minutes with immediate visible results and no 
                 downtime required. The procedure can be combined with other treatments such as <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">facial dermal fillers</Link>, <Link to="/cheek-filler" className="text-purple-300 hover:text-purple-200 underline">cheek fillers</Link>, or <Link to="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">lip enhancement</Link> for comprehensive facial rejuvenation.
               </p>
