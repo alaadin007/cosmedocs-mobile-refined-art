@@ -474,7 +474,7 @@ const NasolabialFolds = () => {
               }}>
                 <h2 className="text-4xl font-bold mb-6">What are Nasolabial Folds (Smile Line/Laugh Lines)?</h2>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                  Nasolabial folds, known as smile or laugh lines, are creases running from the nose to mouth corners that deepen with age. <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> uses premium hyaluronic acid to restore volume and smooth these lines naturally, creating youthful contours whilst preserving facial expression.
+                  Nasolabial folds, known as smile or laugh lines, are creases running from the nose to mouth corners that deepen with age. <AutoLinkedText>Our expert dermal filler treatment</AutoLinkedText> at our Harley Street clinic uses premium hyaluronic acid to restore volume and smooth these lines naturally, creating youthful contours whilst preserving facial expression.
                 </p>
               </motion.div>
             </div>
