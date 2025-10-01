@@ -397,10 +397,8 @@ const ChinBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Combination Treatments with Botox for Dimpled Chin</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                <AutoLinkedText>
-                  Enhance your chin dimples botox results with complementary treatments for comprehensive facial rejuvenation. 
-                  Our expert doctors create personalised treatment plans combining botox chin treatment with other procedures that deliver natural, harmonious chin botox before after results.
-                </AutoLinkedText>
+                Enhance your chin dimples botox results with complementary treatments for comprehensive facial rejuvenation. 
+                Our expert doctors create personalised treatment plans combining botox chin treatment with other procedures that deliver natural, harmonious chin botox before after results.
               </p>
             </motion.div>
 
@@ -417,9 +415,7 @@ const ChinBotox = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 text-center">
-                      <AutoLinkedText>
-                        Combine botox for chin dimpling with volume enhancement for complete chin transformation and optimal chin botox before and after results.
-                      </AutoLinkedText>
+                      Combine botox for chin dimpling with volume enhancement for complete chin transformation and optimal chin botox before and after results.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
@@ -455,9 +451,7 @@ const ChinBotox = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 text-center">
-                      <AutoLinkedText>
-                        Add pebble chin botox to your existing facial botox routine for comprehensive muscle relaxation and enhanced chin botox before after results.
-                      </AutoLinkedText>
+                      Add pebble chin botox to your existing facial botox routine for comprehensive muscle relaxation and enhanced chin botox before after results.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
@@ -493,9 +487,7 @@ const ChinBotox = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 text-center">
-                      <AutoLinkedText>
-                        Combine chin dimple botox muscle relaxation with lifting for enhanced jawline definition and facial contouring.
-                      </AutoLinkedText>
+                      Combine chin dimple botox muscle relaxation with lifting for enhanced jawline definition and facial contouring.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
@@ -706,11 +698,7 @@ const ChinBotox = () => {
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">
-                          <AutoLinkedText linkClassName="text-purple-100 hover:text-white underline transition-colors">
-                            Combines with forehead, frown, or crow's feet
-                          </AutoLinkedText>
-                        </span>
+                        <span className="text-purple-100 text-sm">Combines with forehead, frown, or crow's feet</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
@@ -819,9 +807,7 @@ const ChinBotox = () => {
                   </div>
                   <CardContent className="p-6">
                     <p className="text-gray-300 mb-4">
-                      <AutoLinkedText>
-                        Define your jawline with precision dermal filler placement for elegant facial proportions.
-                      </AutoLinkedText>
+                      Define your jawline with precision dermal filler placement for elegant facial proportions.
                     </p>
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center text-sm text-gray-400">
@@ -858,9 +844,7 @@ const ChinBotox = () => {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-300 mb-6">
-                      <AutoLinkedText>
-                        Balance your dimpled chin botox enhancement with subtle lip volume for perfect facial proportions.
-                      </AutoLinkedText>
+                      Balance your dimpled chin botox enhancement with subtle lip volume for perfect facial proportions.
                     </p>
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center justify-center text-sm text-gray-400">
@@ -897,9 +881,7 @@ const ChinBotox = () => {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-300 mb-6">
-                      <AutoLinkedText>
-                        Complete your chin botox before and after rejuvenation with forehead, frown lines, and crow's feet treatment.
-                      </AutoLinkedText>
+                      Complete your chin botox before and after rejuvenation with forehead, frown lines, and crow's feet treatment.
                     </p>
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center justify-center text-sm text-gray-400">
@@ -1035,7 +1017,7 @@ const ChinBotox = () => {
                       <span className="text-white font-medium">{faq.question}</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4 text-gray-300">
-                      <AutoLinkedText>{faq.answer}</AutoLinkedText>
+                      {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -1101,9 +1083,7 @@ const ChinBotox = () => {
               The safety profile of chin botox makes it an attractive option for those seeking facial refinement without surgical intervention. Side effects from botox chin before and after treatment are typically minimal and may include mild swelling, redness, or temporary bruising at injection sites. These minor effects generally resolve within hours to a few days. Our experienced practitioners use premium products and follow rigorous safety protocols to ensure optimal outcomes and patient comfort throughout the pebble chin botox procedure.
             </p>
             <p>
-              <AutoLinkedText>
-                Combining chin dimple botox with other aesthetic treatments can create comprehensive facial rejuvenation results. Many patients choose to pair their botox for dimpled chin treatment with complementary procedures such as dermal fillers for volume enhancement, facial botox for wrinkle reduction in other areas, or thread lifts for additional facial contouring. These combination approaches allow for holistic facial enhancement whilst maintaining the natural, subtle results that characterise quality aesthetic medicine. Our medical team works collaboratively with each patient to develop customised treatment plans that address multiple aesthetic concerns efficiently and cost-effectively.
-              </AutoLinkedText>
+              Combining chin dimple botox with other aesthetic treatments can create comprehensive facial rejuvenation results. Many patients choose to pair their botox for dimpled chin treatment with complementary procedures such as dermal fillers for volume enhancement, facial botox for wrinkle reduction in other areas, or thread lifts for additional facial contouring. These combination approaches allow for holistic facial enhancement whilst maintaining the natural, subtle results that characterise quality aesthetic medicine. Our medical team works collaboratively with each patient to develop customised treatment plans that address multiple aesthetic concerns efficiently and cost-effectively.
             </p>
             <p>
               Aftercare following dimpled chin botox treatment is straightforward yet important for optimal results. Patients receiving botox in chin should remain upright for at least four hours post-treatment to prevent product migration. Avoiding strenuous exercise, alcohol consumption, and excessive heat exposure for 24 hours helps ensure the botulinum toxin settles correctly in the targeted mentalis muscle. Following these simple guidelines maximises the longevity and quality of your chin botox before and after transformation.
