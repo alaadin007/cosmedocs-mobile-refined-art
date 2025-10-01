@@ -285,25 +285,9 @@ const ForeheadFillers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6">Understanding Dermal Fillers Forehead Treatment</h2>
-              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
-                Dermal filler in forehead treatments are a specialized antiaging treatment designed for the upper face. They effectively 
-                reduce the appearance of static lines, creases, and forehead wrinkle filler applications address deep wrinkle treatment needs. 
-                This forehead wrinkles treatment offers minimal invasiveness with instant results, making it a popular anti wrinkle skin treatment.
-              </p>
-            </motion.div>
-
-            {/* What Are Forehead Fillers */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <h3 className="text-2xl font-bold mb-6 text-purple-300">What Are Dermal Filler on Forehead Treatments?</h3>
+              <h2 className="text-4xl font-bold mb-6">What Are Dermal Filler on Forehead Treatments?</h2>
               <p className="text-gray-300 mb-6">
                 Dermal filler forehead treatments involve the injection of best cosmetic wrinkle fillers directly into targeted areas 
                 to address moderate to severe facial wrinkles and indent on forehead areas. These specialized forehead crease filler 
