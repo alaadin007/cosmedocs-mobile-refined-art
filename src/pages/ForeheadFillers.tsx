@@ -287,7 +287,7 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-4xl font-bold mb-6">Dermal Fillers on Forehead Treatment</h2>
+              <h2 className="text-3xl font-bold mb-6">Dermal Fillers on Forehead Treatment</h2>
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                 Forehead dermal fillers are advanced cosmetic treatments designed to restore volume, smooth wrinkles, and enhance the 
                 upper facial contours. These injectable treatments work by replenishing lost volume beneath the skin's surface, filling 
@@ -311,7 +311,7 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Forehead Fillers Indications</h2>
+              <h2 className="text-3xl font-bold mb-6">Forehead Fillers Indications</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg">
                 Forehead fillers are indicated for various aesthetic concerns and functional improvements. Understanding when forehead fillers are the right choice helps ensure optimal treatment outcomes.
               </p>
@@ -381,7 +381,7 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">What Is Forehead Indentation (Concavity)?</h2>
+              <h2 className="text-3xl font-bold mb-6">What Is Forehead Indentation (Concavity)?</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg">
                 Forehead indentation, or concavity, refers to areas of the forehead that appear sunken, hollow, or depressed compared to the surrounding areas. This condition can significantly impact facial harmony and self-confidence.
               </p>
@@ -615,7 +615,7 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Botox vs. Fillers for the Forehead: Which One Is Right for You?</h2>
+              <h2 className="text-3xl font-bold mb-6">Botox vs. Fillers for the Forehead: Which One Is Right for You?</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg">
                 Understanding the differences between Botox and fillers helps you make an informed decision about the best treatment for your specific forehead concerns and aesthetic goals.
               </p>
@@ -914,7 +914,7 @@ const ForeheadFillers = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12 text-center"
             >
-              <h2 className="text-4xl font-bold mb-6">Ready for Your Forehead's Second Chance?</h2>
+              <h2 className="text-3xl font-bold mb-6">Ready for Your Forehead's Second Chance?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book a consultation with our expert practitioners at Cosmedocs Harley Street. 
                 Let us help you achieve natural-looking, beautiful results with premium forehead fillers.
