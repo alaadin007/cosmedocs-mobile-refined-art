@@ -370,8 +370,176 @@ const CheekFiller = () => {
           </div>
         </section>
 
-        {/* 1ml & 2ml Cheek Filler Section */}
+        {/* What Are Cheek Fillers Section */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Understanding Cheek Fillers: Purpose and Benefits</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto mb-8">
+                Cheek fillers are advanced dermal filler treatments using hyaluronic acid to restore volume, 
+                enhance contours, and rejuvenate the midface area. This non-surgical procedure creates natural-looking 
+                enhancement whilst addressing multiple aesthetic concerns.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 border-white/10 text-white h-full hover:bg-white/10 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <CheckCircle className="text-purple-300" size={20} />
+                      Volume Loss Correction
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Restore lost volume in the cheeks that naturally diminishes with age, recreating youthful 
+                      fullness and healthy facial contours.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 border-white/10 text-white h-full hover:bg-white/10 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <CheckCircle className="text-purple-300" size={20} />
+                      Cheekbone Definition
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Enhance and sculpt cheekbones for more prominent, defined facial structure whilst maintaining 
+                      natural movement and expression.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 border-white/10 text-white h-full hover:bg-white/10 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <CheckCircle className="text-purple-300" size={20} />
+                      Midface Lifting
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Create a lifting effect that reduces the appearance of sagging and provides overall facial 
+                      rejuvenation without surgery.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 border-white/10 text-white h-full hover:bg-white/10 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <CheckCircle className="text-purple-300" size={20} />
+                      Facial Symmetry
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Balance asymmetrical features and create harmonious facial proportions through strategic 
+                      filler placement.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 border-white/10 text-white h-full hover:bg-white/10 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <CheckCircle className="text-purple-300" size={20} />
+                      Hollowing Reduction
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Address hollow or sunken cheeks that create a tired appearance, restoring a refreshed and 
+                      healthy look.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white/5 border-white/10 text-white h-full hover:bg-white/10 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <CheckCircle className="text-purple-300" size={20} />
+                      Youthful Contours
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Recreate the high, full cheeks associated with youth, reversing age-related volume depletion 
+                      for a naturally refreshed appearance.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center mt-12 max-w-4xl mx-auto"
+            >
+              <p className="text-gray-300 text-lg">
+                Using premium hyaluronic acid dermal fillers, our expert practitioners create bespoke treatment 
+                plans that enhance your natural beauty whilst maintaining facial harmony. Results are immediate, 
+                natural-looking, and can last 15-18 months.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* 1ml & 2ml Cheek Filler Section */}
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
