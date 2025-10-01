@@ -543,8 +543,17 @@ const LipFillers = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Comprehensive Lip Enhancement Areas</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Our lip filler treatments target multiple areas around the lips for complete enhancement 
-                and natural-looking results that complement your facial features.
+                Our advanced lip filler treatments target multiple areas around the lips and perioral region for complete enhancement. 
+                Using new hyaluronic acid dermal fillers, we deliver natural-looking results backed by clinical evidence from{" "}
+                <a 
+                  href="https://pubmed.ncbi.nlm.nih.gov/40979310/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-400 hover:text-purple-300 underline transition-colors"
+                >
+                  prospective safety studies
+                </a>
+                {" "}that confirm the efficacy and safety of modern lip enhancement techniques.
               </p>
             </motion.div>
 
