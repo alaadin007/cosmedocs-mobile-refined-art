@@ -613,7 +613,7 @@ const CheekFiller = () => {
         </section>
 
         {/* 3ml & 4ml Cheek Filler - Men Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -703,7 +703,7 @@ const CheekFiller = () => {
         </section>
 
         {/* Aftercare & Treatment Video Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1080,89 +1080,6 @@ const CheekFiller = () => {
               >
                 Book Your Consultation
               </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Meet Dr Ahmed Haq */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Meet Dr. Ahmed Haq</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Leading aesthetic practitioner specializing in natural cheek enhancement at Harley Street, London.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-white">Expert Aesthetic Medicine</h3>
-                  <p className="text-gray-300">
-                    Dr. Ahmed Haq brings years of specialized experience in facial aesthetics to every cheek filler treatment. 
-                    His expertise in facial anatomy and advanced injection techniques ensures safe, natural-looking results 
-                    that enhance your unique beauty.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-white">Advanced Techniques</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li>• Microcannula and needle techniques</li>
-                    <li>• Premium Swiss, USA & French dermal fillers</li>
-                    <li>• 3D facial analysis and planning</li>
-                    <li>• Minimal downtime protocols</li>
-                  </ul>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <Button 
-                    className="bg-white text-black hover:bg-gray-200"
-                    onClick={() => window.open(bookingUrl, '_blank')}
-                  >
-                    Book Consultation
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black"
-                    onClick={() => window.open('https://instagram.com/cosmedocs', '_blank')}
-                  >
-                    <Instagram className="mr-2" size={16} />
-                    Follow @cosmedocs
-                  </Button>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="bg-purple-600/20 rounded-2xl p-8 border border-purple-500/30">
-                  <h4 className="text-xl font-bold text-white mb-4">Professional Credentials</h4>
-                  <div className="space-y-3 text-gray-300">
-                    <p>✓ GMC Registered Medical Practitioner</p>
-                    <p>✓ Advanced Aesthetic Medicine Training</p>
-                    <p>✓ Harley Street Clinic Director</p>
-                    <p>✓ 1000+ Successful Treatments</p>
-                    <p>✓ Patient Safety Certified</p>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>
