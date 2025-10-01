@@ -495,9 +495,6 @@ const NasolabialFolds = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6">Benefits & Aftercare</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                Key advantages and essential care guidelines for optimal results
-              </p>
               <p className="text-gray-300 max-w-2xl mx-auto text-lg mt-4">
                 <a 
                   href="https://academic.oup.com/asj" 
