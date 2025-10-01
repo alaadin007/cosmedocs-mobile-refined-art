@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { Link } from "react-router-dom";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 
@@ -367,7 +368,7 @@ const LipFillers = () => {
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
                       For medium to normal lips seeking noticeable lip enhancement London results. This volume provides visible fullness 
-                      and dramatic improvement in lip shape and contour using premium dermal fillers.
+                      and dramatic improvement in lip shape and contour using premium <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline transition-colors">dermal fillers</Link>.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
@@ -553,7 +554,7 @@ const LipFillers = () => {
                 { area: "Cupid's Bow", description: "Enhance the central curves of the upper lip for a more defined appearance" },
                 { area: "Upper & Lower Lips", description: "Add volume to the fleshy part of both lips for natural fullness" },
                 { area: "Oral Commissures", description: "Treat the corners of the mouth to prevent downward turning" },
-                { area: "Marionette Lines", description: "Address puppet lines that extend downward from the mouth corners" },
+                { area: "Marionette Lines", description: <span>Address <Link to="/marionette-lines-filler" className="text-purple-400 hover:text-purple-300 underline transition-colors">puppet lines</Link> that extend downward from the mouth corners</span> },
                 { area: "Philtrum Ridges", description: "Enhance the natural ridges between nose and upper lip for better definition" }
               ].map((item, index) => (
                 <motion.div
