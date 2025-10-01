@@ -69,14 +69,6 @@ const CheekFiller = () => {
     alt: "Male cheek filler before after London Harley Street masculine enhancement",
     caption: "Masculine cheek enhancement for defined facial structure"
   }, {
-    src: "/lovable-uploads/93abbe25-a062-434e-a633-b9f0d329321d.png",
-    alt: "Cheek volume restoration before after London Cosmedocs dermal filler treatment",
-    caption: "Volume restoration creating natural lift and facial harmony"
-  }, {
-    src: "/lovable-uploads/97e9a4a2-debd-4216-879b-d78feffa8cba.png",
-    alt: "Cheek lift dermal filler London before after midface rejuvenation",
-    caption: "Midface rejuvenation with instant cheek lift and contour definition"
-  }, {
     src: "/lovable-uploads/2dc938fb-78b2-4af7-a0cb-190492553cbb.png",
     alt: "Apple cheek filler before after London youthful enhancement",
     caption: "Apple cheek enhancement for youthful, plump appearance"
@@ -294,9 +286,6 @@ const CheekFiller = () => {
                   <span className="text-purple-300 font-semibold">Invisible Art</span>
                   <br />
                   Transformation that speaks without saying a word
-                </p>
-                <p className="text-sm text-gray-400 mb-6">
-                  Medically reviewed by <Link to="/team/dr-ahmed-haq" className="text-purple-400 hover:text-purple-300 underline">Dr. Ahmed Haq</Link> | Last updated: 31st January 2025
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
