@@ -669,9 +669,7 @@ const JawlineFiller = () => {
                 The filler jawline treatment sculpts the natural bone structure for a sharper, more defined jawline tailored to your unique features. According to the <a href="https://www.baaps.org.uk/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">British Association of Aesthetic Plastic Surgeons</a>, non-surgical facial contouring has become increasingly popular. Before and after jawline filler results show remarkable transformations.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed text-lg">
-                Jawline treatment can define your jaw angle, enhance a receding chin with chin and jawline filler, and reduce sagging jowls. 
-                Whether you need 1ml jawline filler for subtle enhancement or 2ml jawline filler for dramatic sculpting, the treatment gives 
-                projection to weak jawlines and creates stunning jawline before and after results. Some patients also benefit from <a href="/masseter-botox" className="text-purple-300 hover:underline">masseter Botox</a> to slim the jawline further.
+                Jawline treatment can define your jaw angle, enhance a receding chin with chin and jawline filler, and reduce sagging jowls. Some patients also benefit from <a href="/masseter-botox" className="text-purple-300 hover:underline">masseter Botox</a> to slim the jawline further.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Just 1ml jawline filler per side combined with chin and jaw filler can deliver natural, transformative results. 
