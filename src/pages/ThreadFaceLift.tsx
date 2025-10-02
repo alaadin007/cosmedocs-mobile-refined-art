@@ -794,19 +794,21 @@ export function ThreadFaceLift() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-6 text-white">
-                PDO Threading Procedure: How Thread Lifting Works
+                How Does Face Threading Lift Work?
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  During the PDO threading procedure, our experienced medical professional uses a thin needle or cannula 
-                  to insert the PDO lifting threads into the skin. These threads in face create a scaffolding effect 
-                  that lifts and supports sagging facial skin. Some types of lifting threads have small hooks that aid 
-                  in uplifting the skin for enhanced thread facelift results. See the thread lifting procedure video below.
+                  During a face thread lift procedure, our expert practitioners insert specialized threads for face treatment 
+                  beneath the skin using fine needles. These PDO mono threads before and after treatment create an immediate 
+                  lifting effect, whilst also triggering your body's healing response. Over the following weeks, new collagen 
+                  forms around the threads, enhancing the lift and improving skin quality. The thread lift after 3 months 
+                  shows optimal results as collagen production peaks.
                 </p>
                 <p>
-                  As the threads dissolve over time (usually 2 weeks after thread lift treatment), they continue to 
-                  stimulate collagen production, enhancing skin tightness and elasticity for long-lasting thread lift 
-                  before after results.
+                  What are PDO threads exactly? PDO (polydioxanone) is a synthetic absorbable surgical suture material that's 
+                  been used safely in medical procedures for over 30 years. When used for facial threading lift treatments, 
+                  these threads dissolve naturally over 12-18 months, but the collagen framework they create continues providing 
+                  support, meaning your thread lift before and after results can last 2-3 years.
                 </p>
                 <h3 className="text-xl font-semibold text-white mt-6 mb-4">The specific benefits of PDO thread lift include:</h3>
                 <div className="space-y-3">
