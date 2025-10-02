@@ -672,7 +672,6 @@ const JawlineFiller = () => {
                 Jawline treatment can define your jaw angle, enhance a receding chin with chin and jawline filler, and reduce sagging jowls. Some patients also benefit from <a href="/masseter-botox" className="text-purple-300 hover:underline">masseter Botox</a> to slim the jawline further.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
-                Just 1ml jawline filler per side combined with chin and jaw filler can deliver natural, transformative results. 
                 Our jawline filler London treatments create beautifully contoured profiles with long-lasting jaw fillers before and after effects. For comprehensive facial rejuvenation, consider combining with <a href="/face-botox" className="text-purple-300 hover:underline">anti-wrinkle treatments</a>.
               </p>
             </motion.div>
