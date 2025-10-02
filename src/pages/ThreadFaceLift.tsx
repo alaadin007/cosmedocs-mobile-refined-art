@@ -473,7 +473,7 @@ export function ThreadFaceLift() {
             <div className="space-y-6 text-gray-300">
               <p>
                 The PDO thread lift London treatment represents a breakthrough in non-surgical facial rejuvenation. 
-                This innovative threading face lift procedure uses dissolvable <Link to="/dermal-fillers" className="text-link hover:text-link-hover hover:underline">PDO lifting threads</Link> to provide immediate 
+                This innovative threading face lift procedure uses dissolvable PDO lifting threads to provide immediate 
                 lifting whilst stimulating your body's natural collagen production for lasting results. Our comprehensive 
                 thread lifts before and after gallery demonstrates the remarkable transformations achievable through this minimally invasive procedure.
               </p>
