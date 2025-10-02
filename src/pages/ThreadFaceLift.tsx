@@ -464,20 +464,6 @@ export function ThreadFaceLift() {
 
 
 
-              <h3 className="text-2xl font-semibold text-white mt-8 mb-4">Expected Timeline and Results</h3>
-              <p>
-                Understanding the thread lifting journey helps set realistic expectations. Immediate lifting occurs during 
-                the threadlift procedure, but the most dramatic thread face lift before after changes develop gradually. 
-                Initial swelling subsides within days, revealing the mechanical lift from the threads face placement. 
-                However, the true beauty of PDO threading emerges over subsequent months as collagen production increases.
-              </p>
-
-              <p>
-                Many patients photograph their progress, creating impressive before and after thread face lift documentation. 
-                The 2 weeks after thread lift typically shows significant improvement from initial swelling, whilst the 
-                thread lift after 3 months reveals the full biostimulatory effects. This gradual enhancement ensures natural-looking 
-                facial thread lift results that complement your unique features rather than creating an overdone appearance.
-              </p>
             </div>
           </motion.div>
         </div>
@@ -512,6 +498,118 @@ export function ThreadFaceLift() {
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Timeline and Aftercare Section */}
+      <section className="py-20 bg-accent">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white">Thread Lift Journey & Care</h2>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Expected Timeline and Results Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-black border-gray-800 h-full">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl">Expected Timeline and Results</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-gray-300">
+                  <div className="space-y-3">
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">Immediate:</div>
+                      <div>Visible lifting effect from thread placement</div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">2-7 days:</div>
+                      <div>Initial swelling subsides, mechanical lift becomes apparent</div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">2 weeks:</div>
+                      <div>Significant improvement visible as swelling reduces</div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">3 months:</div>
+                      <div>Optimal results as collagen production peaks</div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-24 font-semibold text-purple-300">2-3 years:</div>
+                      <div>Long-lasting natural-looking results maintained</div>
+                    </div>
+                  </div>
+                  <p className="pt-4 border-t border-gray-800">
+                    Results develop gradually, with the true beauty of PDO threading emerging over subsequent months as collagen production increases, ensuring natural-looking facial rejuvenation.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Aftercare Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-black border-gray-800 h-full">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl">Aftercare Guidelines</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-gray-300">
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white">First 24 hours:</strong> Keep head elevated and avoid lying flat
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white">First week:</strong> Avoid strenuous exercise and facial massage
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white">Facial expressions:</strong> Avoid excessive facial movements for 2 weeks
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white">Skincare:</strong> Use gentle products and avoid harsh treatments
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white">Sun protection:</strong> Apply SPF daily to protect treated areas
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-white">Follow-up:</strong> Attend scheduled appointments for optimal results
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
 
