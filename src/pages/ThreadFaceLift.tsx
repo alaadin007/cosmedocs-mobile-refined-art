@@ -477,26 +477,183 @@ export function ThreadFaceLift() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Types of Threads in Face Treatments</h2>
+            <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+              We use premium PDO threads tailored to your specific facial rejuvenation needs, combining different thread types for optimal results
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+            {/* Mono Threads */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500 h-full hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]">
+                <CardHeader>
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <Activity className="text-purple-600" size={28} />
+                  </div>
+                  <CardTitle className="text-white text-2xl text-center">Mono Threads</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-300 text-center mb-4">
+                    Smooth PDO threads designed for skin rejuvenation and texture improvement
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Stimulates collagen production</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Improves skin texture and firmness</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Ideal for fine lines and skin quality</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Minimal downtime treatment</span>
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t border-purple-500/30">
+                    <p className="text-purple-300 font-semibold text-center">Best for: Skin tightening & rejuvenation</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Cog Threads */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gradient-to-br from-pink-900/30 to-purple-900/30 border-pink-500 h-full hover:border-pink-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]">
+                <CardHeader>
+                  <div className="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <Star className="text-pink-600" size={28} />
+                  </div>
+                  <CardTitle className="text-white text-2xl text-center">Cog Threads</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-300 text-center mb-4">
+                    Barbed threads with small cogs for powerful lifting and repositioning
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-pink-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Maximum lifting power</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-pink-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Dramatic facial contouring</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-pink-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Long-lasting support structure</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-pink-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Immediate visible results</span>
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t border-pink-500/30">
+                    <p className="text-pink-300 font-semibold text-center">Best for: Cheek & jawline lifting</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Screw Threads */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border-blue-500 h-full hover:border-blue-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                <CardHeader>
+                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <Shield className="text-blue-600" size={28} />
+                  </div>
+                  <CardTitle className="text-white text-2xl text-center">Screw Threads</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-300 text-center mb-4">
+                    Intertwined threads designed for volume restoration and deep tissue support
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Restores facial volume</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Enhances facial contours</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Deep structural support</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-300">Natural collagen stimulation</span>
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t border-blue-500/30">
+                    <p className="text-blue-300 font-semibold text-center">Best for: Volume & hollow areas</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+
+          {/* Additional Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-6 text-white text-center">Types of Threads in Face Treatments</h2>
-            
-            <div className="space-y-6 text-gray-300">
-              <p className="text-lg">
-                Our clinic offers different types of facial threads facelift options to address various concerns. Mono threads 
-                before and after results excel at skin tightening and texture improvement, whilst barbed lifting threads 
-                provide more dramatic face lift threading effects. Many patients combine both types for comprehensive face 
-                threads before and after transformations. A cheek lift with threads, for example, often uses lifting threads 
-                for volume restoration whilst mono threads improve skin quality.
-              </p>
+            <Card className="bg-accent border-gray-700">
+              <CardContent className="pt-6">
+                <div className="space-y-4 text-gray-300">
+                  <p className="text-lg leading-relaxed">
+                    Our clinic offers different types of <strong className="text-white">facial threads facelift</strong> options to address various concerns. 
+                    <strong className="text-purple-300"> Mono threads before and after</strong> results excel at skin tightening and texture improvement, 
+                    whilst barbed lifting threads provide more dramatic <strong className="text-white">face lift threading</strong> effects. Many patients combine both types 
+                    for comprehensive <strong className="text-white">face threads before and after</strong> transformations. A <strong className="text-purple-300">cheek lift with threads</strong>, 
+                    for example, often uses lifting threads for volume restoration whilst mono threads improve skin quality.
+                  </p>
 
-              <p>
-                The before and after PDO thread lift eyes treatment specifically uses delicate threads designed for the 
-                sensitive eye area. These specialized threads address concerns like crow's feet, under-eye hollowing, and 
-                drooping brow without the downtime of surgical intervention. Patients typically notice improvements 2 weeks 
-                after thread lift, with continued enhancement as natural collagen develops.
-              </p>
-            </div>
+                  <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-6 mt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <Syringe className="text-purple-600" size={24} />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold text-lg mb-2">Eye Area Specialisation</h3>
+                        <p className="text-gray-300">
+                          The <strong className="text-purple-300">before and after PDO thread lift eyes</strong> treatment specifically uses delicate threads designed for the 
+                          sensitive eye area. These specialised threads address concerns like crow's feet, under-eye hollowing, and 
+                          drooping brow without the downtime of surgical intervention. Patients typically notice improvements <strong className="text-white">2 weeks 
+                          after thread lift</strong>, with continued enhancement as natural collagen develops.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </section>
