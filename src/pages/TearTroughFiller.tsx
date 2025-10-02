@@ -123,6 +123,56 @@ const TearTroughFiller = () => {
             "priceRange": "£££"
           })}
         </script>
+
+        {/* MedicalProcedure Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Tear Trough Filler Treatment",
+            "description": "Non-surgical under eye treatment using hyaluronic acid dermal fillers to reduce dark circles, eye bags, and restore volume",
+            "procedureType": "Cosmetic",
+            "followup": "2-week follow-up included",
+            "preparation": "Avoid blood thinners, alcohol, and certain supplements 24 hours before treatment",
+            "howPerformed": "Injection of hyaluronic acid dermal fillers into the tear trough area using advanced cannula or needle techniques for natural results",
+            "bodyLocation": "Under eye area, tear trough region"
+          })}
+        </script>
+
+        {/* Offer Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Tear Trough Filler Treatment",
+            "description": "Professional under eye filler treatment to reduce dark circles and restore volume",
+            "price": "425",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "priceValidUntil": "2025-12-31",
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+
+        {/* FAQPage Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
@@ -137,10 +187,9 @@ const TearTroughFiller = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Tear Trough
-                  <span className="block text-purple-300">Fillers</span>
-                  <span className="block text-sm mt-4">Brighten up your eyes, lighten up your dark circles</span>
+                  Tear Trough Filler London - Under Eye Fillers for Dark Circles & Eye Bags
                 </h1>
+                <p className="text-sm text-purple-300 mb-4">Brighten up your eyes, lighten up your dark circles</p>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
                   <span className="text-purple-300 font-medium text-lg">Invisible Art</span> - Under eye transformation that speaks without saying a word
                 </p>
@@ -1193,6 +1242,38 @@ const TearTroughFiller = () => {
             artificial appearance. Tear trough filler side effects are minimal when performed by experienced professionals, 
             with only mild swelling or bruising possible. The treatment can be combined with other facial treatments like 
             Botox for crow's feet or cheek fillers for comprehensive facial rejuvenation.
+          </p>
+          <p>
+            Understanding the anatomy of tear troughs is essential for successful treatment outcomes. The tear trough area consists 
+            of delicate skin overlying the orbital bone, where natural aging processes lead to volume loss and skin thinning. 
+            Factors contributing to tear trough concerns include genetics, aging, lifestyle factors, and bone structure. Our 
+            tear trough filler London treatments specifically target these anatomical concerns using precise injection techniques 
+            that avoid complications. The dermal fillers for under eye bags we use are carefully selected for their safety profile 
+            and natural integration with existing tissue. Eye fillers for dark circles work by reflecting light differently and 
+            reducing the shadowing effect that makes dark circles visible. Fillers for eye bags help smooth the transition between 
+            the lower eyelid and cheek, creating a more refreshed appearance.
+          </p>
+          <p>
+            Our tear trough filler cost UK pricing is transparent and competitive, starting from £425 for professional treatment. 
+            The price of under eye filler reflects the expertise of our practitioners, the quality of products used, and comprehensive 
+            aftercare support. Tear trough filler aftercare is crucial for optimal results and includes avoiding excessive touching, 
+            staying hydrated, and following specific post-treatment guidelines. Understanding tear trough filler swelling stages 
+            helps patients know what to expect during recovery. Most patients ask "does tear trough filler hurt?" and are pleased 
+            to learn that with our numbing techniques and gentle approach, discomfort is minimal. The question "how long does tear 
+            trough filler last?" depends on individual metabolism, lifestyle, and the specific filler used, but typically ranges 
+            from 12-18 months. Before and after tear trough filler results demonstrate dramatic improvements in under-eye appearance, 
+            with patients reporting looking more rested, youthful, and refreshed. Our clinic specialises in preventing lumpy filler 
+            under eye complications through expert technique and appropriate product selection. We offer both traditional needle and 
+            advanced cannula techniques for tear trough filler injections, choosing the method best suited to each patient's anatomy.
+          </p>
+          <p>
+            Cosmedocs maintains the highest standards of safety and hygiene in all tear trough treatment procedures. Our medical 
+            professionals undergo continuous training in the latest injection techniques and safety protocols. We provide comprehensive 
+            consultations where we assess your individual concerns, discuss realistic expectations, and create personalised treatment 
+            plans. The under eye filler London market has many providers, but our commitment to natural results and patient safety 
+            sets us apart. Every patient receives detailed pre-treatment and post-treatment instructions to ensure optimal outcomes 
+            and minimise any potential side effects. Our approach combines medical expertise with artistic vision, ensuring eye bag 
+            filler treatments enhance your natural beauty whilst maintaining facial harmony and balance.
           </p>
         </div>
 
