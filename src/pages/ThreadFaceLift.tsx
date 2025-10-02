@@ -579,6 +579,12 @@ export function ThreadFaceLift() {
               Face lift using threads can address multiple areas for comprehensive facial threading lift rejuvenation. 
               Our threads face treatments provide natural-looking thread facelift results across various facial zones.
             </p>
+            <p className="text-gray-300 max-w-3xl mx-auto mt-4">
+              The PDO thread lift London treatment is designed to reposition the facial skin and trigger the body's 
+              natural response by producing collagen and improving blood circulation, which tightens the tissue. 
+              Results continue to improve even 3 months after thread lift treatment, with optimal thread lift after 
+              3 months outcomes visible as swelling subsides and collagen remodeling continues.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -863,12 +869,6 @@ export function ThreadFaceLift() {
                   <p className="text-gray-300">They have an excellent safety record, the same type used in cardiac and other surgical sutures.</p>
                 </div>
               </div>
-              <p className="mt-6 text-gray-300 text-center">
-                The PDO thread lift London treatment is designed to reposition the facial skin and trigger the body's 
-                natural response by producing collagen and improving blood circulation, which tightens the tissue. 
-                Results continue to improve even 3 months after thread lift treatment, with optimal thread lift after 
-                3 months outcomes visible as swelling subsides and collagen remodeling continues.
-              </p>
             </div>
           </motion.div>
         </div>
