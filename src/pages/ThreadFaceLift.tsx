@@ -297,10 +297,10 @@ export function ThreadFaceLift() {
                PDO Thread
                <span className="block text-purple-300">Face Lift London</span>
              </h1>
-            <p className="text-xl text-white mb-8">
+            <p className="text-lg text-white mb-8">
               Non-surgical face thread lift with premium PDO threading for natural facial rejuvenation
             </p>
-            <p className="text-xl mb-2">
+            <p className="text-lg mb-2">
               <span className="text-purple-300 font-semibold">Invisible Art</span>
             </p>
             <p className="text-white mb-8">
@@ -471,7 +471,7 @@ export function ThreadFaceLift() {
             <h2 className="text-3xl font-bold mb-6 text-white text-center">Understanding PDO Thread Lifts: A Complete Guide</h2>
             
             <div className="space-y-6 text-gray-300">
-              <p className="text-lg">
+              <p>
                 The PDO thread lift London treatment represents a breakthrough in non-surgical facial rejuvenation. 
                 This innovative threading face lift procedure uses dissolvable <Link to="/dermal-fillers" className="text-link hover:text-link-hover hover:underline">PDO lifting threads</Link> to provide immediate 
                 lifting whilst stimulating your body's natural collagen production for lasting results. Our comprehensive 
@@ -524,21 +524,21 @@ export function ThreadFaceLift() {
                   <CardTitle className="text-white text-2xl text-center">Mono Threads</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-300 text-center text-sm">
+                  <p className="text-gray-300 text-center">
                     Smooth threads for skin rejuvenation and texture improvement
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Collagen stimulation</span>
+                      <span className="text-gray-300">Collagen stimulation</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Skin tightening</span>
+                      <span className="text-gray-300">Skin tightening</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-purple-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Fine line reduction</span>
+                      <span className="text-gray-300">Fine line reduction</span>
                     </div>
                   </div>
                 </CardContent>
@@ -560,21 +560,21 @@ export function ThreadFaceLift() {
                   <CardTitle className="text-white text-2xl text-center">Cog Threads</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-300 text-center text-sm">
+                  <p className="text-gray-300 text-center">
                     Barbed threads for powerful lifting and repositioning
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-pink-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Maximum lifting</span>
+                      <span className="text-gray-300">Maximum lifting</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-pink-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Facial contouring</span>
+                      <span className="text-gray-300">Facial contouring</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-pink-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Immediate results</span>
+                      <span className="text-gray-300">Immediate results</span>
                     </div>
                   </div>
                 </CardContent>
@@ -596,21 +596,21 @@ export function ThreadFaceLift() {
                   <CardTitle className="text-white text-2xl text-center">Screw Threads</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-300 text-center text-sm">
+                  <p className="text-gray-300 text-center">
                     Intertwined threads for volume restoration
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-blue-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Volume enhancement</span>
+                      <span className="text-gray-300">Volume enhancement</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-blue-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Deep support</span>
+                      <span className="text-gray-300">Deep support</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="text-blue-400 flex-shrink-0" size={16} />
-                      <span className="text-gray-300 text-sm">Hollow area treatment</span>
+                      <span className="text-gray-300">Hollow area treatment</span>
                     </div>
                   </div>
                 </CardContent>
@@ -909,15 +909,15 @@ export function ThreadFaceLift() {
                   <div className="space-y-2 text-left">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">Full face and neck treatment</span>
+                      <span className="text-gray-300">Full face and neck treatment</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">Consultation included</span>
+                      <span className="text-gray-300">Consultation included</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">Extended aftercare support</span>
+                      <span className="text-gray-300">Extended aftercare support</span>
                     </div>
                   </div>
                 </CardContent>
@@ -974,15 +974,15 @@ export function ThreadFaceLift() {
                   <div className="space-y-2 text-left">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">Full facial assessment</span>
+                      <span className="text-gray-300">Full facial assessment</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">Treatment recommendations</span>
+                      <span className="text-gray-300">Treatment recommendations</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="text-purple-500" size={16} />
-                      <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                      <span className="text-gray-300">Deducted from treatment cost</span>
                     </div>
                   </div>
                 </CardContent>
