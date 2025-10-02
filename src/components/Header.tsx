@@ -149,7 +149,7 @@ export default function Header() {
               <span className="text-white">COSME</span>
               <span className="text-white">DOCS</span>
             </div>
-            <p className="text-xs text-amber-400 -mt-1">Harley Street Since 2007, 1M+ Injection</p>
+            <p className="text-[10px] md:text-xs text-amber-400 -mt-1 whitespace-nowrap">Harley Street Since 2007, 1M+ Injection</p>
           </Link>
 
           {/* Desktop Actions - Right */}

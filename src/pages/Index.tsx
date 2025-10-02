@@ -97,7 +97,7 @@ const Index = () => {
                 delay: 0.5,
                 duration: 0.6
               }}>
-                  *Our aesthetics is invisible art
+                  Our aesthetics is invisible art
                 </motion.p>
                 <motion.div className="mb-8 max-w-xl mx-auto" initial={{
                 opacity: 0
@@ -107,12 +107,15 @@ const Index = () => {
                 delay: 0.7,
                 duration: 0.6
               }}>
-                  <p className="text-gray-300 mb-1">art • science • bit of magic</p>
-                  <p className="text-gray-400 text-sm mt-4">
-                    Aesthetic medicine by Cosmedocs is minimal.<br />
-                    Quiet, not loud.<br />
-                    Invisible, not exaggerated.<br />
-                    It's transformation that speaks — without saying a word.
+                  <p className="text-gray-300 mb-4">art • science • a touch of magic</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    All done with the finest needles imported,<br />
+                    because every detail matters.
+                  </p>
+                  <p className="text-gray-400 text-sm mt-6 leading-relaxed">
+                    At CosmeDocs, aesthetics is more than treatment — it's a philosophy.<br />
+                    Quiet, not loud. Subtle, not exaggerated.<br />
+                    Transformations that whisper rather than shout.
                   </p>
                 </motion.div>
                 <motion.div initial={{
