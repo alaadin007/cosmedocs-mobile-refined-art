@@ -486,12 +486,6 @@ export function ThreadFaceLift() {
                 that lifts sagging skin whilst encouraging natural collagen threads before and after production over time.
               </p>
 
-              <p>
-                When considering face lift using threads versus traditional surgical options, many patients appreciate the minimal 
-                downtime and natural results. Thread lift cost varies based on treatment areas, but represents excellent value 
-                compared to surgical alternatives. Our thread face lift cost structure is transparent, with thread lift cost UK 
-                pricing competitive amongst <Link to="/non-surgical-facelift" className="text-link hover:text-link-hover hover:underline">London's premier non-surgical facelift clinics</Link>.
-              </p>
 
             </div>
           </motion.div>
