@@ -435,6 +435,56 @@ export function ThreadFaceLift() {
       </section>
 
 
+      {/* Treatment Overview */}
+      <section className="py-20">
+        <div className="page-container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold mb-6">What Are PDO Threads? Face Lift Using Threads Explained</h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  A PDO thread face lift is a revolutionary non-surgical threading face lift procedure that uses 
+                  specialized PDO lifting threads made from polydioxanone to lift and tighten sagging facial skin. 
+                  These medical-grade threads for face treatment are inserted under the skin to create an immediate 
+                  lifting effect while stimulating natural collagen production for long-term facial rejuvenation.
+                </p>
+                <p>
+                  PDO threads London treatments have been safely used in surgical procedures for decades and are 
+                  completely biocompatible and biodegradable. This face threading lift treatment is ideal for 
+                  addressing early signs of aging, including sagging jowls, loose neck skin, and loss of facial definition. 
+                  The threading facelift process offers a non-surgical alternative to traditional surgical procedures.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+                  <div className="space-y-3">
+                    {benefits.map((benefit, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Treatment Areas Section */}
       <section className="py-20 bg-accent">
