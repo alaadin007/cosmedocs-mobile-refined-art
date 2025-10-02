@@ -104,6 +104,9 @@ const TearTroughFiller = () => {
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="tear trough filler, under eye fillers, eye bag fillers, tear trough dermal filler, dermal fillers for under eye bags, eye fillers for dark circles, under eye filler london, fillers for eye bags, tear trough filler before after, tear trough filler aftercare, tear trough filler cost uk, dermal filler under eyes, eye circle filler, tear trough filler swelling stages, does tear trough filler hurt, how long does tear trough filler last, tear trough treatment, London, Harley Street" />
+        <meta name="author" content="Cosmedocs Medical Team" />
+        <meta name="publish-date" content="2024-01-15" />
+        <meta name="last-modified" content="2025-10-02" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -171,6 +174,34 @@ const TearTroughFiller = () => {
                 "text": faq.answer
               }
             }))
+          })}
+        </script>
+
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Tear Trough Filler",
+                "item": "https://www.cosmedocs.co.uk/tear-trough-filler"
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -334,6 +365,7 @@ const TearTroughFiller = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -384,11 +416,11 @@ const TearTroughFiller = () => {
                     <p className="text-gray-300 mb-6">
                       The tear trough dermal filler or eye bag filler is a minimally invasive treatment using what filler for tear trough - 
                       premium hyaluronic acid. This undereye filler treatment aims to restore volume, reduce fillers for under eye circles, 
-                      and minimize puffiness while addressing how to remove eye circles effectively.
+                      and minimize puffiness while addressing how to remove eye circles effectively. Similar to our <a href="/cheek-filler" className="text-purple-300 hover:underline">cheek filler treatments</a>, tear trough fillers use advanced injection techniques for natural results.
                     </p>
                     <p className="text-gray-300 mb-6">
                       Our tear trough filler cost uk starts from £425. These dermal fillers under eyes use soft gel-like hyaluronic acid 
-                      combined with expert injection techniques to rejuvenate the tear trough area - the junction between your lower eyelids and upper cheek.
+                      combined with expert injection techniques to rejuvenate the tear trough area - the junction between your lower eyelids and upper cheek. For comprehensive facial rejuvenation, many patients combine this with <a href="/lip-filler" className="text-purple-300 hover:underline">lip filler treatments</a> or <a href="/face-botox" className="text-purple-300 hover:underline">anti-wrinkle injections</a>.
                     </p>
                     
                     <div className="bg-purple-900/30 border-l-4 border-purple-500 p-4 rounded-r-lg">
@@ -487,6 +519,147 @@ const TearTroughFiller = () => {
           </div>
         </section>
 
+        {/* Treatment Process Section - NEW */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Treatment Process</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Our comprehensive step-by-step approach ensures safe, comfortable, and effective tear trough filler treatments 
+                with optimal results and minimal downtime.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-900/20 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                        1
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2">Initial Consultation</h3>
+                        <p className="text-gray-300">
+                          Comprehensive facial assessment to evaluate your under-eye concerns, discuss expectations, and create a personalised treatment plan. 
+                          We review your medical history and explain the procedure in detail, similar to our <a href="/dermal-fillers" className="text-purple-300 hover:underline">dermal filler consultations</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-900/20 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                        2
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2">Preparation & Numbing</h3>
+                        <p className="text-gray-300">
+                          The treatment area is thoroughly cleansed and a topical anaesthetic cream is applied to ensure maximum comfort. 
+                          We mark the precise injection points for optimal filler placement.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-900/20 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                        3
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2">Precise Injection Technique</h3>
+                        <p className="text-gray-300">
+                          Using advanced cannula or needle techniques, we carefully inject premium hyaluronic acid filler into the tear trough area. 
+                          The procedure typically takes 10-25 minutes with immediate visible results.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-900/20 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                        4
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2">Massage & Moulding</h3>
+                        <p className="text-gray-300">
+                          After injection, we gently massage and mould the filler to ensure smooth, even distribution and natural-looking results. 
+                          This prevents lumpy filler under eye complications.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-900/20 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                        5
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2">Aftercare & Follow-up</h3>
+                        <p className="text-gray-300">
+                          You receive comprehensive tear trough filler aftercare instructions and a complimentary 2-week follow-up appointment. 
+                          Most patients return to normal activities immediately. For optimal facial results, consider combining with <a href="/chin-filler" className="text-purple-300 hover:underline">chin filler</a> or <a href="/masseter-botox" className="text-purple-300 hover:underline">jawline slimming treatments</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Tear Troughs Vs. Dark Circles Vs. Eye Bags Comparison */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -524,6 +697,7 @@ const TearTroughFiller = () => {
                   <img 
                     src="/lovable-uploads/c26ed70e-4dce-4f99-b43a-5e674aa1b4bb.png" 
                     alt="Tear trough treatment before and after comparison"
+                    loading="lazy"
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -548,6 +722,7 @@ const TearTroughFiller = () => {
                   <img 
                     src="/lovable-uploads/5d69dde0-2e2b-497a-a1eb-bbed6071beb7.png" 
                     alt="Dark circles before and after treatment"
+                    loading="lazy"
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -572,6 +747,7 @@ const TearTroughFiller = () => {
                   <img 
                     src="/lovable-uploads/624f9f45-8144-43e0-a979-20cc3a591f28.png" 
                     alt="Eye bags treatment before and after"
+                    loading="lazy"
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -697,7 +873,8 @@ const TearTroughFiller = () => {
               <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Benefits</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Transform your under-eye area with our expert tear trough filler treatments. 
-                Address multiple concerns with one comprehensive solution.
+                Address multiple concerns with one comprehensive solution. Many patients enhance their results by combining this with 
+                <a href="/nose-filler" className="text-purple-300 hover:underline"> non-surgical nose reshaping</a> for complete facial harmony.
               </p>
             </motion.div>
 
@@ -863,7 +1040,8 @@ const TearTroughFiller = () => {
               <h2 className="text-3xl font-bold mb-4 text-white">Tear Trough Filler Price & Cost in London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Transparent tear trough filler cost uk pricing for premium under eye filler london treatments. 
-                All prices include consultation, dermal filler under eyes treatment, and comprehensive tear trough before and after support from our expert medical team.
+                All prices include consultation, dermal filler under eyes treatment, and comprehensive tear trough before and after support from our expert medical team. 
+                View our complete <a href="/price-list" className="text-purple-300 hover:underline">price list</a> for all aesthetic treatments.
               </p>
             </motion.div>
 
@@ -1273,7 +1451,8 @@ const TearTroughFiller = () => {
             plans. The under eye filler London market has many providers, but our commitment to natural results and patient safety 
             sets us apart. Every patient receives detailed pre-treatment and post-treatment instructions to ensure optimal outcomes 
             and minimise any potential side effects. Our approach combines medical expertise with artistic vision, ensuring eye bag 
-            filler treatments enhance your natural beauty whilst maintaining facial harmony and balance.
+            filler treatments enhance your natural beauty whilst maintaining facial harmony and balance. Learn more about our comprehensive 
+            aesthetic medicine approach on our treatments page.
           </p>
         </div>
 
