@@ -2,6 +2,8 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import {
   Carousel,
   CarouselContent,
@@ -177,15 +179,16 @@ const JawlineFiller = () => {
         <meta name="geo.position" content="51.5074;-0.1278" />
         <meta name="ICBM" content="51.5074, -0.1278" />
         
-        {/* Structured Data */}
+        {/* Enhanced MedicalBusiness Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            "name": "Cosmedocs - Jawline Filler",
-            "description": "Premium jawline filler treatments in London's Harley Street",
-            "url": "https://cosmedocs.com/jawline-filler",
+            "name": "Cosmedocs - Jawline Filler London",
+            "description": "Premium jawline filler treatments in London's Harley Street by Dr. Ahmed Haq",
+            "url": "https://www.cosmedocs.co.uk/jawline-filler",
             "telephone": "0333 0551 503",
+            "email": "info@cosmedocs.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -198,13 +201,161 @@ const JawlineFiller = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
             "medicalSpecialty": "Cosmetic Surgery",
-            "priceRange": "£950"
+            "priceRange": "£350-£950",
+            "areaServed": {
+              "@type": "City",
+              "name": "London"
+            },
+            "sameAs": [
+              "https://www.instagram.com/cosmedocs",
+              "https://www.facebook.com/cosmedocs"
+            ]
+          })}
+        </script>
+
+        {/* MedicalProcedure Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Jawline Filler Treatment",
+            "description": "Non-surgical jawline enhancement using hyaluronic acid dermal fillers",
+            "procedureType": "Cosmetic",
+            "followup": "2-week follow-up included",
+            "preparation": "Avoid blood thinners, alcohol, and certain supplements before treatment",
+            "howPerformed": "Injection of hyaluronic acid dermal fillers into the jawline area using advanced techniques"
+          })}
+        </script>
+
+        {/* Offer Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Natural HD Jawline Package",
+            "description": "Comprehensive jawline sculpting treatment package",
+            "price": "950",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.cosmedocs.co.uk/jawline-filler",
+            "priceValidUntil": "2025-12-31",
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+
+        {/* FAQPage Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              ...leftColumnFaqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              })),
+              ...rightColumnFaqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            ]
+          })}
+        </script>
+
+        {/* VideoObject Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Jawline Filler Treatment Process",
+            "description": "Watch the professional jawline filler treatment technique used at Cosmedocs",
+            "thumbnailUrl": "https://img.youtube.com/vi/Y3gCG1n2ioo/maxresdefault.jpg",
+            "uploadDate": "2024-01-01",
+            "contentUrl": "https://www.youtube.com/watch?v=Y3gCG1n2ioo",
+            "embedUrl": "https://www.youtube.com/embed/Y3gCG1n2ioo",
+            "duration": "PT30M"
+          })}
+        </script>
+
+        {/* Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Jawline Filler Treatment",
+            "provider": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "London"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Jawline Filler Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "1ml Jawline Filler"
+                  },
+                  "price": "350",
+                  "priceCurrency": "GBP"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Natural HD Jawline Package"
+                  },
+                  "price": "950",
+                  "priceCurrency": "GBP"
+                }
+              ]
+            }
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-4">
+          <Breadcrumb 
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Treatments", href: "/treatments" },
+              { label: "Jawline Filler" }
+            ]}
+          />
+        </div>
+
         {/* Hero Section - Matching ThreadFaceLift style */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -390,15 +541,15 @@ const JawlineFiller = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
+              <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
                 <p className="text-gray-300 mb-6">
                   Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
-                  The treatment involves injecting hyaluronic acid-based dermal fillers to enhance structure, 
-                  hydration, and contour in the jawline area.
+                  The treatment involves injecting <a href="https://www.webmd.com/beauty/cosmetic-procedures-dermal-fillers" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">hyaluronic acid-based dermal fillers</a> to enhance structure, 
+                  hydration, and contour in the jawline area. Similar to <a href="/dermal-fillers" className="text-purple-300 hover:underline">dermal filler treatments</a>, jawline fillers use premium FDA-approved products.
                 </p>
                 <p className="text-gray-300 mb-6">
                   Just <strong>1ml of filler</strong> — about 1/5 of a teaspoon — can make a noticeable 
-                  difference, delivering precise, long-lasting results for a beautifully sculpted lower face.
+                  difference, delivering precise, long-lasting results for a beautifully sculpted lower face. Many patients also combine this with <a href="/chin-filler" className="text-purple-300 hover:underline">chin filler treatments</a> for comprehensive lower face enhancement.
                 </p>
                 <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20">
                   <h3 className="text-xl font-semibold mb-3 text-purple-300">Jawline Signifies Youth</h3>
@@ -515,16 +666,16 @@ const JawlineFiller = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">How Does Jaw Filler Work?</h2>
               <p className="text-gray-300 mb-4 leading-relaxed text-lg">
                 Jaw filler works by enhancing volume and definition, creating a clear separation between your face and neck. 
-                The filler jawline treatment sculpts the natural bone structure for a sharper, more defined jawline tailored to your unique features. Before and after jawline filler results show remarkable transformations.
+                The filler jawline treatment sculpts the natural bone structure for a sharper, more defined jawline tailored to your unique features. According to the <a href="https://www.baaps.org.uk/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">British Association of Aesthetic Plastic Surgeons</a>, non-surgical facial contouring has become increasingly popular. Before and after jawline filler results show remarkable transformations.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed text-lg">
                 Jawline treatment can define your jaw angle, enhance a receding chin with chin and jawline filler, and reduce sagging jowls. 
                 Whether you need 1ml jawline filler for subtle enhancement or 2ml jawline filler for dramatic sculpting, the treatment gives 
-                projection to weak jawlines and creates stunning jawline before and after results.
+                projection to weak jawlines and creates stunning jawline before and after results. Some patients also benefit from <a href="/masseter-botox" className="text-purple-300 hover:underline">masseter Botox</a> to slim the jawline further.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Just 1ml jawline filler per side combined with chin and jaw filler can deliver natural, transformative results. 
-                Our jawline filler london treatments create beautifully contoured profiles with long-lasting jaw fillers before and after effects.
+                Our jawline filler London treatments create beautifully contoured profiles with long-lasting jaw fillers before and after effects. For comprehensive facial rejuvenation, consider combining with <a href="/face-botox" className="text-purple-300 hover:underline">anti-wrinkle treatments</a>.
               </p>
             </motion.div>
           </div>
@@ -984,24 +1135,47 @@ const JawlineFiller = () => {
           </div>
         </section>
 
-        {/* Hidden SEO content for search engines */}
-        <div className="sr-only">
-          <p>
-            Jawline filler London treatments at Cosmedocs Harley Street offer the perfect solution for creating a jaw-dropping jawline. Our 1ml jawline filler costs £350 while 2ml jawline filler costs £650, with our Natural HD Package at £950 combining premium dermal fillers with Dr. Ahmed Haq's advanced jawline injections techniques. Jaw filler before and after results show dramatic improvements lasting 15-18 months.
-          </p>
-          <p>
-            Before and after jaw filler galleries showcase incredible transformations using 1ml jawline filler before and after comparisons and 2ml jawline filler results. Our jawline treatment enhances facial structure for chubby face 1ml jawline filler solutions and dramatic jaw and chin filler combinations. Jawline fillers before and after photos demonstrate natural-looking results at our prestigious Harley Street clinic.
-          </p>
-          <p>
-            The benefits of choosing jaw fillers include immediate jawline before and after results, minimal downtime, and reversible effects. Filler for jawline treatments allow gradual improvements with chin and jawline filler combinations. Our patients see instant before and after jawline filler results, returning to work the same day with only mild swelling from the jaw line treatment.
-          </p>
-          <p>
-            Dr. Ahmed Haq specializes in jawline filler for jowls, pre jowl filler, and jowl filler before and after transformations. His expertise in chin shadow filler, chin line filler, and chin crease filler ensures optimal jawline chin filler results. The jawline injections technique creates definition using 1 ml chin filler and comprehensive jaw and chin filler approaches.
-          </p>
-          <p>
-            What does jaw filler do? It creates structure, reduces double chin filler concerns, and provides stunning jowl fillers before and after results. How long does chin filler last? Our chin and jaw filler treatments typically last 15-18 months. The jaw fillers cost includes comprehensive aftercare, making it an excellent investment with remarkable before and after jowl fillers transformations requiring touch-ups only every 15-18 months.
-          </p>
-        </div>
+        {/* Additional Information - Now Visible in Accordion */}
+        <section className="py-20 bg-accent">
+          <div className="page-container max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Additional Information</h2>
+              <p className="text-gray-300">
+                Comprehensive details about jawline filler treatments at Cosmedocs
+              </p>
+            </motion.div>
+
+            <Collapsible className="bg-black rounded-lg border border-gray-800">
+              <CollapsibleTrigger className="flex justify-between items-center w-full px-6 py-4 text-left hover:bg-gray-900 rounded-lg">
+                <span className="text-white font-semibold text-lg">Understanding Jawline Filler Treatments</span>
+                <ChevronDown className="h-5 w-5 text-gray-400 transition-transform" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 pb-6 space-y-4 text-gray-300">
+                <p>
+                  Jawline filler London treatments at Cosmedocs Harley Street offer the perfect solution for creating a jaw-dropping jawline. Our 1ml jawline filler costs £350 while 2ml jawline filler costs £650, with our Natural HD Package at £950 combining premium dermal fillers with Dr. Ahmed Haq's advanced jawline injections techniques. Jaw filler before and after results show dramatic improvements lasting 15-18 months.
+                </p>
+                <p>
+                  Before and after jaw filler galleries showcase incredible transformations using 1ml jawline filler before and after comparisons and 2ml jawline filler results. Our jawline treatment enhances facial structure for chubby face 1ml jawline filler solutions and dramatic jaw and chin filler combinations. Jawline fillers before and after photos demonstrate natural-looking results at our prestigious Harley Street clinic.
+                </p>
+                <p>
+                  The benefits of choosing jaw fillers include immediate jawline before and after results, minimal downtime, and reversible effects. Filler for jawline treatments allow gradual improvements with chin and jawline filler combinations. Our patients see instant before and after jawline filler results, returning to work the same day with only mild swelling from the jaw line treatment.
+                </p>
+                <p>
+                  Dr. Ahmed Haq specializes in jawline filler for jowls, pre jowl filler, and jowl filler before and after transformations. His expertise in chin shadow filler, chin line filler, and chin crease filler ensures optimal jawline chin filler results. The jawline injections technique creates definition using 1 ml chin filler and comprehensive jaw and chin filler approaches.
+                </p>
+                <p>
+                  What does jaw filler do? It creates structure, reduces double chin filler concerns, and provides stunning jowl fillers before and after results. How long does chin filler last? Our chin and jaw filler treatments typically last 15-18 months. The jaw fillers cost includes comprehensive aftercare, making it an excellent investment with remarkable before and after jowl fillers transformations requiring touch-ups only every 15-18 months.
+                </p>
+              </CollapsibleContent>
+            </Collapsible>
+          </div>
+        </section>
       </div>
     </>
   );
