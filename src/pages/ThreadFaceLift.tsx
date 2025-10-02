@@ -463,21 +463,6 @@ export function ThreadFaceLift() {
               </p>
 
 
-              <h3 className="text-2xl font-semibold text-white mt-8 mb-4">Types of Threads in Face Treatments</h3>
-              <p>
-                Our clinic offers different types of facial threads facelift options to address various concerns. Mono threads 
-                before and after results excel at skin tightening and texture improvement, whilst barbed lifting threads 
-                provide more dramatic face lift threading effects. Many patients combine both types for comprehensive face 
-                threads before and after transformations. A cheek lift with threads, for example, often uses lifting threads 
-                for volume restoration whilst mono threads improve skin quality.
-              </p>
-
-              <p>
-                The before and after PDO thread lift eyes treatment specifically uses delicate threads designed for the 
-                sensitive eye area. These specialized threads address concerns like crow's feet, under-eye hollowing, and 
-                drooping brow without the downtime of surgical intervention. Patients typically notice improvements 2 weeks 
-                after thread lift, with continued enhancement as natural collagen develops.
-              </p>
 
               <h3 className="text-2xl font-semibold text-white mt-8 mb-4">Expected Timeline and Results</h3>
               <p>
@@ -492,6 +477,38 @@ export function ThreadFaceLift() {
                 The 2 weeks after thread lift typically shows significant improvement from initial swelling, whilst the 
                 thread lift after 3 months reveals the full biostimulatory effects. This gradual enhancement ensures natural-looking 
                 facial thread lift results that complement your unique features rather than creating an overdone appearance.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Types of Threads Section */}
+      <section className="py-20 bg-black">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold mb-6 text-white text-center">Types of Threads in Face Treatments</h2>
+            
+            <div className="space-y-6 text-gray-300">
+              <p className="text-lg">
+                Our clinic offers different types of facial threads facelift options to address various concerns. Mono threads 
+                before and after results excel at skin tightening and texture improvement, whilst barbed lifting threads 
+                provide more dramatic face lift threading effects. Many patients combine both types for comprehensive face 
+                threads before and after transformations. A cheek lift with threads, for example, often uses lifting threads 
+                for volume restoration whilst mono threads improve skin quality.
+              </p>
+
+              <p>
+                The before and after PDO thread lift eyes treatment specifically uses delicate threads designed for the 
+                sensitive eye area. These specialized threads address concerns like crow's feet, under-eye hollowing, and 
+                drooping brow without the downtime of surgical intervention. Patients typically notice improvements 2 weeks 
+                after thread lift, with continued enhancement as natural collagen develops.
               </p>
             </div>
           </motion.div>
