@@ -606,7 +606,17 @@ const JawlineFiller = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Jaw Filler Benefits</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                At Cosmedocs, jaw fillers offer multiple benefits for both men and women seeking facial enhancement.
+                At Cosmedocs, jaw fillers offer multiple benefits for both men and women seeking facial enhancement. 
+                Clinical research demonstrates impressive longevity, with{" "}
+                <a 
+                  href="https://pubmed.ncbi.nlm.nih.gov/38934231/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-purple-400 hover:text-purple-300 underline font-medium"
+                >
+                  studies showing positive outcomes lasting 6-12 months, and in many cases extending beyond 48 weeks
+                </a>
+                , particularly with advanced filler formulations and appropriate retreatment schedules.
               </p>
             </motion.div>
 
