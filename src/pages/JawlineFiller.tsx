@@ -614,9 +614,9 @@ const JawlineFiller = () => {
                   rel="noopener noreferrer" 
                   className="text-purple-400 hover:text-purple-300 underline font-medium"
                 >
-                  studies showing positive outcomes lasting 6-12 months, and in many cases extending beyond 48 weeks
-                </a>
-                , particularly with advanced filler formulations and appropriate retreatment schedules.
+                  studies showing positive outcomes
+                </a>{" "}
+                lasting 6-12 months, and in many cases extending beyond 48 weeks, particularly with advanced filler formulations and appropriate retreatment schedules.
               </p>
             </motion.div>
 
