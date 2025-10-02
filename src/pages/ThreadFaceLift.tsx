@@ -890,7 +890,7 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4 text-white">Thread Face Lift Cost & Thread Lift Cost UK</h2>
+            <h2 className="text-3xl font-bold mb-4 text-white">Thread Lift Cost UK</h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Transparent thread lift cost pricing for premium PDO threads London treatments. 
               Our thread face lift price includes consultation, facial threading lift procedure, 
