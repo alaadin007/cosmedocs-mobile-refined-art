@@ -493,13 +493,6 @@ export function ThreadFaceLift() {
                 pricing competitive amongst <Link to="/non-surgical-facelift" className="text-link hover:text-link-hover hover:underline">London's premier non-surgical facelift clinics</Link>.
               </p>
 
-              <p>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/28445465/" target="_blank" rel="noopener noreferrer" className="text-link hover:text-link-hover hover:underline">
-                  Studies in Dermatologic Surgery journal
-                </a> confirm that PDO threading stimulates neocollagenesis, improving skin quality long after the threads dissolve. 
-                This means your thread lift before after results continue improving, with optimal outcomes visible at thread lift after 3 months, 
-                whilst the lifting effect can last 2-3 years.
-              </p>
             </div>
           </motion.div>
         </div>
