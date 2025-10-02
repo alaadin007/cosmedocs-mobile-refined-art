@@ -218,12 +218,13 @@ const TearTroughFiller = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Tear Trough Filler London - Under Eye Fillers for Dark Circles & Eye Bags
+                  <span className="text-purple-300">Tear Trough Filler London</span>
+                  <span className="block text-sm mt-4">Invisible art - brighten your eyes, naturally refresh your appearance</span>
                 </h1>
-                <p className="text-sm text-purple-300 mb-4">Brighten up your eyes, lighten up your dark circles</p>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-medium text-lg">Invisible Art</span> - Under eye transformation that speaks without saying a word
-                </p>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Under Eye Transformation</p>
+                  <p className="text-sm text-gray-300">Expert treatment for dark circles, eye bags & tear troughs</p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
