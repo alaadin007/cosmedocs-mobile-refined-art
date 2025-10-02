@@ -462,21 +462,6 @@ export function ThreadFaceLift() {
                 that lifts sagging skin whilst encouraging natural collagen threads before and after production over time.
               </p>
 
-              <h3 className="text-2xl font-semibold text-white mt-8 mb-4">How Does Face Threading Lift Work?</h3>
-              <p>
-                During a face thread lift procedure, our expert practitioners insert specialized threads for face treatment 
-                beneath the skin using fine needles. These PDO mono threads before and after treatment create an immediate 
-                lifting effect, whilst also triggering your body's healing response. Over the following weeks, new collagen 
-                forms around the threads, enhancing the lift and improving skin quality. The thread lift after 3 months 
-                shows optimal results as collagen production peaks.
-              </p>
-
-              <p>
-                What are PDO threads exactly? PDO (polydioxanone) is a synthetic absorbable surgical suture material that's 
-                been used safely in medical procedures for over 30 years. When used for facial threading lift treatments, 
-                these threads dissolve naturally over 12-18 months, but the collagen framework they create continues providing 
-                support, meaning your thread lift before and after results can last 2-3 years.
-              </p>
 
               <h3 className="text-2xl font-semibold text-white mt-8 mb-4">Types of Threads in Face Treatments</h3>
               <p>
