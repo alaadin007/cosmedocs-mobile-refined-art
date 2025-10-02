@@ -545,16 +545,8 @@ const JawlineFiller = () => {
               <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
                 <p className="text-gray-300 mb-6">
                   Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
-                  The treatment involves injecting{" "}
-                  <a 
-                    href="https://www.webmd.com/beauty/cosmetic-procedures-dermal-fillers" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-purple-400 hover:text-purple-300 underline font-medium"
-                  >
-                    hyaluronic acid-based dermal fillers
-                  </a>{" "}
-                  to enhance structure, hydration, and contour in the jawline area. Similar to{" "}
+                  The treatment involves injecting hyaluronic acid-based dermal fillers to enhance structure, 
+                  hydration, and contour in the jawline area. Similar to{" "}
                   <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline font-medium">
                     dermal filler treatments
                   </Link>
