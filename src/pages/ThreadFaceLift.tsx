@@ -810,31 +810,6 @@ export function ThreadFaceLift() {
                   these threads dissolve naturally over 12-18 months, but the collagen framework they create continues providing 
                   support, meaning your thread lift before and after results can last 2-3 years.
                 </p>
-                <h3 className="text-xl font-semibold text-white mt-6 mb-4">The specific benefits of PDO thread lift include:</h3>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                    <p>The ultra-fine threads naturally break down within the body over 6-8 months, with results lasting about 18 months.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                    <p>The transparent material is invisible under the skin.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                    <p>The threads are cone-free, preventing tissue damage.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                    <p>They have an excellent safety record, the same type used in cardiac and other surgical sutures.</p>
-                  </div>
-                </div>
-                <p className="mt-4">
-                  The PDO thread lift London treatment is designed to reposition the facial skin and trigger the body's 
-                  natural response by producing collagen and improving blood circulation, which tightens the tissue. 
-                  Results continue to improve even 3 months after thread lift treatment, with optimal thread lift after 
-                  3 months outcomes visible as swelling subsides and collagen remodeling continues.
-                </p>
               </div>
             </motion.div>
 
@@ -859,6 +834,43 @@ export function ThreadFaceLift() {
               </div>
             </motion.div>
           </div>
+
+          {/* Benefits Card - Centered below both columns */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-12 max-w-4xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20">
+              <h3 className="text-2xl font-semibold text-white mb-6 text-center">The Specific Benefits of PDO Thread Lift Include:</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-300">The ultra-fine threads naturally break down within the body over 6-8 months, with results lasting about 18 months.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-300">The transparent material is invisible under the skin.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-300">The threads are cone-free, preventing tissue damage.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-300">They have an excellent safety record, the same type used in cardiac and other surgical sutures.</p>
+                </div>
+              </div>
+              <p className="mt-6 text-gray-300 text-center">
+                The PDO thread lift London treatment is designed to reposition the facial skin and trigger the body's 
+                natural response by producing collagen and improving blood circulation, which tightens the tissue. 
+                Results continue to improve even 3 months after thread lift treatment, with optimal thread lift after 
+                3 months outcomes visible as swelling subsides and collagen remodeling continues.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
