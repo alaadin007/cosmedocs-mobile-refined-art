@@ -479,7 +479,7 @@ export function ThreadFaceLift() {
               </p>
 
               <p>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/30547035/" target="_blank" rel="noopener noreferrer" className="text-link hover:text-link-hover hover:underline">
+                <a href="https://onlinelibrary.wiley.com/doi/10.1111/jocd.15709#:~:text=4.1%20PDO%20threads%20definition,high%20degree%20of%20tissue%20regeneration.&text=Thread%20lift%20is%20a%20minimally,wrinkles%2C%20and%20marked%20facial%20pores.&text=Their%20main%20effect%20is%20to,such%20as%20PDO%20thread%20lifting." target="_blank" rel="noopener noreferrer" className="text-link hover:text-link-hover hover:underline">
                   According to research published in Plastic and Reconstructive Surgery
                 </a>, PDO threads have shown excellent safety profiles and patient satisfaction rates exceeding 90%. 
                 The thread facelift works by inserting biocompatible threads in face tissue, creating a supportive mesh 
