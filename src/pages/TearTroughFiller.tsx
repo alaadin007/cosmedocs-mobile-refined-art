@@ -1437,16 +1437,18 @@ const TearTroughFiller = () => {
           </p>
           <p>
             Our tear trough filler cost UK pricing is transparent and competitive, starting from £425 for professional treatment. 
-            The price of under eye filler reflects the expertise of our practitioners, the quality of products used, and comprehensive 
+            The price of under eye filler and dermal filler tear trough cost reflects the expertise of our practitioners, the quality of products used, and comprehensive 
             aftercare support. Tear trough filler aftercare is crucial for optimal results and includes avoiding excessive touching, 
             staying hydrated, and following specific post-treatment guidelines. Understanding tear trough filler swelling stages 
             helps patients know what to expect during recovery. Most patients ask "does tear trough filler hurt?" and are pleased 
             to learn that with our numbing techniques and gentle approach, discomfort is minimal. The question "how long does tear 
             trough filler last?" depends on individual metabolism, lifestyle, and the specific filler used, but typically ranges 
-            from 12-18 months. Before and after tear trough filler results demonstrate dramatic improvements in under-eye appearance, 
+            from 12-18 months. Tear trough before and after results and under eye dermal filler before and after images demonstrate dramatic improvements in under-eye appearance, 
             with patients reporting looking more rested, youthful, and refreshed. Our clinic specialises in preventing lumpy filler 
             under eye complications through expert technique and appropriate product selection. We offer both traditional needle and 
-            advanced cannula techniques for tear trough filler injections, choosing the method best suited to each patient's anatomy.
+            advanced cannula techniques for undereye filler and injectables for under eyes, choosing the method best suited to each patient's anatomy. 
+            Understanding what filler for tear trough works best is essential - we use premium hyaluronic acid products specifically designed for the delicate under-eye area. 
+            Our eye fillers for eye bags and fillers for dark circles treatments address multiple concerns simultaneously, whilst tear through eyes anatomy requires expert knowledge to avoid complications.
           </p>
           <p>
             Cosmedocs maintains the highest standards of safety and hygiene in all tear trough treatment procedures. Our medical 
