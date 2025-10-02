@@ -96,16 +96,16 @@ const MasseterBotox = () => {
 
   const faqs = [
     {
-      question: "How long does Botox masseter injections last?",
-      answer: "Non-surgical jaw reduction with Botox typically lasts 3-4 months depending on the dose. Large masseter muscles often need three sessions in the first year, two in the second, and fewer afterwards for maintenance. CosmeDocs experts recommend maintenance treatments 2-3 times a year, especially to manage facial pain and headaches from teeth grinding."
+      question: "How long does masseter botox last?",
+      answer: "How long does masseter botox last depends on individual factors, but typically botox into masseter muscles lasts 3-4 months. How long do masseter botox last varies by muscle size – larger masseter muscles often need three sessions in the first year, two in the second, and fewer afterwards for maintenance. How long does masseter botox take to work? Results appear within 1-2 weeks. CosmeDocs experts recommend maintenance treatments 2-3 times a year for sustained jaw slimming and relief from teeth grinding."
+    },
+    {
+      question: "What are masseter botox side effects?",
+      answer: "Masseter botox side effects are generally minimal when performed by experienced doctors. Common masseter botox aftercare concerns include slight pain, minor bruising, redness, or swelling at injection site. Some patients experience temporary muscle weakness during chewing. Serious side effects are rare – the risk of complications like crooked smile is less than 0.5%. Proper masseter botox aftercare includes avoiding strenuous exercise for 24 hours and following all post-treatment guidelines."
     },
     {
       question: "Am I the right candidate for jaw reduction Botox?",
-      answer: "Ideal candidates include those with masseter hypertrophy from nighttime teeth grinding or excessive gum chewing, leading to an enlarged masseter muscle and squarish jawline. You may benefit if you desire a more balanced facial profile, want to reduce jaw pain and tension, need treatment for severe bruxism, want a symmetrical jawline, struggle with TMJ symptoms, or suffer from frequent migraine and tension headaches."
-    },
-    {
-      question: "Is jaw Botox safe?",
-      answer: "Botox treatments are generally safe when performed by experienced doctors. We maintain high industry standards to ensure patient satisfaction. Possible side effects include slight pain, minor bruising, redness, swelling at injection site, muscle weakness during chewing, and rarely dizziness or headaches. The risk of side effects like crooked smile is less than 0.5%, and allergic reactions are rare."
+      answer: "Ideal candidates include those with masseter hypertrophy from nighttime teeth grinding or excessive gum chewing, leading to an enlarged masseter muscle and squarish jawline. You may benefit if you desire jawline slimming, want to reduce jaw pain and tension, need masseter botox for TMJ symptoms, want a symmetrical jawline, or suffer from frequent migraine and tension headaches. Masseter botox jowls improvement can also be achieved through strategic treatment placement."
     },
     {
       question: "Does Jawline Botox Hurt?",
@@ -124,8 +124,8 @@ const MasseterBotox = () => {
       answer: "Jaw Botox relaxes overactive chewing muscles (masseter hypertrophy) to shrink jaw muscle size without surgery. Jaw Fillers restore volume along the jawline where contour has been lost due to age. Botox slims the jaw, while fillers add definition. Many patients benefit from both treatments simultaneously for optimal facial balance after detailed consultation."
     },
     {
-      question: "How Many Units of Botox Are Used?",
-      answer: "Masseter botox units range from 25 to 45 per side. Men generally require a higher dose than women due to greater muscle mass. The muscle starts relaxing within a week. Our £350 standard treatment price covers the maximum dose needed for effectiveness."
+      question: "How much is masseter botox and what does the price include?",
+      answer: "Masseter muscle botox cost at CosmeDocs is £350 for both sides. Our masseter botox price includes comprehensive consultation, precise dosing from 25 to 45 units per side depending on muscle mass, premium Botox products, and aftercare support. The masseter botox pricing UK represents excellent value with no hidden fees. Consultation fee is deducted if you proceed with treatment on the same day."
     }
   ];
 
@@ -388,7 +388,7 @@ const MasseterBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Masseter Botox Before and After</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Before and after images show apparent reduction in masseter muscle size. Jaw slimming botox relaxes the masseter muscle within two weeks, leading to noticeable jaw size reduction.
+                View authentic masseter botox before and after results from our London clinic. Botox masseter before after images demonstrate jawline slimming and facial contouring achieved through botox to the masseter muscle. Side profile transformations show the remarkable jaw slimming botox before and after effects within weeks of treatment.
               </p>
             </motion.div>
 
@@ -443,7 +443,7 @@ const MasseterBotox = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">What is Masseter Botox Treatment?</h2>
               
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Masseter Botox treatment helps with both aesthetic and medical issues. It can slim down a square, wide jawline, correct facial asymmetry, and alleviate jaw pain and aches. These symptoms are often related to <Link to="/bruxism-botox" className="text-purple-300 hover:text-purple-200 underline">bruxism</Link>, which involves teeth clenching and TMJ (Temporomandibular Joint Disorders). Clinical studies have demonstrated the <a href="https://pubmed.ncbi.nlm.nih.gov/28991284/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">effectiveness of Botox for treating masseter hypertrophy</a> and related conditions.
+                Masseter Botox, also known as jawline botox or jaw botox, helps with both aesthetic and medical issues. Botox on masseter muscles can slim down a square, wide jawline through facial slimming botox techniques, correct facial asymmetry, and alleviate jaw pain. These symptoms are often related to <Link to="/bruxism-botox" className="text-purple-300 hover:text-purple-200 underline">bruxism</Link> and TMJ disorders. What does masseter botox do? It relaxes the masseter muscle, reducing its size for both cosmetic face slimming botox results and medical relief. Clinical studies have demonstrated the <a href="https://pubmed.ncbi.nlm.nih.gov/28991284/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">effectiveness of botox for masseter muscle treatment</a> and related conditions.
               </p>
 
               <div className="bg-purple-300/10 border-l-4 border-purple-300 p-6 mb-12 text-left">
@@ -455,7 +455,7 @@ const MasseterBotox = () => {
                <div className="mb-12 text-left">
                  <h3 className="text-2xl font-bold mb-6 text-white text-center">Jawline Slimming Botox</h3>
                  <p className="text-gray-300 leading-relaxed">
-                   Masseter Botox is also known as jawline slimming Botox as the masseter muscle is reduced in size and action. Moreover, Botox in the masseter muscle benefits facial structure by reshaping the transition from temples to jawlines and neck, enhancing the overall facial contour. This treatment can be combined with <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline fillers</Link> or <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin fillers</Link> for comprehensive lower face enhancement.
+                   Masseter botox is also known as jawline slimming botox as the masseter muscle is reduced in size and action through botox injection into masseter muscles. Botox for thinner face treatments work by relaxing the bulk of the masseter muscle, creating a more V-shaped facial contour. This botox facial slimming technique reshapes the transition from temples to jawlines and neck, enhancing overall facial harmony. Treatment can be combined with <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline fillers</Link> or <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin fillers</Link> for comprehensive lower face enhancement.
                  </p>
                </div>
 
@@ -516,7 +516,7 @@ const MasseterBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Is Masseter Botox Right for You?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Masseter Botox London offers dual benefits for jaw slimming and teeth grinding relief. <a href="https://academic.oup.com/asj/advance-article/doi/10.1093/asj/sjaf167/8239609?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Large studies</a> show masseter Botox is generally safe, with no significant effect on bone density after repeated treatments over a year.
+                Masseter botox London offers dual benefits for jawline slimming and masseter botox for TMJ relief. Whether searching for "botox near me" or "masseter botox near me" for facial contouring, our Harley Street clinic provides expert jaw slimming treatments. <a href="https://academic.oup.com/asj/advance-article/doi/10.1093/asj/sjaf167/8239609?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Large studies</a> show masseter botox is generally safe, with no significant effect on bone density after repeated treatments over a year.
               </p>
             </motion.div>
 
@@ -629,7 +629,7 @@ const MasseterBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Masseter Muscle Botox Cost</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Explore our transparent masseter botox pricing London with professional jaw slimming and teeth grinding treatments. All prices include consultation, treatment, and aftercare support from our expert medical team.
+                Transparent masseter botox pricing with no hidden fees. Our masseter botox price UK includes consultation, treatment, and aftercare. How much is masseter botox? At £350 for both sides, our masseter botox cost covers comprehensive treatment with premium products. Consultation fee is deducted from treatment if you proceed on the same day.
               </p>
             </motion.div>
 
@@ -957,7 +957,7 @@ const MasseterBotox = () => {
                     About Our Masseter Botox Treatment
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-300 leading-relaxed pt-4">
-                    Masseter Botox treatment at CosmeDocs London provides expert jaw slimming and <Link to="/bruxism-botox" className="text-purple-300 hover:text-purple-200 underline">bruxism treatment</Link> with dual medical and cosmetic benefits. Our experienced practitioners use precision injection techniques to reduce masseter muscle size, achieving natural jaw contouring whilst relieving teeth grinding symptoms. Located in prestigious Harley Street, we offer comprehensive masseter Botox treatments starting from £350 for both sides, including thorough consultation, precise dosing from 25-45 units per side, and complimentary follow-up appointments.
+                    Masseter Botox treatment at CosmeDocs London provides expert jawline slimming botox and <Link to="/bruxism-botox" className="text-purple-300 hover:text-purple-200 underline">bruxism treatment</Link> with dual medical and cosmetic benefits. If you're searching for "botox treatment near me" or "botox close to me", our Harley Street clinic offers comprehensive masseter botox UK treatments. Our experienced practitioners use precision botox masseter muscle injection techniques to reduce muscle size, achieving natural jaw contouring whilst relieving teeth grinding symptoms. Masseter botox London treatments start from £350 for both sides, including thorough consultation, precise dosing from 25-45 units per side, and complimentary follow-up appointments.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -966,7 +966,7 @@ const MasseterBotox = () => {
                     Treatment Results & Duration
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-300 leading-relaxed pt-4">
-                    Treatment results appear within 1-2 weeks and last 4-6 months, making it an effective solution for wide jaw reduction, facial asymmetry correction, TMJ symptom relief, and severe bruxism management. Regular maintenance treatments every 3-6 months help sustain both cosmetic improvements and medical benefits, with many patients requiring fewer sessions over time as muscle memory develops.
+                    Botox for masseter muscle before and after results appear within 1-2 weeks, with TMJ botox before and after improvements visible in facial structure. Jawline slimming botox before and after transformations last 4-6 months, making masseter reduction an effective solution for wide jaw correction, facial asymmetry, and TMJ symptom relief. Masseter botox before and after side profile views demonstrate the dramatic contouring effects. Regular maintenance treatments every 3-6 months help sustain both cosmetic improvements and medical benefits, with many patients requiring fewer sessions over time as muscle memory develops.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -975,7 +975,7 @@ const MasseterBotox = () => {
                     Our Treatment Philosophy & Approach
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-300 leading-relaxed pt-4">
-                    Our invisible art philosophy ensures natural-looking results that enhance facial harmony whilst providing significant medical benefits for jaw pain, headaches, and dental damage prevention. Our treatment approach considers individual muscle size assessment, facial anatomy evaluation, and personalised dosing strategies to optimise outcomes whilst minimising side effects. This can be combined with <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline fillers</Link> for comprehensive facial contouring.
+                    Our invisible art philosophy ensures natural-looking results that enhance facial harmony whilst providing significant medical benefits for jaw pain, headaches, and dental damage prevention. Botox to thin face techniques and botox for thinner face contouring are tailored to each patient. Our treatment approach considers individual masseter muscle size assessment, facial anatomy evaluation, and personalised dosing strategies to optimise outcomes whilst minimising masseter botox side effects. Botox masseter muscle treatments can be combined with <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline fillers</Link> for comprehensive facial contouring and masseter botox jowls improvement.
                   </AccordionContent>
                 </AccordionItem>
 
