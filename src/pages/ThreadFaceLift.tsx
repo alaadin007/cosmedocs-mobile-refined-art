@@ -644,6 +644,60 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
+      {/* PDO Thread Lift Procedure Section */}
+      <section className="py-20 bg-black">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">
+                How Does Face Threading Lift Work?
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  During a face thread lift procedure, our expert practitioners insert specialized threads for face treatment 
+                  beneath the skin using fine needles. These PDO mono threads before and after treatment create an immediate 
+                  lifting effect, whilst also triggering your body's healing response. Over the following weeks, new collagen 
+                  forms around the threads, enhancing the lift and improving skin quality. The thread lift after 3 months 
+                  shows optimal results as collagen production peaks.
+                </p>
+                <p>
+                  What are PDO threads exactly? PDO (polydioxanone) is a synthetic absorbable surgical suture material that's 
+                  been used safely in medical procedures for over 30 years. When used for facial threading lift treatments, 
+                  these threads dissolve naturally over 12-18 months, but the collagen framework they create continues providing 
+                  support, meaning your thread lift before and after results can last 2-3 years.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/mHn0TARBHik"
+                  title="PDO Thread Lift Procedure Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full aspect-video"
+                ></iframe>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Treatment Areas Section */}
       <section className="py-20 bg-accent">
@@ -870,60 +924,6 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
-      {/* PDO Thread Lift Procedure Section */}
-      <section className="py-20 bg-accent">
-        <div className="page-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-6 text-white">
-                How Does Face Threading Lift Work?
-              </h2>
-              <div className="space-y-4 text-gray-300">
-                <p>
-                  During a face thread lift procedure, our expert practitioners insert specialized threads for face treatment 
-                  beneath the skin using fine needles. These PDO mono threads before and after treatment create an immediate 
-                  lifting effect, whilst also triggering your body's healing response. Over the following weeks, new collagen 
-                  forms around the threads, enhancing the lift and improving skin quality. The thread lift after 3 months 
-                  shows optimal results as collagen production peaks.
-                </p>
-                <p>
-                  What are PDO threads exactly? PDO (polydioxanone) is a synthetic absorbable surgical suture material that's 
-                  been used safely in medical procedures for over 30 years. When used for facial threading lift treatments, 
-                  these threads dissolve naturally over 12-18 months, but the collagen framework they create continues providing 
-                  support, meaning your thread lift before and after results can last 2-3 years.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/mHn0TARBHik"
-                  title="PDO Thread Lift Procedure Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full aspect-video"
-                ></iframe>
-              </div>
-            </motion.div>
-          </div>
-
-        </div>
-      </section>
 
       {/* Why Choose Cosmedocs */}
       <section className="py-20 bg-black">
