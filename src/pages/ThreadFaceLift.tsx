@@ -481,7 +481,7 @@ export function ThreadFaceLift() {
           >
             <h2 className="text-3xl font-bold mb-4 text-white">Types of Threads in Face Treatments</h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              Premium PDO threads tailored to your specific rejuvenation needs
+              Premium PDO threads tailored to your specific rejuvenation needs. <a href="https://pubmed.ncbi.nlm.nih.gov/32766067/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Peer-reviewed research</a> demonstrates consistently high patient satisfaction rates of 80–95% following PDO thread lift procedures.
             </p>
           </motion.div>
 
