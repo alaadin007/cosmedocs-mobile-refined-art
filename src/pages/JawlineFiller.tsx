@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -544,12 +545,28 @@ const JawlineFiller = () => {
               <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
                 <p className="text-gray-300 mb-6">
                   Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
-                  The treatment involves injecting <a href="https://www.webmd.com/beauty/cosmetic-procedures-dermal-fillers" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">hyaluronic acid-based dermal fillers</a> to enhance structure, 
-                  hydration, and contour in the jawline area. Similar to <a href="/dermal-fillers" className="text-purple-300 hover:underline">dermal filler treatments</a>, jawline fillers use premium FDA-approved products.
+                  The treatment involves injecting{" "}
+                  <a 
+                    href="https://www.webmd.com/beauty/cosmetic-procedures-dermal-fillers" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-purple-400 hover:text-purple-300 underline font-medium"
+                  >
+                    hyaluronic acid-based dermal fillers
+                  </a>{" "}
+                  to enhance structure, hydration, and contour in the jawline area. Similar to{" "}
+                  <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline font-medium">
+                    dermal filler treatments
+                  </Link>
+                  , jawline fillers use premium FDA-approved products.
                 </p>
                 <p className="text-gray-300 mb-6">
                   Just <strong>1ml of filler</strong> — about 1/5 of a teaspoon — can make a noticeable 
-                  difference, delivering precise, long-lasting results for a beautifully sculpted lower face. Many patients also combine this with <a href="/chin-filler" className="text-purple-300 hover:underline">chin filler treatments</a> for comprehensive lower face enhancement.
+                  difference, delivering precise, long-lasting results for a beautifully sculpted lower face. Many patients also combine this with{" "}
+                  <Link to="/chin-filler" className="text-purple-400 hover:text-purple-300 underline font-medium">
+                    chin filler treatments
+                  </Link>{" "}
+                  for comprehensive lower face enhancement.
                 </p>
                 <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20">
                   <h3 className="text-xl font-semibold mb-3 text-purple-300">Jawline Signifies Youth</h3>
