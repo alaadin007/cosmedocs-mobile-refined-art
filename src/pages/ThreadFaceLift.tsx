@@ -434,6 +434,84 @@ export function ThreadFaceLift() {
         </div>
       </section>
 
+      {/* Understanding Thread Lifts - New Comprehensive Content Section */}
+      <section className="py-20 bg-accent">
+        <div className="page-container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold mb-6 text-white text-center">Understanding PDO Thread Lifts: A Complete Guide</h2>
+            
+            <div className="space-y-6 text-gray-300">
+              <p className="text-lg">
+                The PDO thread lift London treatment represents a breakthrough in non-surgical facial rejuvenation. 
+                This innovative threading face lift procedure uses dissolvable PDO lifting threads to provide immediate 
+                lifting whilst stimulating your body's natural collagen production for lasting results. Our thread lifts 
+                before and after gallery demonstrates the remarkable transformations achievable through this minimally invasive procedure.
+              </p>
+
+              <p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30547035/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">
+                  According to research published in Plastic and Reconstructive Surgery
+                </a>, PDO threads have shown excellent safety profiles and patient satisfaction rates exceeding 90%. 
+                The thread facelift works by inserting biocompatible threads in face tissue, creating a supportive mesh 
+                that lifts sagging skin whilst encouraging natural collagen threads before and after production over time.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-white mt-8 mb-4">How Does Face Threading Lift Work?</h3>
+              <p>
+                During a face thread lift procedure, our expert practitioners insert specialized threads for face treatment 
+                beneath the skin using fine needles. These PDO mono threads before and after treatment create an immediate 
+                lifting effect, whilst also triggering your body's healing response. Over the following weeks, new collagen 
+                forms around the threads, enhancing the lift and improving skin quality. The thread lift after 3 months 
+                shows optimal results as collagen production peaks.
+              </p>
+
+              <p>
+                What are PDO threads exactly? PDO (polydioxanone) is a synthetic absorbable surgical suture material that's 
+                been used safely in medical procedures for over 30 years. When used for facial threading lift treatments, 
+                these threads dissolve naturally over 12-18 months, but the collagen framework they create continues providing 
+                support, meaning your thread lift before and after results can last 2-3 years.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-white mt-8 mb-4">Types of Threads in Face Treatments</h3>
+              <p>
+                Our clinic offers different types of facial threads facelift options to address various concerns. Mono threads 
+                before and after results excel at skin tightening and texture improvement, whilst barbed lifting threads 
+                provide more dramatic face lift threading effects. Many patients combine both types for comprehensive face 
+                threads before and after transformations. A cheek lift with threads, for example, often uses lifting threads 
+                for volume restoration whilst mono threads improve skin quality.
+              </p>
+
+              <p>
+                The before and after PDO thread lift eyes treatment specifically uses delicate threads designed for the 
+                sensitive eye area. These specialized threads address concerns like crow's feet, under-eye hollowing, and 
+                drooping brow without the downtime of surgical intervention. Patients typically notice improvements 2 weeks 
+                after thread lift, with continued enhancement as natural collagen develops.
+              </p>
+
+              <h3 className="text-2xl font-semibold text-white mt-8 mb-4">Expected Timeline and Results</h3>
+              <p>
+                Understanding the thread lifting journey helps set realistic expectations. Immediate lifting occurs during 
+                the threadlift procedure, but the most dramatic thread face lift before after changes develop gradually. 
+                Initial swelling subsides within days, revealing the mechanical lift from the threads face placement. 
+                However, the true beauty of PDO threading emerges over subsequent months as collagen production increases.
+              </p>
+
+              <p>
+                Many patients photograph their progress, creating impressive before and after thread face lift documentation. 
+                The 2 weeks after thread lift typically shows significant improvement from initial swelling, whilst the 
+                thread lift after 3 months reveals the full biostimulatory effects. This gradual enhancement ensures natural-looking 
+                facial thread lift results that complement your unique features rather than creating an overdone appearance.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Treatment Overview */}
       <section className="py-20">
