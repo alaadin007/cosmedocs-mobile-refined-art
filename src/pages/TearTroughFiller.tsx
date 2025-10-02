@@ -874,7 +874,11 @@ const TearTroughFiller = () => {
               <h2 className="text-3xl font-bold mb-4">Tear Trough Filler Benefits</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Transform your under-eye area with our expert tear trough filler treatments. 
-                Address multiple concerns with one comprehensive solution. Many patients enhance their results by combining this with 
+                Address multiple concerns with one comprehensive solution.{" "}
+                <a href="https://pubmed.ncbi.nlm.nih.gov/32022863/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">
+                  According to Aesthetic Surgery Journal, 80–95% patient satisfaction with tear trough filler outcomes.
+                </a>{" "}
+                Many patients enhance their results by combining this with 
                 <a href="/nose-filler" className="text-purple-300 hover:underline"> non-surgical nose reshaping</a> for complete facial harmony.
               </p>
             </motion.div>
