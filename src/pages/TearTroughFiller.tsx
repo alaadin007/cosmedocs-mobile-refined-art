@@ -167,7 +167,7 @@ const TearTroughFiller = () => {
         </section>
 
         {/* Tear Trough Filler Treatment */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -177,9 +177,6 @@ const TearTroughFiller = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Tear Trough Filler Treatment</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Expert <span className="text-purple-300 font-semibold">under eye filler London</span> treatments for eye bags, dark circles and tear troughs
-              </p>
             </motion.div>
 
             <div className="grid grid-cols-5 gap-2 md:gap-4 lg:gap-6">
