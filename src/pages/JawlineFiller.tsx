@@ -684,14 +684,10 @@ const JawlineFiller = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">How Does Jaw Filler Work?</h2>
               <p className="text-gray-300 mb-4 leading-relaxed text-lg">
-                Jaw filler works by enhancing volume and definition, creating a clear separation between your face and neck. 
-                The jaw line filler treatment sculpts the natural bone structure for a sharper, more defined jawline tailored to your unique features. Jawline injections using hyaluronic acid can address various concerns from double chin filler needs to comprehensive facial contouring. According to the <a href="https://baaps.org.uk/media/press_releases/1891/cosmetic_surgery_trends_2024_facial_rejuvenation_surges_while_mens_procedures_decline?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">British Association of Aesthetic Plastic Surgeons</a>, dermal filler injections has become increasingly popular. Before and after jawline filler results show remarkable transformations.
-              </p>
-              <p className="text-gray-300 mb-4 leading-relaxed text-lg">
-                Jawline treatment can define your jaw angle, enhance a receding chin with jawline chin filler, and reduce sagging jowls. Fillers for chin enhancement combined with jaw line treatment create comprehensive lower face rejuvenation. Chin line filler and chin crease filler address specific concerns whilst maintaining facial harmony. Some patients also benefit from <a href="/masseter-botox" className="text-purple-300 hover:underline">masseter Botox</a> to slim the jawline further.
+                Jaw filler enhances volume and definition, creating a sharper jawline tailored to your features. Jawline injections using hyaluronic acid address concerns from double chin filler needs to comprehensive contouring. According to the <a href="https://baaps.org.uk/media/press_releases/1891/cosmetic_surgery_trends_2024_facial_rejuvenation_surges_while_mens_procedures_decline?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">British Association of Aesthetic Plastic Surgeons</a>, dermal filler treatments show remarkable before and after jawline filler results.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
-                Our jawline filler London treatments create beautifully contoured profiles with long-lasting jaw fillers before and after effects. For comprehensive facial rejuvenation, consider combining with <a href="/face-botox" className="text-purple-300 hover:underline">anti-wrinkle treatments</a>.
+                Jaw line treatment defines your jaw angle, enhances receding chins with jawline chin filler and chin line filler, and reduces jowls. Fillers for chin enhancement combined with chin crease filler create lower face rejuvenation. Our jawline filler London treatments deliver beautifully contoured jaw fillers before and after effects. Combine with <a href="/masseter-botox" className="text-purple-300 hover:underline">masseter Botox</a> or <a href="/face-botox" className="text-purple-300 hover:underline">anti-wrinkle treatments</a> for comprehensive results.
               </p>
             </motion.div>
           </div>
