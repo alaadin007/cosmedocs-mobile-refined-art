@@ -28,7 +28,6 @@ import MasseterBotox from "./pages/MasseterBotox";
 import LipFillerDissolve from "./pages/LipFillerDissolve";
 import PrivateGPDoctor from "./pages/PrivateGPDoctor";
 import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
-import PDOThreads from "./pages/PDOThreads";
 import { ThreadFaceLift } from "./pages/ThreadFaceLift";
 import TriggerPointBotox from "./pages/TriggerPointBotox";
 import AcneTreatment from "./pages/AcneTreatment";
@@ -40,7 +39,6 @@ import AdvancedConsultation from "./pages/AdvancedConsultation";
 import FellowshipInvitation from "./pages/FellowshipInvitation";
 import LongTermAestheticCareBlog from "./pages/LongTermAestheticCareBlog";
 import AestheticMaintenanceCostBlog from "./pages/AestheticMaintenanceCostBlog";
-import PDOThreadsBlog from "./pages/PDOThreadsBlog";
 import NonSurgicalNoseJobBlog from "./pages/NonSurgicalNoseJobBlog";
 import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSkin";
 import ChineseLondonAestheticsBlog from "./pages/ChineseLondonAestheticsBlog";
@@ -150,7 +148,7 @@ const App = () => {
               <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
               <Route path="/private-gp-doctor" element={<PrivateGPDoctor />} />
               <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
-              <Route path="/pdo-threads" element={<PDOThreads />} />
+              <Route path="/pdo-threads" element={<ThreadFaceLift />} />
               <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
               <Route path="/masseter-botox" element={<MasseterBotox />} />
               <Route path="/trigger-point-botox" element={<TriggerPointBotox />} />
@@ -171,7 +169,7 @@ const App = () => {
               <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
               <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />
               <Route path="/aesthetic-maintenance-cost-blog" element={<AestheticMaintenanceCostBlog />} />
-              <Route path="/pdo-threads-blog" element={<PDOThreadsBlog />} />
+              <Route path="/pdo-threads-blog" element={<ThreadFaceLift />} />
               <Route path="/non-surgical-nose-job-blog" element={<NonSurgicalNoseJobBlog />} />
               <Route path="/clinical-concepts-to-flawless-skin" element={<ClinicalConceptsToFlawlessSkin />} />
               <Route path="/chinese-london-aesthetics-blog" element={<ChineseLondonAestheticsBlog />} />
