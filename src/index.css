@@ -28,6 +28,9 @@
     --accent: 0 0% 15%;
     --accent-foreground: 0 0% 100%;
 
+    --link: 270 70% 65%;
+    --link-hover: 270 70% 75%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 

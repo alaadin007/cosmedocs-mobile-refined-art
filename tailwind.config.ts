@@ -58,6 +58,10 @@ export default {
 					white: '#FFFFFF',
 					gray: '#8A898C',
 					lightgray: '#F6F6F7',
+				},
+				link: {
+					DEFAULT: 'hsl(var(--link))',
+					hover: 'hsl(var(--link-hover))'
 				}
 			},
 			fontFamily: {
