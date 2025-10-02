@@ -479,7 +479,7 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Types of Threads in Face Treatments</h2>
+            <h2 className="text-3xl font-bold mb-4 text-white">Types of Threads in Face Treatments</h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Premium PDO threads tailored to your specific rejuvenation needs
             </p>
@@ -607,7 +607,7 @@ export function ThreadFaceLift() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="text-3xl font-bold text-white">Thread Lift Journey & Care</h2>
+            <h2 className="text-3xl font-bold mb-8 text-white">Thread Lift Journey & Care</h2>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -1127,7 +1127,7 @@ export function ThreadFaceLift() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about PDO thread face lift treatments
             </p>
