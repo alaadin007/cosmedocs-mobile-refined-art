@@ -109,6 +109,7 @@ import BruxismBotox from "./pages/BruxismBotox";
 import ExcessiveSweatBotox from "./pages/ExcessiveSweatBotox";
 import AestheticIntelligence from "./pages/AestheticIntelligence";
 import ProductAnalysisDetail from "./pages/ProductAnalysisDetail";
+import PopupOffer from "./pages/PopupOffer";
 
 const queryClient = new QueryClient();
 
@@ -236,7 +237,8 @@ const App = () => {
                   <Route path="/aesthetic-training" element={<AestheticTraining />} />
                    <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
                    <Route path="/botox-price-london" element={<BotoxPriceLondon />} />
-                   <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
+               <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
+               <Route path="/popupoffer" element={<PopupOffer />} />
                
                {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />

@@ -29,12 +29,15 @@ import PopularTreatments from "@/components/PopularTreatments";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import AnimatedDots from "@/components/AnimatedDots";
 import { generateSEOMetadata } from '@/utils/seo';
+import { RafflePopup } from "@/components/RafflePopup";
+import { useFirstVisitPopup } from "@/hooks/useFirstVisitPopup";
 
 const Index = () => {
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { shouldShow, setShow } = useFirstVisitPopup();
 
   const seoData = generateSEOMetadata(
     "Cosmedocs London | Premium Aesthetic Medicine | Harley Street",
@@ -765,6 +768,9 @@ const Index = () => {
           isOpen={isAnalysisOpen}
           onClose={() => setIsAnalysisOpen(false)}
         />
+
+        {/* First Visit Raffle Popup */}
+        <RafflePopup open={shouldShow} onOpenChange={setShow} />
       </TooltipProvider>
     </>
   );
