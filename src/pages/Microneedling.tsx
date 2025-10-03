@@ -149,9 +149,84 @@ const Microneedling = () => {
             }))
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Microneedling",
+                "item": "https://www.cosmedocs.co.uk/microneedling"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "MedicalProcedure",
+              "name": "Microneedling Treatment"
+            },
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "127"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Physician",
+            "name": "Dr. Raj Thethi",
+            "medicalSpecialty": "Aesthetic Medicine",
+            "worksFor": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            },
+            "url": "https://www.cosmedocs.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <nav className="page-container py-4 text-sm" aria-label="Breadcrumb">
+          <ol className="flex items-center space-x-2 text-gray-400">
+            <li>
+              <a href="/" className="hover:text-purple-300 transition-colors">Home</a>
+            </li>
+            <li>/</li>
+            <li>
+              <a href="/treatments" className="hover:text-purple-300 transition-colors">Treatments</a>
+            </li>
+            <li>/</li>
+            <li className="text-white font-medium" aria-current="page">Microneedling</li>
+          </ol>
+        </nav>
+
         {/* Hero Section */}
         <header className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -299,6 +374,8 @@ const Microneedling = () => {
                         src={image.src} 
                         alt={image.alt}
                         loading="lazy"
+                        width="400"
+                        height="256"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
