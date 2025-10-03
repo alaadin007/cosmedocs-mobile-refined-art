@@ -37,9 +37,9 @@ const PopularTreatments = ({
       link: "/dermal-filler-makeover"
     },
     {
-      title: "Clinical Concepts to Flawless Skin – Our Signature 9-Step Protocol",
-      description: "Science-backed skin transformation, beyond the surface.\n\n• Uneven tone & texture\n• Dull, \"lazy\" skin syndrome\n• Enlarged pores & congestion\n• Post-acne scarring\n• Pigmentation & sun damage\n• Early signs of ageing",
-      link: "/clinical-concepts-to-flawless-skin"
+      title: "Non-Surgical Face Lift – Instant Lift, Zero Downtime",
+      description: "Advanced thread lifting and strategic volume restoration.\n\n• Sagging jowls & jawline\n• Neck laxity\n• Cheek drooping\n• Brow ptosis\n• Nasolabial fold deepening\n• Marionette lines\n• Loss of facial contour",
+      link: "/non-surgical-face-lift"
     },
     {
       title: "Lip Fillers – Elegance in Every Curve",
