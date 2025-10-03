@@ -427,6 +427,9 @@ const NonSurgicalNoseJob = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-3xl font-bold mb-8 text-white">What Can Be Treated with Non-Surgical Techniques?</h3>
+              <p className="text-gray-300 max-w-4xl mx-auto mb-8 text-center">
+                Non-surgical rhinoplasty has proven remarkably effective, with an <a href="https://pubmed.ncbi.nlm.nih.gov/38862661/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">updated systematic review</a> of nonsurgical rhinoplasty techniques, outcomes, and complications demonstrating a 99.1% satisfaction rate across 9,657 patients. This evidence-backed approach can address:
+              </p>
               <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
