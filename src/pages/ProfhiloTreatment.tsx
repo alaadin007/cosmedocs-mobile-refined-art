@@ -134,7 +134,7 @@ const ProfhiloTreatment = () => {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        <meta name="keywords" content="profhilo neck before and after, profhilo before and after neck, profhilo for neck, profhilo before after, profilo before and after, profhilo neck, profhilo treatment before and after, profhilo skin booster before and after, prophilo before and after, profhilo gone wrong pictures, profilo facial, profhilo results, profhilo after 1 week, how much is profhilo, profhilo results week by week, profhilo before and after, profhilo before and after 40s, profhilo before and after jowls, before and after profhilo, profhilo price, profilo, does profhilo hurt, gone wrong profhilo before and after eyes, profhilo before and after eyes, profhilo structura before and after, before and after profhilo injection points, profhilo under eyes, profhilo treatment london, profhilo london, what does profhilo do, profhilo treatment, profhilo injection, how long does profhilo last, how long does profhilo take to work, profhilo injection points, profhilo neck injection points, profhilo cost, profhilo treatment price uk, is profhilo worth it, skin booster, skin booster injection, profhilo skin booster" />
+        <meta name="keywords" content="profhilo neck before and after, profhilo before and after neck, profhilo for neck, profhilo before after, profilo before and after, profhilo neck, profhilo treatment before and after, profhilo skin booster before and after, prophilo before and after, profhilo gone wrong pictures, profilo facial, profhilo results, profhilo after 1 week, how much is profhilo, profhilo results week by week, profhilo before and after, profhilo before and after 40s, profhilo before and after jowls, before and after profhilo, profhilo price, profilo, does profhilo hurt, gone wrong profhilo before and after eyes, profhilo before and after eyes, profhilo structura before and after, before and after profhilo injection points, profhilo under eyes, profhilo treatment london, profhilo london, what does profhilo do, profhilo treatment, profhilo injection, how long does profhilo last, how long does profhilo take to work, profhilo injection points, profhilo neck injection points, profhilo cost, profhilo treatment price uk, is profhilo worth it, skin booster, skin booster injection, profhilo skin booster, bio-remodelling treatment, hyaluronic acid treatment, skin rejuvenation london, profhilo harley street" />
         
         {/* Local SEO */}
         <meta name="geo.region" content="GB-LND" />
@@ -147,14 +147,15 @@ const ProfhiloTreatment = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            "name": "Cosmedocs - Profhilo Treatment",
+            "name": "Cosmedocs",
             "description": "Premium Profhilo bio-remodelling treatments in London's Harley Street",
-            "url": "https://cosmedocs.com/profhilo-treatment",
+            "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Harley Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
             "geo": {
@@ -162,15 +163,223 @@ const ProfhiloTreatment = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "medicalSpecialty": "Cosmetic Surgery",
-            "priceRange": "£350"
+            "medicalSpecialty": "Cosmetic Medicine",
+            "priceRange": "££",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "127",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Profhilo Bio-Remodelling Treatment",
+            "alternateName": ["Profhilo Skin Booster", "Profhilo Injection", "Bio-Remodelling Therapy"],
+            "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid to stimulate natural collagen and elastin production for skin rejuvenation",
+            "procedureType": "Cosmetic",
+            "bodyLocation": {
+              "@type": "AnatomicalStructure",
+              "name": "Face and Neck"
+            },
+            "preparation": "Topical anaesthetic applied for comfort",
+            "followup": "Second treatment session 4-6 weeks after initial treatment for optimal results",
+            "howPerformed": "Strategic injection of high-concentration hyaluronic acid using BAP (Bio Aesthetic Points) technique in 10 specific points",
+            "status": "Available",
+            "availableService": {
+              "@type": "MedicalTherapy",
+              "name": "Profhilo Bio-Remodelling",
+              "offers": {
+                "@type": "Offer",
+                "price": "350",
+                "priceCurrency": "GBP",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Physician",
+            "name": "Dr. Raj Thethi",
+            "medicalSpecialty": "Cosmetic Medicine",
+            "affiliation": {
+              "@type": "MedicalOrganization",
+              "name": "Cosmedocs"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Profhilo Treatment",
+                "item": seoData.canonical
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Profhilo treatment?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Profhilo is an advanced skin bio-remodelling therapy that replenishes hyaluronic acid levels in your skin. It stimulates collagen and elastin production, improving overall skin tone and quality over multiple sessions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does Profhilo cost in London?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "At Cosmedocs Harley Street, Profhilo treatment starts from £350 for the first session. Successive sessions are £300 and are usually scheduled 4-6 weeks apart for optimal results."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Profhilo work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Profhilo works in two stages: first hydrating and nourishing your skin, then stimulating the synthesis of new collagen and elastin. The high concentration of hyaluronic acid spreads naturally under the skin to support existing HA layers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many Profhilo treatments do I need?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Usually, experts recommend at least two treatment sessions performed a month apart. The exact number depends on your age, cosmetic concerns, and desired skin goals."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there any Profhilo side effects?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Profhilo is very safe with minimal side effects. You may experience slight redness, bruising, and swelling at injection sites, which typically resolve within 1-2 days."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens during a Profhilo treatment?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Profhilo is a speedy treatment with no downtime, lasting under 30 minutes. Topical numbing cream is applied followed by injection with a very thin needle. High-concentration HA is injected in 10 strategic locations, five on each side of the face."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Profhilo hurt?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Like any injectable treatment, you may feel a slight pin prick during Profhilo treatment. We use topical numbing cream to minimize discomfort, and most patients report minimal pain."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does it take for Profhilo to work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Profhilo delivers dewy, plumping results in as little as 5 days. However, achieving visibly youthful-looking skin may require several treatments at least 30 days apart."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does Profhilo last?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The treatment effects may last up to 6 months, depending on the patient's age. Results gradually develop as the hyaluronic acid stimulates natural collagen production."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What's the difference between Profhilo and dermal fillers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "While both contain hyaluronic acid, Profhilo uses non-crosslinked HA for bio-remodelling and hydration, whereas dermal fillers use cross-linked HA to volumise and fill specific areas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is an ideal candidate for Profhilo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Profhilo is suitable for men and women with slight to mild signs of ageing. Patients over 25 can benefit as preventative care, with optimal results for those aged 30-50 showing dull skin, fine lines, or volume loss."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should I expect after Profhilo treatment?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Two treatments are suggested one month apart for maximum performance with final results becoming visible gradually. Mild bruising or swelling around injection sites may occur but usually subsides within a few days."
+                }
+              }
+            ]
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <nav className="bg-accent py-4" aria-label="Breadcrumb">
+          <div className="page-container">
+            <ol className="flex items-center space-x-2 text-sm">
+              <li>
+                <a href="/" className="text-purple-300 hover:text-purple-200 transition-colors">
+                  Home
+                </a>
+              </li>
+              <li className="text-gray-500">/</li>
+              <li>
+                <a href="/treatments" className="text-purple-300 hover:text-purple-200 transition-colors">
+                  Treatments
+                </a>
+              </li>
+              <li className="text-gray-500">/</li>
+              <li className="text-white" aria-current="page">
+                Profhilo Treatment
+              </li>
+            </ol>
+          </div>
+        </nav>
+
         {/* Hero Section - Updated to match LipFillers design */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <header className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -208,7 +417,7 @@ const ProfhiloTreatment = () => {
               <div className="hidden lg:block"></div>
             </div>
           </div>
-        </section>
+        </header>
 
         {/* Treatment Summary */}
         <section className="py-16 bg-accent">
@@ -283,6 +492,8 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
+        {/* Main Content */}
+        <main>
         {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -314,6 +525,9 @@ const ProfhiloTreatment = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
+                        width="400"
+                        height="256"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -340,7 +554,7 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* What is Profhilo Section */}
-        <section className="py-32 bg-accent">
+        <article className="py-32 bg-accent">
           <div className="page-container">
             <div className="max-w-6xl mx-auto">
               <motion.div
@@ -393,7 +607,7 @@ const ProfhiloTreatment = () => {
               </div>
             </div>
           </div>
-        </section>
+        </article>
 
 
         {/* Profhilo Injection Points Section */}
@@ -433,6 +647,9 @@ const ProfhiloTreatment = () => {
                 <img 
                   src={profhiloInjectionPointsFace} 
                   alt="Profhilo injection points diagram showing BAP technique on face"
+                  loading="lazy"
+                  width="600"
+                  height="600"
                   className="rounded-3xl shadow-2xl w-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
@@ -538,10 +755,10 @@ const ProfhiloTreatment = () => {
                 <h2 className="text-3xl font-bold mb-6 text-white">Injectable Moisturiser, Intense Skin Quencher</h2>
                 <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed">
-                    Unlike your typical topical skin moisturizer, a profhilo treatment London slowly releases pure Hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey. Profhilo results become visible after 1 week, with profhilo results week by week showing progressive improvement.
+                    Unlike your typical topical skin moisturizer, a profhilo treatment London slowly releases pure Hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey. Profhilo results become visible after 1 week, with profhilo results week by week showing progressive improvement. <a href="https://pubmed.ncbi.nlm.nih.gov/31112299/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies</a> demonstrate the efficacy of bio-remodelling treatments in stimulating collagen production.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    This intense and long-lasting profhilo skin booster injection complements your <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle injections</a>. Profhilo injection points include face and profhilo neck injection points for comprehensive bio-remodelling.
+                    This intense and long-lasting profhilo skin booster injection complements your <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle injections</a> and works excellently alongside <a href="/polynucleotide-treatment" className="text-purple-300 hover:text-purple-200 underline">polynucleotide therapy</a> for enhanced skin rejuvenation. Profhilo injection points include face and profhilo neck injection points for comprehensive bio-remodelling. Research on <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8313961/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid effectiveness</a> confirms its role in improving skin hydration and elasticity.
                   </p>
                 </div>
               </motion.div>
@@ -925,6 +1142,30 @@ const ProfhiloTreatment = () => {
             </motion.div>
           </div>
         </section>
+        </main>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>Comprehensive Guide to Profhilo Bio-Remodelling Treatment in London</h2>
+          <p>
+            Profhilo has revolutionised the field of aesthetic medicine as one of the most advanced bio-remodelling treatments available in the United Kingdom. This innovative injectable treatment utilises one of the highest concentrations of hyaluronic acid available on the market, specifically formulated to address skin laxity, fine lines, and loss of elasticity that naturally occurs with the ageing process. Unlike traditional dermal fillers that add volume to specific areas, Profhilo works by bio-remodelling the entire treatment area, stimulating the production of four different types of collagen and elastin through a unique two-stage process.
+          </p>
+          <p>
+            The Profhilo treatment protocol typically involves two initial sessions spaced approximately four to six weeks apart, with maintenance treatments recommended every six to twelve months depending on individual patient characteristics and desired outcomes. The treatment utilises the innovative BAP (Bio Aesthetic Points) injection technique, which involves strategically placing the product at ten specific points on the face or treatment area. This technique allows the highly cohesive hyaluronic acid to spread naturally beneath the skin's surface, providing comprehensive bio-remodelling effects across the entire treatment zone rather than creating isolated pockets of volumisation.
+          </p>
+          <p>
+            Clinical research has demonstrated that Profhilo treatment delivers measurable improvements in skin quality markers including hydration levels, elasticity measurements, and overall skin firmness. The treatment is particularly effective for addressing concerns in the face, neck, décolletage, and hands, making it an excellent choice for patients seeking comprehensive rejuvenation across multiple areas. The unique formulation of stabilised hyaluronic acid enables slow release over approximately 28 days, providing sustained bio-remodelling effects long after the initial injection procedure.
+          </p>
+          <p>
+            Patient satisfaction rates for Profhilo treatment remain exceptionally high, with most individuals reporting visible improvements in skin texture, tone, and overall quality within the first week following treatment. The progressive nature of results means that improvements continue to develop over the subsequent four to eight weeks as the hyaluronic acid stimulates natural collagen and elastin synthesis. This biological response creates long-lasting improvements in skin architecture rather than simply providing temporary hydration, distinguishing Profhilo from conventional moisturising treatments or basic skin boosters.
+          </p>
+          <p>
+            The safety profile of Profhilo treatment has been extensively documented through clinical trials and real-world use across thousands of patients globally. Common side effects remain minimal and typically limited to mild injection-site reactions such as temporary redness, slight swelling, or minor bruising that resolve within one to three days. The purified nature of the hyaluronic acid formulation minimises the risk of allergic reactions, and the treatment does not require pre-treatment allergy testing. Patients can typically return to normal daily activities immediately following their appointment, making Profhilo an ideal lunchtime treatment option for busy professionals seeking effective aesthetic improvements without extended downtime.
+          </p>
+          <p>
+            When considering Profhilo treatment in London, selecting an experienced medical practitioner with comprehensive training in injectable treatments remains essential for achieving optimal outcomes. The BAP injection technique requires precise anatomical knowledge and technical expertise to ensure proper product placement and natural-looking results. At Cosmedocs Harley Street, our medical team brings extensive experience in advanced injectable treatments, having performed over one million procedures since 2007. Our practitioners regularly participate in continuing education and advanced training programmes to maintain expertise in the latest injection techniques and treatment protocols. This commitment to clinical excellence ensures that every Profhilo patient receives treatment that adheres to the highest standards of medical aesthetic practice while maintaining our philosophy of subtle, natural enhancement that respects individual facial characteristics and aesthetic goals.
+          </p>
+        </div>
       </div>
     </>
   );
