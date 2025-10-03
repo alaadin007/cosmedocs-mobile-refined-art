@@ -300,10 +300,10 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 lg:mb-8 text-white">Chin Filler Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -312,10 +312,10 @@ const ChinFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
+                  <Clock className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthetic</h3>
-                <p className="text-gray-300">Local / Topical</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30 minutes including consultation</p>
               </motion.div>
 
               <motion.div
@@ -328,8 +328,8 @@ const ChinFiller = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Calendar className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Chin Filler Results</h3>
-                <p className="text-gray-300">12+ months</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">12-18 months with premium hyaluronic acid</p>
               </motion.div>
 
               <motion.div
@@ -340,10 +340,10 @@ const ChinFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
+                  <Activity className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Procedure Time</h3>
-                <p className="text-gray-300">30 mins</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
               </motion.div>
 
               <motion.div
@@ -354,38 +354,10 @@ const ChinFiller = () => {
                 className="text-center"
               >
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Shield className="text-purple-600" size={24} />
+                  <Syringe className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Risk & Complications</h3>
-                <p className="text-gray-300">Swelling, Bruises & Infection (rare)</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Full Recovery</h3>
-                <p className="text-gray-300">24-48 Hours</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Back To Work</h3>
-                <p className="text-gray-300">Immediate</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
             </div>
           </div>
