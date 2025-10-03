@@ -84,47 +84,47 @@ const NonSurgicalNoseJob = () => {
 
   const leftColumnFaqs = [
     {
-      question: "What is the non-surgical nose job cost and nose filler cost in London?",
-      answer: "At Cosmedocs Harley Street, non-surgical nose job cost starts from £450, while nose botox treatments are £200. Our nose filler cost varies based on the amount needed. The cost for non-surgical nose job includes consultation, premium dermal fillers, and follow-up care."
+      question: "How much does a non-surgical nose job cost in London?",
+      answer: "At Cosmedocs, the cost for non surgical nose job starts from £450 for dermal filler treatments. Botox nose slimming treatments begin at £200. Our non surgical rhinoplasty cost includes your consultation, premium products, and aftercare. We're proud to offer competitive nose job london price without compromising on quality. The nose filler cost varies depending on the amount needed and your specific goals."
     },
     {
-      question: "What are the nose lift side effects and non-surgical nose job before after results?",
-      answer: "Nose lift side effects are minimal with our advanced techniques. You may experience slight swelling or tenderness. Our extensive non-surgical nose job before after gallery shows natural-looking results that typically last 12-18 months."
+      question: "What are the side effects of nose reshaping treatments?",
+      answer: "Nose lift side effects are typically minimal with our advanced techniques. You may experience slight temporary swelling or tenderness at injection sites. Most patients return to normal activities the same day. Our extensive before after non surgical nose job gallery demonstrates natural-looking results that last 12-18 months. The non invasive nature of these treatments means recovery is much easier than traditional surgery."
     },
     {
-      question: "How safe is nose botox and botox in the nose treatments?",
-      answer: "Nose botox and botox in the nose treatments are very safe when performed by Dr. Ahmed Haq at our Harley Street clinic. These nose slimming injections have been refined since 2010, using advanced botox nose techniques to minimize any risks."
+      question: "Is botox safe for nose treatments?",
+      answer: "Yes, botox in the nose is very safe when performed by experienced practitioners like Dr. Ahmed Haq. We've been perfecting nose slimming injection techniques since 2010. Botox for nose treatments including botox nose tip lift and nasal botox are minimally invasive with excellent safety profiles. Our botox nose before after results showcase the effectiveness of these treatments."
     },
     {
-      question: "What's the difference between nose tip filler and nose tip botox?",
-      answer: "Nose tip filler adds volume and projection for pixie tip lifts, while nose tip botox reduces muscle activity for subtle lifting. Our nasal tip botox and dermal filler nose tip treatments can be combined for optimal nose reshaping Harley Street results."
+      question: "What's the difference between filler and botox for the nose?",
+      answer: "Nose tip filler adds volume and shape to create subtle nose job enhancements, perfect for achieving a pixie tip nose or correcting asymmetry. Botox on nose works differently by relaxing muscles for nose slimming botox effects. We can use filler on nose tip for projection, filler in bridge of nose for smoothing bumps, or botox for nose tip lifting. Often these are combined for optimal nose reshaping harley street results."
     },
     {
-      question: "Can you achieve nose reduction without surgery using non-invasive methods?",
-      answer: "Yes, our non-invasive nose job techniques can create the illusion of nose reduction without surgery. Using strategic nose injection placements and our advanced nonsurgical rhinoplasty methods, we can refine and balance your nasal proportions."
+      question: "Can you make a wide nose slimmer without surgery?",
+      answer: "Absolutely. Our slim nose procedure uses strategic placement techniques to create the appearance of nose reduction without surgery. Using nose fillers for wide nose, we can refine proportions and achieve nose slimming botox before and after transformations. This non invasive nose surgery alternative is ideal for patients seeking subtle changes without downtime."
     }
   ];
 
   const rightColumnFaqs = [
     {
-      question: "How do liquid nose job and non-surgical nose surgery compare?",
-      answer: "Our liquid nose job offers immediate results with minimal downtime compared to traditional nose surgery. This non-surgical nose surgery alternative uses nose injection filler techniques to reshape your nose without the risks of invasive procedures."
+      question: "What is a liquid rhinoplasty?",
+      answer: "A liquid nose job uses dermal fillers nose injections to reshape your nose instantly. Unlike traditional surgery, this non surgical nose surgery offers immediate results with minimal downtime. The procedure involves precise nose injection filler cost-effective techniques that can smooth bumps, lift the tip, or improve symmetry. It's become the best nose job london option for many seeking natural enhancement."
     },
     {
-      question: "What makes nose jobs Harley Street treatments at Cosmedocs unique?",
-      answer: "Our nose jobs Harley Street treatments combine botox nose reshaping with advanced dermal fillers nose techniques. We specialize in nose slimming botox, pixie tip nose enhancements, and comprehensive non-surgical rhinoplasty in London."
+      question: "Why choose Harley Street for nose treatments?",
+      answer: "Our nose jobs harley street clinic offers world-class expertise in non surgical nose reshaping london. Dr. Ahmed Haq specialises in advanced techniques including botox nose reshaping, dermal filler nose tip enhancement, and comprehensive nonsurgical rhinoplasty. The nose job london harley street reputation means you're accessing the highest standards of aesthetic medicine."
     },
     {
-      question: "How quickly will I see my nose lift and botox nose before after results?",
-      answer: "Results from nose lift and botox nose treatments are visible immediately, with final botox nose before after results apparent within 2 weeks. Our nose lift botox effects develop progressively as swelling subsides."
+      question: "How quickly will I see results?",
+      answer: "Results from dermal fillers are visible immediately after your non surgical nose job before and after comparison. For botox in nose treatments, you'll see progressive improvement over 7-14 days as the botox nose lift before and after effects develop. Our non surgical nose lift price includes follow-up appointments to ensure optimal outcomes."
     },
     {
-      question: "What's included in your non-surgical rhinoplasty cost consultation?",
-      answer: "Our non-surgical rhinoplasty cost includes comprehensive assessment, treatment planning with our nose job injectable fillers, and discussion of botox for nose tip options. Dr. Ahmed Haq will show you nose job london before after examples during consultation."
+      question: "What's included in the consultation?",
+      answer: "Your non surgical rhinoplasty cost includes a comprehensive facial assessment where we discuss your goals for nose reshaping without surgery. We'll review nose job injectable fillers options, show you similar non surgical nose job before after cases, and create a personalised treatment plan. We'll also discuss options like pixie tip lift, nasal tip botox, and botox to lift nose tip depending on your desired outcome."
     },
     {
-      question: "Are your nose job dermal fillers and nose injection treatments reversible?",
-      answer: "Yes, our nose job dermal fillers and filler tip of nose treatments can be dissolved with hyaluronidase if needed. This reversibility makes our nose injection treatments safer than permanent nose job london procedures."
+      question: "Are the results reversible?",
+      answer: "Yes, one major advantage of non-surgical nose jobs is that nose job dermal fillers can be dissolved with hyaluronidase if needed. This makes filler tip of nose and other nose injection treatments much safer than permanent procedures. Whether it's botox on tip of nose or dermal filler nose tip treatments, we ensure you feel confident about your nose lift no surgery approach."
     }
   ];
 
@@ -242,15 +242,15 @@ const NonSurgicalNoseJob = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Non-Surgical
-                  <span className="block text-purple-300">Nose Job London</span>
-                  <span className="block text-sm mt-4">nose reshaping with dermal filler | Harley Street</span>
+                  Non-Surgical Nose Job
+                  <span className="block text-purple-300">Harley Street London</span>
+                  <span className="block text-sm mt-4">Expert nose reshaping without surgery from £450</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible art - Premium nose fillers</span>
+                  <span className="text-purple-300 font-semibold">Invisible art meets precision</span> - Transform your profile with our advanced liquid rhinoplasty techniques
                 </p>
                 <div className="mb-8">
-                  <p className="text-sm text-gray-300">#cosmenose - Advanced liquid nose job techniques | Non-invasive nose surgery alternative</p>
+                  <p className="text-sm text-gray-300">#cosmenose technique | Non-invasive nose surgery | Botox & filler specialists</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
@@ -287,7 +287,7 @@ const NonSurgicalNoseJob = () => {
             >
               <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Nose Reshaping London</h2>
               <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
-                Experience the latest in non-invasive nose job techniques at our Harley Street clinic. From nose botox for slimming to dermal filler nose tip enhancement, we offer comprehensive nose reshaping without surgery.
+                Experience the best nose job london at our Harley Street clinic. From botox in the nose for slimming to filler on nose tip enhancement, we offer comprehensive non surgical nose reshaping treatments. Our non surgical nose job price is transparent with no hidden costs.
               </p>
             </motion.div>
 
@@ -361,11 +361,11 @@ const NonSurgicalNoseJob = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Non-Surgical Nose Job Before and After Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Before and After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore authentic non-surgical nose job before and after results from our London Harley Street clinic. 
-                See the transformation achieved through nose botox, nose tip fillers, and our signature liquid nose job technique. 
-                Our nose reshaping without surgery delivers natural enhancement using advanced nose injection methods.
+                Explore authentic non surgical nose job before after results from our London clinic. 
+                See the transformation achieved through botox for nose treatments, filler on nose tip, and our signature liquid nose job technique. 
+                Our non surgical rhinoplasty before after gallery showcases natural enhancement using advanced botox nose slimming before and after methods.
               </p>
             </motion.div>
 
@@ -411,11 +411,11 @@ const NonSurgicalNoseJob = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4">Nose Botox & Non-Surgical Rhinoplasty in London</h2>
+              <h2 className="text-3xl font-bold mb-4">London's Leading Non-Surgical Rhinoplasty Clinic</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Experience the art of non-invasive nose enhancement at our Harley Street clinic. Our liquid rhinoplasty treatments combine botox with sophisticated dermal filler techniques to achieve your perfect profile without surgery.<br/><br/>
-                Dr. Ahmed Haq pioneered the innovative #cosmenose technique, specialising in nasal tip treatments and comprehensive reshaping procedures. 
-                From subtle tip refinements to bridge smoothing, our non-surgical approach offers exceptional value for natural, transformative results.
+                Experience the art of non surgical nose reshaping london at our prestigious Harley Street location. Our treatments combine botox on nose techniques with advanced nose filler procedures to achieve your perfect profile. Whether you're considering a subtle nose job or more significant reshaping, we deliver natural results.<br/><br/>
+                Dr. Ahmed Haq pioneered the innovative #cosmenose technique, specialising in nose tip lift procedures, pixie tip nose filler, and botox nose slimming. 
+                From nose lift no surgery options to comprehensive non surgical rhinoplasty in london, our approach offers exceptional london nose job cost value with natural, transformative results.
               </p>
             </motion.div>
 
@@ -426,31 +426,31 @@ const NonSurgicalNoseJob = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-bold mb-8 text-white">What Can Be Treated with Non-Surgical Nose Reshaping?</h3>
+              <h3 className="text-3xl font-bold mb-8 text-white">What Can Be Treated with Non-Surgical Techniques?</h3>
               <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Wide noses and nasal flare reduction using botox injections</p>
+                  <p className="text-gray-300 text-left">Nose slimming injection treatments and nasal flare reduction</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Tip enhancement for pixie lifts and improved projection</p>
+                  <p className="text-gray-300 text-left">Pixie tip lift and nose tip lift botox for improved projection</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Bridge enhancement and bump smoothing with dermal fillers</p>
+                  <p className="text-gray-300 text-left">Bridge enhancement using filler in bridge of nose techniques</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Subtle tip elevation and refinement treatments</p>
+                  <p className="text-gray-300 text-left">Botox on tip of nose for subtle elevation and refinement</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Personalised transformations tailored to your unique features</p>
+                  <p className="text-gray-300 text-left">Dermal filler nose tip enhancements tailored to your features</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Comprehensive reshaping without the need for surgery</p>
+                  <p className="text-gray-300 text-left">Complete non invasive nose job transformations</p>
                 </div>
               </div>
             </motion.div>
@@ -665,8 +665,8 @@ const NonSurgicalNoseJob = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical Nose Job Pricing</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing at our Harley Street clinic. Our competitive rates include consultation, 
-                premium treatments, and comprehensive aftercare with no hidden fees.
+                Transparent nose job cost london with no hidden fees. Our competitive non surgical nose lift price includes consultation, 
+                premium nose job injectable fillers, and comprehensive aftercare. Compare our nose injection filler cost and discover exceptional value.
               </p>
             </motion.div>
 
@@ -1288,27 +1288,22 @@ const NonSurgicalNoseJob = () => {
         {/* Additional SEO Content */}
         <article className="py-16 bg-accent">
           <div className="page-container max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6 text-white">About Our Non-Surgical Nose Enhancement Treatments</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white">Expert Non-Surgical Nose Reshaping in London</h2>
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-300 mb-4">
-                At Cosmedocs Harley Street, we specialise in advanced non-surgical rhinoplasty techniques that deliver natural, sophisticated results. 
-                Dr. Ahmed Haq has pioneered the #cosmenose method, combining expert knowledge of facial anatomy with the latest injectable technologies 
-                to create harmonious nasal enhancements without the need for surgery.
+                At Cosmedocs, we're proud to offer the best non-surgical nose jobs in London. Our nose job in london clinic specialises in advanced nonsurgical rhinoplasty techniques that deliver natural, sophisticated results. Dr. Ahmed Haq has pioneered the #cosmenose method, combining expert knowledge of facial anatomy with the latest nose filler and botox nose technologies to create harmonious enhancements without surgery.
               </p>
               <p className="text-gray-300 mb-4">
-                Our clinic at 10 Harley Street, London W1G 9PF, offers comprehensive facial aesthetic treatments using premium dermal fillers 
-                and advanced botox techniques. Whether you're seeking subtle refinement or more significant reshaping, we provide personalised 
-                treatment plans that respect your unique facial proportions and aesthetic goals.
+                Our prestigious location at 10 Harley Street offers comprehensive treatments including botox to lift nose tip, nose reduction without surgery, and liquid nose job procedures. Whether you're seeking a pixie tip nose enhancement, nasal tip botox treatment, or complete non surgical nose reshaping, we provide personalised plans using premium nose job dermal fillers. Our transparent nose job london cost makes world-class treatment accessible.
               </p>
               <p className="text-gray-300 mb-4">
-                The non-surgical approach offers several advantages including minimal downtime, immediate results, and the ability to preview 
-                changes before committing to permanent alterations. Our treatments are reversible and adjustable, providing peace of mind alongside 
-                exceptional aesthetic outcomes. Results typically last 12-18 months with premium dermal fillers.
+                The non invasive nose surgery approach offers remarkable advantages: minimal downtime, immediate results, and reversible treatments. Our botox for nose procedures including botox nose lift and nose slimming injection options provide subtle, natural-looking refinements. The cost of non surgical nose job uk at Cosmedocs includes consultation, treatment, and follow-up care. Results from our dermal fillers nose treatments typically last 12-18 months, making it an excellent alternative to traditional surgery.
+              </p>
+              <p className="text-gray-300 mb-4">
+                We specialise in various techniques including filler tip of nose for projection, botox tip of nose for lifting, and nose fillers for wide nose to create a slimmer appearance. Our non surgical rhinoplasty before after gallery demonstrates the transformative power of our slim nose procedure approach. From subtle adjustments to significant reshaping, our nose injection treatments deliver exceptional outcomes.
               </p>
               <p className="text-gray-300">
-                For complex cases including post-fracture reconstruction and deviated nose corrections, Dr. Ahmed Haq employs specialised cannula 
-                techniques and gradual reconstruction methods. Book your consultation today by calling 0333 0551 503 or visiting our website at 
-                cosmedocs.co.uk to discover how our invisible art philosophy can enhance your natural beauty.
+                For complex cases including post-fracture reconstruction and deviated noses, Dr. Ahmed Haq employs specialised techniques developed over years of experience. Whether you're looking for the best nose job london or exploring non-surgical nose jobs as a safer alternative, our Harley Street clinic offers unmatched expertise. Book your consultation today by calling 0333 0551 503 to discuss your nose lift options and discover our competitive non surgical nose reshaping cost.
               </p>
             </div>
           </div>
