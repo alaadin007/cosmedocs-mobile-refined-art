@@ -121,9 +121,92 @@ const ChinFiller = () => {
           "priceRange": "£350+"
         })}
         </script>
+
+        {/* FAQPage Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              ...leftColumnFaqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer.replace(/<[^>]*>/g, '')
+                }
+              })),
+              ...rightColumnFaqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer.replace(/<[^>]*>/g, '')
+                }
+              }))
+            ]
+          })}
+        </script>
+
+        {/* Breadcrumb Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Chin Filler",
+                "item": "https://www.cosmedocs.co.uk/chin-filler"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <nav className="bg-gray-900/50 border-b border-gray-800" aria-label="Breadcrumb">
+          <div className="page-container py-3">
+            <ol className="flex items-center space-x-2 text-sm">
+              <li>
+                <a href="/" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                  </svg>
+                  <span className="sr-only">Home</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 text-gray-600 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                <a href="/treatments" className="text-gray-400 hover:text-white transition-colors">
+                  Treatments
+                </a>
+              </li>
+              <li className="flex items-center">
+                <svg className="w-4 h-4 text-gray-600 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-purple-300 font-medium">Chin Filler</span>
+              </li>
+            </ol>
+          </div>
+        </nav>
         {/* Hero Section - Updated to match LipFillers design */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -134,18 +217,14 @@ const ChinFiller = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Chin Fillers
-                  <span className="block text-purple-300">London</span>
-                  <span className="block text-sm mt-4">Transform your profile with precision dermal fillers</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-purple-300">
+                  Chin Filler London
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible Art</span>
-                  <br />
-                  Facial transformation that speaks without words
+                <p className="text-xl text-gray-300 mb-8 max-w-xl">
+                  Transform your profile with precision dermal fillers from £350. Expert 1ml chin filler treatments at Harley Street.
                 </p>
                 <div className="mb-8">
-                  <p className="text-sm text-gray-300">#cosmechin - Check out our IG for hundreds more natural, subtle transformations</p>
+                  <p className="text-sm text-gray-400">#cosmechin - Invisible art philosophy | Natural-looking results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -306,6 +385,7 @@ const ChinFiller = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -1019,6 +1099,28 @@ const ChinFiller = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Hidden SEO Content */}
+        <div className="sr-only" aria-hidden="true">
+          <article>
+            <h2>Comprehensive Guide to Chin Filler Treatments in London</h2>
+            <p>
+              Chin filler London treatments have revolutionised facial aesthetics, offering patients a non-surgical alternative to traditional chin augmentation surgery. Our Harley Street clinic specialises in advanced liquid mentoplasty procedures using premium hyaluronic acid dermal fillers. With over 15 years of experience, our expert practitioners have performed thousands of successful 1ml chin filler treatments, achieving natural-looking results that enhance facial proportions and profile definition.
+            </p>
+            <p>
+              The chin filler cost at our London clinic starts from £350 for 1.2ml, making professional facial enhancement accessible without compromising on quality or safety. Our chin injection filler cost includes comprehensive consultation, premium products, and aftercare support. Whether you're considering chin filler for double chin improvement, chin shadow correction, or overall facial balancing, our dermal fillers chin treatments deliver transformative before and after results. The chin and jawline fillers work synergistically to create harmonious facial contours, particularly effective for round face chin filler transformations.
+            </p>
+            <p>
+              Chin filler before and after results demonstrate significant improvements in facial projection, with 1ml chin filler before and after photos showing enhanced definition and balanced proportions. Our liquid chin filler techniques utilise cannula methods to minimise bruising and ensure precise product placement. The dermal chin filler results last 12-18 months, significantly longer than lip fillers due to the viscosity and placement depth. Round face chin filler before and after transformations are particularly impressive, creating elegant diamond or heart-shaped facial contours through strategic chin filler placement.
+            </p>
+            <p>
+              The chin filler procedure begins with detailed facial analysis, examining bone structure, soft tissue density, and aesthetic goals. Our practitioners specialise in filler chin treatments that address receding chins, weak chin profiles, and chin asymmetry. The chin injection filler procedure takes 15-30 minutes, with topical anaesthetic ensuring comfortable treatment. Post-procedure chin filler aftercare includes ice application, head elevation, and activity modification for optimal healing. The chin filler London price includes 2-week follow-up appointments and 24/7 emergency support.
+            </p>
+            <p>
+              Combining chin filler with complementary treatments such as masseter botox, jawline filler, and nose filler creates comprehensive facial enhancement. The hyaluronic acid makeover combining cheeks, chin, and jawline represents our most popular treatment package. Chin and jawline fillers side effects are minimal when performed by experienced practitioners, typically limited to temporary swelling and bruising. All chin filler treatments use reversible hyaluronic acid products, ensuring patient safety and satisfaction. Book your consultation today to discover how chin fillers can transform your facial aesthetics with natural, sophisticated results.
+            </p>
+          </article>
+        </div>
       </div>
     </>;
 };
