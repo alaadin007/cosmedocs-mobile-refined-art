@@ -985,10 +985,6 @@ const ProfhiloTreatment = () => {
                     <h4 className="font-semibold text-purple-300 mb-2">5-7 Days</h4>
                     <p className="text-gray-300">Initial plumping and hydration effects become visible</p>
                   </div>
-                  <div className="bg-accent rounded-lg p-4">
-                    <h4 className="font-semibold text-purple-300 mb-2">4-6 Weeks</h4>
-                    <p className="text-gray-300">Progressive improvement in skin texture, firmness, and glow</p>
-                  </div>
                 </div>
               </motion.div>
 
