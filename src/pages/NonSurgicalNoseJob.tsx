@@ -614,6 +614,120 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
+        {/* Non-Surgical Rhinoplasty Benefits - Simplified Design */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Non-Surgical Nose Job Benefits & Procedures</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transform your nose with our expert liquid nose job and nose botox treatments in London. 
+                Our non-surgical nose surgery alternatives deliver remarkable results without the need for invasive procedures.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Nose Tip Lift & Pixie Tip Enhancement</h3>
+                      <p className="text-gray-300">Specialized nose tip filler and botox to lift nose tip for pixie tip nose results and enhanced projection</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Hooked & Crooked Nose</h3>
+                      <p className="text-gray-300">Correct asymmetries and improve the overall shape of hooked or crooked noses</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Nose Bridge Filler & Bump Correction</h3>
+                      <p className="text-gray-300">Filler in bridge of nose to smooth bumps and dermal filler nose tip enhancement for refined profiles</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Raise Low Nasal Bridge</h3>
+                      <p className="text-gray-300">Enhance low nasal bridges, particularly beneficial for Asian nose enhancement</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Balance Facial Profile</h3>
+                      <p className="text-gray-300">Create harmonious facial proportions by improving overall nasal balance</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Nose Definition & Contour</h3>
+                      <p className="text-gray-300">Enhance nasal definition and create refined contours for a more sculpted appearance</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* Patient Experience Video */}
         <section className="py-32 bg-accent">
           <div className="page-container">
@@ -794,120 +908,6 @@ const NonSurgicalNoseJob = () => {
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Non-Surgical Rhinoplasty Benefits - Simplified Design */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Non-Surgical Nose Job Benefits & Procedures</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transform your nose with our expert liquid nose job and nose botox treatments in London. 
-                Our non-surgical nose surgery alternatives deliver remarkable results without the need for invasive procedures.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Nose Tip Lift & Pixie Tip Enhancement</h3>
-                      <p className="text-gray-300">Specialized nose tip filler and botox to lift nose tip for pixie tip nose results and enhanced projection</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Hooked & Crooked Nose</h3>
-                      <p className="text-gray-300">Correct asymmetries and improve the overall shape of hooked or crooked noses</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Nose Bridge Filler & Bump Correction</h3>
-                      <p className="text-gray-300">Filler in bridge of nose to smooth bumps and dermal filler nose tip enhancement for refined profiles</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Raise Low Nasal Bridge</h3>
-                      <p className="text-gray-300">Enhance low nasal bridges, particularly beneficial for Asian nose enhancement</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Balance Facial Profile</h3>
-                      <p className="text-gray-300">Create harmonious facial proportions by improving overall nasal balance</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Nose Definition & Contour</h3>
-                      <p className="text-gray-300">Enhance nasal definition and create refined contours for a more sculpted appearance</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-
-            </div>
           </div>
         </section>
 
