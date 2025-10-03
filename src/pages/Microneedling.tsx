@@ -376,8 +376,11 @@ const Microneedling = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">How Does Microneedling Work?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto mb-4">
                 Understanding the science behind collagen induction therapy
+              </p>
+              <p className="text-gray-300 max-w-3xl mx-auto text-sm">
+                Independent research published in the British Journal of Dermatology and UK academic centres — including randomised controlled trials — supports microneedling as a safe, effective treatment for acne scarring, texture improvement and skin rejuvenation. <a href="https://academic.oup.com/bjd/article/192/1/19/7749284?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Peer reviewed research</a> demonstrates measurable improvements in scars and wrinkles with an excellent safety profile.
               </p>
             </motion.div>
 
@@ -394,9 +397,6 @@ const Microneedling = () => {
                     An ultimate skin rejuvenating experience with powerful wand micro-needles, trending for all the right reasons. 
                     How long does microneedling take? In just under 30-40 minutes, the medical microneedling prepares your skin for fresh collagen and elastin and 
                     helps your skincare topicals perform their best. Cost for microneedling includes comprehensive aftercare support.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    Independent research published in the British Journal of Dermatology and UK academic centres — including randomised controlled trials — supports microneedling as a safe, effective treatment for acne scarring, texture improvement and skin rejuvenation. <a href="https://academic.oup.com/bjd/article/192/1/19/7749284?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Peer reviewed research</a> demonstrates measurable improvements in scars and wrinkles with an excellent safety profile.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
                     What is microneedling facial therapy? Microneedling therapy uses your body's natural healing response to deliver a wide range of skin benefits. 
