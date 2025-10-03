@@ -764,12 +764,8 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* How Long Does Profhilo Last Section */}
-        <section className="py-20 bg-gradient-to-b from-black via-accent to-black relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(168,85,247,0.05),transparent_50%)]"></div>
-          
-          <div className="page-container relative z-10">
+        <section className="py-20 bg-accent">
+          <div className="page-container">
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
