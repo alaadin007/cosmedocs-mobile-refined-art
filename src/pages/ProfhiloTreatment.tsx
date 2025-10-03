@@ -598,12 +598,6 @@ const ProfhiloTreatment = () => {
                   <div className="text-purple-300 group-hover:text-purple-200 font-medium text-sm">Treatment Process</div>
                 </a>
                 <a 
-                  href="#testimonials" 
-                  className="bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 text-center transition-all duration-300 group"
-                >
-                  <div className="text-purple-300 group-hover:text-purple-200 font-medium text-sm">Patient Reviews</div>
-                </a>
-                <a 
                   href="#pricing" 
                   className="bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 text-center transition-all duration-300 group"
                 >
@@ -969,115 +963,6 @@ const ProfhiloTreatment = () => {
                 </motion.div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Patient Testimonials Section */}
-        <section id="testimonials" className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-sans font-bold mb-4">What Our Patients Say</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Real experiences from patients who've transformed their skin with Profhilo
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {/* Testimonial 1 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black/50 border-purple-500/20 h-full">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-purple-500 text-purple-500" />
-                      ))}
-                    </div>
-                    <p className="text-gray-300 leading-relaxed mb-4 italic">
-                      "Amazing results from Profhilo treatment at Cosmedocs. The BAP technique was virtually painless and my skin looks so much more hydrated and firm. I can see a real difference in my neck area and my makeup sits so much better now. Highly recommend!"
-                    </p>
-                    <div className="border-t border-gray-700 pt-4">
-                      <p className="text-white font-semibold">Sarah M.</p>
-                      <p className="text-gray-400 text-sm">Age 42, London</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Testimonial 2 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black/50 border-purple-500/20 h-full">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-purple-500 text-purple-500" />
-                      ))}
-                    </div>
-                    <p className="text-gray-300 leading-relaxed mb-4 italic">
-                      "I was hesitant about injectables but Profhilo changed my mind. It's not filler, it's not Botox - it's something different and the results are incredible. My skin has never looked better. The team at Harley Street were brilliant throughout."
-                    </p>
-                    <div className="border-t border-gray-700 pt-4">
-                      <p className="text-white font-semibold">James K.</p>
-                      <p className="text-gray-400 text-sm">Age 38, Chelsea</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Testimonial 3 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black/50 border-purple-500/20 h-full">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-1 mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-purple-500 text-purple-500" />
-                      ))}
-                    </div>
-                    <p className="text-gray-300 leading-relaxed mb-4 italic">
-                      "The perfect treatment for anyone wanting natural-looking results. After two sessions my skin feels plumper, the fine lines have softened and I have this gorgeous glow. No one can tell I've had anything done but everyone says I look refreshed!"
-                    </p>
-                    <div className="border-t border-gray-700 pt-4">
-                      <p className="text-white font-semibold">Emma L.</p>
-                      <p className="text-gray-400 text-sm">Age 45, Kensington</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <div className="inline-flex items-center gap-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3">
-                <Star className="w-5 h-5 fill-purple-500 text-purple-500" />
-                <span className="text-white font-semibold">4.9/5</span>
-                <span className="text-gray-300">from 127 verified reviews</span>
-              </div>
-            </motion.div>
           </div>
         </section>
 
