@@ -147,15 +147,16 @@ export default function EightPointFacelift() {
     "priceRange": "££",
     "founder": {
       "@type": "Person",
-      "name": "Dr. Raj Acquilla"
+      "name": "Dr. Ahmed Haq"
     }
   };
 
   const physicianSchema = {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "name": "Dr. Raj Acquilla",
+    "name": "Dr. Ahmed Haq",
     "jobTitle": "Medical Director & Lead Aesthetic Practitioner",
+    "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimeter-precision facial optimization.",
     "worksFor": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs"
@@ -343,7 +344,7 @@ export default function EightPointFacelift() {
         <meta name="twitter:image" content={seoData.image} />
         <meta name="keywords" content="8 point face lift, 8 point lift, 8 point facelift, 8 point face lift before and after, 8 point face lift price, 8 point face lift near me, 8 point filler face lift, non surgical face lift cost uk, non surgical face lift cost, dermal filler face lift, hyaluronic acid injections face before and after, non surgical face lift, face lift, face lift non surgical procedure, lift for face, face lift before and after, face lift cost, lower face lift, thread face lift, face lift price, face lift cost uk, non surgical face lift near me, non surgical face lifts, face lift london, face lift non surgical, face lift prices, face lift uk, face and neck lift, London facelift, Harley Street" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <meta name="author" content="Dr. Raj Acquilla, Cosmedocs Medical Director" />
+        <meta name="author" content="Dr. Ahmed Haq, Cosmedocs Medical Director" />
         <meta name="last-modified" content="2025-10-03" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -1180,7 +1181,7 @@ export default function EightPointFacelift() {
             >
               <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
                 <GraduationCap size={16} />
-                Medically reviewed by Dr. Raj Acquilla, Medical Director
+                Medically reviewed by Dr. Ahmed Haq, Medical Director
               </p>
               <p className="text-xs text-muted-foreground mt-2">
                 Last updated: 3rd October 2025
