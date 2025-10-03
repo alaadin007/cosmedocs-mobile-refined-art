@@ -697,6 +697,9 @@ const ProfhiloTreatment = () => {
                   <p className="text-gray-300 leading-relaxed mb-6">
                     Unlike other skin boosters that may require multiple injection points across the treatment area, Profhilo uses the innovative BAP (Bio Aesthetic Points) technique with just 5 injection points on each side of the face. This minimises discomfort whilst ensuring optimal distribution of the product. The treatment has minimal downtime, with most patients returning to their normal activities immediately after their appointment at our <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">Harley Street clinic</a>.
                   </p>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    A <a href="https://www.minervamedica.it/en/journals/gazzetta-medica-italiana/article.php?cod=R22Y2023N10A0628" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">comparative study on neck and face rejuvenation with Profhilo</a> examined outcomes in Chinese and Caucasian patient groups. The research demonstrated significant benefits in wrinkle reduction and improvement on volume loss scales across both cohorts, with some variation in responsiveness between ethnicities, confirming Profhilo's effectiveness across diverse skin types.
+                  </p>
                 </div>
               </motion.div>
               
