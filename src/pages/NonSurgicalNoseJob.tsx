@@ -1160,19 +1160,19 @@ const NonSurgicalNoseJob = () => {
         </section>
 
         {/* FAQ Section - Two Columns Apple Style */}
-        <section className="py-32 bg-accent">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
-              className="text-center mb-20"
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
+              <h2 className="text-3xl font-bold mb-4 text-white">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Everything you need to know about non-surgical nose enhancement
               </p>
             </motion.div>
