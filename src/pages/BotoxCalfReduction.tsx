@@ -454,15 +454,10 @@ const BotoxCalfReduction = () => {
                     forms the bulk of the calf and is responsible for the prominent appearance that some patients wish to reduce. The precision required is similar to that used in <a href="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">facial contouring treatments</a>, ensuring natural-looking results.
                   </p>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    Botox is precisely injected into specific points of this muscle using advanced injection techniques. 
-                    The treatment strategically weakens the muscle fibres, leading to a gradual reduction in muscle mass 
-                    and a more refined calf contour over the following weeks.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed mb-4">
                     Research published in aesthetic medicine journals supports the safety and efficacy of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6122154/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin injections</a> for aesthetic muscle reduction, demonstrating measurable improvements with an excellent safety profile when performed by qualified practitioners.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    Studies show that calf subcutaneous fat thickness plays a significant role in treatment outcomes, with optimal <a href="https://pubmed.ncbi.nlm.nih.gov/37220391/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">patient satisfaction</a> achieved when BTX-A calf contouring is tailored to individual anatomy and tissue composition.
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/37220391/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Studies show</a> that calf subcutaneous fat thickness plays a significant role in treatment outcomes, with optimal patient satisfaction achieved when BTX-A calf contouring is tailored to individual anatomy and tissue composition.
                   </p>
                 </div>
               </div>
