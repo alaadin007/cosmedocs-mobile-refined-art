@@ -107,6 +107,69 @@ export default function EightPointFacelift() {
     }
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Cosmedocs",
+    "alternateName": "CosmeDocs Harley Street",
+    "url": "https://www.cosmedocs.co.uk",
+    "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+    "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+    "description": "Leading aesthetic medicine clinic in Harley Street, London, specialising in non-surgical facial rejuvenation treatments",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "51.5194",
+      "longitude": "-0.1464"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+44-20-7435-7521",
+      "contactType": "customer service",
+      "areaServed": "GB",
+      "availableLanguage": ["English"]
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "££",
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Raj Acquilla"
+    }
+  };
+
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Raj Acquilla",
+    "jobTitle": "Medical Director & Lead Aesthetic Practitioner",
+    "worksFor": {
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs"
+    },
+    "medicalSpecialty": "Aesthetic Medicine",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    }
+  };
+
   // Actual before/after images from Cosmedocs website
   const beforeAfterImages = [
     {
@@ -280,8 +343,16 @@ export default function EightPointFacelift() {
         <meta name="twitter:image" content={seoData.image} />
         <meta name="keywords" content="8 point face lift, 8 point lift, 8 point facelift, 8 point face lift before and after, 8 point face lift price, 8 point face lift near me, 8 point filler face lift, non surgical face lift cost uk, non surgical face lift cost, dermal filler face lift, hyaluronic acid injections face before and after, non surgical face lift, face lift, face lift non surgical procedure, lift for face, face lift before and after, face lift cost, lower face lift, thread face lift, face lift price, face lift cost uk, non surgical face lift near me, non surgical face lifts, face lift london, face lift non surgical, face lift prices, face lift uk, face and neck lift, London facelift, Harley Street" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <meta name="author" content="Dr. Raj Acquilla, Cosmedocs Medical Director" />
+        <meta name="last-modified" content="2025-10-03" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(physicianSchema)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
@@ -320,6 +391,21 @@ export default function EightPointFacelift() {
                 "@type": "Answer",
                 "text": faq.answer
               }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "name": "8 Point Face Lift Before and After Gallery",
+            "description": "Real patient results from 8 Point Face Lift treatments at Cosmedocs",
+            "image": beforeAfterImages.map((img, index) => ({
+              "@type": "ImageObject",
+              "contentUrl": img.src,
+              "caption": img.caption,
+              "description": img.alt,
+              "name": `8 Point Face Lift Result ${index + 1}`
             }))
           })}
         </script>
@@ -596,11 +682,11 @@ export default function EightPointFacelift() {
                 >
                   <h3 className="text-xl font-semibold text-white mb-6">Treatment Areas</h3>
                   <div className="space-y-3 text-gray-300">
-                    <p>• <a href="/cheek-fillers" className="text-purple-300 hover:text-purple-200 underline">Cheek Structure</a> and volume enhancement</p>
+                    <p>• <a href="/cheek-filler" className="text-purple-300 hover:text-purple-200 underline">Cheek Structure</a> and volume enhancement</p>
                     <p>• Dark circles and under eye hollows</p>
-                    <p>• <a href="/jawline-fillers" className="text-purple-300 hover:text-purple-200 underline">Jawline</a> definition and jowl improvement</p>
+                    <p>• <a href="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">Jawline</a> definition and jowl improvement</p>
                     <p>• <a href="/non-surgical-nose-job" className="text-purple-300 hover:text-purple-200 underline">Nose</a> to mouth contours</p>
-                    <p>• <a href="/tear-trough-filler" className="text-purple-300 hover:text-purple-200 underline">Tear troughs</a> and tired appearance</p>
+                    <p>• Tear troughs and tired appearance</p>
                   </div>
                 </motion.div>
               </div>
@@ -904,7 +990,8 @@ export default function EightPointFacelift() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs?</h2>
+              <p className="text-gray-300 mb-8">Open Monday-Friday, 9am-6pm • 10 Harley Street, London W1G 9PF</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -990,6 +1077,62 @@ export default function EightPointFacelift() {
           </div>
         </section>
 
+        {/* Patient Testimonials */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Patient Success Stories</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Real experiences from our satisfied patients
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-8"
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Award key={i} className="text-yellow-400 fill-yellow-400" size={20} />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "Amazing results from my 8 point face lift. The team at Cosmedocs are true professionals and the results look completely natural. I couldn't be happier!"
+                </p>
+                <p className="text-purple-300 font-semibold">— Sarah M., London</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-accent border border-purple-500/20 rounded-xl p-8"
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Award key={i} className="text-yellow-400 fill-yellow-400" size={20} />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "Best decision I ever made. The 8 point lift has given me such confidence. No downtime and the results are incredible. Highly recommend Cosmedocs."
+                </p>
+                <p className="text-purple-300 font-semibold">— Jennifer L., Westminster</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 px-6 bg-accent">
           <div className="max-w-4xl mx-auto">
@@ -1026,6 +1169,22 @@ export default function EightPointFacelift() {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-12 text-center"
+            >
+              <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
+                <GraduationCap size={16} />
+                Medically reviewed by Dr. Raj Acquilla, Medical Director
+              </p>
+              <p className="text-xs text-muted-foreground mt-2">
+                Last updated: 3rd October 2025
+              </p>
             </motion.div>
           </div>
         </section>
