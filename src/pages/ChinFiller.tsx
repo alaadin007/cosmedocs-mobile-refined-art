@@ -177,7 +177,7 @@ const ChinFiller = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
+      <main className="bg-black text-white">
         {/* Breadcrumb Navigation */}
         <nav className="bg-gray-900/50 border-b border-gray-800" aria-label="Breadcrumb">
           <div className="page-container py-3">
@@ -1121,7 +1121,7 @@ const ChinFiller = () => {
             </p>
           </article>
         </div>
-      </div>
+      </main>
     </>;
 };
 
