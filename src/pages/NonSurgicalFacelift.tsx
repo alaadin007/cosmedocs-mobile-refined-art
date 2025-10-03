@@ -994,13 +994,13 @@ const NonSurgicalFacelift = () => {
         <section className="sr-only" aria-hidden="true">
           <h2>Comprehensive Guide to Non-Surgical Facelift London Treatments</h2>
           <p>
-            Non-surgical facelift London treatments have revolutionised facial rejuvenation, offering effective alternatives to traditional surgical facelifts. At Cosmedocs, our liquid facelift approach combines advanced dermal filler techniques with PDO thread lifting to address various levels of facial aging without the need for invasive surgery, general anaesthesia, or extensive recovery periods.
+            Non-surgical facelift London treatments have revolutionised facial rejuvenation, offering effective alternatives to traditional surgical facelifts. At Cosmedocs, our liquid facelift approach combines advanced dermal filler techniques with PDO thread lifting to address various levels of facial aging without the need for invasive surgery, general anaesthesia, or extensive recovery periods. Our aesthetics is invisible art - transformation that speaks without saying a word.
           </p>
           <p>
             Understanding facial aging patterns is crucial to delivering optimal non-surgical facelift results. We've developed a sophisticated 3-level classification system that recognises how facial sagging progresses differently in each individual. Level 1 facial aging typically occurs between ages 30-40, characterised by mild volume loss in the outer facial compartment and early jowl formation. Level 2 aging shows moderate facial descent with visible jowls, marionette lines, and nasolabial fold deepening, whilst Level 3 and above involves significant tissue laxity where surgical intervention often provides superior outcomes.
           </p>
           <p>
-            Liquid facelift treatments utilise premium hyaluronic acid dermal fillers strategically placed in key facial compartments to restore youthful volume and contours. The outer facial compartment, located near the ear and behind the masseter muscle, is particularly important for creating natural lifting effects. By precisely volumising this area, we achieve jaw definition and facial lifting without adding width to the face - a common concern that our expert technique addresses through anatomically correct filler placement.
+            Liquid facelift treatments utilise premium hyaluronic acid dermal fillers strategically placed in key facial compartments to restore youthful volume and contours. The outer facial compartment, located near the ear and behind the masseter muscle, is particularly important for creating natural lifting effects. By precisely volumising this area, we achieve jaw definition and facial lifting without adding width to the face - a common concern that our expert technique addresses through anatomically correct filler placement. Our approach is bold, natural, and always your way.
           </p>
           <p>
             PDO thread face lifting represents an advanced component of Level 2 non-surgical facelift treatments. These polydioxanone threads provide immediate mechanical lift whilst stimulating neocollagenesis over subsequent months. The threads create a supportive scaffolding within facial tissues, securing the jawline and providing structural integrity that volume replacement alone cannot achieve. This combination approach delivers both instant visible improvement and progressive enhancement as the body's natural collagen production increases.
@@ -1010,6 +1010,18 @@ const NonSurgicalFacelift = () => {
           </p>
           <p>
             Treatment duration for non-surgical facelifts varies depending on the level of intervention required. Level 1 treatments typically take 45-60 minutes, whilst comprehensive Level 2 procedures incorporating PDO threads may require 90-120 minutes. All treatments are performed using topical anaesthetic combined with lidocaine-containing products to ensure patient comfort throughout the procedure. Most clients experience minimal discomfort and can return to work the same day or following day.
+          </p>
+          <p>
+            Non-surgical facelift cost in London varies significantly based on the treatment level and individual requirements. At Cosmedocs on Harley Street, we provide transparent pricing during consultation, with Level 1 treatments starting from £800 and comprehensive Level 2 treatments ranging from £1,800 to £3,500. Our pricing reflects the premium quality of products used, the expertise of our internationally-trained practitioners, and the bespoke nature of each treatment plan.
+          </p>
+          <p>
+            Choosing the right practitioner for non-surgical facelift treatments is paramount. Our doctors have over 10 years of experience training practitioners internationally and specialise exclusively in advanced facial aesthetics. We understand facial anatomy intimately and employ sophisticated injection techniques that deliver natural, harmonious results. Every treatment is tailored to your unique facial structure, aging pattern, and aesthetic goals. Aesthetic medicine by Cosmedocs is minimal - quiet, not loud; invisible, not exaggerated.
+          </p>
+          <p>
+            Recovery from non-surgical facelift treatments is remarkably swift compared to surgical alternatives. Most patients experience mild swelling and potential bruising for 3-7 days, with the majority returning to work within 24-48 hours. PDO thread treatments may involve slightly more initial swelling, but this subsides within a week. We provide comprehensive aftercare guidance to optimise healing and results, including advice on sleeping position, exercise restriction, and skincare during the recovery period.
+          </p>
+          <p>
+            Long-term results from non-surgical facelifts are impressive, with dermal fillers lasting 12-18 months and PDO threads providing lifting effects for 12-24 months whilst stimulating ongoing collagen production. Many clients establish maintenance schedules to preserve their rejuvenated appearance, with touch-up treatments required less frequently as tissue quality improves. Our 3-level system allows us to adapt your treatment as your facial aging evolves, ensuring consistently natural, age-appropriate results throughout your aesthetic journey.
           </p>
         </section>
 
