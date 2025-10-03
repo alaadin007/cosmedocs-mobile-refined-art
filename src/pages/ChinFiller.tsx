@@ -453,7 +453,7 @@ const ChinFiller = () => {
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">What Is a Chin Filler or Liquid Mentoplasty?</h2>
               <p className="text-sm md:text-base text-gray-300 max-w-3xl mx-auto mb-6">
-                Liquid mentoplasty or Chin filler is a non-surgical chin enhancement procedure that involves reshaping and projecting a weak, short, or retracted chin. Dermal fillers containing hyaluronic acid are directly injected into your chin area to volumize it and project the chin forward.
+                Liquid mentoplasty or chin filler is a non-surgical chin enhancement procedure that involves reshaping and projecting a weak, short, or retracted chin. Dermal fillers containing hyaluronic acid are directly injected into your chin area to volumise it and project the chin forward. <a href="https://pubmed.ncbi.nlm.nih.gov/33347003/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">Clinical evidence</a> demonstrates the safety and effectiveness of this minimally invasive technique for achieving natural facial contouring and enhanced profile definition.
               </p>
             </motion.div>
             
