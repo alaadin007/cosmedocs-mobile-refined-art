@@ -777,7 +777,7 @@ const ProfhiloTreatment = () => {
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-sans font-bold mb-4 text-white">How Long Does Profhilo Last?</h2>
+              <h2 className="text-3xl font-sans font-bold mb-4 text-white">How Long Does Profhilo Last?</h2>
               <p className="text-purple-300 text-lg">Duration, Timeline & Lasting Results</p>
             </motion.div>
 
@@ -1004,7 +1004,7 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Profhilo Aftercare Guide</h2>
+                <h2 className="text-3xl font-sans font-bold mb-6">Profhilo Aftercare Guide</h2>
                 <p className="text-gray-300 mb-6">
                   Essential guidelines to ensure optimal results and proper healing from your 
                   Profhilo bio-remodelling treatment.
@@ -1061,7 +1061,7 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Profhilo Pricing London</h2>
+              <h2 className="text-3xl font-sans font-bold mb-4 text-white">Profhilo Pricing London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Transparent profhilo price and profhilo cost information for premium bio-remodelling treatments. How much is profhilo at our clinic? Our profhilo treatment price UK starts from £350 for the first session. All prices include consultation, profhilo injection treatment, and comprehensive aftercare support from our expert medical team. Many clients find the profhilo cost represents excellent value when considering the transformative results and longevity of effects.
               </p>
@@ -1196,7 +1196,7 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-sans font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -1292,7 +1292,7 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-sans font-bold mb-4 text-white">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 Everything you need to know about Profhilo bio-remodelling treatment
               </p>
@@ -1323,7 +1323,7 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Beautiful, Natural Skin?</h2>
+              <h2 className="text-3xl font-sans font-bold mb-4">Ready for Beautiful, Natural Skin?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert cosmetic doctors and discover how Profhilo 
                 can rejuvenate your skin with subtle, sophisticated bio-remodelling results.
