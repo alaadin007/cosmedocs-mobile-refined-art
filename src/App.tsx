@@ -149,6 +149,7 @@ const App = () => {
               <Route path="/lip-filler-dissolve" element={<LipFillerDissolve />} />
               <Route path="/private-gp-doctor" element={<PrivateGPDoctor />} />
               <Route path="/non-surgical-facelift" element={<NonSurgicalFacelift />} />
+              <Route path="/non-surgical-face-lift" element={<NonSurgicalFacelift />} />
               <Route path="/pdo-threads" element={<ThreadFaceLift />} />
               <Route path="/thread-face-lift" element={<ThreadFaceLift />} />
               <Route path="/masseter-botox" element={<MasseterBotox />} />
