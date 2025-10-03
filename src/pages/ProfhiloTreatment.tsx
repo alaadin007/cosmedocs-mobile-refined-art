@@ -124,17 +124,28 @@ const ProfhiloTreatment = () => {
   return (
     <>
       <Helmet>
+        <html lang="en-GB" />
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="author" content="Cosmedocs" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph */}
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:image" content={seoData.image} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="article:published_time" content="2024-01-15T09:00:00Z" />
+        <meta property="article:modified_time" content="2025-01-20T14:30:00Z" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        <meta name="keywords" content="profhilo neck before and after, profhilo before and after neck, profhilo for neck, profhilo before after, profilo before and after, profhilo neck, profhilo treatment before and after, profhilo skin booster before and after, prophilo before and after, profhilo gone wrong pictures, profilo facial, profhilo results, profhilo after 1 week, how much is profhilo, profhilo results week by week, profhilo before and after, profhilo before and after 40s, profhilo before and after jowls, before and after profhilo, profhilo price, profilo, does profhilo hurt, gone wrong profhilo before and after eyes, profhilo before and after eyes, profhilo structura before and after, before and after profhilo injection points, profhilo under eyes, profhilo treatment london, profhilo london, what does profhilo do, profhilo treatment, profhilo injection, how long does profhilo last, how long does profhilo take to work, profhilo injection points, profhilo neck injection points, profhilo cost, profhilo treatment price uk, is profhilo worth it, skin booster, skin booster injection, profhilo skin booster, bio-remodelling treatment, hyaluronic acid treatment, skin rejuvenation london, profhilo harley street, profhilo before and after 40s, profhilo facial before and after" />
         
         {/* Local SEO */}
         <meta name="geo.region" content="GB-LND" />
@@ -352,6 +363,70 @@ const ProfhiloTreatment = () => {
             ]
           })}
         </script>
+        
+        {/* Review Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Review",
+            "itemReviewed": {
+              "@type": "MedicalProcedure",
+              "name": "Profhilo Bio-Remodelling Treatment"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Sarah M."
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Amazing results from Profhilo treatment at Cosmedocs. The BAP technique was virtually painless and my skin looks so much more hydrated and firm. Highly recommend!"
+          })}
+        </script>
+        
+        {/* Service Schema with Pricing */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Profhilo Bio-Remodelling Treatment",
+            "provider": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "London"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Profhilo Treatment Pricing",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Profhilo First Session"
+                  },
+                  "price": "350",
+                  "priceCurrency": "GBP"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Profhilo Subsequent Sessions"
+                  },
+                  "price": "300",
+                  "priceCurrency": "GBP"
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
@@ -388,10 +463,10 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-sans font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Profhilo Bio-Remodelling</span>
-                  <span className="block text-sm mt-4">Invisible art - advanced injectable skincare for natural skin rejuvenation</span>
+                <h1 className="text-5xl md:text-6xl font-sans font-bold mb-4 leading-tight text-white">
+                  Profhilo Bio-Remodelling London
                 </h1>
+                <p className="text-lg text-gray-300 mb-8">Invisible art - advanced injectable skincare for natural skin rejuvenation</p>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Advanced Bio-Remodelling</p>
                   <p className="text-sm text-gray-300">#cosmeprofhilo - Check out our IG for hundreds more natural, subtle transformations</p>
@@ -567,10 +642,16 @@ const ProfhiloTreatment = () => {
                 <h2 className="text-3xl font-sans font-bold mb-6">What Is Profhilo?</h2>
                 <div className="max-w-4xl mx-auto mb-12">
                   <p className="text-gray-300 leading-relaxed mb-6">
-                    Profhilo is a revolutionary injectable skin remodelling treatment that uses one of the highest concentrations of hyaluronic acid available on the market. Unlike traditional dermal fillers, Profhilo works beneath the skin's surface to hydrate, lift and tighten without adding volume. This unique bio-remodelling approach stimulates the production of collagen, elastin and hyaluronic acid in the deeper skin layers, resulting in improved skin quality, firmness and overall texture.
+                    Profhilo is a revolutionary injectable skin remodelling treatment that uses one of the highest concentrations of hyaluronic acid (HA) available on the market today. Containing 64mg of highly purified HA per treatment, it represents a breakthrough in aesthetic medicine. Unlike traditional <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</a> that add volume to specific areas, Profhilo works beneath the skin's surface to hydrate, lift and tighten without changing facial contours or adding unwanted volume.
                   </p>
                   <p className="text-gray-300 leading-relaxed mb-6">
-                    The treatment is particularly effective for addressing skin laxity, fine lines, crepiness and dullness on the face, neck, décolletage and hands. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9509274/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies and research</a> have demonstrated Profhilo's efficacy for improving skin laxity and roughness, making it an evidence-based choice for natural skin rejuvenation.
+                    What makes Profhilo truly unique is its patented NAHYCO® technology, which creates a thermally bonded hybrid complex of high and low molecular weight hyaluronic acid. This innovative formulation spreads smoothly within the skin tissue, releasing HA slowly over time. The treatment works through a dual mechanism: immediate deep hydration of the skin layers, followed by stimulation of four different types of collagen and elastin production through bio-remodelling.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    The treatment is particularly effective for addressing skin laxity, fine lines, crepiness and dullness on multiple areas including the face, neck, décolletage, hands, arms and even knees. Profhilo is ideal for patients experiencing early signs of ageing who want to improve their skin quality without the use of toxins like <a href="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</a> or volumising fillers. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9509274/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies and research</a> have demonstrated Profhilo's significant efficacy for improving skin laxity and roughness, making it an evidence-based choice for natural skin rejuvenation.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    Unlike other skin boosters that may require multiple injection points across the treatment area, Profhilo uses the innovative BAP (Bio Aesthetic Points) technique with just 5 injection points on each side of the face. This minimises discomfort whilst ensuring optimal distribution of the product. The treatment has minimal downtime, with most patients returning to their normal activities immediately after their appointment at our <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">Harley Street clinic</a>.
                   </p>
                 </div>
               </motion.div>
@@ -578,16 +659,16 @@ const ProfhiloTreatment = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
                   <p className="text-gray-300 text-center mb-4 italic">"Advanced skin bio-remodelling treatment that stimulates natural collagen and elastin production"</p>
-                  <h4 className="text-white text-xl font-semibold mb-6 text-center">How Profhilo Works</h4>
+                  <h3 className="text-white text-xl font-semibold mb-6 text-center">How Profhilo Works</h3>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center mt-1">
                         <span className="text-purple-600 text-sm font-medium">1</span>
                       </div>
                       <div>
-                        <h5 className="text-white font-medium mb-2">Hydrating and Nourishing</h5>
+                        <h4 className="text-white font-medium mb-2">Hydrating and Nourishing</h4>
                         <p className="text-gray-300 font-light">
-                          First stage focuses on deeply hydrating and nourishing your skin layers
+                          First stage focuses on deeply hydrating and nourishing your skin layers with 64mg of pure hyaluronic acid, spreading evenly beneath the surface to provide intense moisture retention
                         </p>
                       </div>
                     </div>
@@ -596,9 +677,9 @@ const ProfhiloTreatment = () => {
                         <span className="text-purple-600 text-sm font-medium">2</span>
                       </div>
                       <div>
-                        <h5 className="text-white font-medium mb-2">Neo-Collagenesis</h5>
+                        <h4 className="text-white font-medium mb-2">Neo-Collagenesis & Elastogenesis</h4>
                         <p className="text-gray-300 font-light">
-                          Stimulates synthesis of new collagen and elastin for long-term skin improvement
+                          Stimulates synthesis of four types of collagen (I, III, IV, and VII) and elastin fibres for long-term skin improvement, firmness and natural rejuvenation over 4-6 weeks
                         </p>
                       </div>
                     </div>
@@ -752,6 +833,94 @@ const ProfhiloTreatment = () => {
           </div>
         </section>
 
+        {/* Treatment Comparison Table */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-sans font-bold mb-4">Profhilo vs Other Treatments</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding how Profhilo compares to other popular aesthetic treatments helps you choose the right option for your skin goals
+              </p>
+            </motion.div>
+
+            <div className="max-w-5xl mx-auto overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b border-purple-500/30">
+                    <th className="text-left p-4 text-purple-300 font-semibold">Treatment</th>
+                    <th className="text-left p-4 text-purple-300 font-semibold">Primary Purpose</th>
+                    <th className="text-left p-4 text-purple-300 font-semibold">Duration</th>
+                    <th className="text-left p-4 text-purple-300 font-semibold">Best For</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-gray-800 bg-purple-900/10">
+                    <td className="p-4 font-semibold text-white">Profhilo</td>
+                    <td className="p-4">Bio-remodelling & hydration</td>
+                    <td className="p-4">6-12 months</td>
+                    <td className="p-4">Skin laxity, texture, overall quality</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-semibold">
+                      <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">Dermal Fillers</a>
+                    </td>
+                    <td className="p-4">Volume restoration</td>
+                    <td className="p-4">9-18 months</td>
+                    <td className="p-4">Volume loss, contouring, wrinkles</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-semibold">
+                      <a href="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</a>
+                    </td>
+                    <td className="p-4">Muscle relaxation</td>
+                    <td className="p-4">3-4 months</td>
+                    <td className="p-4">Dynamic wrinkles, expression lines</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-semibold">Skin Boosters</td>
+                    <td className="p-4">Hydration only</td>
+                    <td className="p-4">3-6 months</td>
+                    <td className="p-4">Superficial hydration, glow</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="p-4 font-semibold">
+                      <a href="/nefertiti-botox-face-jaw-lift" className="text-purple-300 hover:text-purple-200 underline">Nefertiti Lift</a>
+                    </td>
+                    <td className="p-4">Jawline definition</td>
+                    <td className="p-4">3-4 months</td>
+                    <td className="p-4">Neck bands, jawline contouring</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="mt-12 max-w-4xl mx-auto"
+            >
+              <Card className="bg-purple-900/20 border-purple-500/30">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-purple-300" />
+                    Combination Treatments
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Profhilo works exceptionally well when combined with other treatments. Many patients achieve optimal results by pairing Profhilo with <a href="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox for wrinkle reduction</a> or <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers for volume restoration</a>. This comprehensive approach addresses multiple signs of ageing simultaneously.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
 
 
         {/* Injectable Moisturiser Section */}
@@ -1050,6 +1219,87 @@ const ProfhiloTreatment = () => {
                 </div>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Contraindications & Safety Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-sans font-bold mb-6 text-center">Who Should Not Have Profhilo?</h2>
+              <p className="text-gray-300 mb-8 text-center">
+                Whilst Profhilo is suitable for most patients, certain contraindications exist to ensure your safety
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="bg-black/50 border-purple-500/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-purple-300" />
+                      Absolute Contraindications
+                    </h3>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>Pregnancy or breastfeeding</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>Allergy to hyaluronic acid</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>Active skin infections or inflammation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>Autoimmune diseases affecting the skin</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-black/50 border-purple-500/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                      <Activity className="w-5 h-5 text-purple-300" />
+                      Relative Contraindications
+                    </h3>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>History of keloid scarring</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>Blood clotting disorders</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>Recent facial surgery (wait 6 months)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>Active cold sores or herpes simplex</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="mt-8 bg-purple-900/20 border border-purple-500/30 rounded-lg p-6">
+                <p className="text-gray-300 text-center">
+                  <strong className="text-white">Important:</strong> All patients receive a thorough medical consultation before treatment. 
+                  Our experienced practitioners at <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">Cosmedocs</a> will assess your suitability and discuss any concerns during your consultation.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
