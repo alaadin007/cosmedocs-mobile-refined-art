@@ -11,6 +11,7 @@ const TREATMENT_ROUTES = [
   '/lip-fillers',
   '/non-surgical-nose-job', 
   '/non-surgical-facelift',
+  '/8-point-facelift',
   '/pdo-threads',
   '/dermal-fillers',
   '/polynucleotide-treatment',

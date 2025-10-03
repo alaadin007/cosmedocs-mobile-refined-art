@@ -21,7 +21,7 @@ import beforeAfter3 from "@/assets/8-point-facelift-before-after-3.jpg";
 export default function EightPointFacelift() {
   const seoData = generateSEOMetadata(
     "8 Point Face Lift London | Non-Surgical Facelift | Cosmedocs",
-    "8 point face lift London - non surgical facelift using dermal fillers. Expert hyaluronic acid injections for natural facial rejuvenation.",
+    "8 point face lift London - non surgical facelift using dermal fillers. Expert hyaluronic acid injections for natural facial rejuvenation. Face lift prices from £800.",
     "/8-point-facelift"
   );
 
@@ -30,7 +30,7 @@ export default function EightPointFacelift() {
     "@type": "MedicalBusiness",
     "name": "Cosmedocs",
     "description": "Expert 8 Point Face Lift treatments in London using premium dermal fillers for natural facial rejuvenation",
-    "url": "https://cosmedocs.lovable.app/8-point-facelift",
+    "url": "https://www.cosmedocs.co.uk/8-point-facelift",
     "telephone": "0207 435 7521",
     "email": "info@cosmedocs.com",
     "address": {
@@ -111,18 +111,18 @@ export default function EightPointFacelift() {
   const beforeAfterImages = [
     {
       src: beforeAfter1,
-      alt: "PDO thread lift before and after procedure. Final results in a few weeks once swelling settles",
-      caption: "PDO Thread Lift: Before and After Comparison"
+      alt: "8 point face lift before and after - non surgical face lift results showing facial rejuvenation and volume restoration",
+      caption: "8 Point Face Lift: Before and After Results"
     },
     {
       src: beforeAfter2,
-      alt: "Thread face lift before and after image 2 weeks later",
-      caption: "Combination PDO Thread lift before and after combined with skin treatment"
+      alt: "8 point facelift before and after - dermal filler face lift transformation with natural results",
+      caption: "8 Point Lift Before and After: Natural Facial Enhancement"
     },
     {
       src: beforeAfter3,
-      alt: "0.5ml Lip Filler Combined With Multiple Other Areas (Hyaluronic acid makeover)",
-      caption: "0.5ml Lip Filler, Tear Trough, Chin & Jawline Enhancement"
+      alt: "Hyaluronic acid injections face before and after - 8 point filler face lift with lip enhancement",
+      caption: "8 Point Filler Face Lift with Lip Enhancement Results"
     }
   ];
 
@@ -278,10 +278,50 @@ export default function EightPointFacelift() {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        <meta name="keywords" content="8 point face lift, 8 point lift, 8 point facelift, 8 point face lift before and after, 8 point face lift price, 8 point face lift near me, 8 point filler face lift, non surgical face lift cost uk, non surgical face lift cost, dermal filler face lift, hyaluronic acid injections face before and after, London facelift, Harley Street" />
+        <meta name="keywords" content="8 point face lift, 8 point lift, 8 point facelift, 8 point face lift before and after, 8 point face lift price, 8 point face lift near me, 8 point filler face lift, non surgical face lift cost uk, non surgical face lift cost, dermal filler face lift, hyaluronic acid injections face before and after, non surgical face lift, face lift, face lift non surgical procedure, lift for face, face lift before and after, face lift cost, lower face lift, thread face lift, face lift price, face lift cost uk, non surgical face lift near me, non surgical face lifts, face lift london, face lift non surgical, face lift prices, face lift uk, face and neck lift, London facelift, Harley Street" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "8 Point Face Lift",
+                "item": "https://www.cosmedocs.co.uk/8-point-facelift"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
         </script>
       </Helmet>
 
@@ -297,7 +337,7 @@ export default function EightPointFacelift() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">8 Point Face Lift</span>
+                  <span className="text-purple-300">8 Point Face Lift London</span>
                   <span className="block text-sm mt-4">Invisible art - natural facial rejuvenation that speaks without words</span>
                 </h1>
                 <div className="mb-8">
@@ -1023,33 +1063,45 @@ export default function EightPointFacelift() {
         {/* Hidden SEO Content */}
         <div className="sr-only">
           <p>
-            The 8 Point Face Lift at CosmeDocs London represents the pinnacle of non-surgical facial rejuvenation techniques. 
-            This innovative liquid facelift procedure strategically targets eight crucial areas of the face using premium dermal fillers 
-            to restore volume, enhance contours, and create a natural lifting effect. Located in prestigious Harley Street, our clinic 
-            offers this transformative treatment to clients seeking to combat the signs of aging without the need for invasive surgery.
+            The 8 point face lift at CosmeDocs London represents the pinnacle of non surgical face lift techniques available in the UK. 
+            This innovative 8 point facelift procedure strategically targets eight crucial areas of the face using premium dermal filler face lift 
+            technology to restore volume, enhance contours, and create a natural lifting effect. Our face lift London clinic, located in prestigious 
+            Harley Street, offers this transformative non surgical face lift treatment to clients seeking to combat the signs of ageing without 
+            the need for invasive surgery. The 8 point lift provides exceptional face lift before and after results that speak for themselves.
           </p>
           <p>
-            Our approach focuses on the middle face, facial contours, and lower face regions, addressing concerns such as volume loss, 
-            sagging skin, and the development of jowls. The treatment is particularly effective for individuals in their late thirties 
-            and early forties who are beginning to notice the effects of collagen and elastin depletion. By precisely injecting 
-            dermal fillers at the eight strategic points, we can restore the youthful architecture of the face while maintaining 
-            completely natural-looking results.
+            Understanding face lift cost is important for our patients. Our 8 point face lift price starts from £800, making it a cost-effective 
+            alternative to traditional surgical face lifts. When searching for "8 point face lift near me" or "non surgical face lift near me", 
+            CosmeDocs offers competitive face lift prices and transparent face lift cost UK information. The non surgical face lift cost is 
+            significantly lower than surgical alternatives whilst delivering remarkable hyaluronic acid injections face before and after results. 
+            Our 8 point filler face lift represents excellent value, with face lift prices that reflect our commitment to accessible aesthetic medicine.
+          </p>
+          <p>
+            Our approach to this face lift non surgical procedure focuses on the middle face, facial contours, and lower face lift regions, 
+            addressing concerns such as volume loss, sagging skin, and the development of jowls. The treatment is particularly effective as 
+            a lift for face rejuvenation for individuals in their late thirties and early forties who are beginning to notice the effects of 
+            collagen and elastin depletion. This face lift non surgical approach, combined with thread face lift techniques when needed, 
+            can restore the youthful architecture of the face whilst maintaining completely natural-looking results.
           </p>
           <p>
             The eight points targeted in this comprehensive facial rejuvenation treatment include the cheek structure and volume, 
             under-eye hollows and tear troughs, jawline definition, jowl area improvement, nose-to-mouth contour enhancement, 
-            and smile line correction. Each injection point is carefully selected based on individual facial anatomy and aesthetic goals, 
-            ensuring optimal results that complement the patient's natural features.
+            and smile line correction. Each injection point is carefully selected based on individual facial anatomy and aesthetic goals. 
+            Our non surgical face lifts are customised to each patient's unique needs, ensuring optimal results that complement natural features. 
+            The 8 point face lift before and after gallery showcases the transformative power of this dermal filler face lift technique.
           </p>
           <p>
             At CosmeDocs, we pride ourselves on our expertise in aesthetic medicine and our commitment to safety and natural results. 
             Our practitioners are highly trained professionals who understand the importance of precision and artistry in cosmetic treatments. 
-            The 8 Point Face Lift procedure typically takes between 10-25 minutes to complete, with immediate results that continue to 
-            improve over the following weeks as any minor swelling subsides.
+            The 8 point face lift procedure typically takes between 10-25 minutes to complete, with immediate results that continue to 
+            improve over the following weeks as any minor swelling subsides. This makes it ideal for busy professionals seeking a quick 
+            lift for face rejuvenation without extended downtime.
           </p>
           <p>
-            The longevity of results from the 8 Point Face Lift treatment is impressive, with effects lasting between 12-18 months 
-            depending on individual factors such as metabolism, lifestyle, and the specific dermal fillers used. This makes it an 
+            The longevity of results from the 8 point lift treatment is impressive, with effects lasting between 12-18 months 
+            depending on individual factors such as metabolism, lifestyle, and the specific dermal fillers used. When considering 
+            face lift cost uk options, this represents excellent value. Our face lift uk treatments can also be combined with 
+            face and neck lift procedures for comprehensive rejuvenation. The non surgical face lift cost represents an 
             excellent investment for those seeking long-term facial rejuvenation without the commitment and risks associated with surgical procedures.
           </p>
         </div>
