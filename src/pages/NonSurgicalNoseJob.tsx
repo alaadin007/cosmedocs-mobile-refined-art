@@ -419,44 +419,6 @@ const NonSurgicalNoseJob = () => {
               </p>
             </motion.div>
 
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-3xl font-bold mb-8 text-white">What Can Be Treated with Non-Surgical Techniques?</h3>
-              <p className="text-gray-300 max-w-4xl mx-auto mb-8 text-center">
-                Non-surgical rhinoplasty has proven remarkably effective, with an <a href="https://pubmed.ncbi.nlm.nih.gov/38862661/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">updated systematic review</a> of nonsurgical rhinoplasty techniques, outcomes, and complications demonstrating a 99.1% satisfaction rate across 9,657 patients. This evidence-backed approach can address:
-              </p>
-              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Nose slimming injection treatments and nasal flare reduction</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Pixie tip lift and nose tip lift botox for improved projection</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Bridge enhancement using filler in bridge of nose techniques</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Botox on tip of nose for subtle elevation and refinement</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Dermal filler nose tip enhancements tailored to your features</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Complete non invasive nose job transformations</p>
-                </div>
-              </div>
-            </motion.div>
 
           </div>
         </section>
@@ -605,6 +567,50 @@ const NonSurgicalNoseJob = () => {
                 </p>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* What Can Be Treated Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">What Can Be Treated with Non-Surgical Techniques?</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto mb-8 text-center">
+                Non-surgical rhinoplasty has proven remarkably effective, with an <a href="https://pubmed.ncbi.nlm.nih.gov/38862661/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">updated systematic review</a> of nonsurgical rhinoplasty techniques, outcomes, and complications demonstrating a 99.1% satisfaction rate across 9,657 patients. This evidence-backed approach can address:
+              </p>
+              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Nose slimming injection treatments and nasal flare reduction</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Pixie tip lift and nose tip lift botox for improved projection</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Bridge enhancement using filler in bridge of nose techniques</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Botox on tip of nose for subtle elevation and refinement</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Dermal filler nose tip enhancements tailored to your features</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                  <p className="text-gray-300 text-left">Complete non invasive nose job transformations</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
