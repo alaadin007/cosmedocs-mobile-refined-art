@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Carousel,
   CarouselContent,
@@ -645,45 +646,44 @@ const BotoxCalfReduction = () => {
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto space-y-6">
-              {[
-                {
-                  question: "What are the benefits of calf reduction with botox?",
-                  answer: "Botox calf reduction offers multiple benefits: non-surgical approach with no scarring, minimal downtime allowing immediate return to activities, natural-looking gradual results, reversible effects lasting 6-12 months, no general anesthesia required, and significantly lower cost compared to surgical alternatives. It's ideal for achieving slimmer, more proportionate calves safely and effectively."
-                },
-                {
-                  question: "How does botox calf reduction work?",
-                  answer: "Botox is injected into the gastrocnemius muscle to temporarily relax it, causing a gradual reduction in muscle bulk and creating slimmer calf contours."
-                },
-                {
-                  question: "How long do results last?",
-                  answer: "Results typically last 6-12 months. The effects are temporary and reversible, allowing for adjustments as needed."
-                },
-                {
-                  question: "Is the treatment painful?",
-                  answer: "The treatment involves minimal discomfort. Most patients experience only mild temporary soreness at injection sites."
-                },
-                {
-                  question: "When will I see results?",
-                  answer: "Initial changes become visible within 2-4 weeks, with full results apparent at 6-8 weeks as the muscle gradually reduces in size."
-                },
-                {
-                  question: "Are there any side effects?",
-                  answer: "Side effects are rare but may include temporary bruising, swelling, or mild discomfort at injection sites. These resolve within a few days."
-                }
-              ].map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-background rounded-lg p-6"
-                >
-                  <h3 className="text-lg font-semibold mb-3 text-foreground">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </motion.div>
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {[
+                  {
+                    question: "What are the benefits of calf reduction with botox?",
+                    answer: "Botox calf reduction offers multiple benefits: non-surgical approach with no scarring, minimal downtime allowing immediate return to activities, natural-looking gradual results, reversible effects lasting 6-12 months, no general anesthesia required, and significantly lower cost compared to surgical alternatives. It's ideal for achieving slimmer, more proportionate calves safely and effectively."
+                  },
+                  {
+                    question: "How does botox calf reduction work?",
+                    answer: "Botox is injected into the gastrocnemius muscle to temporarily relax it, causing a gradual reduction in muscle bulk and creating slimmer calf contours."
+                  },
+                  {
+                    question: "How long do results last?",
+                    answer: "Results typically last 6-12 months. The effects are temporary and reversible, allowing for adjustments as needed."
+                  },
+                  {
+                    question: "Is the treatment painful?",
+                    answer: "The treatment involves minimal discomfort. Most patients experience only mild temporary soreness at injection sites."
+                  },
+                  {
+                    question: "When will I see results?",
+                    answer: "Initial changes become visible within 2-4 weeks, with full results apparent at 6-8 weeks as the muscle gradually reduces in size."
+                  },
+                  {
+                    question: "Are there any side effects?",
+                    answer: "Side effects are rare but may include temporary bruising, swelling, or mild discomfort at injection sites. These resolve within a few days."
+                  }
+                ].map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
+                      <span className="text-white font-medium">{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 text-gray-300">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
