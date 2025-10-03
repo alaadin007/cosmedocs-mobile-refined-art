@@ -242,15 +242,12 @@ const NonSurgicalNoseJob = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  Non-Surgical Nose Job
-                  <span className="block text-purple-300">Harley Street London</span>
-                  <span className="block text-sm mt-4">Expert nose reshaping without surgery from £450</span>
+                  <span className="text-purple-300">Non-Surgical Nose Job</span>
+                  <span className="block text-sm mt-4">Invisible art - expert nose reshaping without surgery from £450</span>
                 </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Invisible art meets precision</span> - Transform your profile with our advanced liquid rhinoplasty techniques
-                </p>
                 <div className="mb-8">
-                  <p className="text-sm text-gray-300">#cosmenose technique | Non-invasive nose surgery | Botox & filler specialists</p>
+                  <p className="text-2xl text-purple-300 font-bold">Skilled Nose Enhancement</p>
+                  <p className="text-sm text-gray-300">#cosmenose - Transform your profile with our advanced liquid rhinoplasty techniques</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
@@ -285,7 +282,7 @@ const NonSurgicalNoseJob = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical Nose Reshaping London</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Nose Reshaping London</h2>
               <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
                 Experience the best nose job london at our Harley Street clinic. From botox in the nose for slimming to filler on nose tip enhancement, we offer comprehensive non surgical nose reshaping treatments. Our non surgical nose job price is transparent with no hidden costs.
               </p>
