@@ -620,20 +620,32 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-sans font-bold mb-6 text-white">Profhilo Injection Points</h2>
+                <h2 className="text-3xl font-sans font-bold mb-6 text-white">Profhilo Injection Points & BAP Technique</h2>
                 <div className="space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    The latest injectable skin remodelling treatment corrects the ageing signs and their source.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    To achieve remarkable results, experts use the BAP (Bio Aesthetic Points) technique.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    This reduces the required injections and ensures an even and efficient dispersal of the hyaluronic acid into the skin layers, enabling Profhilo to battle signs of ageing more efficiently.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Moreover, the BAP approach ensures your comfort throughout the process.
-                  </p>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300 leading-relaxed">
+                      The latest injectable skin remodelling treatment corrects the ageing signs and their source.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300 leading-relaxed">
+                      To achieve remarkable results, experts use the BAP (Bio Aesthetic Points) technique.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300 leading-relaxed">
+                      This reduces the required injections and ensures an even and efficient dispersal of the hyaluronic acid into the skin layers, enabling Profhilo to battle signs of ageing more efficiently.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-purple-500 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300 leading-relaxed">
+                      Moreover, the BAP approach ensures your comfort throughout the process.
+                    </p>
+                  </div>
                 </div>
               </motion.div>
 
