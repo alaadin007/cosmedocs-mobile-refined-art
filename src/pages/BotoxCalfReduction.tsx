@@ -458,8 +458,11 @@ const BotoxCalfReduction = () => {
                     The treatment strategically weakens the muscle fibres, leading to a gradual reduction in muscle mass 
                     and a more refined calf contour over the following weeks.
                   </p>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed mb-4">
                     Research published in aesthetic medicine journals supports the safety and efficacy of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6122154/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin injections</a> for aesthetic muscle reduction, demonstrating measurable improvements with an excellent safety profile when performed by qualified practitioners.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Studies show that calf subcutaneous fat thickness plays a significant role in treatment outcomes, with optimal <a href="https://pubmed.ncbi.nlm.nih.gov/37220391/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">patient satisfaction</a> achieved when BTX-A calf contouring is tailored to individual anatomy and tissue composition.
                   </p>
                 </div>
               </div>
