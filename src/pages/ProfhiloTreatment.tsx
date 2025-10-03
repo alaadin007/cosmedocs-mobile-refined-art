@@ -569,12 +569,6 @@ const ProfhiloTreatment = () => {
                   <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
                     Before and after profhilo results demonstrate its powerful effects as a skin booster injection. Profhilo treatment before and after images show dramatic improvement in skin quality across various treatment areas. Profhilo before and after neck results are particularly impressive, with profhilo for neck treatments showing excellent skin tightening and texture improvement. Profhilo neck before and after photos consistently reveal enhanced firmness and reduced crepiness. What does profhilo do? It stimulates the production of new collagen, elastin and hyaluronic acid in the deeper skin layers through its unique bio-remodelling action.
                   </p>
-                  <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
-                    This cutting-edge profhilo treatment London delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow. Profhilo before and after 40s clients show remarkable rejuvenation, with profhilo before and after jowls improvement being particularly noticeable. Profhilo before and after eyes treatment can also enhance the delicate periorbital area when expertly administered. How long does profhilo last? Results typically last 6-12 months with progressive improvement. Many patients ask "is profhilo worth it?" and the consistently positive profhilo results speak for themselves.
-                  </p>
-                  <p className="text-white/80 font-light leading-relaxed text-lg">
-                    Profhilo injection points are strategically placed using the BAP technique, with profhilo neck injection points carefully selected for optimal diffusion. Profhilo after 1 week shows initial plumping effects, with profhilo results week by week demonstrating progressive enhancement. The profhilo cost and profhilo price at our London clinic remain competitive whilst maintaining the highest treatment standards. How long does profhilo take to work? Initial effects appear within days, with full results developing over 4-6 weeks. Does profhilo hurt? Most patients report minimal discomfort thanks to our topical anaesthetic protocol.
-                  </p>
                 </div>
               </motion.div>
               
@@ -612,6 +606,29 @@ const ProfhiloTreatment = () => {
           </div>
         </article>
 
+
+        {/* How Long Does Profhilo Last Section */}
+        <section className="py-20 bg-gradient-to-b from-accent to-black">
+          <div className="page-container">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">How Long Does Profhilo Last?</h2>
+              <div className="max-w-4xl mx-auto space-y-6">
+                <p className="text-white/80 font-light leading-relaxed text-lg">
+                  This cutting-edge profhilo treatment London delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow. Profhilo before and after 40s clients show remarkable rejuvenation, with profhilo before and after jowls improvement being particularly noticeable. Profhilo before and after eyes treatment can also enhance the delicate periorbital area when expertly administered. How long does profhilo last? Results typically last 6-12 months with progressive improvement. Many patients ask "is profhilo worth it?" and the consistently positive profhilo results speak for themselves.
+                </p>
+                <p className="text-white/80 font-light leading-relaxed text-lg">
+                  Profhilo injection points are strategically placed using the BAP technique, with profhilo neck injection points carefully selected for optimal diffusion. Profhilo after 1 week shows initial plumping effects, with profhilo results week by week demonstrating progressive enhancement. The profhilo cost and profhilo price at our London clinic remain competitive whilst maintaining the highest treatment standards. How long does profhilo take to work? Initial effects appear within days, with full results developing over 4-6 weeks. Does profhilo hurt? Most patients report minimal discomfort thanks to our topical anaesthetic protocol.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Profhilo Injection Points Section */}
         <section className="py-20 bg-black">
