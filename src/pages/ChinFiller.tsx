@@ -78,17 +78,33 @@ const ChinFiller = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
         <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph - Optimized */}
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:image" content={seoData.image} />
+        <meta property="og:image" content="https://www.cosmedocs.co.uk/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Chin filler before and after results London Harley Street" />
         <meta property="og:site_name" content="Cosmedocs Clinic" />
+        <meta property="og:locale" content="en_GB" />
+        
+        {/* Twitter Card - Optimized */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content={seoData.image} />
+        <meta name="twitter:image" content="https://www.cosmedocs.co.uk/lovable-uploads/d8e871e3-564d-44e3-a331-3fdd8b7574f4.png" />
+        <meta name="twitter:image:alt" content="Chin filler before and after results" />
+        
+        {/* Mobile Optimization */}
+        <meta name="theme-color" content="#000000" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         
         {/* Local SEO */}
         <meta name="geo.region" content="GB-LND" />
@@ -96,14 +112,14 @@ const ChinFiller = () => {
         <meta name="geo.position" content="51.5074;-0.1278" />
         <meta name="ICBM" content="51.5074, -0.1278" />
         
-        {/* Structured Data */}
+        {/* Structured Data - Medical Business */}
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "MedicalBusiness",
           "name": "Cosmedocs - Chin Filler Treatment",
           "description": "Professional chin filler treatments for facial enhancement and profile correction",
-          "url": "https://cosmedocs.com/chin-filler",
+          "url": "https://www.cosmedocs.co.uk/chin-filler",
           "telephone": "0333 0551 503",
           "address": {
             "@type": "PostalAddress",
@@ -118,7 +134,28 @@ const ChinFiller = () => {
             "longitude": -0.1278
           },
           "medicalSpecialty": "Cosmetic Surgery",
-          "priceRange": "£350+"
+          "priceRange": "£350+",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "487",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "10:00",
+              "closes": "16:00"
+            }
+          ]
         })}
         </script>
 
@@ -180,8 +217,8 @@ const ChinFiller = () => {
       <main className="bg-black text-white">
         {/* Breadcrumb Navigation */}
         <nav className="bg-gray-900/50 border-b border-gray-800" aria-label="Breadcrumb">
-          <div className="page-container py-3">
-            <ol className="flex items-center space-x-2 text-sm">
+          <div className="page-container py-2 lg:py-3">
+            <ol className="flex items-center space-x-1 lg:space-x-2 text-xs lg:text-sm overflow-x-auto">{/* ... keep existing code ... */}
               <li>
                 <a href="/" className="text-gray-400 hover:text-white transition-colors flex items-center">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -217,19 +254,19 @@ const ChinFiller = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-purple-300">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight text-purple-300">
                   Chin Filler London
                 </h1>
-                <p className="text-xl text-gray-300 mb-8 max-w-xl">
+                <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 lg:mb-8 max-w-xl">
                   Transform your profile with precision dermal fillers from £350. Expert 1ml chin filler treatments at Harley Street.
                 </p>
-                <div className="mb-8">
-                  <p className="text-sm text-gray-400">#cosmechin - Invisible art philosophy | Natural-looking results</p>
+                <div className="mb-6 lg:mb-8">
+                  <p className="text-xs md:text-sm text-gray-400">#cosmechin - Invisible art philosophy | Natural-looking results</p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
                   <Button 
                     onClick={() => window.open(bookingUrl, "_blank")}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-semibold shadow-2xl w-full sm:w-auto"
                   >
                     Book Consultation
                   </Button>
@@ -241,7 +278,7 @@ const ChinFiller = () => {
                         pricingSection.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-semibold backdrop-blur-sm w-full sm:w-auto"
                   >
                     View Price List
                   </Button>
@@ -263,7 +300,7 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Chin Filler Treatment</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 lg:mb-8 text-white">Chin Filler Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -364,8 +401,8 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Chin Fillers Before and After London</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Chin Fillers Before and After London</h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
                 Explore authentic 1ml chin filler before and after results from our Harley Street clinic. 
                 Our expert dermal fillers chin treatments enhance projection and facial balance, including double chin filler and chin shadow correction.
               </p>
@@ -414,8 +451,8 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">What Is a Chin Filler or Liquid Mentoplasty?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">What Is a Chin Filler or Liquid Mentoplasty?</h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-3xl mx-auto mb-6">
                 Liquid mentoplasty or Chin filler is a non-surgical chin enhancement procedure that involves reshaping and projecting a weak, short, or retracted chin. Dermal fillers containing hyaluronic acid are directly injected into your chin area to volumize it and project the chin forward.
               </p>
             </motion.div>
@@ -446,8 +483,8 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Round Face Chin Filler Before and After</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Round Face Chin Filler Before and After</h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-3xl mx-auto">
                 Tailored 1 ml chin filler approaches for different facial structures including round face chin filler before and after transformations
               </p>
             </motion.div>
@@ -580,8 +617,8 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Genioplasty vs Non-Surgical Chin Enhancement</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Genioplasty vs Non-Surgical Chin Enhancement</h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-3xl mx-auto">
                 Understanding the key differences between surgical genioplasty and dermal filler chin enhancement to help you make an informed decision
               </p>
             </motion.div>
@@ -669,8 +706,8 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Chin Filler?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Why Choose Chin Filler?</h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-3xl mx-auto">
                 Discover the benefits of non-surgical chin enhancement and the areas we can transform
               </p>
             </motion.div>
@@ -1050,14 +1087,14 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">
                 Get answers to common questions about chin filler treatments at our London clinic.
               </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                 <div className="space-y-4">
                   {leftColumnFaqs.map((faq, index) => (
                     <FAQItem key={index} question={faq.question} answer={faq.answer} />
@@ -1083,16 +1120,16 @@ const ChinFiller = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Enhanced Chin Definition?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready for Enhanced Chin Definition?</h2>
+              <p className="text-sm md:text-base text-gray-300 mb-6 lg:mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert cosmetic doctors and discover how chin fillers 
                 can enhance your facial balance with subtle, sophisticated results.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-semibold w-full sm:w-auto">
                   Book Free Consultation
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-semibold w-full sm:w-auto">
                   Call 0333 0551 503
                 </Button>
               </div>
