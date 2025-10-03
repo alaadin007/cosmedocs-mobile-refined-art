@@ -27,57 +27,57 @@ const NonSurgicalNoseJob = () => {
   const beforeAfterImages = [
     {
       src: "/lovable-uploads/8f741338-3fd5-4feb-9d34-270856fb99c5.png",
-      alt: "Non-surgical nose job before after 3 year progression London Harley Street nose botox dermal filler transformation results",
+      alt: "Non-surgical nose job 3 year progression London Harley Street botox filler results",
       caption: "Progressive transformation over 3 years showing natural enhancement with #cosmenose technique"
     },
     {
       src: "/lovable-uploads/16fa7311-00af-4ea7-b353-73f981f6d87c.png",
-      alt: "Liquid nose job before after profile view nose filler cost London Harley Street non-surgical rhinoplasty results",
+      alt: "Liquid nose job profile view London Harley Street non-surgical rhinoplasty results",
       caption: "Subtle profile enhancement achieving perfect nasal proportions"
     },
     {
       src: "/lovable-uploads/717753b3-1c9d-43bd-bdc1-ca245fc3c284.png",
-      alt: "Non-invasive nose job immediate results nose tip filler London Dr Ahmed Haq Cosmedocs nose reshaping without surgery",
+      alt: "Non-invasive nose job immediate results London Cosmedocs Dr Ahmed Haq",
       caption: "Immediate transformation showing refined nasal bridge and tip"
     },
     {
       src: "/lovable-uploads/d5cec131-9f61-4b49-9dba-8658eda2eddf.png",
-      alt: "Nose injection filler treatment progression 5 and 10 minutes nonsurgical rhinoplasty London Harley Street results",
+      alt: "Nose filler treatment progression nonsurgical rhinoplasty London Harley Street",
       caption: "Treatment progression showing results developing over 10 minutes"
     },
     {
       src: "/lovable-uploads/a9ac5188-66f2-420b-9b39-3449dc02ff7b.png",
-      alt: "Non-surgical nose job side profile comparison nose lift botox London Cosmedocs Harley Street before after",
+      alt: "Non-surgical nose job profile comparison botox London Cosmedocs Harley Street",
       caption: "Profile view showing enhanced nasal projection and definition"
     },
     {
       src: "/lovable-uploads/97c76ea5-245e-43c2-8b89-533f365f4969.png",
-      alt: "Advanced nose reshaping technique raised bridge bump correction liquid nose job London Harley Street Cosmedocs",
+      alt: "Bridge bump correction liquid nose job London Harley Street Cosmedocs",
       caption: "Advanced technique demonstrating raised bridge and concealed bump correction"
     },
     {
       src: "/lovable-uploads/7b2a209c-3203-44b6-8cff-83e3a40896b9.png",
-      alt: "Non-surgical nose reshaping before after profile view nose botox London Harley Street nose slimming injection results",
+      alt: "Non-surgical nose reshaping profile botox London Harley Street results",
       caption: "Profile transformation showing refined nasal bridge and enhanced projection with #cosmenose technique"
     },
     {
       src: "/lovable-uploads/62475a93-6144-4596-bca9-7e70d52cb7c1.png",
-      alt: "Non-surgical nose job bottom view before after nose tip botox London Cosmedocs Harley Street nasal tip filler",
+      alt: "Non-surgical nose job bottom view nasal tip filler London Cosmedocs",
       caption: "Underneath view demonstrating improved nasal tip projection and symmetry"
     },
     {
       src: "/lovable-uploads/cc387da3-1543-4b06-8b11-a48d29f03456.png",
-      alt: "Non-surgical nose job side profile before after pixie tip nose filler London Harley Street Cosmedocs results",
+      alt: "Non-surgical nose job profile pixie tip filler London Harley Street",
       caption: "Side profile enhancement demonstrating subtle yet significant improvement in nasal contours"
     },
     {
       src: "/lovable-uploads/1cceb92b-eacb-48b4-9c9f-04c4cb2b025e.png",
-      alt: "Nose reshaping without surgery profile transformation dermal filler nose London Cosmedocs Dr Ahmed Haq",
+      alt: "Nose reshaping profile dermal filler London Cosmedocs Dr Ahmed Haq",
       caption: "Natural-looking profile enhancement achieved with advanced dermal filler techniques"
     },
     {
       src: "/lovable-uploads/bf8a69d8-6776-4187-857d-a009e9fd6147.png",
-      alt: "Non-surgical rhinoplasty Cosmedocs London Harley Street before after nose job london cost results Dr Ahmed Haq",
+      alt: "Non-surgical rhinoplasty before after London Harley Street Dr Ahmed Haq",
       caption: "Remarkable transformation achieving perfect nasal proportions and facial harmony"
     }
   ];
@@ -476,7 +476,7 @@ const NonSurgicalNoseJob = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <img 
                     src="/lovable-uploads/0cac590b-9991-4176-b5d7-541992920464.png" 
-                    alt="Complex nose fracture non-surgical reconstruction before after nose botox nose filler London Harley Street Cosmedocs Dr Ahmed Haq advanced nose reshaping without surgery fibrosis cartilage bone treatment cannula technique"
+                    alt="Complex nose fracture reconstruction London Harley Street Dr Ahmed Haq"
                     className="w-full h-auto rounded-3xl shadow-2xl object-cover max-w-full relative z-10 group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     onError={(e) => {
@@ -497,8 +497,8 @@ const NonSurgicalNoseJob = () => {
                       </h3>
                       <p className="text-lg text-white/80 font-light leading-relaxed mb-8">
                         Advanced non-surgical reconstruction of complex nose fracture cases using pioneering techniques and expert precision. 
-                        Our specialized approach combines nose botox treatments with strategic dermal filler nose placement to address structural damage 
-                        from previous trauma. This non-invasive nose surgery alternative offers remarkable results for patients seeking nose reshaping 
+                        Our specialised approach combines <a href="/advanced-upper-face-botox" className="text-purple-300 hover:text-purple-200 underline">botox treatments</a> with strategic <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</a> placement to address structural damage 
+                        from previous trauma. This non-invasive alternative offers remarkable results for patients seeking nose reshaping 
                         without surgery after fracture complications.
                       </p>
                       
@@ -558,8 +558,9 @@ const NonSurgicalNoseJob = () => {
                     </div>
                     <img 
                       src="/lovable-uploads/461ed1b4-14e5-4864-863b-2e30db23adfc.png" 
-                      alt="Before non-surgical deviated nose correction London Harley Street Cosmedocs Dr Ahmed Haq complex case treatment"
+                      alt="Before deviated nose correction London Harley Street Cosmedocs"
                       className="w-full h-auto rounded-2xl mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <p className="text-white/70 text-lg font-light leading-relaxed">Complex deviated nose requiring specialized correction technique with significant asymmetry challenges</p>
                   </div>
@@ -579,8 +580,9 @@ const NonSurgicalNoseJob = () => {
                     </div>
                     <img 
                       src="/lovable-uploads/8f4b0286-bd8c-4aaa-8ac1-51ddc5e4c73b.png" 
-                      alt="After non-surgical deviated nose correction London Harley Street Cosmedocs Dr Ahmed Haq complex case results"
+                      alt="After deviated nose correction London Harley Street Cosmedocs results"
                       className="w-full h-auto rounded-2xl mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <p className="text-white/70 text-lg font-light leading-relaxed">Remarkable improvement in nasal symmetry and profile using advanced #cosmenose technique</p>
                   </div>
@@ -1294,7 +1296,7 @@ const NonSurgicalNoseJob = () => {
                 At Cosmedocs, we're proud to offer the best non-surgical nose jobs in London. Our nose job in london clinic specialises in advanced nonsurgical rhinoplasty techniques that deliver natural, sophisticated results. Dr. Ahmed Haq has pioneered the #cosmenose method, combining expert knowledge of facial anatomy with the latest nose filler and botox nose technologies to create harmonious enhancements without surgery.
               </p>
               <p className="text-gray-300 mb-4">
-                Our prestigious location at 10 Harley Street offers comprehensive treatments including botox to lift nose tip, nose reduction without surgery, and liquid nose job procedures. Whether you're seeking a pixie tip nose enhancement, nasal tip botox treatment, or complete non surgical nose reshaping, we provide personalised plans using premium nose job dermal fillers. Our transparent nose job london cost makes world-class treatment accessible.
+                Our prestigious location at 10 Harley Street offers comprehensive treatments including <a href="/advanced-upper-face-botox" className="text-purple-300 hover:text-purple-200 underline">botox to lift nose tip</a>, nose reduction without surgery, and liquid nose job procedures. Whether you're seeking a pixie tip nose enhancement, nasal tip botox treatment, or complete non surgical nose reshaping, we provide personalised plans using premium <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</a>. Our transparent nose job london cost makes world-class treatment accessible.
               </p>
               <p className="text-gray-300 mb-4">
                 The non invasive nose surgery approach offers remarkable advantages: minimal downtime, immediate results, and reversible treatments. Our botox for nose procedures including botox nose lift and nose slimming injection options provide subtle, natural-looking refinements. The cost of non surgical nose job uk at Cosmedocs includes consultation, treatment, and follow-up care. Results from our dermal fillers nose treatments typically last 12-18 months, making it an excellent alternative to traditional surgery.
