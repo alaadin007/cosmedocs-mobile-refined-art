@@ -148,14 +148,14 @@ const NonSurgicalNoseJob = () => {
         <meta name="geo.position" content="51.5074;-0.1278" />
         <meta name="ICBM" content="51.5074, -0.1278" />
         
-        {/* Structured Data */}
+        {/* Structured Data - Medical Business */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs - Non-Surgical Nose Job",
             "description": "Premium non-surgical nose job treatments in London's Harley Street",
-            "url": "https://cosmedocs.com/non-surgical-nose-job",
+            "url": "https://www.cosmedocs.co.uk/non-surgical-nose-job",
             "telephone": "0333 0551 503",
             "address": {
               "@type": "PostalAddress",
@@ -173,9 +173,64 @@ const NonSurgicalNoseJob = () => {
             "priceRange": "£450"
           })}
         </script>
+
+        {/* Structured Data - FAQPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              ...leftColumnFaqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              })),
+              ...rightColumnFaqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            ]
+          })}
+        </script>
+
+        {/* Structured Data - Breadcrumbs */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Non-Surgical Nose Job",
+                "item": "https://www.cosmedocs.co.uk/non-surgical-nose-job"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        <main>
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -318,7 +373,7 @@ const NonSurgicalNoseJob = () => {
               <CarouselContent>
                 {beforeAfterImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
+                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -328,6 +383,7 @@ const NonSurgicalNoseJob = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -357,9 +413,9 @@ const NonSurgicalNoseJob = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Nose Botox & Non-Surgical Rhinoplasty in London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Experience the art of non-invasive nose surgery at our Harley Street clinic. Our liquid nose job treatments combine nose botox for slimming with sophisticated dermal filler nose techniques to achieve your perfect profile without surgery.<br/><br/>
-                Dr. Ahmed Haq pioneered the innovative #cosmenose technique, specializing in nose tip botox, nasal tip filler, and comprehensive nose reshaping Harley Street treatments. 
-                From pixie tip nose lifts to nose reduction without surgery, our non-surgical rhinoplasty cost offers exceptional value for transformative results.
+                Experience the art of non-invasive nose enhancement at our Harley Street clinic. Our liquid rhinoplasty treatments combine botox with sophisticated dermal filler techniques to achieve your perfect profile without surgery.<br/><br/>
+                Dr. Ahmed Haq pioneered the innovative #cosmenose technique, specialising in nasal tip treatments and comprehensive reshaping procedures. 
+                From subtle tip refinements to bridge smoothing, our non-surgical approach offers exceptional value for natural, transformative results.
               </p>
             </motion.div>
 
@@ -374,27 +430,27 @@ const NonSurgicalNoseJob = () => {
               <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Nose botox for slimming wide noses and nasal flare reduction</p>
+                  <p className="text-gray-300 text-left">Wide noses and nasal flare reduction using botox injections</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Nose tip filler for pixie tip lifts and enhanced projection</p>
+                  <p className="text-gray-300 text-left">Tip enhancement for pixie lifts and improved projection</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Dermal filler nose bridge enhancement and bump smoothing</p>
+                  <p className="text-gray-300 text-left">Bridge enhancement and bump smoothing with dermal fillers</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Nose lift botox for subtle tip elevation and refinement</p>
+                  <p className="text-gray-300 text-left">Subtle tip elevation and refinement treatments</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Non-surgical nose job before after transformations tailored to your features</p>
+                  <p className="text-gray-300 text-left">Personalised transformations tailored to your unique features</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-gray-300 text-left">Nonsurgical rhinoplasty for comprehensive nose reshaping without surgery</p>
+                  <p className="text-gray-300 text-left">Comprehensive reshaping without the need for surgery</p>
                 </div>
               </div>
             </motion.div>
@@ -607,10 +663,10 @@ const NonSurgicalNoseJob = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical Nose Job Price & Nose Filler Cost London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical Nose Job Pricing</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent non-surgical nose job price and nose injection filler cost at our Harley Street clinic. Our competitive non-surgical rhinoplasty cost includes consultation, 
-                premium nose botox or dermal filler treatments, and comprehensive aftercare. Best nose job london cost with no hidden fees.
+                Transparent pricing at our Harley Street clinic. Our competitive rates include consultation, 
+                premium treatments, and comprehensive aftercare with no hidden fees.
               </p>
             </motion.div>
 
@@ -1229,28 +1285,35 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
-        {/* Hidden SEO content */}
-        <div className="sr-only">
-          <h2>Non-Surgical Nose Job London - Nose Botox & Dermal Fillers Harley Street</h2>
-          <p>
-            Leading non-surgical nose job London and nose botox specialist Dr. Ahmed Haq at Cosmedocs Harley Street. Expert non-surgical rhinoplasty cost from £450, nose botox treatments £200 at our prestigious 10 Harley Street clinic. Specializing in liquid nose job, non-invasive nose job, and nose reshaping without surgery using advanced nose injection techniques. Our nose slimming injection and nose tip filler treatments deliver exceptional non-surgical nose job before and after results. The #cosmenose method combines nose botox, nasal botox, and dermal filler nose techniques for natural enhancement.
-          </p>
-          <p>
-            Comprehensive nose reshaping Harley Street treatments including nose lift botox, pixie tip nose enhancement, and filler on nose tip procedures. Our non-surgical nose surgery alternatives include botox nose slimming, nose tip lift botox, and nose reduction without surgery techniques. Dr. Ahmed Haq's expertise in nose job dermal fillers and nose injection filler cost provides excellent value for nose jobs Harley Street. From subtle nose job enhancements to dramatic nose lift transformations, our non-invasive nose surgery delivers remarkable botox nose before after results.
-          </p>
-          <p>
-            Expert in handling nose fillers for wide nose correction, dermal filler nose tip enhancement, and filler in bridge of nose treatments. Our nonsurgical rhinoplasty and non-surgical rhinoplasty in London practice offers the best nose job london cost with transparent nose filler cost pricing. Specializing in nose tip botox, nasal tip botox, and botox for nose tip lifting for natural-looking nose enhancement. Whether seeking pixie tip lift, nose lift no surgery, or comprehensive nose reshaping without surgery, our nose jobs london deliver exceptional results.
-          </p>
-          <p>
-            Advanced botox nose reshaping and liquid nose job techniques at our nose job london harley street clinic. From basic nose botox slimming to complex nose reduction without surgery procedures, we offer comprehensive non-surgical nose job london treatments. Our nose injection treatments include botox in nose, botox on nose, and strategic filler tip of nose applications for optimal facial harmony. Trust London's leading nose filler london specialist for your non-surgical rhinoplasty cost consultation.
-          </p>
-          <p>
-            Book consultation today at London's premier Harley Street aesthetic clinic Cosmedocs. Call 0333 0551 503 or visit cosmedocs.com for non-surgical nose job London. Located at 10 Harley Street, London W1G 9PF, Cosmedocs offers premium aesthetic treatments including non-surgical rhinoplasty, liquid rhinoplasty, nose filler, nose enhancement, and comprehensive facial aesthetic medicine. Dr. Ahmed Haq's expertise in facial anatomy and Harley Street location make Cosmedocs the leading choice for non-surgical nose enhancement in London. Treatment carried out by Cosmedocs in London, Harley Street using premium dermal fillers and advanced techniques for optimal patient satisfaction and natural aesthetic results.
-          </p>
-          <p>
-            Complex nose fracture reconstruction non-surgical London Harley Street Cosmedocs Dr Ahmed Haq fibrosis cartilage bone treatment cannula dissection technique gradual filling multiple sessions remarkable results. Advanced reconstruction of complicated nose fractures using pioneering non-surgical techniques by Dr Ahmed Haq at Cosmedocs London Harley Street clinic. Specialized treatment for nose fracture complications including fibrosis adhesion to cartilage and bone structures requiring expert cannula dissection and gradual dermal filler reconstruction over multiple treatment sessions.
-          </p>
-        </div>
+        {/* Additional SEO Content */}
+        <article className="py-16 bg-accent">
+          <div className="page-container max-w-4xl">
+            <h2 className="text-3xl font-bold mb-6 text-white">About Our Non-Surgical Nose Enhancement Treatments</h2>
+            <div className="prose prose-invert max-w-none">
+              <p className="text-gray-300 mb-4">
+                At Cosmedocs Harley Street, we specialise in advanced non-surgical rhinoplasty techniques that deliver natural, sophisticated results. 
+                Dr. Ahmed Haq has pioneered the #cosmenose method, combining expert knowledge of facial anatomy with the latest injectable technologies 
+                to create harmonious nasal enhancements without the need for surgery.
+              </p>
+              <p className="text-gray-300 mb-4">
+                Our clinic at 10 Harley Street, London W1G 9PF, offers comprehensive facial aesthetic treatments using premium dermal fillers 
+                and advanced botox techniques. Whether you're seeking subtle refinement or more significant reshaping, we provide personalised 
+                treatment plans that respect your unique facial proportions and aesthetic goals.
+              </p>
+              <p className="text-gray-300 mb-4">
+                The non-surgical approach offers several advantages including minimal downtime, immediate results, and the ability to preview 
+                changes before committing to permanent alterations. Our treatments are reversible and adjustable, providing peace of mind alongside 
+                exceptional aesthetic outcomes. Results typically last 12-18 months with premium dermal fillers.
+              </p>
+              <p className="text-gray-300">
+                For complex cases including post-fracture reconstruction and deviated nose corrections, Dr. Ahmed Haq employs specialised cannula 
+                techniques and gradual reconstruction methods. Book your consultation today by calling 0333 0551 503 or visiting our website at 
+                cosmedocs.co.uk to discover how our invisible art philosophy can enhance your natural beauty.
+              </p>
+            </div>
+          </div>
+        </article>
+        </main>
       </div>
     </>
   );
