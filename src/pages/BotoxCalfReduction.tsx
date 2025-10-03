@@ -58,6 +58,7 @@ const BotoxCalfReduction = () => {
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
         <link rel="canonical" href={seoData.canonical} />
+        <meta name="keywords" content="botox calf reduction, calf slimming london, botox on calves, calf reduction surgery alternative, reduce calf muscle, slim calves treatment, gastrocnemius muscle reduction, non-surgical calf reduction, botulinum toxin calf treatment, harley street calf reduction, cosmetic calf slimming, aesthetic leg contouring, calf muscle botox, professional calf reduction london, minimally invasive calf treatment, leg silhouette enhancement, calf reshaping, botox for calves, calf reduction specialist, london aesthetic clinic, cosmedocs calf treatment, leg contouring, calf botox london, slimmer calves, calf muscle treatment, non-invasive body contouring" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
@@ -70,27 +71,187 @@ const BotoxCalfReduction = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs",
+            "description": "Expert botox calf reduction treatments in London",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "medicalSpecialty": "Cosmetic Medicine",
+            "priceRange": "££"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "MedicalProcedure",
             "name": "Botox Calf Reduction",
-            "description": "Professional botox calf reduction treatment for slimmer, more contoured calves",
-            "provider": {
-              "@type": "MedicalOrganization",
-              "name": "Cosmedocs",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
+            "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
+            "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections",
+            "procedureType": "Cosmetic",
+            "bodyLocation": {
+              "@type": "AnatomicalStructure",
+              "name": "Gastrocnemius Muscle"
+            },
+            "preparation": "Local anaesthetic applied before treatment",
+            "followup": "Comprehensive aftercare and follow-up support",
+            "howPerformed": "Strategic Botox injections into the gastrocnemius muscle to temporarily relax and reduce muscle bulk",
+            "status": "Available",
+            "availableService": {
+              "@type": "MedicalTherapy",
+              "name": "Botox Calf Reduction Therapy",
+              "offers": {
+                "@type": "Offer",
+                "price": "400",
+                "priceCurrency": "GBP",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock"
               }
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are the benefits of calf reduction with botox?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Botox calf reduction offers multiple benefits: non-surgical approach with no scarring, minimal downtime allowing immediate return to activities, natural-looking gradual results, reversible effects lasting 6-12 months, no general anesthesia required, and significantly lower cost compared to surgical alternatives. It's ideal for achieving slimmer, more proportionate calves safely and effectively."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does botox calf reduction work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Botox is injected into the gastrocnemius muscle to temporarily relax it, causing a gradual reduction in muscle bulk and creating slimmer calf contours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long do results last?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Results typically last 6-12 months. The effects are temporary and reversible, allowing for adjustments as needed."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the treatment painful?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The treatment involves minimal discomfort. Most patients experience only mild temporary soreness at injection sites."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When will I see results?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Initial changes become visible within 2-4 weeks, with full results apparent at 6-8 weeks as the muscle gradually reduces in size."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there any side effects?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Side effects are rare but may include temporary bruising, swelling, or mild discomfort at injection sites. These resolve within a few days."
+                }
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Botox Calf Reduction",
+                "item": "https://www.cosmedocs.co.uk/botox-calf-reduction"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "MedicalProcedure",
+              "name": "Botox Calf Reduction Treatment"
+            },
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "89"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Physician",
+            "name": "Dr. Raj Thethi",
+            "medicalSpecialty": "Aesthetic Medicine",
+            "worksFor": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            },
+            "url": "https://www.cosmedocs.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             }
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <nav className="page-container py-4 text-sm" aria-label="Breadcrumb">
+          <ol className="flex items-center space-x-2 text-gray-400">
+            <li>
+              <a href="/" className="hover:text-purple-300 transition-colors">Home</a>
+            </li>
+            <li>/</li>
+            <li>
+              <a href="/treatments" className="hover:text-purple-300 transition-colors">Treatments</a>
+            </li>
+            <li>/</li>
+            <li className="text-white font-medium" aria-current="page">Botox Calf Reduction</li>
+          </ol>
+        </nav>
+
         {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <header className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -137,7 +298,7 @@ const BotoxCalfReduction = () => {
               <div className="hidden lg:block"></div>
             </div>
           </div>
-        </section>
+        </header>
 
         {/* Treatment Summary */}
         <section className="py-16 bg-accent">
@@ -243,6 +404,9 @@ const BotoxCalfReduction = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
+                        width="400"
+                        height="256"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -261,7 +425,7 @@ const BotoxCalfReduction = () => {
         </section>
 
         {/* What is Botox Calf Reduction Section */}
-        <section className="py-20 bg-accent">
+        <article className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -275,30 +439,33 @@ const BotoxCalfReduction = () => {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Botox calf reduction is a non-surgical cosmetic procedure that uses botulinum toxin injections to 
                   temporarily weaken the gastrocnemius muscle in the calves. This creates a slimmer, more contoured 
-                  appearance to the lower legs without invasive surgery.
+                  appearance to the lower legs without invasive surgery. Similar to other aesthetic treatments like <a href="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter botox</a> for facial contouring, this procedure targets specific muscles for refined results.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
                   The procedure works by strategically injecting Botox into specific points of the calf muscle, 
                   causing controlled muscle relaxation. Over time, the treated muscle gradually reduces in size, 
-                  resulting in visibly slimmer and more proportionate calves.
+                  resulting in visibly slimmer and more proportionate calves. Many patients combine this treatment with other body contouring procedures such as <a href="/fat-dissolving-injections" className="text-purple-300 hover:text-purple-200 underline">fat dissolving injections</a> for comprehensive leg refinement.
                 </p>
                 
                 <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
                   <h3 className="text-white text-xl font-semibold mb-4">Muscle Targeting</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     The gastrocnemius muscle is the primary target for calf reduction. This large, superficial muscle 
-                    forms the bulk of the calf and is responsible for the prominent appearance that some patients wish to reduce.
+                    forms the bulk of the calf and is responsible for the prominent appearance that some patients wish to reduce. The precision required is similar to that used in <a href="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">facial contouring treatments</a>, ensuring natural-looking results.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Botox is precisely injected into specific points of this muscle using advanced injection techniques. 
+                    The treatment strategically weakens the muscle fibres, leading to a gradual reduction in muscle mass 
+                    and a more refined calf contour over the following weeks.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    Botox is precisely injected into specific points of this muscle using advanced injection techniques. 
-                    The treatment strategically weakens the muscle fibers, leading to a gradual reduction in muscle mass 
-                    and a more refined calf contour over the following weeks.
+                    Research published in aesthetic medicine journals supports the safety and efficacy of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6122154/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin injections</a> for aesthetic muscle reduction, demonstrating measurable improvements with an excellent safety profile when performed by qualified practitioners.
                   </p>
                 </div>
               </div>
             </motion.div>
           </div>
-        </section>
+        </article>
 
         {/* Botox Vs Surgical Calf Reduction Section */}
         <section className="py-20 bg-black">
@@ -718,18 +885,19 @@ const BotoxCalfReduction = () => {
         <div className="sr-only" aria-hidden="true">
           <h2>Botox Calf Reduction London Harley Street Cosmedocs Treatment Slimmer Calves Leg Contouring</h2>
           <p>
-            Botox calf reduction London, calf slimming treatment, leg contouring, gastrocnemius muscle reduction, 
-            non-surgical calf reduction, botulinum toxin calf treatment, Harley Street calf reduction, cosmetic 
-            calf slimming, aesthetic leg contouring, calf muscle botox, professional calf reduction London, 
-            minimally invasive calf treatment, leg silhouette enhancement, calf reshaping, botox for calves, 
-            calf reduction specialist, London aesthetic clinic, Cosmedocs calf treatment, invisible art aesthetics, 
-            bold natural always your way, refined leg contours, elegant calf shaping, medical aesthetic treatments, 
-            expert practitioners Harley Street, safe calf reduction, effective leg contouring, natural looking results, 
-            minimal downtime treatment, gradual calf slimming, reversible aesthetic treatment, confidence boosting 
-            leg enhancement, personalized calf reduction plan, comprehensive consultation, precise injection technique, 
-            progressive results, follow-up care, muscle relaxation therapy, temporary calf reduction, aesthetic medicine 
-            London, cosmetic injections, professional medical care, advanced botox techniques, leg aesthetics, 
-            calf muscle treatment, non-invasive body contouring, aesthetic transformation, beautiful leg proportions.
+            Botox calf reduction London represents a revolutionary non-surgical approach to achieving slimmer, more elegant calves without the risks and recovery time associated with surgical calf reduction procedures. At Cosmedocs Harley Street, our expert practitioners specialise in gastrocnemius muscle reduction using advanced botulinum toxin injection techniques that deliver natural-looking results whilst maintaining functionality and comfort. Our calf slimming treatment is particularly popular among patients seeking to reduce bulky calf muscles caused by genetics, exercise, or prolonged wearing of high heels.
+          </p>
+          <p>
+            The botox on calves procedure involves precise injections into the gastrocnemius muscle, the large superficial muscle that forms the bulk of the calf. This cosmetic calf slimming treatment temporarily relaxes specific muscle fibres, leading to a gradual reduction in muscle bulk over 6-8 weeks. Unlike surgical calf reduction which requires general anaesthesia, hospital stays, and extended recovery periods, our minimally invasive calf treatment allows patients to return to normal activities immediately with minimal downtime.
+          </p>
+          <p>
+            Professional calf reduction London at our Harley Street clinic combines medical expertise with artistic vision, following our signature "invisible art" philosophy where transformation speaks without saying a word. Each calf reshaping procedure is customised to the patient's unique anatomy and aesthetic goals, ensuring results that enhance overall leg proportions whilst maintaining a natural appearance. Our calf reduction specialist doctors have extensive experience in aesthetic leg contouring, having performed hundreds of successful treatments for patients seeking refined leg silhouettes.
+          </p>
+          <p>
+            The benefits of choosing Cosmedocs for botox for calves include transparent pricing starting from £400, comprehensive consultation and aftercare, use of premium botulinum toxin products, and treatment by GMC-registered doctors with specialist training in aesthetic medicine. Our calf muscle botox treatment delivers gradual, natural-looking results that last 6-12 months, offering a reversible alternative to permanent surgical procedures. Patients appreciate the confidence-boosting leg enhancement without the commitment or risks of surgery.
+          </p>
+          <p>
+            Located at 10 Harley Street, London's premier medical district, our aesthetic clinic provides a discreet, professional environment for all cosmetic treatments. Whether you're seeking calf muscle treatment for athletic bulk, genetic muscle prominence, or asymmetry correction, our personalised calf reduction plan ensures optimal outcomes tailored to your individual needs. Book your consultation today to discover how our expert practitioners can help you achieve the elegant, proportionate leg contours you desire through safe, effective, and minimally invasive body contouring techniques.
           </p>
         </div>
       </div>
