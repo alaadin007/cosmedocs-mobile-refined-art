@@ -285,7 +285,7 @@ const NonSurgicalNoseJob = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Nose Reshaping London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Non-Surgical Nose Reshaping London</h2>
               <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
                 Experience the best nose job london at our Harley Street clinic. From botox in the nose for slimming to filler on nose tip enhancement, we offer comprehensive non surgical nose reshaping treatments. Our non surgical nose job price is transparent with no hidden costs.
               </p>
@@ -637,7 +637,7 @@ const NonSurgicalNoseJob = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">What Can Be Treated with Non-Surgical Techniques?</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">What Can Be Treated with Non-Surgical Techniques?</h2>
               <p className="text-gray-300 max-w-4xl mx-auto mb-8 text-center">
                 Non-surgical rhinoplasty has proven remarkably effective, with an <a href="https://pubmed.ncbi.nlm.nih.gov/38862661/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">updated systematic review</a> of nonsurgical rhinoplasty techniques, outcomes, and complications demonstrating a 99.1% satisfaction rate across 9,657 patients. This evidence-backed approach can address:
               </p>
