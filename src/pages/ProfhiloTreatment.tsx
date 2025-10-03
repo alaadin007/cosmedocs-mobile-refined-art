@@ -791,11 +791,6 @@ const ProfhiloTreatment = () => {
             >
               <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 backdrop-blur-lg">
                 <CardContent className="p-8 md:p-12 text-center">
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <Clock className="w-8 h-8 text-purple-300" />
-                    <h3 className="text-3xl md:text-4xl font-sans font-bold text-white">6-12 Months</h3>
-                  </div>
-                  <p className="text-xl text-purple-200 mb-6">Average Duration of Results</p>
                   <p className="text-white/80 leading-relaxed max-w-2xl mx-auto">
                     How long does profhilo last? Results typically last <strong className="text-purple-300">6-12 months</strong> with progressive improvement throughout. Many patients ask "is profhilo worth it?" and the consistently positive profhilo results speak for themselves.
                   </p>
