@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Syringe, Star, Clock, Shield, Heart, Briefcase, Activity, CheckCircle, Smile, GraduationCap, Palette } from "lucide-react";
+import { Instagram, Users, Award, Calendar, MapPin, Phone, Mail, ChevronDown, ChevronUp, Syringe, Star, Clock, Shield, Heart, Briefcase, Activity, CheckCircle, Smile, GraduationCap, Palette, Zap, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -764,24 +764,202 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* How Long Does Profhilo Last Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-accent">
-          <div className="page-container">
+        <section className="py-20 bg-gradient-to-b from-black via-accent to-black relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(168,85,247,0.05),transparent_50%)]"></div>
+          
+          <div className="page-container relative z-10">
             <motion.div
-              className="text-center mb-12"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">How Long Does Profhilo Last?</h2>
-              <div className="max-w-4xl mx-auto space-y-6">
-                <p className="text-white/80 font-light leading-relaxed text-lg">
-                  This cutting-edge profhilo treatment London delays the appearance of wrinkles and skin laxity while promoting a naturally radiant glow. Profhilo before and after 40s clients show remarkable rejuvenation, with profhilo before and after jowls improvement being particularly noticeable. Profhilo before and after eyes treatment can also enhance the delicate periorbital area when expertly administered. How long does profhilo last? Results typically last 6-12 months with progressive improvement. Many patients ask "is profhilo worth it?" and the consistently positive profhilo results speak for themselves.
-                </p>
-                <p className="text-white/80 font-light leading-relaxed text-lg">
-                  Profhilo injection points are strategically placed using the BAP technique, with profhilo neck injection points carefully selected for optimal diffusion. Profhilo after 1 week shows initial plumping effects, with profhilo results week by week demonstrating progressive enhancement. The profhilo cost and profhilo price at our London clinic remain competitive whilst maintaining the highest treatment standards. How long does profhilo take to work? Initial effects appear within days, with full results developing over 4-6 weeks. Does profhilo hurt? Most patients report minimal discomfort thanks to our topical anaesthetic protocol.
-                </p>
-              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">How Long Does Profhilo Last?</h2>
+              <p className="text-purple-300 text-lg">Duration, Timeline & Lasting Results</p>
+            </motion.div>
+
+            {/* Duration Highlight Card */}
+            <motion.div
+              className="max-w-4xl mx-auto mb-16"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 backdrop-blur-lg">
+                <CardContent className="p-8 md:p-12 text-center">
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <Clock className="w-8 h-8 text-purple-300" />
+                    <h3 className="text-3xl md:text-4xl font-bold text-white">6-12 Months</h3>
+                  </div>
+                  <p className="text-xl text-purple-200 mb-6">Average Duration of Results</p>
+                  <p className="text-white/80 leading-relaxed max-w-2xl mx-auto">
+                    How long does profhilo last? Results typically last <strong className="text-purple-300">6-12 months</strong> with progressive improvement throughout. Many patients ask "is profhilo worth it?" and the consistently positive profhilo results speak for themselves.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Timeline Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-purple-500/20 backdrop-blur-sm h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-purple-500/20 rounded-full p-3">
+                        <Zap className="w-6 h-6 text-purple-300" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-white">Initial Effects</h4>
+                    </div>
+                    <p className="text-purple-300 font-medium mb-2">Within Days</p>
+                    <p className="text-white/70 leading-relaxed">
+                      How long does profhilo take to work? Initial effects appear within days, with skin feeling more hydrated and plump.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-purple-500/20 backdrop-blur-sm h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-purple-500/20 rounded-full p-3">
+                        <TrendingUp className="w-6 h-6 text-purple-300" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-white">Week-by-Week</h4>
+                    </div>
+                    <p className="text-purple-300 font-medium mb-2">Profhilo After 1 Week</p>
+                    <p className="text-white/70 leading-relaxed">
+                      Profhilo after 1 week shows initial plumping effects, with profhilo results week by week demonstrating progressive enhancement.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-purple-500/20 backdrop-blur-sm h-full hover:border-purple-500/40 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-purple-500/20 rounded-full p-3">
+                        <Sparkles className="w-6 h-6 text-purple-300" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-white">Full Results</h4>
+                    </div>
+                    <p className="text-purple-300 font-medium mb-2">4-6 Weeks</p>
+                    <p className="text-white/70 leading-relaxed">
+                      Complete bio-remodelling effects develop over 4-6 weeks, with optimal collagen and elastin production.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            {/* Treatment Areas & Results */}
+            <motion.div
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6 text-center">Treatment Results Across Different Areas</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4 p-4 bg-purple-900/20 rounded-lg border border-purple-500/20">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                      <div>
+                        <h5 className="text-white font-semibold mb-1">Profhilo Before and After 40s</h5>
+                        <p className="text-white/70">Profhilo before and after 40s clients show remarkable rejuvenation, particularly effective for age-related skin laxity.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4 p-4 bg-purple-900/20 rounded-lg border border-purple-500/20">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                      <div>
+                        <h5 className="text-white font-semibold mb-1">Profhilo Before and After Jowls</h5>
+                        <p className="text-white/70">Profhilo before and after jowls improvement is particularly noticeable, with significant tightening and contouring effects.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-4 p-4 bg-purple-900/20 rounded-lg border border-purple-500/20">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                      <div>
+                        <h5 className="text-white font-semibold mb-1">Profhilo Before and After Eyes</h5>
+                        <p className="text-white/70">Profhilo before and after eyes treatment can enhance the delicate periorbital area when expertly administered.</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Treatment Info */}
+            <motion.div
+              className="max-w-4xl mx-auto mt-12 grid md:grid-cols-2 gap-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-black/50 border-purple-500/20 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <MapPin className="w-6 h-6 text-purple-300" />
+                    <h4 className="text-lg font-semibold text-white">Injection Technique</h4>
+                  </div>
+                  <p className="text-white/70 leading-relaxed">
+                    Profhilo injection points are strategically placed using the BAP technique, with profhilo neck injection points carefully selected for optimal diffusion.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-black/50 border-purple-500/20 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Heart className="w-6 h-6 text-purple-300" />
+                    <h4 className="text-lg font-semibold text-white">Comfort Level</h4>
+                  </div>
+                  <p className="text-white/70 leading-relaxed">
+                    Does profhilo hurt? Most patients report minimal discomfort thanks to our topical anaesthetic protocol and expert technique.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Pricing CTA */}
+            <motion.div
+              className="text-center mt-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-white/70 mb-4">
+                The profhilo cost and profhilo price at our London clinic remain competitive whilst maintaining the highest treatment standards.
+              </p>
+              <a href="#pricing" className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 font-semibold transition-colors">
+                View Pricing Details
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </motion.div>
           </div>
         </section>
