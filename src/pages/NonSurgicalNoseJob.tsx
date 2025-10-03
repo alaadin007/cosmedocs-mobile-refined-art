@@ -487,6 +487,63 @@ const NonSurgicalNoseJob = () => {
           </div>
         </section>
 
+        {/* Nose Tip Lift & Slimming */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white">Nose Tip Lift & Slimming</h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Fillers can enhance the nose tip by elevating and making it look slimmer. Furthermore, this sophisticated procedure is commonly integrated when conducting nonsurgical rhinoplasty.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Precise tip elevation for improved projection</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Advanced slimming techniques for refined appearance</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Integrated approach with full rhinoplasty treatment</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-gray-300">Immediate results with minimal downtime</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+                  <CardContent className="p-8">
+                    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                      <Syringe className="text-white" size={32} />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-white mb-4">Specialized Tip Enhancement</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Our advanced #cosmenose technique includes specialized methods for nose tip refinement, creating elegant elevation and slimming effects that complement your facial features naturally.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Complex Deviated Nose Corrections */}
         <section className="py-32 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/10 via-transparent to-blue-900/10"></div>
@@ -908,63 +965,6 @@ const NonSurgicalNoseJob = () => {
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Nose Tip Lift & Slimming */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">Nose Tip Lift & Slimming</h2>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Fillers can enhance the nose tip by elevating and making it look slimmer. Furthermore, this sophisticated procedure is commonly integrated when conducting nonsurgical rhinoplasty.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Precise tip elevation for improved projection</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Advanced slimming techniques for refined appearance</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Integrated approach with full rhinoplasty treatment</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-gray-300">Immediate results with minimal downtime</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-                  <CardContent className="p-8">
-                    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <Syringe className="text-white" size={32} />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white mb-4">Specialized Tip Enhancement</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Our advanced #cosmenose technique includes specialized methods for nose tip refinement, creating elegant elevation and slimming effects that complement your facial features naturally.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
           </div>
         </section>
 
