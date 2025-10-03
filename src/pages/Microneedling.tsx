@@ -389,6 +389,110 @@ const Microneedling = () => {
           </div>
         </section>
 
+        {/* Duration of Results Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">How Long Do Results Last?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Microneedling results don't last forever — but they also don't vanish right away. 
+                The duration depends on the skin concern treated, the number of sessions, and aftercare.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 h-full">
+                  <h3 className="text-white text-xl font-semibold mb-6 flex items-center gap-2">
+                    <Clock className="text-purple-400" size={24} />
+                    Duration of Results
+                  </h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-purple-300 font-semibold mb-2">General Improvement</h4>
+                      <p className="text-gray-300 leading-relaxed">
+                        Skin texture, glow, and fine lines: lasts about <span className="text-white font-semibold">3–5 months</span> after a full course of sessions.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-purple-300 font-semibold mb-2">Collagen Stimulation</h4>
+                      <p className="text-gray-300 leading-relaxed">
+                        Your body produces new collagen and elastin for up to <span className="text-white font-semibold">3–6 months</span> post-treatment, 
+                        so results can even improve gradually before tapering.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-purple-300 font-semibold mb-2">Acne Scars & Deeper Issues</h4>
+                      <p className="text-gray-300 leading-relaxed">
+                        Often need a series of 3–6 sessions spaced 4–6 weeks apart; the improvements can be long-lasting if 
+                        maintained with yearly touch-ups.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-purple-300 font-semibold mb-2">Pigmentation / Tone Correction</h4>
+                      <p className="text-gray-300 leading-relaxed">
+                        Typically lasts several months, but can fade faster if sun protection is neglected.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-gradient-to-br from-purple-600/30 to-purple-800/30 rounded-xl p-8 border border-purple-500/20 h-full">
+                  <h3 className="text-white text-xl font-semibold mb-6 flex items-center gap-2">
+                    <Calendar className="text-purple-400" size={24} />
+                    Maintenance
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <p className="text-gray-300 leading-relaxed">
+                        A maintenance session every <span className="text-white font-semibold">4–6 months</span> is commonly recommended.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <p className="text-gray-300 leading-relaxed">
+                        For anti-ageing, some dermatologists suggest <span className="text-white font-semibold">2–3 sessions per year</span>.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <p className="text-gray-300 leading-relaxed">
+                        Using SPF, a good skincare routine, and avoiding smoking can extend results.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 p-6 bg-black/30 rounded-lg border border-purple-400/30">
+                    <p className="text-purple-200 text-sm leading-relaxed italic">
+                      "Results are maximised when combined with proper skincare and sun protection. 
+                      Your personalised maintenance plan will be discussed during your consultation."
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Benefits and Treatment Process Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
