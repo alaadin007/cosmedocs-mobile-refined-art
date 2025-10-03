@@ -190,7 +190,7 @@ const Microneedling = () => {
                   <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">6-12 months with progressive improvement</p>
+                <p className="text-gray-300">3-5 months with progressive improvement</p>
               </motion.div>
 
               <motion.div
