@@ -566,10 +566,10 @@ const ProfhiloTreatment = () => {
               >
                 <h2 className="text-3xl font-sans font-bold mb-6">What Is Profhilo?</h2>
                 <div className="max-w-4xl mx-auto mb-12">
-                  <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
+                  <p className="text-gray-300 leading-relaxed mb-6">
                     Profhilo is a revolutionary injectable skin remodelling treatment that uses one of the highest concentrations of hyaluronic acid available on the market. Unlike traditional dermal fillers, Profhilo works beneath the skin's surface to hydrate, lift and tighten without adding volume. This unique bio-remodelling approach stimulates the production of collagen, elastin and hyaluronic acid in the deeper skin layers, resulting in improved skin quality, firmness and overall texture.
                   </p>
-                  <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
+                  <p className="text-gray-300 leading-relaxed mb-6">
                     The treatment is particularly effective for addressing skin laxity, fine lines, crepiness and dullness on the face, neck, décolletage and hands. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9509274/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies and research</a> have demonstrated Profhilo's efficacy for improving skin laxity and roughness, making it an evidence-based choice for natural skin rejuvenation.
                   </p>
                 </div>
