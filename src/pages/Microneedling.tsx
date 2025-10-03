@@ -376,11 +376,8 @@ const Microneedling = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">How Does Microneedling Work?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto mb-4">
-                Understanding the science behind collagen induction therapy
-              </p>
-              <p className="text-gray-300 max-w-3xl mx-auto text-sm">
-                Independent research published in the British Journal of Dermatology and UK academic centres — including randomised controlled trials — supports microneedling as a safe, effective treatment for acne scarring, texture improvement and skin rejuvenation. <a href="https://academic.oup.com/bjd/article/192/1/19/7749284?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Peer reviewed research</a> demonstrates measurable improvements in scars and wrinkles with an excellent safety profile.
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the science behind collagen induction therapy. Independent research published in the British Journal of Dermatology and UK academic centres — including randomised controlled trials — supports microneedling as a safe, effective treatment for acne scarring, texture improvement and skin rejuvenation. <a href="https://academic.oup.com/bjd/article/192/1/19/7749284?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Peer reviewed research</a> demonstrates measurable improvements in scars and wrinkles with an excellent safety profile.
               </p>
             </motion.div>
 
