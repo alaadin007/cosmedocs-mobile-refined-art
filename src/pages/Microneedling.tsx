@@ -106,11 +106,54 @@ const Microneedling = () => {
             "priceRange": "££"
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Microneedling Treatment",
+            "alternateName": ["Collagen Induction Therapy", "Skin Needling", "Face Needling"],
+            "description": "Professional microneedling treatment using medical-grade devices to stimulate collagen production and improve skin texture, tone, and firmness",
+            "procedureType": "Cosmetic",
+            "bodyLocation": {
+              "@type": "AnatomicalStructure",
+              "name": "Facial Skin"
+            },
+            "preparation": "Topical anaesthetic applied before treatment",
+            "followup": "Comprehensive aftercare and follow-up support",
+            "howPerformed": "Using fine needles to create controlled micro-injuries in the skin, triggering natural healing response",
+            "status": "Available",
+            "availableService": {
+              "@type": "MedicalTherapy",
+              "name": "Microneedling Therapy",
+              "offers": {
+                "@type": "Offer",
+                "price": "250",
+                "priceCurrency": "GBP",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
         {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <header className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -149,7 +192,7 @@ const Microneedling = () => {
               <div className="hidden lg:block"></div>
             </div>
           </div>
-        </section>
+        </header>
 
         {/* Treatment Summary */}
         <section className="py-16 bg-accent">
@@ -255,6 +298,7 @@ const Microneedling = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -273,7 +317,7 @@ const Microneedling = () => {
         </section>
 
         {/* About Microneedling Treatment Section */}
-        <section className="py-20 bg-accent">
+        <article className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -287,11 +331,11 @@ const Microneedling = () => {
                 <p className="text-gray-300 leading-relaxed mb-6 text-lg">
                   Microneedling (also known as skin needling, face needling therapy, or percutaneous collagen induction therapy) is a minimally 
                   invasive micro needle treatment that involves creating precise, microscopic punctures in the stratum corneum of your 
-                  skin with small needles. This needle facial treatment is perfect for face microneedling and skin tightening.
+                  skin with small needles. This needle facial treatment is perfect for face microneedling and skin tightening. Similar to other advanced treatments like <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</a> and <a href="/chemical-peels" className="text-purple-300 hover:text-purple-200 underline">chemical peels</a>, microneedling offers transformative results.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-12 text-lg">
                   These "micro-injuries" act by encouraging the skin to heal itself naturally through a process known as 
-                  dermal remodelling, without causing any scars. Medical microneedling cost UK starts from £250 for professional facial microneedling treatment.
+                  dermal remodelling, without causing any scars. Medical microneedling cost UK starts from £250 for professional facial microneedling treatment. Many patients combine this treatment with <a href="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">PRP therapy</a> for enhanced results.
                 </p>
               </div>
             </motion.div>
@@ -319,7 +363,7 @@ const Microneedling = () => {
               </motion.div>
             </div>
           </div>
-        </section>
+        </article>
 
         {/* How Does Microneedling Work Section */}
         <section className="py-20 bg-black">
@@ -377,6 +421,7 @@ const Microneedling = () => {
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      loading="lazy"
                       className="w-full aspect-video"
                     ></iframe>
                   </div>
@@ -563,12 +608,12 @@ const Microneedling = () => {
                     <p className="text-gray-300 leading-relaxed">
                       After applying a topical numbing cream, the skin is thoroughly cleansed. The eDermastamp single-use, 
                       sterile needle microneedling device is then set to the correct speed, needle lengths and depth for the 
-                      treatment area. How much does microneedling cost? Our facial micro needling starts from £250.
+                      treatment area. How much does microneedling cost? Our facial micro needling starts from £250. For comprehensive facial rejuvenation, many patients combine microneedling with <a href="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle treatments</a>.
                     </p>
                     <p className="text-gray-300 leading-relaxed">
                       With microneedling treatment, the depth is within the papillary dermal layer of the skin, where microneedling collagen 
                       and elastin fibres are located. The tiny holes close over almost immediately as the channels are small. 
-                      What is a microneedling facial? It's professional needle treatment for optimal skin rejuvenation.
+                      What is a microneedling facial? It's professional needle treatment for optimal skin rejuvenation, often recommended alongside <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo</a> for enhanced hydration.
                     </p>
                     <p className="text-gray-300 leading-relaxed">
                       The 'micro tears' to the dermis encourages the skin to repair itself by activating skin's healing process 
@@ -900,7 +945,19 @@ const Microneedling = () => {
         <div className="sr-only">
           <h2>Microneedling London Harley Street Cosmedocs</h2>
           <p>
-            Microneedling London Harley Street expert treatments for flawless skin rejuvenation. Professional collagen induction therapy using advanced medical-grade devices for natural skin transformation. Cosmedocs offers the finest microneedling treatments in London, combining scientific precision with artistic excellence to achieve remarkable improvements in skin texture, tone, and quality. Our experienced practitioners specialize in addressing acne scars, fine lines, enlarged pores, and overall skin rejuvenation through carefully calibrated microneedling protocols. Located in the heart of Harley Street, our clinic provides comprehensive microneedling consultations and personalized treatment plans designed to deliver optimal results while maintaining the highest safety standards. Each microneedling session is performed by qualified medical professionals using premium equipment and proven techniques that stimulate natural collagen production for long-lasting skin improvements. Discover why patients choose Cosmedocs for their microneedling treatments and experience the transformative power of professional skin rejuvenation in London's premier medical district.
+            Microneedling London Harley Street expert treatments for flawless skin rejuvenation. Professional collagen induction therapy using advanced medical-grade devices for natural skin transformation. Cosmedocs offers the finest microneedling treatments in London, combining scientific precision with artistic excellence to achieve remarkable improvements in skin texture, tone, and quality. Our experienced practitioners specialize in addressing acne scars, fine lines, enlarged pores, and overall skin rejuvenation through carefully calibrated microneedling protocols.
+          </p>
+          <p>
+            Located in the heart of Harley Street, our clinic provides comprehensive microneedling consultations and personalized treatment plans designed to deliver optimal results while maintaining the highest safety standards. Each microneedling session is performed by qualified medical professionals using premium equipment and proven techniques that stimulate natural collagen production for long-lasting skin improvements. We understand that microneedling cost UK is an important consideration, which is why we offer transparent pricing starting from £250 for single sessions and competitive course packages for multiple treatments.
+          </p>
+          <p>
+            Our microneedling London clinic specializes in face needling therapy, skin needling, and derma needling treatments suitable for all skin types and tones. Whether you're seeking microneedling for wrinkles, acne scar reduction, or overall facial rejuvenation, our medical team creates bespoke treatment protocols tailored to your specific concerns. The benefits of microneedling face treatments extend beyond surface improvements, promoting deeper dermal remodeling and enhanced skincare product absorption for comprehensive skin transformation.
+          </p>
+          <p>
+            What is microneedling facial treatment? It's a minimally invasive procedure that uses micro needle therapy to trigger your body's natural healing mechanisms. The microneedling procedure takes approximately 45-60 minutes including consultation, with results duration of 3-5 months and progressive improvement continuing for months after treatment. Our medical microneedling protocols combine precise needle depths with optimal treatment frequency to maximize collagen induction whilst ensuring patient comfort and safety throughout the process.
+          </p>
+          <p>
+            Discover why patients choose Cosmedocs for their microneedling treatments and experience the transformative power of professional skin rejuvenation in London's premier medical district. From microneedling with skin booster enhancements to body microneedling for stretch marks, our comprehensive service range addresses diverse aesthetic concerns with proven efficacy. Book your microneedling consultation today and join the thousands of satisfied patients who have achieved remarkable skin improvements through our expert needle facial treatments at our Harley Street London location.
           </p>
         </div>
       </div>
