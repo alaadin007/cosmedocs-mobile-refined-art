@@ -123,8 +123,20 @@ const NonSurgicalFacelift = () => {
               </motion.div>
               
               <div className="hidden lg:block">
-                <div className="w-full h-96 bg-purple-900/10 rounded-lg border-2 border-purple-500/30 flex items-center justify-center">
-                  <p className="text-gray-500">Hero Image - To be added</p>
+                <div className="space-y-4">
+                  <div className="bg-yellow-900/20 border border-yellow-500/50 rounded-lg p-4">
+                    <p className="text-yellow-300 font-semibold text-center">⚠️ Caution: Treatment Video Contains Graphic Medical Procedures</p>
+                  </div>
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe 
+                      className="absolute top-0 left-0 w-full h-full rounded-lg"
+                      src="https://www.youtube.com/embed/mHn0TARBHik?si=5eH2Povt0jlzoH0I" 
+                      title="Non-Surgical Face Lift Treatment Video" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerPolicy="strict-origin-when-cross-origin" 
+                      allowFullScreen
+                    />
+                  </div>
                 </div>
               </div>
             </div>
