@@ -388,7 +388,7 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                <h1 className="text-5xl md:text-6xl font-sans font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Profhilo Bio-Remodelling</span>
                   <span className="block text-sm mt-4">Invisible art - advanced injectable skincare for natural skin rejuvenation</span>
                 </h1>
@@ -429,7 +429,7 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Profhilo Treatment</h2>
+              <h2 className="text-3xl font-sans font-bold mb-8 text-white">Profhilo Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -504,7 +504,7 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Before & After Profhilo Results</h2>
+              <h2 className="text-3xl font-sans font-bold mb-4">Before & After Profhilo Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 Witness the transformative power of Profhilo bio-remodelling. Our aesthetics is invisible art - 
                 creating natural, bold transformations that speak without saying a word.
@@ -564,7 +564,7 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">What Is Profhilo?</h2>
+                <h2 className="text-3xl font-sans font-bold mb-6">What Is Profhilo?</h2>
                 <div className="max-w-4xl mx-auto mb-12">
                   <p className="text-white/80 font-light leading-relaxed mb-6 text-lg">
                     Before and after profhilo results demonstrate its powerful effects as a skin booster injection. Profhilo treatment before and after images show dramatic improvement in skin quality across various treatment areas. Profhilo before and after neck results are particularly impressive, with profhilo for neck treatments showing excellent skin tightening and texture improvement. Profhilo neck before and after photos consistently reveal enhanced firmness and reduced crepiness. What does profhilo do? It stimulates the production of new collagen, elastin and hyaluronic acid in the deeper skin layers through its unique bio-remodelling action.
@@ -617,7 +617,7 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6 text-white">Profhilo Injection Points</h2>
+                <h2 className="text-3xl font-sans font-bold mb-6 text-white">Profhilo Injection Points</h2>
                 <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed">
                     The latest injectable skin remodelling treatment corrects the ageing signs and their source.
@@ -665,7 +665,7 @@ const ProfhiloTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Profhilo Vs. Dermal Fillers</h2>
+              <h2 className="text-3xl font-sans font-bold mb-6 text-white">Profhilo Vs. Dermal Fillers</h2>
             </motion.div>
 
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
@@ -676,7 +676,7 @@ const ProfhiloTreatment = () => {
                 viewport={{ once: true }}
                 className="bg-purple-900/20 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20"
               >
-                <h3 className="text-2xl font-bold mb-4 text-purple-300">Profhilo</h3>
+                <h3 className="text-2xl font-sans font-bold mb-4 text-purple-300">Profhilo</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="text-purple-500 mt-1" size={16} />
@@ -704,7 +704,7 @@ const ProfhiloTreatment = () => {
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
               >
-                <h3 className="text-2xl font-bold mb-4 text-white">
+                <h3 className="text-2xl font-sans font-bold mb-4 text-white">
                   <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">Dermal Fillers</a>
                 </h3>
                 <ul className="space-y-3 text-gray-300">
@@ -749,7 +749,7 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6 text-white">Injectable Moisturiser, Intense Skin Quencher</h2>
+                <h2 className="text-3xl font-sans font-bold mb-6 text-white">Injectable Moisturiser, Intense Skin Quencher</h2>
                 <div className="space-y-6">
                   <p className="text-gray-300 leading-relaxed">
                     Unlike your typical topical skin moisturiser, profhilo treatment London uses a unique injectable formulation that slowly releases pure hyaluronic acid. When injected directly into your skin layers, it spreads like thin honey throughout the treatment area. Profhilo results become visible after 1 week, with profhilo results week by week showing progressive improvement in skin texture, hydration, and firmness. The profhilo skin booster before and after transformations showcase the treatment's effectiveness across face, neck, and décolletage areas. <a href="https://pubmed.ncbi.nlm.nih.gov/31112299/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies</a> demonstrate the efficacy of bio-remodelling treatments in stimulating collagen production.
@@ -777,7 +777,7 @@ const ProfhiloTreatment = () => {
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">How Long Does Profhilo Last?</h2>
+              <h2 className="text-4xl md:text-5xl font-sans font-bold mb-4 text-white">How Long Does Profhilo Last?</h2>
               <p className="text-purple-300 text-lg">Duration, Timeline & Lasting Results</p>
             </motion.div>
 
@@ -793,7 +793,7 @@ const ProfhiloTreatment = () => {
                 <CardContent className="p-8 md:p-12 text-center">
                   <div className="flex items-center justify-center gap-3 mb-4">
                     <Clock className="w-8 h-8 text-purple-300" />
-                    <h3 className="text-3xl md:text-4xl font-bold text-white">6-12 Months</h3>
+                    <h3 className="text-3xl md:text-4xl font-sans font-bold text-white">6-12 Months</h3>
                   </div>
                   <p className="text-xl text-purple-200 mb-6">Average Duration of Results</p>
                   <p className="text-white/80 leading-relaxed max-w-2xl mx-auto">
@@ -882,7 +882,7 @@ const ProfhiloTreatment = () => {
             >
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6 text-center">Treatment Results Across Different Areas</h3>
+                  <h3 className="text-2xl font-sans font-bold text-white mb-6 text-center">Treatment Results Across Different Areas</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-4 p-4 bg-purple-900/20 rounded-lg border border-purple-500/20">
                       <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
@@ -974,7 +974,7 @@ const ProfhiloTreatment = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold mb-6">Recovery Timeline</h2>
+                <h2 className="text-3xl font-sans font-bold mb-6">Recovery Timeline</h2>
                 <p className="text-gray-300 mb-6">
                   Understanding what to expect during your Profhilo healing process
                 </p>
