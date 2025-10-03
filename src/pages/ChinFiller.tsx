@@ -763,6 +763,41 @@ const ChinFiller = () => {
                       <p className="text-gray-300 text-sm">Improved profile and facial harmony</p>
                     </div>
                   </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Quick Procedure Time</h4>
+                      <p className="text-gray-300 text-sm">Treatment completed in just 15-30 minutes</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Cost-Effective Solution</h4>
+                      <p className="text-gray-300 text-sm">More affordable than surgical chin augmentation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Youthful Appearance</h4>
+                      <p className="text-gray-300 text-sm">Well-defined chin perceived as sign of youth and beauty</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">No General Anaesthesia</h4>
+                      <p className="text-gray-300 text-sm">Only topical numbing cream required for comfort</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="text-purple-500 mt-1" size={16} />
+                    <div>
+                      <h4 className="text-white font-medium">Customisable Results</h4>
+                      <p className="text-gray-300 text-sm">Tailored to your unique facial structure and goals</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
               
