@@ -241,7 +241,7 @@ const NonSurgicalNoseJob = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-purple-300">
                   Non-Surgical Nose Job London
                 </h1>
                 <p className="text-xl text-gray-300 mb-8 max-w-xl">
