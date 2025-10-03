@@ -431,11 +431,6 @@ const Microneedling = () => {
                     What does microneedling do? It helps with hyper-pigmentation, disfiguring scars and acne scarring, stretch marks and 
                     promotes new collagen fibres. Microneedling for skin tightening delivers exceptional results with minimal downtime. Similar benefits to derma roller treatment but with professional medical-grade precision.
                   </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Our derma needling therapy serves your skin in more ways than you can imagine! From correcting 
-                    pitted acne scarring to stretch marks, skin laxity and unwanted fine lines with minimal discomfort and 
-                    practically no recovery. Benefits of microneedling face include improved texture, reduced pore size, and enhanced collagen production. Whether you're considering micro-needling or microderm needling, our advanced techniques deliver superior results.
-                  </p>
                 </div>
               </motion.div>
             </div>
