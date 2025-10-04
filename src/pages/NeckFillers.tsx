@@ -219,49 +219,42 @@ const NeckFillers = () => {
           />
         </div>
 
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-indigo-900/20"></div>
+        {/* Hero Section - Updated to match TempleFiller design */}
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Neck Fillers London
-                  <span className="block text-2xl md:text-3xl text-purple-300 mt-4 font-normal">
-                    Say Bye to Sag | Smooth Neck Lines & Tech Neck
-                  </span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Neck Fillers London</span>
+                  <span className="block text-sm mt-4">Invisible art - say bye to sag with smooth neck lines & tech neck treatment</span>
                 </h1>
-                
-                <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Invisible art - fix neck wrinkles and tech neck lines with premium dermal fillers. Get smoother, wrinkle-free skin with our expert neck filler treatments.
-                </p>
-
-                <p className="text-sm text-purple-300 mb-8">
-                  #cosmeneck - Check out our IG for hundreds more authentic looking neck enhancement transformations
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Expert Neck Enhancement</p>
+                  <p className="text-sm text-gray-300">#cosmeneck - Check out our IG for hundreds more authentic looking neck enhancement transformations</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
-                    size="lg"
                     className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
                     onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                   >
                     Book Consultation
                   </Button>
                   <Button 
-                    size="lg"
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
                     onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     View Price List
                   </Button>
                 </div>
               </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
