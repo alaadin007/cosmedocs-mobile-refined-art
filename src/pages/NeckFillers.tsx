@@ -535,11 +535,7 @@ const NeckFillers = () => {
                 <div className="grid grid-cols-1 gap-4">
                   {[
                     "Non Surgical Neck Lift UK - No Downtime",
-                    "How to Remove Neck Lines Without Surgery",
-                    "Non Surgery Neck Lift Alternative",
                     "Improves Wrinkly Neck Appearance",
-                    "Natural Non Surgical Chin Lift Effect",
-                    "Affordable vs Face and Neck Lift Cost UK",
                     "Smooths Neck Folds and Neckline Wrinkles",
                     "Reduces Horizontal Neck Lines Instantly",
                     "Treats Tech Neck and Neck Creases",
