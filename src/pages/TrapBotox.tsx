@@ -86,8 +86,73 @@ const TrapBotox = () => {
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
+            "openingHours": "Mo-Fr 09:00-18:00",
             "medicalSpecialty": "Cosmetic Medicine",
             "priceRange": "££"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Trap Botox Treatment",
+            "alternateName": ["Trapezius Botox", "Trap Tox", "Barbie Botox"],
+            "description": "Botox injections for trapezius muscles to reduce shoulder bulk and create elegant neck contouring",
+            "procedureType": "Cosmetic Injectable Treatment",
+            "bodyLocation": {
+              "@type": "AnatomicalStructure",
+              "name": "Trapezius Muscle"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Trap Botox Treatment",
+            "provider": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            },
+            "areaServed": "London",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Trap Botox Treatments",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Trap Botox Treatment"
+                  },
+                  "price": "350",
+                  "priceCurrency": "GBP"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Full Barbie Botox"
+                  },
+                  "price": "650",
+                  "priceCurrency": "GBP"
+                }
+              ]
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           })}
         </script>
       </Helmet>
@@ -229,15 +294,12 @@ const TrapBotox = () => {
                 viewport={{ once: true }}
               >
                 <div className="space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    Trapezius Botox, also known as Trap Botox, is an injectable treatment that relaxes the trapezius muscles, 
-                    often referred to as the 'traps'. When these muscles become overworked and tense, it can lead to discomfort 
-                    and postural issues in the neck, shoulders, and upper back.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Consequently, the Trap Botox injection aims to alleviate this muscle tension by temporarily relaxing the 
-                    trapezius muscles, creating a more elegant shoulder profile and improved posture.
-                  </p>
+                <p className="text-gray-300 leading-relaxed">
+                  <a href="/botox-treatments" className="text-purple-300 hover:text-purple-200 underline">Trapezius Botox</a>, also known as Trap Botox or Trap Tox, is an injectable treatment that uses <a href="/botox" className="text-purple-300 hover:text-purple-200 underline">botox for traps</a> to relax the trapezius muscles. When these trap muscles become overworked and tense, it can lead to pain in trapezius muscle, trapezius pain, and postural issues in the neck, shoulders, and upper back.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Botox in trap muscles aims to alleviate this muscle tension by temporarily relaxing the trapezius muscle, creating a more elegant shoulder profile and improved posture. Many patients search for "trap botox before and after" results to see the dramatic transformation this <a href="/aesthetic-treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatment</a> can achieve.
+                </p>
                 </div>
               </motion.div>
 
@@ -252,6 +314,9 @@ const TrapBotox = () => {
                   src="/src/assets/trapezius-muscle-treatment.png" 
                   alt="Trapezius muscle anatomy diagram showing injection points"
                   className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                  loading="lazy"
+                  width="400"
+                  height="400"
                 />
                 <p className="text-gray-400 text-sm mt-4">Trapezius muscle anatomy and injection points</p>
               </motion.div>
@@ -281,13 +346,11 @@ const TrapBotox = () => {
                 className="space-y-6"
               >
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  The trapezius muscle is a large muscle that extends from the back of your head and neck down to your shoulders, 
-                  playing a super important role in defining your upper body's structure.
+                  Understanding what are traps and where the trapezius is located is essential for this treatment. The trapezius muscle is a large, diamond-shaped muscle that extends from the back of your head and neck down to your shoulders, playing a crucial role in defining your upper body's structure. Many patients ask "what are trapezius muscles" and "where are trapezius muscles located" before considering treatment.
                 </p>
                 
                 <p className="text-gray-300 leading-relaxed">
-                  When the trapezius muscle experiences hypertrophy, it grows bigger and more developed, it can be due to 
-                  tenderness, tightness, and pain. Furthermore, various factors contribute to the development of these trigger points, including:
+                  When the trapezius muscle experiences hypertrophy (growing bigger and more developed), it can lead to a hurt trapezius, sore trapezius muscle, and trapezius muscle pain. Trapezius muscle trigger points and muscle knot trapezius can cause significant discomfort. Various factors contribute to m trapezius pain and these trigger points, including:
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -341,9 +404,7 @@ const TrapBotox = () => {
                 className="space-y-6"
               >
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  By receiving Botox injections in the trapezius muscles, or "traps", the nerve signals that cause these 
-                  muscles to become overworked from constant movement can be blocked. Additionally, this temporary muscle 
-                  relaxation helps:
+                  By receiving botox in traps, the nerve signals that cause these muscles to become overworked from constant movement can be blocked. Trapezius muscle botox and traps muscle botox work by temporarily paralysing the targeted areas. This trap muscle botox treatment helps address trapezius muscle hurts and provides relief from chronic trapezius pain. Additionally, this temporary muscle relaxation helps:
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
@@ -733,8 +794,28 @@ const TrapBotox = () => {
 
         {/* Hidden SEO content for search engines */}
         <div className="sr-only">
+          <h2>Comprehensive Guide to Trap Botox and Trapezius Muscle Treatment in London</h2>
           <p>
-            Cosmedocs Harley Street clinic offers expert trap botox treatments in London for shoulder slimming and neck contouring. Our experienced cosmetic doctors specialize in trapezius muscle botox injections to create elegant shoulder profiles and refined silhouettes. Located at 10 Harley Street, we provide personalized treatment plans with precise injection techniques. Our trap botox procedures can reduce shoulder bulk, enhance neck definition, and improve overall posture. Results typically last 4-6 months with minimal downtime required. The treatment involves multiple small injections into the trapezius muscles using very fine needles. Book your trap botox consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer competitive pricing starting from £350 and flexible payment options for all shoulder slimming treatments. Our aesthetics is invisible art - bold, natural, always your way.
+            Cosmedocs Harley Street clinic offers expert trap botox treatments in London for shoulder slimming and neck contouring. Our experienced cosmetic doctors specialise in trapezius muscle botox and botox for traps to create elegant shoulder profiles and refined silhouettes. Understanding what are traps and where the trapezius is located is essential for anyone considering this transformative treatment.
+          </p>
+          <h3>Understanding the Trapezius Muscle and Common Issues</h3>
+          <p>
+            The trapezius muscle is a large, diamond-shaped muscle extending from your neck to your shoulders and down your upper back. Many patients ask "what are trapezius muscles" and "where are trapezius muscles located" before treatment. When you experience pain in trapezius muscle, trapezius pain, or m trapezius pain, it can significantly impact your daily life. A hurt trapezius or sore trapezius muscle often results from poor posture, stress, or repetitive movements. Trapezius muscle trigger points and muscle knot trapezius are common complaints that botox in trap muscles can effectively address.
+          </p>
+          <h3>Trap Botox Before and After: What to Expect</h3>
+          <p>
+            Searching for "trap botox before and after" or "trapezius botox before and after" results? Our gallery showcases dramatic transformations from traps muscle botox treatments. Botox in traps works by temporarily relaxing the trapezius muscle, reducing bulk and creating a more elegant shoulder line. This trap muscle botox procedure, also known as trap tox or trapezius botox, has become increasingly popular for its ability to address both aesthetic concerns and trapezius muscle hurts.
+          </p>
+          <h3>Treatment Process and Benefits</h3>
+          <p>
+            Our trap botox procedure involves precise botox injections in the trapezius muscles using ultra-fine needles. The treatment typically takes 15-20 minutes and addresses issues like trapezius muscle pain, poor posture, and shoulder bulk. Patients seeking botox traps treatment appreciate the dual benefits of pain relief and aesthetic enhancement. Results from trapezius muscle botox typically appear within 1-2 weeks, with full effects visible after 4-6 weeks.
+          </p>
+          <h3>Why Choose Cosmedocs for Trap Botox in London</h3>
+          <p>
+            Located at 10 Harley Street, we provide personalised treatment plans with precise injection techniques for trap botox. Our experienced practitioners understand where the trapezius is located and how to effectively target trapezius muscle trigger points. Whether you're experiencing a sore trapezius muscle or seeking aesthetic refinement, our trap muscle botox treatments deliver natural-looking results. We offer competitive pricing starting from £350, with comprehensive consultations to assess your individual needs.
+          </p>
+          <p>
+            Book your trap botox consultation today by calling 0333 0551 503 or visiting our Harley Street clinic. We offer flexible payment options for all shoulder slimming treatments including trapezius botox and trap tox procedures. Our aesthetics is invisible art - bold, natural, always your way. Experience the transformation that botox for traps can provide, addressing both cosmetic concerns and trapezius pain with expert care and precision.
           </p>
         </div>
       </div>
