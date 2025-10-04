@@ -412,6 +412,9 @@ const NeckFillers = () => {
               <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
                 Neck fillers, also known as <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">neck injections</a> or neck contouring, are a <a href="/non-surgical-treatments" className="text-purple-300 hover:text-purple-200 underline">non-surgical cosmetic procedure</a> designed to improve the overall look of the neck. This treatment targets neck wrinkles, neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen and elastin production. Whether you're dealing with horizontal neck lines, neck creases, neckline wrinkles, or wondering how to get rid of neck lines, our expert team can help you achieve natural, beautiful results.
               </p>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed mt-4">
+                Research published in the <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jocd.15539" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Journal of Cosmetic Dermatology</a> has demonstrated the efficacy of hyaluronic acid fillers for neck rejuvenation, confirming their safety and effectiveness in addressing age-related changes in the neck area whilst maintaining natural-looking results.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
