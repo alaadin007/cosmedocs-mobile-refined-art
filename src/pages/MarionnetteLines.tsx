@@ -529,8 +529,11 @@ const MarionnetteLines = () => {
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold mb-6 text-white">Marionette Lines Filler: The Solution</h2>
-              <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed mb-4">
                 Marionette lines filler treatment is the gold standard for addressing these ageing concerns. Using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid-based dermal fillers</Link>, we restore lost volume and smooth the vertical lines that run from the corners of your mouth to your chin.
+              </p>
+              <p className="text-gray-300 max-w-4xl mx-auto text-sm">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/35718985/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies in the Journal of Cosmetic Dermatology</a> demonstrate 94% improvement at 3 weeks, with 88% of patients maintaining excellent results at 18 months with favourable safety profiles.
               </p>
             </motion.div>
 
