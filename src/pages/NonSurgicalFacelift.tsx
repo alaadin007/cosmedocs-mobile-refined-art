@@ -77,6 +77,24 @@ const NonSurgicalFacelift = () => {
     }
   ];
 
+  const treatmentSummary = [
+    {
+      title: "Level 1: Early Volume Loss",
+      subtitle: "Ages 30-40",
+      icon: <Activity className="w-6 h-6" />,
+    },
+    {
+      title: "Level 2: Moderate Sagging",
+      subtitle: "Ages 40-55",
+      icon: <Syringe className="w-6 h-6" />,
+    },
+    {
+      title: "Level 3: Advanced Concerns",
+      subtitle: "Ages 55+",
+      icon: <Shield className="w-6 h-6" />,
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -165,21 +183,50 @@ const NonSurgicalFacelift = () => {
           </div>
         </section>
 
-        {/* Treatment Levels */}
-        <section id="levels" className="py-20 bg-accent">
+        {/* Treatment Levels Summary */}
+        <section className="py-16 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold mb-4">Three Levels of Facial Sagging</h2>
               <p className="text-xl text-gray-300">Personalised treatment approaches for every stage of ageing</p>
             </motion.div>
 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {treatmentSummary.map((level, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-card border border-purple-500/30 rounded-lg p-6 hover:border-purple-400/50 transition-all cursor-pointer"
+                  onClick={() => document.getElementById(`level-${index + 1}`)?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white">
+                      {level.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{level.title}</h3>
+                      <p className="text-purple-300 text-sm">{level.subtitle}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Detailed Treatment Levels */}
+        <section id="levels" className="py-20 bg-background">
+          <div className="page-container">
             {/* Level 1 */}
-            <Card className="bg-card border-purple-500/30 mb-8">
+            <Card id="level-1" className="bg-card border-purple-500/30 mb-8">
               <CardHeader>
                 <CardTitle className="text-3xl text-purple-300 flex items-center gap-3">
                   <span className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl">1</span>
@@ -218,7 +265,7 @@ const NonSurgicalFacelift = () => {
             </Card>
 
             {/* Level 2 */}
-            <Card className="bg-card border-purple-500/30 mb-8">
+            <Card id="level-2" className="bg-card border-purple-500/30 mb-8">
               <CardHeader>
                 <CardTitle className="text-3xl text-purple-300 flex items-center gap-3">
                   <span className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl">2</span>
@@ -261,7 +308,7 @@ const NonSurgicalFacelift = () => {
             </Card>
 
             {/* Level 3 */}
-            <Card className="bg-card border-purple-500/30">
+            <Card id="level-3" className="bg-card border-purple-500/30">
               <CardHeader>
                 <CardTitle className="text-3xl text-purple-300 flex items-center gap-3">
                   <span className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl">3</span>
