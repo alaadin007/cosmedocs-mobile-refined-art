@@ -208,6 +208,71 @@ const MarionnetteLines = () => {
     "reviewBody": "The marionette lines treatment has completely transformed my appearance. I genuinely look 10 years younger and the results are so natural. Dr. Haq's precision and artistry are exceptional."
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.cosmedocs.co.uk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Dermal Fillers",
+        "item": "https://www.cosmedocs.co.uk/dermal-fillers"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Marionette Lines Treatment",
+        "item": "https://www.cosmedocs.co.uk/marionette-lines"
+      }
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Marionette Lines Filler Treatment",
+    "description": "Expert marionette lines treatment using premium hyaluronic acid dermal fillers. Non-surgical liquid facelift approach for facial rejuvenation in London.",
+    "provider": {
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      },
+      "telephone": "0333 0551 503"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "London"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://www.cosmedocs.co.uk/marionette-lines",
+      "servicePhone": {
+        "@type": "ContactPoint",
+        "telephone": "0333 0551 503",
+        "contactType": "Customer Service"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "325",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.cosmedocs.co.uk/marionette-lines"
+    },
+    "category": "Aesthetic Medicine"
+  };
+
   return (
     <>
       <Helmet>
@@ -246,6 +311,12 @@ const MarionnetteLines = () => {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(testimonialSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
         </script>
       </Helmet>
 
