@@ -157,26 +157,42 @@ const NonSurgicalFacelift = () => {
         </section>
 
         {/* Introduction */}
-        <section className="py-16 bg-background">
-          <div className="page-container max-w-4xl">
+        <section className="py-16 bg-gradient-to-b from-background to-accent">
+          <div className="page-container max-w-5xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-8 text-center">The Art of Non-Surgical Facial Rejuvenation</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
+                The Art of Non-Surgical Facial Rejuvenation
+              </h2>
               
-              <div className="prose prose-invert max-w-none space-y-6 text-gray-300">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
+                  <Clock className="w-8 h-8 text-purple-400 mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Minimal Downtime</h3>
+                  <p className="text-gray-400 text-sm">Return to normal activities within 24-48 hours</p>
+                </div>
+                <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
+                  <Award className="w-8 h-8 text-purple-400 mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">10+ Years Expertise</h3>
+                  <p className="text-gray-400 text-sm">Training doctors internationally in advanced techniques</p>
+                </div>
+                <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
+                  <Heart className="w-8 h-8 text-purple-400 mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Natural Results</h3>
+                  <p className="text-gray-400 text-sm">Bold yet invisible—transformation without words</p>
+                </div>
+              </div>
+
+              <div className="prose prose-lg prose-invert max-w-none space-y-4 text-gray-300">
                 <p className="text-lg leading-relaxed">
-                  At Cosmedocs, we believe aesthetic medicine should be minimal, quiet, and invisible. Our non-surgical face lift treatments represent the pinnacle of modern facial rejuvenation—transformation that speaks without saying a word. Rather than a one-size-fits-all approach, we've developed a sophisticated three-level treatment protocol that addresses facial ageing at every stage, from early signs in your 30s through to more advanced concerns.
+                  At Cosmedocs, we believe aesthetic medicine should be <span className="text-purple-300 font-semibold">minimal, quiet, and invisible</span>. Our non-surgical face lift treatments represent the pinnacle of modern facial rejuvenation—transformation that speaks without saying a word.
                 </p>
 
                 <p className="text-lg leading-relaxed">
-                  The secret to natural-looking facial rejuvenation lies in understanding facial anatomy at a profound level. Over our 10+ years training doctors internationally in advanced injectable techniques, we've perfected the art of strategic volume replacement and tissue repositioning. Our approach doesn't just mask ageing—it restores the architectural foundation of a youthful face.
-                </p>
-
-                <p className="text-lg leading-relaxed">
-                  What sets our non-surgical face lift apart is precision. We don't simply fill lines or add volume indiscriminately. Instead, we analyse your unique facial structure, identify specific compartments that have lost volume, and develop a bespoke treatment plan tailored to your level of facial sagging. This intelligent, anatomically-informed approach delivers results that are bold yet natural, visible yet invisible—the essence of our philosophy at Cosmedocs.
+                  Rather than a one-size-fits-all approach, we've developed a sophisticated <span className="text-purple-300 font-semibold">three-level treatment protocol</span> that addresses facial ageing at every stage, from early signs in your 30s through to more advanced concerns. Our approach doesn't just mask ageing—it restores the architectural foundation of a youthful face.
                 </p>
               </div>
             </motion.div>
@@ -226,116 +242,157 @@ const NonSurgicalFacelift = () => {
         <section id="levels" className="py-20 bg-background">
           <div className="page-container">
             {/* Level 1 */}
-            <Card id="level-1" className="bg-card border-purple-500/30 mb-8">
-              <CardHeader>
-                <CardTitle className="text-3xl text-purple-300 flex items-center gap-3">
-                  <span className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl">1</span>
-                  Level One: Early Volume Loss (Ages 30-40)
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="prose prose-invert max-w-none">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Characteristics of Level 1 Facial Sagging</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Level one sagging typically emerges between the ages of 30 to 40, marking the beginning of visible facial volume loss. At this stage, you'll notice a subtle loss of definition along the jaw angle, with early jowls beginning to form. This presentation is often more pronounced in females than males due to differences in facial fat distribution and hormonal factors affecting collagen production.
-                  </p>
+            <Accordion type="single" collapsible className="mb-6">
+              <AccordionItem 
+                id="level-1" 
+                value="level-1"
+                className="bg-card border-2 border-purple-500/30 rounded-xl overflow-hidden"
+              >
+                <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-purple-900/10">
+                  <div className="flex items-center gap-4 text-left w-full">
+                    <span className="bg-purple-600 rounded-full min-w-12 h-12 flex items-center justify-center text-white text-xl font-bold">1</span>
+                    <div>
+                      <h3 className="text-2xl font-bold text-purple-300">Level One: Early Volume Loss</h3>
+                      <p className="text-sm text-gray-400 mt-1">Ages 30-40 • Dermal Fillers</p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-8 pb-8">
+                  <div className="space-y-6 pt-4">
+                    <div className="bg-purple-900/10 rounded-lg p-6">
+                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                        <Activity className="w-5 h-5 text-purple-400" />
+                        Characteristics
+                      </h4>
+                      <ul className="space-y-3 text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                          <span>Subtle loss of jaw angle definition with early jowl formation</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                          <span>Flattening of outer facial compartment near the ear</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                          <span>Mild mid-cheek flattening and visible tear troughs</span>
+                        </li>
+                      </ul>
+                    </div>
 
-                  <p className="text-gray-300 leading-relaxed">
-                    The hallmark sign of level one ageing is the flattening of the outer facial compartment near the ear. This specific area, often overlooked in traditional treatments, is crucial for maintaining youthful facial contours. As volume depletes here, the face loses its natural lift, causing tissues to descend and creating the appearance of early jowls. Simultaneously, the mid-cheek area becomes slightly flatter, and the tear trough under the eye becomes more apparent.
-                  </p>
-
-                  <h3 className="text-2xl font-semibold text-white mb-4 mt-6">Level 1 Treatment Approach</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Our treatment for level one facial sagging focuses on strategic volume replacement using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link>. The cornerstone of this approach involves carefully placing filler in the outer compartment of the face, right in front of the ear, behind the masseter (jaw) muscle. This precise placement is critical—it creates a lifting effect similar to when you place your hands in front of your ears to demonstrate a facelift.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    Contrary to what many patients fear, this volume placement does not make your face look wider. Because the filler sits behind the jaw muscle in a specific anatomical plane, it creates vertical lift rather than horizontal expansion. The result is a naturally defined jawline with improved contours, as if the tissues have been gently lifted upward.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    Additionally, we address the mild flattening in the mid-cheek area with conservative filler placement. The goal isn't to create prominent, over-projected cheeks, but rather to restore the gentle convexity that characterises youthful facial contours. A small amount of carefully placed filler in the under-eye area softens the tear trough, creating a refreshed appearance without looking overdone.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    The projection achieved in these areas is subtle but transformative—your face regains its natural forward projection rather than the flat, descended appearance that characterises early ageing. At Cosmedocs, we call this "invisible art"—changes that your friends notice without being able to identify what's different.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+                    <div className="bg-accent/50 rounded-lg p-6">
+                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                        <Syringe className="w-5 h-5 text-purple-400" />
+                        Treatment Approach
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed mb-4">
+                        Strategic volume replacement using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline font-medium">dermal fillers</Link> in the outer facial compartment behind the masseter muscle creates a natural lifting effect without widening the face.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        Conservative mid-cheek and under-eye filler restores youthful contours with subtle, transformative results—our signature "invisible art."
+                      </p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
 
             {/* Level 2 */}
-            <Card id="level-2" className="bg-card border-purple-500/30 mb-8">
-              <CardHeader>
-                <CardTitle className="text-3xl text-purple-300 flex items-center gap-3">
-                  <span className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl">2</span>
-                  Level Two: Moderate Sagging (Ages 40-55)
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="prose prose-invert max-w-none">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Characteristics of Level 2 Facial Sagging</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Level two facial sagging represents a more advanced stage of ageing, typically presenting in the 40s to mid-50s. At this stage, volume loss becomes more pronounced around the angle of the mandible (jaw), with moderate, clearly visible jowls. The sides of the chin begin to develop hollowness, and marionette lines—those vertical lines running from the corners of the mouth downward—become apparent.
-                  </p>
+            <Accordion type="single" collapsible className="mb-6">
+              <AccordionItem 
+                id="level-2" 
+                value="level-2"
+                className="bg-card border-2 border-purple-500/30 rounded-xl overflow-hidden"
+              >
+                <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-purple-900/10">
+                  <div className="flex items-center gap-4 text-left w-full">
+                    <span className="bg-purple-600 rounded-full min-w-12 h-12 flex items-center justify-center text-white text-xl font-bold">2</span>
+                    <div>
+                      <h3 className="text-2xl font-bold text-purple-300">Level Two: Moderate Sagging</h3>
+                      <p className="text-sm text-gray-400 mt-1">Ages 40-55 • Fillers + PDO Threads</p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-8 pb-8">
+                  <div className="space-y-6 pt-4">
+                    <div className="bg-purple-900/10 rounded-lg p-6">
+                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                        <Activity className="w-5 h-5 text-purple-400" />
+                        Characteristics
+                      </h4>
+                      <ul className="space-y-3 text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                          <span>Moderate, clearly visible jowls with pronounced volume loss</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                          <span>Hollowness around chin with apparent marionette lines</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                          <span>Facial segmentation with prominent nasolabial folds</span>
+                        </li>
+                      </ul>
+                    </div>
 
-                  <p className="text-gray-300 leading-relaxed">
-                    The face at level two starts to segment into distinct compartments, with the nasolabial folds (lines from nose to mouth corners) becoming more prominent. This segmentation occurs because multiple facial fat pads have descended and deflated, creating visible boundaries between different areas of the face. The overall effect is a heavier, more aged appearance with loss of the smooth, continuous contours of youth.
-                  </p>
-
-                  <h3 className="text-2xl font-semibold text-white mb-4 mt-6">Level 2 Treatment Approach</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Level two facial sagging requires a more comprehensive treatment strategy combining increased <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</Link> volume with the structural support of <Link to="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline">PDO threads</Link>. Filler alone, whilst effective for level one, cannot provide sufficient lifting and support for moderate jowls and tissue descent.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    We begin by volumising more extensively than in level one treatment, placing greater amounts of filler in the outer facial compartment and mid-cheek area. This increased volume helps counteract the more significant fat loss and provides a foundation for the lifting effect. Strategic placement along the jawline and in the pre-jowl sulcus (the depression in front of the jowl) helps smooth the jaw contour.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    The game-changer at level two is the insertion of PDO threads. These medical-grade threads, made from polydioxanone, are carefully placed beneath the skin to physically lift and secure sagging tissue. The threads have tiny cones or barbs that anchor into the tissue, allowing us to reposition descended fat pads and skin back to a more youthful position. Over time, the threads stimulate collagen production, further improving skin quality and firmness.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    For the jawline specifically, we use PDO threads to create a sling-like support system that defines the jaw angle and lifts jowls. Combined with the volumising effect of fillers, this dual approach achieves remarkable rejuvenation without surgery. The nasolabial folds soften as mid-face tissues are lifted, and marionette lines improve as the lower face regains support.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    Level two treatments represent the sweet spot where non-surgical techniques can achieve dramatic, natural-looking results that previously required surgical intervention. Our decade of experience training international practitioners in these advanced techniques ensures optimal, safe outcomes tailored to your unique facial anatomy.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+                    <div className="bg-accent/50 rounded-lg p-6">
+                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                        <Syringe className="w-5 h-5 text-purple-400" />
+                        Treatment Approach
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed mb-4">
+                        Comprehensive strategy combining increased <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline font-medium">dermal filler</Link> volume with <Link to="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline font-medium">PDO thread</Link> structural support.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        Medical-grade threads create a sling-like support system that physically lifts sagging tissue whilst stimulating collagen production. This dual approach achieves dramatic, natural-looking results that previously required surgery.
+                      </p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
 
             {/* Level 3 */}
-            <Card id="level-3" className="bg-card border-purple-500/30">
-              <CardHeader>
-                <CardTitle className="text-3xl text-purple-300 flex items-center gap-3">
-                  <span className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl">3</span>
-                  Level Three and Beyond: Advanced Sagging
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="prose prose-invert max-w-none">
-                  <p className="text-gray-300 leading-relaxed">
-                    Level three and above represents significant facial sagging characterised by heavy jowls, substantial volume loss, and marked tissue descent. This level of ageing is most commonly seen in patients who had fuller faces in their youth—when facial fat pads are larger to begin with, their descent creates a heavier, more pronounced fall that proves challenging to address with non-surgical methods alone.
-                  </p>
+            <Accordion type="single" collapsible>
+              <AccordionItem 
+                id="level-3" 
+                value="level-3"
+                className="bg-card border-2 border-purple-500/30 rounded-xl overflow-hidden"
+              >
+                <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-purple-900/10">
+                  <div className="flex items-center gap-4 text-left w-full">
+                    <span className="bg-purple-600 rounded-full min-w-12 h-12 flex items-center justify-center text-white text-xl font-bold">3+</span>
+                    <div>
+                      <h3 className="text-2xl font-bold text-purple-300">Level Three and Beyond</h3>
+                      <p className="text-sm text-gray-400 mt-1">Ages 55+ • Surgical Consultation</p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-8 pb-8">
+                  <div className="space-y-6 pt-4">
+                    <div className="bg-purple-900/10 rounded-lg p-6">
+                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                        <Shield className="w-5 h-5 text-purple-400" />
+                        Honest Assessment
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed mb-4">
+                        Significant facial sagging with heavy jowls, substantial volume loss, and marked tissue descent. At this advanced stage, skin elasticity has often diminished considerably.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        At Cosmedocs, honesty and patient welfare come first. If we determine you present with level three or more advanced facial sagging, we'll have an open discussion about surgical face lift options. Whilst we specialise in non-surgical techniques, we recognise limitations and always recommend the most appropriate treatment for your individual situation.
+                      </p>
+                    </div>
 
-                  <p className="text-gray-300 leading-relaxed">
-                    At this advanced stage, the skin itself has often lost considerable elasticity, and the degree of tissue descent exceeds what fillers and threads can adequately correct. Attempting non-surgical treatments at level three may yield disappointing results or require excessive product, leading to an unnatural appearance.
-                  </p>
-
-                  <h3 className="text-2xl font-semibold text-white mb-4 mt-6">Honest Assessment and Surgical Referral</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    At Cosmedocs, honesty and patient welfare come before everything. If during your consultation we determine that you present with level three or more advanced facial sagging, we will have an open discussion about surgical face lift options. Whilst we specialise in non-surgical techniques and are passionate about what can be achieved without surgery, we recognise the limitations and will always recommend the most appropriate treatment for your individual situation.
-                  </p>
-
-                  <p className="text-gray-300 leading-relaxed">
-                    A surgical face lift at this stage will provide more comprehensive, longer-lasting results than non-surgical alternatives. We work closely with experienced plastic surgeons and can provide referrals to trusted colleagues who share our philosophy of natural, elegant results. Your journey to facial rejuvenation should always be guided by what will truly serve your aesthetic goals, not by pushing treatments beyond their appropriate scope.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+                    <div className="bg-accent/50 rounded-lg p-6 border-l-4 border-purple-500">
+                      <p className="text-gray-300 leading-relaxed">
+                        A surgical face lift at this stage provides more comprehensive, longer-lasting results than non-surgical alternatives. We work closely with experienced plastic surgeons and can provide referrals to trusted colleagues who share our philosophy of natural, elegant results.
+                      </p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
 
@@ -444,17 +501,17 @@ const NonSurgicalFacelift = () => {
               <p className="text-xl text-gray-300">Everything you need to know about non-surgical face lifts</p>
             </motion.div>
 
-            <Accordion type="single" collapsible className="w-full space-y-4">
+            <Accordion type="single" collapsible className="w-full space-y-3">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-card border border-purple-500/30 rounded-lg px-6"
+                  className="bg-card/50 backdrop-blur border border-purple-500/20 rounded-xl px-6 hover:border-purple-400/40 transition-colors"
                 >
-                  <AccordionTrigger className="text-left text-lg font-semibold hover:text-purple-300">
+                  <AccordionTrigger className="text-left text-base md:text-lg font-semibold hover:text-purple-300 py-5 hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-300 leading-relaxed">
+                  <AccordionContent className="text-gray-300 leading-relaxed pb-5 pt-1">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
