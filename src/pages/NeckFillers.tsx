@@ -391,7 +391,7 @@ const NeckFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Neckline Filler Treatment</h2>
+              <h2 className="text-3xl font-bold mb-6">Neckline Filler Treatment</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
                 Neck fillers, also known as neck injections or neck contouring, are a non-surgical cosmetic 
                 procedure designed to improve the overall look of the neck. This treatment targets neck wrinkles, 
@@ -609,7 +609,7 @@ const NeckFillers = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Neck Filler Pricing London</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Neck Filler Pricing London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
                 Transparent pricing for premium neck enhancement treatments. All prices include consultation, 
                 treatment, and aftercare support from our expert medical team.
@@ -944,7 +944,7 @@ const NeckFillers = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12 border border-purple-500/20"
             >
-              <h2 className="text-4xl font-bold mb-6">Ready for a Smoother, Younger Neck?</h2>
+              <h2 className="text-3xl font-bold mb-6">Ready for a Smoother, Younger Neck?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
                 Book your consultation with our expert cosmetic doctors and discover how neck fillers 
                 can smooth away neck lines for a more youthful appearance.
