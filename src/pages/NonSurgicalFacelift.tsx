@@ -13,6 +13,10 @@ import {
 import { Link } from "react-router-dom";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Heart, Users, Shield } from "lucide-react";
+import faceliftBa1 from "@/assets/facelift-ba-1.jpg";
+import faceliftBa2 from "@/assets/facelift-ba-2.jpg";
+import faceliftBa3 from "@/assets/facelift-ba-3.jpg";
+import faceliftBa4 from "@/assets/facelift-ba-4.jpg";
 
 const NonSurgicalFacelift = () => {
   const seoData = generateSEOMetadata(
@@ -25,24 +29,24 @@ const NonSurgicalFacelift = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/lovable-uploads/placeholder-facelift-1.jpg", 
-      alt: "Non-surgical facelift before and after Level 1", 
-      caption: "Level 1 Treatment - Natural jawline definition" 
+      src: faceliftBa1, 
+      alt: "Mild jowls and loss of jawline definition restored with liquid face lift using dermal fillers and PDO thread", 
+      caption: "Mild jowls and loss of jawline definition restored with liquid face lift using dermal fillers and PDO thread to secure and sharpen jawline" 
     },
     { 
-      src: "/lovable-uploads/placeholder-facelift-2.jpg", 
-      alt: "Non-surgical face lift Level 2 with PDO threads", 
-      caption: "Level 2 Treatment - Combined filler and PDO threads" 
+      src: faceliftBa2, 
+      alt: "Non-surgical face lift over 6 months with fillers, biostimulators and PDO threads", 
+      caption: "Face lift non-surgical over 6 months with fillers, biostimulators and PDO threads using special lift-lock techniques" 
     },
     { 
-      src: "/lovable-uploads/placeholder-facelift-3.jpg", 
-      alt: "Non-surgical facial rejuvenation results", 
-      caption: "Comprehensive facial rejuvenation" 
+      src: faceliftBa3, 
+      alt: "Mild lift and definition of the jawline with non-surgical treatment", 
+      caption: "Mild lift and definition of the jawline" 
     },
     { 
-      src: "/lovable-uploads/placeholder-facelift-4.jpg", 
-      alt: "Non-surgical facelift transformation", 
-      caption: "Natural transformation - invisible art" 
+      src: faceliftBa4, 
+      alt: "Loss of jaw angle leading to jowls, replaced and restored jawangle and jawline definition", 
+      caption: "Loss of jaw angle leading to jowls, replaced and restored jaw angle and jawline definition" 
     }
   ];
 
@@ -121,24 +125,6 @@ const NonSurgicalFacelift = () => {
                   </Button>
                 </div>
               </motion.div>
-              
-              <div className="hidden lg:block">
-                <div className="space-y-4">
-                  <div className="bg-yellow-900/20 border border-yellow-500/50 rounded-lg p-4">
-                    <p className="text-yellow-300 font-semibold text-center">⚠️ Caution: Treatment Video Contains Graphic Medical Procedures</p>
-                  </div>
-                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                    <iframe 
-                      className="absolute top-0 left-0 w-full h-full rounded-lg"
-                      src="https://www.youtube.com/embed/mHn0TARBHik?si=5eH2Povt0jlzoH0I" 
-                      title="Non-Surgical Face Lift Treatment Video" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      referrerPolicy="strict-origin-when-cross-origin" 
-                      allowFullScreen
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -326,9 +312,12 @@ const NonSurgicalFacelift = () => {
                     <CarouselItem key={index} className="md:basis-1/2">
                       <Card className="bg-card border-purple-500/30">
                         <CardContent className="p-4">
-                          <div className="aspect-square bg-purple-900/10 rounded-lg border-2 border-purple-500/30 flex items-center justify-center mb-4">
-                            <p className="text-gray-500">Before/After Image {index + 1} - To be added</p>
-                          </div>
+                          <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            className="w-full h-auto rounded-lg mb-4"
+                            loading="lazy"
+                          />
                           <p className="text-sm text-gray-300 text-center">{image.caption}</p>
                         </CardContent>
                       </Card>
@@ -338,10 +327,6 @@ const NonSurgicalFacelift = () => {
                 <CarouselPrevious />
                 <CarouselNext />
               </Carousel>
-            </div>
-
-            <div className="text-center mt-8">
-              <p className="text-gray-300 italic">Before and after gallery images to be added by client</p>
             </div>
           </div>
         </section>
@@ -428,6 +413,37 @@ const NonSurgicalFacelift = () => {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+        </section>
+
+        {/* Treatment Video Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-4">Watch Our Non-Surgical Face Lift Technique</h2>
+              <p className="text-xl text-gray-300">See how we perform the treatment</p>
+            </motion.div>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-yellow-900/20 border border-yellow-500/50 rounded-lg p-4 mb-6">
+                <p className="text-yellow-300 font-semibold text-center">⚠️ Caution: Treatment Video Contains Graphic Medical Procedures</p>
+              </div>
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe 
+                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  src="https://www.youtube.com/embed/mHn0TARBHik?si=5eH2Povt0jlzoH0I" 
+                  title="Non-Surgical Face Lift Treatment Video" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
         </section>
 
