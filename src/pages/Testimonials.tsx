@@ -73,58 +73,118 @@ const Testimonials = () => {
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+        <section className="relative py-24 overflow-hidden">
+          {/* Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-purple-500/5 to-pink-500/10" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+          
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+              >
+                <Star className="w-4 h-4 fill-primary text-primary" />
+                <span className="text-sm font-medium text-primary">5-Star Rated Clinic</span>
+              </motion.div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-primary to-foreground">
                 Our Client Testimonials
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-light">
                 The greatest compliment you could ever give us is a recommendation
               </p>
-              <div className="flex justify-center gap-1 mb-8">
+              
+              <div className="flex justify-center gap-2 mb-8">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-8 h-8 fill-primary text-primary" />
+                  <motion.div
+                    key={i}
+                    initial={{ scale: 0, rotate: -180 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+                  >
+                    <Star className="w-10 h-10 fill-primary text-primary drop-shadow-lg" />
+                  </motion.div>
                 ))}
               </div>
+              
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="text-muted-foreground text-lg"
+              >
+                Read what our clients say about their transformative experiences
+              </motion.p>
             </motion.div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16">
+        <section className="py-20 relative">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
+            <div className="max-w-5xl mx-auto space-y-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="relative"
+                  className="group"
                 >
-                  <Card className="p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary">
-                    <div className="flex items-start gap-6">
-                      <Quote className="w-12 h-12 text-primary/30 flex-shrink-0 mt-1" />
-                      <div className="flex-1 space-y-4">
-                        <p className="text-lg leading-relaxed text-foreground/90 italic">
-                          {testimonial.text}
-                        </p>
-                        <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                          <div className="flex gap-0.5">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                            ))}
+                  <Card className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                    {/* Decorative gradient overlay */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700" />
+                    
+                    <div className="relative p-8 md:p-10">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        {/* Quote Icon */}
+                        <div className="flex-shrink-0">
+                          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <Quote className="w-8 h-8 text-white" />
                           </div>
-                          <p className="font-bold text-primary text-lg">
-                            {testimonial.initials}
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="flex-1 space-y-6">
+                          <p className="text-lg md:text-xl leading-relaxed text-foreground/90">
+                            "{testimonial.text}"
                           </p>
+                          
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-6 border-t border-border/50">
+                            <div className="flex gap-1">
+                              {[...Array(5)].map((_, i) => (
+                                <motion.div
+                                  key={i}
+                                  initial={{ scale: 0 }}
+                                  whileInView={{ scale: 1 }}
+                                  transition={{ delay: index * 0.05 + i * 0.05 }}
+                                  viewport={{ once: true }}
+                                >
+                                  <Star className="w-5 h-5 fill-primary text-primary" />
+                                </motion.div>
+                              ))}
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
+                                <span className="font-bold text-primary">
+                                  {testimonial.initials.charAt(0)}
+                                </span>
+                              </div>
+                              <p className="font-bold text-primary text-lg">
+                                {testimonial.initials}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -136,25 +196,50 @@ const Testimonials = () => {
         </section>
 
         {/* Statistics Section */}
-        <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Trusted by Thousands
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Numbers that speak for themselves
+              </p>
+            </motion.div>
+            
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {[
-                { number: "10,000+", label: "Happy Clients", icon: Star },
-                { number: "15+", label: "Years Experience", icon: Award },
-                { number: "5-Star", label: "Reviews", icon: Shield }
+                { number: "10,000+", label: "Happy Clients", icon: Star, color: "from-yellow-500 to-orange-500" },
+                { number: "15+", label: "Years Experience", icon: Award, color: "from-purple-500 to-pink-500" },
+                { number: "5-Star", label: "Reviews", icon: Shield, color: "from-blue-500 to-cyan-500" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center p-8 bg-background rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                  className="group"
                 >
-                  <stat.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-4xl font-bold text-primary mb-2">{stat.number}</h3>
-                  <p className="text-muted-foreground font-medium">{stat.label}</p>
+                  <Card className="relative overflow-hidden p-10 text-center bg-gradient-to-br from-background to-primary/5 border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative z-10">
+                      <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <stat.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-primary mb-3">
+                        {stat.number}
+                      </h3>
+                      <p className="text-muted-foreground font-medium text-lg">{stat.label}</p>
+                    </div>
+                  </Card>
                 </motion.div>
               ))}
             </div>
@@ -162,8 +247,9 @@ const Testimonials = () => {
         </section>
 
         {/* Instagram Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-          <div className="container mx-auto px-4">
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-purple-500/5 to-primary/10" />
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -171,27 +257,28 @@ const Testimonials = () => {
               viewport={{ once: true }}
               className="text-center max-w-3xl mx-auto"
             >
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Instagram className="w-10 h-10 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-bold">Follow Us on Instagram</h2>
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center shadow-lg">
+                  <Instagram className="w-7 h-7 text-white" />
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold">Follow Us on Instagram</h2>
               </div>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
                 See our latest treatments, transformations, and client success stories.
-                Join our community @cosmedocs
+                Join our community <span className="text-primary font-semibold">@cosmedocs</span>
               </p>
               <Button
                 size="lg"
-                variant="outline"
-                className="rounded-full px-8 py-6 text-lg"
+                className="rounded-full px-10 py-7 text-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a 
                   href="https://www.instagram.com/cosmedocs/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-3"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <Instagram className="w-6 h-6" />
                   View on Instagram
                 </a>
               </Button>
@@ -200,43 +287,48 @@ const Testimonials = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-b from-background to-primary/5">
-          <div className="container mx-auto px-4">
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/10 to-pink-500/20" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary/30 via-transparent to-transparent" />
+          
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center max-w-3xl mx-auto"
+              className="text-center max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Experience Cosmedocs?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Join thousands of satisfied clients who trust us with their aesthetic treatments.
-                Book your consultation today and discover why our clients recommend us.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg"
-                  className="rounded-full px-8 py-6 text-lg"
-                  asChild
-                >
-                  <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
-                    Book Free Consultation
-                  </a>
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full px-8 py-6 text-lg"
-                  asChild
-                >
-                  <a href="tel:03330551503">
-                    Call 0333 0551 503
-                  </a>
-                </Button>
-              </div>
+              <Card className="p-12 md:p-16 bg-gradient-to-br from-background/95 to-primary/5 backdrop-blur-sm border-primary/30 shadow-2xl">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-primary to-foreground">
+                  Ready to Experience Cosmedocs?
+                </h2>
+                <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+                  Join thousands of satisfied clients who trust us with their aesthetic treatments.
+                  Book your consultation today and discover why our clients recommend us.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg"
+                    className="rounded-full px-10 py-7 text-lg bg-primary hover:bg-primary/90 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                    asChild
+                  >
+                    <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                      Book Free Consultation
+                    </a>
+                  </Button>
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="rounded-full px-10 py-7 text-lg border-2 hover:bg-primary/10 hover:border-primary shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                    asChild
+                  >
+                    <a href="tel:03330551503">
+                      Call 0333 0551 503
+                    </a>
+                  </Button>
+                </div>
+              </Card>
             </motion.div>
           </div>
         </section>
