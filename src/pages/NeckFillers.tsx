@@ -780,15 +780,6 @@ const NeckFillers = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
-                <CardHeader>
-                  <CheckCircle className="text-purple-400 mb-2" size={32} />
-                  <CardTitle className="text-white text-lg">Accredited Clinic</CardTitle>
-                </CardHeader>
-                <CardContent className="text-gray-300 text-sm">
-                  <p>Registered with <a href="https://www.saveface.co.uk" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Save Face</a>, the UK's official register of accredited practitioners.</p>
-                </CardContent>
-              </Card>
 
               <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
                 <CardHeader>
