@@ -131,59 +131,57 @@ const Testimonials = () => {
         {/* Testimonials Section */}
         <section className="py-20 relative">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group"
+                  className="group h-full"
                 >
-                  <Card className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                  <Card className="relative overflow-hidden h-full bg-gradient-to-br from-background via-background to-primary/5 border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
                     {/* Decorative gradient overlay */}
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700" />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700" />
                     
-                    <div className="relative p-8 md:p-10">
-                      <div className="flex flex-col md:flex-row gap-6">
-                        {/* Quote Icon */}
-                        <div className="flex-shrink-0">
-                          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <Quote className="w-8 h-8 text-white" />
-                          </div>
+                    <div className="relative p-6 flex flex-col h-full">
+                      {/* Quote Icon */}
+                      <div className="mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          <Quote className="w-6 h-6 text-white" />
                         </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="flex-1 flex flex-col">
+                        <p className="text-base leading-relaxed text-foreground/90 mb-6 flex-1">
+                          "{testimonial.text}"
+                        </p>
                         
-                        {/* Content */}
-                        <div className="flex-1 space-y-6">
-                          <p className="text-lg md:text-xl leading-relaxed text-foreground/90">
-                            "{testimonial.text}"
-                          </p>
-                          
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-6 border-t border-border/50">
-                            <div className="flex gap-1">
-                              {[...Array(5)].map((_, i) => (
-                                <motion.div
-                                  key={i}
-                                  initial={{ scale: 0 }}
-                                  whileInView={{ scale: 1 }}
-                                  transition={{ delay: index * 0.05 + i * 0.05 }}
-                                  viewport={{ once: true }}
-                                >
-                                  <Star className="w-5 h-5 fill-primary text-primary" />
-                                </motion.div>
-                              ))}
+                        <div className="space-y-3 pt-4 border-t border-border/50">
+                          <div className="flex gap-1">
+                            {[...Array(5)].map((_, i) => (
+                              <motion.div
+                                key={i}
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ delay: index * 0.05 + i * 0.05 }}
+                                viewport={{ once: true }}
+                              >
+                                <Star className="w-4 h-4 fill-primary text-primary" />
+                              </motion.div>
+                            ))}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
+                              <span className="font-bold text-primary text-sm">
+                                {testimonial.initials.charAt(0)}
+                              </span>
                             </div>
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
-                                <span className="font-bold text-primary">
-                                  {testimonial.initials.charAt(0)}
-                                </span>
-                              </div>
-                              <p className="font-bold text-primary text-lg">
-                                {testimonial.initials}
-                              </p>
-                            </div>
+                            <p className="font-bold text-primary">
+                              {testimonial.initials}
+                            </p>
                           </div>
                         </div>
                       </div>
