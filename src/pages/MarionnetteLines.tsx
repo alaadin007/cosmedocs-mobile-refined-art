@@ -65,12 +65,12 @@ const MarionnetteLines = () => {
       answer: "Marionette lines are vertical creases that extend from the corners of the mouth down towards the chin, resembling the lines on a marionette puppet's face. These lines develop due to natural ageing, volume loss in the cheeks, decreased collagen production, and repetitive facial expressions. They can make you appear sad or aged, even when you're feeling happy."
     },
     {
-      question: "Can I use botox on marionette lines or do I need fillers?",
-      answer: "While Botox can help with some muscle activity, dermal filler treatment is generally more effective for marionette lines. Botox may provide limited results as these are primarily caused by volume loss rather than muscle activity. Filler is the gold standard treatment as it directly addresses the structural changes causing these lines."
+      question: "Can I use Botox on marionette lines or do I need fillers?",
+      answer: "While Botox for marionette lines can help with some muscle activity, dermal filler treatment is generally more effective. Marionette lines Botox may provide limited results as these are primarily caused by volume loss rather than muscle activity. Filler marionette lines treatment is the gold standard as it directly addresses the structural changes causing these lines."
     },
     {
       question: "How to get rid of marionette lines effectively?",
-      answer: "The best treatment is dermal filler. Our expert practitioners use premium hyaluronic acid fillers to restore volume and smooth these lines. This treatment can dramatically reduce their appearance and is considered the most effective way to remove them non-surgically."
+      answer: "The best treatment for marionette lines is dermal filler. Our expert practitioners use premium hyaluronic acid fillers for marionette lines to restore volume and smooth these lines. This treatment can dramatically reduce their appearance and is considered the most effective way to remove marionette lines non-surgically. How to remove marionette lines successfully depends on expert filler placement and the right product selection."
     },
     {
       question: "Is marionette line treatment part of a liquid facelift?",
@@ -86,7 +86,7 @@ const MarionnetteLines = () => {
     },
     {
       question: "Can marionette line treatment be combined with other procedures?",
-      answer: "Absolutely! The treatment works excellently in combination with cheek volume enhancement, nasolabial fold correction, and <Link to='/lip-fillers' className='text-purple-300 hover:text-purple-200 underline'>lip hydration</Link> treatments. This comprehensive approach addresses multiple aspects of facial ageing for more harmonious and natural-looking results."
+      answer: "Absolutely! The treatment works excellently in combination with cheek volume enhancement, filler for nasolabial folds and marionette lines, and <Link to='/lip-fillers' className='text-purple-300 hover:text-purple-200 underline'>lip hydration</Link> treatments. Filler for jowls and marionette lines can be combined in one session for comprehensive lower face rejuvenation. This approach addresses multiple aspects of facial ageing for more harmonious and natural-looking results."
     },
     {
       question: "What is the recovery time for marionette line fillers?",
@@ -94,7 +94,7 @@ const MarionnetteLines = () => {
     },
     {
       question: "How much does marionette lines filler cost UK treatment?",
-      answer: "Filler treatment costs start from £325 per ml at our London clinic. The exact cost depends on the amount of filler needed and whether additional treatments are combined. During your consultation, we'll provide a detailed treatment plan with transparent pricing."
+      answer: "Marionette lines filler cost UK treatment starts from £325 per ml at our London clinic. The exact cost depends on the amount of filler needed and whether additional treatments are combined. During your consultation, we'll provide a detailed treatment plan with transparent pricing."
     }
   ];
 
@@ -457,7 +457,7 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6">Marionette Lines Before and After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                See the dramatic before and after marionette lines improvements achieved through our expert dermal fillers for marionette lines treatments and liquid facelift procedures.
+                See the dramatic before and after marionette lines improvements achieved through our expert filler for marionette lines treatments and liquid facelift procedures. Real results from marionette lines filler before and after treatments at our London clinic.
               </p>
             </motion.div>
 
@@ -504,13 +504,13 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6">What are Marionette Lines?</h2>
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These marionettes lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">facial expressions</Link> over time.
+                Marionette lines on face are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These marionettes lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">facial expressions</Link> over time. Understanding what is marionette lines helps determine the best treatment for marionette lines for your individual needs.
               </p>
               
               <Card className="bg-black border-purple-500 border-2 p-6">
                 <CardContent className="p-0">
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    <AutoLinkedText>Our liquid facelift approach</AutoLinkedText> is particularly effective for younger individuals in their 30s, offering a non-surgical solution that can take 10 years off your appearance through strategic dermal filler placement.
+                    Our <Link to="/non-surgical-facelift" className="text-purple-300 hover:text-purple-200 underline">liquid facelift</Link> approach is particularly effective for younger individuals in their 30s, offering a non-surgical solution that can take 10 years off your appearance through strategic dermal filler marionette lines placement. This treatment addresses marionette line concerns while maintaining natural facial harmony.
                   </p>
                 </CardContent>
               </Card>
@@ -530,7 +530,7 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6 text-white">Marionette Lines Filler: The Solution</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-                Marionette lines filler treatment is the gold standard for addressing these ageing concerns. Using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid-based dermal fillers</Link>, we restore lost volume and smooth the vertical lines that run from the corners of your mouth to your chin. <a href="https://pubmed.ncbi.nlm.nih.gov/35718985/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies published in the Journal of Cosmetic Dermatology</a> demonstrate impressive results, with 94% of patients showing improvement at 3 weeks and 88% maintaining excellent outcomes at 18 months with favourable safety profiles.
+                Marionette lines fillers treatment is the gold standard for addressing these ageing concerns. Using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid-based dermal fillers</Link>, we restore lost volume and smooth the vertical lines that run from the corners of your mouth to your chin. Filler in marionette lines provides natural-looking results that enhance your facial contours. <a href="https://pubmed.ncbi.nlm.nih.gov/35718985/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies published in the Journal of Cosmetic Dermatology</a> demonstrate impressive results, with 94% of patients showing improvement at 3 weeks and 88% maintaining excellent outcomes at 18 months with favourable safety profiles.
               </p>
             </motion.div>
 
@@ -551,7 +551,7 @@ const MarionnetteLines = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      Dermal fillers for marionette lines work by replenishing lost volume in the deeper layers of your skin. Our expert practitioners strategically inject premium <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid</Link> fillers along the marionette lines and in the surrounding areas to:
+                      Dermal fillers for marionette lines work by replenishing lost volume in the deeper layers of your skin. Our expert practitioners strategically inject premium <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid</Link> fillers marionette lines along the creases and in the surrounding areas to:
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
