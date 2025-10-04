@@ -797,7 +797,7 @@ const MarionnetteLines = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Treatment Benefits & Aftercare</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">Marionette Lines Benefits & Aftercare</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Understand the benefits of marionette line treatment and important aftercare guidelines for optimal results.
               </p>
@@ -821,13 +821,6 @@ const MarionnetteLines = () => {
                       <div>
                         <h4 className="text-white font-semibold mb-1">Volume Restoration</h4>
                         <p className="text-gray-300 text-sm">Replenishes lost facial volume for natural lift and rejuvenation</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                      <div>
-                        <h4 className="text-white font-semibold mb-1">Natural Results</h4>
-                        <p className="text-gray-300 text-sm">Maintains your unique features and expressions with subtle enhancement</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
