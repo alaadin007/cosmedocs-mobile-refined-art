@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, Instagram, Award, Shield } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Button } from "@/components/ui/button";
 
@@ -124,6 +124,89 @@ const Testimonials = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Trust Badges Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+                <Shield className="w-8 h-8 text-primary" />
+                Don't Just Take Our Word For It
+              </h2>
+              <p className="text-muted-foreground">
+                Trusted by leading institutions and certified professionals
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center max-w-6xl mx-auto">
+              {[
+                { name: "Royal College of Surgeons", icon: Award },
+                { name: "University College London", icon: Award },
+                { name: "Cambridge University", icon: Award },
+                { name: "British College", icon: Award },
+                { name: "American Academy", icon: Award }
+              ].map((institution, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center justify-center p-6 bg-background rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <institution.icon className="w-12 h-12 text-primary mb-2" />
+                  <p className="text-xs text-center text-muted-foreground font-medium">
+                    {institution.name}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Instagram Section */}
+        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center max-w-3xl mx-auto"
+            >
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Instagram className="w-10 h-10 text-primary" />
+                <h2 className="text-3xl md:text-4xl font-bold">Follow Us on Instagram</h2>
+              </div>
+              <p className="text-lg text-muted-foreground mb-8">
+                See our latest treatments, transformations, and client success stories.
+                Join our community @cosmedocs
+              </p>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 py-6 text-lg"
+                asChild
+              >
+                <a 
+                  href="https://www.instagram.com/cosmedocs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Instagram className="w-5 h-5" />
+                  View on Instagram
+                </a>
+              </Button>
+            </motion.div>
           </div>
         </section>
 
