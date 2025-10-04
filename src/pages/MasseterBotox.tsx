@@ -18,6 +18,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Zap, Users, Shield, ChevronLeft, ChevronRight, CheckCircle, Award, GraduationCap, Palette, Heart, Calendar, Activity, Syringe, AlertCircle, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import ClientReviews from '@/components/ClientReviews';
 
 const MasseterBotox = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -938,6 +939,9 @@ const MasseterBotox = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Additional Information Section - Previously Hidden SEO Content */}
         <section className="py-20 bg-accent">

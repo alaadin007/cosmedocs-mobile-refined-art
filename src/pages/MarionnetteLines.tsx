@@ -18,6 +18,7 @@ import { Breadcrumb } from '@/components/Breadcrumb';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Award, GraduationCap, Palette, Heart, MapPin, Phone } from 'lucide-react';
+import ClientReviews from '@/components/ClientReviews';
 
 const MarionnetteLines = () => {
   const seoData = generateSEOMetadata(
@@ -1449,6 +1450,9 @@ const MarionnetteLines = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Hidden SEO content */}
         <div className="sr-only">

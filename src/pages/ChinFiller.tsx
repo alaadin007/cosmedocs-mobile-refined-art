@@ -8,6 +8,7 @@ import BeforeAfterGrid from "@/components/BeforeAfterGrid";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
+import ClientReviews from '@/components/ClientReviews';
 import {
   Carousel,
   CarouselContent,
@@ -1115,6 +1116,9 @@ const ChinFiller = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">

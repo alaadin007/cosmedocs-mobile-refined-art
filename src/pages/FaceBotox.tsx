@@ -14,6 +14,7 @@ import {
 import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check, Activity, Syringe, GraduationCap, Palette, Brain, Droplets, RefreshCw, User, Sparkles } from "lucide-react";
 import PopularTreatments from '@/components/PopularTreatments';
+import ClientReviews from '@/components/ClientReviews';
 
 export default function FaceBotox() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -1310,6 +1311,9 @@ export default function FaceBotox() {
             </div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">

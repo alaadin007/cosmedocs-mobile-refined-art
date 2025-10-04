@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import ClientReviews from '@/components/ClientReviews';
 import jawlineFiller1ml from "@/assets/jawline-filler-1ml-before-after.png";
 import jawlineFiller1mlTransformation from "@/assets/jawline-filler-1ml-transformation.jpg";
 import jawlineFiller2ml from "@/assets/jawline-filler-2ml-before-after.png";
@@ -1188,6 +1189,9 @@ const JawlineFiller = () => {
             </Collapsible>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
       </div>
     </>
   );

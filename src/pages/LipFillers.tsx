@@ -15,6 +15,7 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Link } from "react-router-dom";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import ClientReviews from '@/components/ClientReviews';
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
@@ -885,6 +886,9 @@ const LipFillers = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Hidden SEO content for search engines */}
         <div className="sr-only">

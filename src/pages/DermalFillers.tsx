@@ -8,6 +8,7 @@ import { CheckCircle, Clock, Star, Award, Eye, Zap, ArrowRight, Users, BookOpen,
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Link } from 'react-router-dom';
+import ClientReviews from '@/components/ClientReviews';
 
 const DermalFillerMakeover = () => {
   const seoData = generateSEOMetadata(
@@ -1120,6 +1121,9 @@ const DermalFillerMakeover = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
