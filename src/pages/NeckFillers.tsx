@@ -13,7 +13,9 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Shield } from "lucide-react";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import ClientReviews from "@/components/ClientReviews";
 
 const NeckFillers = () => {
   const seoData = generateSEOMetadata(
@@ -94,96 +96,208 @@ const NeckFillers = () => {
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="neck fillers London, neck wrinkles, tech neck, dermal fillers, Harley Street, cosmetic treatment, neck lines, hyaluronic acid, neck contouring" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+        <meta name="keywords" content="neck fillers London, neck wrinkles, tech neck, dermal fillers, Harley Street, cosmetic treatment, neck lines, hyaluronic acid, neck contouring, horizontal neck lines, vertical neck lines, wrinkly neck, tech neck lines, neck filler before and after, how to get rid of neck lines, lines on neck, neck lift non surgical, botox for neck lines" />
+        
+        {/* Structured Data - MedicalProcedure */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Neck Filler Treatment",
+            "description": "Professional neck filler treatment to smooth horizontal neck lines, vertical neck lines, and tech neck wrinkles using premium hyaluronic acid fillers",
+            "procedureType": "Cosmetic dermal filler injection",
+            "bodyLocation": "Neck",
+            "preparation": "Avoid blood-thinning medications, stay hydrated, avoid sun exposure",
+            "followup": "Minimal downtime, avoid strenuous exercise for 24 hours",
+            "howPerformed": "Injectable hyaluronic acid fillers administered by expert cosmetic doctors"
+          })}
+        </script>
+
+        {/* Structured Data - LocalBusiness */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert neck filler treatments in London",
+            "description": "Expert neck filler treatments in London - smooth neck lines and wrinkles with premium dermal fillers",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
+            "priceRange": "££",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.5194",
+              "longitude": "-0.1468"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "medicalSpecialty": "Cosmetic Medicine"
+          })}
+        </script>
+
+        {/* Structured Data - FAQPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+
+        {/* Structured Data - BreadcrumbList */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://cosmedocs.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Neck Fillers",
+                "item": seoData.canonical
+              }
+            ]
+          })}
+        </script>
+
+        {/* Structured Data - ImageGallery */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "name": "Neck Filler Before and After Results",
+            "description": "Real patient results from neck filler treatments at Cosmedocs London",
+            "image": beforeAfterImages.map(img => ({
+              "@type": "ImageObject",
+              "url": img.src,
+              "description": img.alt,
+              "caption": img.caption
+            }))
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section - Matching LipFillers style */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-20">
+          <Breadcrumb 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Neck Fillers' }
+            ]} 
+          />
+        </div>
+
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-indigo-900/20"></div>
           <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Neck Fillers</span>
-                  <span className="block text-sm mt-4">Invisible art - fix neck wrinkles and tech neck lines with premium dermal fillers</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                  Neck Fillers London
+                  <span className="block text-2xl md:text-3xl text-purple-300 mt-4 font-normal">
+                    Say Bye to Sag | Smooth Neck Lines & Tech Neck
+                  </span>
                 </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">say bye to sag and get smoother, wrinkle free skin</p>
-                  <p className="text-sm text-gray-300">#cosmeneck - Check out our IG for hundreds more authentic looking neck enhancement transformations</p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4">
+                
+                <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                  Invisible art - fix neck wrinkles and tech neck lines with premium dermal fillers. Get smoother, wrinkle-free skin with our expert neck filler treatments.
+                </p>
+
+                <p className="text-sm text-purple-300 mb-8">
+                  #cosmeneck - Check out our IG for hundreds more authentic looking neck enhancement transformations
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
+                    size="lg"
                     className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
                     onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                   >
                     Book Consultation
                   </Button>
                   <Button 
+                    size="lg"
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
                     onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     View Price List
                   </Button>
                 </div>
               </motion.div>
-              
-              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-16 bg-accent">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Neck Filler Treatment</h2>
+              <h2 className="text-4xl font-bold mb-4 text-white">Neck Filler Treatment Overview</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+                Quick, effective treatment to smooth neck lines and restore youthful contours
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">30-45 minutes including consultation</p>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
+                  <CardContent className="pt-6">
+                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Clock className="text-purple-300" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">Treatment Duration</h3>
+                    <p className="text-gray-300">30-45 minutes including consultation</p>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -191,13 +305,16 @@ const NeckFillers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
+                  <CardContent className="pt-6">
+                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Calendar className="text-purple-300" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">Results Duration</h3>
+                    <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -205,13 +322,16 @@ const NeckFillers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">Minimal downtime, return to work same day</p>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
+                  <CardContent className="pt-6">
+                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Activity className="text-purple-300" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">Recovery Time</h3>
+                    <p className="text-gray-300">Minimal downtime, return to work same day</p>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <motion.div
@@ -219,13 +339,16 @@ const NeckFillers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-center"
               >
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Syringe className="text-purple-600" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
+                  <CardContent className="pt-6">
+                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Syringe className="text-purple-300" size={28} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">Anaesthesia</h3>
+                    <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
           </div>
@@ -281,7 +404,7 @@ const NeckFillers = () => {
         </section>
 
         {/* Treatment Overview */}
-        <section className="py-20 bg-accent">
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -291,7 +414,7 @@ const NeckFillers = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6">Neckline Filler Treatment</h2>
-              <p className="text-gray-300 max-w-4xl mx-auto text-lg">
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
                 Neck fillers, also known as neck injections or neck contouring, are a non-surgical cosmetic 
                 procedure designed to improve the overall look of the neck. This treatment targets neck wrinkles, 
                 neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen 
@@ -299,7 +422,7 @@ const NeckFillers = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {/* What Causes Neck Wrinkles */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -307,41 +430,47 @@ const NeckFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">What Causes Neck Wrinkles?</h3>
-                <p className="text-gray-300 mb-6">
-                  Necklines, often referred to as neck wrinkles, are creases or folds that develop on the neck skin. 
-                  These lines can appear as horizontal neck lines or vertical neck lines, varying in depth and severity.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Ageing</h4>
-                      <p className="text-gray-300 text-sm">Natural loss of collagen and elasticity</p>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-purple-300">What Causes Neck Wrinkles?</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <p className="text-gray-300 leading-relaxed">
+                      Necklines, often referred to as neck wrinkles, are creases or folds that develop on the neck skin. 
+                      These lines can appear as horizontal neck lines or vertical neck lines, varying in depth and severity.
+                    </p>
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Ageing</h4>
+                          <p className="text-gray-400 text-sm">Natural loss of collagen and elasticity</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Sun Exposure</h4>
+                          <p className="text-gray-400 text-sm">Damages neck skin, accelerating wrinkle formation</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Tech Neck</h4>
+                          <p className="text-gray-400 text-sm">Daily actions like looking down at devices lead to tech neck lines</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Genetics & Lifestyle</h4>
+                          <p className="text-gray-400 text-sm">Predisposition to lines and smoking depleting skin elasticity</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Sun Exposure</h4>
-                      <p className="text-gray-300 text-sm">Damages neck skin, accelerating wrinkle formation</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Tech Neck</h4>
-                      <p className="text-gray-300 text-sm">Daily actions like looking down at devices lead to tech neck lines</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-white">Genetics & Lifestyle</h4>
-                      <p className="text-gray-300 text-sm">Predisposition to lines and smoking depleting skin elasticity</p>
-                    </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               {/* How Dermal Fillers Help */}
@@ -351,38 +480,44 @@ const NeckFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-purple-300">How Dermal Fillers Help</h3>
-                <p className="text-gray-300 mb-6">
-                  Dermal fillers provide an effective solution for treating neck wrinkles and neck lines. 
-                  Using hyaluronic acid fillers, these treatments restore hydration and stimulate collagen production.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Replenish lost volume in the neck area</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Smooth out horizontal and vertical neck lines</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Improve neck skin texture and elasticity</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <p className="text-gray-300">Reduce tech neck wrinkles and sagging skin</p>
-                  </div>
-                </div>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-purple-300">How Dermal Fillers Help</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <p className="text-gray-300 leading-relaxed">
+                      Dermal fillers provide an effective solution for treating neck wrinkles and neck lines. 
+                      Using hyaluronic acid fillers, these treatments restore hydration and stimulate collagen production.
+                    </p>
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
+                        <p className="text-gray-300">Replenish lost volume in the neck area</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
+                        <p className="text-gray-300">Smooth out horizontal and vertical neck lines</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
+                        <p className="text-gray-300">Improve neck skin texture and elasticity</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
+                        <p className="text-gray-300">Reduce tech neck wrinkles and sagging skin</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* Benefits and Aftercare Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {/* Benefits of Neck Fillers */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -390,12 +525,12 @@ const NeckFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-3xl font-bold mb-8 text-white">Benefits of Neck Fillers</h3>
-                <p className="text-gray-300 mb-8">
+                <h3 className="text-3xl font-bold mb-6 text-white">Benefits of Neck Fillers</h3>
+                <p className="text-gray-300 mb-8 leading-relaxed">
                   Experience the transformative benefits of professional neck filler treatment at Cosmedocs.
                 </p>
                 
-                <div className="grid grid-cols-1 gap-6">
+                <div className="grid grid-cols-1 gap-4">
                   {[
                     "Smooths Horizontal Neck Lines",
                     "Enhances Skin Quality",
@@ -410,12 +545,10 @@ const NeckFillers = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="bg-black rounded-lg p-4 border border-gray-800 flex items-center space-x-4"
+                      className="bg-gradient-to-r from-purple-900/30 to-transparent rounded-lg p-4 border border-purple-500/20 flex items-center space-x-4"
                     >
-                      <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
-                        <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
-                      </div>
-                      <h4 className="text-white font-semibold">{benefit}</h4>
+                      <CheckCircle className="text-purple-400 flex-shrink-0" size={24} />
+                      <h4 className="text-white font-medium">{benefit}</h4>
                     </motion.div>
                   ))}
                 </div>
@@ -428,55 +561,59 @@ const NeckFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-3xl font-bold mb-8 text-white">Aftercare</h3>
-                <p className="text-gray-300 mb-8">
+                <h3 className="text-3xl font-bold mb-6 text-white">Aftercare</h3>
+                <p className="text-gray-300 mb-8 leading-relaxed">
                   Follow these essential aftercare guidelines to ensure optimal results and minimize any potential side effects.
                 </p>
                 
-                <div className="space-y-6">
-                  <div className="bg-black rounded-lg p-6 border border-gray-800">
-                    <h4 className="text-xl font-semibold text-white mb-4">Immediate Aftercare (24-48 hours)</h4>
-                    <div className="space-y-3">
+                <div className="space-y-4">
+                  <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                    <CardHeader>
+                      <CardTitle className="text-lg text-white">Immediate Aftercare (24-48 hours)</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Apply ice packs for 10-15 minutes to reduce swelling</p>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Avoid strenuous exercise and excessive heat</p>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Sleep with your head elevated</p>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Avoid touching or massaging the treated area</p>
                       </div>
-                    </div>
-                  </div>
+                    </CardContent>
+                  </Card>
 
-                  <div className="bg-black rounded-lg p-6 border border-gray-800">
-                    <h4 className="text-xl font-semibold text-white mb-4">First Week</h4>
-                    <div className="space-y-3">
+                  <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                    <CardHeader>
+                      <CardTitle className="text-lg text-white">First Week</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Use gentle skincare products</p>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Avoid saunas, steam rooms, and prolonged sun exposure</p>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Stay hydrated and maintain a healthy diet</p>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 text-sm">Contact clinic if you experience unusual symptoms</p>
                       </div>
-                    </div>
-                  </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </motion.div>
             </div>
@@ -485,47 +622,48 @@ const NeckFillers = () => {
 
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-accent">
+        <section id="pricing-section" className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Neck Filler Pricing London</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-4xl font-bold mb-6 text-white">Neck Filler Pricing London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
                 Transparent pricing for premium neck enhancement treatments. All prices include consultation, 
                 treatment, and aftercare support from our expert medical team.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border-purple-500 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Single Neck Area</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£325</div>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full hover:border-purple-400/40 transition-all">
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-white text-xl mb-4">Single Neck Area</CardTitle>
+                    <div className="text-purple-300 text-5xl font-bold mb-2">£325</div>
+                    <p className="text-gray-400 text-sm">per ml</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Perfect for targeted neck line treatment</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
+                    <p className="text-gray-300 text-center mb-6">Perfect for targeted neck line treatment</p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={18} />
                         <span className="text-gray-300 text-sm">Consultation included</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={18} />
                         <span className="text-gray-300 text-sm">Premium hyaluronic acid</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={18} />
                         <span className="text-gray-300 text-sm">Aftercare support</span>
                       </div>
                     </div>
@@ -539,32 +677,33 @@ const NeckFillers = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">POPULAR</span>
+                <Card className="bg-gradient-to-br from-purple-600 to-purple-700 border-purple-400 h-full relative shadow-2xl shadow-purple-500/20">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-6 py-2 rounded-full text-sm font-bold shadow-lg">MOST POPULAR</span>
                   </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Full Neck Treatment</CardTitle>
-                    <div className="text-white text-4xl font-bold">£425</div>
+                  <CardHeader className="text-center pb-4 pt-8">
+                    <CardTitle className="text-white text-xl mb-4">Full Neck Treatment</CardTitle>
+                    <div className="text-white text-5xl font-bold mb-2">£425</div>
+                    <p className="text-purple-100 text-sm">comprehensive treatment</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">Comprehensive neck enhancement with multiple injection points</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                    <p className="text-purple-50 text-center mb-6">Comprehensive neck enhancement with multiple injection points</p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-white flex-shrink-0 mt-0.5" size={18} />
+                        <span className="text-purple-50 text-sm">Comprehensive consultation</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Premium hyaluronic acid</span>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-white flex-shrink-0 mt-0.5" size={18} />
+                        <span className="text-purple-50 text-sm">Premium hyaluronic acid</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-white flex-shrink-0 mt-0.5" size={18} />
+                        <span className="text-purple-50 text-sm">Extended aftercare support</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">2-week follow-up</span>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-white flex-shrink-0 mt-0.5" size={18} />
+                        <span className="text-purple-50 text-sm">2-week follow-up</span>
                       </div>
                     </div>
                   </CardContent>
@@ -577,24 +716,25 @@ const NeckFillers = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-black border-gray-700 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">£50</div>
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full hover:border-purple-400/40 transition-all">
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-white text-xl mb-4">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-5xl font-bold mb-2">£50</div>
+                    <p className="text-gray-400 text-sm">redeemable</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
+                    <p className="text-gray-300 text-center mb-6">Professional assessment and treatment planning</p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={18} />
                         <span className="text-gray-300 text-sm">Full neck assessment</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={18} />
                         <span className="text-gray-300 text-sm">Treatment recommendations</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-500" size={16} />
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={18} />
                         <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
                       </div>
                     </div>
@@ -610,10 +750,14 @@ const NeckFillers = () => {
               viewport={{ once: true }}
               className="text-center mt-12"
             >
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-400 mb-8 text-sm">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-3 text-lg font-semibold">
+              <Button 
+                size="lg"
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-10 py-6 text-lg font-semibold shadow-xl"
+                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+              >
                 Book Your Consultation
               </Button>
             </motion.div>
@@ -621,8 +765,68 @@ const NeckFillers = () => {
         </section>
 
 
+        {/* Medical Authority & Research Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Medical Authority & Research</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Our neck filler treatments are backed by extensive medical research and endorsed by leading aesthetic medicine authorities.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                <CardHeader>
+                  <Shield className="text-purple-400 mb-2" size={32} />
+                  <CardTitle className="text-white text-lg">Clinical Evidence</CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-300 text-sm">
+                  <p>Research published in <a href="https://www.ncbi.nlm.nih.gov" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">NCBI</a> demonstrates the safety and efficacy of hyaluronic acid fillers for neck rejuvenation.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                <CardHeader>
+                  <Award className="text-purple-400 mb-2" size={32} />
+                  <CardTitle className="text-white text-lg">Professional Bodies</CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-300 text-sm">
+                  <p>Aligned with standards set by <a href="https://www.bapras.org.uk" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">BAPRAS</a> for aesthetic procedures.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                <CardHeader>
+                  <CheckCircle className="text-purple-400 mb-2" size={32} />
+                  <CardTitle className="text-white text-lg">Accredited Clinic</CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-300 text-sm">
+                  <p>Registered with <a href="https://www.saveface.co.uk" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Save Face</a>, the UK's official register of accredited practitioners.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                <CardHeader>
+                  <GraduationCap className="text-purple-400 mb-2" size={32} />
+                  <CardTitle className="text-white text-lg">Regulatory Compliance</CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-300 text-sm">
+                  <p>Fully compliant with <a href="https://www.cqc.org.uk" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">CQC</a> standards for patient safety and care quality.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-black">
+        <section className="py-20">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -753,31 +957,43 @@ const NeckFillers = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20">
+        <section className="py-20 bg-accent">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12 border border-purple-500/20"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for a Smoother, Younger Neck?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              <h2 className="text-4xl font-bold mb-6">Ready for a Smoother, Younger Neck?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
                 Book your consultation with our expert cosmetic doctors and discover how neck fillers 
                 can smooth away neck lines for a more youthful appearance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                <Button 
+                  size="lg"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-10 py-6 text-lg font-semibold"
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                >
                   Book Free Consultation
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                <Button 
+                  size="lg"
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-10 py-6 text-lg font-semibold"
+                  onClick={() => window.open('tel:03330551503')}
+                >
                   Call 0333 0551 503
                 </Button>
               </div>
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Hidden SEO content for search engines */}
         <div className="sr-only">
