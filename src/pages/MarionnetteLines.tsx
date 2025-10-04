@@ -659,22 +659,162 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6">The Liquid Facelift Advantage</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-                Our marionette line treatment is often part of a comprehensive liquid facelift approach, designed specifically for younger individuals who want to address early signs of aging without surgery. This non-invasive procedure combines multiple <AutoLinkedText>dermal filler treatments</AutoLinkedText> to restore facial volume, smooth lines, and enhance natural contours.
+                Our marionette line treatment is often part of a comprehensive liquid facelift approach, designed specifically for younger individuals who want to address early signs of ageing without surgery. This non-invasive procedure combines multiple <AutoLinkedText>dermal filler treatments</AutoLinkedText> to restore facial volume, smooth lines, and enhance natural contours.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <Card className="bg-gray-900 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-purple-300">Volume Restoration</CardTitle>
-                </CardHeader>
-              </Card>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                {/* What is a Liquid Facelift */}
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-gray-900 border-purple-500 border-2 h-full">
+                    <CardHeader>
+                      <CardTitle className="text-purple-300 text-2xl">What is a Liquid Facelift?</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <p className="text-gray-300">
+                        A liquid facelift is a revolutionary non-surgical cosmetic procedure that uses strategic dermal filler placement to restore youthful facial contours without the need for invasive surgery, anaesthesia, or lengthy recovery times.
+                      </p>
+                      <p className="text-gray-300">
+                        Unlike traditional surgical facelifts that require incisions and tissue manipulation, the liquid facelift achieves remarkable rejuvenation through precise injection of hyaluronic acid-based fillers into targeted areas of the face.
+                      </p>
+                      <div className="space-y-2">
+                        <div className="flex items-start space-x-2">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={18} />
+                          <p className="text-gray-300 text-sm">Addresses multiple facial areas in one session</p>
+                        </div>
+                        <div className="flex items-start space-x-2">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={18} />
+                          <p className="text-gray-300 text-sm">Customised treatment plan for each patient</p>
+                        </div>
+                        <div className="flex items-start space-x-2">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={18} />
+                          <p className="text-gray-300 text-sm">Immediate visible results with no surgery</p>
+                        </div>
+                        <div className="flex items-start space-x-2">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={18} />
+                          <p className="text-gray-300 text-sm">Perfect for patients aged 30-50</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
-              <Card className="bg-gray-900 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-purple-300">Natural Results</CardTitle>
-                </CardHeader>
-              </Card>
+                {/* Treatment Areas */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-gray-900 border-purple-500 border-2 h-full">
+                    <CardHeader>
+                      <CardTitle className="text-purple-300 text-2xl">Areas Treated in a Liquid Facelift</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Marionette Lines</h4>
+                          <p className="text-gray-300 text-sm">Vertical lines from mouth corners to chin</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Nasolabial Folds</h4>
+                          <p className="text-gray-300 text-sm">Smile lines running from nose to mouth corners</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Cheek Volume</h4>
+                          <p className="text-gray-300 text-sm">Restores youthful cheek fullness and lift</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Tear Troughs</h4>
+                          <p className="text-gray-300 text-sm">Under-eye hollowing for refreshed appearance</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Jawline & Jowls</h4>
+                          <p className="text-gray-300 text-sm">Defines and contours the lower face</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Temples</h4>
+                          <p className="text-gray-300 text-sm">Fills temple hollowing for facial harmony</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Lips</h4>
+                          <p className="text-gray-300 text-sm">Enhances volume and corrects asymmetry</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
+
+              {/* Why Choose Liquid Facelift */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center">Why Choose a Liquid Facelift Over Surgery?</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="text-center">
+                        <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                          <Clock size={28} />
+                        </div>
+                        <h4 className="text-white font-semibold mb-2">No Surgery, No Downtime</h4>
+                        <p className="text-gray-300 text-sm">
+                          Treatment completed in 45-60 minutes with immediate return to daily activities. No incisions, scars, or general anaesthesia required.
+                        </p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                          <Palette size={28} />
+                        </div>
+                        <h4 className="text-white font-semibold mb-2">Natural-Looking Results</h4>
+                        <p className="text-gray-300 text-sm">
+                          Subtle enhancement that preserves your unique features and expressions. The invisible art of aesthetic medicine at its finest.
+                        </p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                          <Heart size={28} />
+                        </div>
+                        <h4 className="text-white font-semibold mb-2">Reversible & Adjustable</h4>
+                        <p className="text-gray-300 text-sm">
+                          Unlike surgery, results can be adjusted or reversed if needed. Build your results gradually with top-up treatments.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -708,6 +848,20 @@ const MarionnetteLines = () => {
                     <CardTitle className="text-purple-300 text-2xl">Treatment Benefits</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Volume Restoration</h4>
+                        <p className="text-gray-300 text-sm">Replenishes lost facial volume for natural lift and rejuvenation</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-semibold mb-1">Natural Results</h4>
+                        <p className="text-gray-300 text-sm">Maintains your unique features and expressions with subtle enhancement</p>
+                      </div>
+                    </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
                       <div>
