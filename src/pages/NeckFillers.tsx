@@ -539,7 +539,16 @@ const NeckFillers = () => {
                     "Non Surgery Neck Lift Alternative",
                     "Improves Wrinkly Neck Appearance",
                     "Natural Non Surgical Chin Lift Effect",
-                    "Affordable vs Face and Neck Lift Cost UK"
+                    "Affordable vs Face and Neck Lift Cost UK",
+                    "Smooths Neck Folds and Neckline Wrinkles",
+                    "Reduces Horizontal Neck Lines Instantly",
+                    "Treats Tech Neck and Neck Creases",
+                    "Stimulates Collagen for Long-Term Results",
+                    "Immediate, Visible Improvement",
+                    "Safe, Reversible Treatment",
+                    "Minimal Recovery - Return to Work Same Day",
+                    "Natural-Looking Enhancement",
+                    "Boosts Confidence and Self-Esteem"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
