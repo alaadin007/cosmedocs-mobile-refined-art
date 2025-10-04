@@ -66,7 +66,7 @@ const MarionnetteLines = () => {
     },
     {
       question: "Can I use botox on marionette lines or do I need fillers?",
-      answer: "While botox can help with some muscle activity, dermal filler treatment is generally more effective for marionette lines. Botox may provide limited results as these are primarily caused by volume loss rather than muscle activity. Filler is the gold standard treatment as it directly addresses the structural changes causing these lines."
+      answer: "While Botox can help with some muscle activity, dermal filler treatment is generally more effective for marionette lines. Botox may provide limited results as these are primarily caused by volume loss rather than muscle activity. Filler is the gold standard treatment as it directly addresses the structural changes causing these lines."
     },
     {
       question: "How to get rid of marionette lines effectively?",
@@ -86,7 +86,7 @@ const MarionnetteLines = () => {
     },
     {
       question: "Can marionette line treatment be combined with other procedures?",
-      answer: "Absolutely! The treatment works excellently in combination with cheek volume enhancement, nasolabial fold correction, and lip hydration treatments. This comprehensive approach addresses multiple aspects of facial ageing for more harmonious and natural-looking results."
+      answer: "Absolutely! The treatment works excellently in combination with cheek volume enhancement, nasolabial fold correction, and <Link to='/lip-fillers' className='text-purple-300 hover:text-purple-200 underline'>lip hydration</Link> treatments. This comprehensive approach addresses multiple aspects of facial ageing for more harmonious and natural-looking results."
     },
     {
       question: "What is the recovery time for marionette line fillers?",
@@ -504,7 +504,7 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6">What are Marionette Lines?</h2>
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These marionettes lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive facial expressions over time.
+                Marionette lines are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These marionettes lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">facial expressions</Link> over time.
               </p>
               
               <Card className="bg-black border-purple-500 border-2 p-6">
@@ -530,7 +530,7 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6 text-white">Marionette Lines Filler: The Solution</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-                Marionette lines filler treatment is the gold standard for addressing these ageing concerns. Using premium hyaluronic acid-based dermal fillers, we restore lost volume and smooth the vertical lines that run from the corners of your mouth to your chin.
+                Marionette lines filler treatment is the gold standard for addressing these ageing concerns. Using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid-based dermal fillers</Link>, we restore lost volume and smooth the vertical lines that run from the corners of your mouth to your chin.
               </p>
             </motion.div>
 
@@ -551,7 +551,7 @@ const MarionnetteLines = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      Dermal fillers for marionette lines work by replenishing lost volume in the deeper layers of your skin. Our expert practitioners strategically inject premium hyaluronic acid fillers along the marionette lines and in the surrounding areas to:
+                      Dermal fillers for marionette lines work by replenishing lost volume in the deeper layers of your skin. Our expert practitioners strategically inject premium <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid</Link> fillers along the marionette lines and in the surrounding areas to:
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
@@ -659,7 +659,7 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6">The Liquid Facelift Advantage</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-                Our marionette line treatment is often part of a comprehensive liquid facelift approach, designed specifically for younger individuals who want to address early signs of ageing without surgery. This non-invasive procedure combines multiple <AutoLinkedText>dermal filler treatments</AutoLinkedText> to restore facial volume, smooth lines, and enhance natural contours.
+                Our marionette line treatment is often part of a comprehensive <Link to="/non-surgical-facelift" className="text-purple-300 hover:text-purple-200 underline">liquid facelift</Link> approach, designed specifically for younger individuals who want to address early signs of ageing without surgery. This non-invasive procedure combines multiple dermal filler treatments to restore facial volume, smooth lines, and enhance natural contours.
               </p>
             </motion.div>
 
@@ -678,7 +678,7 @@ const MarionnetteLines = () => {
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <p className="text-gray-300">
-                        A liquid facelift is a revolutionary non-surgical cosmetic procedure that uses strategic dermal filler placement to restore youthful facial contours without the need for invasive surgery, anaesthesia, or lengthy recovery times.
+                        A liquid facelift is a revolutionary non-surgical cosmetic procedure that uses strategic dermal filler placement to restore youthful facial contours without the need for invasive surgery, <Link to="/advanced-consultation" className="text-purple-300 hover:text-purple-200 underline">anaesthesia</Link>, or lengthy recovery times.
                       </p>
                       <p className="text-gray-300">
                         Unlike traditional surgical facelifts that require incisions and tissue manipulation, the liquid facelift achieves remarkable rejuvenation through precise injection of hyaluronic acid-based fillers into targeted areas of the face.
