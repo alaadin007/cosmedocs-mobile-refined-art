@@ -260,37 +260,31 @@ const NeckFillers = () => {
         </section>
 
         {/* Treatment Summary */}
-        <section className="py-20 bg-accent">
+        <section className="py-16 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4 text-white">Neck Filler Treatment Overview</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Quick, effective treatment to smooth neck lines and restore youthful contours
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Neck Filler Treatment</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
-                  <CardContent className="pt-6">
-                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Clock className="text-purple-300" size={28} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Treatment Duration</h3>
-                    <p className="text-gray-300">30-45 minutes including consultation</p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">30-45 minutes including consultation</p>
               </motion.div>
 
               <motion.div
@@ -298,16 +292,13 @@ const NeckFillers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
-                  <CardContent className="pt-6">
-                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Calendar className="text-purple-300" size={28} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Results Duration</h3>
-                    <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">6-12 months with premium hyaluronic acid</p>
               </motion.div>
 
               <motion.div
@@ -315,16 +306,13 @@ const NeckFillers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
-                  <CardContent className="pt-6">
-                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Activity className="text-purple-300" size={28} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Recovery Time</h3>
-                    <p className="text-gray-300">Minimal downtime, return to work same day</p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, return to work same day</p>
               </motion.div>
 
               <motion.div
@@ -332,16 +320,13 @@ const NeckFillers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full text-center">
-                  <CardContent className="pt-6">
-                    <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Syringe className="text-purple-300" size={28} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">Anaesthesia</h3>
-                    <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine in filler</p>
               </motion.div>
             </div>
           </div>
