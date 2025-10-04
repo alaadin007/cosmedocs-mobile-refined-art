@@ -96,28 +96,36 @@ const Testimonials = () => {
           </div>
         </section>
 
-        {/* Testimonials Grid */}
+        {/* Testimonials Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="max-w-4xl mx-auto space-y-12">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
+                  className="relative"
                 >
-                  <Card className="p-6 h-full relative hover:shadow-lg transition-shadow">
-                    <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
-                    <div className="space-y-4">
-                      <p className="text-foreground/80 leading-relaxed">
-                        "{testimonial.text}"
-                      </p>
-                      <div className="pt-4 border-t border-border">
-                        <p className="font-semibold text-primary">
-                          — {testimonial.initials}
+                  <Card className="p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-l-primary">
+                    <div className="flex items-start gap-6">
+                      <Quote className="w-12 h-12 text-primary/30 flex-shrink-0 mt-1" />
+                      <div className="flex-1 space-y-4">
+                        <p className="text-lg leading-relaxed text-foreground/90 italic">
+                          {testimonial.text}
                         </p>
+                        <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+                          <div className="flex gap-0.5">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                            ))}
+                          </div>
+                          <p className="font-bold text-primary text-lg">
+                            {testimonial.initials}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </Card>
@@ -127,45 +135,26 @@ const Testimonials = () => {
           </div>
         </section>
 
-        {/* Trust Badges Section */}
-        <section className="py-16 bg-muted/30">
+        {/* Statistics Section */}
+        <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center gap-3">
-                <Shield className="w-8 h-8 text-primary" />
-                Don't Just Take Our Word For It
-              </h2>
-              <p className="text-muted-foreground">
-                Trusted by leading institutions and certified professionals
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {[
-                { name: "Royal College of Surgeons", icon: Award },
-                { name: "University College London", icon: Award },
-                { name: "Cambridge University", icon: Award },
-                { name: "British College", icon: Award },
-                { name: "American Academy", icon: Award }
-              ].map((institution, index) => (
+                { number: "10,000+", label: "Happy Clients", icon: Star },
+                { number: "15+", label: "Years Experience", icon: Award },
+                { number: "5-Star", label: "Reviews", icon: Shield }
+              ].map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center justify-center p-6 bg-background rounded-lg hover:shadow-md transition-shadow"
+                  className="text-center p-8 bg-background rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <institution.icon className="w-12 h-12 text-primary mb-2" />
-                  <p className="text-xs text-center text-muted-foreground font-medium">
-                    {institution.name}
-                  </p>
+                  <stat.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-4xl font-bold text-primary mb-2">{stat.number}</h3>
+                  <p className="text-muted-foreground font-medium">{stat.label}</p>
                 </motion.div>
               ))}
             </div>
