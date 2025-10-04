@@ -504,7 +504,7 @@ const MarionnetteLines = () => {
             >
               <h2 className="text-4xl font-bold mb-6">What are Marionette Lines?</h2>
               <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                Marionette lines on face are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These marionettes lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">facial expressions</Link> over time. Understanding what is marionette lines helps determine the best treatment for marionette lines for your individual needs.
+                Marionette lines on face are the vertical creases that extend from the corners of your mouth down towards your chin, creating a downturned expression that can make you appear sad or older than you feel. These marionettes lines develop due to natural aging processes, volume loss in the facial tissues, and repetitive facial expressions over time. Understanding what is marionette lines helps determine the best treatment for marionette lines for your individual needs.
               </p>
               
               <Card className="bg-black border-purple-500 border-2 p-6">
