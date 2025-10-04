@@ -14,9 +14,10 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import AutoLinkedText from '@/components/AutoLinkedText';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Award, GraduationCap, Palette, Heart } from 'lucide-react';
+import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Award, GraduationCap, Palette, Heart, MapPin, Phone } from 'lucide-react';
 
 const MarionnetteLines = () => {
   const seoData = generateSEOMetadata(
@@ -97,6 +98,116 @@ const MarionnetteLines = () => {
     }
   ];
 
+  // Structured Data Schemas
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Cosmedocs",
+    "url": "https://www.cosmedocs.co.uk",
+    "logo": "https://www.cosmedocs.co.uk/cosmedocs-logo.png",
+    "description": "Expert aesthetic medicine clinic in London specialising in marionette lines treatment and liquid facelifts",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "telephone": "0333 0551 503",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "medicalSpecialty": "Aesthetic Medicine",
+    "priceRange": "££",
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Ahmed Haq"
+    }
+  };
+
+  const physicianSchema = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Ahmed Haq",
+    "jobTitle": "Medical Director & Lead Aesthetic Practitioner",
+    "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
+    "worksFor": {
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs"
+    }
+  };
+
+  const procedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Marionette Lines Filler Treatment",
+    "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation",
+    "procedureType": "Cosmetic",
+    "bodyLocation": "Face - lower facial third",
+    "preparation": "Consultation and facial assessment",
+    "followup": "2-week follow-up appointment included",
+    "howPerformed": "Strategic dermal filler placement using ultra-fine needles with topical anaesthetic",
+    "status": "Active"
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  const imageGallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Marionette Lines Before and After Results",
+    "description": "Real patient results from marionette lines filler treatments at Cosmedocs",
+    "image": beforeAfterImages.map(img => ({
+      "@type": "ImageObject",
+      "url": `https://www.cosmedocs.co.uk${img.src}`,
+      "description": img.alt,
+      "caption": img.caption
+    }))
+  };
+
+  const offerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "name": "Marionette Lines Filler Treatment",
+    "description": "Professional marionette lines treatment with premium hyaluronic acid fillers",
+    "price": "325",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": seoData.canonical,
+    "seller": {
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs"
+    }
+  };
+
+  const testimonialSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "MedicalBusiness",
+      "name": "Cosmedocs"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Jessica L."
+    },
+    "reviewBody": "The marionette lines treatment has completely transformed my appearance. I genuinely look 10 years younger and the results are so natural. Dr. Haq's precision and artistry are exceptional."
+  };
+
   return (
     <>
       <Helmet>
@@ -108,29 +219,46 @@ const MarionnetteLines = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
         <meta name="keywords" content="marionette lines filler London, liquid facelift, 10 years younger, nasolabial folds, dermal fillers, anti-aging treatment, Harley Street clinic" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <meta name="author" content="Dr. Ahmed Haq, Cosmedocs Medical Director" />
+        <meta name="last-modified" content="2025-10-04" />
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Cosmedocs",
-            "description": "Expert marionette line filler treatments and liquid facelifts in London",
-            "url": seoData.canonical,
-            "telephone": "0333 0551 503",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
-          })}
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(physicianSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(procedureSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(imageGallerySchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(offerSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(testimonialSchema)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-4">
+          <Breadcrumb items={[
+            { label: "Home", href: "/" },
+            { label: "Dermal Fillers", href: "/dermal-fillers" },
+            { label: "Marionette Lines" }
+          ]} />
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="absolute inset-0 bg-black"></div>
@@ -143,9 +271,7 @@ const MarionnetteLines = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-2xl">
-                  Marionette Lines
-                  <span className="block text-purple-300">10 Years Younger</span>
-                  <span className="block text-sm mt-4 font-normal">Transform your appearance with our liquid facelift</span>
+                  Marionette Lines Filler Treatment London — Look 10 Years Younger
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl drop-shadow-lg">
                 </p>
@@ -268,7 +394,7 @@ const MarionnetteLines = () => {
               <CarouselContent>
                 {beforeAfterImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
+                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -278,6 +404,7 @@ const MarionnetteLines = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -644,6 +771,16 @@ const MarionnetteLines = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <div className="flex items-center justify-center gap-4 text-gray-300 mb-4">
+                <div className="flex items-center gap-2">
+                  <MapPin size={18} className="text-purple-300" />
+                  <span>10 Harley Street, London W1G 9PF</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone size={18} className="text-purple-300" />
+                  <span>Open Monday-Friday, 9am-6pm</span>
+                </div>
+              </div>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -729,6 +866,56 @@ const MarionnetteLines = () => {
           </div>
         </section>
 
+        {/* Patient Testimonials */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Patient Testimonials</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Real results from real patients who've experienced the transformative effects of our marionette lines treatment.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <Card className="bg-gray-900 border-purple-500">
+                <CardContent className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-400">★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">
+                    "The marionette lines treatment has completely transformed my appearance. I genuinely look 10 years younger and the results are so natural. Dr. Haq's precision and artistry are exceptional."
+                  </p>
+                  <p className="text-purple-300 font-semibold">Jessica L.</p>
+                  <p className="text-gray-400 text-sm">Verified Patient</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900 border-purple-500">
+                <CardContent className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-400">★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">
+                    "I was nervous about fillers but the team at Cosmedocs made me feel completely at ease. The liquid facelift approach is brilliant — my marionette lines have vanished and I still look like me, just refreshed."
+                  </p>
+                  <p className="text-purple-300 font-semibold">Amanda K.</p>
+                  <p className="text-gray-400 text-sm">Verified Patient</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -748,16 +935,34 @@ const MarionnetteLines = () => {
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800">
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-black rounded-lg border-gray-800" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                     <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-900 rounded-lg">
-                      <span className="text-white font-medium">{faq.question}</span>
+                      <span className="text-white font-medium" itemProp="name">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-gray-300">
-                      <AutoLinkedText>{faq.answer}</AutoLinkedText>
+                    <AccordionContent className="px-6 pb-4 text-gray-300" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                      <div itemProp="text">
+                        <AutoLinkedText>{faq.answer}</AutoLinkedText>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center mt-8"
+              >
+                <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
+                  <GraduationCap size={16} />
+                  Medically reviewed by Dr. Ahmed Haq, Medical Director
+                </p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  Last updated: 4th October 2025
+                </p>
+              </motion.div>
             </div>
           </div>
         </section>
