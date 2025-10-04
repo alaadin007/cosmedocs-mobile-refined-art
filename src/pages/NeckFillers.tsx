@@ -541,10 +541,7 @@ const NeckFillers = () => {
                     "Treats Tech Neck and Neck Creases",
                     "Stimulates Collagen for Long-Term Results",
                     "Immediate, Visible Improvement",
-                    "Safe, Reversible Treatment",
-                    "Minimal Recovery - Return to Work Same Day",
-                    "Natural-Looking Enhancement",
-                    "Boosts Confidence and Self-Esteem"
+                    "Safe, Reversible Treatment"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
