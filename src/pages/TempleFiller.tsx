@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { Button } from '@/components/ui/button';
+import ClientReviews from '@/components/ClientReviews';
 
 const TempleFiller = () => {
   const seoData = generateSEOMetadata(
@@ -847,6 +848,9 @@ const TempleFiller = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Enhanced SEO Content with Image References */}
         <div className="sr-only">
