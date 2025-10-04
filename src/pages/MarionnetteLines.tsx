@@ -62,19 +62,19 @@ const MarionnetteLines = () => {
   const faqs = [
     {
       question: "What are marionette lines and how do they develop?",
-      answer: "Marionette lines are vertical creases that extend from the corners of the mouth down towards the chin, resembling the lines on a marionette puppet's face. These lines on face develop due to natural aging, volume loss in the cheeks, decreased collagen production, and repetitive facial expressions. Marionette line can make you appear sad or aged, even when you're feeling happy."
+      answer: "Marionette lines are vertical creases that extend from the corners of the mouth down towards the chin, resembling the lines on a marionette puppet's face. These lines develop due to natural ageing, volume loss in the cheeks, decreased collagen production, and repetitive facial expressions. They can make you appear sad or aged, even when you're feeling happy."
     },
     {
       question: "Can I use botox on marionette lines or do I need fillers?",
-      answer: "While botox for marionette lines can help with some muscle activity, dermal fillers marionette lines treatment is generally more effective. Marionette lines botox may provide limited results as these are primarily caused by volume loss rather than muscle activity. Filler for marionette lines is the gold standard treatment as it directly addresses the structural changes causing these lines."
+      answer: "While botox can help with some muscle activity, dermal filler treatment is generally more effective for marionette lines. Botox may provide limited results as these are primarily caused by volume loss rather than muscle activity. Filler is the gold standard treatment as it directly addresses the structural changes causing these lines."
     },
     {
       question: "How to get rid of marionette lines effectively?",
-      answer: "The best treatment for marionette lines is dermal filler marionette lines treatment. Our expert practitioners use premium hyaluronic acid fillers marionette lines to restore volume and smooth these lines. This treatment for marionette lines can dramatically reduce their appearance and is considered the most effective way to remove marionette lines non-surgically."
+      answer: "The best treatment is dermal filler. Our expert practitioners use premium hyaluronic acid fillers to restore volume and smooth these lines. This treatment can dramatically reduce their appearance and is considered the most effective way to remove them non-surgically."
     },
     {
       question: "Is marionette line treatment part of a liquid facelift?",
-      answer: "Yes, marionette line treatment is often a key component of our liquid facelift procedures, especially for younger individuals in their 30s. The liquid facelift combines multiple dermal filler treatments to address various signs of aging without surgery, including marionette lines, nasolabial folds, cheek volume loss, and lip enhancement."
+      answer: "Yes, treatment is often a key component of our liquid facelift procedures, especially for younger individuals in their 30s. The liquid facelift combines multiple dermal filler treatments to address various signs of ageing without surgery, including nasolabial folds, cheek volume loss, and lip enhancement."
     },
     {
       question: "How long do marionette line filler results last?",
@@ -86,7 +86,7 @@ const MarionnetteLines = () => {
     },
     {
       question: "Can marionette line treatment be combined with other procedures?",
-      answer: "Absolutely! Marionette line treatment works excellently in combination with cheek volume enhancement, nasolabial fold correction, and lip hydration treatments. This comprehensive approach addresses multiple aspects of facial aging for more harmonious and natural-looking results."
+      answer: "Absolutely! The treatment works excellently in combination with cheek volume enhancement, nasolabial fold correction, and lip hydration treatments. This comprehensive approach addresses multiple aspects of facial ageing for more harmonious and natural-looking results."
     },
     {
       question: "What is the recovery time for marionette line fillers?",
@@ -94,7 +94,7 @@ const MarionnetteLines = () => {
     },
     {
       question: "How much does marionette lines filler cost UK treatment?",
-      answer: "Marionette lines filler cost UK starts from £325 per ml at our London clinic. The exact filler marionette lines cost depends on the amount of filler needed and whether additional treatments are combined. During your consultation, we'll provide a detailed treatment plan with transparent pricing for your marionette line filler treatment."
+      answer: "Filler treatment costs start from £325 per ml at our London clinic. The exact cost depends on the amount of filler needed and whether additional treatments are combined. During your consultation, we'll provide a detailed treatment plan with transparent pricing."
     }
   ];
 
@@ -724,30 +724,24 @@ const MarionnetteLines = () => {
                           <p className="text-gray-300 text-sm">Vertical lines from mouth corners to chin</p>
                         </div>
                       </div>
-                      <Link to="/nasolabial-folds" className="block hover:no-underline">
-                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
-                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                          <div className="flex-1">
-                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
-                              Nasolabial Folds
-                              <ArrowRight size={16} className="text-purple-400" />
-                            </h4>
-                            <p className="text-gray-300 text-sm">Smile lines running from nose to mouth corners</p>
-                          </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div className="flex-1">
+                          <h4 className="text-white font-semibold mb-1">
+                            <Link to="/nasolabial-folds" className="text-purple-300 hover:text-purple-200 underline">Nasolabial Folds</Link>
+                          </h4>
+                          <p className="text-gray-300 text-sm">Smile lines running from nose to mouth corners</p>
                         </div>
-                      </Link>
-                      <Link to="/cheek-filler" className="block hover:no-underline">
-                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
-                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                          <div className="flex-1">
-                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
-                              Cheek Volume
-                              <ArrowRight size={16} className="text-purple-400" />
-                            </h4>
-                            <p className="text-gray-300 text-sm">Restores youthful cheek fullness and lift</p>
-                          </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div className="flex-1">
+                          <h4 className="text-white font-semibold mb-1">
+                            <Link to="/cheek-filler" className="text-purple-300 hover:text-purple-200 underline">Cheek Volume</Link>
+                          </h4>
+                          <p className="text-gray-300 text-sm">Restores youthful cheek fullness and lift</p>
                         </div>
-                      </Link>
+                      </div>
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
                         <div className="flex-1">
@@ -755,42 +749,33 @@ const MarionnetteLines = () => {
                           <p className="text-gray-300 text-sm">Under-eye hollowing for refreshed appearance</p>
                         </div>
                       </div>
-                      <Link to="/chin-filler" className="block hover:no-underline">
-                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
-                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                          <div className="flex-1">
-                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
-                              Jawline & Jowls
-                              <ArrowRight size={16} className="text-purple-400" />
-                            </h4>
-                            <p className="text-gray-300 text-sm">Defines and contours the lower face</p>
-                          </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div className="flex-1">
+                          <h4 className="text-white font-semibold mb-1">
+                            <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">Jawline & Jowls</Link>
+                          </h4>
+                          <p className="text-gray-300 text-sm">Defines and contours the lower face</p>
                         </div>
-                      </Link>
-                      <Link to="/temple-filler-london" className="block hover:no-underline">
-                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
-                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                          <div className="flex-1">
-                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
-                              Temples
-                              <ArrowRight size={16} className="text-purple-400" />
-                            </h4>
-                            <p className="text-gray-300 text-sm">Fills temple hollowing for facial harmony</p>
-                          </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div className="flex-1">
+                          <h4 className="text-white font-semibold mb-1">
+                            <Link to="/temple-filler-london" className="text-purple-300 hover:text-purple-200 underline">Temples</Link>
+                          </h4>
+                          <p className="text-gray-300 text-sm">Fills temple hollowing for facial harmony</p>
                         </div>
-                      </Link>
-                      <Link to="/lip-filler" className="block hover:no-underline">
-                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
-                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                          <div className="flex-1">
-                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
-                              Lips
-                              <ArrowRight size={16} className="text-purple-400" />
-                            </h4>
-                            <p className="text-gray-300 text-sm">Enhances volume and corrects asymmetry</p>
-                          </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div className="flex-1">
+                          <h4 className="text-white font-semibold mb-1">
+                            <Link to="/lip-filler" className="text-purple-300 hover:text-purple-200 underline">Lips</Link>
+                          </h4>
+                          <p className="text-gray-300 text-sm">Enhances volume and corrects asymmetry</p>
                         </div>
-                      </Link>
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -1231,7 +1216,7 @@ const MarionnetteLines = () => {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">
-                    "I was nervous about fillers but the team at Cosmedocs made me feel completely at ease. The liquid facelift approach is brilliant — my marionette lines have vanished and I still look like me, just refreshed."
+                    "I was nervous about fillers but the team at Cosmedocs made me feel completely at ease. The liquid facelift approach is brilliant — the lines have vanished and I still look like me, just refreshed."
                   </p>
                   <p className="text-purple-300 font-semibold">Amanda K.</p>
                   <p className="text-gray-400 text-sm">Verified Patient</p>
@@ -1266,7 +1251,7 @@ const MarionnetteLines = () => {
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-4 text-gray-300" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                       <div itemProp="text">
-                        <AutoLinkedText>{faq.answer}</AutoLinkedText>
+                        {faq.answer}
                       </div>
                     </AccordionContent>
                   </AccordionItem>
