@@ -464,7 +464,7 @@ const NeckFillers = () => {
                 </Card>
               </motion.div>
 
-              {/* How Dermal Fillers Help */}
+              {/* How Neck Fillers Work */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -473,28 +473,40 @@ const NeckFillers = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-purple-300">How Dermal Fillers Help</CardTitle>
+                    <CardTitle className="text-2xl text-purple-300">How Neck Fillers Work</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <p className="text-gray-300 leading-relaxed">
-                      Dermal fillers provide an effective neck wrinkle treatment and answer to how to eliminate neck lines without surgery. Using premium hyaluronic acid fillers, these <a href="/skin-boosters" className="text-purple-300 hover:text-purple-200 underline">advanced treatments</a> restore hydration and stimulate collagen production, offering a non surgical neck lift alternative.
+                      Neck fillers work by using premium hyaluronic acid to provide an effective neck wrinkle treatment and answer to how to eliminate neck lines without surgery. This non surgical neck lift procedure delivers natural-looking results for those wondering how to get rid of necklace lines and how to remove neck lines.
                     </p>
                     <div className="space-y-4">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Replenish lost volume and address how to get rid of creases in neck</p>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Volume Restoration</h4>
+                          <p className="text-gray-400 text-sm">Hyaluronic acid replenishes lost volume and addresses how to get rid of creases in neck by plumping the skin from beneath</p>
+                        </div>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Smooth horizontal neck lines and show how to eliminate wrinkles on neck</p>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Smoothing Horizontal Neck Lines</h4>
+                          <p className="text-gray-400 text-sm">Strategically injected filler smooths horizontal neck lines and shows how to eliminate wrinkles on neck effectively</p>
+                        </div>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Best non surgical procedure for neck tightening and texture improvement</p>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Collagen Stimulation</h4>
+                          <p className="text-gray-400 text-sm">The best non surgical procedure for neck tightening - stimulates natural collagen production for long-term texture improvement</p>
+                        </div>
                       </div>
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Turkey neck treatment without surgery for natural-looking rejuvenation</p>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Natural Rejuvenation</h4>
+                          <p className="text-gray-400 text-sm">Turkey neck treatment without surgery for natural-looking rejuvenation, avoiding the face and neck lift cost UK</p>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
