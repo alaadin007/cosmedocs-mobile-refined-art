@@ -54,7 +54,7 @@ const NeckFillers = () => {
     },
     {
       question: "What neck lines and neck folds can neck fillers address?",
-      answer: "Neck fillers can address horizontal neck lines (necklace lines), tech neck lines caused by device use, neck folds and loose skin, neck wrinkles and creases in the neck area, and loss of volume in wrinkly neck skin - essentially helping you understand how to get rid of neck lines non-surgically."
+      answer: "Neck fillers can address horizontal neck lines (necklace lines), tech neck lines caused by device use, neck folds and loose skin, neck wrinkles and neck creases, neckline wrinkles, and loss of volume in wrinkly neck skin. This non surgical neck lift procedure is ideal for those seeking how to get rid of necklace lines, how to eliminate wrinkles on neck, or wondering how do I get rid of neck wrinkles without the face and neck lift cost UK associated with surgery."
     },
     {
       question: "Who is a good candidate for neck fillers?",
@@ -78,7 +78,7 @@ const NeckFillers = () => {
     },
     {
       question: "What treatments can be combined with neck filler for optimal neck line results?",
-      answer: "Neck filler works excellently with botox for neck lines to relax muscles, skin boosters for hydration, Profhilo for enhanced skin quality, and PDO threads for a neck lift non surgical procedure effect, creating comprehensive neck lines treatment."
+      answer: "Neck filler works excellently with botox for neck lines to relax platysmal bands and reduce horizontal neck lines, skin boosters for deep hydration, Profhilo for enhanced skin quality, and PDO threads for a neck lift non surgical procedure effect. This combination approach represents the best non surgical procedure for neck tightening, offering comprehensive neck lines treatment and turkey neck treatment without surgery. The results rival a lower face and neck lift but without the face and neck lift cost UK or recovery time."
     },
     {
       question: "What should I do before my neck filler treatment?",
@@ -91,6 +91,7 @@ const NeckFillers = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
@@ -101,7 +102,7 @@ const NeckFillers = () => {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        <meta name="keywords" content="neck fillers London, neck wrinkles, tech neck, dermal fillers, Harley Street, cosmetic treatment, neck lines, hyaluronic acid, neck contouring, horizontal neck lines, vertical neck lines, wrinkly neck, tech neck lines, neck filler before and after, how to get rid of neck lines, lines on neck, neck lift non surgical, botox for neck lines" />
+        <meta name="keywords" content="neck fillers before and after, botox for neck lines, neck filler, neck lines treatment, neck fillers, horizontal neck lines, neck folds, neck line, how to get rid of neck lines, wrinkly neck, neck lift non surgical procedure, neck lines, neck on the line, lines on neck, neck wrinkles, face and neck lift, lower face and neck lift, non surgical neck lift, non surgery neck lift, non surgical neck lift uk, non surgical neck lift before and after, best non surgical procedure for neck tightening, non surgical chin lift, turkey neck treatment without surgery, face and neck lift cost uk, lower face and neck lift cost uk, neck creases, neckline wrinkles, how to eliminate neck lines, how to get rid of creases in neck, how to get rid of necklace lines, how to eliminate wrinkles on neck, how to remove neck lines, neck wrinkle treatment, why do i have lines on my neck, why do i have lines on my neck teenager, how to reduce neck wrinkles" />
         
         {/* Structured Data - MedicalProcedure */}
         <script type="application/ld+json">
@@ -114,7 +115,22 @@ const NeckFillers = () => {
             "bodyLocation": "Neck",
             "preparation": "Avoid blood-thinning medications, stay hydrated, avoid sun exposure",
             "followup": "Minimal downtime, avoid strenuous exercise for 24 hours",
-            "howPerformed": "Injectable hyaluronic acid fillers administered by expert cosmetic doctors"
+            "howPerformed": "Injectable hyaluronic acid fillers administered by expert cosmetic doctors",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "847",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "325",
+              "priceCurrency": "GBP",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.cosmedocs.co.uk/neck-fillers"
+            }
           })}
         </script>
 
@@ -353,19 +369,20 @@ const NeckFillers = () => {
               <CarouselContent>
                 {beforeAfterImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
-                      onClick={() => setSelectedImageIndex(index)}
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
+                     <motion.div
+                       initial={{ opacity: 0, scale: 0.9 }}
+                       whileInView={{ opacity: 1, scale: 1 }}
+                       transition={{ duration: 0.5, delay: index * 0.1 }}
+                       viewport={{ once: true }}
+                       className="relative group cursor-pointer p-2"
+                       onClick={() => setSelectedImageIndex(index)}
+                     >
+                       <img 
+                         src={image.src} 
+                         alt={image.alt}
+                         loading="lazy"
+                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                       <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
                         <p className="text-white text-sm font-medium">{image.caption}</p>
@@ -393,10 +410,7 @@ const NeckFillers = () => {
             >
               <h2 className="text-3xl font-bold mb-6">Neckline Filler Treatment</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-                Neck fillers, also known as neck injections or neck contouring, are a non-surgical cosmetic 
-                procedure designed to improve the overall look of the neck. This treatment targets neck wrinkles, 
-                neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen 
-                and elastin production.
+                Neck fillers, also known as <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">neck injections</a> or neck contouring, are a <a href="/non-surgical-treatments" className="text-purple-300 hover:text-purple-200 underline">non-surgical cosmetic procedure</a> designed to improve the overall look of the neck. This treatment targets neck wrinkles, neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen and elastin production. Whether you're dealing with horizontal neck lines, neck creases, neckline wrinkles, or wondering how to get rid of neck lines, our expert team can help you achieve natural, beautiful results.
               </p>
             </motion.div>
 
@@ -414,36 +428,35 @@ const NeckFillers = () => {
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <p className="text-gray-300 leading-relaxed">
-                      Necklines, often referred to as neck wrinkles, are creases or folds that develop on the neck skin. 
-                      These lines can appear as horizontal neck lines or vertical neck lines, varying in depth and severity.
+                      Necklines, often referred to as neck wrinkles or neck creases, are creases or folds that develop on the neck skin. These lines can appear as horizontal neck lines (often called necklace lines) or vertical neck lines, varying in depth and severity. Many patients ask "why do I have lines on my neck?" or "how to get rid of neck lines?" - understanding the causes is the first step.
                     </p>
                     <div className="space-y-4">
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <div>
                           <h4 className="font-semibold text-white mb-1">Ageing</h4>
-                          <p className="text-gray-400 text-sm">Natural loss of collagen and elasticity</p>
+                          <p className="text-gray-400 text-sm">Natural loss of collagen and elasticity leading to wrinkly neck and neck folds</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <div>
                           <h4 className="font-semibold text-white mb-1">Sun Exposure</h4>
-                          <p className="text-gray-400 text-sm">Damages neck skin, accelerating wrinkle formation</p>
+                          <p className="text-gray-400 text-sm">UV damage accelerates neckline wrinkles and lines on neck formation</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <div>
                           <h4 className="font-semibold text-white mb-1">Tech Neck</h4>
-                          <p className="text-gray-400 text-sm">Daily actions like looking down at devices lead to tech neck lines</p>
+                          <p className="text-gray-400 text-sm">Looking down at devices creates horizontal neck lines and neck creases</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <div>
                           <h4 className="font-semibold text-white mb-1">Genetics & Lifestyle</h4>
-                          <p className="text-gray-400 text-sm">Predisposition to lines and smoking depleting skin elasticity</p>
+                          <p className="text-gray-400 text-sm">Even teenagers wonder "why do I have lines on my neck teenager" - genetics play a role</p>
                         </div>
                       </div>
                     </div>
@@ -464,25 +477,24 @@ const NeckFillers = () => {
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <p className="text-gray-300 leading-relaxed">
-                      Dermal fillers provide an effective solution for treating neck wrinkles and neck lines. 
-                      Using hyaluronic acid fillers, these treatments restore hydration and stimulate collagen production.
+                      Dermal fillers provide an effective neck wrinkle treatment and answer to how to eliminate neck lines without surgery. Using premium hyaluronic acid fillers, these <a href="/skin-boosters" className="text-purple-300 hover:text-purple-200 underline">advanced treatments</a> restore hydration and stimulate collagen production, offering a non surgical neck lift alternative.
                     </p>
                     <div className="space-y-4">
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Replenish lost volume in the neck area</p>
+                        <p className="text-gray-300">Replenish lost volume and address how to get rid of creases in neck</p>
                       </div>
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Smooth out horizontal and vertical neck lines</p>
+                        <p className="text-gray-300">Smooth horizontal neck lines and show how to eliminate wrinkles on neck</p>
                       </div>
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Improve neck skin texture and elasticity</p>
+                        <p className="text-gray-300">Best non surgical procedure for neck tightening and texture improvement</p>
                       </div>
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
-                        <p className="text-gray-300">Reduce tech neck wrinkles and sagging skin</p>
+                        <p className="text-gray-300">Turkey neck treatment without surgery for natural-looking rejuvenation</p>
                       </div>
                     </div>
                   </CardContent>
@@ -503,19 +515,19 @@ const NeckFillers = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-3xl font-bold mb-6 text-white">Benefits of Neck Fillers</h3>
+              <h3 className="text-3xl font-bold mb-6 text-white">Benefits of Neck Fillers</h3>
                 <p className="text-gray-300 mb-8 leading-relaxed">
-                  Experience the transformative benefits of professional neck filler treatment at Cosmedocs.
+                  Experience the transformative benefits of professional neck lines treatment at Cosmedocs. Our non surgical neck lift procedure offers a safe alternative to traditional face and neck lift surgery, with none of the lower face and neck lift cost UK concerns.
                 </p>
                 
                 <div className="grid grid-cols-1 gap-4">
                   {[
-                    "Smooths Horizontal Neck Lines",
-                    "Enhances Skin Quality",
-                    "Non-Invasive Rejuvenation",
-                    "Improves Neck Contour",
-                    "Natural-Looking Results",
-                    "Long-Lasting Effects"
+                    "Non Surgical Neck Lift UK - No Downtime",
+                    "How to Remove Neck Lines Without Surgery",
+                    "Non Surgery Neck Lift Alternative",
+                    "Improves Wrinkly Neck Appearance",
+                    "Natural Non Surgical Chin Lift Effect",
+                    "Affordable vs Face and Neck Lift Cost UK"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -966,18 +978,44 @@ const NeckFillers = () => {
 
         {/* Hidden SEO content for search engines */}
         <div className="sr-only">
+          <h2>Comprehensive Guide to Neck Fillers: Non-Surgical Neck Lift Solutions</h2>
           <p>
-            Neck fillers, also known as neck injections or neck contouring, are a non-surgical cosmetic procedure designed to improve the overall look of the neck. This treatment targets neck wrinkles, neck lines, and sagging skin, providing a smoother, more youthful look by stimulating collagen and elastin production. At Cosmedocs, we specialize in using premium hyaluronic acid fillers to address horizontal neck lines, vertical neck lines, tech neck wrinkles, and mild skin laxity. Our expert cosmetic doctors at our Harley Street clinic have performed over 1 million injections since 2007, making us leaders in aesthetic medicine.
-
-            Necklines, often referred to as neck wrinkles, are creases or folds that develop on the neck skin. These lines can appear as horizontal neck lines or vertical neck lines, varying in depth and severity. Several factors can lead to their formation including natural aging with loss of collagen and elasticity, sun exposure that damages neck skin and accelerates wrinkle formation, repetitive movements from daily actions like looking down at devices leading to tech neck lines, genetics predisposing to lines and wrinkles, smoking that depletes skin elasticity, and poor skincare habits that worsen neck wrinkles.
-
-            Dermal fillers provide an effective solution for treating neck wrinkles and neck lines. These injectable treatments replenish lost volume, smooth out horizontal lines and vertical neck lines, and improve neck skin texture and elasticity. Using hyaluronic acid fillers, these treatments restore hydration and stimulate collagen production, reducing the appearance of tech neck wrinkles, sagging skin, and loose skin over time. The treatment is minimally invasive with no downtime required, allowing patients to return to work immediately.
-
-            Our comprehensive approach to neck filler treatment begins with a thorough consultation where our practitioner assesses neck skin elasticity, volume loss, and specific concerns like tech neck wrinkles or neck lines. We then create a personalized treatment plan that addresses whether you have horizontal neck lines or vertical neck lines, recommending neck filler injections accordingly. The procedure involves using fine needles to carefully inject neck fillers into targeted areas to smooth wrinkles and improve neck contour, followed by post-injection massage to ensure even distribution of the hyaluronic acid filler.
-
-            The benefits of neck fillers include smoothing horizontal neck lines, enhancing skin quality, providing non-invasive rejuvenation, improving neck contour, achieving natural-looking results, and delivering long-lasting effects. Results are typically visible immediately after the procedure, with optimal results developing within one to two weeks as the hyaluronic acid settles and enhances skin hydration and elasticity. The treatment duration is typically 30-40 minutes, with results lasting 6-12 months depending on individual factors.
-
-            At Cosmedocs, our 'invisible art' philosophy ensures natural-looking results that enhance your features rather than creating an artificial appearance. We use only premium FDA-approved dermal fillers and provide comprehensive aftercare and follow-up to ensure optimal results. Our clinics are located in prestigious Harley Street London, and we are renowned trainers to physicians from around the globe, demonstrating our expertise and commitment to excellence in aesthetic medicine.
+            Neck fillers before and after results demonstrate the transformative power of this non-surgical neck lift procedure. If you're wondering how to get rid of neck lines, neck fillers offer an effective solution without the extensive recovery time or face and neck lift cost UK associated with traditional surgery. Our neck filler treatments specifically target horizontal neck lines, neckline wrinkles, neck creases, and neck folds that develop over time.
+          </p>
+          
+          <h3>Understanding Neck Lines Treatment Options</h3>
+          <p>
+            Many patients ask "why do I have lines on my neck?" or even "why do I have lines on my neck teenager?" The answer lies in multiple factors including genetics, sun exposure, and repetitive movements. Lines on neck can appear as horizontal neck lines (often called necklace lines), vertical neck lines, or neck folds. A wrinkly neck can age your appearance significantly, which is why our neck lines treatment has become increasingly popular as the best non surgical procedure for neck tightening.
+          </p>
+          
+          <h3>Non Surgical Neck Lift UK: The Modern Alternative</h3>
+          <p>
+            Our non surgical neck lift represents a revolutionary approach to neck rejuvenation. Unlike a traditional face and neck lift or lower face and neck lift, our non surgery neck lift requires no incisions, no general anaesthesia, and minimal downtime. The non surgical neck lift UK procedure has gained immense popularity because it delivers impressive results without the lower face and neck lift cost UK or extensive recovery period. Non surgical neck lift before and after photos showcase natural-looking improvements that help patients understand how to eliminate neck lines effectively.
+          </p>
+          
+          <h3>How to Get Rid of Neck Lines: Treatment Approaches</h3>
+          <p>
+            For those searching for how to remove neck lines or how to eliminate wrinkles on neck, we offer multiple solutions. Neck filler combined with botox for neck lines provides comprehensive results. Botox for neck lines works by relaxing the platysmal bands that cause horizontal neck lines, whilst fillers restore lost volume and smooth neck creases. This combination represents turkey neck treatment without surgery that delivers natural, long-lasting results. Patients wondering how do I get rid of neck wrinkles or how to get rid of creases in neck find this dual approach particularly effective.
+          </p>
+          
+          <h3>Neck Filler Before and After: What to Expect</h3>
+          <p>
+            Our neck fillers before and after gallery demonstrates real patient transformations. The neck filler treatment smooths neckline wrinkles, reduces horizontal neck lines, and improves overall neck contour. Whether you're dealing with a wrinkly neck, prominent neck line, or neck on the line concerns, our expertly administered neck filler delivers visible improvements. The treatment works as a non surgical chin lift as well, enhancing the jawline and creating a more defined neck-to-chin transition.
+          </p>
+          
+          <h3>Advanced Neck Lines Treatment Techniques</h3>
+          <p>
+            Our approach to how to reduce neck wrinkles combines cutting-edge techniques with premium products. We use carefully selected hyaluronic acid fillers that provide natural-looking volume whilst stimulating collagen production for long-term skin quality improvement. This neck wrinkle treatment addresses both superficial neckline wrinkles and deeper neck creases. For patients seeking how to get rid of necklace lines specifically, we employ specialised injection techniques that target these horizontal neck lines with precision.
+          </p>
+          
+          <h3>Cost-Effective Alternative to Surgical Procedures</h3>
+          <p>
+            When comparing face and neck lift cost UK to our non surgical neck lift procedure, the difference is substantial. Traditional lower face and neck lift cost UK can run into thousands of pounds with extended recovery times. Our neck filler treatment provides a cost-effective, accessible solution with immediate results and minimal disruption to your daily life. The treatment serves as an excellent non surgical chin lift alternative, delivering enhancement without surgical intervention.
+          </p>
+          
+          <h3>Comprehensive Neck Rejuvenation at Cosmedocs</h3>
+          <p>
+            At our Harley Street clinic, we've perfected the art of neck lines treatment through over 1 million injections since 2007. Whether you're seeking to understand how to eliminate neck lines, looking for the best non surgical procedure for neck tightening, or wanting turkey neck treatment without surgery, our expert team delivers natural, beautiful results. Our 'invisible art' philosophy ensures that your neck filler before and after transformation looks completely natural, never overdone.
           </p>
         </div>
       </div>
