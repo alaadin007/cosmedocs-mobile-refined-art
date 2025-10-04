@@ -489,15 +489,6 @@ const MarionnetteLines = () => {
               <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
               <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
             </Carousel>
-
-            <div className="text-center mt-12">
-              <BeforeAfterImageViewer 
-                images={beforeAfterImages}
-                triggerLabel="View Complete Gallery"
-                title="Marionette Lines & Liquid Facelift Results"
-                description="Comprehensive collection of our marionette line and facial rejuvenation treatments"
-              />
-            </div>
           </div>
         </section>
 
