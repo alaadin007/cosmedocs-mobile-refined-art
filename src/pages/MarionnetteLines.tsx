@@ -518,6 +518,181 @@ const MarionnetteLines = () => {
           </div>
         </section>
 
+        {/* Marionette Lines Filler Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-white">Marionette Lines Filler: The Solution</h2>
+              <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
+                Marionette lines filler treatment is the gold standard for addressing these ageing concerns. Using premium hyaluronic acid-based dermal fillers, we restore lost volume and smooth the vertical lines that run from the corners of your mouth to your chin.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {/* How Marionette Lines Fillers Work */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900 border-purple-500 border-2 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-purple-300 text-2xl flex items-center gap-2">
+                      <Syringe size={24} />
+                      How Marionette Lines Fillers Work
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      Dermal fillers for marionette lines work by replenishing lost volume in the deeper layers of your skin. Our expert practitioners strategically inject premium hyaluronic acid fillers along the marionette lines and in the surrounding areas to:
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Restore Volume</h4>
+                          <p className="text-gray-300 text-sm">Replace lost collagen and fat that causes sagging and creasing</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Lift and Support</h4>
+                          <p className="text-gray-300 text-sm">Provide structural support to lift sagging skin and reduce fold depth</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Smooth Creases</h4>
+                          <p className="text-gray-300 text-sm">Fill in the vertical lines for a smoother, more youthful appearance</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Stimulate Collagen</h4>
+                          <p className="text-gray-300 text-sm">Hyaluronic acid encourages natural collagen production for lasting benefits</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Types of Fillers Used */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gray-900 border-purple-500 border-2 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-purple-300 text-2xl flex items-center gap-2">
+                      <Award size={24} />
+                      Premium Fillers We Use
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">
+                      At Cosmedocs, we exclusively use FDA-approved, premium hyaluronic acid fillers that are specifically designed for marionette line treatment:
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Juvéderm Voluma</h4>
+                          <p className="text-gray-300 text-sm">High G-prime filler for deep volume restoration and structural support</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Restylane Lyft</h4>
+                          <p className="text-gray-300 text-sm">Ideal for mid-to-deep injection to lift and contour the lower face</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Teosyal Ultra Deep</h4>
+                          <p className="text-gray-300 text-sm">Long-lasting filler for severe marionette lines and deep folds</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                        <div>
+                          <h4 className="text-white font-semibold mb-1">Belotero Volume</h4>
+                          <p className="text-gray-300 text-sm">Provides natural-looking volume with excellent integration</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 p-4 bg-purple-900/20 rounded-lg border border-purple-500/30">
+                      <p className="text-purple-200 text-sm">
+                        <strong>Expert Selection:</strong> Our practitioners assess your individual needs and select the optimal filler type, viscosity, and injection technique for your unique facial anatomy.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            {/* Treatment Process */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-12 max-w-4xl mx-auto"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500">
+                <CardHeader>
+                  <CardTitle className="text-white text-2xl text-center">The Marionette Lines Filler Treatment Process</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="text-center">
+                      <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                        1
+                      </div>
+                      <h4 className="text-white font-semibold mb-2">Consultation & Assessment</h4>
+                      <p className="text-gray-300 text-sm">
+                        Comprehensive facial analysis to determine optimal filler placement and volume requirements
+                      </p>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                        2
+                      </div>
+                      <h4 className="text-white font-semibold mb-2">Precise Injection</h4>
+                      <p className="text-gray-300 text-sm">
+                        Strategic filler placement using ultra-fine needles or cannulas with topical anaesthetic for comfort
+                      </p>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                        3
+                      </div>
+                      <h4 className="text-white font-semibold mb-2">Immediate Results</h4>
+                      <p className="text-gray-300 text-sm">
+                        See instant improvement with final results visible within 2 weeks as any swelling subsides
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Liquid Facelift Explanation */}
         <section className="py-20">
           <div className="page-container">
