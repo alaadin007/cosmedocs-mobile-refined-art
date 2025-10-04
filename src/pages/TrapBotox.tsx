@@ -295,7 +295,7 @@ const TrapBotox = () => {
               >
                 <div className="space-y-6">
                 <p className="text-gray-300 leading-relaxed">
-                  <a href="/botox-treatments" className="text-purple-300 hover:text-purple-200 underline">Trapezius Botox</a>, also known as Trap Botox or Trap Tox, is an injectable treatment that uses <a href="/botox" className="text-purple-300 hover:text-purple-200 underline">botox for traps</a> to relax the trapezius muscles. When these trap muscles become overworked and tense, it can lead to pain in trapezius muscle, trapezius pain, and postural issues in the neck, shoulders, and upper back.
+                  Trapezius Botox, also known as Trap Botox or Trap Tox, is an injectable treatment that uses <a href="/botox" className="text-purple-300 hover:text-purple-200 underline">botox for traps</a> to relax the trapezius muscles. When these trap muscles become overworked and tense, it can lead to pain in trapezius muscle, trapezius pain, and postural issues in the neck, shoulders, and upper back.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
                   Botox in trap muscles aims to alleviate this muscle tension by temporarily relaxing the trapezius muscle, creating a more elegant shoulder profile and improved posture. Many patients search for "trap botox before and after" results to see the dramatic transformation this <a href="/aesthetic-treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatment</a> can achieve.
