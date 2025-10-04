@@ -6,7 +6,10 @@ import { generateSEOMetadata } from '../utils/seo';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Clock, Shield, Star, Users, Award, Calendar, Activity, Syringe, GraduationCap, Palette, Heart } from 'lucide-react';
+import { CheckCircle, Clock, Shield, Star, Users, Award, Calendar, Activity, Syringe, GraduationCap, Palette, Heart, Phone, MapPin } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadges from '@/components/TrustBadges';
+import { Link } from 'react-router-dom';
 
 const TriggerPointBotox = () => {
   const seoData = generateSEOMetadata(
@@ -20,22 +23,128 @@ const TriggerPointBotox = () => {
     "@type": "MedicalProcedure",
     "name": "Trigger Point Botox Treatment",
     "description": "Professional trigger point botox injections for muscle tension relief and chronic pain management",
+    "procedureType": "Botulinum Toxin Injection",
+    "bodyLocation": "Muscles (neck, shoulders, back, jaw)",
+    "preparation": "No special preparation required. Avoid blood-thinning medications if possible.",
+    "followup": "Follow-up consultation after 2 weeks to assess results",
+    "howPerformed": "Precision injection of botulinum toxin directly into trigger points using fine needles",
     "provider": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
+      "url": "https://www.cosmedocs.co.uk",
+      "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "10 Harley Street",
         "addressLocality": "London",
         "postalCode": "W1G 9PF",
         "addressCountry": "GB"
-      }
+      },
+      "telephone": "+44-20-7999-9999",
+      "priceRange": "££"
     },
     "offers": {
       "@type": "Offer",
       "price": "450",
-      "priceCurrency": "GBP"
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock"
     }
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+    "url": "https://www.cosmedocs.co.uk",
+    "telephone": "+44-20-7999-9999",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5194,
+      "longitude": -0.1468
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "16:00"
+      }
+    ],
+    "priceRange": "££"
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does trigger point botox last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trigger point botox typically provides relief for 3-6 months. The duration varies depending on individual factors such as muscle activity, severity of trigger points, and dosage administered."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is trigger point botox painful?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most patients experience minimal discomfort during the procedure. We use fine needles and can provide local anaesthetic if needed. The injection itself takes only seconds per trigger point."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many trigger points can be treated in one session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The number of trigger points treated depends on your specific condition and the areas affected. Typically, we can address multiple trigger points in one session, with treatment plans tailored to your needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will I see results from trigger point botox?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some patients notice improvement within a few days, while full effects typically develop over 1-2 weeks as the muscle tension gradually reduces and pain subsides."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there any side effects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Side effects are generally minimal and may include temporary soreness at injection sites, mild bruising, or temporary weakness in the treated muscle. Serious complications are rare when performed by qualified practitioners."
+        }
+      }
+    ]
+  };
+
+  const handleBookingClick = () => {
+    // Analytics tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click', {
+        'event_category': 'CTA',
+        'event_label': 'Book Consultation - Trigger Point Botox'
+      });
+    }
+    // Navigate to booking page or open booking modal
+    window.location.href = 'https://cosmedocs.com/book-consultation';
   };
 
   return (
@@ -43,24 +152,55 @@ const TriggerPointBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph */}
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
-        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cosmedocs" />
+        <meta property="og:image" content={seoData.image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
+        
+        {/* Additional SEO */}
+        <meta name="author" content="Cosmedocs" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.5194;-0.1468" />
+        <meta name="ICBM" content="51.5194, -0.1468" />
+        
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-20">
+          <Breadcrumb 
+            items={[{ label: "Treatments", path: "/treatments" }]} 
+            currentPage="Trigger Point Botox" 
+          />
+        </div>
+
         {/* Hero Section - Updated to match LipFillers design */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <section className="relative py-20 overflow-hidden min-h-[85vh] flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -78,7 +218,10 @@ const TriggerPointBotox = () => {
                   <p className="text-sm text-gray-300">Expert trigger point botox injections for chronic muscle tension - from £450</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl">
+                  <Button 
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                    onClick={handleBookingClick}
+                  >
                     Book Consultation
                   </Button>
                   <Button 
@@ -88,6 +231,11 @@ const TriggerPointBotox = () => {
                   >
                     View Pricing
                   </Button>
+                </div>
+                
+                {/* Trust Badges */}
+                <div className="mt-12">
+                  <TrustBadges />
                 </div>
               </motion.div>
               
@@ -390,8 +538,11 @@ const TriggerPointBotox = () => {
                   <div>
                     <img 
                       src="/lovable-uploads/91daaa52-6dff-448b-b375-8ce52b2d0f41.png" 
-                      alt="Medical consultation and trigger point assessment - marking trigger points for precise treatment"
+                      alt="Trigger point botox London Harley Street - medical professional marking precise trigger point locations on patient's shoulder for targeted muscle tension relief treatment"
                       className="rounded-lg shadow-lg w-full h-80 object-cover"
+                      loading="lazy"
+                      width="800"
+                      height="600"
                     />
                     <p className="text-gray-400 text-sm mt-2 text-center">
                       Precise trigger point identification and marking ensures accurate treatment
@@ -401,8 +552,11 @@ const TriggerPointBotox = () => {
                   <div>
                     <img 
                       src="/lovable-uploads/cda46474-143e-4d79-ab59-9a967c212d0e.png" 
-                      alt="Precise trigger point botox injection procedure showing gentle technique"
+                      alt="Professional trigger point injection procedure London - expert practitioner administering botox injection for chronic muscle pain and myofascial tension relief"
                       className="rounded-lg shadow-lg w-full h-80 object-cover"
+                      loading="lazy"
+                      width="800"
+                      height="600"
                     />
                     <p className="text-gray-400 text-sm mt-2 text-center">
                       Gentle injection technique for immediate muscle tension relief
@@ -437,11 +591,161 @@ const TriggerPointBotox = () => {
                     Starting price for trigger point botox treatment including consultation, 
                     assessment, and precision injection therapy.
                   </p>
-                  <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full rounded-full">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-black hover:bg-gray-200 w-full rounded-full"
+                    onClick={handleBookingClick}
+                  >
                     Book Your Treatment
                   </Button>
+                  
+                  <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-400">
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-4 h-4" />
+                      <a href="tel:+442079999999" className="hover:text-purple-300 transition-colors">
+                        020 7999 9999
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      <span>Harley Street, London</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Practitioner Credentials */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold text-center mb-8 text-white">Expert Medical Team</h2>
+              <p className="text-gray-300 text-center mb-12">
+                Our trigger point botox treatments are administered exclusively by GMC-registered medical professionals with extensive experience in pain management and aesthetic medicine.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white/5 rounded-xl p-6 border border-purple-300/20">
+                  <GraduationCap className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-white font-bold mb-2">Advanced Training</h3>
+                  <p className="text-gray-400 text-sm">
+                    Specialised training in trigger point identification and injection techniques through the{" "}
+                    <a 
+                      href="https://www.harleystreetinstitute.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-purple-300 hover:text-purple-200 underline"
+                    >
+                      Harley Street Institute
+                    </a>
+                  </p>
+                </div>
+                
+                <div className="bg-white/5 rounded-xl p-6 border border-purple-300/20">
+                  <Award className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-white font-bold mb-2">GMC Registered</h3>
+                  <p className="text-gray-400 text-sm">
+                    All practitioners are fully registered with the General Medical Council and maintain continuous professional development
+                  </p>
+                </div>
+                
+                <div className="bg-white/5 rounded-xl p-6 border border-purple-300/20">
+                  <Users className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-white font-bold mb-2">Proven Experience</h3>
+                  <p className="text-gray-400 text-sm">
+                    Over 1 million injections performed since 2007, with expertise in treating complex chronic pain conditions
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Additional SEO Content in Expandable Format */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold text-center mb-12 text-white">Comprehensive Treatment Information</h2>
+              <Accordion type="single" collapsible className="w-full space-y-4">
+                <AccordionItem value="comprehensive-info" className="border-gray-700 bg-black/30 rounded-lg px-6">
+                  <AccordionTrigger className="text-white hover:text-purple-300">
+                    Why Choose Trigger Point Botox in London?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 space-y-4 pt-4">
+                    <p>
+                      Trigger point botox London specialists at Cosmedocs provide advanced muscle tension relief using botulinum toxin injections. Our Harley Street clinic offers expert trigger point therapy for chronic pain management, myofascial pain syndrome, and muscular tension disorders. Professional botox injections for trigger points provide long-lasting relief from chronic muscle spasms and tension headaches.
+                    </p>
+                    <p>
+                      Botulinum toxin trigger point injections represent a revolutionary approach to treating chronic musculoskeletal pain conditions. Our experienced medical practitioners use precision injection techniques to target hyperirritable muscle fibres, providing sustained relief from chronic pain syndromes. Trigger point botox treatment costs from £450 at our London clinic, representing excellent value for professional medical care.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="treatment-approach" className="border-gray-700 bg-black/30 rounded-lg px-6">
+                  <AccordionTrigger className="text-white hover:text-purple-300">
+                    Advanced Pain Management Techniques
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 space-y-4 pt-4">
+                    <p>
+                      Muscle tension relief through trigger point botox offers a non-surgical alternative to traditional pain management approaches. Our clinic specialises in treating fibromyalgia, chronic neck pain, shoulder tension, and tension-type headaches using advanced botulinum toxin therapy. Professional trigger point injections provide 3-6 months of sustained pain relief with minimal side effects.
+                    </p>
+                    <p>
+                      Chronic pain management through trigger point botox therapy has shown excellent clinical results for patients suffering from myofascial pain syndromes. Our Harley Street practitioners combine medical expertise with compassionate care to deliver optimal treatment outcomes. Botox trigger point therapy reduces muscle spasticity and improves range of motion effectively.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="related-treatments" className="border-gray-700 bg-black/30 rounded-lg px-6">
+                  <AccordionTrigger className="text-white hover:text-purple-300">
+                    Related Pain Management Treatments
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 space-y-4 pt-4">
+                    <p className="mb-4">
+                      In addition to trigger point botox, we offer complementary treatments that may benefit patients with chronic muscle tension:
+                    </p>
+                    <ul className="space-y-2 ml-4">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                        <span>
+                          <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">
+                            Masseter Botox
+                          </Link> - for jaw tension and TMJ disorders
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                        <span>
+                          <Link to="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">
+                            Dermal Fillers
+                          </Link> - for facial rejuvenation
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                        <span>
+                          <Link to="/non-surgical-facelift" className="text-purple-300 hover:text-purple-200 underline">
+                            Non-Surgical Facelift
+                          </Link> - for comprehensive facial rejuvenation
+                        </span>
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </motion.div>
           </div>
         </section>
@@ -600,22 +904,6 @@ const TriggerPointBotox = () => {
         </section>
 
 
-        {/* Hidden SEO Content */}
-        <div style={{ position: 'absolute', left: '-9999px', visibility: 'hidden' }}>
-          <h3>Comprehensive Trigger Point Botox Information</h3>
-          <p>
-            Trigger point botox London specialists at Cosmedocs provide advanced muscle tension relief using botulinum toxin injections. Our Harley Street clinic offers expert trigger point therapy for chronic pain management, myofascial pain syndrome, and muscular tension disorders. Professional botox injections for trigger points provide long-lasting relief from chronic muscle spasms and tension headaches.
-          </p>
-          <p>
-            Botulinum toxin trigger point injections represent a revolutionary approach to treating chronic musculoskeletal pain conditions. Our experienced medical practitioners use precision injection techniques to target hyperirritable muscle fibers, providing sustained relief from chronic pain syndromes. Trigger point botox treatment costs from £450 at our London clinic, representing excellent value for professional medical care.
-          </p>
-          <p>
-            Muscle tension relief through trigger point botox offers a non-surgical alternative to traditional pain management approaches. Our clinic specializes in treating fibromyalgia, chronic neck pain, shoulder tension, and tension-type headaches using advanced botulinum toxin therapy. Professional trigger point injections provide 3-6 months of sustained pain relief with minimal side effects.
-          </p>
-          <p>
-            Chronic pain management through trigger point botox therapy has shown excellent clinical results for patients suffering from myofascial pain syndromes. Our Harley Street practitioners combine medical expertise with compassionate care to deliver optimal treatment outcomes. Botox trigger point therapy reduces muscle spasticity and improves range of motion effectively.
-          </p>
-        </div>
 
         {/* Call to Action */}
         <section className="py-20">
@@ -632,7 +920,10 @@ const TriggerPointBotox = () => {
                 Book your consultation with our expert medical team and discover how trigger point botox 
                 can provide lasting relief from chronic muscle tension and pain.
               </p>
-              <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+              <Button 
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                onClick={handleBookingClick}
+              >
                 Book Free Consultation
               </Button>
             </motion.div>

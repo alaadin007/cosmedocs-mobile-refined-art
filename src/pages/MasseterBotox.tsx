@@ -13,7 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
-import { Breadcrumb } from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Zap, Users, Shield, ChevronLeft, ChevronRight, CheckCircle, Award, GraduationCap, Palette, Heart, Calendar, Activity, Syringe, AlertCircle, Sparkles } from "lucide-react";
 import { useState } from "react";

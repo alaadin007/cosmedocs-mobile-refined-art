@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import AutoLinkedText from '@/components/AutoLinkedText';
-import { Breadcrumb } from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/Breadcrumb';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Award, GraduationCap, Palette, Heart, MapPin, Phone } from 'lucide-react';

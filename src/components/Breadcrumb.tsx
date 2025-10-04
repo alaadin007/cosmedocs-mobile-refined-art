@@ -1,44 +1,95 @@
+import { ChevronRight, Home } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 interface BreadcrumbItem {
   label: string;
+  path?: string;
   href?: string;
 }
 
 interface BreadcrumbProps {
   items: BreadcrumbItem[];
+  currentPage?: string;
 }
 
-export const Breadcrumb = ({ items }: BreadcrumbProps) => {
+const Breadcrumb = ({ items, currentPage }: BreadcrumbProps) => {
+  // If currentPage is provided, use it. Otherwise, treat the last item as the current page
+  const breadcrumbItems = currentPage ? items : items.slice(0, -1);
+  const finalPage = currentPage || (items.length > 0 ? items[items.length - 1].label : '');
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.cosmedocs.co.uk"
+      },
+      ...breadcrumbItems.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": item.label,
+        "item": `https://www.cosmedocs.co.uk${item.path || item.href || ''}`
+      })),
+      ...(finalPage ? [{
+        "@type": "ListItem",
+        "position": breadcrumbItems.length + 2,
+        "name": finalPage,
+        "item": `https://www.cosmedocs.co.uk${window.location.pathname}`
+      }] : [])
+    ]
+  };
+
   return (
-    <nav aria-label="Breadcrumb" className="py-4">
-      <ol className="flex items-center space-x-2 text-sm" itemScope itemType="https://schema.org/BreadcrumbList">
-        {items.map((item, index) => (
-          <li key={index} className="flex items-center" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-            {item.href ? (
-              <>
-                <Link 
-                  to={item.href} 
-                  className="text-purple-300 hover:text-purple-200 transition-colors"
-                  itemProp="item"
-                >
-                  <span itemProp="name">{item.label}</span>
-                </Link>
-                <meta itemProp="position" content={String(index + 1)} />
-                {index < items.length - 1 && (
-                  <ChevronRight className="mx-2 text-gray-500" size={16} />
-                )}
-              </>
-            ) : (
-              <>
-                <span className="text-gray-400" itemProp="name">{item.label}</span>
-                <meta itemProp="position" content={String(index + 1)} />
-              </>
-            )}
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
+      
+      <nav aria-label="Breadcrumb" className="py-4">
+        <ol className="flex items-center gap-2 text-sm flex-wrap">
+          <li className="flex items-center gap-2">
+            <Link 
+              to="/" 
+              className="text-gray-400 hover:text-purple-300 transition-colors flex items-center gap-1"
+            >
+              <Home className="w-4 h-4" />
+              <span>Home</span>
+            </Link>
+            <ChevronRight className="w-4 h-4 text-gray-600" />
           </li>
-        ))}
-      </ol>
-    </nav>
+          
+          {breadcrumbItems.map((item, index) => {
+            const itemPath = item.path || item.href || '#';
+            return (
+              <li key={itemPath} className="flex items-center gap-2">
+                <Link 
+                  to={itemPath}
+                  className="text-gray-400 hover:text-purple-300 transition-colors"
+                >
+                  {item.label}
+                </Link>
+                <ChevronRight className="w-4 h-4 text-gray-600" />
+              </li>
+            );
+          })}
+          
+          {finalPage && (
+            <li>
+              <span className="text-purple-300 font-medium" aria-current="page">
+                {finalPage}
+              </span>
+            </li>
+          )}
+        </ol>
+      </nav>
+    </>
   );
 };
+
+export default Breadcrumb;
