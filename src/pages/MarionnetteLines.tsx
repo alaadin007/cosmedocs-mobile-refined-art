@@ -644,52 +644,6 @@ const MarionnetteLines = () => {
                 </Card>
               </motion.div>
             </div>
-
-            {/* Treatment Process */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="mt-12 max-w-4xl mx-auto"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">The Marionette Lines Filler Treatment Process</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="text-center">
-                      <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 text-xl font-bold">
-                        1
-                      </div>
-                      <h4 className="text-white font-semibold mb-2">Consultation & Assessment</h4>
-                      <p className="text-gray-300 text-sm">
-                        Comprehensive facial analysis to determine optimal filler placement and volume requirements
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 text-xl font-bold">
-                        2
-                      </div>
-                      <h4 className="text-white font-semibold mb-2">Precise Injection</h4>
-                      <p className="text-gray-300 text-sm">
-                        Strategic filler placement using ultra-fine needles or cannulas with topical anaesthetic for comfort
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 text-xl font-bold">
-                        3
-                      </div>
-                      <h4 className="text-white font-semibold mb-2">Immediate Results</h4>
-                      <p className="text-gray-300 text-sm">
-                        See instant improvement with final results visible within 2 weeks as any swelling subsides
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </section>
 
