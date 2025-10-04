@@ -719,102 +719,82 @@ const MarionnetteLines = () => {
                     <CardContent className="space-y-3">
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                        <div>
+                        <div className="flex-1">
                           <h4 className="text-white font-semibold mb-1">Marionette Lines</h4>
                           <p className="text-gray-300 text-sm">Vertical lines from mouth corners to chin</p>
                         </div>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Nasolabial Folds</h4>
-                          <p className="text-gray-300 text-sm">Smile lines running from nose to mouth corners</p>
+                      <Link to="/nasolabial-folds" className="block hover:no-underline">
+                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                          <div className="flex-1">
+                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
+                              Nasolabial Folds
+                              <ArrowRight size={16} className="text-purple-400" />
+                            </h4>
+                            <p className="text-gray-300 text-sm">Smile lines running from nose to mouth corners</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Cheek Volume</h4>
-                          <p className="text-gray-300 text-sm">Restores youthful cheek fullness and lift</p>
+                      </Link>
+                      <Link to="/cheek-filler" className="block hover:no-underline">
+                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                          <div className="flex-1">
+                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
+                              Cheek Volume
+                              <ArrowRight size={16} className="text-purple-400" />
+                            </h4>
+                            <p className="text-gray-300 text-sm">Restores youthful cheek fullness and lift</p>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                       <div className="flex items-start space-x-3">
                         <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                        <div>
+                        <div className="flex-1">
                           <h4 className="text-white font-semibold mb-1">Tear Troughs</h4>
                           <p className="text-gray-300 text-sm">Under-eye hollowing for refreshed appearance</p>
                         </div>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Jawline & Jowls</h4>
-                          <p className="text-gray-300 text-sm">Defines and contours the lower face</p>
+                      <Link to="/chin-filler" className="block hover:no-underline">
+                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                          <div className="flex-1">
+                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
+                              Jawline & Jowls
+                              <ArrowRight size={16} className="text-purple-400" />
+                            </h4>
+                            <p className="text-gray-300 text-sm">Defines and contours the lower face</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Temples</h4>
-                          <p className="text-gray-300 text-sm">Fills temple hollowing for facial harmony</p>
+                      </Link>
+                      <Link to="/temple-filler-london" className="block hover:no-underline">
+                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                          <div className="flex-1">
+                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
+                              Temples
+                              <ArrowRight size={16} className="text-purple-400" />
+                            </h4>
+                            <p className="text-gray-300 text-sm">Fills temple hollowing for facial harmony</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                        <div>
-                          <h4 className="text-white font-semibold mb-1">Lips</h4>
-                          <p className="text-gray-300 text-sm">Enhances volume and corrects asymmetry</p>
+                      </Link>
+                      <Link to="/lip-filler" className="block hover:no-underline">
+                        <div className="flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
+                          <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                          <div className="flex-1">
+                            <h4 className="text-white font-semibold mb-1 flex items-center gap-2">
+                              Lips
+                              <ArrowRight size={16} className="text-purple-400" />
+                            </h4>
+                            <p className="text-gray-300 text-sm">Enhances volume and corrects asymmetry</p>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </CardContent>
                   </Card>
                 </motion.div>
               </div>
-
-              {/* Why Choose Liquid Facelift */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl text-center">Why Choose a Liquid Facelift Over Surgery?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="text-center">
-                        <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                          <Clock size={28} />
-                        </div>
-                        <h4 className="text-white font-semibold mb-2">No Surgery, No Downtime</h4>
-                        <p className="text-gray-300 text-sm">
-                          Treatment completed in 45-60 minutes with immediate return to daily activities. No incisions, scars, or general anaesthesia required.
-                        </p>
-                      </div>
-                      <div className="text-center">
-                        <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                          <Palette size={28} />
-                        </div>
-                        <h4 className="text-white font-semibold mb-2">Natural-Looking Results</h4>
-                        <p className="text-gray-300 text-sm">
-                          Subtle enhancement that preserves your unique features and expressions. The invisible art of aesthetic medicine at its finest.
-                        </p>
-                      </div>
-                      <div className="text-center">
-                        <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                          <Heart size={28} />
-                        </div>
-                        <h4 className="text-white font-semibold mb-2">Reversible & Adjustable</h4>
-                        <p className="text-gray-300 text-sm">
-                          Unlike surgery, results can be adjusted or reversed if needed. Build your results gradually with top-up treatments.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
             </div>
           </div>
         </section>
