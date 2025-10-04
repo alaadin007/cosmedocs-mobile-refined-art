@@ -516,53 +516,6 @@ const TempleFiller = () => {
               </motion.div>
             </div>
 
-            {/* Treatment Results Summary */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="mt-16 flex justify-center"
-            >
-              <Card className="bg-card/50 backdrop-blur-sm border border-primary/20 overflow-hidden max-w-lg">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Star className="text-primary" size={20} />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-white">Treatment Results</CardTitle>
-                  <p className="text-muted-foreground text-sm">
-                    Professional temple enhancement achieving natural volume restoration
-                  </p>
-                </CardHeader>
-                
-                <CardContent className="pt-0">
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="text-center p-3 rounded-lg bg-primary/10">
-                      <div className="text-xl font-bold text-primary mb-1">12-18</div>
-                      <div className="text-xs text-muted-foreground">Months Duration</div>
-                    </div>
-                    <div className="text-center p-3 rounded-lg bg-primary/10">
-                      <div className="text-xl font-bold text-primary mb-1">45</div>
-                      <div className="text-xs text-muted-foreground">Minute Treatment</div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    {[
-                      "Volume restoration",
-                      "Enhanced symmetry", 
-                      "Natural contours",
-                      "Facial harmony"
-                    ].map((result, index) => (
-                      <div key={index} className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2 flex-shrink-0" size={14} />
-                        <span className="text-muted-foreground">{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </section>
 
