@@ -38,16 +38,6 @@ const MarionnetteLines = () => {
       caption: "Dramatic improvement in marionette lines with expert filler placement" 
     },
     { 
-      src: "/lovable-uploads/8470f01b-6e88-46ac-898a-108ce73f9dd5.png", 
-      alt: "Before nasolabial creases and mild lip hydration treatment", 
-      caption: "Before: Nasolabial creases and lip area assessment" 
-    },
-    { 
-      src: "/lovable-uploads/a51527f8-e826-4789-bd14-3bd8eee153bf.png", 
-      alt: "After nasolabial crease and lip hydration treatment", 
-      caption: "After: Smooth nasolabial area with enhanced lip hydration" 
-    },
-    { 
       src: "/lovable-uploads/010185b4-89b2-4e8b-b94b-8187262a436e.png", 
       alt: "Nasolabial folds before and after dermal filler treatment", 
       caption: "Complete transformation of nasolabial folds and smile lines" 
