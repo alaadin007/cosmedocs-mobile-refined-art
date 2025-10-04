@@ -566,40 +566,44 @@ const TempleFiller = () => {
           </div>
         </section>
 
-        {/* Temple Fillers & Benefits */}
-        <section className="py-20">
+        {/* Understanding Temple Volume Loss */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">Temple Fillers & Benefits</h2>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Understanding Temple Volume Loss</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Understanding temple volume loss and discovering the transformative benefits of professional treatment.
+                Discover the causes of temple hollowing and how it affects facial appearance.
               </p>
-            </div>
-            
-            {/* Two Column Layout for Understanding and Benefits */}
-            <div className="grid lg:grid-cols-2 gap-8">
-              {/* Understanding Temple Volume Loss Card */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="bg-purple-500/20 rounded-full p-3">
-                        <Activity className="text-purple-300" size={24} />
-                      </div>
-                      <CardTitle className="text-2xl text-white">Understanding Temple Volume Loss</CardTitle>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="bg-purple-500/20 rounded-full p-3">
+                      <Activity className="text-purple-300" size={24} />
                     </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4 text-gray-300">
-                    <p className="leading-relaxed">
-                      Temple volume loss is a natural part of ageing that begins as early as our mid-20s. The temples contain 
-                      minimal subcutaneous fat, making volume depletion particularly noticeable in this area. Fillers in the temples 
-                      can effectively address this concern and even help lift the eye area.
-                    </p>
+                    <CardTitle className="text-2xl text-white">What Causes Temple Volume Loss?</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4 text-gray-300">
+                  <p className="leading-relaxed">
+                    Temple volume loss is a natural part of ageing that begins as early as our mid-20s. The temples contain 
+                    minimal subcutaneous fat, making volume depletion particularly noticeable in this area. Fillers in the temples 
+                    can effectively address this concern and even help lift the eye area.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6 mt-6">
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -613,6 +617,8 @@ const TempleFiller = () => {
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p>Genetics and lifestyle factors accelerate the ageing process</p>
                       </div>
+                    </div>
+                    <div className="space-y-3">
                       <div className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p>Creates an aged, tired appearance affecting facial harmony</p>
@@ -622,11 +628,76 @@ const TempleFiller = () => {
                         <p>Filler in temples to lift eyes is a popular non-surgical approach to rejuvenation</p>
                       </div>
                     </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Temple Fillers & Benefits */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Temple Fillers & Benefits</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Discover how temple filler treatments restore volume and deliver transformative benefits.
+              </p>
+            </motion.div>
+            
+            {/* Two Column Layout for Fillers and Benefits */}
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Temple Filler Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20 h-full">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-purple-500/20 rounded-full p-3">
+                        <Syringe className="text-purple-300" size={24} />
+                      </div>
+                      <CardTitle className="text-2xl text-white">Temple Filler Treatment</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-gray-300">
+                    <p className="leading-relaxed">
+                      Temple dermal filler is a non-surgical cosmetic treatment using premium hyaluronic acid-based injectable 
+                      fillers to restore lost volume in the temporal region. This treatment provides immediate results, acting 
+                      as a liquid facelift for the temples.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p><strong>Premium Hyaluronic Acid:</strong> We use only the highest quality temple fillers for optimal results</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p><strong>Precision Injection:</strong> Strategic placement ensures natural-looking temple filler before and after results</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p><strong>Eye Lifting Effect:</strong> Filler in temples to lift eyes provides subtle brow elevation</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p><strong>Quick Procedure:</strong> Treatment takes 30-45 minutes with minimal downtime</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
-              {/* Temple Filler Benefits Card */}
+              {/* Temple Filler Benefits Column */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -682,14 +753,30 @@ const TempleFiller = () => {
                 </Card>
               </motion.div>
             </div>
+          </div>
+        </section>
 
-            {/* New Section - How Temple Fillers Work */}
+        {/* How Temple Fillers Work */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="mt-16"
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">How Temple Fillers Work</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Understanding the science and procedure behind temple filler treatments.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
               <Card className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border-indigo-500/20">
                 <CardHeader>
@@ -697,7 +784,7 @@ const TempleFiller = () => {
                     <div className="bg-indigo-500/20 rounded-full p-3">
                       <Syringe className="text-indigo-300" size={24} />
                     </div>
-                    <CardTitle className="text-2xl text-white">How Temple Fillers Work & Related Treatments</CardTitle>
+                    <CardTitle className="text-2xl text-white">The Temple Filler Process</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6 text-gray-300">
@@ -735,43 +822,128 @@ const TempleFiller = () => {
 
                     <div className="space-y-3">
                       <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                        <CheckCircle className="text-indigo-400" size={18} />
-                        Complementary Treatments
+                        <Activity className="text-indigo-400" size={18} />
+                        How Long Do Injectable Fillers Last?
                       </h3>
                       <p className="text-sm leading-relaxed">
-                        Temple fillers can be combined with other treatments for comprehensive facial rejuvenation:
+                        The longevity of temple fillers depends on several factors including the type of filler used, individual metabolism, 
+                        and lifestyle factors. Premium hyaluronic acid fillers typically last 12-18 months in the temple area.
                       </p>
-                      <ul className="space-y-2 ml-6">
+                      <p className="text-sm leading-relaxed">
+                        How long does filler last can vary between individuals - those with faster metabolisms may see results fade sooner, 
+                        whilst others may enjoy results beyond 18 months. Regular maintenance treatments ensure consistent, optimal results over time.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Combination & Complementary Treatments */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Combination & Complementary Treatments</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Enhance your results by combining temple fillers with other facial rejuvenation treatments.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Card className="bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border-teal-500/20">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="bg-teal-500/20 rounded-full p-3">
+                      <Palette className="text-teal-300" size={24} />
+                    </div>
+                    <CardTitle className="text-2xl text-white">Complete Facial Rejuvenation</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6 text-gray-300">
+                  <p className="leading-relaxed">
+                    Temple fillers can be combined with other treatments for comprehensive facial rejuvenation, creating a 
+                    harmonious liquid facelift effect. This holistic approach addresses multiple areas of concern simultaneously 
+                    for optimal aesthetic results.
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                        <CheckCircle className="text-teal-400" size={18} />
+                        Popular Treatment Combinations
+                      </h3>
+                      <ul className="space-y-3">
                         <li className="flex items-start gap-2">
-                          <span className="text-indigo-400 mt-1">•</span>
-                          <span><a href="/face-botox" className="text-purple-300 hover:text-purple-200 underline">Face lift with Botox</a> for wrinkle reduction</span>
+                          <span className="text-teal-400 mt-1">•</span>
+                          <div>
+                            <a href="/face-botox" className="text-purple-300 hover:text-purple-200 underline font-medium">
+                              Face Lift with Botox
+                            </a>
+                            <p className="text-sm mt-1">Combine temple fillers with Botox for wrinkle reduction and comprehensive upper face rejuvenation</p>
+                          </div>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-indigo-400 mt-1">•</span>
-                          <span><a href="/cheek-fillers" className="text-purple-300 hover:text-purple-200 underline">Cheek fillers</a> for mid-face volume</span>
+                          <span className="text-teal-400 mt-1">•</span>
+                          <div>
+                            <a href="/cheek-fillers" className="text-purple-300 hover:text-purple-200 underline font-medium">
+                              Cheek Fillers
+                            </a>
+                            <p className="text-sm mt-1">Restore mid-face volume alongside temple enhancement for balanced facial proportions</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="space-y-3">
+                      <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                        <CheckCircle className="text-teal-400" size={18} />
+                        Additional Complementary Treatments
+                      </h3>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-2">
+                          <span className="text-teal-400 mt-1">•</span>
+                          <div>
+                            <a href="/tear-trough-filler" className="text-purple-300 hover:text-purple-200 underline font-medium">
+                              Tear Trough Fillers
+                            </a>
+                            <p className="text-sm mt-1">Address under-eye hollowing for a complete eye area rejuvenation</p>
+                          </div>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-indigo-400 mt-1">•</span>
-                          <span><a href="/tear-trough-filler" className="text-purple-300 hover:text-purple-200 underline">Tear trough fillers</a> for under-eye hollowing</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-indigo-400 mt-1">•</span>
-                          <span><a href="/lip-filler" className="text-purple-300 hover:text-purple-200 underline">Lip fillers</a> for complete facial harmony</span>
+                          <span className="text-teal-400 mt-1">•</span>
+                          <div>
+                            <a href="/lip-filler" className="text-purple-300 hover:text-purple-200 underline font-medium">
+                              Lip Fillers
+                            </a>
+                            <p className="text-sm mt-1">Complete your transformation with enhanced lip volume and definition</p>
+                          </div>
                         </li>
                       </ul>
                     </div>
                   </div>
 
-                  <div className="bg-indigo-500/10 rounded-lg p-4 border border-indigo-500/20">
+                  <div className="bg-teal-500/10 rounded-lg p-4 border border-teal-500/20 mt-6">
                     <h4 className="font-semibold text-white mb-2 flex items-center gap-2">
-                      <Activity className="text-indigo-400" size={16} />
-                      How Long Do Injectable Fillers Last?
+                      <Heart className="text-teal-400" size={16} />
+                      The Liquid Facelift Approach
                     </h4>
                     <p className="text-sm leading-relaxed">
-                      The longevity of temple fillers depends on several factors including the type of filler used, individual metabolism, 
-                      and lifestyle factors. Premium hyaluronic acid fillers typically last 12-18 months in the temple area. How long does 
-                      filler last can vary between individuals - those with faster metabolisms may see results fade sooner, whilst others 
-                      may enjoy results beyond 18 months. Regular maintenance treatments ensure consistent, optimal results over time.
+                      By strategically combining temple fillers with other injectable treatments, we can achieve comprehensive facial 
+                      rejuvenation without surgery. This liquid facelift approach delivers natural-looking results with minimal downtime, 
+                      addressing multiple signs of ageing simultaneously for a harmonious, youthful appearance.
                     </p>
                   </div>
                 </CardContent>
