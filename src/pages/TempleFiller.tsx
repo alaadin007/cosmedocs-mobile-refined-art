@@ -1046,6 +1046,216 @@ const TempleFiller = () => {
           </div>
         </section>
 
+        {/* Video Section - Educational Content */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Temple Filler Treatment Explained</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Watch our expert practitioners explain the temple filler procedure, what to expect, and how we achieve natural-looking results.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="aspect-video bg-gradient-to-br from-purple-900/20 to-indigo-900/20 rounded-2xl overflow-hidden border border-purple-500/20 relative group">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                  <div className="bg-purple-500/20 rounded-full p-6 mb-6 group-hover:scale-110 transition-transform">
+                    <Activity className="text-purple-300" size={48} />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">Temple Filler Procedure Overview</h3>
+                  <p className="text-gray-300 max-w-2xl mb-6">
+                    Learn about temple dermal filler treatment from consultation to aftercare, including how long do injectable fillers last, 
+                    the benefits of filler in temples to lift eyes, and how temple fillers contribute to a comprehensive liquid facelift approach.
+                  </p>
+                  <Button 
+                    className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-3"
+                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                  >
+                    Book Consultation to Learn More
+                  </Button>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                  <CardHeader>
+                    <CardTitle className="text-white text-lg flex items-center gap-2">
+                      <Clock className="text-purple-400" size={20} />
+                      Treatment Process
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-gray-300 text-sm">
+                    <p>See the step-by-step temple filler procedure from consultation through to immediate results</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                  <CardHeader>
+                    <CardTitle className="text-white text-lg flex items-center gap-2">
+                      <Shield className="text-purple-400" size={20} />
+                      Safety Standards
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-gray-300 text-sm">
+                    <p>Learn about our medical-grade products and safety protocols endorsed by <a href="https://www.bapras.org.uk" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">BAPRAS</a></p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/20">
+                  <CardHeader>
+                    <CardTitle className="text-white text-lg flex items-center gap-2">
+                      <Heart className="text-purple-400" size={20} />
+                      Patient Care
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-gray-300 text-sm">
+                    <p>Discover our comprehensive aftercare and follow-up support ensuring optimal temple filler before and after results</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Medical Authority & Research Section */}
+        <section className="py-20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Evidence-Based Treatment Approach</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Our temple filler treatments are based on established medical research and industry best practices.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border-indigo-500/20 h-full">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-indigo-500/20 rounded-full p-3">
+                        <GraduationCap className="text-indigo-300" size={24} />
+                      </div>
+                      <CardTitle className="text-2xl text-white">Clinical Evidence</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-gray-300">
+                    <p className="leading-relaxed">
+                      Temple filler treatments are supported by extensive clinical research demonstrating safety and efficacy. 
+                      Hyaluronic acid dermal fillers have been studied extensively for facial volume restoration.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-indigo-400 mt-1 flex-shrink-0" size={16} />
+                        <p className="text-sm">
+                          <a 
+                            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5300704/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-purple-300 hover:text-purple-200 underline"
+                          >
+                            Clinical studies on hyaluronic acid safety
+                          </a> published in peer-reviewed journals
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-indigo-400 mt-1 flex-shrink-0" size={16} />
+                        <p className="text-sm">
+                          Treatments follow guidelines from the <a 
+                            href="https://www.saveface.co.uk" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-purple-300 hover:text-purple-200 underline"
+                          >
+                            Save Face Register
+                          </a> for safe aesthetic practice
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-indigo-400 mt-1 flex-shrink-0" size={16} />
+                        <p className="text-sm">FDA and CE-approved dermal filler products used exclusively</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border-teal-500/20 h-full">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-teal-500/20 rounded-full p-3">
+                        <Shield className="text-teal-300" size={24} />
+                      </div>
+                      <CardTitle className="text-2xl text-white">Medical Standards</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-gray-300">
+                    <p className="leading-relaxed">
+                      We adhere to the highest medical standards set by leading UK regulatory bodies, ensuring safe, 
+                      effective temple dermal filler treatments with predictable, natural-looking results.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-teal-400 mt-1 flex-shrink-0" size={16} />
+                        <p className="text-sm">
+                          Registered with the <a 
+                            href="https://www.cqc.org.uk" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-purple-300 hover:text-purple-200 underline"
+                          >
+                            Care Quality Commission (CQC)
+                          </a> for patient safety
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-teal-400 mt-1 flex-shrink-0" size={16} />
+                        <p className="text-sm">Comprehensive medical insurance and emergency protocols in place</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-teal-400 mt-1 flex-shrink-0" size={16} />
+                        <p className="text-sm">Ongoing training in advanced injection techniques and facial anatomy</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="text-teal-400 mt-1 flex-shrink-0" size={16} />
+                        <p className="text-sm">Member of professional aesthetic medicine organisations</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -1261,7 +1471,8 @@ const TempleFiller = () => {
             a non-surgical solution for age-related volume loss in the temporal region. Our featured temple filler before and after 
             case study demonstrates the remarkable transformation possible with professional temple filler treatment, showing 
             before, during, and after images that highlight the expertise and artistry involved in this sophisticated procedure. 
-            Fillers in the temples are now recognised as an essential component of comprehensive facial rejuvenation.
+            Fillers in the temples are now recognised as an essential component of comprehensive facial rejuvenation, particularly 
+            for patients seeking natural temple enhancement in London clinics.
           </p>
           <p>
             The before treatment images clearly show the common signs of temple volume loss - hollowed areas, 
@@ -1269,7 +1480,8 @@ const TempleFiller = () => {
             aesthetic practitioners use advanced injection techniques with medical-grade hyaluronic acid fillers 
             to precisely restore volume. Filler in temples to lift eyes is a particularly sought-after technique, 
             creating a subtle lifting effect that rejuvenates the entire upper face. The filler temples before after 
-            results showcase significant improvement in facial harmony, restored temple volume, and a more youthful, refreshed appearance.
+            results showcase significant improvement in facial harmony, restored temple volume, and a more youthful, refreshed appearance. 
+            Many London patients specifically request temple filler to address signs of ageing in the upper face region.
           </p>
           <p>
             This comprehensive temple filler case study represents typical results achievable at our London clinic, 
@@ -1277,7 +1489,8 @@ const TempleFiller = () => {
             treatment process involves strategic placement of injectable fillers to address volume loss whilst maintaining 
             facial expression and natural movement, ensuring results that enhance rather than alter the patient's 
             natural beauty. Many patients ask "how long does filler last?" and we're pleased to report that temple fillers 
-            typically provide results lasting 12-18 months with premium hyaluronic acid formulations.
+            typically provide results lasting 12-18 months with premium hyaluronic acid formulations. Understanding how long do injectable fillers last 
+            helps patients plan their aesthetic maintenance schedule effectively.
           </p>
           <p>
             Temple filler before and after photography demonstrates the effectiveness of this treatment for addressing 
@@ -1285,7 +1498,8 @@ const TempleFiller = () => {
             through our combination of expert technique, premium products, and personalised treatment planning. 
             The transformation shown in these images represents the gold standard of temple dermal filler treatment available 
             in London's aesthetic medicine landscape. Temple fillers are often incorporated into a liquid facelift approach, 
-            combined with other treatments for comprehensive facial rejuvenation without surgery.
+            combined with other treatments for comprehensive facial rejuvenation without surgery. The liquid facelift technique using 
+            strategic dermal filler placement has become the preferred non-surgical alternative to traditional facelifts for many London patients.
           </p>
           <p>
             Understanding how long do injectable fillers last is crucial for treatment planning. While individual results vary, 
@@ -1293,7 +1507,8 @@ const TempleFiller = () => {
             preserve your results. The versatility of fillers in the temples means they can address multiple concerns - from 
             simple volume restoration to using filler in temples to lift eyes for a more open, youthful gaze. Many patients 
             combine temple fillers with a face lift with Botox approach, using anti-wrinkle injections to address dynamic lines 
-            whilst dermal fillers restore lost volume, creating a comprehensive non-surgical rejuvenation strategy.
+            whilst dermal fillers restore lost volume, creating a comprehensive non-surgical rejuvenation strategy. This combination of 
+            face lift with Botox and temple fillers provides optimal facial rejuvenation results.
           </p>
           <p>
             The liquid facelift concept has revolutionised non-surgical facial rejuvenation, with temple fillers playing a central 
@@ -1301,7 +1516,30 @@ const TempleFiller = () => {
             risks, or costs associated with traditional surgical procedures. Our expert practitioners carefully assess each patient's 
             unique facial anatomy to create a customised treatment plan that may include temple dermal filler as part of a 
             comprehensive aesthetic strategy, ensuring harmonious, balanced, and natural-looking results that enhance your 
-            inherent beauty.
+            inherent beauty. Temple filler treatment in London continues to grow in popularity as patients discover the transformative 
+            yet natural results achievable with this sophisticated treatment.
+          </p>
+          <p>
+            For patients considering temple enhancement, it's important to understand the full scope of temple filler benefits. 
+            Not only do temple fillers restore lost volume, but strategic placement of filler in temples to lift eyes can create 
+            a significant rejuvenating effect on the entire upper face. The temple filler before and after results we achieve 
+            demonstrate how this treatment addresses multiple ageing concerns simultaneously - from hollowed temples to drooping 
+            brows and tired-looking eyes. When incorporated into a comprehensive liquid facelift strategy, temple fillers work 
+            synergistically with other treatments to create balanced, natural facial rejuvenation.
+          </p>
+          <p>
+            Patients frequently enquire about how long do injectable fillers last, particularly when planning their aesthetic journey. 
+            With temple dermal filler treatments, longevity depends on various factors including the type of hyaluronic acid used, 
+            individual metabolism, lifestyle factors, and injection technique. Premium temple fillers in London typically last 12-18 months, 
+            offering excellent value for this transformative treatment. Understanding how long does filler last helps patients make 
+            informed decisions about their aesthetic maintenance schedule and budget accordingly.
+          </p>
+          <p>
+            The combination of temple fillers with face lift with Botox represents the pinnacle of non-surgical facial rejuvenation. 
+            Whilst Botox addresses dynamic wrinkles caused by muscle movement, temple fillers restore structural volume loss, creating 
+            comprehensive upper face rejuvenation. This dual approach mirrors the effects of a traditional surgical facelift but without 
+            incisions, general anaesthesia, or extended recovery periods. Many London patients appreciate this sophisticated non-surgical 
+            alternative that delivers natural-looking results aligned with our philosophy of invisible art in aesthetic medicine.
           </p>
           
           {/* Additional SEO metadata for images */}
