@@ -298,7 +298,7 @@ const TrapBotox = () => {
                   Trapezius Botox, also known as Trap Botox or Trap Tox, is an injectable treatment that uses <a href="/botox" className="text-purple-300 hover:text-purple-200 underline">botox for traps</a> to relax the trapezius muscles. When these trap muscles become overworked and tense, it can lead to pain in trapezius muscle, trapezius pain, and postural issues in the neck, shoulders, and upper back.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Botox in trap muscles aims to alleviate this muscle tension by temporarily relaxing the trapezius muscle, creating a more elegant shoulder profile and improved posture. Many patients search for "trap botox before and after" results to see the dramatic transformation this <a href="/aesthetic-treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatment</a> can achieve.
+                  Botox in trap muscles aims to alleviate this muscle tension by temporarily relaxing the trapezius muscle, creating a more elegant shoulder profile and improved posture. Many patients search for "trap botox before and after" results to see the dramatic transformation this <a href="/aesthetic-treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatment</a> can achieve. Clinical research published in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12091602/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Plastic and Reconstructive Surgery</a> has demonstrated the efficacy and safety of botulinum toxin for trapezius muscle reduction.
                 </p>
                 </div>
               </motion.div>
@@ -404,7 +404,7 @@ const TrapBotox = () => {
                 className="space-y-6"
               >
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  By receiving botox in traps, the nerve signals that cause these muscles to become overworked from constant movement can be blocked. Trapezius muscle botox and traps muscle botox work by temporarily paralysing the targeted areas. This trap muscle botox treatment helps address trapezius muscle hurts and provides relief from chronic trapezius pain. Additionally, this temporary muscle relaxation helps:
+                  By receiving botox in traps, the nerve signals that cause these muscles to become overworked from constant movement can be blocked. Trapezius muscle botox and traps muscle botox work by temporarily paralysing the targeted areas. This trap muscle botox treatment helps address trapezius muscle hurts and provides relief from chronic trapezius pain. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9293110/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">study published by the National Institutes of Health</a> confirms the effectiveness of botulinum toxin for correcting trapezius muscle hypertrophy. Additionally, this temporary muscle relaxation helps:
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
