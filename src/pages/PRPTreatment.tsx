@@ -514,7 +514,12 @@ const PRPTreatment = () => {
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Treatment Care & Timeline</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Essential information about caring for your skin after PRP treatment and understanding your results timeline
+                Essential information about caring for your skin after PRP treatment and understanding your results timeline. The <a 
+                  href="https://www.baaps.org.uk" 
+                  target="_blank" 
+                  rel="noopener noreferrer nofollow"
+                  className="text-purple-300 hover:text-purple-200 underline"
+                >British Association of Aesthetic Plastic Surgeons</a> recognises PRP as an evidence-based regenerative treatment for aesthetic enhancement.
               </p>
             </motion.div>
 
@@ -865,14 +870,6 @@ const PRPTreatment = () => {
               className="text-center mb-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto mb-8">
-                Our PRP treatments are backed by extensive clinical experience and recognised by leading aesthetic medicine organisations. The <a 
-                  href="https://www.baaps.org.uk" 
-                  target="_blank" 
-                  rel="noopener noreferrer nofollow"
-                  className="text-purple-300 hover:text-purple-200 underline"
-                >British Association of Aesthetic Plastic Surgeons</a> recognises PRP as an evidence-based regenerative treatment for aesthetic enhancement.
-              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
