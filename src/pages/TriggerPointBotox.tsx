@@ -12,6 +12,8 @@ import TrustBadges from '@/components/TrustBadges';
 import { Link } from 'react-router-dom';
 
 const TriggerPointBotox = () => {
+  const bookingUrl = "https://med.as.me/harleystreet";
+  
   const seoData = generateSEOMetadata(
     "Trigger Point Botox London - £450 | Muscle Tension Relief | Cosmedocs",
     "Expert trigger point botox injections in London from £450. Relieve chronic muscle tension, pain, and trigger points with precision botox treatments at Cosmedocs Harley Street.",
@@ -220,7 +222,7 @@ const TriggerPointBotox = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                    onClick={handleBookingClick}
+                    onClick={() => window.open(bookingUrl, "_blank")}
                   >
                     Book Consultation
                   </Button>
@@ -675,127 +677,6 @@ const TriggerPointBotox = () => {
         </section>
 
 
-        {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Pricing</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for professional trigger point botox treatments. All prices include consultation, 
-                assessment, and precision injection therapy from our expert medical team.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">MOST POPULAR</span>
-                  </div>
-                  <CardHeader className="pt-8">
-                    <CardTitle className="text-white text-2xl">Trigger Point Botox</CardTitle>
-                    <div className="text-white text-4xl font-bold">£450</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-purple-100">Professional muscle tension relief treatment</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation included</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Precision injection therapy</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">3-6 months pain relief</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Expert GMC-registered practitioners</span>
-                      </div>
-                    </div>
-                    <Button 
-                      size="lg" 
-                      className="bg-white text-purple-600 hover:bg-gray-100 w-full rounded-full mt-4"
-                      onClick={handleBookingClick}
-                    >
-                      Book Your Treatment
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border-purple-300/20 h-full text-center">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
-                    <div className="text-purple-300 text-4xl font-bold">Free</div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
-                    <div className="space-y-2 text-left">
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-300" size={16} />
-                        <span className="text-gray-300 text-sm">Detailed trigger point assessment</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-300" size={16} />
-                        <span className="text-gray-300 text-sm">Personalised treatment plan</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-300" size={16} />
-                        <span className="text-gray-300 text-sm">Pain assessment & evaluation</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="text-purple-300" size={16} />
-                        <span className="text-gray-300 text-sm">Expert medical advice</span>
-                      </div>
-                    </div>
-                    <Button 
-                      size="lg" 
-                      className="bg-white text-black hover:bg-gray-200 w-full rounded-full mt-4"
-                      onClick={handleBookingClick}
-                    >
-                      Book Free Consultation
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-
-            <div className="mt-8 flex items-center justify-center gap-6 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <a href="tel:+03330551503" className="hover:text-purple-300 transition-colors">
-                  0333 0551 503
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>Harley Street, London</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Practitioner Credentials */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -926,6 +807,127 @@ const TriggerPointBotox = () => {
                 </motion.div>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing-section" className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Treatment Pricing</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Transparent pricing for professional trigger point botox treatments. All prices include consultation, 
+                assessment, and precision injection therapy from our expert medical team.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-purple-600 border-purple-400 h-full text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-semibold">MOST POPULAR</span>
+                  </div>
+                  <CardHeader className="pt-8">
+                    <CardTitle className="text-white text-2xl">Trigger Point Botox</CardTitle>
+                    <div className="text-white text-4xl font-bold">£450</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-purple-100">Professional muscle tension relief treatment</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Comprehensive consultation included</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Precision injection therapy</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">3-6 months pain relief</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-white" size={16} />
+                        <span className="text-purple-100 text-sm">Expert GMC-registered practitioners</span>
+                      </div>
+                    </div>
+                    <Button 
+                      size="lg" 
+                      className="bg-white text-purple-600 hover:bg-gray-100 w-full rounded-full mt-4"
+                      onClick={() => window.open(bookingUrl, "_blank")}
+                    >
+                      Book Your Treatment
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-300/20 h-full text-center">
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl">Consultation Only</CardTitle>
+                    <div className="text-purple-300 text-4xl font-bold">Free</div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-gray-300 text-sm">Detailed trigger point assessment</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-gray-300 text-sm">Personalised treatment plan</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-gray-300 text-sm">Pain assessment & evaluation</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-purple-300" size={16} />
+                        <span className="text-gray-300 text-sm">Expert medical advice</span>
+                      </div>
+                    </div>
+                    <Button 
+                      size="lg" 
+                      className="bg-white text-black hover:bg-gray-200 w-full rounded-full mt-4"
+                      onClick={() => window.open(bookingUrl, "_blank")}
+                    >
+                      Book Free Consultation
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center gap-6 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+03330551503" className="hover:text-purple-300 transition-colors">
+                  0333 0551 503
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Harley Street, London</span>
+              </div>
+            </div>
           </div>
         </section>
 
