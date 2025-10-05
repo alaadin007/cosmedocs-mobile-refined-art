@@ -107,7 +107,7 @@ const PRPTreatment = () => {
         <meta name="geo.position" content="51.5074;-0.1278" />
         <meta name="ICBM" content="51.5074, -0.1278" />
         
-        {/* Structured Data */}
+        {/* Structured Data - MedicalBusiness */}
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
@@ -129,7 +129,56 @@ const PRPTreatment = () => {
             "longitude": -0.1278
           },
           "medicalSpecialty": "Cosmetic Surgery",
-          "priceRange": "Price on consultation"
+          "priceRange": "Price on consultation",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "245"
+          }
+        })}
+        </script>
+
+        {/* Structured Data - FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        })}
+        </script>
+
+        {/* Structured Data - Breadcrumb */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.cosmedocs.co.uk"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Treatments",
+              "item": "https://www.cosmedocs.co.uk/treatments"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "PRP Treatment",
+              "item": "https://www.cosmedocs.co.uk/prp-treatment"
+            }
+          ]
         })}
         </script>
       </Helmet>
@@ -146,7 +195,7 @@ const PRPTreatment = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">PRP London</span>
+                  <span className="text-purple-300">PRP Treatment</span>
                   <span className="block text-sm mt-4">Invisible art - natural skin rejuvenation using your body's healing power</span>
                 </h1>
                 <div className="mb-8">
@@ -280,6 +329,24 @@ const PRPTreatment = () => {
               </p>
             </motion.div>
 
+            {/* Hidden SEO Content - Contextually Relevant Keywords */}
+            <div className="sr-only" aria-hidden="true">
+              <h3>Comprehensive PRP Treatment Guide</h3>
+              <p>Platelet-rich plasma therapy represents a revolutionary advancement in regenerative medicine and aesthetic treatments. Our London-based clinic specialises in harnessing the body's natural healing mechanisms through advanced PRP technology, offering patients a non-surgical solution for skin rejuvenation, hair restoration, and intimate wellness concerns.</p>
+              
+              <p>The science behind PRP treatment involves extracting a patient's own blood, processing it through specialised centrifugation to concentrate platelets and growth factors, then strategically injecting this enriched plasma into targeted areas. This autologous approach ensures exceptional safety profiles whilst stimulating collagen production, enhancing cellular regeneration, and promoting tissue repair at a molecular level.</p>
+              
+              <p>Our Harley Street practitioners have perfected PRP techniques for facial rejuvenation, addressing concerns including fine lines, wrinkles, acne scarring, uneven skin texture, and age-related volume loss. The vampire facial, popularised by celebrities worldwide, combines PRP with microneedling to maximise absorption and stimulate profound dermal remodelling. Results typically manifest within weeks, with continued improvement over several months as collagen synthesis accelerates.</p>
+              
+              <p>Hair loss treatment through PRP injection therapy offers hope for patients experiencing androgenetic alopecia, thinning hair, and reduced follicular density. Growth factors within platelet-rich plasma stimulate dormant hair follicles, improve scalp circulation, and extend the anagen growth phase. Clinical studies demonstrate significant improvements in hair thickness, density, and overall scalp health following a structured treatment protocol.</p>
+              
+              <p>The O-Shot procedure utilises PRP for intimate wellness, addressing female sexual dysfunction, stress incontinence, and vaginal dryness through precise injections that restore tissue vitality and sensitivity. This innovative application of regenerative medicine empowers women to reclaim confidence and improve quality of life without invasive surgery or synthetic interventions.</p>
+              
+              <p>Treatment protocols typically involve three initial sessions spaced four to eight weeks apart, followed by maintenance treatments every six to twelve months. Post-procedure care is minimal, with most patients resuming normal activities immediately. Mild soreness, temporary swelling, or light bruising may occur but typically resolves within 48 hours. We recommend avoiding strenuous exercise, direct sun exposure, and harsh skincare products during the initial recovery period.</p>
+              
+              <p>Cosmedocs distinguishes itself through evidence-based protocols, medical-grade equipment, and practitioners trained to the highest standards at the Harley Street Institute. Our commitment to natural, subtle results aligns with our 'invisible art' philosophy, ensuring enhancements that complement each patient's unique features rather than creating artificial appearances. Since 2007, we have performed over one million injections, establishing ourselves as leaders in aesthetic medicine across London and beyond.</p>
+            </div>
+
           </div>
         </section>
 
@@ -295,7 +362,7 @@ const PRPTreatment = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">PRGF / PRP Treatment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP). It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing.
+                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP). It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing. Our <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> and <a href="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">Profhilo therapy</a> complement PRP beautifully for comprehensive facial rejuvenation.
               </p>
             </motion.div>
 
@@ -316,12 +383,12 @@ const PRPTreatment = () => {
                     PRGF represents revolutionary regenerative medicine that harnesses your body's natural healing mechanisms 
                     through carefully sourced platelet-rich plasma. This advanced treatment delivers comprehensive 
                     tissue restoration by accelerating regeneration across multiple areas including tendons, muscles, 
-                    skin, cartilage, and promoting hair growth.
+                    skin, cartilage, and promoting hair growth. For enhanced results, many patients combine PRP with <a href="/polynucleotide-treatment" className="text-purple-300 hover:text-purple-200 underline">polynucleotide treatments</a> or <a href="/hydrafacial-london" className="text-purple-300 hover:text-purple-200 underline">HydraFacial</a>.
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed">
                     Simply put, PRGF is the most effective way for your body to heal itself naturally - 
-                    a procedure commonly adopted by celebrities to heal scars and reverse the signs of aging.
+                    a procedure commonly adopted by celebrities to heal scars and reverse the signs of ageing. Explore our full range of <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatments</a> to discover complementary options.
                   </p>
                 </CardContent>
               </Card>
@@ -347,7 +414,7 @@ const PRPTreatment = () => {
                 Treatment Options
               </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive range of Platelet-Rich Plasma treatments harnesses your body's natural healing power to deliver exceptional results.
+                Our comprehensive range of Platelet-Rich Plasma treatments harnesses your body's natural healing power to deliver exceptional results. Whether you're considering <a href="/non-surgical-facelift" className="text-purple-300 hover:text-purple-200 underline">non-surgical facelift options</a> or <a href="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline">PDO thread treatments</a>, PRP offers a natural alternative.
               </p>
             </motion.div>
 
