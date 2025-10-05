@@ -676,6 +676,85 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
+        {/* Related Pain Management Treatments - New Standalone Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold text-center mb-8 text-white">Related Pain Management Treatments</h2>
+              <p className="text-gray-300 text-center mb-12">
+                In addition to trigger point botox, we offer complementary treatments that may benefit patients with chronic muscle tension and jaw-related conditions.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="bg-black/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
+                >
+                  <Syringe className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-xl font-bold text-white mb-3">Masseter Botox</h3>
+                  <p className="text-gray-300 mb-4">
+                    Targeted treatment for jaw tension, TMJ disorders, and teeth grinding. Relaxes masseter muscles for pain relief and facial slimming.
+                  </p>
+                  <Link 
+                    to="/masseter-botox" 
+                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-black/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
+                >
+                  <Activity className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-xl font-bold text-white mb-3">Bruxism Treatment</h3>
+                  <p className="text-gray-300 mb-4">
+                    Specialised botox treatment for teeth grinding and clenching. Reduces muscle strain and protects teeth from damage.
+                  </p>
+                  <Link 
+                    to="/bruxism-botox" 
+                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-black/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
+                >
+                  <Zap className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-xl font-bold text-white mb-3">Trap Botox</h3>
+                  <p className="text-gray-300 mb-4">
+                    Relief for trapezius muscle tension and shoulder pain. Reduces bulk and creates a more elegant shoulder contour.
+                  </p>
+                  <Link 
+                    to="/trap-botox" 
+                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Practitioner Credentials */}
         <section className="py-20 bg-black">
@@ -728,88 +807,6 @@ const TriggerPointBotox = () => {
             </motion.div>
           </div>
         </section>
-
-
-        {/* Related Pain Management Treatments - New Standalone Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold text-center mb-8 text-white">Related Pain Management Treatments</h2>
-              <p className="text-gray-300 text-center mb-12">
-                In addition to trigger point botox, we offer complementary treatments that may benefit patients with chronic muscle tension and jaw-related conditions.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="bg-accent/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
-                >
-                  <Syringe className="text-purple-300 mb-4" size={32} />
-                  <h3 className="text-xl font-bold text-white mb-3">Masseter Botox</h3>
-                  <p className="text-gray-300 mb-4">
-                    Targeted treatment for jaw tension, TMJ disorders, and teeth grinding. Relaxes masseter muscles for pain relief and facial slimming.
-                  </p>
-                  <Link 
-                    to="/masseter-botox" 
-                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
-                  >
-                    Learn More →
-                  </Link>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-accent/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
-                >
-                  <Activity className="text-purple-300 mb-4" size={32} />
-                  <h3 className="text-xl font-bold text-white mb-3">Bruxism Treatment</h3>
-                  <p className="text-gray-300 mb-4">
-                    Specialised botox treatment for teeth grinding and clenching. Reduces muscle strain and protects teeth from damage.
-                  </p>
-                  <Link 
-                    to="/bruxism-botox" 
-                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
-                  >
-                    Learn More →
-                  </Link>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="bg-accent/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
-                >
-                  <Zap className="text-purple-300 mb-4" size={32} />
-                  <h3 className="text-xl font-bold text-white mb-3">Trap Botox</h3>
-                  <p className="text-gray-300 mb-4">
-                    Relief for trapezius muscle tension and shoulder pain. Reduces bulk and creates a more elegant shoulder contour.
-                  </p>
-                  <Link 
-                    to="/trap-botox" 
-                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
-                  >
-                    Learn More →
-                  </Link>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
