@@ -514,12 +514,12 @@ const PRPTreatment = () => {
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Treatment Care & Timeline</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Essential information about caring for your skin after PRP treatment and understanding your results timeline. The <a 
+                Understanding your post-treatment care routine and results timeline ensures optimal outcomes. Our protocols are backed by clinical evidence, with the <a 
                   href="https://www.baaps.org.uk" 
                   target="_blank" 
                   rel="noopener noreferrer nofollow"
                   className="text-purple-300 hover:text-purple-200 underline"
-                >British Association of Aesthetic Plastic Surgeons</a> recognises PRP as an evidence-based regenerative treatment for aesthetic enhancement.
+                >British Association of Aesthetic Plastic Surgeons</a> recognising PRP as an evidence-based regenerative treatment for aesthetic enhancement.
               </p>
             </motion.div>
 
