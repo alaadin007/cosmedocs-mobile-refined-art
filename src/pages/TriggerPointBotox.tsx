@@ -6,7 +6,7 @@ import { generateSEOMetadata } from '../utils/seo';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle, Clock, Shield, Star, Users, Award, Calendar, Activity, Syringe, GraduationCap, Palette, Heart, Phone, MapPin } from 'lucide-react';
+import { CheckCircle, Clock, Shield, Star, Users, Award, Calendar, Activity, Syringe, GraduationCap, Palette, Heart, Phone, MapPin, Zap } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadges from '@/components/TrustBadges';
 import { Link } from 'react-router-dom';
@@ -231,11 +231,6 @@ const TriggerPointBotox = () => {
                   >
                     View Pricing
                   </Button>
-                </div>
-                
-                {/* Trust Badges */}
-                <div className="mt-12">
-                  <TrustBadges />
                 </div>
               </motion.div>
               
@@ -713,8 +708,8 @@ const TriggerPointBotox = () => {
                   <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-400">
                     <div className="flex items-center gap-2">
                       <Phone className="w-4 h-4" />
-                      <a href="tel:+442079999999" className="hover:text-purple-300 transition-colors">
-                        020 7999 9999
+                      <a href="tel:+03330551503" className="hover:text-purple-300 transition-colors">
+                        0333 0551 503
                       </a>
                     </div>
                     <div className="flex items-center gap-2">
@@ -792,71 +787,88 @@ const TriggerPointBotox = () => {
             >
               <h2 className="text-3xl font-bold text-center mb-12 text-white">Comprehensive Treatment Information</h2>
               <Accordion type="single" collapsible className="w-full space-y-4">
-                <AccordionItem value="comprehensive-info" className="border-gray-700 bg-black/30 rounded-lg px-6">
-                  <AccordionTrigger className="text-white hover:text-purple-300">
-                    Why Choose Trigger Point Botox in London?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-300 space-y-4 pt-4">
-                    <p>
-                      Trigger point botox London specialists at Cosmedocs provide advanced muscle tension relief using botulinum toxin injections. Our Harley Street clinic offers expert trigger point therapy for chronic pain management, myofascial pain syndrome, and muscular tension disorders. Professional botox injections for trigger points provide long-lasting relief from chronic muscle spasms and tension headaches.
-                    </p>
-                    <p>
-                      Botulinum toxin trigger point injections represent a revolutionary approach to treating chronic musculoskeletal pain conditions. Our experienced medical practitioners use precision injection techniques to target hyperirritable muscle fibres, providing sustained relief from chronic pain syndromes. Trigger point botox treatment costs from £450 at our London clinic, representing excellent value for professional medical care.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="treatment-approach" className="border-gray-700 bg-black/30 rounded-lg px-6">
-                  <AccordionTrigger className="text-white hover:text-purple-300">
-                    Advanced Pain Management Techniques
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-300 space-y-4 pt-4">
-                    <p>
-                      Muscle tension relief through trigger point botox offers a non-surgical alternative to traditional pain management approaches. Our clinic specialises in treating fibromyalgia, chronic neck pain, shoulder tension, and tension-type headaches using advanced botulinum toxin therapy. Professional trigger point injections provide 3-6 months of sustained pain relief with minimal side effects.
-                    </p>
-                    <p>
-                      Chronic pain management through trigger point botox therapy has shown excellent clinical results for patients suffering from myofascial pain syndromes. Our Harley Street practitioners combine medical expertise with compassionate care to deliver optimal treatment outcomes. Botox trigger point therapy reduces muscle spasticity and improves range of motion effectively.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="related-treatments" className="border-gray-700 bg-black/30 rounded-lg px-6">
-                  <AccordionTrigger className="text-white hover:text-purple-300">
-                    Related Pain Management Treatments
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-300 space-y-4 pt-4">
-                    <p className="mb-4">
-                      In addition to trigger point botox, we offer complementary treatments that may benefit patients with chronic muscle tension:
-                    </p>
-                    <ul className="space-y-2 ml-4">
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                        <span>
-                          <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">
-                            Masseter Botox
-                          </Link> - for jaw tension and TMJ disorders
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                        <span>
-                          <Link to="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">
-                            Dermal Fillers
-                          </Link> - for facial rejuvenation
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
-                        <span>
-                          <Link to="/non-surgical-facelift" className="text-purple-300 hover:text-purple-200 underline">
-                            Non-Surgical Facelift
-                          </Link> - for comprehensive facial rejuvenation
-                        </span>
-                      </li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
+                {/* Kept accordion items will remain here if any, but the two moved items are removed */}
               </Accordion>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Related Pain Management Treatments - New Standalone Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold text-center mb-8 text-white">Related Pain Management Treatments</h2>
+              <p className="text-gray-300 text-center mb-12">
+                In addition to trigger point botox, we offer complementary treatments that may benefit patients with chronic muscle tension and jaw-related conditions.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="bg-accent/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
+                >
+                  <Syringe className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-xl font-bold text-white mb-3">Masseter Botox</h3>
+                  <p className="text-gray-300 mb-4">
+                    Targeted treatment for jaw tension, TMJ disorders, and teeth grinding. Relaxes masseter muscles for pain relief and facial slimming.
+                  </p>
+                  <Link 
+                    to="/masseter-botox" 
+                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-accent/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
+                >
+                  <Activity className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-xl font-bold text-white mb-3">Bruxism Treatment</h3>
+                  <p className="text-gray-300 mb-4">
+                    Specialised botox treatment for teeth grinding and clenching. Reduces muscle strain and protects teeth from damage.
+                  </p>
+                  <Link 
+                    to="/bruxism-botox" 
+                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-accent/50 rounded-xl p-6 border border-purple-300/20 hover:border-purple-300/40 transition-all"
+                >
+                  <Zap className="text-purple-300 mb-4" size={32} />
+                  <h3 className="text-xl font-bold text-white mb-3">Trap Botox</h3>
+                  <p className="text-gray-300 mb-4">
+                    Relief for trapezius muscle tension and shoulder pain. Reduces bulk and creates a more elegant shoulder contour.
+                  </p>
+                  <Link 
+                    to="/masseter-botox" 
+                    className="text-purple-300 hover:text-purple-200 underline font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -958,7 +970,7 @@ const TriggerPointBotox = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1007,6 +1019,32 @@ const TriggerPointBotox = () => {
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-300">
                     Side effects are generally minimal and may include temporary soreness at injection sites, mild bruising, or temporary weakness in the treated muscle. Serious complications are rare when performed by qualified practitioners.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-6" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">
+                    Why Choose Trigger Point Botox in London?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 space-y-4">
+                    <p>
+                      Trigger point botox London specialists at Cosmedocs provide advanced muscle tension relief using botulinum toxin injections. Our Harley Street clinic offers expert trigger point therapy for chronic pain management, myofascial pain syndrome, and muscular tension disorders. Professional botox injections for trigger points provide long-lasting relief from chronic muscle spasms and tension headaches.
+                    </p>
+                    <p>
+                      Botulinum toxin trigger point injections represent a revolutionary approach to treating chronic musculoskeletal pain conditions. Our experienced medical practitioners use precision injection techniques to target hyperirritable muscle fibres, providing sustained relief from chronic pain syndromes. Trigger point botox treatment costs from £450 at our London clinic, representing excellent value for professional medical care.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-7" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">
+                    Advanced Pain Management Techniques
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 space-y-4">
+                    <p>
+                      Muscle tension relief through trigger point botox offers a non-surgical alternative to traditional pain management approaches. Our clinic specialises in treating fibromyalgia, chronic neck pain, shoulder tension, and tension-type headaches using advanced botulinum toxin therapy. Professional trigger point injections provide 3-6 months of sustained pain relief with minimal side effects.
+                    </p>
+                    <p>
+                      Chronic pain management through trigger point botox therapy has shown excellent clinical results for patients suffering from myofascial pain syndromes. Our Harley Street practitioners combine medical expertise with compassionate care to deliver optimal treatment outcomes. Botox trigger point therapy reduces muscle spasticity and improves range of motion effectively.
+                    </p>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
