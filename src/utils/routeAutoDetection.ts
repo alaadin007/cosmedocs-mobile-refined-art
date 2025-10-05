@@ -21,7 +21,7 @@ const ROUTE_REGISTRY = {
     // Core aesthetic treatments
     '/lip-fillers', '/forehead-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', 
     '/pdo-threads', '/thread-face-lift', '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
-    '/hydrafacial', '/hydrafacial-london', '/prp-treatment', '/prp-treatment-london',
+    '/hydrafacial', '/hydrafacial-london', '/prp-treatment',
     
     // Botox treatments
     '/advanced-upper-face-botox', '/lower-face-botox', '/face-botox-areas', '/face-botox',

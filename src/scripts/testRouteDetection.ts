@@ -53,7 +53,7 @@ function testRouteDetection() {
   const criticalTreatments = [
     '/forehead-fillers', '/ear-lobe-rejuvenation', '/temple-filler-london',
     '/neck-fillers', '/chin-filler', '/cheek-filler', '/jawline-filler',
-    '/prp-treatment-london', '/nefertiti-botox-face-jaw-lift',
+    '/nefertiti-botox-face-jaw-lift',
     '/dermal-filler-makeover', '/face-botox'
   ];
   

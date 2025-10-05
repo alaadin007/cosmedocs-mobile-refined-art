@@ -213,7 +213,7 @@ const App = () => {
                 <Route path="/trap-botox" element={<TrapBotox />} />
                <Route path="/hydrafacial-london" element={<HydraFacial />} />
               <Route path="/prp-treatment" element={<PRPTreatment />} />
-              <Route path="/prp-treatment-london" element={<PRPTreatment />} />
+              
               
               <Route path="/peel-to-reveal" element={<PeelToReveal />} />
               <Route path="/chemical-peel" element={<ChemicalPeel />} />
