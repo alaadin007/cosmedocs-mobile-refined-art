@@ -1158,15 +1158,15 @@ const TriggerPointBotox = () => {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">
-                  "After years of chronic shoulder pain, trigger point botox has been life-changing. The treatment was quick, virtually painless, and I noticed significant relief within a week. Finally able to sleep through the night without discomfort."
+                  "I was surprised at how easy and painless the Botox treatment was and I was thrilled to see the lines around my eyes and the even deeper line between my eyes to be instantly erased. I will definitely be going back to Cosmedocs because the treatment worked and the service was excellent."
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
-                    S
+                    J
                   </div>
                   <div>
-                    <p className="text-white font-semibold">Sarah M.</p>
-                    <p className="text-gray-400 text-sm">December 2024</p>
+                    <p className="text-white font-semibold">JS</p>
+                    <p className="text-gray-400 text-sm">Verified Client</p>
                   </div>
                 </div>
               </motion.div>
@@ -1184,15 +1184,15 @@ const TriggerPointBotox = () => {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">
-                  "Suffered from tension headaches for months. The practitioners at Cosmedocs were incredibly knowledgeable and the trigger point injections have dramatically reduced my headache frequency. Highly recommend."
+                  "I've had three facial areas treated with Anti-Wrinkle Injection at Cosmedocs in recent years, and find the treatment swift, thorough and effective. Also, Dr Haq's pleasant and friendly manner makes the treatment as painless as possible!"
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
-                    J
+                    N
                   </div>
                   <div>
-                    <p className="text-white font-semibold">James P.</p>
-                    <p className="text-gray-400 text-sm">November 2024</p>
+                    <p className="text-white font-semibold">NC</p>
+                    <p className="text-gray-400 text-sm">Verified Client</p>
                   </div>
                 </div>
               </motion.div>
@@ -1205,21 +1205,20 @@ const TriggerPointBotox = () => {
                 className="bg-accent/50 rounded-xl p-6 border border-purple-300/20"
               >
                 <div className="flex mb-4">
-                  {[1, 2, 3, 4].map((star) => (
+                  {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="w-4 h-4 fill-purple-300 text-purple-300" />
                   ))}
-                  <Star className="w-4 h-4 text-purple-300" />
                 </div>
                 <p className="text-gray-300 mb-4 italic">
-                  "Great experience overall. The consultation was thorough and the treatment effective. My neck mobility has improved significantly. Only minor bruising that resolved quickly."
+                  "I used Cosmedocs to get Botox for excessive sweating of my hands. Cosmedocs has very reasonable prices, and were very accommodating. The doctor and his assistant really made me feel at ease. Plus the results were great, and I was offered a free top up!"
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
-                    E
+                    C
                   </div>
                   <div>
-                    <p className="text-white font-semibold">Emma L.</p>
-                    <p className="text-gray-400 text-sm">November 2024</p>
+                    <p className="text-white font-semibold">CH</p>
+                    <p className="text-gray-400 text-sm">Verified Client</p>
                   </div>
                 </div>
               </motion.div>
