@@ -757,7 +757,7 @@ const TriggerPointBotox = () => {
         </section>
 
         {/* Practitioner Credentials */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -808,7 +808,7 @@ const TriggerPointBotox = () => {
           </div>
         </section>
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-accent">
+        <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
