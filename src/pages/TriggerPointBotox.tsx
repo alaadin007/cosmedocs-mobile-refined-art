@@ -413,7 +413,7 @@ const TriggerPointBotox = () => {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-3xl font-bold text-center mb-12 text-white">What is Trigger Point Botox?</h2>
-              <div className="prose prose-lg mx-auto text-gray-300 space-y-6 mb-12">
+              <div className="prose prose-lg mx-auto text-gray-300 space-y-6">
                 <p>
                   Trigger point botox is a specialized medical treatment that uses botulinum toxin injections to relieve chronic muscle tension, spasms, and pain. Unlike cosmetic botox applications, trigger point botox specifically targets hyperirritable spots in skeletal muscle known as trigger points, which are associated with palpable nodules in taut bands of muscle fibers.
                 </p>
@@ -421,44 +421,155 @@ const TriggerPointBotox = () => {
                   These trigger points can cause significant discomfort, referred pain, and limited range of motion. Our expert practitioners at Cosmedocs use precise injection techniques to deliver botulinum toxin directly into these problematic areas, effectively relaxing the muscle and providing long-lasting relief from chronic pain conditions.
                 </p>
               </div>
-              
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Key Benefits & Aftercare - Two Column Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {/* Key Benefits Column */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="max-w-5xl mx-auto"
               >
-                <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/20">
-                  <h3 className="text-2xl font-bold mb-8 text-white text-center">Key Benefits</h3>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {[
-                      { title: "Relieve Chronic Pain", desc: "Effectively relieve chronic muscle pain and persistent tightness" },
-                      { title: "Improve Mobility", desc: "Enhance mobility, flexibility and overall posture" },
-                      { title: "Reduce Headaches", desc: "Significantly reduce tension headaches and referred pain" },
-                      { title: "Enhance Function", desc: "Restore and enhance overall muscle function" },
-                      { title: "Non-surgical", desc: "Minimally invasive, non-surgical treatment option" },
-                      { title: "Expert Care", desc: "Administered by qualified medical professionals" },
-                      { title: "Proven Results", desc: "Clinically tested and evidence-based treatment" }
-                    ].map((benefit, index) => (
-                      <motion.div 
-                        key={index} 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="group"
-                      >
-                        <div className="text-center p-6 bg-white/5 rounded-xl border border-purple-300/20 hover:border-purple-300/40 transition-all duration-300 hover:bg-white/10 h-full">
-                          <h4 className="font-bold text-white text-base mb-3">{benefit.title}</h4>
-                          <p className="text-gray-300 text-sm leading-relaxed">{benefit.desc}</p>
-                        </div>
-                      </motion.div>
-                    ))}
+                <div className="bg-accent/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/20 h-full">
+                  <h3 className="text-2xl font-bold mb-6 text-white">Key Benefits</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">Relieve Chronic Pain</h4>
+                        <p className="text-gray-300 text-sm">Effectively relieve chronic muscle pain and persistent tightness</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">Improve Mobility</h4>
+                        <p className="text-gray-300 text-sm">Enhance mobility, flexibility and overall posture</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">Reduce Headaches</h4>
+                        <p className="text-gray-300 text-sm">Significantly reduce tension headaches and referred pain</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">Enhance Function</h4>
+                        <p className="text-gray-300 text-sm">Restore and enhance overall muscle function</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">Non-surgical</h4>
+                        <p className="text-gray-300 text-sm">Minimally invasive, non-surgical treatment option</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">Expert Care</h4>
+                        <p className="text-gray-300 text-sm">Administered by qualified medical professionals</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">Proven Results</h4>
+                        <p className="text-gray-300 text-sm">Clinically tested and evidence-based treatment</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              {/* Aftercare & What Happens Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-accent/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/20 h-full">
+                  <h3 className="text-2xl font-bold mb-6 text-white">Aftercare & What to Expect</h3>
+                  
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="font-semibold text-purple-300 mb-3">Immediately After Treatment</h4>
+                      <ul className="space-y-2 text-gray-300 text-sm">
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Mild tenderness or bruising at injection sites is normal</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>You can return to normal activities immediately</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Avoid massaging the treated areas for 24 hours</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-purple-300 mb-3">First 24-48 Hours</h4>
+                      <ul className="space-y-2 text-gray-300 text-sm">
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Avoid strenuous exercise or heavy lifting</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Stay upright for at least 4 hours post-treatment</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Apply ice packs if needed to reduce swelling</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-purple-300 mb-3">Results Timeline</h4>
+                      <ul className="space-y-2 text-gray-300 text-sm">
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Initial effects begin within 3-7 days</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Full results visible at 2 weeks</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Pain relief typically lasts 3-6 months</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>Follow-up treatments can be scheduled as needed</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-purple-300/10 rounded-lg p-4 border border-purple-300/20">
+                      <p className="text-sm text-gray-300">
+                        <strong className="text-white">Important:</strong> Contact us immediately if you experience severe pain, excessive swelling, or any concerning symptoms.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
