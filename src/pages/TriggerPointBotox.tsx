@@ -410,63 +410,11 @@ const TriggerPointBotox = () => {
               <h2 className="text-3xl font-bold text-center mb-12 text-white">What is Trigger Point Botox?</h2>
               <div className="prose prose-lg mx-auto text-gray-300 space-y-6">
                 <p>
-                  Trigger point botox is a specialised medical treatment that uses botulinum toxin injections to relieve chronic muscle tension, spasms, and pain. Unlike cosmetic botox applications, trigger point botox specifically targets hyperirritable spots in skeletal muscle known as trigger points, which are associated with palpable nodules in taut bands of muscle fibres.
+                  Trigger point botox is a specialised medical treatment that uses botulinum toxin injections to relieve chronic muscle tension, spasms, and pain. Unlike cosmetic botox applications, trigger point botox specifically targets hyperirritable spots in skeletal muscle known as trigger points, which are associated with palpable nodules in taut bands of muscle fibres. Research published in the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9721314/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">National Institutes of Health</a> has demonstrated sustained pain relief with minimal adverse effects.
                 </p>
                 <p>
-                  These trigger points can cause significant discomfort, referred pain, and limited range of motion. Our expert practitioners at Cosmedocs use precise injection techniques to deliver botulinum toxin directly into these problematic areas, effectively relaxing the muscle and providing long-lasting relief from chronic pain conditions.
+                  These trigger points can cause significant discomfort, referred pain, and limited range of motion. Our expert practitioners at Cosmedocs use precise injection techniques to deliver botulinum toxin directly into these problematic areas, effectively relaxing the muscle and providing long-lasting relief from chronic pain conditions. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7202127/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Cochrane systematic review</a> confirms the safety and efficacy of this treatment in adult patients.
                 </p>
-                
-                {/* Clinical Evidence Section */}
-                <div className="bg-purple-300/10 rounded-lg p-6 border border-purple-300/20 mt-8">
-                  <h3 className="text-xl font-bold text-white mb-4">Clinical Evidence & Research</h3>
-                  <p className="text-gray-300 mb-4">
-                    The effectiveness and safety of botulinum toxin for trigger point treatment is supported by extensive clinical research:
-                  </p>
-                  <ul className="space-y-3 text-sm text-gray-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>
-                        <a 
-                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9721314/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-purple-300 hover:text-purple-200 underline"
-                        >
-                          Long-Term Effects of Botulinum Toxin in Myofascial Pain
-                        </a> - National Institutes of Health study demonstrating sustained pain relief and minimal adverse effects
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>
-                        <a 
-                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11870196/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-purple-300 hover:text-purple-200 underline"
-                        >
-                          Pioneering Pain Management with Botulinum Toxin Type A
-                        </a> - Comprehensive review of BTX-A performance in managing myofascial and muscular pain
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
-                      <span>
-                        <a 
-                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7202127/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-purple-300 hover:text-purple-200 underline"
-                        >
-                          Botulinum Toxin for Myofascial Pain Syndromes
-                        </a> - Cochrane systematic review confirming safety and efficacy in adult patients
-                      </span>
-                    </li>
-                  </ul>
-                  <p className="text-xs text-gray-400 mt-4 italic">
-                    These peer-reviewed studies published in leading medical journals demonstrate that trigger point botox is a safe, effective treatment with minimal adverse effects when administered by qualified medical professionals.
-                  </p>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -672,7 +620,7 @@ const TriggerPointBotox = () => {
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-purple-300">Beyond Pain Relief</h3>
                       <p className="text-gray-300">
-                        While the goal is to reduce pain, the real benefit is freedom of movement. Patients often notice they can turn their head more easily, sit more comfortably at a desk, or even sleep better the same night.
+                        While the goal is to reduce pain, the real benefit is freedom of movement. Patients often notice they can turn their head more easily, sit more comfortably at a desk, or even sleep better the same night. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11870196/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">comprehensive review</a> in medical literature confirms BTX-A's effectiveness in managing myofascial and muscular pain.
                       </p>
                     </div>
                     
@@ -827,23 +775,6 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
-        {/* Additional SEO Content in Expandable Format */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold text-center mb-12 text-white">Comprehensive Treatment Information</h2>
-              <Accordion type="single" collapsible className="w-full space-y-4">
-                {/* Kept accordion items will remain here if any, but the two moved items are removed */}
-              </Accordion>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Related Pain Management Treatments - New Standalone Section */}
         <section className="py-20 bg-black">
@@ -914,7 +845,7 @@ const TriggerPointBotox = () => {
                     Relief for trapezius muscle tension and shoulder pain. Reduces bulk and creates a more elegant shoulder contour.
                   </p>
                   <Link 
-                    to="/masseter-botox" 
+                    to="/trap-botox" 
                     className="text-purple-300 hover:text-purple-200 underline font-semibold"
                   >
                     Learn More →
