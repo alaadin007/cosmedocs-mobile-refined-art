@@ -49,7 +49,7 @@ const PRPTreatment = () => {
     title: "Duration",
     value: "18 months"
   }];
-  const benefits = ["Promoting new cell growth", "Addressing mild collagen and volume loss", "Enhancing skin complexion", "Minimising fine lines and wrinkles", "Reducing crow's feet and dark under-eye circles", "Helping with initial signs of ageing", "Alleviating rosacea condition", "Stimulating hair follicles for hair density", "Treating acne scarring", "Enhancing skin tone and texture", "Firming and toning skin"];
+  const benefits = ["Promoting new cell growth", "Addressing mild collagen and volume loss", "Enhancing skin complexion", "Minimising fine lines and wrinkles", "Reducing crow's feet and dark under-eye circles", "Helping with initial signs of ageing", "Alleviating rosacea condition", "Stimulating hair follicles for hair density", "Treating acne scarring and skin imperfections", "Enhancing skin tone and texture", "Firming and toning skin naturally"];
   const treatmentTypes = [{
     title: "PRP Facial (Vampire Facial)",
     description: "Uses your body's natural healing abilities to restore facial youthfulness and luminosity",
@@ -530,10 +530,10 @@ const PRPTreatment = () => {
                     <div className="space-y-4">
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <div>
+                         <div>
                            <h4 className="text-white font-medium mb-1">First 24 Hours</h4>
-                           <p className="text-gray-300 text-sm">Avoid touching the treated area, apply ice packs if needed, and stay well-hydrated</p>
-                        </div>
+                           <p className="text-gray-300 text-sm">Avoid touching the treated area, apply ice packs if needed, stay well-hydrated, and follow our post-treatment skincare recommendations</p>
+                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
@@ -993,7 +993,7 @@ const PRPTreatment = () => {
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready for Natural Rejuvenation?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert doctors and discover how PRP can harness your body's natural healing power for transformative results.
+                Book your consultation with our expert doctors and discover how PRP can harness your body's natural healing power for transformative results. Explore our <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">full range of treatments</a> or visit our <a href="/contact" className="text-purple-300 hover:text-purple-200 underline">Harley Street clinic</a>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
