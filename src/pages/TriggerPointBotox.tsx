@@ -1140,7 +1140,7 @@ const TriggerPointBotox = () => {
                 <span className="text-gray-300 text-lg">4.8 out of 5 (127 reviews)</span>
               </div>
               <p className="text-gray-300 max-w-2xl mx-auto mb-6">
-                Read what our clients say about their trigger point botox treatment experience at Cosmedocs Harley Street.
+                Read what our clients say about their botox treatment experience at Cosmedocs Harley Street.
               </p>
             </motion.div>
 
