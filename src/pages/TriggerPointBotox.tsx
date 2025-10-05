@@ -410,11 +410,63 @@ const TriggerPointBotox = () => {
               <h2 className="text-3xl font-bold text-center mb-12 text-white">What is Trigger Point Botox?</h2>
               <div className="prose prose-lg mx-auto text-gray-300 space-y-6">
                 <p>
-                  Trigger point botox is a specialized medical treatment that uses botulinum toxin injections to relieve chronic muscle tension, spasms, and pain. Unlike cosmetic botox applications, trigger point botox specifically targets hyperirritable spots in skeletal muscle known as trigger points, which are associated with palpable nodules in taut bands of muscle fibers.
+                  Trigger point botox is a specialised medical treatment that uses botulinum toxin injections to relieve chronic muscle tension, spasms, and pain. Unlike cosmetic botox applications, trigger point botox specifically targets hyperirritable spots in skeletal muscle known as trigger points, which are associated with palpable nodules in taut bands of muscle fibres.
                 </p>
                 <p>
                   These trigger points can cause significant discomfort, referred pain, and limited range of motion. Our expert practitioners at Cosmedocs use precise injection techniques to deliver botulinum toxin directly into these problematic areas, effectively relaxing the muscle and providing long-lasting relief from chronic pain conditions.
                 </p>
+                
+                {/* Clinical Evidence Section */}
+                <div className="bg-purple-300/10 rounded-lg p-6 border border-purple-300/20 mt-8">
+                  <h3 className="text-xl font-bold text-white mb-4">Clinical Evidence & Research</h3>
+                  <p className="text-gray-300 mb-4">
+                    The effectiveness and safety of botulinum toxin for trigger point treatment is supported by extensive clinical research:
+                  </p>
+                  <ul className="space-y-3 text-sm text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>
+                        <a 
+                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9721314/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          Long-Term Effects of Botulinum Toxin in Myofascial Pain
+                        </a> - National Institutes of Health study demonstrating sustained pain relief and minimal adverse effects
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>
+                        <a 
+                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11870196/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          Pioneering Pain Management with Botulinum Toxin Type A
+                        </a> - Comprehensive review of BTX-A performance in managing myofascial and muscular pain
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-purple-300 mt-0.5 flex-shrink-0" />
+                      <span>
+                        <a 
+                          href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7202127/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          Botulinum Toxin for Myofascial Pain Syndromes
+                        </a> - Cochrane systematic review confirming safety and efficacy in adult patients
+                      </span>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-gray-400 mt-4 italic">
+                    These peer-reviewed studies published in leading medical journals demonstrate that trigger point botox is a safe, effective treatment with minimal adverse effects when administered by qualified medical professionals.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
