@@ -1120,7 +1120,7 @@ const TriggerPointBotox = () => {
           </div>
         </section>
 
-        {/* Patient Testimonials Section */}
+        {/* Client Testimonials Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
@@ -1130,7 +1130,7 @@ const TriggerPointBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Patient Testimonials</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Client Testimonials</h2>
               <div className="flex items-center justify-center gap-2 mb-8">
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -1139,9 +1139,12 @@ const TriggerPointBotox = () => {
                 </div>
                 <span className="text-gray-300 text-lg">4.8 out of 5 (127 reviews)</span>
               </div>
+              <p className="text-gray-300 max-w-2xl mx-auto mb-6">
+                Read what our clients say about their trigger point botox treatment experience at Cosmedocs Harley Street.
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1220,6 +1223,16 @@ const TriggerPointBotox = () => {
                   </div>
                 </div>
               </motion.div>
+            </div>
+
+            <div className="text-center">
+              <Link to="/testimonials">
+                <Button 
+                  className="bg-purple-600 text-white hover:bg-purple-700 rounded-full px-8 py-6 text-lg font-semibold"
+                >
+                  Read More Client Reviews
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
