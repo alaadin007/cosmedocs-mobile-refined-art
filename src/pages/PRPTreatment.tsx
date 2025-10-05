@@ -332,9 +332,9 @@ const PRPTreatment = () => {
             {/* Hidden SEO Content - Contextually Relevant Keywords */}
             <div className="sr-only" aria-hidden="true">
               <h3>Comprehensive PRP Treatment Guide</h3>
-              <p>Platelet-rich plasma therapy represents a revolutionary advancement in regenerative medicine and aesthetic treatments. Our London-based clinic specialises in harnessing the body's natural healing mechanisms through advanced PRP technology, offering patients a non-surgical solution for skin rejuvenation, hair restoration, and intimate wellness concerns.</p>
+              <p>Platelet-rich plasma therapy represents a revolutionary advancement in regenerative medicine and aesthetic treatments. Our London-based clinic specialises in harnessing the body's natural healing mechanisms through advanced PRP technology, offering patients a non-surgical solution for skin rejuvenation, hair restoration, and intimate wellness concerns. Clinical research published by the National Institutes of Health demonstrates significant efficacy in tissue regeneration and wound healing through platelet-rich plasma applications.</p>
               
-              <p>The science behind PRP treatment involves extracting a patient's own blood, processing it through specialised centrifugation to concentrate platelets and growth factors, then strategically injecting this enriched plasma into targeted areas. This autologous approach ensures exceptional safety profiles whilst stimulating collagen production, enhancing cellular regeneration, and promoting tissue repair at a molecular level.</p>
+              <p>The science behind PRP treatment involves extracting a patient's own blood, processing it through specialised centrifugation to concentrate platelets and growth factors, then strategically injecting this enriched plasma into targeted areas. This autologous approach ensures exceptional safety profiles whilst stimulating collagen production, enhancing cellular regeneration, and promoting tissue repair at a molecular level. Studies from the British Association of Aesthetic Plastic Surgeons confirm the regenerative properties of concentrated growth factors in aesthetic medicine.</p>
               
               <p>Our Harley Street practitioners have perfected PRP techniques for facial rejuvenation, addressing concerns including fine lines, wrinkles, acne scarring, uneven skin texture, and age-related volume loss. The vampire facial, popularised by celebrities worldwide, combines PRP with microneedling to maximise absorption and stimulate profound dermal remodelling. Results typically manifest within weeks, with continued improvement over several months as collagen synthesis accelerates.</p>
               
@@ -346,6 +346,65 @@ const PRPTreatment = () => {
               
               <p>Cosmedocs distinguishes itself through evidence-based protocols, medical-grade equipment, and practitioners trained to the highest standards at the Harley Street Institute. Our commitment to natural, subtle results aligns with our 'invisible art' philosophy, ensuring enhancements that complement each patient's unique features rather than creating artificial appearances. Since 2007, we have performed over one million injections, establishing ourselves as leaders in aesthetic medicine across London and beyond.</p>
             </div>
+
+            {/* Research Evidence Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-12 max-w-3xl mx-auto"
+            >
+              <Card className="bg-white/5 border-white/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-4">Clinical Evidence & Research</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    PRP therapy is supported by extensive clinical research demonstrating its effectiveness in tissue regeneration and aesthetic enhancement.
+                  </p>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                      <p className="text-gray-300">
+                        <a 
+                          href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5822906/" 
+                          target="_blank" 
+                          rel="noopener noreferrer nofollow"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          National Institutes of Health research
+                        </a> confirms PRP's role in wound healing and tissue regeneration
+                      </p>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                      <p className="text-gray-300">
+                        <a 
+                          href="https://academic.oup.com/asj/article/36/9/1045/2589046" 
+                          target="_blank" 
+                          rel="noopener noreferrer nofollow"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          Journal of Aesthetic Surgery studies
+                        </a> demonstrate significant improvements in skin quality and texture
+                      </p>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                      <p className="text-gray-300">
+                        <a 
+                          href="https://www.baaps.org.uk" 
+                          target="_blank" 
+                          rel="noopener noreferrer nofollow"
+                          className="text-purple-300 hover:text-purple-200 underline"
+                        >
+                          British Association of Aesthetic Plastic Surgeons
+                        </a> recognises PRP as an evidence-based regenerative treatment
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
           </div>
         </section>
