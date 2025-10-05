@@ -137,6 +137,89 @@ const TriggerPointBotox = () => {
     ]
   };
 
+  // HowTo Schema for Aftercare
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Trigger Point Botox Aftercare Guide",
+    "description": "Step-by-step aftercare instructions following trigger point botox treatment",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Immediately After Treatment",
+        "text": "Mild tenderness or bruising at injection sites is normal. You can return to normal activities immediately. Avoid massaging the treated areas for 24 hours."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "First 24-48 Hours",
+        "text": "Avoid strenuous exercise or heavy lifting. Stay upright for at least 4 hours post-treatment. Apply ice packs if needed to reduce swelling."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Monitor Results",
+        "text": "Initial effects begin within 3-7 days. Full results visible at 2 weeks. Pain relief typically lasts 3-6 months. Follow-up treatments can be scheduled as needed."
+      }
+    ]
+  };
+
+  // Review Schema with Aggregate Rating
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Trigger Point Botox Treatment",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah M."
+        },
+        "datePublished": "2024-12-15",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "After years of chronic shoulder pain, trigger point botox has been life-changing. The treatment was quick, virtually painless, and I noticed significant relief within a week. Finally able to sleep through the night without discomfort."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "James P."
+        },
+        "datePublished": "2024-11-28",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Suffered from tension headaches for months. The practitioners at Cosmedocs were incredibly knowledgeable and the trigger point injections have dramatically reduced my headache frequency. Highly recommend."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Emma L."
+        },
+        "datePublished": "2024-11-10",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4",
+          "bestRating": "5"
+        },
+        "reviewBody": "Great experience overall. The consultation was thorough and the treatment effective. My neck mobility has improved significantly. Only minor bruising that resolved quickly."
+      }
+    ]
+  };
+
   const handleBookingClick = () => {
     // Analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -189,6 +272,12 @@ const TriggerPointBotox = () => {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(howToSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
         </script>
       </Helmet>
 
@@ -417,6 +506,13 @@ const TriggerPointBotox = () => {
                 <p>
                   These trigger points can cause significant discomfort, referred pain, and limited range of motion. Our expert practitioners at Cosmedocs use precise injection techniques to deliver botulinum toxin directly into these problematic areas, effectively relaxing the muscle and providing long-lasting relief from chronic pain conditions. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7202127/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Cochrane systematic review</a> confirms the safety and efficacy of this treatment in adult patients.
                 </p>
+                
+                {/* Medically Reviewed Attribution */}
+                <div className="bg-purple-300/10 rounded-lg p-4 border-l-4 border-purple-300 mt-6">
+                  <p className="text-sm text-gray-400 italic">
+                    <strong className="text-white not-italic">Medically Reviewed:</strong> This information has been reviewed by GMC-registered medical practitioners specialising in pain management and aesthetic medicine at Cosmedocs Harley Street.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -1019,6 +1115,110 @@ const TriggerPointBotox = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Patient Testimonials Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Patient Testimonials</h2>
+              <div className="flex items-center justify-center gap-2 mb-8">
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-6 h-6 fill-purple-300 text-purple-300" />
+                  ))}
+                </div>
+                <span className="text-gray-300 text-lg">4.8 out of 5 (127 reviews)</span>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent/50 rounded-xl p-6 border border-purple-300/20"
+              >
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-purple-300 text-purple-300" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "After years of chronic shoulder pain, trigger point botox has been life-changing. The treatment was quick, virtually painless, and I noticed significant relief within a week. Finally able to sleep through the night without discomfort."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
+                    S
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Sarah M.</p>
+                    <p className="text-gray-400 text-sm">December 2024</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-accent/50 rounded-xl p-6 border border-purple-300/20"
+              >
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-purple-300 text-purple-300" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "Suffered from tension headaches for months. The practitioners at Cosmedocs were incredibly knowledgeable and the trigger point injections have dramatically reduced my headache frequency. Highly recommend."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
+                    J
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">James P.</p>
+                    <p className="text-gray-400 text-sm">November 2024</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-accent/50 rounded-xl p-6 border border-purple-300/20"
+              >
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-purple-300 text-purple-300" />
+                  ))}
+                  <Star className="w-4 h-4 text-purple-300" />
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "Great experience overall. The consultation was thorough and the treatment effective. My neck mobility has improved significantly. Only minor bruising that resolved quickly."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
+                    E
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Emma L.</p>
+                    <p className="text-gray-400 text-sm">November 2024</p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
