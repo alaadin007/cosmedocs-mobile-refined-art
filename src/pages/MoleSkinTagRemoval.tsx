@@ -732,9 +732,6 @@ const MoleSkinTagRemoval = () => {
                 <p>
                   Removing moles and skin tags requires specialist medical expertise. Our GMC-registered practitioners have extensive experience in cosmetic mole removal and skin tags and moles treatment. We understand that mole removal on face requires particular care to minimise scarring. Our facial mole removal techniques are designed to preserve aesthetic appearance whilst ensuring complete lesion removal. For those concerned about scars from removing moles, we provide detailed guidance on scar prevention and management throughout the healing process.
                 </p>
-                <p>
-                  Understanding mole removal healing stages is essential for realistic expectations. We provide mole removal healing stages pictures and detailed aftercare instructions to guide you through recovery. The healing process typically progresses through initial wound closure (3-7 days), scab formation and falling off (7-14 days), and scar maturation (3-12 months). Proper aftercare, including sun protection and gentle wound care, significantly influences final aesthetic outcomes and minimises visible scarring.
-                </p>
                 <p className="text-sm mt-8 text-gray-400">
                   <strong>Last Updated:</strong> {new Date(lastModified).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
                 </p>
@@ -1217,8 +1214,137 @@ const MoleSkinTagRemoval = () => {
           </div>
         </section>
 
-        {/* Why Choose Cosmedocs */}
+        {/* Aftercare & Healing Section */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Aftercare & Healing Stages</h2>
+              <p className="text-base text-gray-300 max-w-3xl mx-auto">
+                <strong>Understanding the Healing Process:</strong> Understanding mole removal healing stages is essential for realistic expectations. We provide mole removal healing stages pictures and detailed aftercare instructions to guide you through recovery. The healing process typically progresses through initial wound closure (3-7 days), scab formation and falling off (7-14 days), and scar maturation (3-12 months). Proper aftercare, including sun protection and gentle wound care, significantly influences final aesthetic outcomes and minimises visible scarring.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500 h-full">
+                  <CardHeader className="text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Activity className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Initial Healing</CardTitle>
+                    <p className="text-purple-300 font-semibold">Days 3-7</p>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <p className="text-base text-gray-300">
+                      Initial wound closure phase with minimal tenderness. Keep area clean and dry.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Apply prescribed ointment</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Avoid water exposure</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">No strenuous exercise</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500 h-full">
+                  <CardHeader className="text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Zap className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Scab Formation</CardTitle>
+                    <p className="text-purple-300 font-semibold">Days 7-14</p>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <p className="text-base text-gray-300">
+                      Natural scab forms and falls off. Do not pick or disturb the healing area.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Let scabs fall naturally</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Continue gentle cleaning</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Apply SPF 50+ protection</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black border-purple-500 h-full">
+                  <CardHeader className="text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Heart className="text-purple-600" size={24} />
+                    </div>
+                    <CardTitle className="text-white text-xl">Scar Maturation</CardTitle>
+                    <p className="text-purple-300 font-semibold">Months 3-12</p>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <p className="text-base text-gray-300">
+                      Final healing phase as scar tissue matures and fades to match surrounding skin.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Continued sun protection</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Scar gradually fades</span>
+                      </div>
+                      <div className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <span className="text-base text-gray-300">Optimal final results</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-black">
+
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
