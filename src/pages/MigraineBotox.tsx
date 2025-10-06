@@ -320,10 +320,7 @@ const MigraineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Botox for Migraines UK - Does Botox Help Migraines?</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-6">
-                Yes! Botox for migraines UK is FDA-approved and clinically proven. Learn how botox helps migraines through targeted injections across key trigger points in Marylebone, Westminster, and Mayfair areas.
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Botox for Migraines UK</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
