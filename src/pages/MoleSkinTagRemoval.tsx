@@ -733,9 +733,6 @@ const MoleSkinTagRemoval = () => {
                   Removing moles and skin tags requires specialist medical expertise. Our GMC-registered practitioners have extensive experience in cosmetic mole removal and skin tags and moles treatment. We understand that mole removal on face requires particular care to minimise scarring. Our facial mole removal techniques are designed to preserve aesthetic appearance whilst ensuring complete lesion removal. For those concerned about scars from removing moles, we provide detailed guidance on scar prevention and management throughout the healing process.
                 </p>
                 <p>
-                  Mole removal cost and skin tag removal pricing are important considerations. Our transparent pricing structure shows that mole removal prices start from £150 for single lesion removal. For those comparing private mole removal cost UK options, our competitive rates include consultation, treatment, and comprehensive aftercare. Many patients research "how much does it cost to remove moles" and NHS mole removal cost alternatives. Whilst NHS services may be available for suspicious lesions, private mole removal offers greater flexibility for cosmetic concerns, with typical mole removal UK prices ranging from £150-£250 depending on complexity.
-                </p>
-                <p>
                   Understanding mole removal healing stages is essential for realistic expectations. We provide mole removal healing stages pictures and detailed aftercare instructions to guide you through recovery. The healing process typically progresses through initial wound closure (3-7 days), scab formation and falling off (7-14 days), and scar maturation (3-12 months). Proper aftercare, including sun protection and gentle wound care, significantly influences final aesthetic outcomes and minimises visible scarring.
                 </p>
                 <p className="text-sm mt-8 text-gray-400">
@@ -1090,9 +1087,11 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Mole & Skin Tag Removal Pricing London</h2>
+              <p className="text-base text-gray-300 max-w-3xl mx-auto mb-4">
+                <strong>Understanding Costs:</strong> When researching "how much does it cost to remove moles" or comparing private mole removal cost UK options, transparency is essential. Our competitive pricing structure starts from £150 for single lesion removal, with comprehensive rates including consultation, treatment, and aftercare. Whilst NHS mole removal may be available for medically concerning lesions, private removal offers flexibility for cosmetic concerns. Typical mole removal UK prices range from £150-£250 depending on complexity, with our rates representing excellent value for central London.
+              </p>
               <p className="text-base text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for professional removal treatments. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
+                All prices include professional consultation, treatment, and comprehensive aftercare support from our expert medical team.
               </p>
             </motion.div>
 
