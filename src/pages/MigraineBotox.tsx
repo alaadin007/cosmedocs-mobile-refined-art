@@ -395,10 +395,11 @@ const MigraineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Migraine Botox? Can Botox Help Migraines?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Cosmedocs has been providing botox and migraines treatment for over a decade. Although botox for headaches was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. Botox shots for migraines are administered at precise botox injection sites for migraine headaches.{' '}
+                Cosmedocs has been providing botox and migraines treatment for over a decade. Although <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox for headaches</Link> was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. Botox shots for migraines are administered at precise botox injection sites for migraine headaches. According to the{' '}
                 <a href="https://www.nhs.uk/conditions/botulinum-toxin/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
-                  Learn more about botulinum toxin from the NHS
-                </a>.
+                  NHS, botulinum toxin is a safe and established treatment
+                </a>{' '}
+                when administered by qualified medical professionals.
               </p>
             </motion.div>
 
@@ -410,13 +411,13 @@ const MigraineBotox = () => {
               className="text-center mb-12"
             >
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="text-white text-2xl text-center">Understanding Migraines</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
-                    Migraines are not just ordinary headaches. They are complex neurological events characterized by intense, debilitating headaches, often accompanied by nausea, vomiting, and sensitivity to light and sound.
-                  </p>
+                  <CardHeader>
+                    <CardTitle className="text-white text-2xl text-center">Understanding Migraines</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
+                      Migraines are not just ordinary headaches. They are complex neurological events characterised by intense, debilitating headaches, often accompanied by nausea, vomiting, and sensitivity to light and sound. Similar to how we treat other facial concerns with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> or <Link to="/skin-boosters" className="text-purple-400 hover:text-purple-300 underline">skin boosters</Link>, migraine treatment requires precision and expertise.
+                    </p>
                   <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
                     People with chronic migraines experience 15 or more headache days per month, with migraines occurring on at least eight days.
                   </p>
@@ -503,7 +504,7 @@ const MigraineBotox = () => {
                       </li>
                     </ul>
                     <p className="text-purple-300 font-medium">
-                      Following the botox treatment you may continue normal daily activities.
+                      Following the botox treatment you may continue normal daily activities. Many patients combine their visit with other <Link to="/treatments" className="text-purple-400 hover:text-purple-300 underline">aesthetic treatments</Link> during the same appointment.
                     </p>
                   </CardContent>
                 </Card>
@@ -564,10 +565,11 @@ const MigraineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Triggers for Migraines</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                It is important to understand that migraines can have various causes. For expert guidance on migraine triggers and management,{' '}
+                Understanding what triggers your migraines is crucial for effective management. Research from{' '}
                 <a href="https://migrainetrust.org/live-with-migraine/treatments/botox/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
-                  visit The Migraine Trust
-                </a>. Some of the key factors include:
+                  The Migraine Trust highlights
+                </a>{' '}
+                several common migraine triggers. Some of the key factors include:
               </p>
             </motion.div>
 
@@ -631,10 +633,11 @@ const MigraineBotox = () => {
                       Botox for migraines works by blocking the release of specific chemicals involved in transmitting pain. When botox injections for migraines are administered into targeted muscles, the medication enters nerve endings and prevents the release of neurotransmitters that carry pain signals to the brain. This is how botox helps migraines at the neurological level.
                     </p>
                     <p className="text-gray-300 text-lg leading-relaxed mb-8 text-center">
-                      This creates a protective barrier against migraine triggers, effectively stopping the pain cascade before it begins. Does botox help migraine headaches? Absolutely - clinical trials show botox migraine treatment is particularly effective for chronic migraine sufferers who experience frequent, debilitating episodes. Many patients ask "can botox help with migraines" - the FDA approval confirms it can. For comprehensive clinical guidelines, see{' '}
+                      This creates a protective barrier against migraine triggers, effectively stopping the pain cascade before it begins. Does botox help migraine headaches? Absolutely - clinical trials demonstrate that botox migraine treatment is particularly effective for chronic migraine sufferers who experience frequent, debilitating episodes. Many patients ask "can botox help with migraines" - the FDA approval confirms it can. The{' '}
                       <a href="https://www.nice.org.uk/guidance/ta260" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
-                        NICE guidance on botulinum toxin for chronic migraine
-                      </a>.
+                        National Institute for Health and Care Excellence (NICE) recommends botulinum toxin
+                      </a>{' '}
+                      as an effective treatment option for chronic migraine prevention.
                     </p>
                     <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 border border-purple-500/30 max-w-3xl mx-auto">
                       <div className="flex items-start gap-3">
@@ -923,7 +926,7 @@ const MigraineBotox = () => {
               <h2 className="text-3xl font-bold mb-4">Ready to Find Migraine Relief?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert cosmetic doctors and discover how therapeutic botox 
-                can transform your quality of life with effective migraine prevention.
+                can transform your quality of life with effective migraine prevention. We also offer a range of <Link to="/treatments" className="text-purple-400 hover:text-purple-300 underline">other treatments</Link> including <Link to="/prp-treatment" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> for comprehensive aesthetic care.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
