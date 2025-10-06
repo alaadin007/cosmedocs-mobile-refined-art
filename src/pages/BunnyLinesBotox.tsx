@@ -302,7 +302,7 @@ const BunnyLinesBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">What Are Bunny Lines? Understanding Nose Wrinkles</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Bunny Lines Botox Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
