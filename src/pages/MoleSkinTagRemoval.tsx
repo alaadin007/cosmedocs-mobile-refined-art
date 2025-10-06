@@ -615,7 +615,7 @@ const MoleSkinTagRemoval = () => {
                   <Clock className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">15-30 minutes depending on size</p>
+                <p className="text-base text-gray-300">15-30 minutes depending on size</p>
               </motion.div>
 
               <motion.div
@@ -629,7 +629,7 @@ const MoleSkinTagRemoval = () => {
                   <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">Permanent removal when complete</p>
+                <p className="text-base text-gray-300">Permanent removal when complete</p>
               </motion.div>
 
               <motion.div
@@ -643,7 +643,7 @@ const MoleSkinTagRemoval = () => {
                   <Activity className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-gray-300">1-2 weeks complete healing</p>
+                <p className="text-base text-gray-300">1-2 weeks complete healing</p>
               </motion.div>
 
               <motion.div
@@ -657,7 +657,7 @@ const MoleSkinTagRemoval = () => {
                   <Scissors className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-gray-300">Local anaesthetic for comfort</p>
+                <p className="text-base text-gray-300">Local anaesthetic for comfort</p>
               </motion.div>
             </div>
           </div>
@@ -674,7 +674,7 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">Before and After Mole & Skin Tag Removal in London</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-base text-gray-300 max-w-2xl mx-auto">
                 Explore authentic before and after results from our London clinic. 
                 Our expert dermatological treatments provide safe removal with minimal scarring and excellent healing.
               </p>
@@ -763,7 +763,7 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Understanding Moles & Skin Tags</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-base text-gray-300 max-w-3xl mx-auto">
                 Learn about these common skin growths and when professional removal is recommended
               </p>
             </motion.div>
@@ -780,15 +780,15 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-white text-2xl">What Are Moles?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">
+                    <p className="text-base text-gray-300">
                       Moles are small, dark spots on the skin formed by clusters of pigmented cells called melanocytes. 
                       They can be flat or raised and vary in colour from brown to black, appearing anywhere on the body.
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-base text-gray-300">
                       <strong className="text-purple-300">Formation:</strong> Moles form when melanocytes grow in clusters 
                       instead of being evenly spread. Factors include genetics, sun exposure, and hormonal changes.
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-base text-gray-300">
                       While most moles are harmless, they should be monitored for changes in size, shape, or colour, 
                       as this can indicate potential skin issues requiring professional assessment.
                     </p>
@@ -807,16 +807,16 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-white text-2xl">What Are Skin Tags?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">
+                    <p className="text-base text-gray-300">
                       Skin tags are small, soft, benign growths that hang off the skin, typically appearing where skin 
                       rubs against skin or clothing - such as the neck, armpits, or groin areas.
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-base text-gray-300">
                       <strong className="text-purple-300">Formation:</strong> Skin tags develop when skin cells multiply 
                       rapidly in response to friction or irritation. They're more common in people who are overweight, 
                       pregnant, or have certain health conditions like diabetes.
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-base text-gray-300">
                       While generally harmless, many people choose to have skin tags removed for cosmetic reasons 
                       or if they become irritated by clothing or jewelry.
                     </p>
@@ -838,7 +838,7 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">Professional Removal Methods</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-base text-gray-300 max-w-2xl mx-auto">
                 We offer multiple proven techniques for safe and effective mole and skin tag removal
               </p>
             </motion.div>
@@ -856,21 +856,21 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Surgical Excision</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Complete removal with sterile scissors or scalpel, ideal for larger moles and skin tags.</p>
+                    <p className="text-base text-gray-300">Complete removal with sterile scissors or scalpel, ideal for larger moles and skin tags.</p>
                     <div className="space-y-2">
                       <h4 className="text-white font-semibold">Benefits:</h4>
                       <ul className="space-y-1">
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Complete removal</span>
+                          <span className="text-base text-gray-300">Complete removal</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Tissue can be tested</span>
+                          <span className="text-base text-gray-300">Tissue can be tested</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Minimal recurrence</span>
+                          <span className="text-base text-gray-300">Minimal recurrence</span>
                         </li>
                       </ul>
                     </div>
@@ -890,21 +890,21 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Cryotherapy</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Liquid nitrogen freezing treatment that causes moles and skin tags to fall off naturally.</p>
+                    <p className="text-base text-gray-300">Liquid nitrogen freezing treatment that causes moles and skin tags to fall off naturally.</p>
                     <div className="space-y-2">
                       <h4 className="text-white font-semibold">Benefits:</h4>
                       <ul className="space-y-1">
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Non-invasive</span>
+                          <span className="text-base text-gray-300">Non-invasive</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Quick procedure</span>
+                          <span className="text-base text-gray-300">Quick procedure</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">No stitches required</span>
+                          <span className="text-base text-gray-300">No stitches required</span>
                         </li>
                       </ul>
                     </div>
@@ -924,21 +924,21 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Electrosurgery</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Electric current burns away unwanted tissue with precision and control.</p>
+                    <p className="text-base text-gray-300">Electric current burns away unwanted tissue with precision and control.</p>
                     <div className="space-y-2">
                       <h4 className="text-white font-semibold">Benefits:</h4>
                       <ul className="space-y-1">
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Precise removal</span>
+                          <span className="text-base text-gray-300">Precise removal</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Cauterizes bleeding</span>
+                          <span className="text-base text-gray-300">Cauterizes bleeding</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Suitable for multiple lesions</span>
+                          <span className="text-base text-gray-300">Suitable for multiple lesions</span>
                         </li>
                       </ul>
                     </div>
@@ -977,7 +977,7 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Mole Assessment (ABCDE)</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-base text-gray-300 mb-4">
                       Consult us if you notice any of these changes in a mole:
                     </p>
                     <ul className="space-y-3">
@@ -985,35 +985,35 @@ const MoleSkinTagRemoval = () => {
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Asymmetry:</span>
-                          <span className="text-gray-300"> One half doesn't match the other</span>
+                          <span className="text-base text-gray-300"> One half doesn't match the other</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Border:</span>
-                          <span className="text-gray-300"> Irregular, scalloped, or poorly defined edges</span>
+                          <span className="text-base text-gray-300"> Irregular, scalloped, or poorly defined edges</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Color:</span>
-                          <span className="text-gray-300"> Varied colors or changes in color</span>
+                          <span className="text-base text-gray-300"> Varied colors or changes in color</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Diameter:</span>
-                          <span className="text-gray-300"> Larger than 6mm (pencil eraser)</span>
+                          <span className="text-base text-gray-300"> Larger than 6mm (pencil eraser)</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Evolving:</span>
-                          <span className="text-gray-300"> Any changes over time</span>
+                          <span className="text-base text-gray-300"> Any changes over time</span>
                         </div>
                       </li>
                     </ul>
@@ -1032,7 +1032,7 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Skin Tag Removal Indications</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-base text-gray-300 mb-4">
                       Consider removal for skin tags that:
                     </p>
                     <ul className="space-y-3">
@@ -1040,35 +1040,35 @@ const MoleSkinTagRemoval = () => {
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Irritation:</span>
-                          <span className="text-gray-300"> Caught on clothing or jewelry</span>
+                          <span className="text-base text-gray-300"> Caught on clothing or jewelry</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Bleeding:</span>
-                          <span className="text-gray-300"> Due to repeated friction or trauma</span>
+                          <span className="text-base text-gray-300"> Due to repeated friction or trauma</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Cosmetic concerns:</span>
-                          <span className="text-gray-300"> Affecting confidence or appearance</span>
+                          <span className="text-base text-gray-300"> Affecting confidence or appearance</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Location:</span>
-                          <span className="text-gray-300"> In areas prone to frequent rubbing</span>
+                          <span className="text-base text-gray-300"> In areas prone to frequent rubbing</span>
                         </div>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
                           <span className="text-white font-medium">Changes:</span>
-                          <span className="text-gray-300"> Any sudden changes in appearance</span>
+                          <span className="text-base text-gray-300"> Any sudden changes in appearance</span>
                         </div>
                       </li>
                     </ul>
@@ -1090,7 +1090,7 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Mole & Skin Tag Removal Pricing London</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-base text-gray-300 max-w-3xl mx-auto">
                 Transparent pricing for professional removal treatments. All prices include consultation, 
                 treatment, and aftercare support from our expert medical team.
               </p>
@@ -1109,19 +1109,19 @@ const MoleSkinTagRemoval = () => {
                     <div className="text-purple-300 text-4xl font-bold">£150</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Perfect for individual moles or skin tags</p>
+                    <p className="text-base text-gray-300">Perfect for individual moles or skin tags</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Consultation included</span>
+                        <span className="text-base text-gray-300">Consultation included</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Local anaesthetic</span>
+                        <span className="text-base text-gray-300">Local anaesthetic</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Aftercare support</span>
+                        <span className="text-base text-gray-300">Aftercare support</span>
                       </div>
                     </div>
                   </CardContent>
@@ -1143,23 +1143,23 @@ const MoleSkinTagRemoval = () => {
                     <div className="text-white text-4xl font-bold">£250</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-purple-100">Ideal for 3-5 moles or skin tags in one session</p>
+                    <p className="text-base text-purple-100">Ideal for 3-5 moles or skin tags in one session</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Comprehensive consultation</span>
+                        <span className="text-base text-purple-100">Comprehensive consultation</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Multiple removal methods</span>
+                        <span className="text-base text-purple-100">Multiple removal methods</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">Extended aftercare support</span>
+                        <span className="text-base text-purple-100">Extended aftercare support</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-white" size={16} />
-                        <span className="text-purple-100 text-sm">2-week follow-up</span>
+                        <span className="text-base text-purple-100">2-week follow-up</span>
                       </div>
                     </div>
                   </CardContent>
@@ -1178,19 +1178,19 @@ const MoleSkinTagRemoval = () => {
                     <div className="text-purple-300 text-4xl font-bold">£75</div>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Professional assessment and treatment planning</p>
+                    <p className="text-base text-gray-300">Professional assessment and treatment planning</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Full skin assessment</span>
+                        <span className="text-base text-gray-300">Full skin assessment</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">ABCDE mole evaluation</span>
+                        <span className="text-base text-gray-300">ABCDE mole evaluation</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
-                        <span className="text-gray-300 text-sm">Deducted from treatment cost</span>
+                        <span className="text-base text-gray-300">Deducted from treatment cost</span>
                       </div>
                     </div>
                   </CardContent>
