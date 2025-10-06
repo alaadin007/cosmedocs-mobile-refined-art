@@ -156,10 +156,10 @@ const MoleSkinTagRemoval = () => {
       },
       {
         "@type": "Question",
-        "name": "How much does mole and skin tag removal cost?",
+        "name": "How much does mole removal cost in London?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Costs vary based on the size, location, and number of lesions. Single lesion removal starts at £150, multiple lesions £250, and consultation only £75 (deducted from treatment cost)."
+          "text": "Our mole removal London prices start from £150 for single lesion removal, £250 for multiple lesions (3-5), and £75 for consultation only which is deducted from treatment cost if you proceed."
         }
       },
       {
@@ -168,6 +168,86 @@ const MoleSkinTagRemoval = () => {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Keep the area clean and dry, apply prescribed ointment, avoid picking at scabs, and protect from sun exposure. Most areas heal completely within 1-2 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I remove moles at home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We strongly advise against attempting to remove moles at home. DIY methods or unproven creams can lead to infection, excessive bleeding, incomplete removal, and poor scarring. Professional removal ensures safety and optimal results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between NHS and private mole removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NHS mole removal is typically available only for medically concerning lesions. Private mole removal offers faster access, greater flexibility for cosmetic concerns, and choice of clinic and practitioner. Our private mole removal cost UK starts from £150."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do mole removal healing stages take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mole removal healing follows predictable stages: initial wound closure (3-7 days), scab formation and falling off (7-14 days), and scar maturation (3-12 months). Most patients see significant improvement within 2-3 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is facial mole removal different from body mole removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Facial mole removal requires greater precision and expertise to achieve optimal cosmetic outcomes. Our practitioners use specialized techniques for face mole removal to minimize scarring and preserve aesthetic appearance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What methods do you use for mole removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer surgical excision (cutting and stitching), shave excision (for raised moles), cryotherapy (freezing), and electrosurgery (burning). The best method depends on mole type, size, location, and your preferences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can all moles be removed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, nearly all moles can be removed safely. However, some may require specific techniques or histological examination. During consultation, we assess each mole and recommend the most appropriate removal method."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I minimize scars from removing moles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Scar minimization depends on proper technique, wound care, and sun protection. Following our aftercare instructions, avoiding premature scab removal, and using SPF 50+ sunscreen significantly improve final scar appearance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is laser mole removal available in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, laser mole removal London is available for certain types of flat, pigmented moles. However, laser cannot provide tissue for histology. We assess each case individually to determine if laser treatment is suitable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best mole removal clinic in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our Harley Street mole removal clinic combines over 15 years of experience, GMC-registered practitioners, advanced techniques, and competitive pricing. We've performed over 1 million procedures with excellent patient satisfaction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does private mole removal cost in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Private mole removal cost UK typically ranges from £150-£350 per lesion depending on complexity and location. Our transparent pricing includes consultation, procedure, and aftercare, with competitive rates for our central London location."
         }
       }
     ]
@@ -355,12 +435,52 @@ const MoleSkinTagRemoval = () => {
       answer: "Consult us if a mole changes in size, shape, color, or texture, becomes itchy or painful, or bleeds. We follow ABCDE guidelines for mole assessment and can arrange histology if needed."
     },
     {
-      question: "How much does mole and skin tag removal cost?",
-      answer: "Costs vary based on the size, location, and number of lesions. We provide transparent pricing during consultation and offer competitive rates for professional removal."
+      question: "How much does mole removal cost in London?",
+      answer: "Our mole removal London prices start from £150 for single lesion removal, £250 for multiple lesions (3-5), and £75 for consultation only which is deducted from treatment cost if you proceed."
     },
     {
       question: "What aftercare is required?",
       answer: "Keep the area clean and dry, apply prescribed ointment, avoid picking at scabs, and protect from sun exposure. Most areas heal completely within 1-2 weeks."
+    },
+    {
+      question: "Can I remove moles at home?",
+      answer: "We strongly advise against attempting to remove moles at home. DIY methods or unproven creams can lead to infection, excessive bleeding, incomplete removal, and poor scarring. Professional removal ensures safety and optimal results."
+    },
+    {
+      question: "What is the difference between NHS and private mole removal?",
+      answer: "NHS mole removal is typically available only for medically concerning lesions. Private mole removal offers faster access, greater flexibility for cosmetic concerns, and choice of clinic and practitioner. Our private mole removal cost UK starts from £150."
+    },
+    {
+      question: "How long do mole removal healing stages take?",
+      answer: "Mole removal healing follows predictable stages: initial wound closure (3-7 days), scab formation and falling off (7-14 days), and scar maturation (3-12 months). Most patients see significant improvement within 2-3 weeks."
+    },
+    {
+      question: "Is facial mole removal different from body mole removal?",
+      answer: "Facial mole removal requires greater precision and expertise to achieve optimal cosmetic outcomes. Our practitioners use specialized techniques for face mole removal to minimize scarring and preserve aesthetic appearance."
+    },
+    {
+      question: "What methods do you use for mole removal?",
+      answer: "We offer surgical excision (cutting and stitching), shave excision (for raised moles), cryotherapy (freezing), and electrosurgery (burning). The best method depends on mole type, size, location, and your preferences."
+    },
+    {
+      question: "Can all moles be removed?",
+      answer: "Yes, nearly all moles can be removed safely. However, some may require specific techniques or histological examination. During consultation, we assess each mole and recommend the most appropriate removal method."
+    },
+    {
+      question: "How do I minimize scars from removing moles?",
+      answer: "Scar minimization depends on proper technique, wound care, and sun protection. Following our aftercare instructions, avoiding premature scab removal, and using SPF 50+ sunscreen significantly improve final scar appearance."
+    },
+    {
+      question: "Is laser mole removal available in London?",
+      answer: "Yes, laser mole removal London is available for certain types of flat, pigmented moles. However, laser cannot provide tissue for histology. We assess each case individually to determine if laser treatment is suitable."
+    },
+    {
+      question: "What is the best mole removal clinic in London?",
+      answer: "Our Harley Street mole removal clinic combines over 15 years of experience, GMC-registered practitioners, advanced techniques, and competitive pricing. We've performed over 1 million procedures with excellent patient satisfaction."
+    },
+    {
+      question: "How much does private mole removal cost in the UK?",
+      answer: "Private mole removal cost UK typically ranges from £150-£350 per lesion depending on complexity and location. Our transparent pricing includes consultation, procedure, and aftercare, with competitive rates for our central London location."
     }
   ];
 
