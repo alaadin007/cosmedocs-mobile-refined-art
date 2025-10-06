@@ -837,12 +837,12 @@ const MoleSkinTagRemoval = () => {
               <p className="text-gray-300 max-w-3xl mx-auto mb-4">
                 Many patients ask "how to remove moles" safely and "how can you remove moles" with minimal scarring. Unlike at-home remedies or creams for removing moles, professional mole removal ensures complete lesion removal with proper wound care. Our mole removal clinic offers three proven techniques: surgical excision for complete tag moles removal, cryotherapy for non-invasive treatment, and electrosurgery for precise face mole removal. Each method is selected based on lesion type, size, and location to achieve optimal results. Learn more about{' '}
                 <a 
-                  href="https://www.aad.org/public/diseases/bumps-and-growths/moles/safe-mole-removal" 
+                  href="https://www.aad.org/public/diseases/a-z/moles-overview" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-purple-400 hover:text-purple-300 underline"
                 >
-                  safe mole removal techniques recommended by dermatologists
+                  professional mole assessment and removal from the American Academy of Dermatology
                 </a>.
               </p>
               <p className="text-gray-300 max-w-3xl mx-auto">
