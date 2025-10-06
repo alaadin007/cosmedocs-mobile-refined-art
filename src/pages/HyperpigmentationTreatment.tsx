@@ -285,9 +285,6 @@ const HyperpigmentationTreatment = () => {
                 className="text-center mb-12"
               >
                 <h2 className="text-3xl font-bold mb-8 text-white">Hyperpigmentation Treatments for Face & Body</h2>
-                <p className="text-gray-300 max-w-3xl mx-auto">
-                  Comprehensive skin pigmentation treatment options including <Link to="/ipl-treatment" className="text-purple-300 hover:text-purple-200 underline">IPL therapy</Link>, <Link to="/chemical-peels" className="text-purple-300 hover:text-purple-200 underline">chemical peels</Link>, and prescription skincare for all skin types.
-                </p>
               </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -411,7 +408,7 @@ const HyperpigmentationTreatment = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Understanding Skin Pigmentation Disorders</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Hyperpigmentation is a common skin pigmentation disorder where melanin, the natural pigment that gives your skin its colour, is overproduced. When melanocytes (pigment-producing cells) become overactive, they create excess melanin in certain areas, leading to uneven skin tone, dark patches on face and body, and post-inflammatory hyperpigmentation.
+                Hyperpigmentation is a common skin pigmentation disorder where melanin, the natural pigment that gives your skin its colour, is overproduced. When melanocytes (pigment-producing cells) become overactive, they create excess melanin in certain areas, leading to uneven skin tone, dark patches on face and body, and post-inflammatory hyperpigmentation. According to the <a href="https://www.nhs.uk/conditions/skin-pigmentation-disorders/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">NHS</a>, these conditions are common and can affect people of all skin types.
               </p>
             </motion.div>
 
@@ -599,7 +596,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">IPL Hyperpigmentation Treatment</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Intense Pulsed Light therapy is one of the best treatments for hyperpigmentation, targeting dark spots, age spots, and sun damage on face and body. Typically 3-6 sessions needed with no downtime required. Effective for post-hyperpigmentation treatment.
+                          Intense Pulsed Light therapy is one of the best treatments for hyperpigmentation, targeting dark spots, age spots, and sun damage on face and body. Typically 3-6 sessions needed with no downtime required. Effective for post-hyperpigmentation treatment. Learn more about <Link to="/profhilo" className="text-purple-300 hover:text-purple-200 underline">advanced skin treatments</Link>.
                         </p>
                         <div className="text-xs text-purple-300">✓ No downtime • ✓ 3-6 sessions • ✓ All skin types • ✓ Face & body</div>
                       </div>
@@ -611,7 +608,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Chemical Peels for Hyperpigmentation</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Professional-grade chemical peels are among the best hyperpigmentation treatments, using Lactic, Salicylic, and Glycolic acids for facial and body hyperpigmentation treatment. Available in varying depths to suit different skin types, including hyperpigmentation treatment for dark skin.
+                          Professional-grade chemical peels are among the best hyperpigmentation treatments, using Lactic, Salicylic, and Glycolic acids for facial and body hyperpigmentation treatment. Available in varying depths to suit different skin types, including hyperpigmentation treatment for dark skin. The <a href="https://www.bad.org.uk/healthcare-professionals/clinical-standards/clinical-guidelines/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">British Association of Dermatologists</a> recommends professional peels for effective pigmentation management.
                         </p>
                         <div className="text-xs text-purple-300">✓ Customisable depth • ✓ Natural ingredients • ✓ Face & body treatment</div>
                       </div>
@@ -623,8 +620,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Microdermabrasion</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Effective for mild pigmentation. Improves rough, sun-damaged skin through 
-                          exfoliation while enhancing product absorption.
+                          Effective for mild pigmentation. Improves rough, sun-damaged skin through exfoliation whilst enhancing product absorption. Can be combined with other <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">skin rejuvenation treatments</Link> for optimal results.
                         </p>
                         <div className="text-xs text-purple-300">✓ Mild pigmentation • ✓ Enhanced absorption • ✓ Combines with peels</div>
                       </div>
@@ -636,8 +632,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Dermaroller Treatment</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Micro-needling technology promoting skin rejuvenation while infusing 
-                          powerful antioxidants and brightening agents into the skin.
+                          Micro-needling technology promoting skin rejuvenation whilst infusing powerful antioxidants and brightening agents into the skin. According to <a href="https://dermnetnz.org/topics/post-inflammatory-hyperpigmentation" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">DermNet NZ</a>, micro-needling can be effective for treating post-inflammatory hyperpigmentation when combined with appropriate skincare.
                         </p>
                         <div className="text-xs text-purple-300">✓ Micro-needling • ✓ Antioxidant infusion • ✓ Cell turnover</div>
                       </div>
