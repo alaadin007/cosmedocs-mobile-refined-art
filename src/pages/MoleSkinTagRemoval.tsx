@@ -730,9 +730,6 @@ const MoleSkinTagRemoval = () => {
                   At Cosmedocs, we specialise in professional mole removal London services and skin tag removal London treatments for benign skin lesions. Our Harley Street mole removal clinic in London combines advanced dermatological techniques with over 15 years of clinical experience. Whether you're searching for "mole removal near me" or "private mole removal near me", our central London location provides convenient access to expert cosmetic mole removal and facial mole removal services.
                 </p>
                 <p>
-                  Many patients ask "how to remove moles" safely and "how can you remove moles" with minimal scarring. Unlike at-home remedies or creams for removing moles, professional mole removal ensures complete lesion removal with proper wound care. Our mole removal clinic offers three proven techniques: surgical excision for complete tag moles removal, cryotherapy for non-invasive treatment, and electrosurgery for precise face mole removal. Each method is selected based on lesion type, size, and location to achieve optimal results.
-                </p>
-                <p>
                   Removing moles and skin tags requires specialist medical expertise. Our GMC-registered practitioners have extensive experience in cosmetic mole removal and skin tags and moles treatment. We understand that mole removal on face requires particular care to minimise scarring. Our facial mole removal techniques are designed to preserve aesthetic appearance whilst ensuring complete lesion removal. For those concerned about scars from removing moles, we provide detailed guidance on scar prevention and management throughout the healing process.
                 </p>
                 <p>
@@ -838,7 +835,10 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">Professional Removal Methods</h2>
-              <p className="text-base text-gray-300 max-w-2xl mx-auto">
+              <p className="text-base text-gray-300 max-w-3xl mx-auto mb-4">
+                Many patients ask "how to remove moles" safely and "how can you remove moles" with minimal scarring. Unlike at-home remedies or creams for removing moles, professional mole removal ensures complete lesion removal with proper wound care. Our mole removal clinic offers three proven techniques: surgical excision for complete tag moles removal, cryotherapy for non-invasive treatment, and electrosurgery for precise face mole removal. Each method is selected based on lesion type, size, and location to achieve optimal results.
+              </p>
+              <p className="text-base text-gray-300 max-w-3xl mx-auto">
                 We offer multiple proven techniques for safe and effective mole and skin tag removal
               </p>
             </motion.div>
