@@ -395,7 +395,10 @@ const MigraineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Migraine Botox? Can Botox Help Migraines?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Cosmedocs has been providing botox and migraines treatment for over a decade. Although botox for headaches was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. Botox shots for migraines are administered at precise botox injection sites for migraine headaches.
+                Cosmedocs has been providing botox and migraines treatment for over a decade. Although botox for headaches was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. Botox shots for migraines are administered at precise botox injection sites for migraine headaches.{' '}
+                <a href="https://www.nhs.uk/conditions/botulinum-toxin/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
+                  Learn more about botulinum toxin from the NHS
+                </a>.
               </p>
             </motion.div>
 
@@ -561,7 +564,10 @@ const MigraineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Triggers for Migraines</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                It is important to understand that migraines can have various causes. Some of the factors are:
+                It is important to understand that migraines can have various causes. For expert guidance on migraine triggers and management,{' '}
+                <a href="https://migrainetrust.org/live-with-migraine/treatments/botox/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
+                  visit The Migraine Trust
+                </a>. Some of the key factors include:
               </p>
             </motion.div>
 
@@ -625,28 +631,11 @@ const MigraineBotox = () => {
                       Botox for migraines works by blocking the release of specific chemicals involved in transmitting pain. When botox injections for migraines are administered into targeted muscles, the medication enters nerve endings and prevents the release of neurotransmitters that carry pain signals to the brain. This is how botox helps migraines at the neurological level.
                     </p>
                     <p className="text-gray-300 text-lg leading-relaxed mb-8 text-center">
-                      This creates a protective barrier against migraine triggers, effectively stopping the pain cascade before it begins. Does botox help migraine headaches? Absolutely - clinical trials show botox migraine treatment is particularly effective for chronic migraine sufferers who experience frequent, debilitating episodes. Many patients ask "can botox help with migraines" - the FDA approval confirms it can.
+                      This creates a protective barrier against migraine triggers, effectively stopping the pain cascade before it begins. Does botox help migraine headaches? Absolutely - clinical trials show botox migraine treatment is particularly effective for chronic migraine sufferers who experience frequent, debilitating episodes. Many patients ask "can botox help with migraines" - the FDA approval confirms it can. For comprehensive clinical guidelines, see{' '}
+                      <a href="https://www.nice.org.uk/guidance/ta260" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
+                        NICE guidance on botulinum toxin for chronic migraine
+                      </a>.
                     </p>
-                    <div className="bg-purple-900/50 rounded-lg p-6 mb-6 max-w-2xl mx-auto">
-                      <h4 className="text-purple-200 font-semibold mb-3 text-center">External Resources:</h4>
-                      <ul className="space-y-2 text-gray-300">
-                        <li>
-                          <a href="https://www.nhs.uk/conditions/botulinum-toxin/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
-                            NHS: Botulinum Toxin Information
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://migrainetrust.org/live-with-migraine/treatments/botox/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
-                            The Migraine Trust: Botox for Migraines
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.nice.org.uk/guidance/ta260" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
-                            NICE Guidelines: Botulinum Toxin for Chronic Migraine
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
                     <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 border border-purple-500/30 max-w-3xl mx-auto">
                       <div className="flex items-start gap-3">
                         <GraduationCap className="text-purple-400 mt-1" size={24} />
