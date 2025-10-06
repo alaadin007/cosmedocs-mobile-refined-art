@@ -395,7 +395,7 @@ const MigraineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Migraine Botox? Can Botox Help Migraines?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Cosmedocs has been providing botox and migraines treatment for over a decade. Although <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox for headaches</Link> was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. Botox shots for migraines are administered at precise botox injection sites for migraine headaches. According to the{' '}
+                Cosmedocs has been providing botox and migraines treatment for over a decade. Although botox for headaches was initially designed for wrinkle treatment, it was discovered to be remarkably effective for migraine relief botox. Does botox for migraines change your face? No - our invisible art approach provides migraine headache relief while maintaining completely natural expressions. <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">Botox shots for migraines</Link> are administered at precise botox injection sites for migraine headaches. According to the{' '}
                 <a href="https://www.nhs.uk/conditions/botulinum-toxin/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
                   NHS, botulinum toxin is a safe and established treatment
                 </a>{' '}
