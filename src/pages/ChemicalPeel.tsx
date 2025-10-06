@@ -561,7 +561,15 @@ const ChemicalPeel = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Chemical peels for face use controlled acids to precisely remove damaged skin layers, stimulating natural 
-                cell renewal and revealing healthier, younger-looking skin with improved texture and tone.
+                cell renewal and revealing healthier, younger-looking skin with improved texture and tone. According to{' '}
+                <a 
+                  href="https://www.aad.org/public/cosmetic/younger-looking/chemical-peels-faqs" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-300 hover:text-purple-200 underline"
+                >
+                  the American Academy of Dermatology
+                </a>, chemical peels can effectively improve the appearance of aging skin, acne scars, and uneven skin tone.
               </p>
             </motion.div>
 
@@ -670,7 +678,15 @@ const ChemicalPeel = () => {
               >
                 <h2 className="text-3xl font-bold mb-6">Results Timeline</h2>
                 <p className="text-gray-300 mb-6">
-                  Understanding the healing process and when to expect visible improvements:
+                  Understanding the healing process and when to expect visible improvements. Research published in{' '}
+                  <a 
+                    href="https://www.sciencedirect.com/science/article/abs/pii/S0738081X17301013" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Clinics in Dermatology
+                  </a>{' '}demonstrates that proper post-peel care significantly enhances outcomes and minimizes complications.
                 </p>
 
                 <div className="space-y-4">
@@ -721,7 +737,7 @@ const ChemicalPeel = () => {
             >
               <h2 className="text-3xl font-bold mb-6">Combination Treatments</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enhance your face chemical peel results with complementary treatments for comprehensive skin rejuvenation. Our <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link> and <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</Link> treatments work synergistically with chemical peels London.
+                Enhance your face chemical peel results with complementary treatments for comprehensive skin rejuvenation. Our <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link>, <Link to="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo</Link>, and <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</Link> treatments work synergistically with chemical peels London.
               </p>
             </motion.div>
 
@@ -735,7 +751,7 @@ const ChemicalPeel = () => {
               >
                 <h3 className="text-xl font-semibold text-white mb-4">Chemical Peel + Microneedling</h3>
                 <p className="text-gray-300 mb-4">
-                  Combine peels with microneedling for enhanced collagen production and deeper skin renewal.
+                  Combine peels with <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link> for enhanced collagen production and deeper skin renewal.
                 </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Enhanced collagen stimulation</li>
@@ -753,7 +769,7 @@ const ChemicalPeel = () => {
               >
                 <h3 className="text-xl font-semibold text-white mb-4">Chemical Peel + HydraFacial</h3>
                 <p className="text-gray-300 mb-4">
-                  Follow peels with HydraFacial for gentle hydration and nourishment during the healing process.
+                  Follow peels with <Link to="/hydrafacial" className="text-purple-300 hover:text-purple-200 underline">HydraFacial</Link> for gentle hydration and nourishment during the healing process.
                 </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Optimal skin hydration</li>
@@ -771,7 +787,7 @@ const ChemicalPeel = () => {
               >
                 <h3 className="text-xl font-semibold text-white mb-4">Chemical Peel + LED Therapy</h3>
                 <p className="text-gray-300 mb-4">
-                  LED light therapy accelerates healing and reduces inflammation after chemical peel treatments.
+                  <Link to="/led-light-therapy" className="text-purple-300 hover:text-purple-200 underline">LED light therapy</Link> accelerates healing and reduces inflammation after chemical peel treatments.
                 </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-300 mr-2" />Faster healing process</li>
@@ -966,7 +982,7 @@ const ChemicalPeel = () => {
                     className="text-purple-300 hover:text-purple-200 underline"
                   >
                     Harley Street Institute
-                  </a> trainers
+                  </a> trainers with <Link to="/botox" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> expertise
                 </p>
               </motion.div>
 
