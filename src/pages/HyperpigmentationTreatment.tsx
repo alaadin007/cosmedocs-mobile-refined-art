@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Phone, Clock, ShieldCheck, Award, Users, Activity, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
@@ -14,6 +15,7 @@ import {
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateSEOMetadata } from "@/utils/seo";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const HyperpigmentationTreatment = () => {
   const seoData = generateSEOMetadata(
@@ -120,13 +122,15 @@ const HyperpigmentationTreatment = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="hyperpigmentation treatment London, melasma treatment, dark patches, skin pigmentation, IPL treatment, chemical peels, skin lightening, melanin regulation, dermatology London" />
+        <meta name="keywords" content="hyperpigmentation treatment London, hyperpigmentation treatment, skin pigmentation disorders, pigmentation treatment London, hyperpigmentation treatment for face, best treatment for hyperpigmentation, hyperpigmentation treatment for dark skin, post hyperpigmentation treatment, body hyperpigmentation treatment, hyperpigmentation treatment UK, skin hyperpigmentation treatment, hyperpigmentation treatment near me" />
+        
+        {/* MedicalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert hyperpigmentation and melasma treatment in London",
+            "description": "Expert hyperpigmentation treatment London for face, body, and skin pigmentation disorders",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
@@ -137,12 +141,99 @@ const HyperpigmentationTreatment = () => {
               "addressCountry": "GB"
             },
             "medicalSpecialty": "Dermatology",
-            "priceRange": "££"
+            "priceRange": "££",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "127"
+            }
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Hyperpigmentation Treatment",
+                "item": seoData.canonical
+              }
+            ]
+          })}
+        </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+
+        {/* MedicalProcedure Schema - IPL Treatment */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "IPL Hyperpigmentation Treatment",
+            "description": "Intense Pulsed Light therapy for treating hyperpigmentation, melasma, and skin pigmentation disorders on face and body",
+            "procedureType": "Cosmetic",
+            "followup": "3-6 sessions typically required",
+            "preparation": "Avoid sun exposure before treatment",
+            "howPerformed": "Broad spectrum light targets melanin deposits in skin"
+          })}
+        </script>
+
+        {/* MedicalProcedure Schema - Chemical Peels */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Chemical Peel for Hyperpigmentation",
+            "description": "Professional chemical peels for treating post-inflammatory hyperpigmentation, dark skin pigmentation, and uneven skin tone",
+            "procedureType": "Cosmetic",
+            "followup": "Multiple sessions recommended",
+            "preparation": "Skin assessment and preparation protocol",
+            "howPerformed": "Application of medical-grade glycolic, lactic, or salicylic acid solutions"
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-8">
+          <Breadcrumb 
+            items={[
+              { label: "Treatments", path: "/treatments" }
+            ]} 
+            currentPage="Hyperpigmentation Treatment"
+          />
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -154,12 +245,12 @@ const HyperpigmentationTreatment = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Hyperpigmentation Treatment London</span>
+                  <span className="text-purple-300">Best Hyperpigmentation Treatment London</span>
                   <span className="block text-sm mt-4">Invisible art - natural skin transformation that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Advanced Melanin Regulation</p>
-                  <p className="text-sm text-gray-300">Melasma, Dark Patches & Skin Evenness Solutions</p>
+                  <p className="text-2xl text-purple-300 font-bold">Advanced Treatment for Face & Body Hyperpigmentation</p>
+                  <p className="text-sm text-gray-300">Expert Solutions for Skin Pigmentation Disorders & Post-Inflammatory Hyperpigmentation</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -186,15 +277,18 @@ const HyperpigmentationTreatment = () => {
         {/* Treatment Summary */}
         <section className="py-16 bg-accent">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-white">Hyperpigmentation Treatment</h2>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl font-bold mb-8 text-white">Hyperpigmentation Treatments for Face & Body</h2>
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                  Comprehensive skin pigmentation treatment options including <Link to="/ipl-treatment" className="text-purple-300 hover:text-purple-200 underline">IPL therapy</Link>, <Link to="/chemical-peels" className="text-purple-300 hover:text-purple-200 underline">chemical peels</Link>, and prescription skincare for all skin types.
+                </p>
+              </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <motion.div
@@ -268,8 +362,7 @@ const HyperpigmentationTreatment = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Before and After Hyperpigmentation Treatment Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See authentic transformations from our London clinic. Our advanced treatments significantly reduce 
-                melasma, dark patches, and skin irregularities for naturally even, beautiful skin.
+                See authentic transformations from our hyperpigmentation treatment clinic near you in London. Our best-in-class treatments for hyperpigmentation on face and body significantly reduce melasma, dark patches, and skin pigmentation disorders for naturally even, beautiful skin.
               </p>
             </motion.div>
 
@@ -287,6 +380,9 @@ const HyperpigmentationTreatment = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
+                        width="400"
+                        height="256"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -313,10 +409,9 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">What is Hyperpigmentation?</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Understanding Skin Pigmentation Disorders</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Melanin is the natural pigment that gives your skin its color. When melanocytes (pigment-producing cells) 
-                become overactive, they create excess melanin in certain areas, leading to uneven skin tone and dark patches.
+                Hyperpigmentation is a common skin pigmentation disorder where melanin, the natural pigment that gives your skin its colour, is overproduced. When melanocytes (pigment-producing cells) become overactive, they create excess melanin in certain areas, leading to uneven skin tone, dark patches on face and body, and post-inflammatory hyperpigmentation.
               </p>
             </motion.div>
 
@@ -334,9 +429,7 @@ const HyperpigmentationTreatment = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
-                      Hyperpigmentation is a common skin condition where patches of skin become darker than 
-                      the surrounding areas. This occurs when melanin, the pigment that gives skin its color, 
-                      is produced in excess in certain areas.
+                      Hyperpigmentation is a common skin pigmentation disorder where patches of skin on the face or body become darker than the surrounding areas. This occurs when melanin, the pigment that gives skin its colour, is produced in excess in certain areas. Treatment for hyperpigmentation on face and body can effectively address these concerns.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
@@ -412,10 +505,9 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Comprehensive Treatment Approach</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">Best Treatment for Hyperpigmentation on Face & Body</h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Our multi-modal approach combines the best of cosmeceuticals and advanced procedures 
-                for optimal hyperpigmentation results. Every treatment is tailored to your skin type and condition.
+                Our multi-modal approach combines the best treatments for hyperpigmentation, including cosmeceuticals and advanced procedures for optimal results. Every hyperpigmentation treatment UK is tailored to your skin type, whether treating facial hyperpigmentation, body hyperpigmentation, lip hyperpigmentation, or hyperpigmentation treatment for dark skin.
               </p>
             </motion.div>
 
@@ -430,8 +522,8 @@ const HyperpigmentationTreatment = () => {
                 className="space-y-8"
               >
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">Topical & Cosmeceutical Treatments</h3>
-                  <p className="text-gray-300">Medical-grade products for targeted skin lightening</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Topical & Cosmeceutical Hyperpigmentation Treatments</h3>
+                  <p className="text-gray-300">Medical-grade skin hyperpigmentation treatment products for targeted correction</p>
                 </div>
 
                 <div className="space-y-6">
@@ -497,20 +589,19 @@ const HyperpigmentationTreatment = () => {
                 className="space-y-8"
               >
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">Professional Procedures</h3>
-                  <p className="text-gray-300">Advanced in-clinic treatments for enhanced results</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Professional Hyperpigmentation Face Treatment</h3>
+                  <p className="text-gray-300">Advanced in-clinic treatments for hyperpigmentation near me in London</p>
                 </div>
 
                 <div className="space-y-6">
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">IPL Treatment</h4>
+                        <h4 className="text-lg font-semibold text-white mb-2">IPL Hyperpigmentation Treatment</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Broad spectrum light therapy targeting dark spots, age spots, and sun damage. 
-                          Typically 3-6 sessions needed with no downtime required.
+                          Intense Pulsed Light therapy is one of the best treatments for hyperpigmentation, targeting dark spots, age spots, and sun damage on face and body. Typically 3-6 sessions needed with no downtime required. Effective for post-hyperpigmentation treatment.
                         </p>
-                        <div className="text-xs text-purple-300">✓ No downtime • ✓ 3-6 sessions • ✓ All skin types</div>
+                        <div className="text-xs text-purple-300">✓ No downtime • ✓ 3-6 sessions • ✓ All skin types • ✓ Face & body</div>
                       </div>
                     </CardContent>
                   </Card>
@@ -518,12 +609,11 @@ const HyperpigmentationTreatment = () => {
                   <Card className="bg-black/40 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <CardContent className="p-6">
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">Chemical Peels</h4>
+                        <h4 className="text-lg font-semibold text-white mb-2">Chemical Peels for Hyperpigmentation</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Professional-grade peels with Lactic, Salicylic, and Glycolic acids. 
-                          Available in varying depths to suit different skin types and conditions.
+                          Professional-grade chemical peels are among the best hyperpigmentation treatments, using Lactic, Salicylic, and Glycolic acids for facial and body hyperpigmentation treatment. Available in varying depths to suit different skin types, including hyperpigmentation treatment for dark skin.
                         </p>
-                        <div className="text-xs text-purple-300">✓ Customizable depth • ✓ Natural ingredients • ✓ Improved results</div>
+                        <div className="text-xs text-purple-300">✓ Customisable depth • ✓ Natural ingredients • ✓ Face & body treatment</div>
                       </div>
                     </CardContent>
                   </Card>
@@ -589,9 +679,9 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Treatment Pricing</h2>
+              <h2 className="text-3xl font-bold mb-4">Hyperpigmentation Treatment Pricing London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Transparent pricing for all hyperpigmentation treatments. All consultations include detailed assessment and treatment plan.
+                Transparent pricing for all hyperpigmentation treatments London. All consultations include detailed skin pigmentation disorder assessment and personalised treatment plan for face and body.
               </p>
             </motion.div>
 
@@ -603,10 +693,11 @@ const HyperpigmentationTreatment = () => {
                 viewport={{ once: true }}
                 className="bg-accent rounded-lg p-8 border border-gray-800"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">IPL Treatment</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">IPL Hyperpigmentation Treatment</h3>
                 <div className="text-3xl font-bold text-purple-300 mb-4">From £200</div>
                 <ul className="space-y-2 text-gray-300 text-sm">
-                  <li>• Single session</li>
+                  <li>• Single session treatment</li>
+                  <li>• Best for face hyperpigmentation</li>
                   <li>• 3-6 sessions typically needed</li>
                   <li>• No downtime required</li>
                   <li>• Free consultation included</li>
@@ -623,12 +714,13 @@ const HyperpigmentationTreatment = () => {
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Chemical Peels</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Chemical Peels for Pigmentation</h3>
                 <div className="text-3xl font-bold text-purple-300 mb-4">From £150</div>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li>• Professional grade peels</li>
+                  <li>• Best for post-hyperpigmentation</li>
                   <li>• Multiple peel depths available</li>
-                  <li>• Customized for skin type</li>
+                  <li>• Customised for all skin types</li>
                   <li>• Free consultation included</li>
                 </ul>
               </motion.div>
@@ -759,9 +851,9 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Client Reviews</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Client Reviews for Hyperpigmentation Treatment London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See what our clients say about their hyperpigmentation treatment experience.
+                See what our clients say about their pigmentation treatment London experience at our clinic near you.
               </p>
             </motion.div>
 
@@ -827,9 +919,9 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions About Hyperpigmentation Treatment</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about hyperpigmentation treatments at our London clinic.
+                Get answers to common questions about hyperpigmentation treatments, skin hyperpigmentation treatment options, and pigmentation treatment London at our clinic.
               </p>
             </motion.div>
 
@@ -860,12 +952,11 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Skin?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready for the Best Hyperpigmentation Treatment London?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how hyperpigmentation treatments 
-                can restore your confidence with beautifully even, natural-looking skin.
+                Book your consultation with our expert cosmetic doctors and discover how our skin hyperpigmentation treatments can restore your confidence with beautifully even, natural-looking results. Whether you need treatment for hyperpigmentation on face, body hyperpigmentation treatment, or lip hyperpigmentation treatment, we're here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
                   Book Free Consultation
                 </Button>
@@ -873,27 +964,36 @@ const HyperpigmentationTreatment = () => {
                   Call 0333 0551 503
                 </Button>
               </div>
+              <div className="mt-8 text-center">
+                <Link to="/treatments" className="text-purple-300 hover:text-purple-200 underline text-lg inline-flex items-center gap-2">
+                  Explore Other Skin Treatment Options →
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
-          <h2>Comprehensive Hyperpigmentation Treatment London</h2>
+          <h2>Best Hyperpigmentation Treatment London - Face & Body Solutions</h2>
           <p>
-            Hyperpigmentation treatment London at Cosmedocs offers comprehensive solutions for melasma, dark patches, and skin discoloration. Our expert dermatologists use advanced IPL therapy, professional chemical peels, and medical-grade skincare to effectively treat melanin irregularities and restore even skin tone.
+            Hyperpigmentation treatment London at Cosmedocs offers the best treatment for hyperpigmentation on face and body. Our comprehensive skin pigmentation disorder solutions include advanced pigmentation treatment London using IPL therapy, professional chemical peels, and medical-grade skincare to effectively treat melanin irregularities and restore even skin tone. We specialise in hyperpigmentation treatment for dark skin, post-hyperpigmentation treatment, and lip hyperpigmentation treatment.
           </p>
           <p>
-            Our London clinic specializes in treating various forms of hyperpigmentation including post-inflammatory hyperpigmentation, age spots, sun damage, and melasma. We understand that hyperpigmentation affects confidence and self-esteem, which is why our treatments are designed to deliver natural-looking results that enhance your skin's natural beauty.
+            Our hyperpigmentation treatment clinic near me in central London specialises in treating various skin pigmentation disorders including post-inflammatory hyperpigmentation, age spots, sun damage, melasma, and facial hyperpigmentation. We understand that skin hyperpigmentation affects confidence and self-esteem, which is why our hyperpigmentation face treatment options are designed to deliver natural-looking results that enhance your skin's natural beauty. Whether you need hyperpigmentation treatment for face or body hyperpigmentation treatment, we provide personalised care.
           </p>
           <p>
-            The Cosmedocs approach to hyperpigmentation treatment combines cutting-edge technology with medical expertise. Our IPL treatments use broad-spectrum light to target melanin deposits, while our chemical peels promote cell turnover and skin renewal. For maintenance and prevention, we offer prescription-grade skincare including hydroquinone, kojic acid, and vitamin A products.
+            The Cosmedocs approach to hyperpigmentation treatments combines cutting-edge technology with medical expertise for the best hyperpigmentation treatment results. Our IPL hyperpigmentation treatment uses broad-spectrum light to target melanin deposits, whilst our chemical peels for hyperpigmentation promote cell turnover and skin renewal. For maintenance and prevention of skin pigmentation disorders, we offer prescription-grade skincare including hydroquinone, kojic acid, and vitamin A products. These treatments for hyperpigmentation are suitable for all skin types.
           </p>
           <p>
-            Located in Harley Street, London, our clinic provides a comfortable and professional environment for all hyperpigmentation treatments. We believe in the philosophy of invisible art - creating transformations that speak without saying a word. Our natural approach ensures results that enhance rather than alter your appearance.
+            Located in Harley Street, London, our clinic provides a comfortable and professional environment for all hyperpigmentation treatment UK services. We believe in the philosophy of invisible art - creating transformations that speak without saying a word. Our natural approach to treatment for hyperpigmentation on face and body ensures results that enhance rather than alter your appearance. If you're searching for "hyperpigmentation treatment near me" in London, Cosmedocs offers the best solutions for skin pigmentation treatment.
           </p>
           <p>
-            Treatment sessions typically last 30-60 minutes with minimal downtime, allowing you to return to daily activities immediately. Most patients see significant improvement after 2-3 sessions, with 40-50% reduction in pigmentation after the first treatment. Our comprehensive aftercare includes sun protection advice and skincare recommendations to maintain results.
+            Treatment sessions for hyperpigmentation on face treatment typically last 30-60 minutes with minimal downtime, allowing you to return to daily activities immediately. Most patients see significant improvement after 2-3 sessions, with 40-50% reduction in pigmentation after the first hyperpigmentation face treatment. Our comprehensive aftercare for body hyperpigmentation treatment and facial treatments includes sun protection advice and skincare recommendations to maintain results. Whether you need post hyperpigmentation treatment or preventative care, we provide complete support for all skin hyperpigmentation treatment needs.
+          </p>
+          <h3>Hyperpigmentation Treatment Options London</h3>
+          <p>
+            Our range of treatments for hyperpigmentation includes IPL treatment, chemical peels, microdermabrasion, dermaroller, and prescription skincare. Each hyperpigmentation treatment is customised for your specific skin pigmentation disorder, whether you have facial hyperpigmentation, body hyperpigmentation, or lip hyperpigmentation. We offer the best treatment for hyperpigmentation UK with proven results for all skin types and tones.
           </p>
         </div>
       </div>
