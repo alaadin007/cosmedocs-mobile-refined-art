@@ -612,7 +612,7 @@ export default function PsoriasisTreatment() {
                       <Sparkles className="text-purple-600" size={24} />
                     </div>
                     <CardTitle className="text-white text-xl">Light Therapy & Phototherapy</CardTitle>
-                    <p className="text-gray-300">Advanced <Link to="/led-light-therapy" className="text-purple-300 hover:text-purple-200 underline">phototherapy</Link> for moderate to severe psoriasis treatment</p>
+                    <p className="text-gray-300">Advanced phototherapy for moderate to severe psoriasis treatment</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     {[
