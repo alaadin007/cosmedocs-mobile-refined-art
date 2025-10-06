@@ -298,9 +298,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Acne Treatment London</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Comprehensive Acne Treatments UK</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Comprehensive acne treatment options for face and body including advanced therapies for cystic acne, hormonal acne, and acne scar treatment.
+                Expert acne treatment options for face, back acne treatment, chest acne treatment, and body acne treatment. We specialise in cystic acne treatment UK, hormonal acne treatment UK, acne scar treatment near me, bacterial acne treatment, fungal acne treatment, and comedonal acne treatment for all ages including teenage acne treatment and best acne treatment for adults.
               </p>
             </motion.div>
 
@@ -394,9 +394,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Understanding Acne & Skin Conditions</h2>
+              <h2 className="text-3xl font-bold mb-4">Understanding Acne & Related Skin Conditions</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Acne is one of the most common chronic skin conditions affecting adolescents and adults in London and across the UK. Our expert dermatologists specialise in treating all forms of acne including severe acne, cystic acne, hormonal acne, and acne scarring.
+                Acne vulgaris is one of the most common skin diseases affecting adolescents and adults in London and across the UK. Our expert dermatologist acne treatment services specialise in treating all forms including severe acne treatment, cystic acne treatment UK, hormonal acne treatment UK, back acne treatment UK, fungal acne treatment, bacterial acne treatment, comedonal acne treatment, and private acne treatment for acne scars treatment near me.
               </p>
             </motion.div>
 
@@ -415,24 +415,28 @@ export default function AcneTreatment() {
                         Acne vulgaris is the most common chronic skin disease, causing lesions, spots, and oily skin primarily on the face, chest, and back due to infected skin pores. While it especially affects adolescents, adult acne treatment is increasingly common. The <a href="https://www.bad.org.uk/healthcare-professionals/clinical-standards/clinical-guidelines/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">British Association of Dermatologists</a> provides comprehensive clinical guidelines for acne management.
                       </p>
                       <p className="text-gray-300">
-                        Our comprehensive acne treatment London approach addresses:
+                        Our comprehensive acne treatment dermatologist approach addresses:
                       </p>
                       <ul className="space-y-3">
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Active acne lesions and breakouts</span>
+                          <span className="text-gray-300">Active acne lesions including spot treatment for acne and best acne spot treatment</span>
                         </li>
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Acne scarring and texture issues</span>
+                          <span className="text-gray-300">Best treatment for acne scar removal and skin treatment for acne scarring</span>
                         </li>
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Hormonal and cystic acne</span>
+                          <span className="text-gray-300">Treatment of acne cyst, hormonal treatment of acne, and PCOS acne treatment</span>
                         </li>
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Prevention of future breakouts</span>
+                          <span className="text-gray-300">Prevention including treatment acne dark spots and acne marks treatment</span>
+                        </li>
+                        <li className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                          <span className="text-gray-300">Specialised acne treatment on the back, chest acne treatment, and scalp acne treatment</span>
                         </li>
                       </ul>
                     </div>
@@ -501,9 +505,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4">Best Acne Treatment Options London</h2>
+              <h2 className="text-3xl font-bold mb-4">Best Treatment for Acne UK</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Our multi-faceted approach combines the latest dermatological advances with personalised care for optimal acne management. From cystic acne treatment to hormonal acne therapy and acne scar treatment UK, we offer comprehensive solutions.
+                Our multi-faceted dermatologist acne treatment approach combines the latest advances with personalised care. From topical acne treatment and acne treatment prescription to light acne treatments and Accutane acne treatment, we offer top acne treatment UK solutions for all acne disease treatments including treatment for hormonal acne, chin acne treatment, and menopause and acne treatment.
               </p>
             </motion.div>
 
@@ -519,11 +523,11 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Stethoscope className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Topical Acne Treatments</CardTitle>
+                    <CardTitle className="text-white text-xl">Topical Acne Treatment Options</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Advanced topical therapies targeting acne-causing bacteria and reducing inflammation. Essential for mild to moderate acne treatment.
+                      Advanced topical treatment for acne targeting bacteria and reducing inflammation. Essential for mild to moderate treatment for acne including spot treatment for acne and natural acne treatment approaches.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -562,11 +566,11 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Target className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Advanced Acne Procedures</CardTitle>
+                    <CardTitle className="text-white text-xl">Advanced Acne Scar Treatment</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Professional treatments for faster results and acne scar prevention. Includes <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link> for scar reduction.
+                      Professional treatments including best acne scar treatment, best acne scar removal treatment, and treatment for deep acne scar. Includes skin care treatments for acne scars, treatment for acne scars London, and <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link> for acne scarring treatment.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -605,11 +609,11 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Sparkles className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Oral Medications for Severe Acne</CardTitle>
+                    <CardTitle className="text-white text-xl">Prescription Acne Treatment</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Systemic treatments for moderate to severe acne cases including cystic acne treatment and hormonal acne treatment. Can be combined with <Link to="/skin-boosters" className="text-purple-300 hover:text-purple-200 underline">skin booster treatments</Link> for enhanced results.
+                      Systemic acne treatment prescription for moderate to severe cases including best hormonal acne treatment, treatment for hormonal acne, and treatment of acne cyst. Options include Accutane acne treatment (isotretinoin) and can be combined with <Link to="/skin-boosters" className="text-purple-300 hover:text-purple-200 underline">skin booster treatments</Link>.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -634,7 +638,7 @@ export default function AcneTreatment() {
               </motion.div>
             </div>
 
-            {/* Additional Information Card */}
+            {/* Body Acne Treatment Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -644,11 +648,31 @@ export default function AcneTreatment() {
             >
               <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-white text-lg">Acne-Related Conditions – Pigmentation And Scarring</CardTitle>
+                  <CardTitle className="text-white text-lg">Body Acne Treatment - Back, Chest & Scalp</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300">
-                    Acne patients may experience pigmentation, discolouration, and scarring. Our acne scar treatment London options include laser therapy, dermal fillers, and specialist skincare. According to <a href="https://dermnetnz.org/topics/acne" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">DermNet NZ</a>, professional treatment significantly reduces post-acne complications.
+                    We treat acne beyond the face including back acne treatment, acne back treatment, acne treatment on the back, chest acne treatment, butt acne treatment, treatment for butt acne, and scalp acne treatment. Our body acne treatment addresses all areas affected by acne disease treatments with the same expertise as facial treatments.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Acne Scarring Treatment Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-8"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/20 to-black border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-white text-lg">Acne Scarring Treatment & Pigmentation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">
+                    Acne patients may experience pigmentation, discolouration, and scarring. Our best acne acne scar treatment options include treatment for acne scars products, skin treatment for acne scarring, and specialist skincare. According to <a href="https://dermnetnz.org/topics/acne" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">DermNet NZ</a>, professional treatment significantly reduces post-acne complications.
                   </p>
                 </CardContent>
               </Card>
@@ -668,7 +692,7 @@ export default function AcneTreatment() {
             >
               <h2 className="text-3xl font-bold mb-4">Types of Acne We Treat</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding the different types of acne helps us create targeted treatment plans for optimal results. We treat all acne types from mild to severe acne London.
+                Understanding acne types helps us create targeted good acne treatments UK. We treat all acne including comedonal acne treatment, bacterial acne treatment, fungal acne treatment, severe acne treatment, and topical treatment for rosacea acne from mild to severe cases.
               </p>
             </motion.div>
 
@@ -774,9 +798,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Acne Treatment Pricing London</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Private Acne Treatment Pricing</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Professional acne treatment London with personalised care plans. Every treatment includes comprehensive consultation, assessment, and ongoing support from our expert acne dermatologist London team. We offer the best acne treatment UK with transparent pricing.
+                Professional private acne treatment with personalised care plans. Every treatment includes comprehensive consultation, assessment, and ongoing support from our expert acne treatment dermatologist team. We offer the best acne treatment UK and top acne treatment UK with transparent pricing for all acne treatments including acne treatment for teen boys, adult acne treatment, and baby acne treatment.
               </p>
             </motion.div>
 
@@ -983,37 +1007,37 @@ export default function AcneTreatment() {
         <div className="sr-only">
           <h2>Best Acne Treatment London - Expert Dermatology Care</h2>
           <p>
-            Acne treatment London at Cosmedocs offers the best acne treatment for all types including cystic acne treatment, hormonal acne treatment, severe acne treatment, and acne scar treatment. Our comprehensive approach to treating acne includes advanced dermatological therapies, topical treatments, oral medications, and professional procedures. We specialise in acne treatment for face, teenage acne treatment, adult acne treatment, and body acne treatment UK.
+            Acne treatment at Cosmedocs offers the best acne treatment UK for all types including cystic acne treatment, cystic acne treatment UK, hormonal acne treatment, hormonal acne treatment UK, best hormonal acne treatment, treatment for hormonal acne, severe acne treatment, private acne treatment, and acne scar treatment near me. Our comprehensive approach to treating acne includes advanced dermatological therapies, topical acne treatment, acne treatment prescription, Accutane acne treatment, and professional procedures. We specialise in acne treatment for face, teenage acne treatment, acne treatment for teen boys, best acne treatment for adults, adult acne treatment, and body acne treatment UK including back acne treatment, back acne treatment UK, acne back treatment, acne treatment on the back, chest acne treatment, butt acne treatment, treatment for butt acne, and scalp acne treatment.
           </p>
           
-          <h3>Understanding Acne and Its Types</h3>
+          <h3>Comprehensive Acne Treatment Dermatologist Services</h3>
           <p>
-            Acne is a chronic inflammatory skin condition affecting millions of people in London and across the UK. Our acne dermatologist London team treats all forms of acne vulgaris including comedonal acne (blackheads and whiteheads), inflammatory acne (papules, pustules), and severe acne forms like nodules and cysts. Whether you're seeking cystic acne treatment London, hormonal acne treatment, or teenage acne solutions, our expert dermatologists provide personalised care. We understand that acne treatment near me searches reflect the urgent need for professional help, and our central London location makes us easily accessible.
+            Our dermatologist acne treatment London team treats all forms of acne vulgaris including comedonal acne treatment (blackheads and whiteheads), bacterial acne treatment, fungal acne treatment, and severe acne forms like nodules requiring treatment of acne cyst. Whether you're seeking good acne treatments UK, top acne treatment UK, best treatment for acne, or acne treatment near me searches reflect the urgent need for professional help, our central London location makes us easily accessible. We provide specialised hormonal treatment of acne for conditions including PCOS acne treatment, menopause and acne treatment, and chin acne treatment.
           </p>
           
-          <h3>Advanced Acne Treatment Options London</h3>
+          <h3>Advanced Acne Disease Treatments & Options</h3>
           <p>
-            Our best acne treatment UK arsenal includes topical therapies such as retinoids (tretinoin, adapalene), benzoyl peroxide, and topical antibiotics for mild to moderate acne treatment. For more extensive acne, we offer chemical peels, laser therapy, LED light treatments, and microneedling that have proven highly effective in reducing inflammation and preventing new breakouts. These advanced acne treatments are particularly effective for acne scar treatment London. In severe cystic acne treatment cases, we provide oral medications including antibiotics, hormonal treatments (birth control pills, spironolactone), and isotretinoin (Accutane) for comprehensive acne management.
+            Our best acne treatment UK arsenal includes topical treatment for acne such as retinoids, benzoyl peroxide for spot treatment for acne, best acne spot treatment, and topical antibiotics for mild to moderate treatment for acne. We also offer natural acne treatment approaches and topical treatment for rosacea acne. For more extensive acne treatments, we offer chemical peels, laser therapy, light acne treatments, and microneedling that have proven highly effective in reducing inflammation. These advanced acne disease treatments are particularly effective for acne scarring treatment and best treatment for acne scar removal. In severe cases, we provide acne treatment prescription including oral antibiotics, hormonal treatments, and Accutane acne treatment (isotretinoin) for comprehensive acne management and skin and acne treatment.
           </p>
           
-          <h3>Acne Scar Treatment London</h3>
+          <h3>Best Acne Scar Treatment & Removal Options</h3>
           <p>
-            Post-acne scarring is a common concern that we address with specialist acne scar treatment options. Our treatments for acne scars include laser therapy, dermal fillers, chemical peels, and microneedling. The best treatment for acne scars depends on scar type, skin type, and severity. Our acne treatment London approach ensures both active acne management and scar prevention, providing complete skin transformation.
+            Post-acne scarring is a common concern that we address with specialist acne scar treatment, acne scars treatment, best acne scar treatment, best acne acne scar treatment, best acne scar removal treatment, acne scar treatment near me, and treatment for acne scars London options. Our treatment for acne scars products include laser therapy, dermal fillers, chemical peels, skin care treatments for acne scars, skin treatment for acne scarring, and microneedling. The best treatment for acne scar removal depends on scar type including treatment for deep acne scar. We also treat acne marks treatment, treatment acne dark spots, and ensure both active acne spot treatment and scar prevention.
           </p>
           
-          <h3>Personalised Acne Treatment Care</h3>
+          <h3>Personalised Acne Treatment Care for All Ages</h3>
           <p>
-            Located at 10 Harley Street in the heart of London, our clinic provides the best acne treatment near me for patients from Marylebone, Mayfair, Westminster, Fitzrovia, Bloomsbury, Regent's Park, and all areas of Central London and Greater London. Every patient's acne journey is unique, which is why we develop personalised acne treatment plans tailored to your specific needs, whether you need hormonal acne treatment, cystic acne treatment, or teenage acne treatment. Our holistic approach to acne treatment UK considers not only the physical aspects but also the psychological impact of acne, providing support throughout your treatment journey. We work closely with you to monitor progress, adjust acne treatments as needed, and ensure optimal long-term outcomes for clear, healthy skin.
+            Located at 10 Harley Street in the heart of London, our clinic provides the best acne treatment for all ages including teenage acne treatment, acne treatment for teen boys, best acne treatment for adults, adult acne treatment, and even baby acne treatment when needed. Every patient's acne journey is unique, which is why we develop personalised private acne treatment plans tailored to your specific needs, whether you need hormonal acne treatment UK, cystic acne treatment UK, or body acne treatment. Our holistic approach to good acne treatments UK and top acne treatment UK considers not only the physical aspects but also the psychological impact of acne, providing support throughout your acne treatment dermatologist journey. We work closely with you to monitor progress, adjust treatments as needed, and ensure optimal long-term outcomes for clear, healthy skin with our comprehensive acne treatments.
           </p>
           
-          <h3>Why Choose Our Acne Treatment London</h3>
+          <h3>Why Choose Our Dermatologist Acne Treatment London</h3>
           <p>
-            As leading acne dermatologists in London, we combine over 15 years of experience with the latest acne treatment technologies. Our GMC-registered doctors are Harley Street Institute trainers, ensuring you receive the highest standard of care for all acne types. Whether you're searching for "acne treatment near me", "best acne treatment London", "cystic acne treatment", or "acne scar treatment UK", Cosmedocs offers evidence-based solutions with proven results. We believe in invisible art - creating natural transformations that restore your confidence and skin health.
+            As leading acne dermatologists in London, we combine over 15 years of experience with the latest acne disease treatments technologies. Our GMC-registered doctors are Harley Street Institute trainers, ensuring you receive the highest standard of care for all acne types including bacterial acne treatment, fungal acne treatment, comedonal acne treatment, and topical treatment for rosacea acne. Whether you're searching for "acne treatment near me", "best acne treatment UK", "best acne treatment London", "cystic acne treatment", "acne scar treatment near me", or "treatment for acne scars London", Cosmedocs offers evidence-based solutions with proven results. We believe in invisible art - creating natural transformations that restore your confidence and skin health through the best treatment for acne available.
           </p>
           
           <h3>Medical Review Information</h3>
           <p>
-            All acne treatment information reviewed by GMC-registered dermatologists with over 15 years of experience in treating acne vulgaris, cystic acne, hormonal acne, and acne scarring. Our medical team includes Harley Street Institute trainers specialising in advanced acne therapies, laser treatments, and cosmeceutical acne management.
+            All acne treatment information reviewed by GMC-registered dermatologists with over 15 years of experience in treating acne vulgaris, cystic acne, hormonal acne, bacterial acne, fungal acne, and acne scarring. Our medical team includes Harley Street Institute trainers specialising in advanced acne therapies including Accutane acne treatment, laser treatments, light acne treatments, topical acne treatment, and cosmeceutical acne management for comprehensive skin and acne treatment.
           </p>
         </div>
       </div>
