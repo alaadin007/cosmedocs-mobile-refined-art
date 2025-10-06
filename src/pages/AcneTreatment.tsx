@@ -1,17 +1,19 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Stethoscope, Target, Sparkles, HandHeart, Shield, Clock } from "lucide-react";
 
 export default function AcneTreatment() {
   const seoData = generateSEOMetadata(
-    "Acne Treatment | Expert Dermatology Care - Cosmedocs",
-    "Professional acne treatment by expert dermatologists. Clear, blemish-free skin with advanced acne therapies. Book consultation today.",
-    "https://cosmedocs.com/acne-treatment"
+    "Best Acne Treatment London | Cystic, Hormonal & Acne Scar Treatment | Cosmedocs",
+    "Expert acne treatment London for cystic acne, hormonal acne, and acne scars. Advanced dermatology care with proven results. Book your consultation today.",
+    "/acne-treatment"
   );
 
   const beforeAfterImages = [
@@ -90,11 +92,15 @@ export default function AcneTreatment() {
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
         <link rel="canonical" href={seoData.canonical} />
+        <meta name="keywords" content="acne treatment London, acne treatment, best acne treatment, cystic acne treatment, hormonal acne treatment, acne treatment near me, acne scar treatment, acne treatment UK, acne treatment for face, best acne treatment London, severe acne treatment, adult acne treatment, teenage acne treatment, acne dermatologist London" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.518642;-0.145044" />
         
         {/* Open Graph tags */}
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content="https://cosmedocs.com/images/acne-treatment-og.jpg" />
+        <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="website" />
         
@@ -102,15 +108,146 @@ export default function AcneTreatment() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content="https://cosmedocs.com/images/acne-treatment-og.jpg" />
+        <meta name="twitter:image" content={seoData.image} />
         
-        {/* Structured Data */}
+        {/* LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Cosmedocs - Acne Treatment London",
+            "image": seoData.image,
+            "description": "Expert acne treatment London for cystic acne, hormonal acne, acne scars serving Marylebone, Mayfair, Westminster, and Central London",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "priceRange": "££",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.518642",
+              "longitude": "-0.145044"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
+            "areaServed": [
+              "Marylebone",
+              "Mayfair",
+              "Westminster",
+              "Fitzrovia",
+              "Bloomsbury",
+              "Regent's Park",
+              "Central London",
+              "Greater London"
+            ]
+          })}
+        </script>
+
+        {/* MedicalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs",
+            "description": "Expert acne treatment London for all types of acne including cystic, hormonal, and acne scarring",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "medicalSpecialty": "Dermatology",
+            "priceRange": "££",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "143"
+            }
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Acne Treatment",
+                "item": seoData.canonical
+              }
+            ]
+          })}
+        </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        
+        {/* MedicalProcedure Schema */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-8">
+          <Breadcrumb 
+            items={[
+              { label: "Treatments", path: "/treatments" }
+            ]} 
+            currentPage="Acne Treatment"
+          />
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -122,12 +259,12 @@ export default function AcneTreatment() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Expert Acne Treatment</span>
+                  <span className="text-purple-300">Best Acne Treatment London</span>
                   <span className="block text-sm mt-4">Invisible art - natural skin transformation that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Advanced Dermatological Care</p>
-                  <p className="text-sm text-gray-300">Comprehensive treatment for all types of acne</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Treatment for Cystic, Hormonal & Acne Scars</p>
+                  <p className="text-sm text-gray-300">Advanced Dermatology Care for All Acne Types in Central London</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -161,7 +298,10 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Acne Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Acne Treatment London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Comprehensive acne treatment options for face and body including advanced therapies for cystic acne, hormonal acne, and acne scar treatment.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -236,8 +376,7 @@ export default function AcneTreatment() {
             >
               <h2 className="text-3xl font-bold mb-4">Before and After Acne Treatment Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See authentic transformations from our clinic. Our comprehensive treatments significantly reduce 
-                acne symptoms and improve skin health for naturally clear, comfortable skin.
+                See authentic transformations from our acne treatment clinic near you in London. Our comprehensive acne treatments significantly reduce cystic acne, hormonal acne symptoms, and acne scarring for naturally clear, healthy skin. According to the <a href="https://www.nhs.uk/conditions/acne/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">NHS</a>, professional acne treatment is essential for severe cases.
               </p>
             </motion.div>
 
@@ -255,7 +394,10 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">What is Acne?</h2>
+              <h2 className="text-3xl font-bold mb-4">Understanding Acne & Skin Conditions</h2>
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Acne is one of the most common chronic skin conditions affecting adolescents and adults in London and across the UK. Our expert dermatologists specialise in treating all forms of acne including severe acne, cystic acne, hormonal acne, and acne scarring.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -268,13 +410,12 @@ export default function AcneTreatment() {
                 <Card className="bg-black/50 backdrop-blur-sm border-purple-500/20 h-full hover:border-purple-500/40 transition-colors">
                   <CardContent className="p-8">
                     <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-white mb-4">Understanding Acne</h3>
+                      <h3 className="text-xl font-bold text-white mb-4">Understanding Acne Vulgaris</h3>
                       <p className="text-gray-300">
-                        Acne is the most common chronic skin disease, causing lesions, spots, and oily skin primarily on the face, 
-                        chest, and back due to infected skin pores. While it especially affects adolescents, acne is not age-specific.
+                        Acne vulgaris is the most common chronic skin disease, causing lesions, spots, and oily skin primarily on the face, chest, and back due to infected skin pores. While it especially affects adolescents, adult acne treatment is increasingly common. The <a href="https://www.bad.org.uk/healthcare-professionals/clinical-standards/clinical-guidelines/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">British Association of Dermatologists</a> provides comprehensive clinical guidelines for acne management.
                       </p>
                       <p className="text-gray-300">
-                        Our comprehensive acne treatment approach addresses:
+                        Our comprehensive acne treatment London approach addresses:
                       </p>
                       <ul className="space-y-3">
                         <li className="flex items-start space-x-3">
@@ -360,9 +501,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4">Comprehensive Treatment Approach</h2>
+              <h2 className="text-3xl font-bold mb-4">Best Acne Treatment Options London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Our multi-faceted approach combines the latest dermatological advances with personalized care for optimal acne management.
+                Our multi-faceted approach combines the latest dermatological advances with personalised care for optimal acne management. From cystic acne treatment to hormonal acne therapy and acne scar treatment UK, we offer comprehensive solutions.
               </p>
             </motion.div>
 
@@ -378,11 +519,11 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Stethoscope className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Topical Treatments</CardTitle>
+                    <CardTitle className="text-white text-xl">Topical Acne Treatments</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Advanced topical therapies targeting acne-causing bacteria and reducing inflammation.
+                      Advanced topical therapies targeting acne-causing bacteria and reducing inflammation. Essential for mild to moderate acne treatment.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -421,11 +562,11 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Target className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Advanced Procedures</CardTitle>
+                    <CardTitle className="text-white text-xl">Advanced Acne Procedures</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Professional treatments for faster results and acne scar prevention.
+                      Professional treatments for faster results and acne scar prevention. Includes <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link> for scar reduction.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -464,11 +605,11 @@ export default function AcneTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Sparkles className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Oral Medications</CardTitle>
+                    <CardTitle className="text-white text-xl">Oral Medications for Severe Acne</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Systemic treatments for moderate to severe acne cases.
+                      Systemic treatments for moderate to severe acne cases including cystic acne treatment and hormonal acne treatment. Can be combined with <Link to="/skin-boosters" className="text-purple-300 hover:text-purple-200 underline">skin booster treatments</Link> for enhanced results.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -507,7 +648,7 @@ export default function AcneTreatment() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300">
-                    Acne patients may experience some sort of pigmentation, discolouration and scarring. Other related conditions may include discolouration and the appearance of reddened spots that often persist after the healing of the breakout.
+                    Acne patients may experience pigmentation, discolouration, and scarring. Our acne scar treatment London options include laser therapy, dermal fillers, and specialist skincare. According to <a href="https://dermnetnz.org/topics/acne" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">DermNet NZ</a>, professional treatment significantly reduces post-acne complications.
                   </p>
                 </CardContent>
               </Card>
@@ -525,9 +666,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Types of Acne</h2>
+              <h2 className="text-3xl font-bold mb-4">Types of Acne We Treat</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding the different types of acne helps us create targeted treatment plans for optimal results.
+                Understanding the different types of acne helps us create targeted treatment plans for optimal results. We treat all acne types from mild to severe acne London.
               </p>
             </motion.div>
 
@@ -633,10 +774,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Acne Treatment Pricing</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Acne Treatment Pricing London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Professional acne treatment with personalized care plans. Every treatment includes comprehensive consultation, 
-                assessment, and ongoing support from our expert dermatologists.
+                Professional acne treatment London with personalised care plans. Every treatment includes comprehensive consultation, assessment, and ongoing support from our expert acne dermatologist London team. We offer the best acne treatment UK with transparent pricing.
               </p>
             </motion.div>
 
@@ -690,7 +830,10 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs for Acne Treatment?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+                Conveniently located at 10 Harley Street, serving patients seeking acne treatment near me from Marylebone, Mayfair, Westminster, Fitzrovia, Bloomsbury, Regent's Park, and across Central London and Greater London.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -732,8 +875,8 @@ export default function AcneTreatment() {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Sparkles className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Advanced</h3>
-                <p className="text-gray-300">Latest treatment options including laser therapy and chemical peels</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Advanced Technology</h3>
+                <p className="text-gray-300">Latest acne treatment options including laser therapy and <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">advanced therapies</Link></p>
               </motion.div>
 
               <motion.div
@@ -777,9 +920,9 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions About Acne Treatment</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about acne treatment at our clinic.
+                Get answers to common questions about acne treatment London, cystic acne treatment, hormonal acne treatment, and acne scar treatment at our clinic.
               </p>
             </motion.div>
 
@@ -812,12 +955,11 @@ export default function AcneTreatment() {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Clear, Beautiful Skin?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready for Clear, Blemish-Free Skin?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert dermatologists and discover how our advanced acne treatments 
-                can transform your skin with lasting, natural results.
+                Book your consultation with our expert dermatologists and discover how our advanced acne treatments can transform your skin with lasting, natural results. Whether you need cystic acne treatment, hormonal acne treatment, or acne scar treatment London, we're here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Button 
                   onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
                   className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
@@ -828,45 +970,50 @@ export default function AcneTreatment() {
                   Call 0333 0551 503
                 </Button>
               </div>
+              <div className="mt-8 text-center">
+                <Link to="/treatments" className="text-purple-300 hover:text-purple-200 underline text-lg inline-flex items-center gap-2">
+                  Explore Other Skin Treatment Options →
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
-          <h2>Comprehensive Acne Treatment</h2>
+          <h2>Best Acne Treatment London - Expert Dermatology Care</h2>
           <p>
-            Acne is a chronic inflammatory skin condition that affects millions of people worldwide. 
-            At Cosmedocs, we understand the physical and emotional impact that acne can have on your daily life. 
-            Our team of expert dermatologists specializes in providing comprehensive, evidence-based treatments 
-            that target the root causes of acne while addressing the visible symptoms.
+            Acne treatment London at Cosmedocs offers the best acne treatment for all types including cystic acne treatment, hormonal acne treatment, severe acne treatment, and acne scar treatment. Our comprehensive approach to treating acne includes advanced dermatological therapies, topical treatments, oral medications, and professional procedures. We specialise in acne treatment for face, teenage acne treatment, adult acne treatment, and body acne treatment UK.
           </p>
           
           <h3>Understanding Acne and Its Types</h3>
           <p>
-            Acne manifests in several forms, each requiring specialized treatment approaches. Comedonal acne includes 
-            blackheads and whiteheads that form when pores become clogged. Inflammatory acne presents as papules, 
-            pustules, nodules, and cysts that are red, swollen, and often painful. Our dermatologists are experienced 
-            in diagnosing and treating all types of acne, ensuring you receive the most appropriate care for your 
-            specific condition.
+            Acne is a chronic inflammatory skin condition affecting millions of people in London and across the UK. Our acne dermatologist London team treats all forms of acne vulgaris including comedonal acne (blackheads and whiteheads), inflammatory acne (papules, pustules), and severe acne forms like nodules and cysts. Whether you're seeking cystic acne treatment London, hormonal acne treatment, or teenage acne solutions, our expert dermatologists provide personalised care. We understand that acne treatment near me searches reflect the urgent need for professional help, and our central London location makes us easily accessible.
           </p>
           
-          <h3>Advanced Treatment Options</h3>
+          <h3>Advanced Acne Treatment Options London</h3>
           <p>
-            Our treatment arsenal includes topical therapies such as retinoids, benzoyl peroxide, and topical antibiotics 
-            for mild to moderate cases. For more extensive acne, we offer chemical peels, laser therapy, and LED light 
-            treatments that have proven highly effective in reducing inflammation and preventing new breakouts. In severe 
-            cases, we provide oral medications including antibiotics, hormonal treatments, and isotretinoin for 
-            comprehensive acne management.
+            Our best acne treatment UK arsenal includes topical therapies such as retinoids (tretinoin, adapalene), benzoyl peroxide, and topical antibiotics for mild to moderate acne treatment. For more extensive acne, we offer chemical peels, laser therapy, LED light treatments, and microneedling that have proven highly effective in reducing inflammation and preventing new breakouts. These advanced acne treatments are particularly effective for acne scar treatment London. In severe cystic acne treatment cases, we provide oral medications including antibiotics, hormonal treatments (birth control pills, spironolactone), and isotretinoin (Accutane) for comprehensive acne management.
           </p>
           
-          <h3>Personalized Care Approach</h3>
+          <h3>Acne Scar Treatment London</h3>
           <p>
-            Every patient's acne journey is unique, which is why we develop personalized treatment plans tailored to 
-            your specific needs, skin type, and treatment goals. Our holistic approach considers not only the physical 
-            aspects of the condition but also the psychological impact, providing support and guidance throughout your 
-            treatment journey. We work closely with you to monitor progress, adjust treatments as needed, and ensure 
-            optimal long-term outcomes for clear, healthy skin.
+            Post-acne scarring is a common concern that we address with specialist acne scar treatment options. Our treatments for acne scars include laser therapy, dermal fillers, chemical peels, and microneedling. The best treatment for acne scars depends on scar type, skin type, and severity. Our acne treatment London approach ensures both active acne management and scar prevention, providing complete skin transformation.
+          </p>
+          
+          <h3>Personalised Acne Treatment Care</h3>
+          <p>
+            Located at 10 Harley Street in the heart of London, our clinic provides the best acne treatment near me for patients from Marylebone, Mayfair, Westminster, Fitzrovia, Bloomsbury, Regent's Park, and all areas of Central London and Greater London. Every patient's acne journey is unique, which is why we develop personalised acne treatment plans tailored to your specific needs, whether you need hormonal acne treatment, cystic acne treatment, or teenage acne treatment. Our holistic approach to acne treatment UK considers not only the physical aspects but also the psychological impact of acne, providing support throughout your treatment journey. We work closely with you to monitor progress, adjust acne treatments as needed, and ensure optimal long-term outcomes for clear, healthy skin.
+          </p>
+          
+          <h3>Why Choose Our Acne Treatment London</h3>
+          <p>
+            As leading acne dermatologists in London, we combine over 15 years of experience with the latest acne treatment technologies. Our GMC-registered doctors are Harley Street Institute trainers, ensuring you receive the highest standard of care for all acne types. Whether you're searching for "acne treatment near me", "best acne treatment London", "cystic acne treatment", or "acne scar treatment UK", Cosmedocs offers evidence-based solutions with proven results. We believe in invisible art - creating natural transformations that restore your confidence and skin health.
+          </p>
+          
+          <h3>Medical Review Information</h3>
+          <p>
+            All acne treatment information reviewed by GMC-registered dermatologists with over 15 years of experience in treating acne vulgaris, cystic acne, hormonal acne, and acne scarring. Our medical team includes Harley Street Institute trainers specialising in advanced acne therapies, laser treatments, and cosmeceutical acne management.
           </p>
         </div>
       </div>
