@@ -123,6 +123,60 @@ const HyperpigmentationTreatment = () => {
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="hyperpigmentation treatment London, hyperpigmentation treatment, skin pigmentation disorders, pigmentation treatment London, hyperpigmentation treatment for face, best treatment for hyperpigmentation, hyperpigmentation treatment for dark skin, post hyperpigmentation treatment, body hyperpigmentation treatment, hyperpigmentation treatment UK, skin hyperpigmentation treatment, hyperpigmentation treatment near me" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.518642;-0.145044" />
+        
+        {/* LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Cosmedocs - Hyperpigmentation Treatment London",
+            "image": seoData.image,
+            "description": "Expert hyperpigmentation treatment London for face, body, and skin pigmentation disorders serving Marylebone, Mayfair, Westminster, and Central London",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "priceRange": "££",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.518642",
+              "longitude": "-0.145044"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
+            "areaServed": [
+              "Marylebone",
+              "Mayfair",
+              "Westminster",
+              "Fitzrovia",
+              "Bloomsbury",
+              "Regent's Park",
+              "Central London",
+              "Greater London"
+            ]
+          })}
+        </script>
         
         {/* MedicalBusiness Schema */}
         <script type="application/ld+json">
@@ -529,8 +583,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Broad Spectrum Sunscreen</h4>
                         <p className="text-gray-300 text-sm leading-relaxed">
-                          SPF 30 and above protection essential for preventing further UV damage 
-                          and maintaining treatment results.
+                          SPF 30 and above protection essential for preventing further UV damage and maintaining treatment results. Often combined with <Link to="/skin-boosters" className="text-purple-300 hover:text-purple-200 underline">skin booster treatments</Link> for enhanced skin health.
                         </p>
                       </div>
                     </CardContent>
@@ -556,8 +609,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Vitamin A Products</h4>
                         <p className="text-gray-300 text-sm leading-relaxed">
-                          Retinol and Tretinoin accelerate skin rejuvenation, resurfacing, 
-                          and cellular turnover for improved pigmentation.
+                          Retinol and Tretinoin accelerate skin rejuvenation, resurfacing, and cellular turnover for improved pigmentation. Works synergistically with <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">regenerative treatments</Link>.
                         </p>
                       </div>
                     </CardContent>
@@ -654,9 +706,7 @@ const HyperpigmentationTreatment = () => {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-4">Our Treatment Philosophy</h3>
                   <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                    At Cosmedocs, we believe in <span className="text-purple-300 font-semibold">invisible art</span> — 
-                    transformation that speaks without saying a word. Our comprehensive approach ensures 
-                    natural-looking results that enhance your confidence while maintaining skin health.
+                    At Cosmedocs, we believe in <span className="text-purple-300 font-semibold">invisible art</span> — transformation that speaks without saying a word. Our comprehensive approach ensures natural-looking results that enhance your confidence whilst maintaining skin health. We also offer complementary treatments including <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">anti-wrinkle treatments</Link> and <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for complete facial rejuvenation.
                   </p>
                 </CardContent>
               </Card>
@@ -750,7 +800,10 @@ const HyperpigmentationTreatment = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs for Hyperpigmentation Treatment?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+                Conveniently located in Harley Street, serving patients from Marylebone, Mayfair, Westminster, Fitzrovia, Bloomsbury, Regent's Park, and across Central London and Greater London.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -981,7 +1034,7 @@ const HyperpigmentationTreatment = () => {
             The Cosmedocs approach to hyperpigmentation treatments combines cutting-edge technology with medical expertise for the best hyperpigmentation treatment results. Our IPL hyperpigmentation treatment uses broad-spectrum light to target melanin deposits, whilst our chemical peels for hyperpigmentation promote cell turnover and skin renewal. For maintenance and prevention of skin pigmentation disorders, we offer prescription-grade skincare including hydroquinone, kojic acid, and vitamin A products. These treatments for hyperpigmentation are suitable for all skin types.
           </p>
           <p>
-            Located in Harley Street, London, our clinic provides a comfortable and professional environment for all hyperpigmentation treatment UK services. We believe in the philosophy of invisible art - creating transformations that speak without saying a word. Our natural approach to treatment for hyperpigmentation on face and body ensures results that enhance rather than alter your appearance. If you're searching for "hyperpigmentation treatment near me" in London, Cosmedocs offers the best solutions for skin pigmentation treatment.
+            Located at 10 Harley Street in the heart of London, our clinic provides a comfortable and professional environment for all hyperpigmentation treatment UK services. We're easily accessible from Marylebone, Mayfair, Westminster, Fitzrovia, Bloomsbury, Regent's Park, and all areas of Central London and Greater London. Our expert team serves patients throughout the UK seeking the best pigmentation treatment London has to offer. We believe in the philosophy of invisible art - creating transformations that speak without saying a word. Our natural approach to treatment for hyperpigmentation on face and body ensures results that enhance rather than alter your appearance. If you're searching for "hyperpigmentation treatment near me" in London, Cosmedocs offers the best solutions for skin pigmentation treatment.
           </p>
           <p>
             Treatment sessions for hyperpigmentation on face treatment typically last 30-60 minutes with minimal downtime, allowing you to return to daily activities immediately. Most patients see significant improvement after 2-3 sessions, with 40-50% reduction in pigmentation after the first hyperpigmentation face treatment. Our comprehensive aftercare for body hyperpigmentation treatment and facial treatments includes sun protection advice and skincare recommendations to maintain results. Whether you need post hyperpigmentation treatment or preventative care, we provide complete support for all skin hyperpigmentation treatment needs.
@@ -989,6 +1042,10 @@ const HyperpigmentationTreatment = () => {
           <h3>Hyperpigmentation Treatment Options London</h3>
           <p>
             Our range of treatments for hyperpigmentation includes IPL treatment, chemical peels, microdermabrasion, dermaroller, and prescription skincare. Each hyperpigmentation treatment is customised for your specific skin pigmentation disorder, whether you have facial hyperpigmentation, body hyperpigmentation, or lip hyperpigmentation. We offer the best treatment for hyperpigmentation UK with proven results for all skin types and tones.
+          </p>
+          <h3>Medical Review Information</h3>
+          <p>
+            All hyperpigmentation treatment information reviewed by GMC-registered aesthetic doctors with over 15 years of experience in dermatological treatments and skin pigmentation disorders. Our medical team includes Harley Street Institute trainers specialising in advanced IPL therapy, chemical peels, and cosmeceutical treatments for hyperpigmentation.
           </p>
         </div>
       </div>
