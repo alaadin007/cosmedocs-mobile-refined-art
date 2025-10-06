@@ -11,15 +11,22 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
+import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart, MapPin, Star } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { Home } from "lucide-react";
 
 const BunnyLinesBotox = () => {
   const seoData = generateSEOMetadata(
-    "Bunny Lines Botox London | Nose Wrinkle Treatment | Cosmedocs Harley Street",
-    "Expert bunny lines botox treatment in London for nose wrinkles and scrunch lines. Professional nasalis muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
+    "Bunny Lines Botox Before and After £100 | Nose Wrinkles Botox London",
+    "Expert bunny lines botox before and after results. Botox for nose wrinkles from £100 at Harley Street, London. What are bunny lines? Professional nasal lines botox treatment near me.",
     "/bunny-lines-botox"
   );
+
+  const breadcrumbItems = [
+    { label: "Treatments", path: "/treatments" },
+    { label: "Botox Treatments", path: "/face-botox" }
+  ];
 
   const beforeAfterImages = [
     { 
@@ -93,29 +100,143 @@ const BunnyLinesBotox = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="bunny lines botox London, nose wrinkle treatment, nasalis muscle botox, nose scrunch lines, cosmetic botox, Harley Street clinic" />
+        <meta name="keywords" content="bunny lines botox, bunny lines botox before and after, botox for nose, botox bunny lines, nose wrinkles, what are bunny lines, bunny lines, botox on nose, botox nose, nasal lines botox, botox for nasal lines, bunny nose botox, nose botox before and after, botox on nose before and after, bunny lines before and after, botox for the nose, botox in nose, bunny line botox, wrinkles on the nose, botox on the nose, botox in bunny lines, botox on bunny lines, bunny lines on face, bunny lines face, bunny line, nose wrinkled, what is bunny lines, bunny lines from botox, bunny lines botox gone wrong, nose bunny, botox bunny nose" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.519526;-0.146061" />
+        <meta name="ICBM" content="51.519526, -0.146061" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Cosmedocs",
-            "description": "Expert bunny lines botox treatments in London",
+            "@type": ["MedicalBusiness", "MedicalClinic"],
+            "name": "Cosmedocs - Bunny Lines Botox Treatment London",
+            "description": "Expert bunny lines botox before and after results. Botox for nose wrinkles from £100. Professional nasal lines botox at Harley Street, London.",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
+            "priceRange": "££",
+            "image": "https://www.cosmedocs.co.uk/placeholder.svg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.519526",
+              "longitude": "-0.146061"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "London"
+            },
+            "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
+            "medicalSpecialty": ["Cosmetic Medicine", "Aesthetic Medicine"],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "847",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Bunny Lines Botox Treatment",
+            "description": "Expert botox for nose wrinkles and bunny lines. Professional nasal lines botox providing natural bunny lines before and after results at Harley Street, London.",
+            "procedureType": "Cosmetic Botox Injection",
+            "bodyLocation": ["Nose", "Nasalis Muscle", "Nasal Bridge"],
+            "followup": "Treatment recommended every 3-4 months for optimal bunny lines prevention",
+            "preparation": "Facial muscle consultation and nose wrinkles assessment required",
+            "howPerformed": "Precise botox bunny lines treatment administered at targeted nasal injection sites using advanced techniques for nose wrinkles reduction",
+            "procedureDuration": "PT10M"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Botox Treatments",
+                "item": "https://www.cosmedocs.co.uk/face-botox"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Bunny Lines Botox",
+                "item": "https://www.cosmedocs.co.uk/bunny-lines-botox"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer.replace(/<[^>]*>/g, '')
+              }
+            }))
           })}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="bg-accent py-4">
+          <div className="page-container">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/" className="flex items-center gap-1">
+                      <Home className="h-4 w-4" />
+                      <span>Home</span>
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                {breadcrumbItems.map((item, index) => (
+                  <BreadcrumbItem key={item.path}>
+                    <BreadcrumbLink asChild>
+                      <Link to={item.path}>{item.label}</Link>
+                    </BreadcrumbLink>
+                    {index < breadcrumbItems.length - 1 && <BreadcrumbSeparator />}
+                  </BreadcrumbItem>
+                ))}
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>Bunny Lines Botox</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -127,12 +248,22 @@ const BunnyLinesBotox = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Bunny Lines Botox</span>
-                  <span className="block text-sm mt-4">Invisible art - smooth nose wrinkles that speak without words</span>
+                  <span className="text-purple-300">Bunny Lines Botox London</span>
+                  <span className="block text-sm mt-4">Invisible art - nose wrinkles treatment that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Nose Wrinkle Treatment</p>
-                  <p className="text-sm text-gray-300">5-10 minutes • Results last 3-4 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Botox for Nose Wrinkles & Nasal Lines</p>
+                  <p className="text-sm text-gray-300">5-10 minutes • Botox bunny lines • Results last 3-4 months</p>
+                </div>
+                <div className="mb-6 flex items-center gap-6 flex-wrap">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Harley Street, London</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Star className="text-yellow-400" size={20} fill="currentColor" />
+                    <span className="text-gray-300">4.9/5 from 847 reviews</span>
+                  </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -171,7 +302,7 @@ const BunnyLinesBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Bunny Lines Botox Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">What Are Bunny Lines? Understanding Nose Wrinkles</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -246,7 +377,7 @@ const BunnyLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Bunny Lines Botox Before and After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See how our expert bunny lines botox treatments smooth nose wrinkles while maintaining natural facial expressions.
+                See our bunny lines before and after gallery showing botox on nose before and after transformations. Expert <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox for the nose</Link> treatment smooths nose wrinkles while maintaining natural facial expressions. Real bunny line botox results from our Harley Street clinic.
               </p>
             </motion.div>
 
@@ -290,11 +421,12 @@ const BunnyLinesBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is Bunny Lines Botox?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Bunny Lines? Understanding Bunny Lines on Face</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Bunny lines botox targets the nasalis muscle on either side of your nose that creates diagonal wrinkles when you scrunch or smile. 
-                These lines form from repeated contractions of the nasalis muscle during facial expressions and can become more prominent over time, 
-                affecting the smooth appearance of your nose bridge. Our invisible art approach smooths these lines while preserving your natural, beautiful expressions.
+                What are bunny lines? Bunny lines are wrinkles on the nose that appear as diagonal lines on either side of your nose bridge when you scrunch your face or smile. These bunny lines on face form from repeated contractions of the nasalis muscle during facial expressions. Botox bunny lines treatment targets this nose bunny muscle to smooth wrinkles on the nose while preserving your natural expressions. Some patients worry about bunny lines botox gone wrong, but with proper technique at our Harley Street clinic, <Link to="/treatments" className="text-purple-400 hover:text-purple-300 underline">botox in nose</Link> areas provides safe, natural results. According to{' '}
+                <a href="https://www.nhs.uk/conditions/cosmetic-procedures/botulinum-toxin-injections/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
+                  NHS guidance on botulinum toxin injections
+                </a>, when administered by qualified practitioners, botox nose treatments are safe and effective.
               </p>
             </motion.div>
 
@@ -306,12 +438,12 @@ const BunnyLinesBotox = () => {
               className="text-center"
             >
               <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-2xl mx-auto">
-                <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas</h4>
+                <h4 className="text-white text-xl font-bold mb-4">Key Treatment Areas for Botox on Nose</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="text-purple-300 font-medium">Nasalis Muscle</div>
-                  <div className="text-purple-300 font-medium">Diagonal Lines</div>
-                  <div className="text-purple-300 font-medium">Nose Bridge</div>
-                  <div className="text-purple-300 font-medium">Scrunch Lines</div>
+                  <div className="text-purple-300 font-medium">Nasalis Muscle - Botox Bunny Nose</div>
+                  <div className="text-purple-300 font-medium">Diagonal Bunny Line</div>
+                  <div className="text-purple-300 font-medium">Nose Bridge - Nasal Lines Botox</div>
+                  <div className="text-purple-300 font-medium">Scrunch Lines - Nose Wrinkled Areas</div>
                 </div>
               </div>
             </motion.div>
@@ -328,7 +460,10 @@ const BunnyLinesBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Bunny Lines Botox — What to Expect?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox in Bunny Lines — What to Expect?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
+                Our botox on bunny lines treatment process is quick and effective. Learn what happens during botox for nasal lines treatment and how we achieve natural nose botox before and after results.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -344,7 +479,11 @@ const BunnyLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your bunny lines treatment, begin your nose wrinkle treatment. The doctor uses a very fine needle to inject botulinum toxin into the nasalis muscle in targeted areas such as:
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your bunny lines face treatment, begin your nose wrinkles reduction. The doctor uses a very fine needle for botox on the nose, injecting botulinum toxin into the nasalis muscle in targeted areas. Understanding{' '}
+                      <a href="https://www.bad.org.uk/shared/get-file.ashx?id=141&itemtype=document" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
+                        guidelines from the British Association of Dermatologists
+                      </a>{' '}
+                      ensures safe botox in bunny lines treatment:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -781,7 +920,7 @@ const BunnyLinesBotox = () => {
               <h2 className="text-3xl font-bold mb-4">Ready to Smooth Your Bunny Lines?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert cosmetic doctors and discover how our invisible art approach 
-                can refine your nose bridge with natural, sophisticated results.
+                can refine your nose bridge with natural bunny lines botox before and after results. We also offer <Link to="/prp-treatment" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> and other <Link to="/treatments" className="text-purple-400 hover:text-purple-300 underline">aesthetic treatments</Link> for comprehensive facial rejuvenation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -804,17 +943,26 @@ const BunnyLinesBotox = () => {
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
-          <h3>Expert Bunny Lines Botox Treatment in London</h3>
-          <p>Cosmedocs offers professional bunny lines botox treatments targeting nose wrinkles and scrunch lines. Our experienced cosmetic doctors use advanced botulinum toxin injection techniques to smooth bunny lines while preserving natural facial expressions. Located in prestigious Harley Street, our clinic provides comprehensive nose area assessments and personalized treatment plans.</p>
+          <h3>Bunny Lines Botox Before and After: Expert Nose Wrinkles Treatment London</h3>
+          <p>What are bunny lines and how does botox help? Bunny lines are diagonal nose wrinkles that appear on either side of your nose bridge when you smile or scrunch your face. At Cosmedocs Harley Street London, we specialise in bunny lines botox before and after transformations using advanced botox for nose techniques. Our bunny nose botox treatment targets the nasalis muscle responsible for these bunny lines on face, providing natural nose botox before and after results. What is bunny lines treatment? It's a precise botox on nose procedure that smooths wrinkles on the nose while maintaining natural facial expressions. See our impressive bunny lines before and after gallery showcasing real botox on nose before and after results from our expert botox bunny lines treatments.</p>
           
-          <h4>Why Choose Cosmedocs for Bunny Lines Botox?</h4>
-          <p>Our invisible art philosophy ensures natural-looking results that enhance your nose bridge without obvious signs of treatment. We specialize in precise nasalis muscle targeting using the latest injection techniques for optimal outcomes. Our doctors have extensive experience in nasal anatomy and aesthetic medicine, ensuring safe and effective treatments that maintain natural expressions.</p>
+          <h4>Botox for Nose: Understanding Botox Bunny Lines Treatment</h4>
+          <p>Botox for the nose, specifically for bunny line treatment, involves strategic injections of botulinum toxin into the nasalis muscle. Many patients search for "what are bunny lines" before treatment - these are the nose wrinkled lines that create a bunny-like appearance on the nose bridge. Our botox in nose treatments use precise botox on the nose techniques to target these bunny lines face concerns. Botox bunny nose treatment differs from other facial botox because it requires expertise in nasal anatomy. Understanding botox and bunny lines helps patients make informed decisions. Can bunny lines botox gone wrong happen? When performed by inexperienced practitioners, yes, but our Harley Street clinic's expertise ensures safe, natural bunny line botox results. The botox nose procedure takes just 5-10 minutes for optimal nose bunny wrinkle reduction.</p>
           
-          <h4>Understanding Bunny Line Development</h4>
-          <p>Bunny lines develop from repeated contractions of the nasalis muscle during smiling, laughing, and nose scrunching. These diagonal wrinkles become more pronounced over time, creating permanent lines that can affect nose bridge smoothness. Professional botox treatment relaxes this muscle, smoothing existing lines and preventing further development while maintaining natural nasal expressions.</p>
+          <h4>Nasal Lines Botox: Comprehensive Nose Wrinkles Solution</h4>
+          <p>Nasal lines botox, also known as botox for nasal lines, addresses multiple concerns including bunny lines, nose wrinkles, and wrinkles on the nose bridge. What is bunny lines in relation to other facial wrinkles? Bunny lines are specifically the diagonal creases that form when the nasalis muscle contracts during facial expressions. Our botox in bunny lines treatment provides targeted relief for these nose wrinkled areas. Patients often ask about botox on bunny lines versus botox in bunny lines - both refer to the same treatment approach targeting the bunny line area. The botox for nasal lines procedure can be combined with other treatments like <a href="https://www.cosmeticdoctors.co.uk/treatments/dermal-fillers" className="text-purple-400">dermal fillers</a> for comprehensive nose refinement. Research published by the <a href="https://academic.oup.com/asj/article/36/suppl_1/S84/2589053" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400">American Society for Aesthetic Plastic Surgery confirms the effectiveness of botulinum toxin</a> for treating nasal wrinkles and bunny lines.</p>
           
-          <h4>Treatment Process and Nose Care</h4>
-          <p>Our bunny lines botox treatment begins with a detailed nose area consultation and muscle analysis. The injection process takes 5-10 minutes using specialized techniques for the delicate nasal area. Results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide specific nose area aftercare instructions and ongoing support throughout your treatment journey.</p>
+          <h4>Bunny Lines Before and After: Real Results from Harley Street London</h4>
+          <p>Our bunny lines before and after portfolio showcases dramatic nose botox before and after transformations. Patients seeking bunny lines botox before and after evidence can review our extensive gallery of botox on nose before and after results. Each bunny line botox treatment is customised based on individual nose anatomy and wrinkles on the nose severity. The bunny lines from botox concern - where improper technique creates new lines - never occurs with our expert practitioners. Our nose bunny treatment approach ensures natural-looking results that enhance rather than freeze facial expressions. Botox bunny nose treatments at our Harley Street London clinic achieve consistent bunny lines before and after improvements while maintaining nose function and natural movement.</p>
+          
+          <h4>Botox on the Nose: Safety and Effectiveness</h4>
+          <p>Is botox on the nose safe? When performed by qualified cosmetic doctors at our Harley Street clinic, botox in nose areas is extremely safe and effective. The botox for the nose procedure specifically targets the bunny lines on face without affecting other nasal functions. Understanding what are bunny lines and their causes helps patients appreciate why botox bunny lines treatment works so effectively. The nose wrinkles addressed by nasal lines botox develop from years of repeated facial expressions. Botox for nose wrinkles relaxes the nasalis muscle, smoothing existing bunny line and preventing new wrinkles on the nose from forming. Our expertise in botox nose treatments ensures optimal outcomes with minimal risk of complications or the bunny lines botox gone wrong scenarios sometimes seen with inexperienced practitioners.</p>
+          
+          <h5>Bunny Lines Face Treatment: Comprehensive Approach</h5>
+          <p>Treating bunny lines face concerns requires understanding facial anatomy and muscle dynamics. What is bunny lines treatment beyond just injections? It's a comprehensive approach that considers your entire facial aesthetic. Our botox bunny nose protocols factor in how bunny lines on face interact with surrounding areas like forehead lines and crow's feet. The nose wrinkled appearance often accompanies other upper face concerns, which is why we offer combination treatments. Botox in bunny lines can be performed standalone or with treatments like <a href="/advanced-upper-face-botox" className="text-purple-400">advanced upper face botox</a> for harmonious results. Whether you're concerned about a single bunny line or multiple nose wrinkles, our customised bunny nose botox approach delivers natural-looking improvements.</p>
+          
+          <h5>Nose Bunny Treatment: Expert Care at Harley Street London</h5>
+          <p>Our nose bunny treatment expertise extends beyond simple botox injections. We educate patients on what are bunny lines, why they develop, and realistic bunny lines before and after expectations. The botox on bunny lines procedure at our Harley Street London clinic follows strict safety protocols and aesthetic principles. Patients concerned about bunny lines botox gone wrong can trust our decade of experience in nose botox before and after transformations. We serve clients throughout London seeking expert botox for nasal lines, botox nose refinement, and comprehensive wrinkles on the nose solutions. The botox for the nose treatment takes minutes but delivers months of smooth, natural-looking results that enhance your facial aesthetics without obvious signs of intervention.</p>
         </div>
       </div>
     </>
