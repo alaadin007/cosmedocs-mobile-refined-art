@@ -2,8 +2,9 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Palette, Star, Clock, Users, Calendar, Shield, Activity, Award, GraduationCap, CheckCircle, Heart } from "lucide-react";
+import { Palette, Star, Clock, Users, Calendar, Shield, Activity, Award, GraduationCap, CheckCircle, Heart, Home, ChevronRight as BreadcrumbChevron } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import { Link } from "react-router-dom";
 import {
   Carousel,
   CarouselContent,
@@ -128,16 +129,105 @@ const ChemicalPeel = () => {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalBusiness",
+        "name": "Cosmedocs - Chemical Peel London",
+        "description": "Professional chemical peel treatments in London's Harley Street for skin resurfacing and rejuvenation",
+        "url": "https://cosmedocs.com/chemical-peel",
+        "telephone": "0333 0551 503",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Harley Street",
+          "addressLocality": "London",
+          "postalCode": "W1G 9PF",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5074,
+          "longitude": -0.1278
+        },
+        "medicalSpecialty": "Dermatology",
+        "priceRange": "£120-£200"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Chemical Peel Treatment Process",
+        "description": "Watch the professional chemical peel treatment process at Cosmedocs London",
+        "thumbnailUrl": "https://www.cosmedocs.co.uk/placeholder.svg",
+        "uploadDate": "2024-01-15",
+        "contentUrl": "https://www.cosmedocs.co.uk/videos/chemical-peel",
+        "duration": "PT2M"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.cosmedocs.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Treatments",
+            "item": "https://www.cosmedocs.co.uk/treatments"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Chemical Peel",
+            "item": "https://www.cosmedocs.co.uk/chemical-peel"
+          }
+        ]
+      },
+      {
+        "@type": "Offer",
+        "name": "Chemical Peel Treatment",
+        "price": "120",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.cosmedocs.co.uk/chemical-peel",
+        "priceValidUntil": "2025-12-31"
+      }
+    ]
+  };
+
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: "en-GB" }}>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:url" content={seoData.canonical} />
         <meta property="og:image" content={seoData.image} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="article:published_time" content="2024-01-15T09:00:00Z" />
+        <meta property="article:modified_time" content="2025-01-20T14:30:00Z" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
@@ -150,33 +240,36 @@ const ChemicalPeel = () => {
         
         {/* Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "MedicalBusiness",
-          "name": "Cosmedocs - Chemical Peel London",
-          "description": "Professional chemical peel treatments in London's Harley Street for skin resurfacing and rejuvenation",
-          "url": "https://cosmedocs.com/chemical-peel",
-          "telephone": "0333 0551 503",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Harley Street",
-            "addressLocality": "London",
-            "postalCode": "W1G 9PF",
-            "addressCountry": "GB"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.5074,
-            "longitude": -0.1278
-          },
-          "medicalSpecialty": "Dermatology",
-          "priceRange": "£120"
-        })}
+          {JSON.stringify(structuredData)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <nav className="bg-gray-900/50 border-b border-gray-800" aria-label="Breadcrumb">
+          <div className="page-container py-3">
+            <ol className="flex items-center space-x-2 text-sm">
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                  <Home className="w-4 h-4" />
+                  <span className="sr-only">Home</span>
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <BreadcrumbChevron className="w-4 h-4 text-gray-600 mx-2" />
+                <Link to="/treatments" className="text-gray-400 hover:text-white transition-colors">
+                  Treatments
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <BreadcrumbChevron className="w-4 h-4 text-gray-600 mx-2" />
+                <span className="text-purple-300 font-medium">Chemical Peel</span>
+              </li>
+            </ol>
+          </div>
+        </nav>
         {/* Hero Section */}
+        <header>
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -215,7 +308,9 @@ const ChemicalPeel = () => {
             </div>
           </div>
         </section>
+        </header>
 
+        <main>
         {/* Summary of Treatment */}
         <section className="py-16 bg-accent">
           <div className="page-container">
@@ -317,9 +412,12 @@ const ChemicalPeel = () => {
                       viewport={{ once: true }}
                       className="relative group cursor-pointer p-2"
                     >
-                      <img 
+                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        width="800"
+                        height="600"
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -357,7 +455,15 @@ const ChemicalPeel = () => {
                 </p>
                 <p>
                   During the treatment, a chemical solution is applied to the skin, causing it to exfoliate and 
-                  eventually peel off. The new skin is typically smoother, less wrinkled, and more even in tone.
+                  eventually peel off. The new skin is typically smoother, less wrinkled, and more even in tone. According to{' '}
+                  <a 
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3663177/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    research published in the Journal of Clinical and Aesthetic Dermatology
+                  </a>, chemical peels are highly effective for treating photoaging, acne scars, and pigmentary disorders.
                 </p>
               </div>
 
@@ -941,6 +1047,103 @@ const ChemicalPeel = () => {
             </motion.div>
           </div>
         </section>
+        </main>
+
+        {/* SEO Hidden Content - Crawlable but not visible */}
+        <div className="sr-only">
+          <article>
+            <h2>Comprehensive Guide to Chemical Peel Treatments in London</h2>
+            
+            <section>
+              <h3>Understanding Chemical Peel Science and Benefits</h3>
+              <p>
+                Chemical peels represent one of the most effective non-invasive dermatological treatments for skin rejuvenation, 
+                offering transformative results for patients seeking to address various skin concerns. At Cosmedocs in London's 
+                prestigious Harley Street, our medical professionals specialise in advanced chemical peel treatments that harness 
+                the power of controlled exfoliation to reveal healthier, more youthful-looking skin.
+              </p>
+              <p>
+                The science behind chemical peels involves the application of carefully selected acids that penetrate the skin's 
+                surface layers, triggering controlled desquamation and stimulating the natural healing response. This process 
+                encourages increased collagen production, cellular turnover, and the removal of damaged epidermal cells, resulting 
+                in improved skin texture, tone, and overall appearance. Our clinic offers various peel strengths and formulations, 
+                including glycolic acid peels, salicylic acid peels, TCA peels, and Jessner's peels, each tailored to specific 
+                skin types and concerns.
+              </p>
+            </section>
+
+            <section>
+              <h3>Chemical Peel Treatment for Acne and Acne Scarring</h3>
+              <p>
+                Acne and post-inflammatory hyperpigmentation affect millions of individuals, significantly impacting quality of life 
+                and self-confidence. Chemical peels offer remarkable benefits for acne-prone skin by unclogging pores, reducing 
+                sebum production, and eliminating acne-causing bacteria. Salicylic acid peels are particularly effective for active 
+                acne, as this beta-hydroxy acid penetrates oil-filled pores to dissolve debris and reduce inflammation.
+              </p>
+              <p>
+                For acne scarring and post-inflammatory hyperpigmentation, medium-depth peels such as TCA or combination peels 
+                provide superior results. These treatments work at deeper dermal levels to remodel scar tissue, stimulate collagen 
+                synthesis, and promote the growth of new, healthy skin cells. Our experienced practitioners assess each patient's 
+                unique scarring pattern and skin type to recommend the most appropriate peel protocol, often combining treatments 
+                with other modalities such as microneedling or laser therapy for optimal outcomes.
+              </p>
+            </section>
+
+            <section>
+              <h3>Anti-Ageing Benefits and Skin Rejuvenation</h3>
+              <p>
+                The visible signs of ageing—fine lines, wrinkles, age spots, and loss of skin elasticity—can be significantly 
+                improved with regular chemical peel treatments. Glycolic acid and lactic acid peels are alpha-hydroxy acids that 
+                excel at addressing photoaging, sun damage, and superficial wrinkles. These peels work by breaking down the bonds 
+                between dead skin cells, revealing the fresher, more vibrant skin beneath whilst simultaneously stimulating 
+                fibroblast activity for enhanced collagen and elastin production.
+              </p>
+              <p>
+                For more advanced signs of ageing, deeper peels such as phenol or high-concentration TCA peels can provide 
+                dramatic rejuvenation. These treatments penetrate to the reticular dermis, effectively reducing moderate to severe 
+                wrinkles, improving skin laxity, and correcting significant pigmentation irregularities. Patients typically observe 
+                progressive improvement over several months as new collagen continues to form, with results lasting several years 
+                when combined with proper skincare maintenance and sun protection.
+              </p>
+            </section>
+
+            <section>
+              <h3>Treating Hyperpigmentation and Melasma</h3>
+              <p>
+                Hyperpigmentation disorders, including melasma, sun spots, and post-inflammatory hyperpigmentation, present unique 
+                challenges in dermatological practice. Chemical peels offer effective solutions by targeting excess melanin deposits 
+                within the epidermis and superficial dermis. Modified Jessner's peels and combination peels containing kojic acid, 
+                arbutin, or vitamin C are particularly beneficial for these conditions, working to inhibit melanin production whilst 
+                removing pigmented cells.
+              </p>
+              <p>
+                Treatment of melasma requires a carefully planned approach, as this condition is notoriously resistant and prone to 
+                recurrence. Our protocols typically involve a series of gentle to medium-depth peels combined with strict sun 
+                protection and medical-grade skincare containing tyrosinase inhibitors. This comprehensive strategy addresses both 
+                existing pigmentation and prevents new melanin formation, achieving more uniform skin tone and sustained improvement.
+              </p>
+            </section>
+
+            <section>
+              <h3>Safety, Recovery, and Expected Results</h3>
+              <p>
+                Patient safety remains paramount in all our chemical peel treatments. Prior to any procedure, comprehensive skin 
+                analysis and medical history review ensure appropriate treatment selection and minimise potential complications. 
+                Our practitioners are extensively trained in recognising contraindications and managing all skin types, including 
+                darker skin tones that require specialised protocols to prevent post-inflammatory hyperpigmentation.
+              </p>
+              <p>
+                Recovery varies depending on peel depth. Light peels typically involve minimal downtime with mild redness and 
+                flaking for 3-5 days, allowing immediate return to daily activities with proper sun protection. Medium-depth peels 
+                require 7-10 days of healing, during which the skin undergoes controlled peeling and regeneration. Deep peels 
+                necessitate 2-3 weeks recovery but deliver the most dramatic transformation. Comprehensive aftercare instructions, 
+                including gentle cleansing protocols, healing ointments, and broad-spectrum sun protection, ensure optimal healing 
+                and results. Most patients observe significant improvement within 4-6 weeks, with continued enhancement as collagen 
+                remodelling progresses over subsequent months.
+              </p>
+            </section>
+          </article>
+        </div>
       </div>
     </>
   );
