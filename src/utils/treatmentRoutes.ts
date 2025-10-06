@@ -52,6 +52,7 @@ const TREATMENT_ROUTES = [
   '/fat-dissolve',
   '/oily-skin-botox',
   '/cosmederm',
+  '/mole-skin-tag-removal',
   
   // Advanced/specialized treatments
   '/advanced-consultation',

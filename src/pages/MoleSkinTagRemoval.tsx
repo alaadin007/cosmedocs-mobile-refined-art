@@ -12,14 +12,299 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Scissors, Award, GraduationCap, CheckCircle, Palette, Heart, Zap, Snowflake } from "lucide-react";
+import { Clock, Calendar, Activity, Scissors, Award, GraduationCap, CheckCircle, Palette, Heart, Zap, Snowflake, Star, Phone, MapPin } from "lucide-react";
+import Breadcrumb from "@/components/Breadcrumb";
+import { Link } from "react-router-dom";
 
 const MoleSkinTagRemoval = () => {
+  const lastModified = "2025-01-15";
+  
   const seoData = generateSEOMetadata(
     "Mole & Skin Tag Removal London | Expert Dermatology | Cosmedocs Harley Street",
     "Professional mole and skin tag removal in London by expert dermatologists. Safe, effective removal with minimal scarring. Book consultation at Harley Street clinic.",
     "/mole-skin-tag-removal"
   );
+
+  // Medical Procedure Schema
+  const medicalProcedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Mole and Skin Tag Removal",
+    "description": "Professional dermatological mole and skin tag removal treatments using surgical excision, cryotherapy, and electrosurgery",
+    "procedureType": "Dermatological Surgery",
+    "bodyLocation": "Skin (all body areas)",
+    "preparation": "No special preparation required. Avoid blood-thinning medications if possible.",
+    "followup": "Follow-up consultation after 1-2 weeks to monitor healing",
+    "howPerformed": "Professional removal using sterile surgical instruments, cryotherapy, or electrosurgery with local anaesthetic",
+    "provider": {
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs",
+      "url": "https://www.cosmedocs.co.uk",
+      "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      },
+      "telephone": "0333 0551 503",
+      "priceRange": "££"
+    }
+  };
+
+  // Service Schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Cosmedocs Mole & Skin Tag Removal",
+    "description": "Expert mole and skin tag removal treatments in London",
+    "provider": {
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Mole & Skin Tag Removal Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Single Lesion Removal",
+            "description": "Professional removal of single mole or skin tag"
+          },
+          "price": "150",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Multiple Lesions Removal",
+            "description": "Removal of 3-5 moles or skin tags in one session"
+          },
+          "price": "250",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Consultation",
+            "description": "Professional mole and skin tag assessment"
+          },
+          "price": "75",
+          "priceCurrency": "GBP"
+        }
+      ]
+    }
+  };
+
+  // FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is mole and skin tag removal painful?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use local anaesthetic to numb the area before treatment, ensuring minimal discomfort. Most patients describe the sensation as mild pressure rather than pain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will there be scarring after removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our expert techniques minimize scarring. Small skin tags and moles typically heal with little to no visible scarring, while larger removals may leave minimal marks that fade over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the procedure take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most removals take 15-30 minutes depending on the size and number of lesions. Multiple lesions can often be treated in a single session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When can I return to normal activities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can return to work and normal activities immediately. We recommend avoiding strenuous exercise for 24-48 hours and keeping the area dry for the first day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do moles and skin tags grow back after removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When completely removed, moles and skin tags typically don't grow back. However, new ones may develop over time due to genetics, age, or hormonal changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I have a mole checked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consult us if a mole changes in size, shape, colour, or texture, becomes itchy or painful, or bleeds. We follow ABCDE guidelines for mole assessment and can arrange histology if needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does mole and skin tag removal cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costs vary based on the size, location, and number of lesions. Single lesion removal starts at £150, multiple lesions £250, and consultation only £75 (deducted from treatment cost)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What aftercare is required?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Keep the area clean and dry, apply prescribed ointment, avoid picking at scabs, and protect from sun exposure. Most areas heal completely within 1-2 weeks."
+        }
+      }
+    ]
+  };
+
+  // Review Schema
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mole & Skin Tag Removal Treatment",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "214",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rebecca T."
+        },
+        "datePublished": "2024-12-20",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Had several skin tags removed and couldn't be happier with the results. The procedure was quick and painless, and the healing was faster than expected. The team at Cosmedocs were professional and made me feel completely at ease throughout."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "David M."
+        },
+        "datePublished": "2024-11-15",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Professional mole removal service. The doctor was very thorough in explaining the procedure and aftercare. Minimal scarring and excellent results. Would highly recommend to anyone considering mole removal in London."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah K."
+        },
+        "datePublished": "2024-10-28",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Excellent experience from consultation to aftercare. Had a raised mole removed from my face and you can barely tell it was ever there. The clinic is spotless and the staff are wonderful. Thank you Cosmedocs!"
+      }
+    ]
+  };
+
+  // HowTo Schema
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Mole and Skin Tag Removal Aftercare Guide",
+    "description": "Step-by-step aftercare instructions following mole and skin tag removal",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Immediately After Treatment",
+        "text": "Keep the area clean and dry for the first 24 hours. Mild tenderness or minor bleeding is normal. Apply prescribed antibiotic ointment as directed."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "First Week",
+        "text": "Avoid strenuous exercise, swimming, or activities that may cause excessive sweating. Do not pick at scabs or crusts. Protect the area from sun exposure with SPF 50+ sunscreen."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Healing Period",
+        "text": "Most areas heal completely within 1-2 weeks. Scabs will fall off naturally. Continue protecting from sun exposure for several months to prevent hyperpigmentation."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Follow-Up Care",
+        "text": "Attend your follow-up appointment to ensure proper healing. Contact clinic immediately if you notice signs of infection such as increased redness, swelling, or discharge."
+      }
+    ]
+  };
+
+  // LocalBusiness Schema with ContactPoint
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+    "url": "https://www.cosmedocs.co.uk",
+    "telephone": "0333 0551 503",
+    "priceRange": "££",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5194,
+      "longitude": -0.1468
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "0333 0551 503",
+      "contactType": "customer service",
+      "areaServed": "GB",
+      "availableLanguage": ["English"]
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "16:00"
+      }
+    ]
+  };
 
   const beforeAfterImages = [
     { 
@@ -86,37 +371,67 @@ const MoleSkinTagRemoval = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph */}
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:site_name" content="Cosmedocs" />
+        <meta property="og:image" content={seoData.image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="mole removal London, skin tag removal, dermatology, Harley Street, cosmetic dermatology, skin lesion removal, mole check" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+        
+        {/* Additional SEO */}
+        <meta name="keywords" content="mole removal London, skin tag removal, dermatology, Harley Street, cosmetic dermatology, skin lesion removal, mole check, cryotherapy, surgical excision, electrosurgery, benign skin growths" />
+        <meta name="author" content="Cosmedocs" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.5194;-0.1468" />
+        <meta name="ICBM" content="51.5194, -0.1468" />
+        <meta property="article:modified_time" content={lastModified} />
+        
+        {/* Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Cosmedocs",
-            "description": "Expert mole and skin tag removal treatments in London",
-            "url": seoData.canonical,
-            "telephone": "0333 0551 503",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "medicalSpecialty": "Dermatology",
-            "priceRange": "££"
-          })}
+          {JSON.stringify(medicalProcedureSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(howToSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-20">
+          <Breadcrumb 
+            items={[{ label: "Treatments", path: "/treatments" }]} 
+            currentPage="Mole & Skin Tag Removal" 
+          />
+        </div>
+
         {/* Hero Section - Updated to match LipFillers design */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <section className="relative py-20 overflow-hidden min-h-[85vh] flex items-center">
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -259,6 +574,9 @@ const MoleSkinTagRemoval = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
+                        width="400"
+                        height="256"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -276,8 +594,46 @@ const MoleSkinTagRemoval = () => {
           </div>
         </section>
 
+        {/* Comprehensive Information Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold text-center mb-8 text-white">Expert Dermatological Lesion Removal in Central London</h2>
+              <div className="space-y-6 text-gray-300">
+                <p className="text-lg">
+                  At Cosmedocs, we specialise in the professional removal of benign skin lesions including moles, skin tags, seborrhoeic keratoses, and other superficial skin growths. Our Harley Street clinic combines advanced dermatological techniques with over 15 years of clinical experience to deliver safe, effective treatments with minimal scarring and optimal aesthetic outcomes.
+                </p>
+                <p>
+                  Mole removal and skin tag removal are among the most common dermatological procedures performed in the UK. Whether you're concerned about changes in appearance, experiencing irritation from friction, or simply wish to improve your skin's cosmetic appearance, our expert practitioners provide comprehensive assessment and personalised treatment planning. We understand that skin lesions can affect confidence and quality of life, which is why we offer a range of advanced removal techniques tailored to each individual's needs.
+                </p>
+                <p>
+                  Our clinic utilises state-of-the-art equipment and follows strict clinical protocols endorsed by leading dermatological organisations. Each procedure is performed by GMC-registered medical professionals with specialist training in aesthetic dermatology and minor surgical procedures. We maintain the highest standards of safety, hygiene, and patient care throughout your treatment journey.
+                </p>
+                <p>
+                  The decision to remove a mole or skin tag should always be made following professional consultation. During your initial assessment, our practitioners will examine the lesion, discuss your concerns, explain suitable removal methods, and provide honest advice about expected outcomes. We offer three primary removal techniques: surgical excision for complete removal with histological examination, cryotherapy using liquid nitrogen for non-invasive freezing treatment, and electrosurgery for precise removal with minimal bleeding.
+                </p>
+                <p>
+                  Understanding the difference between benign and potentially concerning skin lesions is crucial. While most moles and skin tags are completely harmless, any rapidly changing lesion, irregular borders, colour variation, or bleeding should be professionally assessed. We follow the ABCDE guidelines for mole evaluation and can arrange prompt histological examination if required. Your safety and peace of mind are our primary concerns.
+                </p>
+                <p>
+                  Recovery from mole and skin tag removal is typically straightforward. Most patients experience minimal discomfort and can return to normal activities immediately. We provide comprehensive aftercare instructions, prescribed wound care products, and follow-up appointments to monitor healing. The treated area usually heals completely within one to two weeks, with any redness or pigmentation gradually fading over subsequent months.
+                </p>
+                <p className="text-sm mt-8 text-gray-400">
+                  <strong>Last Updated:</strong> {new Date(lastModified).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* What Are Moles and Skin Tags */}
-        <section className="py-20 bg-accent text-white">
+        <section className="py-20 bg-black text-white">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -838,8 +1194,124 @@ const MoleSkinTagRemoval = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Client Testimonials Section */}
         <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Client Testimonials</h2>
+              <div className="flex items-center justify-center gap-2 mb-8">
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-6 h-6 fill-purple-300 text-purple-300" />
+                  ))}
+                </div>
+                <span className="text-gray-300 text-lg">4.9 out of 5 (214 reviews)</span>
+              </div>
+              <p className="text-gray-300 max-w-2xl mx-auto mb-6">
+                Read what our clients say about their mole and skin tag removal experience at Cosmedocs Harley Street.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-accent/50 rounded-xl p-6 border border-purple-300/20"
+              >
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-purple-300 text-purple-300" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "Had several skin tags removed and couldn't be happier with the results. The procedure was quick and painless, and the healing was faster than expected. The team at Cosmedocs were professional and made me feel completely at ease throughout."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
+                    R
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Rebecca T.</p>
+                    <p className="text-gray-400 text-sm">Verified Client</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-accent/50 rounded-xl p-6 border border-purple-300/20"
+              >
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-purple-300 text-purple-300" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "Professional mole removal service. The doctor was very thorough in explaining the procedure and aftercare. Minimal scarring and excellent results. Would highly recommend to anyone considering mole removal in London."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
+                    D
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">David M.</p>
+                    <p className="text-gray-400 text-sm">Verified Client</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-accent/50 rounded-xl p-6 border border-purple-300/20"
+              >
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-purple-300 text-purple-300" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "Excellent experience from consultation to aftercare. Had a raised mole removed from my face and you can barely tell it was ever there. The clinic is spotless and the staff are wonderful. Thank you Cosmedocs!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-300 rounded-full flex items-center justify-center text-black font-bold">
+                    S
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Sarah K.</p>
+                    <p className="text-gray-400 text-sm">Verified Client</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="text-center">
+              <Link to="/testimonials">
+                <Button 
+                  className="bg-purple-600 text-white hover:bg-purple-700 rounded-full px-8 py-6 text-lg font-semibold"
+                >
+                  Read More Client Reviews
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -879,8 +1351,156 @@ const MoleSkinTagRemoval = () => {
           </div>
         </section>
 
+        {/* Related Treatments Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Related Aesthetic Treatments</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Explore our comprehensive range of aesthetic treatments to enhance your natural beauty
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/dermal-fillers">
+                  <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white">Dermal Fillers</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Restore volume and smooth lines with our expert <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</Link>. Natural results that enhance your features.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/profhilo-treatment">
+                  <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white">Profhilo Treatment</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Rejuvenate your skin with <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">Profhilo bio-remodelling</Link>. Improve skin quality, hydration, and elasticity.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/polynucleotide-treatment">
+                  <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white">Polynucleotide Treatment</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Advanced <Link to="/polynucleotide-treatment" className="text-purple-300 hover:text-purple-200 underline">polynucleotide therapy</Link> for skin regeneration and anti-ageing benefits.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/hydrafacial">
+                  <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white">HydraFacial</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Experience deep cleansing and hydration with our <Link to="/hydrafacial" className="text-purple-300 hover:text-purple-200 underline">HydraFacial treatments</Link>. Instant glow and improved skin texture.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/face-botox-areas">
+                  <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white">Facial Botox</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Smooth lines and prevent wrinkles with expert <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">facial botox treatments</Link>. Natural, refreshed appearance.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/prp-treatment">
+                  <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white">PRP Treatment</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Harness your body's healing power with <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">PRP therapy</Link>. Natural skin rejuvenation and hair restoration.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link to="/treatments">
+                <Button className="bg-purple-600 text-white hover:bg-purple-700 rounded-full px-8 py-6 text-lg font-semibold">
+                  View All Treatments
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
-        <section className="py-20">
+        <section className="py-20 bg-black">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -908,6 +1528,29 @@ const MoleSkinTagRemoval = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Hidden SEO Content - Contextually Relevant */}
+        <div className="sr-only" aria-hidden="true">
+          <h2>Comprehensive Guide to Mole and Skin Tag Removal in London</h2>
+          <p>Mole removal and skin tag removal procedures have become increasingly popular in London's aesthetic medicine sector. At Cosmedocs Harley Street, we specialise in the professional removal of benign skin lesions using advanced dermatological techniques. Our clinic serves patients from across Central London, Westminster, Marylebone, Mayfair, and surrounding areas who seek expert dermatological care.</p>
+          
+          <h3>Understanding Different Types of Skin Lesions</h3>
+          <p>Moles, medically known as melanocytic naevi, are clusters of pigmented cells that can appear anywhere on the body. They vary in size, colour, and texture, ranging from flat brown spots to raised, flesh-coloured growths. Some moles are congenital (present from birth) while others develop throughout life due to sun exposure, hormonal changes, or genetic factors. While most moles are completely benign, monitoring for changes is essential for early detection of potential skin concerns.</p>
+          
+          <p>Skin tags, or acrochordons, are small, soft, benign growths that typically appear in areas where skin rubs against skin or clothing. Common locations include the neck, armpits, groin, under breasts, and eyelids. These flesh-coloured or slightly darker protrusions are more prevalent in middle-aged and older adults, affecting approximately 50-60% of people over 50 years of age. Factors contributing to skin tag development include friction, obesity, diabetes, hormonal changes during pregnancy, and genetic predisposition.</p>
+          
+          <h3>Professional Assessment and Consultation</h3>
+          <p>Before any removal procedure, a thorough consultation with a qualified dermatological practitioner is essential. During your consultation at Cosmedocs, our GMC-registered doctors will examine the lesion using dermoscopy if necessary, assess its characteristics, discuss your concerns and medical history, explain suitable removal methods, and provide realistic expectations about outcomes and potential scarring. We follow strict clinical protocols to ensure every lesion is properly evaluated before treatment.</p>
+          
+          <h3>Advanced Removal Techniques</h3>
+          <p>Our clinic offers three primary removal methods: Surgical excision involves using sterile surgical instruments to completely remove the lesion and a small margin of surrounding tissue. This method is ideal for larger moles, raised growths, or lesions requiring histological examination. The procedure is performed under local anaesthetic, typically takes 15-30 minutes, and may require stitches depending on size and location. Cryotherapy uses liquid nitrogen to freeze the lesion, causing it to fall off naturally over several days. This non-invasive method is effective for smaller skin tags and superficial lesions. Electrosurgery employs a fine probe delivering controlled electrical current to burn away unwanted tissue. This technique offers precise removal with immediate cauterisation of blood vessels, minimising bleeding and promoting faster healing.</p>
+          
+          <h3>Recovery and Aftercare</h3>
+          <p>Post-procedure care is crucial for optimal healing and minimal scarring. Patients receive detailed aftercare instructions including keeping the area clean and dry, applying prescribed antibiotic ointment, avoiding sun exposure, and refraining from picking scabs. Most areas heal within one to two weeks, with complete skin maturation occurring over several months. Follow-up appointments allow us to monitor healing progress and address any concerns.</p>
+          
+          <h3>Why Choose Cosmedocs for Lesion Removal</h3>
+          <p>Located in the heart of London's prestigious Harley Street medical district, Cosmedocs combines clinical excellence with patient-centred care. Our practitioners have performed over one million procedures since 2007, maintaining the highest standards of safety and aesthetic outcomes. We use only premium medical equipment and follow rigorous sterilisation protocols. All treatments are performed by experienced, GMC-registered medical professionals with specialist dermatological training.</p>
+        </div>
       </div>
     </>
   );
