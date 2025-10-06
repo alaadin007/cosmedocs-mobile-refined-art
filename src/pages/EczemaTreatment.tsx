@@ -1,17 +1,19 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from "@/utils/seo";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Stethoscope, Target, Sparkles, HandHeart, Shield, Clock } from "lucide-react";
 
 export default function EczemaTreatment() {
   const seoData = generateSEOMetadata(
-    "Eczema Treatment | Expert Dermatology Care - Cosmedocs",
-    "Professional eczema treatment by expert dermatologists. Effective solutions for dry, red, and scaly skin. Book consultation today.",
-    "https://cosmedocs.com/eczema-treatment"
+    "Best Eczema Treatment London | Atopic Dermatitis & Severe Eczema | Cosmedocs",
+    "Expert eczema treatment London for atopic dermatitis, severe eczema, hand eczema, scalp eczema, and facial eczema. Advanced dermatology care for all eczema types. Book consultation today.",
+    "/eczema-treatment"
   );
 
   const beforeAfterImages = [
@@ -90,11 +92,15 @@ export default function EczemaTreatment() {
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
         <link rel="canonical" href={seoData.canonical} />
+        <meta name="keywords" content="eczema treatment London, eczema treatment, atopic eczema treatment, atopic dermatitis treatment, best eczema treatment, severe eczema treatment, hand eczema treatment, scalp eczema treatment, eczema treatment UK, face eczema treatment, eczema treatment for face, best treatment for eczema, eczema treatment near me, treatment for eczema" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.518642;-0.145044" />
         
         {/* Open Graph tags */}
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
-        <meta property="og:image" content="https://cosmedocs.com/images/eczema-treatment-og.jpg" />
+        <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:type" content="website" />
         
@@ -102,15 +108,146 @@ export default function EczemaTreatment() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        <meta name="twitter:image" content="https://cosmedocs.com/images/eczema-treatment-og.jpg" />
+        <meta name="twitter:image" content={seoData.image} />
         
-        {/* Structured Data */}
+        {/* LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Cosmedocs - Eczema Treatment London",
+            "image": seoData.image,
+            "description": "Expert eczema treatment London for atopic dermatitis, severe eczema, hand eczema, scalp eczema serving Marylebone, Mayfair, Westminster, and Central London",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "priceRange": "££",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.518642",
+              "longitude": "-0.145044"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
+            "areaServed": [
+              "Marylebone",
+              "Mayfair",
+              "Westminster",
+              "Fitzrovia",
+              "Bloomsbury",
+              "Regent's Park",
+              "Central London",
+              "Greater London"
+            ]
+          })}
+        </script>
+
+        {/* MedicalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Cosmedocs",
+            "description": "Expert eczema treatment London for all types including atopic dermatitis, severe eczema, and eczema flare up treatment",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "medicalSpecialty": "Dermatology",
+            "priceRange": "££",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "156"
+            }
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Eczema Treatment",
+                "item": seoData.canonical
+              }
+            ]
+          })}
+        </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        
+        {/* MedicalProcedure Schema */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="page-container pt-8">
+          <Breadcrumb 
+            items={[
+              { label: "Treatments", path: "/treatments" }
+            ]} 
+            currentPage="Eczema Treatment"
+          />
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -122,12 +259,12 @@ export default function EczemaTreatment() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Expert Eczema Treatment</span>
+                  <span className="text-purple-300">Best Eczema Treatment London</span>
                   <span className="block text-sm mt-4">Invisible art - natural skin transformation that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Advanced Dermatological Care</p>
-                  <p className="text-sm text-gray-300">Comprehensive treatment for all types of eczema</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Treatment for Atopic Dermatitis & Severe Eczema</p>
+                  <p className="text-sm text-gray-300">Advanced Dermatology Care for All Eczema Types in Central London</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -161,7 +298,10 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Eczema Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Comprehensive Eczema Treatments UK</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Expert eczema treatment options including hand eczema treatment, scalp eczema treatment, face eczema treatment, foot eczema treatment, and treatments for eczema on eyes, ears, and lips. Specialising in severe eczema treatment, atopic dermatitis treatment, infected eczema treatment, and eczema flare up treatment for all ages.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -236,8 +376,7 @@ export default function EczemaTreatment() {
             >
               <h2 className="text-3xl font-bold mb-4">Before and After Eczema Treatment Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See authentic transformations from our clinic. Our comprehensive treatments significantly reduce 
-                eczema symptoms and improve skin health for naturally healthy, comfortable skin.
+                See authentic transformations from our eczema treatment clinic near you in London. Our comprehensive eczema treatments significantly reduce atopic dermatitis symptoms, severe eczema, and improve skin health for naturally healthy, comfortable skin. According to the <a href="https://www.nhs.uk/conditions/atopic-eczema/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">NHS</a>, professional treatment is essential for managing chronic eczema.
               </p>
             </motion.div>
 
@@ -255,7 +394,10 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">What is Eczema?</h2>
+              <h2 className="text-3xl font-bold mb-4">Understanding Eczema & Atopic Dermatitis</h2>
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Eczema, also known as atopic dermatitis, is a chronic inflammatory skin condition affecting millions in London and the UK. Our expert dermatologists specialise in treating all forms including severe eczema treatment, hand eczema treatment, scalp eczema treatment, facial eczema treatment, and extreme eczema treatment for serious eczema cases.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -268,30 +410,29 @@ export default function EczemaTreatment() {
                 <Card className="bg-black/50 backdrop-blur-sm border-purple-500/20 h-full hover:border-purple-500/40 transition-colors">
                   <CardContent className="p-8">
                     <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-white mb-4">Understanding Eczema</h3>
+                      <h3 className="text-xl font-bold text-white mb-4">Understanding Atopic Eczema</h3>
                       <p className="text-gray-300">
-                        Eczema, also known as atopic dermatitis, is a chronic inflammatory skin condition that causes dry, red, 
-                        and intensely itchy patches of skin. It affects people of all ages but is most common in children.
+                        Eczema, also known as atopic dermatitis, is a chronic inflammatory skin condition that causes dry, red, and intensely itchy patches of skin. It affects people of all ages but is most common in children. The <a href="https://eczema.org/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">National Eczema Society</a> provides comprehensive resources for managing this condition.
                       </p>
                       <p className="text-gray-300">
-                        Our comprehensive eczema treatment approach addresses:
+                        Our comprehensive treatment for eczema approach addresses:
                       </p>
                       <ul className="space-y-3">
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Active inflammation and itching</span>
+                          <span className="text-gray-300">Active inflammation and itching including eczema flare up treatment</span>
                         </li>
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Skin barrier restoration</span>
+                          <span className="text-gray-300">Skin barrier restoration for eczema on face treatment and hand eczema treatment</span>
                         </li>
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Trigger identification and avoidance</span>
+                          <span className="text-gray-300">Trigger identification including treatment for eczema on head and scalp</span>
                         </li>
                         <li className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                          <span className="text-gray-300">Long-term prevention strategies</span>
+                          <span className="text-gray-300">Long-term prevention strategies for all eczema and treatment needs</span>
                         </li>
                       </ul>
                     </div>
@@ -360,9 +501,9 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4">Comprehensive Treatment Approach</h2>
+              <h2 className="text-3xl font-bold mb-4">Best Treatment for Eczema UK</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Our multi-faceted approach combines the latest dermatological advances with personalized care for optimal eczema management.
+                Our multi-faceted approach combines the latest dermatological advances with personalised care. From topical treatments to light treatment for eczema, we offer the best eczema treatment options for atopic dermatitis eczema treatment, infected eczema treatment, and serious eczema treatment including eczema rash treatment.
               </p>
             </motion.div>
 
@@ -378,11 +519,11 @@ export default function EczemaTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Stethoscope className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Topical Treatments</CardTitle>
+                    <CardTitle className="text-white text-xl">Topical Eczema Treatments</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Advanced topical therapies to reduce inflammation and restore skin barrier function.
+                      Advanced topical therapies for eczema on face treatment, treatment eczema face, and best treatment for eczema on face. Essential for treating facial eczema treatment, eyelid eczema treatment, and eczema under eye treatment. Can be combined with <Link to="/skin-boosters" className="text-purple-300 hover:text-purple-200 underline">skin barrier repair treatments</Link>.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -417,11 +558,11 @@ export default function EczemaTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Target className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Advanced Therapies</CardTitle>
+                    <CardTitle className="text-white text-xl">Advanced Eczema Therapies</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Specialized treatments for moderate to severe eczema cases.
+                      Specialised treatments for severe eczema treatment and extreme eczema treatment cases. Includes light treatment eczema (phototherapy) for serious eczema treatment. According to the <a href="https://www.bad.org.uk/healthcare-professionals/clinical-standards/clinical-guidelines/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">British Association of Dermatologists</a>, these advanced therapies are essential for moderate to severe cases.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -456,11 +597,11 @@ export default function EczemaTreatment() {
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                       <Sparkles className="text-purple-600" size={24} />
                     </div>
-                    <CardTitle className="text-white text-xl">Lifestyle Management</CardTitle>
+                    <CardTitle className="text-white text-xl">Lifestyle & Area-Specific Management</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Comprehensive approach including trigger avoidance and stress management.
+                      Comprehensive approach for eczema on hands treatment, eczema treatment for the scalp, foot eczema treatment, ear eczema treatment, and eye eczema treatment. Includes trigger management and can be combined with <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">skin rejuvenation treatments</Link> for enhanced results.
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-center space-x-2">
@@ -497,9 +638,9 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Types of Eczema</h2>
+              <h2 className="text-3xl font-bold mb-4">Types of Eczema We Treat</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Understanding the different types of eczema helps us create targeted treatment plans for optimal results.
+                Understanding different eczema types helps us create targeted treatments for eczema. We treat all types including atopic eczema treatment, atopic dermatitis eczema treatment, and microbial eczema treatment from mild to extreme eczema.
               </p>
             </motion.div>
 
@@ -599,10 +740,9 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Eczema Treatment Pricing</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Eczema Treatment Pricing London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Professional eczema treatment with personalized care plans. Every treatment includes comprehensive consultation, 
-                assessment, and ongoing support from our expert dermatologists.
+                Professional eczema treatment UK with personalised care plans. Every treatment includes comprehensive consultation, assessment, and ongoing support from our expert dermatologists. We offer the best eczema treatment for all types including eczema treatment on feet, eczema on scalp treatment, eczema on lips treatment, eczema around eyes treatment, and eczema under the eyes treatment.
               </p>
             </motion.div>
 
@@ -656,7 +796,10 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs for Eczema Treatment?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+                Conveniently located at 10 Harley Street, serving patients seeking eczema treatment near me from Marylebone, Mayfair, Westminster, Fitzrovia, Bloomsbury, Regent's Park, and across Central London and Greater London.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -698,8 +841,8 @@ export default function EczemaTreatment() {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Sparkles className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Advanced</h3>
-                <p className="text-gray-300">Latest treatment options including phototherapy and barrier repair</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Advanced Technology</h3>
+                <p className="text-gray-300">Latest options including light treatment eczema and <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline">regenerative therapies</Link></p>
               </motion.div>
 
               <motion.div
@@ -743,9 +886,9 @@ export default function EczemaTreatment() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions About Eczema Treatment</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Get answers to common questions about eczema treatment at our clinic.
+                Get answers to common questions about eczema treatment London, atopic dermatitis treatment, severe eczema treatment, and treatments for eczema at our clinic.
               </p>
             </motion.div>
 
@@ -778,10 +921,9 @@ export default function EczemaTreatment() {
             >
               <h2 className="text-3xl font-bold mb-4">Ready for Healthy, Comfortable Skin?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert dermatologists and discover how our advanced eczema treatments 
-                can transform your skin health with lasting, natural results.
+                Book your consultation with our expert dermatologists and discover how our advanced eczema treatments can transform your skin health with lasting, natural results. Whether you need atopic eczema treatment, severe eczema treatment, or treatment for eczema on face, hands, scalp, or feet, we're here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Button 
                   onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
                   className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
@@ -792,43 +934,50 @@ export default function EczemaTreatment() {
                   Call 0333 0551 503
                 </Button>
               </div>
+              <div className="mt-8 text-center">
+                <Link to="/treatments" className="text-purple-300 hover:text-purple-200 underline text-lg inline-flex items-center gap-2">
+                  Explore Other Skin Treatment Options →
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
-          <h2>Comprehensive Eczema Treatment</h2>
+          <h2>Best Eczema Treatment London - Expert Dermatology Care</h2>
           <p>
-            Eczema is a chronic inflammatory skin condition that affects millions of people worldwide. 
-            At Cosmedocs, we understand the physical and emotional impact that eczema can have on your daily life. 
-            Our team of expert dermatologists specializes in providing comprehensive, evidence-based treatments 
-            that target the root causes of eczema while addressing the visible symptoms.
+            Eczema treatment at Cosmedocs offers the best eczema treatment UK for all types including atopic eczema treatment, atopic dermatitis treatment, atopic dermatitis eczema treatment, severe eczema treatment, serious eczema treatment, extreme eczema treatment, and infected eczema treatment. Our comprehensive approach to treatment for eczema includes advanced dermatological therapies, topical eczema treatments, light treatment for eczema (phototherapy), and professional procedures. We specialise in eczema treatment for face, best treatment for eczema on face, treatment eczema face, facial eczema treatment, and eczema on face treatment. We also provide hand eczema treatment, eczema of the hands treatment, eczema on hands treatment, scalp eczema treatment, eczema treatment for the scalp, treatment for eczema on head, eczema on scalp treatment, foot eczema treatment, eczema on feet treatment, and eczema treatment on feet.
           </p>
           
-          <h3>Understanding Eczema and Its Types</h3>
+          <h3>Comprehensive Area-Specific Eczema Treatments</h3>
           <p>
-            Eczema manifests in several forms, each requiring specialized treatment approaches. Atopic dermatitis is 
-            the most common type, often appearing in childhood and associated with allergies. Contact dermatitis 
-            occurs from direct contact with irritants or allergens. Our dermatologists are experienced in diagnosing 
-            and treating all types of eczema, ensuring you receive the most appropriate care for your specific condition.
+            Our expert dermatologists provide specialised treatments for eczema in all areas including eyelid eczema treatment, eye eczema treatment, eczema around eyes treatment, eczema under eye treatment, eczema under the eyes treatment, ear eczema treatment, and eczema on lips treatment. We understand that eczema and treatment needs vary by location, which is why we offer targeted eczema treatments for each specific area. Whether you're seeking eczema treatment near me in London or the best treatment for eczema for your specific condition, our central London location makes professional care easily accessible. We treat all forms of eczema rash treatment and eczema flare up treatment with evidence-based approaches.
           </p>
           
-          <h3>Advanced Treatment Options</h3>
+          <h3>Advanced Eczema Treatment Options London</h3>
           <p>
-            Our treatment arsenal includes topical corticosteroids, calcineurin inhibitors, and barrier repair 
-            moisturizers for managing inflammation and restoring skin function. For more severe cases, we offer 
-            phototherapy, wet wrap therapy, and immunosuppressive treatments. Our comprehensive approach also 
-            includes trigger identification and lifestyle management strategies.
+            Our best eczema treatment arsenal includes topical treatments for managing inflammation and restoring skin barrier function. For more extensive severe eczema treatment and serious eczema treatment cases, we offer light treatment eczema (phototherapy), wet wrap therapy, and immunosuppressive treatments that have proven highly effective in reducing inflammation. These advanced eczema treatments UK options are particularly effective for extreme eczema treatment and infected eczema treatment. Our approach to atopic dermatitis eczema treatment combines multiple modalities including prescription medications, barrier repair moisturisers, and lifestyle modifications for optimal results in treating atopic eczema treatment and atopic dermatitis treatment.
           </p>
           
-          <h3>Personalized Care Approach</h3>
+          <h3>Specialist Facial & Hand Eczema Treatment</h3>
           <p>
-            Every patient's eczema journey is unique, which is why we develop personalized treatment plans tailored 
-            to your specific needs, triggers, and lifestyle. Our holistic approach considers not only the physical 
-            aspects of the condition but also the psychological impact, providing support and guidance throughout your 
-            treatment journey. We work closely with you to monitor progress, adjust treatments as needed, and ensure 
-            optimal long-term skin health.
+            Facial areas require special attention, which is why we provide expert eczema on face treatment, facial eczema treatment, best treatment for eczema on face, and treatment for eczema on face options. Our approach to face eczema treatment includes gentle formulations suitable for sensitive facial skin whilst treating eyelid eczema treatment, eczema around eyes treatment, and eczema under eye treatment concerns. For hand eczema treatment, we address eczema of the hands treatment and eczema on hands treatment with barrier repair and occupational therapy approaches. We also specialise in scalp eczema treatment, eczema treatment for the scalp, treatment for eczema on head, and eczema on scalp treatment using medicated shampoos and topical therapies.
+          </p>
+          
+          <h3>Personalised Eczema Treatment Care</h3>
+          <p>
+            Located at 10 Harley Street in the heart of London, our clinic provides the best eczema treatment near me for patients from Marylebone, Mayfair, Westminster, Fitzrovia, Bloomsbury, Regent's Park, and all areas of Central London and Greater London. Every patient's eczema journey is unique, which is why we develop personalised eczema treatment plans tailored to your specific needs, whether you need severe eczema treatment, atopic eczema treatment, or treatments for eczema in specific body areas. Our holistic approach to eczema treatment UK and eczema treatments considers not only the physical aspects but also the psychological impact, providing support throughout your treatment journey. We work closely with you to monitor progress, adjust treatments as needed, and ensure optimal long-term outcomes for clear, healthy skin with our comprehensive eczema and treatment solutions.
+          </p>
+          
+          <h3>Why Choose Our Eczema Treatment London</h3>
+          <p>
+            As leading dermatologists in London, we combine over 15 years of experience with the latest eczema treatment technologies including light treatment for eczema. Our GMC-registered doctors are Harley Street Institute trainers, ensuring you receive the highest standard of care for all eczema types including microbial eczema treatment, infected eczema treatment, and eczema rash treatment. Whether you're searching for "eczema treatment near me", "best eczema treatment", "best eczema treatment UK", "atopic dermatitis treatment", "severe eczema treatment", or "treatment for eczema on face", Cosmedocs offers evidence-based solutions with proven results. We believe in invisible art - creating natural transformations that restore your skin health and confidence.
+          </p>
+          
+          <h3>Medical Review Information</h3>
+          <p>
+            All eczema treatment information reviewed by GMC-registered dermatologists with over 15 years of experience in treating atopic eczema, atopic dermatitis, severe eczema, and all eczema types. Our medical team includes Harley Street Institute trainers specialising in advanced eczema therapies including light treatment eczema, barrier repair treatments, and comprehensive eczema management for face eczema treatment, hand eczema treatment, scalp eczema treatment, and body eczema treatments.
           </p>
         </div>
       </div>
