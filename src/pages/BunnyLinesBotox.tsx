@@ -815,11 +815,11 @@ const BunnyLinesBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Skin Rejuvenation</CardTitle>
+                    <CardTitle className="text-white text-xl">Skin Rejuvenation & Nasal Refinement</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Complement your botox bunny lines treatment with <Link to="/skin-boosters" className="text-purple-400 hover:text-purple-300 underline">skin boosters</Link> or <Link to="/prp-treatment" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> to improve overall skin texture and quality whilst smoothing wrinkles on the nose.
+                      Complement your botox bunny lines treatment with <Link to="/skin-boosters" className="text-purple-400 hover:text-purple-300 underline">skin boosters</Link> or <Link to="/prp-treatment" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> to improve overall skin texture. Address nasal concerns comprehensively with <Link to="/nasal-flaring-botox" className="text-purple-400 hover:text-purple-300 underline">nasal flaring botox</Link> whilst smoothing wrinkles on the nose.
                     </p>
                   </CardContent>
                 </Card>
