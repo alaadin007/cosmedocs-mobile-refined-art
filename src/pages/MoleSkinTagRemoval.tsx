@@ -738,9 +738,6 @@ const MoleSkinTagRemoval = () => {
                 <p>
                   Understanding mole removal healing stages is essential for realistic expectations. We provide mole removal healing stages pictures and detailed aftercare instructions to guide you through recovery. The healing process typically progresses through initial wound closure (3-7 days), scab formation and falling off (7-14 days), and scar maturation (3-12 months). Proper aftercare, including sun protection and gentle wound care, significantly influences final aesthetic outcomes and minimises visible scarring.
                 </p>
-                <p>
-                  For those wondering "how to remove skin tag moles" or "how to remove tag moles", professional assessment is crucial. Never attempt how to remove tag moles at home, as improper removal can lead to infection, excessive bleeding, or incomplete removal. Our london mole removal and london skin tag removal services ensure safe, sterile procedures performed by qualified medical professionals. Whether you need laser mole removal London or traditional surgical excision, we offer comprehensive solutions tailored to your specific needs.
-                </p>
                 <p className="text-sm mt-8 text-gray-400">
                   <strong>Last Updated:</strong> {new Date(lastModified).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
                 </p>
@@ -959,8 +956,11 @@ const MoleSkinTagRemoval = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">When to Seek Treatment</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4">When to Seek Professional Removal</h2>
+              <p className="text-base text-gray-300 max-w-3xl mx-auto mb-4">
+                <strong>Professional Assessment is Crucial:</strong> For those wondering "how to remove skin tag moles" or "how to remove tag moles", professional assessment is crucial. Never attempt how to remove tag moles at home, as improper removal can lead to infection, excessive bleeding, or incomplete removal. Our london mole removal and london skin tag removal services ensure safe, sterile procedures performed by qualified medical professionals. Whether you need laser mole removal London or traditional surgical excision, we offer comprehensive solutions tailored to your specific needs.
+              </p>
+              <p className="text-base text-gray-300 max-w-3xl mx-auto">
                 Recognising when professional assessment and removal is recommended
               </p>
             </motion.div>
