@@ -774,7 +774,15 @@ const MoleSkinTagRemoval = () => {
                     </p>
                     <p className="text-gray-300">
                       <strong className="text-purple-300">Formation:</strong> Moles form when melanocytes grow in clusters 
-                      instead of being evenly spread. Factors include genetics, sun exposure, and hormonal changes.
+                      instead of being evenly spread. Factors include genetics, sun exposure, and hormonal changes. Interestingly,{' '}
+                      <a 
+                        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4769025/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-400 hover:text-purple-300 underline"
+                      >
+                        research shows that the average person has between 10 and 40 moles
+                      </a>, though this number can vary significantly based on genetic factors and sun exposure patterns.
                     </p>
                     <p className="text-gray-300">
                       While most moles are harmless, they should be monitored for changes in size, shape, or colour, 
@@ -827,7 +835,15 @@ const MoleSkinTagRemoval = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Professional Removal Methods</h2>
               <p className="text-gray-300 max-w-3xl mx-auto mb-4">
-                Many patients ask "how to remove moles" safely and "how can you remove moles" with minimal scarring. Unlike at-home remedies or creams for removing moles, professional mole removal ensures complete lesion removal with proper wound care. Our mole removal clinic offers three proven techniques: surgical excision for complete tag moles removal, cryotherapy for non-invasive treatment, and electrosurgery for precise face mole removal. Each method is selected based on lesion type, size, and location to achieve optimal results.
+                Many patients ask "how to remove moles" safely and "how can you remove moles" with minimal scarring. Unlike at-home remedies or creams for removing moles, professional mole removal ensures complete lesion removal with proper wound care. Our mole removal clinic offers three proven techniques: surgical excision for complete tag moles removal, cryotherapy for non-invasive treatment, and electrosurgery for precise face mole removal. Each method is selected based on lesion type, size, and location to achieve optimal results. Learn more about{' '}
+                <a 
+                  href="https://www.aad.org/public/diseases/bumps-and-growths/moles/safe-mole-removal" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-400 hover:text-purple-300 underline"
+                >
+                  safe mole removal techniques recommended by dermatologists
+                </a>.
               </p>
               <p className="text-gray-300 max-w-3xl mx-auto">
                 We offer multiple proven techniques for safe and effective mole and skin tag removal
