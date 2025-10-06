@@ -423,7 +423,7 @@ const BunnyLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Bunny Lines? Understanding Bunny Lines on Face</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                What are bunny lines? Bunny lines are wrinkles on the nose that appear as diagonal lines on either side of your nose bridge when you scrunch your face or smile. These bunny lines on face form from repeated contractions of the nasalis muscle during facial expressions. Botox bunny lines treatment targets this nose bunny muscle to smooth wrinkles on the nose while preserving your natural expressions. Some patients worry about bunny lines botox gone wrong, but with proper technique at our Harley Street clinic, <Link to="/treatments" className="text-purple-400 hover:text-purple-300 underline">botox in nose</Link> areas provides safe, natural results. According to{' '}
+                What are bunny lines? Bunny lines are wrinkles on the nose that appear as diagonal lines on either side of your nose bridge when you scrunch your face or smile. These bunny lines on face form from repeated contractions of the nasalis muscle during facial expressions. Botox bunny lines treatment targets this nose bunny muscle to smooth wrinkles on the nose while preserving your natural expressions. Some patients worry about bunny lines botox gone wrong, but with proper technique at our Harley Street clinic, botox for the nose provides safe, natural results. According to{' '}
                 <a href="https://www.nhs.uk/conditions/cosmetic-procedures/botulinum-toxin-injections/" target="_blank" rel="nofollow noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">
                   NHS guidance on botulinum toxin injections
                 </a>, when administered by qualified practitioners, botox nose treatments are safe and effective.
@@ -750,6 +750,80 @@ const BunnyLinesBotox = () => {
                   </Card>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Combined Treatments Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Combined Treatments for Complete Facial Harmony</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
+                Bunny lines botox works beautifully alongside other facial treatments for comprehensive rejuvenation. Many patients combine nasal lines botox with complementary procedures for optimal results.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Upper Face Botox</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Combine bunny nose botox with <Link to="/forehead-lines-botox" className="text-purple-400 hover:text-purple-300 underline">forehead lines treatment</Link> and <Link to="/frown-lines-botox" className="text-purple-400 hover:text-purple-300 underline">frown lines botox</Link> for comprehensive upper face smoothing. This approach addresses nose wrinkles alongside other expression lines.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Dermal Fillers</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Enhance your bunny lines before and after results by pairing botox on nose treatment with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> for nose contouring or <Link to="/cheek-fillers" className="text-purple-400 hover:text-purple-300 underline">cheek enhancement</Link>. Create balanced, natural-looking facial proportions.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">Skin Rejuvenation</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 mb-4">
+                      Complement your botox bunny lines treatment with <Link to="/skin-boosters" className="text-purple-400 hover:text-purple-300 underline">skin boosters</Link> or <Link to="/prp-treatment" className="text-purple-400 hover:text-purple-300 underline">PRP therapy</Link> to improve overall skin texture and quality whilst smoothing wrinkles on the nose.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
