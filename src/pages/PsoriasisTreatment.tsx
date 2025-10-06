@@ -1023,6 +1023,11 @@ export default function PsoriasisTreatment() {
                   Call 020 7851 6616
                 </Button>
               </div>
+              <div className="mt-8">
+                <Link to="/treatments" className="text-purple-300 hover:text-purple-200 underline text-lg inline-flex items-center gap-2">
+                  Explore Other Treatment Options →
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
