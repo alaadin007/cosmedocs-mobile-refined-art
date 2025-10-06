@@ -226,7 +226,7 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Chemical Peel Treatment Summary</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Chemical Peel Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -237,8 +237,8 @@ const ChemicalPeel = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-purple-300" size={24} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
                 <p className="text-gray-300">30-45 minutes including consultation</p>
@@ -251,8 +251,8 @@ const ChemicalPeel = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="text-purple-300" size={24} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
                 <p className="text-gray-300">Monthly treatments recommended</p>
@@ -265,8 +265,8 @@ const ChemicalPeel = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="text-purple-300" size={24} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
                 <p className="text-gray-300">3-14 days depending on peel depth</p>
@@ -279,8 +279,8 @@ const ChemicalPeel = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-purple-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Palette className="text-purple-300" size={24} />
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Peel Types</h3>
                 <p className="text-gray-300">Light, medium & deep peels available</p>
@@ -299,7 +299,7 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Chemical Peel Before & After Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Before and After Chemical Peel Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
                 See real results from our chemical peel treatments at Cosmedocs London. 
                 Professional skin resurfacing delivers dramatic improvement in skin texture, clarity, and overall appearance.
@@ -347,7 +347,7 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-4xl font-bold mb-8 text-center text-white">What is Chemical Peel?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Chemical Peel?</h2>
               
               <div className="space-y-6 text-gray-300 text-lg mb-12">
                 <p>
@@ -420,7 +420,7 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold mb-6 text-white">
                 Benefits of Chemical Peel
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -459,7 +459,7 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4 text-white">The Chemical Peel Process</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">The Chemical Peel Process</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our 5-step chemical peel treatment delivers comprehensive skin rejuvenation
               </p>
@@ -583,7 +583,7 @@ const ChemicalPeel = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-8">Combination Treatments</h2>
+              <h2 className="text-3xl font-bold mb-6">Combination Treatments</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Enhance your chemical peel results with complementary treatments for comprehensive skin rejuvenation
               </p>
