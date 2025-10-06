@@ -615,7 +615,7 @@ const MoleSkinTagRemoval = () => {
                   <Clock className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-base text-gray-300">15-30 minutes depending on size</p>
+                <p className="text-gray-300">15-30 minutes depending on size</p>
               </motion.div>
 
               <motion.div
@@ -629,7 +629,7 @@ const MoleSkinTagRemoval = () => {
                   <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-base text-gray-300">Permanent removal when complete</p>
+                <p className="text-gray-300">Permanent removal when complete</p>
               </motion.div>
 
               <motion.div
@@ -643,7 +643,7 @@ const MoleSkinTagRemoval = () => {
                   <Activity className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
-                <p className="text-base text-gray-300">1-2 weeks complete healing</p>
+                <p className="text-gray-300">1-2 weeks complete healing</p>
               </motion.div>
 
               <motion.div
@@ -657,7 +657,7 @@ const MoleSkinTagRemoval = () => {
                   <Scissors className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
-                <p className="text-base text-gray-300">Local anaesthetic for comfort</p>
+                <p className="text-gray-300">Local anaesthetic for comfort</p>
               </motion.div>
             </div>
           </div>
@@ -674,7 +674,7 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">Before and After Mole & Skin Tag Removal in London</h2>
-              <p className="text-base text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 Explore authentic before and after results from our London clinic. 
                 Our expert dermatological treatments provide safe removal with minimal scarring and excellent healing.
               </p>
@@ -751,7 +751,7 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Understanding Moles & Skin Tags</h2>
-              <p className="text-base text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Learn about these common skin growths and when professional removal is recommended
               </p>
             </motion.div>
@@ -768,15 +768,15 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-white text-2xl">What Are Moles?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       Moles are small, dark spots on the skin formed by clusters of pigmented cells called melanocytes. 
                       They can be flat or raised and vary in colour from brown to black, appearing anywhere on the body.
                     </p>
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       <strong className="text-purple-300">Formation:</strong> Moles form when melanocytes grow in clusters 
                       instead of being evenly spread. Factors include genetics, sun exposure, and hormonal changes.
                     </p>
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       While most moles are harmless, they should be monitored for changes in size, shape, or colour, 
                       as this can indicate potential skin issues requiring professional assessment.
                     </p>
@@ -795,16 +795,16 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-white text-2xl">What Are Skin Tags?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       Skin tags are small, soft, benign growths that hang off the skin, typically appearing where skin 
                       rubs against skin or clothing - such as the neck, armpits, or groin areas.
                     </p>
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       <strong className="text-purple-300">Formation:</strong> Skin tags develop when skin cells multiply 
                       rapidly in response to friction or irritation. They're more common in people who are overweight, 
                       pregnant, or have certain health conditions like diabetes.
                     </p>
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       While generally harmless, many people choose to have skin tags removed for cosmetic reasons 
                       or if they become irritated by clothing or jewelry.
                     </p>
@@ -826,10 +826,10 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">Professional Removal Methods</h2>
-              <p className="text-base text-gray-300 max-w-3xl mx-auto mb-4">
+              <p className="text-gray-300 max-w-3xl mx-auto mb-4">
                 Many patients ask "how to remove moles" safely and "how can you remove moles" with minimal scarring. Unlike at-home remedies or creams for removing moles, professional mole removal ensures complete lesion removal with proper wound care. Our mole removal clinic offers three proven techniques: surgical excision for complete tag moles removal, cryotherapy for non-invasive treatment, and electrosurgery for precise face mole removal. Each method is selected based on lesion type, size, and location to achieve optimal results.
               </p>
-              <p className="text-base text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 We offer multiple proven techniques for safe and effective mole and skin tag removal
               </p>
             </motion.div>
@@ -847,21 +847,21 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Surgical Excision</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-base text-gray-300">Complete removal with sterile scissors or scalpel, ideal for larger moles and skin tags.</p>
+                    <p className="text-gray-300">Complete removal with sterile scissors or scalpel, ideal for larger moles and skin tags.</p>
                     <div className="space-y-2">
                       <h4 className="text-white font-semibold">Benefits:</h4>
                       <ul className="space-y-1">
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Complete removal</span>
+                          <span className="text-gray-300">Complete removal</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Tissue can be tested</span>
+                          <span className="text-gray-300">Tissue can be tested</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Minimal recurrence</span>
+                          <span className="text-gray-300">Minimal recurrence</span>
                         </li>
                       </ul>
                     </div>
@@ -881,21 +881,21 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Cryotherapy</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-base text-gray-300">Liquid nitrogen freezing treatment that causes moles and skin tags to fall off naturally.</p>
+                    <p className="text-gray-300">Liquid nitrogen freezing treatment that causes moles and skin tags to fall off naturally.</p>
                     <div className="space-y-2">
                       <h4 className="text-white font-semibold">Benefits:</h4>
                       <ul className="space-y-1">
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Non-invasive</span>
+                          <span className="text-gray-300">Non-invasive</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Quick procedure</span>
+                          <span className="text-gray-300">Quick procedure</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">No stitches required</span>
+                          <span className="text-gray-300">No stitches required</span>
                         </li>
                       </ul>
                     </div>
@@ -915,21 +915,21 @@ const MoleSkinTagRemoval = () => {
                     <CardTitle className="text-purple-300">Electrosurgery</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-base text-gray-300">Electric current burns away unwanted tissue with precision and control.</p>
+                    <p className="text-gray-300">Electric current burns away unwanted tissue with precision and control.</p>
                     <div className="space-y-2">
                       <h4 className="text-white font-semibold">Benefits:</h4>
                       <ul className="space-y-1">
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Precise removal</span>
+                          <span className="text-gray-300">Precise removal</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Cauterizes bleeding</span>
+                          <span className="text-gray-300">Cauterizes bleeding</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                          <span className="text-base text-gray-300">Suitable for multiple lesions</span>
+                          <span className="text-gray-300">Suitable for multiple lesions</span>
                         </li>
                       </ul>
                     </div>
@@ -951,7 +951,7 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Aftercare & Healing Stages</h2>
-              <p className="text-base text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 <strong>Understanding the Healing Process:</strong> Understanding mole removal healing stages is essential for realistic expectations. We provide mole removal healing stages pictures and detailed aftercare instructions to guide you through recovery. The healing process typically progresses through initial wound closure (3-7 days), scab formation and falling off (7-14 days), and scar maturation (3-12 months). Proper aftercare, including sun protection and gentle wound care, significantly influences final aesthetic outcomes and minimises visible scarring.
               </p>
             </motion.div>
@@ -972,21 +972,21 @@ const MoleSkinTagRemoval = () => {
                     <p className="text-purple-300 font-semibold">Days 3-7</p>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       Initial wound closure phase with minimal tenderness. Keep area clean and dry.
                     </p>
                     <div className="space-y-2">
                       <div className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-base text-gray-300">Apply prescribed ointment</span>
+                        <span className="text-gray-300">Apply prescribed ointment</span>
                       </div>
                       <div className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-base text-gray-300">Avoid water exposure</span>
+                        <span className="text-gray-300">Avoid water exposure</span>
                       </div>
                       <div className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-base text-gray-300">No strenuous exercise</span>
+                        <span className="text-gray-300">No strenuous exercise</span>
                       </div>
                     </div>
                   </CardContent>
@@ -1008,21 +1008,21 @@ const MoleSkinTagRemoval = () => {
                     <p className="text-purple-300 font-semibold">Days 7-14</p>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <p className="text-base text-gray-300">
+                    <p className="text-gray-300">
                       Natural scab forms and falls off. Do not pick or disturb the healing area.
                     </p>
                     <div className="space-y-2">
                       <div className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-base text-gray-300">Let scabs fall naturally</span>
+                        <span className="text-gray-300">Let scabs fall naturally</span>
                       </div>
                       <div className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-base text-gray-300">Continue gentle cleaning</span>
+                        <span className="text-gray-300">Continue gentle cleaning</span>
                       </div>
                       <div className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <span className="text-base text-gray-300">Apply SPF 50+ protection</span>
+                        <span className="text-gray-300">Apply SPF 50+ protection</span>
                       </div>
                     </div>
                   </CardContent>
@@ -1079,10 +1079,10 @@ const MoleSkinTagRemoval = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">When to Seek Professional Removal</h2>
-              <p className="text-base text-gray-300 max-w-3xl mx-auto mb-4">
+              <p className="text-gray-300 max-w-3xl mx-auto mb-4">
                 <strong>Professional Assessment is Crucial:</strong> For those wondering "how to remove skin tag moles" or "how to remove tag moles", professional assessment is crucial. Never attempt how to remove tag moles at home, as improper removal can lead to infection, excessive bleeding, or incomplete removal. Our london mole removal and london skin tag removal services ensure safe, sterile procedures performed by qualified medical professionals. Whether you need laser mole removal London or traditional surgical excision, we offer comprehensive solutions tailored to your specific needs.
               </p>
-              <p className="text-base text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto">
                 Recognising when professional assessment and removal is recommended
               </p>
             </motion.div>
