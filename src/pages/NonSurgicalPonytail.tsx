@@ -468,57 +468,44 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Surgical vs Non-Surgical Ponytail Facelift</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Understanding the key differences between traditional surgical facelifts and the non-surgical ponytail lift (mini facelift)
+              <h2 className="text-3xl font-bold mb-4 text-white">Surgical vs Non-Surgical Ponytail Facelift</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the key differences between traditional surgical facelifts and the non-surgical ponytail lift (mini facelift) to help you make an informed decision
               </p>
             </motion.div>
-
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <div className="page-container">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Surgical Facelift */}
                 <motion.div
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -40 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-gray-500/30 h-full">
+                  <Card className="bg-accent border-red-500/30 h-full">
                     <CardHeader>
-                      <CardTitle className="text-white text-2xl text-center">Surgical Facelift</CardTitle>
+                      <CardTitle className="text-white text-xl flex items-center">
+                        <Syringe className="mr-3 text-red-400" size={24} />
+                        Surgical Facelift
+                      </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="border-b border-gray-700 pb-3">
-                        <p className="text-gray-400 text-sm mb-1">Procedure Type</p>
-                        <p className="text-gray-300">Invasive surgery with incisions</p>
-                      </div>
-                      <div className="border-b border-gray-700 pb-3">
-                        <p className="text-gray-400 text-sm mb-1">Duration</p>
-                        <p className="text-gray-300">2-4 hours under general anaesthesia</p>
-                      </div>
-                      <div className="border-b border-gray-700 pb-3">
-                        <p className="text-gray-400 text-sm mb-1">Recovery Time</p>
-                        <p className="text-gray-300">2-4 weeks with visible bruising & swelling</p>
-                      </div>
-                      <div className="border-b border-gray-700 pb-3">
-                        <p className="text-gray-400 text-sm mb-1">Results Duration</p>
-                        <p className="text-gray-300">5-10 years (permanent tissue removal)</p>
-                      </div>
-                      <div className="border-b border-gray-700 pb-3">
-                        <p className="text-gray-400 text-sm mb-1">Cost</p>
-                        <p className="text-gray-300">£6,000 - £15,000+</p>
-                      </div>
-                      <div className="border-b border-gray-700 pb-3">
-                        <p className="text-gray-400 text-sm mb-1">Risks</p>
-                        <p className="text-gray-300">Scarring, infection, nerve damage, anaesthesia complications</p>
-                      </div>
-                      <div className="border-b border-gray-700 pb-3">
-                        <p className="text-gray-400 text-sm mb-1">Pain Level</p>
-                        <p className="text-gray-300">Significant post-operative pain requiring medication</p>
-                      </div>
-                      <div>
-                        <p className="text-gray-400 text-sm mb-1">Ideal For</p>
-                        <p className="text-gray-300">Severe sagging, major facial restructuring</p>
+                    <CardContent className="space-y-6">
+                      <p className="text-gray-300">
+                        Invasive surgical procedure involving incisions, tissue removal, and muscle tightening under general anaesthesia for permanent facial rejuvenation.
+                      </p>
+                      
+                      <div className="bg-red-900/20 rounded-lg p-6 border border-red-500/30">
+                        <ul className="text-gray-300 space-y-3">
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> General anaesthesia required</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> 2-4 hours surgery duration</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> 2-4 weeks recovery time</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> £6,000-£15,000+ cost</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Visible scarring potential</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Risk of nerve damage</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Significant post-operative pain</li>
+                          <li className="flex items-center"><span className="text-red-400 mr-3">•</span> Infection & complications risk</li>
+                        </ul>
                       </div>
                     </CardContent>
                   </Card>
@@ -526,66 +513,39 @@ const NonSurgicalPonytail = () => {
 
                 {/* Non-Surgical Ponytail Lift */}
                 <motion.div
-                  initial={{ opacity: 0, x: 30 }}
+                  initial={{ opacity: 0, x: 40 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
+                  <Card className="bg-accent border-primary h-full">
                     <CardHeader>
-                      <CardTitle className="text-white text-2xl text-center">Non-Surgical Ponytail Lift (Mini Facelift)</CardTitle>
+                      <CardTitle className="text-white text-xl flex items-center">
+                        <Heart className="mr-3 text-purple-400" size={24} />
+                        Non-Surgical Ponytail Lift (Mini Facelift)
+                      </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="border-b border-purple-700/30 pb-3">
-                        <p className="text-purple-400 text-sm mb-1">Procedure Type</p>
-                        <p className="text-gray-300">Non-invasive injectable treatment</p>
-                      </div>
-                      <div className="border-b border-purple-700/30 pb-3">
-                        <p className="text-purple-400 text-sm mb-1">Duration</p>
-                        <p className="text-gray-300">15-20 minutes with no anaesthesia needed</p>
-                      </div>
-                      <div className="border-b border-purple-700/30 pb-3">
-                        <p className="text-purple-400 text-sm mb-1">Recovery Time</p>
-                        <p className="text-gray-300">Immediate return to normal activities</p>
-                      </div>
-                      <div className="border-b border-purple-700/30 pb-3">
-                        <p className="text-purple-400 text-sm mb-1">Results Duration</p>
-                        <p className="text-gray-300">3-4 months (botox) & 6-12 months (fillers)</p>
-                      </div>
-                      <div className="border-b border-purple-700/30 pb-3">
-                        <p className="text-purple-400 text-sm mb-1">Cost</p>
-                        <p className="text-gray-300">£350 per treatment session</p>
-                      </div>
-                      <div className="border-b border-purple-700/30 pb-3">
-                        <p className="text-purple-400 text-sm mb-1">Risks</p>
-                        <p className="text-gray-300">Minimal - temporary bruising or mild tenderness only</p>
-                      </div>
-                      <div className="border-b border-purple-700/30 pb-3">
-                        <p className="text-purple-400 text-sm mb-1">Pain Level</p>
-                        <p className="text-gray-300">Minimal discomfort during brief injections</p>
-                      </div>
-                      <div>
-                        <p className="text-purple-400 text-sm mb-1">Ideal For</p>
-                        <p className="text-gray-300">Mild to moderate sagging, natural facial lifting</p>
+                    <CardContent className="space-y-6">
+                      <p className="text-gray-300">
+                        Non-invasive injectable treatment combining botox and dermal fillers for natural facial lifting with no surgery, no downtime, and immediate results.
+                      </p>
+                      
+                      <div className="bg-purple-900/10 rounded-lg p-6 border border-purple-500/30">
+                        <ul className="text-gray-300 space-y-3">
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> No anaesthesia needed</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> 15-20 minute procedure</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Immediate return to activities</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> £350 cost-effective</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> No scarring whatsoever</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Fully reversible treatment</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Minimal discomfort only</li>
+                          <li className="flex items-center"><span className="text-purple-400 mr-3">•</span> Natural-looking results</li>
+                        </ul>
                       </div>
                     </CardContent>
                   </Card>
                 </motion.div>
               </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="mt-8 text-center"
-              >
-                <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 max-w-3xl mx-auto border border-purple-500/30">
-                  <p className="text-purple-200 font-semibold text-lg">
-                    The non-surgical ponytail facelift offers a convenient, affordable, and low-risk alternative to traditional surgical facelifts, perfect for those seeking natural facial rejuvenation without downtime or surgical intervention.
-                  </p>
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>
