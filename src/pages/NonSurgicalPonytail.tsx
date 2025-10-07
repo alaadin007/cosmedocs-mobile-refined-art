@@ -458,7 +458,7 @@ const NonSurgicalPonytail = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Non-Surgical Ponytail Lift — How Does It Work?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                Understanding the ponytail lift technique: Our expert doctors use precise injections at strategic facial points to create a natural lifting effect without surgery or downtime.
+                Understanding the ponytail lift technique: Our expert doctors use a strategic combination of botox and dermal filler injections at precise facial points to create a natural lifting effect without surgery or downtime.
               </p>
             </motion.div>
 
@@ -475,7 +475,7 @@ const NonSurgicalPonytail = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation and facial assessment at Cosmedocs, your treatment begins. The doctor uses a very fine needle to inject botulinum toxin into precise points in strategic facial areas including:
+                      After a detailed consultation and facial assessment at Cosmedocs, your treatment begins. The doctor uses a very fine needle to inject a combination of botulinum toxin (to relax downward-pulling muscles) and dermal fillers (to restore volume and enhance lift) into precise points in strategic facial areas including:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -600,7 +600,7 @@ const NonSurgicalPonytail = () => {
             >
               <h2 className="text-4xl font-bold mb-6 text-white">How Does the Ponytail Lift Work? The Science</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                The non-surgical ponytail lift works by strategically targeting specific facial muscles. Here's the science behind this innovative treatment.
+                The non-surgical ponytail lift works through a dual-action approach combining botox and dermal fillers to target specific facial muscles and restore volume. Here's the science behind this innovative treatment.
               </p>
             </motion.div>
 
@@ -620,10 +620,10 @@ const NonSurgicalPonytail = () => {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <p className="text-gray-300 text-lg leading-relaxed mb-6 text-center">
-                      The non-surgical ponytail lift works by relaxing specific muscles that pull the face downward (depressor muscles) whilst allowing the lifting muscles (elevator muscles) to work more effectively. When botox is injected into targeted points, it blocks the release of acetylcholine, preventing muscle contraction in downward-pulling areas.
+                      The non-surgical ponytail lift works through a sophisticated two-part approach: botox relaxes specific muscles that pull the face downward (depressor muscles) whilst dermal fillers restore volume and structural support to key areas. When botox is injected into targeted points, it blocks the release of acetylcholine, preventing muscle contraction in downward-pulling areas. Simultaneously, dermal fillers add volume and lift to the temples, cheeks, and jawline.
                     </p>
                     <p className="text-gray-300 text-lg leading-relaxed mb-8 text-center">
-                      This creates a natural lifting effect as the unopposed elevator muscles gently pull the facial tissues upward, mimicking the effect of a physical facelift without any surgical intervention. The treatment particularly addresses the temporal region, brow position, and jawline definition, providing a subtle yet noticeable rejuvenation effect.
+                      This creates a comprehensive lifting effect: the botox allows the lifting muscles (elevator muscles) to work more effectively, whilst the dermal fillers provide immediate structural support and volume restoration. Together, they mimic the effect of a physical facelift without any surgical intervention. The treatment particularly addresses the temporal region, brow position, and jawline definition, providing both immediate and progressive rejuvenation effects.
                     </p>
                     <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 border border-purple-500/30 max-w-3xl mx-auto">
                       <div className="flex items-start gap-3">
@@ -631,7 +631,7 @@ const NonSurgicalPonytail = () => {
                         <div>
                           <p className="text-purple-200 font-medium mb-2">Expert Technique</p>
                           <p className="text-gray-300 italic leading-relaxed">
-                            "The success of a non-surgical ponytail lift depends entirely on precise anatomical knowledge and injection technique. Our doctors understand the complex interplay of facial muscles and use strategic placement to achieve natural, balanced lifting without compromising facial expression or movement."
+                            "The success of a non-surgical ponytail lift depends entirely on precise anatomical knowledge and expert injection technique. Our doctors understand the complex interplay of facial muscles and tissue support structures, using strategic placement of both botox and dermal fillers to achieve natural, balanced lifting without compromising facial expression or movement."
                           </p>
                         </div>
                       </div>
