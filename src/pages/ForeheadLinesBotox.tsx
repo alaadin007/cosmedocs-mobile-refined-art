@@ -123,6 +123,7 @@ const ForeheadLinesBotox = () => {
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="forehead lines botox London, horizontal wrinkles treatment, frontalis muscle botox, forehead wrinkle treatment, cosmetic botox, Harley Street clinic" />
+        {/* Enhanced MedicalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -131,6 +132,7 @@ const ForeheadLinesBotox = () => {
             "description": "Expert forehead lines botox treatments in London",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
+            "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -138,8 +140,106 @@ const ForeheadLinesBotox = () => {
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.5194",
+              "longitude": "-0.1468"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "850"
+            },
             "medicalSpecialty": "Cosmetic Medicine",
             "priceRange": "££"
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Botox Treatments",
+                "item": "https://www.cosmedocs.co.uk/face-botox-areas"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Forehead Lines Botox",
+                "item": seoData.canonical
+              }
+            ]
+          })}
+        </script>
+
+        {/* MedicalProcedure Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Forehead Lines Botox Treatment",
+            "alternateName": "Frontalis Muscle Botox",
+            "description": "Professional botox treatment targeting forehead lines and horizontal wrinkles by relaxing the frontalis muscle for natural-looking results",
+            "procedureType": "Cosmetic",
+            "bodyLocation": {
+              "@type": "AnatomicalStructure",
+              "name": "Forehead",
+              "alternateName": "Frontalis Muscle"
+            },
+            "preparation": "Avoid blood-thinning medications and alcohol for 24 hours before treatment",
+            "followup": "Results appear within 3-7 days, full effects visible after 2 weeks",
+            "howPerformed": "Precise botulinum toxin injections into the frontalis muscle to relax forehead lines",
+            "procedureDuration": "PT15M",
+            "recoveryTime": "Immediate return to normal activities",
+            "expectedPrognosis": "Results typically last 3-4 months",
+            "offers": {
+              "@type": "Offer",
+              "price": "175",
+              "priceCurrency": "GBP",
+              "availability": "https://schema.org/InStock",
+              "url": seoData.canonical
+            }
+          })}
+        </script>
+
+        {/* FAQPage Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           })}
         </script>
       </Helmet>
@@ -293,6 +393,7 @@ const ForeheadLinesBotox = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -321,8 +422,8 @@ const ForeheadLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Forehead Lines Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Forehead lines botox targets the frontalis muscle across your forehead that creates horizontal wrinkles when raising eyebrows or expressing surprise. 
-                Our invisible art approach smooths existing lines while preserving natural brow movement.
+                <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">Forehead lines botox</Link> targets the frontalis muscle across your forehead that creates horizontal wrinkles when raising eyebrows or expressing surprise. 
+                Our invisible art approach smooths existing lines whilst preserving natural brow movement.
               </p>
             </motion.div>
 
@@ -394,7 +495,7 @@ const ForeheadLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your forehead lines treatment, we begin your frontalis muscle treatment. The doctor uses very fine needles to inject botulinum toxin into the frontalis muscle in targeted areas such as:
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your forehead lines treatment, we begin your frontalis muscle treatment. The doctor uses very fine needles to inject <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botulinum toxin</Link> into the frontalis muscle in targeted areas such as:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -433,7 +534,7 @@ const ForeheadLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Forehead lines botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                      <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">Forehead lines botox</Link> is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
                     </p>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start space-x-2">
@@ -513,9 +614,9 @@ const ForeheadLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Baby Botox for Forehead Lines</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-                Worry lines or forehead wrinkles are common among people in their 20s, 30s, 40s, 50s, and even teenage years! 
+                Worry lines or forehead wrinkles are common amongst people in their 20s, 30s, 40s, 50s, and even teenage years! 
                 Many patients do not wish to have a shiny forehead or a 'frozen look'. The results are almost instant, 
-                and they still have some control over their facial muscles, hence more forehead mobility.
+                and they still have some control over their <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">facial muscles</Link>, hence more forehead mobility.
               </p>
             </motion.div>
 
@@ -686,7 +787,7 @@ const ForeheadLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Forehead Lines</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-                While Botox for forehead lines is highly effective, we offer complementary treatments to achieve comprehensive forehead rejuvenation and maintain long-lasting results.
+                Whilst <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botox for forehead lines</Link> is highly effective, we offer complementary treatments to achieve comprehensive forehead rejuvenation and maintain long-lasting results.
               </p>
             </motion.div>
 
@@ -709,7 +810,7 @@ const ForeheadLinesBotox = () => {
                   </CardHeader>
                   <CardContent className="text-gray-300 text-center">
                     <p className="leading-relaxed">
-                      Strategic filler placement smooths deep static lines by restoring volume and structure. This immediate treatment complements Botox by addressing lines that persist at rest, creating a comprehensive anti-aging approach.
+                      Strategic <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">filler placement</Link> smooths deep static lines by restoring volume and structure. This immediate treatment complements botox by addressing lines that persist at rest, creating a comprehensive anti-ageing approach.
                     </p>
                     <div className="mt-4 pt-4 border-t border-purple-500/30">
                       <span className="text-purple-300 text-sm font-medium">Immediate Results • 6-12 Months Duration</span>
