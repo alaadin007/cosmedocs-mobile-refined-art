@@ -522,7 +522,7 @@ const LipFlip = () => {
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <p className="text-gray-300">
-                      Hyaluronic acid-based dermal fillers that add volume and shape to lips for dramatic or subtle enhancement results. Lip fillers physically augment lip size whilst maintaining natural lip movement and expression. Perfect for those seeking fuller, more defined lips with immediate visible results.
+                      Hyaluronic acid-based dermal fillers that add volume and shape to lips for dramatic or subtle enhancement results. Lip fillers physically augment lip size whilst maintaining natural lip movement and expression.
                     </p>
                     
                     <div className="bg-pink-900/20 rounded-lg p-6 border border-pink-500/30">
