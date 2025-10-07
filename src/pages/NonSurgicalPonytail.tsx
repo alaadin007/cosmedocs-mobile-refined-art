@@ -703,7 +703,7 @@ const NonSurgicalPonytail = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Benefits of Non-Surgical Ponytail Lift & Mini Lower Face Lift</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                The non-surgical ponytail lift offers numerous advantages for those seeking facial rejuvenation without surgery. This innovative face lifting therapy combines <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">advanced botox techniques</Link> with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">premium dermal fillers</Link> to deliver exceptional results. Key benefits include:
+                The non-surgical ponytail lift offers numerous advantages for those seeking facial rejuvenation without surgery. This innovative face lifting therapy combines advanced botox techniques with premium dermal fillers to deliver exceptional results. Key benefits include:
               </p>
             </motion.div>
 
