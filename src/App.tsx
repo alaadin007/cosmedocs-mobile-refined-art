@@ -111,6 +111,7 @@ import ExcessiveSweatBotox from "./pages/ExcessiveSweatBotox";
 import AestheticIntelligence from "./pages/AestheticIntelligence";
 import ProductAnalysisDetail from "./pages/ProductAnalysisDetail";
 import PopupOffer from "./pages/PopupOffer";
+import NonSurgicalPonytail from "./pages/NonSurgicalPonytail";
 
 const queryClient = new QueryClient();
 
@@ -207,10 +208,11 @@ const App = () => {
               <Route path="/lip-flip" element={<LipFlip />} />
               <Route path="/migraine-botox" element={<MigraineBotox />} />
               <Route path="/bruxism-botox" element={<BruxismBotox />} />
-              <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
-                <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
-                <Route path="/product-analysis/:id" element={<ProductAnalysisDetail />} />
-                <Route path="/trap-botox" element={<TrapBotox />} />
+               <Route path="/excessive-sweat-botox" element={<ExcessiveSweatBotox />} />
+                 <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
+                 <Route path="/product-analysis/:id" element={<ProductAnalysisDetail />} />
+                 <Route path="/trap-botox" element={<TrapBotox />} />
+                <Route path="/non-surgical-ponytail" element={<NonSurgicalPonytail />} />
                <Route path="/hydrafacial-london" element={<HydraFacial />} />
               <Route path="/prp-treatment" element={<PRPTreatment />} />
               

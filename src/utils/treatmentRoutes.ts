@@ -38,6 +38,7 @@ const TREATMENT_ROUTES = [
   '/migraine-botox',
   '/bruxism-botox',
   '/excessive-sweat-botox',
+  '/non-surgical-ponytail',
   
   // Filler treatments
   '/marionette-lines',
