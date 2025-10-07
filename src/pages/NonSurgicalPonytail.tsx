@@ -402,33 +402,6 @@ const NonSurgicalPonytail = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
-                  <CardHeader>
-                    <CardTitle className="text-white text-2xl text-center">Understanding Facial Ageing</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
-                      As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail facelift addresses these concerns through a dual approach: strategically relaxing downward-pulling muscles with botox whilst restoring volume and structural support with dermal fillers. This mini facelift technique, similar to how we integrate treatments like <Link to="/profhilo-treatment" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, requires precision and expertise for optimal face lifting therapy results.
-                    </p>
-                  <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
-                    This non surgical face lift technique provides subtle yet noticeable face lift skin tightening, creating a more youthful and refreshed appearance without the need for invasive surgery or lengthy recovery periods.
-                  </p>
-                  <div className="bg-purple-900/50 rounded-lg p-6 max-w-2xl mx-auto">
-                    <p className="text-purple-200 font-semibold text-center">
-                      The non-surgical ponytail face lift has become increasingly popular as a mini face lift alternative to traditional surgical facelifts, offering natural-looking results with minimal downtime and no surgical risks.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center"
@@ -442,6 +415,45 @@ const NonSurgicalPonytail = () => {
                   <div className="text-purple-300 font-medium">Lower Face</div>
                 </div>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Understanding Facial Ageing */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-white">Understanding Facial Ageing</h2>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
+                <CardContent className="p-8">
+                  <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
+                    As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail facelift addresses these concerns through a dual approach: strategically relaxing downward-pulling muscles with botox whilst restoring volume and structural support with dermal fillers. This mini facelift technique, similar to how we integrate treatments like <Link to="/profhilo-treatment" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, requires precision and expertise for optimal face lifting therapy results.
+                  </p>
+                  <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
+                    This non surgical face lift technique provides subtle yet noticeable face lift skin tightening, creating a more youthful and refreshed appearance without the need for invasive surgery or lengthy recovery periods.
+                  </p>
+                  <div className="bg-purple-900/50 rounded-lg p-6 max-w-2xl mx-auto">
+                    <p className="text-purple-200 font-semibold text-center">
+                      The non-surgical ponytail face lift has become increasingly popular as a mini face lift alternative to traditional surgical facelifts, offering natural-looking results with minimal downtime and no surgical risks.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </section>
