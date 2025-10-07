@@ -741,7 +741,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Pricing - Non Surgical Face Lift Price UK</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Pricing - Non Surgical Face Lift Price UK</h2>
               <p className="text-gray-300 max-w-2xl mx-auto text-lg">
                 Transparent pricing for non-surgical ponytail facelift and mini face lift treatment in London. All prices include consultation and follow-up care. Best non surgical face lift near me.
               </p>
@@ -959,7 +959,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Ready to Experience Natural Facial Lifting?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Experience Natural Facial Lifting?</h2>
               <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
                 Book your consultation today and discover how the non-surgical ponytail lift can enhance your natural beauty
               </p>
