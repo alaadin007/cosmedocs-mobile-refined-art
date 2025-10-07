@@ -700,40 +700,32 @@ const NonSurgicalPonytail = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-20 bg-black">
+        {/* Why Choose Cosmedocs */}
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Why Choose Cosmedocs</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                Expert care and natural results from London's leading aesthetic doctors
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <Award className="text-purple-400 mb-4" size={40} />
-                    <CardTitle className="text-white text-xl">Expert Doctors</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      All treatments performed by GMC-registered doctors with extensive experience in advanced facial aesthetics
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
               </motion.div>
 
               <motion.div
@@ -741,18 +733,22 @@ const NonSurgicalPonytail = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <Palette className="text-purple-400 mb-4" size={40} />
-                    <CardTitle className="text-white text-xl">Natural Results</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Our invisible art approach ensures subtle, natural-looking lifting that enhances your features without looking overdone
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
               </motion.div>
 
               <motion.div
@@ -760,18 +756,41 @@ const NonSurgicalPonytail = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
-                  <CardHeader>
-                    <Heart className="text-purple-400 mb-4" size={40} />
-                    <CardTitle className="text-white text-xl">Personalised Care</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Bespoke treatment plans tailored to your unique facial structure and aesthetic goals
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved botox and fillers only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
