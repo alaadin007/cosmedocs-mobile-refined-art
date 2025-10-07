@@ -384,7 +384,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* What is Non-Surgical Ponytail Lift */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -440,7 +440,7 @@ const NonSurgicalPonytail = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -498,7 +498,7 @@ const NonSurgicalPonytail = () => {
 
 
         {/* Treatment Process & Side Effects */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -507,7 +507,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Treatment Process & What to Expect</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Treatment Process & What to Expect During Mini Face Lift</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Understanding the procedure and potential side effects of the non-surgical ponytail facelift
               </p>
@@ -597,7 +597,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* Comparison Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -689,7 +689,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -732,7 +732,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-black">
+        <section id="pricing-section" className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
