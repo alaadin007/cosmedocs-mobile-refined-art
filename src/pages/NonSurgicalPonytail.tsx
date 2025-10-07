@@ -949,27 +949,29 @@ const NonSurgicalPonytail = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-900 to-pink-900">
-          <div className="page-container">
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Experience Natural Facial Lifting?</h2>
-              <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Book your consultation today and discover how the non-surgical ponytail lift can enhance your natural beauty
+              <h2 className="text-3xl font-bold mb-4">Ready to Experience Natural Facial Lifting?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how the non-surgical ponytail lift 
+                can enhance your natural beauty with subtle, sophisticated results.
               </p>
-              <Button 
-                size="lg"
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-12 py-6 text-lg font-semibold shadow-2xl"
-                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-              >
-                Book Your Consultation
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6">
+                  Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
