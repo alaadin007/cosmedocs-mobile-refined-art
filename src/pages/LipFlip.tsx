@@ -633,7 +633,7 @@ const LipFlip = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your flip lip treatment, we begin the botox top lip procedure. The doctor uses very fine needles for botox injections lips, targeting specific lip flip injection sites around the upper lip. How does a lip flip work during the procedure?
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your flip lip treatment, we begin the botox top lip procedure. The doctor uses very fine needles for botox injections lips, targeting specific lip flip injection sites around the upper lip. Research shows <a href="https://pubmed.ncbi.nlm.nih.gov/31633544/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botox is highly effective for aesthetic lip enhancement</a>. How does a lip flip work during the procedure?
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
