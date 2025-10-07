@@ -265,12 +265,12 @@ const NonSurgicalPonytail = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Non-Surgical Ponytail Facelift | Mini Face Lift London</span>
-                  <span className="block text-sm mt-4">Invisible art - natural face lifting therapy without surgery</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-purple-300">
+                  Ponytail Lift
                 </h1>
+                <p className="text-xl text-gray-200 mb-8">Invisible art - natural face lifting therapy without surgery</p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Ponytail Face Lift Near Me</p>
+                  <p className="text-2xl text-white font-bold">Expert Non-Surgical Facelift & Mini Facelift London</p>
                   <p className="text-sm text-gray-300">15-20 minutes • Natural face lift skin tightening • Results last 3-4 months (botox) & 6-12 months (fillers)</p>
                 </div>
                 <div className="mb-6 flex items-center gap-6 flex-wrap">
