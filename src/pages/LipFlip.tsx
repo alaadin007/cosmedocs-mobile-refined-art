@@ -351,7 +351,7 @@ const LipFlip = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">What is a Lip Flip?</h2>
               <div className="text-gray-300 max-w-4xl mx-auto text-lg space-y-4">
                 <p>
-                  What is lip flip treatment? A lip flip botox procedure is a non-invasive lip enhancement technique involving precise botox injections in lips. The lip flipping botox treatment uses a small amount of botulinum toxin injected into the upper lip muscles, specifically targeting the orbicularis oris muscle.
+                  What is lip flip treatment? A lip flip botox procedure is a non-invasive lip enhancement technique involving precise botox injections in lips. The lip flipping botox treatment uses a small amount of <a href="https://www.nhs.uk/conditions/botulinum-toxin/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin</a> injected into the upper lip muscles, specifically targeting the orbicularis oris muscle.
                 </p>
                 <p>
                   How does a lip flip work? Unlike <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">lip fillers</Link>, the botox upper lip treatment relaxes muscles, causing the top lip to subtly roll outward. This reveals more of the pink lip tissue, creating fuller-looking lips without adding volume. The flip lip botox technique is ideal for those seeking subtle enhancement.
@@ -668,7 +668,7 @@ const LipFlip = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Botox for lip flip is considered safe with minimal side effects for most people. The lip flio (lip flop) procedure is well-tolerated. However, your botox treatment may have some slight temporary effects:
+                      Botox for lip flip is considered safe with minimal side effects for most people. The lip flio (lip flop) procedure is well-tolerated and follows <a href="https://www.baaps.org.uk/patients/procedures/18/non_surgical_cosmetic_procedures" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">BAAPS guidelines for non-surgical cosmetic procedures</a>. However, your botox treatment may have some slight temporary effects:
                     </p>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start space-x-2">
@@ -947,7 +947,7 @@ const LipFlip = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about lip flip botox treatments answered by our expert doctors.
+                Common questions about lip flip botox treatments answered by our expert doctors, following guidance from the <a href="https://www.gmc-uk.org/ethical-guidance/ethical-guidance-for-doctors/cosmetic-interventions" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">GMC on cosmetic interventions</a>.
               </p>
             </motion.div>
 
