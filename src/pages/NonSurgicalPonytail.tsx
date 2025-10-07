@@ -768,10 +768,6 @@ const NonSurgicalPonytail = () => {
                           <Check className="text-purple-400" size={16} />
                           <span>Natural lifting effect</span>
                         </li>
-                        <li className="flex items-center gap-2">
-                          <Check className="text-purple-400" size={16} />
-                          <span>Results last 3-4 months</span>
-                        </li>
                       </ul>
                     </div>
                     <div className="text-center">
