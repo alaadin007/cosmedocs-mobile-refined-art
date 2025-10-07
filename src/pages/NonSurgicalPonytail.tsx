@@ -35,7 +35,7 @@ const NonSurgicalPonytail = () => {
   const faqs = [
     {
       question: "What is a non-surgical ponytail lift?",
-      answer: "A non-surgical ponytail lift, also known as a ponytail facelift, uses strategic botox injections to create a subtle lifting effect similar to wearing your hair in a tight ponytail. It targets specific muscles that pull the face downward, resulting in a natural lift of the eyebrows, cheeks, and jawline."
+      answer: "A non-surgical ponytail lift, also known as a ponytail facelift, uses a strategic combination of botox and dermal fillers to create a subtle lifting effect similar to wearing your hair in a tight ponytail. Botox relaxes muscles that pull the face downward, whilst dermal fillers restore volume and enhance lift, resulting in a natural elevation of the eyebrows, cheeks, and jawline."
     },
     {
       question: "How long do ponytail lift results last?",
@@ -87,7 +87,7 @@ const NonSurgicalPonytail = () => {
     <>
       <Helmet>
         <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} />
+        <meta name="description" content="Expert non-surgical ponytail lift combining botox and dermal fillers. Ponytail facelift from £350 at Harley Street, London. Natural face lifting without surgery. Book consultation today." />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
@@ -161,12 +161,12 @@ const NonSurgicalPonytail = () => {
             "@context": "https://schema.org",
             "@type": "MedicalProcedure",
             "name": "Non-Surgical Ponytail Lift",
-            "description": "Non-surgical ponytail facelift using strategic botox injections for natural facial lifting. Professional aesthetic treatment at Harley Street, London.",
-            "procedureType": "Aesthetic Botox Injection",
+            "description": "Non-surgical ponytail facelift using strategic combination of botox and dermal fillers for natural facial lifting. Professional aesthetic treatment at Harley Street, London.",
+            "procedureType": "Aesthetic Injectable Treatment",
             "bodyLocation": ["Face", "Temples", "Forehead", "Jawline", "Eyebrows"],
             "followup": "Treatment recommended every 12-16 weeks for optimal lifting and contouring",
             "preparation": "Medical consultation and facial assessment required",
-            "howPerformed": "Precise botox injections administered at strategic facial points to create natural lifting effect without surgery",
+            "howPerformed": "Strategic combination of botox injections to relax downward-pulling muscles and dermal fillers to restore volume, administered at precise facial points to create natural lifting effect without surgery",
             "procedureDuration": "PT20M",
             "medicationUsed": {
               "@type": "Drug",
@@ -395,7 +395,7 @@ const NonSurgicalPonytail = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is a Non-Surgical Ponytail Lift?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Cosmedocs has been providing advanced facial aesthetics for over a decade. The non-surgical ponytail lift, also known as the ponytail facelift, is an innovative treatment that mimics the natural lifting effect achieved when pulling your hair back into a tight ponytail. Using strategic <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox injections</Link> at precise facial points, we relax muscles that pull the face downward whilst enhancing those that provide lift. Our invisible art approach provides natural facial contouring and lifting whilst maintaining completely natural expressions and movement. This treatment is ideal for those seeking facial rejuvenation without surgery or downtime.
+                Cosmedocs has been providing advanced facial aesthetics for over a decade. The non-surgical ponytail lift, also known as the ponytail facelift, is an innovative treatment that mimics the natural lifting effect achieved when pulling your hair back into a tight ponytail. Using a strategic combination of <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox injections</Link> and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> at precise facial points, we relax muscles that pull the face downward whilst restoring volume and enhancing lift. Our invisible art approach provides natural facial contouring and lifting whilst maintaining completely natural expressions and movement. This treatment is ideal for those seeking facial rejuvenation without surgery or downtime.
               </p>
             </motion.div>
 
@@ -412,7 +412,7 @@ const NonSurgicalPonytail = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
-                      As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail lift addresses these concerns by strategically relaxing downward-pulling muscles whilst allowing upward-lifting muscles to work more effectively. Similar to how we address other aesthetic concerns with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> or <Link to="/profhilo-treatment" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, the ponytail lift requires precision and expertise.
+                      As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail lift addresses these concerns through a dual approach: strategically relaxing downward-pulling muscles with botox whilst restoring volume and structural support with dermal fillers. This combination technique, similar to how we integrate treatments like <Link to="/profhilo-treatment" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, requires precision and expertise.
                     </p>
                   <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
                     This technique provides subtle yet noticeable lifting, creating a more youthful and refreshed appearance without the need for invasive surgery or lengthy recovery periods.
