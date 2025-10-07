@@ -39,7 +39,7 @@ const NonSurgicalPonytail = () => {
     },
     {
       question: "How long do ponytail lift results last?",
-      answer: "Non-surgical ponytail lift results typically last 3-4 months. Many patients experience a subtle yet noticeable lifting effect with improved facial contours. Regular treatments every 12-16 weeks help maintain optimal lifting and contouring results."
+      answer: "The non-surgical ponytail lift combines two components with different durations: botox effects typically last 3-4 months, whilst dermal filler results can last 6-12 months depending on the type used. Most patients return for botox top-ups every 3-4 months to maintain the lifting effect, with filler refreshed less frequently as needed."
     },
     {
       question: "Is the ponytail lift procedure painful?",
@@ -59,11 +59,11 @@ const NonSurgicalPonytail = () => {
     },
     {
       question: "Can a ponytail lift be combined with other treatments?",
-      answer: "Yes! The non-surgical ponytail lift can be combined with other treatments like <Link to='/dermal-fillers' className='text-purple-400 hover:text-purple-300 underline'>dermal fillers</Link>, <Link to='/profhilo-treatment' className='text-purple-400 hover:text-purple-300 underline'>Profhilo</Link>, and <Link to='/face-botox' className='text-purple-400 hover:text-purple-300 underline'>other botox treatments</Link>. Our doctors create comprehensive treatment plans for optimal facial rejuvenation."
+      answer: "Yes! The non-surgical ponytail lift already combines botox and dermal fillers, but can be enhanced with additional treatments like <Link to='/profhilo-treatment' className='text-purple-400 hover:text-purple-300 underline'>Profhilo</Link> for skin quality, <Link to='/face-botox' className='text-purple-400 hover:text-purple-300 underline'>other botox areas</Link>, or additional <Link to='/dermal-fillers' className='text-purple-400 hover:text-purple-300 underline'>filler treatments</Link> in different facial zones. Our doctors create comprehensive treatment plans for optimal facial rejuvenation."
     },
     {
       question: "How many injection points are needed for a ponytail lift?",
-      answer: "The treatment typically involves strategic injections in 8-12 key points around the temples, forehead edges, and jaw area. The clinician's expertise is crucial in determining the precise placement to achieve a natural lifting effect whilst maintaining facial movement and expression."
+      answer: "The treatment typically involves strategic botox injections in 8-12 key points around the temples, forehead edges, and jaw area, plus targeted dermal filler placement to restore volume and enhance the lifting effect. The clinician's expertise is crucial in determining the precise placement to achieve a natural lifting effect whilst maintaining facial movement and expression."
     },
     {
       question: "How long does the ponytail lift procedure take?",
@@ -75,7 +75,7 @@ const NonSurgicalPonytail = () => {
     },
     {
       question: "How often do I need ponytail lift treatments?",
-      answer: "Generally, the ponytail lift treatment is repeated every 3-4 months for effective, maintained results. Some patients may extend to 4-5 months depending on individual muscle response and desired lifting effect."
+      answer: "The botox component requires maintenance every 3-4 months to preserve the lifting effect. Dermal fillers last longer (6-12 months), so filler top-ups are needed less frequently. Your personalised treatment schedule will be tailored to maintain optimal results based on how your individual facial tissues respond."
     },
     {
       question: "What makes Cosmedocs different for ponytail lifts?",
