@@ -402,7 +402,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* Understanding Facial Ageing */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -440,7 +440,7 @@ const NonSurgicalPonytail = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -498,7 +498,7 @@ const NonSurgicalPonytail = () => {
 
 
         {/* Treatment Process & Side Effects */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -597,7 +597,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* Comparison Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -689,7 +689,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -732,7 +732,7 @@ const NonSurgicalPonytail = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing-section" className="py-20 bg-accent">
+        <section id="pricing-section" className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
