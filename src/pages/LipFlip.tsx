@@ -668,7 +668,7 @@ const LipFlip = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Botox for lip flip is considered safe with minimal side effects for most people. The lip flio (lip flop) procedure is well-tolerated and follows <a href="https://www.baaps.org.uk/patients/procedures/18/non_surgical_cosmetic_procedures" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">BAAPS guidelines for non-surgical cosmetic procedures</a>. However, your botox treatment may have some slight temporary effects:
+                      Botox for lip flip is considered safe with minimal side effects for most people. The lip flio (lip flop) procedure is well-tolerated and follows <a href="https://www.fda.gov/consumers/consumer-updates/wrinkle-fillers-botulinum-toxin-and-soft-tissue-fillers" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA guidance on botulinum toxin treatments</a>. However, your botox treatment may have some slight temporary effects:
                     </p>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start space-x-2">
