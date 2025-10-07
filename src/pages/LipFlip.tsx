@@ -351,7 +351,7 @@ const LipFlip = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">What is a Lip Flip?</h2>
               <div className="text-gray-300 max-w-4xl mx-auto text-lg space-y-4">
                 <p>
-                  What is a lip flip before and after? What is lip flip treatment? A lip flip botox procedure is a non-invasive lip enhancement technique involving precise botox injections in lips. The lip flipping botox treatment uses a small amount of botulinum toxin injected into the upper lip muscles, specifically targeting the orbicularis oris muscle.
+                  What is lip flip treatment? A lip flip botox procedure is a non-invasive lip enhancement technique involving precise botox injections in lips. The lip flipping botox treatment uses a small amount of botulinum toxin injected into the upper lip muscles, specifically targeting the orbicularis oris muscle.
                 </p>
                 <p>
                   How does a lip flip work? Unlike lip fillers, the botox upper lip treatment relaxes muscles, causing the top lip to subtly roll outward. This reveals more of the pink lip tissue, creating fuller-looking lips without adding volume. The flip lip botox technique is ideal for those seeking subtle enhancement.
