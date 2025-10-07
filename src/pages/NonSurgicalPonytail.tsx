@@ -18,8 +18,8 @@ import { Home } from "lucide-react";
 
 const NonSurgicalPonytail = () => {
   const seoData = generateSEOMetadata(
-    "Non-Surgical Ponytail Lift UK Cost £350 | Ponytail Facelift London Near Me",
-    "Expert non-surgical ponytail lift treatment. Botox ponytail facelift from £350 at Harley Street, London. Natural face lifting without surgery. Book consultation today.",
+    "Non-Surgical Ponytail Lift UK | Mini Facelift London | Ponytail Face Lift £350",
+    "Expert non-surgical ponytail facelift combining botox and dermal fillers. Mini face lift London from £350 at Harley Street. Ponytail lift before and after results. Face lifting therapy without surgery.",
     "/non-surgical-ponytail"
   );
 
@@ -87,14 +87,14 @@ const NonSurgicalPonytail = () => {
     <>
       <Helmet>
         <title>{seoData.title}</title>
-        <meta name="description" content="Expert non-surgical ponytail lift combining botox and dermal fillers. Ponytail facelift from £350 at Harley Street, London. Natural face lifting without surgery. Book consultation today." />
+        <meta name="description" content="Expert non-surgical ponytail lift combining botox and dermal fillers. Mini facelift London from £350. Ponytail face lift before and after results. Face lifting therapy without surgery at Harley Street." />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="non-surgical ponytail lift, ponytail facelift, ponytail lift botox, face lift without surgery, non surgical facelift, jawline lift, eyebrow lift, facial lifting, natural facelift, botox face lift, temple lift, ponytail facelift near me, non surgical lift, facial contouring, jowl reduction, non surgical ponytail, aesthetic lifting" />
+        <meta name="keywords" content="ponytail facelift, ponytail lift, ponytail face lift, mini facelift london, mini face lift uk, face lift london, mini facelift, mini lower face lift, ponytail facelift before and after, mini ponytail, face lifting therapy, face lift skin tightening, non surgical face lift, non surgical face lift london, face lift non surgical, non surgical brow lift, non surgical eyelid lift, non surgical face lift near me, non surgical face lift before and after, best face lift non surgical, non surgical face lift price uk, non surgical ponytail, aesthetic lifting" />
         <meta name="geo.region" content="GB-LND" />
         <meta name="geo.placename" content="London" />
         <meta name="geo.position" content="51.519526;-0.146061" />
@@ -104,8 +104,8 @@ const NonSurgicalPonytail = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": ["MedicalBusiness", "MedicalClinic"],
-            "name": "Cosmedocs - Non-Surgical Ponytail Lift London",
-            "description": "Expert non-surgical ponytail lift treatment. Botox ponytail facelift from £350. Natural face lifting without surgery at Harley Street, London.",
+            "name": "Cosmedocs - Non-Surgical Ponytail Facelift | Mini Facelift London",
+            "description": "Expert non-surgical ponytail lift and mini facelift treatment. Ponytail face lift from £350. Natural face lifting therapy without surgery at Harley Street, London.",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "priceRange": "££",
@@ -266,12 +266,12 @@ const NonSurgicalPonytail = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Non-Surgical Ponytail Lift London</span>
-                  <span className="block text-sm mt-4">Invisible art - natural facial lifting without surgery</span>
+                  <span className="text-purple-300">Non-Surgical Ponytail Facelift | Mini Face Lift London</span>
+                  <span className="block text-sm mt-4">Invisible art - natural face lifting therapy without surgery</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Ponytail Facelift Near Me</p>
-                  <p className="text-sm text-gray-300">15-20 minutes • Natural lifting effect • Results last 3-4 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Ponytail Face Lift Near Me</p>
+                  <p className="text-sm text-gray-300">15-20 minutes • Natural face lift skin tightening • Results last 3-4 months (botox) & 6-12 months (fillers)</p>
                 </div>
                 <div className="mb-6 flex items-center gap-6 flex-wrap">
                   <div className="flex items-center gap-2">
@@ -320,7 +320,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Ponytail Lift Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Ponytail Lift & Mini Facelift Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -412,14 +412,14 @@ const NonSurgicalPonytail = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
-                      As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail lift addresses these concerns through a dual approach: strategically relaxing downward-pulling muscles with botox whilst restoring volume and structural support with dermal fillers. This combination technique, similar to how we integrate treatments like <Link to="/profhilo-treatment" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, requires precision and expertise.
+                      As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail facelift addresses these concerns through a dual approach: strategically relaxing downward-pulling muscles with botox whilst restoring volume and structural support with dermal fillers. This mini facelift technique, similar to how we integrate treatments like <Link to="/profhilo-treatment" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, requires precision and expertise for optimal face lifting therapy results.
                     </p>
                   <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
-                    This technique provides subtle yet noticeable lifting, creating a more youthful and refreshed appearance without the need for invasive surgery or lengthy recovery periods.
+                    This non surgical face lift technique provides subtle yet noticeable face lift skin tightening, creating a more youthful and refreshed appearance without the need for invasive surgery or lengthy recovery periods.
                   </p>
                   <div className="bg-purple-900/50 rounded-lg p-6 max-w-2xl mx-auto">
                     <p className="text-purple-200 font-semibold text-center">
-                      The non-surgical ponytail lift has become increasingly popular as an alternative to traditional facelifts, offering natural-looking results with minimal downtime and no surgical risks.
+                      The non-surgical ponytail face lift has become increasingly popular as a mini face lift alternative to traditional surgical facelifts, offering natural-looking results with minimal downtime and no surgical risks.
                     </p>
                   </div>
                 </CardContent>
@@ -598,9 +598,9 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">How Does the Ponytail Lift Work? The Science</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">How Does the Ponytail Facelift Work? The Science</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                The non-surgical ponytail lift works through a dual-action approach combining botox and dermal fillers to target specific facial muscles and restore volume. Here's the science behind this innovative treatment.
+                The non-surgical ponytail facelift works through a dual-action approach combining botox and dermal fillers to target specific facial muscles and restore volume. This mini facelift technique provides comprehensive face lifting therapy through strategic muscle relaxation and volume enhancement. Here's the science behind this innovative non surgical face lift procedure.
               </p>
             </motion.div>
 
@@ -653,9 +653,9 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Pricing</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">Pricing - Non Surgical Face Lift Price UK</h2>
               <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                Transparent pricing for non-surgical ponytail lift treatment in London. All prices include consultation and follow-up care.
+                Transparent pricing for non-surgical ponytail facelift and mini face lift treatment in London. All prices include consultation and follow-up care. Best non surgical face lift near me.
               </p>
             </motion.div>
 
@@ -664,7 +664,7 @@ const NonSurgicalPonytail = () => {
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
-                      <h3 className="text-2xl font-bold text-white mb-2">Non-Surgical Ponytail Lift</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">Non-Surgical Ponytail Facelift & Mini Face Lift</h3>
                       <p className="text-gray-300 text-lg">
                         Complete treatment including consultation, injection, and 2-week follow-up
                       </p>
@@ -806,9 +806,9 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions - Ponytail Facelift Before and After</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about non-surgical ponytail lift treatments answered by our expert doctors.
+                Common questions about non-surgical ponytail facelift, mini face lift, and face lifting therapy answered by our expert doctors.
               </p>
             </motion.div>
 
@@ -830,6 +830,34 @@ const NonSurgicalPonytail = () => {
                 ))}
               </Accordion>
             </div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content */}
+        <section className="sr-only" aria-hidden="true">
+          <div className="page-container">
+            <h2>Non-Surgical Face Lift London - Comprehensive Guide to Ponytail Facelift & Mini Face Lift UK</h2>
+            <p>
+              The non-surgical ponytail facelift has revolutionised face lifting therapy in London, offering an innovative alternative to traditional surgical procedures. This mini facelift technique combines advanced botox applications with strategic dermal filler placement to achieve remarkable face lift skin tightening results without going under the knife. Patients seeking a mini face lift UK solution increasingly turn to this non surgical face lift procedure for its natural-looking outcomes and minimal downtime.
+            </p>
+            <p>
+              Our ponytail face lift treatment provides comprehensive facial rejuvenation through a face lift non surgical approach. The procedure addresses multiple concerns simultaneously, functioning as a non surgical brow lift, non surgical eyelid lift, and mini lower face lift all in one session. Many patients researching "non surgical face lift near me" or "best face lift non surgical" options discover that the ponytail facelift before and after results demonstrate exceptional improvements in facial contours, jawline definition, and overall facial harmony.
+            </p>
+            <p>
+              As a leading provider of non surgical face lifts in London, we understand that non surgical face lift price UK considerations are important. Our mini facelift London treatments offer exceptional value, with transparent pricing for this innovative face lifting therapy. The mini ponytail technique works by strategically relaxing downward-pulling muscles whilst simultaneously restoring volume to key facial areas, creating the characteristic lifted appearance associated with the ponytail face lift.
+            </p>
+            <p>
+              The ponytail lift before and after transformations showcase how this non surgical face lift London treatment can address age-related changes including jowls, loss of jawline definition, brow ptosis, and midface volume loss. Unlike traditional face lift london surgical procedures, our mini face lift before and after results reveal natural-looking enhancements that respect individual facial anatomy. Patients appreciate that this face lift non surgical procedure maintains facial expressiveness whilst providing visible rejuvenation.
+            </p>
+            <p>
+              When comparing non surgical face lift options, the ponytail facelift stands out for its dual-action approach combining muscle relaxation with volumetric restoration. This best face lift non surgical technique delivers both immediate and progressive improvements, with dermal filler effects visible instantly whilst botox results develop over 7-14 days. Our experienced practitioners ensure precise placement for optimal face lift skin tightening outcomes that appear completely natural.
+            </p>
+            <p>
+              For those seeking non surgical face lift near me solutions in London, Harley Street offers the ideal location for this advanced face lifting therapy. Our mini facelift london treatments are performed by highly skilled aesthetic doctors who specialise in facial anatomy and rejuvenation techniques. The mini lower face lift effects achieved through strategic botox and filler placement create definition along the jawline whilst the upper face benefits from non surgical brow lift and temple volumisation.
+            </p>
+            <p>
+              Understanding non surgical face lift price UK considerations, we provide comprehensive consultations to discuss treatment expectations, longevity, and maintenance schedules. The ponytail face lift offers exceptional value given its comprehensive rejuvenation effects across multiple facial zones. Patients researching mini face lift UK options appreciate the transparent pricing structure and personalised treatment planning that ensures optimal outcomes suited to individual aesthetic goals and facial characteristics.
+            </p>
           </div>
         </section>
 
