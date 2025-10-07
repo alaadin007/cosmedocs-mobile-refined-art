@@ -700,45 +700,6 @@ const NonSurgicalPonytail = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6 text-white">Before & After Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-                Real results from our non-surgical ponytail lift treatments. See the natural lifting and contouring achieved without surgery.
-              </p>
-            </motion.div>
-
-            <Carousel className="max-w-4xl mx-auto">
-              <CarouselContent>
-                {beforeAfterImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full rounded-lg"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-                        <p className="text-white text-sm">{image.caption}</p>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </section>
-
         {/* Why Choose Us */}
         <section className="py-20 bg-black">
           <div className="page-container">
