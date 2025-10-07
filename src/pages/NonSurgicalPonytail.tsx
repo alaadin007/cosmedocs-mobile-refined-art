@@ -393,7 +393,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is a Non-Surgical Ponytail Lift? Mini Facelift London</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is a Non-Surgical Ponytail Lift also known as Mini Facelift London?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-6">
                 Cosmedocs has been providing advanced facial aesthetics for over a decade. The non-surgical ponytail lift, also known as the ponytail facelift, is an innovative treatment that mimics the natural lifting effect achieved when pulling your hair back into a tight ponytail. Using a strategic combination of <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox injections</Link> and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> at precise facial points, we relax muscles that pull the face downward whilst restoring volume and enhancing lift.
               </p>
