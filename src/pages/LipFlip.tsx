@@ -947,7 +947,7 @@ const LipFlip = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about lip flip botox treatments answered by our expert doctors, following guidance from the <a href="https://www.gmc-uk.org/ethical-guidance/ethical-guidance-for-doctors/cosmetic-interventions" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">GMC on cosmetic interventions</a>.
+                Common questions about lip flip botox treatments answered by our expert doctors, based on <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11815597/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">published research on lip flip procedures</a>.
               </p>
             </motion.div>
 
