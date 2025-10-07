@@ -393,7 +393,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is a Non-Surgical Ponytail Lift?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is a Non-Surgical Ponytail Lift? Mini Facelift London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Cosmedocs has been providing advanced facial aesthetics for over a decade. The non-surgical ponytail lift, also known as the ponytail facelift, is an innovative treatment that mimics the natural lifting effect achieved when pulling your hair back into a tight ponytail. Using a strategic combination of <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox injections</Link> and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> at precise facial points, we relax muscles that pull the face downward whilst restoring volume and enhancing lift. Our invisible art approach provides natural facial contouring and lifting whilst maintaining completely natural expressions and movement. This treatment is ideal for those seeking facial rejuvenation without surgery or downtime.
               </p>
@@ -411,7 +411,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Understanding Facial Ageing</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Understanding Facial Ageing & Face Lift Skin Tightening</h2>
             </motion.div>
 
             <motion.div
@@ -449,7 +449,7 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">How Does the Ponytail Facelift Work?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does the Ponytail Facelift Work? Non Surgical Face Lift London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
                 The non-surgical ponytail facelift works through a dual-action approach combining botox and dermal fillers. Here's the science and process behind this innovative mini facelift technique.
               </p>
@@ -526,7 +526,7 @@ const NonSurgicalPonytail = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation and facial assessment at Cosmedocs, your treatment begins. The doctor uses a very fine needle to inject a combination of botulinum toxin (to relax downward-pulling muscles) and dermal fillers (to restore volume and enhance lift) into precise points in strategic facial areas including:
+                      After a detailed consultation and facial assessment at Cosmedocs, your treatment begins. The doctor uses a very fine needle to inject a combination of <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botulinum toxin</Link> (to relax downward-pulling muscles) and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> (to restore volume and enhance lift) into precise points in strategic facial areas including:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -606,9 +606,9 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Surgical vs Non-Surgical Ponytail Facelift</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Surgical vs Non-Surgical Ponytail Facelift: Best Face Lift Non Surgical</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Understanding the key differences between traditional surgical facelifts and the non-surgical ponytail lift (mini facelift) to help you make an informed decision
+                Understanding the key differences between traditional surgical facelifts and the non-surgical ponytail lift (mini facelift) to help you make an informed decision. Discover why patients are choosing non surgical brow lift and <Link to="/nefertiti-botox-facelift" className="text-purple-400 hover:text-purple-300 underline">Nefertiti facelift</Link> alternatives over invasive surgery.
               </p>
             </motion.div>
             
@@ -665,7 +665,7 @@ const NonSurgicalPonytail = () => {
                     </CardHeader>
                     <CardContent className="space-y-6">
                       <p className="text-gray-300">
-                        Non-invasive injectable treatment combining botox and dermal fillers for natural facial lifting with no surgery, no downtime, and immediate results.
+                        Non-invasive injectable treatment combining <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botox</Link> and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> for natural facial lifting with no surgery, no downtime, and immediate results. Perfect alternative to traditional surgical procedures.
                       </p>
                       
                       <div className="bg-purple-900/10 rounded-lg p-6 border border-purple-500/30">
@@ -698,9 +698,9 @@ const NonSurgicalPonytail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Benefits of Non-Surgical Ponytail Lift</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Benefits of Non-Surgical Ponytail Lift & Mini Lower Face Lift</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
-                The non-surgical ponytail lift offers numerous advantages for those seeking facial rejuvenation without surgery. Key benefits include:
+                The non-surgical ponytail lift offers numerous advantages for those seeking facial rejuvenation without surgery. This innovative face lifting therapy combines <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">advanced botox techniques</Link> with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">premium dermal fillers</Link> to deliver exceptional results. Key benefits include:
               </p>
             </motion.div>
 
