@@ -271,7 +271,7 @@ const NonSurgicalPonytail = () => {
                 <p className="text-xl text-gray-200 mb-8">Invisible art - non surgical ponytail face lift London</p>
                 <div className="mb-8">
                   <p className="text-2xl text-white font-bold">Expert Mini Facelift London</p>
-                  <p className="text-sm text-gray-300">15-20 minutes • Natural face lift skin tightening</p>
+                  <p className="text-sm text-gray-300">15-20 minutes • Combination of Botox & Dermal Fillers • Natural face lift skin tightening</p>
                 </div>
                 <div className="mb-6 flex items-center gap-6 flex-wrap">
                   <div className="flex items-center gap-2">
