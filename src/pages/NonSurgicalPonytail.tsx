@@ -668,7 +668,7 @@ const NonSurgicalPonytail = () => {
                     </CardHeader>
                     <CardContent className="space-y-6">
                       <p className="text-gray-300">
-                        Non-invasive injectable treatment combining <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botox</Link> and <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> for natural facial lifting with no surgery, no downtime, and immediate results. Perfect alternative to traditional surgical procedures.
+                        Non-invasive injectable treatment combining botox and dermal fillers for natural facial lifting with no surgery, no downtime, and immediate results. Perfect alternative to traditional surgical procedures.
                       </p>
                       
                       <div className="bg-purple-900/10 rounded-lg p-6 border border-purple-500/30">
