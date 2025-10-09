@@ -70,7 +70,7 @@ const FrownLineBotox = () => {
     },
     {
       question: "Am I a good candidate for frown line botox?",
-      answer: "Ideal candidates have moderate to severe frown lines, are in good health, and have realistic expectations. A consultation with our expert doctors will determine if this treatment is right for you. According to the American Society of Plastic Surgeons, botox is most effective for dynamic wrinkles."
+      answer: "Ideal candidates have moderate to severe frown lines, are in good health, and have realistic expectations. A consultation with our expert doctors will determine if this treatment is right for you."
     },
     {
       question: "How much does frown line botox cost?",
@@ -78,7 +78,7 @@ const FrownLineBotox = () => {
     },
     {
       question: "Can frown line botox be combined with other treatments?",
-      answer: "Yes! Frown line botox works excellently with forehead botox, crow's feet treatment, and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalised treatment plans combining botox with treatments like the Nefertiti lift for complete facial enhancement."
+      answer: "Yes! Frown line botox works excellently with forehead lines, crow's feet, and dermal filler treatments for comprehensive facial rejuvenation. Our doctors create personalised treatment plans combining botox with other procedures for optimal results."
     },
     {
       question: "What's the difference between static and dynamic lines?",
@@ -98,7 +98,7 @@ const FrownLineBotox = () => {
     },
     {
       question: "How can I prevent frown lines from appearing?",
-      answer: "Use topical retinoids to boost collagen production, apply SPF sunscreen daily to protect from UV damage, wear sunglasses, quit smoking, get adequate sleep, and maintain a healthy diet rich in antioxidants. These lifestyle changes support healthy skin and prevent premature ageing. The British Association of Dermatologists recommends comprehensive sun protection as the most effective prevention strategy."
+      answer: "Use topical retinoids to boost collagen production, apply SPF sunscreen daily to protect from UV damage, wear sunglasses, quit smoking, get adequate sleep, and maintain a healthy diet rich in antioxidants. These lifestyle changes support healthy skin and prevent premature ageing."
     }
   ];
 
@@ -427,8 +427,8 @@ const FrownLineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Botox for 11 Lines and Frown Lines?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> on 11 lines (also called eleven lines or glabellar lines) targets the corrugator and procerus muscles between your eyebrows that create vertical frown lines. 
-                Our botox for frown lines treatment uses precise injections to smooth existing 11s and prevent new wrinkles from forming, whilst preserving natural facial expressions. This <a href="https://www.nhs.uk/conditions/cosmetic-procedures/non-surgical-cosmetic-procedures/botox-injections/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin treatment</a> for <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines</Link> delivers natural before and after results.
+                Botox on 11 lines (also called eleven lines or glabellar lines) targets the corrugator and procerus muscles between your eyebrows that create vertical frown lines. 
+                Our botox for frown lines treatment uses precise injections to smooth existing 11s and prevent new wrinkles from forming, whilst preserving natural facial expressions. This treatment for forehead lines delivers natural before and after results.
               </p>
             </motion.div>
 
@@ -466,8 +466,8 @@ const FrownLineBotox = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Glabellar lines (commonly known as 11 lines or eleven lines) form between the eyebrows from repeated contractions of the <a href="https://www.ncbi.nlm.nih.gov/books/NBK539720/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">corrugator and procerus muscles</a>. 
-                    These frown lines can make you appear angry, worried, or tired even when you're not. <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox 11</Link> effectively treats these scowl lines, restoring facial harmony with natural-looking results.
+                    Glabellar lines (commonly known as 11 lines or eleven lines) form between the eyebrows from repeated contractions of the corrugator and procerus muscles. 
+                    These frown lines can make you appear angry, worried, or tired even when you're not. Botox 11 effectively treats these scowl lines, restoring facial harmony with <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6489637/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven natural-looking results</a>.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-4 mt-6">
@@ -617,7 +617,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Botox on 11 lines relaxes the muscles causing frown lines and scowl lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. <a href="https://www.aad.org/public/cosmetic/wrinkles/botulinum-toxin-overview" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Botox glabellar treatments</a> work by blocking nerve signals that cause muscle contractions, allowing the skin to smooth out naturally. This is why botox and frown lines treatment produces such effective before and after results.
+                      Botox on 11 lines relaxes the muscles causing frown lines and scowl lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. Botox glabellar treatments work by blocking nerve signals that cause muscle contractions, allowing the skin to smooth out naturally. This <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10682279/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">well-tolerated treatment</a> produces effective before and after results.
                     </p>
                   </CardContent>
                 </Card>
@@ -697,7 +697,7 @@ const FrownLineBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Remove Frown Lines and 11s</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                We have a range of effective treatments to target eleven lines and achieve a smoother, more relaxed expression in addition to botox frown lines treatment at our London Harley Street clinic. Combining treatments often yields <a href="https://www.plasticsurgery.org/cosmetic-procedures/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">superior aesthetic results</a>.
+                We have a range of effective treatments to target eleven lines and achieve a smoother, more relaxed expression in addition to botox frown lines treatment at our London Harley Street clinic.
               </p>
             </motion.div>
 
@@ -753,7 +753,7 @@ const FrownLineBotox = () => {
             >
               <h2 className="text-4xl font-bold mb-6 text-white">Why 11 Lines Form & Our Botox Solution</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-xl leading-relaxed">
-                Understanding the <a href="https://www.dermatologytimes.com/view/understanding-aging-facial-muscles" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">root causes of frown lines</a> and eleven lines helps us deliver targeted, effective botox treatments that address both existing 11s and prevent future formation. Our botox for scowl lines treatment at Harley Street, London, delivers exceptional before and after results.
+                Understanding the root causes of frown lines and eleven lines helps us deliver targeted, effective botox treatments that address both existing 11s and prevent future formation. Our botox for scowl lines treatment at Harley Street, London, delivers exceptional before and after results.
               </p>
             </motion.div>
 
@@ -877,7 +877,7 @@ const FrownLineBotox = () => {
                       </li>
                        <li className="flex items-center space-x-2">
                          <Check className="text-purple-400" size={16} />
-                         <span className="text-gray-300">Combines with <Link to="/crows-feet-botox" className="text-purple-300 hover:text-purple-200 underline">crow's feet</Link> & <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead treatments</Link></span>
+                         <span className="text-gray-300">Follow-up care included</span>
                        </li>
                     </ul>
                     <div className="mt-6">
