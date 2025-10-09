@@ -27,18 +27,18 @@ const CrowsFeetBotox = () => {
   const beforeAfterImages = [
     { 
       src: beforeAfter1, 
-      alt: "Botox for crow's feet before and after treatment showing dramatic reduction in eye wrinkles", 
-      caption: "Before: Deep crow's feet visible around eyes at rest. After: Smooth, refreshed eye area with softened lines whilst maintaining natural expression. 12 units Botox treatment to orbicularis oculi muscle." 
+      alt: "Crows feet botox before and after showing reduced eye wrinkles", 
+      caption: "Before and after botox for crows feet - smooth eye area with natural expression maintained" 
     },
     { 
       src: beforeAfter2, 
-      alt: "Comprehensive upper face botox treatment before after showing forehead, frown lines, and crow's feet improvement", 
-      caption: "Before: Pronounced crow's feet, forehead lines, and frown lines creating aged appearance. After: Complete upper face rejuvenation with smooth forehead, relaxed glabella, and diminished lateral canthal lines. Full face botox treatment." 
+      alt: "Botox crows feet before after with forehead lines treatment", 
+      caption: "Crow's feet botox before and after - complete upper face rejuvenation with frown lines" 
     },
     { 
       src: beforeAfter3, 
-      alt: "Crows feet botox before after comparison demonstrating eye wrinkle reduction and skin smoothing", 
-      caption: "Before: Multiple fine lines radiating from outer eye corners when smiling. After: Significantly reduced crow's feet wrinkles with preserved natural smile, achieving fresh and youthful eye contours. 10 units per side." 
+      alt: "Before after crows feet botox treatment around eyes", 
+      caption: "Smiling botox before and after crows feet - reduced wrinkles around eyes, natural smile preserved" 
     }
   ];
 
