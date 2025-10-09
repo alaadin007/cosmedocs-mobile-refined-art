@@ -257,15 +257,6 @@ const Treatments = () => {
               price: "£400/ml",
               link: "/neck-fillers"
             },
-            {
-              title: "Profhilo",
-              price: "£350 (package price available)",
-              link: "/profhilo-treatment"
-            },
-            {
-              title: "Polynucleotide",
-              link: "/polynucleotides"
-            }
           ]
         },
         {
@@ -556,27 +547,32 @@ const Treatments = () => {
         {
           title: "FACIAL THREAD VEINS",
           price: "FROM £75",
-          description: "Treatment for visible facial blood vessels"
+          description: "Treatment for visible facial blood vessels",
+          link: "/thread-veins"
         },
         {
           title: "LEG VEINS / SPIDER VEINS",
           price: "£400 PER LEG",
-          description: "Treatment for leg veins and spider veins"
+          description: "Treatment for leg veins and spider veins",
+          link: "/thread-veins"
         },
         {
           title: "SKIN TAG REMOVAL",
           price: "£100 FOR 5 TAGS",
-          description: "Safe removal of skin tags"
+          description: "Safe removal of skin tags",
+          link: "/mole-skin-tag-removal"
         },
         {
           title: "SEMI PERMANENT MAKEUP",
           price: "POC",
-          description: "Semi-permanent makeup services"
+          description: "Semi-permanent makeup services",
+          link: "/semi-permanent-makeup"
         },
         {
           title: "IPL/LASER HAIR REMOVAL",
           price: "POC",
-          description: "IPL and laser hair removal treatments"
+          description: "IPL and laser hair removal treatments",
+          link: "/laser-hair-removal"
         },
         {
           title: "PRESCRIPTION SKINCARE",
