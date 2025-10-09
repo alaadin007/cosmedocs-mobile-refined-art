@@ -747,42 +747,74 @@ const Treatments = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold mb-2">{treatments.fillers.title}</h2>
+              <h2 className="text-2xl font-bold mb-2 text-amber-400">{treatments.fillers.title}</h2>
               <p className="text-gray-400 mb-6">{treatments.fillers.subtitle}</p>
               
+              {/* Anti-Ageing Section */}
               <div className="mt-8">
-                {treatments.fillers.items.map((category, index) => (
-                  <div key={index} className="mb-8">
-                    {category.isSubcategory && (
-                      <h3 className="text-xl font-semibold mb-4 text-white/90">{category.subtitle}</h3>
-                    )}
-                    
-                    {category.subitems && category.subitems.map((item, idx) => (
-                      <Card key={idx} className="mb-4 bg-accent text-white border-0">
-                        <CardContent className="p-4">
-                          <div className="flex justify-between items-start">
-                            <h4 className="font-semibold">{item.title}</h4>
-                            {item.price && <p className="font-bold">{item.price}</p>}
-                          </div>
-                          {item.link && (
-                            <div className="mt-2 text-right">
-                              {item.link.startsWith('/') ? (
-                                <Link to={item.link}>
-                                  <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                                    Learn more →
-                                  </Button>
-                                </Link>
-                              ) : (
-                                <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                                  Learn more →
-                                </Button>
-                              )}
-                            </div>
-                          )}
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">ANTI-AGEING</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.fillers.items[0].subitems?.map((item, idx) => (
+                  <Card key={idx} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{item.title}</h4>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          {item.price && <p className="font-bold">{item.price}</p>}
+                        </div>
+                      </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Facial Contouring Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">FACIAL CONTOURING</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.fillers.items[1].subitems?.map((item, idx) => (
+                  <Card key={idx} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{item.title}</h4>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          {item.price && <p className="font-bold">{item.price}</p>}
+                        </div>
+                      </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </motion.div>
@@ -855,19 +887,9 @@ const Treatments = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold mb-2">{treatments.skinBoosters.title}</h2>
+              <h2 className="text-2xl font-bold mb-2 text-amber-400">{treatments.skinBoosters.title}</h2>
               <p className="text-gray-400 mb-6">{treatments.skinBoosters.subtitle}</p>
               <p className="text-gray-300 mb-6">{treatments.skinBoosters.description}</p>
-              
-              <div className="flex justify-center mb-8">
-                <BeforeAfterImageViewer 
-                  images={skinBoosterBeforeAfterImages}
-                  triggerLabel="View Before & After Results"
-                  title="Skin Boosters Before & After"
-                  description="Real results from our advanced skin booster treatments"
-                  className="text-base"
-                />
-              </div>
               
               <div className="mt-6">
                 {treatments.skinBoosters.items.map((item, index) => (
@@ -904,41 +926,105 @@ const Treatments = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold mb-4">{treatments.medspa.title}</h2>
+              <h2 className="text-2xl font-bold mb-4 text-amber-400">{treatments.medspa.title}</h2>
               
+              {/* Skin Peeling Systems Section */}
               <div className="mt-8">
-                {treatments.medspa.items.map((item, index) => {
-                  if (item.isSubcategory) {
-                    return (
-                      <div key={index} className="mb-8">
-                        <div className="flex justify-between items-center mb-4">
-                          <h3 className="text-xl font-semibold">{item.subtitle}</h3>
-                          {item.link && (
-                            <Link to={item.link}>
-                              <Button variant="link" className="p-0 h-auto text-purple-400 hover:text-purple-300">
-                                Learn more →
-                              </Button>
-                            </Link>
-                          )}
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">SKIN PEELING SYSTEMS</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.medspa.items[0].link && (
+                  <div className="mb-4 text-right">
+                    <Link to={treatments.medspa.items[0].link}>
+                      <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                        Learn more →
+                      </Button>
+                    </Link>
+                  </div>
+                )}
+                
+                {treatments.medspa.items[0].subitems?.map((subitem, idx) => (
+                  <Card key={idx} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{subitem.title}</h4>
+                          {subitem.description && <p className="text-sm text-gray-400">{subitem.description}</p>}
                         </div>
-                        
-                        {item.subitems && item.subitems.map((subitem, idx) => (
-                          <Card key={idx} className="mb-4 bg-accent text-white border-0">
-                            <CardContent className="p-4">
-                              <div className="flex justify-between items-start">
-                                <div>
-                                  <h4 className="font-semibold">{subitem.title}</h4>
-                                  {subitem.description && <p className="text-sm text-gray-400">{subitem.description}</p>}
-                                </div>
-                                <p className="font-bold">{subitem.price}</p>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        ))}
+                        <p className="font-bold">{subitem.price}</p>
                       </div>
-                    );
-                  }
-                })}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Microneedling Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">MICRONEEDLING (NATURAL COLLAGEN INDUCTION)</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.medspa.items[1].link && (
+                  <div className="mb-4 text-right">
+                    <Link to={treatments.medspa.items[1].link}>
+                      <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                        Learn more →
+                      </Button>
+                    </Link>
+                  </div>
+                )}
+                
+                {treatments.medspa.items[1].subitems?.map((subitem, idx) => (
+                  <Card key={idx} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{subitem.title}</h4>
+                          {subitem.description && <p className="text-sm text-gray-400">{subitem.description}</p>}
+                        </div>
+                        <p className="font-bold">{subitem.price}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* PRP Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">PRP (AKA Vampire Facelift)</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.medspa.items[2].link && (
+                  <div className="mb-4 text-right">
+                    <Link to={treatments.medspa.items[2].link}>
+                      <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                        Learn more →
+                      </Button>
+                    </Link>
+                  </div>
+                )}
+                
+                {treatments.medspa.items[2].subitems?.map((subitem, idx) => (
+                  <Card key={idx} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{subitem.title}</h4>
+                          {subitem.description && <p className="text-sm text-gray-400">{subitem.description}</p>}
+                        </div>
+                        <p className="font-bold">{subitem.price}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </motion.div>
           </TabsContent>
