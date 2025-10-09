@@ -27,18 +27,18 @@ const CrowsFeetBotox = () => {
   const beforeAfterImages = [
     { 
       src: beforeAfter1, 
-      alt: "Botox for crow's feet before and after treatment", 
-      caption: "Invisible Art - Crease less eyes that speak without words. Expert orbital muscle relaxation creating transformation that speaks — without saying a word." 
+      alt: "Botox for crow's feet before and after treatment showing dramatic reduction in eye wrinkles", 
+      caption: "Before: Deep crow's feet visible around eyes at rest. After: Smooth, refreshed eye area with softened lines whilst maintaining natural expression. 12 units Botox treatment to orbicularis oculi muscle." 
     },
     { 
       src: beforeAfter2, 
-      alt: "Forehead crow's feet and frown lines treatment before after", 
-      caption: "Bold • Natural • Always Your Way - Comprehensive upper face treatment creating quiet, not loud transformation around the eyes." 
+      alt: "Comprehensive upper face botox treatment before after showing forehead, frown lines, and crow's feet improvement", 
+      caption: "Before: Pronounced crow's feet, forehead lines, and frown lines creating aged appearance. After: Complete upper face rejuvenation with smooth forehead, relaxed glabella, and diminished lateral canthal lines. Full face botox treatment." 
     },
     { 
       src: beforeAfter3, 
-      alt: "Comparison of crow's feet lines before and after Botox treatment", 
-      caption: "Aesthetic medicine that's minimal - Eyes that speak without words showing fresh, smooth, and crease-less transformation." 
+      alt: "Crows feet botox before after comparison demonstrating eye wrinkle reduction and skin smoothing", 
+      caption: "Before: Multiple fine lines radiating from outer eye corners when smiling. After: Significantly reduced crow's feet wrinkles with preserved natural smile, achieving fresh and youthful eye contours. 10 units per side." 
     }
   ];
 
@@ -915,24 +915,35 @@ const CrowsFeetBotox = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready for Crease Less Eyes?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Experience invisible art - eyes that speak without words. Book your expert consultation today and discover how our natural approach creates transformation that speaks — without saying a word.
+              <h2 className="text-3xl font-bold mb-4">Ready for Smooth, Youthful Eyes?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how crow's feet botox 
+                can enhance your natural beauty with subtle, sophisticated results that speak without words.
               </p>
-              <Button 
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-              >
-                Book Free Consultation
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                  onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
+                >
+                  Book Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                  onClick={() => window.location.href = 'tel:03330551503'}
+                >
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
