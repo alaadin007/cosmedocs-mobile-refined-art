@@ -428,7 +428,7 @@ const FrownLineBotox = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">What is Botox for 11 Lines and Frown Lines?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> on 11 lines (also called eleven lines or glabellar lines) targets the corrugator and procerus muscles between your eyebrows that create vertical frown lines. 
-                Our botox for frown lines treatment uses precise injections to smooth existing 11s and prevent new wrinkles from forming, whilst preserving natural facial expressions. This <a href="https://www.nhs.uk/conditions/cosmetic-procedures/botulinum-toxin-injections/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin treatment</a> for <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines</Link> delivers natural before and after results.
+                Our botox for frown lines treatment uses precise injections to smooth existing 11s and prevent new wrinkles from forming, whilst preserving natural facial expressions. This <a href="https://www.nhs.uk/conditions/cosmetic-procedures/non-surgical-cosmetic-procedures/botox-injections/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">botulinum toxin treatment</a> for <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines</Link> delivers natural before and after results.
               </p>
             </motion.div>
 
@@ -617,7 +617,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Botox on 11 lines relaxes the muscles causing frown lines and scowl lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. <a href="https://www.aad.org/public/cosmetic/younger-looking/botulinum-toxin-overview" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Botox glabellar treatments</a> work by blocking nerve signals that cause muscle contractions, allowing the skin to smooth out naturally. This is why botox and frown lines treatment produces such effective before and after results.
+                      Botox on 11 lines relaxes the muscles causing frown lines and scowl lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. <a href="https://www.aad.org/public/cosmetic/wrinkles/botulinum-toxin-overview" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Botox glabellar treatments</a> work by blocking nerve signals that cause muscle contractions, allowing the skin to smooth out naturally. This is why botox and frown lines treatment produces such effective before and after results.
                     </p>
                   </CardContent>
                 </Card>
