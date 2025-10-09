@@ -59,37 +59,57 @@ const Treatments = () => {
             { name: "3 Areas", price: "£350" },
             { name: "*Men supplement", price: "£50", note: "If Combined With Any 1,2,3 Main Areas" }
           ],
-          link: "visit page"
+          link: "/face-botox-areas"
         },
         {
-          title: "Chin",
-          price: "£50",
-          link: "visit page"
-        },
-        {
-          title: "Brow Lift",
-          price: "£50",
-          link: "visit page"
-        },
-        {
-          title: "Gummy Smile",
-          price: "£50",
-          link: "visit page"
-        },
-        {
-          title: "Bunny Lines",
-          price: "£50",
-          link: "visit page"
-        },
-        {
-          title: "Lip Flip",
+          title: "Forehead Lines Botox",
           price: "£175",
-          link: "visit page"
+          link: "/forehead-lines-botox"
         },
         {
-          title: "Nefertiti Face Lift (neck bands/platysma)",
+          title: "Frown Lines Botox (Glabella)",
+          price: "£175",
+          link: "/frown-line-botox"
+        },
+        {
+          title: "Crow's Feet Botox",
+          price: "£175",
+          link: "/crows-feet-botox"
+        },
+        {
+          title: "Chin Botox",
+          price: "£50",
+          link: "/chin-botox"
+        },
+        {
+          title: "Brow Lift Botox",
+          price: "£50",
+          link: "/brow-lift-botox"
+        },
+        {
+          title: "Gummy Smile Botox",
+          price: "£50",
+          link: "/gummy-smile-botox"
+        },
+        {
+          title: "Bunny Lines Botox",
+          price: "£50",
+          link: "/bunny-lines-botox"
+        },
+        {
+          title: "Nasal Flaring Botox",
+          price: "£50",
+          link: "/nasal-flaring-botox"
+        },
+        {
+          title: "Lip Flip Botox",
+          price: "£175",
+          link: "/lip-flip"
+        },
+        {
+          title: "Nefertiti Lift (Neck Bands/Platysma)",
           price: "£300",
-          link: "visit page"
+          link: "/nefertiti-lift"
         },
         {
           title: "Jelly Roll Botox",
@@ -99,22 +119,28 @@ const Treatments = () => {
           title: "Full Face Natural Botox",
           price: "£500",
           description: "Including all the above areas (3 areas plus the lower face)",
-          link: "visit page"
+          link: "/face-botox-areas"
         },
         {
           title: "Dermal Filler For Deep Lines",
           price: "£200",
           description: "When complimenting with Botox Treatment",
-          link: "visit page"
+          link: "/dermal-fillers"
         },
         {
-          title: "Migraines / Headaches",
-          price: "£450-550"
+          title: "Migraine Botox / Headaches",
+          price: "£450-550",
+          link: "/migraine-botox"
         },
         {
           title: "Trigger Point Botox",
           price: "£350–£550",
-          link: "visit page"
+          link: "/trigger-point-botox"
+        },
+        {
+          title: "Bruxism Botox (Teeth Grinding)",
+          price: "£350",
+          link: "/bruxism-botox"
         },
         {
           title: "Rosacea & Blushing",
@@ -125,6 +151,11 @@ const Treatments = () => {
           price: "£250",
           description: "Reduces sebum production and controls facial shine",
           link: "/oily-skin-botox"
+        },
+        {
+          title: "Excessive Sweating (Hyperhidrosis)",
+          price: "£550",
+          link: "/excessive-sweat-botox"
         }
       ],
       contouringItems: [
@@ -136,7 +167,7 @@ const Treatments = () => {
         {
           title: "Full Barbie Botox (Shoulder Reduction)",
           price: "£450",
-          link: "visit page"
+          link: "/trap-botox"
         },
         {
           title: "Botox Calf Reduction",
@@ -184,41 +215,56 @@ const Treatments = () => {
               title: "8 Point Facelift",
               price: "From £800",
               description: "Comprehensive non-surgical facelift targeting 8 key facial points",
-              link: "visit page"
+              link: "/8-point-facelift"
             },
             {
-              title: "Marionette Lines",
+              title: "Non-Surgical Facelift",
+              price: "From £800",
+              link: "/non-surgical-facelift"
+            },
+            {
+              title: "Marionette Lines Filler",
               price: "£325/ml",
-              link: "visit page"
+              link: "/marionette-lines"
             },
             {
-              title: "Nasolabial Folds",
+              title: "Nasolabial Folds Filler",
               price: "£325/ml",
-              link: "visit page"
+              link: "/nasolabial-folds"
             },
             {
-              title: "Jawline (High Def/Jowls)",
+              title: "Jawline Filler (High Def/Jowls)",
               price: "£350/ml",
-              link: "visit page"
+              link: "/jawline-filler"
             },
             {
-              title: "Cheek volume",
+              title: "Cheek Filler",
               price: "£350/ml",
-              link: "visit page"
+              link: "/cheek-filler"
             },
             {
-              title: "Tear Trough / Under Eye Circles",
+              title: "Tear Trough Filler / Under Eye Circles",
               price: "£425",
-              link: "visit page"
+              link: "/tear-trough-filler"
+            },
+            {
+              title: "Chin Filler",
+              price: "£350/ml",
+              link: "/chin-filler"
+            },
+            {
+              title: "Neck Filler",
+              price: "£400/ml",
+              link: "/neck-fillers"
             },
             {
               title: "Profhilo",
               price: "£350 (package price available)",
-              link: "visit page"
+              link: "/profhilo-treatment"
             },
             {
               title: "Polynucleotide",
-              link: "visit page"
+              link: "/polynucleotides"
             }
           ]
         },
@@ -242,9 +288,14 @@ const Treatments = () => {
               link: "/lip-fillers"
             },
             {
+              title: "Lip Filler Dissolve",
+              price: "£200",
+              link: "/lip-filler-dissolve"
+            },
+            {
               title: "Non Surgical Nose Job",
               price: "£450",
-              link: "visit page"
+              link: "/non-surgical-nose-job"
             },
             {
               title: "Nose Filler Maintenance",
@@ -253,12 +304,12 @@ const Treatments = () => {
             {
               title: "Forehead Filler Bumps & Dips",
               price: "£400",
-              link: "visit page"
+              link: "/forehead-fillers"
             },
             {
-              title: "Temples Hollowing",
+              title: "Temple Filler (Hollowing)",
               price: "£350/ml",
-              link: "visit page"
+              link: "/temple-filler"
             },
             {
               title: "Redensity 1",
@@ -276,7 +327,7 @@ const Treatments = () => {
             },
             {
               title: "PDO Threads",
-              link: "Visit Page"
+              link: "/pdo-threads"
             },
             {
               title: "Ear Lobe Rejuvenation",
