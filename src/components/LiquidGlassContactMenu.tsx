@@ -65,15 +65,17 @@ const treatmentCategories = [
     color: "from-blue-400 to-cyan-500"
   },
   {
-    name: "Sweat-Tox",
+    name: "Dermatology",
     icon: Crown,
     treatments: [
-      { name: "Underarms Advanced", link: "/excessive-sweat-botox" },
-      { name: "Palms", link: "/excessive-sweat-botox" },
-      { name: "Forehead", link: "/excessive-sweat-botox" },
-      { name: "Feet", link: "/excessive-sweat-botox" }
+      { name: "Skin Cancer Screening", link: "/skin-cancer-screening" },
+      { name: "Mole Removal", link: "/mole-removal" },
+      { name: "Skin Tag Removal", link: "/skin-tag-removal" },
+      { name: "Eczema Treatment", link: "/eczema-treatment" },
+      { name: "Psoriasis Treatment", link: "/psoriasis-treatment" },
+      { name: "Dermatology Consultation", link: "/dermatology-consultation" }
     ],
-    viewAllLink: "/excessive-sweat-botox",
+    viewAllLink: "/treatments",
     color: "from-purple-400 to-indigo-500"
   },
   {
