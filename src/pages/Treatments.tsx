@@ -172,27 +172,33 @@ const Treatments = () => {
       sweattoxItems: [
         {
           title: "Underarms Advanced Treatments",
-          price: "£550"
+          price: "£550",
+          link: "/excessive-sweat-botox"
         },
         {
           title: "Palms",
-          price: "£550"
+          price: "£550",
+          link: "/excessive-sweat-botox"
         },
         {
           title: "Forehead",
-          price: "£350"
+          price: "£350",
+          link: "/excessive-sweat-botox"
         },
         {
           title: "Scalp",
-          price: "£600"
+          price: "£600",
+          link: "/excessive-sweat-botox"
         },
         {
           title: "Nose",
-          price: "£200"
+          price: "£200",
+          link: "/excessive-sweat-botox"
         },
         {
           title: "Cheeks",
-          price: "£200"
+          price: "£200",
+          link: "/excessive-sweat-botox"
         }
       ]
     },
@@ -715,10 +721,23 @@ const Treatments = () => {
                 {treatments.botox.sweattoxItems.map((item, index) => (
                   <Card key={index} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
-                      <div className="flex justify-between items-center">
-                        <h4 className="font-semibold">{item.title}</h4>
-                        <p className="font-bold">{item.price}</p>
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{item.title}</h4>
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                        </div>
                       </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 ))}
