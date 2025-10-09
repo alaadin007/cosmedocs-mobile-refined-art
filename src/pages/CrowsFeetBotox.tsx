@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -77,13 +78,22 @@ const CrowsFeetBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <html lang="en-GB" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="crow's feet botox London, eye wrinkle treatment, laugh lines botox, orbital muscle botox, cosmetic botox, Harley Street clinic" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="crow's feet botox, crows feet botox before and after, botox for crow's feet, crows feet treatment, botox crows feet, crow's feet before and after, eye wrinkle treatment, lateral canthal lines, orbicularis oculi botox, crows feet around eyes, best treatment for crow's feet, Harley Street clinic London" />
+        
+        {/* MedicalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -103,9 +113,110 @@ const CrowsFeetBotox = () => {
             "priceRange": "££"
           })}
         </script>
+
+        {/* MedicalProcedure Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Crow's Feet Botox Treatment",
+            "alternateName": ["Lateral Canthal Lines Treatment", "Eye Wrinkle Botox", "Crow's Feet Reduction"],
+            "description": "Professional botox treatment for crow's feet and eye wrinkles. Expert injections to smooth lateral canthal lines and prevent wrinkle formation around the eyes.",
+            "procedureType": "Cosmetic",
+            "bodyLocation": "Lateral canthal area (outer eye corners)",
+            "preparation": "Consultation and facial analysis",
+            "followup": "Results visible in 3-7 days, lasting 3-4 months"
+          })}
+        </script>
+
+        {/* Offer Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Crow's Feet Botox Treatment",
+            "description": "Professional crow's feet botox treatment at Harley Street clinic",
+            "price": "175",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+
+        {/* FAQPage Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer.replace(/<[^>]*>/g, '')
+              }
+            }))
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Crow's Feet Botox",
+                "item": seoData.canonical
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <nav className="bg-gray-900/50 border-b border-gray-800" aria-label="Breadcrumb">
+          <div className="page-container py-3">
+            <ol className="flex items-center space-x-2 text-sm">
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-white transition-colours flex items-center">
+                  <span className="sr-only">Home</span>
+                  Home
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <span className="text-gray-600 mx-2">/</span>
+                <Link to="/treatments" className="text-gray-400 hover:text-white transition-colours">
+                  Treatments
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <span className="text-gray-600 mx-2">/</span>
+                <span className="text-white">Crow's Feet Botox</span>
+              </li>
+            </ol>
+          </div>
+        </nav>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -117,12 +228,12 @@ const CrowsFeetBotox = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Crow's Feet Botox</span>
-                  <span className="block text-sm mt-4">Invisible art - crease less eyes that speak without words</span>
+                  <span className="text-purple-300">Crow's Feet Botox & Eye Wrinkle Treatment</span>
+                  <span className="block text-2xl mt-4">Invisible art - crease less eyes that speak without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Eye Wrinkle Treatment</p>
-                  <p className="text-sm text-gray-300">10-15 minutes • Results last 3-4 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Crows Feet Treatment in London</p>
+                  <p className="text-lg text-gray-300">10-15 minutes • Results last 3-4 months • Natural before and after results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -234,9 +345,9 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Crow's Feet Before and After</h2>
+              <h2 className="text-3xl font-bold mb-4">Botox Crows Feet Before and After Results</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Check out our Botox Crow's Feet Treatment at Cosmedocs. Our before-and-after images show significant improvements in the appearance of the skin, resulting in fresh, smooth, and crease-less eyes.
+                View our crows feet botox before and after results at Cosmedocs Harley Street. These before after botox crows feet images demonstrate significant improvements in crow's feet around eyes, resulting in fresh, smooth, and crease-less transformation with our best treatment for crow's feet.
               </p>
             </motion.div>
 
@@ -254,6 +365,9 @@ const CrowsFeetBotox = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
+                        width="400"
+                        height="256"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -280,10 +394,9 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is Crow's Feet Botox?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What Are Crow's Feet and How Does Botox Help?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Crow's feet botox targets the orbicularis oculi muscle around your eyes that creates fine lines and wrinkles when smiling or squinting. 
-                Our treatment smooths these lines while preserving your natural, beautiful smile.
+                Crow's feet (also known as lateral canthal lines or smile lines) are wrinkles around eyes that appear when smiling or squinting. These crows feet wrinkles form from repeated contractions of the orbicularis oculi muscle. <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox for crow's feet</Link> targets this orbital muscle, smoothing crow feet eyes whilst preserving your natural expressions. Our <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10374187/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven treatment</a> delivers exceptional botox crows feet before after results.
               </p>
             </motion.div>
 
@@ -301,8 +414,8 @@ const CrowsFeetBotox = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Crow's feet develop from repeated contractions of the orbicularis oculi muscle when you smile, laugh, or squint. 
-                    Over time, these dynamic expressions create permanent lines that can age your appearance and affect eye contour.
+                    Crows feet (crowsfeet) develop from repeated contractions of the orbicularis oculi muscle when you smile, laugh, or squint. These crows feet eye wrinkles are common signs of ageing. 
+                    Over time, these dynamic expressions create permanent crow feet wrinkles that can age your appearance. Botox to crows feet effectively smooths these lines, delivering natural crow's feet before and after transformations.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-4 mt-6">
@@ -352,7 +465,7 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your crow's feet treatment, we begin your orbital muscle treatment. The doctor uses very fine needles to inject botulinum toxin into the orbicularis oculi muscle in targeted areas such as:
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your crows feet treatment, we begin your orbital muscle treatment. The doctor uses very fine needles to inject botulinum toxin into the orbicularis oculi muscle to treat crows feet face wrinkles in targeted areas such as:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -391,7 +504,7 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Crow's feet botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                      Botox for crows feet is considered <a href="https://www.aad.org/public/cosmetic/wrinkles/botulinum-toxin-faqs" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">safe with minimal side effects</a> for most people when administered by qualified professionals. However, your crows feet wrinkles treatment may have some slight side effects, such as:
                     </p>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start space-x-2">
@@ -432,7 +545,7 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Crow's Feet?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work to Get Rid of Crow's Feet?</h2>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
@@ -451,7 +564,7 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Botox relaxes the orbicularis oculi muscle causing crow's feet, resulting in smoother, more youthful-looking eyes. It works by blocking nerve signals that cause muscle contractions, preventing the formation of eye wrinkles while maintaining natural smile expressions.
+                      Botox crow's feet treatment relaxes the orbicularis oculi muscle, resulting in smoother, more youthful-looking crow eyes. It works by <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9316553/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">blocking nerve signals</a> that cause muscle contractions, preventing the formation of crows feet wrinkles whilst maintaining natural smile expressions. This creates impressive smiling botox before and after crows feet transformations.
                     </p>
                   </CardContent>
                 </Card>
@@ -470,7 +583,7 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Types of Crow's Feet</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Types of Crow's Feet: Dynamic vs Static</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -486,10 +599,10 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Dynamic crow's feet appear when you make facial expressions like smiling, laughing, or squinting. These lines are temporary and disappear when your face is relaxed and at rest.
+                      Dynamic crows feet appear when you make facial expressions like smiling, laughing, or squinting. These crows' feet lines are temporary and disappear when your face is relaxed and at rest.
                     </p>
                     <p className="text-purple-300 mt-4 font-medium">
-                      Botox is highly effective for dynamic lines as it relaxes the orbital muscles to reduce their appearance.
+                      Botox and crows feet treatment is highly effective for dynamic lines, delivering natural before and after crows feet results as it relaxes the orbital muscles.
                     </p>
                   </CardContent>
                 </Card>
@@ -507,10 +620,10 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Static crow's feet are visible even when your face is at rest. They develop over time as repeated expressions weaken the skin's elasticity around the eyes, causing permanent creases.
+                      Static crows feet eyes wrinkles are visible even when your face is at rest. They develop over time as repeated expressions weaken the skin's elasticity around the eyes, causing permanent creases.
                     </p>
                     <p className="text-purple-300 mt-4 font-medium">
-                      Botox prevents static lines from becoming deeper and may require combination with dermal fillers for optimal results.
+                      Botox crow's feet before and after treatment prevents static lines from deepening and may require combination with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for optimal crows feet before and after results.
                     </p>
                   </CardContent>
                 </Card>
@@ -531,10 +644,10 @@ const CrowsFeetBotox = () => {
                 className="space-y-8"
               >
                 <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20">
-                  <h2 className="text-3xl font-bold text-white mb-6">Units of Crow's Feet Botox</h2>
+                  <h2 className="text-3xl font-bold text-white mb-6">How Many Units of Botox for Crows Feet?</h2>
                   <div className="space-y-6 text-gray-300">
                     <p className="text-lg leading-relaxed">
-                      Everyone is unique, so the number of Botox units needed to treat crow's feet can vary from person to person.
+                      Everyone is unique, so the number of units needed for crow feet botox before and after results can vary from person to person. The exact amount will be determined during your consultation.
                     </p>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -604,9 +717,9 @@ const CrowsFeetBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Crow's Feet</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Best Treatments for Crow's Feet Beyond Botox</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                We have a range of effective treatments to target crow's feet and achieve smoother, more youthful eyes alongside Crow's Feet Botox.
+                We have a range of effective crows feet wrinkles treatment options to achieve smoother, more youthful eyes alongside botox for the feet area. Combining treatments delivers superior before after crows feet transformations.
               </p>
             </motion.div>
 
@@ -619,11 +732,11 @@ const CrowsFeetBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Enhanced Results with Dermal Fillers</CardTitle>
+                    <CardTitle className="text-white text-xl">Filler for Crows Feet Enhancement</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      While Botox effectively treats dynamic wrinkles by relaxing orbital muscles, dermal fillers can further enhance the results. Fillers, injected to add volume and smooth out deeper lines around the eyes, are particularly useful for static wrinkles that Botox alone can't fully address.
+                      Whilst botox before and after crows feet treatment effectively treats dynamic wrinkles by relaxing orbital muscles, filler in crows feet areas can further enhance results. Fillers add volume and smooth deeper lines around the eyes, particularly useful for static wrinkles that botox crows feet treatment alone can't fully address.
                     </p>
                   </CardContent>
                 </Card>
@@ -637,11 +750,11 @@ const CrowsFeetBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full">
                   <CardHeader>
-                    <CardTitle className="text-white text-xl">Combination Treatment</CardTitle>
+                    <CardTitle className="text-white text-xl">Comprehensive Combination Treatment</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      Combining Botox with dermal fillers offers a comprehensive approach to crow's feet. Botox reduces muscle activity causing the lines, while fillers add volume to deep-set lines around the eyes, resulting in smoother, more youthful eye contour.
+                      Combining botox crow's feet with dermal fillers offers comprehensive what is crow's feet treatment. Botox reduces muscle activity causing the lines, whilst fillers add volume to deep-set wrinkles, resulting in smoother eye contour. This approach is also effective when paired with <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines treatment</Link> for complete upper face rejuvenation.
                     </p>
                   </CardContent>
                 </Card>
