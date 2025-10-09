@@ -26,9 +26,9 @@ const treatmentCategories = [
     name: "Botox",
     icon: Zap,
     treatments: [
-      { name: "Face Botox (1-3 Areas)", link: "/treatments" },
-      { name: "Nefertiti Face Lift", link: "/treatments" },
-      { name: "Masseter (Jawline Slimming)", link: "/treatments" }
+      { name: "Face Botox (1-3 Areas)", link: "/face-botox-areas" },
+      { name: "Nefertiti Face Lift", link: "/nefertiti-lift" },
+      { name: "Masseter (Jawline Slimming)", link: "/masseter-botox" }
     ],
     color: "from-yellow-400 to-orange-500"
   },
@@ -36,9 +36,9 @@ const treatmentCategories = [
     name: "Dermal Fillers",
     icon: Heart,
     treatments: [
-      { name: "Lip Fillers", link: "/treatments" },
-      { name: "Non Surgical Nose Job", link: "/treatments" },
-      { name: "Dermal Filler Makeover", link: "/treatments" }
+      { name: "Lip Fillers", link: "/lip-fillers" },
+      { name: "Non Surgical Nose Job", link: "/non-surgical-nose-job" },
+      { name: "Dermal Filler Makeover", link: "/non-surgical-facelift" }
     ],
     color: "from-pink-400 to-red-500"
   },
@@ -46,9 +46,9 @@ const treatmentCategories = [
     name: "Skin Treatments",
     icon: Sparkles,
     treatments: [
-      { name: "Chemical Peels", link: "/treatments" },
-      { name: "Microneedling", link: "/treatments" },
-      { name: "PRP Vampire Facelift", link: "/treatments" }
+      { name: "Chemical Peels", link: "/skin-peels" },
+      { name: "Microneedling", link: "/microneedling" },
+      { name: "PRP Vampire Facelift", link: "/prp-treatment" }
     ],
     color: "from-blue-400 to-cyan-500"
   },
@@ -56,9 +56,9 @@ const treatmentCategories = [
     name: "Sweat-Tox",
     icon: Crown,
     treatments: [
-      { name: "Underarms Advanced", link: "/treatments" },
-      { name: "Palms", link: "/treatments" },
-      { name: "Forehead", link: "/treatments" }
+      { name: "Underarms Advanced", link: "/excessive-sweat-botox" },
+      { name: "Palms", link: "/excessive-sweat-botox" },
+      { name: "Forehead", link: "/excessive-sweat-botox" }
     ],
     color: "from-purple-400 to-indigo-500"
   },
@@ -66,9 +66,9 @@ const treatmentCategories = [
     name: "Skin Boosters",
     icon: Droplets,
     treatments: [
-      { name: "Profhilo", link: "/treatments" },
-      { name: "Polynucleotides", link: "/treatments" },
-      { name: "Redensity 1", link: "/treatments" }
+      { name: "Profhilo", link: "/profhilo-treatment" },
+      { name: "Polynucleotides", link: "/polynucleotides" },
+      { name: "Redensity 1", link: "/skin-boosters" }
     ],
     color: "from-green-400 to-teal-500"
   },
@@ -76,9 +76,9 @@ const treatmentCategories = [
     name: "Hair & Skin Medicine",
     icon: Lightbulb,
     treatments: [
-      { name: "Acne Treatment", link: "/treatments" },
-      { name: "Facial Thread Veins", link: "/treatments" },
-      { name: "Leg Veins Treatment", link: "/treatments" }
+      { name: "Acne Treatment", link: "/acne-treatment" },
+      { name: "Facial Thread Veins", link: "/thread-veins" },
+      { name: "Leg Veins Treatment", link: "/thread-veins" }
     ],
     color: "from-orange-400 to-red-500"
   }
