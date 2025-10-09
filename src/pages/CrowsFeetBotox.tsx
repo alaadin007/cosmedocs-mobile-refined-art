@@ -190,6 +190,29 @@ const CrowsFeetBotox = () => {
             ]
           })}
         </script>
+
+        {/* VideoObject Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Crow's Feet Botox Treatment Technique",
+            "description": "Expert demonstration of crow's feet botox injection technique showing precise orbital muscle targeting for natural results",
+            "thumbnailUrl": "https://www.cosmedocs.co.uk/placeholder.svg",
+            "uploadDate": "2021-09-15",
+            "contentUrl": "https://www.cosmedocs.com/wp-content/uploads/2021/09/Crows_Feet_Trim-1.mp4",
+            "embedUrl": "https://www.cosmedocs.com/wp-content/uploads/2021/09/Crows_Feet_Trim-1.mp4",
+            "duration": "PT2M",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Cosmedocs",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.cosmedocs.co.uk/logo.png"
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
@@ -465,7 +488,7 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your crows feet treatment, we begin your orbital muscle treatment. The doctor uses very fine needles to inject botulinum toxin into the orbicularis oculi muscle to treat crows feet face wrinkles in targeted areas such as:
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your crows feet treatment, we begin your orbital muscle treatment. The doctor uses very fine needles to inject <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10374187/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA-approved botulinum toxin</a> into the orbicularis oculi muscle to treat crows feet face wrinkles in targeted areas such as:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -647,7 +670,7 @@ const CrowsFeetBotox = () => {
                   <h2 className="text-3xl font-bold text-white mb-6">How Many Units of Botox for Crows Feet?</h2>
                   <div className="space-y-6 text-gray-300">
                     <p className="text-lg leading-relaxed">
-                      Everyone is unique, so the number of units needed for crow feet botox before and after results can vary from person to person. The exact amount will be determined during your consultation.
+                      Everyone is unique, so the number of units needed for crow feet botox before and after results can vary from person to person. The exact amount will be determined during your consultation. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10833495/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinical studies</a> show optimal dosing varies based on muscle strength and severity of wrinkles.
                     </p>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -719,7 +742,7 @@ const CrowsFeetBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Best Treatments for Crow's Feet Beyond Botox</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                We have a range of effective crows feet wrinkles treatment options to achieve smoother, more youthful eyes alongside botox for the feet area. Combining treatments delivers superior before after crows feet transformations.
+                We have a range of effective crows feet wrinkles treatment options to achieve smoother, more youthful eyes alongside botox for the feet area. Combining treatments delivers superior before after crows feet transformations. Learn more about <Link to="/cosmetalk-blog" className="text-purple-300 hover:text-purple-200 underline">advanced aesthetic techniques</Link> on our blog.
               </p>
             </motion.div>
 
@@ -754,7 +777,7 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      Combining botox crow's feet with dermal fillers offers comprehensive what is crow's feet treatment. Botox reduces muscle activity causing the lines, whilst fillers add volume to deep-set wrinkles, resulting in smoother eye contour. This approach is also effective when paired with <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines treatment</Link> for complete upper face rejuvenation.
+                      Combining botox crow's feet with dermal fillers offers comprehensive what is crow's feet treatment. Botox reduces muscle activity causing the lines, whilst fillers add volume to deep-set wrinkles, resulting in smoother eye contour. This approach is also effective when paired with <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines treatment</Link> for complete upper face rejuvenation. Read about <Link to="/long-term-aesthetic-care-blog" className="text-purple-300 hover:text-purple-200 underline">long-term aesthetic maintenance</Link> strategies.
                     </p>
                   </CardContent>
                 </Card>
