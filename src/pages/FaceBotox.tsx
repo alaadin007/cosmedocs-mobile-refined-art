@@ -363,45 +363,69 @@ export default function FaceBotox() {
         </div>
 
         {/* Hero Section */}
-        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black"></div>
+          
           <div className="page-container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-left"
               >
-                <div className="mb-4 italic text-gray-400 text-sm">
-                  "The best botox I've ever had – natural results every time" – Verified Patient
+                <div className="mb-4 inline-block">
+                  <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
+                    Best Botox London | Harley Street
+                  </span>
                 </div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Best Botox London</span>
-                  <span className="block text-3xl mt-4">Harley Street | 3 Areas £350</span>
-                </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  Looking for <strong>where to get botox</strong> in London? Cosmedocs is the <strong>best botox clinic London</strong> on Harley Street. 
-                  Expert baby botox London treatments with natural results. <strong>How much is botox?</strong> From £175 per area with transparent <strong>botox London prices</strong>.
-                </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                  Face Botox London
+                  <span className="block text-purple-300 mt-2">3 Areas £350</span>
+                </h1>
+                
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Looking for <strong className="text-white">where to get botox</strong> in London? Cosmedocs is the <strong className="text-white">best botox clinic London</strong> on Harley Street. 
+                  Expert <strong className="text-white">baby botox London</strong> treatments with natural results. <strong className="text-white">How much is botox?</strong> From £175 per area with transparent <strong className="text-white">botox London prices</strong>.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                   <Button 
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
+                    size="lg"
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-8"
                     onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                   >
-                    Book Consultation
+                    Book Free Consultation
                   </Button>
                   <Button 
+                    size="lg"
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
-                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-black px-8"
+                    onClick={() => window.location.href = 'tel:03330551503'}
                   >
-                    View Price List
+                    Call 0333 0551 503
                   </Button>
                 </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">£175</div>
+                    <div className="text-sm text-gray-400">Starting Price</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">15 min</div>
+                    <div className="text-sm text-gray-400">Treatment Time</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">4-6 mo</div>
+                    <div className="text-sm text-gray-400">Results Last</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-300 mb-2">1M+</div>
+                    <div className="text-sm text-gray-400">Treatments</div>
+                  </div>
+                </div>
               </motion.div>
-              
-              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
