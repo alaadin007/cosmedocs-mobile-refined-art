@@ -498,18 +498,19 @@ const Treatments = () => {
       title: "DERMATOLOGY SERVICES",
       subtitle: "Medical and aesthetic dermatology",
       description: "Our qualified dermatologists provide comprehensive skin health services, treating both medical conditions and aesthetic concerns with evidence-based treatments for optimal skin health.",
-      items: [
+      consultationItems: [
         {
           title: "DERMATOLOGY CONSULTATION",
           price: "£200",
           description: "Comprehensive skin health assessment and treatment planning"
         },
         {
-          title: "MOLE & SKIN TAG REMOVAL",
-          price: "From £150",
-          description: "Safe removal of benign skin lesions",
-          link: "/mole-skin-tag-removal"
-        },
+          title: "SKIN CANCER SCREENING",
+          price: "£300",
+          description: "Comprehensive skin cancer detection and monitoring"
+        }
+      ],
+      medicalItems: [
         {
           title: "ACNE TREATMENT",
           price: "From £250",
@@ -529,20 +530,29 @@ const Treatments = () => {
           link: "/psoriasis-treatment"
         },
         {
+          title: "ROSACEA TREATMENT",
+          price: "From £200",
+          description: "Management of rosacea and facial redness"
+        }
+      ],
+      cosmeticItems: [
+        {
+          title: "MOLE & SKIN TAG REMOVAL",
+          price: "From £150",
+          description: "Safe removal of benign skin lesions",
+          link: "/mole-skin-tag-removal"
+        },
+        {
+          title: "SKIN TAG REMOVAL",
+          price: "£100 FOR 5 TAGS",
+          description: "Safe removal of skin tags",
+          link: "/mole-skin-tag-removal"
+        },
+        {
           title: "HYPERPIGMENTATION TREATMENT",
           price: "From £300",
           description: "Treatment for dark spots and uneven skin tone",
           link: "/hyperpigmentation-treatment"
-        },
-        {
-          title: "SKIN CANCER SCREENING",
-          price: "£300",
-          description: "Comprehensive skin cancer detection and monitoring"
-        },
-        {
-          title: "ROSACEA TREATMENT",
-          price: "From £200",
-          description: "Management of rosacea and facial redness"
         },
         {
           title: "FACIAL THREAD VEINS",
@@ -557,23 +567,19 @@ const Treatments = () => {
           link: "/thread-veins"
         },
         {
-          title: "SKIN TAG REMOVAL",
-          price: "£100 FOR 5 TAGS",
-          description: "Safe removal of skin tags",
-          link: "/mole-skin-tag-removal"
+          title: "IPL/LASER HAIR REMOVAL",
+          price: "POC",
+          description: "IPL and laser hair removal treatments",
+          link: "/laser-hair-removal"
         },
         {
           title: "SEMI PERMANENT MAKEUP",
           price: "POC",
           description: "Semi-permanent makeup services",
           link: "/semi-permanent-makeup"
-        },
-        {
-          title: "IPL/LASER HAIR REMOVAL",
-          price: "POC",
-          description: "IPL and laser hair removal treatments",
-          link: "/laser-hair-removal"
-        },
+        }
+      ],
+      specialistItems: [
         {
           title: "PRESCRIPTION SKINCARE",
           price: "From £100",
@@ -1074,17 +1080,126 @@ const Treatments = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold mb-2">{treatments.dermatology.title}</h2>
+              <h2 className="text-2xl font-bold mb-2 text-amber-400">{treatments.dermatology.title}</h2>
               <p className="text-gray-400 mb-6">{treatments.dermatology.subtitle}</p>
               <p className="text-gray-300 mb-6">{treatments.dermatology.description}</p>
               
+              {/* Consultations & Screening Section */}
               <div className="mt-8">
-                {treatments.dermatology.items.map((item, index) => (
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">CONSULTATIONS & SCREENING</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.dermatology.consultationItems.map((item, index) => (
                   <Card key={index} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
                       <div className="flex justify-between items-start">
                         <div>
-                          <h3 className="font-semibold">{item.title}</h3>
+                          <h4 className="font-semibold">{item.title}</h4>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                        </div>
+                      </div>
+                      {'link' in item && item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Medical Dermatology Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">MEDICAL DERMATOLOGY</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.dermatology.medicalItems.map((item, index) => (
+                  <Card key={index} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{item.title}</h4>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                        </div>
+                      </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Cosmetic Dermatology Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">COSMETIC DERMATOLOGY</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.dermatology.cosmeticItems.map((item, index) => (
+                  <Card key={index} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{item.title}</h4>
+                          {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
+                        </div>
+                        <div className="text-right">
+                          <p className="font-bold">{item.price}</p>
+                        </div>
+                      </div>
+                      {item.link && (
+                        <div className="mt-2 text-right">
+                          <Link to={item.link}>
+                            <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                              Learn more →
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Specialist Services Section */}
+              <div className="mt-12">
+                <div className="flex items-center mb-6">
+                  <div className="flex-1 h-px bg-gradient-to-r from-amber-400/50 to-amber-600/50"></div>
+                  <h3 className="text-xl font-bold text-amber-400 px-6">SPECIALIST SERVICES</h3>
+                  <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
+                </div>
+                
+                {treatments.dermatology.specialistItems.map((item, index) => (
+                  <Card key={index} className="mb-4 bg-accent text-white border-0">
+                    <CardContent className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">{item.title}</h4>
                           {item.description && <p className="text-sm text-gray-400">{item.description}</p>}
                         </div>
                         <div className="text-right">
