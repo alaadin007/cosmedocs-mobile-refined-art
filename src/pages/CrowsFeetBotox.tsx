@@ -742,7 +742,7 @@ const CrowsFeetBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Best Treatments for Crow's Feet Beyond Botox</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                We have a range of effective crows feet wrinkles treatment options to achieve smoother, more youthful eyes alongside botox for the feet area. Combining treatments delivers superior before after crows feet transformations. Learn more about <Link to="/cosmetalk-blog" className="text-purple-300 hover:text-purple-200 underline">advanced aesthetic techniques</Link> on our blog.
+                We have a range of effective crows feet wrinkles treatment options to achieve smoother, more youthful eyes alongside botox for the feet area. Combining treatments delivers superior before after crows feet transformations.
               </p>
             </motion.div>
 
@@ -777,7 +777,7 @@ const CrowsFeetBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      Combining botox crow's feet with dermal fillers offers comprehensive what is crow's feet treatment. Botox reduces muscle activity causing the lines, whilst fillers add volume to deep-set wrinkles, resulting in smoother eye contour. This approach is also effective when paired with <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines treatment</Link> for complete upper face rejuvenation. Read about <Link to="/long-term-aesthetic-care-blog" className="text-purple-300 hover:text-purple-200 underline">long-term aesthetic maintenance</Link> strategies.
+                      Combining botox crow's feet with dermal fillers offers comprehensive what is crow's feet treatment. Botox reduces muscle activity causing the lines, whilst fillers add volume to deep-set wrinkles, resulting in smoother eye contour. This approach is also effective when paired with <Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines treatment</Link> for complete upper face rejuvenation.
                     </p>
                   </CardContent>
                 </Card>
