@@ -1278,37 +1278,36 @@ export default function FaceBotox() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-purple-900/20">
-          <div className="page-container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready for Comprehensive Face Botox?</h2>
-              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                Transform your entire face with our expert comprehensive Botox treatments. 
-                From upper face to lower face areas and advanced combination techniques.
+        <section className="py-20">
+          <div className="page-container text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready for Natural, Youthful Results?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how comprehensive face botox 
+                can enhance your natural beauty with subtle, sophisticated results that speak without words.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  size="lg" 
-                  className="bg-purple-300 text-black hover:bg-purple-200 px-8 py-4 text-lg font-semibold"
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
                   onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
                 >
-                  Book Your Consultation
+                  Book Free Consultation
                 </Button>
                 <Button 
-                  size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold"
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                  onClick={() => window.location.href = 'tel:03330551503'}
                 >
-                  View Price List
+                  Call 0333 0551 503
                 </Button>
               </div>
-              <div className="mt-8 text-center">
-                <div className="inline-flex items-center gap-2 text-sm text-gray-400">
-                  <Eye className="h-4 w-4" />
-                  <span>Bold • Natural • Always Your Way</span>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
