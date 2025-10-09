@@ -732,7 +732,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      Combining botox for 11 lines with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> offers a comprehensive approach to remove frown lines. Botox reduces muscle activity causing the eleven lines, whilst fillers add volume to deep-set lines, resulting in smoother, more youthful skin with superior before and after results. This combination approach is also effective when paired with treatments like the <Link to="/nefertiti-botox-face-jaw-lift" className="text-purple-300 hover:text-purple-200 underline">Nefertiti lift</Link> for complete facial rejuvenation.
+                      Combining botox for 11 lines with dermal fillers offers a comprehensive approach to remove frown lines. Botox reduces muscle activity causing the eleven lines, whilst fillers add volume to deep-set lines, resulting in smoother, more youthful skin with superior before and after results. This combination approach is also effective when paired with treatments like the <Link to="/nefertiti-botox-face-jaw-lift" className="text-purple-300 hover:text-purple-200 underline">Nefertiti lift</Link> for complete facial rejuvenation.
                     </p>
                   </CardContent>
                 </Card>
