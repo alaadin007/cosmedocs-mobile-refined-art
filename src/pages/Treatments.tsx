@@ -122,12 +122,6 @@ const Treatments = () => {
           link: "/face-botox-areas"
         },
         {
-          title: "Dermal Filler For Deep Lines",
-          price: "£200",
-          description: "When complimenting with Botox Treatment",
-          link: "/dermal-fillers"
-        },
-        {
           title: "Migraine Botox / Headaches",
           price: "£450-550",
           link: "/migraine-botox"
