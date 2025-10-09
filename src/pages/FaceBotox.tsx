@@ -15,46 +15,145 @@ import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check, Activity, Syringe, GraduationCap, Palette, Brain, Droplets, RefreshCw, User, Sparkles } from "lucide-react";
 import PopularTreatments from '@/components/PopularTreatments';
 import ClientReviews from '@/components/ClientReviews';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function FaceBotox() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const seoData = generateSEOMetadata(
-    "Face Botox London | Comprehensive Treatment Guide | Cosmedocs",
-    "Complete face botox treatment including forehead, frown lines, crow's feet, lower face areas and advanced techniques. Expert practitioners on Harley Street since 2007.",
+    "Best Botox London Harley Street | 3 Areas £350 | Face Botox",
+    "Looking for where to get botox in London? Best botox London clinic on Harley Street. 3 areas of botox cost £350. Expert baby botox London treatments. Book your free consultation.",
     "/face-botox"
   );
 
-  const jsonLd = {
+  const medicalBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Cosmedocs",
+    "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+    "url": "https://www.cosmedocs.co.uk",
+    "telephone": "+443330551503",
+    "priceRange": "£175-£350",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "37 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 8QD",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5194,
+      "longitude": -0.1488
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  };
+
+  const medicalProcedureSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
-    "name": "Comprehensive Face Botox Treatment",
-    "alternateName": ["Anti-Wrinkle Injections", "Botulinum Toxin", "Facial Botox", "Upper Face Botox", "Lower Face Botox"],
-    "description": "Professional comprehensive face botox treatment including upper face, lower face areas and advanced combination techniques.",
+    "name": "Face Botox Treatment London",
+    "alternateName": ["Anti-Wrinkle Injections", "Botulinum Toxin", "Baby Botox London", "Botox Harley Street"],
+    "description": "Professional face botox treatment in London including forehead, frown lines, crow's feet, lower face areas and advanced combination techniques. Best botox London prices from £175.",
+    "procedureType": "Cosmetic",
+    "bodyLocation": "Face",
+    "preparation": "Avoid blood thinners and alcohol 24 hours before treatment",
+    "followup": "2-week follow-up assessment",
+    "howPerformed": "Precision injection of botulinum toxin into targeted facial muscles using ultra-fine needles",
     "provider": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.com",
+      "url": "https://www.cosmedocs.co.uk",
+      "telephone": "+443330551503",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "37 Harley Street",
         "addressLocality": "London",
-        "addressRegion": "London",
         "postalCode": "W1G 8QD",
         "addressCountry": "GB"
       }
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "175",
-      "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock"
-    },
-    "procedure": {
-      "@type": "MedicalProcedure",
-      "name": "Botox Injection",
-      "duration": "PT30M"
     }
+  };
+
+  const offerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "name": "Face Botox Treatment London",
+    "description": "Comprehensive face botox treatment - 1 area £175, 2 areas £275, 3 areas of botox price £350",
+    "price": "175",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.cosmedocs.co.uk/face-botox",
+    "priceValidUntil": "2025-12-31",
+    "seller": {
+      "@type": "MedicalOrganization",
+      "name": "Cosmedocs"
+    },
+    "itemOffered": {
+      "@type": "MedicalProcedure",
+      "name": "Face Botox Treatment"
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much is Botox in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Botox London treatment prices at Cosmedocs Harley Street start from £175 for one area, £275 for two areas, and £350 for three areas. The cost of botox UK varies by clinic and practitioner experience, but we offer transparent pricing with no hidden costs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where to get botox in London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cosmedocs offers the best botox London on Harley Street. Our clinic specialises in natural-looking face botox treatments with expert practitioners who have performed over 1 million injections since 2007. We're located at 37 Harley Street, London W1G 8QD."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Botox safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Botox is approved by the Food & Drug Administration in the US and the UK (MHRA). As a muscle relaxant with an extensive record of application in medicine, botulinum toxin has an outstanding safety record over 40 years when performed by trained physicians."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Botox hurt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Botox injections are usually not painful. At Cosmedocs, we use the smallest 'invisible needles' in the industry combined with numbing cream, making the injection feel like a mosquito bite."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take for Botox to work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The full effects of botox treatment typically take up to 14 days to show and can last for four to six months. Various factors may affect the timeframe including treatment area, muscle thickness, and botox dosage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 3 areas of botox cost UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 3 areas of botox cost at Cosmedocs is £350, covering forehead lines, frown lines, and crow's feet. This represents excellent value for comprehensive upper face treatment with our expert practitioners."
+        }
+      }
+    ]
   };
 
   // Combined treatment areas from all pages
@@ -171,17 +270,17 @@ export default function FaceBotox() {
   const beforeAfterImages = [
     {
       src: "/lovable-uploads/d610e5f1-30da-4a26-b87c-a7c38162811f.png",
-      alt: "Before and after frown lines botox treatment",
+      alt: "Best botox London before and after results for frown lines at Cosmedocs Harley Street clinic",
       caption: "Frown Lines Treatment: Smooth, natural results with our precision Botox technique."
     },
     {
       src: "/lovable-uploads/35a418d0-b5b2-4c2c-864c-a3546681613f.png", 
-      alt: "Before and after forehead lines botox treatment",
+      alt: "Botox London prices - forehead lines before and after treatment at best botox clinic London",
       caption: "Forehead Lines Treatment: Gentle smoothing while maintaining natural movement."
     },
     {
       src: "/lovable-uploads/4fc6cbae-9029-4158-bc6e-1e30f20ac5a3.png",
-      alt: "Before and after gummy smile botox treatment", 
+      alt: "Baby botox London results - gummy smile treatment before and after at Harley Street", 
       caption: "Gummy Smile Treatment: Delicate enhancement for a perfect smile."
     }
   ];
@@ -225,23 +324,44 @@ export default function FaceBotox() {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:url" content={seoData.canonical} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
-        <meta name="keywords" content="face botox london, anti-wrinkle injections, botox harley street, forehead botox, crow's feet botox, frown lines botox, facial rejuvenation, cosmetic botox, comprehensive face botox, lower face botox, advanced botox" />
+        <meta name="keywords" content="best botox london, botox in harley street, botox london harley street, cost of botox uk, baby botox london, how much is botox uk, botox in london, 3 areas of botox price, where to get botox, botox london prices, botox cost london, how much does botox cost, best botox in london, botox clinic london, face botox london" />
         <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
+          {JSON.stringify(medicalBusinessSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(medicalProcedureSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(offerSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb */}
+        <div className="page-container pt-20">
+          <Breadcrumb 
+            items={[
+              { label: 'Treatments', path: '/treatments' }
+            ]}
+            currentPage="Face Botox London"
+          />
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -256,13 +376,12 @@ export default function FaceBotox() {
                   "The best botox I've ever had – natural results every time" – Verified Patient
                 </div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Botox London</span>
-                  <span className="block text-sm mt-4">Face botox treatments for natural, lasting results</span>
+                  <span className="text-purple-300">Best Botox London</span>
+                  <span className="block text-3xl mt-4">Harley Street | 3 Areas £350</span>
                 </h1>
                 <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                  <span className="text-purple-300 font-semibold">Expert Practitioners</span>
-                  <br />
-                  Professional face botox treatments for forehead, frown lines, crow's feet, and facial contouring on Harley Street
+                  Looking for <strong>where to get botox</strong> in London? Cosmedocs is the <strong>best botox clinic London</strong> on Harley Street. 
+                  Expert baby botox London treatments with natural results. <strong>How much is botox?</strong> From £175 per area with transparent <strong>botox London prices</strong>.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -297,7 +416,11 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Best Face Botox London</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Where Can You Get Botox? Best Botox in London</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto mb-8">
+                Wondering <strong>where to get botox on your face</strong>? Cosmedocs on Harley Street offers the <strong>best botox London</strong> with over 1 million treatments since 2007. 
+                Our <strong>botox in Harley Street</strong> clinic provides expert <strong>botox in London</strong> with natural results you'll love.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -372,10 +495,10 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Real Results - Before & After</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Real Botox London Results - Before & After</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See the transformation our expert doctors achieve with precision Botox treatments. 
-                Natural, beautiful results that enhance your features.
+                See why we're rated the <strong>best botox London</strong> clinic. Our <strong>botox London Harley Street</strong> doctors achieve natural, 
+                beautiful results with precision <strong>baby botox London</strong> techniques. Real patient transformations at our <strong>botox clinic London</strong>.
               </p>
             </motion.div>
 
@@ -395,6 +518,8 @@ export default function FaceBotox() {
                         alt={image.alt}
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
+                        width="400"
+                        height="256"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                       <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
@@ -430,11 +555,12 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">What is Botox?</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">What is Botox? Understanding Your Treatment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto mb-8">
-                Botox (Botulinum toxin) is a purified protein that temporarily blocks nerve signals to muscles, 
-                causing them to relax. This FDA-approved treatment has been safely used for both medical and 
-                cosmetic purposes for over 30 years.
+                <strong>Botox</strong> (Botulinum toxin) is a purified protein that temporarily blocks nerve signals to muscles, 
+                causing them to relax. This <a href="https://www.fda.gov/consumers/consumer-updates/wrinkle-treatments-and-other-cosmetic-procedures" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA-approved treatment</a> has been safely used for both medical and 
+                cosmetic purposes for over 30 years. According to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5300732/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">research published in the National Institutes of Health</a>, 
+                botulinum toxin is one of the most effective treatments for facial rejuvenation with an excellent safety profile when administered by qualified practitioners.
               </p>
             </motion.div>
 
@@ -448,10 +574,11 @@ export default function FaceBotox() {
               >
                 <Card className="bg-gray-900/50 border-purple-500">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-6 text-white text-center">Botox for Men</h3>
+                    <h3 className="text-2xl font-bold mb-6 text-white text-center">Botox for Men in London</h3>
                     <p className="text-gray-300 mb-6 text-center">
-                      Male Botox treatments have grown dramatically as men seek natural, professional-looking results. 
-                      Our approach for men focuses on subtle enhancement that maintains masculine features.
+                      Men increasingly choose <strong>botox in London</strong> for natural, professional results. Our <strong>botox London best</strong> techniques 
+                      for men maintain masculine features whilst reducing lines. According to the <a href="https://www.plasticsurgery.org/news/press-releases/new-statistics-reveal-the-shape-of-plastic-surgery" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">American Society of Plastic Surgeons</a>, 
+                      male botox treatments have increased over 400% since 2010.
                     </p>
                     
                     {/* Statistics */}
@@ -586,9 +713,11 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Natural Baby Botox: Subtle Enhancement</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Baby Botox London: Subtle Enhancement</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Microtox, or Baby Botox, employs meticulous microneedle injections with small doses of botulinum toxin for a gentle, natural anti-ageing outcome.
+                <strong>Baby botox London</strong> (Microtox) employs meticulous microneedle injections with small doses of botulinum toxin for a gentle, 
+                natural anti-ageing outcome. This is the <strong>best botox in London</strong> technique for those wanting subtle results. Our <strong>botox in Harley Street</strong> clinic 
+                specialises in this refined approach for natural-looking enhancement.
               </p>
             </motion.div>
             
@@ -860,10 +989,12 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Face Botox Pricing</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox London Prices | How Much Does Botox Cost?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Transparent pricing for all facial areas with no hidden costs. All prices include consultation, 
-                treatment, and aftercare support from our expert medical team.
+                <strong>How much is botox UK?</strong> Our <strong>botox cost London</strong> is transparent with no hidden fees. <strong>Cost of botox UK</strong> at our 
+                <strong> botox in Harley Street</strong> clinic: 1 area £175, 2 areas £275, <strong>3 areas of botox price</strong> £350. 
+                All <strong>botox London prices</strong> include consultation, treatment, and aftercare from expert doctors. Discover <strong>how much does botox cost</strong> 
+                at London's leading <strong>botox clinic London</strong>.
               </p>
             </motion.div>
 
@@ -947,9 +1078,10 @@ export default function FaceBotox() {
                   <CardHeader>
                     <CardTitle className="text-white text-2xl">3 Areas</CardTitle>
                     <div className="text-purple-300 text-4xl font-bold">£350</div>
+                    <p className="text-sm text-gray-400">3 areas of botox cost UK</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300">Complete upper face treatment for maximum results</p>
+                    <p className="text-gray-300">Complete upper face treatment for maximum results - forehead, frown lines, and crow's feet</p>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="text-purple-500" size={16} />
@@ -1041,16 +1173,16 @@ export default function FaceBotox() {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Botox Training London</h3>
                 <p className="text-gray-300">
-                  <a 
+                  <strong>Botox courses London</strong> - We train practitioners at the <a 
                     href="https://www.harleystreetinstitute.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-300 hover:text-purple-200 underline"
                   >
                     Harley Street Institute
-                  </a> trainers
+                  </a>. <strong>Botox training London</strong> by experts.
                 </p>
               </motion.div>
 
@@ -1183,9 +1315,9 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox London FAQs | Where to Get Botox</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Common questions about Botox treatments answered by our expert practitioners.
+                Your questions about <strong>where can you get botox</strong>, <strong>how much is botox</strong>, and <strong>botox in London</strong> answered by expert practitioners.
               </p>
             </motion.div>
             
@@ -1194,14 +1326,20 @@ export default function FaceBotox() {
                 <AccordionItem value="safety" className="border-gray-700">
                   <AccordionTrigger className="text-white hover:text-purple-300">Is Botox safe?</AccordionTrigger>
                   <AccordionContent className="text-gray-300">
-                    Botox is approved by the Food & Drug Administration in the US and the UK (MHRA). As a muscle relaxant with an extensive record of application in medicine, botulinum toxin BOTOX has an outstanding safety record. It has been used successfully for young and mature patients in various medical conditions throughout the past 40 years. To ensure successful and safe results from your Botox treatments, they must be performed by trained physicians.
+                    <strong>Botox</strong> is approved by the <a href="https://www.fda.gov/consumers/consumer-updates/wrinkle-treatments-and-other-cosmetic-procedures" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Food & Drug Administration</a> in the US and the UK (MHRA). 
+                    As a muscle relaxant with an extensive record of application in medicine, botulinum toxin has an outstanding safety record. 
+                    According to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5300732/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinical research</a>, 
+                    it has been used successfully for various medical and cosmetic conditions throughout the past 40 years. To ensure successful and safe results 
+                    from <strong>botox in London</strong> treatments, they must be performed by trained physicians at reputable clinics like our <strong>botox in Harley Street</strong> facility.
                   </AccordionContent>
                 </AccordionItem>
                 
                 <AccordionItem value="pain" className="border-gray-700">
-                  <AccordionTrigger className="text-white hover:text-purple-300">Does Botox hurt?</AccordionTrigger>
+                  <AccordionTrigger className="text-white hover:text-purple-300">Does Botox hurt at the best botox London clinic?</AccordionTrigger>
                   <AccordionContent className="text-gray-300">
-                    Botox injections are usually not painful. Many patients report experiencing no discomfort during the procedure. At CosmeDocs, the doctors use the smallest needles in the industry, known as "invisible needles," for London Botox to minimise discomfort. When combined with the application of a numbing cream, most patients report that the injection during the procedure feels like a mosquito bite.
+                    <strong>Botox injections</strong> are usually not painful. Many patients at our <strong>botox clinic London</strong> report experiencing no discomfort during the procedure. 
+                    At Cosmedocs, our doctors use the smallest needles in the industry, known as "invisible needles," for <strong>botox London</strong> treatments to minimise discomfort. 
+                    When combined with numbing cream, most patients at our <strong>best botox in London</strong> clinic report that the injection feels like a mosquito bite.
                   </AccordionContent>
                 </AccordionItem>
                 
@@ -1227,9 +1365,21 @@ export default function FaceBotox() {
                 </AccordionItem>
                 
                 <AccordionItem value="cost" className="border-gray-700">
-                  <AccordionTrigger className="text-white hover:text-purple-300">How much is Botox in London?</AccordionTrigger>
+                  <AccordionTrigger className="text-white hover:text-purple-300">How much is Botox in London? Botox cost London</AccordionTrigger>
                   <AccordionContent className="text-gray-300">
-                    Botox London treatment prices vary depending on the practitioner's experience. At CosmeDocs Harley Street Clinic in London, Botox costs start from £175 for one area, £275 for two areas, and £350 for three areas.
+                    <strong>How much is botox UK?</strong> <strong>Botox London treatment prices</strong> vary depending on the practitioner's experience and location. 
+                    At Cosmedocs <strong>botox in Harley Street</strong> clinic, <strong>botox cost London</strong> starts from £175 for one area, £275 for two areas, 
+                    and <strong>3 areas of botox cost UK</strong> is £350. These <strong>botox London prices</strong> are competitive for the <strong>best botox London</strong> quality. 
+                    <strong>How much does botox cost</strong> includes consultation, treatment, and aftercare at our <strong>botox clinic London</strong>.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="location" className="border-gray-700">
+                  <AccordionTrigger className="text-white hover:text-purple-300">Where to get botox on your face in London?</AccordionTrigger>
+                  <AccordionContent className="text-gray-300">
+                    <strong>Where can you get botox</strong> in London? Cosmedocs offers the <strong>best botox in London</strong> at our <strong>botox London Harley Street</strong> clinic 
+                    at 37 Harley Street, London W1G 8QD. Our <strong>botox clinic London</strong> specialises in <strong>where to get botox on your face</strong> safely with expert doctors. 
+                    We're the leading choice for <strong>botox in London</strong> with over 1 million treatments performed. Book your free consultation to discover <strong>where to get botox</strong> from London's most trusted practitioners.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -1241,18 +1391,19 @@ export default function FaceBotox() {
         <section className="py-20 bg-accent">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-white">Professional Training Available</h2>
-              <p className="text-gray-300">Learn advanced face Botox techniques from our experts</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox Courses London | Botox Training</h2>
+              <p className="text-gray-300">Learn advanced face Botox techniques from our experts. <strong>Botox courses in London</strong> and <strong>botox training London</strong> by industry leaders.</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-gray-900/50 border-gray-700">
                 <CardContent className="p-6">
                   <BookOpen className="h-8 w-8 text-purple-300 mb-4" />
-                  <h3 className="text-xl font-semibold mb-4 text-white">Online Courses</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-white">Botox Courses in London - Online</h3>
                   <p className="text-gray-300 mb-4">
-                    For medical professionals practicing dermal fillers and Botox, we offer comprehensive 
-                    online courses through harleystreetinstitute.com
+                    For medical professionals seeking <strong>botox training London</strong>, we offer comprehensive 
+                    <strong>botox courses London</strong> through <a href="https://www.harleystreetinstitute.com" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">harleystreetinstitute.com</a>. 
+                    Learn from the team behind the <strong>best botox London</strong> clinic.
                   </p>
                   <Button variant="outline" className="w-full border-purple-300 text-purple-300 hover:bg-purple-300 hover:text-black">
                     Learn More About Online Training
@@ -1287,10 +1438,11 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready for Natural, Youthful Results?</h2>
+              <h2 className="text-3xl font-bold mb-4">Book the Best Botox London | Harley Street</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how comprehensive face botox 
-                can enhance your natural beauty with subtle, sophisticated results that speak without words.
+                Ready to experience <strong>best botox in London</strong>? Book your free consultation at our <strong>botox London Harley Street</strong> clinic. 
+                Discover why patients choose us when searching for <strong>where to get botox</strong> in London. Expert <strong>baby botox London</strong> treatments with natural, 
+                sophisticated results. Call us today for competitive <strong>botox London prices</strong>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -1316,9 +1468,47 @@ export default function FaceBotox() {
 
         {/* Hidden SEO Content */}
         <div className="sr-only" aria-hidden="true">
-          <h2>Comprehensive Face Botox Treatment London Birmingham Manchester Cardiff</h2>
+          <h2>Best Botox London | Botox in Harley Street | Cost of Botox UK Guide</h2>
           <p>
-            Comprehensive Face Botox treatment at Cosmedocs London offers professional wrinkle reduction for all facial areas including forehead lines, frown lines, crow's feet, lower face areas, and advanced combination treatments. Our expert practitioners on Harley Street have performed over 1 million injections since 2007, delivering natural-looking results through our invisible art philosophy. Face Botox treatment costs £175-£350 for 1-3 areas with transparent pricing structure and £50 supplement for men. Results take 5-10 days to develop and last 4-6 months for standard treatments, up to 18-24 months for advanced combination treatments. The treatment takes less than 5 minutes with comprehensive consultation process. We use premium Botox products including Azzalure and Dysport and follow strict safety protocols to ensure optimal outcomes. Our consultation process includes detailed facial assessment, treatment planning, and aftercare guidance. Cosmedocs specializes in subtle enhancement that preserves natural facial expressions while reducing unwanted lines and wrinkles. We offer comprehensive treatments including upper face areas (forehead lines, frown lines, crow's feet, brow lift), lower face areas (DAO muscle depressor anguli oris, mentalis crease, platysma muscle, jawline definition), and advanced combination treatments with dermal fillers for deep wrinkles. Advanced upper face treatments combine Botox with dermal fillers for superior results lasting 18-24 months using strategic filler placement and advanced cross-linking technology. Lower face treatments address facial imbalance and create harmony between upper and lower facial animation, targeting specific muscle groups for comprehensive rejuvenation. Additional facial areas include chin Botox, Nefertiti facelift, masseter jaw slimming, lip flip, gummy smile, and bunny lines treatments with specialized pricing and techniques. Professional training available through Harley Street Institute for medical professionals including online courses and one-to-one training sessions. Book your consultation today at our Harley Street clinic for expert comprehensive face Botox treatment in London. Contact us at 0333 0551 503 or info@cosmedocs.com for more information about our complete face Botox treatment options and pricing.
+            Looking for where to get botox in London? Cosmedocs is the best botox London clinic on Harley Street offering comprehensive face botox treatment for all facial areas. 
+            Our botox in Harley Street clinic provides expert botox in London with natural results. How much is botox UK? Our transparent botox London prices start from £175 for one area, 
+            £275 for two areas, and the 3 areas of botox price is £350. The cost of botox UK at our botox clinic London includes consultation, treatment, and aftercare. 
+            How much does botox cost? Our competitive botox cost London represents excellent value for the best botox in London quality. We specialise in baby botox London techniques 
+            for subtle, natural enhancement. Where can you get botox safely? Our botox London Harley Street clinic at 37 Harley Street has performed over 1 million injections since 2007. 
+            The best botox London practitioners deliver invisible art philosophy results. Botox London best describes our approach - natural-looking outcomes that preserve facial expression. 
+            Where to get botox on your face? We treat forehead lines, frown lines, crow's feet, lower face areas, chin, jawline, and more. Our botox in London prices include free consultation 
+            and follow-up. The 3 areas of botox cost UK covers complete upper face treatment. How much is botox? Prices vary by practitioner experience - our expert doctors ensure optimal 
+            results. Baby botox London is perfect for those wanting subtle enhancement. Our botox clinic London uses premium FDA-approved products with strict safety protocols. 
+            Botox London prices are transparent with no hidden costs. The cost of botox UK depends on treatment areas and practitioner expertise. Where to get botox in London safely? 
+            Choose our CQC-registered botox in Harley Street clinic. How much does botox cost for men? Additional £50 for higher dosage requirements. Best botox in London combines 
+            advanced technique, premium products, and expert practitioners. Our botox London Harley Street location is easily accessible with excellent facilities. 
+            Botox training London available through Harley Street Institute - we offer botox courses London and botox courses in London for medical professionals. 
+            Book your consultation today at the best botox London clinic. Contact us at 0333 0551 503 to discuss where can you get botox safely in London. 
+            Our botox London best team provides personalised treatment plans. Visit our botox clinic London for expert advice on cost of botox UK and treatment options. 
+            Discover why patients choose us when searching for where to get botox on your face in London. Experience baby botox London at its finest with natural, 
+            sophisticated results that speak without words. Our botox in London service includes comprehensive aftercare and support. The botox cost London reflects 
+            our commitment to excellence and patient satisfaction. Learn more about botox London prices and book your free consultation at London's premier 
+            botox in Harley Street clinic today.
+          </p>
+          
+          <h3>Botox Treatment Areas London | Where to Get Botox on Your Face</h3>
+          <p>
+            Our best botox London clinic treats all facial areas: upper face botox (forehead lines, frown lines, crow's feet, brow lift), lower face botox 
+            (DAO muscle, mentalis crease, platysma muscle, jawline definition), and specialised areas (chin botox, Nefertiti facelift, masseter jaw slimming, 
+            lip flip, gummy smile, bunny lines). Baby botox London technique available for subtle enhancement. All botox in London treatments include consultation.
+          </p>
+          
+          <h3>Botox London Prices | Cost of Botox UK | How Much Does Botox Cost</h3>
+          <p>
+            Transparent botox cost London: 1 area £175, 2 areas £275, 3 areas of botox cost UK £350. How much is botox UK? Our competitive botox London prices 
+            include consultation, treatment, and aftercare. Men's treatments +£50. Best botox in London value at our botox clinic London.
+          </p>
+          
+          <h3>Why Choose Our Botox in Harley Street Clinic</h3>
+          <p>
+            Cosmedocs offers the best botox London with expert practitioners, over 1 million treatments performed, premium products, invisible art philosophy, 
+            and comprehensive aftercare. Our botox London Harley Street clinic is CQC-registered ensuring highest safety standards. Experience why we're rated 
+            the best botox in London by patients searching for where to get botox safely.
           </p>
         </div>
 
