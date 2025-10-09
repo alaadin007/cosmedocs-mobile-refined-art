@@ -61,34 +61,6 @@ export default function Header() {
       title: "Get in Touch",
       options: [
         {
-          icon: Sparkles,
-          label: "AI Aesthetic Intelligence",
-          action: () => window.location.href = "/aesthetic-intelligence",
-          subtitle: "Product analysis tool"
-        },
-        {
-          icon: Sparkles,
-          label: "AI Aesthetic Analysis",
-          action: () => setIsAnalysisOpen(true)
-        },
-        {
-          icon: MessageSquare,
-          label: "WhatsApp",
-          action: () => window.open(whatsappUrl, "_blank"),
-          subtitle: "+44 7735 606447"
-        },
-        {
-          icon: Search,
-          label: "Chat With Our AI CosmeDoc",
-          action: () => setIsSearchOpen(true)
-        },
-        {
-          icon: Mail,
-          label: "Email Us",
-          action: () => window.open("mailto:info@cosmedocs.com", "_blank"),
-          subtitle: "info@cosmedocs.com"
-        },
-        {
           icon: Phone,
           label: "Call Us - Clinic 1",
           action: () => window.open("tel:+443330551503", "_blank"),
@@ -100,6 +72,44 @@ export default function Header() {
           action: () => window.open("tel:+448008600178", "_blank"),
           subtitle: "0800 8600 178"
         },
+        {
+          icon: MessageSquare,
+          label: "WhatsApp",
+          action: () => window.open(whatsappUrl, "_blank"),
+          subtitle: "+44 7735 606447"
+        },
+        {
+          icon: Mail,
+          label: "Email Us",
+          action: () => window.open("mailto:info@cosmedocs.com", "_blank"),
+          subtitle: "info@cosmedocs.com"
+        }
+      ]
+    },
+    {
+      title: "AI Tools",
+      options: [
+        {
+          icon: Sparkles,
+          label: "AI Aesthetic Intelligence",
+          action: () => window.location.href = "/aesthetic-intelligence",
+          subtitle: "Product analysis tool"
+        },
+        {
+          icon: Sparkles,
+          label: "AI Aesthetic Analysis",
+          action: () => setIsAnalysisOpen(true)
+        },
+        {
+          icon: Search,
+          label: "Chat With Our AI CosmeDoc",
+          action: () => setIsSearchOpen(true)
+        }
+      ]
+    },
+    {
+      title: "Social Media",
+      options: [
         {
           icon: Instagram,
           label: "Instagram",
