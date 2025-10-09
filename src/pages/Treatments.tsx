@@ -359,6 +359,7 @@ const Treatments = () => {
         {
           subtitle: "SKIN PEELING SYSTEMS",
           isSubcategory: true,
+          link: "/skin-peels",
           subitems: [
             {
               title: "1. Light Peels (no obvious flaking or dryness)",
@@ -395,6 +396,7 @@ const Treatments = () => {
         {
           subtitle: "PRP (AKA Vampire Facelift)",
           isSubcategory: true,
+          link: "/prp-treatment",
           subitems: [
             {
               title: "1 Session",
@@ -405,34 +407,6 @@ const Treatments = () => {
               price: "£1500 + Complimentary Vitamin C12% & Retinol (RRP £50)"
             }
           ]
-        },
-        {
-          title: "ACNE TREATMENT",
-          price: "POC"
-        },
-        {
-          title: "FACIAL THREAD VEINS",
-          price: "FROM £75"
-        },
-        {
-          title: "PRESCRIPTION SKIN CARE",
-          price: "POC"
-        },
-        {
-          title: "LEG VEINS / SPIDER VEINS",
-          price: "£400 PER LEG"
-        },
-        {
-          title: "SKIN TAG REMOVAL",
-          price: "£100 FOR 5 TAGS"
-        },
-        {
-          title: "SEMI PERMANENT MAKEUP",
-          price: "POC"
-        },
-        {
-          title: "IPL/LASER HAIR REMOVAL",
-          price: "POC"
         }
       ]
     },
@@ -445,13 +419,13 @@ const Treatments = () => {
           title: "PROFHILO",
           price: "£350 per session",
           description: "Bio-remodeling hyaluronic acid treatment for skin laxity and hydration",
-          hasBeforeAfter: true,
           link: "/profhilo-treatment"
         },
         {
           title: "POLYNUCLEOTIDES",
           price: "£300 per session",
-          description: "DNA-based regenerative treatment to stimulate cellular renewal"
+          description: "DNA-based regenerative treatment to stimulate cellular renewal",
+          link: "/polynucleotides"
         },
         {
           title: "REDENSITY 1",
@@ -572,6 +546,31 @@ const Treatments = () => {
           title: "ROSACEA TREATMENT",
           price: "From £200",
           description: "Management of rosacea and facial redness"
+        },
+        {
+          title: "FACIAL THREAD VEINS",
+          price: "FROM £75",
+          description: "Treatment for visible facial blood vessels"
+        },
+        {
+          title: "LEG VEINS / SPIDER VEINS",
+          price: "£400 PER LEG",
+          description: "Treatment for leg veins and spider veins"
+        },
+        {
+          title: "SKIN TAG REMOVAL",
+          price: "£100 FOR 5 TAGS",
+          description: "Safe removal of skin tags"
+        },
+        {
+          title: "SEMI PERMANENT MAKEUP",
+          price: "POC",
+          description: "Semi-permanent makeup services"
+        },
+        {
+          title: "IPL/LASER HAIR REMOVAL",
+          price: "POC",
+          description: "IPL and laser hair removal treatments"
         },
         {
           title: "PRESCRIPTION SKINCARE",
@@ -866,13 +865,6 @@ const Treatments = () => {
                         </div>
                         <div className="text-right">
                           <p className="font-bold">{item.price}</p>
-                          {item.hasBeforeAfter && (
-                            <div className="mt-1">
-                              <Button variant="link" className="p-0 h-auto text-purple-400 hover:text-purple-300 text-sm">
-                                View Results →
-                              </Button>
-                            </div>
-                          )}
                         </div>
                       </div>
                       {item.link && (
@@ -929,26 +921,6 @@ const Treatments = () => {
                           </Card>
                         ))}
                       </div>
-                    );
-                  } else {
-                    return (
-                      <Card key={index} className="mb-4 bg-accent text-white border-0">
-                        <CardContent className="p-4">
-                          <div className="flex justify-between items-center">
-                            <h3 className="font-semibold">{item.title}</h3>
-                            <p className="font-bold">{item.price}</p>
-                          </div>
-                          {'link' in item && item.link && (
-                            <div className="mt-2 text-right">
-                              <Link to={item.link}>
-                                <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                                  Learn more →
-                                </Button>
-                              </Link>
-                            </div>
-                          )}
-                        </CardContent>
-                      </Card>
                     );
                   }
                 })}
