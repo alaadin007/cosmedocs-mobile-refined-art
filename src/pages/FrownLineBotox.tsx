@@ -107,19 +107,28 @@ const FrownLineBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <html lang="en-GB" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="frown line botox London, glabellar lines treatment, botox between eyebrows, wrinkle treatment, cosmetic botox, Harley Street clinic" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="frown line botox, botox frown lines, glabellar lines botox, botox 11 lines, eleven lines botox, botox for 11 lines, 11s botox, botox on 11s, botox forehead lines, botox before after frown lines, frown lines botox before and after, remove frown lines, botox for scowl lines, Harley Street clinic London" />
+        
+        {/* MedicalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert frown line botox treatments in London",
+            "description": "Expert frown line botox and glabellar lines treatment in London",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
@@ -131,6 +140,83 @@ const FrownLineBotox = () => {
             },
             "medicalSpecialty": "Cosmetic Medicine",
             "priceRange": "££"
+          })}
+        </script>
+
+        {/* MedicalProcedure Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Frown Line Botox Treatment",
+            "alternateName": ["Glabellar Lines Botox", "11 Lines Botox", "Botox for Frown Lines"],
+            "description": "Professional botox treatment for frown lines (11 lines) and glabellar lines between eyebrows. Expert injections to smooth vertical lines and prevent wrinkle formation.",
+            "procedureType": "Cosmetic",
+            "bodyLocation": "Glabella (between eyebrows)",
+            "preparation": "Consultation and facial analysis",
+            "followup": "Results visible in 3-14 days, lasting 3-4 months"
+          })}
+        </script>
+
+        {/* Offer Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Frown Line Botox Treatment",
+            "description": "Professional frown line botox treatment at Harley Street clinic",
+            "price": "175",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+
+        {/* FAQPage Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer.replace(/<[^>]*>/g, '')
+              }
+            }))
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Frown Line Botox",
+                "item": seoData.canonical
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -147,12 +233,12 @@ const FrownLineBotox = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Frown Line Botox</span>
+                  <span className="text-purple-300">Botox for Frown Lines & 11 Lines</span>
                   <span className="block text-sm mt-4">Invisible art - smooth expression that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Glabellar Lines Treatment</p>
-                  <p className="text-sm text-gray-300">10-15 minutes • Results last 3-4 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Glabellar Lines Botox Treatment in London</p>
+                  <p className="text-sm text-gray-300">10-15 minutes • Results last 3-4 months • Natural before and after results</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -191,7 +277,7 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Frown Line Botox Treatment</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Botox for 11 Lines & Glabellar Lines Treatment</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -264,9 +350,9 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Frown Line Botox Before and After Results</h2>
+              <h2 className="text-3xl font-bold mb-4">Botox Before and After 11 Lines: Frown Lines Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See how our expert frown line botox treatments smooth glabellar lines while preserving natural facial expressions.
+                See real botox frown lines before and after results. Our expert eleven lines botox treatments smooth glabellar lines and remove frown lines whilst preserving natural facial expressions at our Harley Street London clinic.
               </p>
             </motion.div>
 
@@ -284,6 +370,9 @@ const FrownLineBotox = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
+                        width="400"
+                        height="256"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
@@ -310,10 +399,10 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">What is Frown Line Botox?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">What is Botox for 11 Lines and Frown Lines?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Frown line botox targets the corrugator and procerus muscles between your eyebrows that create vertical glabellar lines. 
-                Our invisible art approach smooths existing lines while preserving natural facial expressions.
+                Botox on 11 lines (also called eleven lines or glabellar lines) targets the corrugator and procerus muscles between your eyebrows that create vertical frown lines. 
+                Our botox for frown lines treatment uses precise injections to smooth existing 11s and prevent new wrinkles from forming, whilst preserving natural facial expressions. This botox forehead lines treatment delivers natural before and after results.
               </p>
             </motion.div>
 
@@ -327,11 +416,14 @@ const FrownLineBotox = () => {
             >
               <img 
                 src={frownLinesInjectionSites} 
-                alt="Frown lines injection sites illustration"
+                alt="Botox 11 lines injection sites - glabellar lines treatment diagram"
+                loading="lazy"
+                width="448"
+                height="448"
                 className="mx-auto rounded-lg shadow-lg max-w-md w-full"
               />
               <p className="text-sm text-gray-300 mt-4 italic">
-                Strategic injection sites for frown lines botox treatment targeting corrugator and procerus muscles.
+                Strategic injection sites for botox on 11s and frown lines treatment targeting corrugator and procerus muscles for optimal results.
               </p>
             </motion.div>
 
@@ -348,8 +440,8 @@ const FrownLineBotox = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Glabellar lines form between the eyebrows from repeated contractions of the corrugator and procerus muscles. 
-                    These lines can make you appear angry, worried, or tired even when you're not, affecting your overall facial harmony.
+                    Glabellar lines (commonly known as 11 lines or eleven lines) form between the eyebrows from repeated contractions of the corrugator and procerus muscles. 
+                    These frown lines can make you appear angry, worried, or tired even when you're not. Botox 11 effectively treats these scowl lines, restoring facial harmony with natural-looking results.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-4 mt-6">
@@ -383,7 +475,7 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Frown Lines Botox — What to Expect?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox 11 Lines Before After — What to Expect?</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -399,7 +491,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your frown lines treatment, begin your glabellar lines treatment. The doctor uses very fine needles to inject botulinum toxin into the corrugator and procerus muscles in targeted areas such as:
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs in Harley Street, London, your botox for 11 lines treatment begins. The doctor uses very fine needles to inject botulinum toxin into the corrugator and procerus muscles to remove frown lines and smooth eleven lines in targeted areas such as:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -420,7 +512,7 @@ const FrownLineBotox = () => {
                       </li>
                     </ul>
                     <p className="text-purple-300 font-medium">
-                      Following the botox treatment you may continue normal daily activities immediately.
+                      Following your botox frown lines treatment you may continue normal daily activities immediately. Results typically appear within 3-14 days, with full before and after effects visible by two weeks.
                     </p>
                   </CardContent>
                 </Card>
@@ -438,7 +530,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Frown lines botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                      Botox for 11 lines is considered safe with minimal side effects for most people. However, your eleven lines botox treatment may have some slight side effects, such as:
                     </p>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start space-x-2">
@@ -480,7 +572,7 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work for Frown Lines?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">How Does Botox Work to Remove Frown Lines and 11s?</h2>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
@@ -499,7 +591,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Botox relaxes the muscles causing frown lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. It works by blocking nerve signals that cause muscle contractions.
+                      Botox on 11 lines relaxes the muscles causing frown lines and scowl lines, specifically the corrugator and procerus muscles, resulting in a smoother, more refreshed appearance. Botox glabellar treatments work by blocking nerve signals that cause muscle contractions, allowing the skin to smooth out naturally. This is why botox and frown lines treatment produces such effective before and after results.
                     </p>
                   </CardContent>
                 </Card>
@@ -518,7 +610,7 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Types of Frown Lines</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Types of Frown Lines: Understanding 11 Lines</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -534,10 +626,10 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Dynamic frown lines appear when you make facial movements or expressions like frowning, squinting, or concentrating. These lines are temporary and disappear when your face is relaxed.
+                      Dynamic frown lines (11 lines) appear when you make facial movements or expressions like frowning, squinting, or concentrating. These eleven lines are temporary and disappear when your face is relaxed.
                     </p>
                     <p className="text-purple-300 mt-4 font-medium">
-                      Botox is highly effective for dynamic lines as it relaxes the muscles to reduce their appearance.
+                      Botox for 11 lines before and after shows highly effective results for dynamic lines as it relaxes the muscles to reduce their appearance naturally.
                     </p>
                   </CardContent>
                 </Card>
@@ -555,10 +647,10 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Static frown lines are visible even when your face is at rest. They develop over time as repeated expressions weaken the skin's elasticity, causing permanent creases.
+                      Static frown lines are visible even when your face is at rest. These deeper 11s develop over time as repeated expressions weaken the skin's elasticity, causing permanent creases.
                     </p>
                     <p className="text-purple-300 mt-4 font-medium">
-                      Botox prevents static lines from becoming deeper and may require combination with dermal fillers for optimal results.
+                      Botox 11 lines before after treatment prevents static lines from becoming deeper and may require combination with dermal fillers for optimal results to fully remove frown lines.
                     </p>
                   </CardContent>
                 </Card>
@@ -577,9 +669,9 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Frown Lines</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Remove Frown Lines and 11s</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                We have a range of effective treatments to target frown lines and achieve a smoother, more relaxed expression other than Frown lines Botox.
+                We have a range of effective treatments to target eleven lines and achieve a smoother, more relaxed expression in addition to botox frown lines treatment at our London Harley Street clinic.
               </p>
             </motion.div>
 
@@ -596,7 +688,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      While Botox effectively treats dynamic wrinkles by relaxing underlying muscles, dermal fillers can further enhance the results. Fillers, injected to add volume and smooth out lines, are particularly useful for static wrinkles that Botox alone can't fully address.
+                      Whilst botox on 11s effectively treats dynamic wrinkles by relaxing underlying muscles, dermal fillers can further enhance botox before after frown lines results. Fillers, injected to add volume and smooth out lines, are particularly useful for static 11 lines that botox glabellar treatment alone can't fully address.
                     </p>
                   </CardContent>
                 </Card>
@@ -614,7 +706,7 @@ const FrownLineBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">
-                      Combining Botox with dermal fillers offers a comprehensive approach to frown lines. Botox reduces muscle activity causing the lines, while fillers add volume to deep-set lines, resulting in smoother, more youthful skin.
+                      Combining botox for 11 lines with dermal fillers offers a comprehensive approach to remove frown lines. Botox reduces muscle activity causing the eleven lines, whilst fillers add volume to deep-set lines, resulting in smoother, more youthful skin with superior before and after results.
                     </p>
                   </CardContent>
                 </Card>
@@ -633,9 +725,9 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">Why Frown Lines Form & Our Solution</h2>
+              <h2 className="text-4xl font-bold mb-6 text-white">Why 11 Lines Form & Our Botox Solution</h2>
               <p className="text-gray-300 max-w-4xl mx-auto text-xl leading-relaxed">
-                Understanding the root causes of frown lines helps us deliver targeted, effective treatments that address both existing lines and prevent future formation.
+                Understanding the root causes of frown lines and eleven lines helps us deliver targeted, effective botox treatments that address both existing 11s and prevent future formation. Our botox for scowl lines treatment at Harley Street, London, delivers exceptional before and after results.
               </p>
             </motion.div>
 
@@ -649,27 +741,27 @@ const FrownLineBotox = () => {
               >
 
                 <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-6 border border-purple-500/20">
-                  <h3 className="text-2xl font-bold text-white mb-6">Our Comprehensive Solution</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Our Comprehensive Botox 11s Solution</h3>
                   <div className="space-y-4 text-gray-300">
                     <div className="flex items-start space-x-3">
                       <span className="text-purple-300 mt-1">•</span>
-                      <p><strong className="text-white">Precision Botox Treatment:</strong> Targeted muscle relaxation for immediate smoothing of existing lines</p>
+                      <p><strong className="text-white">Precision Botox Treatment:</strong> Targeted muscle relaxation for immediate smoothing of existing eleven lines and glabellar lines</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <span className="text-purple-300 mt-1">•</span>
-                      <p><strong className="text-white">Prevention Strategy:</strong> Stop new lines from forming by relaxing overactive muscles</p>
+                      <p><strong className="text-white">Prevention Strategy:</strong> Stop new frown lines from forming by relaxing overactive corrugator and procerus muscles</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <span className="text-purple-300 mt-1">•</span>
-                      <p><strong className="text-white">Natural Results:</strong> Preserve facial expressions while smoothing unwanted lines</p>
+                      <p><strong className="text-white">Natural Results:</strong> Preserve facial expressions whilst smoothing unwanted 11 lines with superior botox before and after results</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <span className="text-purple-300 mt-1">•</span>
-                      <p><strong className="text-white">Expert Technique:</strong> Harley Street standards with our invisible art philosophy</p>
+                      <p><strong className="text-white">Expert Technique:</strong> Harley Street London standards with our invisible art philosophy for botox forehead lines</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <span className="text-purple-300 mt-1">•</span>
-                      <p><strong className="text-white">Long-lasting Results:</strong> 3-4 months of smoother, more youthful appearance</p>
+                      <p><strong className="text-white">Long-lasting Results:</strong> 3-4 months of smoother, more youthful appearance to remove frown lines effectively</p>
                     </div>
                   </div>
                 </div>
@@ -683,12 +775,14 @@ const FrownLineBotox = () => {
                 className="relative"
               >
                 <div className="relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-8 border border-purple-500/30 overflow-hidden">
-                  <h4 className="text-2xl font-bold text-white mb-6 text-center">Expert Treatment Process</h4>
+                  <h4 className="text-2xl font-bold text-white mb-6 text-center">Expert Botox 11 Lines Treatment Process</h4>
                   <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
                     <video 
                       controls 
+                      preload="metadata"
                       className="w-full h-full object-cover"
                       poster="/placeholder.svg"
+                      aria-label="Botox frown lines treatment demonstration video"
                     >
                       <source src="https://www.cosmedocs.com/wp-content/uploads/2021/09/Frown_Trim-1.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
@@ -718,9 +812,9 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Frown Line Botox Pricing</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox 11 Lines Pricing London</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Transparent pricing for professional frown line botox treatments at our Harley Street clinic.
+                Transparent pricing for professional botox frown lines and eleven lines treatments at our Harley Street London clinic.
               </p>
             </motion.div>
 
@@ -733,9 +827,9 @@ const FrownLineBotox = () => {
               >
                 <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full border-2 border-purple-400">
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white text-xl">Frown Lines Treatment</CardTitle>
+                    <CardTitle className="text-white text-xl">Botox for 11 Lines Treatment</CardTitle>
                     <div className="text-2xl font-bold text-purple-300">£175</div>
-                    <div className="text-sm text-purple-400">Standalone Treatment</div>
+                    <div className="text-sm text-purple-400">Eleven Lines Botox - Standalone Treatment</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -832,9 +926,9 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions About Botox 11 Lines</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about frown line botox treatments answered by our expert doctors.
+                Common questions about botox frown lines and eleven lines treatments answered by our expert doctors in London.
               </p>
             </motion.div>
 
@@ -871,10 +965,10 @@ const FrownLineBotox = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-4">Ready to Smooth Your Frown Lines?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready to Remove Frown Lines with Botox 11s?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your consultation with our expert cosmetic doctors and discover how our invisible art approach 
-                can transform your appearance with natural, sophisticated results.
+                Book your consultation with our expert cosmetic doctors in Harley Street, London and discover how our invisible art approach to botox on 11 lines 
+                can transform your appearance with natural, sophisticated before and after results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -896,18 +990,24 @@ const FrownLineBotox = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h3>Expert Frown Line Botox Treatment in London</h3>
-          <p>Cosmedocs offers professional frown line botox treatments targeting glabellar lines between the eyebrows. Our experienced cosmetic doctors use advanced botulinum toxin injection techniques to smooth vertical frown lines while preserving natural facial expressions. Located in prestigious Harley Street, our clinic provides comprehensive consultations and personalized treatment plans.</p>
+        <div className="sr-only" aria-hidden="true">
+          <h3>Expert Botox for 11 Lines and Frown Lines Treatment in London Harley Street</h3>
+          <p>Cosmedocs offers professional botox 11 lines and glabellar lines botox treatments targeting frown lines between the eyebrows in London. Our experienced cosmetic doctors use advanced botulinum toxin injection techniques to smooth vertical eleven lines and remove frown lines whilst preserving natural facial expressions. Located in prestigious Harley Street, our clinic provides comprehensive consultations and personalised treatment plans for botox on 11s with excellent before and after results.</p>
           
-          <h4>Why Choose Cosmedocs for Frown Line Botox?</h4>
-          <p>Our invisible art philosophy ensures natural-looking results that enhance your appearance without obvious signs of treatment. We specialize in precise muscle targeting using the latest injection techniques for optimal outcomes. Our doctors have extensive experience in facial anatomy and aesthetic medicine, ensuring safe and effective treatments.</p>
+          <h4>Why Choose Cosmedocs for Botox Frown Lines and 11 Lines Treatment?</h4>
+          <p>Our invisible art philosophy ensures natural-looking botox before after frown lines results that enhance your appearance without obvious signs of treatment. We specialise in precise muscle targeting using the latest injection techniques for botox glabellar treatments delivering optimal outcomes. Our doctors have extensive experience in facial anatomy and aesthetic medicine, ensuring safe and effective eleven lines botox and botox forehead lines treatments. We deliver superior botox 11 lines before after results at our London Harley Street clinic.</p>
           
-          <h4>Understanding Frown Line Formation</h4>
-          <p>Frown lines develop from repeated contractions of the corrugator and procerus muscles during facial expressions. These dynamic wrinkles become static over time, creating permanent vertical lines that can make you appear angry or worried. Professional botox treatment relaxes these muscles, smoothing existing lines and preventing further deepening.</p>
+          <h4>Understanding 11 Lines and Frown Line Formation</h4>
+          <p>Frown lines (also called 11 lines, eleven lines, or scowl lines) develop from repeated contractions of the corrugator and procerus muscles during facial expressions. These dynamic wrinkles become static over time, creating permanent vertical lines that can make you appear angry or worried. Professional botox for 11 lines treatment relaxes these muscles, smoothing existing lines and preventing further deepening. Botox on 11 lines is highly effective to remove frown lines and achieve natural before and after results.</p>
           
-          <h4>Treatment Process and Aftercare</h4>
-          <p>Our frown line botox treatment begins with a thorough consultation and facial analysis. The injection process takes 10-15 minutes using fine needles for minimal discomfort. Results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide comprehensive aftercare instructions and support throughout your treatment journey.</p>
+          <h4>Botox 11s Treatment Process and Aftercare in London</h4>
+          <p>Our botox frown line treatment begins with a thorough consultation and facial analysis at our Harley Street London clinic. The injection process for botox 11 takes 10-15 minutes using fine needles for minimal discomfort. Botox for 11 lines before and after results appear gradually over 3-14 days, with optimal effects lasting 3-4 months. We provide comprehensive aftercare instructions and support throughout your botox and frown lines treatment journey.</p>
+          
+          <h4>Botox Before and After 11 Lines: Real Results</h4>
+          <p>Our botox frown lines before and after gallery showcases real patient transformations. Botox 11 lines before after photos demonstrate how effectively we can smooth eleven lines whilst maintaining natural expressions. Whether treating dynamic or static frown lines, our botox for scowl lines delivers consistent, natural-looking results. Patients typically see visible improvements within 3-14 days, with full botox before after frown lines effects by two weeks.</p>
+          
+          <h4>Combining Botox Forehead Lines with 11 Lines Treatment</h4>
+          <p>Many patients combine botox on 11s with botox forehead lines treatment for comprehensive upper face rejuvenation. This combination approach addresses both glabellar lines and horizontal forehead wrinkles, creating harmonious before and after results. Our expert doctors can create bespoke treatment plans that address multiple areas whilst preserving your natural expressions and delivering the invisible art aesthetic Cosmedocs is known for throughout London and Harley Street.</p>
         </div>
       </div>
     </>
