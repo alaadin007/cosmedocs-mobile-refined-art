@@ -28,8 +28,12 @@ const treatmentCategories = [
     treatments: [
       { name: "Face Botox (1-3 Areas)", link: "/face-botox-areas" },
       { name: "Nefertiti Face Lift", link: "/nefertiti-lift" },
-      { name: "Masseter (Jawline Slimming)", link: "/masseter-botox" }
+      { name: "Masseter (Jawline Slimming)", link: "/masseter-botox" },
+      { name: "Bunny Lines", link: "/bunny-lines-treatment" },
+      { name: "Gummy Smile", link: "/gummy-smile-treatment" },
+      { name: "Excessive Sweat Botox", link: "/excessive-sweat-botox" }
     ],
+    viewAllLink: "/treatments",
     color: "from-yellow-400 to-orange-500"
   },
   {
@@ -38,8 +42,12 @@ const treatmentCategories = [
     treatments: [
       { name: "Lip Fillers", link: "/lip-fillers" },
       { name: "Non Surgical Nose Job", link: "/non-surgical-nose-job" },
-      { name: "Dermal Filler Makeover", link: "/non-surgical-facelift" }
+      { name: "Dermal Filler Makeover", link: "/non-surgical-facelift" },
+      { name: "Chin Filler", link: "/chin-filler" },
+      { name: "Cheek Fillers", link: "/cheek-fillers" },
+      { name: "Jawline Filler", link: "/jawline-filler" }
     ],
+    viewAllLink: "/treatments",
     color: "from-pink-400 to-red-500"
   },
   {
@@ -48,8 +56,12 @@ const treatmentCategories = [
     treatments: [
       { name: "Chemical Peels", link: "/skin-peels" },
       { name: "Microneedling", link: "/microneedling" },
-      { name: "PRP Vampire Facelift", link: "/prp-treatment" }
+      { name: "PRP Vampire Facelift", link: "/prp-treatment" },
+      { name: "Hydrafacial", link: "/hydrafacial" },
+      { name: "Laser Hair Removal", link: "/laser-hair-removal" },
+      { name: "Laser Skin Resurfacing", link: "/laser-skin-resurfacing" }
     ],
+    viewAllLink: "/treatments",
     color: "from-blue-400 to-cyan-500"
   },
   {
@@ -58,8 +70,10 @@ const treatmentCategories = [
     treatments: [
       { name: "Underarms Advanced", link: "/excessive-sweat-botox" },
       { name: "Palms", link: "/excessive-sweat-botox" },
-      { name: "Forehead", link: "/excessive-sweat-botox" }
+      { name: "Forehead", link: "/excessive-sweat-botox" },
+      { name: "Feet", link: "/excessive-sweat-botox" }
     ],
+    viewAllLink: "/excessive-sweat-botox",
     color: "from-purple-400 to-indigo-500"
   },
   {
@@ -68,8 +82,11 @@ const treatmentCategories = [
     treatments: [
       { name: "Profhilo", link: "/profhilo-treatment" },
       { name: "Polynucleotides", link: "/polynucleotides" },
-      { name: "Redensity 1", link: "/skin-boosters" }
+      { name: "Redensity 1", link: "/skin-boosters" },
+      { name: "Seventy Hyal 2000", link: "/seventy-hyal" },
+      { name: "Sunekos", link: "/sunekos" }
     ],
+    viewAllLink: "/treatments",
     color: "from-green-400 to-teal-500"
   },
   {
@@ -78,8 +95,12 @@ const treatmentCategories = [
     treatments: [
       { name: "Acne Treatment", link: "/acne-treatment" },
       { name: "Facial Thread Veins", link: "/thread-veins" },
-      { name: "Leg Veins Treatment", link: "/thread-veins" }
+      { name: "Leg Veins Treatment", link: "/thread-veins" },
+      { name: "Hair Loss Treatment", link: "/hair-loss-treatment" },
+      { name: "Rosacea Treatment", link: "/rosacea-treatment" },
+      { name: "Pigmentation Treatment", link: "/pigmentation-treatment" }
     ],
+    viewAllLink: "/treatments",
     color: "from-orange-400 to-red-500"
   }
 ];
@@ -235,6 +256,18 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                                   <span className="truncate">{treatment.name}</span>
                                 </button>
                               ))}
+                              
+                              {/* View All Link */}
+                              <button 
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  window.location.href = category.viewAllLink;
+                                }}
+                                className="text-xs text-amber-400 hover:text-amber-300 transition-colors duration-300 flex items-center gap-1 w-full text-left hover:translate-x-0.5 mt-1 pt-1 border-t border-white/10 font-medium"
+                              >
+                                <Star className="w-2.5 h-2.5 flex-shrink-0" />
+                                <span className="truncate">View All Treatments</span>
+                              </button>
                             </div>
                           </div>
                         </motion.div>
