@@ -22,7 +22,7 @@ export default function FaceBotox() {
   
   const seoData = generateSEOMetadata(
     "Best Botox London Harley Street | 3 Areas £350 | Face Botox",
-    "Looking for where to get botox in London? Best botox London clinic on Harley Street. 3 areas of botox cost £350. Expert baby botox London treatments. Book your free consultation.",
+    "Best botox London clinic on Harley Street. 3 areas of botox cost £350. Expert baby botox London treatments. Book your free consultation.",
     "/face-botox"
   );
 
@@ -379,7 +379,7 @@ export default function FaceBotox() {
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Best Botox London | 3 Areas £350</p>
                   <p className="text-sm text-gray-300">
-                    Looking for <strong>where to get botox</strong> in London? Expert <strong>botox in Harley Street</strong> with transparent <strong>botox London prices</strong>. 
+                    Expert <strong>botox in Harley Street</strong> with transparent <strong>botox London prices</strong>. 
                     Specialist <strong>baby botox London</strong> treatments at the <strong>best botox clinic London</strong>.
                   </p>
                 </div>
