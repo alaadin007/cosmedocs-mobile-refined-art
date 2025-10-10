@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -958,7 +959,7 @@ export default function FaceBotox() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-4 text-white">The Advanced Solution</h3>
                   <p className="text-gray-300 mb-4">
-                    Combining Botox with carefully placed <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</a> addresses both 
+                    Combining Botox with carefully placed <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> addresses both 
                     muscle movement AND fills the established crease for comprehensive treatment.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-300">
@@ -1499,9 +1500,9 @@ export default function FaceBotox() {
           
           <h3>Botox Treatment Areas London | Where to Get Botox on Your Face</h3>
           <p>
-            Our best botox London clinic treats all facial areas: upper face botox (<a href="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines</a>, <a href="/frown-line-botox" className="text-purple-300 hover:text-purple-200 underline">frown lines</a>, <a href="/crows-feet-botox" className="text-purple-300 hover:text-purple-200 underline">crow's feet</a>, brow lift), lower face botox 
-            (DAO muscle, mentalis crease, platysma muscle, <a href="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline</a> definition), and specialised areas (<a href="/chin-botox" className="text-purple-300 hover:text-purple-200 underline">chin botox</a>, <a href="/nefertiti-botox-face-jaw-lift" className="text-purple-300 hover:text-purple-200 underline">Nefertiti facelift</a>, <a href="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter jaw slimming</a>, 
-            <a href="/lip-flip" className="text-purple-300 hover:text-purple-200 underline">lip flip</a>, <a href="/gummy-smile-botox" className="text-purple-300 hover:text-purple-200 underline">gummy smile</a>, <a href="/bunny-lines-botox" className="text-purple-300 hover:text-purple-200 underline">bunny lines</a>). Baby botox London technique available for subtle enhancement. All botox in London treatments include consultation.
+            Our best botox London clinic treats all facial areas: upper face botox (<Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines</Link>, <Link to="/frown-line-botox" className="text-purple-300 hover:text-purple-200 underline">frown lines</Link>, <Link to="/crows-feet-botox" className="text-purple-300 hover:text-purple-200 underline">crow's feet</Link>, brow lift), lower face botox 
+            (DAO muscle, mentalis crease, platysma muscle, <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline</Link> definition), and specialised areas (<Link to="/chin-botox" className="text-purple-300 hover:text-purple-200 underline">chin botox</Link>, <Link to="/nefertiti-botox-face-jaw-lift" className="text-purple-300 hover:text-purple-200 underline">Nefertiti facelift</Link>, <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter jaw slimming</Link>, 
+            <Link to="/lip-flip" className="text-purple-300 hover:text-purple-200 underline">lip flip</Link>, <Link to="/gummy-smile-botox" className="text-purple-300 hover:text-purple-200 underline">gummy smile</Link>, <Link to="/bunny-lines-botox" className="text-purple-300 hover:text-purple-200 underline">bunny lines</Link>). Baby botox London technique available for subtle enhancement. All botox in London treatments include consultation.
           </p>
           
           <h3>Botox London Prices | Cost of Botox UK | How Much Does Botox Cost</h3>
