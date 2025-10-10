@@ -557,7 +557,7 @@ export default function FaceBotox() {
               <h2 className="text-3xl font-bold mb-8 text-white">What is Botox? Understanding Your Treatment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto mb-8">
                 <strong>Botox</strong> (Botulinum toxin) is a purified protein that temporarily blocks nerve signals to muscles, 
-                causing them to relax. This <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-botox-cosmetic-treat-moderate-severe-forehead-lines" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA-approved treatment</a> has been safely used for both medical and 
+                causing them to relax. This <a href="https://www.fda.gov/cosmetics/cosmetic-products/wrinkle-fillers" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA-approved treatment</a> has been safely used for both medical and 
                 cosmetic purposes for over 30 years. According to <a href="https://www.plasticsurgery.org/cosmetic-procedures/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">the American Society of Plastic Surgeons</a>, 
                 botulinum toxin is one of the most effective treatments for facial rejuvenation with an excellent safety profile when administered by qualified practitioners.
               </p>
@@ -1325,7 +1325,7 @@ export default function FaceBotox() {
                 <AccordionItem value="safety" className="border-gray-700">
                   <AccordionTrigger className="text-white hover:text-purple-300">Is Botox safe?</AccordionTrigger>
                   <AccordionContent className="text-gray-300">
-                    <strong>Botox</strong> is approved by the <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-botox-cosmetic-treat-moderate-severe-forehead-lines" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Food & Drug Administration</a> in the US and the UK (MHRA). 
+                    <strong>Botox</strong> is approved by the <a href="https://www.fda.gov/cosmetics/cosmetic-products/wrinkle-fillers" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Food & Drug Administration</a> in the US and the UK (MHRA). 
                     As a muscle relaxant with an extensive record of application in medicine, botulinum toxin has an outstanding safety record. 
                     According to <a href="https://www.plasticsurgery.org/cosmetic-procedures/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinical research from the American Society of Plastic Surgeons</a>, 
                     it has been used successfully for various medical and cosmetic conditions throughout the past 40 years. To ensure successful and safe results 
