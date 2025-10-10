@@ -230,7 +230,7 @@ export default function FaceBotox() {
       duration: "4-6 months"
     },
     {
-      name: "Nefertiti Face Lift",
+      name: "<a href='/nefertiti-botox-facelift' className='text-purple-300 hover:text-purple-200 underline'>Nefertiti Face Lift</a>",
       price: "£300",
       description: "Jawline definition and neck smoothing for an elegant profile.",
       units: "30-50 units",
