@@ -363,69 +363,44 @@ export default function FaceBotox() {
         </div>
 
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-black"></div>
-          
+        <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <div className="mb-4 inline-block">
-                  <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
-                    Best Botox London | Harley Street
-                  </span>
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-                  Face Botox London
-                  <span className="block text-purple-300 mt-2">3 Areas £350</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                  <span className="text-purple-300">Face Botox London</span>
+                  <span className="block text-sm mt-4">Invisible art - natural transformation that speaks without words</span>
                 </h1>
-                
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Looking for <strong className="text-white">where to get botox</strong> in London? Cosmedocs is the <strong className="text-white">best botox clinic London</strong> on Harley Street. 
-                  Expert <strong className="text-white">baby botox London</strong> treatments with natural results. <strong className="text-white">How much is botox?</strong> From £175 per area with transparent <strong className="text-white">botox London prices</strong>.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                  <Button 
-                    size="lg"
-                    className="bg-purple-600 hover:bg-purple-700 text-white px-8"
-                    onClick={() => window.open('https://med.as.me/harleystreet', '_blank')}
-                  >
-                    Book Free Consultation
-                  </Button>
-                  <Button 
-                    size="lg"
-                    variant="outline" 
-                    className="border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-black px-8"
-                    onClick={() => window.location.href = 'tel:03330551503'}
-                  >
-                    Call 0333 0551 503
-                  </Button>
+                <div className="mb-8">
+                  <p className="text-2xl text-purple-300 font-bold">Best Botox London | 3 Areas £350</p>
+                  <p className="text-sm text-gray-300">
+                    Looking for <strong>where to get botox</strong> in London? Expert <strong>botox in Harley Street</strong> with transparent <strong>botox London prices</strong>. 
+                    Specialist <strong>baby botox London</strong> treatments at the <strong>best botox clinic London</strong>.
+                  </p>
                 </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">£175</div>
-                    <div className="text-sm text-gray-400">Starting Price</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">15 min</div>
-                    <div className="text-sm text-gray-400">Treatment Time</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">4-6 mo</div>
-                    <div className="text-sm text-gray-400">Results Last</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-300 mb-2">1M+</div>
-                    <div className="text-sm text-gray-400">Treatments</div>
-                  </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                  >
+                    Book Consultation
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    View Price List
+                  </Button>
                 </div>
               </motion.div>
+              
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
@@ -582,8 +557,8 @@ export default function FaceBotox() {
               <h2 className="text-3xl font-bold mb-8 text-white">What is Botox? Understanding Your Treatment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto mb-8">
                 <strong>Botox</strong> (Botulinum toxin) is a purified protein that temporarily blocks nerve signals to muscles, 
-                causing them to relax. This <a href="https://www.fda.gov/consumers/consumer-updates/wrinkle-treatments-and-other-cosmetic-procedures" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA-approved treatment</a> has been safely used for both medical and 
-                cosmetic purposes for over 30 years. According to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5300732/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">research published in the National Institutes of Health</a>, 
+                causing them to relax. This <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-botox-cosmetic-treat-moderate-severe-forehead-lines" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA-approved treatment</a> has been safely used for both medical and 
+                cosmetic purposes for over 30 years. According to <a href="https://www.plasticsurgery.org/cosmetic-procedures/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">the American Society of Plastic Surgeons</a>, 
                 botulinum toxin is one of the most effective treatments for facial rejuvenation with an excellent safety profile when administered by qualified practitioners.
               </p>
             </motion.div>
@@ -1350,9 +1325,9 @@ export default function FaceBotox() {
                 <AccordionItem value="safety" className="border-gray-700">
                   <AccordionTrigger className="text-white hover:text-purple-300">Is Botox safe?</AccordionTrigger>
                   <AccordionContent className="text-gray-300">
-                    <strong>Botox</strong> is approved by the <a href="https://www.fda.gov/consumers/consumer-updates/wrinkle-treatments-and-other-cosmetic-procedures" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Food & Drug Administration</a> in the US and the UK (MHRA). 
+                    <strong>Botox</strong> is approved by the <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-botox-cosmetic-treat-moderate-severe-forehead-lines" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Food & Drug Administration</a> in the US and the UK (MHRA). 
                     As a muscle relaxant with an extensive record of application in medicine, botulinum toxin has an outstanding safety record. 
-                    According to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5300732/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinical research</a>, 
+                    According to <a href="https://www.plasticsurgery.org/cosmetic-procedures/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinical research from the American Society of Plastic Surgeons</a>, 
                     it has been used successfully for various medical and cosmetic conditions throughout the past 40 years. To ensure successful and safe results 
                     from <strong>botox in London</strong> treatments, they must be performed by trained physicians at reputable clinics like our <strong>botox in Harley Street</strong> facility.
                   </AccordionContent>
