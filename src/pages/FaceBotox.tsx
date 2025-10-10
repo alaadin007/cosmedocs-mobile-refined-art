@@ -230,11 +230,12 @@ export default function FaceBotox() {
       duration: "4-6 months"
     },
     {
-      name: "<a href='/nefertiti-botox-facelift' className='text-purple-300 hover:text-purple-200 underline'>Nefertiti Face Lift</a>",
+      name: "Nefertiti Face Lift",
       price: "£300",
       description: "Jawline definition and neck smoothing for an elegant profile.",
       units: "30-50 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "/nefertiti-botox-facelift"
     },
     {
       name: "Masseter (Jaw Slimming)",
@@ -817,7 +818,13 @@ export default function FaceBotox() {
                   <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-lg font-semibold text-white">{area.name}</h3>
+                        <h3 className="text-lg font-semibold text-white">
+                          {area.link ? (
+                            <a href={area.link} className="text-white hover:text-purple-300 transition-colors">{area.name}</a>
+                          ) : (
+                            area.name
+                          )}
+                        </h3>
                         <span className="text-purple-300 font-bold">{area.price}</span>
                       </div>
                       <p className="text-gray-300 text-sm mb-4">{area.description}</p>
