@@ -20,6 +20,7 @@ const TREATMENT_ROUTES = [
   '/prp-treatment',
   
   // Botox treatments
+  '/botox-london',
   '/advanced-upper-face-botox',
   '/lower-face-botox',
   '/face-botox-areas',

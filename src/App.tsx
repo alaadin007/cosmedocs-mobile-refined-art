@@ -166,10 +166,11 @@ const App = () => {
               <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
               
               <Route path="/nefertiti-botox-face-jaw-lift" element={<NefertitiBotoxFacelift />} />
-              <Route path="/advanced-upper-face-botox" element={<Navigate to="/face-botox" replace />} />
-              <Route path="/face-botox-areas" element={<Navigate to="/face-botox" replace />} />
-              <Route path="/face-botox" element={<FaceBotox />} />
-              <Route path="/lower-face-botox" element={<Navigate to="/face-botox" replace />} />
+              <Route path="/advanced-upper-face-botox" element={<Navigate to="/botox-london" replace />} />
+              <Route path="/face-botox-areas" element={<Navigate to="/botox-london" replace />} />
+              <Route path="/face-botox" element={<Navigate to="/botox-london" replace />} />
+              <Route path="/botox-london" element={<FaceBotox />} />
+              <Route path="/lower-face-botox" element={<Navigate to="/botox-london" replace />} />
               <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
               <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
               <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />

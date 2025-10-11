@@ -24,7 +24,7 @@ export default function FaceBotox() {
   const seoData = generateSEOMetadata(
     "Botox London | Best Botox Harley Street | 3 Areas £350",
     "Botox London at Harley Street's premier clinic. Expert botox treatments from £175. 3 areas of botox £350. Book your free consultation today.",
-    "/face-botox"
+    "/botox-london"
   );
 
   const medicalBusinessSchema = {
@@ -90,7 +90,7 @@ export default function FaceBotox() {
     "price": "175",
     "priceCurrency": "GBP",
     "availability": "https://schema.org/InStock",
-    "url": "https://www.cosmedocs.co.uk/face-botox",
+    "url": "https://www.cosmedocs.co.uk/botox-london",
     "priceValidUntil": "2025-12-31",
     "seller": {
       "@type": "MedicalOrganization",
