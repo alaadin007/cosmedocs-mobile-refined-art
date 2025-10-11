@@ -362,6 +362,8 @@ const BruxismBotox = () => {
               <div className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
                 <p>
                   <strong>Botox for TMJ</strong> and <strong>bruxism botox</strong> works by gently relaxing the overactive jaw muscles responsible for <strong>teeth grinding</strong>, <strong>jaw clenching</strong>, and jaw tension. 
+                  According to the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893479/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">National Institutes of Health</a>, 
+                  bruxism affects approximately 8-31% of the general population and can lead to significant dental damage if left untreated.
                   By reducing strain on the <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter</Link> and surrounding muscles, this <strong>teeth grinding treatment</strong> provides both functional relief and subtle aesthetic benefits. 
                   Our expert <strong>botox for clenched jaw</strong> therapy targets <strong>bruxism teeth grinding symptoms</strong> while naturally slimming the jawline. 
                   This proven <strong>bruxism treatment</strong> helps patients who <strong>grind teeth</strong> at night or experience <strong>symptoms of clenched jaw</strong> during the day.
@@ -407,6 +409,8 @@ const BruxismBotox = () => {
               <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-2xl mx-auto">
                 <p className="text-gray-300 text-center">
                   Safe, minimally invasive, and effective, <strong>teeth grinding botox</strong> targets the root cause of jaw discomfort — offering long-lasting relief and improved quality of life. 
+                  <a href="https://www.plasticsurgery.org/cosmetic-procedures/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline"> Research from the American Society of Plastic Surgeons</a> confirms 
+                  that botulinum toxin has an outstanding safety record with minimal side effects when administered by qualified practitioners.
                   Understanding <strong>bruxism signs and symptoms</strong> is crucial for effective <strong>bruxism treatments</strong> and finding the right <strong>bruxism cure</strong>.
                 </p>
               </div>
@@ -498,6 +502,8 @@ const BruxismBotox = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">TMJ Botox & Botox TMJ Treatment Helps With:</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 <strong>Jaw grinding</strong> and <strong>bruxism grinding</strong> can enlarge the masseter muscle, which is responsible for chewing. 
+                A <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5870198/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinical study published in the Journal of Oral Rehabilitation</a> demonstrated 
+                that botulinum toxin injections significantly reduce bruxism symptoms with minimal adverse effects.
                 Our therapeutic <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">botox</Link> provides relief from multiple <strong>symptoms of clenched jaw</strong> and <strong>clench jaw symptoms</strong>.
               </p>
             </motion.div>
