@@ -393,7 +393,7 @@ const ExcessiveSweatBotox = () => {
                         <Check className="text-purple-400 mt-1" size={16} />
                         <div>
                           <h3 className="text-white font-medium mb-1">Minimal Pain</h3>
-                          <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort.</p>
+                          <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort. <a href="https://jamanetwork.com/journals/jamadermatology/fullarticle/2773913" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Studies show minimal side effects</a>.</p>
                         </div>
                       </li>
                       
@@ -401,7 +401,7 @@ const ExcessiveSweatBotox = () => {
                         <Check className="text-purple-400 mt-1" size={16} />
                         <div>
                           <h3 className="text-white font-medium mb-1">Long-Lasting</h3>
-                          <p className="text-gray-300 text-sm">Results last 6-12 months for underarms, 4-6 months for hands and feet.</p>
+                          <p className="text-gray-300 text-sm"><a href="https://www.aad.org/public/diseases/a-z/hyperhidrosis-treatment" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Results last 6-12 months</a> for underarms, 4-6 months for hands and feet.</p>
                         </div>
                       </li>
                       
