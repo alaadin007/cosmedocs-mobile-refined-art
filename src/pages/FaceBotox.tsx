@@ -945,7 +945,7 @@ export default function FaceBotox() {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Advanced Combination Approach</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                For deep wrinkles, we combine Botox with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for superior results
+                For deep wrinkles, we combine Botox with dermal fillers for superior results
               </p>
             </motion.div>
 
