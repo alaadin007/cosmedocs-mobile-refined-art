@@ -357,10 +357,10 @@ const FatDissolve = () => {
                   People who are looking for quick and easy way to get rid of their extra body fat and build muscles for a well-toned and sculpted body love EMSCULPT.
                 </p>
                 <p>
-                  There is no need to do intense exercises to sculpt and tone your body. EMSCULPT does it for you in few treatment sessions. Imagine that you are performing 20,000 squats or sit-ups in a single session of 30 minutes.
+                  There is no need to do intense exercises to sculpt and tone your body. EMSCULPT does it for you in few treatment sessions. Imagine that you are performing 20,000 squats or sit-ups in a single session of 30 minutes. This revolutionary approach to <a href="https://www.health.harvard.edu/staying-healthy/the-truth-about-fats-bad-and-good" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">healthy fat reduction</a> complements natural body processes.
                 </p>
                 <p>
-                  It helps you to get rid of your extra body fat and build your muscles. You do not need to make changes in your diet or exercise regimen to get results. Only 2 sessions in a week for two weeks and it gives amazing results.
+                  It helps you to get rid of your extra body fat and build your muscles. You do not need to make changes in your diet or exercise regimen to get results. Only 2 sessions in a week for two weeks and it gives amazing results. For comprehensive facial rejuvenation, consider combining with our <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo treatments</a> for optimal aesthetic outcomes.
                 </p>
               </div>
             </motion.div>
@@ -396,7 +396,7 @@ const FatDissolve = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      EMSCULPT uses HIFEM technology to create supramaximal contractions that are impossible to achieve through voluntary exercise.
+                      EMSCULPT uses <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6446744/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">HIFEM technology</a> to create supramaximal contractions that are impossible to achieve through voluntary exercise. This scientifically proven method delivers measurable results.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
@@ -584,7 +584,7 @@ const FatDissolve = () => {
                   <Award className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">EMSCULPT Expertise</h3>
-                <p className="text-gray-300">Specialist cosmetic practitioners trained in advanced EMSCULPT technology</p>
+                <p className="text-gray-300">Specialist cosmetic practitioners trained in advanced EMSCULPT technology and <a href="/anti-wrinkle" className="text-purple-300 hover:text-purple-200 underline">aesthetic medicine</a></p>
               </motion.div>
 
               <motion.div
@@ -612,7 +612,7 @@ const FatDissolve = () => {
                   <CheckCircle className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">FDA Approved</h3>
-                <p className="text-gray-300">Clinically researched and tested technology with proven safety record</p>
+                <p className="text-gray-300">Clinically researched and <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/expert-answers/body-contouring/faq-20348166" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">tested body contouring technology</a> with proven safety record</p>
               </motion.div>
 
               <motion.div
@@ -640,7 +640,7 @@ const FatDissolve = () => {
                   <Heart className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Complete Care</h3>
-                <p className="text-gray-300">Comprehensive consultation and aftercare support included</p>
+                <p className="text-gray-300">Comprehensive consultation and aftercare support at our <a href="/contact" className="text-purple-300 hover:text-purple-200 underline">Harley Street clinic</a> included</p>
               </motion.div>
             </div>
           </div>
