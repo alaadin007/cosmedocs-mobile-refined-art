@@ -314,7 +314,7 @@ const ExcessiveSweatBotox = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    Hyperhidrosis is a medical condition causing excessive sweating that significantly impacts daily life, confidence, and social interactions. 
+                    Hyperhidrosis is a <a href="https://www.nhs.uk/conditions/hyperhidrosis/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical condition causing excessive sweating</a> that significantly impacts daily life, confidence, and social interactions. 
                     Botox for hyperhidrosis works by blocking the nerve signals that trigger sweat production. Botox injections for excessive sweating provide dramatic relief - 
                     whether it's botox on underarms, botox under the arms, botox in underarms, or botox for sweating face. The cost of armpit botox and underarm botox cost 
                     varies by area, with armpit botox being one of the most popular and effective treatments available.
@@ -337,7 +337,7 @@ const ExcessiveSweatBotox = () => {
                 <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
                   <CardContent className="p-6">
                     <p className="text-gray-300 mb-6">
-                      Hyperhidrosis occurs when sweat glands work overtime for no apparent reason.
+                      Hyperhidrosis occurs when sweat glands work overtime for no apparent reason. For patients seeking comprehensive facial treatments, we also offer <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> at our clinic.
                     </p>
 
                     <ul className="space-y-4">
@@ -417,7 +417,7 @@ const ExcessiveSweatBotox = () => {
                         <Check className="text-purple-400 mt-1" size={16} />
                         <div>
                           <h3 className="text-white font-medium mb-1">FDA Approved</h3>
-                          <p className="text-gray-300 text-sm">Clinically proven to reduce excessive sweating by up to 87%.</p>
+                          <p className="text-gray-300 text-sm"><a href="https://www.fda.gov/consumers/consumer-updates/botox-cosmetic-look-facts" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinically proven to reduce excessive sweating</a> by up to 87%.</p>
                         </div>
                       </li>
                     </ul>
@@ -583,8 +583,8 @@ const ExcessiveSweatBotox = () => {
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 max-w-4xl mx-auto">
                 <CardContent className="p-8">
                   <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                    Moreover, a medical study suggests the usage of high doses to relax sweat glands has long-lasting results. 
-                    This approach allows anti-sweat injections to treat excessive sweating quite effectively.
+                    Moreover, a <a href="https://pubmed.ncbi.nlm.nih.gov/21418398/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical study suggests the usage of high doses</a> to relax sweat glands has long-lasting results. 
+                    This approach allows anti-sweat injections to treat excessive sweating quite effectively. For comprehensive facial rejuvenation, we also offer <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo treatments</a> alongside our therapeutic botox services.
                   </p>
                   <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4 border border-purple-500/20">
                     <p className="text-purple-200 font-medium">
@@ -636,7 +636,8 @@ const ExcessiveSweatBotox = () => {
                 <div className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed">
                     The dosage of botox in armpits depends on the size of the underarm area. When getting botox under armpits, we aim to inject a concentrated dose per square centimetre, 
-                    covering the entire hairy patch area of the underarm. The botox armpits price reflects the number of units needed for optimal coverage and results.
+                    covering the entire hairy patch area of the underarm. Similar to how we approach <a href="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter botox treatments</a>, 
+                    the botox armpits price reflects the number of units needed for optimal coverage and results.
                   </p>
                   <p className="text-gray-300 text-lg leading-relaxed">
                     Studies have revealed that a higher dose for botox underarms is safe, effective, and long-lasting. Botox on face for sweating and botox in face for sweating 
@@ -853,6 +854,7 @@ const ExcessiveSweatBotox = () => {
                     <div className="space-y-2">
                       <div className="text-purple-300 font-semibold">Other Areas</div>
                       <div className="text-white text-lg">On Consultation</div>
+                      <div className="text-gray-300 text-xs mt-2">For anti-wrinkle options, <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">explore our treatments</a></div>
                     </div>
                   </div>
                 </CardContent>
@@ -969,7 +971,7 @@ const ExcessiveSweatBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Common questions about excessive sweating botox treatment answered by our expert practitioners.
+                Common questions about excessive sweating botox treatment answered by our expert practitioners. For more facial enhancement options, visit our <a href="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin filler page</a>.
               </p>
             </motion.div>
 
