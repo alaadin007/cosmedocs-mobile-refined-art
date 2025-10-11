@@ -528,7 +528,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      T-zone oily skin botox is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                      T-zone oily skin botox is <a href="https://www.mayoclinic.org/tests-procedures/botox/about/pac-20384658" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">considered safe with minimal side effects</a> for most people. However, your treatment may have some slight side effects, such as:
                     </p>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start space-x-2">
@@ -588,7 +588,7 @@ const OilySkinBotox = () => {
                   </CardHeader>
                   <CardContent className="px-8 pb-8">
                     <p className="text-gray-300 text-lg leading-relaxed text-center">
-                      Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil production in the T-zone. This results in up to 30% reduction in sebum production, creating a balanced, matte complexion that lasts 4-6 months while maintaining natural skin function.
+                      Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil production in the T-zone. This results in up to 30% reduction in sebum production, creating a balanced, matte complexion that <a href="https://www.webmd.com/beauty/cosmetic-procedures-botox" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">lasts 4-6 months</a> while maintaining natural skin function.
                     </p>
                   </CardContent>
                 </Card>
