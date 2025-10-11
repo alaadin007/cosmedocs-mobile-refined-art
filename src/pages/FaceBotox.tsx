@@ -228,7 +228,8 @@ export default function FaceBotox() {
       price: "£175",
       description: "Smooth dimpled or cobblestone chin texture for a refined appearance.",
       units: "15-25 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "/chin-botox"
     },
     {
       name: "Nefertiti Face Lift",
@@ -243,28 +244,32 @@ export default function FaceBotox() {
       price: "£350",
       description: "Reduce jaw muscle bulk for a softer, more feminine facial contour.",
       units: "25-40 units per side",
-      duration: "6-8 months"
+      duration: "6-8 months",
+      link: "/masseter-botox"
     },
     {
       name: "Lip Flip",
       price: "£175",
       description: "Subtle upper lip enhancement for a naturally fuller appearance.",
       units: "4-8 units",
-      duration: "3-4 months"
+      duration: "3-4 months",
+      link: "/lip-flip"
     },
     {
       name: "Gummy Smile",
       price: "£50",
       description: "Reduce excessive gum display when smiling for perfect smile proportions.",
       units: "2-4 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "/gummy-smile-botox"
     },
     {
       name: "Bunny Lines",
       price: "£50",
       description: "Smooth fine lines on the nose bridge that appear when scrunching.",
       units: "4-8 units",
-      duration: "4-6 months"
+      duration: "4-6 months",
+      link: "/bunny-lines-botox"
     }
   ];
 
@@ -420,7 +425,10 @@ export default function FaceBotox() {
               <h2 className="text-3xl font-bold mb-8 text-white">Where Can You Get Botox? Best Botox in London</h2>
               <p className="text-gray-300 max-w-3xl mx-auto mb-8">
                 Wondering <strong>where to get botox on your face</strong>? Cosmedocs on Harley Street offers the <strong>best botox London</strong> with over 1 million treatments since 2007. 
-                Our <strong>botox in Harley Street</strong> clinic provides expert <strong>botox in London</strong> with natural results you'll love.
+                Our <strong>botox in Harley Street</strong> clinic provides expert <strong>botox in London</strong> with natural results you'll love. We also offer comprehensive 
+                <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline mx-1">dermal fillers</Link>, 
+                <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline mx-1">Profhilo</Link>, and 
+                <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline mx-1">PRP treatments</Link>.
               </p>
             </motion.div>
 
@@ -624,8 +632,15 @@ export default function FaceBotox() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {treatmentAreas.map((area, index) => (
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {treatmentAreas.map((area, index) => {
+                const areaLinks: Record<string, string> = {
+                  "Forehead Lines": "/forehead-lines-botox",
+                  "Frown Lines": "/frown-line-botox",
+                  "Crow's Feet": "/crows-feet-botox"
+                };
+                
+                return (
                 <motion.div
                   key={area.area}
                   initial={{ opacity: 0, y: 20 }}
@@ -635,7 +650,13 @@ export default function FaceBotox() {
                 >
                   <Card className="bg-gray-900/50 border-gray-700 h-full hover:bg-gray-900/70 transition-all duration-300">
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-3 text-white">{area.area}</h3>
+                      <h3 className="text-xl font-semibold mb-3 text-white">
+                        {areaLinks[area.area] ? (
+                          <Link to={areaLinks[area.area]} className="hover:text-purple-300">{area.area}</Link>
+                        ) : (
+                          area.area
+                        )}
+                      </h3>
                       <p className="text-gray-300 mb-4 text-sm">{area.description}</p>
                       <div className="space-y-2 text-xs">
                         <div className="text-gray-400">
@@ -651,7 +672,7 @@ export default function FaceBotox() {
                     </CardContent>
                   </Card>
                 </motion.div>
-              ))}
+              )})}
             </div>
           </div>
         </section>
@@ -821,7 +842,7 @@ export default function FaceBotox() {
                       <div className="flex justify-between items-start mb-3">
                         <h3 className="text-lg font-semibold text-white">
                           {area.link ? (
-                            <a href={area.link} className="text-white hover:text-purple-300 transition-colors">{area.name}</a>
+                            <Link to={area.link} className="text-white hover:text-purple-300 transition-colors">{area.name}</Link>
                           ) : (
                             area.name
                           )}
@@ -861,12 +882,12 @@ export default function FaceBotox() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
+                <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">Bruxism & TMJ</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/bruxism-botox" className="hover:text-purple-300">Bruxism</Link> & TMJ</h3>
                   <p className="text-sm text-gray-300">
                     Effective treatment for jaw pain, teeth grinding, and TMJ disorders.
                   </p>
@@ -878,7 +899,7 @@ export default function FaceBotox() {
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">Migraines</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/migraine-botox" className="hover:text-purple-300">Migraines</Link></h3>
                   <p className="text-sm text-gray-300">
                     FDA-approved treatment for chronic migraines and tension headaches.
                   </p>
@@ -890,7 +911,7 @@ export default function FaceBotox() {
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">Hyperhidrosis</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/excessive-sweat-botox" className="hover:text-purple-300">Hyperhidrosis</Link></h3>
                   <p className="text-sm text-gray-300">
                     Effective solution for excessive sweating in underarms, palms, and feet.
                   </p>
@@ -924,7 +945,7 @@ export default function FaceBotox() {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Advanced Combination Approach</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                For deep wrinkles, we combine Botox with <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</a> for superior results
+                For deep wrinkles, we combine Botox with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for superior results
               </p>
             </motion.div>
 
