@@ -11,7 +11,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Home, ChevronRight } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import emsculptImage from "@/assets/emsculpt-before-after.jpg";
 
 const FatDissolve = () => {
@@ -97,18 +105,18 @@ const FatDissolve = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="EMSCULPT London, fat dissolving London, non-invasive fat reduction, body contouring London, muscle building treatment, fat burning London, HIFEM technology, buttock lifting, abdominal sculpting, Harley Street" />
+        <meta name="keywords" content="fat dissolving injections, fat dissolving injections near me, lemon fat dissolving injections, aqualyx fat dissolving injections, fat dissolving injections london, chin fat dissolving injections, fat dissolving injections stomach, EMSCULPT London, non-invasive fat reduction, body contouring London, fat dissolving injections uk, best fat dissolving injections, are fat dissolving injections safe, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Revolutionary EMSCULPT non-invasive fat reduction and muscle building treatments",
+            "description": "Revolutionary EMSCULPT non-invasive fat reduction and muscle building treatments. Specialist fat dissolving injections in London.",
             "url": seoData.canonical,
             "telephone": "0333 0551 503",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
+              "streetAddress": "37 Harley Street",
               "addressLocality": "London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
@@ -117,9 +125,92 @@ const FatDissolve = () => {
             "priceRange": "£££"
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "EMSCULPT Fat Dissolving Treatment",
+            "description": "Non-invasive fat reduction and muscle building treatment using HIFEM technology. FDA approved body contouring with proven results.",
+            "procedureType": "Non-invasive body contouring",
+            "followup": "4 sessions over 2 weeks recommended",
+            "preparation": "No special preparation required",
+            "howPerformed": "HIFEM energy produces supramaximal muscle contractions while reducing fat cells",
+            "bodyLocation": ["Abdomen", "Buttocks", "Arms", "Thighs", "Calves"]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "EMSCULPT Treatment Packages",
+            "description": "Professional fat reduction and muscle building treatments",
+            "priceCurrency": "GBP",
+            "price": "750",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.cosmedocs.com"
+            }, {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "EMSCULPT Fat Dissolving",
+              "item": seoData.canonical
+            }]
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <section className="py-4 bg-black border-b border-gray-800">
+          <div className="page-container">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" className="text-gray-400 hover:text-purple-300 flex items-center gap-1">
+                    <Home className="h-4 w-4" />
+                    Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="text-gray-600">
+                  <ChevronRight className="h-4 w-4" />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-purple-300">EMSCULPT Fat Dissolving</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -131,12 +222,12 @@ const FatDissolve = () => {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">EMSCULPT Fat Dissolving</span>
+                  <span className="text-purple-300">EMSCULPT Fat Dissolving & Injections</span>
                   <span className="block text-sm mt-4">Melt away stubborn fat effortlessly whilst building muscle</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Revolutionary Body Contouring</p>
-                  <p className="text-sm text-gray-300">FDA approved technology - 20% fat reduction & 16% muscle increase</p>
+                  <p className="text-2xl text-purple-300 font-bold">Revolutionary Body Contouring & Fat Dissolving Injections London</p>
+                  <p className="text-sm text-gray-300">FDA approved technology - Best fat dissolving injections for chin, stomach & belly fat</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -264,6 +355,9 @@ const FatDissolve = () => {
                         src={image.src} 
                         alt={image.alt}
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        width="400"
+                        height="256"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                       <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
@@ -289,10 +383,10 @@ const FatDissolve = () => {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">What is EMSCULPT?</h2>
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">What is EMSCULPT & Fat Dissolving Injections?</h2>
               <div className="text-gray-300 space-y-6">
                 <p className="text-lg">
-                  EMSCULPT is a revolutionary FDA approved device that builds your muscles while burning your fat. This is the world's first and only technology which offers this without:
+                  EMSCULPT is a revolutionary <a href="https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/body-contouring" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">FDA approved device</a> that builds your muscles while burning your fat. Combined with advanced fat dissolving injections like Aqualyx and Lemon Bottle, we offer the most comprehensive fat reduction treatments in London. These are fat dissolving injections that work to permanently eliminate stubborn fat cells in targeted areas such as the chin, stomach, belly, face, and legs. This is the world&apos;s first and only technology which offers this without:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center space-x-3">
@@ -313,7 +407,7 @@ const FatDissolve = () => {
                   </div>
                 </div>
                 <p>
-                  This non-surgical fat burning treatment is pain-free and has no downtime. There are thirteen clinical research studies that back the results of EMSCULPT treatment.
+                  This non-surgical fat burning treatment is pain-free and has no downtime. Our fat dissolving injections are safe and effective, with minimal <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6420270/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">side effects of fat dissolving injections</a> when administered by qualified practitioners. There are thirteen clinical research studies that back the results of EMSCULPT treatment. For those seeking targeted fat reduction, we also offer specialist <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> for facial contouring.
                 </p>
               </div>
             </motion.div>
@@ -687,6 +781,58 @@ const FatDissolve = () => {
                 </Button>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content */}
+        <section className="sr-only" aria-hidden="true">
+          <div className="page-container">
+            <h2>Comprehensive Guide to Fat Dissolving Injections in London</h2>
+            
+            <h3>Understanding Fat Dissolving Injections: How They Work</h3>
+            <p>
+              Fat dissolving injections represent a breakthrough in non-surgical body contouring, offering a safe and effective alternative to traditional liposuction. These injectable treatments use specialised compounds to break down stubborn fat cells permanently. When patients ask &quot;how do fat dissolving injections work?&quot;, the answer lies in the science of lipolysis - the natural breakdown of fat cells. Popular formulations like Aqualyx fat dissolving injections and Lemon Bottle fat dissolving injections contain deoxycholic acid, a naturally occurring substance that disrupts fat cell membranes, causing them to release their contents which are then metabolised and eliminated by the body. This process makes fat dissolving injections work exceptionally well for localised fat deposits that resist diet and exercise. The treatment is particularly effective for chin fat dissolving injections, addressing the common concern of double chin fat, as well as stomach fat dissolving injections for those seeking a flatter abdomen.
+            </p>
+
+            <h3>Types of Fat Dissolving Injections Available in London</h3>
+            <p>
+              At our Harley Street clinic, we offer the best fat dissolving injections currently available in the UK market. Aqualyx fat dissolving injections have been extensively tested and approved for use across Europe, making them one of the most trusted options for patients searching for &quot;aqualyx fat dissolving injections near me&quot;. This treatment works by liquefying fat cells in targeted areas, with excellent results shown in stomach aqualyx fat dissolving injections before and after photographs. Lemon Bottle fat dissolving injections represent a newer generation of dissolving fat injections, offering faster results with potentially fewer sessions required. When considering lemon fat dissolving injections near me, our London location provides convenient access to this innovative treatment. Both formulations are used for various body areas including fat dissolving injections chin, fat dissolving injections stomach, fat dissolving injections face, fat dissolving injections legs, arm fat dissolving injections, and fat dissolving injections cheeks. The choice between Aqualyx and Lemon Bottle depends on individual factors assessed during consultation.
+            </p>
+
+            <h3>Fat Dissolving Injections Before and After: What Results to Expect</h3>
+            <p>
+              One of the most common questions we receive is about fat dissolving injections before and after results. Clinical evidence demonstrates significant improvements in treated areas, with patients typically seeing noticeable reduction within 4-6 weeks. Before and after fat dissolving injections stomach treatments show an average reduction of 2-4cm in circumference after a complete treatment course. Lemon fat dissolving injections before and after results often appear slightly faster than traditional formulations. For facial treatments, chin fat dissolving injections before and after photos reveal dramatic improvements in jawline definition and profile. Double chin fat dissolving injections are particularly popular, as this area responds exceptionally well to treatment. Fat dissolving injections for belly fat demonstrate consistent results when combined with a healthy lifestyle. Face fat dissolving injections can address concerns like jowls and cheek fullness. It is important to maintain realistic expectations - while these treatments are highly effective, they work best for patients within a healthy weight range seeking targeted fat reduction rather than overall weight loss.
+            </p>
+
+            <h3>Safety Profile: Are Fat Dissolving Injections Safe?</h3>
+            <p>
+              A frequently asked question is &quot;are fat dissolving injections safe?&quot; When administered by qualified medical professionals, fat dissolving injections are considered very safe with an excellent track record. The side effects of fat dissolving injections are typically mild and temporary, including minor swelling, redness, and tenderness at injection sites. More comprehensive <a href="https://www.aestheticsjournal.com/feature/overview-of-injectable-lipolysis-treatments" target="_blank" rel="noopener noreferrer" className="text-purple-300">clinical studies on injectable lipolysis safety</a> confirm minimal risks when proper protocols are followed. Common side effects of fat dissolving injections usually resolve within a few days to a week. Serious complications are rare, particularly when treatments are performed in medically supervised environments like our Harley Street clinic. We conduct thorough medical assessments before any treatment to ensure suitability and minimise any potential risks. The fat dissolving injection safety profile has been established through years of clinical use and research, making these treatments a reliable option for body contouring.
+            </p>
+
+            <h3>Treatment Areas and Specialised Applications</h3>
+            <p>
+              Fat dissolving injections offer versatility in treating multiple body areas. Chin fat dissolving injections remain the most popular application, effectively addressing submental fullness and creating a more defined jawline. Double chin fat dissolving injections can dramatically improve facial profile without surgery. Fat dissolving injections stomach treatments target abdominal fat deposits, whilst fat dissolving injections belly applications address lower abdominal concerns. Face fat dissolving injections work well for jowls, buccal fat, and cheek contouring. Fat dissolving injections legs can reduce inner and outer thigh fullness, whilst arm fat dissolving injections address the upper arm area. Fat dissolving injections cheeks create facial definition by reducing excess facial volume. Each area requires specific injection techniques and dosing, which our experienced practitioners customise for optimal results.
+            </p>
+
+            <h3>Cost and Investment: Fat Dissolving Injections Pricing in London</h3>
+            <p>
+              Understanding fat dissolving injections cost helps patients plan their treatment journey. Aqualyx fat dissolving injections cost varies depending on the treatment area and number of sessions required. Generally, smaller areas like the chin require less product and fewer sessions than larger areas like the stomach. The fat dissolving injections cost at our clinic reflects the expertise of our practitioners, the quality of products used, and comprehensive aftercare support. When comparing fat dissolving injections uk pricing, it is essential to consider the qualifications of the practitioner and the clinic&apos;s reputation. Many patients find that investing in quality treatment at an established Harley Street practice provides better value and results than cheaper alternatives. We offer transparent pricing during consultation, with no hidden fees.
+            </p>
+
+            <h3>Patient Reviews and Testimonials</h3>
+            <p>
+              Our fat dissolving injections reviews consistently highlight patient satisfaction with both treatment results and the overall experience. Many fat dissolving injections review comments mention the professionalism of our team and the comfortable treatment environment. Patients particularly appreciate the minimal downtime and natural-looking results. Reviews of lemon fat dissolving injections often praise the faster visible results compared to earlier formulations. When reading reviews, prospective patients should look for verified testimonials from reputable clinics that demonstrate consistent results across different treatment areas.
+            </p>
+
+            <h3>Combining EMSCULPT with Fat Dissolving Injections</h3>
+            <p>
+              For optimal body contouring results, many patients combine EMSCULPT treatments with targeted fat dissolving injections. EMSCULPT builds muscle and reduces fat through HIFEM technology, whilst fat dissolve injections precisely target stubborn localised fat deposits. This combined approach addresses both muscle tone and fat reduction simultaneously, creating comprehensive body transformation. Patients seeking dramatic results in areas like the abdomen often benefit from this dual treatment strategy. Our practitioners can recommend the most effective treatment combinations during your consultation, ensuring your aesthetic goals are achieved efficiently and safely.
+            </p>
+
+            <h3>Choosing Your Provider: Why Location Matters</h3>
+            <p>
+              When searching for &quot;fat dissolving injections near me&quot;, &quot;fat dissolving injection near me&quot;, or &quot;aqualyx fat dissolving injections london&quot;, choosing a reputable Harley Street clinic ensures access to the highest standards of care. Fat dissolving injections london providers should be medically qualified with extensive experience in aesthetic treatments. Our central London location at 37 Harley Street offers convenient access for patients throughout the UK seeking the best fat dissolving injections available. The combination of expert practitioners, premium products, and state-of-the-art facilities makes our clinic the preferred choice for discerning patients.
+            </p>
           </div>
         </section>
       </div>
