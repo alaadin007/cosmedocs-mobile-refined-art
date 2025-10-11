@@ -349,7 +349,7 @@ const LipFillerDissolve = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">What is Lip Filler Dissolve Procedure?</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Lip filler dissolve uses <a href="https://www.fda.gov/cosmetics/cosmetic-products/dermal-fillers-soft-tissue-fillers" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">hyaluronidase enzyme</a> to safely break down hyaluronic acid-based fillers. 
+                Lip filler dissolve uses hyaluronidase enzyme to safely break down hyaluronic acid-based fillers. 
                 This treatment corrects unwanted results, complications, or simply restores your natural lip shape. Whether you're searching for "lip filler dissolving near me" or need expert <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</a> correction, our London clinic provides professional solutions.
               </p>
             </motion.div>
@@ -367,7 +367,7 @@ const LipFillerDissolve = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
-                      Hyaluronidase is a <a href="https://www.healthline.com/health/hyaluronidase" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">naturally occurring enzyme</a> that breaks down hyaluronic acid molecules. 
+                      Hyaluronidase is a naturally occurring enzyme that breaks down hyaluronic acid molecules. 
                       When injected into areas with unwanted filler, it dissolves the gel structure safely and effectively. This is the primary lip filler dissolver used by aesthetic professionals worldwide for safe correction.
                     </p>
                     <div className="space-y-3">
