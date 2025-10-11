@@ -337,7 +337,7 @@ const ExcessiveSweatBotox = () => {
                 <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
                   <CardContent className="p-6">
                     <p className="text-gray-300 mb-6">
-                      Hyperhidrosis occurs when sweat glands work overtime for no apparent reason. For patients seeking comprehensive facial treatments, we also offer <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> at our clinic.
+                      Hyperhidrosis occurs when sweat glands work overtime for no apparent reason.
                     </p>
 
                     <ul className="space-y-4">
