@@ -3,13 +3,6 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Home, ChevronRight } from "lucide-react";
 import {
@@ -20,7 +13,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import emsculptImage from "@/assets/emsculpt-before-after.jpg";
+
 
 const FatDissolve = () => {
   const seoData = generateSEOMetadata(
@@ -28,24 +21,6 @@ const FatDissolve = () => {
     "Revolutionary EMSCULPT non-invasive fat reduction treatment in London. Build muscle & burn fat simultaneously. FDA approved body contouring from £750. Book consultation.",
     "/fat-dissolve"
   );
-
-  const beforeAfterImages = [
-    { 
-      src: emsculptImage, 
-      alt: "EMSCULPT before and after fat reduction results showing muscle building and fat burning", 
-      caption: "EMSCULPT results - 20% fat reduction and 16% muscle mass increase" 
-    },
-    { 
-      src: emsculptImage, 
-      alt: "EMSCULPT abdominal treatment before and after showing sculpted abs", 
-      caption: "Abdominal EMSCULPT - equivalent to 20,000 sit-ups in 30 minutes" 
-    },
-    { 
-      src: emsculptImage, 
-      alt: "EMSCULPT buttock lifting before and after non-surgical enhancement", 
-      caption: "Non-invasive buttock lifting and toning with EMSCULPT technology" 
-    }
-  ];
 
   const faqs = [
     {
