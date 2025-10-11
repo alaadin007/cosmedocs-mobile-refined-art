@@ -195,7 +195,7 @@ const BruxismBotox = () => {
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">TMJ Botox & Teeth Grinding Treatment</p>
                   <p className="text-lg text-gray-300 mb-4">
-                    <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox for clenched jaw</Link> and <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">jaw pain relief</Link>. Professional bruxism treatment at Harley Street clinic.
+                    Botox for clenched jaw and jaw pain relief. Professional bruxism treatment at Harley Street clinic.
                   </p>
                   <p className="text-sm text-gray-300">10-15 minutes • Results last 4-6 months • £350-£450</p>
                 </div>
@@ -386,13 +386,13 @@ const BruxismBotox = () => {
                   <div className="text-gray-300 text-lg leading-relaxed space-y-4">
                     <p>
                       <strong className="text-white">Bruxism Botox & Botox for Teeth Grinding:</strong> <strong>Botox to stop teeth grinding</strong> helps prevent teeth damage, reduces <strong>jaw teeth grinding</strong> frequency, and may create a softer, more refined <strong>bruxism jawline</strong>. 
-                      This effective <strong>treatment of teeth grinding</strong> addresses <strong>bruxism teeth</strong> wear and <strong>teeth clenching</strong> habits.
+                      This effective <strong>treatment of teeth grinding</strong> addresses <strong>bruxism teeth</strong> wear and <strong>teeth clenching</strong> habits. Many patients combine this with <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> for comprehensive facial rejuvenation.
                     </p>
                     
                     <p>
                       <strong className="text-white">TMJ Botox & Botox for Jaw Pain:</strong> Relieves <strong>jaw pain</strong>, headaches, and stiffness linked to temporomandibular joint disorder. 
                       Our <strong>botox jaw clenching</strong> treatment effectively manages <strong>clench jaw symptoms</strong> and <strong>clenching jaw</strong> tension. 
-                      Many patients searching "how I cured my bruxism" discover <strong>botox and teeth grinding</strong> treatment as an effective solution.
+                      Many patients searching "how I cured my bruxism" discover <strong>botox and teeth grinding</strong> treatment as an effective solution, often pairing it with <Link to="/chin-filler" className="text-purple-300 hover:text-purple-200 underline">chin enhancement</Link> for balanced facial aesthetics.
                     </p>
                   </div>
                 </CardContent>
@@ -510,14 +510,14 @@ const BruxismBotox = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: <Check className="w-6 h-6" />, title: "Headaches and Migraines", description: "Reduce tension-related headaches" },
+                { icon: <Check className="w-6 h-6" />, title: "Headaches and Migraines", description: "Reduce tension-related headaches", link: "/migraine-botox" },
                 { icon: <Check className="w-6 h-6" />, title: "Earaches", description: "Relieve referred ear pain" },
                 { icon: <Check className="w-6 h-6" />, title: "Facial Pain", description: "Alleviate jaw and facial discomfort" },
                 { icon: <Check className="w-6 h-6" />, title: "Neck Pain", description: "Reduce tension in neck muscles" },
                 { icon: <Check className="w-6 h-6" />, title: "Chipped Teeth & Sensitivity", description: "Prevent dental damage" },
                 { icon: <Check className="w-6 h-6" />, title: "Chewed Tissue", description: "Protect inside of mouth" },
                 { icon: <Check className="w-6 h-6" />, title: "Jaw Stiffness", description: "Improve jaw movement" },
-                { icon: <Check className="w-6 h-6" />, title: "Sleep Disturbance", description: "Reduce sleep bruxism" },
+                { icon: <Check className="w-6 h-6" />, title: "Sleep Disturbance", description: "Reduce sleep bruxism", link: "/profhilo-treatment" },
                 { icon: <Check className="w-6 h-6" />, title: "Shoulder Tension", description: "Relieve muscle tightness" }
               ].map((item, index) => (
                 <motion.div
@@ -532,7 +532,13 @@ const BruxismBotox = () => {
                       <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                         <div className="text-purple-400">{item.icon}</div>
                       </div>
-                      <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                      <h3 className="text-white font-semibold mb-2">
+                        {item.link ? (
+                          <Link to={item.link} className="hover:text-purple-300 transition-colors">{item.title}</Link>
+                        ) : (
+                          item.title
+                        )}
+                      </h3>
                       <p className="text-gray-300 text-sm">{item.description}</p>
                     </CardContent>
                   </Card>
