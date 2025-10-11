@@ -99,7 +99,7 @@ const NonSurgicalPonytail = () => {
         <meta name="geo.placename" content="London" />
         <meta name="geo.position" content="51.519526;-0.146061" />
         <meta name="ICBM" content="51.519526, -0.146061" />
-        <meta name="author" content="Dr. Raj Thethi, Cosmetic Medicine Specialist" />
+        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -818,12 +818,6 @@ const LipFillerDissolve = () => {
 
         {/* Medical Review Banner */}
         <div className="bg-purple-900/20 border-t border-purple-500/30 py-6">
-          <div className="page-container text-center">
-            <p className="text-gray-300 text-sm">
-              <span className="font-semibold text-purple-300">Medically Reviewed by:</span> Dr. Raj Thethi, GMC Registered Cosmetic Medicine Specialist
-            </p>
-            <p className="text-gray-400 text-xs mt-1">Last updated: {new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}</p>
-          </div>
         </div>
 
         {/* Hidden SEO Content */}

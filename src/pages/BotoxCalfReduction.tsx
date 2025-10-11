@@ -216,7 +216,7 @@ const BotoxCalfReduction = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Physician",
-            "name": "Dr. Raj Thethi",
+            "name": "Dr. Ahmed Haq",
             "medicalSpecialty": "Aesthetic Medicine",
             "worksFor": {
               "@type": "MedicalBusiness",
