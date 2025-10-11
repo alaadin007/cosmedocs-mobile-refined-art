@@ -29,7 +29,7 @@ const FatDissolve = () => {
     },
     {
       question: "What is the procedure?",
-      answer: "There are no special prior-treatment preparations needed. Avoid taking a heavy full meal and empty your bladder before treatment. The procedure is simple and quick using HIFEM energy to produce supramaximal muscle contractions. The treatment is not painful - patients feel strong and frequent muscle contractions. Many patients feel tingling sensations initially but the body adapts quickly."
+      answer: "There are no special prior-treatment preparations needed. Avoid taking a heavy full meal and empty your bladder before treatment. The procedure is simple and quick using HIFEM energy to produce supramaximal muscle contractions. The treatment is not painful - clients feel strong and frequent muscle contractions. Many people feel tingling sensations initially but the body adapts quickly."
     },
     {
       question: "What areas can EMSCULPT treat?",
@@ -41,11 +41,11 @@ const FatDissolve = () => {
     },
     {
       question: "What results can I expect?",
-      answer: "Clinical studies show an average of 19% fat reduction, 16% increase in muscle mass, 96% patient satisfaction rate, and average waist reduction of 4.4cm. Some patients see improvement in muscle tone one day after treatment."
+      answer: "Clinical studies show an average of 19% fat reduction, 16% increase in muscle mass, 96% client satisfaction rate, and average waist reduction of 4.4cm. Some people see improvement in muscle tone one day after treatment."
     },
     {
       question: "How much fat can I lose after EMSCULPT treatment series?",
-      answer: "According to clinical research studies, patients lost 20% of their body fat on average and experienced 1.5 inch loss in their waistline on average after taking series of 4 EMSCULPT treatments."
+      answer: "According to clinical research studies, people lost 20% of their body fat on average and experienced 1.5 inch loss in their waistline on average after taking series of 4 EMSCULPT treatments."
     },
     {
       question: "What is post-treatment like?",
@@ -53,7 +53,7 @@ const FatDissolve = () => {
     },
     {
       question: "Is EMSCULPT painful?",
-      answer: "EMSCULPT is not painful. You'll feel strong muscle contractions, and some patients may experience tingling sensations initially. The body adapts to the rhythmic contractions quickly. It's similar to preparing for a rigorous strength training workout."
+      answer: "EMSCULPT is not painful. You'll feel strong muscle contractions, and some people may experience tingling sensations initially. The body adapts to the rhythmic contractions quickly. It's similar to preparing for a rigorous strength training workout."
     },
     {
       question: "Who is not suitable for EMSCULPT?",
@@ -65,7 +65,7 @@ const FatDissolve = () => {
     },
     {
       question: "Can EMSCULPT be combined with other treatments?",
-      answer: "Yes, patients can combine EMSCULPT with other non-invasive fat reduction treatments such as CoolSculpting or Vanquish to improve fat reduction. Sculptra, Ultherapy, or fat transfer can be combined with EMSCULPT for buttock shaping and lifting."
+      answer: "Yes, clients can combine EMSCULPT with other non-invasive fat reduction treatments such as CoolSculpting or Vanquish to improve fat reduction. Sculptra, Ultherapy, or fat transfer can be combined with EMSCULPT for buttock shaping and lifting."
     }
   ];
 
@@ -341,7 +341,7 @@ const FatDissolve = () => {
           </div>
         </section>
 
-        {/* Why Patients Love It Section */}
+        {/* Why Clients Love It Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -351,10 +351,10 @@ const FatDissolve = () => {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Why Patients Love It</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Clients Love It</h2>
               <div className="text-gray-300 space-y-6">
                 <p className="text-lg">
-                  Patients who are looking for quick and easy way to get rid of their extra body fat and build muscles for a well-toned and sculpted body love EMSCULPT.
+                  People who are looking for quick and easy way to get rid of their extra body fat and build muscles for a well-toned and sculpted body love EMSCULPT.
                 </p>
                 <p>
                   There is no need to do intense exercises to sculpt and tone your body. EMSCULPT does it for you in few treatment sessions. Imagine that you are performing 20,000 squats or sit-ups in a single session of 30 minutes.
@@ -718,17 +718,17 @@ const FatDissolve = () => {
             
             <h3>Understanding Fat Dissolving Injections: How They Work</h3>
             <p>
-              Fat dissolving injections represent a breakthrough in non-surgical body contouring, offering a safe and effective alternative to traditional liposuction. These injectable treatments use specialised compounds to break down stubborn fat cells permanently. When patients ask &quot;how do fat dissolving injections work?&quot;, the answer lies in the science of lipolysis - the natural breakdown of fat cells. Popular formulations like Aqualyx fat dissolving injections and Lemon Bottle fat dissolving injections contain deoxycholic acid, a naturally occurring substance that disrupts fat cell membranes, causing them to release their contents which are then metabolised and eliminated by the body. This process makes fat dissolving injections work exceptionally well for localised fat deposits that resist diet and exercise. The treatment is particularly effective for chin fat dissolving injections, addressing the common concern of double chin fat, as well as stomach fat dissolving injections for those seeking a flatter abdomen.
+              Fat dissolving injections represent a breakthrough in non-surgical body contouring, offering a safe and effective alternative to traditional liposuction. These injectable treatments use specialised compounds to break down stubborn fat cells permanently. When people ask &quot;how do fat dissolving injections work?&quot;, the answer lies in the science of lipolysis - the natural breakdown of fat cells. Popular formulations like Aqualyx fat dissolving injections and Lemon Bottle fat dissolving injections contain deoxycholic acid, a naturally occurring substance that disrupts fat cell membranes, causing them to release their contents which are then metabolised and eliminated by the body. This process makes fat dissolving injections work exceptionally well for localised fat deposits that resist diet and exercise. The treatment is particularly effective for chin fat dissolving injections, addressing the common concern of double chin fat, as well as stomach fat dissolving injections for those seeking a flatter abdomen.
             </p>
 
             <h3>Types of Fat Dissolving Injections Available in London</h3>
             <p>
-              At our Harley Street clinic, we offer the best fat dissolving injections currently available in the UK market. Aqualyx fat dissolving injections have been extensively tested and approved for use across Europe, making them one of the most trusted options for patients searching for &quot;aqualyx fat dissolving injections near me&quot;. This treatment works by liquefying fat cells in targeted areas, with excellent results shown in stomach aqualyx fat dissolving injections before and after photographs. Lemon Bottle fat dissolving injections represent a newer generation of dissolving fat injections, offering faster results with potentially fewer sessions required. When considering lemon fat dissolving injections near me, our London location provides convenient access to this innovative treatment. Both formulations are used for various body areas including fat dissolving injections chin, fat dissolving injections stomach, fat dissolving injections face, fat dissolving injections legs, arm fat dissolving injections, and fat dissolving injections cheeks. The choice between Aqualyx and Lemon Bottle depends on individual factors assessed during consultation.
+              At our Harley Street clinic, we offer the best fat dissolving injections currently available in the UK market. Aqualyx fat dissolving injections have been extensively tested and approved for use across Europe, making them one of the most trusted options for clients searching for &quot;aqualyx fat dissolving injections near me&quot;. This treatment works by liquefying fat cells in targeted areas, with excellent results shown in stomach aqualyx fat dissolving injections before and after photographs. Lemon Bottle fat dissolving injections represent a newer generation of dissolving fat injections, offering faster results with potentially fewer sessions required. When considering lemon fat dissolving injections near me, our London location provides convenient access to this innovative treatment. Both formulations are used for various body areas including fat dissolving injections chin, fat dissolving injections stomach, fat dissolving injections face, fat dissolving injections legs, arm fat dissolving injections, and fat dissolving injections cheeks. The choice between Aqualyx and Lemon Bottle depends on individual factors assessed during consultation.
             </p>
 
             <h3>Fat Dissolving Injections Before and After: What Results to Expect</h3>
             <p>
-              One of the most common questions we receive is about fat dissolving injections before and after results. Clinical evidence demonstrates significant improvements in treated areas, with patients typically seeing noticeable reduction within 4-6 weeks. Before and after fat dissolving injections stomach treatments show an average reduction of 2-4cm in circumference after a complete treatment course. Lemon fat dissolving injections before and after results often appear slightly faster than traditional formulations. For facial treatments, chin fat dissolving injections before and after photos reveal dramatic improvements in jawline definition and profile. Double chin fat dissolving injections are particularly popular, as this area responds exceptionally well to treatment. Fat dissolving injections for belly fat demonstrate consistent results when combined with a healthy lifestyle. Face fat dissolving injections can address concerns like jowls and cheek fullness. It is important to maintain realistic expectations - while these treatments are highly effective, they work best for patients within a healthy weight range seeking targeted fat reduction rather than overall weight loss.
+              One of the most common questions we receive is about fat dissolving injections before and after results. Clinical evidence demonstrates significant improvements in treated areas, with clients typically seeing noticeable reduction within 4-6 weeks. Before and after fat dissolving injections stomach treatments show an average reduction of 2-4cm in circumference after a complete treatment course. Lemon fat dissolving injections before and after results often appear slightly faster than traditional formulations. For facial treatments, chin fat dissolving injections before and after photos reveal dramatic improvements in jawline definition and profile. Double chin fat dissolving injections are particularly popular, as this area responds exceptionally well to treatment. Fat dissolving injections for belly fat demonstrate consistent results when combined with a healthy lifestyle. Face fat dissolving injections can address concerns like jowls and cheek fullness. It is important to maintain realistic expectations - while these treatments are highly effective, they work best for people within a healthy weight range seeking targeted fat reduction rather than overall weight loss.
             </p>
 
             <h3>Safety Profile: Are Fat Dissolving Injections Safe?</h3>
@@ -743,22 +743,22 @@ const FatDissolve = () => {
 
             <h3>Cost and Investment: Fat Dissolving Injections Pricing in London</h3>
             <p>
-              Understanding fat dissolving injections cost helps patients plan their treatment journey. Aqualyx fat dissolving injections cost varies depending on the treatment area and number of sessions required. Generally, smaller areas like the chin require less product and fewer sessions than larger areas like the stomach. The fat dissolving injections cost at our clinic reflects the expertise of our practitioners, the quality of products used, and comprehensive aftercare support. When comparing fat dissolving injections uk pricing, it is essential to consider the qualifications of the practitioner and the clinic&apos;s reputation. Many patients find that investing in quality treatment at an established Harley Street practice provides better value and results than cheaper alternatives. We offer transparent pricing during consultation, with no hidden fees.
+              Understanding fat dissolving injections cost helps people plan their treatment journey. Aqualyx fat dissolving injections cost varies depending on the treatment area and number of sessions required. Generally, smaller areas like the chin require less product and fewer sessions than larger areas like the stomach. The fat dissolving injections cost at our clinic reflects the expertise of our practitioners, the quality of products used, and comprehensive aftercare support. When comparing fat dissolving injections uk pricing, it is essential to consider the qualifications of the practitioner and the clinic&apos;s reputation. Many clients find that investing in quality treatment at an established Harley Street practice provides better value and results than cheaper alternatives. We offer transparent pricing during consultation, with no hidden fees.
             </p>
 
-            <h3>Patient Reviews and Testimonials</h3>
+            <h3>Client Reviews and Testimonials</h3>
             <p>
-              Our fat dissolving injections reviews consistently highlight patient satisfaction with both treatment results and the overall experience. Many fat dissolving injections review comments mention the professionalism of our team and the comfortable treatment environment. Patients particularly appreciate the minimal downtime and natural-looking results. Reviews of lemon fat dissolving injections often praise the faster visible results compared to earlier formulations. When reading reviews, prospective patients should look for verified testimonials from reputable clinics that demonstrate consistent results across different treatment areas.
+              Our fat dissolving injections reviews consistently highlight client satisfaction with both treatment results and the overall experience. Many fat dissolving injections review comments mention the professionalism of our team and the comfortable treatment environment. Clients particularly appreciate the minimal downtime and natural-looking results. Reviews of lemon fat dissolving injections often praise the faster visible results compared to earlier formulations. When reading reviews, prospective clients should look for verified testimonials from reputable clinics that demonstrate consistent results across different treatment areas.
             </p>
 
             <h3>Combining EMSCULPT with Fat Dissolving Injections</h3>
             <p>
-              For optimal body contouring results, many patients combine EMSCULPT treatments with targeted fat dissolving injections. EMSCULPT builds muscle and reduces fat through HIFEM technology, whilst fat dissolve injections precisely target stubborn localised fat deposits. This combined approach addresses both muscle tone and fat reduction simultaneously, creating comprehensive body transformation. Patients seeking dramatic results in areas like the abdomen often benefit from this dual treatment strategy. Our practitioners can recommend the most effective treatment combinations during your consultation, ensuring your aesthetic goals are achieved efficiently and safely.
+              For optimal body contouring results, many people combine EMSCULPT treatments with targeted fat dissolving injections. EMSCULPT builds muscle and reduces fat through HIFEM technology, whilst fat dissolve injections precisely target stubborn localised fat deposits. This combined approach addresses both muscle tone and fat reduction simultaneously, creating comprehensive body transformation. Clients seeking dramatic results in areas like the abdomen often benefit from this dual treatment strategy. Our practitioners can recommend the most effective treatment combinations during your consultation, ensuring your aesthetic goals are achieved efficiently and safely.
             </p>
 
             <h3>Choosing Your Provider: Why Location Matters</h3>
             <p>
-              When searching for &quot;fat dissolving injections near me&quot;, &quot;fat dissolving injection near me&quot;, or &quot;aqualyx fat dissolving injections london&quot;, choosing a reputable Harley Street clinic ensures access to the highest standards of care. Fat dissolving injections london providers should be medically qualified with extensive experience in aesthetic treatments. Our central London location at 37 Harley Street offers convenient access for patients throughout the UK seeking the best fat dissolving injections available. The combination of expert practitioners, premium products, and state-of-the-art facilities makes our clinic the preferred choice for discerning patients.
+              When searching for &quot;fat dissolving injections near me&quot;, &quot;fat dissolving injection near me&quot;, or &quot;aqualyx fat dissolving injections london&quot;, choosing a reputable Harley Street clinic ensures access to the highest standards of care. Fat dissolving injections london providers should be medically qualified with extensive experience in aesthetic treatments. Our central London location at 37 Harley Street offers convenient access for clients throughout the UK seeking the best fat dissolving injections available. The combination of expert practitioners, premium products, and state-of-the-art facilities makes our clinic the preferred choice for discerning clients.
             </p>
           </div>
         </section>
