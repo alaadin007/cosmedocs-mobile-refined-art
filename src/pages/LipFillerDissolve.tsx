@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Phone, Clock, ShieldCheck, Award, Users, Activity, Syringe, CheckCircle, Home, ChevronRight } from "lucide-react";
+import ClientReviews from "@/components/ClientReviews";
 import {
   Carousel,
   CarouselContent,
@@ -815,6 +816,9 @@ const LipFillerDissolve = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Medical Review Banner */}
         <div className="bg-purple-900/20 border-t border-purple-500/30 py-6">
