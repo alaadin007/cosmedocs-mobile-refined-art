@@ -652,7 +652,7 @@ export default function FaceBotox() {
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold mb-3 text-white">
                         {areaLinks[area.area] ? (
-                          <Link to={areaLinks[area.area]} className="hover:text-purple-300">{area.area}</Link>
+                          <Link to={areaLinks[area.area]} className="text-purple-300 underline hover:text-purple-200">{area.area}</Link>
                         ) : (
                           area.area
                         )}
@@ -842,7 +842,7 @@ export default function FaceBotox() {
                       <div className="flex justify-between items-start mb-3">
                         <h3 className="text-lg font-semibold text-white">
                           {area.link ? (
-                            <Link to={area.link} className="text-white hover:text-purple-300 transition-colors">{area.name}</Link>
+                            <Link to={area.link} className="text-purple-300 underline hover:text-purple-200 transition-colors">{area.name}</Link>
                           ) : (
                             area.name
                           )}
@@ -887,7 +887,7 @@ export default function FaceBotox() {
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/bruxism-botox" className="hover:text-purple-300">Bruxism</Link> & TMJ</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/bruxism-botox" className="text-purple-300 underline hover:text-purple-200">Bruxism</Link> & TMJ</h3>
                   <p className="text-sm text-gray-300">
                     Effective treatment for jaw pain, teeth grinding, and TMJ disorders.
                   </p>
@@ -899,7 +899,7 @@ export default function FaceBotox() {
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/migraine-botox" className="hover:text-purple-300">Migraines</Link></h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/migraine-botox" className="text-purple-300 underline hover:text-purple-200">Migraines</Link></h3>
                   <p className="text-sm text-gray-300">
                     FDA-approved treatment for chronic migraines and tension headaches.
                   </p>
@@ -911,7 +911,7 @@ export default function FaceBotox() {
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/excessive-sweat-botox" className="hover:text-purple-300">Hyperhidrosis</Link></h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/excessive-sweat-botox" className="text-purple-300 underline hover:text-purple-200">Hyperhidrosis</Link></h3>
                   <p className="text-sm text-gray-300">
                     Effective solution for excessive sweating in underarms, palms, and feet.
                   </p>
