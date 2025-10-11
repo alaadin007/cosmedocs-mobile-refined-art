@@ -334,7 +334,7 @@ const FatDissolve = () => {
                   </div>
                 </div>
                 <p>
-                  This non-surgical fat burning treatment is pain-free and has no downtime. Our fat dissolving injections are safe and effective, with minimal <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6420270/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">side effects of fat dissolving injections</a> when administered by qualified practitioners. There are thirteen clinical research studies that back the results of EMSCULPT treatment. For those seeking targeted fat reduction, we also offer specialist <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> for facial contouring.
+                  This non-surgical fat burning treatment is pain-free and has no downtime. Our fat dissolving injections are safe and effective, with minimal side effects when administered by qualified practitioners. There are thirteen clinical research studies that back the results of EMSCULPT treatment. For those seeking targeted fat reduction, we also offer specialist <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> for facial contouring.
                 </p>
               </div>
             </motion.div>
@@ -396,7 +396,7 @@ const FatDissolve = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      EMSCULPT uses <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6446744/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">HIFEM technology</a> to create supramaximal contractions that are impossible to achieve through voluntary exercise. This scientifically proven method delivers measurable results.
+                      EMSCULPT uses HIFEM technology to create supramaximal contractions that are impossible to achieve through voluntary exercise. This scientifically proven method delivers measurable results.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
