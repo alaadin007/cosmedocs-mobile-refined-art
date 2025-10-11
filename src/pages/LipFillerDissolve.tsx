@@ -756,95 +756,6 @@ const LipFillerDissolve = () => {
           </div>
         </section>
 
-        {/* Client Reviews */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Client Reviews</h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                See what our clients say about their lip filler dissolve experience at Cosmedocs.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        ★★★★★
-                      </div>
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">
-                      "I had overfilled lips from another clinic and Dr. Sarah at Cosmedocs dissolved them perfectly. 
-                      The treatment was quick and painless, and my lips look natural again. So grateful!"
-                    </p>
-                    <p className="text-white font-semibold">Emma L.</p>
-                    <p className="text-purple-300 text-sm">Verified Patient</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        ★★★★★
-                      </div>
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">
-                      "My filler had migrated and created an unnatural shape. The team at Cosmedocs corrected it beautifully. 
-                      Professional, caring, and the results exceeded my expectations."
-                    </p>
-                    <p className="text-white font-semibold">Sophie K.</p>
-                    <p className="text-purple-300 text-sm">Verified Patient</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-black border border-purple-500/20 h-full hover:border-purple-500/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        ★★★★★
-                      </div>
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">
-                      "Emergency dissolve service was incredible. I had vascular compromise and they saw me immediately. 
-                      Professional emergency care that saved my lips. Cannot recommend enough."
-                    </p>
-                    <p className="text-white font-semibold">Jessica M.</p>
-                    <p className="text-purple-300 text-sm">Verified Patient</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section className="py-20 bg-accent">
           <div className="page-container">
@@ -904,6 +815,16 @@ const LipFillerDissolve = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Medical Review Banner */}
+        <div className="bg-purple-900/20 border-t border-purple-500/30 py-6">
+          <div className="page-container text-center">
+            <p className="text-gray-300 text-sm">
+              <span className="font-semibold text-purple-300">Medically Reviewed by:</span> Dr. Raj Thethi, GMC Registered Cosmetic Medicine Specialist
+            </p>
+            <p className="text-gray-400 text-xs mt-1">Last updated: {new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}</p>
+          </div>
+        </div>
 
         {/* Hidden SEO Content */}
         <section className="sr-only" aria-hidden="true">
