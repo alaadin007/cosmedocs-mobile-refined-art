@@ -180,7 +180,7 @@ const ExcessiveSweatBotox = () => {
                 </h1>
                 <div className="mb-8 space-y-3">
                   <p className="text-2xl text-purple-300 font-bold">Expert Botox for Underarms, Hands, Face & Feet</p>
-                  <p className="text-lg text-gray-200">FDA-approved <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">botox treatment</a> that blocks sweat glands for dramatic, life-changing results</p>
+                  <p className="text-lg text-gray-200">FDA-approved botox treatment that blocks sweat glands for dramatic, life-changing results</p>
                   <p className="text-sm text-gray-300">20-30 minutes • Results last 6-12 months • Prices from £350</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
