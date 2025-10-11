@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -12,11 +13,12 @@ import {
 } from "@/components/ui/carousel";
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const BruxismBotox = () => {
   const seoData = generateSEOMetadata(
-    "Bruxism Botox London | TMJ Treatment | Cosmedocs Harley Street",
-    "Expert bruxism botox treatment in London for teeth grinding and TMJ disorders. Professional masseter muscle botox by cosmetic doctors. Therapeutic results at Harley Street clinic.",
+    "Bruxism Botox London | TMJ Botox Treatment | Teeth Grinding Cure",
+    "Expert bruxism botox treatment in London for teeth grinding and TMJ disorders. Botox for clenched jaw and jaw pain. Professional masseter botox by cosmetic doctors at Harley Street.",
     "/bruxism-botox"
   );
 
@@ -61,35 +63,121 @@ const BruxismBotox = () => {
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={seoData.canonical} />
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_GB" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="bruxism botox London, TMJ treatment, teeth grinding botox, masseter muscle botox, jaw slimming, therapeutic botox, Harley Street clinic" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.image} />
+        <meta name="keywords" content="bruxism botox, TMJ botox, teeth grinding treatment, botox for clenched jaw, botox and teeth grinding, botox for jaw pain, botox for tmj, botox to stop teeth grinding, bruxism treatment, jaw clenching, teeth grinding botox, masseter botox, Harley Street clinic" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Cosmedocs",
-            "description": "Expert bruxism botox treatments in London",
+            "description": "Expert bruxism botox and TMJ treatments in London",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+443330551503",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
+              "streetAddress": "37 Harley Street",
               "addressLocality": "London",
-              "postalCode": "W1G 9PF",
+              "postalCode": "W1G 8QD",
               "addressCountry": "GB"
             },
             "medicalSpecialty": "Cosmetic Medicine",
             "priceRange": "££"
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Bruxism Botox Treatment",
+            "alternateName": ["TMJ Botox", "Teeth Grinding Treatment", "Botox for Jaw Clenching", "Masseter Botox"],
+            "description": "Professional bruxism botox treatment for teeth grinding, jaw clenching, and TMJ disorders using botulinum toxin injections in masseter muscles.",
+            "procedureType": "Therapeutic and Cosmetic",
+            "bodyLocation": "Jaw and Masseter Muscles",
+            "preparation": "Avoid blood thinners 24 hours before treatment",
+            "followup": "2-4 week assessment",
+            "howPerformed": "Precision injection of botulinum toxin into masseter and temporalis muscles using specialized techniques",
+            "provider": {
+              "@type": "MedicalOrganization",
+              "name": "Cosmedocs",
+              "url": seoData.canonical,
+              "telephone": "+443330551503"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Bruxism Botox Treatment",
+            "description": "Therapeutic botox treatment for bruxism and TMJ - £350-£450",
+            "price": "350",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "priceValidUntil": "2025-12-31",
+            "seller": {
+              "@type": "MedicalOrganization",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does botox help with bruxism and TMJ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Botox relaxes the masseter muscles responsible for jaw clenching and teeth grinding. This reduces muscle tension, alleviates TMJ pain, and prevents dental damage while creating a slimmer jawline as a cosmetic benefit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long do bruxism botox results last?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Bruxism botox results typically last 4-6 months. The masseter muscles gradually regain strength, requiring maintenance treatments to sustain therapeutic benefits and prevent return of grinding symptoms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does bruxism botox cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Bruxism botox at Cosmedocs costs £300-450 depending on the severity and muscle size. This therapeutic treatment requires higher doses than cosmetic botox for effective muscle relaxation and symptom relief."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb */}
+        <div className="page-container pt-20">
+          <Breadcrumb 
+            items={[
+              { label: 'Treatments', path: '/treatments' },
+              { label: 'Botox Treatments', path: '/botox-london' }
+            ]}
+            currentPage="Bruxism Botox"
+          />
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -102,11 +190,14 @@ const BruxismBotox = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Bruxism Botox London</span>
-                  <span className="block text-sm mt-4">Invisible art - jaw relief that speaks without words</span>
+                  <span className="block text-sm mt-4">Expert treatment for teeth grinding, jaw clenching, and TMJ disorders</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert TMJ & Teeth Grinding Treatment</p>
-                  <p className="text-sm text-gray-300">10-15 minutes • Results last 4-6 months</p>
+                  <p className="text-2xl text-purple-300 font-bold">TMJ Botox & Teeth Grinding Treatment</p>
+                  <p className="text-lg text-gray-300 mb-4">
+                    <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox for clenched jaw</Link> and <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">jaw pain relief</Link>. Professional bruxism treatment at Harley Street clinic.
+                  </p>
+                  <p className="text-sm text-gray-300">10-15 minutes • Results last 4-6 months • £350-£450</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -239,6 +330,9 @@ const BruxismBotox = () => {
                         src={image.src} 
                         alt={image.alt}
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        width="400"
+                        height="256"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                       <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
@@ -264,12 +358,14 @@ const BruxismBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">TMJ & Bruxism Botox</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">TMJ Botox & Bruxism Treatment</h2>
               <div className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
                 <p>
-                  Botox for TMJ and bruxism works by gently relaxing the overactive jaw muscles responsible for teeth grinding, clenching, and jaw tension. By reducing strain on the masseter and surrounding muscles, this treatment provides both functional relief and subtle aesthetic benefits.
+                  <strong>Botox for TMJ</strong> and <strong>bruxism botox</strong> works by gently relaxing the overactive jaw muscles responsible for <strong>teeth grinding</strong>, <strong>jaw clenching</strong>, and jaw tension. 
+                  By reducing strain on the <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter</Link> and surrounding muscles, this <strong>teeth grinding treatment</strong> provides both functional relief and subtle aesthetic benefits. 
+                  Our expert <strong>botox for clenched jaw</strong> therapy targets <strong>bruxism teeth grinding symptoms</strong> while naturally slimming the jawline. 
+                  This proven <strong>bruxism treatment</strong> helps patients who <strong>grind teeth</strong> at night or experience <strong>symptoms of clenched jaw</strong> during the day.
                 </p>
-                
               </div>
             </motion.div>
 
@@ -287,11 +383,14 @@ const BruxismBotox = () => {
                 <CardContent>
                   <div className="text-gray-300 text-lg leading-relaxed space-y-4">
                     <p>
-                      <strong className="text-white">Bruxism Botox:</strong> Helps prevent teeth damage, reduces jaw tightness, and may create a softer, more refined jawline.
+                      <strong className="text-white">Bruxism Botox & Botox for Teeth Grinding:</strong> <strong>Botox to stop teeth grinding</strong> helps prevent teeth damage, reduces <strong>jaw teeth grinding</strong> frequency, and may create a softer, more refined <strong>bruxism jawline</strong>. 
+                      This effective <strong>treatment of teeth grinding</strong> addresses <strong>bruxism teeth</strong> wear and <strong>teeth clenching</strong> habits.
                     </p>
                     
                     <p>
-                      <strong className="text-white">TMJ Botox:</strong> Relieves jaw pain, headaches, and stiffness linked to temporomandibular joint disorder.
+                      <strong className="text-white">TMJ Botox & Botox for Jaw Pain:</strong> Relieves <strong>jaw pain</strong>, headaches, and stiffness linked to temporomandibular joint disorder. 
+                      Our <strong>botox jaw clenching</strong> treatment effectively manages <strong>clench jaw symptoms</strong> and <strong>clenching jaw</strong> tension. 
+                      Many patients searching "how I cured my bruxism" discover <strong>botox and teeth grinding</strong> treatment as an effective solution.
                     </p>
                   </div>
                 </CardContent>
@@ -307,7 +406,8 @@ const BruxismBotox = () => {
             >
               <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 max-w-2xl mx-auto">
                 <p className="text-gray-300 text-center">
-                  Safe, minimally invasive, and effective, this treatment targets the root cause of jaw discomfort — offering long-lasting relief and improved quality of life.
+                  Safe, minimally invasive, and effective, <strong>teeth grinding botox</strong> targets the root cause of jaw discomfort — offering long-lasting relief and improved quality of life. 
+                  Understanding <strong>bruxism signs and symptoms</strong> is crucial for effective <strong>bruxism treatments</strong> and finding the right <strong>bruxism cure</strong>.
                 </p>
               </div>
             </motion.div>
@@ -324,9 +424,10 @@ const BruxismBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Causes of Bruxism</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Causes of Bruxism Disease</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Bruxism, commonly known as teeth grinding, can be caused by several factors. Understanding these causes is crucial for effectively managing and treating this condition.
+                <strong>Bruxism</strong> (also known as <strong>bruxismo</strong> or <strong>bruxims</strong>), commonly known as <strong>teeth grinding</strong> and <strong>jaw grinding</strong>, can be caused by several factors. 
+                Understanding <strong>bruxism teeth grinding symptoms</strong> and <strong>teeth grinding symptoms</strong> is crucial for effectively managing this <strong>bruxism disease</strong> and finding appropriate <strong>bruxism treatments</strong> to <strong>treat teeth grinding</strong>.
               </p>
             </motion.div>
 
@@ -339,11 +440,14 @@ const BruxismBotox = () => {
               >
                 <img 
                   src="/src/assets/bruxism-effects.jpg" 
-                  alt="Bruxism teeth grinding long term effects on teeth wear and tear"
+                  alt="Bruxism teeth grinding long term effects showing teeth wear, jaw clenching damage and symptoms of clenched jaw"
                   className="w-full rounded-lg shadow-2xl"
+                  loading="lazy"
+                  width="600"
+                  height="400"
                 />
                 <p className="text-gray-400 text-sm mt-2 text-center">
-                  Botox for Bruxism reduces the pressure on the teeth, reducing long-term wear and tear.
+                  <strong>Botox for bruxism grinding</strong> reduces the pressure on the teeth, preventing long-term wear and tear from <strong>bruxism teeth</strong> damage and <strong>clenching teeth</strong>.
                 </p>
               </motion.div>
 
@@ -391,9 +495,10 @@ const BruxismBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">TMJ Botox Helps With:</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">TMJ Botox & Botox TMJ Treatment Helps With:</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Jaw grinding can enlarge the masseter muscle, which is responsible for chewing. Our therapeutic botox provides relief from multiple symptoms.
+                <strong>Jaw grinding</strong> and <strong>bruxism grinding</strong> can enlarge the masseter muscle, which is responsible for chewing. 
+                Our therapeutic <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">botox</Link> provides relief from multiple <strong>symptoms of clenched jaw</strong> and <strong>clench jaw symptoms</strong>.
               </p>
             </motion.div>
 
@@ -897,18 +1002,86 @@ const BruxismBotox = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h3>Expert Bruxism Botox Treatment in London</h3>
-          <p>Cosmedocs offers professional bruxism botox treatments for teeth grinding and TMJ disorders. Our experienced cosmetic doctors use advanced botulinum toxin injection techniques to relax masseter muscles and provide therapeutic relief. Located in prestigious Harley Street, our clinic provides comprehensive jaw assessments and personalized treatment plans.</p>
+        <div className="sr-only" aria-hidden="true">
+          <h2>Expert Bruxism Botox Treatment London | TMJ Botox | Teeth Grinding Cure</h2>
+          <p>
+            Cosmedocs offers professional <strong>bruxism botox</strong> and <strong>TMJ botox</strong> treatments for <strong>teeth grinding</strong> and <strong>jaw clenching</strong>. 
+            Our experienced cosmetic doctors use advanced <strong>botox for teeth grinding</strong> and <strong>botox for clenched jaw</strong> techniques to provide effective relief. 
+            <strong>Botox and teeth grinding</strong> treatment targets the masseter and temporalis muscles, offering a proven <strong>bruxism cure</strong> and <strong>teeth grinding treatment</strong>.
+            Located in prestigious Harley Street, London, our clinic provides comprehensive jaw assessments and personalized <strong>bruxism treatments</strong> for optimal results.
+          </p>
           
-          <h4>Why Choose Cosmedocs for Bruxism Botox?</h4>
-          <p>Our invisible art philosophy ensures effective therapeutic treatment while providing aesthetic jawline slimming benefits. We specialize in precise masseter muscle targeting using the latest injection techniques for optimal outcomes. Our doctors have extensive experience in therapeutic botox applications and jaw anatomy, ensuring safe and effective treatments.</p>
-          
-          <h4>Understanding Bruxism and TMJ Disorders</h4>
-          <p>Bruxism involves unconscious teeth grinding and jaw clenching that can cause dental damage, headaches, and TMJ pain. Professional botox treatment relaxes the overactive masseter muscles, reducing grinding frequency and providing significant relief from associated symptoms while creating aesthetic facial slimming.</p>
-          
-          <h4>Treatment Process and Jaw Care</h4>
-          <p>Our bruxism botox treatment begins with a comprehensive jaw assessment and medical history review. The injection process takes 10-15 minutes using specialized techniques for the thick masseter muscles. Results appear gradually over 1-4 weeks, with optimal effects lasting 4-6 months. We provide ongoing TMJ management support and regular follow-up care.</p>
+          <h3>Botox for Jaw Pain & TMJ Treatment London</h3>
+          <p>
+            <strong>Botox for jaw pain</strong> and <strong>botox for tmj</strong> (temporomandibular joint disorder) effectively relieves <strong>symptoms of clenched jaw</strong> and reduces <strong>jaw grinding</strong> intensity. 
+            Our <strong>botox TMJ</strong> treatment addresses <strong>clench jaw symptoms</strong> including headaches, facial pain, and dental damage from <strong>bruxism teeth</strong> wear. 
+            <strong>Botox to stop teeth grinding</strong> works by relaxing overactive jaw muscles, preventing unconscious <strong>clenching teeth</strong> and <strong>teeth clenching</strong> behaviours. 
+            This therapeutic approach provides long-lasting relief from <strong>bruxism disease</strong> and <strong>jaw teeth grinding</strong> symptoms.
+          </p>
+
+          <h3>Understanding Bruxism Signs and Symptoms | Bruxism Teeth Grinding</h3>
+          <p>
+            <strong>Bruxism signs and symptoms</strong> include unconscious <strong>grind teeth</strong> behaviour, <strong>jaw clenching</strong>, morning headaches, and <strong>teeth grinding symptoms</strong> like tooth sensitivity and enamel wear. 
+            <strong>Bruxism teeth grinding symptoms</strong> often present as <strong>clenching jaw</strong> tension, TMJ pain, and worn dental surfaces from chronic <strong>bruxism grinding</strong>. 
+            Many patients experience <strong>symptoms of clenched jaw</strong> including facial muscle fatigue, earaches, and disturbed sleep patterns. 
+            <strong>Bruxism teeth</strong> damage can lead to chipped teeth, receding gums, and increased tooth sensitivity requiring professional <strong>treatment of teeth grinding</strong>.
+          </p>
+
+          <h3>Bruxism Treatment Options | How I Cured My Bruxism</h3>
+          <p>
+            Patients often ask "how I cured my bruxism" - and <strong>teeth grinding botox</strong> represents one of the most effective modern <strong>bruxism treatments</strong> available. 
+            <strong>Botox jaw clenching</strong> therapy targets the masseter muscles responsible for <strong>jaw grinding</strong> and <strong>clenching teeth</strong>. 
+            This innovative <strong>bruxism treatment</strong> offers superior results compared to traditional mouth guards for managing <strong>bruxismo</strong> (the medical term for teeth grinding). 
+            Our expert practitioners specialize in <strong>treat teeth grinding</strong> using precise botulinum toxin injections that relax jaw muscles whilst preserving normal chewing function.
+          </p>
+
+          <h3>Comprehensive Teeth Grinding Treatment & Bruxism Cure</h3>
+          <p>
+            Our comprehensive <strong>teeth grinding treatment</strong> approach combines <strong>botox and teeth grinding</strong> therapy with lifestyle management strategies. 
+            <strong>Botox for bruxism</strong> provides 4-6 months of relief from <strong>jaw teeth grinding</strong> and <strong>teeth clenching</strong> symptoms. 
+            The treatment effectively addresses both daytime <strong>clenching jaw</strong> habits and nocturnal <strong>bruxism teeth grinding</strong>. 
+            As a recognized <strong>bruxism cure</strong>, this therapy prevents further <strong>bruxism teeth</strong> damage whilst improving sleep quality and reducing tension headaches associated with chronic <strong>jaw clenching</strong>.
+          </p>
+
+          <h3>Botox Jaw Clenching Treatment & Bruxism Jawline Benefits</h3>
+          <p>
+            <strong>Botox jaw clenching</strong> treatment offers dual benefits - therapeutic relief and aesthetic <strong>bruxism jawline</strong> refinement. 
+            By relaxing enlarged masseter muscles from chronic <strong>grinding teeth</strong>, patients achieve a slimmer, more feminine jaw contour. 
+            This <strong>treatment for teeth grinding</strong> reduces muscle bulk whilst maintaining natural jaw movement and chewing function. 
+            The resulting <strong>bruxism jawline</strong> transformation complements the therapeutic benefits of reduced <strong>jaw grinding</strong> and <strong>teeth grinding symptoms</strong>.
+          </p>
+
+          <h3>Expert TMJ Botox & Bruxism Treatment at Harley Street</h3>
+          <p>
+            Our Harley Street clinic offers expert <strong>TMJ botox</strong> and <strong>bruxism botox</strong> administered by experienced cosmetic doctors specializing in jaw disorders. 
+            We use premium botulinum toxin for <strong>botox to stop teeth grinding</strong> and alleviate <strong>symptoms of clenched jaw</strong>. 
+            Each <strong>teeth grinding treatment</strong> begins with comprehensive assessment of <strong>bruxism signs and symptoms</strong> to create personalized treatment plans. 
+            Our practitioners stay current with latest research on <strong>botox and teeth grinding</strong>, including insights from experts like Luke Cascarini in maxillofacial medicine.
+          </p>
+
+          <h3>Why Choose Our Bruxism Treatment & Teeth Grinding Botox</h3>
+          <p>
+            Cosmedocs provides the leading <strong>bruxism treatment</strong> in London with proven results for <strong>botox for clenched jaw</strong> and <strong>jaw clenching</strong> relief. 
+            Our invisible art philosophy ensures effective therapeutic <strong>treatment of teeth grinding</strong> whilst providing aesthetic <strong>bruxism jawline</strong> slimming. 
+            We specialize in precise masseter muscle targeting using advanced <strong>botox for teeth grinding</strong> injection techniques for optimal outcomes. 
+            Our doctors have extensive experience with <strong>botox TMJ</strong> applications and jaw anatomy, ensuring safe and effective <strong>bruxism treatments</strong> that address both <strong>teeth clenching</strong> and aesthetic concerns.
+          </p>
+
+          <h3>Treatment Process for Botox for Jaw Pain & Bruxism Grinding</h3>
+          <p>
+            Our <strong>bruxism botox</strong> treatment begins with comprehensive jaw assessment reviewing <strong>bruxism teeth grinding symptoms</strong> and medical history. 
+            The <strong>teeth grinding botox</strong> injection process takes 10-15 minutes using specialized techniques for thick masseter muscles. 
+            <strong>Botox for jaw pain</strong> results appear gradually over 1-4 weeks as muscles relax, with optimal <strong>TMJ botox</strong> effects lasting 4-6 months. 
+            We provide ongoing support to <strong>treat teeth grinding</strong> effectively and regular follow-up care to monitor <strong>jaw grinding</strong> reduction and <strong>clench jaw symptoms</strong> improvement.
+          </p>
+
+          <h3>Bruxism Disease Management & Long-term Teeth Grinding Treatment</h3>
+          <p>
+            Managing <strong>bruxism disease</strong> requires understanding that <strong>bruxism</strong> (<strong>bruxismo</strong>) is a chronic neuromuscular condition affecting jaw muscles. 
+            Our <strong>teeth grinding treatment</strong> using <strong>botox and teeth grinding</strong> therapy provides effective long-term management of <strong>bruxism teeth grinding</strong>. 
+            Regular maintenance treatments every 4-6 months prevent return of <strong>grinding teeth</strong> behaviour and protect against further <strong>bruxism teeth</strong> damage. 
+            Combined with stress management and lifestyle modifications, <strong>botox jaw clenching</strong> treatment offers comprehensive relief from <strong>jaw teeth grinding</strong> and associated <strong>symptoms of clenched jaw</strong>.
+          </p>
         </div>
       </div>
     </>
