@@ -235,7 +235,7 @@ const ExcessiveSweatBotox = () => {
                   <Clock className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">20-30 minutes including consultation. Learn more about our <a href="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">other treatments</a>.</p>
+                <p className="text-gray-300">20-30 minutes including consultation</p>
               </motion.div>
 
               <motion.div
