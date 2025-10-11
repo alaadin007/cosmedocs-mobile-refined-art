@@ -341,7 +341,7 @@ const OilySkinBotox = () => {
                 <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
                     The T-zone (forehead, nose, and chin) contains the highest concentration of sebaceous glands, making it prone to excessive oil production and greasy skin. 
-                    Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil glands in these problematic areas. This advanced <a href="https://www.aad.org/public/cosmetic/younger-looking/botulinum-toxin-overview" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">skin treatment for oily skin</a> provides lasting results for those seeking a greasy skin treatment that actually works.
+                    Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil glands in these problematic areas. This advanced skin treatment for oily skin provides lasting results for those seeking a greasy skin treatment that actually works.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-4 mt-6">
