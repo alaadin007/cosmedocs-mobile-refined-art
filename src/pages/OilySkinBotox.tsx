@@ -322,7 +322,7 @@ const OilySkinBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is T-Zone Oily Skin Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                T-Zone oily skin Botox is the best skin treatment for oily skin, <a href="https://www.aad.org/public/diseases/a-z/botulinum-toxin-overview" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven to reduce excess sebum</a>, targeting sweat glands in the forehead, nose, and chin areas to reduce excess oil production. 
+                T-Zone oily skin Botox is the best skin treatment for oily skin, <a href="https://dermnetnz.org/topics/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven to reduce excess sebum</a>, targeting sweat glands in the forehead, nose, and chin areas to reduce excess oil production. 
                 This innovative oily skin treatment helps achieve up to 30% reduction in sebum production for a balanced, matte complexion. Perfect for those struggling with greasy t zone issues and seeking an effective greasy skin cure.
               </p>
             </motion.div>
