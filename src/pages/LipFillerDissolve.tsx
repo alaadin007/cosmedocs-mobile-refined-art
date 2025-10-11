@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, Phone, Clock, ShieldCheck, Award, Users, Activity, Syringe, CheckCircle } from "lucide-react";
+import { Calendar, Phone, Clock, ShieldCheck, Award, Users, Activity, Syringe, CheckCircle, Home, ChevronRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -13,6 +13,14 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { generateSEOMetadata } from "@/utils/seo";
 
 const LipFillerDissolve = () => {
@@ -109,7 +117,7 @@ const LipFillerDissolve = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="lip filler dissolve London, hyaluronidase injections London, lip filler correction UK, dissolve lip filler London, filler complications London, lip filler removal London, overfilled lips correction, migrated filler treatment, Harley Street" />
+        <meta name="keywords" content="lip filler dissolve London, dissolving lip filler, lip filler dissolver, lip filler dissolving, lip filler dissolving near me, dissolved lip filler, dissolve lip filler, lip filler dissolved before and after, dissolving lip filler before and after, how to dissolve lip filler, hyaluronidase injections London, lip filler correction UK, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -129,9 +137,92 @@ const LipFillerDissolve = () => {
             "priceRange": "££"
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Lip Filler Dissolve Treatment",
+            "description": "Professional hyaluronidase treatment to safely dissolve unwanted lip filler and correct complications",
+            "procedureType": "Non-surgical cosmetic procedure",
+            "followup": "Results visible within 24-48 hours, reassessment after 2 weeks",
+            "preparation": "Consultation to assess filler type and treatment plan",
+            "howPerformed": "Hyaluronidase enzyme injected to break down hyaluronic acid filler",
+            "bodyLocation": "Lips"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Lip Filler Dissolve Treatment Packages",
+            "description": "Professional lip filler correction and dissolving treatments",
+            "priceCurrency": "GBP",
+            "price": "250",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.cosmedocs.com"
+            }, {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Lip Filler Dissolve",
+              "item": seoData.canonical
+            }]
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <section className="py-4 bg-black border-b border-gray-800">
+          <div className="page-container">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" className="text-gray-400 hover:text-purple-300 flex items-center gap-1">
+                    <Home className="h-4 w-4" />
+                    Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="text-gray-600">
+                  <ChevronRight className="h-4 w-4" />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-purple-300">Lip Filler Dissolve</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -258,8 +349,8 @@ const LipFillerDissolve = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">What is Lip Filler Dissolve Procedure?</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Lip filler dissolve uses hyaluronidase enzyme to safely break down hyaluronic acid-based fillers. 
-                This treatment corrects unwanted results, complications, or simply restores your natural lip shape.
+                Lip filler dissolve uses <a href="https://www.fda.gov/cosmetics/cosmetic-products/dermal-fillers-soft-tissue-fillers" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">hyaluronidase enzyme</a> to safely break down hyaluronic acid-based fillers. 
+                This treatment corrects unwanted results, complications, or simply restores your natural lip shape. Whether you're searching for "lip filler dissolving near me" or need expert <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</a> correction, our London clinic provides professional solutions.
               </p>
             </motion.div>
 
@@ -276,8 +367,8 @@ const LipFillerDissolve = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
-                      Hyaluronidase is a naturally occurring enzyme that breaks down hyaluronic acid molecules. 
-                      When injected into areas with unwanted filler, it dissolves the gel structure safely and effectively.
+                      Hyaluronidase is a <a href="https://www.healthline.com/health/hyaluronidase" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">naturally occurring enzyme</a> that breaks down hyaluronic acid molecules. 
+                      When injected into areas with unwanted filler, it dissolves the gel structure safely and effectively. This is the primary lip filler dissolver used by aesthetic professionals worldwide for safe correction.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
@@ -314,7 +405,7 @@ const LipFillerDissolve = () => {
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
                       Various situations may require lip filler dissolving, from aesthetic dissatisfaction 
-                      to medical complications requiring immediate correction.
+                      to <a href="https://www.nhs.uk/conditions/cosmetic-procedures/dermal-fillers/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical complications</a> requiring immediate correction. Whether you need emergency treatment or simply want to refresh your look before new <a href="/lip-filler" className="text-purple-300 hover:text-purple-200 underline">lip filler</a> treatment.
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
@@ -353,8 +444,8 @@ const LipFillerDissolve = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Comprehensive Dissolve Treatment Approach</h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our expert approach combines precise assessment, safe dissolving techniques, and comprehensive aftercare 
-                to achieve optimal correction results with minimal discomfort.
+                Our expert approach at our <a href="/contact" className="text-purple-300 hover:text-purple-200 underline">Harley Street clinic</a> combines precise assessment, safe dissolving techniques, and comprehensive aftercare 
+                to achieve optimal correction results with minimal discomfort. We provide the same high standards across all our <a href="/treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatments</a>.
               </p>
             </motion.div>
 
@@ -815,24 +906,46 @@ const LipFillerDissolve = () => {
         </section>
 
         {/* Hidden SEO Content */}
-        <div className="sr-only">
-          <h2>Professional Lip Filler Dissolve London</h2>
-          <p>
-            Lip filler dissolve London at Cosmedocs offers expert hyaluronidase treatments to safely correct unwanted filler results. Our experienced cosmetic doctors specialize in dissolving lip filler complications including overfilled lips, filler migration, asymmetry, and vascular issues. Located at 10 Harley Street, we provide same-day emergency dissolving services and comprehensive filler correction treatments.
-          </p>
-          <p>
-            Our London clinic uses medical-grade hyaluronidase enzyme to safely break down hyaluronic acid-based fillers without damaging natural lip tissue. We can dissolve fillers from any clinic, providing immediate relief from unwanted results. Treatment takes 15-30 minutes with results visible within 24-48 hours.
-          </p>
-          <p>
-            The Cosmedocs approach to lip filler dissolve combines medical expertise with aesthetic artistry. Our practitioners assess each case individually, creating precise treatment plans for optimal correction. We offer standard dissolving from £250, complex corrections from £350, and emergency treatments from £450.
-          </p>
-          <p>
-            Common reasons for lip filler dissolving include overfilled lips, filler migration creating unnatural shapes, asymmetry or lumps, vascular complications, and aesthetic dissatisfaction. Our expert team provides comprehensive care from emergency dissolving to planned aesthetic corrections, with follow-up care and planning for future treatments.
-          </p>
-          <p>
-            Book your lip filler dissolve consultation at our Harley Street clinic by calling 0333 0551 503. We offer same-day emergency appointments for vascular complications and urgent corrections. Our invisible art philosophy ensures natural restoration that enhances rather than alters your appearance.
-          </p>
-        </div>
+        <section className="sr-only" aria-hidden="true">
+          <div className="page-container">
+            <h2>Comprehensive Guide to Dissolving Lip Filler in London</h2>
+            
+            <h3>Understanding Lip Filler Dissolving: How the Process Works</h3>
+            <p>
+              Dissolving lip filler is a safe and effective procedure using hyaluronidase, the primary lip filler dissolver enzyme that specifically targets hyaluronic acid-based fillers. When people ask "how to dissolve lip filler" or search for "lip filler dissolving near me", they're seeking professional correction of unwanted filler results. The process of lip filler dissolving begins immediately upon injection, with noticeable volume reduction within 30 minutes. Full lip filler dissolving stages progress over 24-48 hours, though the enzyme continues working for up to 2 weeks. Understanding the dissolving lip filler stages helps clients know what to expect: initial swelling from the injection, gradual volume reduction over the first day, and final results visible within 48 hours. Many clients wonder "does lip filler dissolve on its own?" - while hyaluronic acid fillers do gradually break down naturally over 6-18 months, professional lip filler dissolving London treatments provide immediate correction when needed.
+            </p>
+
+            <h3>Lip Filler Dissolved Before and After: What Results to Expect</h3>
+            <p>
+              Lip filler dissolved before and after photographs demonstrate the remarkable effectiveness of hyaluronidase treatments. Dissolving lip filler before and after images show immediate volume reduction and restoration of natural lip contours. Clients searching for "dissolved lip fillers before and after" or "lip filler dissolving before and after" want to see realistic outcomes. Our London clinic maintains extensive before and after documentation showing various scenarios: overfilled lips returned to natural proportions, migrated filler correction, and asymmetry correction. The lip filler dissolving before and after progression typically shows: pre-treatment state with unwanted filler, immediate post-injection appearance with some swelling, 24-hour results showing significant reduction, and final results at 48 hours revealing restored natural lip shape. Some clients report that lip fillers dissolved after 1 week show even more refined results as residual swelling completely subsides. When comparing dissolved lip filler outcomes, it's important to remember that results depend on the amount of filler present and individual healing response.
+            </p>
+
+            <h3>Does Lip Filler Dissolve Naturally? Understanding Your Options</h3>
+            <p>
+              A common question we receive is "do lip fillers dissolve" naturally over time, and "does lip filler dissolve on its own?" The answer is yes - hyaluronic acid-based lip fillers do gradually break down through natural body processes over 6-18 months depending on the product used. However, when immediate correction is needed, professional lip filler dissolve treatments provide instant results rather than waiting months for natural dissolution. Many people wonder "does lip filler dissolve" completely with hyaluronidase treatment - the answer is that we can achieve near-complete dissolution with precise dosing. The decision between waiting for natural dissolution versus active lip filler dissolving depends on your individual circumstances: if you're experiencing complications like vascular compromise, immediate dissolving is essential; if you simply want to adjust your look, you can choose either approach. Our <a href="/lip-filler" className="text-purple-300">lip filler</a> specialists help determine the best course of action during consultation.
+            </p>
+
+            <h3>Finding Expert Lip Filler Dissolving Near Me in London</h3>
+            <p>
+              When searching for "lip filler dissolving near me" or "lip filler dissolve" services in London, choosing an experienced aesthetic clinic is crucial for optimal results and safety. Our Harley Street location provides convenient access for anyone searching "dissolving lip filler" or "dissolve lip filler" treatments in central London. We specialize in correcting work from other clinics, offering expertise in all aspects of lip filler dissolving including emergency vascular compromise treatment, migration correction, and aesthetic refinement. The process of dissolving lip filler requires expert knowledge of facial anatomy, filler types, and precise hyaluronidase dosing. Whether you need complete filler removal or subtle correction, our practitioners create individualised treatment plans. Many clients find us when searching "lip filler dissolver" or "dissolved lip filler" correction, appreciating our transparent pricing and <a href="https://www.aestheticsjournal.com/feature/how-to-dissolve-dermal-filler" target="_blank" rel="noopener noreferrer" className="text-purple-300">expert approach</a> to filler correction.
+            </p>
+
+            <h3>The Dissolving Lip Filler Stages: A Timeline Guide</h3>
+            <p>
+              Understanding the dissolving lip filler stages helps prepare for your treatment journey. Stage 1 (0-30 minutes): Immediate enzyme activation begins breaking down hyaluronic acid molecules, with some clients noticing slight volume reduction. Stage 2 (2-6 hours): Progressive dissolution continues, swelling from the injection procedure begins to subside, initial shape changes become visible. Stage 3 (24 hours): Significant volume reduction achieved, approximately 70-80% of final results visible, before and after differences clearly noticeable. Stage 4 (48 hours): Near-complete dissolution for most cases, residual swelling minimal, final lip shape revealed. Stage 5 (1-2 weeks): Complete enzyme activity conclusion, any remaining filler fully dissolved, final assessment and planning for future treatments if desired. The lip filler dissolving stages may vary slightly depending on the amount of filler present and individual metabolism. Our practitioners provide detailed aftercare instructions and monitor progress throughout all dissolving lip filler stages to ensure optimal outcomes.
+            </p>
+
+            <h3>Lip Filler Dissolving London: Why Choose Cosmedocs</h3>
+            <p>
+              For professional lip filler dissolving London treatments, Cosmedocs offers unmatched expertise in filler correction and aesthetic restoration. Our Harley Street clinic specialises in all aspects of dissolving lip filler, from routine corrections to complex emergency cases. We understand that deciding to dissolve lip filler is significant, whether due to complications or aesthetic preference changes. Our invisible art philosophy applies to correction work - we restore natural beauty that speaks without saying a word. When you search "lip filler dissolving London" or need urgent filler correction, our same-day emergency appointments ensure immediate access to expert care. We also offer comprehensive aesthetic services including <a href="/anti-wrinkle" className="text-purple-300">anti-wrinkle treatments</a>, <a href="/profhilo" className="text-purple-300">Profhilo</a>, and advanced skin rejuvenation. Book your lip filler dissolve consultation by calling 0333 0551 503 or visit our <a href="/contact" className="text-purple-300">Harley Street clinic</a> for expert assessment and treatment planning.
+            </p>
+
+            <h3>Safety and Expertise in Lip Filler Dissolving</h3>
+            <p>
+              Professional lip filler dissolving requires extensive knowledge of facial anatomy and <a href="https://www.mayoclinic.org/tests-procedures/dermal-fillers/about/pac-20384845" target="_blank" rel="noopener noreferrer" className="text-purple-300">dermal filler science</a>. Our practitioners have performed thousands of successful dissolving procedures, managing everything from simple corrections to complex vascular complications. We use medical-grade hyaluronidase and follow strict safety protocols to minimize risks and optimize outcomes. Whether you need routine filler correction or emergency treatment, our team provides expert care with transparent pricing from £250. The combination of technical expertise, aesthetic judgment, and comprehensive aftercare makes Cosmedocs the preferred choice for lip filler dissolve treatments in London.
+            </p>
+          </div>
+        </section>
       </div>
     </>
   );
