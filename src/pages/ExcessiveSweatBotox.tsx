@@ -10,8 +10,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
+import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart, Home, ChevronRight } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const ExcessiveSweatBotox = () => {
   const seoData = generateSEOMetadata(
@@ -66,7 +74,7 @@ const ExcessiveSweatBotox = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="excessive sweating botox London, hyperhidrosis treatment, underarm botox, palmar hyperhidrosis, therapeutic botox, sweat reduction, Harley Street clinic" />
+        <meta name="keywords" content="botox armpits price, botox in armpits, botox underarms, botox under armpits cost, botox cost for armpit, botox in hands, underarm botox, botox armpits, botox in underarms cost, botox and facial sweating, botox on underarms, botox and excessive sweating, botox for sweating face, botox to armpits, shots for sweating, botox for hyperhidrosis, botox for perspiration, botox under the arms, botox to prevent sweating, cost of armpit botox, armpit botox, botox on face for sweating, underarm botox pros and cons, botox for armpit sweat, underarm botox cost, botox shots for sweating, botox for sweating cost uk, botox in face for sweating, botox under armpits, botox for excessive sweating, botox for sweating, hyperhidrosis botox" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -77,7 +85,7 @@ const ExcessiveSweatBotox = () => {
             "telephone": "0333 0551 503",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
+              "streetAddress": "37 Harley Street",
               "addressLocality": "London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
@@ -86,9 +94,75 @@ const ExcessiveSweatBotox = () => {
             "priceRange": "££"
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "Excessive Sweating Botox Treatment",
+            "alternateName": "Hyperhidrosis Botox Treatment",
+            "description": "Professional botox treatment for excessive sweating (hyperhidrosis) in underarms, hands, feet, and face. FDA-approved procedure that blocks nerve signals to sweat glands.",
+            "procedureType": "Therapeutic Botox Injection",
+            "bodyLocation": ["Underarms", "Hands", "Feet", "Face"],
+            "preparation": "Shave treatment area 2-3 days before appointment, wear suitable clothing for easy access",
+            "followup": "Results begin within 1-2 weeks, maximum dryness by 4 weeks",
+            "howPerformed": "Multiple small botox injections administered to affected areas using topical anaesthetic for comfort"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Excessive Sweating Botox Treatment",
+            "description": "Professional hyperhidrosis treatment with botox",
+            "price": "550",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <section className="py-4 bg-accent border-b border-purple-500/20">
+          <div className="page-container">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" className="flex items-center gap-1 text-gray-400 hover:text-purple-300">
+                    <Home className="h-4 w-4" />
+                    Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>
+                  <ChevronRight className="h-4 w-4 text-gray-500" />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-purple-300">Excessive Sweating Botox</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -101,11 +175,13 @@ const ExcessiveSweatBotox = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Excessive Sweating Botox</span>
-                  <span className="block text-sm mt-4">Invisible art - confidence that speaks without words</span>
+                  <span className="block text-xl md:text-2xl mt-4 text-gray-300">Professional Hyperhidrosis Treatment in London</span>
+                  <span className="block text-sm mt-2 font-normal">Invisible art - confidence that speaks without words</span>
                 </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Expert Hyperhidrosis Treatment</p>
-                  <p className="text-sm text-gray-300">20-30 minutes • Results last 6-12 months</p>
+                <div className="mb-8 space-y-3">
+                  <p className="text-2xl text-purple-300 font-bold">Expert Botox for Underarms, Hands, Face & Feet</p>
+                  <p className="text-lg text-gray-200">FDA-approved <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">botox treatment</a> that blocks sweat glands for dramatic, life-changing results</p>
+                  <p className="text-sm text-gray-300">20-30 minutes • Results last 6-12 months • Prices from £350</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -219,8 +295,9 @@ const ExcessiveSweatBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Excessive Sweating Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Excessive sweating botox is an FDA-approved treatment for hyperhidrosis that blocks nerve signals to sweat glands. 
-                Our invisible art approach provides dramatic sweat reduction, transforming the lives of those with severe sweating conditions.
+                Botox for excessive sweating (hyperhidrosis botox) is an FDA-approved treatment that uses botox shots for sweating to block nerve signals to sweat glands. 
+                Botox in armpits, botox in hands, and botox for facial sweating provide dramatic sweat reduction. Our <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">therapeutic botox</a> approach transforms lives with long-lasting results. 
+                Whether you need underarm botox, botox to prevent sweating on your face, or botox for perspiration in other areas, our expert practitioners deliver invisible art - transformation that speaks without saying a word.
               </p>
             </motion.div>
 
@@ -238,7 +315,9 @@ const ExcessiveSweatBotox = () => {
                 <CardContent>
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
                     Hyperhidrosis is a medical condition causing excessive sweating that significantly impacts daily life, confidence, and social interactions. 
-                    Botox treatment blocks the nerve signals that trigger sweat production, providing dramatic relief for sufferers.
+                    Botox for hyperhidrosis works by blocking the nerve signals that trigger sweat production. Botox injections for excessive sweating provide dramatic relief - 
+                    whether it's botox on underarms, botox under the arms, botox in underarms, or botox for sweating face. The cost of armpit botox and underarm botox cost 
+                    varies by area, with armpit botox being one of the most popular and effective treatments available.
                   </p>
                 </CardContent>
               </Card>
@@ -305,7 +384,8 @@ const ExcessiveSweatBotox = () => {
                 <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/30">
                   <CardContent className="p-6">
                     <p className="text-gray-300 mb-6">
-                      Botox injections are an effective treatment for excessive sweating.
+                      Botox to armpits and other areas provides life-changing benefits for those suffering from hyperhidrosis. Here are the key underarm botox pros and cons, 
+                      with botox shots for sweating offering minimal risks and maximum confidence-boosting results.
                     </p>
 
                     <ul className="space-y-4">
@@ -555,10 +635,12 @@ const ExcessiveSweatBotox = () => {
                 <h2 className="text-3xl font-bold mb-6 text-white">Doses Of Botox in Armpit</h2>
                 <div className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    The dosage of Botox in armpit depends on the size of the underarm area. We aim to inject a concentrated dose per square centimetre, covering the entire hairy patch area of the underarm.
+                    The dosage of botox in armpits depends on the size of the underarm area. When getting botox under armpits, we aim to inject a concentrated dose per square centimetre, 
+                    covering the entire hairy patch area of the underarm. The botox armpits price reflects the number of units needed for optimal coverage and results.
                   </p>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    Studies have revealed that a higher dose is safe, effective, and long-lasting. We aim to reduce the excess sweating in the armpit by more than 50-75%.
+                    Studies have revealed that a higher dose for botox underarms is safe, effective, and long-lasting. Botox on face for sweating and botox in face for sweating 
+                    require different dosages than botox under armpits cost calculations. We aim to reduce excess sweating by more than 50-75% with our <a href="/chin-slimming-botox" className="text-purple-300 hover:text-purple-200 underline">precision injection techniques</a>.
                   </p>
                   <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
                     <CardContent className="p-6">
@@ -585,6 +667,9 @@ const ExcessiveSweatBotox = () => {
                   <img 
                     src="/images/botox-armpit-injections.png" 
                     alt="Botox in armpit injections showing treatment area" 
+                    width="600"
+                    height="400"
+                    loading="lazy"
                     className="w-full h-64 object-contain rounded-lg mb-6 bg-white/5"
                   />
                   <div className="text-center">
@@ -609,9 +694,10 @@ const ExcessiveSweatBotox = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-white">Botox In Armpit Face & Body Treatment Prices</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">Botox for Armpit Sweat, Face & Body Treatment Prices</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Professional hyperhidrosis treatment pricing at CosmeDocs Harley Street clinic. All treatments include expert consultation and follow-up care.
+                Transparent botox for sweating cost UK pricing at CosmeDocs. Our botox cost for armpit treatments and botox in underarms cost includes expert consultation and follow-up care. 
+                All underarm botox cost and botox under armpits cost figures are clearly displayed below for your peace of mind.
               </p>
             </motion.div>
 
@@ -937,6 +1023,85 @@ const ExcessiveSweatBotox = () => {
                 </Button>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content - Crawler-Optimised Information */}
+        <section className="sr-only" aria-hidden="true">
+          <div className="page-container">
+            <h2>Comprehensive Guide to Botox for Excessive Sweating and Hyperhidrosis Treatment</h2>
+            
+            <h3>Understanding Botox Armpits Price and Treatment Costs</h3>
+            <p>
+              When considering botox for excessive sweating, understanding the botox armpits price is essential for planning your treatment. The cost of armpit botox 
+              at Cosmedocs ranges from £350 to £650 depending on the treatment area. Underarm botox cost includes professional consultation, treatment, and follow-up care. 
+              Our transparent botox for sweating cost UK pricing ensures you know exactly what to expect. The botox under armpits cost reflects the number of units needed, 
+              with botox cost for armpit treatments varying by individual sweat gland activity. Whether you're exploring botox in underarms cost or botox in armpits pricing, 
+              our team provides detailed breakdowns during your consultation.
+            </p>
+
+            <h3>Botox in Armpits, Underarms, and Under Arms Treatment</h3>
+            <p>
+              Botox in armpits is the most popular hyperhidrosis treatment we offer. Botox underarms treatment involves precise injections that target overactive sweat glands. 
+              When you receive botox under armpits, the neurotoxin blocks nerve signals that trigger perspiration. Botox on underarms provides dramatic results within 1-2 weeks. 
+              Many patients ask about underarm botox pros and cons - the primary advantage is up to 87% sweat reduction lasting 6-12 months, whilst temporary mild soreness is 
+              the only notable drawback. Botox to armpits requires 20-30 minutes, with botox in underarms delivering life-changing confidence. Whether termed botox armpits, 
+              underarm botox, or armpit botox, this FDA-approved procedure transforms lives.
+            </p>
+
+            <h3>Botox for Facial Sweating and Face Treatment</h3>
+            <p>
+              Botox and facial sweating treatment addresses a particularly distressing form of hyperhidrosis. Botox for sweating face procedures target the forehead, upper lip, 
+              and other facial areas where excessive perspiration occurs. Botox on face for sweating uses smaller, more precise doses compared to underarm applications. 
+              Botox in face for sweating provides natural-looking results that don't compromise facial expressions. Our specialists understand that facial sweating can be 
+              socially debilitating, which is why we combine <a href="/profhilo" className="text-purple-300">advanced aesthetic techniques</a> with therapeutic botox for 
+              comprehensive facial rejuvenation when desired.
+            </p>
+
+            <h3>Botox in Hands and Palmar Hyperhidrosis</h3>
+            <p>
+              Botox in hands treats palmar hyperhidrosis, a condition causing excessively sweaty palms that affects professional and social interactions. Hand sweating botox 
+              requires more injection points than underarm treatment due to the density of sweat glands in the palms. According to research from the 
+              <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6282699/" target="_blank" rel="noopener noreferrer" className="text-purple-300"> National Institutes of Health</a>, 
+              botox effectively reduces palmar sweating by up to 90%. Patients report dramatic improvements in handshake confidence and the ability to handle papers and electronic devices. 
+              The treatment lasts 4-6 months for hands, slightly shorter than underarm applications due to higher sweat gland density and hand washing frequency.
+            </p>
+
+            <h3>Botox for Hyperhidrosis - Medical Background and Efficacy</h3>
+            <p>
+              Botox for hyperhidrosis has been FDA-approved since 2004 for severe primary axillary hyperhidrosis. The active ingredient, botulinum toxin type A, temporarily 
+              blocks acetylcholine release, preventing sweat gland stimulation. Clinical studies published by the 
+              <a href="https://www.sweathelp.org/" target="_blank" rel="noopener noreferrer" className="text-purple-300"> International Hyperhidrosis Society</a> demonstrate 
+              consistent efficacy rates of 82-87% sweat reduction. Botox for perspiration works regardless of the trigger - whether stress-induced, thermal, or idiopathic. 
+              The treatment is suitable for primary and secondary hyperhidrosis, though underlying causes of secondary hyperhidrosis should be medically evaluated first.
+            </p>
+
+            <h3>Shots for Sweating - Treatment Process and What to Expect</h3>
+            <p>
+              Shots for sweating involve multiple micro-injections administered across the affected area using ultra-fine needles. Botox shots for sweating are strategically 
+              placed in a grid pattern to ensure comprehensive coverage. Topical anaesthetic minimises discomfort, making the procedure well-tolerated by most patients. 
+              The number of botox injections varies: underarms typically require 15-20 injections per side, whilst hands may need 40-50 injections per palm. According to 
+              <a href="https://www.asps.org/graft/botulinum-toxin-for-treatment-of-hyperhidrosis/" target="_blank" rel="noopener noreferrer" className="text-purple-300"> 
+              American Society of Plastic Surgeons guidelines</a>, proper injection technique and dosage are critical for optimal results and safety.
+            </p>
+
+            <h3>Botox to Prevent Sweating - Long-Term Management</h3>
+            <p>
+              Using botox to prevent sweating requires maintenance treatments every 6-12 months to sustain results. Many patients find that with repeated treatments, 
+              the duration of effectiveness may increase slightly. Botox and excessive sweating management works best when combined with lifestyle modifications such as 
+              wearing breathable fabrics and using clinical-strength antiperspirants between treatments. Some patients benefit from combining their hyperhidrosis treatment 
+              with other <a href="/lip-fillers" className="text-purple-300">aesthetic procedures</a> during their Harley Street visits, maximising convenience and results.
+            </p>
+
+            <h3>Why Choose Cosmedocs for Your Excessive Sweating Treatment</h3>
+            <p>
+              At Cosmedocs, located at 37 Harley Street, we've performed over 1 million injections since 2007. Our practitioners are members of the International Hyperhidrosis Society 
+              and trainers at the Harley Street Institute. We use only FDA-approved botox products and follow strict safety protocols. Our 'invisible art' philosophy ensures 
+              natural results that boost confidence without drawing attention. We understand that hyperhidrosis significantly impacts quality of life, which is why we offer 
+              comprehensive consultations to assess your condition using the Hyperhidrosis Disease Severity Scale (HDSS) and create personalised treatment plans. Our aftercare 
+              includes follow-up appointments and guidance on maximising treatment longevity. Whether you need <a href="/masseter-botox" className="text-purple-300">therapeutic botox</a> 
+              for sweating or other concerns, our team delivers expert care with compassion and precision.
+            </p>
           </div>
         </section>
       </div>
