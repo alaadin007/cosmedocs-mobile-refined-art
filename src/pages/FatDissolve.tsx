@@ -357,7 +357,7 @@ const FatDissolve = () => {
                   People who are looking for quick and easy way to get rid of their extra body fat and build muscles for a well-toned and sculpted body love EMSCULPT.
                 </p>
                 <p>
-                  There is no need to do intense exercises to sculpt and tone your body. EMSCULPT does it for you in few treatment sessions. Imagine that you are performing 20,000 squats or sit-ups in a single session of 30 minutes. This revolutionary approach to <a href="https://www.health.harvard.edu/staying-healthy/the-truth-about-fats-bad-and-good" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">healthy fat reduction</a> complements natural body processes.
+                  There is no need to do intense exercises to sculpt and tone your body. EMSCULPT does it for you in few treatment sessions. Imagine that you are performing 20,000 squats or sit-ups in a single session of 30 minutes. This revolutionary approach to <a href="https://www.healthline.com/health/body-contouring" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">non-invasive body contouring</a> complements natural body processes.
                 </p>
                 <p>
                   It helps you to get rid of your extra body fat and build your muscles. You do not need to make changes in your diet or exercise regimen to get results. Only 2 sessions in a week for two weeks and it gives amazing results. For comprehensive facial rejuvenation, consider combining with our <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo treatments</a> for optimal aesthetic outcomes.
