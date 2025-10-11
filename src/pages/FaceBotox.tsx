@@ -22,8 +22,8 @@ export default function FaceBotox() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const seoData = generateSEOMetadata(
-    "Best Botox London Harley Street | 3 Areas £350 | Face Botox",
-    "Best botox London clinic on Harley Street. 3 areas of botox cost £350. Expert baby botox London treatments. Book your free consultation.",
+    "Botox London | Best Botox Harley Street | 3 Areas £350",
+    "Botox London at Harley Street's premier clinic. Expert botox treatments from £175. 3 areas of botox £350. Book your free consultation today.",
     "/face-botox"
   );
 
@@ -59,9 +59,9 @@ export default function FaceBotox() {
   const medicalProcedureSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
-    "name": "Face Botox Treatment London",
-    "alternateName": ["Anti-Wrinkle Injections", "Botulinum Toxin", "Baby Botox London", "Botox Harley Street"],
-    "description": "Professional face botox treatment in London including forehead, frown lines, crow's feet, lower face areas and advanced combination techniques. Best botox London prices from £175.",
+    "name": "Botox London Treatment",
+    "alternateName": ["Face Botox London", "Anti-Wrinkle Injections London", "Botulinum Toxin", "Baby Botox London", "Botox Harley Street"],
+    "description": "Professional Botox London treatment including forehead, frown lines, crow's feet, lower face areas and advanced combination techniques. Best botox London prices from £175.",
     "procedureType": "Cosmetic",
     "bodyLocation": "Face",
     "preparation": "Avoid blood thinners and alcohol 24 hours before treatment",
@@ -85,8 +85,8 @@ export default function FaceBotox() {
   const offerSchema = {
     "@context": "https://schema.org",
     "@type": "Offer",
-    "name": "Face Botox Treatment London",
-    "description": "Comprehensive face botox treatment - 1 area £175, 2 areas £275, 3 areas of botox price £350",
+    "name": "Botox London Treatment",
+    "description": "Comprehensive botox London treatment - 1 area £175, 2 areas £275, 3 areas of botox price £350",
     "price": "175",
     "priceCurrency": "GBP",
     "availability": "https://schema.org/InStock",
@@ -98,7 +98,7 @@ export default function FaceBotox() {
     },
     "itemOffered": {
       "@type": "MedicalProcedure",
-      "name": "Face Botox Treatment"
+      "name": "Botox London Treatment"
     }
   };
 
@@ -365,7 +365,7 @@ export default function FaceBotox() {
             items={[
               { label: 'Treatments', path: '/treatments' }
             ]}
-            currentPage="Face Botox London"
+            currentPage="Botox London"
           />
         </div>
 
@@ -380,7 +380,7 @@ export default function FaceBotox() {
                 className="text-left"
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Face Botox London</span>
+                  <span className="text-purple-300">Botox London</span>
                   <span className="block text-sm mt-4">Invisible art - natural transformation that speaks without words</span>
                 </h1>
                 <div className="mb-8">
