@@ -393,7 +393,7 @@ const ExcessiveSweatBotox = () => {
                         <Check className="text-purple-400 mt-1" size={16} />
                         <div>
                           <h3 className="text-white font-medium mb-1">Minimal Pain</h3>
-                          <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort. <a href="https://jamanetwork.com/journals/jamadermatology/fullarticle/2773913" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Studies show minimal side effects</a>.</p>
+                          <p className="text-gray-300 text-sm">Quick injections with topical anaesthetic for comfort.</p>
                         </div>
                       </li>
                       
