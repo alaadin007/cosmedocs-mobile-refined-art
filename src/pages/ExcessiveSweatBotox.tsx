@@ -296,7 +296,7 @@ const ExcessiveSweatBotox = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">What is Excessive Sweating Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Botox for excessive sweating (hyperhidrosis botox) is an FDA-approved treatment that uses botox shots for sweating to block nerve signals to sweat glands. 
-                Botox in armpits, botox in hands, and botox for facial sweating provide dramatic sweat reduction. Our <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">therapeutic botox</a> approach transforms lives with long-lasting results. 
+                Botox in armpits, botox in hands, and botox for facial sweating provide dramatic sweat reduction. Our <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">therapeutic approach</a> transforms lives with long-lasting results. 
                 Whether you need underarm botox, botox to prevent sweating on your face, or botox for perspiration in other areas, our expert practitioners deliver invisible art - transformation that speaks without saying a word.
               </p>
             </motion.div>
@@ -640,7 +640,7 @@ const ExcessiveSweatBotox = () => {
                   </p>
                   <p className="text-gray-300 text-lg leading-relaxed">
                     Studies have revealed that a higher dose for botox underarms is safe, effective, and long-lasting. Botox on face for sweating and botox in face for sweating 
-                    require different dosages than botox under armpits cost calculations. We aim to reduce excess sweating by more than 50-75% with our <a href="/chin-slimming-botox" className="text-purple-300 hover:text-purple-200 underline">precision injection techniques</a>.
+                    require different dosages than botox under armpits cost calculations. We aim to reduce excess sweating by more than 50-75% with our precision injection techniques.
                   </p>
                   <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
                     <CardContent className="p-6">
@@ -1099,8 +1099,7 @@ const ExcessiveSweatBotox = () => {
               and trainers at the Harley Street Institute. We use only FDA-approved botox products and follow strict safety protocols. Our 'invisible art' philosophy ensures 
               natural results that boost confidence without drawing attention. We understand that hyperhidrosis significantly impacts quality of life, which is why we offer 
               comprehensive consultations to assess your condition using the Hyperhidrosis Disease Severity Scale (HDSS) and create personalised treatment plans. Our aftercare 
-              includes follow-up appointments and guidance on maximising treatment longevity. Whether you need <a href="/masseter-botox" className="text-purple-300">therapeutic botox</a> 
-              for sweating or other concerns, our team delivers expert care with compassion and precision.
+              includes follow-up appointments and guidance on maximising treatment longevity. Whether you need therapeutic botox for sweating or other concerns, our team delivers expert care with compassion and precision.
             </p>
           </div>
         </section>
