@@ -296,7 +296,7 @@ const ExcessiveSweatBotox = () => {
               <h2 className="text-3xl font-bold mb-6 text-white">What is Excessive Sweating Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Botox for excessive sweating (hyperhidrosis botox) is an FDA-approved treatment that uses botox shots for sweating to block nerve signals to sweat glands. 
-                Botox in armpits, botox in hands, and botox for facial sweating provide dramatic sweat reduction. Our <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">therapeutic approach</a> transforms lives with long-lasting results. 
+                Botox in armpits, botox in hands, and botox for facial sweating provide dramatic sweat reduction. Our therapeutic approach transforms lives with long-lasting results. 
                 Whether you need underarm botox, botox to prevent sweating on your face, or botox for perspiration in other areas, our expert practitioners deliver invisible art - transformation that speaks without saying a word.
               </p>
             </motion.div>
