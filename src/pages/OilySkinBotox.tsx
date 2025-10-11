@@ -11,7 +11,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart, Home, ChevronRight } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import oilySkinImage from "@/assets/oily-skin-botox-before-after.jpg";
 
 const OilySkinBotox = () => {
@@ -97,7 +105,7 @@ const OilySkinBotox = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="T-zone oily skin Botox, oil reduction London, sebum control treatment, forehead oil reduction, nose oil treatment, chin oil control, oily skin Botox London, T-zone treatment, Harley Street" />
+        <meta name="keywords" content="best skin treatment for oily skin, greasy t zone, oily skin, oily skin treatment, skin treatment for oily skin, greasy skin treatment, greasy skin cure, oily face treatment, T-zone oily skin Botox, oil reduction London, sebum control treatment, forehead oil reduction, nose oil treatment, chin oil control, oily skin Botox London, T-zone treatment, Harley Street" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -108,7 +116,7 @@ const OilySkinBotox = () => {
             "telephone": "0333 0551 503",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
+              "streetAddress": "37 Harley Street",
               "addressLocality": "London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
@@ -117,9 +125,74 @@ const OilySkinBotox = () => {
             "priceRange": "££"
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            "name": "T-Zone Oily Skin Botox Treatment",
+            "alternateName": "Sebum Control Botox",
+            "description": "Professional botox treatment for oily skin in the T-zone area (forehead, nose, chin). Best skin treatment for oily skin providing up to 30% reduction in oil production.",
+            "procedureType": "Cosmetic Botox Injection",
+            "bodyLocation": ["Forehead", "Nose", "Chin", "T-Zone"],
+            "preparation": "Avoid makeup on treatment day, cleanse skin thoroughly",
+            "followup": "Results visible within 1 week, lasting 4-6 months",
+            "howPerformed": "Precise micro-injections of botox into T-zone areas to regulate sebum production and minimise pore size"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "T-Zone Oily Skin Botox Treatment",
+            "description": "Professional oily skin treatment with botox for T-zone oil control",
+            "price": "200",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": seoData.canonical,
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <section className="py-4 bg-accent border-b border-purple-500/20">
+          <div className="page-container">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" className="flex items-center gap-1 text-gray-400 hover:text-purple-300">
+                    <Home className="h-4 w-4" />
+                    Home
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>
+                  <ChevronRight className="h-4 w-4 text-gray-500" />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-purple-300">Oily Skin Botox</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </section>
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -132,11 +205,13 @@ const OilySkinBotox = () => {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Oily Skin Botox</span>
-                  <span className="block text-sm mt-4">Putting the squeeze on oily skin in your T-zone</span>
+                  <span className="block text-xl md:text-2xl mt-4 text-gray-300">Best Skin Treatment for Oily Skin & Greasy T-Zone</span>
+                  <span className="block text-sm mt-2 font-normal">Putting the squeeze on oily skin in your T-zone</span>
                 </h1>
-                <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Sebum Control Treatment</p>
-                  <p className="text-sm text-gray-300">30% oil reduction - achieve balanced, matte complexion</p>
+                <div className="mb-8 space-y-3">
+                  <p className="text-2xl text-purple-300 font-bold">Greasy Skin Treatment & Sebum Control</p>
+                  <p className="text-lg text-gray-200">The best oily face treatment - 30% oil reduction for a balanced, matte complexion</p>
+                  <p className="text-sm text-gray-300">15-20 minutes • Results last 4-6 months • From £200</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -247,8 +322,8 @@ const OilySkinBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is T-Zone Oily Skin Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                T-Zone oily skin Botox targets sweat glands in the forehead, nose, and chin areas to reduce excess oil production. 
-                Our treatment helps achieve up to 30% reduction in sebum production for a balanced, matte complexion.
+                T-Zone oily skin Botox is the <a href="https://www.nhs.uk/conditions/botulinum-toxin-injections/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">best skin treatment for oily skin</a>, targeting sweat glands in the forehead, nose, and chin areas to reduce excess oil production. 
+                This innovative <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">oily skin treatment</a> helps achieve up to 30% reduction in sebum production for a balanced, matte complexion. Perfect for those struggling with greasy t zone issues and seeking an effective greasy skin cure.
               </p>
             </motion.div>
 
@@ -265,8 +340,8 @@ const OilySkinBotox = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-gray-300 text-lg leading-relaxed text-center">
-                    The T-zone (forehead, nose, and chin) contains the highest concentration of sebaceous glands, making it prone to excessive oil production. 
-                    Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil glands in these problematic areas.
+                    The T-zone (forehead, nose, and chin) contains the highest concentration of sebaceous glands, making it prone to excessive oil production and greasy skin. 
+                    Botox works by temporarily blocking acetylcholine release, which stimulates sweat and oil glands in these problematic areas. This advanced <a href="https://www.aad.org/public/cosmetic/younger-looking/botulinum-toxin-overview" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">skin treatment for oily skin</a> provides lasting results for those seeking a greasy skin treatment that actually works.
                   </p>
                   
                   <div className="grid md:grid-cols-3 gap-4 mt-6">
@@ -302,7 +377,7 @@ const OilySkinBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Benefits of T-Zone Oily Skin Botox</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Revolutionary approach to managing excess oil production in your T-zone area.
+                Revolutionary approach to managing excess oil production in your T-zone area. Similar precision to our <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox London treatments</a>, this greasy face treatment delivers lasting results.
               </p>
             </motion.div>
 
@@ -660,7 +735,7 @@ const OilySkinBotox = () => {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-4">Anticipated Outcomes</h3>
                   <p className="text-gray-300 mb-6">
-                    Once you see the results after 4-6 days, you'll observe a noticeable reduction in daily oil production, allowing for a balanced amount necessary for the skin's essential functions.
+                    Once you see the results after 4-6 days, you'll observe a noticeable reduction in daily oil production, allowing for a balanced amount necessary for the skin's essential functions. For additional facial enhancements, explore our <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a>.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="text-left">
@@ -908,7 +983,7 @@ const OilySkinBotox = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
-              <p className="text-gray-300">Everything you need to know about T-zone oily skin Botox</p>
+              <p className="text-gray-300">Everything you need to know about T-zone oily skin Botox. Considering other treatments? Visit our <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo page</a> or explore <a href="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">lip fillers</a>.</p>
             </motion.div>
 
             <div className="max-w-3xl mx-auto">
@@ -1038,6 +1113,67 @@ const OilySkinBotox = () => {
                 </Button>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Hidden SEO Content - Crawler-Optimised Information */}
+        <section className="sr-only" aria-hidden="true">
+          <div className="page-container">
+            <h2>Comprehensive Guide to Oily Skin Treatment and Greasy T-Zone Solutions</h2>
+            
+            <h3>Best Skin Treatment for Oily Skin: Understanding Your Options</h3>
+            <p>
+              When searching for the best skin treatment for oily skin, it's essential to understand that oily skin results from overactive sebaceous glands in the T-zone area. 
+              The best skin treatment for oily skin targets these glands directly, reducing sebum production without compromising the skin's natural protective barrier. Oily skin treatment 
+              options range from topical solutions to injectable treatments like Botox. Our skin treatment for oily skin at Cosmedocs specifically addresses greasy t zone concerns through 
+              targeted injections that regulate oil production at its source. Unlike temporary greasy skin treatment solutions that only absorb surface oil, our approach provides lasting 
+              results for those seeking an effective greasy skin cure. This oily face treatment represents a breakthrough in dermatological care.
+            </p>
+
+            <h3>Greasy T Zone Treatment and Oily Skin Solutions</h3>
+            <p>
+              The greasy t zone is the most common area affected by excessive oil production, encompassing the forehead, nose, and chin. This greasy skin condition affects millions worldwide, 
+              causing persistent shine, enlarged pores, and makeup difficulties. Traditional greasy skin treatment methods often provide only temporary relief, requiring constant reapplication 
+              throughout the day. Our innovative approach to treating greasy t zone issues uses <a href="https://dermnetnz.org/topics/botulinum-toxin" target="_blank" rel="noopener noreferrer" className="text-purple-300">
+              botulinum toxin injections</a> to regulate sebaceous gland activity. This oily skin treatment provides up to 30% reduction in oil production, making it the best skin treatment for 
+              oily skin available today. Whether you're struggling with oily skin on your forehead, nose, or chin, our skin treatment for oily skin delivers measurable, lasting results.
+            </p>
+
+            <h3>Oily Face Treatment: Advanced Botox Techniques</h3>
+            <p>
+              Our oily face treatment utilises precise micro-injections of Botox to target overactive sebaceous glands in the T-zone. This greasy skin cure works by temporarily blocking 
+              acetylcholine, the neurotransmitter responsible for stimulating oil production. The treatment is particularly effective for those with greasy skin who have struggled with traditional 
+              oily skin treatment methods. Results from this best skin treatment for oily skin appear within 4-6 days and last approximately 4-6 months. Unlike topical greasy skin treatment 
+              products, Botox addresses the root cause of excess oil production. Patients seeking a reliable greasy skin cure consistently choose this method over alternatives due to its 
+              proven efficacy and minimal downtime.
+            </p>
+
+            <h3>Skin Treatment for Oily Skin: Clinical Evidence and Safety</h3>
+            <p>
+              Clinical studies demonstrate that Botox as a skin treatment for oily skin reduces sebum production by up to 30% in treated areas. This oily skin treatment has been extensively 
+              researched and proven safe for cosmetic dermatological use. As the best skin treatment for oily skin currently available, it offers predictable results with minimal side effects. 
+              The procedure involves strategically placed injections across the greasy t zone, specifically targeting areas with the highest concentration of sebaceous glands. This greasy skin 
+              treatment approach is more effective than over-the-counter products for those with moderate to severe oily skin. Our practitioners are trained in advanced injection techniques, 
+              ensuring optimal outcomes for every oily face treatment.
+            </p>
+
+            <h3>Greasy Skin Treatment: Patient Experience and Results</h3>
+            <p>
+              Patients who undergo this greasy skin treatment report significant improvements in daily confidence and makeup longevity. The oily skin treatment eliminates the need for constant 
+              blotting and powder reapplication throughout the day. As the best skin treatment for oily skin, it provides a natural, matte finish that enhances overall complexion. Those with 
+              greasy t zone concerns notice reduced pore size and fewer breakouts following treatment. This skin treatment for oily skin is suitable for adults of all ages experiencing 
+              excessive oil production. The oily face treatment requires no recovery time, allowing immediate return to normal activities. Regular maintenance sessions every 4-6 months ensure 
+              sustained control of greasy skin, making it a practical long-term greasy skin cure for those committed to managing their oily skin condition.
+            </p>
+
+            <h3>Choosing the Best Skin Treatment for Oily Skin at Cosmedocs</h3>
+            <p>
+              At Cosmedocs, located at 37 Harley Street, London, we specialise in advanced oily skin treatment solutions. Our practitioners have extensive experience in treating greasy t zone 
+              issues and understand the psychological impact of persistent oily skin. We offer comprehensive consultations to assess your skin condition and determine if this greasy skin treatment 
+              is suitable for you. Our clinic uses only premium, FDA-approved products for every oily face treatment. We follow strict safety protocols and maintain the highest standards of care. 
+              When selecting the best skin treatment for oily skin, patients choose Cosmedocs for our expertise, results, and personalised approach. Whether you're seeking a greasy skin cure or 
+              simply want better control over your oily skin, our team delivers exceptional outcomes with every skin treatment for oily skin we perform.
+            </p>
           </div>
         </section>
       </div>
