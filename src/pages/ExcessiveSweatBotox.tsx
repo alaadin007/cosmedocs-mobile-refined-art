@@ -417,7 +417,7 @@ const ExcessiveSweatBotox = () => {
                         <Check className="text-purple-400 mt-1" size={16} />
                         <div>
                           <h3 className="text-white font-medium mb-1">FDA Approved</h3>
-                          <p className="text-gray-300 text-sm"><a href="https://www.fda.gov/consumers/consumer-updates/botox-cosmetic-look-facts" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">Clinically proven to reduce excessive sweating</a> by up to 87%.</p>
+                          <p className="text-gray-300 text-sm">Clinically proven to reduce excessive sweating by up to 87%.</p>
                         </div>
                       </li>
                     </ul>
