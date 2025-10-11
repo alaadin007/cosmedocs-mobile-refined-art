@@ -235,7 +235,7 @@ const ExcessiveSweatBotox = () => {
                   <Clock className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
-                <p className="text-gray-300">20-30 minutes including consultation</p>
+                <p className="text-gray-300">20-30 minutes including consultation. Learn more about our <a href="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">other treatments</a>.</p>
               </motion.div>
 
               <motion.div
@@ -446,7 +446,7 @@ const ExcessiveSweatBotox = () => {
                   <CardContent>
                     <p className="text-gray-300 mb-4">
                       HDSS is a point scale (sweat test) that sets specific benchmarks to rate the seriousness of a patient's condition. 
-                      It evaluates how much excessive sweating interferes with daily activities.
+                      It evaluates how much excessive sweating interferes with daily activities. Similar precision is used in our <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox London treatments</a>.
                     </p>
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
