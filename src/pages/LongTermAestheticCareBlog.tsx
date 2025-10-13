@@ -10,7 +10,7 @@ import { Users, Clock, Award, TrendingUp, Heart, Lightbulb } from "lucide-react"
 
 const LongTermAestheticCareBlog = () => {
   const seoData = generateSEOMetadata(
-    "The Long-Term Benefits of Aesthetic Continuity | Why Returning to the Same Doctor Matters",
+    "Long-Term Aesthetic Care Benefits | Cosmedocs",
     "Discover why maintaining a relationship with your aesthetic practitioner leads to better results, cost-effectiveness, and personalized five-year beauty plans in London.",
     "/blog/long-term-aesthetic-care-benefits"
   );

@@ -26,7 +26,7 @@ import profhiloInjectionPointsFace from "@/assets/profhilo-injection-points-face
 
 const ProfhiloTreatment = () => {
   const seoData = generateSEOMetadata(
-    "Profhilo Treatment London | £350 | Bio-Remodelling | Cosmedocs Harley Street",
+    "Profhilo Treatment London | £350 | Cosmedocs",
     "Profhilo London from £350. See profhilo before and after results. Expert profhilo treatment, neck injections & skin booster. Book consultation.",
     "/profhilo-treatment"
   );

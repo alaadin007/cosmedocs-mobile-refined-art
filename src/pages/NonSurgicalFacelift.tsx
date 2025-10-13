@@ -20,7 +20,7 @@ import faceliftBa4 from "@/assets/facelift-ba-4.jpg";
 
 const NonSurgicalFacelift = () => {
   const seoData = generateSEOMetadata(
-    "Non-Surgical Face Lift London | 3-Level Treatment Approach | Cosmedocs",
+    "Non-Surgical Facelift London | Cosmedocs",
     "Expert non-surgical face lift London. Tailored treatment for Level 1, 2 & 3 facial sagging. Dermal fillers & PDO threads. Natural results. Book consultation today.",
     "/non-surgical-face-lift"
   );

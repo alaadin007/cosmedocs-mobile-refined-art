@@ -17,7 +17,7 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 const Microneedling = () => {
   const bookingUrl = "https://med.as.me/harleystreet";
   const seoData = generateSEOMetadata(
-    "Microneedling London Price | Face Needling Treatment Cost UK | Cosmedocs",
+    "Microneedling London | From £250 | Cosmedocs",
     "Professional microneedling London from £250. Face needling therapy for wrinkles, acne scars & skin tightening. Book micro needle treatment today.",
     "/microneedling"
   );

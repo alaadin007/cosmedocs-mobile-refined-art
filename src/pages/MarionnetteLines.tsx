@@ -22,7 +22,7 @@ import ClientReviews from '@/components/ClientReviews';
 
 const MarionnetteLines = () => {
   const seoData = generateSEOMetadata(
-    "Marionette Lines Filler London | 10 Years Younger | Liquid Facelift | Cosmedocs",
+    "Marionette Lines Filler London | Cosmedocs",
     "Expert marionette lines filler treatment in London. See before and after results. Best dermal fillers for marionette lines. Book consultation.",
     "/marionette-lines"
   );

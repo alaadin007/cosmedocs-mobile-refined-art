@@ -82,7 +82,7 @@ const BirminghamHome = () => {
         <meta name="description" content="Premier Birmingham botox, lip filler and dermal filler treatments. Expert aesthetic medicine in West Midlands. Book your consultation today. Invisible art philosophy." />
         <meta name="keywords" content="birmingham botox, birmingham lip filler, birmingham dermal fillers, botox birmingham, lip fillers birmingham, aesthetic clinic birmingham, cosmetic treatments birmingham" />
         <link rel="canonical" href="https://cosmedocs.com/birmingham" />
-        <meta property="og:title" content="Birmingham Botox, Lip Filler & Dermal Fillers | Cosmedocs Birmingham" />
+        <meta property="og:title" content="Birmingham Botox & Fillers | Cosmedocs" />
         <meta property="og:description" content="Premier Birmingham botox, lip filler and dermal filler treatments. Expert aesthetic medicine in West Midlands with invisible art philosophy." />
         <meta property="og:url" content="https://cosmedocs.com/birmingham" />
         <meta property="og:type" content="website" />
