@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Helmet } from "react-helmet-async";
 import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, QrCode } from "lucide-react";
 import QRCode from "qrcode";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -109,6 +110,12 @@ const Home2 = () => {
 
   return (
     <TooltipProvider>
+      <Helmet>
+        <title>Cosmedocs - Aesthetic Medicine Harley Street | Botox & Fillers London</title>
+        <meta name="description" content="Premium aesthetic medicine on Harley Street since 2007. Botox, dermal fillers, lip enhancement. 1M+ injections. Invisible art philosophy." />
+        <meta name="keywords" content="cosmedocs, harley street aesthetic clinic, botox london, dermal fillers, lip enhancement, aesthetic medicine, cosmetic treatments" />
+        <link rel="canonical" href="https://cosmedocs.com/" />
+      </Helmet>
       <div className="bg-black text-white min-h-screen flex flex-col">
         {/* Integrated Header */}
         <header className="fixed top-0 left-0 right-0 z-50">
