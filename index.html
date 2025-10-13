@@ -4,6 +4,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Critical inline CSS for above-the-fold content -->
+    <style>
+      /* Critical styles for initial render */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { 
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background-color: #000;
+        color: #fff;
+        line-height: 1.5;
+      }
+      #root { min-height: 100vh; }
+      /* Prevent flash of unstyled content */
+      .page-container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+    </style>
+    
     <title>Cosmedocs - Premium Aesthetic Medicine & Botox Treatments | London Harley Street</title>
     <meta name="description" content="Cosmedocs offers premium aesthetic medicine treatments including Botox, dermal fillers, lip fillers, and non-surgical rejuvenation. Expert practitioners with over 1 million injections since 2007. Harley Street, London." />
     <meta name="author" content="Cosmedocs" />
