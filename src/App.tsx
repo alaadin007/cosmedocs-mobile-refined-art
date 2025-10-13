@@ -4,114 +4,125 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
+import { lazy, Suspense } from "react";
 import { useAutoSitemap } from "@/hooks/useAutoSitemap";
 import Layout from "./components/Layout";
-import Index from "./pages/Index";
-import Home from "./pages/Home";
-import Home2 from "./pages/Home2";
-import Treatments from "./pages/Treatments";
-import Team from "./pages/Team";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import ThankYou from "./pages/ThankYou";
-import Testimonials from "./pages/Testimonials";
-import LipFillers from "./pages/LipFillers";
-import ForeheadFillers from "./pages/ForeheadFillers";
-import NonSurgicalNoseJob from "./pages/NonSurgicalNoseJob";
-import BeforeAfterGallery from "./pages/BeforeAfterGallery";
-import Membership from "./pages/Membership";
-import DrAhmedHaq from "./pages/DrAhmedHaq";
-import DrHenaHaq from "./pages/DrHenaHaq";
-import Partners from "./pages/Partners";
-import NotFound from "./pages/NotFound";
-import BotoxCalfReduction from "./pages/BotoxCalfReduction";
-import MasseterBotox from "./pages/MasseterBotox";
-import LipFillerDissolve from "./pages/LipFillerDissolve";
-import PrivateGPDoctor from "./pages/PrivateGPDoctor";
-import NonSurgicalFacelift from "./pages/NonSurgicalFacelift";
-import { ThreadFaceLift } from "./pages/ThreadFaceLift";
-import TriggerPointBotox from "./pages/TriggerPointBotox";
-import AcneTreatment from "./pages/AcneTreatment";
-import MedicalAnalBleaching from "./pages/MedicalAnalBleaching";
-import DermalFillers from "./pages/DermalFillers";
-import NefertitiBotoxFacelift from "./pages/NefertitiBotoxFacelift";
-import FaceBotox from "./pages/FaceBotox";
-import AdvancedConsultation from "./pages/AdvancedConsultation";
-import FellowshipInvitation from "./pages/FellowshipInvitation";
-import LongTermAestheticCareBlog from "./pages/LongTermAestheticCareBlog";
-import AestheticMaintenanceCostBlog from "./pages/AestheticMaintenanceCostBlog";
-import NonSurgicalNoseJobBlog from "./pages/NonSurgicalNoseJobBlog";
-import ClinicalConceptsToFlawlessSkin from "./pages/ClinicalConceptsToFlawlessSkin";
-import ChineseLondonAestheticsBlog from "./pages/ChineseLondonAestheticsBlog";
-import VitaminCSerumBenefitsBlog from "./pages/VitaminCSerumBenefitsBlog";
-import CosmetalkBlog from "./pages/CosmetalkBlog";
-import InsideMindAestheticDoctorBlog from "./pages/InsideMindAestheticDoctorBlog";
-import SmokersLinesWomen from "./pages/SmokersLinesWomen";
-import FlawlessSkin from "./pages/FlawlessSkin";
-import LazySkinSyndrome from "./pages/LazySkinSyndrome";
-import BeautyEthnicNeutrality from "./pages/blog/BeautyEthnicNeutrality";
-import EightPointFacelift from "./pages/EightPointFacelift";
-import TreatmentsSummaryChinese from "./pages/TreatmentsSummaryChinese";
-import TreatmentsSummaryArabic from "./pages/TreatmentsSummaryArabic";
-import TreatmentsSummaryJapanese from "./pages/TreatmentsSummaryJapanese";
-import BirminghamHome from "./pages/BirminghamHome";
-import ManchesterHome from "./pages/ManchesterHome";
-import CardiffHome from "./pages/CardiffHome";
-import GummySmileBotox from "./pages/GummySmileBotox";
-import MarionnetteLines from "./pages/MarionnetteLines";
-import NasolabialFolds from "./pages/NasolabialFolds";
-import DelhiLocation from "./pages/DelhiLocation";
-import KarachiLocation from "./pages/KarachiLocation";
-import BarbadosHome from "./pages/BarbadosHome";
-import PolynucleotideTreatment from "./pages/PolynucleotideTreatment";
-import ProfhiloTreatment from "./pages/ProfhiloTreatment";
-import ChinBotox from "./pages/ChinBotox";
-import HydraFacial from "./pages/HydraFacial";
-import PRPTreatment from "./pages/PRPTreatment";
-import PeelToReveal from "./pages/PeelToReveal";
-import CheekFiller from "./pages/CheekFiller";
-import ChinFiller from "./pages/ChinFiller";
-// Import ear lobe rejuvenation component
-import EarLobeRejuvenation from "./pages/EarLobeRejuvenation";
-import JawlineFiller from "./pages/JawlineFiller";
-import ChemicalPeel from "./pages/ChemicalPeel";
-import PrescriptionSkincare from "./pages/PrescriptionSkincare";
-import Microneedling from "./pages/Microneedling";
-import TearTroughFiller from "./pages/TearTroughFiller";
-import TrapBotox from "./pages/TrapBotox";
-import VideoUpload from "./pages/VideoUpload";
-import ExperimentalTreatment from "./pages/ExperimentalTreatment";
-import TempleFiller from "./pages/TempleFiller";
-import NeckFillers from "./pages/NeckFillers";
-import HarleyStreetConsultingRooms from "./pages/HarleyStreetConsultingRooms";
-import PlasticSurgeon from "./pages/PlasticSurgeon";
-import Dermatology from "./pages/Dermatology";
-import AestheticTraining from "./pages/AestheticTraining";
-import HairTransplantSurgeon from "./pages/HairTransplantSurgeon";
-import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import ScrollToTop from "./components/ScrollToTop";
-import MoleSkinTagRemoval from "./pages/MoleSkinTagRemoval";
-import EczemaTreatment from "./pages/EczemaTreatment";
-import PsoriasisTreatment from "./pages/PsoriasisTreatment";
-import HyperpigmentationTreatment from "./pages/HyperpigmentationTreatment";
-import FatDissolve from "./pages/FatDissolve";
-import OilySkinBotox from "./pages/OilySkinBotox";
-import CosmeDerm from "./pages/CosmeDerm";
-import BotoxPriceLondon from "./pages/BotoxPriceLondon";
-import AestheticsAtGlance from "./pages/AestheticsAtGlance";
-import FrownLineBotox from "./pages/FrownLineBotox";
-import CrowsFeetBotox from "./pages/CrowsFeetBotox";
-import ForeheadLinesBotox from "./pages/ForeheadLinesBotox";
-import BunnyLinesBotox from "./pages/BunnyLinesBotox";
-import NasalFlaringBotox from "./pages/NasalFlaringBotox";
-import LipFlip from "./pages/LipFlip";
-import MigraineBotox from "./pages/MigraineBotox";
-import BruxismBotox from "./pages/BruxismBotox";
-import ExcessiveSweatBotox from "./pages/ExcessiveSweatBotox";
-import AestheticIntelligence from "./pages/AestheticIntelligence";
-import ProductAnalysisDetail from "./pages/ProductAnalysisDetail";
-import PopupOffer from "./pages/PopupOffer";
-import NonSurgicalPonytail from "./pages/NonSurgicalPonytail";
+
+// Eager load critical pages only
+import Index from "./pages/Index";
+
+// Lazy load all other pages
+const Home = lazy(() => import("./pages/Home"));
+const Home2 = lazy(() => import("./pages/Home2"));
+const Treatments = lazy(() => import("./pages/Treatments"));
+const Team = lazy(() => import("./pages/Team"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
+const Testimonials = lazy(() => import("./pages/Testimonials"));
+const LipFillers = lazy(() => import("./pages/LipFillers"));
+const ForeheadFillers = lazy(() => import("./pages/ForeheadFillers"));
+const NonSurgicalNoseJob = lazy(() => import("./pages/NonSurgicalNoseJob"));
+const BeforeAfterGallery = lazy(() => import("./pages/BeforeAfterGallery"));
+const Membership = lazy(() => import("./pages/Membership"));
+const DrAhmedHaq = lazy(() => import("./pages/DrAhmedHaq"));
+const DrHenaHaq = lazy(() => import("./pages/DrHenaHaq"));
+const Partners = lazy(() => import("./pages/Partners"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const BotoxCalfReduction = lazy(() => import("./pages/BotoxCalfReduction"));
+const MasseterBotox = lazy(() => import("./pages/MasseterBotox"));
+const LipFillerDissolve = lazy(() => import("./pages/LipFillerDissolve"));
+const PrivateGPDoctor = lazy(() => import("./pages/PrivateGPDoctor"));
+const NonSurgicalFacelift = lazy(() => import("./pages/NonSurgicalFacelift"));
+const ThreadFaceLift = lazy(() => import("./pages/ThreadFaceLift").then(m => ({ default: m.ThreadFaceLift })));
+const TriggerPointBotox = lazy(() => import("./pages/TriggerPointBotox"));
+const AcneTreatment = lazy(() => import("./pages/AcneTreatment"));
+const MedicalAnalBleaching = lazy(() => import("./pages/MedicalAnalBleaching"));
+const DermalFillers = lazy(() => import("./pages/DermalFillers"));
+const NefertitiBotoxFacelift = lazy(() => import("./pages/NefertitiBotoxFacelift"));
+const FaceBotox = lazy(() => import("./pages/FaceBotox"));
+const AdvancedConsultation = lazy(() => import("./pages/AdvancedConsultation"));
+const FellowshipInvitation = lazy(() => import("./pages/FellowshipInvitation"));
+const LongTermAestheticCareBlog = lazy(() => import("./pages/LongTermAestheticCareBlog"));
+const AestheticMaintenanceCostBlog = lazy(() => import("./pages/AestheticMaintenanceCostBlog"));
+const NonSurgicalNoseJobBlog = lazy(() => import("./pages/NonSurgicalNoseJobBlog"));
+const ClinicalConceptsToFlawlessSkin = lazy(() => import("./pages/ClinicalConceptsToFlawlessSkin"));
+const ChineseLondonAestheticsBlog = lazy(() => import("./pages/ChineseLondonAestheticsBlog"));
+const VitaminCSerumBenefitsBlog = lazy(() => import("./pages/VitaminCSerumBenefitsBlog"));
+const CosmetalkBlog = lazy(() => import("./pages/CosmetalkBlog"));
+const InsideMindAestheticDoctorBlog = lazy(() => import("./pages/InsideMindAestheticDoctorBlog"));
+const SmokersLinesWomen = lazy(() => import("./pages/SmokersLinesWomen"));
+const FlawlessSkin = lazy(() => import("./pages/FlawlessSkin"));
+const LazySkinSyndrome = lazy(() => import("./pages/LazySkinSyndrome"));
+const BeautyEthnicNeutrality = lazy(() => import("./pages/blog/BeautyEthnicNeutrality"));
+const EightPointFacelift = lazy(() => import("./pages/EightPointFacelift"));
+const TreatmentsSummaryChinese = lazy(() => import("./pages/TreatmentsSummaryChinese"));
+const TreatmentsSummaryArabic = lazy(() => import("./pages/TreatmentsSummaryArabic"));
+const TreatmentsSummaryJapanese = lazy(() => import("./pages/TreatmentsSummaryJapanese"));
+const BirminghamHome = lazy(() => import("./pages/BirminghamHome"));
+const ManchesterHome = lazy(() => import("./pages/ManchesterHome"));
+const CardiffHome = lazy(() => import("./pages/CardiffHome"));
+const GummySmileBotox = lazy(() => import("./pages/GummySmileBotox"));
+const MarionnetteLines = lazy(() => import("./pages/MarionnetteLines"));
+const NasolabialFolds = lazy(() => import("./pages/NasolabialFolds"));
+const DelhiLocation = lazy(() => import("./pages/DelhiLocation"));
+const KarachiLocation = lazy(() => import("./pages/KarachiLocation"));
+const BarbadosHome = lazy(() => import("./pages/BarbadosHome"));
+const PolynucleotideTreatment = lazy(() => import("./pages/PolynucleotideTreatment"));
+const ProfhiloTreatment = lazy(() => import("./pages/ProfhiloTreatment"));
+const ChinBotox = lazy(() => import("./pages/ChinBotox"));
+const HydraFacial = lazy(() => import("./pages/HydraFacial"));
+const PRPTreatment = lazy(() => import("./pages/PRPTreatment"));
+const PeelToReveal = lazy(() => import("./pages/PeelToReveal"));
+const CheekFiller = lazy(() => import("./pages/CheekFiller"));
+const ChinFiller = lazy(() => import("./pages/ChinFiller"));
+const EarLobeRejuvenation = lazy(() => import("./pages/EarLobeRejuvenation"));
+const JawlineFiller = lazy(() => import("./pages/JawlineFiller"));
+const ChemicalPeel = lazy(() => import("./pages/ChemicalPeel"));
+const PrescriptionSkincare = lazy(() => import("./pages/PrescriptionSkincare"));
+const Microneedling = lazy(() => import("./pages/Microneedling"));
+const TearTroughFiller = lazy(() => import("./pages/TearTroughFiller"));
+const TrapBotox = lazy(() => import("./pages/TrapBotox"));
+const VideoUpload = lazy(() => import("./pages/VideoUpload"));
+const ExperimentalTreatment = lazy(() => import("./pages/ExperimentalTreatment"));
+const TempleFiller = lazy(() => import("./pages/TempleFiller"));
+const NeckFillers = lazy(() => import("./pages/NeckFillers"));
+const HarleyStreetConsultingRooms = lazy(() => import("./pages/HarleyStreetConsultingRooms"));
+const PlasticSurgeon = lazy(() => import("./pages/PlasticSurgeon"));
+const Dermatology = lazy(() => import("./pages/Dermatology"));
+const AestheticTraining = lazy(() => import("./pages/AestheticTraining"));
+const HairTransplantSurgeon = lazy(() => import("./pages/HairTransplantSurgeon"));
+const GoogleAnalytics = lazy(() => import("./components/GoogleAnalytics").then(m => ({ default: m.GoogleAnalytics })));
+const MoleSkinTagRemoval = lazy(() => import("./pages/MoleSkinTagRemoval"));
+const EczemaTreatment = lazy(() => import("./pages/EczemaTreatment"));
+const PsoriasisTreatment = lazy(() => import("./pages/PsoriasisTreatment"));
+const HyperpigmentationTreatment = lazy(() => import("./pages/HyperpigmentationTreatment"));
+const FatDissolve = lazy(() => import("./pages/FatDissolve"));
+const OilySkinBotox = lazy(() => import("./pages/OilySkinBotox"));
+const CosmeDerm = lazy(() => import("./pages/CosmeDerm"));
+const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
+const AestheticsAtGlance = lazy(() => import("./pages/AestheticsAtGlance"));
+const FrownLineBotox = lazy(() => import("./pages/FrownLineBotox"));
+const CrowsFeetBotox = lazy(() => import("./pages/CrowsFeetBotox"));
+const ForeheadLinesBotox = lazy(() => import("./pages/ForeheadLinesBotox"));
+const BunnyLinesBotox = lazy(() => import("./pages/BunnyLinesBotox"));
+const NasalFlaringBotox = lazy(() => import("./pages/NasalFlaringBotox"));
+const LipFlip = lazy(() => import("./pages/LipFlip"));
+const MigraineBotox = lazy(() => import("./pages/MigraineBotox"));
+const BruxismBotox = lazy(() => import("./pages/BruxismBotox"));
+const ExcessiveSweatBotox = lazy(() => import("./pages/ExcessiveSweatBotox"));
+const AestheticIntelligence = lazy(() => import("./pages/AestheticIntelligence"));
+const ProductAnalysisDetail = lazy(() => import("./pages/ProductAnalysisDetail"));
+const PopupOffer = lazy(() => import("./pages/PopupOffer"));
+const NonSurgicalPonytail = lazy(() => import("./pages/NonSurgicalPonytail"));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-pulse text-muted-foreground">Loading...</div>
+  </div>
+);
 
 const queryClient = new QueryClient();
 
@@ -127,8 +138,11 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
           <ScrollToTop />
-          <GoogleAnalytics />
+          <Suspense fallback={null}>
+            <GoogleAnalytics />
+          </Suspense>
           <Layout>
+            <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/home" element={<Home />} />
@@ -254,6 +268,7 @@ const App = () => {
               <Route path="/admin/video-upload" element={<VideoUpload />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            </Suspense>
           </Layout>
         </BrowserRouter>
       </TooltipProvider>
