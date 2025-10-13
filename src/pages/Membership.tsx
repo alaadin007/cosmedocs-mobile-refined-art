@@ -13,7 +13,7 @@ const Membership = () => {
     <>
       <Helmet>
         <title>Cosmedocs Membership - Premium Aesthetic Medicine | £95/month</title>
-        <meta name="description" content="Join Cosmedocs exclusive membership for £95/month. Get 25% off injectables, 50% off skin boosters, free monthly treatments, and more. Aesthetic medicine that's invisible art." />
+        <meta name="description" content="Cosmedocs membership £95/month. 25% off injectables, 50% off skin boosters, free monthly treatments. Aesthetic medicine as invisible art." />
         <meta name="keywords" content="cosmedocs membership, aesthetic medicine subscription, botox discount, filler membership, london aesthetic clinic" />
         <link rel="canonical" href="https://cosmedocs.com/membership" />
       </Helmet>

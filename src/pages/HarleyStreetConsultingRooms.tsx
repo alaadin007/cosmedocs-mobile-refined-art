@@ -50,7 +50,7 @@ export default function HarleyStreetConsultingRooms() {
     <>
       <Helmet>
         <title>Harley Street Consulting Rooms - Premium Medical Practice Partnerships | CosmeDocs</title>
-        <meta name="description" content="Discover partnership opportunities in prestigious Harley Street. Join London's leading aesthetic medicine practice for collaborative excellence in premium healthcare delivery." />
+        <meta name="description" content="Partnership opportunities in prestigious Harley Street. Join London's leading aesthetic medicine practice for collaborative excellence." />
         <meta name="keywords" content="harley street consulting rooms, harley street medical rooms, private consulting rooms harley street, harley street rooms rent, medical consulting rooms london, aesthetic medicine partnerships" />
         <link rel="canonical" href="https://www.cosmedocs.com/harley-street-consulting-rooms" />
         
