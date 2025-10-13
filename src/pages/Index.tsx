@@ -38,7 +38,7 @@ const Index = () => {
   const isMobile = useIsMobile();
 
   const seoData = generateSEOMetadata(
-    "Cosmedocs London | Premium Aesthetic Medicine | Harley Street",
+    "Cosmedocs London | Aesthetic Medicine | Harley Street",
     "Premium aesthetic medicine in London's Harley Street. Expert treatments by Dr. Ahmed Haq. Our aesthetics is invisible art • Bold • Natural • Always Your Way",
     "/"
   );

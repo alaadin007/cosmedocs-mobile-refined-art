@@ -10,7 +10,7 @@ const DrHenaHaq = () => {
   console.log("DrHenaHaq component is rendering");
   
   const seoData = generateSEOMetadata(
-    "Dr Hena Haq | Expert Cosmetic Physician | Cosmedocs London",
+    "Dr Hena Haq | Cosmetic Physician | Cosmedocs",
     "Dr. Hena Haq is an Aesthetic Doctor whose holistic approach to client treatments has made her popular amongst her clients. Specializing in subtle tweakments and natural outcomes.",
     "/team/dr-hena-haq"
   );

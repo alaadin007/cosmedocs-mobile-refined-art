@@ -24,7 +24,7 @@ import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const AestheticTraining = () => {
   const seoData = generateSEOMetadata(
-    "Aesthetic Medicine Training & Fellowship | Cosmedocs London",
+    "Aesthetic Medicine Training | Cosmedocs London",
     "Join the Cosmedocs Fellowship in Aesthetic Medicine - partnering with Harley Street Institute since 2014. Experience unparalleled live clinic training with real patients and expert mentorship.",
     "/aesthetic-training"
   );

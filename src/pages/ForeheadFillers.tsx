@@ -21,7 +21,7 @@ const ForeheadFillers = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   
   const seoData = generateSEOMetadata(
-    "Forehead Filler | Dermal Fillers for Forehead Lines & Wrinkles",
+    "Forehead Filler London | Cosmedocs",
     "Professional dermal fillers forehead treatment in London. View forehead filler before and after results. Expert frown line filler & wrinkle treatment.",
     "/forehead-fillers"
   );
