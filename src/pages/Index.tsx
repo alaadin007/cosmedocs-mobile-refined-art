@@ -390,7 +390,7 @@ const Index = () => {
                 
                 <Dialog open={isRejuvenationDialogOpen} onOpenChange={setIsRejuvenationDialogOpen}>
                   <DialogTrigger asChild>
-                    <motion.div className="relative max-w-3xl mx-auto cursor-pointer rounded-xl overflow-hidden mb-16" initial={{
+                    <motion.button className="relative max-w-3xl mx-auto cursor-pointer rounded-xl overflow-hidden mb-16 w-full border-0 p-0 bg-transparent" initial={{
                     opacity: 0,
                     y: 20
                   }} whileInView={{
@@ -424,7 +424,7 @@ const Index = () => {
                           <p>See how we score facial aesthetics</p>
                         </TooltipContent>
                       </Tooltip>
-                    </motion.div>
+                    </motion.button>
                   </DialogTrigger>
                   
                   {/* Dialog content remains the same as Home page */}
