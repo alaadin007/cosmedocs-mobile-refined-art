@@ -16,7 +16,7 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 
 const AdvancedConsultation = () => {
   const seoData = generateSEOMetadata(
-    "Advanced Aesthetic Consultation with Dr. Ahmed Haq | Cosmedocs",
+    "Advanced Aesthetic Consultation | Dr. Ahmed Haq",
     "Experience millimeter-precision aesthetic refinements with Dr. Ahmed Haq. Expert consultations for subtle facial optimization, addressing temporal hollowing, lip corner enhancement, and volumizing techniques. 15+ years training physicians in advanced aesthetic medicine.",
     "/advanced-consultation"
   );

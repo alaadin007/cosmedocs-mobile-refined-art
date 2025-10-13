@@ -35,7 +35,7 @@ import jawlineGallery12 from "@/assets/jawline-gallery-12.jpg";
 
 const JawlineFiller = () => {
   const seoData = generateSEOMetadata(
-    "Jawline Filler London | £950 Natural HD Package | Dr. Ahmed Haq | Harley Street",
+    "Jawline Filler London | £950 | Dr. Ahmed Haq",
     "Expert jawline filler treatments in London's Harley Street. Dr. Ahmed Haq offers Natural HD Jawline Package from £950. Create a jaw-dropping jawline - slimmer, sleeker & sharper.",
     "/jawline-filler"
   );

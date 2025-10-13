@@ -20,7 +20,7 @@ import beforeAfter3 from "@/assets/8-point-facelift-before-after-3.jpg";
 
 export default function EightPointFacelift() {
   const seoData = generateSEOMetadata(
-    "8 Point Face Lift London | Non-Surgical Facelift | Cosmedocs",
+    "8 Point Facelift London | From £800 | Cosmedocs",
     "8 point face lift London - non surgical facelift using dermal fillers. Expert hyaluronic acid injections for natural facial rejuvenation. Face lift prices from £800.",
     "/8-point-facelift"
   );

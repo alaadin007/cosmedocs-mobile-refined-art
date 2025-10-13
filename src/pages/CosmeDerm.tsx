@@ -16,7 +16,7 @@ import cosmedermImage from "@/assets/cosmederm-clinic.jpg";
 
 const CosmeDerm = () => {
   const seoData = generateSEOMetadata(
-    "CosmeDerm Dermatology Clinic UK | Online & In-Clinic Consultations | Expert Skin Treatment | Cosmedocs",
+    "CosmeDerm Dermatology UK | Dr Hassan Mirza",
     "CosmeDerm dermatology clinic UK offering online & in-clinic consultations. Expert treatment for acne, psoriasis, eczema, hair loss. Dr Hassan Mirza MBBS MRCP.",
     "/cosmederm"
   );

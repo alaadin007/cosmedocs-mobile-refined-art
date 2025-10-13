@@ -20,7 +20,7 @@ import lipFlipImage3 from "@/assets/before-after/lip-flip-3.jpg";
 
 const LipFlip = () => {
   const seoData = generateSEOMetadata(
-    "Lip Flip Botox London | Upper Lip Enhancement | Cosmedocs Harley Street",
+    "Lip Flip Botox London | Cosmedocs",
     "Expert lip flip botox treatment in London for upper lip enhancement. Professional orbicularis oris muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
     "/lip-flip"
   );

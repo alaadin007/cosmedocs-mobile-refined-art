@@ -23,7 +23,7 @@ import frownLinesInjectionSites from "@/assets/frown-lines-injection-sites.jpg";
 
 const FrownLineBotox = () => {
   const seoData = generateSEOMetadata(
-    "Frown Line Botox London | Glabellar Lines Treatment | Cosmedocs Harley Street",
+    "Frown Line Botox London | Cosmedocs",
     "Expert frown line botox treatment in London for glabellar lines between eyebrows. Professional botulinum toxin injections by cosmetic doctors. Natural results at Harley Street clinic.",
     "/frown-line-botox"
   );

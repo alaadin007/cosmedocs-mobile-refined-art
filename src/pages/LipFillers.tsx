@@ -19,7 +19,7 @@ import ClientReviews from '@/components/ClientReviews';
 
 const LipFillers = () => {
   const seoData = generateSEOMetadata(
-    "Lip Filler London | Expert Lip Augmentation UK | 1ml Lip Injection Cost | Cosmedocs",
+    "Lip Filler London | From £300 | Cosmedocs",
     "Professional lip filler London treatments by expert doctors. Lip augmentation UK from £300. Natural looking lip enhancement & 1ml lip filler. How much is lip filler? Book consultation.",
     "/lip-fillers"
   );

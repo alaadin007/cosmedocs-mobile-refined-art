@@ -17,7 +17,7 @@ import { Clock, Calendar, Activity, Syringe, Award, Users, CheckCircle, Palette,
 
 const BotoxCalfReduction = () => {
   const seoData = generateSEOMetadata(
-    "Botox Calf Reduction London | Slim Your Calves | Cosmedocs Harley Street",
+    "Botox Calf Reduction London | Cosmedocs",
     "Calf botox & calf reduction surgery alternative. Botox on calves for slimmer calves. Reduce calf muscle mass non-surgically. London clinic consultation.",
     "/botox-calf-reduction"
   );

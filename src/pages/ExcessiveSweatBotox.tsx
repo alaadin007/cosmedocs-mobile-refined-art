@@ -23,7 +23,7 @@ import {
 
 const ExcessiveSweatBotox = () => {
   const seoData = generateSEOMetadata(
-    "Excessive Sweating Botox London | Hyperhidrosis Treatment | Cosmedocs Harley Street",
+    "Excessive Sweating Botox London | Cosmedocs",
     "Expert excessive sweating botox treatment in London for hyperhidrosis. Professional therapeutic botox for underarms, hands, and feet by cosmetic doctors. Life-changing results at Harley Street clinic.",
     "/excessive-sweat-botox"
   );

@@ -30,7 +30,7 @@ declare global {
 
 const EarLobeRejuvenation = () => {
   const seoData = generateSEOMetadata(
-    "Ear Lobe Rejuvenation London | From £500 | Cosmedocs | Harley Street", 
+    "Ear Lobe Rejuvenation London | £500 | Cosmedocs", 
     "Professional ear lobe rejuvenation treatments in London's Harley Street. Transform drooping, aged earlobes with dermal fillers. Expert treatment from £500 at Cosmedocs.", 
     "/ear-lobe-rejuvenation"
   );

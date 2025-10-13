@@ -11,7 +11,7 @@ import { Stethoscope, Target, Sparkles, HandHeart, Shield, Clock } from "lucide-
 
 export default function EczemaTreatment() {
   const seoData = generateSEOMetadata(
-    "Best Eczema Treatment London | Atopic Dermatitis & Severe Eczema | Cosmedocs",
+    "Eczema Treatment London | Cosmedocs",
     "Expert eczema treatment London for atopic dermatitis, severe eczema, hand eczema, scalp eczema, and facial eczema. Advanced dermatology care for all eczema types. Book consultation today.",
     "/eczema-treatment"
   );

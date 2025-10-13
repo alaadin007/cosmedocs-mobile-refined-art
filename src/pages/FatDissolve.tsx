@@ -17,7 +17,7 @@ import {
 
 const FatDissolve = () => {
   const seoData = generateSEOMetadata(
-    "EMSCULPT Fat Dissolving London | Non-Invasive Fat Reduction | Body Contouring UK | Cosmedocs",
+    "EMSCULPT London | Fat Reduction | Cosmedocs",
     "Revolutionary EMSCULPT non-invasive fat reduction treatment in London. Build muscle & burn fat simultaneously. FDA approved body contouring from £750. Book consultation.",
     "/fat-dissolve"
   );

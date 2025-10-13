@@ -22,7 +22,7 @@ import foreheadBotoxResultsImage from "@/assets/forehead-botox-results.jpg";
 
 const ForeheadLinesBotox = () => {
   const seoData = generateSEOMetadata(
-    "Forehead Lines Botox London | Horizontal Wrinkle Treatment | Cosmedocs Harley Street",
+    "Forehead Lines Botox London | Cosmedocs",
     "Expert forehead lines botox treatment in London for horizontal wrinkles. Professional frontalis muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
     "/forehead-lines-botox"
   );

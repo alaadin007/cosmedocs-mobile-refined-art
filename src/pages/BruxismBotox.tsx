@@ -17,7 +17,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 const BruxismBotox = () => {
   const seoData = generateSEOMetadata(
-    "Bruxism Botox London | TMJ Botox Treatment | Teeth Grinding Cure",
+    "Bruxism Botox London | TMJ Treatment | Cosmedocs",
     "Expert bruxism botox treatment in London for teeth grinding and TMJ disorders. Botox for clenched jaw and jaw pain. Professional masseter botox by cosmetic doctors at Harley Street.",
     "/bruxism-botox"
   );

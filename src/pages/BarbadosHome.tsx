@@ -10,7 +10,7 @@ import PopularTreatments from '@/components/PopularTreatments';
 
 const BarbadosHome = () => {
   const seoData = generateSEOMetadata(
-    "Cosmedocs Barbados | Dr. Crystal | Harley Street Trained Aesthetic Doctor",
+    "Cosmedocs Barbados | Dr. Crystal | Aesthetic Clinic",
     "Premium aesthetic treatments by Dr. Crystal in Barbados. Harley Street trained, Fellowship certified. Botox, dermal fillers, and advanced cosmetic procedures.",
     "/barbados"
   );
