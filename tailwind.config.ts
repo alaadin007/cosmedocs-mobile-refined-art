@@ -4,10 +4,13 @@ import type { Config } from "tailwindcss";
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./index.html",
+		"./src/**/*.{js,ts,jsx,tsx}",
+	],
+	// Optimize for production - remove unused styles
+	safelist: [
+		// Keep essential utility classes that might be dynamically generated
+		'sr-only',
 	],
 	prefix: "",
 	theme: {
