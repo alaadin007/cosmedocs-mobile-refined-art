@@ -15,7 +15,7 @@ import {
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 
 const PeelToReveal = () => {
-  const seoData = generateSEOMetadata("Peel to Reveal London | £120 | Deep Skin Rejuvenation | Harley Street", "Revolutionary Peel to Reveal treatment in London's Harley Street. Deep skin cleansing, repairing & rejuvenation with powerful antioxidants. From £120.", "/peel-to-reveal");
+  const seoData = generateSEOMetadata("Peel to Reveal London | £120 | Cosmedocs", "Revolutionary Peel to Reveal treatment in London's Harley Street. Deep skin cleansing, repairing & rejuvenation with powerful antioxidants. From £120.", "/peel-to-reveal");
   const bookingUrl = "https://med.as.me/harleystreet";
 
   // Before/after images for the viewer - Real Cosmedocs results

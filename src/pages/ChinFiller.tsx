@@ -17,7 +17,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 const ChinFiller = () => {
-  const seoData = generateSEOMetadata("1ml Chin Filler London | Before & After Results | From £350", "Expert 1ml chin filler treatments in London. See amazing before and after results. Double chin filler, chin shadow correction. Book consultation.", "/chin-filler");
+  const seoData = generateSEOMetadata("Chin Filler London | From £350 | Cosmedocs", "Expert 1ml chin filler treatments in London. See amazing before and after results. Double chin filler, chin shadow correction. Book consultation.", "/chin-filler");
   const bookingUrl = "https://med.as.me/harleystreet";
   
   const beforeAfterImages = [

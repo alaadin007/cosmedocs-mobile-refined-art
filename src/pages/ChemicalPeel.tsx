@@ -24,7 +24,7 @@ const ChemicalPeel = () => {
     getVideosByTreatment
   } = useVideoManagement();
   const [selectedVideo, setSelectedVideo] = useState<any>(null);
-  const seoData = generateSEOMetadata("Chemical Peel London | Face Chemical Peel from £120 | Cosmedocs", "Professional chemical peel for face in London. Expert chemical peels for hyperpigmentation, acne scarring & melasma. TCA peel, glycolic peel London & salicylic acid peel. Chemical face peel before and after results. Book now.", "/chemical-peel");
+  const seoData = generateSEOMetadata("Chemical Peel London | From £120 | Cosmedocs", "Professional chemical peel for face in London. Expert chemical peels for hyperpigmentation, acne scarring & melasma. TCA peel, glycolic peel London & salicylic acid peel. Chemical face peel before and after results. Book now.", "/chemical-peel");
 
   // Get Chemical Peel specific videos
   const chemicalPeelVideos = getVideosByTreatment('Chemical Peel');

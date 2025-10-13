@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const PolynucleotideTreatment = () => {
-  const seoData = generateSEOMetadata("Polynucleotide Treatment London | £450 | Regenerative DNA Therapy | Harley Street", "Expert polynucleotide DNA therapy for skin regeneration, anti-aging, and hair restoration in London's Harley Street. Advanced regenerative medicine from £450.", "/polynucleotide-treatment");
+  const seoData = generateSEOMetadata("Polynucleotide Treatment London | £450 | Cosmedocs", "Expert polynucleotide DNA therapy for skin regeneration, anti-aging, and hair restoration in London's Harley Street. Advanced regenerative medicine from £450.", "/polynucleotide-treatment");
   const bookingUrl = "https://med.as.me/harleystreet";
 
   // Before/after images for the viewer
