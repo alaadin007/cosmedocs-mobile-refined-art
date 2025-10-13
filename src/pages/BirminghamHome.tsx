@@ -93,12 +93,8 @@ const BirminghamHome = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        <header>
-          <h1 className="sr-only">Birmingham Botox, Lip Filler & Dermal Fillers - Cosmedocs Birmingham Aesthetic Clinic</h1>
-        </header>
-        
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center" aria-labelledby="hero-heading">
+        <section className="relative h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
           <AnimatedDots />
           <div className="page-container relative z-10">
@@ -108,10 +104,10 @@ const BirminghamHome = () => {
                   <MapPin className="h-6 w-6 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-lg">Birmingham</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" id="hero-heading">
-                  cosmedocs
-                  <span className="block text-2xl md:text-3xl text-blue-400 mt-2">Birmingham Aesthetic Medicine</span>
-                </h2>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                  Birmingham Botox, Lip Filler & Dermal Fillers
+                  <span className="block text-2xl md:text-3xl text-blue-400 mt-2">Cosmedocs Birmingham Aesthetic Clinic</span>
+                </h1>
               </motion.div>
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>

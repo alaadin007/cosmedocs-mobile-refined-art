@@ -93,12 +93,8 @@ const CardiffHome = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        <header>
-          <h1 className="sr-only">Cardiff Botox, Lip Filler & Dermal Fillers - Cosmedocs Cardiff Aesthetic Clinic</h1>
-        </header>
-        
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center" aria-labelledby="hero-heading">
+        <section className="relative h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black"></div>
           <AnimatedDots />
           <div className="page-container relative z-10">
@@ -108,10 +104,10 @@ const CardiffHome = () => {
                   <MapPin className="h-6 w-6 text-red-400 mr-2" />
                   <span className="text-red-400 text-lg">Cardiff</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" id="hero-heading">
-                  cosmedocs
-                  <span className="block text-2xl md:text-3xl text-red-400 mt-2">Cardiff Aesthetic Medicine</span>
-                </h2>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                  Cardiff Botox, Lip Filler & Dermal Fillers
+                  <span className="block text-2xl md:text-3xl text-red-400 mt-2">Cosmedocs Cardiff Aesthetic Clinic</span>
+                </h1>
               </motion.div>
               
               <motion.div className="mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}>
