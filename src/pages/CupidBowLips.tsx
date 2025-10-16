@@ -537,47 +537,40 @@ const CupidBowLips = () => {
 
                   <p>
                     Whilst everyone possesses this double-curved area on their upper lip, many people have 
-                    a subtle or flat Cupid's bow that lacks clear definition. Factors influencing the 
-                    appearance of your Cupid's bow include:
+                    a subtle or flat Cupid's bow that lacks clear definition.
                   </p>
                 </CardContent>
               </Card>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <Card className="bg-black border-purple-900/30">
-                  <CardContent className="pt-6">
-                    <ul className="space-y-3 text-gray-300">
-                      <li className="flex items-start gap-3">
-                        <span className="text-purple-300 mt-1">•</span>
-                        <span>Genetics and inherited facial structure</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-purple-300 mt-1">•</span>
-                        <span>Natural lip anatomy and muscle positioning</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-purple-300 mt-1">•</span>
-                        <span>Age-related volume loss in the lips</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-black border-purple-900/30">
-                  <CardContent className="pt-6">
-                    <ul className="space-y-3 text-gray-300">
-                      <li className="flex items-start gap-3">
-                        <span className="text-purple-300 mt-1">•</span>
-                        <span>Ethnic background and facial proportions</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-purple-300 mt-1">•</span>
-                        <span>Individual variation in lip thickness and shape</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
+              <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 mb-6">
+                <CardHeader>
+                  <CardTitle className="text-white text-xl">Factors Influencing the Appearance of Your Cupid's Bow:</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-400" size={16} />
+                      <span>Genetics and inherited facial structure</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-400" size={16} />
+                      <span>Natural lip anatomy and muscle positioning</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-400" size={16} />
+                      <span>Age-related volume loss in the lips</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-400" size={16} />
+                      <span>Ethnic background and facial proportions</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle className="text-purple-400" size={16} />
+                      <span>Individual variation in lip thickness and shape</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
 
               <Card className="bg-black border-none">
                 <CardContent className="pt-6 space-y-6 text-gray-300">
