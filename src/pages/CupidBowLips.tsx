@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Heart, Target, MapPin, Star, Home } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Heart, Target, MapPin, Star, Home, Award, GraduationCap, CheckCircle, Palette } from "lucide-react";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import ClientReviews from '@/components/ClientReviews';
 
@@ -728,8 +728,104 @@ const CupidBowLips = () => {
           </div>
         </section>
 
-        {/* FAQs Section */}
+        {/* Why Choose Cosmedocs */}
         <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs Section */}
+        <section className="py-20 bg-accent">
           <div className="page-container max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -756,13 +852,6 @@ const CupidBowLips = () => {
           </div>
         </section>
 
-        {/* Client Reviews */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <ClientReviews />
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-black">
           <div className="page-container text-center">
@@ -771,21 +860,34 @@ const CupidBowLips = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-3xl font-bold mb-6">Ready to Define Your Cupid's Bow?</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                Book your consultation with our expert doctors at our Harley Street clinic 
-                and discover how Cupid's bow enhancement can elevate your natural beauty.
+              <h2 className="text-3xl font-bold mb-4">Ready for a Perfectly Defined Cupid's Bow?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert cosmetic doctors and discover how Cupid's bow enhancement 
+                can elevate your natural beauty with subtle, sophisticated results.
               </p>
-              <Button 
-                onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
-              >
-                Book Consultation Now
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
+                  Book Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                  onClick={() => window.location.href = 'tel:03330551503'}
+                >
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
+
+        {/* Client Reviews */}
+        <ClientReviews />
 
         {/* Hidden SEO Content */}
         <section className="sr-only" aria-hidden="true">
