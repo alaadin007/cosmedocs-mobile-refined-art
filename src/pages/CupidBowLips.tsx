@@ -568,10 +568,10 @@ const CupidBowLips = () => {
                         </li>
                       </ul>
                       <p className="text-purple-300 font-medium">
-                        Unlike general <Link to="/lip-fillers" className="text-purple-200 hover:text-white underline">lip filler treatments</Link>, Cupid's bow enhancement focuses specifically on 
+                        Unlike general lip filler treatments, Cupid's bow enhancement focuses specifically on 
                         creating precise definition in the upper lip peaks, resulting in a more refined, 
                         elegant appearance whilst maintaining natural-looking proportions. For comprehensive facial rejuvenation, 
-                        many clients combine this treatment with <Link to="/dermal-fillers" className="text-purple-200 hover:text-white underline">dermal fillers</Link> for other areas.
+                        many clients combine this treatment with dermal fillers for other areas.
                       </p>
                     </CardContent>
                   </Card>
@@ -700,8 +700,8 @@ const CupidBowLips = () => {
                   <p>
                     This natural variation is precisely why Cupid's bow enhancement has become increasingly 
                     popular—it allows us to refine and define this feature for those seeking more sculpted, 
-                    balanced lip aesthetics, regardless of their natural lip structure. For those seeking fuller lips overall, our comprehensive <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler treatments</Link> can 
-                    be combined with Cupid's bow definition for optimal results.
+                    balanced lip aesthetics, regardless of their natural lip structure. For those seeking fuller lips overall, 
+                    comprehensive lip enhancement can be combined with Cupid's bow definition for optimal results.
                   </p>
                 </CardContent>
               </Card>
@@ -1043,7 +1043,7 @@ const CupidBowLips = () => {
             of the philtrum (the vertical groove between nose and upper lip), and provides a more 
             youthful, refined appearance. The treatment can also improve lip symmetry and balance, 
             creating more harmonious facial aesthetics overall. Many clients choose to enhance their results with complementary treatments 
-            like the lip flip for subtle upper lip eversion, or comprehensive dermal filler treatments to address multiple areas of concern simultaneously.
+            for subtle upper lip eversion, or comprehensive facial treatments to address multiple areas of concern simultaneously.
           </p>
           <p>
             Recovery from Cupid's bow enhancement is minimal, with most clients experiencing only mild 
