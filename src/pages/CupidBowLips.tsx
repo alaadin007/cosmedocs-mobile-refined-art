@@ -960,9 +960,12 @@ const CupidBowLips = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">
+                      <p className="text-gray-300 mb-3">
                         Enhance overall lip volume and shape with premium hyaluronic acid fillers for naturally fuller lips.
                       </p>
+                      <span className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                        Learn more →
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
@@ -983,9 +986,12 @@ const CupidBowLips = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">
+                      <p className="text-gray-300 mb-3">
                         Subtle enhancement using anti-wrinkle treatment to gently evert the upper lip for a fuller appearance.
                       </p>
+                      <span className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                        Learn more →
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
@@ -1006,9 +1012,12 @@ const CupidBowLips = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">
+                      <p className="text-gray-300 mb-3">
                         Smooth smile lines from nose to mouth for a more youthful, refreshed appearance.
                       </p>
+                      <span className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                        Learn more →
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
@@ -1029,9 +1038,12 @@ const CupidBowLips = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">
+                      <p className="text-gray-300 mb-3">
                         Reduce downturned mouth corners and vertical lines for a lifted, happier expression.
                       </p>
+                      <span className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                        Learn more →
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
@@ -1052,9 +1064,12 @@ const CupidBowLips = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">
+                      <p className="text-gray-300 mb-3">
                         Restore facial volume and smooth wrinkles with premium hyaluronic acid treatments.
                       </p>
+                      <span className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                        Learn more →
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
@@ -1075,9 +1090,12 @@ const CupidBowLips = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">
+                      <p className="text-gray-300 mb-3">
                         Safe, effective removal or adjustment of previous lip filler treatments for natural results.
                       </p>
+                      <span className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                        Learn more →
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
