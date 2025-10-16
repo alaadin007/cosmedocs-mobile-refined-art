@@ -65,7 +65,7 @@ const CupidBowLips = () => {
     },
     {
       question: "Can Cupid's bow enhancement be combined with other treatments?",
-      answer: "Yes, it's often combined with overall lip filler, lip border definition, or other facial aesthetic treatments for comprehensive enhancement. Our doctors will create a bespoke treatment plan tailored to your goals."
+      answer: "Yes, it's often combined with overall lip filler, lip border definition, or other facial aesthetic treatments for comprehensive enhancement. Popular combinations include nasolabial fold treatment, marionette lines treatment, or non-surgical facelifts. Our doctors will create a bespoke treatment plan tailored to your goals."
     },
     {
       question: "What are the possible side effects?",
@@ -504,14 +504,14 @@ const CupidBowLips = () => {
 
                 <p>
                   Cupid's bow enhancement (also known as cupid's bow lip injections or lip injections cupid's bow) is a specialised 
-                  lip filler technique that precisely defines, reshapes, or accentuates this area. Injecting cupid's bow using 
+                  <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler</Link> technique that precisely defines, reshapes, or accentuates this area. Injecting cupid's bow using 
                   premium <a 
                     href="https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/dermal-fillers-approved-uses" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
                   >FDA-approved hyaluronic acid fillers</a> and expert injection techniques, we create symmetrical, 
-                  well-defined cupid's bow lips that complement your natural facial proportions. Our cupid's bow enhancement before and after 
+                  well-defined cupid's bow lips that complement your natural facial proportions. Similar techniques are used in our <Link to="/lip-flip" className="text-purple-400 hover:text-purple-300 underline">lip flip treatments</Link>, though the Cupid's bow enhancement focuses specifically on structural definition. Our cupid's bow enhancement before and after 
                   results demonstrate the transformative power of precise cupid bow lip techniques.
                 </p>
               </div>
@@ -568,9 +568,10 @@ const CupidBowLips = () => {
                         </li>
                       </ul>
                       <p className="text-purple-300 font-medium">
-                        Unlike general lip filler treatments, Cupid's bow enhancement focuses specifically on 
+                        Unlike general <Link to="/lip-fillers" className="text-purple-200 hover:text-white underline">lip filler treatments</Link>, Cupid's bow enhancement focuses specifically on 
                         creating precise definition in the upper lip peaks, resulting in a more refined, 
-                        elegant appearance whilst maintaining natural-looking proportions.
+                        elegant appearance whilst maintaining natural-looking proportions. For comprehensive facial rejuvenation, 
+                        many clients combine this treatment with <Link to="/dermal-fillers" className="text-purple-200 hover:text-white underline">dermal fillers</Link> for other areas.
                       </p>
                     </CardContent>
                   </Card>
@@ -699,7 +700,8 @@ const CupidBowLips = () => {
                   <p>
                     This natural variation is precisely why Cupid's bow enhancement has become increasingly 
                     popular—it allows us to refine and define this feature for those seeking more sculpted, 
-                    balanced lip aesthetics, regardless of their natural lip structure.
+                    balanced lip aesthetics, regardless of their natural lip structure. For those seeking fuller lips overall, our comprehensive <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler treatments</Link> can 
+                    be combined with Cupid's bow definition for optimal results.
                   </p>
                 </CardContent>
               </Card>
@@ -975,7 +977,7 @@ const CupidBowLips = () => {
               <h2 className="text-3xl font-bold mb-4">Ready for a Perfectly Defined Cupid's Bow?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book your consultation with our expert cosmetic doctors and discover how Cupid's bow enhancement 
-                can elevate your natural beauty with subtle, sophisticated results.
+                can elevate your natural beauty with subtle, sophisticated results. Explore our full range of <Link to="/treatments" className="text-purple-300 hover:text-purple-200 underline">aesthetic treatments</Link> for comprehensive facial rejuvenation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -1013,7 +1015,8 @@ const CupidBowLips = () => {
             The Cupid's bow plays a crucial role in overall lip aesthetics. A well-defined Cupid's bow 
             creates the illusion of fuller, more youthful lips even without adding significant volume. 
             This treatment is particularly beneficial for individuals with naturally flat upper lip 
-            borders, asymmetrical peaks, or those experiencing age-related loss of definition.
+            borders, asymmetrical peaks, or those experiencing age-related loss of definition. For those concerned with other signs of ageing, 
+            treatments such as nasolabial fold fillers, marionette line treatment, and cheek fillers can complement Cupid's bow enhancement beautifully.
           </p>
           <p>
             Our Cupid's bow enhancement technique utilises premium hyaluronic acid-based dermal fillers, 
@@ -1039,14 +1042,16 @@ const CupidBowLips = () => {
             A well-defined Cupid's bow creates better lip-to-face proportions, enhances the appearance 
             of the philtrum (the vertical groove between nose and upper lip), and provides a more 
             youthful, refined appearance. The treatment can also improve lip symmetry and balance, 
-            creating more harmonious facial aesthetics overall.
+            creating more harmonious facial aesthetics overall. Many clients choose to enhance their results with complementary treatments 
+            like the lip flip for subtle upper lip eversion, or comprehensive dermal filler treatments to address multiple areas of concern simultaneously.
           </p>
           <p>
             Recovery from Cupid's bow enhancement is minimal, with most clients experiencing only mild 
             swelling that resolves within 24-48 hours. Unlike more extensive lip filler treatments, 
             Cupid's bow enhancement typically produces less swelling due to the small, precise volumes 
             used. Results are visible immediately and continue to improve as the filler settles and 
-            integrates with your natural tissues over the following two weeks.
+            integrates with your natural tissues over the following two weeks. Should you ever wish to reverse 
+            or adjust your results, our lip filler dissolve service offers a safe and effective solution.
           </p>
           <p>
             At Cosmedocs, we exclusively use premium, FDA-approved hyaluronic acid fillers from leading 
