@@ -44,7 +44,6 @@ const Contact = () => {
         ]);
 
       if (error) {
-        console.error('Error submitting form:', error);
         toast({
           title: "Error",
           description: "There was an error submitting your message. Please try again.",
@@ -55,7 +54,6 @@ const Contact = () => {
         navigate('/thank-you');
       }
     } catch (error) {
-      console.error('Unexpected error:', error);
       toast({
         title: "Error",
         description: "There was an unexpected error. Please try again.",
