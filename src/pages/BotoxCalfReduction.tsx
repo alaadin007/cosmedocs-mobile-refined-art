@@ -71,7 +71,7 @@ const BotoxCalfReduction = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Expert botox calf reduction treatments in London",
             "url": seoData.canonical,
@@ -80,11 +80,15 @@ const BotoxCalfReduction = () => {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
+            "priceRange": "££",
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Botox Calf Reduction"
+            }
           })}
         </script>
         <script type="application/ld+json">
@@ -219,16 +223,17 @@ const BotoxCalfReduction = () => {
             "name": "Dr. Ahmed Haq",
             "medicalSpecialty": "Aesthetic Medicine",
             "worksFor": {
-              "@type": "MedicalBusiness",
-              "name": "Cosmedocs"
-            },
-            "url": "https://www.cosmedocs.co.uk",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             }
           })}
         </script>
