@@ -289,23 +289,69 @@ const CupidBowLips = () => {
                   injection techniques, we create symmetrical, well-defined peaks that complement your 
                   natural facial proportions.
                 </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-                <p>
-                  This treatment is ideal for those with:
-                </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Flat or undefined Cupid's bow</li>
-                  <li>Asymmetrical lip peaks</li>
-                  <li>Age-related loss of lip definition</li>
-                  <li>Desire for more sculpted, elegant lip shape</li>
-                  <li>Naturally thin upper lip lacking definition</li>
-                </ul>
+        {/* Ideal Candidates & Aftercare */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-6xl mx-auto"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {/* Ideal Candidates Column */}
+                <div>
+                  <h2 className="text-3xl font-bold mb-6 text-white">Who Is This Treatment Ideal For?</h2>
+                  
+                  <div className="space-y-6 text-gray-300">
+                    <p>This treatment is ideal for those with:</p>
+                    
+                    <ul className="list-disc list-inside space-y-3 ml-4">
+                      <li>Flat or undefined Cupid's bow</li>
+                      <li>Asymmetrical lip peaks</li>
+                      <li>Age-related loss of lip definition</li>
+                      <li>Desire for more sculpted, elegant lip shape</li>
+                      <li>Naturally thin upper lip lacking definition</li>
+                    </ul>
 
-                <p>
-                  Unlike general lip filler treatments, Cupid's bow enhancement focuses specifically on 
-                  creating precise definition in the upper lip peaks, resulting in a more refined, 
-                  elegant appearance whilst maintaining natural-looking proportions.
-                </p>
+                    <p>
+                      Unlike general lip filler treatments, Cupid's bow enhancement focuses specifically on 
+                      creating precise definition in the upper lip peaks, resulting in a more refined, 
+                      elegant appearance whilst maintaining natural-looking proportions.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Aftercare Column */}
+                <div>
+                  <h2 className="text-3xl font-bold mb-6 text-white">Aftercare</h2>
+                  
+                  <div className="space-y-6 text-gray-300">
+                    <p>To ensure optimal results and minimise swelling, follow these aftercare guidelines:</p>
+                    
+                    <ul className="list-disc list-inside space-y-3 ml-4">
+                      <li>Avoid touching or massaging the treated area for 24 hours</li>
+                      <li>Apply ice packs for 10-15 minutes to reduce swelling</li>
+                      <li>Sleep with your head elevated for the first night</li>
+                      <li>Avoid strenuous exercise for 24-48 hours</li>
+                      <li>Stay hydrated and avoid alcohol for 24 hours</li>
+                      <li>Avoid extreme heat (saunas, hot yoga) for 48 hours</li>
+                      <li>Use a gentle lip balm to keep lips moisturised</li>
+                      <li>Avoid makeup on the treated area for 12 hours</li>
+                    </ul>
+
+                    <p>
+                      Mild swelling and tenderness are normal and typically subside within 48 hours. 
+                      Final results will be visible after 2 weeks once any swelling has completely resolved.
+                    </p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
