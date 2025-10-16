@@ -152,7 +152,7 @@ const CupidBowLips = () => {
                 <p className="text-xl text-gray-200 mb-8">Invisible art - defining elegance without exaggeration</p>
                 <div className="mb-8">
                   <p className="text-2xl text-white font-bold">Define Your Natural Beauty</p>
-                  <p className="text-sm text-gray-300">20-30 minutes • Precise filler technique • Natural lip definition</p>
+                  <p className="text-sm text-gray-300">Precise filler technique • Natural lip definition</p>
                 </div>
                 <div className="mb-6 flex items-center gap-6 flex-wrap">
                   <div className="flex items-center gap-2">
