@@ -407,54 +407,49 @@ const CupidBowLips = () => {
               viewport={{ once: true }}
               className="max-w-6xl mx-auto"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Ideal Candidates Column */}
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-accent border-none h-full">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
                     <CardHeader>
-                      <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                        <Heart className="text-purple-600" size={28} />
-                      </div>
-                      <CardTitle className="text-2xl text-white">Who Is This Treatment Ideal For?</CardTitle>
+                      <CardTitle className="text-white text-xl">Who Is This Treatment Ideal For?</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-6 text-gray-300">
-                      <p className="text-base">This treatment is ideal for those with:</p>
-                      
-                      <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                    <CardContent>
+                      <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                        This treatment is ideal for those with:
+                      </p>
+                      <ul className="space-y-3 text-gray-300 mb-6">
+                        <li className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-400" size={16} />
                           <span>Flat or undefined Cupid's bow</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-400" size={16} />
                           <span>Asymmetrical lip peaks</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-400" size={16} />
                           <span>Age-related loss of lip definition</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-400" size={16} />
                           <span>Desire for more sculpted, elegant lip shape</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-center space-x-2">
+                          <CheckCircle className="text-purple-400" size={16} />
                           <span>Naturally thin upper lip lacking definition</span>
                         </li>
                       </ul>
-
-                      <div className="pt-4 border-t border-purple-900/30">
-                        <p className="text-sm leading-relaxed">
-                          Unlike general lip filler treatments, Cupid's bow enhancement focuses specifically on 
-                          creating precise definition in the upper lip peaks, resulting in a more refined, 
-                          elegant appearance whilst maintaining natural-looking proportions.
-                        </p>
-                      </div>
+                      <p className="text-purple-300 font-medium">
+                        Unlike general lip filler treatments, Cupid's bow enhancement focuses specifically on 
+                        creating precise definition in the upper lip peaks, resulting in a more refined, 
+                        elegant appearance whilst maintaining natural-looking proportions.
+                      </p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -463,60 +458,55 @@ const CupidBowLips = () => {
                 <motion.div
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-accent border-none h-full">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
                     <CardHeader>
-                      <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                        <Target className="text-purple-600" size={28} />
-                      </div>
-                      <CardTitle className="text-2xl text-white">Aftercare Guidelines</CardTitle>
+                      <CardTitle className="text-white text-xl">Aftercare Guidelines</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-6 text-gray-300">
-                      <p className="text-base">To ensure optimal results and minimise swelling:</p>
-                      
-                      <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                    <CardContent>
+                      <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                        To ensure optimal results and minimise swelling:
+                      </p>
+                      <ul className="space-y-3 text-gray-300 mb-6">
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Avoid touching or massaging the treated area for 24 hours</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Apply ice packs for 10-15 minutes to reduce swelling</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Sleep with your head elevated for the first night</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Avoid strenuous exercise for 24-48 hours</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Stay hydrated and avoid alcohol for 24 hours</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Avoid extreme heat (saunas, hot yoga) for 48 hours</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Use a gentle lip balm to keep lips moisturised</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="text-purple-300 mt-1">•</span>
+                        <li className="flex items-start space-x-2">
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Avoid makeup on the treated area for 12 hours</span>
                         </li>
                       </ul>
-
-                      <div className="pt-4 border-t border-purple-900/30">
-                        <p className="text-sm leading-relaxed">
-                          Mild swelling and tenderness are normal and typically subside within 48 hours. 
-                          Final results will be visible after 2 weeks once any swelling has completely resolved.
-                        </p>
-                      </div>
+                      <p className="text-purple-300 font-medium">
+                        Mild swelling and tenderness are normal and typically subside within 48 hours. 
+                        Final results will be visible after 2 weeks once any swelling has completely resolved.
+                      </p>
                     </CardContent>
                   </Card>
                 </motion.div>
