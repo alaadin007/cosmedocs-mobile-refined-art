@@ -366,6 +366,12 @@ const CupidBowLips = () => {
               
               <div className="space-y-6 text-gray-300">
                 <p>
+                  Whilst a naturally pronounced, sharply defined Cupid's bow with perfect symmetry is rare, 
+                  many individuals have asymmetrical peaks, one side more defined than the other, or a 
+                  completely flat upper lip border lacking the characteristic 'M' shape.
+                </p>
+
+                <p>
                   Cupid's bow enhancement is a specialised lip filler technique that precisely defines, 
                   reshapes, or accentuates this area. Using premium hyaluronic acid fillers and expert 
                   injection techniques, we create symmetrical, well-defined peaks that complement your 
