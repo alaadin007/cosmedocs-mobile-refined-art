@@ -928,6 +928,9 @@ const CupidBowLips = () => {
           </div>
         </section>
 
+        {/* Client Reviews */}
+        <ClientReviews />
+
         {/* Related Treatments */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -1165,9 +1168,6 @@ const CupidBowLips = () => {
             </motion.div>
           </div>
         </section>
-
-        {/* Client Reviews */}
-        <ClientReviews />
 
         {/* Hidden SEO Content */}
         <section className="sr-only" aria-hidden="true">
