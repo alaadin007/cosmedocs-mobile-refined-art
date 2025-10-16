@@ -22,6 +22,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
 const LipFillers = lazy(() => import("./pages/LipFillers"));
+const CupidBowLips = lazy(() => import("./pages/CupidBowLips"));
 const ForeheadFillers = lazy(() => import("./pages/ForeheadFillers"));
 const NonSurgicalNoseJob = lazy(() => import("./pages/NonSurgicalNoseJob"));
 const BeforeAfterGallery = lazy(() => import("./pages/BeforeAfterGallery"));
@@ -155,6 +156,7 @@ const App = () => {
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/thank-you" element={<ThankYou />} />
               <Route path="/lip-fillers" element={<LipFillers />} />
+              <Route path="/cupid-bow-lips" element={<CupidBowLips />} />
               <Route path="/forehead-fillers" element={<ForeheadFillers />} />
               <Route path="/non-surgical-nose-job" element={<NonSurgicalNoseJob />} />
               <Route path="/before-after-gallery" element={<BeforeAfterGallery />} />
