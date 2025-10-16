@@ -501,7 +501,7 @@ const CupidBowLips = () => {
                   Cupid's bow enhancement (also known as cupid's bow lip injections or lip injections cupid's bow) is a specialised 
                   <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler</Link> technique that precisely defines, reshapes, or accentuates this area. Injecting cupid's bow using 
                   premium <a 
-                    href="https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/dermal-fillers-approved-uses" 
+                    href="https://www.fda.gov/cosmetics/cosmetic-products/dermal-fillers-soft-tissue-fillers" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
