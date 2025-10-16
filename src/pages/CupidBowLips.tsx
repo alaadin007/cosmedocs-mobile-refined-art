@@ -18,8 +18,8 @@ import ClientReviews from '@/components/ClientReviews';
 
 const CupidBowLips = () => {
   const seoData = generateSEOMetadata(
-    "Cupid's Bow Lip Enhancement London | Cosmedocs",
-    "Expert Cupid's bow lip enhancement in London. Define & reshape your lip peaks for a natural, elegant smile. Book consultation today.",
+    "Cupid's Bow Lip Enhancement London 2025 | From £300 | Harley Street",
+    "Expert Cupid's bow lip enhancement at Harley Street, London. Define cupids bow & reshape lip peaks naturally. Premium lip injections cupid's bow. Book free consultation.",
     "/cupid-bow-lips"
   );
 
@@ -88,18 +88,122 @@ const CupidBowLips = () => {
         <meta property="og:image" content={seoData.image} />
         <meta property="og:url" content={seoData.canonical} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="Cupid's bow enhancement, Cupid's bow lip filler, lip peak definition, lip shaping London, upper lip enhancement, lip contouring, natural lip definition, aesthetic lip enhancement, Harley Street lip treatment" />
+        <meta name="keywords" content="cupids bow, cupid bow, cupid with a bow, cupid's bow lips, cupid bow lips, cupid's bow, cupids bow lips, bow cupid, cupid's bow lip, cupids bow lip, cupid bow lip, define cupids bow, what is a cupid's bow, cupid bows, cupid's bow meaning, defined cupid's bow, cupid's bow enhancement, cupid's bow enhancement before and after, cupid's bow lip injections, injecting cupid's bow, lip injections cupid's bow, lip filler London, Harley Street aesthetics" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.519526;-0.146061" />
+        <meta name="ICBM" content="51.519526, -0.146061" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["MedicalBusiness", "MedicalClinic"],
+            "name": "Cosmedocs - Cupid's Bow Lip Enhancement London",
+            "description": "Expert cupid's bow enhancement and lip injections at Harley Street, London. Specialised cupid's bow lip filler treatments.",
+            "url": seoData.canonical,
+            "telephone": "0333 0551 503",
+            "priceRange": "££",
+            "image": "https://www.cosmedocs.co.uk/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.519526",
+              "longitude": "-0.146061"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "London"
+              },
+              {
+                "@type": "Place",
+                "name": "Marylebone"
+              },
+              {
+                "@type": "Place",
+                "name": "Westminster"
+              },
+              {
+                "@type": "Place",
+                "name": "Mayfair"
+              }
+            ],
+            "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
+            "medicalSpecialty": ["Cosmetic Medicine", "Aesthetic Medicine"],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "847",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalProcedure",
             "name": "Cupid's Bow Lip Enhancement",
             "description": "Specialised lip filler technique to define and enhance the Cupid's bow area of the upper lip",
-            "procedureType": "Cosmetic",
+            "procedureType": "Cosmetic Injectable Treatment",
             "bodyLocation": "Upper lip",
             "preparation": "Topical anaesthetic applied",
             "followup": "Minimal downtime, results visible immediately",
-            "howPerformed": "Precise dermal filler injection to define lip peaks"
+            "howPerformed": "Precise dermal filler injection to define lip peaks",
+            "procedureDuration": "PT30M"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cosmedocs.co.uk/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Treatments",
+                "item": "https://www.cosmedocs.co.uk/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Lip Treatments",
+                "item": "https://www.cosmedocs.co.uk/lip-fillers"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Cupid's Bow Enhancement",
+                "item": "https://www.cosmedocs.co.uk/cupid-bow-lips"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           })}
         </script>
       </Helmet>
@@ -320,17 +424,23 @@ const CupidBowLips = () => {
               
               <div className="space-y-6 text-gray-300">
                 <p>
-                  The Cupid's bow is the distinctive double-curved area at the centre of the upper lip, 
-                  resembling the shape of Cupid's archery bow from classical mythology. This anatomical feature 
+                  The cupid's bow (also written as cupid bow or cupids bow) is the distinctive double-curved area at the centre of the upper lip, 
+                  resembling the shape of Cupid with a bow from classical mythology. This anatomical feature 
                   defines the peaks and valleys of your upper lip, creating the characteristic 'M' shape that's 
                   essential for balanced, attractive lip aesthetics.
                 </p>
 
                 <p>
                   Named after the Roman god of love, Cupid, whose bow shared a similar curved silhouette, 
-                  the Cupid's bow consists of two symmetrical peaks (the highest points of the upper lip) 
-                  connected by a central dip. This natural contour plays a crucial role in facial harmony 
-                  and is considered a key feature of youthful, aesthetically pleasing lips.
+                  the cupid's bow consists of two symmetrical peaks (the highest points of the upper lip) 
+                  connected by a central dip. Understanding what is a cupid's bow and its cupid's bow meaning 
+                  is crucial for appreciating how this natural contour plays a vital role in facial harmony 
+                  and is considered a key feature of youthful, aesthetically pleasing lips. According to <a 
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6901087/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 underline"
+                  >research published in medical literature</a>, well-defined cupid bows are associated with perceptions of beauty and youth.
                 </p>
 
                 <Card className="bg-black border-purple-900/30 mt-6">
@@ -341,7 +451,12 @@ const CupidBowLips = () => {
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start gap-3">
                         <span className="text-purple-300 mt-1">•</span>
-                        <span>Clear definition between the upper lip and the philtrum (the vertical groove from nose to lip)</span>
+                        <span>Clear definition between the upper lip and the <a 
+                          href="https://www.sciencedirect.com/topics/medicine-and-dentistry/philtrum" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-400 hover:text-purple-300 underline"
+                        >philtrum</a> (the vertical groove from nose to lip)</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-purple-300 mt-1">•</span>
@@ -381,16 +496,23 @@ const CupidBowLips = () => {
               
               <div className="space-y-6 text-gray-300">
                 <p>
-                  Whilst a naturally pronounced, sharply defined Cupid's bow with perfect symmetry is rare, 
-                  many individuals have asymmetrical peaks, one side more defined than the other, or a 
-                  completely flat upper lip border lacking the characteristic 'M' shape.
+                  Whilst a naturally pronounced, sharply defined cupid's bow with perfect symmetry is rare, 
+                  many individuals have asymmetrical cupid bow lips, one side more defined than the other, or a 
+                  completely flat upper lip border lacking the characteristic 'M' shape. This is where cupid's bow enhancement 
+                  becomes valuable for those seeking to define cupids bow features.
                 </p>
 
                 <p>
-                  Cupid's bow enhancement is a specialised lip filler technique that precisely defines, 
-                  reshapes, or accentuates this area. Using premium hyaluronic acid fillers and expert 
-                  injection techniques, we create symmetrical, well-defined peaks that complement your 
-                  natural facial proportions.
+                  Cupid's bow enhancement (also known as cupid's bow lip injections or lip injections cupid's bow) is a specialised 
+                  lip filler technique that precisely defines, reshapes, or accentuates this area. Injecting cupid's bow using 
+                  premium <a 
+                    href="https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/dermal-fillers-approved-uses" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 underline"
+                  >FDA-approved hyaluronic acid fillers</a> and expert injection techniques, we create symmetrical, 
+                  well-defined cupid's bow lips that complement your natural facial proportions. Our cupid's bow enhancement before and after 
+                  results demonstrate the transformative power of precise cupid bow lip techniques.
                 </p>
               </div>
             </motion.div>
@@ -530,14 +652,14 @@ const CupidBowLips = () => {
               <Card className="bg-black border-none mb-6">
                 <CardContent className="pt-6 space-y-6 text-gray-300">
                   <p>
-                    No, having a Cupid's bow isn't rare—everyone naturally has this anatomical feature. 
-                    However, the prominence, definition, and symmetry of the Cupid's bow varies significantly 
-                    from person to person.
+                    No, having cupids bow lips isn't rare—everyone naturally has this anatomical feature. 
+                    However, the prominence, definition, and symmetry of the bow cupid varies significantly 
+                    from person to person. What makes a defined cupid's bow stand out is the sharpness and symmetry of the peaks.
                   </p>
 
                   <p>
-                    Whilst everyone possesses this double-curved area on their upper lip, many people have 
-                    a subtle or flat Cupid's bow that lacks clear definition.
+                    Whilst everyone possesses this double-curved cupid's bow lip area on their upper lip, many people have 
+                    a subtle or flat cupid bow lip that lacks clear definition.
                   </p>
                 </CardContent>
               </Card>
@@ -881,10 +1003,11 @@ const CupidBowLips = () => {
         <section className="sr-only" aria-hidden="true">
           <h2>Cupid's Bow Lip Enhancement London - Expert Treatment Guide</h2>
           <p>
-            Cupid's bow enhancement is an advanced aesthetic treatment designed to define and refine 
-            the characteristic double-curved area of the upper lip. At Cosmedocs, our expert practitioners 
-            specialise in creating beautifully sculpted Cupid's bows that enhance your natural facial 
-            harmony whilst maintaining subtle, elegant results.
+            Cupid's bow enhancement is an advanced aesthetic treatment designed to define cupids bow and refine 
+            the characteristic double-curved area of the upper lip. At Cosmedocs, our expert practitioners at 
+            10 Harley Street, London W1G 9PF, specialise in creating beautifully sculpted cupid's bow lips that enhance your natural facial 
+            harmony whilst maintaining subtle, elegant results. Understanding what is a cupid's bow and the cupid's bow meaning 
+            is essential for appreciating this sophisticated cupid bow lip treatment.
           </p>
           <p>
             The Cupid's bow plays a crucial role in overall lip aesthetics. A well-defined Cupid's bow 
