@@ -83,15 +83,16 @@ const ChinBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Expert dimpled chin botox and pebble chin botox treatments in London",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
@@ -100,8 +101,11 @@ const ChinBotox = () => {
               "latitude": "51.519366",
               "longitude": "-0.144962"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
-            "priceRange": "££"
+            "priceRange": "££",
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Chin Botox Treatment"
+            }
           })}
         </script>
         <script type="application/ld+json">

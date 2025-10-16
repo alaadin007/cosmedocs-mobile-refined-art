@@ -75,7 +75,7 @@ const BotoxCalfReduction = () => {
             "name": "Cosmedocs",
             "description": "Expert botox calf reduction treatments in London",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
@@ -85,6 +85,11 @@ const BotoxCalfReduction = () => {
               "addressCountry": "GB"
             },
             "priceRange": "££",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "availableService": {
               "@type": "MedicalProcedure",
               "name": "Botox Calf Reduction"
@@ -221,11 +226,12 @@ const BotoxCalfReduction = () => {
             "@context": "https://schema.org",
             "@type": "Physician",
             "name": "Dr. Ahmed Haq",
-            "medicalSpecialty": "Aesthetic Medicine",
+            "jobTitle": "Aesthetic Medicine Specialist",
             "worksFor": {
               "@type": "MedicalClinic",
               "name": "Cosmedocs",
               "url": "https://www.cosmedocs.co.uk",
+              "telephone": "+44 20 3733 3227",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "10 Harley Street",

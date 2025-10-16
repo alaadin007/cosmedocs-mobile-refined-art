@@ -22,17 +22,19 @@ const BirminghamHome = () => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "Cosmedocs Birmingham - Aesthetic Medicine Clinic",
     "description": "Premier Birmingham botox, lip filler and dermal filler treatments. Expert aesthetic medicine serving Birmingham and West Midlands with invisible art philosophy.",
     "url": "https://cosmedocs.com/birmingham",
-    "telephone": "0333 0551 503",
+    "telephone": "+44 121 318 4218",
     "email": "info@cosmedocs.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "62-64 Corporation Street",
       "addressLocality": "Birmingham",
       "addressRegion": "West Midlands",
-      "addressCountry": "UK"
+      "postalCode": "B2 4RR",
+      "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -41,7 +43,6 @@ const BirminghamHome = () => {
     },
     "openingHours": "Mo-Fr 09:00-18:00",
     "priceRange": "£££",
-    "medicalSpecialty": ["Aesthetic Medicine", "Cosmetic Dermatology"],
     "areaServed": ["Birmingham", "West Midlands", "Solihull", "Coventry", "Wolverhampton", "Dudley"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
