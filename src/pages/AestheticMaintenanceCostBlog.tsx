@@ -25,7 +25,15 @@ const AestheticMaintenanceCostBlog = () => {
     "image": "https://cosmedocs.com/default-og-image.jpg",
     "author": {
       "@type": "Organization",
-      "name": "Cosmedocs"
+      "name": "Cosmedocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "publisher": {
       "@type": "Organization",
@@ -33,6 +41,14 @@ const AestheticMaintenanceCostBlog = () => {
       "logo": {
         "@type": "ImageObject",
         "url": "https://cosmedocs.com/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
       }
     },
     "datePublished": "2024-01-26"

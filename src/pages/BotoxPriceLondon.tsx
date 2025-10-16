@@ -13,7 +13,15 @@ const BotoxPriceLondon = () => {
     "author": {
       "@type": "Organization",
       "name": "Cosmedocs",
-      "url": "https://cosmedocs.com"
+      "url": "https://cosmedocs.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "publisher": {
       "@type": "Organization",
@@ -21,6 +29,14 @@ const BotoxPriceLondon = () => {
       "logo": {
         "@type": "ImageObject",
         "url": "https://cosmedocs.com/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
       }
     },
     "datePublished": "2024-01-15",

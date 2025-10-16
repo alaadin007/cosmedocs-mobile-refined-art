@@ -66,7 +66,7 @@ const PlasticSurgeon = () => {
             "description": "Expert plastic surgeon offering local anaesthetic procedures including upper eyelid surgery and lumps and bumps removal",
             "url": seoData.canonical,
             "telephone": "+44 20 3733 3227",
-            "email": "info@cosmedocs.com",
+            "email": "pashma@medcales.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",

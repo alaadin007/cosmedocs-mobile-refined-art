@@ -174,7 +174,15 @@ const CosmetalkBlog = () => {
     "url": "https://www.cosmedocs.com/cosmetalk",
     "publisher": {
       "@type": "Organization",
-      "name": "Cosmedocs"
+      "name": "Cosmedocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "blogPost": blogPosts.map(post => ({
       "@type": "BlogPosting",
@@ -184,7 +192,15 @@ const CosmetalkBlog = () => {
       "dateModified": post.date,
       "author": {
         "@type": "Organization", 
-        "name": "Cosmedocs"
+        "name": "Cosmedocs",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Harley Street",
+          "addressLocality": "London",
+          "addressRegion": "Greater London",
+          "postalCode": "W1G 9PF",
+          "addressCountry": "GB"
+        }
       }
     }))
   };
