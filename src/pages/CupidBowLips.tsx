@@ -337,16 +337,35 @@ const CupidBowLips = () => {
                   and is considered a key feature of youthful, aesthetically pleasing lips.
                 </p>
 
-                <p>
-                  A well-defined Cupid's bow creates:
-                </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Clear definition between the upper lip and the philtrum (the vertical groove from nose to lip)</li>
-                  <li>Balanced proportions between upper and lower lips</li>
-                  <li>Enhanced lip shape and projection</li>
-                  <li>A more youthful, refined appearance</li>
-                  <li>Improved overall facial symmetry</li>
-                </ul>
+                <Card className="bg-black border-purple-900/30 mt-6">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl">A Well-Defined Cupid's Bow Creates:</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 text-gray-300">
+                      <li className="flex items-start gap-3">
+                        <span className="text-purple-300 mt-1">•</span>
+                        <span>Clear definition between the upper lip and the philtrum (the vertical groove from nose to lip)</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-purple-300 mt-1">•</span>
+                        <span>Balanced proportions between upper and lower lips</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-purple-300 mt-1">•</span>
+                        <span>Enhanced lip shape and projection</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-purple-300 mt-1">•</span>
+                        <span>A more youthful, refined appearance</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-purple-300 mt-1">•</span>
+                        <span>Improved overall facial symmetry</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
             </motion.div>
           </div>
