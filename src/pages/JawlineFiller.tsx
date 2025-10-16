@@ -185,16 +185,17 @@ const JawlineFiller = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Jawline Filler London",
             "description": "Premium jawline filler treatments in London's Harley Street by Dr. Ahmed Haq",
             "url": "https://www.cosmedocs.co.uk/jawline-filler",
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "email": "info@cosmedocs.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
@@ -217,7 +218,6 @@ const JawlineFiller = () => {
                 "closes": "16:00"
               }
             ],
-            "medicalSpecialty": "Cosmetic Surgery",
             "priceRange": "£350-£950",
             "areaServed": {
               "@type": "City",

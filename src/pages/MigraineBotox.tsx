@@ -103,11 +103,11 @@ const MigraineBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": ["MedicalBusiness", "MedicalClinic"],
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Migraine Botox Treatment London",
             "description": "Expert botox for migraines UK treatment. Botox injections for migraines from £450. FDA-approved migraine relief botox at Harley Street, London.",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "priceRange": "££",
             "image": "https://www.cosmedocs.co.uk/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png",
             "address": {
@@ -146,7 +146,6 @@ const MigraineBotox = () => {
               }
             ],
             "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
-            "medicalSpecialty": ["Cosmetic Medicine", "Pain Management", "Neurology"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

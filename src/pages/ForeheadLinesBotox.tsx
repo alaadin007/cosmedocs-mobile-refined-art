@@ -127,16 +127,17 @@ const ForeheadLinesBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Expert forehead lines botox treatments in London",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
@@ -164,7 +165,6 @@ const ForeheadLinesBotox = () => {
               "ratingValue": "4.9",
               "reviewCount": "850"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
             "priceRange": "££"
           })}
         </script>

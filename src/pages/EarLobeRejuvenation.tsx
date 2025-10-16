@@ -169,15 +169,16 @@ const EarLobeRejuvenation = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Ear Lobe Rejuvenation Treatment",
             "description": "Professional ear lobe rejuvenation treatments for aging and drooping earlobes",
             "url": "https://cosmedocs.com/ear-lobe-rejuvenation",
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
@@ -186,8 +187,11 @@ const EarLobeRejuvenation = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "medicalSpecialty": "Cosmetic Surgery",
-            "priceRange": "£500+"
+            "priceRange": "£500+",
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Ear Lobe Rejuvenation Treatment"
+            }
           })}
         </script>
 

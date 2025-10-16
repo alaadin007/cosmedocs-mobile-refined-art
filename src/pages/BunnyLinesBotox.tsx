@@ -108,11 +108,11 @@ const BunnyLinesBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": ["MedicalBusiness", "MedicalClinic"],
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Bunny Lines Botox Treatment London",
             "description": "Expert bunny lines botox before and after results. Botox for nose wrinkles from £100. Professional nasal lines botox at Harley Street, London.",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "priceRange": "££",
             "image": "https://www.cosmedocs.co.uk/placeholder.svg",
             "address": {
@@ -133,7 +133,6 @@ const BunnyLinesBotox = () => {
               "name": "London"
             },
             "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
-            "medicalSpecialty": ["Cosmetic Medicine", "Aesthetic Medicine"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

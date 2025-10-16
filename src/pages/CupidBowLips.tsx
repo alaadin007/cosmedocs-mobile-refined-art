@@ -97,11 +97,11 @@ const CupidBowLips = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": ["MedicalBusiness", "MedicalClinic"],
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Cupid's Bow Lip Enhancement London",
             "description": "Expert cupid's bow enhancement and lip injections at Harley Street, London. Specialised cupid's bow lip filler treatments.",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "priceRange": "££",
             "image": "https://www.cosmedocs.co.uk/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png",
             "address": {
@@ -136,7 +136,6 @@ const CupidBowLips = () => {
               }
             ],
             "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
-            "medicalSpecialty": ["Cosmetic Medicine", "Aesthetic Medicine"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

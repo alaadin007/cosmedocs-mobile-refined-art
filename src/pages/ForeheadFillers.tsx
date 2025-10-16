@@ -89,17 +89,18 @@ const ForeheadFillers = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Expert forehead filler treatments in London - Harley Street aesthetic clinic",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "email": "info@cosmedocs.com",
             "priceRange": "££",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
@@ -122,7 +123,6 @@ const ForeheadFillers = () => {
                 "closes": "16:00"
               }
             ],
-            "medicalSpecialty": "Cosmetic Medicine",
             "sameAs": [
               "https://www.instagram.com/cosmedocs/",
               "https://www.facebook.com/cosmedocs/"
