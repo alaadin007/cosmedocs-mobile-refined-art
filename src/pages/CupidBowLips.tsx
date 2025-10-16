@@ -311,6 +311,55 @@ const CupidBowLips = () => {
           </div>
         </section>
 
+        {/* Is It Rare to Have a Cupid's Bow? */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center">Is It Rare to Have a Cupid's Bow?</h2>
+              
+              <div className="space-y-6 text-gray-300">
+                <p>
+                  No, having a Cupid's bow isn't rare—everyone naturally has this anatomical feature. 
+                  However, the prominence, definition, and symmetry of the Cupid's bow varies significantly 
+                  from person to person.
+                </p>
+
+                <p>
+                  Whilst everyone possesses this double-curved area on their upper lip, many people have 
+                  a subtle or flat Cupid's bow that lacks clear definition. Factors influencing the 
+                  appearance of your Cupid's bow include:
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Genetics and inherited facial structure</li>
+                  <li>Natural lip anatomy and muscle positioning</li>
+                  <li>Age-related volume loss in the lips</li>
+                  <li>Ethnic background and facial proportions</li>
+                  <li>Individual variation in lip thickness and shape</li>
+                </ul>
+
+                <p>
+                  What is considered rare is a naturally pronounced, sharply defined Cupid's bow with 
+                  perfect symmetry. Many individuals have asymmetrical peaks, one side more defined than 
+                  the other, or a completely flat upper lip border lacking the characteristic 'M' shape.
+                </p>
+
+                <p>
+                  This natural variation is precisely why Cupid's bow enhancement has become increasingly 
+                  popular—it allows us to refine and define this feature for those seeking more sculpted, 
+                  balanced lip aesthetics, regardless of their natural lip structure.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* The Cosmedocs Approach */}
         <section className="py-20 bg-black">
           <div className="page-container">
