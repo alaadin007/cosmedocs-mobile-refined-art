@@ -500,16 +500,16 @@ const CupidBowLips = () => {
                   connected by a central dip. Understanding what is a cupid's bow and its cupid's bow meaning 
                   is crucial for appreciating how this natural contour plays a vital role in facial harmony 
                   and is considered a key feature of youthful, aesthetically pleasing lips. According to <a 
-                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6901087/" 
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5952987/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >research published in medical literature</a>, well-defined cupid bows are associated with perceptions of beauty and youth. Studies from the <a 
-                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5418287/" 
+                  >research on ideal lip aesthetics</a>, well-defined cupid bows are associated with perceptions of beauty and youth. Studies from the <a 
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6345732/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >Journal of Cosmetic Dermatology</a> further confirm that lip proportion and Cupid's bow prominence significantly influence facial attractiveness ratings.
+                  >Journal of Craniofacial Surgery</a> further confirm that lip proportion and Cupid's bow prominence significantly influence facial attractiveness ratings.
                 </p>
 
                 <Card className="bg-black border-purple-900/30 mt-6">
@@ -569,11 +569,11 @@ const CupidBowLips = () => {
                 <p>
                   Cupid's bow enhancement (also known as cupid's bow lip injections or lip injections cupid's bow) is a specialised 
                   <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler</Link> technique that precisely defines, reshapes, or accentuates this area. Using premium hyaluronic acid fillers and expert injection techniques, we create symmetrical, well-defined cupid's bow lips that complement your natural facial proportions. According to <a 
-                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315926/" 
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11253074/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >clinical research on lip augmentation techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates.
+                  >clinical research on lip augmentation injection techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates.
                 </p>
               </div>
             </motion.div>
@@ -690,11 +690,11 @@ const CupidBowLips = () => {
                       <p className="text-purple-300 font-medium">
                         Mild swelling and tenderness are normal and typically subside within 48 hours. 
                         Final results will be visible after 2 weeks once any swelling has completely resolved. According to <a 
-                          href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4387527/" 
+                          href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7497045/" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-purple-200 hover:text-white underline"
-                        >clinical guidelines on dermal filler aftercare</a>, proper post-treatment care significantly enhances treatment outcomes and longevity.
+                        >clinical guidelines on facial aesthetic injection aftercare</a>, proper post-treatment care significantly enhances treatment outcomes and longevity.
                       </p>
                     </CardContent>
                   </Card>
