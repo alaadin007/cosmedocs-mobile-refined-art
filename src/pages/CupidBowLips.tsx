@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,9 +11,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Link } from "react-router-dom";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Heart, Target } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Heart, Target, MapPin, Star, Home } from "lucide-react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import ClientReviews from '@/components/ClientReviews';
 
 const CupidBowLips = () => {
@@ -21,6 +22,11 @@ const CupidBowLips = () => {
     "Expert Cupid's bow lip enhancement in London. Define & reshape your lip peaks for a natural, elegant smile. Book consultation today.",
     "/cupid-bow-lips"
   );
+
+  const breadcrumbItems = [
+    { label: "Treatments", path: "/treatments" },
+    { label: "Lip Treatments", path: "/lip-fillers" }
+  ];
 
   const beforeAfterImages = [
     { 
@@ -103,6 +109,37 @@ const CupidBowLips = () => {
       </Helmet>
 
       <div className="bg-black text-white">
+        {/* Breadcrumb Navigation */}
+        <div className="bg-accent py-4">
+          <div className="page-container">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/" className="flex items-center gap-1">
+                      <Home className="h-4 w-4" />
+                      <span>Home</span>
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                {breadcrumbItems.map((item, index) => (
+                  <BreadcrumbItem key={item.path}>
+                    <BreadcrumbLink asChild>
+                      <Link to={item.path}>{item.label}</Link>
+                    </BreadcrumbLink>
+                    {index < breadcrumbItems.length - 1 && <BreadcrumbSeparator />}
+                  </BreadcrumbItem>
+                ))}
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>Cupid's Bow Enhancement</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -113,13 +150,23 @@ const CupidBowLips = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                  <span className="text-purple-300">Cupid's Bow Enhancement</span>
-                  <span className="block text-sm mt-4">Invisible art—defining elegance without exaggeration</span>
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-purple-300">
+                  Cupid's Bow Enhancement
                 </h1>
+                <p className="text-xl text-gray-200 mb-8">Invisible art - defining elegance without exaggeration</p>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Define Your Natural Beauty</p>
-                  <p className="text-sm text-gray-300">Precise enhancement for perfectly shaped, symmetrical lips</p>
+                  <p className="text-2xl text-white font-bold">Define Your Natural Beauty</p>
+                  <p className="text-sm text-gray-300">20-30 minutes • Precise filler technique • Natural lip definition</p>
+                </div>
+                <div className="mb-6 flex items-center gap-6 flex-wrap">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="text-purple-400" size={20} />
+                    <span className="text-gray-300">Harley Street, London</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Star className="text-yellow-400" size={20} fill="currentColor" />
+                    <span className="text-gray-300">4.9/5 from 847 reviews</span>
+                  </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -133,7 +180,7 @@ const CupidBowLips = () => {
                     className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
                     onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    View Pricing
+                    View Price List
                   </Button>
                 </div>
               </motion.div>
@@ -153,7 +200,7 @@ const CupidBowLips = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-8 text-white">Treatment Overview</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Cupid's Bow Enhancement Overview</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
