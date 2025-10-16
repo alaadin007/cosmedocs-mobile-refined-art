@@ -928,7 +928,165 @@ const CupidBowLips = () => {
           </div>
         </section>
 
-        {/* FAQs Section */}
+        {/* Related Treatments */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Related Treatments</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Complement your Cupid's bow enhancement with these popular treatments
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/lip-fillers">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full hover:border-purple-400/50 transition-all duration-300 cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Heart className="text-purple-400" size={20} />
+                        Lip Fillers
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Enhance overall lip volume and shape with premium hyaluronic acid fillers for naturally fuller lips.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/lip-flip">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full hover:border-purple-400/50 transition-all duration-300 cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Syringe className="text-purple-400" size={20} />
+                        Lip Flip
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Subtle enhancement using anti-wrinkle treatment to gently evert the upper lip for a fuller appearance.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/nasolabial-folds">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full hover:border-purple-400/50 transition-all duration-300 cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Target className="text-purple-400" size={20} />
+                        Nasolabial Folds
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Smooth smile lines from nose to mouth for a more youthful, refreshed appearance.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/marionette-lines">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full hover:border-purple-400/50 transition-all duration-300 cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Activity className="text-purple-400" size={20} />
+                        Marionette Lines
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Reduce downturned mouth corners and vertical lines for a lifted, happier expression.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/dermal-fillers">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full hover:border-purple-400/50 transition-all duration-300 cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Syringe className="text-purple-400" size={20} />
+                        Dermal Fillers
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Restore facial volume and smooth wrinkles with premium hyaluronic acid treatments.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Link to="/lip-filler-dissolve">
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30 h-full hover:border-purple-400/50 transition-all duration-300 cursor-pointer">
+                    <CardHeader>
+                      <CardTitle className="text-white text-xl flex items-center gap-2">
+                        <Target className="text-purple-400" size={20} />
+                        Lip Filler Dissolve
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-300">
+                        Safe, effective removal or adjustment of previous lip filler treatments for natural results.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+
         <section className="py-20 bg-accent">
           <div className="page-container max-w-4xl mx-auto">
             <motion.div
