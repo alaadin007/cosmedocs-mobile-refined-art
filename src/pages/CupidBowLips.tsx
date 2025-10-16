@@ -499,20 +499,12 @@ const CupidBowLips = () => {
 
                 <p>
                   Cupid's bow enhancement (also known as cupid's bow lip injections or lip injections cupid's bow) is a specialised 
-                  <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler</Link> technique that precisely defines, reshapes, or accentuates this area. Injecting cupid's bow using 
-                  premium <a 
-                    href="https://www.fda.gov/cosmetics/cosmetic-products/dermal-fillers-soft-tissue-fillers" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-purple-300 underline"
-                  >FDA-approved hyaluronic acid fillers</a> and expert injection techniques, we create symmetrical, 
-                  well-defined cupid's bow lips that complement your natural facial proportions. According to <a 
+                  <Link to="/lip-fillers" className="text-purple-400 hover:text-purple-300 underline">lip filler</Link> technique that precisely defines, reshapes, or accentuates this area. Using premium hyaluronic acid fillers and expert injection techniques, we create symmetrical, well-defined cupid's bow lips that complement your natural facial proportions. According to <a 
                     href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315926/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >clinical research on lip augmentation techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates. Similar techniques are used in our <Link to="/lip-flip" className="text-purple-400 hover:text-purple-300 underline">lip flip treatments</Link>, though the Cupid's bow enhancement focuses specifically on structural definition. Our cupid's bow enhancement before and after 
-                  results demonstrate the transformative power of precise cupid bow lip techniques.
+                  >clinical research on lip augmentation techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates. Similar techniques are used in our <Link to="/lip-flip" className="text-purple-400 hover:text-purple-300 underline">lip flip treatments</Link>, though Cupid's bow enhancement focuses specifically on structural definition. Our cupid's bow enhancement before and after results demonstrate the transformative power of precise cupid bow lip techniques.
                 </p>
               </div>
             </motion.div>
