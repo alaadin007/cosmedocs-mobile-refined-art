@@ -504,7 +504,7 @@ const CupidBowLips = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >clinical research on lip augmentation techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates. Similar techniques are used in our <Link to="/lip-flip" className="text-purple-400 hover:text-purple-300 underline">lip flip treatments</Link>, though Cupid's bow enhancement focuses specifically on structural definition. Our cupid's bow enhancement before and after results demonstrate the transformative power of precise cupid bow lip techniques.
+                  >clinical research on lip augmentation techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates.
                 </p>
               </div>
             </motion.div>
