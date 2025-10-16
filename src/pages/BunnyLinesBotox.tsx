@@ -25,7 +25,7 @@ const BunnyLinesBotox = () => {
 
   const breadcrumbItems = [
     { label: "Treatments", path: "/treatments" },
-    { label: "Botox Treatments", path: "/face-botox" }
+    { label: "Botox Treatments", path: "/botox-london" }
   ];
 
   const beforeAfterImages = [
@@ -73,7 +73,7 @@ const BunnyLinesBotox = () => {
     },
     {
       question: "Can bunny lines botox be combined with other treatments?",
-      answer: "Yes! Bunny lines botox works excellently with <Link to='/advanced-upper-face-botox' className='text-purple-400 hover:text-purple-300 underline'>upper face botox treatments</Link> and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized combination treatment plans for optimal results."
+      answer: "Yes! Bunny lines botox works excellently with <Link to='/botox-london' className='text-purple-400 hover:text-purple-300 underline'>upper face botox treatments</Link> and dermal fillers for comprehensive facial rejuvenation. Our doctors create personalized combination treatment plans for optimal results."
     },
     {
       question: "Are there any side effects associated with Bunny Lines Botox?",
@@ -177,7 +177,7 @@ const BunnyLinesBotox = () => {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Botox Treatments",
-                "item": "https://www.cosmedocs.co.uk/face-botox"
+                "item": "https://www.cosmedocs.co.uk/botox-london"
               },
               {
                 "@type": "ListItem",
@@ -376,7 +376,7 @@ const BunnyLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-4">Bunny Lines Botox Before and After Results</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See our bunny lines before and after gallery showing botox on nose before and after transformations. Expert <Link to="/face-botox" className="text-purple-400 hover:text-purple-300 underline">botox for the nose</Link> treatment smooths nose wrinkles while maintaining natural facial expressions. Real bunny line botox results from our Harley Street clinic.
+                See our bunny lines before and after gallery showing botox on nose before and after transformations. Expert <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">botox for the nose</Link> treatment smooths nose wrinkles while maintaining natural facial expressions. Real bunny line botox results from our Harley Street clinic.
               </p>
             </motion.div>
 
@@ -1032,7 +1032,7 @@ const BunnyLinesBotox = () => {
           <p>Is botox on the nose safe? When performed by qualified cosmetic doctors at our Harley Street clinic, botox in nose areas is extremely safe and effective. The botox for the nose procedure specifically targets the bunny lines on face without affecting other nasal functions. Understanding what are bunny lines and their causes helps patients appreciate why botox bunny lines treatment works so effectively. The nose wrinkles addressed by nasal lines botox develop from years of repeated facial expressions. Botox for nose wrinkles relaxes the nasalis muscle, smoothing existing bunny line and preventing new wrinkles on the nose from forming. Our expertise in botox nose treatments ensures optimal outcomes with minimal risk of complications or the bunny lines botox gone wrong scenarios sometimes seen with inexperienced practitioners.</p>
           
           <h5>Bunny Lines Face Treatment: Comprehensive Approach</h5>
-          <p>Treating bunny lines face concerns requires understanding facial anatomy and muscle dynamics. What is bunny lines treatment beyond just injections? It's a comprehensive approach that considers your entire facial aesthetic. Our botox bunny nose protocols factor in how bunny lines on face interact with surrounding areas like forehead lines and crow's feet. The nose wrinkled appearance often accompanies other upper face concerns, which is why we offer combination treatments. Botox in bunny lines can be performed standalone or with treatments like <a href="/advanced-upper-face-botox" className="text-purple-400">advanced upper face botox</a> for harmonious results. Whether you're concerned about a single bunny line or multiple nose wrinkles, our customised bunny nose botox approach delivers natural-looking improvements.</p>
+          <p>Treating bunny lines face concerns requires understanding facial anatomy and muscle dynamics. What is bunny lines treatment beyond just injections? It's a comprehensive approach that considers your entire facial aesthetic. Our botox bunny nose protocols factor in how bunny lines on face interact with surrounding areas like forehead lines and crow's feet. The nose wrinkled appearance often accompanies other upper face concerns, which is why we offer combination treatments. Botox in bunny lines can be performed standalone or with treatments like <a href="/botox-london" className="text-purple-400">advanced upper face botox</a> for harmonious results. Whether you're concerned about a single bunny line or multiple nose wrinkles, our customised bunny nose botox approach delivers natural-looking improvements.</p>
           
           <h5>Nose Bunny Treatment: Expert Care at Harley Street London</h5>
           <p>Our nose bunny treatment expertise extends beyond simple botox injections. We educate patients on what are bunny lines, why they develop, and realistic bunny lines before and after expectations. The botox on bunny lines procedure at our Harley Street London clinic follows strict safety protocols and aesthetic principles. Patients concerned about bunny lines botox gone wrong can trust our decade of experience in nose botox before and after transformations. We serve clients throughout London seeking expert botox for nasal lines, botox nose refinement, and comprehensive wrinkles on the nose solutions. The botox for the nose treatment takes minutes but delivers months of smooth, natural-looking results that enhance your facial aesthetics without obvious signs of intervention.</p>

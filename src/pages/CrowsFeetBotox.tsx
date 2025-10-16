@@ -428,7 +428,7 @@ const CrowsFeetBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What Are Crow's Feet and How Does Botox Help?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                Crow's feet (also known as lateral canthal lines or smile lines) are wrinkles around eyes that appear when smiling or squinting. These crows feet wrinkles form from repeated contractions of the orbicularis oculi muscle. <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox for crow's feet</Link> targets this orbital muscle, smoothing crow feet eyes whilst preserving your natural expressions. Our <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10374187/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven treatment</a> delivers exceptional botox crows feet before after results.
+                Crow's feet (also known as lateral canthal lines or smile lines) are wrinkles around eyes that appear when smiling or squinting. These crows feet wrinkles form from repeated contractions of the orbicularis oculi muscle. <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox for crow's feet</Link> targets this orbital muscle, smoothing crow feet eyes whilst preserving your natural expressions. Our <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10374187/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven treatment</a> delivers exceptional botox crows feet before after results.
               </p>
             </motion.div>
 

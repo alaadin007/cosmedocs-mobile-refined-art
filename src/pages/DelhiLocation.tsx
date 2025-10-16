@@ -19,7 +19,7 @@ const DelhiLocation = () => {
     {
       title: "Botox Face Areas",
       description: "Premium Botox treatment for frown lines, forehead, and crow's feet",
-      link: "/face-botox-areas",
+      link: "/botox-london",
       price: "From ₹15,000"
     },
     {

@@ -29,7 +29,7 @@ const PopularTreatments = ({
     {
       title: "Botox – The Art of a Natural Pause in Ageing",
       description: "Subtle muscle relaxation for a refreshed, rested look.\n\n• Frown lines (glabellar lines)\n• Forehead lines\n• Crow's feet (eye wrinkles)\n• Brow lift (non-surgical)\n• Gummy smile correction\n• Jawline slimming (masseter reduction)\n• Excessive sweating (hyperhidrosis)",
-      link: "/face-botox-areas"
+      link: "/botox-london"
     },
     {
       title: "Dermal Fillers – Restore Balance, Contour & Confidence",

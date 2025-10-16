@@ -26,7 +26,7 @@ const BarbadosHome = () => {
     {
       title: "Botox Treatments",
       description: "Anti-wrinkle injections for smooth, youthful skin",
-      link: "/face-botox-areas",
+      link: "/botox-london",
       price: "From $300",
       icon: "✨"
     },

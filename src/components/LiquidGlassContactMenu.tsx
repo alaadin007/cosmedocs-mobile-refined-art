@@ -26,7 +26,7 @@ const treatmentCategories = [
     name: "Botox",
     icon: Zap,
     treatments: [
-      { name: "Face Botox (1-3 Areas)", link: "/face-botox-areas" },
+      { name: "Face Botox (1-3 Areas)", link: "/botox-london" },
       { name: "Nefertiti Face Lift", link: "/nefertiti-lift" },
       { name: "Masseter (Jawline Slimming)", link: "/masseter-botox" },
       { name: "Bunny Lines", link: "/bunny-lines-treatment" },

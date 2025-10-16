@@ -724,7 +724,7 @@ const ForeheadFillers = () => {
                   <div>
                     <h4 className="font-bold text-white mb-3">How It Works</h4>
                     <p className="text-gray-300 text-sm">
-                      <Link to="/face-botox" className="text-blue-300 hover:text-blue-200 underline">Botox</Link> temporarily relaxes forehead muscles that cause dynamic wrinkles, preventing the formation of lines when you make facial expressions.
+                      <Link to="/botox-london" className="text-blue-300 hover:text-blue-200 underline">Botox</Link> temporarily relaxes forehead muscles that cause dynamic wrinkles, preventing the formation of lines when you make facial expressions.
                     </p>
                   </div>
 

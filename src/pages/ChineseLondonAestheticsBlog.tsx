@@ -160,7 +160,7 @@ const ChineseLondonAestheticsBlog = () => {
                   benefits: ["无创无痛", "效果自然", "维持6-8个月", "不影响正常咀嚼"],
                   price: "£380-580",
                   popular: true,
-                  link: "/lower-face-botox"
+                  link: "/botox-london"
                 },
                 {
                   title: "亚洲鼻型微整形",
