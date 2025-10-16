@@ -310,8 +310,50 @@ const CupidBowLips = () => {
           </div>
         </section>
 
-        {/* What is Cupid's Bow Enhancement */}
+        {/* What is Cupid's Bow? */}
         <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-center">What Is a Cupid's Bow?</h2>
+              
+              <div className="space-y-6 text-gray-300">
+                <p>
+                  The Cupid's bow is the distinctive double-curved area at the centre of the upper lip, 
+                  resembling the shape of Cupid's archery bow from classical mythology. This anatomical feature 
+                  defines the peaks and valleys of your upper lip, creating the characteristic 'M' shape that's 
+                  essential for balanced, attractive lip aesthetics.
+                </p>
+
+                <p>
+                  Named after the Roman god of love, Cupid, whose bow shared a similar curved silhouette, 
+                  the Cupid's bow consists of two symmetrical peaks (the highest points of the upper lip) 
+                  connected by a central dip. This natural contour plays a crucial role in facial harmony 
+                  and is considered a key feature of youthful, aesthetically pleasing lips.
+                </p>
+
+                <p>
+                  A well-defined Cupid's bow creates:
+                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Clear definition between the upper lip and the philtrum (the vertical groove from nose to lip)</li>
+                  <li>Balanced proportions between upper and lower lips</li>
+                  <li>Enhanced lip shape and projection</li>
+                  <li>A more youthful, refined appearance</li>
+                  <li>Improved overall facial symmetry</li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* What is Cupid's Bow Enhancement */}
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -324,13 +366,6 @@ const CupidBowLips = () => {
               
               <div className="space-y-6 text-gray-300">
                 <p>
-                  The Cupid's bow is the distinctive double-curved area at the centre of the upper lip, 
-                  resembling the shape of Cupid's archery bow. This anatomical feature defines the peaks 
-                  and valleys of your upper lip, creating the characteristic 'M' shape that's essential 
-                  for balanced, attractive lip aesthetics.
-                </p>
-
-                <p>
                   Cupid's bow enhancement is a specialised lip filler technique that precisely defines, 
                   reshapes, or accentuates this area. Using premium hyaluronic acid fillers and expert 
                   injection techniques, we create symmetrical, well-defined peaks that complement your 
@@ -342,7 +377,7 @@ const CupidBowLips = () => {
         </section>
 
         {/* Ideal Candidates & Aftercare */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -470,7 +505,7 @@ const CupidBowLips = () => {
         </section>
 
         {/* Is It Rare to Have a Cupid's Bow? */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -536,63 +571,12 @@ const CupidBowLips = () => {
               <Card className="bg-black border-none">
                 <CardContent className="pt-6 space-y-6 text-gray-300">
                   <p>
-                    What is considered rare is a naturally pronounced, sharply defined Cupid's bow with 
-                    perfect symmetry. Many individuals have asymmetrical peaks, one side more defined than 
-                    the other, or a completely flat upper lip border lacking the characteristic 'M' shape.
-                  </p>
-
-                  <p>
                     This natural variation is precisely why Cupid's bow enhancement has become increasingly 
                     popular—it allows us to refine and define this feature for those seeking more sculpted, 
                     balanced lip aesthetics, regardless of their natural lip structure.
                   </p>
                 </CardContent>
               </Card>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* The Cosmedocs Approach */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl font-bold mb-8 text-center">The Cosmedocs Approach</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card className="bg-accent border-none">
-                  <CardHeader>
-                    <Heart className="text-purple-300 mb-4" size={32} />
-                    <CardTitle className="text-white">Invisible Art Philosophy</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-300">
-                    <p>
-                      Our aesthetics is invisible art. We enhance your natural Cupid's bow with subtle 
-                      precision, creating definition that speaks without words—bold yet natural, 
-                      always your way.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-accent border-none">
-                  <CardHeader>
-                    <Target className="text-purple-300 mb-4" size={32} />
-                    <CardTitle className="text-white">Precision Technique</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-gray-300">
-                    <p>
-                      Using advanced micro-injection techniques and premium fillers, we meticulously 
-                      sculpt each lip peak with millimetre precision, ensuring symmetrical, 
-                      harmonious results tailored to your unique anatomy.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
             </motion.div>
           </div>
         </section>
