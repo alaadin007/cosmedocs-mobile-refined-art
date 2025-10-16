@@ -451,12 +451,7 @@ const CupidBowLips = () => {
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start gap-3">
                         <span className="text-purple-300 mt-1">•</span>
-                        <span>Clear definition between the upper lip and the <a 
-                          href="https://www.sciencedirect.com/topics/medicine-and-dentistry/philtrum" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-purple-400 hover:text-purple-300 underline"
-                        >philtrum</a> (the vertical groove from nose to lip)</span>
+                        <span>Clear definition between the upper lip and the philtrum (the vertical groove from nose to lip)</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-purple-300 mt-1">•</span>
@@ -511,7 +506,12 @@ const CupidBowLips = () => {
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
                   >FDA-approved hyaluronic acid fillers</a> and expert injection techniques, we create symmetrical, 
-                  well-defined cupid's bow lips that complement your natural facial proportions. Similar techniques are used in our <Link to="/lip-flip" className="text-purple-400 hover:text-purple-300 underline">lip flip treatments</Link>, though the Cupid's bow enhancement focuses specifically on structural definition. Our cupid's bow enhancement before and after 
+                  well-defined cupid's bow lips that complement your natural facial proportions. According to <a 
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315926/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 underline"
+                  >clinical research on lip augmentation techniques</a>, precise injection methods targeting the Cupid's bow area produce superior aesthetic outcomes with high patient satisfaction rates. Similar techniques are used in our <Link to="/lip-flip" className="text-purple-400 hover:text-purple-300 underline">lip flip treatments</Link>, though the Cupid's bow enhancement focuses specifically on structural definition. Our cupid's bow enhancement before and after 
                   results demonstrate the transformative power of precise cupid bow lip techniques.
                 </p>
               </div>
