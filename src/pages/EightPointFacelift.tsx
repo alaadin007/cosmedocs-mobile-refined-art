@@ -27,27 +27,27 @@ export default function EightPointFacelift() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "Cosmedocs",
     "description": "Expert 8 Point Face Lift treatments in London using premium dermal fillers for natural facial rejuvenation",
     "url": "https://www.cosmedocs.co.uk/8-point-facelift",
-    "telephone": "0207 435 7521",
+    "telephone": "+44 20 3733 3227",
     "email": "info@cosmedocs.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",
       "addressLocality": "London",
+      "addressRegion": "Greater London",
       "postalCode": "W1G 9PF",
       "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "51.5194",
-      "longitude": "-0.1464"
+      "latitude": 51.5074,
+      "longitude": -0.1278
     },
     "openingHours": "Mo-Fr 09:00-18:00",
     "priceRange": "£800-£1200",
-    "medicalSpecialty": "Cosmetic Medicine",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",

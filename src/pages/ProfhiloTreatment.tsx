@@ -157,15 +157,16 @@ const ProfhiloTreatment = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Premium Profhilo bio-remodelling treatments in London's Harley Street",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
@@ -174,7 +175,6 @@ const ProfhiloTreatment = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "medicalSpecialty": "Cosmetic Medicine",
             "priceRange": "££",
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -393,7 +393,7 @@ const ProfhiloTreatment = () => {
             "@type": "Service",
             "serviceType": "Profhilo Bio-Remodelling Treatment",
             "provider": {
-              "@type": "MedicalBusiness",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs",
               "url": "https://www.cosmedocs.co.uk"
             },

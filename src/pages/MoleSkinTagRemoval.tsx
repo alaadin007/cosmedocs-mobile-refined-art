@@ -56,7 +56,7 @@ const MoleSkinTagRemoval = () => {
   // Service Schema
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "Cosmedocs Mole & Skin Tag Removal",
     "description": "Expert mole and skin tag removal treatments in London",
     "provider": {

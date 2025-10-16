@@ -22,17 +22,19 @@ const ManchesterHome = () => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "Cosmedocs Manchester - Aesthetic Medicine Clinic",
     "description": "Premier Manchester botox, lip filler and dermal filler treatments. Expert aesthetic medicine serving Greater Manchester with invisible art philosophy.",
     "url": "https://cosmedocs.com/manchester",
-    "telephone": "0333 0551 503",
+    "telephone": "+44 161 503 1350",
     "email": "info@cosmedocs.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "79 Deansgate",
       "addressLocality": "Manchester",
       "addressRegion": "Greater Manchester",
-      "addressCountry": "UK"
+      "postalCode": "M3 2BW",
+      "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -41,7 +43,6 @@ const ManchesterHome = () => {
     },
     "openingHours": "Mo-Fr 09:00-18:00",
     "priceRange": "£££",
-    "medicalSpecialty": ["Aesthetic Medicine", "Cosmetic Dermatology"],
     "areaServed": ["Manchester", "Greater Manchester", "Stockport", "Bolton", "Oldham", "Rochdale"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

@@ -29,24 +29,25 @@ const seoData = generateSEOMetadata(
 
 const medicalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
+  "@type": "MedicalClinic",
   "name": "Cosmedocs",
   "description": "Expert PDO thread face lift and facial threading treatments in London - Harley Street aesthetic clinic",
   "url": "https://www.cosmedocs.co.uk/thread-face-lift",
-  "telephone": "0333 0551 503",
+  "telephone": "+44 20 3733 3227",
   "email": "info@cosmedocs.com",
   "priceRange": "£££",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "10 Harley Street",
     "addressLocality": "London",
+    "addressRegion": "Greater London",
     "postalCode": "W1G 9PF",
     "addressCountry": "GB"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "51.5174",
-    "longitude": "-0.1468"
+    "latitude": 51.5074,
+    "longitude": -0.1278
   },
   "openingHoursSpecification": [
     {
@@ -105,7 +106,7 @@ const offerSchema = {
   "availability": "https://schema.org/InStock",
   "url": "https://www.cosmedocs.co.uk/thread-face-lift",
   "seller": {
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "Cosmedocs"
   }
 };

@@ -103,23 +103,24 @@ const TempleFiller = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Temple Filler London",
             "image": seoData.image,
             "description": "Expert temple filler treatments in London. Restore volume, enhance facial symmetry & achieve natural-looking results.",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "4 Wimpole Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
-              "postalCode": "W1G 8GY",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "51.5176",
-              "longitude": "-0.1481"
+              "latitude": 51.5074,
+              "longitude": -0.1278
             },
-            "telephone": "+443330551503",
+            "telephone": "+44 20 3733 3227",
             "url": "https://www.cosmedocs.com/temple-filler-london",
             "openingHoursSpecification": [
               {

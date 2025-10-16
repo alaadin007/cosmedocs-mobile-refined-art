@@ -97,7 +97,7 @@ const DelhiLocation = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs Delhi",
             "description": "Premier aesthetic clinic in Delhi NCR with Dr. Geetika",
             "url": seoData.canonical,
@@ -111,12 +111,16 @@ const DelhiLocation = () => {
               "postalCode": "201301",
               "addressCountry": "IN"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.5355,
+              "longitude": 77.3910
+            },
             "priceRange": "₹₹₹",
             "physician": {
-              "@type": "Physician",
+              "@type": "Person",
               "name": "Dr. Geetika",
-              "medicalSpecialty": "Aesthetic Medicine"
+              "jobTitle": "Aesthetic Medicine Specialist"
             }
           })}
         </script>

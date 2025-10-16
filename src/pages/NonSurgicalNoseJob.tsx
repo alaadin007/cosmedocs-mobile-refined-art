@@ -152,15 +152,16 @@ const NonSurgicalNoseJob = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Non-Surgical Nose Job",
             "description": "Premium non-surgical nose job treatments in London's Harley Street",
             "url": "https://www.cosmedocs.co.uk/non-surgical-nose-job",
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
@@ -169,7 +170,6 @@ const NonSurgicalNoseJob = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "medicalSpecialty": "Cosmetic Surgery",
             "priceRange": "£450"
           })}
         </script>

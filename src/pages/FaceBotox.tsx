@@ -29,24 +29,24 @@ export default function FaceBotox() {
 
   const medicalBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "Cosmedocs",
     "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
     "url": "https://www.cosmedocs.co.uk",
-    "telephone": "+443330551503",
+    "telephone": "+44 20 3733 3227",
     "priceRange": "£175-£350",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "37 Harley Street",
+      "streetAddress": "10 Harley Street",
       "addressLocality": "London",
       "addressRegion": "Greater London",
-      "postalCode": "W1G 8QD",
+      "postalCode": "W1G 9PF",
       "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 51.5194,
-      "longitude": -0.1488
+      "latitude": 51.5074,
+      "longitude": -0.1278
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

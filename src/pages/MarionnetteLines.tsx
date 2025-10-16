@@ -184,7 +184,7 @@ const MarionnetteLines = () => {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
-      "@type": "MedicalBusiness",
+      "@type": "MedicalClinic",
       "name": "Cosmedocs"
     },
     "reviewRating": {

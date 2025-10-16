@@ -109,19 +109,24 @@ const OilySkinBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Specialist T-zone oily skin Botox treatments for oil reduction and sebum control",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "37 Harley Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Dermatology",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "priceRange": "££"
           })}
         </script>
@@ -164,7 +169,7 @@ const OilySkinBotox = () => {
             "availability": "https://schema.org/InStock",
             "url": seoData.canonical,
             "seller": {
-              "@type": "MedicalBusiness",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs"
             }
           })}

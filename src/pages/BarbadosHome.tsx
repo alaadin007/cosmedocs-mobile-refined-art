@@ -105,7 +105,7 @@ const BarbadosHome = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs Barbados",
             "description": "Premier aesthetic clinic in Barbados with Dr. Crystal, Harley Street trained",
             "url": seoData.canonical,
@@ -117,13 +117,20 @@ const BarbadosHome = () => {
               "addressLocality": "Barbados",
               "addressCountry": "BB"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 13.0969,
+              "longitude": -59.5432
+            },
             "priceRange": "$$$",
             "physician": {
-              "@type": "Physician",
+              "@type": "Person",
               "name": "Dr. Crystal",
-              "medicalSpecialty": "Aesthetic Medicine",
-              "alumniOf": "Harley Street Institute"
+              "jobTitle": "Aesthetic Medicine Specialist",
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Harley Street Institute"
+              }
             }
           })}
         </script>

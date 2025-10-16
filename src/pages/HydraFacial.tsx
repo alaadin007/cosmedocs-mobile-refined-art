@@ -143,15 +143,16 @@ const HydraFacial = () => {
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MedicalBusiness",
+          "@type": "MedicalClinic",
           "name": "Cosmedocs - HydraFacial London",
           "description": "Premium HydraFacial treatments in London's Harley Street using advanced vortex technology",
           "url": "https://cosmedocs.com/hydrafacial-london",
-          "telephone": "0333 0551 503",
+          "telephone": "+44 20 3733 3227",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "10 Harley Street",
             "addressLocality": "London",
+            "addressRegion": "Greater London",
             "postalCode": "W1G 9PF",
             "addressCountry": "GB"
           },
@@ -160,7 +161,6 @@ const HydraFacial = () => {
             "latitude": 51.5074,
             "longitude": -0.1278
           },
-          "medicalSpecialty": "Dermatology",
           "priceRange": "£175"
         })}
         </script>

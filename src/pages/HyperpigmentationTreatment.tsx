@@ -178,23 +178,28 @@ const HyperpigmentationTreatment = () => {
           })}
         </script>
         
-        {/* MedicalBusiness Schema */}
+        {/* MedicalClinic Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Expert hyperpigmentation treatment London for face, body, and skin pigmentation disorders",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Dermatology",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "priceRange": "££",
             "aggregateRating": {
               "@type": "AggregateRating",

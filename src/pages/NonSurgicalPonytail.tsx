@@ -103,11 +103,11 @@ const NonSurgicalPonytail = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": ["MedicalBusiness", "MedicalClinic"],
+            "@type": "MedicalClinic",
             "name": "Cosmedocs - Non-Surgical Ponytail Facelift | Mini Facelift London",
             "description": "Expert non-surgical ponytail lift and mini facelift treatment. Ponytail face lift from £350. Natural face lifting therapy without surgery at Harley Street, London.",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "priceRange": "££",
             "image": "https://www.cosmedocs.co.uk/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png",
             "address": {
@@ -120,8 +120,8 @@ const NonSurgicalPonytail = () => {
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "51.519526",
-              "longitude": "-0.146061"
+              "latitude": 51.5074,
+              "longitude": -0.1278
             },
             "areaServed": [
               {

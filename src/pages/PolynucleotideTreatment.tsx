@@ -96,15 +96,16 @@ const PolynucleotideTreatment = () => {
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MedicalBusiness",
+          "@type": "MedicalClinic",
           "name": "Cosmedocs - Polynucleotide Treatment",
           "description": "Advanced polynucleotide DNA therapy for skin regeneration and hair restoration in London's Harley Street",
           "url": "https://cosmedocs.com/polynucleotide-treatment",
-          "telephone": "0333 0551 503",
+          "telephone": "+44 20 3733 3227",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "10 Harley Street",
             "addressLocality": "London",
+            "addressRegion": "Greater London",
             "postalCode": "W1G 9PF",
             "addressCountry": "GB"
           },
@@ -113,7 +114,6 @@ const PolynucleotideTreatment = () => {
             "latitude": 51.5074,
             "longitude": -0.1278
           },
-          "medicalSpecialty": "Regenerative Medicine",
           "priceRange": "£450"
         })}
         </script>

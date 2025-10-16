@@ -302,9 +302,17 @@ const AestheticIntelligence = () => {
               "priceCurrency": "GBP"
             },
             "provider": {
-              "@type": "MedicalBusiness",
-              "name": "CosmeDocs",
-              "url": "https://cosmedocs.com"
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://cosmedocs.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             }
           })}
         </script>

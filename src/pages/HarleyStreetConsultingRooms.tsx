@@ -71,18 +71,24 @@ export default function HarleyStreetConsultingRooms() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "CosmeDocs Harley Street",
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs Harley Street",
             "description": "Premium aesthetic medicine practice offering partnership opportunities in prestigious Harley Street location",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Harley Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "telephone": "+447735606447",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "telephone": "+44 20 3733 3227",
             "url": "https://www.cosmedocs.com/harley-street-consulting-rooms",
-            "medicalSpecialty": "Aesthetic Medicine",
             "priceRange": "£££"
           })}
         </script>

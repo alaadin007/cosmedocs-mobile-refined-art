@@ -106,19 +106,24 @@ const AdvancedConsultation = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Advanced aesthetic consultation with Dr. Ahmed Haq - millimeter-precision facial optimization",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Aesthetic Medicine",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "priceRange": "£££"
           })}
         </script>

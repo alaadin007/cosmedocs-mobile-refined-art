@@ -138,11 +138,11 @@ const NeckFillers = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs",
             "description": "Expert neck filler treatments in London - smooth neck lines and wrinkles with premium dermal fillers",
             "url": seoData.canonical,
-            "telephone": "0333 0551 503",
+            "telephone": "+44 20 3733 3227",
             "priceRange": "££",
             "address": {
               "@type": "PostalAddress",
@@ -154,8 +154,8 @@ const NeckFillers = () => {
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "51.5194",
-              "longitude": "-0.1468"
+              "latitude": 51.5074,
+              "longitude": -0.1278
             },
             "openingHoursSpecification": [
               {

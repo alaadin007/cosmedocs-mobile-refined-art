@@ -61,20 +61,25 @@ const PlasticSurgeon = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs Plastic Surgery",
             "description": "Expert plastic surgeon offering local anaesthetic procedures including upper eyelid surgery and lumps and bumps removal",
             "url": seoData.canonical,
-            "telephone": "+44 20 7123 4567",
-            "email": "pashma@medcales.com",
+            "telephone": "+44 20 3733 3227",
+            "email": "info@cosmedocs.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Harley Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
-              "postalCode": "W1G 6AN",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Plastic Surgery",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "priceRange": "£££",
             "areaServed": "London, UK"
           })}

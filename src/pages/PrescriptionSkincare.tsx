@@ -113,18 +113,24 @@ const PrescriptionSkincare = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "CosmeDocs Prescription Skincare",
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs Prescription Skincare",
             "description": "Personalised prescription skincare with pharmaceutical-grade generic formulations",
             "url": seoData.canonical,
-            "telephone": "0800 8600 178",
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Harley Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
-              "addressCountry": "UK"
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             },
-            "medicalSpecialty": "Dermatology",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "serviceType": "Prescription Skincare"
           })}
         </script>

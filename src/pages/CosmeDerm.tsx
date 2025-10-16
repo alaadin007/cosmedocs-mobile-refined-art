@@ -114,7 +114,7 @@ const CosmeDerm = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "CosmeDerm",
             "description": "Dermatology clinic offering online and in-clinic consultations for comprehensive skin and hair treatments",
             "url": seoData.canonical,
@@ -123,10 +123,15 @@ const CosmeDerm = () => {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Dermatology",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "priceRange": "££"
           })}
         </script>

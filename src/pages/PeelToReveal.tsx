@@ -153,15 +153,16 @@ const PeelToReveal = () => {
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MedicalBusiness",
+          "@type": "MedicalClinic",
           "name": "Cosmedocs - Peel to Reveal Treatment",
           "description": "Revolutionary skin peel treatment for deep cleansing, repairing & rejuvenation",
           "url": "https://cosmedocs.com/peel-to-reveal",
-          "telephone": "0333 0551 503",
+          "telephone": "+44 20 3733 3227",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "10 Harley Street",
             "addressLocality": "London",
+            "addressRegion": "Greater London",
             "postalCode": "W1G 9PF",
             "addressCountry": "GB"
           },
@@ -170,7 +171,6 @@ const PeelToReveal = () => {
             "latitude": 51.5074,
             "longitude": -0.1278
           },
-          "medicalSpecialty": "Dermatology",
           "priceRange": "£120-£250"
         })}
         </script>

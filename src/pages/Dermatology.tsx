@@ -94,20 +94,25 @@ const Dermatology = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs Dermatology Clinic",
             "description": "Expert dermatologist in Harley Street specializing in medical and cosmetic dermatology treatments",
             "url": seoData.canonical,
-            "telephone": "+44 20 7123 4567",
+            "telephone": "+44 20 3733 3227",
             "email": "info@cosmedocs.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Harley Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
-              "postalCode": "W1G 6AN",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "Dermatology",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "priceRange": "£££",
             "areaServed": "London, UK"
           })}

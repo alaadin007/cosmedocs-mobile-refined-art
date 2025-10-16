@@ -105,17 +105,24 @@ export default function PrivateGPDoctor() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs Private GP Doctor London",
             "description": seoData.description,
             "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Harley Street",
+              "streetAddress": "10 Harley Street",
               "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "medicalSpecialty": "General Practice",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
             "availableService": [
               {
                 "@type": "MedicalProcedure",
