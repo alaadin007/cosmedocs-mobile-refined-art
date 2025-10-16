@@ -206,6 +206,70 @@ const CupidBowLips = () => {
             }))
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Cupid's Bow Enhancement Treatment",
+            "description": "Professional Cupid's bow lip enhancement with premium hyaluronic acid fillers",
+            "priceSpecification": [
+              {
+                "@type": "PriceSpecification",
+                "price": "250",
+                "priceCurrency": "GBP",
+                "name": "Subtle Definition (0.3ml)"
+              },
+              {
+                "@type": "PriceSpecification",
+                "price": "350",
+                "priceCurrency": "GBP",
+                "name": "Enhanced Definition (0.5ml)"
+              },
+              {
+                "@type": "PriceSpecification",
+                "price": "450",
+                "priceCurrency": "GBP",
+                "name": "Maximum Definition (0.7ml)"
+              }
+            ],
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.cosmedocs.co.uk/cupid-bow-lips",
+            "seller": {
+              "@type": "MedicalBusiness",
+              "name": "Cosmedocs"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "contentUrl": "https://www.cosmedocs.co.uk/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png",
+            "name": "Before and after Cupid's bow enhancement showing defined lip peaks",
+            "description": "Perfectly defined Cupid's bow creating elegant lip shape",
+            "thumbnailUrl": "https://www.cosmedocs.co.uk/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "contentUrl": "https://www.cosmedocs.co.uk/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png",
+            "name": "Before and after Cupid's bow lip filler London showing natural definition",
+            "description": "Enhanced Cupid's bow with natural-looking definition and symmetry",
+            "thumbnailUrl": "https://www.cosmedocs.co.uk/lovable-uploads/0fc2f9cc-be54-45a6-b6ac-11c1f0dc04ad.png"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "contentUrl": "https://www.cosmedocs.co.uk/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png",
+            "name": "Before and after subtle Cupid's bow enhancement London",
+            "description": "Subtle Cupid's bow refinement for balanced, proportionate lips",
+            "thumbnailUrl": "https://www.cosmedocs.co.uk/lovable-uploads/ca0d519c-295a-47a5-ad68-27462c0fa778.png"
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-black text-white">
@@ -440,7 +504,12 @@ const CupidBowLips = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 underline"
-                  >research published in medical literature</a>, well-defined cupid bows are associated with perceptions of beauty and youth.
+                  >research published in medical literature</a>, well-defined cupid bows are associated with perceptions of beauty and youth. Studies from the <a 
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5418287/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 underline"
+                  >Journal of Cosmetic Dermatology</a> further confirm that lip proportion and Cupid's bow prominence significantly influence facial attractiveness ratings.
                 </p>
 
                 <Card className="bg-black border-purple-900/30 mt-6">
@@ -620,7 +689,12 @@ const CupidBowLips = () => {
                       </ul>
                       <p className="text-purple-300 font-medium">
                         Mild swelling and tenderness are normal and typically subside within 48 hours. 
-                        Final results will be visible after 2 weeks once any swelling has completely resolved.
+                        Final results will be visible after 2 weeks once any swelling has completely resolved. According to <a 
+                          href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4387527/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-purple-200 hover:text-white underline"
+                        >clinical guidelines on dermal filler aftercare</a>, proper post-treatment care significantly enhances treatment outcomes and longevity.
                       </p>
                     </CardContent>
                   </Card>
