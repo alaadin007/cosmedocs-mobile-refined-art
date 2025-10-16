@@ -48,10 +48,6 @@ const CupidBowLips = () => {
 
   const faqs = [
     {
-      question: "What is Cupid's bow lip enhancement?",
-      answer: "Cupid's bow lip enhancement is a specialised technique that defines and reshapes the double-curved area at the centre of your upper lip. Using precise filler placement, we create or enhance the distinctive 'M' shape, adding definition, symmetry, and elegance to your lips whilst maintaining a natural appearance."
-    },
-    {
       question: "How long do Cupid's bow enhancement results last?",
       answer: "Results typically last 6-12 months depending on the filler used, your metabolism, and lifestyle factors. Premium hyaluronic acid fillers provide long-lasting definition whilst naturally integrating with your lip tissue for optimal results."
     },
@@ -64,20 +60,20 @@ const CupidBowLips = () => {
       answer: "Absolutely. Our philosophy is invisible art—enhancing your natural features without exaggeration. We carefully assess your facial proportions and lip anatomy to create a Cupid's bow that complements your unique features beautifully."
     },
     {
-      question: "Who is suitable for Cupid's bow lip enhancement?",
-      answer: "This treatment is ideal for those with a flat or undefined Cupid's bow, asymmetrical lip peaks, or anyone seeking more defined lip contours. During consultation, our doctors will assess your lips and discuss whether this treatment suits your aesthetic goals."
-    },
-    {
-      question: "What's the recovery time for Cupid's bow enhancement?",
-      answer: "Recovery is minimal. You may experience slight swelling for 24-48 hours, but most clients return to normal activities immediately. Final results are visible after 2 weeks once any swelling subsides completely."
-    },
-    {
       question: "How much filler is needed for Cupid's bow enhancement?",
       answer: "Typically, 0.3-0.7ml of filler is used specifically for the Cupid's bow area. The exact amount depends on your natural lip structure and desired definition. Our doctors will recommend the optimal volume during your consultation."
     },
     {
       question: "Can Cupid's bow enhancement be combined with other treatments?",
       answer: "Yes, it's often combined with overall lip filler, lip border definition, or other facial aesthetic treatments for comprehensive enhancement. Our doctors will create a bespoke treatment plan tailored to your goals."
+    },
+    {
+      question: "What are the possible side effects?",
+      answer: "Common side effects include mild swelling, tenderness, and occasional bruising at injection sites. These typically resolve within 24-48 hours. Serious complications are rare when performed by experienced medical professionals using premium products."
+    },
+    {
+      question: "When can I wear makeup after treatment?",
+      answer: "Avoid makeup on the treated area for at least 12 hours post-treatment. This allows the injection sites to heal properly and reduces the risk of infection or irritation."
     }
   ];
 
