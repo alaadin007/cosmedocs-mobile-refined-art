@@ -146,7 +146,6 @@ const NonSurgicalPonytail = () => {
               }
             ],
             "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
-            "medicalSpecialty": ["Cosmetic Medicine", "Aesthetic Medicine"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

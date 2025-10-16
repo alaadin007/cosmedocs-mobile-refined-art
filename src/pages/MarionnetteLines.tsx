@@ -106,7 +106,6 @@ const MarionnetteLines = () => {
     },
     "telephone": "0333 0551 503",
     "openingHours": "Mo-Fr 09:00-18:00",
-    "medicalSpecialty": "Aesthetic Medicine",
     "priceRange": "££",
     "founder": {
       "@type": "Person",

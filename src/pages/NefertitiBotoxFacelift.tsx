@@ -168,8 +168,7 @@ export default function NefertitiBotoxFacelift() {
           "addressLocality": "London",
           "addressCountry": "GB"
         },
-        "priceRange": "££-£££",
-        "medicalSpecialty": "Aesthetic Medicine"
+        "priceRange": "££-£££"
       },
       {
         "@type": "Offer",

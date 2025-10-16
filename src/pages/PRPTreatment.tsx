@@ -129,7 +129,6 @@ const PRPTreatment = () => {
             "latitude": 51.5074,
             "longitude": -0.1278
           },
-          "medicalSpecialty": "Cosmetic Surgery",
           "priceRange": "Price on consultation",
           "aggregateRating": {
             "@type": "AggregateRating",

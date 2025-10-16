@@ -106,7 +106,7 @@ const KarachiLocation = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs Karachi",
             "description": "Premier aesthetic clinic in Karachi Pakistan with Dr. Khadija",
             "url": seoData.canonical,
@@ -120,12 +120,16 @@ const KarachiLocation = () => {
               "postalCode": "75600",
               "addressCountry": "PK"
             },
-            "medicalSpecialty": "Cosmetic Medicine",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 24.8607,
+              "longitude": 67.0011
+            },
             "priceRange": "Rs.Rs.Rs.",
             "physician": {
-              "@type": "Physician",
+              "@type": "Person",
               "name": "Dr. Khadija",
-              "medicalSpecialty": "Aesthetic Medicine"
+              "jobTitle": "Aesthetic Medicine Specialist"
             }
           })}
         </script>

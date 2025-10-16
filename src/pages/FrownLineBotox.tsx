@@ -179,7 +179,7 @@ const FrownLineBotox = () => {
             "availability": "https://schema.org/InStock",
             "url": seoData.canonical,
             "seller": {
-              "@type": "MedicalBusiness",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs"
             }
           })}

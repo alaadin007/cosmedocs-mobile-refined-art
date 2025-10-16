@@ -217,9 +217,9 @@ const ProfhiloTreatment = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Physician",
+            "@type": "Person",
             "name": "Dr. Ahmed Haq",
-            "medicalSpecialty": "Cosmetic Medicine",
+            "jobTitle": "Aesthetic Medicine Specialist",
             "affiliation": {
               "@type": "MedicalOrganization",
               "name": "Cosmedocs"

@@ -165,7 +165,6 @@ const NeckFillers = () => {
                 "closes": "18:00"
               }
             ],
-            "medicalSpecialty": "Cosmetic Medicine"
           })}
         </script>
 

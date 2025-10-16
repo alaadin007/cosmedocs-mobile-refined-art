@@ -257,7 +257,7 @@ const JawlineFiller = () => {
             "url": "https://www.cosmedocs.co.uk/jawline-filler",
             "priceValidUntil": "2025-12-31",
             "seller": {
-              "@type": "MedicalBusiness",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs"
             }
           })}
@@ -311,7 +311,7 @@ const JawlineFiller = () => {
             "@type": "Service",
             "serviceType": "Jawline Filler Treatment",
             "provider": {
-              "@type": "MedicalBusiness",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs"
             },
             "areaServed": {

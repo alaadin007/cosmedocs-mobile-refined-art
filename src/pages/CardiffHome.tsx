@@ -22,7 +22,7 @@ const CardiffHome = () => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "MedicalClinic",
     "name": "Cosmedocs Cardiff - Aesthetic Medicine Clinic",
     "description": "Premier Cardiff botox, lip filler and dermal filler treatments. Expert aesthetic medicine serving Cardiff and South Wales with invisible art philosophy.",
     "url": "https://cosmedocs.com/cardiff",
@@ -41,7 +41,6 @@ const CardiffHome = () => {
     },
     "openingHours": "Mo-Fr 09:00-18:00",
     "priceRange": "£££",
-    "medicalSpecialty": ["Aesthetic Medicine", "Cosmetic Dermatology"],
     "areaServed": ["Cardiff", "South Wales", "Newport", "Swansea", "Bridgend", "Rhondda Cynon Taf"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

@@ -63,7 +63,6 @@ const medicalBusinessSchema = {
       "closes": "16:00"
     }
   ],
-  "medicalSpecialty": "Cosmetic Medicine",
   "sameAs": [
     "https://www.instagram.com/cosmedocs/",
     "https://www.facebook.com/cosmedocs/"

@@ -263,7 +263,7 @@ const NasolabialFolds = () => {
           "availability": "https://schema.org/InStock",
           "validFrom": "2025-01-01",
           "seller": {
-            "@type": "MedicalBusiness",
+            "@type": "MedicalClinic",
             "name": "Cosmedocs"
           }
         })}

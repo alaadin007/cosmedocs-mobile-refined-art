@@ -234,7 +234,7 @@ const CupidBowLips = () => {
             "availability": "https://schema.org/InStock",
             "url": "https://www.cosmedocs.co.uk/cupid-bow-lips",
             "seller": {
-              "@type": "MedicalBusiness",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs"
             }
           })}
