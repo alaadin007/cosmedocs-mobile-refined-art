@@ -8,46 +8,23 @@ import { Eye, HelpCircle, Sparkles, Brain, Heart, Clock, Shield, Stethoscope, Pa
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import AestheticAnalysisWizard from "@/components/AestheticAnalysisWizard";
-import { 
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent
-} from "@/components/ui/card";
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import PopularTreatments from "@/components/PopularTreatments";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import AnimatedDots from "@/components/AnimatedDots";
 import { generateSEOMetadata } from '@/utils/seo';
 import RaffleChatbot from "@/components/RaffleChatbot";
-
 const Index = () => {
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   const isMobile = useIsMobile();
-
-  const seoData = generateSEOMetadata(
-    "Cosmedocs London | Aesthetic Medicine | Harley Street",
-    "Premium aesthetic medicine in London's Harley Street. Expert treatments by Dr. Ahmed Haq. Our aesthetics is invisible art • Bold • Natural • Always Your Way",
-    "/"
-  );
+  const seoData = generateSEOMetadata("Cosmedocs London | Aesthetic Medicine | Harley Street", "Premium aesthetic medicine in London's Harley Street. Expert treatments by Dr. Ahmed Haq. Our aesthetics is invisible art • Bold • Natural • Always Your Way", "/");
 
   // Booking URL for all Book Now buttons
   const bookingUrl = "https://med.as.me/harleystreet";
-
-  return (
-    <>
+  return <>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -75,14 +52,14 @@ const Index = () => {
             <div className="page-container relative z-10">
               <div className="max-w-3xl mx-auto text-center">
                 <motion.div initial={{
-                  opacity: 0,
-                  y: 20
-                }} animate={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  duration: 0.6
-                }}>
+                opacity: 0,
+                y: 20
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.6
+              }}>
                   <div className="relative mb-6">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold" id="hero-heading">
                       cosmedocs
@@ -124,20 +101,23 @@ const Index = () => {
               }} animate={{
                 opacity: 1
               }} transition={{
-                 delay: 0.9,
-                 duration: 0.6
-               }}>
+                delay: 0.9,
+                duration: 0.6
+              }}>
                    <div className="space-y-4">
-                     <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 inline-flex items-center justify-center text-sm font-medium transition-colors">
-                       Book a Consultation
-                     </a>
+                     
                      
                      {/* Aesthetics at a Glance Ebook Link */}
-                     <motion.div
-                       initial={{ opacity: 0, y: 10 }}
-                       animate={{ opacity: 1, y: 0 }}
-                       transition={{ delay: 1.1, duration: 0.6 }}
-                     >
+                     <motion.div initial={{
+                    opacity: 0,
+                    y: 10
+                  }} animate={{
+                    opacity: 1,
+                    y: 0
+                  }} transition={{
+                    delay: 1.1,
+                    duration: 0.6
+                  }}>
                        <a href="/aesthetics-at-glance" className="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-full px-8 py-6 text-sm font-medium transition-all duration-300 inline-flex items-center justify-center">
                          <BookOpen className="h-4 w-4 mr-2" />
                          Read Our Free Ebook
@@ -165,13 +145,17 @@ const Index = () => {
           <section className="py-20 bg-gradient-to-b from-black to-[#0A0A0A]" aria-labelledby="ai-analysis-heading">
             <div className="page-container">
               <div className="max-w-6xl mx-auto">
-                <motion.div
-                  className="text-center mb-16"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="text-center mb-16" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8
+              }} viewport={{
+                once: true
+              }}>
                   <h2 id="ai-analysis-heading" className="text-4xl md:text-5xl font-bold mb-6">
                     <Sparkles className="inline-block h-8 w-8 mr-3 text-primary" />
                     AI Aesthetic Analysis
@@ -183,50 +167,49 @@ const Index = () => {
                 </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
-                  {[
-                    {
-                      icon: Brain,
-                      title: "Smart Assessment",
-                      description: "AI-powered analysis of skin quality, wrinkles, and volume loss"
-                    },
-                    {
-                      icon: Heart,
-                      title: "Personalized Plan", 
-                      description: "Customized treatment recommendations based on your unique features"
-                    },
-                    {
-                      icon: Clock,
-                      title: "Instant Results",
-                      description: "Get your detailed aesthetic report in minutes, not days"
-                    }
-                  ].map((feature, index) => (
-                    <motion.div
-                      key={index}
-                      className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
+                  {[{
+                  icon: Brain,
+                  title: "Smart Assessment",
+                  description: "AI-powered analysis of skin quality, wrinkles, and volume loss"
+                }, {
+                  icon: Heart,
+                  title: "Personalized Plan",
+                  description: "Customized treatment recommendations based on your unique features"
+                }, {
+                  icon: Clock,
+                  title: "Instant Results",
+                  description: "Get your detailed aesthetic report in minutes, not days"
+                }].map((feature, index) => <motion.div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center" initial={{
+                  opacity: 0,
+                  y: 30
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} transition={{
+                  duration: 0.6,
+                  delay: index * 0.1
+                }} viewport={{
+                  once: true
+                }}>
                       <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                       <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                       <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                    </motion.div>
-                  ))}
+                    </motion.div>)}
                 </div>
 
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <Button
-                    onClick={() => setIsAnalysisOpen(true)}
-                    size="lg"
-                    className="bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-white text-black rounded-full px-12 py-6 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-2xl border border-gray-200"
-                  >
+                <motion.div className="text-center" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.4
+              }} viewport={{
+                once: true
+              }}>
+                  <Button onClick={() => setIsAnalysisOpen(true)} size="lg" className="bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-white text-black rounded-full px-12 py-6 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-2xl border border-gray-200">
                     <Sparkles className="h-5 w-5 mr-2" />
                     Start Your AI Analysis
                   </Button>
@@ -242,13 +225,17 @@ const Index = () => {
           <section className="py-20 bg-gradient-to-b from-[#0A0A0A] to-black" aria-labelledby="prescription-skincare-heading">
             <div className="page-container">
               <div className="max-w-6xl mx-auto">
-                <motion.div
-                  className="text-center mb-16"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="text-center mb-16" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8
+              }} viewport={{
+                once: true
+              }}>
                   <h2 id="prescription-skincare-heading" className="text-4xl md:text-5xl font-bold mb-6">
                     <Stethoscope className="inline-block h-8 w-8 mr-3 text-primary" />
                     Prescription Medical Skincare
@@ -260,12 +247,17 @@ const Index = () => {
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                  <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                  >
+                  <motion.div initial={{
+                  opacity: 0,
+                  x: -30
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.8
+                }} viewport={{
+                  once: true
+                }}>
                     <div className="space-y-6">
                       <div className="flex items-start gap-4">
                         <Shield className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
@@ -293,13 +285,17 @@ const Index = () => {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                  >
+                  <motion.div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" initial={{
+                  opacity: 0,
+                  x: 30
+                }} whileInView={{
+                  opacity: 1,
+                  x: 0
+                }} transition={{
+                  duration: 0.8
+                }} viewport={{
+                  once: true
+                }}>
                     <div className="text-center mb-6">
                       <div className="text-5xl font-bold text-primary mb-2">£60</div>
                       <div className="text-lg text-gray-300">every 3 months</div>
@@ -324,11 +320,7 @@ const Index = () => {
                       </div>
                     </div>
                     
-                    <Button 
-                      asChild
-                      size="lg" 
-                      className="w-full bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-white text-black rounded-full py-6 text-lg font-medium transition-all duration-300 hover:scale-105"
-                    >
+                    <Button asChild size="lg" className="w-full bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-white text-black rounded-full py-6 text-lg font-medium transition-all duration-300 hover:scale-105">
                       <a href="/prescription-skincare">
                         <Star className="w-5 h-5 mr-2" />
                         Start My Consultation
@@ -337,13 +329,18 @@ const Index = () => {
                   </motion.div>
                 </div>
 
-                <motion.div
-                  className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-8 border border-green-500/20"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
+                <motion.div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-8 border border-green-500/20" initial={{
+                opacity: 0,
+                y: 30
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.8,
+                delay: 0.2
+              }} viewport={{
+                once: true
+              }}>
                   <div className="text-center">
                     <h3 className="text-2xl font-semibold mb-4">Why Generic Over Custom Compounded?</h3>
                     <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -438,11 +435,7 @@ const Index = () => {
                     
                     {/* Before and After Image at the top */}
                     <div className="mb-6">
-                      <img 
-                        src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" 
-                        alt="Before and after facial assessment results" 
-                        className="w-full h-auto rounded-lg"
-                      />
+                      <img src="/lovable-uploads/8675e9bd-ccdf-44e5-80b3-c916c48f40e5.png" alt="Before and after facial assessment results" className="w-full h-auto rounded-lg" />
                     </div>
                     
                     <div className="py-4 overflow-auto">
@@ -762,16 +755,11 @@ const Index = () => {
         </div>
 
         {/* AI Aesthetic Analysis Modal */}
-        <AestheticAnalysisWizard 
-          isOpen={isAnalysisOpen}
-          onClose={() => setIsAnalysisOpen(false)}
-        />
+        <AestheticAnalysisWizard isOpen={isAnalysisOpen} onClose={() => setIsAnalysisOpen(false)} />
 
         {/* Raffle Chatbot */}
         <RaffleChatbot />
       </TooltipProvider>
-    </>
-  );
+    </>;
 };
-
 export default Index;
