@@ -158,7 +158,7 @@ const Home = () => {
                       to="/aesthetics-at-a-glance"
                       className="inline-block"
                     >
-                      Read Our Aesthetics Guide
+                      Flawless Skin Guide
                     </Link>
                   </Button>
                 </div>
