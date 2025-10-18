@@ -182,8 +182,12 @@ const Microneedling = () => {
             "@context": "https://schema.org",
             "@type": "AggregateRating",
             "itemReviewed": {
-              "@type": "MedicalProcedure",
-              "name": "Microneedling Treatment"
+              "@type": "Service",
+              "name": "Microneedling Treatment",
+              "provider": {
+                "@type": "MedicalClinic",
+                "name": "Cosmedocs"
+              }
             },
             "ratingValue": "4.8",
             "bestRating": "5",

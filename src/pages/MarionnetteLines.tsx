@@ -190,8 +190,12 @@ const MarionnetteLines = () => {
     "@context": "https://schema.org",
     "@type": "Review",
     "itemReviewed": {
-      "@type": "MedicalClinic",
-      "name": "Cosmedocs"
+      "@type": "Service",
+      "name": "Marionette Lines Treatment",
+      "provider": {
+        "@type": "MedicalClinic",
+        "name": "Cosmedocs"
+      }
     },
     "reviewRating": {
       "@type": "Rating",

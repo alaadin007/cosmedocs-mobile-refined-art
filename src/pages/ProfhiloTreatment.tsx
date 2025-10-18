@@ -367,8 +367,12 @@ const ProfhiloTreatment = () => {
             "@context": "https://schema.org",
             "@type": "Review",
             "itemReviewed": {
-              "@type": "MedicalProcedure",
-              "name": "Profhilo Bio-Remodelling Treatment"
+              "@type": "Service",
+              "name": "Profhilo Bio-Remodelling Treatment",
+              "provider": {
+                "@type": "MedicalClinic",
+                "name": "Cosmedocs"
+              }
             },
             "author": {
               "@type": "Person",
