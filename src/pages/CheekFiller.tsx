@@ -184,7 +184,7 @@ const CheekFiller = () => {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "reviewCount": "178"
+            "ratingCount": "178"
           }
         })}
         </script>
@@ -217,18 +217,19 @@ const CheekFiller = () => {
           })}
         </script>
 
-        {/* Medical Procedure Schema */}
+        {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Cheek Filler Treatment",
             "description": "Non-surgical cheek enhancement using premium hyaluronic acid dermal fillers to restore volume and define cheekbones",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Cheeks and midface",
-            "preparation": "Consultation and facial analysis, topical anaesthetic applied",
-            "followup": "Follow-up at 2 weeks, results last 15-18 months",
-            "howPerformed": "Strategic injection of hyaluronic acid filler using microcannula or needle technique"
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
 

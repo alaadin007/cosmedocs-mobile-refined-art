@@ -109,19 +109,23 @@ const TrapBotox = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
-              "reviewCount": "120"
+              "ratingCount": "120"
             }
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Trap Botox Treatment",
             "alternateName": ["Trapezius Botox", "Trap Tox", "Barbie Botox"],
             "description": "Botox injections for trapezius muscles to reduce shoulder bulk and create elegant neck contouring",
-            "procedureType": "Cosmetic Injectable Treatment",
-            "bodyLocation": "Trapezius Muscle"
+            "serviceType": "Cosmetic Injectable Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

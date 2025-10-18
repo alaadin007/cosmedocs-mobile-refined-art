@@ -99,19 +99,16 @@ export default function NefertitiBotoxFacelift() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "MedicalProcedure",
+        "@type": "Service",
         "name": "Nefertiti Lift",
         "alternateName": ["Nefertiti Neck Lift", "Nefertiti Botox", "Neck Lift Botox"],
         "description": "Non-surgical jawline and neck contouring treatment using Botox injections to define the jawline, smooth neck bands, and reduce turkey neck appearance.",
-        "procedureType": "Non-surgical cosmetic procedure",
-        "bodyLocation": "Neck and Jawline",
-        "preparation": "Consultation and facial assessment required",
-        "followup": "2-week follow-up for optimal results",
-        "howPerformed": "Strategic Botox injections into the platysma muscle bands along the neck and jawline",
-        "medicationType": "Botulinum Toxin Type A (Botox)",
-        "expectedDuration": "15-20 minutes",
-        "recoveryTime": "No downtime, immediate return to activities",
-        "result": "Defined jawline, smoother neck contour, reduced neck bands lasting 3-4 months"
+        "serviceType": "Non-surgical cosmetic procedure",
+        "provider": {
+          "@type": "MedicalClinic",
+          "name": "Cosmedocs",
+          "url": "https://www.cosmedocs.co.uk"
+        }
       },
       {
         "@type": "FAQPage",

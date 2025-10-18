@@ -154,7 +154,7 @@ const BunnyLinesBotox = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "847",
+              "ratingCount": "847",
               "bestRating": "5",
               "worstRating": "1"
             }
@@ -163,15 +163,15 @@ const BunnyLinesBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Bunny Lines Botox Treatment",
             "description": "Expert botox for nose wrinkles and bunny lines. Professional nasal lines botox providing natural bunny lines before and after results at Harley Street, London.",
-            "procedureType": "Cosmetic Botox Injection",
-            "bodyLocation": ["Nose", "Nasalis Muscle", "Nasal Bridge"],
-            "followup": "Treatment recommended every 3-4 months for optimal bunny lines prevention",
-            "preparation": "Facial muscle consultation and nose wrinkles assessment required",
-            "howPerformed": "Precise botox bunny lines treatment administered at targeted nasal injection sites using advanced techniques for nose wrinkles reduction",
-            "procedureDuration": "PT10M"
+            "serviceType": "Cosmetic Botox Injection",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

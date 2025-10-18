@@ -189,14 +189,15 @@ const MasseterBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Masseter Botox Treatment",
             "description": "Professional Botox treatment for masseter muscle reduction, jaw slimming, and bruxism (teeth grinding) relief",
-            "procedureType": "Cosmetic and Medical Injectable Treatment",
-            "bodyLocation": "Masseter Muscle (Jaw)",
-            "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
-            "followup": "Follow-up assessment after 2 weeks",
-            "howPerformed": "Botox injections administered into masseter muscles on both sides of jaw"
+            "serviceType": "Cosmetic and Medical Injectable Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

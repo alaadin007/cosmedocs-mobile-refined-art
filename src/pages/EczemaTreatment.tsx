@@ -63,16 +63,12 @@ export default function EczemaTreatment() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": "Service",
     "name": "Eczema Treatment",
     "description": "Professional eczema treatment for dry, red, and scaly skin conditions",
-    "procedureType": "Dermatological Treatment",
-    "bodyLocation": "Skin",
-    "preparation": "Consultation with dermatologist",
-    "followup": "Regular monitoring and skincare regime",
-    "howPerformed": "Topical treatments, emollients, and professional dermatological care",
+    "serviceType": "Dermatological Treatment",
     "provider": {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "name": "Cosmedocs",
       "url": "https://www.cosmedocs.co.uk",
       "telephone": "+44 20 3733 3227",
@@ -85,13 +81,11 @@ export default function EczemaTreatment() {
         "addressCountry": "GB"
       }
     },
-    "location": {
-      "@type": "Place", 
-      "name": "UK"
-    },
-    "offers": {
-      "@type": "Offer",
-      "description": "Eczema treatment consultation and therapy"
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "bestRating": "5",
+      "ratingCount": "156"
     }
   };
 

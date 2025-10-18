@@ -71,23 +71,28 @@ const medicalBusinessSchema = {
 
 const medicalProcedureSchema = {
   "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
+  "@type": "Service",
   "name": "PDO Thread Face Lift",
   "description": "Non-surgical thread face lift using PDO threads for skin tightening and face slimming",
+  "serviceType": "Cosmetic and Medical Injectable Treatment",
   "provider": {
-    "@type": "MedicalOrganization",
-    "name": "CosmeDocs",
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "url": "https://www.cosmedocs.co.uk",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",
       "addressLocality": "London",
-      "addressCountry": "UK"
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
     }
   },
-  "procedureType": "Cosmetic and Medical Injectable Treatment",
-  "bodyLocation": "Face and neck",
-  "duration": "PT45M",
-  "recovery": "P7D",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "ratingCount": "124"
+  },
   "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
   "followup": "Follow-up assessment after 2 weeks",
   "howPerformed": "PDO threads inserted into facial tissue to lift and tighten skin"

@@ -118,22 +118,23 @@ const ChinBotox = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "156"
+              "ratingCount": "156"
             }
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Chin Botox Treatment",
             "alternateName": ["Dimpled Chin Botox", "Pebble Chin Botox", "Botox for Dimpled Chin", "Chin Dimple Botox"],
             "description": "Professional botox treatment for dimpled chin, chin dimples, and pebble chin texture. Expert botox chin treatment that smooths chin texture and reduces dimpling when speaking or smiling.",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Chin",
-            "preparation": "No special preparation required. Avoid blood thinners 24 hours before treatment.",
-            "followup": "Results appear within 3-5 days, full effects visible after 2 weeks.",
-            "howPerformed": "Botulinum toxin injected into mentalis muscle to relax contractions causing chin dimpling and pebble chin texture."
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

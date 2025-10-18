@@ -90,7 +90,7 @@ const NasalFlaringBotox = () => {
             },
             "priceRange": "££",
             "availableService": {
-              "@type": "MedicalProcedure",
+              "@type": "Service",
               "name": "Nasal Flaring Botox Treatment"
             }
           })}

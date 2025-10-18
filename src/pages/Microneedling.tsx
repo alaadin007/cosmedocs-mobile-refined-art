@@ -114,26 +114,28 @@ const Microneedling = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Microneedling Treatment",
             "alternateName": ["Collagen Induction Therapy", "Skin Needling", "Face Needling"],
             "description": "Professional microneedling treatment using medical-grade devices to stimulate collagen production and improve skin texture, tone, and firmness",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Facial Skin",
-            "preparation": "Topical anaesthetic applied before treatment",
-            "followup": "Comprehensive aftercare and follow-up support",
-            "howPerformed": "Using fine needles to create controlled micro-injuries in the skin, triggering natural healing response",
-            "status": "Available",
-            "availableService": {
-              "@type": "MedicalTherapy",
-              "name": "Microneedling Therapy",
-              "offers": {
-                "@type": "Offer",
-                "price": "250",
-                "priceCurrency": "GBP",
-                "priceValidUntil": "2025-12-31",
-                "availability": "https://schema.org/InStock"
-              }
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "ratingCount": "187"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "250",
+              "priceCurrency": "GBP",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock"
             }
           })}
         </script>

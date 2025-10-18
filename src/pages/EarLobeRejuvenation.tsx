@@ -189,7 +189,7 @@ const EarLobeRejuvenation = () => {
             },
             "priceRange": "£500+",
             "availableService": {
-              "@type": "MedicalProcedure",
+              "@type": "Service",
               "name": "Ear Lobe Rejuvenation Treatment"
             }
           })}

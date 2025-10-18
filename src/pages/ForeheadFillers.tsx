@@ -132,14 +132,15 @@ const ForeheadFillers = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Forehead Filler Treatment",
             "description": "Professional dermal filler treatment for forehead lines, wrinkles, and volume restoration using premium hyaluronic acid fillers",
-            "procedureType": "Cosmetic Injectable Treatment",
-            "bodyLocation": "Forehead",
-            "preparation": "Avoid blood-thinning medications, stay hydrated, avoid alcohol 24 hours prior",
-            "followup": "2-week follow-up appointment included with treatment",
-            "howPerformed": "Injectable dermal fillers carefully administered to targeted forehead areas"
+            "serviceType": "Cosmetic Injectable Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

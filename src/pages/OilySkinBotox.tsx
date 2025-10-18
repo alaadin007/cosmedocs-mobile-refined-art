@@ -133,15 +133,16 @@ const OilySkinBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "T-Zone Oily Skin Botox Treatment",
             "alternateName": "Sebum Control Botox",
             "description": "Professional botox treatment for oily skin in the T-zone area (forehead, nose, chin). Best skin treatment for oily skin providing up to 30% reduction in oil production.",
-            "procedureType": "Cosmetic Botox Injection",
-            "bodyLocation": ["Forehead", "Nose", "Chin", "T-Zone"],
-            "preparation": "Avoid makeup on treatment day, cleanse skin thoroughly",
-            "followup": "Results visible within 1 week, lasting 4-6 months",
-            "howPerformed": "Precise micro-injections of botox into T-zone areas to regulate sebum production and minimise pore size"
+            "serviceType": "Cosmetic Botox Injection",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

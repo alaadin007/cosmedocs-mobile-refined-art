@@ -113,22 +113,23 @@ const ExcessiveSweatBotox = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
-              "reviewCount": "189"
+              "ratingCount": "189"
             }
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Excessive Sweating Botox Treatment",
             "alternateName": "Hyperhidrosis Botox Treatment",
             "description": "Professional botox treatment for excessive sweating (hyperhidrosis) in underarms, hands, feet, and face. FDA-approved procedure that blocks nerve signals to sweat glands.",
-            "procedureType": "Therapeutic Botox Injection",
-            "bodyLocation": ["Underarms", "Hands", "Feet", "Face"],
-            "preparation": "Shave treatment area 2-3 days before appointment, wear suitable clothing for easy access",
-            "followup": "Results begin within 1-2 weeks, maximum dryness by 4 weeks",
-            "howPerformed": "Multiple small botox injections administered to affected areas using topical anaesthetic for comfort"
+            "serviceType": "Therapeutic Botox Injection",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

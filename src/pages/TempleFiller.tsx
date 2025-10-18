@@ -73,25 +73,26 @@ const TempleFiller = () => {
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={seoData.image} />
         
-        {/* Structured Data - Medical Procedure */}
+        {/* Structured Data - Service */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Temple Filler Treatment",
             "description": "Professional temple dermal filler treatment to restore volume and enhance facial symmetry",
+            "serviceType": "Cosmetic Treatment",
             "provider": {
-              "@type": "MedicalOrganization",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "4 Wimpole Street",
+                "streetAddress": "10 Harley Street",
                 "addressLocality": "London",
-                "postalCode": "W1G 8GY",
-                "addressCountry": "UK"
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
               },
-              "telephone": "+443330551503",
-              "url": "https://www.cosmedocs.com"
+              "telephone": "+443330551503"
             },
             "procedureType": "Cosmetic Procedure",
             "bodyLocation": "Temple",

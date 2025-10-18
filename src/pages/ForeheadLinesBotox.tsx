@@ -169,7 +169,7 @@ const ForeheadLinesBotox = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "850"
+              "ratingCount": "850"
             }
           })}
         </script>
@@ -202,22 +202,20 @@ const ForeheadLinesBotox = () => {
           })}
         </script>
 
-        {/* MedicalProcedure Schema */}
+        {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Forehead Lines Botox Treatment",
             "alternateName": "Frontalis Muscle Botox",
             "description": "Professional botox treatment targeting forehead lines and horizontal wrinkles by relaxing the frontalis muscle for natural-looking results",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Forehead (Frontalis Muscle)",
-            "preparation": "Avoid blood-thinning medications and alcohol for 24 hours before treatment",
-            "followup": "Results appear within 3-7 days, full effects visible after 2 weeks",
-            "howPerformed": "Precise botulinum toxin injections into the frontalis muscle to relax forehead lines",
-            "procedureDuration": "PT15M",
-            "recoveryTime": "Immediate return to normal activities",
-            "expectedPrognosis": "Results typically last 3-4 months",
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            },
             "offers": {
               "@type": "Offer",
               "price": "175",

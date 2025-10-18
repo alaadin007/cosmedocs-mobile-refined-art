@@ -119,21 +119,22 @@ const FatDissolve = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.7",
-              "reviewCount": "156"
+              "ratingCount": "156"
             }
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "EMSCULPT Fat Dissolving Treatment",
             "description": "Non-invasive fat reduction and muscle building treatment using HIFEM technology. FDA approved body contouring with proven results.",
-            "procedureType": "Non-invasive body contouring",
-            "followup": "4 sessions over 2 weeks recommended",
-            "preparation": "No special preparation required",
-            "howPerformed": "HIFEM energy produces supramaximal muscle contractions while reducing fat cells",
-            "bodyLocation": ["Abdomen", "Buttocks", "Arms", "Thighs", "Calves"]
+            "serviceType": "Non-invasive body contouring",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
         <script type="application/ld+json">

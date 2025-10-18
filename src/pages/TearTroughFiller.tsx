@@ -132,18 +132,19 @@ const TearTroughFiller = () => {
           })}
         </script>
 
-        {/* MedicalProcedure Schema */}
+        {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Tear Trough Filler Treatment",
             "description": "Non-surgical under eye treatment using hyaluronic acid dermal fillers to reduce dark circles, eye bags, and restore volume",
-            "procedureType": "Cosmetic",
-            "followup": "2-week follow-up included",
-            "preparation": "Avoid blood thinners, alcohol, and certain supplements 24 hours before treatment",
-            "howPerformed": "Injection of hyaluronic acid dermal fillers into the tear trough area using advanced cannula or needle techniques for natural results",
-            "bodyLocation": "Under eye area, tear trough region"
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            }
           })}
         </script>
 
