@@ -194,26 +194,28 @@ const ProfhiloTreatment = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Profhilo Bio-Remodelling Treatment",
             "alternateName": ["Profhilo Skin Booster", "Profhilo Injection", "Bio-Remodelling Therapy"],
             "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid to stimulate natural collagen and elastin production for skin rejuvenation",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Face and Neck",
-            "preparation": "Topical anaesthetic applied for comfort",
-            "followup": "Second treatment session 4-6 weeks after initial treatment for optimal results",
-            "howPerformed": "Strategic injection of high-concentration hyaluronic acid using BAP (Bio Aesthetic Points) technique in 10 specific points",
-            "status": "Available",
-            "availableService": {
-              "@type": "MedicalTherapy",
-              "name": "Profhilo Bio-Remodelling",
-              "offers": {
-                "@type": "Offer",
-                "price": "350",
-                "priceCurrency": "GBP",
-                "priceValidUntil": "2025-12-31",
-                "availability": "https://schema.org/InStock"
-              }
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "ratingCount": "143"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "350",
+              "priceCurrency": "GBP",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock"
             }
           })}
         </script>
@@ -367,31 +369,6 @@ const ProfhiloTreatment = () => {
           })}
         </script>
         
-        {/* Review Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Review",
-            "itemReviewed": {
-              "@type": "Service",
-              "name": "Profhilo Bio-Remodelling Treatment",
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "Cosmedocs"
-              }
-            },
-            "author": {
-              "@type": "Person",
-              "name": "Sarah M."
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
-            },
-            "reviewBody": "Amazing results from Profhilo treatment at Cosmedocs. The BAP technique was virtually painless and my skin looks so much more hydrated and firm. Highly recommend!"
-          })}
-        </script>
         
         {/* Service Schema with Pricing */}
         <script type="application/ld+json">

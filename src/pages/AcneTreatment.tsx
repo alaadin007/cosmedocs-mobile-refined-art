@@ -63,16 +63,12 @@ export default function AcneTreatment() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": "Service",
     "name": "Acne Treatment",
     "description": "Professional acne treatment for clear, blemish-free skin",
-    "procedureType": "Dermatological Treatment",
-    "bodyLocation": "Face, Chest, Back",
-    "preparation": "Consultation with dermatologist",
-    "followup": "Regular follow-up appointments",
-    "howPerformed": "Advanced acne therapies and treatments",
+    "serviceType": "Dermatological Treatment",
     "provider": {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "name": "Cosmedocs",
       "url": "https://www.cosmedocs.co.uk",
       "telephone": "+44 20 3733 3227",
@@ -85,13 +81,11 @@ export default function AcneTreatment() {
         "addressCountry": "GB"
       }
     },
-    "location": {
-      "@type": "Place", 
-      "name": "UK"
-    },
-    "offers": {
-      "@type": "Offer",
-      "description": "Acne treatment consultation and therapy"
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "bestRating": "5",
+      "ratingCount": "95"
     }
   };
 

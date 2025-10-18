@@ -91,7 +91,7 @@ const BotoxCalfReduction = () => {
               "longitude": -0.1278
             },
             "availableService": {
-              "@type": "MedicalProcedure",
+              "@type": "Service",
               "name": "Botox Calf Reduction"
             }
           })}

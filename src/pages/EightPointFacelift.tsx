@@ -97,10 +97,10 @@ export default function EightPointFacelift() {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "8 Point Face Lift",
             "description": "Non-surgical facelift using dermal fillers at 8 strategic points",
-            "procedureType": "Minimally Invasive"
+            "serviceType": "Minimally Invasive"
           },
           "price": "800",
           "priceCurrency": "GBP"

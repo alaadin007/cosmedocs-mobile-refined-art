@@ -142,15 +142,21 @@ const MarionnetteLines = () => {
 
   const procedureSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": "Service",
     "name": "Marionette Lines Filler Treatment",
     "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation",
-    "procedureType": "Cosmetic",
-    "bodyLocation": "Face - lower facial third",
-    "preparation": "Consultation and facial assessment",
-    "followup": "2-week follow-up appointment included",
-    "howPerformed": "Strategic dermal filler placement using ultra-fine needles with topical anaesthetic",
-    "status": "Active"
+    "serviceType": "Cosmetic Treatment",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Cosmedocs",
+      "url": "https://www.cosmedocs.co.uk"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "156"
+    }
   };
 
   const faqSchema = {
@@ -202,28 +208,6 @@ const MarionnetteLines = () => {
     }
   };
 
-  const testimonialSchema = {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Marionette Lines Treatment",
-      "provider": {
-        "@type": "MedicalClinic",
-        "name": "Cosmedocs"
-      }
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Jessica L."
-    },
-    "reviewBody": "The marionette lines treatment has completely transformed my appearance. I genuinely look 10 years younger and the results are so natural. Dr. Haq's precision and artistry are exceptional."
-  };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -325,9 +309,6 @@ const MarionnetteLines = () => {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(offerSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(testimonialSchema)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}

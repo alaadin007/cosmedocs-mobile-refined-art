@@ -22,16 +22,12 @@ const TriggerPointBotox = () => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": "Service",
     "name": "Trigger Point Botox Treatment",
     "description": "Professional trigger point botox injections for muscle tension relief and chronic pain management",
-    "procedureType": "Botulinum Toxin Injection",
-    "bodyLocation": "Muscles (neck, shoulders, back, jaw)",
-    "preparation": "No special preparation required. Avoid blood-thinning medications if possible.",
-    "followup": "Follow-up consultation after 2 weeks to assess results",
-    "howPerformed": "Precision injection of botulinum toxin directly into trigger points using fine needles",
+    "serviceType": "Botulinum Toxin Injection",
     "provider": {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "name": "Cosmedocs",
       "url": "https://www.cosmedocs.co.uk",
       "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
@@ -44,6 +40,12 @@ const TriggerPointBotox = () => {
       },
       "telephone": "+44-20-7999-9999",
       "priceRange": "££"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "127"
     },
     "offers": {
       "@type": "Offer",

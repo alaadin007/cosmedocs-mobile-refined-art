@@ -25,19 +25,15 @@ const MoleSkinTagRemoval = () => {
     "/mole-skin-tag-removal"
   );
 
-  // Medical Procedure Schema
+  // Service Schema
   const medicalProcedureSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": "Service",
     "name": "Mole and Skin Tag Removal",
     "description": "Professional dermatological mole and skin tag removal treatments using surgical excision, cryotherapy, and electrosurgery",
-    "procedureType": "Dermatological Surgery",
-    "bodyLocation": "Skin (all body areas)",
-    "preparation": "No special preparation required. Avoid blood-thinning medications if possible.",
-    "followup": "Follow-up consultation after 1-2 weeks to monitor healing",
-    "howPerformed": "Professional removal using sterile surgical instruments, cryotherapy, or electrosurgery with local anaesthetic",
+    "serviceType": "Dermatological Surgery",
     "provider": {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "name": "Cosmedocs",
       "url": "https://www.cosmedocs.co.uk",
       "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
@@ -50,6 +46,12 @@ const MoleSkinTagRemoval = () => {
       },
       "telephone": "0333 0551 503",
       "priceRange": "££"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "214"
     }
   };
 

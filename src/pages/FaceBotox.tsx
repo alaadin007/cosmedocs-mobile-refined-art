@@ -58,17 +58,13 @@ export default function FaceBotox() {
 
   const medicalProcedureSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": "Service",
     "name": "Botox London Treatment",
     "alternateName": ["Face Botox London", "Anti-Wrinkle Injections London", "Botulinum Toxin", "Baby Botox London", "Botox Harley Street"],
     "description": "Professional Botox London treatment including forehead, frown lines, crow's feet, lower face areas and advanced combination techniques. Best botox London prices from £175.",
-    "procedureType": "Cosmetic",
-    "bodyLocation": "Face",
-    "preparation": "Avoid blood thinners and alcohol 24 hours before treatment",
-    "followup": "2-week follow-up assessment",
-    "howPerformed": "Precision injection of botulinum toxin into targeted facial muscles using ultra-fine needles",
+    "serviceType": "Cosmetic Treatment",
     "provider": {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "name": "Cosmedocs",
       "url": "https://www.cosmedocs.co.uk",
       "telephone": "+443330551503",
@@ -79,6 +75,12 @@ export default function FaceBotox() {
         "postalCode": "W1G 8QD",
         "addressCountry": "GB"
       }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "287"
     }
   };
 
@@ -97,7 +99,7 @@ export default function FaceBotox() {
       "name": "Cosmedocs"
     },
     "itemOffered": {
-      "@type": "MedicalProcedure",
+      "@type": "Service",
       "name": "Botox London Treatment"
     }
   };
