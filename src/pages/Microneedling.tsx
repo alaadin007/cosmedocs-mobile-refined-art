@@ -226,14 +226,7 @@ const Microneedling = () => {
                 "addressCountry": "GB"
               }
             },
-            "url": "https://www.cosmedocs.co.uk",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            }
+            "url": "https://www.cosmedocs.co.uk"
           })}
         </script>
       </Helmet>

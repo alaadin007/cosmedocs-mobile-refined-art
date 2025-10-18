@@ -40,14 +40,17 @@ const Team = () => {
     "@type": "MedicalOrganization",
     "name": "Cosmedocs Medical Team",
     "url": "https://www.cosmedocs.com/team",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
     "member": teamMembers.map(member => ({
       "@type": "Person",
       "name": member.name,
-      "jobTitle": member.title,
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Cosmedocs"
-      }
+      "jobTitle": member.title
     }))
   };
 

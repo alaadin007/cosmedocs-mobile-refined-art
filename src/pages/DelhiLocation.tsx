@@ -116,7 +116,6 @@ const DelhiLocation = () => {
               "latitude": 28.5355,
               "longitude": 77.3910
             },
-            "priceRange": "₹₹₹",
             "physician": {
               "@type": "Person",
               "name": "Dr. Geetika",

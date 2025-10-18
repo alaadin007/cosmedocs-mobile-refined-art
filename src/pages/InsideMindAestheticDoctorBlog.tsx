@@ -22,12 +22,7 @@ const InsideMindAestheticDoctorBlog = () => {
     "author": {
       "@type": "Person",
       "name": "Dr Ahmed Haq",
-      "jobTitle": "Aesthetic Doctor",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "CosmeDocs",
-        "url": "https://www.cosmedocs.com"
-      }
+      "jobTitle": "Aesthetic Doctor"
     },
     "publisher": {
       "@type": "Organization",

@@ -261,7 +261,6 @@ const CheekFiller = () => {
             "author": {
               "@type": "Person",
               "name": "Dr. Ahmed Haq",
-              "jobTitle": "Aesthetic Medicine Specialist",
               "url": "https://cosmedocs.com/team/dr-ahmed-haq"
             },
             "reviewedBy": {

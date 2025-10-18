@@ -124,9 +124,9 @@ const MarionnetteLines = () => {
     "@context": "https://schema.org",
     "@type": "Physician",
     "name": "Dr. Ahmed Haq",
-    "jobTitle": "Medical Director & Lead Aesthetic Practitioner",
     "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
-    "worksFor": {
+    "medicalSpecialty": "Aesthetic Medicine",
+    "affiliation": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
       "address": {

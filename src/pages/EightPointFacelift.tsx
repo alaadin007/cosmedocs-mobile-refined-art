@@ -173,7 +173,7 @@ export default function EightPointFacelift() {
     "name": "Dr. Ahmed Haq",
     "medicalSpecialty": "Aesthetic Medicine",
     "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimeter-precision facial optimization.",
-    "worksFor": {
+    "affiliation": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
       "address": {

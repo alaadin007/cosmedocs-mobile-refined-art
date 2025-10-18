@@ -141,11 +141,7 @@ const BarbadosHome = () => {
             "physician": {
               "@type": "Person",
               "name": "Dr. Crystal",
-              "jobTitle": "Aesthetic Medicine Specialist",
-              "alumniOf": {
-                "@type": "EducationalOrganization",
-                "name": "Harley Street Institute"
-              }
+              "jobTitle": "Aesthetic Medicine Specialist"
             }
           })}
         </script>
