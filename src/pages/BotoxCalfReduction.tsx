@@ -214,6 +214,7 @@ const BotoxCalfReduction = () => {
               "provider": {
                 "@type": "MedicalClinic",
                 "name": "Cosmedocs",
+                "url": "https://www.cosmedocs.co.uk",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "10 Harley Street",
