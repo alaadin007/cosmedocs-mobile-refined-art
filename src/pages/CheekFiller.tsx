@@ -149,41 +149,42 @@ const CheekFiller = () => {
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MedicalClinic",
-          "name": "Cosmedocs - Cheek Fillers London",
+          "@type": "Service",
+          "name": "Cheek Filler Treatment",
           "description": "Premium cheek filler treatments for lifted and defined cheeks in London's Harley Street",
-          "url": "https://cosmedocs.com/cheek-filler",
-          "telephone": "+44 20 3733 3227",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Harley Street",
-            "addressLocality": "London",
-            "addressRegion": "Greater London",
-            "postalCode": "W1G 9PF",
-            "addressCountry": "GB"
+          "serviceType": "Cosmetic Treatment",
+          "provider": {
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs - Cheek Fillers London",
+            "url": "https://cosmedocs.com/cheek-filler",
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "priceRange": "£350-£950",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ]
           },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.5074,
-            "longitude": -0.1278
-          },
-          "priceRange": "£350-£950",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "18:00"
-            }
-          ],
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "178"
-          },
-          "availableService": {
-            "@type": "MedicalProcedure",
-            "name": "Cheek Filler Treatment"
           }
         })}
         </script>

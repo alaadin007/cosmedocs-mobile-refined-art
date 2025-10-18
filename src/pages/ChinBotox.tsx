@@ -83,41 +83,42 @@ const ChinBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
-            "description": "Expert dimpled chin botox and pebble chin botox treatments in London",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
+            "@type": "Service",
+            "name": "Chin Botox Treatment",
+            "description": "Expert dimpled chin botox and pebble chin botox treatment for smooth, refined chin contours",
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": seoData.canonical,
+              "telephone": "+44 20 3733 3227",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.519366",
+                "longitude": "-0.144962"
+              },
+              "priceRange": "££",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                }
+              ]
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "51.519366",
-              "longitude": "-0.144962"
-            },
-            "priceRange": "££",
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
-              }
-            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "reviewCount": "156"
-            },
-            "availableService": {
-              "@type": "MedicalProcedure",
-              "name": "Chin Botox Treatment"
             }
           })}
         </script>

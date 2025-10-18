@@ -79,58 +79,13 @@ const BruxismBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
-            "description": "Expert bruxism botox and TMJ treatments in London",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "priceRange": "££",
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
-              }
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "132"
-            },
-            "availableService": {
-              "@type": "MedicalProcedure",
-              "name": "Bruxism Botox Treatment"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Bruxism Botox Treatment",
             "alternateName": ["TMJ Botox", "Teeth Grinding Treatment", "Botox for Jaw Clenching", "Masseter Botox"],
-            "description": "Professional bruxism botox treatment for teeth grinding, jaw clenching, and TMJ disorders using botulinum toxin injections in masseter muscles.",
-            "procedureType": "Therapeutic and Cosmetic",
-            "bodyLocation": "Jaw and Masseter Muscles",
-            "preparation": "Avoid blood thinners 24 hours before treatment",
-            "followup": "2-4 week assessment",
-            "howPerformed": "Precision injection of botulinum toxin into masseter and temporalis muscles using specialized techniques",
+            "description": "Professional bruxism botox treatment for teeth grinding, jaw clenching, and TMJ disorders using botulinum toxin injections in masseter muscles",
+            "serviceType": "Therapeutic and Cosmetic Treatment",
             "provider": {
-              "@type": "MedicalOrganization",
+              "@type": "MedicalClinic",
               "name": "Cosmedocs",
               "url": "https://www.cosmedocs.co.uk",
               "telephone": "+44 20 3733 3227",
@@ -141,7 +96,26 @@ const BruxismBotox = () => {
                 "addressRegion": "Greater London",
                 "postalCode": "W1G 9PF",
                 "addressCountry": "GB"
-              }
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 51.5074,
+                "longitude": -0.1278
+              },
+              "priceRange": "££",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                }
+              ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "132"
             }
           })}
         </script>

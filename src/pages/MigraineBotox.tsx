@@ -103,87 +103,73 @@ const MigraineBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs - Migraine Botox Treatment London",
-            "description": "Expert botox for migraines UK treatment. Botox injections for migraines from £450. FDA-approved migraine relief botox at Harley Street, London.",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "priceRange": "££",
-            "image": "https://www.cosmedocs.co.uk/lovable-uploads/2d50a34b-eb5c-40fd-849d-79e90a7cf03c.png",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
+            "@type": "Service",
+            "name": "Botox for Migraines Treatment",
+            "description": "Expert Botox treatment for chronic migraines and headache relief in London",
+            "serviceType": "Therapeutic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs - Migraine Botox Treatment London",
+              "url": seoData.canonical,
+              "telephone": "+44 20 3733 3227",
+              "priceRange": "££",
+              "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.519642",
+                "longitude": "-0.145092"
+              },
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "London"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Marylebone"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Westminster"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Mayfair"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Fitzrovia"
+                }
+              ],
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "16:00"
+                }
+              ]
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "51.519526",
-              "longitude": "-0.146061"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "London"
-              },
-              {
-                "@type": "Place",
-                "name": "Marylebone"
-              },
-              {
-                "@type": "Place",
-                "name": "Westminster"
-              },
-              {
-                "@type": "Place",
-                "name": "Mayfair"
-              },
-              {
-                "@type": "Place",
-                "name": "Fitzrovia"
-              }
-            ],
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "16:00"
-              }
-            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "reviewCount": "847",
               "bestRating": "5",
               "worstRating": "1"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
-            "name": "Botox for Migraines Treatment",
-            "description": "FDA-approved botox injections for migraines providing chronic headache relief. Professional migraine botox treatment at Harley Street, London.",
-            "procedureType": "Therapeutic Botox Injection",
-            "bodyLocation": ["Head", "Neck", "Forehead", "Temples", "Shoulders"],
-            "followup": "Treatment recommended every 12 weeks for optimal migraine prevention",
-            "preparation": "Medical consultation and neurological assessment required",
-            "howPerformed": "Precise botox injections for migraines administered across up to 31 injection sites using FDA-approved protocol for chronic migraine headaches",
-            "procedureDuration": "PT15M",
-            "medicationUsed": {
-              "@type": "Drug",
-              "name": "Botulinum Toxin Type A (Botox)",
-              "isProprietary": true
             }
           })}
         </script>

@@ -117,28 +117,37 @@ const ChinFiller = () => {
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MedicalClinic",
-          "name": "Cosmedocs - Chin Filler Treatment",
+          "@type": "Service",
+          "name": "Chin Filler Treatment",
           "description": "Professional chin filler treatments for facial enhancement and profile correction",
-          "url": "https://www.cosmedocs.co.uk/chin-filler",
-          "telephone": "+44 20 3733 3227",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Harley Street",
-            "addressLocality": "London",
-            "addressRegion": "Greater London",
-            "postalCode": "W1G 9PF",
-            "addressCountry": "GB"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.5074,
-            "longitude": -0.1278
-          },
-          "priceRange": "£350+",
-          "availableService": {
-            "@type": "MedicalProcedure",
-            "name": "Chin Filler Treatment"
+          "serviceType": "Cosmetic Treatment",
+          "provider": {
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs - Chin Filler Treatment",
+            "url": "https://www.cosmedocs.co.uk/chin-filler",
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "priceRange": "£350+",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ]
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -146,21 +155,7 @@ const ChinFiller = () => {
             "reviewCount": "487",
             "bestRating": "5",
             "worstRating": "1"
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "18:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "10:00",
-              "closes": "16:00"
-            }
-          ]
+          }
         })}
         </script>
 
