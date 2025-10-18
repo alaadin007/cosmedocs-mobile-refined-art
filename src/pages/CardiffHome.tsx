@@ -30,17 +30,31 @@ const CardiffHome = () => {
     "email": "info@cosmedocs.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "19 Park Place",
       "addressLocality": "Cardiff",
-      "addressRegion": "South Wales",
-      "addressCountry": "UK"
+      "addressRegion": "South Glamorgan",
+      "postalCode": "CF10 3DQ",
+      "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "51.4816",
       "longitude": "-3.1791"
     },
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "priceRange": "£££",
+    "priceRange": "££",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "75"
+    },
     "areaServed": ["Cardiff", "South Wales", "Newport", "Swansea", "Bridgend", "Rhondda Cynon Taf"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

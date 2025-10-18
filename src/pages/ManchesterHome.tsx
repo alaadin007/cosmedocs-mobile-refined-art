@@ -41,8 +41,20 @@ const ManchesterHome = () => {
       "latitude": "53.4808",
       "longitude": "-2.2426"
     },
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "priceRange": "£££",
+    "priceRange": "££",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "95"
+    },
     "areaServed": ["Manchester", "Greater Manchester", "Stockport", "Bolton", "Oldham", "Rochdale"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

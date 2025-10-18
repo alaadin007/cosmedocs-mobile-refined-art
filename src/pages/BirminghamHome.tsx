@@ -41,8 +41,20 @@ const BirminghamHome = () => {
       "latitude": "52.4862",
       "longitude": "-1.8904"
     },
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "priceRange": "£££",
+    "priceRange": "££",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "85"
+    },
     "areaServed": ["Birmingham", "West Midlands", "Solihull", "Coventry", "Wolverhampton", "Dudley"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
