@@ -213,6 +213,13 @@ const EarLobeRejuvenation = () => {
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://cosmedocs.com/default-og-image.jpg"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
               }
             },
             "hasPart": [

@@ -270,7 +270,14 @@ const CheekFiller = () => {
             "publisher": {
               "@type": "Organization",
               "name": "Cosmedocs",
-              "url": "https://cosmedocs.com"
+              "url": "https://cosmedocs.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             }
           })}
         </script>

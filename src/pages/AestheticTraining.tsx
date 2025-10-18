@@ -37,7 +37,14 @@ const AestheticTraining = () => {
     "description": "Fellowship in Aesthetic Medicine offering comprehensive training in injectable procedures and non-surgical treatments",
     "partner": {
       "@type": "Organization",
-      "name": "Harley Street Institute"
+      "name": "Harley Street Institute",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "course": {
       "@type": "Course",

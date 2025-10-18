@@ -335,7 +335,14 @@ const Partners = () => {
               },
               "parentOrganization": {
                 "@type": "Organization",
-                "name": "Harley Street Institute"
+                "name": "Harley Street Institute",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "10 Harley Street",
+                  "addressLocality": "London",
+                  "postalCode": "W1G 9PF",
+                  "addressCountry": "GB"
+                }
               }
             },
             },
