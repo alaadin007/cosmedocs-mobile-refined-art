@@ -92,7 +92,6 @@ const TrapBotox = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "priceRange": "££",
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
@@ -179,7 +178,7 @@ const TrapBotox = () => {
         </script>
       </Helmet>
 
-      <div className="bg-black text-white">
+      <main className="bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
           <div className="page-container relative z-10">
@@ -864,7 +863,7 @@ const TrapBotox = () => {
             While trap tox is generally considered safe when performed by qualified practitioners, patients should be aware of potential side effects and proper aftercare. Temporary side effects may include mild bruising at injection sites, slight muscle weakness, headache, or neck stiffness. It is crucial to avoid lying down for 4 hours post-treatment, refrain from strenuous exercise for 24 hours, and avoid massaging the treated area. Patients with a sore trapezius muscle may experience temporary relief or slight discomfort as the muscle adjusts to the treatment. At Cosmedocs, we provide comprehensive aftercare instructions and follow-up support to ensure optimal results and patient satisfaction with your trapezius botox treatment.
           </p>
         </div>
-      </div>
+      </main>
     </>
   );
 };
