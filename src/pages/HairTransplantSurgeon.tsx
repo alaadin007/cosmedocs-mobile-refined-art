@@ -10,7 +10,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 const HairTransplantSurgeon = () => {
   const seoData = generateSEOMetadata(
     "Hair Transplant Surgeon London | Cosmedocs",
-    "Expert hair transplant surgeon consultation in London. Natural hair restoration with R CQC approved clinic. Contact Pashma for professional hair transplant treatment assessment.",
+    "Natural hair restoration with expert surgeon. CQC-approved clinic offering FUE & FUT transplant techniques. Contact Pashma.",
     "/hair-transplant-surgeon"
   );
 

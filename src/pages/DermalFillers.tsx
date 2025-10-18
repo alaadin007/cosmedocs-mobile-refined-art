@@ -13,7 +13,7 @@ import ClientReviews from '@/components/ClientReviews';
 const DermalFillerMakeover = () => {
   const seoData = generateSEOMetadata(
     "Dermal Filler Makeover London | Cosmedocs",
-    "Expert dermal filler makeover in London for full face rejuvenation. Achieve natural-looking results with our personalized treatment plans. Book your consultation today.",
+    "Complete facial rejuvenation with dermal fillers. Multi-area treatment for harmonious face transformation. Bespoke plans.",
     "/dermal-filler-makeover"
   );
 

@@ -18,7 +18,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 const ChinBotox = () => {
   const seoData = generateSEOMetadata(
     "Chin Botox London | Dimpled Chin | Cosmedocs",
-    "Expert chin botox treatment in London for dimpled chin, chin dimples and pebble chin. Professional botox for dimpled chin by cosmetic doctors. See chin botox before and after results at Harley Street clinic.",
+    "Eliminate dimpled, pebble chin texture with botox. Achieve smooth chin contours. Orange peel chin treatment from £150.",
     "/chin-botox"
   );
 

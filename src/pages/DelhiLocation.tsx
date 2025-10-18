@@ -11,7 +11,7 @@ import PopularTreatments from '@/components/PopularTreatments';
 const DelhiLocation = () => {
   const seoData = generateSEOMetadata(
     "Cosmedocs Delhi | Dr. Geetika | Aesthetic Clinic",
-    "Expert aesthetic treatments by Dr. Geetika at Cosmedocs Delhi. Premium Botox, dermal fillers, and cosmetic procedures in Delhi NCR. Book consultation today.",
+    "Dr. Geetika delivers premium botox & dermal fillers in Delhi NCR. Expert cosmetic procedures at Cosmedocs Delhi.",
     "/delhi"
   );
 

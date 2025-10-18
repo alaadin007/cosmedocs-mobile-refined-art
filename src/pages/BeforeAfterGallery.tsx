@@ -24,7 +24,7 @@ const BeforeAfterGallery = () => {
 
   const seoData = generateSEOMetadata(
     "Before & After Gallery - Real Results | CosmeDocs",
-    "View real before & after photos and videos of aesthetic treatments. Actual patient results from Botox, fillers, lip enhancement at Harley Street.",
+    "Real patient transformations: botox, fillers & lip enhancement. Authentic before & after photos from Harley Street.",
     "/before-after-gallery"
   );
 

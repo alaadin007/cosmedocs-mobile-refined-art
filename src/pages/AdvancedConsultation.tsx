@@ -17,7 +17,7 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 const AdvancedConsultation = () => {
   const seoData = generateSEOMetadata(
     "Advanced Aesthetic Consultation | Dr. Ahmed Haq",
-    "Millimeter-precision aesthetic refinements with Dr. Ahmed Haq. Expert facial optimization, temporal hollowing, lip corner lift. 15+ years experience.",
+    "Millimetre-precision facial optimization. Expert refinements for temporal hollowing & lip corners. 15+ years expertise.",
     "/advanced-consultation"
   );
 

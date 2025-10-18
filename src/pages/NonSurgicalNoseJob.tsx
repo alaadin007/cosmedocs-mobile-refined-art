@@ -18,7 +18,7 @@ import {
 const NonSurgicalNoseJob = () => {
   const seoData = generateSEOMetadata(
     "Non-Surgical Nose Job London | Nose Botox & Fillers | £450 | Harley Street",
-    "Leading non-surgical nose job & nose botox treatments in London. Expert nose reshaping without surgery from £450. Harley Street clinic.",
+    "Reshape your nose without surgery. Liquid rhinoplasty corrects bumps, asymmetry & drooping tips. Nose job from £450.",
     "/non-surgical-nose-job"
   );
 

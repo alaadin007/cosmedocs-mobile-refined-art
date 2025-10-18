@@ -19,7 +19,7 @@ import { Home } from "lucide-react";
 const BunnyLinesBotox = () => {
   const seoData = generateSEOMetadata(
     "Bunny Lines Botox London | £100 | Cosmedocs",
-    "Expert bunny lines botox before and after results. Botox for nose wrinkles from £100 at Harley Street, London. What are bunny lines? Professional nasal lines botox treatment near me.",
+    "Smooth diagonal nose wrinkles with bunny lines botox. Target nasalis muscle for wrinkle-free nose bridge from £100.",
     "/bunny-lines-botox"
   );
 

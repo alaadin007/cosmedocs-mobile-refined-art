@@ -11,7 +11,7 @@ const DrHenaHaq = () => {
   
   const seoData = generateSEOMetadata(
     "Dr Hena Haq | Cosmetic Physician | Cosmedocs",
-    "Dr. Hena Haq, Aesthetic Doctor with holistic approach to treatments. Popular for subtle tweakments and natural outcomes. Cosmedocs Harley Street.",
+    "Aesthetic doctor with holistic approach. Renowned for subtle tweakments & natural-looking results. Harley Street.",
     "/team/dr-hena-haq"
   );
 

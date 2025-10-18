@@ -10,7 +10,7 @@ import { Calendar, ArrowRight, Clock, User, TrendingUp, BookOpen, Sparkles, Hear
 const CosmetalkBlog = () => {
   const seoData = generateSEOMetadata(
     "Cosmetalk | Aesthetic Medicine Insights | Cosmedocs",
-    "Discover the latest insights, trends, and expert advice on aesthetic medicine, skincare, and non-surgical treatments from the professionals at Cosmedocs.",
+    "Latest aesthetic medicine insights, skincare trends & expert treatment advice. Professional guidance from Cosmedocs.",
     "/cosmetalk"
   );
 

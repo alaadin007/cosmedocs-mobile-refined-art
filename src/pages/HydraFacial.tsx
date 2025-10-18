@@ -23,7 +23,7 @@ const HydraFacial = () => {
     getVideosByTreatment
   } = useVideoManagement();
   const [selectedVideo, setSelectedVideo] = useState<any>(null);
-  const seoData = generateSEOMetadata("HydraFacial London | £175 | Cosmedocs", "Premium HydraFacial treatments in London's Harley Street. Advanced vortex technology for glowing, hydrated skin. From £175. Book your session today.", "/hydrafacial-london");
+  const seoData = generateSEOMetadata("HydraFacial London | £175 | Cosmedocs", "Deep cleanse, exfoliate & hydrate with HydraFacial. Vortex technology for instant glowing skin. Treatments from £175.", "/hydrafacial-london");
 
   // Get HydraFacial specific videos
   const hydraFacialVideos = getVideosByTreatment('HydraFacial');

@@ -24,7 +24,7 @@ import frownLinesInjectionSites from "@/assets/frown-lines-injection-sites.jpg";
 const FrownLineBotox = () => {
   const seoData = generateSEOMetadata(
     "Frown Line Botox London | Cosmedocs",
-    "Expert frown line botox treatment in London for glabellar lines between eyebrows. Professional botulinum toxin injections by cosmetic doctors. Natural results at Harley Street clinic.",
+    "Remove angry 11 lines between eyebrows. Frown line botox for a softer, relaxed appearance. Glabellar lines from £200.",
     "/frown-line-botox"
   );
 

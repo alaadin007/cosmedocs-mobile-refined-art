@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const ExperimentalTreatment = () => {
   const seoData = generateSEOMetadata(
     "Experimental Treatment Layout | Cosmedocs | Harley Street", 
-    "Experimental layout design showcasing left-aligned content with purple accents and strategic content positioning.", 
+    "Innovative treatment design with strategic content positioning. Aesthetic excellence at Harley Street clinic.", 
     "/experimental-treatment"
   );
   

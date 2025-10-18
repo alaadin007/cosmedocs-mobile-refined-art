@@ -16,7 +16,7 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 const ClinicalConceptsToFlawlessSkin = () => {
   const seoData = generateSEOMetadata(
     "Clinical Concepts to Flawless Skin | Cosmedocs",
-    "Unlock flawless skin with Cosmedocs' clinical approach. Expert treatments targeting skin health, rejuvenation, and lasting radiance. Book your consultation today.",
+    "Clinical approach to flawless skin. Evidence-based treatments for lasting skin health, radiance & rejuvenation.",
     "/clinical-concepts-to-flawless-skin"
   );
 

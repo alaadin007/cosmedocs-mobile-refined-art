@@ -12,7 +12,7 @@ import { Stethoscope, Target, Sparkles, HandHeart, Shield, Clock } from "lucide-
 export default function AcneTreatment() {
   const seoData = generateSEOMetadata(
     "Acne Treatment London | Cosmedocs",
-    "Expert acne treatment London for cystic acne, hormonal acne, and acne scars. Advanced dermatology care with proven results. Book your consultation today.",
+    "Clear cystic & hormonal acne with advanced dermatology. Treat active breakouts, scars & texture. Medical-grade solutions.",
     "/acne-treatment"
   );
 

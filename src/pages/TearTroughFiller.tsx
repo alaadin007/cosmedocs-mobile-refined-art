@@ -32,7 +32,7 @@ const TearTroughFiller = () => {
   };
   const seoData = generateSEOMetadata(
     "Tear Trough Filler London | Under Eye | Cosmedocs",
-    "Expert tear trough filler treatments in London. Brighten under eyes, reduce dark circles & eye bags. Professional under eye fillers at Harley Street clinic.",
+    "Eliminate dark circles & under-eye hollows. Tear trough filler for brighter, youthful eyes. Expert results from £400.",
     "/tear-trough-filler"
   );
 

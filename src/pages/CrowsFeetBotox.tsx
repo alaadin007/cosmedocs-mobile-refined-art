@@ -21,7 +21,7 @@ import beforeAfter3 from "@/assets/before-after/crows-feet-botox-3.jpeg";
 const CrowsFeetBotox = () => {
   const seoData = generateSEOMetadata(
     "Crow's Feet Botox London | Cosmedocs",
-    "Expert crow's feet botox treatment in London for eye wrinkles and laugh lines. Professional orbicularis oculi muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
+    "Soften eye wrinkles & laugh lines with crow's feet botox. Rejuvenate tired eyes whilst preserving your natural smile from £200.",
     "/crows-feet-botox"
   );
 

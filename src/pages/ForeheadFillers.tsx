@@ -22,7 +22,7 @@ const ForeheadFillers = () => {
   
   const seoData = generateSEOMetadata(
     "Forehead Filler London | Cosmedocs",
-    "Professional dermal fillers forehead treatment in London. View forehead filler before and after results. Expert frown line filler & wrinkle treatment.",
+    "Fill forehead indentations & deep lines. Dermal filler for smooth, youthful forehead contours. Natural volume restoration.",
     "/forehead-fillers"
   );
 

@@ -20,7 +20,7 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 const GummySmileBotox = () => {
   const seoData = generateSEOMetadata(
     "Gummy Smile Botox London | Cosmedocs",
-    "Gummy smile botox before and after results. Expert botox for gummy smile treatment. Fix excessive gum display naturally. Book consultation.",
+    "Reduce excessive gum display with gummy smile botox. Quick, painless treatment for balanced smile aesthetics from £150.",
     "/gummy-smile-botox"
   );
 

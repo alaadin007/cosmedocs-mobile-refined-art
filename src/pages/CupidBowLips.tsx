@@ -19,7 +19,7 @@ import ClientReviews from '@/components/ClientReviews';
 const CupidBowLips = () => {
   const seoData = generateSEOMetadata(
     "Cupid's Bow Lip Enhancement London 2025 | From £300 | Harley Street",
-    "Expert Cupid's bow lip enhancement at Harley Street, London. Define cupids bow & reshape lip peaks naturally. Premium lip injections cupid's bow. Book free consultation.",
+    "Define & reshape your cupid's bow with precision filler. Create pronounced lip peaks for perfect symmetry from £300.",
     "/cupid-bow-lips"
   );
 

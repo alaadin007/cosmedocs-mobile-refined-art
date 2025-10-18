@@ -23,7 +23,7 @@ export default function FaceBotox() {
   
   const seoData = generateSEOMetadata(
     "Botox London | Best Botox Harley Street | 3 Areas £350",
-    "Botox London at Harley Street's premier clinic. Expert botox treatments from £175. 3 areas of botox £350. Book your free consultation today.",
+    "Premium botox injections from £175 per area. Anti-wrinkle treatment for forehead, eyes & frown lines. 3 areas £350.",
     "/botox-london"
   );
 

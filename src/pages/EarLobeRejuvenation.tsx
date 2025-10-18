@@ -31,7 +31,7 @@ declare global {
 const EarLobeRejuvenation = () => {
   const seoData = generateSEOMetadata(
     "Ear Lobe Rejuvenation London | £500 | Cosmedocs", 
-    "Professional ear lobe rejuvenation treatments in London's Harley Street. Transform drooping, aged earlobes with dermal fillers. Expert treatment from £500 at Cosmedocs.", 
+    "Restore youthful ear lobes with filler. Repair stretched, sagging ear tissue from heavy earrings. Rejuvenation from £500.", 
     "/ear-lobe-rejuvenation"
   );
   

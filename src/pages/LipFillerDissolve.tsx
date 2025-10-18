@@ -27,7 +27,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 const LipFillerDissolve = () => {
   const seoData = generateSEOMetadata(
     "Lip Filler Dissolve London | £250 | Cosmedocs",
-    "Professional lip filler dissolve London treatments. Expert hyaluronidase injections to correct unwanted filler complications. Safe dissolving from £250. Book consultation.",
+    "Reverse unwanted lip filler safely. Hyaluronidase injections to dissolve filler complications & restore natural lips from £250.",
     "/lip-filler-dissolve"
   );
 

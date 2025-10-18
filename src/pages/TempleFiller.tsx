@@ -10,7 +10,7 @@ import ClientReviews from '@/components/ClientReviews';
 const TempleFiller = () => {
   const seoData = generateSEOMetadata(
     "Temple Filler London | Cosmedocs",
-    "Expert temple filler treatments in London. Restore volume, enhance facial symmetry & achieve natural-looking results. Book your consultation with Cosmedocs today.",
+    "Restore hollow temples with dermal filler. Reverse volume loss for youthful facial proportions & enhanced symmetry.",
     "/temple-filler-london",
     "/lovable-uploads/3bbc1c04-e87d-4253-811d-e71dfa550186.png"
   );

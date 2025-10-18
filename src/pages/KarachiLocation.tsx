@@ -20,7 +20,7 @@ import khJawline from '@/assets/karachi-dermal-fillers-jawline.png';
 const KarachiLocation = () => {
   const seoData = generateSEOMetadata(
     "Cosmedocs Karachi | Dr. Khadija | Aesthetic Clinic",
-    "Expert aesthetic treatments by Dr. Khadija at Cosmedocs Karachi. Premium Botox, dermal fillers, and cosmetic procedures in Pakistan. Book consultation today.",
+    "Dr. Khadija provides expert botox & dermal fillers in Karachi, Pakistan. Premium aesthetic treatments at Cosmedocs.",
     "/karachi"
   );
 

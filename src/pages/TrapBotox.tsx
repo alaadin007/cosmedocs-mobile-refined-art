@@ -11,7 +11,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 const TrapBotox = () => {
   const seoData = generateSEOMetadata(
     "Trap Botox London | Shoulder Slimming & Neck Contouring",
-    "Professional trap botox treatments in London. Reduce shoulder bulk, slim your trapezius muscles, and achieve elegant neck contouring. Book a consultation.",
+    "Slim bulky trapezius muscles with botox. Create elegant, slender shoulders & refined neck contours. Trap reduction.",
     "/trap-botox"
   );
 

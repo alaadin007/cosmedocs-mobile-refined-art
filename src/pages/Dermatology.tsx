@@ -8,7 +8,7 @@ import { CheckCircle, Award, Shield, Clock, Mail, Phone, Microscope } from 'luci
 const Dermatology = () => {
   const seoData = generateSEOMetadata(
     'Dermatologist Harley Street | Cosmedocs',
-    'Leading Harley Street dermatologist. Acne, eczema, psoriasis, skin cancer screening & advanced treatments. CQC registered clinic.',
+    'Expert dermatology for acne, eczema, psoriasis & skin cancer screening. CQC registered medical dermatologist.',
     '/dermatology'
   );
 

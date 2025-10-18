@@ -12,7 +12,7 @@ import supermodelAfter2 from "@/assets/supermodel-after-2.jpg";
 
 const seoData = generateSEOMetadata(
   "Aesthetics at a Glance | Beautiful Skin | Cosmedocs",
-  "Discover the science behind beautiful skin. Learn about lazy skin syndrome, cell rejuvenation and professional treatments. Free ebook download.",
+  "Science of beautiful skin: lazy skin syndrome, cell rejuvenation & treatments. Free ebook reveals professional secrets.",
   "/aesthetics-at-glance"
 );
 

@@ -23,7 +23,7 @@ import pdoThreadLiftImage from '@/assets/pdo-thread-lift-before-after.jpg';
 
 const seoData = generateSEOMetadata(
   "PDO Thread Face Lift London | Thread Lift Before and After - CosmeDocs",
-  "Expert PDO thread lifting in London. See real thread lift before and after results. Threading face lift treatments with 2-3 year results. PDO threads London specialists.",
+  "Instant facelift with PDO threads. Lift sagging skin, restore contours & stimulate collagen. Results last 2-3 years.",
   "/thread-face-lift"
 );
 

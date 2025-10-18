@@ -12,7 +12,7 @@ const DrAhmedHaq = () => {
   
   const seoData = generateSEOMetadata(
     "Dr A. Farhan Haq | Cosmetic Physician | Cosmedocs",
-    "Dr. A.Farhan Haq is an eminent cosmetic doctor who possesses extensive experience and does profound latest research in the aesthetics medicine field.",
+    "Leading cosmetic doctor with extensive experience. Specialising in botox, fillers & facial rejuvenation research.",
     "/team/dr-ahmed-haq"
   );
 

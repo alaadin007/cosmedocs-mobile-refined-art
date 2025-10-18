@@ -27,7 +27,7 @@ import { Button } from "@/components/ui/button";
 type TreatmentVideo = Tables<'treatment_videos'>;
 
 const CheekFiller = () => {
-  const seoData = generateSEOMetadata("Cheek Fillers London | From £350 | Cosmedocs", "Premium cheek filler treatments London. 1ml vs 2ml cheek fillers, before & after results. Cheekbone enhancement by Dr. Ahmed Haq, Harley Street.", "/cheek-filler");
+  const seoData = generateSEOMetadata("Cheek Fillers London | From £350 | Cosmedocs", "Lift & define cheekbones with dermal filler. Restore youthful volume using 1ml or 2ml cheek enhancement from £350.", "/cheek-filler");
   const bookingUrl = "https://med.as.me/harleystreet";
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [cheekFillerVideos, setCheekFillerVideos] = useState<TreatmentVideo[]>([]);

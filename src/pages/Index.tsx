@@ -20,7 +20,7 @@ const Index = () => {
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
   const [isAnalysisOpen, setIsAnalysisOpen] = useState(false);
   const isMobile = useIsMobile();
-  const seoData = generateSEOMetadata("Cosmedocs London | Aesthetic Medicine | Harley Street", "Premium aesthetic medicine in London's Harley Street. Expert treatments by Dr. Ahmed Haq. Our aesthetics is invisible art • Bold • Natural • Always Your Way", "/");
+  const seoData = generateSEOMetadata("Cosmedocs London | Aesthetic Medicine | Harley Street", "Harley Street aesthetic clinic by Dr. Ahmed Haq. Botox, fillers & skin treatments. Invisible art • Bold • Natural.", "/");
 
   // Booking URL for all Book Now buttons
   const bookingUrl = "https://med.as.me/harleystreet";

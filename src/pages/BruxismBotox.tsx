@@ -18,7 +18,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 const BruxismBotox = () => {
   const seoData = generateSEOMetadata(
     "Bruxism Botox London | TMJ Treatment | Cosmedocs",
-    "Expert bruxism botox treatment in London for teeth grinding and TMJ disorders. Botox for clenched jaw and jaw pain. Professional masseter botox by cosmetic doctors at Harley Street.",
+    "End teeth grinding & TMJ jaw pain with therapeutic botox. Masseter muscle treatment relieves bruxism symptoms from £350.",
     "/bruxism-botox"
   );
 
