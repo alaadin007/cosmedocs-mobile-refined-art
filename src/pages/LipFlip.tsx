@@ -132,8 +132,7 @@ const LipFlip = () => {
             "bodyLocation": "Upper Lip",
             "preparation": "Consultation with cosmetic doctor, avoid blood thinners 24 hours before treatment",
             "followup": "Results visible in 3-7 days, follow-up assessment available",
-            "howPerformed": "Botulinum toxin injected into orbicularis oris muscle at strategic points along upper lip border",
-            "medicalSpecialty": "Cosmetic Medicine"
+            "howPerformed": "Botulinum toxin injected into orbicularis oris muscle at strategic points along upper lip border"
           })}
         </script>
 

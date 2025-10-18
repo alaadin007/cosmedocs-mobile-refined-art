@@ -90,8 +90,7 @@ const medicalProcedureSchema = {
   "recovery": "P7D",
   "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
   "followup": "Follow-up assessment after 2 weeks",
-  "howPerformed": "PDO threads inserted into facial tissue to lift and tighten skin",
-  "medicalSpecialty": "Cosmetic Medicine"
+  "howPerformed": "PDO threads inserted into facial tissue to lift and tighten skin"
 };
 
 const offerSchema = {

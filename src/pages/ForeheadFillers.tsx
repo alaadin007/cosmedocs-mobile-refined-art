@@ -139,8 +139,7 @@ const ForeheadFillers = () => {
             "bodyLocation": "Forehead",
             "preparation": "Avoid blood-thinning medications, stay hydrated, avoid alcohol 24 hours prior",
             "followup": "2-week follow-up appointment included with treatment",
-            "howPerformed": "Injectable dermal fillers carefully administered to targeted forehead areas",
-            "medicalSpecialty": "Cosmetic Medicine"
+            "howPerformed": "Injectable dermal fillers carefully administered to targeted forehead areas"
           })}
         </script>
         <script type="application/ld+json">

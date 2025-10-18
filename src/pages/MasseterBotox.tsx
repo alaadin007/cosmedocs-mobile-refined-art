@@ -196,8 +196,7 @@ const MasseterBotox = () => {
             "bodyLocation": "Masseter Muscle (Jaw)",
             "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
             "followup": "Follow-up assessment after 2 weeks",
-            "howPerformed": "Botox injections administered into masseter muscles on both sides of jaw",
-            "medicalSpecialty": "Cosmetic Medicine"
+            "howPerformed": "Botox injections administered into masseter muscles on both sides of jaw"
           })}
         </script>
         <script type="application/ld+json">

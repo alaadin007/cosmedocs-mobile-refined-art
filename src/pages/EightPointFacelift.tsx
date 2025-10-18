@@ -46,7 +46,14 @@ export default function EightPointFacelift() {
       "latitude": 51.5074,
       "longitude": -0.1278
     },
-    "openingHours": "Mo-Fr 09:00-18:00",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
     "priceRange": "£800-£1200",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -161,7 +168,7 @@ export default function EightPointFacelift() {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs"
     },
-    "medicalSpecialty": "Aesthetic Medicine",
+    "knowsAbout": "Aesthetic Medicine",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",
