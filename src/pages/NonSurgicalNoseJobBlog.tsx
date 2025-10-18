@@ -8,7 +8,7 @@ import { generateSEOMetadata } from '@/utils/seo';
 const NonSurgicalNoseJobBlog = () => {
   const seoData = generateSEOMetadata(
     "Non-Surgical Nose Job Blog | Cosmedocs",
-    "Learn about non-surgical nose jobs, also known as liquid rhinoplasty, at Cosmedocs. Discover the benefits, procedure details, and expected results.",
+    "Liquid rhinoplasty explained: benefits, procedure steps & expected results. Non-surgical nose reshaping guide.",
     "/non-surgical-nose-job-blog"
   );
 

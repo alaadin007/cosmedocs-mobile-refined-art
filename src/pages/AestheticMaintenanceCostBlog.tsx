@@ -9,7 +9,7 @@ import { CheckCircle, Clock, Shield, Star, Users, Award } from 'lucide-react';
 const AestheticMaintenanceCostBlog = () => {
   const seoData = generateSEOMetadata(
     "Aesthetic Treatment Maintenance Costs | Cosmedocs",
-    "Understand the ongoing costs of maintaining aesthetic treatments. Learn about factors influencing prices and how to budget for long-term results at Cosmedocs.",
+    "Budget for botox & filler maintenance. Understand pricing factors & plan long-term aesthetic investment wisely.",
     "/aesthetic-treatment-maintenance-costs"
   );
 

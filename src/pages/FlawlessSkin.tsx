@@ -25,7 +25,7 @@ const FlawlessSkin = () => {
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>Flawless Skin Naturally | Anti-Ageing Tips | Cosmedocs</title>
-        <meta name="description" content="Discover expert-backed skincare strategies to reverse ageing, reduce pigmentation, shrink pores, and achieve flawless, hydrated, even-toned skin—naturally." />
+        <meta name="description" content="Reverse skin ageing naturally. Reduce pigmentation, shrink pores & achieve hydrated, even-toned skin with expert tips." />
         <meta name="keywords" content="how to get flawless skin, reverse skin ageing naturally, best treatment for pigmentation and pores, skincare routine for smooth even skin, dermatologist-approved skin plan, how to shrink pores and boost collagen, lazy skin syndrome fix, flawless skin without makeup" />
         <meta property="og:title" content="How to Get Flawless Skin Naturally: Anti-Ageing Aesthetic Dermatology Tips" />
         <meta property="og:description" content="Discover expert-backed skincare strategies to reverse ageing, reduce pigmentation, shrink pores, and achieve flawless, hydrated, even-toned skin—naturally." />

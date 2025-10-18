@@ -10,7 +10,7 @@ import { Stethoscope, Shield, Clock, MapPin, Phone, Calendar } from "lucide-reac
 export default function PrivateGPDoctor() {
   const seoData = generateSEOMetadata(
     "Private GP Doctor London | CQC Regulated Healthcare | Cosmedocs",
-    "Expert private GP consultations in Harley Street London. CQC regulated healthcare with flexible scheduling, blood tests, sexual health services, and concierge care to hotels.",
+    "CQC-regulated private GP consultations in Harley Street. Blood tests, sexual health & concierge hotel service available.",
     "/private-gp-doctor"
   );
 

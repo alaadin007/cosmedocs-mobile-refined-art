@@ -19,7 +19,7 @@ import { Home } from "lucide-react";
 const MigraineBotox = () => {
   const seoData = generateSEOMetadata(
     "Botox for Migraines UK Cost £450 | Migraine Botox Treatment London Near Me",
-    "Expert botox for migraines UK treatment. Botox injections for migraines from £450 at Harley Street, London. FDA-approved migraine relief botox. Does botox help migraines? Book consultation today.",
+    "FDA-approved botox for chronic migraines. Reduce headache frequency & intensity with therapeutic muscle injections from £450.",
     "/migraine-botox"
   );
 

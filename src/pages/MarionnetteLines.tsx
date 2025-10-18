@@ -23,7 +23,7 @@ import ClientReviews from '@/components/ClientReviews';
 const MarionnetteLines = () => {
   const seoData = generateSEOMetadata(
     "Marionette Lines Filler London | Cosmedocs",
-    "Expert marionette lines filler treatment in London. See before and after results. Best dermal fillers for marionette lines. Book consultation.",
+    "Lift downturned mouth corners with marionette lines filler. Smooth puppet lines & restore youthful lower face contours.",
     "/marionette-lines"
   );
 

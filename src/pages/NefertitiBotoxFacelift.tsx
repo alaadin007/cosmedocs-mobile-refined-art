@@ -18,7 +18,7 @@ export default function NefertitiBotoxFacelift() {
 
   const seoData = generateSEOMetadata(
     "Nefertiti Lift - Non-Surgical Jawline & Neck Contouring | Cosmedocs",
-    "Redefine your jawline with precision using the Nefertiti Lift. Non-surgical Botox treatment for sharper jawlines, improved neck contour & reduced neck bands. Book consultation.",
+    "Define jawline & smooth neck bands with Nefertiti Lift. Non-surgical botox for sharp contours & reduced platysmal bands.",
     "/nefertiti-botox-face-jaw-lift"
   );
 

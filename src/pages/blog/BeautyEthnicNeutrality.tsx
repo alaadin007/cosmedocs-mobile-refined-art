@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const BeautyEthnicNeutrality = () => {
   const seoData = generateSEOMetadata(
     "Beauty as Ethnic Neutrality: Aesthetic Harmony Beyond Race | CosmeTalk™",
-    "Discover how universal beauty standards transcend ethnicity through facial harmony, balance, and symmetry. Explore the science behind aesthetic treatments that enhance natural beauty.",
+    "Universal beauty transcends ethnicity. Facial harmony, balance & symmetry define aesthetic excellence across all races.",
     "/blog/beauty-ethnic-neutrality"
   );
 

@@ -16,7 +16,7 @@ import { generateSEOMetadata } from "@/utils/seo";
 const NasalFlaringBotox = () => {
   const seoData = generateSEOMetadata(
     "Nasal Flaring Botox London | Nostril Reduction Treatment | Cosmedocs Harley Street",
-    "Expert nasal flaring botox treatment in London for nostril widening and alar base reduction. Professional dilator naris muscle botox by cosmetic doctors. Natural results at Harley Street clinic.",
+    "Reduce nostril widening & alar base flaring with botox. Refine dilator naris muscle for controlled nose movement.",
     "/nasal-flaring-botox"
   );
 

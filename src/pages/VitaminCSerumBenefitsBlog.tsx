@@ -10,7 +10,7 @@ import AutoLinkedText from "@/components/AutoLinkedText";
 const VitaminCSerumBenefitsBlog = () => {
   const seoData = generateSEOMetadata(
     "The Power Trio: L-Ascorbic Acid with Ferulic Acid and Vitamin E for Radiant Skin | Cosmedocs",
-    "Discover the remarkable benefits of L-Ascorbic Acid combined with Ferulic Acid and Vitamin E. Learn how this powerful antioxidant trio can transform your skincare routine and boost vitamin C potency up to eight times.",
+    "L-Ascorbic Acid + Ferulic Acid + Vitamin E: 8x potency boost. Transform skin with this powerful antioxidant trio.",
     "/blog/vitamin-c-ferulic-acid-benefits"
   );
 

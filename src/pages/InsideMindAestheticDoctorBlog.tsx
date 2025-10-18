@@ -10,7 +10,7 @@ import heroImage from '@/assets/inside-mind-aesthetic-doctor-hero.jpg';
 const InsideMindAestheticDoctorBlog = () => {
   const seoData = generateSEOMetadata(
     "Inside Mind of Aesthetic Doctor | Fillers | Cosmedocs",
-    "Dr Ahmed Haq's artistic approach to facial aesthetics. Nuanced techniques for cheeks, lips and chin fillers creating natural results.",
+    "Dr Haq's artistic filler philosophy: nuanced cheek, lip & chin techniques for natural facial aesthetics.",
     "/inside-mind-aesthetic-doctor-blog"
   );
 

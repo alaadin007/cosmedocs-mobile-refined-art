@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function PsoriasisTreatment() {
   const seoData = generateSEOMetadata(
     "Psoriasis Treatment UK | Scalp Psoriasis Treatment | Best Private Care - Cosmedocs",
-    "Expert psoriasis treatment UK & scalp psoriasis treatment at our London clinic. Best treatment for psoriasis including nail psoriasis treatment UK. Private psoriasis skin treatment from £150. Book today.",
+    "Treat plaque, scalp & nail psoriasis with specialist dermatology. Private UK psoriasis treatment from £150.",
     "https://cosmedocs.com/psoriasis-treatment"
   );
 

@@ -10,7 +10,7 @@ import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, 
 const MedicalAnalBleaching = () => {
   const seoData = generateSEOMetadata(
     "Medical Anal Bleaching London | Expert Hyperpigmentation Treatment",
-    "Safe and effective medical anal bleaching in London. Expert treatment for hyperpigmentation with guaranteed results. Book your consultation at our discreet Harley Street clinic.",
+    "Safe medical anal bleaching for hyperpigmentation. Discreet Harley Street clinic. Guaranteed results. Medical-grade treatment.",
     "/medical-anal-bleaching"
   );
 

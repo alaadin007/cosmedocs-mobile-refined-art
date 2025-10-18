@@ -10,7 +10,7 @@ const SmokersLinesWomen = () => {
     <>
       <Helmet>
         <title>Why Women Get Smokers Lines (Even Without Smoking) | CosmedTalk</title>
-        <meta name="description" content="Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines." />
+        <meta name="description" content="Why 99% of smoker's lines patients are women. Lip anatomy, speech patterns & lifestyle factors causing perioral wrinkles." />
         <link rel="canonical" href="https://cosmedocs.co.uk/cosmetalk/smokers-lines-women" />
         <meta property="og:title" content="Why Women Get Smokers Lines (Even Without Smoking) | CosmedTalk" />
         <meta property="og:description" content="Discover why 99% of smokers lines patients are women, even non-smokers. Learn about lip anatomy, speech patterns, and lifestyle factors that create perioral lines." />

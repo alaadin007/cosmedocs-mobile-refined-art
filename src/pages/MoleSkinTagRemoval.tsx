@@ -21,7 +21,7 @@ const MoleSkinTagRemoval = () => {
   
   const seoData = generateSEOMetadata(
     "Mole Removal London | Skin Tag Removal Clinic | From £150 | Cosmedocs",
-    "Professional mole removal London & skin tag removal at our Harley Street clinic. Expert cosmetic mole removal, facial mole removal from £150. Private mole removal near me with minimal scarring.",
+    "Safe cosmetic mole & skin tag removal from £150. Minimal scarring, same-day service at Harley Street clinic.",
     "/mole-skin-tag-removal"
   );
 

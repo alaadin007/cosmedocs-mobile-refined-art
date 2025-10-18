@@ -20,7 +20,7 @@ import ClientReviews from "@/components/ClientReviews";
 const NeckFillers = () => {
   const seoData = generateSEOMetadata(
     "Neck Fillers London | Say Bye to Sag | Cosmedocs Harley Street",
-    "Neck fillers London - treat wrinkly neck, horizontal neck lines & botox for neck lines. See neck fillers before and after results.",
+    "Treat wrinkly neck & horizontal neck lines with filler. Smooth necklace lines & tech neck. Say goodbye to sagging.",
     "/neck-fillers"
   );
 

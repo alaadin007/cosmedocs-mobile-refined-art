@@ -31,7 +31,7 @@ import { CheckCircle, ArrowRight, Clock, Calendar, Activity, Syringe, Eye } from
 
 const NasolabialFolds = () => {
   const bookingUrl = "https://med.as.me/harleystreet";
-  const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Cosmedocs", "Expert nasolabial fold filler & dermal fillers for smile lines in London. Before & after results. Natural face filler treatments.", "/nasolabial-folds");
+  const seoData = generateSEOMetadata("Nasolabial Folds Filler London | Cosmedocs", "Erase smile lines & nasolabial folds with dermal filler. Age-reversing face filler for natural, smooth results.", "/nasolabial-folds");
   const beforeAfterImages = [
     { 
       src: smileLinesResult1, 

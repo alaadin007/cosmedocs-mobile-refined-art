@@ -18,7 +18,7 @@ const Microneedling = () => {
   const bookingUrl = "https://med.as.me/harleystreet";
   const seoData = generateSEOMetadata(
     "Microneedling London | From £250 | Cosmedocs",
-    "Professional microneedling London from £250. Face needling therapy for wrinkles, acne scars & skin tightening. Book micro needle treatment today.",
+    "Face needling therapy for wrinkles, acne scars & skin tightening. Micro needle collagen induction from £250.",
     "/microneedling"
   );
 

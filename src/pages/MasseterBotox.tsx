@@ -57,7 +57,7 @@ const MasseterBotox = () => {
   };
   const seoData = generateSEOMetadata(
     "Masseter Botox London | £350 | Cosmedocs",
-    "Expert Masseter Botox for jaw slimming & bruxism treatment. Reduce jaw muscle size & relieve teeth grinding. £350 both sides. Book consultation at Harley Street clinic.",
+    "Slim square jaw & treat bruxism with masseter botox. Reduce jaw muscle size & relieve teeth grinding from £350.",
     "/masseter-botox"
   );
 

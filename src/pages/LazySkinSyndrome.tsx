@@ -25,7 +25,7 @@ const LazySkinSyndrome = () => {
     <div className="min-h-screen bg-black text-white">
       <Helmet>
         <title>Lazy Skin Syndrome: Why Moisturisers May Be Hurting You</title>
-        <meta name="description" content="Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within." />
+        <meta name="description" content="Moisturiser dependency creates lazy skin. Fix dull, dry skin with peels & treatments that restore hydration naturally." />
         <meta name="keywords" content="lazy skin syndrome, moisturiser dependency, how to fix dull dry skin, skin exfoliation vs moisturising, skin peels for dry skin, why moisturisers don't work, how to restore skin hydration naturally" />
         <meta property="og:title" content="Lazy Skin Syndrome: Why Moisturisers May Be Hurting You" />
         <meta property="og:description" content="Discover what Lazy Skin Syndrome is, how moisturisers create long-term skin fatigue, and the expert-approved treatments that restore hydration from within." />
