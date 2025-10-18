@@ -209,8 +209,12 @@ const BotoxCalfReduction = () => {
             "@context": "https://schema.org",
             "@type": "AggregateRating",
             "itemReviewed": {
-              "@type": "MedicalProcedure",
-              "name": "Botox Calf Reduction Treatment"
+              "@type": "Service",
+              "name": "Botox Calf Reduction Treatment",
+              "provider": {
+                "@type": "MedicalClinic",
+                "name": "Cosmedocs"
+              }
             },
             "ratingValue": "4.9",
             "bestRating": "5",
