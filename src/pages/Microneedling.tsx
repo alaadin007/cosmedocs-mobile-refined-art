@@ -180,19 +180,30 @@ const Microneedling = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "AggregateRating",
-            "itemReviewed": {
-              "@type": "Service",
-              "name": "Microneedling Treatment",
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "Cosmedocs"
+            "@type": "Service",
+            "name": "Microneedling Treatment",
+            "description": "Professional microneedling treatment for skin rejuvenation, acne scars, and fine lines",
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
               }
             },
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "127"
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "127"
+            }
           })}
         </script>
         <script type="application/ld+json">

@@ -111,25 +111,30 @@ const PRPTreatment = () => {
         <script type="application/ld+json">
           {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MedicalClinic",
-          "name": "Cosmedocs - PRP Treatment",
+          "@type": "Service",
+          "name": "PRP Treatment",
           "description": "Premium PRP and Vampire Facial treatments in London's Harley Street",
-          "url": "https://cosmedocs.com/prp-treatment",
-          "telephone": "+44 20 3733 3227",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Harley Street",
-            "addressLocality": "London",
-            "addressRegion": "Greater London",
-            "postalCode": "W1G 9PF",
-            "addressCountry": "GB"
+          "serviceType": "Cosmetic Treatment",
+          "provider": {
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs - PRP Treatment",
+            "url": "https://cosmedocs.com/prp-treatment",
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "priceRange": "Price on consultation"
           },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.5074,
-            "longitude": -0.1278
-          },
-          "priceRange": "Price on consultation",
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",

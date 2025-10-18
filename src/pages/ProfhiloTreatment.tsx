@@ -157,25 +157,31 @@ const ProfhiloTreatment = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs",
-            "description": "Premium Profhilo bio-remodelling treatments in London's Harley Street",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
+            "@type": "Service",
+            "name": "Profhilo Bio-Remodelling Treatment",
+            "alternateName": ["Profhilo Skin Booster", "Profhilo Injection", "Bio-Remodelling Therapy"],
+            "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid to stimulate natural collagen and elastin production for skin rejuvenation",
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": seoData.canonical,
+              "telephone": "+44 20 3733 3227",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 51.5074,
+                "longitude": -0.1278
+              },
+              "priceRange": "££"
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 51.5074,
-              "longitude": -0.1278
-            },
-            "priceRange": "££",
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

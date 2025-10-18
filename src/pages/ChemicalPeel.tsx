@@ -133,8 +133,13 @@ const ChemicalPeel = () => {
   // Review Schema
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Chemical Peel Treatment",
+    "serviceType": "Cosmetic Treatment",
+    "provider": {
+      "@type": "MedicalClinic",
+      "name": "Cosmedocs"
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",

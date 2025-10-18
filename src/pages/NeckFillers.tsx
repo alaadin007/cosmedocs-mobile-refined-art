@@ -108,14 +108,23 @@ const NeckFillers = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
+            "@type": "Service",
             "name": "Neck Filler Treatment",
             "description": "Professional neck filler treatment to smooth horizontal neck lines, vertical neck lines, and tech neck wrinkles using premium hyaluronic acid fillers",
-            "procedureType": "Cosmetic dermal filler injection",
-            "bodyLocation": "Neck",
-            "preparation": "Avoid blood-thinning medications, stay hydrated, avoid sun exposure",
-            "followup": "Minimal downtime, avoid strenuous exercise for 24 hours",
-            "howPerformed": "Injectable hyaluronic acid fillers administered by expert cosmetic doctors",
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

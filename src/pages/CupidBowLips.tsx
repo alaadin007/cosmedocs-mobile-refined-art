@@ -97,58 +97,63 @@ const CupidBowLips = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalClinic",
-            "name": "Cosmedocs - Cupid's Bow Lip Enhancement London",
-            "description": "Expert cupid's bow enhancement and lip injections at Harley Street, London. Specialised cupid's bow lip filler treatments.",
-            "url": seoData.canonical,
-            "telephone": "+44 20 3733 3227",
-            "priceRange": "££",
-            "image": "https://www.cosmedocs.co.uk/lovable-uploads/a9533a9b-0dd5-4e65-8c88-8e415e07f1ff.png",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "10 Harley Street",
-              "addressLocality": "London",
-              "addressRegion": "Greater London",
-              "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
+            "@type": "Service",
+            "name": "Cupid's Bow Lip Enhancement",
+            "description": "Expert Cupid's bow lip filler treatment for natural, defined lips in London",
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs - Cupid's Bow Lip Filler London",
+              "url": seoData.canonical,
+              "telephone": "+44 20 3733 3227",
+              "priceRange": "££",
+              "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.519526",
+                "longitude": "-0.146061"
+              },
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "London"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Marylebone"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Westminster"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Mayfair"
+                }
+              ],
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "16:00"
+                }
+              ]
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "51.519526",
-              "longitude": "-0.146061"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "London"
-              },
-              {
-                "@type": "Place",
-                "name": "Marylebone"
-              },
-              {
-                "@type": "Place",
-                "name": "Westminster"
-              },
-              {
-                "@type": "Place",
-                "name": "Mayfair"
-              }
-            ],
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "16:00"
-              }
-            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
@@ -156,19 +161,6 @@ const CupidBowLips = () => {
               "bestRating": "5",
               "worstRating": "1"
             }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
-            "name": "Cupid's Bow Lip Enhancement",
-            "description": "Specialised lip filler technique to define and enhance the Cupid's bow area of the upper lip",
-            "procedureType": "Cosmetic Injectable Treatment",
-            "bodyLocation": "Upper lip",
-            "preparation": "Topical anaesthetic applied",
-            "followup": "Minimal downtime, results visible immediately",
-            "howPerformed": "Precise dermal filler injection to define lip peaks"
           })}
         </script>
         <script type="application/ld+json">
