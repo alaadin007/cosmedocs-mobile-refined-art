@@ -92,7 +92,7 @@ const CardiffHome = () => {
     <>
       <Helmet>
         <title>Cardiff Botox, Lip Filler & Dermal Fillers | Cosmedocs Cardiff</title>
-        <meta name="description" content="Premier Cardiff botox, lip filler and dermal fillers. Expert aesthetic medicine in South Wales. Book consultation. Invisible art." />
+        <meta name="description" content="Cardiff aesthetic clinic: botox, lip fillers & dermal fillers. South Wales premium treatments. Natural results." />
         <meta name="keywords" content="cardiff botox, cardiff lip filler, cardiff dermal fillers, botox cardiff, lip fillers cardiff, aesthetic clinic cardiff, cosmetic treatments cardiff" />
         <link rel="canonical" href="https://www.cosmedocs.co.uk/cardiff" />
         <meta property="og:title" content="Cardiff Botox, Lip Filler & Dermal Fillers | Cosmedocs Cardiff" />

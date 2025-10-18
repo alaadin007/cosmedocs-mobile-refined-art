@@ -40,7 +40,7 @@ const FellowshipInvitation = () => {
     <>
       <Helmet>
         <title>Welcome {FELLOW_TITLE} - Your CosmeDocs Partner Invitation</title>
-        <meta name="description" content="Exclusive invitation for CosmeDocs Fellowship graduates to join our partner network. Transform your practice with national support." />
+        <meta name="description" content="Fellowship graduates: join our partner network. Transform your aesthetic practice with national support & mentorship." />
         <meta name="keywords" content="cosmedocs fellowship, aesthetic medicine partner, harley street training, aesthetic clinic partnership" />
         <link rel="canonical" href={`https://www.cosmedocs.co.uk/fellowship-invitation-${FELLOW_NAME.toLowerCase().replace(/\s+/g, '-')}`} />
       </Helmet>

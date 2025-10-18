@@ -280,7 +280,7 @@ const AestheticIntelligence = () => {
     <>
       <Helmet>
         <title>Aesthetic Intelligence - AI-Powered Skincare Product Analysis | CosmeDocs</title>
-        <meta name="description" content="AI-powered skincare product analysis. Uncover hidden chemicals and harmful ingredients. Get professional insights on what works for your skin." />
+        <meta name="description" content="AI skincare analysis: detect harmful chemicals & ingredients. Professional insights on product efficacy for your skin." />
         <meta name="keywords" content="skincare analysis, cosmetic ingredients, product review, AI beauty tool, ingredient checker, skincare ingredients, cosmetic chemistry, dermatology analysis" />
         <link rel="canonical" href="https://www.cosmedocs.co.uk/aesthetic-intelligence" />
         <meta property="og:title" content="Aesthetic Intelligence - AI-Powered Skincare Product Analysis | CosmeDocs" />

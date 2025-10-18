@@ -113,7 +113,7 @@ const BotoxPriceLondon = () => {
         <title>Botox Price London: Complete Guide to Costs & Expert Treatment 2024</title>
         <meta 
           name="description" 
-          content="Comprehensive Botox prices London. Why master injectors offer better value, costs by experience level, and expert insights on safety."
+          content="London botox pricing guide. Master injector value vs cost. Expert insights on safety & guaranteed satisfaction."
         />
         <meta name="keywords" content="botox price london, botox cost london, botulinum toxin london, anti-wrinkle injections london, botox treatment london" />
         <link rel="canonical" href="https://www.cosmedocs.co.uk/botox-price-london" />

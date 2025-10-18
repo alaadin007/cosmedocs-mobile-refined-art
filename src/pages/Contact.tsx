@@ -68,7 +68,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Cosmedocs - Get in Touch | Harley Street Aesthetic Clinic</title>
-        <meta name="description" content="Contact Cosmedocs Harley Street clinic. Book consultations and get expert aesthetic advice. Call 0333 0551 503 or 0800 860 0178." />
+        <meta name="description" content="Contact Harley Street aesthetic clinic. Expert consultation booking. Call 0333 0551 503 or 0800 860 0178." />
         <meta name="keywords" content="contact cosmedocs, harley street clinic contact, aesthetic clinic london, book consultation, cosmetic treatment enquiry" />
         <link rel="canonical" href="https://www.cosmedocs.co.uk/contact" />
         

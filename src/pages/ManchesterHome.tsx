@@ -92,7 +92,7 @@ const ManchesterHome = () => {
     <>
       <Helmet>
         <title>Manchester Botox, Lip Filler & Dermal Fillers | Cosmedocs Manchester</title>
-        <meta name="description" content="Premier Manchester botox, lip filler and dermal filler treatments. Expert aesthetic medicine in Greater Manchester. Book your consultation today. Invisible art philosophy." />
+        <meta name="description" content="Greater Manchester aesthetic clinic: expert botox, lip & dermal fillers. Premium treatments. Invisible art philosophy." />
         <meta name="keywords" content="manchester botox, manchester lip filler, manchester dermal fillers, botox manchester, lip fillers manchester, aesthetic clinic manchester, cosmetic treatments manchester" />
         <link rel="canonical" href="https://www.cosmedocs.co.uk/manchester" />
         <meta property="og:title" content="Manchester Botox, Lip Filler & Dermal Fillers | Cosmedocs Manchester" />
