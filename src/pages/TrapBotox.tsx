@@ -126,7 +126,15 @@ const TrapBotox = () => {
             "serviceType": "Trap Botox Treatment",
             "provider": {
               "@type": "MedicalClinic",
-              "name": "Cosmedocs"
+              "name": "Cosmedocs",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             },
             "areaServed": "London",
             "hasOfferCatalog": {
