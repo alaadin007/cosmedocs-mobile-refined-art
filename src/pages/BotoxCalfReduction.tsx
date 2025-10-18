@@ -209,21 +209,10 @@ const BotoxCalfReduction = () => {
             "@context": "https://schema.org",
             "@type": "AggregateRating",
             "itemReviewed": {
-              "@type": "Service",
+              "@type": "MedicalProcedure",
               "name": "Botox Calf Reduction Treatment",
-              "provider": {
-                "@type": "MedicalClinic",
-                "name": "Cosmedocs",
-                "url": "https://www.cosmedocs.co.uk",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "10 Harley Street",
-                  "addressLocality": "London",
-                  "addressRegion": "Greater London",
-                  "postalCode": "W1G 9PF",
-                  "addressCountry": "GB"
-                }
-              }
+              "description": "Non-surgical calf reduction treatment using Botox injections",
+              "procedureType": "Cosmetic"
             },
             "ratingValue": "4.9",
             "bestRating": "5",
