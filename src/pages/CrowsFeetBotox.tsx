@@ -98,43 +98,33 @@ const CrowsFeetBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Crow's Feet Botox Treatment",
-            "description": "Expert crow's feet botox treatment for eye wrinkle reduction and natural-looking results",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": seoData.canonical,
-              "telephone": "+44 20 3733 3227",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 51.5074,
-                "longitude": -0.1278
-              },
-              "priceRange": "££",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                }
-              ]
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
             },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "bestRating": "5",
               "ratingCount": "167"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Crow's Feet Botox Treatment",
+              "description": "Expert crow's feet botox treatment for eye wrinkle reduction and natural-looking results"
             }
           })}
         </script>
