@@ -39,7 +39,15 @@ const FlawlessSkin = () => {
             "headline": "How to Get Flawless Skin Naturally: Anti-Ageing Aesthetic Dermatology Tips",
             "author": {
               "@type": "Organization",
-              "name": "Cosmedocs"
+              "name": "Cosmedocs",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             },
             "publisher": {
               "@type": "Organization",
@@ -47,6 +55,14 @@ const FlawlessSkin = () => {
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://cosmedocs.co.uk/logo.png"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
               }
             },
             "datePublished": "2024-01-18",

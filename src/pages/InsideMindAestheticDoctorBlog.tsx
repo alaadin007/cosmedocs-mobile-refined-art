@@ -35,6 +35,14 @@ const InsideMindAestheticDoctorBlog = () => {
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.cosmedocs.com/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
       }
     },
     "datePublished": "2025-01-16",

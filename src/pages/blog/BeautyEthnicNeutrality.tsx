@@ -17,7 +17,15 @@ const BeautyEthnicNeutrality = () => {
     "description": "Exploring how universal beauty standards transcend ethnicity through facial harmony and balance",
     "author": {
       "@type": "Organization",
-      "name": "CosmeDocs"
+      "name": "CosmeDocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "publisher": {
       "@type": "Organization",
@@ -25,6 +33,14 @@ const BeautyEthnicNeutrality = () => {
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.cosmedocs.com/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
       }
     },
     "datePublished": "2024-01-15",

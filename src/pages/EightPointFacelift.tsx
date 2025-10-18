@@ -171,7 +171,7 @@ export default function EightPointFacelift() {
     "@context": "https://schema.org",
     "@type": "Physician",
     "name": "Dr. Ahmed Haq",
-    "jobTitle": "Medical Director & Lead Aesthetic Practitioner",
+    "medicalSpecialty": "Aesthetic Medicine",
     "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimeter-precision facial optimization.",
     "worksFor": {
       "@type": "MedicalOrganization",

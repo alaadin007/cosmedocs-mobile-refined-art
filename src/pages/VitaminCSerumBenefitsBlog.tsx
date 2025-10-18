@@ -21,11 +21,31 @@ const VitaminCSerumBenefitsBlog = () => {
     "description": "Comprehensive guide to the benefits of L-Ascorbic Acid combined with Ferulic Acid and Vitamin E for optimal skin health and anti-aging benefits.",
     "author": {
       "@type": "Organization",
-      "name": "Cosmedocs"
+      "name": "Cosmedocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Cosmedocs"
+      "name": "Cosmedocs",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cosmedocs.co.uk/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "datePublished": "2025-01-17",
     "dateModified": "2025-01-17",

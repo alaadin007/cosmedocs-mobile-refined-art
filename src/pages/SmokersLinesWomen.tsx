@@ -23,7 +23,15 @@ const SmokersLinesWomen = () => {
             "headline": "Why Women Get Smokers Lines (Even Without Smoking)",
             "author": {
               "@type": "Organization",
-              "name": "Cosmedocs"
+              "name": "Cosmedocs",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             },
             "publisher": {
               "@type": "Organization",
@@ -31,6 +39,14 @@ const SmokersLinesWomen = () => {
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://cosmedocs.co.uk/logo.png"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
               }
             },
             "datePublished": "2024-01-15",

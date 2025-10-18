@@ -23,7 +23,15 @@ const LongTermAestheticCareBlog = () => {
     "author": {
       "@type": "Organization",
       "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.com"
+      "url": "https://www.cosmedocs.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "publisher": {
       "@type": "Organization",
@@ -31,6 +39,14 @@ const LongTermAestheticCareBlog = () => {
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.cosmedocs.com/logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
       }
     },
     "datePublished": "2025-06-17",
