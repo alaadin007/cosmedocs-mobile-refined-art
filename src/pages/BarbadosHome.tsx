@@ -113,8 +113,10 @@ const BarbadosHome = () => {
             "email": contactInfo.email,
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Christ Church",
-              "addressLocality": "Barbados",
+              "streetAddress": "Rockley Main Road, Christ Church",
+              "addressLocality": "Bridgetown",
+              "addressRegion": "Christ Church",
+              "postalCode": "BB15008",
               "addressCountry": "BB"
             },
             "geo": {
@@ -123,6 +125,19 @@ const BarbadosHome = () => {
               "longitude": -59.5432
             },
             "priceRange": "$$$",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "17:00"
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "65"
+            },
             "physician": {
               "@type": "Person",
               "name": "Dr. Crystal",
