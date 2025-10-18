@@ -138,7 +138,7 @@ const BotoxCalfReduction = () => {
             "@context": "https://schema.org",
             "@type": "Physician",
             "name": "Dr. Ahmed Haq",
-            "jobTitle": "Aesthetic Medicine Specialist",
+            "medicalSpecialty": "Aesthetic Medicine",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "10 Harley Street",
