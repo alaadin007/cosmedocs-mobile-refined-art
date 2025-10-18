@@ -131,7 +131,11 @@ const PrescriptionSkincare = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "serviceType": "Prescription Skincare"
+            "availableService": {
+              "@type": "MedicalService",
+              "name": "Prescription Skincare",
+              "description": "Dermatologist-grade skincare with clinically proven actives"
+            }
           })}
         </script>
       </Helmet>
