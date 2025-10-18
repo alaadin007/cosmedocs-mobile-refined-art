@@ -27,10 +27,10 @@ const treatmentCategories = [
     icon: Zap,
     treatments: [
       { name: "Face Botox (1-3 Areas)", link: "/botox-london" },
-      { name: "Nefertiti Face Lift", link: "/nefertiti-lift" },
+      { name: "Nefertiti Face Lift", link: "/nefertiti-botox-face-jaw-lift" },
       { name: "Masseter (Jawline Slimming)", link: "/masseter-botox" },
-      { name: "Bunny Lines", link: "/bunny-lines-treatment" },
-      { name: "Gummy Smile", link: "/gummy-smile-treatment" },
+      { name: "Bunny Lines", link: "/bunny-lines-botox" },
+      { name: "Gummy Smile", link: "/gummy-smile-botox" },
       { name: "Excessive Sweat Botox", link: "/excessive-sweat-botox" }
     ],
     viewAllLink: "/treatments",
