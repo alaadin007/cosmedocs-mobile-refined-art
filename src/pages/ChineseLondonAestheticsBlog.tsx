@@ -14,7 +14,7 @@ const ChineseLondonAestheticsBlog = () => {
         <title>伦敦中国人医美指南 | 瘦脸针下颌缩小术 | 亚洲鼻型微整形 | Cosmedocs哈利街</title>
         <meta name="description" content="专为在伦敦的中国留学生和华人提供专业医美服务。瘦脸针下颌缩小、亚洲鼻型微整形、下巴塑形。哈利街顶级医美诊所，深谙亚洲面部美学。伦敦中国人肉毒杆菌、玻尿酸填充首选。" />
         <meta name="keywords" content="伦敦中国人肉毒杆菌,伦敦瘦脸针,伦敦玻尿酸,伦敦医美,哈利街中文服务,亚洲鼻型整形,下颌缩小术,中国留学生医美,伦敦华人美容,Chinese London Botox,Chinese aesthetics London" />
-        <link rel="canonical" href="https://www.cosmedocs.com/cosmetalk/chinese-london-aesthetics-guide" />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/blog/chinese-london-aesthetics-guide" />
         
         {/* Baidu SEO specific meta tags */}
         <meta name="baidu-site-verification" content="cosmedocs-london-chinese" />

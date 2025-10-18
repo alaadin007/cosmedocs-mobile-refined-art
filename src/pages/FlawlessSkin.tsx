@@ -31,7 +31,7 @@ const FlawlessSkin = () => {
         <meta property="og:description" content="Discover expert-backed skincare strategies to reverse ageing, reduce pigmentation, shrink pores, and achieve flawless, hydrated, even-toned skin—naturally." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://cosmedocs.co.uk/cosmetalk/flawless-skin" />
-        <link rel="canonical" href="https://cosmedocs.co.uk/cosmetalk/flawless-skin" />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/cosmetalk/flawless-skin" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
