@@ -129,7 +129,8 @@ const GummySmileBotox = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "134"
+              "bestRating": "5",
+              "ratingCount": "134"
             }
           })}
         </script>
