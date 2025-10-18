@@ -138,6 +138,11 @@ const BarbadosHome = () => {
               "ratingValue": "4.9",
               "reviewCount": "65"
             },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Aesthetic Treatments in Barbados",
+              "description": "Professional aesthetic medicine treatments in Barbados"
+            },
             "physician": {
               "@type": "Person",
               "name": "Dr. Crystal",

@@ -63,30 +63,35 @@ export default function EczemaTreatment() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Eczema Treatment",
-    "description": "Professional eczema treatment for dry, red, and scaly skin conditions",
-    "serviceType": "Dermatological Treatment",
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk",
-      "telephone": "+44 20 3733 3227",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "addressRegion": "Greater London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      }
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "url": "https://www.cosmedocs.co.uk",
+    "telephone": "+44 20 3733 3227",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5074,
+      "longitude": -0.1278
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
       "bestRating": "5",
       "ratingCount": "156"
-    }
+    },
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Eczema Treatment",
+      "description": "Professional eczema treatment for dry, red, and scaly skin conditions"
+    },
+    "priceRange": "££"
   };
 
   return (

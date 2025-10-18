@@ -133,12 +133,17 @@ const PRPTreatment = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "priceRange": "Price on consultation"
+            "priceRange": "££"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "245"
+          },
+          "availableService": {
+            "@type": "MedicalProcedure",
+            "name": "PRP Treatment",
+            "description": "Platelet-rich plasma therapy for natural skin rejuvenation and hair restoration"
           }
         })}
         </script>

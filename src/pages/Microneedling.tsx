@@ -114,15 +114,21 @@ const Microneedling = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Microneedling Treatment",
-            "alternateName": ["Collagen Induction Therapy", "Skin Needling", "Face Needling"],
-            "description": "Professional microneedling treatment using medical-grade devices to stimulate collagen production and improve skin texture, tone, and firmness",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": "https://www.cosmedocs.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
             },
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -130,13 +136,13 @@ const Microneedling = () => {
               "bestRating": "5",
               "ratingCount": "187"
             },
-            "offers": {
-              "@type": "Offer",
-              "price": "250",
-              "priceCurrency": "GBP",
-              "priceValidUntil": "2025-12-31",
-              "availability": "https://schema.org/InStock"
-            }
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Microneedling Treatment",
+              "alternateName": ["Collagen Induction Therapy", "Skin Needling", "Face Needling"],
+              "description": "Professional microneedling treatment using medical-grade devices to stimulate collagen production"
+            },
+            "priceRange": "££"
           })}
         </script>
         <script type="application/ld+json">

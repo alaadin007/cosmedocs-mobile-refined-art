@@ -96,6 +96,11 @@ export default function FaceBotox() {
       "ratingValue": "4.9",
       "bestRating": "5",
       "ratingCount": "287"
+    },
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Botox Face Treatment",
+      "description": "Comprehensive botox treatment for facial rejuvenation"
     }
   };
 

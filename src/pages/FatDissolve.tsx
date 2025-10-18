@@ -120,6 +120,11 @@ const FatDissolve = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.7",
               "ratingCount": "156"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "EMSCULPT Fat Dissolving Treatment",
+              "description": "Non-invasive fat reduction and muscle building treatment using HIFEM technology"
             }
           })}
         </script>

@@ -165,6 +165,11 @@ const NonSurgicalPonytail = () => {
               "reviewCount": "847",
               "bestRating": "5",
               "worstRating": "1"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Non-Surgical Ponytail Lift",
+              "description": "Non-surgical ponytail facelift using strategic combination of botox and dermal fillers for natural facial lifting"
             }
           })}
         </script>

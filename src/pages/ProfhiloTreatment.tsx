@@ -188,6 +188,12 @@ const ProfhiloTreatment = () => {
               "reviewCount": "127",
               "bestRating": "5",
               "worstRating": "1"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Profhilo Bio-Remodelling Treatment",
+              "alternateName": ["Profhilo Skin Booster", "Profhilo Injection", "Bio-Remodelling Therapy"],
+              "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid"
             }
           })}
         </script>

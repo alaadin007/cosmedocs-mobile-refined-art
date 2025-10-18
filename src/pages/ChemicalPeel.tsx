@@ -133,12 +133,21 @@ const ChemicalPeel = () => {
   // Review Schema
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Chemical Peel Treatment",
-    "serviceType": "Cosmetic Treatment",
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "Cosmedocs"
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "url": "https://www.cosmedocs.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5074,
+      "longitude": -0.1278
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -146,7 +155,13 @@ const ChemicalPeel = () => {
       "reviewCount": "187",
       "bestRating": "5",
       "worstRating": "1"
-    }
+    },
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Chemical Peel Treatment",
+      "description": "Professional chemical peel treatments for skin resurfacing and rejuvenation"
+    },
+    "priceRange": "££"
   };
 
   const structuredData = {

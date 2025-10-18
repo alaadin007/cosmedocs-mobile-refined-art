@@ -142,21 +142,34 @@ const MarionnetteLines = () => {
 
   const procedureSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Marionette Lines Filler Treatment",
-    "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation",
-    "serviceType": "Cosmetic Treatment",
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk"
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "url": "https://www.cosmedocs.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5074,
+      "longitude": -0.1278
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "bestRating": "5",
       "ratingCount": "156"
-    }
+    },
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Marionette Lines Filler Treatment",
+      "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation"
+    },
+    "priceRange": "££"
   };
 
   const faqSchema = {

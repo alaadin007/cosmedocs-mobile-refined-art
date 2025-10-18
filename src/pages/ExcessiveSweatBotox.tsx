@@ -114,6 +114,12 @@ const ExcessiveSweatBotox = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
               "ratingCount": "189"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Excessive Sweating Botox Treatment",
+              "alternateName": "Hyperhidrosis Botox Treatment",
+              "description": "Professional botox treatment for excessive sweating (hyperhidrosis) in underarms, hands, feet, and face"
             }
           })}
         </script>

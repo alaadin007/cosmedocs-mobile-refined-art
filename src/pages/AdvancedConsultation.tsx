@@ -137,6 +137,11 @@ const AdvancedConsultation = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "reviewCount": "145"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Advanced Consultation",
+              "description": "Comprehensive aesthetic consultation with treatment planning"
             }
           })}
         </script>

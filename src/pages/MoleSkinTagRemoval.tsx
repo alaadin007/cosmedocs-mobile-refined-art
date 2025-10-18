@@ -28,30 +28,34 @@ const MoleSkinTagRemoval = () => {
   // Service Schema
   const medicalProcedureSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Mole and Skin Tag Removal",
-    "description": "Professional dermatological mole and skin tag removal treatments using surgical excision, cryotherapy, and electrosurgery",
-    "serviceType": "Dermatological Surgery",
-    "provider": {
-      "@type": "MedicalClinic",
-      "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.co.uk",
-      "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harley Street",
-        "addressLocality": "London",
-        "postalCode": "W1G 9PF",
-        "addressCountry": "GB"
-      },
-      "telephone": "0333 0551 503",
-      "priceRange": "££"
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "url": "https://www.cosmedocs.co.uk",
+    "logo": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    },
+    "telephone": "0333 0551 503",
+    "priceRange": "££",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "bestRating": "5",
       "ratingCount": "214"
+    },
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Mole and Skin Tag Removal",
+      "description": "Professional dermatological mole and skin tag removal treatments using surgical excision, cryotherapy, and electrosurgery"
     }
   };
 

@@ -127,6 +127,11 @@ const Dermatology = () => {
               "ratingValue": "4.8",
               "reviewCount": "142"
             },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Dermatology Services",
+              "description": "Expert dermatology consultations and treatments"
+            },
             "areaServed": "London, UK"
           })}
         </script>

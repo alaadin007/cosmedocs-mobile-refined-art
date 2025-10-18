@@ -108,22 +108,21 @@ const NeckFillers = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Neck Filler Treatment",
-            "description": "Professional neck filler treatment to smooth horizontal neck lines, vertical neck lines, and tech neck wrinkles using premium hyaluronic acid fillers",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": "https://www.cosmedocs.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
             },
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -132,14 +131,12 @@ const NeckFillers = () => {
               "bestRating": "5",
               "worstRating": "1"
             },
-            "offers": {
-              "@type": "Offer",
-              "price": "325",
-              "priceCurrency": "GBP",
-              "priceValidUntil": "2025-12-31",
-              "availability": "https://schema.org/InStock",
-              "url": "https://www.cosmedocs.co.uk/neck-fillers"
-            }
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Neck Filler Treatment",
+              "description": "Professional neck filler treatment to smooth horizontal neck lines, vertical neck lines, and tech neck wrinkles using premium hyaluronic acid fillers"
+            },
+            "priceRange": "££"
           })}
         </script>
 

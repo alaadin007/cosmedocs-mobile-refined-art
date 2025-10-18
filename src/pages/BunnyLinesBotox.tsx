@@ -157,6 +157,11 @@ const BunnyLinesBotox = () => {
               "ratingCount": "847",
               "bestRating": "5",
               "worstRating": "1"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Bunny Lines Botox Treatment",
+              "description": "Expert botox for nose wrinkles and bunny lines"
             }
           })}
         </script>

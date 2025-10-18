@@ -145,6 +145,11 @@ const CosmeDerm = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.7",
               "reviewCount": "112"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "CosmeDerm Treatment",
+              "description": "Advanced cosmetic dermatology treatments"
             }
           })}
         </script>

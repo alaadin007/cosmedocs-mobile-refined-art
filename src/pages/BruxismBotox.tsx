@@ -116,6 +116,11 @@ const BruxismBotox = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
               "reviewCount": "132"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Bruxism Botox Treatment",
+              "description": "Therapeutic botox treatment for bruxism and TMJ disorders"
             }
           })}
         </script>

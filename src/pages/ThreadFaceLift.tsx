@@ -87,15 +87,25 @@ const medicalProcedureSchema = {
       "addressCountry": "GB"
     }
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5074,
+    "longitude": -0.1278
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
     "bestRating": "5",
     "ratingCount": "124"
   },
-  "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
-  "followup": "Follow-up assessment after 2 weeks",
-  "howPerformed": "PDO threads inserted into facial tissue to lift and tighten skin"
+  "availableService": {
+    "@type": "MedicalProcedure",
+    "name": "PDO Thread Face Lift",
+    "description": "Non-surgical thread lift treatment using PDO threads for facial rejuvenation",
+    "preparation": "Avoid blood-thinning medications, inform doctor of medical conditions",
+    "followup": "Follow-up assessment after 2 weeks"
+  },
+  "priceRange": "£££"
 };
 
 const offerSchema = {

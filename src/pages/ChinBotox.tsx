@@ -119,6 +119,12 @@ const ChinBotox = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "ratingCount": "156"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Chin Botox Treatment",
+              "alternateName": ["Dimpled Chin Botox", "Pebble Chin Botox", "Botox for Dimpled Chin", "Chin Dimple Botox"],
+              "description": "Professional botox treatment for dimpled chin, chin dimples, and pebble chin texture"
             }
           })}
         </script>

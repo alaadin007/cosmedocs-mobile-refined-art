@@ -99,23 +99,21 @@ const BotoxCalfReduction = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Botox Calf Reduction Treatment",
-            "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
-            "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": "https://www.cosmedocs.co.uk",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
             },
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -124,13 +122,13 @@ const BotoxCalfReduction = () => {
               "worstRating": "1",
               "ratingCount": "89"
             },
-            "offers": {
-              "@type": "Offer",
-              "price": "400",
-              "priceCurrency": "GBP",
-              "priceValidUntil": "2025-12-31",
-              "availability": "https://schema.org/InStock"
-            }
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Botox Calf Reduction Treatment",
+              "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
+              "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections"
+            },
+            "priceRange": "££"
           })}
         </script>
         <script type="application/ld+json">

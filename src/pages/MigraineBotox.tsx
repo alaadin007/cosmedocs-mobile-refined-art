@@ -170,6 +170,11 @@ const MigraineBotox = () => {
               "reviewCount": "847",
               "bestRating": "5",
               "worstRating": "1"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Migraine Botox Treatment",
+              "description": "FDA-approved botox treatment for chronic migraine prevention"
             }
           })}
         </script>

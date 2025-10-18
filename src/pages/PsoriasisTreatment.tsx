@@ -71,15 +71,35 @@ export default function PsoriasisTreatment() {
   // Review Schema
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Psoriasis Treatment",
+    "@type": "MedicalClinic",
+    "name": "Cosmedocs",
+    "url": "https://www.cosmedocs.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "reviewCount": "156",
       "bestRating": "5",
       "worstRating": "1"
-    }
+    },
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "Psoriasis Treatment",
+      "description": "Professional psoriasis treatment using topical therapies, light therapy, and advanced medications"
+    },
+    "priceRange": "££"
   };
 
   // Generate structured data for SEO

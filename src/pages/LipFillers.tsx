@@ -155,6 +155,11 @@ const LipFillers = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "reviewCount": "243"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Lip Filler Treatment",
+              "description": "Expert lip filler treatment for natural-looking lip enhancement"
             }
           })}
         </script>

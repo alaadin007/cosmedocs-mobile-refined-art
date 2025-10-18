@@ -131,6 +131,11 @@ const GummySmileBotox = () => {
               "ratingValue": "4.9",
               "bestRating": "5",
               "ratingCount": "134"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Gummy Smile Botox Treatment",
+              "description": "Professional botox treatment to reduce excessive gum display when smiling"
             }
           })}
         </script>

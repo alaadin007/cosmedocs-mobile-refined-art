@@ -155,6 +155,11 @@ const ChinFiller = () => {
             "reviewCount": "487",
             "bestRating": "5",
             "worstRating": "1"
+          },
+          "availableService": {
+            "@type": "MedicalProcedure",
+            "name": "Chin Filler Treatment",
+            "description": "Expert chin filler treatment for profile enhancement and facial balance"
           }
         })}
         </script>

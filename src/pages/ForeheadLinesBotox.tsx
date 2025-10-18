@@ -170,6 +170,11 @@ const ForeheadLinesBotox = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
               "ratingCount": "850"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Forehead Lines Botox Treatment",
+              "description": "Expert botox treatment for forehead lines and wrinkles"
             }
           })}
         </script>

@@ -154,6 +154,11 @@ const ClinicalConceptsToFlawlessSkin = () => {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
               "reviewCount": "98"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Clinical Concepts Skin Treatment",
+              "description": "Advanced clinical skin treatments for flawless skin"
             }
           })}
         </script>

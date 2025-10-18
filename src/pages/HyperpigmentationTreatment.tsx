@@ -205,6 +205,11 @@ const HyperpigmentationTreatment = () => {
               "@type": "AggregateRating",
               "ratingValue": "5",
               "reviewCount": "127"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Hyperpigmentation Treatment",
+              "description": "Expert treatment for face, body, and skin pigmentation disorders"
             }
           })}
         </script>

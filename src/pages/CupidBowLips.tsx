@@ -160,6 +160,11 @@ const CupidBowLips = () => {
               "reviewCount": "847",
               "bestRating": "5",
               "worstRating": "1"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Cupid Bow Lips Treatment",
+              "description": "Expert lip filler treatment to enhance cupid's bow definition"
             }
           })}
         </script>

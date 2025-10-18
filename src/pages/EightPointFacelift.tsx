@@ -62,6 +62,11 @@ export default function EightPointFacelift() {
       "bestRating": "5",
       "worstRating": "1"
     },
+    "availableService": {
+      "@type": "MedicalProcedure",
+      "name": "8 Point Face Lift",
+      "description": "Non-surgical 8 point facelift using dermal fillers for facial rejuvenation"
+    },
     "review": [
       {
         "@type": "Review",
