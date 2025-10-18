@@ -1494,8 +1494,8 @@ export default function FaceBotox() {
         {/* Client Reviews */}
         <ClientReviews />
 
-        {/* Hidden SEO Content */}
-        <div className="sr-only" aria-hidden="true">
+        <div className="sr-only">
+
           <h2>Best Botox London | Botox in Harley Street | Cost of Botox UK Guide</h2>
           <p>
             Looking for where to get botox in London? Cosmedocs is the best botox London clinic on Harley Street offering comprehensive face botox treatment for all facial areas. 
@@ -1521,9 +1521,9 @@ export default function FaceBotox() {
           
           <h3>Botox Treatment Areas London | Where to Get Botox on Your Face</h3>
           <p>
-            Our best botox London clinic treats all facial areas: upper face botox (<Link to="/forehead-lines-botox" className="text-purple-300 hover:text-purple-200 underline">forehead lines</Link>, <Link to="/frown-line-botox" className="text-purple-300 hover:text-purple-200 underline">frown lines</Link>, <Link to="/crows-feet-botox" className="text-purple-300 hover:text-purple-200 underline">crow's feet</Link>, brow lift), lower face botox 
-            (DAO muscle, mentalis crease, platysma muscle, <Link to="/jawline-filler" className="text-purple-300 hover:text-purple-200 underline">jawline</Link> definition), and specialised areas (<Link to="/chin-botox" className="text-purple-300 hover:text-purple-200 underline">chin botox</Link>, <Link to="/nefertiti-botox-face-jaw-lift" className="text-purple-300 hover:text-purple-200 underline">Nefertiti facelift</Link>, <Link to="/masseter-botox" className="text-purple-300 hover:text-purple-200 underline">masseter jaw slimming</Link>, 
-            <Link to="/lip-flip" className="text-purple-300 hover:text-purple-200 underline">lip flip</Link>, <Link to="/gummy-smile-botox" className="text-purple-300 hover:text-purple-200 underline">gummy smile</Link>, <Link to="/bunny-lines-botox" className="text-purple-300 hover:text-purple-200 underline">bunny lines</Link>). Baby botox London technique available for subtle enhancement. All botox in London treatments include consultation.
+            Our best botox London clinic treats all facial areas: upper face botox (<Link to="/forehead-lines-botox" tabIndex={-1}>forehead lines</Link>, <Link to="/frown-line-botox" tabIndex={-1}>frown lines</Link>, <Link to="/crows-feet-botox" tabIndex={-1}>crow's feet</Link>, brow lift), lower face botox 
+            (DAO muscle, mentalis crease, platysma muscle, <Link to="/jawline-filler" tabIndex={-1}>jawline</Link> definition), and specialised areas (<Link to="/chin-botox" tabIndex={-1}>chin botox</Link>, <Link to="/nefertiti-botox-face-jaw-lift" tabIndex={-1}>Nefertiti facelift</Link>, <Link to="/masseter-botox" tabIndex={-1}>masseter jaw slimming</Link>, 
+            <Link to="/lip-flip" tabIndex={-1}>lip flip</Link>, <Link to="/gummy-smile-botox" tabIndex={-1}>gummy smile</Link>, <Link to="/bunny-lines-botox" tabIndex={-1}>bunny lines</Link>). Baby botox London technique available for subtle enhancement. All botox in London treatments include consultation.
           </p>
           
           <h3>Botox London Prices | Cost of Botox UK | How Much Does Botox Cost</h3>
