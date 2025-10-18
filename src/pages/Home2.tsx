@@ -114,7 +114,7 @@ const Home2 = () => {
         <title>Cosmedocs - Aesthetic Medicine Harley Street | Botox & Fillers London</title>
         <meta name="description" content="Premium aesthetic medicine on Harley Street since 2007. Botox, dermal fillers, lip enhancement. 1M+ injections. Invisible art philosophy." />
         <meta name="keywords" content="cosmedocs, harley street aesthetic clinic, botox london, dermal fillers, lip enhancement, aesthetic medicine, cosmetic treatments" />
-        <link rel="canonical" href="https://cosmedocs.com/" />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/" />
       </Helmet>
       <div className="bg-black text-white min-h-screen flex flex-col">
         {/* Integrated Header */}

@@ -70,12 +70,12 @@ const Contact = () => {
         <title>Contact Cosmedocs - Get in Touch | Harley Street Aesthetic Clinic</title>
         <meta name="description" content="Contact Cosmedocs Harley Street clinic. Book consultations and get expert aesthetic advice. Call 0333 0551 503 or 0800 860 0178." />
         <meta name="keywords" content="contact cosmedocs, harley street clinic contact, aesthetic clinic london, book consultation, cosmetic treatment enquiry" />
-        <link rel="canonical" href="https://cosmedocs.com/contact" />
+        <link rel="canonical" href="https://www.cosmedocs.co.uk/contact" />
         
         <meta property="og:title" content="Contact Cosmedocs - Harley Street Aesthetic Clinic" />
         <meta property="og:description" content="Get in touch with Cosmedocs for expert aesthetic treatments. Professional consultations available. Contact us today." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://cosmedocs.com/contact" />
+        <meta property="og:url" content="https://www.cosmedocs.co.uk/contact" />
       </Helmet>
 
       <div className="bg-black text-white py-24">
