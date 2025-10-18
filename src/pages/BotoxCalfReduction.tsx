@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { generateSEOMetadata } from '@/utils/seo';
@@ -13,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
+import Breadcrumb from '@/components/Breadcrumb';
 import { Clock, Calendar, Activity, Syringe, Award, Users, CheckCircle, Palette, Heart } from "lucide-react";
 
 const BotoxCalfReduction = () => {
@@ -166,20 +166,15 @@ const BotoxCalfReduction = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Breadcrumb Navigation */}
-        <nav className="page-container py-4 text-sm" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-gray-400">
-            <li>
-              <a href="/" className="hover:text-purple-300 transition-colors">Home</a>
-            </li>
-            <li>/</li>
-            <li>
-              <a href="/treatments" className="hover:text-purple-300 transition-colors">Treatments</a>
-            </li>
-            <li>/</li>
-            <li className="text-white font-medium" aria-current="page">Botox Calf Reduction</li>
-          </ol>
-        </nav>
+        {/* Breadcrumb */}
+        <div className="page-container pt-20">
+          <Breadcrumb 
+            items={[
+              { label: 'Treatments', path: '/treatments' }
+            ]}
+            currentPage="Botox Calf Reduction"
+          />
+        </div>
 
         {/* Hero Section */}
         <header className="relative py-32 overflow-hidden min-h-screen flex items-center">

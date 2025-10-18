@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import { Check, Clock, Calendar, Activity, Syringe, CheckCircle, Award, GraduationCap, Palette, Heart } from "lucide-react";
 import { generateSEOMetadata } from "@/utils/seo";
+import Breadcrumb from '@/components/Breadcrumb';
 import beforeAfter1 from "@/assets/before-after/crows-feet-botox-1.png";
 import beforeAfter2 from "@/assets/before-after/crows-feet-botox-2.jpg";
 import beforeAfter3 from "@/assets/before-after/crows-feet-botox-3.jpeg";
@@ -234,29 +235,15 @@ const CrowsFeetBotox = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Breadcrumb Navigation */}
-        <nav className="bg-gray-900/50 border-b border-gray-800" aria-label="Breadcrumb">
-          <div className="page-container py-3">
-            <ol className="flex items-center space-x-2 text-sm">
-              <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-colours flex items-center">
-                  <span className="sr-only">Home</span>
-                  Home
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <span className="text-gray-600 mx-2">/</span>
-                <Link to="/treatments" className="text-gray-400 hover:text-white transition-colours">
-                  Treatments
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <span className="text-gray-600 mx-2">/</span>
-                <span className="text-white">Crow's Feet Botox</span>
-              </li>
-            </ol>
-          </div>
-        </nav>
+        {/* Breadcrumb */}
+        <div className="page-container pt-20">
+          <Breadcrumb 
+            items={[
+              { label: 'Treatments', path: '/treatments' }
+            ]}
+            currentPage="Crow's Feet Botox"
+          />
+        </div>
 
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
