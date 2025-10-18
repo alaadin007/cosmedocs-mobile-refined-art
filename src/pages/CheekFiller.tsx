@@ -168,6 +168,19 @@ const CheekFiller = () => {
             "longitude": -0.1278
           },
           "priceRange": "£350-£950",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "178"
+          },
           "availableService": {
             "@type": "MedicalProcedure",
             "name": "Cheek Filler Treatment"

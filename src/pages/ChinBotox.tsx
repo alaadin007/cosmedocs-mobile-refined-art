@@ -102,6 +102,19 @@ const ChinBotox = () => {
               "longitude": "-0.144962"
             },
             "priceRange": "££",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "156"
+            },
             "availableService": {
               "@type": "MedicalProcedure",
               "name": "Chin Botox Treatment"

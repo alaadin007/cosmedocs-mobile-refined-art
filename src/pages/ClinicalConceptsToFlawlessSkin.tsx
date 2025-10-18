@@ -141,7 +141,20 @@ const ClinicalConceptsToFlawlessSkin = () => {
               "latitude": 51.5074,
               "longitude": -0.1278
             },
-            "priceRange": "££"
+            "priceRange": "££",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "98"
+            }
           })}
         </script>
       </Helmet>
