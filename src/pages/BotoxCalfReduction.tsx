@@ -99,125 +99,38 @@ const BotoxCalfReduction = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
-            "name": "Botox Calf Reduction",
+            "@type": "Service",
+            "name": "Botox Calf Reduction Treatment",
             "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
             "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Gastrocnemius Muscle",
-            "preparation": "Local anaesthetic applied before treatment",
-            "followup": "Comprehensive aftercare and follow-up support",
-            "howPerformed": "Strategic Botox injections into the gastrocnemius muscle to temporarily relax and reduce muscle bulk",
-            "status": "Available",
-            "availableService": {
-              "@type": "MedicalTherapy",
-              "name": "Botox Calf Reduction Therapy",
-              "offers": {
-                "@type": "Offer",
-                "price": "400",
-                "priceCurrency": "GBP",
-                "priceValidUntil": "2025-12-31",
-                "availability": "https://schema.org/InStock"
+            "serviceType": "Cosmetic Treatment",
+            "provider": {
+              "@type": "MedicalClinic",
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
               }
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What are the benefits of calf reduction with botox?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Botox calf reduction offers multiple benefits: non-surgical approach with no scarring, minimal downtime allowing immediate return to activities, natural-looking gradual results, reversible effects lasting 6-12 months, no general anesthesia required, and significantly lower cost compared to surgical alternatives. It's ideal for achieving slimmer, more proportionate calves safely and effectively."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How does botox calf reduction work?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Botox is injected into the gastrocnemius muscle to temporarily relax it, causing a gradual reduction in muscle bulk and creating slimmer calf contours."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How long do results last?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Results typically last 6-12 months. The effects are temporary and reversible, allowing for adjustments as needed."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is the treatment painful?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The treatment involves minimal discomfort. Most patients experience only mild temporary soreness at injection sites."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "When will I see results?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Initial changes become visible within 2-4 weeks, with full results apparent at 6-8 weeks as the muscle gradually reduces in size."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Are there any side effects?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Side effects are rare but may include temporary bruising, swelling, or mild discomfort at injection sites. These resolve within a few days."
-                }
-              }
-            ]
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.cosmedocs.co.uk/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Treatments",
-                "item": "https://www.cosmedocs.co.uk/treatments"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Botox Calf Reduction",
-                "item": "https://www.cosmedocs.co.uk/botox-calf-reduction"
-              }
-            ]
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AggregateRating",
-            "itemReviewed": {
-              "@type": "MedicalProcedure",
-              "name": "Botox Calf Reduction Treatment",
-              "description": "Non-surgical calf reduction treatment using Botox injections",
-              "procedureType": "Cosmetic"
             },
-            "ratingValue": "4.9",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "89"
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "89"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "400",
+              "priceCurrency": "GBP",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock"
+            }
           })}
         </script>
         <script type="application/ld+json">
