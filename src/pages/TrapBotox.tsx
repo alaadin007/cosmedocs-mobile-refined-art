@@ -74,125 +74,43 @@ const TrapBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Trap Botox Treatment",
-            "alternateName": ["Trapezius Botox", "Trap Tox", "Barbie Botox"],
-            "description": "Expert trap botox for shoulder slimming and neck contouring in London",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": seoData.canonical,
-              "telephone": "+44 20 3733 3227",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 51.5074,
-                "longitude": -0.1278
-              },
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                }
-              ]
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
               "ratingCount": "120"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Trap Botox Treatment",
-            "alternateName": ["Trapezius Botox", "Trap Tox", "Barbie Botox"],
-            "description": "Botox injections for trapezius muscles to reduce shoulder bulk and create elegant neck contouring",
-            "serviceType": "Cosmetic Injectable Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk",
-              "telephone": "+44 20 3733 3227",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 51.5074,
-                "longitude": -0.1278
-              },
-              "priceRange": "££",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                }
-              ]
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Trap Botox Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
             },
-            "areaServed": "London",
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Trap Botox Treatments",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Trap Botox Treatment"
-                  },
-                  "price": "350",
-                  "priceCurrency": "GBP"
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Full Barbie Botox"
-                  },
-                  "price": "650",
-                  "priceCurrency": "GBP"
-                }
-              ]
-            }
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Trap Botox Treatment",
+              "alternateName": ["Trapezius Botox", "Trap Tox", "Barbie Botox"],
+              "description": "Expert trap botox for shoulder slimming and neck contouring in London"
+            },
+            "priceRange": "££"
           })}
         </script>
         <script type="application/ld+json">
