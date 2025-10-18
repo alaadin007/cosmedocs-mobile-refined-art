@@ -107,7 +107,14 @@ export default function NefertitiBotoxFacelift() {
         "performer": {
           "@type": "MedicalClinic",
           "name": "Cosmedocs",
-          "url": "https://www.cosmedocs.co.uk"
+          "url": "https://www.cosmedocs.co.uk",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10 Harley Street",
+            "addressLocality": "London",
+            "postalCode": "W1G 9PF",
+            "addressCountry": "GB"
+          }
         }
       },
       {
@@ -161,8 +168,9 @@ export default function NefertitiBotoxFacelift() {
         "description": "Leading aesthetic medicine clinic in London's Harley Street, specialising in non-surgical cosmetic treatments with over 1 million injections performed since 2007.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Harley Street",
+          "streetAddress": "10 Harley Street",
           "addressLocality": "London",
+          "postalCode": "W1G 9PF",
           "addressCountry": "GB"
         }
       },
