@@ -132,7 +132,8 @@ const CrowsFeetBotox = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "167"
+              "bestRating": "5",
+              "ratingCount": "167"
             }
           })}
         </script>
