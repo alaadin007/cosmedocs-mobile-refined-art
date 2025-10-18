@@ -237,6 +237,14 @@ const BotoxCalfReduction = () => {
             "@type": "Physician",
             "name": "Dr. Ahmed Haq",
             "jobTitle": "Aesthetic Medicine Specialist",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
             "worksFor": {
               "@type": "MedicalClinic",
               "name": "Cosmedocs",
