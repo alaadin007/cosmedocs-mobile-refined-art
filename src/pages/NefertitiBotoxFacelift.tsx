@@ -161,7 +161,7 @@ export default function NefertitiBotoxFacelift() {
         ]
       },
       {
-        "@type": "MedicalOrganization",
+        "@type": "Organization",
         "name": "Cosmedocs",
         "url": "https://www.cosmedocs.co.uk",
         "logo": "https://www.cosmedocs.co.uk/logo.png",
