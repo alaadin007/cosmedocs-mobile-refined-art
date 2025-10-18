@@ -128,7 +128,15 @@ const MarionnetteLines = () => {
     "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
     "worksFor": {
       "@type": "MedicalOrganization",
-      "name": "Cosmedocs"
+      "name": "Cosmedocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     }
   };
 
@@ -182,7 +190,15 @@ const MarionnetteLines = () => {
     "url": seoData.canonical,
     "seller": {
       "@type": "MedicalOrganization",
-      "name": "Cosmedocs"
+      "name": "Cosmedocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     }
   };
 

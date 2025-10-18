@@ -158,7 +158,15 @@ const BruxismBotox = () => {
             "priceValidUntil": "2025-12-31",
             "seller": {
               "@type": "MedicalOrganization",
-              "name": "Cosmedocs"
+              "name": "Cosmedocs",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             }
           })}
         </script>

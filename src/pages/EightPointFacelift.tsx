@@ -175,13 +175,22 @@ export default function EightPointFacelift() {
     "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimeter-precision facial optimization.",
     "worksFor": {
       "@type": "MedicalOrganization",
-      "name": "Cosmedocs"
+      "name": "Cosmedocs",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     },
     "knowsAbout": "Aesthetic Medicine",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Harley Street",
       "addressLocality": "London",
+      "addressRegion": "Greater London",
       "postalCode": "W1G 9PF",
       "addressCountry": "GB"
     }
