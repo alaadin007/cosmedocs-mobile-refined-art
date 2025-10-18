@@ -168,8 +168,7 @@ const CupidBowLips = () => {
             "bodyLocation": "Upper lip",
             "preparation": "Topical anaesthetic applied",
             "followup": "Minimal downtime, results visible immediately",
-            "howPerformed": "Precise dermal filler injection to define lip peaks",
-            "procedureDuration": "PT30M"
+            "howPerformed": "Precise dermal filler injection to define lip peaks"
           })}
         </script>
         <script type="application/ld+json">
