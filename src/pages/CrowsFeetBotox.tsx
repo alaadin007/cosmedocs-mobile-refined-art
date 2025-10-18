@@ -137,20 +137,6 @@ const CrowsFeetBotox = () => {
           })}
         </script>
 
-        {/* MedicalProcedure Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
-            "name": "Crow's Feet Botox Treatment",
-            "alternateName": ["Lateral Canthal Lines Treatment", "Eye Wrinkle Botox", "Crow's Feet Reduction"],
-            "description": "Professional botox treatment for crow's feet and eye wrinkles. Expert injections to smooth lateral canthal lines and prevent wrinkle formation around the eyes.",
-            "procedureType": "Cosmetic",
-            "bodyLocation": "Lateral canthal area (outer eye corners)",
-            "preparation": "Consultation and facial analysis",
-            "followup": "Results visible in 3-7 days, lasting 3-4 months"
-          })}
-        </script>
 
         {/* Offer Schema */}
         <script type="application/ld+json">
@@ -165,7 +151,15 @@ const CrowsFeetBotox = () => {
             "url": seoData.canonical,
             "seller": {
               "@type": "MedicalClinic",
-              "name": "Cosmedocs"
+              "name": "Cosmedocs",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             }
           })}
         </script>
