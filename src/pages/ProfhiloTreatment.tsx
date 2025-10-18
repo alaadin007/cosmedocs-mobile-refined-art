@@ -193,10 +193,7 @@ const ProfhiloTreatment = () => {
             "alternateName": ["Profhilo Skin Booster", "Profhilo Injection", "Bio-Remodelling Therapy"],
             "description": "Advanced bio-remodelling treatment using high-concentration hyaluronic acid to stimulate natural collagen and elastin production for skin rejuvenation",
             "procedureType": "Cosmetic",
-            "bodyLocation": {
-              "@type": "AnatomicalStructure",
-              "name": "Face and Neck"
-            },
+            "bodyLocation": "Face and Neck",
             "preparation": "Topical anaesthetic applied for comfort",
             "followup": "Second treatment session 4-6 weeks after initial treatment for optimal results",
             "howPerformed": "Strategic injection of high-concentration hyaluronic acid using BAP (Bio Aesthetic Points) technique in 10 specific points",

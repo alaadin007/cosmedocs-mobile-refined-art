@@ -116,10 +116,7 @@ const TrapBotox = () => {
             "alternateName": ["Trapezius Botox", "Trap Tox", "Barbie Botox"],
             "description": "Botox injections for trapezius muscles to reduce shoulder bulk and create elegant neck contouring",
             "procedureType": "Cosmetic Injectable Treatment",
-            "bodyLocation": {
-              "@type": "AnatomicalStructure",
-              "name": "Trapezius Muscle"
-            }
+            "bodyLocation": "Trapezius Muscle"
           })}
         </script>
         <script type="application/ld+json">

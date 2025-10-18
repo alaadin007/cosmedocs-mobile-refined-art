@@ -206,11 +206,7 @@ const ForeheadLinesBotox = () => {
             "alternateName": "Frontalis Muscle Botox",
             "description": "Professional botox treatment targeting forehead lines and horizontal wrinkles by relaxing the frontalis muscle for natural-looking results",
             "procedureType": "Cosmetic",
-            "bodyLocation": {
-              "@type": "AnatomicalStructure",
-              "name": "Forehead",
-              "alternateName": "Frontalis Muscle"
-            },
+            "bodyLocation": "Forehead (Frontalis Muscle)",
             "preparation": "Avoid blood-thinning medications and alcohol for 24 hours before treatment",
             "followup": "Results appear within 3-7 days, full effects visible after 2 weeks",
             "howPerformed": "Precise botulinum toxin injections into the frontalis muscle to relax forehead lines",

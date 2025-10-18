@@ -104,10 +104,7 @@ const BotoxCalfReduction = () => {
             "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
             "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections",
             "procedureType": "Cosmetic",
-            "bodyLocation": {
-              "@type": "AnatomicalStructure",
-              "name": "Gastrocnemius Muscle"
-            },
+            "bodyLocation": "Gastrocnemius Muscle",
             "preparation": "Local anaesthetic applied before treatment",
             "followup": "Comprehensive aftercare and follow-up support",
             "howPerformed": "Strategic Botox injections into the gastrocnemius muscle to temporarily relax and reduce muscle bulk",

@@ -119,10 +119,7 @@ const Microneedling = () => {
             "alternateName": ["Collagen Induction Therapy", "Skin Needling", "Face Needling"],
             "description": "Professional microneedling treatment using medical-grade devices to stimulate collagen production and improve skin texture, tone, and firmness",
             "procedureType": "Cosmetic",
-            "bodyLocation": {
-              "@type": "AnatomicalStructure",
-              "name": "Facial Skin"
-            },
+            "bodyLocation": "Facial Skin",
             "preparation": "Topical anaesthetic applied before treatment",
             "followup": "Comprehensive aftercare and follow-up support",
             "howPerformed": "Using fine needles to create controlled micro-injuries in the skin, triggering natural healing response",

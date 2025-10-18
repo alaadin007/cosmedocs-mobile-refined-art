@@ -208,10 +208,7 @@ const NasolabialFolds = () => {
           "alternateName": ["Smile Lines Filler", "Laugh Lines Treatment"],
           "description": "Expert nasolabial fold filler treatment using premium hyaluronic acid to smooth smile lines and restore youthful appearance",
           "procedureType": "Cosmetic",
-          "bodyLocation": {
-            "@type": "AnatomicalStructure",
-            "name": "Nasolabial Folds"
-          },
+          "bodyLocation": "Nasolabial Folds",
           "preparation": "Consultation and face assessment",
           "followup": "2-week follow-up appointment",
           "howPerformed": "Dermal filler injection using ultra-fine needles with topical anaesthetic",
