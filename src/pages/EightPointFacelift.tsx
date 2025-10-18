@@ -110,7 +110,16 @@ export default function EightPointFacelift() {
     "provider": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
-      "url": "https://www.cosmedocs.com"
+      "url": "https://www.cosmedocs.co.uk",
+      "telephone": "+44 20 3733 3227",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Harley Street",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "W1G 9PF",
+        "addressCountry": "GB"
+      }
     }
   };
 

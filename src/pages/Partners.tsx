@@ -324,10 +324,20 @@ const Partners = () => {
               "@type": "Organization",
               "name": "CosmeDoc",
               "url": "https://cosmedocs.com",
+              "telephone": "+44 20 3733 3227",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              },
               "parentOrganization": {
                 "@type": "Organization",
                 "name": "Harley Street Institute"
               }
+            },
             },
             "areaServed": "United Kingdom",
             "serviceType": "Medical Aesthetic Franchise Development"

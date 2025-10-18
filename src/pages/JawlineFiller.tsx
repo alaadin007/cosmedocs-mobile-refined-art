@@ -312,7 +312,17 @@ const JawlineFiller = () => {
             "serviceType": "Jawline Filler Treatment",
             "provider": {
               "@type": "MedicalClinic",
-              "name": "Cosmedocs"
+              "name": "Cosmedocs",
+              "url": "https://www.cosmedocs.co.uk",
+              "telephone": "+44 20 3733 3227",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             },
             "areaServed": {
               "@type": "City",

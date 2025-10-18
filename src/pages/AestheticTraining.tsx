@@ -43,10 +43,20 @@ const AestheticTraining = () => {
       "@type": "Course",
       "name": "Fellowship in Aesthetic Medicine",
       "description": "Comprehensive aesthetic medicine training with live patient experience",
-      "provider": {
-        "@type": "Organization",
-        "name": "Cosmedocs"
-      }
+        "provider": {
+          "@type": "Organization",
+          "name": "Cosmedocs",
+          "url": "https://www.cosmedocs.co.uk",
+          "telephone": "+44 20 3733 3227",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10 Harley Street",
+            "addressLocality": "London",
+            "addressRegion": "Greater London",
+            "postalCode": "W1G 9PF",
+            "addressCountry": "GB"
+          }
+        }
     }
   };
 

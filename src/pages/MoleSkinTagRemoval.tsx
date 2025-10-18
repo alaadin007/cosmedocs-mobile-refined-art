@@ -59,10 +59,20 @@ const MoleSkinTagRemoval = () => {
     "@type": "MedicalClinic",
     "name": "Cosmedocs Mole & Skin Tag Removal",
     "description": "Expert mole and skin tag removal treatments in London",
-    "provider": {
-      "@type": "MedicalOrganization",
-      "name": "Cosmedocs"
-    },
+     "provider": {
+       "@type": "MedicalOrganization",
+       "name": "Cosmedocs",
+       "url": "https://www.cosmedocs.co.uk",
+       "telephone": "0333 0551 503",
+       "address": {
+         "@type": "PostalAddress",
+         "streetAddress": "10 Harley Street",
+         "addressLocality": "London",
+         "addressRegion": "Greater London",
+         "postalCode": "W1G 9PF",
+         "addressCountry": "GB"
+       }
+     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Mole & Skin Tag Removal Services",
