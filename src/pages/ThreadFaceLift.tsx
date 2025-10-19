@@ -49,6 +49,12 @@ const medicalBusinessSchema = {
     "latitude": 51.5074,
     "longitude": -0.1278
   },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "ratingCount": "124"
+  },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
