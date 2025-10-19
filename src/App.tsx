@@ -149,7 +149,6 @@ const App = () => {
               <Route path="/home" element={<Home />} />
               <Route path="/home2" element={<Home2 />} />
               <Route path="/treatments" element={<Treatments />} />
-              <Route path="/skin-boosters" element={<Treatments />} />
               <Route path="/team" element={<Team />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
@@ -211,6 +210,7 @@ const App = () => {
               <Route path="/aesthetics-at-glance" element={<Navigate to="/aesthetics-at-a-glance" replace />} />
               <Route path="/booking" element={<Navigate to="/contact" replace />} />
               <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
+              <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
               
               <Route path="/advanced-upper-face-botox" element={<Navigate to="/botox-london" replace />} />
               <Route path="/face-botox-areas" element={<Navigate to="/botox-london" replace />} />
