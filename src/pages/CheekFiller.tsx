@@ -148,12 +148,7 @@ const CheekFiller = () => {
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Cheek Filler Treatment",
-          "description": "Premium cheek filler treatments for lifted and defined cheeks in London's Harley Street",
-          "serviceType": "Cosmetic Treatment",
-          "provider": {
+            "@context": "https://schema.org",
             "@type": "MedicalClinic",
             "name": "Cosmedocs - Cheek Fillers London",
             "url": "https://cosmedocs.com/cheek-filler",
@@ -179,14 +174,18 @@ const CheekFiller = () => {
                 "opens": "09:00",
                 "closes": "18:00"
               }
-            ]
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "178"
-          }
-        })}
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "ratingCount": "178"
+            },
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "Cheek Filler Treatment",
+              "description": "Premium cheek filler treatments for lifted and defined cheeks in London's Harley Street"
+            }
+          })}
         </script>
 
         {/* Breadcrumb Schema */}
