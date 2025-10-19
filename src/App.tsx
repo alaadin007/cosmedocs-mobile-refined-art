@@ -182,6 +182,36 @@ const App = () => {
               <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
               
               <Route path="/nefertiti-botox-face-jaw-lift" element={<NefertitiBotoxFacelift />} />
+              
+              {/* Botox URL redirects */}
+              <Route path="/anti-wrinkle" element={<Navigate to="/botox-london" replace />} />
+              <Route path="/anti-wrinkle-injections" element={<Navigate to="/botox-london" replace />} />
+              <Route path="/botox" element={<Navigate to="/botox-london" replace />} />
+              <Route path="/brow-lift-botox" element={<Navigate to="/botox-london" replace />} />
+              <Route path="/forehead-botox" element={<Navigate to="/forehead-lines-botox" replace />} />
+              <Route path="/frown-lines-botox" element={<Navigate to="/frown-line-botox" replace />} />
+              <Route path="/chin-dimpling-botox" element={<Navigate to="/chin-botox" replace />} />
+              <Route path="/gummy-smile-treatment" element={<Navigate to="/gummy-smile-botox" replace />} />
+              <Route path="/nefertiti-botox-facelift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
+              <Route path="/nefertiti-lift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
+              
+              {/* Filler URL redirects */}
+              <Route path="/cheek-fillers" element={<Navigate to="/cheek-filler" replace />} />
+              <Route path="/jawline-fillers" element={<Navigate to="/jawline-filler" replace />} />
+              <Route path="/lip-filler" element={<Navigate to="/lip-fillers" replace />} />
+              <Route path="/marionette-lines-filler" element={<Navigate to="/marionette-lines" replace />} />
+              <Route path="/nose-filler" element={<Navigate to="/non-surgical-nose-job" replace />} />
+              <Route path="/tear-trough-fillers" element={<Navigate to="/tear-trough-filler" replace />} />
+              <Route path="/temple-fillers" element={<Navigate to="/temple-filler-london" replace />} />
+              
+              {/* Treatment URL redirects */}
+              <Route path="/fat-dissolving-injections" element={<Navigate to="/fat-dissolve" replace />} />
+              <Route path="/profhilo" element={<Navigate to="/profhilo-treatment" replace />} />
+              <Route path="/thread-lift" element={<Navigate to="/thread-face-lift" replace />} />
+              <Route path="/aesthetics-at-glance" element={<Navigate to="/aesthetics-at-a-glance" replace />} />
+              <Route path="/booking" element={<Navigate to="/contact" replace />} />
+              <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
+              
               <Route path="/advanced-upper-face-botox" element={<Navigate to="/botox-london" replace />} />
               <Route path="/face-botox-areas" element={<Navigate to="/botox-london" replace />} />
               <Route path="/face-botox" element={<Navigate to="/botox-london" replace />} />
