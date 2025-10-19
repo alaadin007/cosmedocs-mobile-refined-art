@@ -126,6 +126,14 @@ const MarionnetteLines = () => {
     "name": "Dr. Ahmed Haq",
     "description": "15+ years experience training physicians in advanced aesthetic medicine. Specialist in millimetre-precision facial optimisation.",
     "medicalSpecialty": "Aesthetic Medicine",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Harley Street",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "W1G 9PF",
+      "addressCountry": "GB"
+    },
     "affiliation": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
