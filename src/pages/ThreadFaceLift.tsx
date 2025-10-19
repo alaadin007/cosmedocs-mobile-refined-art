@@ -71,21 +71,16 @@ const medicalBusinessSchema = {
 
 const medicalProcedureSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "PDO Thread Face Lift",
-  "description": "Non-surgical thread face lift using PDO threads for skin tightening and face slimming",
-  "serviceType": "Cosmetic and Medical Injectable Treatment",
-  "provider": {
-    "@type": "MedicalClinic",
-    "name": "Cosmedocs",
-    "url": "https://www.cosmedocs.co.uk",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Harley Street",
-      "addressLocality": "London",
-      "postalCode": "W1G 9PF",
-      "addressCountry": "GB"
-    }
+  "@type": "MedicalClinic",
+  "name": "Cosmedocs",
+  "url": "https://www.cosmedocs.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "10 Harley Street",
+    "addressLocality": "London",
+    "addressRegion": "Greater London",
+    "postalCode": "W1G 9PF",
+    "addressCountry": "GB"
   },
   "geo": {
     "@type": "GeoCoordinates",
