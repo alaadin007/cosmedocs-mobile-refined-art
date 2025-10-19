@@ -1,12 +1,20 @@
 
 import { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import PopularTreatments from "@/components/PopularTreatments";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
+import { generateSEOMetadata } from '@/utils/seo';
 
 const TreatmentsSummaryChinese = () => {
+  const seoData = generateSEOMetadata(
+    "美容治疗摘要 | Cosmedocs 伦敦",
+    "在伦敦哈利街的Cosmedocs诊所，我们提供专业的美容治疗，包括肉毒杆菌、真皮填充剂和皮肤增强剂。",
+    "/treatments-summary-chinese"
+  );
+  
   // Define Chinese treatments with local descriptions
   const chineseTreatments = [
     {
@@ -76,7 +84,21 @@ const TreatmentsSummaryChinese = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-24">
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href={seoData.canonical} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="美容治疗, 肉毒杆菌, 真皮填充剂, 伦敦, 哈利街" />
+      </Helmet>
+      <div className="bg-black text-white py-24">
       <div className="page-container">
         {/* Header */}
         <div className="text-center mb-16">
@@ -304,6 +326,7 @@ const TreatmentsSummaryChinese = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

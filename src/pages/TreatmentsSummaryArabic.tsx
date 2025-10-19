@@ -1,11 +1,19 @@
 
 import { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import PopularTreatments from "@/components/PopularTreatments";
+import { generateSEOMetadata } from '@/utils/seo';
 
 const TreatmentsSummaryArabic = () => {
+  const seoData = generateSEOMetadata(
+    "ملخص العلاجات | Cosmedocs لندن",
+    "في عيادة Cosmedocs على شارع هارلي في لندن، نقدم علاجات تجميلية متخصصة بما في ذلك البوتوكس وحشوات الجلد ومحفزات البشرة.",
+    "/treatments-summary-arabic"
+  );
+  
   // Define Arabic treatments with local descriptions
   const arabicTreatments = [
     {
@@ -41,7 +49,21 @@ const TreatmentsSummaryArabic = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-24" dir="rtl">
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href={seoData.canonical} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="العلاجات التجميلية, البوتوكس, حشوات الجلد, لندن, شارع هارلي" />
+      </Helmet>
+      <div className="bg-black text-white py-24" dir="rtl">
       <div className="page-container">
         {/* Header */}
         <div className="text-center mb-16">
@@ -143,6 +165,7 @@ const TreatmentsSummaryArabic = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

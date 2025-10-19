@@ -1,9 +1,31 @@
 
+import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
+import { generateSEOMetadata } from '@/utils/seo';
 
 const About = () => {
+  const seoData = generateSEOMetadata(
+    "About Cosmedocs | Expert Aesthetic Medicine Since 2007",
+    "Learn about Cosmedocs' invisible art philosophy. Over 1 million injections performed by expert practitioners on Harley Street since 2007.",
+    "/about"
+  );
+  
   return (
-    <div className="bg-black text-white py-24">
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href={seoData.canonical} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="about Cosmedocs, aesthetic medicine London, Harley Street clinic, invisible art aesthetics, expert practitioners, since 2007" />
+      </Helmet>
+      <div className="bg-black text-white py-24">
       <div className="page-container">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -101,6 +123,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
@@ -6,8 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import BeforeAfterImageViewer from "@/components/BeforeAfterImageViewer";
 import { Link, useLocation } from "react-router-dom";
+import { generateSEOMetadata } from '@/utils/seo';
 
 const Treatments = () => {
+  const seoData = generateSEOMetadata(
+    "Aesthetic Treatments & Price List London | Cosmedocs",
+    "Comprehensive aesthetic treatments including Botox, dermal fillers, skin boosters & medical skincare. Expert practitioners on Harley Street since 2007.",
+    "/treatments"
+  );
+  
   const [activeTab, setActiveTab] = useState("botox");
   const location = useLocation();
   useEffect(() => {
@@ -597,7 +605,21 @@ const Treatments = () => {
   };
 
   return (
-    <div className="bg-black text-white py-24">
+    <>
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <link rel="canonical" href={seoData.canonical} />
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="keywords" content="aesthetic treatments London, Botox London, dermal fillers, skin boosters, Harley Street clinic, cosmetic treatments, anti-wrinkle injections, facial rejuvenation, price list" />
+      </Helmet>
+      <div className="bg-black text-white py-24">
       <div className="page-container">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Our Treatments & Prices</h1>
@@ -1233,6 +1255,7 @@ const Treatments = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
