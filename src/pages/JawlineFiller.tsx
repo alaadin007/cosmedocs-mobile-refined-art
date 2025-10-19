@@ -230,21 +230,6 @@ const JawlineFiller = () => {
           })}
         </script>
 
-        {/* Service Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Jawline Filler Treatment",
-            "description": "Non-surgical jawline enhancement using hyaluronic acid dermal fillers",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
-            }
-          })}
-        </script>
 
         {/* Offer Schema */}
         <script type="application/ld+json">

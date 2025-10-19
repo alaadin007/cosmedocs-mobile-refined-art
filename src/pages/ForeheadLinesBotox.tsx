@@ -127,45 +127,39 @@ const ForeheadLinesBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Forehead Lines Botox Treatment",
-            "description": "Expert forehead lines botox treatment for horizontal wrinkle reduction and natural-looking results",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": seoData.canonical,
-              "telephone": "+44 20 3733 3227",
-              "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "51.5194",
-                "longitude": "-0.1468"
-              },
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "10:00",
-                  "closes": "16:00"
-                }
-              ],
-              "priceRange": "££"
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
+            "image": "https://www.cosmedocs.co.uk/default-og-image.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.5194",
+              "longitude": "-0.1468"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
+            "priceRange": "££",
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
@@ -174,7 +168,8 @@ const ForeheadLinesBotox = () => {
             "availableService": {
               "@type": "MedicalProcedure",
               "name": "Forehead Lines Botox Treatment",
-              "description": "Expert botox treatment for forehead lines and wrinkles"
+              "alternateName": "Frontalis Muscle Botox",
+              "description": "Expert forehead lines botox treatment for horizontal wrinkle reduction and natural-looking results"
             }
           })}
         </script>
@@ -207,29 +202,6 @@ const ForeheadLinesBotox = () => {
           })}
         </script>
 
-        {/* Service Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Forehead Lines Botox Treatment",
-            "alternateName": "Frontalis Muscle Botox",
-            "description": "Professional botox treatment targeting forehead lines and horizontal wrinkles by relaxing the frontalis muscle for natural-looking results",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "175",
-              "priceCurrency": "GBP",
-              "availability": "https://schema.org/InStock",
-              "url": seoData.canonical
-            }
-          })}
-        </script>
 
         {/* FAQPage Schema */}
         <script type="application/ld+json">
