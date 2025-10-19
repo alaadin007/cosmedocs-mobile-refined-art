@@ -120,7 +120,7 @@ const Index = () => {
                   }}>
                        <a href="/aesthetics-at-glance" className="bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-full px-8 py-6 text-sm font-medium transition-all duration-300 inline-flex items-center justify-center">
                          <BookOpen className="h-4 w-4 mr-2" />
-                         Read Our Free Ebook
+                         Understanding Skin
                        </a>
                         <p className="text-xs text-gray-400 mt-2">
                           "Aesthetics at a Glance" • Complete skin guide • 
