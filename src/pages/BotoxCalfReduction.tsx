@@ -82,9 +82,8 @@ const BotoxCalfReduction = () => {
               "addressLocality": "London",
               "addressRegion": "Greater London",
               "postalCode": "W1G 9PF",
-              "addressCountry": "GB"
+            "addressCountry": "GB"
             },
-            "priceRange": "££",
             "geo": {
               "@type": "GeoCoordinates",
               "latitude": 51.5074,
@@ -128,7 +127,6 @@ const BotoxCalfReduction = () => {
               "alternateName": ["Calf Slimming", "Gastrocnemius Muscle Reduction", "Non-Surgical Calf Reduction"],
               "description": "Professional botox calf reduction treatment for slimmer, more contoured calves using botulinum toxin injections"
             },
-            "priceRange": "££"
           })}
         </script>
         <script type="application/ld+json">
@@ -145,7 +143,7 @@ const BotoxCalfReduction = () => {
               "postalCode": "W1G 9PF",
               "addressCountry": "GB"
             },
-            "affiliation": {
+            "worksFor": {
               "@type": "MedicalClinic",
               "name": "Cosmedocs",
               "url": "https://www.cosmedocs.co.uk",

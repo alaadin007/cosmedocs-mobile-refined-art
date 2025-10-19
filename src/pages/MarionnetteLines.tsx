@@ -105,15 +105,6 @@ const MarionnetteLines = () => {
       "addressCountry": "GB"
     },
     "telephone": "0333 0551 503",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      }
-    ],
-    "priceRange": "££",
     "founder": {
       "@type": "Person",
       "name": "Dr. Ahmed Haq"
@@ -134,7 +125,7 @@ const MarionnetteLines = () => {
       "postalCode": "W1G 9PF",
       "addressCountry": "GB"
     },
-    "affiliation": {
+    "worksFor": {
       "@type": "MedicalOrganization",
       "name": "Cosmedocs",
       "address": {
@@ -176,8 +167,7 @@ const MarionnetteLines = () => {
       "@type": "MedicalProcedure",
       "name": "Marionette Lines Filler Treatment",
       "description": "Non-surgical marionette lines treatment using premium hyaluronic acid dermal fillers for facial rejuvenation"
-    },
-    "priceRange": "££"
+    }
   };
 
   const faqSchema = {
