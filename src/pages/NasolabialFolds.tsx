@@ -216,11 +216,7 @@ const NasolabialFolds = () => {
           "preparation": "Consultation and face assessment",
           "followup": "2-week follow-up appointment",
           "howPerformed": "Dermal filler injection using ultra-fine needles with topical anaesthetic",
-          "status": "Active",
-          "medicationUsed": {
-            "@type": "Drug",
-            "name": "Hyaluronic Acid Dermal Filler"
-          }
+          "status": "Active"
         })}
         </script>
 
