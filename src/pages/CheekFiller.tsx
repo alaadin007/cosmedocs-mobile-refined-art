@@ -216,22 +216,6 @@ const CheekFiller = () => {
           })}
         </script>
 
-        {/* Service Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Cheek Filler Treatment",
-            "description": "Non-surgical cheek enhancement using premium hyaluronic acid dermal fillers to restore volume and define cheekbones",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
-            }
-          })}
-        </script>
-
         {/* FAQ Schema */}
         <script type="application/ld+json">
           {JSON.stringify({

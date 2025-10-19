@@ -97,63 +97,57 @@ const CupidBowLips = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Cupid's Bow Lip Enhancement",
-            "description": "Expert Cupid's bow lip filler treatment for natural, defined lips in London",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs - Cupid's Bow Lip Filler London",
-              "url": seoData.canonical,
-              "telephone": "+44 20 3733 3227",
-              "priceRange": "££",
-              "image": "https://www.cosmedocs.co.uk/placeholder.svg",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "51.519526",
-                "longitude": "-0.146061"
-              },
-              "areaServed": [
-                {
-                  "@type": "City",
-                  "name": "London"
-                },
-                {
-                  "@type": "Place",
-                  "name": "Marylebone"
-                },
-                {
-                  "@type": "Place",
-                  "name": "Westminster"
-                },
-                {
-                  "@type": "Place",
-                  "name": "Mayfair"
-                }
-              ],
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "10:00",
-                  "closes": "16:00"
-                }
-              ]
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs - Cupid's Bow Lip Filler London",
+            "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
+            "priceRange": "££",
+            "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.519526",
+              "longitude": "-0.146061"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "London"
+              },
+              {
+                "@type": "Place",
+                "name": "Marylebone"
+              },
+              {
+                "@type": "Place",
+                "name": "Westminster"
+              },
+              {
+                "@type": "Place",
+                "name": "Mayfair"
+              }
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

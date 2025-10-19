@@ -83,38 +83,32 @@ const ChinBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Chin Botox Treatment",
-            "description": "Expert dimpled chin botox and pebble chin botox treatment for smooth, refined chin contours",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": seoData.canonical,
-              "telephone": "+44 20 3733 3227",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "51.519366",
-                "longitude": "-0.144962"
-              },
-              "priceRange": "££",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                }
-              ]
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.519366",
+              "longitude": "-0.144962"
+            },
+            "priceRange": "££",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
@@ -124,22 +118,7 @@ const ChinBotox = () => {
               "@type": "MedicalProcedure",
               "name": "Chin Botox Treatment",
               "alternateName": ["Dimpled Chin Botox", "Pebble Chin Botox", "Botox for Dimpled Chin", "Chin Dimple Botox"],
-              "description": "Professional botox treatment for dimpled chin, chin dimples, and pebble chin texture"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Chin Botox Treatment",
-            "alternateName": ["Dimpled Chin Botox", "Pebble Chin Botox", "Botox for Dimpled Chin", "Chin Dimple Botox"],
-            "description": "Professional botox treatment for dimpled chin, chin dimples, and pebble chin texture. Expert botox chin treatment that smooths chin texture and reduces dimpling when speaking or smiling.",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
+              "description": "Expert dimpled chin botox and pebble chin botox treatment for smooth, refined chin contours"
             }
           })}
         </script>

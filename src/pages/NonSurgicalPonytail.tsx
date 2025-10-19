@@ -176,20 +176,6 @@ const NonSurgicalPonytail = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Non-Surgical Ponytail Lift",
-            "description": "Non-surgical ponytail facelift using strategic combination of botox and dermal fillers for natural facial lifting. Professional aesthetic treatment at Harley Street, London.",
-            "serviceType": "Aesthetic Injectable Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
               {

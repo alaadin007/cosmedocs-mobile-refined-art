@@ -133,15 +133,29 @@ const OilySkinBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "T-Zone Oily Skin Botox Treatment",
-            "alternateName": "Sebum Control Botox",
-            "description": "Professional botox treatment for oily skin in the T-zone area (forehead, nose, chin). Best skin treatment for oily skin providing up to 30% reduction in oil production.",
-            "serviceType": "Cosmetic Botox Injection",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": "https://www.cosmedocs.co.uk",
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "priceRange": "££",
+            "availableService": {
+              "@type": "MedicalProcedure",
+              "name": "T-Zone Oily Skin Botox Treatment",
+              "alternateName": "Sebum Control Botox",
+              "description": "Professional botox treatment for oily skin in the T-zone area (forehead, nose, chin). Best skin treatment for oily skin providing up to 30% reduction in oil production."
             }
           })}
         </script>

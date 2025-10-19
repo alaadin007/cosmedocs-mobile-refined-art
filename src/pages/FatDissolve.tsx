@@ -84,38 +84,32 @@ const FatDissolve = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "EMSCULPT Fat Dissolving Treatment",
-            "description": "Revolutionary EMSCULPT non-invasive fat reduction and muscle building treatments. Specialist fat dissolving injections in London",
-            "serviceType": "Body Contouring Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": seoData.canonical,
-              "telephone": "+44 20 3733 3227",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 51.5074,
-                "longitude": -0.1278
-              },
-              "priceRange": "£££",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                }
-              ]
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs",
+            "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.5074,
+              "longitude": -0.1278
+            },
+            "priceRange": "£££",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.7",
@@ -124,29 +118,7 @@ const FatDissolve = () => {
             "availableService": {
               "@type": "MedicalProcedure",
               "name": "EMSCULPT Fat Dissolving Treatment",
-              "description": "Non-invasive fat reduction and muscle building treatment using HIFEM technology"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "EMSCULPT Fat Dissolving Treatment",
-            "description": "Non-invasive fat reduction and muscle building treatment using HIFEM technology. FDA approved body contouring with proven results.",
-            "serviceType": "Non-invasive body contouring",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              }
+              "description": "Revolutionary EMSCULPT non-invasive fat reduction and muscle building treatments. Specialist fat dissolving injections in London"
             }
           })}
         </script>

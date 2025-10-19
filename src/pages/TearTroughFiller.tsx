@@ -132,21 +132,6 @@ const TearTroughFiller = () => {
           })}
         </script>
 
-        {/* Service Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Tear Trough Filler Treatment",
-            "description": "Non-surgical under eye treatment using hyaluronic acid dermal fillers to reduce dark circles, eye bags, and restore volume",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
-            }
-          })}
-        </script>
 
         {/* Offer Schema */}
         <script type="application/ld+json">

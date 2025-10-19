@@ -108,49 +108,43 @@ const BunnyLinesBotox = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Bunny Lines Botox Treatment",
-            "description": "Expert botox for nose wrinkles and bunny lines. Professional nasal lines botox providing natural bunny lines before and after results",
-            "serviceType": "Cosmetic Treatment",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs - Bunny Lines Botox Treatment London",
-              "url": seoData.canonical,
-              "telephone": "+44 20 3733 3227",
-              "priceRange": "££",
-              "image": "https://www.cosmedocs.co.uk/placeholder.svg",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "10 Harley Street",
-                "addressLocality": "London",
-                "addressRegion": "Greater London",
-                "postalCode": "W1G 9PF",
-                "addressCountry": "GB"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "51.519526",
-                "longitude": "-0.146061"
-              },
-              "areaServed": {
-                "@type": "City",
-                "name": "London"
-              },
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "10:00",
-                  "closes": "16:00"
-                }
-              ]
+            "@type": "MedicalClinic",
+            "name": "Cosmedocs - Bunny Lines Botox Treatment London",
+            "url": seoData.canonical,
+            "telephone": "+44 20 3733 3227",
+            "priceRange": "££",
+            "image": "https://www.cosmedocs.co.uk/placeholder.svg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "10 Harley Street",
+              "addressLocality": "London",
+              "addressRegion": "Greater London",
+              "postalCode": "W1G 9PF",
+              "addressCountry": "GB"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.519526",
+              "longitude": "-0.146061"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "London"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
@@ -161,21 +155,7 @@ const BunnyLinesBotox = () => {
             "availableService": {
               "@type": "MedicalProcedure",
               "name": "Bunny Lines Botox Treatment",
-              "description": "Expert botox for nose wrinkles and bunny lines"
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Bunny Lines Botox Treatment",
-            "description": "Expert botox for nose wrinkles and bunny lines. Professional nasal lines botox providing natural bunny lines before and after results at Harley Street, London.",
-            "serviceType": "Cosmetic Botox Injection",
-            "provider": {
-              "@type": "MedicalClinic",
-              "name": "Cosmedocs",
-              "url": "https://www.cosmedocs.co.uk"
+              "description": "Expert botox for nose wrinkles and bunny lines. Professional nasal lines botox providing natural bunny lines before and after results"
             }
           })}
         </script>
