@@ -803,7 +803,7 @@ const BunnyLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Enhance your bunny lines before and after results by pairing botox on nose treatment with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> for nose contouring or <Link to="/cheek-fillers" className="text-purple-400 hover:text-purple-300 underline">cheek enhancement</Link>. Create balanced, natural-looking facial proportions.
+                      Enhance your bunny lines before and after results by pairing botox on nose treatment with <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline">dermal fillers</Link> for nose contouring or <Link to="/cheek-filler" className="text-purple-400 hover:text-purple-300 underline">cheek enhancement</Link>. Create balanced, natural-looking facial proportions.
                     </p>
                   </CardContent>
                 </Card>

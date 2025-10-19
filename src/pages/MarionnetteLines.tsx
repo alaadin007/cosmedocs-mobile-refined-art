@@ -791,7 +791,7 @@ const MarionnetteLines = () => {
                         <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
                         <div className="flex-1">
                           <h4 className="text-white font-semibold mb-1">
-                            <Link to="/lip-filler" className="text-purple-300 hover:text-purple-200 underline">Lips</Link>
+                            <Link to="/lip-fillers" className="text-purple-300 hover:text-purple-200 underline">Lips</Link>
                           </h4>
                           <p className="text-gray-300 text-sm">Enhances volume and corrects asymmetry</p>
                         </div>
