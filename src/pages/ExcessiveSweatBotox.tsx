@@ -143,7 +143,15 @@ const ExcessiveSweatBotox = () => {
             "url": seoData.canonical,
             "seller": {
               "@type": "MedicalClinic",
-              "name": "Cosmedocs"
+              "name": "Cosmedocs",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10 Harley Street",
+                "addressLocality": "London",
+                "addressRegion": "Greater London",
+                "postalCode": "W1G 9PF",
+                "addressCountry": "GB"
+              }
             }
           })}
         </script>
