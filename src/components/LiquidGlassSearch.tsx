@@ -88,7 +88,7 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
   - Phone: 0333 0551 503
   - Email: info@cosmedocs.com
   - WhatsApp: +447735606447
-  - Book online: https://www.acuityscheduling.com/schedule.php?owner=11449602
+  - Book online: Book Now at https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29
   
   Please provide helpful, accurate information about our treatments, booking process, and aesthetic medicine expertise.
   `;
@@ -254,7 +254,7 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-2 mb-3">
                       <Button 
-                        onClick={() => window.open('https://www.acuityscheduling.com/schedule.php?owner=11449602', '_blank')}
+                        onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
                         size="sm"
                         className="bg-primary/20 text-white hover:bg-primary/30 rounded-xl border border-primary/20"
                       >

@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Sparkles, Star, Heart, Zap, Crown, Droplets, Lightbulb } from "lucide-react";
+import { X, Sparkles, Star, Heart, Zap, Crown, Droplets, Lightbulb, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ContactOption {
@@ -284,10 +284,11 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                       className="mt-2 text-center flex-shrink-0"
                     >
                       <button 
-                        onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                        className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-black font-semibold py-2 px-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 text-xs md:text-sm"
+                        onClick={() => window.open("https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29", "_blank")}
+                        className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-black font-semibold py-2 px-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 text-xs md:text-sm flex items-center justify-center gap-2"
                       >
-                        👑 Book Your Consultation
+                        <Calendar className="w-4 h-4" />
+                        Book Your Consultation
                       </button>
                     </motion.div>
                   </motion.div>

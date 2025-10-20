@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Helmet } from "react-helmet-async";
-import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, QrCode } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, QrCode, Calendar } from "lucide-react";
 import QRCode from "qrcode";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
@@ -74,6 +74,11 @@ const Home2 = () => {
     {
       title: "Get in Touch", 
       options: [
+        {
+          icon: Calendar,
+          label: "Book Appointment",
+          action: () => window.open("https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29", "_blank")
+        },
         {
           icon: MessageSquare,
           label: "WhatsApp",
@@ -146,6 +151,16 @@ const Home2 = () => {
             {/* Desktop Actions */}
             <div className="hidden md:flex items-center space-x-3">
               <Button
+                onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
+                variant="ghost"
+                size="icon"
+                className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
+                title="Book Appointment"
+              >
+                <Calendar className="h-5 w-5" />
+              </Button>
+              
+              <Button
                 onClick={() => setIsSearchOpen(true)}
                 variant="ghost"
                 size="icon"
@@ -164,6 +179,16 @@ const Home2 = () => {
 
             {/* Mobile Actions */}
             <div className="md:hidden flex items-center space-x-2">
+              <Button
+                onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
+                variant="ghost"
+                size="icon"
+                className="text-white/90 hover:text-white hover:bg-white/10"
+                title="Book Appointment"
+              >
+                <Calendar className="h-5 w-5" />
+              </Button>
+              
               <Button
                 onClick={() => setIsSearchOpen(true)}
                 variant="ghost"

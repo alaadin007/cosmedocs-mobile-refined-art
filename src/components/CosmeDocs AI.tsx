@@ -83,7 +83,7 @@ const CosmeDocsAI = () => {
   CONSULTATION POLICY:
   - Injectable consultation: £50 off any treatment
   - All treatments include aftercare and follow-up
-  - Book online: https://www.acuityscheduling.com/schedule.php?owner=11449602
+  - Book online: Book Now
 
   PAYMENT OPTIONS:
   - Cash/Card payment

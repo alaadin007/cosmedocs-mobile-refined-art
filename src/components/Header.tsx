@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain } from "lucide-react";
+import { Menu, Search, MessageSquare, Mail, Phone, Instagram, Twitter, Sparkles, Users, Camera, Brain, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
@@ -60,6 +60,11 @@ export default function Header() {
     {
       title: "Get in Touch",
       options: [
+        {
+          icon: Calendar,
+          label: "Book Appointment",
+          action: () => window.open("https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29", "_blank")
+        },
         {
           icon: Phone,
           label: "Call Us - Clinic 1",
@@ -165,6 +170,15 @@ export default function Header() {
           {/* Desktop Actions - Right */}
           <div className="hidden md:flex items-center space-x-3">
             <Button
+              onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
+              variant="ghost"
+              size="icon"
+              className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
+              title="Book Appointment"
+            >
+              <Calendar className="h-5 w-5" />
+            </Button>
+            <Button
               onClick={() => setIsSearchOpen(true)}
               variant="ghost"
               size="icon"
@@ -199,16 +213,27 @@ export default function Header() {
               </Button>
             </div>
             
-            {/* Mobile Search - Right */}
-            <Button
-              onClick={() => setIsSearchOpen(true)}
-              variant="ghost"
-              size="icon"
-              className="text-white/90 hover:text-white hover:bg-white/10"
-              title="Search"
-            >
-              <Search className="h-5 w-5" />
-            </Button>
+            {/* Mobile Actions - Right */}
+            <div className="flex items-center gap-2">
+              <Button
+                onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
+                variant="ghost"
+                size="icon"
+                className="text-white/90 hover:text-white hover:bg-white/10"
+                title="Book Appointment"
+              >
+                <Calendar className="h-5 w-5" />
+              </Button>
+              <Button
+                onClick={() => setIsSearchOpen(true)}
+                variant="ghost"
+                size="icon"
+                className="text-white/90 hover:text-white hover:bg-white/10"
+                title="Search"
+              >
+                <Search className="h-5 w-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </header>
