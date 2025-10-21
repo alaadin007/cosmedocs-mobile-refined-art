@@ -31,7 +31,8 @@ const treatmentCategories = [
       { name: "Masseter (Jawline Slimming)", link: "/masseter-botox" },
       { name: "Bunny Lines", link: "/bunny-lines-botox" },
       { name: "Gummy Smile", link: "/gummy-smile-botox" },
-      { name: "Excessive Sweat Botox", link: "/excessive-sweat-botox" }
+      { name: "Excessive Sweat Botox", link: "/excessive-sweat-botox" },
+      { name: "Trigger Point Botox", link: "/trigger-point-botox" }
     ],
     viewAllLink: "/treatments",
     color: "from-yellow-400 to-orange-500"
