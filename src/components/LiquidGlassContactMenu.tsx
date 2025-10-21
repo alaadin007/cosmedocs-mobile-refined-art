@@ -59,7 +59,6 @@ const treatmentCategories = [
       { name: "Chemical Peels", link: "/chemical-peel" },
       { name: "Hydrafacial", link: "/hydrafacial-london" },
       { name: "PRP Vampire Facelift", link: "/prp-treatment" },
-      { name: "Acne Treatment", link: "/acne-treatment" },
       { name: "Hyperpigmentation Treatment", link: "/hyperpigmentation-treatment" }
     ],
     viewAllLink: "/treatments",
@@ -72,6 +71,7 @@ const treatmentCategories = [
       { name: "Mole & Skin Tag Removal", link: "/mole-skin-tag-removal" },
       { name: "Eczema Treatment", link: "/eczema-treatment" },
       { name: "Psoriasis Treatment", link: "/psoriasis-treatment" },
+      { name: "Acne Treatment", link: "/acne-treatment" },
       { name: "Dermatology Consultation", link: "/dermatology" }
     ],
     viewAllLink: "/treatments",
