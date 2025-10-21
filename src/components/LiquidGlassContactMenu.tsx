@@ -45,7 +45,8 @@ const treatmentCategories = [
       { name: "Dermal Filler Makeover", link: "/non-surgical-facelift" },
       { name: "Chin Filler", link: "/chin-filler" },
       { name: "Cheek Fillers", link: "/cheek-fillers" },
-      { name: "Jawline Filler", link: "/jawline-filler" }
+      { name: "Jawline Filler", link: "/jawline-filler" },
+      { name: "Non Surgical Face Lift - Long Lasting Using Lifting Sutures and Volumising", link: "/non-surgical-facelift" }
     ],
     viewAllLink: "/treatments",
     color: "from-pink-400 to-red-500"
