@@ -16,6 +16,9 @@ import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import AutoLinkedText from '@/components/AutoLinkedText';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
+import gummySmileBA1 from '@/assets/gummy-smile-ba-1.jpeg';
+import gummySmileBA2 from '@/assets/gummy-smile-ba-2.jpeg';
+import gummySmileBA3 from '@/assets/gummy-smile-ba-3.jpeg';
 
 const GummySmileBotox = () => {
   const seoData = generateSEOMetadata(
@@ -26,19 +29,19 @@ const GummySmileBotox = () => {
 
   const beforeAfterImages = [
     { 
-      src: "/lovable-uploads/13ac9c3a-f117-440d-a458-ac5bc69b4d64.png", 
-      alt: "Gummy smile before and after Botox treatment", 
-      caption: "Dramatic reduction in gum display after targeted Botox injections - achieving perfect smile proportions" 
+      src: gummySmileBA1, 
+      alt: "Gummy smile botox before and after - lip fillers with gummy smile improvement", 
+      caption: "Enhanced smile with fuller lips and reduced gummy smile" 
     },
     { 
-      src: "/lovable-uploads/6979990b-3579-4571-b139-3501a368919b.png", 
-      alt: "Gummy smile correction results", 
-      caption: "Natural-looking smile enhancement with reduced gum visibility" 
+      src: gummySmileBA2, 
+      alt: "Gummy smile botox before and after treatment comparison", 
+      caption: "Gummy smile botox transformation - balanced smile proportions" 
     },
     { 
-      src: "/lovable-uploads/4208979a-6544-4949-898f-4915a9791946.png", 
-      alt: "Gummy smile Botox before after", 
-      caption: "Precise Botox placement creating harmonious smile proportions" 
+      src: gummySmileBA3, 
+      alt: "Gummy smile botox before after results", 
+      caption: "Gummy smile botox - natural smile enhancement" 
     }
   ];
 
