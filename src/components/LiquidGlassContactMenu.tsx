@@ -57,7 +57,6 @@ const treatmentCategories = [
     treatments: [
       { name: "Chemical Peels", link: "/chemical-peel" },
       { name: "Microneedling", link: "/microneedling" },
-      { name: "PRP Vampire Facelift", link: "/prp-treatment" },
       { name: "Hydrafacial", link: "/hydrafacial-london" }
     ],
     viewAllLink: "/treatments",
@@ -80,8 +79,7 @@ const treatmentCategories = [
     icon: Droplets,
     treatments: [
       { name: "Profhilo", link: "/profhilo-treatment" },
-      { name: "Polynucleotides", link: "/polynucleotide-treatment" },
-      { name: "Redensity 1", link: "/skin-boosters" }
+      { name: "Polynucleotides", link: "/polynucleotide-treatment" }
     ],
     viewAllLink: "/treatments",
     color: "from-green-400 to-teal-500"
@@ -90,6 +88,7 @@ const treatmentCategories = [
     name: "Hair & Skin Medicine",
     icon: Lightbulb,
     treatments: [
+      { name: "PRP Vampire Facelift", link: "/prp-treatment" },
       { name: "Acne Treatment", link: "/acne-treatment" },
       { name: "Hyperpigmentation Treatment", link: "/hyperpigmentation-treatment" }
     ],
