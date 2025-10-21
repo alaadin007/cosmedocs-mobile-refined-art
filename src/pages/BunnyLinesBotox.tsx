@@ -34,18 +34,18 @@ const BunnyLinesBotox = () => {
   const beforeAfterImages = [
     { 
       src: bunnyLinesBeforeAfter1, 
-      alt: "Bunny lines botox before and after - nose bridge smoothing", 
-      caption: "Bunny Lines Botox Treatment: Smooth, refined nose bridge with natural expressions preserved. Expert nasalis muscle relaxation." 
+      alt: "Bunny lines botox before and after treatment results showing reduced nose wrinkles and smoother nasal bridge at Cosmedocs London clinic", 
+      caption: "Bunny Lines Botox Before and After: Visible reduction in diagonal nose wrinkles. Natural-looking results with preserved facial expressions. Expert nasalis muscle relaxation by our Harley Street specialists." 
     },
     { 
       src: bunnyLinesBeforeAfter2, 
-      alt: "Forehead and bunny lines comprehensive treatment", 
-      caption: "Combined <Link to='/forehead-lines-botox' className='text-purple-400 hover:text-purple-300 underline'>forehead</Link> and bunny lines treatment for complete upper face rejuvenation." 
+      alt: "Combined forehead lines, crow's feet and bunny lines botox before after results demonstrating comprehensive upper face rejuvenation treatment", 
+      caption: "Combined Upper Face Treatment: Comprehensive botox addressing forehead lines, crow's feet, and bunny lines simultaneously. Harmonious, natural rejuvenation with balanced facial aesthetics. See how our integrated approach delivers stunning results." 
     },
     { 
       src: bunnyLinesBeforeAfter3, 
-      alt: "Nose wrinkles botox before after comparison", 
-      caption: "Comparison showing significant reduction in nose wrinkles and bunny lines with expert botox treatment." 
+      alt: "Nose wrinkles and bunny lines botox treatment before after comparison showing dramatic improvement in nasal wrinkles and smoother skin texture", 
+      caption: "Dramatic Bunny Lines Transformation: Side-by-side comparison demonstrating significant reduction in nose wrinkles and bunny lines. Smoother nasal bridge whilst maintaining natural facial movement and expression. Expert botox technique delivers invisible art." 
     }
   ];
 
