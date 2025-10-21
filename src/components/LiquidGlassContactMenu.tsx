@@ -56,7 +56,6 @@ const treatmentCategories = [
     icon: Sparkles,
     treatments: [
       { name: "Chemical Peels", link: "/chemical-peel" },
-      { name: "Microneedling", link: "/microneedling" },
       { name: "Hydrafacial", link: "/hydrafacial-london" }
     ],
     viewAllLink: "/treatments",
@@ -79,7 +78,8 @@ const treatmentCategories = [
     icon: Droplets,
     treatments: [
       { name: "Profhilo", link: "/profhilo-treatment" },
-      { name: "Polynucleotides", link: "/polynucleotide-treatment" }
+      { name: "Polynucleotides", link: "/polynucleotide-treatment" },
+      { name: "Microneedling", link: "/microneedling" }
     ],
     viewAllLink: "/treatments",
     color: "from-green-400 to-teal-500"
