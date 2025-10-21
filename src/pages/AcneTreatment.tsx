@@ -377,25 +377,6 @@ export default function AcneTreatment() {
           </div>
         </section>
 
-        {/* Before and After Gallery */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Before and After Acne Treatment Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See authentic transformations from our acne treatment clinic near you in London. Our comprehensive acne treatments significantly reduce cystic acne, hormonal acne symptoms, and acne scarring for naturally clear, healthy skin. According to the <a href="https://www.nhs.uk/conditions/acne/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">NHS</a>, professional acne treatment is essential for severe cases.
-              </p>
-            </motion.div>
-
-            <BeforeAfterImageViewer images={beforeAfterImages} />
-          </div>
-        </section>
 
         {/* What is Acne - Two Column Layout */}
         <section className="py-20 bg-accent">

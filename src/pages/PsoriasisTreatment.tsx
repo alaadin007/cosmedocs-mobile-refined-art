@@ -361,26 +361,6 @@ export default function PsoriasisTreatment() {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Before and After Psoriasis Treatment Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See authentic transformations from our private psoriasis treatment UK clinic. Our comprehensive psoriasis treatments significantly reduce 
-                symptoms including scalp psoriasis and nail psoriasis, improving skin health for naturally clear, comfortable skin.
-              </p>
-            </motion.div>
-
-            <BeforeAfterImageViewer images={beforeAfterImages} />
-          </div>
-        </section>
 
         {/* What is Psoriasis */}
         <section className="py-20 bg-accent text-white">

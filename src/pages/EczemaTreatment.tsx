@@ -377,25 +377,6 @@ export default function EczemaTreatment() {
           </div>
         </section>
 
-        {/* Before and After Gallery */}
-        <section className="py-20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4">Before and After Eczema Treatment Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                See authentic transformations from our eczema treatment clinic near you in London. Our comprehensive eczema treatments significantly reduce atopic dermatitis symptoms, severe eczema, and improve skin health for naturally healthy, comfortable skin. According to the <a href="https://www.nhs.uk/conditions/atopic-eczema/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">NHS</a>, professional treatment is essential for managing chronic eczema.
-              </p>
-            </motion.div>
-
-            <BeforeAfterImageViewer images={beforeAfterImages} />
-          </div>
-        </section>
 
         {/* What is Eczema - Two Column Layout */}
         <section className="py-20 bg-accent">
