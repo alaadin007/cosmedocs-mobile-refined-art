@@ -117,6 +117,7 @@ const AestheticIntelligence = lazy(() => import("./pages/AestheticIntelligence")
 const ProductAnalysisDetail = lazy(() => import("./pages/ProductAnalysisDetail"));
 const PopupOffer = lazy(() => import("./pages/PopupOffer"));
 const NonSurgicalPonytail = lazy(() => import("./pages/NonSurgicalPonytail"));
+const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWorkExperience"));
 
 // Loading component
 const PageLoader = () => (
@@ -289,9 +290,10 @@ const App = () => {
                    <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
                    <Route path="/botox-price-london" element={<BotoxPriceLondon />} />
                <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
-               <Route path="/popupoffer" element={<PopupOffer />} />
-               
-               {/* Blog redirects */}
+                <Route path="/popupoffer" element={<PopupOffer />} />
+                <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
+                
+                {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
               <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/cosmetalk/vitamin-c-ferulic-acid-benefits" replace />} />
               
