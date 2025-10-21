@@ -44,7 +44,7 @@ const treatmentCategories = [
       { name: "Non Surgical Nose Job", link: "/non-surgical-nose-job" },
       { name: "Dermal Filler Makeover", link: "/non-surgical-facelift" },
       { name: "Chin Filler", link: "/chin-filler" },
-      { name: "Cheek Fillers", link: "/cheek-fillers" },
+      { name: "Cheek Fillers", link: "/cheek-filler" },
       { name: "Jawline Filler", link: "/jawline-filler" },
       { name: "Non Surgical Face Lift - Long Lasting Using Lifting Sutures and Volumising", link: "/non-surgical-facelift" }
     ],
@@ -55,12 +55,10 @@ const treatmentCategories = [
     name: "Skin Treatments",
     icon: Sparkles,
     treatments: [
-      { name: "Chemical Peels", link: "/skin-peels" },
+      { name: "Chemical Peels", link: "/chemical-peel" },
       { name: "Microneedling", link: "/microneedling" },
       { name: "PRP Vampire Facelift", link: "/prp-treatment" },
-      { name: "Hydrafacial", link: "/hydrafacial" },
-      { name: "Laser Hair Removal", link: "/laser-hair-removal" },
-      { name: "Laser Skin Resurfacing", link: "/laser-skin-resurfacing" }
+      { name: "Hydrafacial", link: "/hydrafacial-london" }
     ],
     viewAllLink: "/treatments",
     color: "from-blue-400 to-cyan-500"
@@ -69,12 +67,10 @@ const treatmentCategories = [
     name: "Dermatology",
     icon: Crown,
     treatments: [
-      { name: "Skin Cancer Screening", link: "/skin-cancer-screening" },
-      { name: "Mole Removal", link: "/mole-removal" },
-      { name: "Skin Tag Removal", link: "/skin-tag-removal" },
+      { name: "Mole & Skin Tag Removal", link: "/mole-skin-tag-removal" },
       { name: "Eczema Treatment", link: "/eczema-treatment" },
       { name: "Psoriasis Treatment", link: "/psoriasis-treatment" },
-      { name: "Dermatology Consultation", link: "/dermatology-consultation" }
+      { name: "Dermatology Consultation", link: "/dermatology" }
     ],
     viewAllLink: "/treatments",
     color: "from-purple-400 to-indigo-500"
@@ -84,10 +80,8 @@ const treatmentCategories = [
     icon: Droplets,
     treatments: [
       { name: "Profhilo", link: "/profhilo-treatment" },
-      { name: "Polynucleotides", link: "/polynucleotides" },
-      { name: "Redensity 1", link: "/skin-boosters" },
-      { name: "Seventy Hyal 2000", link: "/seventy-hyal" },
-      { name: "Sunekos", link: "/sunekos" }
+      { name: "Polynucleotides", link: "/polynucleotide-treatment" },
+      { name: "Redensity 1", link: "/skin-boosters" }
     ],
     viewAllLink: "/treatments",
     color: "from-green-400 to-teal-500"
@@ -97,11 +91,7 @@ const treatmentCategories = [
     icon: Lightbulb,
     treatments: [
       { name: "Acne Treatment", link: "/acne-treatment" },
-      { name: "Facial Thread Veins", link: "/thread-veins" },
-      { name: "Leg Veins Treatment", link: "/thread-veins" },
-      { name: "Hair Loss Treatment", link: "/hair-loss-treatment" },
-      { name: "Rosacea Treatment", link: "/rosacea-treatment" },
-      { name: "Pigmentation Treatment", link: "/pigmentation-treatment" }
+      { name: "Hyperpigmentation Treatment", link: "/hyperpigmentation-treatment" }
     ],
     viewAllLink: "/treatments",
     color: "from-orange-400 to-red-500"
