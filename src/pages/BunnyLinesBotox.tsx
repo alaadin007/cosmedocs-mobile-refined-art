@@ -400,6 +400,8 @@ const BunnyLinesBotox = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
