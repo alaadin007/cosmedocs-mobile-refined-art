@@ -190,7 +190,6 @@ const App = () => {
               <Route path="/forehead-botox" element={<Navigate to="/forehead-lines-botox" replace />} />
               <Route path="/frown-lines-botox" element={<Navigate to="/frown-line-botox" replace />} />
               <Route path="/chin-dimpling-botox" element={<Navigate to="/chin-botox" replace />} />
-              <Route path="/gummy-smile-treatment" element={<Navigate to="/gummy-smile-botox" replace />} />
               <Route path="/nefertiti-botox-facelift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
               <Route path="/nefertiti-lift" element={<Navigate to="/nefertiti-botox-face-jaw-lift" replace />} />
               
