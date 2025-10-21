@@ -35,17 +35,17 @@ const BunnyLinesBotox = () => {
     { 
       src: bunnyLinesBeforeAfter1, 
       alt: "Bunny lines botox before and after treatment results showing reduced nose wrinkles and smoother nasal bridge at Cosmedocs London clinic", 
-      caption: "Bunny Lines Botox Before and After: Visible reduction in diagonal nose wrinkles. Natural-looking results with preserved facial expressions. Expert nasalis muscle relaxation by our Harley Street specialists." 
+      caption: "Bunny lines botox before and after: Smooth nose bridge with natural expressions preserved." 
     },
     { 
       src: bunnyLinesBeforeAfter2, 
       alt: "Combined forehead lines, crow's feet and bunny lines botox before after results demonstrating comprehensive upper face rejuvenation treatment", 
-      caption: "Combined Upper Face Treatment: Comprehensive botox addressing forehead lines, crow's feet, and bunny lines simultaneously. Harmonious, natural rejuvenation with balanced facial aesthetics. See how our integrated approach delivers stunning results." 
+      caption: "Bunny lines botox combined with forehead and crow's feet treatment for complete upper face rejuvenation." 
     },
     { 
       src: bunnyLinesBeforeAfter3, 
       alt: "Nose wrinkles and bunny lines botox treatment before after comparison showing dramatic improvement in nasal wrinkles and smoother skin texture", 
-      caption: "Dramatic Bunny Lines Transformation: Side-by-side comparison demonstrating significant reduction in nose wrinkles and bunny lines. Smoother nasal bridge whilst maintaining natural facial movement and expression. Expert botox technique delivers invisible art." 
+      caption: "Bunny lines botox results: Significant reduction in nose wrinkles whilst maintaining natural facial movement." 
     }
   ];
 
