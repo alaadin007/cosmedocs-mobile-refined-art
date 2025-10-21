@@ -960,6 +960,16 @@ const Treatments = () => {
                   <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
                 </div>
                 
+                {treatments.medspa.items[0].link && (
+                  <div className="mb-4 text-right">
+                    <Link to={treatments.medspa.items[0].link}>
+                      <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
+                        Learn more →
+                      </Button>
+                    </Link>
+                  </div>
+                )}
+                
                 {treatments.medspa.items[0].subitems?.map((subitem, idx) => (
                   <Card key={idx} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
