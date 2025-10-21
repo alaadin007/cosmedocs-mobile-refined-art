@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/carousel";
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import AutoLinkedText from '@/components/AutoLinkedText';
+import ImageZoomModal from '@/components/ImageZoomModal';
 import { generateSEOMetadata } from '@/utils/seo';
 import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Palette, Heart } from "lucide-react";
 import gummySmileBA1 from '@/assets/gummy-smile-ba-1.jpeg';
@@ -21,6 +22,8 @@ import gummySmileBA2 from '@/assets/gummy-smile-ba-2.jpeg';
 import gummySmileBA3 from '@/assets/gummy-smile-ba-3.jpeg';
 
 const GummySmileBotox = () => {
+  const [zoomImage, setZoomImage] = useState<{ src: string; alt: string; title: string } | null>(null);
+  
   const seoData = generateSEOMetadata(
     "Gummy Smile Botox London | Cosmedocs",
     "Reduce excessive gum display with gummy smile botox. Quick, painless treatment for balanced smile aesthetics from £150.",
@@ -278,6 +281,7 @@ const GummySmileBotox = () => {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       className="relative group cursor-pointer p-2"
+                      onClick={() => setZoomImage({ src: image.src, alt: image.alt, title: image.caption })}
                     >
                       <img 
                         src={image.src} 
@@ -298,6 +302,15 @@ const GummySmileBotox = () => {
 
           </div>
         </section>
+
+        {/* Image Zoom Modal */}
+        <ImageZoomModal
+          isOpen={zoomImage !== null}
+          onClose={() => setZoomImage(null)}
+          imageSrc={zoomImage?.src || ''}
+          imageAlt={zoomImage?.alt || ''}
+          title={zoomImage?.title || ''}
+        />
 
         {/* What is Gummy Smile Section */}
         <section className="py-20 bg-accent">
