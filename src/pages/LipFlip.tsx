@@ -888,7 +888,7 @@ const LipFlip = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 mb-4">
-                      Address excessive gum visibility with <Link to="/gummy-smile-treatment" className="text-purple-400 hover:text-purple-300 underline">gummy smile botox</Link>. Perfect complement to lip flip for a balanced, confident smile. Non-invasive treatment for comprehensive smile enhancement.
+                      Address excessive gum visibility with <Link to="/gummy-smile-botox" className="text-purple-400 hover:text-purple-300 underline">gummy smile botox</Link>. Perfect complement to lip flip for a balanced, confident smile. Non-invasive treatment for comprehensive smile enhancement.
                     </p>
                   </CardContent>
                 </Card>
