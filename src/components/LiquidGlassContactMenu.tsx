@@ -57,7 +57,10 @@ const treatmentCategories = [
     icon: Sparkles,
     treatments: [
       { name: "Chemical Peels", link: "/chemical-peel" },
-      { name: "Hydrafacial", link: "/hydrafacial-london" }
+      { name: "Hydrafacial", link: "/hydrafacial-london" },
+      { name: "PRP Vampire Facelift", link: "/prp-treatment" },
+      { name: "Acne Treatment", link: "/acne-treatment" },
+      { name: "Hyperpigmentation Treatment", link: "/hyperpigmentation-treatment" }
     ],
     viewAllLink: "/treatments",
     color: "from-blue-400 to-cyan-500"
@@ -84,17 +87,6 @@ const treatmentCategories = [
     ],
     viewAllLink: "/treatments",
     color: "from-green-400 to-teal-500"
-  },
-  {
-    name: "Hair & Skin Medicine",
-    icon: Lightbulb,
-    treatments: [
-      { name: "PRP Vampire Facelift", link: "/prp-treatment" },
-      { name: "Acne Treatment", link: "/acne-treatment" },
-      { name: "Hyperpigmentation Treatment", link: "/hyperpigmentation-treatment" }
-    ],
-    viewAllLink: "/treatments",
-    color: "from-orange-400 to-red-500"
   }
 ];
 
