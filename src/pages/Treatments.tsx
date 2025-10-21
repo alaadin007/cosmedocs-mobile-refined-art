@@ -364,7 +364,7 @@ const Treatments = () => {
         {
           subtitle: "SKIN PEELING SYSTEMS",
           isSubcategory: true,
-          link: "/skin-peels",
+          link: "/peel-to-reveal",
           subitems: [
             {
               title: "1. Light Peels (no obvious flaking or dryness)",
@@ -565,26 +565,22 @@ const Treatments = () => {
         {
           title: "FACIAL THREAD VEINS",
           price: "FROM £75",
-          description: "Treatment for visible facial blood vessels",
-          link: "/thread-veins"
+          description: "Treatment for visible facial blood vessels"
         },
         {
           title: "LEG VEINS / SPIDER VEINS",
           price: "£400 PER LEG",
-          description: "Treatment for leg veins and spider veins",
-          link: "/thread-veins"
+          description: "Treatment for leg veins and spider veins"
         },
         {
           title: "IPL/LASER HAIR REMOVAL",
           price: "POC",
-          description: "IPL and laser hair removal treatments",
-          link: "/laser-hair-removal"
+          description: "IPL and laser hair removal treatments"
         },
         {
           title: "SEMI PERMANENT MAKEUP",
           price: "POC",
-          description: "Semi-permanent makeup services",
-          link: "/semi-permanent-makeup"
+          description: "Semi-permanent makeup services"
         }
       ],
       specialistItems: [
@@ -964,16 +960,6 @@ const Treatments = () => {
                   <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
                 </div>
                 
-                {treatments.medspa.items[0].link && (
-                  <div className="mb-4 text-right">
-                    <Link to={treatments.medspa.items[0].link}>
-                      <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                        Learn more →
-                      </Button>
-                    </Link>
-                  </div>
-                )}
-                
                 {treatments.medspa.items[0].subitems?.map((subitem, idx) => (
                   <Card key={idx} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
@@ -997,16 +983,6 @@ const Treatments = () => {
                   <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
                 </div>
                 
-                {treatments.medspa.items[1].link && (
-                  <div className="mb-4 text-right">
-                    <Link to={treatments.medspa.items[1].link}>
-                      <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                        Learn more →
-                      </Button>
-                    </Link>
-                  </div>
-                )}
-                
                 {treatments.medspa.items[1].subitems?.map((subitem, idx) => (
                   <Card key={idx} className="mb-4 bg-accent text-white border-0">
                     <CardContent className="p-4">
@@ -1029,16 +1005,6 @@ const Treatments = () => {
                   <h3 className="text-xl font-bold text-amber-400 px-6">PRP (AKA Vampire Facelift)</h3>
                   <div className="flex-1 h-px bg-gradient-to-l from-amber-400/50 to-amber-600/50"></div>
                 </div>
-                
-                {treatments.medspa.items[2].link && (
-                  <div className="mb-4 text-right">
-                    <Link to={treatments.medspa.items[2].link}>
-                      <Button variant="link" className="p-0 h-auto text-white hover:text-gray-300">
-                        Learn more →
-                      </Button>
-                    </Link>
-                  </div>
-                )}
                 
                 {treatments.medspa.items[2].subitems?.map((subitem, idx) => (
                   <Card key={idx} className="mb-4 bg-accent text-white border-0">
