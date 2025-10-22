@@ -12,7 +12,8 @@ import {
 } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import { generateSEOMetadata } from "@/utils/seo";
-import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Heart, Users, Shield } from "lucide-react";
+import { Clock, Calendar, Activity, Syringe, Award, GraduationCap, CheckCircle, Heart, Users, Shield, Zap } from "lucide-react";
+import ClientReviews from '@/components/ClientReviews';
 import faceliftBa1 from "@/assets/facelift-ba-1.jpg";
 import faceliftBa2 from "@/assets/facelift-ba-2.jpg";
 import faceliftBa3 from "@/assets/facelift-ba-3.jpg";
@@ -77,24 +78,6 @@ const NonSurgicalFacelift = () => {
     }
   ];
 
-  const treatmentSummary = [
-    {
-      title: "Level 1: Early Volume Loss",
-      subtitle: "Ages 30-40",
-      icon: <Activity className="w-6 h-6" />,
-    },
-    {
-      title: "Level 2: Moderate Sagging",
-      subtitle: "Ages 40-55",
-      icon: <Syringe className="w-6 h-6" />,
-    },
-    {
-      title: "Level 3: Advanced Concerns",
-      subtitle: "Ages 55+",
-      icon: <Shield className="w-6 h-6" />,
-    }
-  ];
-
   return (
     <>
       <Helmet>
@@ -108,159 +91,250 @@ const NonSurgicalFacelift = () => {
       </Helmet>
 
       <div className="bg-black text-white">
-        {/* Hero Section - Space for hero banner */}
+        {/* Hero Section */}
         <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-black z-0"></div>
-          
           <div className="page-container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-left"
               >
-                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">Non-Surgical Face Lift</span>
-                  <span className="block text-sm mt-4">Our aesthetics is invisible art</span>
+                  <span className="block text-sm mt-4">Invisible art - transformation that speaks without words</span>
                 </h1>
                 <div className="mb-8">
-                  <p className="text-2xl text-purple-300 font-bold">Bold • Natural • Always Your Way</p>
-                  <p className="text-sm text-gray-300">Transformation that speaks without saying a word</p>
+                  <p className="text-2xl text-purple-300 font-bold">Expert Facial Rejuvenation</p>
+                  <p className="text-sm text-gray-300">10+ years training doctors internationally in advanced non-surgical facelift techniques</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     onClick={() => window.open(bookingUrl, "_blank")}
-                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold"
+                    className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
                   >
                     Book Consultation
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold"
-                    onClick={() => document.getElementById('levels')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+                    onClick={() => document.getElementById('treatment-levels')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     View Treatment Levels
                   </Button>
+                </div>
+              </motion.div>
+              
+              <div className="hidden lg:block"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Treatment Summary */}
+        <section className="py-16 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-8 text-white">Non-Surgical Facelift Treatment</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Treatment Duration</h3>
+                <p className="text-gray-300">45-90 minutes depending on level</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
+                <p className="text-gray-300">12-24 months with maintenance</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Activity className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Recovery Time</h3>
+                <p className="text-gray-300">Minimal downtime, 3-7 days mild swelling</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Syringe className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Anaesthesia</h3>
+                <p className="text-gray-300">Topical anaesthetic + lidocaine</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4">Real Patient Transformations</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Authentic results from our expert non-surgical facelift treatments using dermal fillers and PDO threads
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {beforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+          </div>
+        </section>
+
+        {/* What is Non-Surgical Facelift */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-6 text-white text-center">The Art of Non-Surgical Facial Rejuvenation</h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                  <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
+                    <Clock className="w-8 h-8 text-purple-400 mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Minimal Downtime</h3>
+                    <p className="text-gray-400 text-sm">Return to normal activities within 24-48 hours</p>
+                  </div>
+                  <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
+                    <Award className="w-8 h-8 text-purple-400 mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">10+ Years Expertise</h3>
+                    <p className="text-gray-400 text-sm">Training doctors internationally in advanced techniques</p>
+                  </div>
+                  <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
+                    <Heart className="w-8 h-8 text-purple-400 mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Natural Results</h3>
+                    <p className="text-gray-400 text-sm">Bold yet invisible—transformation without words</p>
+                  </div>
+                </div>
+
+                <div className="space-y-6 text-left">
+                  <p className="text-gray-300 leading-relaxed">
+                    At Cosmedocs, we believe aesthetic medicine should be <span className="text-purple-300 font-semibold">minimal, quiet, and invisible</span>. Our non-surgical face lift treatments represent the pinnacle of modern facial rejuvenation—transformation that speaks without saying a word.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Rather than a one-size-fits-all approach, we've developed a sophisticated <span className="text-purple-300 font-semibold">three-level treatment protocol</span> that addresses facial ageing at every stage, from early signs in your 30s through to more advanced concerns. Our approach doesn't just mask ageing—it restores the architectural foundation of a youthful face.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Using advanced injectable treatments including <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> and <Link to="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline">PDO threads</Link>, we lift, contour, and rejuvenate facial features without surgery. The treatment restores lost volume, lifts sagging tissue, and redefines facial contours naturally.
+                  </p>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Banner Section */}
-        <section className="py-8 bg-purple-900/20">
-          <div className="page-container">
-            <div className="w-full h-48 bg-purple-900/10 rounded-lg border-2 border-purple-500/30 flex items-center justify-center">
-              <p className="text-gray-500">Banner Image - To be added</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Introduction */}
-        <section className="py-16 bg-gradient-to-b from-background to-accent">
-          <div className="page-container max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent">
-                The Art of Non-Surgical Facial Rejuvenation
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
-                  <Clock className="w-8 h-8 text-purple-400 mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Minimal Downtime</h3>
-                  <p className="text-gray-400 text-sm">Return to normal activities within 24-48 hours</p>
-                </div>
-                <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
-                  <Award className="w-8 h-8 text-purple-400 mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">10+ Years Expertise</h3>
-                  <p className="text-gray-400 text-sm">Training doctors internationally in advanced techniques</p>
-                </div>
-                <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-purple-500/20">
-                  <Heart className="w-8 h-8 text-purple-400 mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">Natural Results</h3>
-                  <p className="text-gray-400 text-sm">Bold yet invisible—transformation without words</p>
-                </div>
-              </div>
-
-              <div className="prose prose-lg prose-invert max-w-none space-y-4 text-gray-300">
-                <p className="text-lg leading-relaxed">
-                  At Cosmedocs, we believe aesthetic medicine should be <span className="text-purple-300 font-semibold">minimal, quiet, and invisible</span>. Our non-surgical face lift treatments represent the pinnacle of modern facial rejuvenation—transformation that speaks without saying a word.
-                </p>
-
-                <p className="text-lg leading-relaxed">
-                  Rather than a one-size-fits-all approach, we've developed a sophisticated <span className="text-purple-300 font-semibold">three-level treatment protocol</span> that addresses facial ageing at every stage, from early signs in your 30s through to more advanced concerns. Our approach doesn't just mask ageing—it restores the architectural foundation of a youthful face.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Treatment Levels Summary */}
-        <section className="py-16 bg-accent">
+        {/* Three Levels of Treatment */}
+        <section id="treatment-levels" className="py-20 bg-gray-900/30">
           <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4">Three Levels of Facial Sagging</h2>
-              <p className="text-xl text-gray-300">Personalised treatment approaches for every stage of ageing</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Three Levels of Facial Sagging</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Personalised treatment approaches for every stage of ageing - from early volume loss to advanced concerns
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {treatmentSummary.map((level, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-card border border-purple-500/30 rounded-lg p-6 hover:border-purple-400/50 transition-all cursor-pointer"
-                  onClick={() => document.getElementById(`level-${index + 1}`)?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white">
-                      {level.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{level.title}</h3>
-                      <p className="text-purple-300 text-sm">{level.subtitle}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Detailed Treatment Levels */}
-        <section id="levels" className="py-20 bg-background">
-          <div className="page-container">
-            {/* Level 1 */}
-            <Accordion type="single" collapsible className="mb-6">
-              <AccordionItem 
-                id="level-1" 
-                value="level-1"
-                className="bg-card border-2 border-purple-500/30 rounded-xl overflow-hidden"
+            <div className="max-w-5xl mx-auto space-y-6">
+              {/* Level 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
               >
-                <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-purple-900/10">
-                  <div className="flex items-center gap-4 text-left w-full">
-                    <span className="bg-purple-600 rounded-full min-w-12 h-12 flex items-center justify-center text-white text-xl font-bold">1</span>
-                    <div>
-                      <h3 className="text-2xl font-bold text-purple-300">Level One: Early Volume Loss</h3>
-                      <p className="text-sm text-gray-400 mt-1">Ages 30-40 • Dermal Fillers</p>
+                <Card className="bg-black/50 border-gray-700 hover:border-purple-400 transition-colors">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl font-bold">
+                        1
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-2xl">Level One: Early Volume Loss</CardTitle>
+                        <p className="text-purple-300 text-sm mt-1">Ages 30-40 • Dermal Fillers</p>
+                      </div>
                     </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-8">
-                  <div className="space-y-6 pt-4">
+                  </CardHeader>
+                  <CardContent className="space-y-4">
                     <div className="bg-purple-900/10 rounded-lg p-6">
-                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                      <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                         <Activity className="w-5 h-5 text-purple-400" />
                         Characteristics
                       </h4>
@@ -275,48 +349,46 @@ const NonSurgicalFacelift = () => {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                          <span>Mild mid-cheek flattening and visible tear troughs</span>
+                          <span>Mild mid-cheek flattening and visible <Link to="/tear-trough-filler" className="text-purple-300 hover:text-purple-200 underline">tear troughs</Link></span>
                         </li>
                       </ul>
                     </div>
 
                     <div className="bg-accent/50 rounded-lg p-6">
-                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                      <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                         <Syringe className="w-5 h-5 text-purple-400" />
                         Treatment Approach
                       </h4>
-                      <p className="text-gray-300 leading-relaxed mb-4">
-                        Strategic volume replacement using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline font-medium">dermal fillers</Link> in the outer facial compartment behind the masseter muscle creates a natural lifting effect without widening the face.
-                      </p>
                       <p className="text-gray-300 leading-relaxed">
-                        Conservative mid-cheek and under-eye filler restores youthful contours with subtle, transformative results—our signature "invisible art."
+                        Strategic volume replacement using premium <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal fillers</Link> in the outer facial compartment behind the masseter muscle creates a natural lifting effect without widening the face. Conservative mid-cheek and under-eye filler restores youthful contours with subtle, transformative results—our signature "invisible art."
                       </p>
                     </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-            {/* Level 2 */}
-            <Accordion type="single" collapsible className="mb-6">
-              <AccordionItem 
-                id="level-2" 
-                value="level-2"
-                className="bg-card border-2 border-purple-500/30 rounded-xl overflow-hidden"
+              {/* Level 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
               >
-                <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-purple-900/10">
-                  <div className="flex items-center gap-4 text-left w-full">
-                    <span className="bg-purple-600 rounded-full min-w-12 h-12 flex items-center justify-center text-white text-xl font-bold">2</span>
-                    <div>
-                      <h3 className="text-2xl font-bold text-purple-300">Level Two: Moderate Sagging</h3>
-                      <p className="text-sm text-gray-400 mt-1">Ages 40-55 • Fillers + PDO Threads</p>
+                <Card className="bg-black/50 border-gray-700 hover:border-purple-400 transition-colors">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl font-bold">
+                        2
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-2xl">Level Two: Moderate Sagging</CardTitle>
+                        <p className="text-purple-300 text-sm mt-1">Ages 40-55 • Fillers + PDO Threads</p>
+                      </div>
                     </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-8">
-                  <div className="space-y-6 pt-4">
+                  </CardHeader>
+                  <CardContent className="space-y-4">
                     <div className="bg-purple-900/10 rounded-lg p-6">
-                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                      <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                         <Activity className="w-5 h-5 text-purple-400" />
                         Characteristics
                       </h4>
@@ -327,52 +399,50 @@ const NonSurgicalFacelift = () => {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                          <span>Hollowness around chin with apparent marionette lines</span>
+                          <span>Hollowness around chin with apparent <Link to="/marionette-lines" className="text-purple-300 hover:text-purple-200 underline">marionette lines</Link></span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                          <span>Facial segmentation with prominent nasolabial folds</span>
+                          <span>Facial segmentation with prominent <Link to="/nasolabial-folds" className="text-purple-300 hover:text-purple-200 underline">nasolabial folds</Link></span>
                         </li>
                       </ul>
                     </div>
 
                     <div className="bg-accent/50 rounded-lg p-6">
-                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                      <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                         <Syringe className="w-5 h-5 text-purple-400" />
                         Treatment Approach
                       </h4>
-                      <p className="text-gray-300 leading-relaxed mb-4">
-                        Comprehensive strategy combining increased <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline font-medium">dermal filler</Link> volume with <Link to="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline font-medium">PDO thread</Link> structural support.
-                      </p>
                       <p className="text-gray-300 leading-relaxed">
-                        Medical-grade threads create a sling-like support system that physically lifts sagging tissue whilst stimulating collagen production. This dual approach achieves dramatic, natural-looking results that previously required surgery.
+                        Comprehensive strategy combining increased <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</Link> volume with <Link to="/pdo-threads" className="text-purple-300 hover:text-purple-200 underline">PDO thread</Link> structural support. Medical-grade threads create a sling-like support system that physically lifts sagging tissue whilst stimulating collagen production. This dual approach achieves dramatic, natural-looking results that previously required surgery.
                       </p>
                     </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-            {/* Level 3 */}
-            <Accordion type="single" collapsible>
-              <AccordionItem 
-                id="level-3" 
-                value="level-3"
-                className="bg-card border-2 border-purple-500/30 rounded-xl overflow-hidden"
+              {/* Level 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
               >
-                <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-purple-900/10">
-                  <div className="flex items-center gap-4 text-left w-full">
-                    <span className="bg-purple-600 rounded-full min-w-12 h-12 flex items-center justify-center text-white text-xl font-bold">3+</span>
-                    <div>
-                      <h3 className="text-2xl font-bold text-purple-300">Level Three and Beyond</h3>
-                      <p className="text-sm text-gray-400 mt-1">Ages 55+ • Surgical Consultation</p>
+                <Card className="bg-black/50 border-gray-700 hover:border-purple-400 transition-colors">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <div className="bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center text-white text-xl font-bold">
+                        3+
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-2xl">Level Three and Beyond</CardTitle>
+                        <p className="text-purple-300 text-sm mt-1">Ages 55+ • Surgical Consultation</p>
+                      </div>
                     </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-8 pb-8">
-                  <div className="space-y-6 pt-4">
+                  </CardHeader>
+                  <CardContent className="space-y-4">
                     <div className="bg-purple-900/10 rounded-lg p-6">
-                      <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                      <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                         <Shield className="w-5 h-5 text-purple-400" />
                         Honest Assessment
                       </h4>
@@ -389,48 +459,9 @@ const NonSurgicalFacelift = () => {
                         A surgical face lift at this stage provides more comprehensive, longer-lasting results than non-surgical alternatives. We work closely with experienced plastic surgeons and can provide referrals to trusted colleagues who share our philosophy of natural, elegant results.
                       </p>
                     </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </section>
-
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-background">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-4">Real Patient Transformations</h2>
-              <p className="text-xl text-gray-300 mb-8">Authentic results from our 10+ years training doctors internationally</p>
-            </motion.div>
-
-            <div className="max-w-5xl mx-auto">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {beforeAfterImages.map((image, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2">
-                      <Card className="bg-card border-purple-500/30">
-                        <CardContent className="p-4">
-                          <img 
-                            src={image.src} 
-                            alt={image.alt}
-                            className="w-full h-auto rounded-lg mb-4"
-                            loading="lazy"
-                          />
-                          <p className="text-sm text-gray-300 text-center">{image.caption}</p>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -439,98 +470,93 @@ const NonSurgicalFacelift = () => {
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4">Why Choose Cosmedocs for Non-Surgical Face Lifts</h2>
-              <p className="text-xl text-gray-300">Over a decade of international training and expertise</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Over a decade of international training and expertise in non-surgical facial rejuvenation
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="bg-card border-purple-500/30">
-                <CardHeader>
-                  <GraduationCap className="w-12 h-12 text-purple-400 mb-4" />
-                  <CardTitle className="text-xl">International Training Expertise</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">
-                    We've trained doctors internationally in advanced non-surgical face lift techniques for over 10 years. Our expertise ensures you receive treatment from practitioners at the forefront of aesthetic medicine.
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
+                  <CardHeader>
+                    <GraduationCap className="w-12 h-12 text-purple-400 mb-4" />
+                    <CardTitle className="text-white text-xl">International Training Expertise</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      We've trained doctors internationally in advanced non-surgical face lift techniques for over 10 years. Our expertise ensures you receive treatment from practitioners at the forefront of aesthetic medicine.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-              <Card className="bg-card border-purple-500/30">
-                <CardHeader>
-                  <Heart className="w-12 h-12 text-purple-400 mb-4" />
-                  <CardTitle className="text-xl">Invisible Art Philosophy</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">
-                    Our aesthetics is invisible art—bold, natural, always your way. We create transformation that speaks without saying a word, never loud or exaggerated.
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
+                  <CardHeader>
+                    <Heart className="w-12 h-12 text-purple-400 mb-4" />
+                    <CardTitle className="text-white text-xl">Invisible Art Philosophy</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      Our aesthetics is invisible art—bold, natural, always your way. We create transformation that speaks without saying a word, never loud or exaggerated.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
-              <Card className="bg-card border-purple-500/30">
-                <CardHeader>
-                  <Shield className="w-12 h-12 text-purple-400 mb-4" />
-                  <CardTitle className="text-xl">Honest Assessments</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">
-                    We provide truthful consultations about which treatment level suits you best, including honest advice about when surgical options may be more appropriate.
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
+                  <CardHeader>
+                    <Shield className="w-12 h-12 text-purple-400 mb-4" />
+                    <CardTitle className="text-white text-xl">Honest Assessments</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300">
+                      We provide truthful consultations about which treatment level suits you best, including honest advice about when surgical options may be more appropriate.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-20 bg-background">
-          <div className="page-container max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300">Everything you need to know about non-surgical face lifts</p>
-            </motion.div>
-
-            <Accordion type="single" collapsible className="w-full space-y-3">
-              {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="bg-card/50 backdrop-blur border border-purple-500/20 rounded-xl px-6 hover:border-purple-400/40 transition-colors"
-                >
-                  <AccordionTrigger className="text-left text-base md:text-lg font-semibold hover:text-purple-300 py-5 hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-300 leading-relaxed pb-5 pt-1">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
-
         {/* Treatment Video Section */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-gray-900/30">
           <div className="page-container">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold mb-4">Watch Our Non-Surgical Face Lift Technique</h2>
-              <p className="text-xl text-gray-300">See how we perform the treatment</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">Watch Our Non-Surgical Face Lift Technique</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                See how we perform advanced non-surgical facelift treatments using dermal fillers and PDO threads
+              </p>
             </motion.div>
             
             <div className="max-w-4xl mx-auto">
@@ -551,21 +577,60 @@ const NonSurgicalFacelift = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
+              <p className="text-gray-300">Everything you need to know about non-surgical face lifts</p>
+            </motion.div>
+
+            <Accordion type="single" collapsible className="w-full space-y-3">
+              {faqs.map((faq, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="bg-black/50 border border-gray-700 rounded-xl px-6 hover:border-purple-400 transition-colors"
+                >
+                  <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-white hover:text-purple-300 py-5 hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 leading-relaxed pb-5 pt-1">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        {/* Client Reviews */}
+        <section className="py-20 bg-black">
+          <ClientReviews />
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-b from-purple-900/20 to-black">
           <div className="page-container text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Discover Your Treatment Level?</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Discover Your Treatment Level?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Book a consultation with our expert practitioners to receive a personalised assessment and treatment plan tailored to your unique facial anatomy.
               </p>
               <Button 
                 onClick={() => window.open(bookingUrl, "_blank")}
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-12 py-6 text-lg font-semibold"
+                className="bg-white text-black hover:bg-gray-200 rounded-full px-12 py-6 text-lg font-semibold shadow-2xl"
               >
                 Book Your Consultation Today
               </Button>
@@ -576,7 +641,7 @@ const NonSurgicalFacelift = () => {
         {/* Hidden SEO Content */}
         <div className="hidden">
           <p>
-            Non-surgical facelift London treatments at Cosmedocs Harley Street represent the pinnacle of modern aesthetic medicine, offering comprehensive facial rejuvenation without the need for invasive surgical procedures. Our three-level treatment protocol addresses every stage of facial ageing, from early volume loss in patients aged 30-40 through to moderate sagging requiring combined dermal filler and PDO thread interventions. The science behind our non-surgical face lift approach centres on understanding facial anatomy at an intricate level, recognising that facial ageing occurs through predictable patterns of volume loss in specific fat compartments, descent of facial tissues due to gravitational forces and ligamentous laxity, and degradation of collagen and elastin within the skin matrix itself. At Cosmedocs, we've refined these techniques through over a decade of training medical practitioners internationally, developing protocols that deliver natural, elegant results aligned with our philosophy that aesthetic medicine should be invisible art—transformation that speaks without saying a word. Our Level 1 non-surgical facelift protocol specifically targets early facial ageing presenting between ages 30-40, characterised by subtle loss of jaw angle definition, early jowl formation, mild mid-cheek flattening, and increasingly apparent tear troughs. Treatment involves strategic volume replacement using premium hyaluronic acid dermal fillers placed in the outer facial compartment anterior to the ear, behind the masseter muscle. This precise anatomical placement creates vertical lift without horizontal facial widening, restoring youthful contours through what we term "invisible enhancement." The mid-cheek receives conservative volumisation to restore gentle convexity, whilst minimal filler in the tear trough region refreshes the under-eye area without creating an overfilled appearance. Level 2 treatments address moderate facial sagging typically presenting in the 40-55 age range, requiring more comprehensive intervention combining increased dermal filler volumes with PDO thread lifting technology. At this stage, patients exhibit visible jowls, pronounced marionette lines, hollowing along the chin sides, and segmentation of facial contours with prominent nasolabial folds. Our protocol utilises greater volumes of hyaluronic acid filler strategically placed throughout facial compartments, supplemented by PDO threads that provide structural support, physically repositioning descended tissues whilst stimulating neocollagenesis for long-term improvement. The threads create a supportive mesh that lifts and secures facial tissues, defining the jawline whilst softening jowls, nasolabial folds, and marionette lines through comprehensive mid-face elevation. This combined approach represents the optimal non-surgical solution for moderate facial ageing, achieving results previously possible only through surgical facelift procedures. Level 3 and advanced facial sagging, conversely, typically exceeds the capacity of non-surgical interventions to deliver optimal results. Characterised by heavy jowls, substantial volume loss, and marked tissue descent—particularly in patients who possessed fuller faces in youth—this degree of ageing generally warrants surgical consultation. At Cosmedocs, we prioritise honest patient assessment over treatment sales, providing truthful guidance about when surgical facelift procedures will better serve aesthetic goals than non-surgical alternatives. Our commitment to patient welfare means recommending appropriate interventions regardless of personal financial benefit, maintaining the integrity and trust that defines our Harley Street practice. The dermal fillers utilised in our non-surgical facelift protocols consist of cross-linked hyaluronic acid, a naturally occurring glycosaminoglycan present throughout human connective tissue, particularly concentrated in skin, joints, and eyes. Hyaluronic acid's exceptional hygroscopic properties—capable of binding up to 1000 times its molecular weight in water—make it ideal for restoring facial volume whilst maintaining natural tissue hydration and suppleness. Our selected premium filler products integrate seamlessly with native facial tissues, providing immediate volumisation whilst stimulating fibroblast activity for sustained collagen production. The biocompatibility and biodegradability of hyaluronic acid ensures safe, gradual resorption through enzymatic breakdown, typically over 12-18 months, allowing for natural-looking, temporary results that can be adjusted or refined in subsequent treatments. PDO threads employed in Level 2 protocols consist of polydioxanone, a synthetic absorbable suture material with extensive medical history in cardiovascular and general surgery. These threads physically lift and reposition sagging facial tissues through mechanical anchoring, whilst simultaneously triggering foreign body response mechanisms that stimulate fibroblast proliferation, neocollagenesis, and elastin synthesis. The threads themselves absorb completely over 6-8 months through hydrolysis, yet the biological effects—including improved skin thickness, enhanced collagen density, and tissue tightening—persist for 18-24 months post-treatment. This dual mechanism of immediate physical lift combined with sustained biological regeneration makes PDO threads invaluable for addressing moderate facial sagging where volume restoration alone proves insufficient. Patient selection remains paramount for achieving optimal non-surgical facelift outcomes, requiring comprehensive facial assessment including degree of volume loss, tissue descent severity, skin quality and elasticity evaluation, underlying bone structure analysis, and realistic expectation alignment with achievable results. Cosmedocs consultation process involves detailed discussion of your aesthetic concerns, comprehensive facial examination assessing ageing patterns, determination of appropriate treatment level, explanation of recommended modalities and expected outcomes, and transparent discussion of costs, recovery expectations, and maintenance requirements. This thorough consultation ensures every patient receives personalised treatment precisely matched to their individual anatomy, ageing patterns, and aesthetic goals, embodying our commitment to bespoke aesthetic medicine rather than template-based approaches.
+            Non-surgical facelift London treatments at Cosmedocs offer advanced facial rejuvenation without surgery. Our expert practitioners specialise in liquid facelift techniques using premium dermal fillers and PDO threads to lift, contour, and restore youthful facial features. With over 10 years of experience training doctors internationally, we provide personalised treatment plans for Level 1, 2, and 3 facial sagging. Our non-surgical face lift approach addresses jowls, volume loss, nasolabial folds, and marionette lines with minimal downtime and natural results. Book your consultation at our Harley Street clinic to discover how our invisible art philosophy can transform your appearance through expert non-surgical facial rejuvenation techniques tailored to your unique needs and aesthetic goals.
           </p>
         </div>
       </div>
