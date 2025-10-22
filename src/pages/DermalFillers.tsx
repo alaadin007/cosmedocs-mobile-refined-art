@@ -14,7 +14,7 @@ const DermalFillerMakeover = () => {
   const seoData = generateSEOMetadata(
     "Dermal Filler Makeover London | Cosmedocs",
     "Complete facial rejuvenation with dermal fillers. Multi-area treatment for harmonious face transformation. Bespoke plans.",
-    "/dermal-filler-makeover"
+    "/dermal-fillers"
   );
 
   const beforeAfterImages = [

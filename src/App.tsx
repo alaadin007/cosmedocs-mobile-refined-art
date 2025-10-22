@@ -177,7 +177,6 @@ const App = () => {
               
               {/* Dermal Filler Routes */}
               <Route path="/dermal-fillers" element={<DermalFillers />} />
-              <Route path="/dermal-filler-makeover" element={<DermalFillers />} />
               <Route path="/marionette-lines" element={<MarionnetteLines />} />
               <Route path="/nasolabial-folds" element={<NasolabialFolds />} />
               

@@ -194,7 +194,7 @@ const ChineseLondonAestheticsBlog = () => {
                   benefits: ["立体轮廓", "黄金比例", "面部平衡", "气质提升"],
                   price: "£350-550",
                   popular: false,
-                  link: "/dermal-filler-makeover"
+                  link: "/dermal-fillers"
                 }
               ].map((treatment, index) => (
                 <motion.div
@@ -511,7 +511,7 @@ const ChineseLondonAestheticsBlog = () => {
                   description: "适合工作繁忙的白领，一次性解决多个美容需求",
                   popular: true,
                   studentDiscount: false,
-                  link: "/dermal-filler-makeover"
+                  link: "/dermal-fillers"
                 },
                 {
                   name: "贵妇臻享套餐",

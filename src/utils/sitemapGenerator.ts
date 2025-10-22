@@ -80,7 +80,7 @@ export const sitemapData: SitemapData = {
       priority: 0.9
     },
     {
-      loc: `${baseUrl}/dermal-filler-makeover`,
+      loc: `${baseUrl}/dermal-fillers`,
       lastmod: currentDate,
       changefreq: 'monthly',
       priority: 0.8

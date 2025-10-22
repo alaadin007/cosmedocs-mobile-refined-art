@@ -34,7 +34,7 @@ const PopularTreatments = ({
     {
       title: "Dermal Fillers – Restore Balance, Contour & Confidence",
       description: "Volume where it matters, definition where it's needed.\n\n• Cheek enhancement & contouring\n• Post-weight loss volume restoration\n• Sunken or hollow cheeks\n• Tear trough (under-eye hollows)\n• Temple hollow correction\n• Nose reshaping (liquid rhinoplasty)\n• Smile line (nasolabial folds) softening\n• Marionette line rejuvenation\n• Jawline & chin sculpting\n• Full-face rejuvenation & makeover",
-      link: "/dermal-filler-makeover"
+      link: "/dermal-fillers"
     },
     {
       title: "Non-Surgical Face Lift – Instant Lift, Zero Downtime",

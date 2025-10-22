@@ -44,7 +44,7 @@ const ROUTE_REGISTRY = {
     '/fat-dissolve', '/oily-skin-botox',
     
     // Alternative/redirect routes
-    '/dermal-filler-makeover', '/experimental-treatment'
+    '/dermal-fillers', '/experimental-treatment'
   ],
   blog: [
     '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',

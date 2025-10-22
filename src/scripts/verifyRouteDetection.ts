@@ -29,7 +29,7 @@ function verifyRouteDetection() {
     '/ear-lobe-rejuvenation', '/jawline-filler', '/temple-filler-london',
     '/tear-trough-filler', '/neck-fillers', '/neck', '/advanced-consultation',
     '/clinical-concepts-to-flawless-skin', '/medical-anal-bleaching', '/peel-to-reveal',
-    '/chemical-peel', '/prescription-skin-care', '/microneedling', '/dermal-filler-makeover',
+    '/chemical-peel', '/prescription-skin-care', '/microneedling', '/dermal-fillers',
     
     // Blog
     '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
