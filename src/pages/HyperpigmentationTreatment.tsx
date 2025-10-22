@@ -610,7 +610,7 @@ const HyperpigmentationTreatment = () => {
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">IPL Hyperpigmentation Treatment</h4>
                         <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                          Intense Pulsed Light therapy is one of the best treatments for hyperpigmentation, targeting dark spots, age spots, and sun damage on face and body. Typically 3-6 sessions needed with no downtime required. Effective for post-hyperpigmentation treatment. Learn more about <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">advanced skin treatments</Link>.
+                          Intense Pulsed Light therapy is one of the best treatments for hyperpigmentation, targeting dark spots, age spots, and sun damage on face and body. Typically 3-6 sessions needed with no downtime required. Effective for post-hyperpigmentation treatment. Learn more about <Link to="/profhilo" className="text-purple-300 hover:text-purple-200 underline">advanced skin treatments</Link>.
                         </p>
                         <div className="text-xs text-purple-300">✓ No downtime • ✓ 3-6 sessions • ✓ All skin types • ✓ Face & body</div>
                       </div>

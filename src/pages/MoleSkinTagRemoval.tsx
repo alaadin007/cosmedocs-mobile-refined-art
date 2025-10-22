@@ -1621,14 +1621,14 @@ const MoleSkinTagRemoval = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <Link to="/profhilo-treatment">
+                <Link to="/profhilo">
                   <Card className="bg-accent border-purple-500 h-full hover:border-purple-300 transition-colors cursor-pointer">
                     <CardHeader>
                       <CardTitle className="text-white">Profhilo Treatment</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-300">
-                        Rejuvenate your skin with <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">Profhilo bio-remodelling</Link>. Improve skin quality, hydration, and elasticity.
+                        Rejuvenate your skin with <Link to="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo bio-remodelling</Link>. Improve skin quality, hydration, and elasticity.
                       </p>
                     </CardContent>
                   </Card>

@@ -757,7 +757,7 @@ const ChemicalPeel = () => {
             >
               <h2 className="text-3xl font-bold mb-6">Combination Treatments</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enhance your face chemical peel results with complementary treatments for comprehensive skin rejuvenation. Our <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link>, <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">Profhilo</Link>, and <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</Link> treatments work synergistically with chemical peels London.
+                Enhance your face chemical peel results with complementary treatments for comprehensive skin rejuvenation. Our <Link to="/microneedling" className="text-purple-300 hover:text-purple-200 underline">microneedling</Link>, <Link to="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo</Link>, and <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler</Link> treatments work synergistically with chemical peels London.
               </p>
             </motion.div>
 

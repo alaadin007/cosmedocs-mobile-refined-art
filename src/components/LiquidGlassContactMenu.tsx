@@ -81,7 +81,7 @@ const treatmentCategories = [
     name: "Skin Boosters",
     icon: Droplets,
     treatments: [
-      { name: "Profhilo", link: "/profhilo-treatment" },
+      { name: "Profhilo", link: "/profhilo" },
       { name: "Polynucleotides", link: "/polynucleotide-treatment" },
       { name: "Microneedling", link: "/microneedling" }
     ],

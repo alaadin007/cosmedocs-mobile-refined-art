@@ -15,7 +15,7 @@ const TREATMENT_ROUTES = [
   '/pdo-threads',
   '/dermal-fillers',
   '/polynucleotide-treatment',
-  '/profhilo-treatment',
+  '/profhilo',
   '/hydrafacial',
   '/prp-treatment',
   

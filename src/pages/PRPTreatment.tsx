@@ -367,7 +367,7 @@ const PRPTreatment = () => {
             >
               <h2 className="text-3xl font-bold mb-4 text-white">PRGF / PRP Treatment</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP). It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing. Our <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> and <a href="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">Profhilo therapy</a> complement PRP beautifully for comprehensive facial rejuvenation.
+                Plasma Rich in Growth Factors (PRGF) is the most cutting-edge in advanced Platelet-Rich Plasma system (PRP). It works by using the platelets from patient's own blood for both the stimulation and acceleration of tissue regeneration and healing. Our <a href="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline">dermal filler treatments</a> and <a href="/profhilo" className="text-purple-300 hover:text-purple-200 underline">Profhilo therapy</a> complement PRP beautifully for comprehensive facial rejuvenation.
               </p>
             </motion.div>
 

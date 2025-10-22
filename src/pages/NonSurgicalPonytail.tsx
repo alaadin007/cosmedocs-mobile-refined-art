@@ -59,7 +59,7 @@ const NonSurgicalPonytail = () => {
     },
     {
       question: "Can a ponytail lift be combined with other treatments?",
-      answer: "Yes! The non-surgical ponytail lift already combines botox and dermal fillers, but can be enhanced with additional treatments like <Link to='/profhilo-treatment' className='text-purple-400 hover:text-purple-300 underline'>Profhilo</Link> for skin quality, <Link to='/face-botox' className='text-purple-400 hover:text-purple-300 underline'>other botox areas</Link>, or additional <Link to='/dermal-fillers' className='text-purple-400 hover:text-purple-300 underline'>filler treatments</Link> in different facial zones. Our doctors create comprehensive treatment plans for optimal facial rejuvenation."
+      answer: "Yes! The non-surgical ponytail lift already combines botox and dermal fillers, but can be enhanced with additional treatments like <Link to='/profhilo' className='text-purple-400 hover:text-purple-300 underline'>Profhilo</Link> for skin quality, <Link to='/face-botox' className='text-purple-400 hover:text-purple-300 underline'>other botox areas</Link>, or additional <Link to='/dermal-fillers' className='text-purple-400 hover:text-purple-300 underline'>filler treatments</Link> in different facial zones. Our doctors create comprehensive treatment plans for optimal facial rejuvenation."
     },
     {
       question: "How many injection points are needed for a ponytail lift?",
@@ -425,7 +425,7 @@ const NonSurgicalPonytail = () => {
               <Card className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500/30">
                 <CardContent className="p-8">
                   <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
-                    As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail facelift addresses these concerns through a dual approach: strategically relaxing downward-pulling muscles with botox whilst restoring volume and structural support with dermal fillers. This mini facelift technique, similar to how we integrate treatments like <Link to="/profhilo-treatment" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, requires precision and expertise for optimal face lifting therapy results.
+                    As we age, facial muscles and tissues lose elasticity, leading to sagging in key areas like the eyebrows, cheeks, and jawline. The non-surgical ponytail facelift addresses these concerns through a dual approach: strategically relaxing downward-pulling muscles with botox whilst restoring volume and structural support with dermal fillers. This mini facelift technique, similar to how we integrate treatments like <Link to="/profhilo" className="text-purple-400 hover:text-purple-300 underline">Profhilo</Link>, requires precision and expertise for optimal face lifting therapy results.
                   </p>
                   <p className="text-gray-300 text-lg leading-relaxed text-center mb-6">
                     This non surgical face lift technique provides subtle yet noticeable face lift skin tightening, creating a more youthful and refreshed appearance without the need for invasive surgery or lengthy recovery periods.

@@ -528,7 +528,7 @@ const BruxismBotox = () => {
                 { icon: <Check className="w-6 h-6" />, title: "Chipped Teeth & Sensitivity", description: "Prevent dental damage" },
                 { icon: <Check className="w-6 h-6" />, title: "Chewed Tissue", description: "Protect inside of mouth" },
                 { icon: <Check className="w-6 h-6" />, title: "Jaw Stiffness", description: "Improve jaw movement" },
-                { icon: <Check className="w-6 h-6" />, title: "Sleep Disturbance", description: "Reduce sleep bruxism", link: "/profhilo-treatment" },
+                { icon: <Check className="w-6 h-6" />, title: "Sleep Disturbance", description: "Reduce sleep bruxism", link: "/profhilo" },
                 { icon: <Check className="w-6 h-6" />, title: "Shoulder Tension", description: "Relieve muscle tightness" }
               ].map((item, index) => (
                 <motion.div

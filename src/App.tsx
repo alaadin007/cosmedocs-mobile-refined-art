@@ -203,7 +203,6 @@ const App = () => {
               
               {/* Treatment URL redirects */}
               <Route path="/fat-dissolving-injections" element={<Navigate to="/fat-dissolve" replace />} />
-              <Route path="/profhilo" element={<Navigate to="/profhilo-treatment" replace />} />
               <Route path="/thread-lift" element={<Navigate to="/thread-face-lift" replace />} />
               <Route path="/aesthetics-at-glance" element={<Navigate to="/aesthetics-at-a-glance" replace />} />
               <Route path="/booking" element={<Navigate to="/contact" replace />} />
@@ -242,7 +241,7 @@ const App = () => {
                <Route path="/barbados" element={<BarbadosHome />} />
               <Route path="/gummy-smile-botox" element={<GummySmileBotox />} />
               <Route path="/polynucleotide-treatment" element={<PolynucleotideTreatment />} />
-              <Route path="/profhilo-treatment" element={<ProfhiloTreatment />} />
+              <Route path="/profhilo" element={<ProfhiloTreatment />} />
               <Route path="/chin-botox" element={<ChinBotox />} />
               <Route path="/frown-line-botox" element={<FrownLineBotox />} />
               <Route path="/crows-feet-botox" element={<CrowsFeetBotox />} />

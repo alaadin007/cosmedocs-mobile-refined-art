@@ -62,7 +62,7 @@ function extractAllRoutes(): { pages: string[], treatments: string[], blog: stri
       ],
       treatments: [
         '/lip-fillers', '/non-surgical-nose-job', '/non-surgical-facelift', '/pdo-threads',
-        '/dermal-fillers', '/polynucleotide-treatment', '/profhilo-treatment',
+        '/dermal-fillers', '/polynucleotide-treatment', '/profhilo',
         '/hydrafacial', '/prp-treatment', '/advanced-upper-face-botox', '/lower-face-botox',
         '/face-botox-areas', '/nefertiti-botox-facelift', '/trigger-point-botox', 
         '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction', '/marionette-lines',

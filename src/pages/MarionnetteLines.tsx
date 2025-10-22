@@ -561,7 +561,7 @@ const MarionnetteLines = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300">
-                      Dermal fillers for marionette lines work by replenishing lost volume in the deeper layers of your skin. Our expert practitioners strategically inject premium <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid</Link> fillers marionette lines along the creases and in the surrounding areas to:
+                      Dermal fillers for marionette lines work by replenishing lost volume in the deeper layers of your skin. Our expert practitioners strategically inject premium <Link to="/profhilo" className="text-purple-300 hover:text-purple-200 underline">hyaluronic acid</Link> fillers marionette lines along the creases and in the surrounding areas to:
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">

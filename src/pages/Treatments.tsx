@@ -424,7 +424,7 @@ const Treatments = () => {
           title: "PROFHILO",
           price: "£350 per session",
           description: "Bio-remodeling hyaluronic acid treatment for skin laxity and hydration",
-          link: "/profhilo-treatment"
+          link: "/profhilo"
         },
         {
           title: "POLYNUCLEOTIDES",

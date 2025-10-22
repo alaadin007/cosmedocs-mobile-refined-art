@@ -28,7 +28,7 @@ const ProfhiloTreatment = () => {
   const seoData = generateSEOMetadata(
     "Profhilo Treatment London | £350 | Cosmedocs",
     "Profhilo London from £350. See profhilo before and after results. Expert profhilo treatment, neck injections & skin booster. Book consultation.",
-    "/profhilo-treatment"
+    "/profhilo"
   );
 
   const bookingUrl = "https://med.as.me/harleystreet";
@@ -541,52 +541,6 @@ const ProfhiloTreatment = () => {
         </section>
 
         {/* Table of Contents */}
-        <section className="py-12 bg-gradient-to-b from-accent to-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-2xl font-bold text-center mb-8 text-white">Quick Navigation</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <a 
-                  href="#what-is-profhilo" 
-                  className="bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 text-center transition-all duration-300 group"
-                >
-                  <div className="text-purple-300 group-hover:text-purple-200 font-medium text-sm">What is Profhilo?</div>
-                </a>
-                <a 
-                  href="#before-after" 
-                  className="bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 text-center transition-all duration-300 group"
-                >
-                  <div className="text-purple-300 group-hover:text-purple-200 font-medium text-sm">Before & After</div>
-                </a>
-                <a 
-                  href="#pricing" 
-                  className="bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 text-center transition-all duration-300 group"
-                >
-                  <div className="text-purple-300 group-hover:text-purple-200 font-medium text-sm">Pricing</div>
-                </a>
-                <a 
-                  href="#safety" 
-                  className="bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 text-center transition-all duration-300 group"
-                >
-                  <div className="text-purple-300 group-hover:text-purple-200 font-medium text-sm">Safety Info</div>
-                </a>
-                <a 
-                  href="#faqs" 
-                  className="bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 text-center transition-all duration-300 group"
-                >
-                  <div className="text-purple-300 group-hover:text-purple-200 font-medium text-sm">FAQs</div>
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Main Content */}
         <main>
         {/* Before & After Gallery */}

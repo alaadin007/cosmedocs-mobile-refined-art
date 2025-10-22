@@ -443,7 +443,7 @@ export default function FaceBotox() {
                 Wondering <strong>where to get botox on your face</strong>? Cosmedocs on Harley Street offers the <strong>best botox London</strong> with over 1 million treatments since 2007. 
                 Our <strong>botox in Harley Street</strong> clinic provides expert <strong>botox in London</strong> with natural results you'll love. We also offer comprehensive 
                 <Link to="/dermal-fillers" className="text-purple-300 hover:text-purple-200 underline mx-1">dermal fillers</Link>, 
-                <Link to="/profhilo-treatment" className="text-purple-300 hover:text-purple-200 underline mx-1">Profhilo</Link>, and 
+                <Link to="/profhilo" className="text-purple-300 hover:text-purple-200 underline mx-1">Profhilo</Link>, and 
                 <Link to="/prp-treatment" className="text-purple-300 hover:text-purple-200 underline mx-1">PRP treatments</Link>.
               </p>
             </motion.div>
