@@ -467,7 +467,7 @@ const NonSurgicalFacelift = () => {
         </section>
 
         {/* Why Choose Cosmedocs */}
-        <section className="py-20 bg-accent">
+        <section className="py-20 bg-black">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -476,68 +476,87 @@ const NonSurgicalFacelift = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
-                Over a decade of international training and expertise in non-surgical facial rejuvenation
-              </p>
+              <h2 className="text-3xl font-bold mb-8 text-white">Why Choose Cosmedocs?</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
-                  <CardHeader>
-                    <GraduationCap className="w-12 h-12 text-purple-400 mb-4" />
-                    <CardTitle className="text-white text-xl">International Training Expertise</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      We've trained doctors internationally in advanced non-surgical face lift techniques for over 10 years. Our expertise ensures you receive treatment from practitioners at the forefront of aesthetic medicine.
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-gray-300">Over 1 million injections performed since 2007</p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
-                  <CardHeader>
-                    <Heart className="w-12 h-12 text-purple-400 mb-4" />
-                    <CardTitle className="text-white text-xl">Invisible Art Philosophy</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      Our aesthetics is invisible art—bold, natural, always your way. We create transformation that speaks without saying a word, never loud or exaggerated.
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <GraduationCap className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+                <p className="text-gray-300">
+                  <a 
+                    href="https://www.harleystreetinstitute.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-300 hover:text-purple-200 underline"
+                  >
+                    Harley Street Institute
+                  </a> trainers
+                </p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
-                  <CardHeader>
-                    <Shield className="w-12 h-12 text-purple-400 mb-4" />
-                    <CardTitle className="text-white text-xl">Honest Assessments</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300">
-                      We provide truthful consultations about which treatment level suits you best, including honest advice about when surgical options may be more appropriate.
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
+                <p className="text-gray-300">Premium FDA-approved dermal fillers only</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Philosophy</h3>
+                <p className="text-gray-300">'Invisible art' for natural results</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="text-purple-600" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
+                <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
             </div>
           </div>
