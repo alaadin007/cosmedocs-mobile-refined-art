@@ -560,11 +560,8 @@ const NonSurgicalFacelift = () => {
             </motion.div>
             
             <div className="max-w-4xl mx-auto">
-              <div className="bg-yellow-900/20 border border-yellow-500/50 rounded-lg p-4 mb-6">
-                <p className="text-yellow-300 font-semibold text-center">⚠️ Caution: Treatment Video Contains Graphic Medical Procedures</p>
-              </div>
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                <iframe 
+                <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-lg"
                   src="https://www.youtube.com/embed/mHn0TARBHik?si=5eH2Povt0jlzoH0I" 
                   title="Non-Surgical Face Lift Treatment Video" 
@@ -615,25 +612,36 @@ const NonSurgicalFacelift = () => {
           <ClientReviews />
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-b from-purple-900/20 to-black">
+        {/* Call to Action */}
+        <section className="py-20">
           <div className="page-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Discover Your Treatment Level?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book a consultation with our expert practitioners to receive a personalised assessment and treatment plan tailored to your unique facial anatomy.
+              <h2 className="text-3xl font-bold mb-4">Ready to Discover Your Treatment Level?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Book your consultation with our expert practitioners and receive a personalised assessment 
+                and treatment plan tailored to your unique facial anatomy.
               </p>
-              <Button 
-                onClick={() => window.open(bookingUrl, "_blank")}
-                className="bg-white text-black hover:bg-gray-200 rounded-full px-12 py-6 text-lg font-semibold shadow-2xl"
-              >
-                Book Your Consultation Today
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => window.open(bookingUrl, "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6"
+                >
+                  Book Free Consultation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6"
+                  onClick={() => window.open('tel:03330551503')}
+                >
+                  Call 0333 0551 503
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
