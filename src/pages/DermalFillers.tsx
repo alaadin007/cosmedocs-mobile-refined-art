@@ -293,15 +293,15 @@ const DermalFillerMakeover = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { area: "Cheek Enhancement", description: "Restore youthful volume and create natural lift for defined cheekbones" },
-                { area: "Nasolabial Folds", description: "Smooth smile lines from nose to mouth corners for a more youthful appearance" },
-                { area: "Marionette Lines", description: "Address downward lines from mouth corners to chin for improved facial contour" },
-                { area: "Jawline Definition", description: "Create sharp, masculine or feminine jawline definition with strategic placement" },
-                { area: "Tear Trough", description: "Reduce under-eye hollowing and dark circles for a refreshed, rested look" },
-                { area: "Lip Enhancement", description: "Add volume, shape, and definition to lips for natural or dramatic results" },
-                { area: "Temple Hollowing", description: "Restore temple volume lost with aging for improved facial proportions" },
-                { area: "Non-Surgical Nose Job", description: "Reshape and refine nose contours without surgery for immediate results" },
-                { area: "Forehead Enhancement", description: "Smooth bumps and irregularities for an even, youthful forehead surface" }
+                { area: "Cheek Enhancement", description: "Restore youthful volume and create natural lift for defined cheekbones", link: "/cheek-filler" },
+                { area: "Nasolabial Folds", description: "Smooth smile lines from nose to mouth corners for a more youthful appearance", link: "/nasolabial-folds" },
+                { area: "Marionette Lines", description: "Address downward lines from mouth corners to chin for improved facial contour", link: "/marionette-lines" },
+                { area: "Jawline Definition", description: "Create sharp, masculine or feminine jawline definition with strategic placement", link: "/jawline-filler" },
+                { area: "Tear Trough", description: "Reduce under-eye hollowing and dark circles for a refreshed, rested look", link: "/tear-trough-filler" },
+                { area: "Lip Enhancement", description: "Add volume, shape, and definition to lips for natural or dramatic results", link: "/lip-fillers" },
+                { area: "Temple Hollowing", description: "Restore temple volume lost with aging for improved facial proportions", link: "/temple-filler-london" },
+                { area: "Non-Surgical Nose Job", description: "Reshape and refine nose contours without surgery for immediate results", link: "/non-surgical-nose-job" },
+                { area: "Forehead Enhancement", description: "Smooth bumps and irregularities for an even, youthful forehead surface", link: "/forehead-fillers" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -310,17 +310,22 @@ const DermalFillerMakeover = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors">
-                    <CardHeader>
-                      <CardTitle className="text-white text-lg flex items-start space-x-3">
-                        <Zap className="text-purple-400 mt-1 shrink-0" size={20} />
-                        <span>{item.area}</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300">{item.description}</p>
-                    </CardContent>
-                  </Card>
+                  <Link to={item.link}>
+                    <Card className="bg-black/50 border-gray-700 h-full hover:border-purple-400 transition-colors group cursor-pointer">
+                      <CardHeader>
+                        <CardTitle className="text-white text-lg flex items-start justify-between">
+                          <span className="flex items-start space-x-3">
+                            <Zap className="text-purple-400 mt-1 shrink-0" size={20} />
+                            <span>{item.area}</span>
+                          </span>
+                          <ArrowRight className="text-purple-400 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" size={20} />
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-300">{item.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </motion.div>
               ))}
             </div>
