@@ -39,7 +39,7 @@ const PopularTreatments = ({
     {
       title: "Non-Surgical Face Lift – Instant Lift, Zero Downtime",
       description: "Advanced thread lifting and strategic volume restoration.\n\n• Sagging jowls & jawline\n• Neck laxity\n• Cheek drooping\n• Brow ptosis\n• Nasolabial fold deepening\n• Marionette lines\n• Loss of facial contour",
-      link: "/non-surgical-face-lift"
+      link: "/non-surgical-facelift"
     },
     {
       title: "Lip Fillers – Elegance in Every Curve",

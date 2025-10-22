@@ -22,7 +22,7 @@ const NonSurgicalFacelift = () => {
   const seoData = generateSEOMetadata(
     "Non-Surgical Facelift London | Cosmedocs",
     "Expert non-surgical face lift London. Tailored treatment for Level 1, 2 & 3 facial sagging. Dermal fillers & PDO threads. Natural results. Book consultation today.",
-    "/non-surgical-face-lift"
+    "/non-surgical-facelift"
   );
 
   const bookingUrl = "https://med.as.me/harleystreet";
