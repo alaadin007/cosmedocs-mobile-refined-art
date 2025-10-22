@@ -24,8 +24,7 @@ const ROUTE_REGISTRY = {
     '/hydrafacial', '/hydrafacial-london', '/prp-treatment',
     
     // Botox treatments
-    '/advanced-upper-face-botox', '/lower-face-botox', '/face-botox-areas', '/face-botox',
-    '/nefertiti-botox-facelift', '/nefertiti-botox-face-jaw-lift', '/trigger-point-botox', 
+    '/botox-london', '/nefertiti-botox-facelift', '/nefertiti-botox-face-jaw-lift', '/trigger-point-botox',
     '/gummy-smile-botox', '/chin-botox', '/botox-calf-reduction',
     
     // Filler treatments

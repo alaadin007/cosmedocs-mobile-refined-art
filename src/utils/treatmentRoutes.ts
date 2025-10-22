@@ -21,9 +21,6 @@ const TREATMENT_ROUTES = [
   
   // Botox treatments
   '/botox-london',
-  '/advanced-upper-face-botox',
-  '/lower-face-botox',
-  '/face-botox-areas',
   '/nefertiti-botox-facelift',
   '/trigger-point-botox',
   '/gummy-smile-botox',

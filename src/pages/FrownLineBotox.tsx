@@ -484,7 +484,7 @@ const FrownLineBotox = () => {
                 <CardContent className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed text-center">
                 Glabellar lines (commonly known as 11 lines or eleven lines) form between the eyebrows from repeated contractions of the corrugator and procerus muscles. 
-                These frown lines can make you appear angry, worried, or tired even when you're not. <Link to="/face-botox-areas" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> 11 effectively treats these scowl lines, restoring facial harmony with <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6489637/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven natural-looking results</a>.
+                These frown lines can make you appear angry, worried, or tired even when you're not. <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> 11 effectively treats these scowl lines, restoring facial harmony with <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6489637/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">clinically proven natural-looking results</a>.
               </p>
                   
                   <div className="grid md:grid-cols-3 gap-4 mt-6">

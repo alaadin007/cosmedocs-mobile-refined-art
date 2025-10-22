@@ -601,7 +601,7 @@ const FatDissolve = () => {
                   <Award className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">EMSCULPT Expertise</h3>
-                <p className="text-gray-300">Specialist cosmetic practitioners trained in advanced EMSCULPT technology and <a href="/anti-wrinkle" className="text-purple-300 hover:text-purple-200 underline">aesthetic medicine</a></p>
+                <p className="text-gray-300">Specialist cosmetic practitioners trained in advanced EMSCULPT technology and <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">aesthetic medicine</a></p>
               </motion.div>
 
               <motion.div

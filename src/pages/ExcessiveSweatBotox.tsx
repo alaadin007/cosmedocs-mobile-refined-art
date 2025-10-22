@@ -871,7 +871,7 @@ const ExcessiveSweatBotox = () => {
                     <div className="space-y-2">
                       <div className="text-purple-300 font-semibold">Other Areas</div>
                       <div className="text-white text-lg">On Consultation</div>
-                      <div className="text-gray-300 text-xs mt-2">For anti-wrinkle options, <a href="/anti-wrinkle-injections" className="text-purple-300 hover:text-purple-200 underline">explore our treatments</a></div>
+                      <div className="text-gray-300 text-xs mt-2">For anti-wrinkle options, <a href="/botox-london" className="text-purple-300 hover:text-purple-200 underline">explore our treatments</a></div>
                     </div>
                   </div>
                 </CardContent>

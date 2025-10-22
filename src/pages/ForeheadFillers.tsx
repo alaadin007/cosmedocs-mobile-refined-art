@@ -1047,7 +1047,7 @@ const ForeheadFillers = () => {
                     What Can Forehead Fillers Treat?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-300 leading-relaxed pt-4">
-                    The treatment effectively addresses static wrinkles, hollow temples, uneven brow height, and facial asymmetry. Using only FDA-approved fillers from renowned brands like Juvéderm, Teosyal, and Stylage, we ensure safety and efficacy in every procedure. Forehead fillers can be combined with <Link to="/face-botox" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> for comprehensive facial rejuvenation, targeting both dynamic and static wrinkles. Forehead fillers restore collagen production, improve skin texture, and provide long-lasting volume enhancement.
+                    The treatment effectively addresses static wrinkles, hollow temples, uneven brow height, and facial asymmetry. Using only FDA-approved fillers from renowned brands like Juvéderm, Teosyal, and Stylage, we ensure safety and efficacy in every procedure. Forehead fillers can be combined with <Link to="/botox-london" className="text-purple-300 hover:text-purple-200 underline">Botox</Link> for comprehensive facial rejuvenation, targeting both dynamic and static wrinkles. Forehead fillers restore collagen production, improve skin texture, and provide long-lasting volume enhancement.
                   </AccordionContent>
                 </AccordionItem>
 

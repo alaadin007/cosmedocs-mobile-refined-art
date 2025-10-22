@@ -190,7 +190,7 @@ const ForeheadLinesBotox = () => {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Botox Treatments",
-                "item": "https://www.cosmedocs.co.uk/face-botox-areas"
+                "item": "https://www.cosmedocs.co.uk/botox-london"
               },
               {
                 "@type": "ListItem",
@@ -398,7 +398,7 @@ const ForeheadLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">What is Forehead Lines Botox?</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-                <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">Forehead lines botox</Link> targets the frontalis muscle across your forehead that creates horizontal wrinkles when raising eyebrows or expressing surprise. 
+                <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">Forehead lines botox</Link> targets the frontalis muscle across your forehead that creates horizontal wrinkles when raising eyebrows or expressing surprise.
                 Our invisible art approach smooths existing lines whilst preserving natural brow movement.
               </p>
             </motion.div>
@@ -471,7 +471,7 @@ const ForeheadLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your forehead lines treatment, we begin your frontalis muscle treatment. The doctor uses very fine needles to inject <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botulinum toxin</Link> into the frontalis muscle in targeted areas such as:
+                      After a detailed consultation with a cosmetic specialist at Cosmedocs for your forehead lines treatment, we begin your frontalis muscle treatment. The doctor uses very fine needles to inject <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">botulinum toxin</Link> into the frontalis muscle in targeted areas such as:
                     </p>
                     <ul className="space-y-3 text-gray-300 mb-6">
                       <li className="flex items-center space-x-2">
@@ -510,7 +510,7 @@ const ForeheadLinesBotox = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">Forehead lines botox</Link> is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
+                      <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">Forehead lines botox</Link> is considered safe with minimal side effects for most people. However, your treatment may have some slight side effects, such as:
                     </p>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start space-x-2">
@@ -592,7 +592,7 @@ const ForeheadLinesBotox = () => {
               <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
                 Worry lines or forehead wrinkles are common amongst people in their 20s, 30s, 40s, 50s, and even teenage years! 
                 Many patients do not wish to have a shiny forehead botox result or a 'frozen look'. Baby botox on face treatments deliver almost instant results, 
-                and they still have some control over their <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">facial muscles</Link>, hence more forehead mobility. This prevents the undesirable botox shiny forehead appearance that some people worry about.
+                and they still have some control over their <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">facial muscles</Link>, hence more forehead mobility. This prevents the undesirable botox shiny forehead appearance that some people worry about.
               </p>
             </motion.div>
 
@@ -763,7 +763,7 @@ const ForeheadLinesBotox = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Other Ways to Reduce Forehead Lines</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-                Whilst <Link to="/face-botox-areas" className="text-purple-400 hover:text-purple-300 underline">botox for forehead lines</Link> is highly effective, we offer complementary treatments to achieve comprehensive forehead rejuvenation and maintain long-lasting results. Some patients combine botox forehead wrinkles before after treatments with these alternatives for enhanced outcomes.
+                Whilst <Link to="/botox-london" className="text-purple-400 hover:text-purple-300 underline">botox for forehead lines</Link> is highly effective, we offer complementary treatments to achieve comprehensive forehead rejuvenation and maintain long-lasting results. Some patients combine botox forehead wrinkles before after treatments with these alternatives for enhanced outcomes.
               </p>
             </motion.div>
 

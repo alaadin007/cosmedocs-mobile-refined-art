@@ -182,10 +182,6 @@ const App = () => {
               <Route path="/nefertiti-botox-face-jaw-lift" element={<NefertitiBotoxFacelift />} />
               
               {/* Botox URL redirects */}
-              <Route path="/anti-wrinkle" element={<Navigate to="/botox-london" replace />} />
-              <Route path="/anti-wrinkle-injections" element={<Navigate to="/botox-london" replace />} />
-              <Route path="/botox" element={<Navigate to="/botox-london" replace />} />
-              <Route path="/brow-lift-botox" element={<Navigate to="/botox-london" replace />} />
               <Route path="/forehead-botox" element={<Navigate to="/forehead-lines-botox" replace />} />
               <Route path="/frown-lines-botox" element={<Navigate to="/frown-line-botox" replace />} />
               <Route path="/chin-dimpling-botox" element={<Navigate to="/chin-botox" replace />} />
@@ -209,11 +205,7 @@ const App = () => {
               <Route path="/price-list" element={<Navigate to="/treatments" replace />} />
               <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
               
-              <Route path="/advanced-upper-face-botox" element={<Navigate to="/botox-london" replace />} />
-              <Route path="/face-botox-areas" element={<Navigate to="/botox-london" replace />} />
-              <Route path="/face-botox" element={<Navigate to="/botox-london" replace />} />
               <Route path="/botox-london" element={<FaceBotox />} />
-              <Route path="/lower-face-botox" element={<Navigate to="/botox-london" replace />} />
               <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
               <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
               <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />
