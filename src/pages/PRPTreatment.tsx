@@ -316,44 +316,6 @@ const PRPTreatment = () => {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Before and After PRP Treatment Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore authentic before and after PRP treatment results from our London clinic. 
-                Our natural healing approach delivers transformative skin rejuvenation and hair restoration using your body's own platelets.
-              </p>
-            </motion.div>
-
-            {/* Hidden SEO Content - Contextually Relevant Keywords */}
-            <div className="sr-only" aria-hidden="true">
-              <h3>Comprehensive PRP Treatment Guide</h3>
-              <p>Platelet-rich plasma therapy represents a revolutionary advancement in regenerative medicine and aesthetic treatments. Our London-based clinic specialises in harnessing the body's natural healing mechanisms through advanced PRP technology, offering patients a non-surgical solution for skin rejuvenation, hair restoration, and intimate wellness concerns. Clinical research published by the National Institutes of Health demonstrates significant efficacy in tissue regeneration and wound healing through platelet-rich plasma applications.</p>
-              
-              <p>The science behind PRP treatment involves extracting a patient's own blood, processing it through specialised centrifugation to concentrate platelets and growth factors, then strategically injecting this enriched plasma into targeted areas. This autologous approach ensures exceptional safety profiles whilst stimulating collagen production, enhancing cellular regeneration, and promoting tissue repair at a molecular level. Studies from the British Association of Aesthetic Plastic Surgeons confirm the regenerative properties of concentrated growth factors in aesthetic medicine.</p>
-              
-              <p>Our Harley Street practitioners have perfected PRP techniques for facial rejuvenation, addressing concerns including fine lines, wrinkles, acne scarring, uneven skin texture, and age-related volume loss. The vampire facial, popularised by celebrities worldwide, combines PRP with microneedling to maximise absorption and stimulate profound dermal remodelling. Results typically manifest within weeks, with continued improvement over several months as collagen synthesis accelerates.</p>
-              
-              <p>Hair loss treatment through PRP injection therapy offers hope for patients experiencing androgenetic alopecia, thinning hair, and reduced follicular density. Growth factors within platelet-rich plasma stimulate dormant hair follicles, improve scalp circulation, and extend the anagen growth phase. Clinical studies demonstrate significant improvements in hair thickness, density, and overall scalp health following a structured treatment protocol.</p>
-              
-              <p>The O-Shot procedure utilises PRP for intimate wellness, addressing female sexual dysfunction, stress incontinence, and vaginal dryness through precise injections that restore tissue vitality and sensitivity. This innovative application of regenerative medicine empowers women to reclaim confidence and improve quality of life without invasive surgery or synthetic interventions.</p>
-              
-              <p>Treatment protocols typically involve three initial sessions spaced four to eight weeks apart, followed by maintenance treatments every six to twelve months. Post-procedure care is minimal, with most patients resuming normal activities immediately. Mild soreness, temporary swelling, or light bruising may occur but typically resolves within 48 hours. We recommend avoiding strenuous exercise, direct sun exposure, and harsh skincare products during the initial recovery period.</p>
-              
-              <p>Cosmedocs distinguishes itself through evidence-based protocols, medical-grade equipment, and practitioners trained to the highest standards at the Harley Street Institute. Our commitment to natural, subtle results aligns with our 'invisible art' philosophy, ensuring enhancements that complement each patient's unique features rather than creating artificial appearances. Since 2007, we have performed over one million injections, establishing ourselves as leaders in aesthetic medicine across London and beyond.</p>
-            </div>
-
-
-          </div>
-        </section>
 
         {/* PRGF / PRP Treatment Section */}
         <section className="py-20 bg-accent">
