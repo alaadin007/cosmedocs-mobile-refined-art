@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, CheckCircle, Award, Shield, Heart, TrendingUp } from "lucide-react";
 import ClientReviews from '@/components/ClientReviews';
+import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import { Link } from "react-router-dom";
 
 const BotoxCostLondon = () => {
@@ -20,6 +21,29 @@ const BotoxCostLondon = () => {
     { area: "2 Areas", womenPrice: "£350", menPrice: "£380" },
     { area: "3 Areas", womenPrice: "£395", menPrice: "£425" },
     { area: "Nefertiti Neck/Jowl Lift", womenPrice: "£250 (or £150 as supplement)", menPrice: "£250 (or £150 as supplement)" }
+  ];
+
+  const botoxBeforeAfterImages = [
+    {
+      src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&auto=format&fit=crop",
+      alt: "Botox forehead lines treatment before and after",
+      caption: "Forehead lines - 3 months after treatment"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&auto=format&fit=crop",
+      alt: "Botox frown lines treatment before and after",
+      caption: "Frown lines - Natural, refreshed results"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&auto=format&fit=crop",
+      alt: "Botox crow's feet treatment before and after",
+      caption: "Crow's feet - Subtle enhancement"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=800&auto=format&fit=crop",
+      alt: "Botox combination treatment before and after",
+      caption: "Multiple areas - Harmonious rejuvenation"
+    }
   ];
 
   const faqs = [
@@ -632,6 +656,58 @@ const BotoxCostLondon = () => {
 
         {/* Client Reviews */}
         <ClientReviews />
+
+        {/* Before & After Results */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox Before & After Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto mb-6">
+                See the natural, subtle results achieved with expert Botox treatments at Cosmedocs. Our specialist injectors deliver refreshed appearances without the frozen look.{' '}
+                <Link to="/botox" className="text-purple-300 hover:underline">
+                  Learn more about our Botox treatments
+                </Link>.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {botoxBeforeAfterImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <BeforeAfterImageViewer
+                    images={botoxBeforeAfterImages}
+                    startIndex={index}
+                    triggerLabel=""
+                    className="w-full"
+                  />
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-8"
+            >
+              <p className="text-sm text-gray-400">
+                Results may vary. Individual results depend on facial anatomy, skin condition, and treatment plan.
+              </p>
+            </motion.div>
+          </div>
+        </section>
 
         {/* FAQs */}
         <section className="py-20 bg-accent">
