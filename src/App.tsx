@@ -206,6 +206,7 @@ const App = () => {
               <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
               
               <Route path="/botox-london" element={<FaceBotox />} />
+              <Route path="/botox-cost-london" element={<BotoxPriceLondon />} />
               <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
               <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
               <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />

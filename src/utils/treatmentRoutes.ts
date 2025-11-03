@@ -21,6 +21,7 @@ const TREATMENT_ROUTES = [
   
   // Botox treatments
   '/botox-london',
+  '/botox-cost-london',
   '/nefertiti-botox-facelift',
   '/trigger-point-botox',
   '/gummy-smile-botox',
