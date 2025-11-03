@@ -102,7 +102,7 @@ const HyperpigmentationTreatment = lazy(() => import("./pages/HyperpigmentationT
 const FatDissolve = lazy(() => import("./pages/FatDissolve"));
 const OilySkinBotox = lazy(() => import("./pages/OilySkinBotox"));
 const CosmeDerm = lazy(() => import("./pages/CosmeDerm"));
-const BotoxPriceLondon = lazy(() => import("./pages/BotoxPriceLondon"));
+const BotoxCostLondon = lazy(() => import("./pages/BotoxCostLondon"));
 const AestheticsAtGlance = lazy(() => import("./pages/AestheticsAtGlance"));
 const FrownLineBotox = lazy(() => import("./pages/FrownLineBotox"));
 const CrowsFeetBotox = lazy(() => import("./pages/CrowsFeetBotox"));
@@ -206,7 +206,8 @@ const App = () => {
               <Route path="/skin-boosters" element={<Navigate to="/treatments" replace />} />
               
               <Route path="/botox-london" element={<FaceBotox />} />
-              <Route path="/botox-cost-london" element={<BotoxPriceLondon />} />
+              <Route path="/botox-cost-london" element={<BotoxCostLondon />} />
+              <Route path="/botox-price-london" element={<Navigate to="/botox-cost-london" replace />} />
               <Route path="/advanced-consultation" element={<AdvancedConsultation />} />
               <Route path="/fellowship-invitation" element={<FellowshipInvitation />} />
               <Route path="/long-term-aesthetic-care-blog" element={<LongTermAestheticCareBlog />} />
@@ -276,10 +277,9 @@ const App = () => {
                <Route path="/eczema-treatment" element={<EczemaTreatment />} />
                 <Route path="/psoriasis-treatment" element={<PsoriasisTreatment />} />
                 <Route path="/hyperpigmentation-treatment" element={<HyperpigmentationTreatment />} />
-                  <Route path="/aesthetic-training" element={<AestheticTraining />} />
-                   <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
-                   <Route path="/botox-price-london" element={<BotoxPriceLondon />} />
-               <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
+                   <Route path="/aesthetic-training" element={<AestheticTraining />} />
+                    <Route path="/hair-transplant-surgeon" element={<HairTransplantSurgeon />} />
+                <Route path="/aesthetics-at-a-glance" element={<AestheticsAtGlance />} />
                 <Route path="/popupoffer" element={<PopupOffer />} />
                 <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
                 
