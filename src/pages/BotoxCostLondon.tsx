@@ -8,14 +8,14 @@ import { Clock, CheckCircle, Award, Shield, Heart, TrendingUp } from "lucide-rea
 import ClientReviews from '@/components/ClientReviews';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import { Link } from "react-router-dom";
-import botoxForeheadBefore from '@/assets/botox-forehead-before.jpg';
-import botoxForeheadAfter from '@/assets/botox-forehead-after.jpg';
-import botoxFrownBefore from '@/assets/botox-frown-before.jpg';
-import botoxFrownAfter from '@/assets/botox-frown-after.jpg';
-import botoxCrowsfeetBefore from '@/assets/botox-crowsfeet-before.jpg';
-import botoxCrowsfeetAfter from '@/assets/botox-crowsfeet-after.jpg';
-import botoxFullBefore from '@/assets/botox-full-before.jpg';
-import botoxFullAfter from '@/assets/botox-full-after.jpg';
+import botoxForeheadImage from "@/assets/botox-forehead-before-after.jpeg";
+import foreheadLineImage from "@/assets/forehead-line-before-after.jpeg";
+import crowsFeetBA1 from "@/assets/before-after/crows-feet-botox-1.png";
+import crowsFeetBA2 from "@/assets/before-after/crows-feet-botox-2.jpg";
+import frownLinesBA1 from "@/assets/frown-lines-before-after-1.jpg";
+import frownLinesBA2 from "@/assets/frown-lines-before-after-2.jpg";
+import frownLinesBA3 from "@/assets/frown-lines-before-after-3.jpg";
+import frownLinesBA4 from "@/assets/frown-lines-before-after-4.jpg";
 
 const BotoxCostLondon = () => {
   const seoData = generateSEOMetadata(
@@ -33,44 +33,44 @@ const BotoxCostLondon = () => {
 
   const botoxBeforeAfterImages = [
     {
-      src: botoxForeheadBefore,
-      alt: "Botox forehead lines treatment before showing natural expression lines",
-      caption: "Forehead lines - Before treatment"
+      src: botoxForeheadImage,
+      alt: "Botox forehead lines treatment before and after showing smooth, natural results",
+      caption: "Forehead lines - Natural wrinkle reduction"
     },
     {
-      src: botoxForeheadAfter,
-      alt: "Botox forehead lines treatment after showing smooth, natural results",
-      caption: "Forehead lines - 3 months after treatment"
+      src: foreheadLineImage,
+      alt: "Forehead line Botox treatment before and after results",
+      caption: "Forehead rejuvenation - Visible improvement"
     },
     {
-      src: botoxFrownBefore,
-      alt: "Botox frown lines treatment before showing vertical lines between eyebrows",
-      caption: "Frown lines - Before treatment"
+      src: frownLinesBA1,
+      alt: "Botox frown lines treatment before and after showing relaxed appearance",
+      caption: "Frown lines - Softened expression"
     },
     {
-      src: botoxFrownAfter,
-      alt: "Botox frown lines treatment after showing relaxed, refreshed appearance",
-      caption: "Frown lines - Natural, refreshed results"
+      src: frownLinesBA2,
+      alt: "Frown line Botox before and after demonstrating natural results",
+      caption: "Glabellar lines - Refreshed look"
     },
     {
-      src: botoxCrowsfeetBefore,
-      alt: "Botox crow's feet treatment before showing fine lines around eyes",
-      caption: "Crow's feet - Before treatment"
+      src: crowsFeetBA1,
+      alt: "Botox crow's feet treatment before and after showing smooth eye area",
+      caption: "Crow's feet - Youthful eyes"
     },
     {
-      src: botoxCrowsfeetAfter,
-      alt: "Botox crow's feet treatment after showing smooth eye area",
-      caption: "Crow's feet - Subtle enhancement"
+      src: crowsFeetBA2,
+      alt: "Crow's feet Botox before and after with subtle enhancement",
+      caption: "Eye area - Subtle rejuvenation"
     },
     {
-      src: botoxFullBefore,
-      alt: "Botox full face treatment before showing multiple treatment areas",
-      caption: "Multiple areas - Before treatment"
+      src: frownLinesBA3,
+      alt: "Multiple area Botox treatment before and after results",
+      caption: "Combined areas - Harmonious results"
     },
     {
-      src: botoxFullAfter,
-      alt: "Botox full face treatment after showing comprehensive rejuvenation",
-      caption: "Multiple areas - Harmonious rejuvenation"
+      src: frownLinesBA4,
+      alt: "Full face Botox before and after showing comprehensive rejuvenation",
+      caption: "Full face treatment - Natural enhancement"
     }
   ];
 
