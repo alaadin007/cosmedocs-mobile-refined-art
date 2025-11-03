@@ -328,7 +328,7 @@ const BotoxCostLondon = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Why Botox Prices Differ in London</h2>
               <p className="text-gray-300 mb-6">
-                According to the <a href="https://www.nhs.uk/conditions/cosmetic-procedures/non-surgical/botulinum-toxin-botox/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">NHS guidelines on botulinum toxin treatments</a>, pricing varies significantly based on several key factors:
+                According to the <a href="https://www.nhs.uk/conditions/botulinum-toxin-injections/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">NHS guidelines on botulinum toxin treatments</a>, pricing varies significantly based on several key factors:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
