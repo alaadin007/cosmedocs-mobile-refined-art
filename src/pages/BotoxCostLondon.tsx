@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,8 +6,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { generateSEOMetadata } from "@/utils/seo";
 import { Clock, CheckCircle, Award, Shield, Heart, TrendingUp } from "lucide-react";
 import ClientReviews from '@/components/ClientReviews';
-import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import botoxForeheadImage from "@/assets/botox-forehead-before-after.jpeg";
 import foreheadLineImage from "@/assets/forehead-line-before-after.jpeg";
 import crowsFeetBA1 from "@/assets/before-after/crows-feet-botox-1.png";
@@ -24,8 +29,6 @@ const BotoxCostLondon = () => {
     "Transparent Botox pricing from £275. Expert anti-wrinkle injections at London's leading pure injectable clinic. Premium results, honest costs.",
     "/botox-cost-london"
   );
-
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const priceTable = [
     { area: "1 Area", womenPrice: "£275", menPrice: "£275" },
@@ -299,6 +302,67 @@ const BotoxCostLondon = () => {
                 </Card>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Before & After Results */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox Before & After Results</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto mb-6">
+                See the natural, subtle results achieved with expert Botox treatments at Cosmedocs. Our specialist injectors deliver refreshed appearances without the frozen look.{' '}
+                <Link to="/botox" className="text-purple-300 hover:underline">
+                  Learn more about our Botox treatments
+                </Link>.
+              </p>
+            </motion.div>
+
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {botoxBeforeAfterImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative group cursor-pointer p-2"
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
+                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-black" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-black" />
+            </Carousel>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-8"
+            >
+              <p className="text-sm text-gray-400">
+                Results may vary. Individual results depend on facial anatomy, skin condition, and treatment plan.
+              </p>
+            </motion.div>
           </div>
         </section>
 
@@ -687,73 +751,6 @@ const BotoxCostLondon = () => {
 
         {/* Client Reviews */}
         <ClientReviews />
-
-        {/* Before & After Results */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Botox Before & After Results</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto mb-6">
-                See the natural, subtle results achieved with expert Botox treatments at Cosmedocs. Our specialist injectors deliver refreshed appearances without the frozen look.{' '}
-                <Link to="/botox" className="text-purple-300 hover:underline">
-                  Learn more about our Botox treatments
-                </Link>.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {botoxBeforeAfterImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group cursor-pointer"
-                  onClick={() => setSelectedImageIndex(index)}
-                >
-                  <div className="aspect-square rounded-lg overflow-hidden bg-accent mb-3">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed text-center">
-                    {image.caption}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-
-            {selectedImageIndex !== null && (
-              <BeforeAfterImageViewer
-                images={botoxBeforeAfterImages}
-                startIndex={selectedImageIndex}
-                isOpen={selectedImageIndex !== null}
-                onOpenChange={(open) => !open && setSelectedImageIndex(null)}
-              />
-            )}
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-8"
-            >
-              <p className="text-sm text-gray-400">
-                Results may vary. Individual results depend on facial anatomy, skin condition, and treatment plan.
-              </p>
-            </motion.div>
-          </div>
-        </section>
 
         {/* FAQs */}
         <section className="py-20 bg-accent">
