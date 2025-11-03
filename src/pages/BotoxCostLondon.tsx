@@ -328,7 +328,7 @@ const BotoxCostLondon = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">Why Botox Prices Differ in London</h2>
               <p className="text-gray-300 mb-6">
-                According to <a href="https://www.nhs.uk/tests-and-treatments/cosmetic-procedures/advice/choosing-who-will-do-your-procedure/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">NHS guidance on choosing a cosmetic practitioner</a>, pricing varies significantly based on several key factors:
+                The <a href="https://www.nhs.uk/tests-and-treatments/cosmetic-procedures/advice/choosing-who-will-do-your-procedure/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">NHS advises patients to ask about costs during consultations</a>, as pricing varies significantly based on several key factors:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
