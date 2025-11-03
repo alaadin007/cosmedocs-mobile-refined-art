@@ -8,6 +8,14 @@ import { Clock, CheckCircle, Award, Shield, Heart, TrendingUp } from "lucide-rea
 import ClientReviews from '@/components/ClientReviews';
 import BeforeAfterImageViewer from '@/components/BeforeAfterImageViewer';
 import { Link } from "react-router-dom";
+import botoxForeheadBefore from '@/assets/botox-forehead-before.jpg';
+import botoxForeheadAfter from '@/assets/botox-forehead-after.jpg';
+import botoxFrownBefore from '@/assets/botox-frown-before.jpg';
+import botoxFrownAfter from '@/assets/botox-frown-after.jpg';
+import botoxCrowsfeetBefore from '@/assets/botox-crowsfeet-before.jpg';
+import botoxCrowsfeetAfter from '@/assets/botox-crowsfeet-after.jpg';
+import botoxFullBefore from '@/assets/botox-full-before.jpg';
+import botoxFullAfter from '@/assets/botox-full-after.jpg';
 
 const BotoxCostLondon = () => {
   const seoData = generateSEOMetadata(
@@ -25,23 +33,43 @@ const BotoxCostLondon = () => {
 
   const botoxBeforeAfterImages = [
     {
-      src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&auto=format&fit=crop",
-      alt: "Botox forehead lines treatment before and after",
+      src: botoxForeheadBefore,
+      alt: "Botox forehead lines treatment before showing natural expression lines",
+      caption: "Forehead lines - Before treatment"
+    },
+    {
+      src: botoxForeheadAfter,
+      alt: "Botox forehead lines treatment after showing smooth, natural results",
       caption: "Forehead lines - 3 months after treatment"
     },
     {
-      src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&auto=format&fit=crop",
-      alt: "Botox frown lines treatment before and after",
+      src: botoxFrownBefore,
+      alt: "Botox frown lines treatment before showing vertical lines between eyebrows",
+      caption: "Frown lines - Before treatment"
+    },
+    {
+      src: botoxFrownAfter,
+      alt: "Botox frown lines treatment after showing relaxed, refreshed appearance",
       caption: "Frown lines - Natural, refreshed results"
     },
     {
-      src: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&auto=format&fit=crop",
-      alt: "Botox crow's feet treatment before and after",
+      src: botoxCrowsfeetBefore,
+      alt: "Botox crow's feet treatment before showing fine lines around eyes",
+      caption: "Crow's feet - Before treatment"
+    },
+    {
+      src: botoxCrowsfeetAfter,
+      alt: "Botox crow's feet treatment after showing smooth eye area",
       caption: "Crow's feet - Subtle enhancement"
     },
     {
-      src: "https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=800&auto=format&fit=crop",
-      alt: "Botox combination treatment before and after",
+      src: botoxFullBefore,
+      alt: "Botox full face treatment before showing multiple treatment areas",
+      caption: "Multiple areas - Before treatment"
+    },
+    {
+      src: botoxFullAfter,
+      alt: "Botox full face treatment after showing comprehensive rejuvenation",
       caption: "Multiple areas - Harmonious rejuvenation"
     }
   ];
