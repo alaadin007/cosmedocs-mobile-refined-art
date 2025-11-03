@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,8 @@ const BotoxCostLondon = () => {
     "Transparent Botox pricing from £275. Expert anti-wrinkle injections at London's leading pure injectable clinic. Premium results, honest costs.",
     "/botox-cost-london"
   );
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const priceTable = [
     { area: "1 Area", womenPrice: "£275", menPrice: "£275" },
@@ -712,16 +715,31 @@ const BotoxCostLondon = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  className="group cursor-pointer"
+                  onClick={() => setSelectedImageIndex(index)}
                 >
-                  <BeforeAfterImageViewer
-                    images={botoxBeforeAfterImages}
-                    startIndex={index}
-                    triggerLabel=""
-                    className="w-full"
-                  />
+                  <div className="aspect-square rounded-lg overflow-hidden bg-accent mb-3">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                    {image.caption}
+                  </p>
                 </motion.div>
               ))}
             </div>
+
+            {selectedImageIndex !== null && (
+              <BeforeAfterImageViewer
+                images={botoxBeforeAfterImages}
+                startIndex={selectedImageIndex}
+                isOpen={selectedImageIndex !== null}
+                onOpenChange={(open) => !open && setSelectedImageIndex(null)}
+              />
+            )}
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
