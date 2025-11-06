@@ -57,6 +57,7 @@ const SmokersLinesWomen = lazy(() => import("./pages/SmokersLinesWomen"));
 const FlawlessSkin = lazy(() => import("./pages/FlawlessSkin"));
 const LazySkinSyndrome = lazy(() => import("./pages/LazySkinSyndrome"));
 const BeautyEthnicNeutrality = lazy(() => import("./pages/blog/BeautyEthnicNeutrality"));
+const BlogHome = lazy(() => import("./pages/BlogHome"));
 const EightPointFacelift = lazy(() => import("./pages/EightPointFacelift"));
 const TreatmentsSummaryChinese = lazy(() => import("./pages/TreatmentsSummaryChinese"));
 const TreatmentsSummaryArabic = lazy(() => import("./pages/TreatmentsSummaryArabic"));
@@ -222,6 +223,7 @@ const App = () => {
               <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
                <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
                <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
+                <Route path="/journal" element={<BlogHome />} />
                <Route path="/8-point-facelift" element={<EightPointFacelift />} />
                <Route path="/cosmetalk" element={<CosmetalkBlog />} />
               <Route path="/treatments-summary-chinese" element={<TreatmentsSummaryChinese />} />
