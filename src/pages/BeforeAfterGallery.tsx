@@ -33,8 +33,8 @@ const BeforeAfterGallery = () => {
     {
       id: "1",
       type: "image",
-      beforeUrl: "/api/placeholder/400/300",
-      afterUrl: "/api/placeholder/400/300",
+      beforeUrl: "/placeholder.svg",
+      afterUrl: "/placeholder.svg",
       treatment: "Lip Fillers",
       description: "0.5ml natural lip enhancement for subtle volume",
       patientAge: "28",
@@ -43,8 +43,8 @@ const BeforeAfterGallery = () => {
     {
       id: "2", 
       type: "image",
-      beforeUrl: "/api/placeholder/400/300",
-      afterUrl: "/api/placeholder/400/300",
+      beforeUrl: "/placeholder.svg",
+      afterUrl: "/placeholder.svg",
       treatment: "Botox",
       description: "Forehead and frown line treatment",
       patientAge: "35",
@@ -53,7 +53,7 @@ const BeforeAfterGallery = () => {
     {
       id: "3",
       type: "video",
-      beforeUrl: "/api/placeholder/400/300",
+      beforeUrl: "/placeholder.svg",
       videoUrl: "#",
       treatment: "Dermal Filler Makeover",
       description: "Complete facial rejuvenation with HAMA technique",
@@ -64,8 +64,8 @@ const BeforeAfterGallery = () => {
     {
       id: "4",
       type: "image",
-      beforeUrl: "/api/placeholder/400/300",
-      afterUrl: "/api/placeholder/400/300",
+      beforeUrl: "/placeholder.svg",
+      afterUrl: "/placeholder.svg",
       treatment: "Non-Surgical Nose Job",
       description: "Profile refinement with hyaluronic acid",
       patientAge: "24",
@@ -74,8 +74,8 @@ const BeforeAfterGallery = () => {
     {
       id: "5",
       type: "image",
-      beforeUrl: "/api/placeholder/400/300",
-      afterUrl: "/api/placeholder/400/300",
+      beforeUrl: "/placeholder.svg",
+      afterUrl: "/placeholder.svg",
       treatment: "Cheek Fillers",
       description: "Volume restoration and contouring",
       patientAge: "38",
@@ -84,8 +84,8 @@ const BeforeAfterGallery = () => {
     {
       id: "6",
       type: "image",
-      beforeUrl: "/api/placeholder/400/300",
-      afterUrl: "/api/placeholder/400/300",
+      beforeUrl: "/placeholder.svg",
+      afterUrl: "/placeholder.svg",
       treatment: "Jawline Contouring",
       description: "Masculine jawline enhancement",
       patientAge: "32",
@@ -199,6 +199,8 @@ const BeforeAfterGallery = () => {
                             <img
                               src={item.beforeUrl}
                               alt={`Before ${item.treatment}`}
+                              loading="lazy"
+                              onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                               className="w-full h-full object-cover"
                             />
                             <div className="absolute top-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-xs">
@@ -210,6 +212,8 @@ const BeforeAfterGallery = () => {
                               <img
                                 src={item.afterUrl}
                                 alt={`After ${item.treatment}`}
+                                loading="lazy"
+                                onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                                 className="w-full h-full object-cover"
                               />
                               <div className="absolute top-2 right-2 bg-amber-500 text-black px-2 py-1 rounded text-xs font-medium">
@@ -223,6 +227,8 @@ const BeforeAfterGallery = () => {
                           <img
                             src={item.beforeUrl}
                             alt={`${item.treatment} video preview`}
+                            loading="lazy"
+                            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                             className="w-full h-full object-cover"
                           />
                           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -300,6 +306,8 @@ const BeforeAfterGallery = () => {
                         <img
                           src={selectedItem.beforeUrl}
                           alt={`Before ${selectedItem.treatment}`}
+                          loading="lazy"
+                          onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                           className="w-full h-[400px] object-cover"
                         />
                         <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-2 rounded">
@@ -311,6 +319,8 @@ const BeforeAfterGallery = () => {
                           <img
                             src={selectedItem.afterUrl}
                             alt={`After ${selectedItem.treatment}`}
+                            loading="lazy"
+                            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
                             className="w-full h-[400px] object-cover"
                           />
                           <div className="absolute top-4 right-4 bg-amber-500 text-black px-3 py-2 rounded font-medium">
