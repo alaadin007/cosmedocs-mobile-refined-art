@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { X, ChevronLeft, ChevronRight, Camera, Play } from "lucide-react";
 import { generateSEOMetadata } from "../utils/seo";
+import jawlineImage from "@/assets/jawline-filler-2ml-before-after.png";
 
 interface MediaItem {
   id: string;
@@ -33,8 +34,8 @@ const BeforeAfterGallery = () => {
     {
       id: "1",
       type: "image",
-      beforeUrl: "/placeholder.svg",
-      afterUrl: "/placeholder.svg",
+      beforeUrl: "/lovable-uploads/729455dc-8926-4c98-9c54-10530134f7f3.png",
+      afterUrl: "/lovable-uploads/729455dc-8926-4c98-9c54-10530134f7f3.png",
       treatment: "Lip Fillers",
       description: "0.5ml natural lip enhancement for subtle volume",
       patientAge: "28",
@@ -43,8 +44,8 @@ const BeforeAfterGallery = () => {
     {
       id: "2", 
       type: "image",
-      beforeUrl: "/placeholder.svg",
-      afterUrl: "/placeholder.svg",
+      beforeUrl: "/lovable-uploads/062e112b-382a-4f69-a659-07824545dd80.png",
+      afterUrl: "/lovable-uploads/062e112b-382a-4f69-a659-07824545dd80.png",
       treatment: "Botox",
       description: "Forehead and frown line treatment",
       patientAge: "35",
@@ -52,9 +53,9 @@ const BeforeAfterGallery = () => {
     },
     {
       id: "3",
-      type: "video",
-      beforeUrl: "/placeholder.svg",
-      videoUrl: "#",
+      type: "image",
+      beforeUrl: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png",
+      afterUrl: "/lovable-uploads/c5117df6-2f03-4565-8ede-2a7fa83bb2fe.png",
       treatment: "Dermal Filler Makeover",
       description: "Complete facial rejuvenation with HAMA technique",
       duration: "3 months",
@@ -64,8 +65,8 @@ const BeforeAfterGallery = () => {
     {
       id: "4",
       type: "image",
-      beforeUrl: "/placeholder.svg",
-      afterUrl: "/placeholder.svg",
+      beforeUrl: "/lovable-uploads/def5f295-bb56-4f08-9271-7e38269dffc8.png",
+      afterUrl: "/lovable-uploads/def5f295-bb56-4f08-9271-7e38269dffc8.png",
       treatment: "Non-Surgical Nose Job",
       description: "Profile refinement with hyaluronic acid",
       patientAge: "24",
@@ -74,8 +75,8 @@ const BeforeAfterGallery = () => {
     {
       id: "5",
       type: "image",
-      beforeUrl: "/placeholder.svg",
-      afterUrl: "/placeholder.svg",
+      beforeUrl: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png",
+      afterUrl: "/lovable-uploads/4bb9f7fc-8d28-4ce9-b09e-7ee91adbe38c.png",
       treatment: "Cheek Fillers",
       description: "Volume restoration and contouring",
       patientAge: "38",
@@ -84,8 +85,8 @@ const BeforeAfterGallery = () => {
     {
       id: "6",
       type: "image",
-      beforeUrl: "/placeholder.svg",
-      afterUrl: "/placeholder.svg",
+      beforeUrl: jawlineImage,
+      afterUrl: jawlineImage,
       treatment: "Jawline Contouring",
       description: "Masculine jawline enhancement",
       patientAge: "32",
