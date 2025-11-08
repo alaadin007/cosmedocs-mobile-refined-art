@@ -46,9 +46,14 @@ const chapters: Chapter[] = [
   { id: "chapter-5", title: "Chapter 5", subtitle: "The Forties: The Era of Lift and Logic" },
   { id: "chapter-6", title: "Chapter 6", subtitle: "The Fifties: Elegance, Elasticity & Energy" },
   {
-    id: "chapter-7",
-    title: "Chapter 7",
-    subtitle: "The Sixties: Legacy, Light & the Art of Mastery",
+    id: "epilogue",
+    title: "Epilogue",
+    subtitle: "The Philosophy of Aesthetics: What We Learned from Faces",
+  },
+  {
+    id: "postscript",
+    title: "Postscript",
+    subtitle: "The Core Principles of Aesthetic Medicine",
   },
 ];
 
@@ -1934,166 +1939,147 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
-              {/* Chapter 7: The Sixties */}
-              <section id="chapter-7" className="mb-16 scroll-mt-20">
+              {/* Epilogue: The Philosophy of Aesthetics */}
+              <section id="epilogue" className="mb-16 scroll-mt-20">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                  Chapter 7: The Sixties: Legacy, Light & the Art of Mastery
+                  Epilogue: The Philosophy of Aesthetics: What We Learned from Faces
                 </h2>
                 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    🌙 "By sixty, beauty isn't a miracle. It's a collaboration."
+                    🌙 "Perfection was never the goal. Harmony was."
                   </p>
 
                   <p>
-                    Welcome to the decade where everything you've done — or not done — shows its report card.
-                    If your practitioner knew what they were doing in your forties and fifties, you're walking into your sixties with calm, balanced, luminous skin and structure.
-                    If they didn't — well, this is the chapter where experience finally matters more than enthusiasm.
-                  </p>
-
-                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    The Era of the Expert
-                  </h3>
-
-                  <p>
-                    Let's be honest.
-                    This is not the decade to experiment with someone new who's just finished a weekend course and calls every cheek filler a "liquid facelift."
-                    At this stage, your face is a living map — every compartment, ligament, and muscle has shifted slightly from where nature first drew it.
+                    After all these years — faces, treatments, trends, and philosophies — here's what we've learned:
+                    Beauty is asymmetry.
+                    It's the slight tilt of one brow, the uneven curve of a smile, the imperfection that gives identity.
+                    It's the tension between balance and individuality that makes a face feel alive.
                   </p>
 
                   <p>
-                    This isn't "filling."
-                    This is restoration — a millimetre at a time.
-                    And that requires an injector who can see not just where to place filler, but where not to.
+                    And yet, many chase something else — a kind of ethnic neutrality, a smoothed-out sameness shaped by algorithms and filters.
+                    That's why if you look at every Miss Universe from every nation, they start to look almost identical.
+                    Different passports, same proportions.
+                    Different countries, same template.
+                  </p>
+
+                  <p>
+                    That's not beauty. That's symmetry without soul.
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    💬 "By sixty, you don't need a fan. You need a conductor."
+                    💬 "Faces aren't meant to match. They're meant to move you."
                   </p>
 
                   <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    The Skill of the Subtle
+                    The Philosophy We Practice
                   </h3>
 
                   <p>
-                    A good practitioner at this age doesn't chase youth.
-                    They restore coherence — the smooth flow of light, contour, and tone across the face.
-                    That means treating every detail with intention:
-                  </p>
-
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Under-eyes</strong>, where skin has thinned and the fat pads have separated.</li>
-                    <li><strong>Corners of the lips</strong>, to lift mood as much as mouth.</li>
-                    <li><strong>Jawline</strong>, to hold definition without heaviness.</li>
-                    <li><strong>Preauricular zones</strong> (near the ears), to transition from face to neck.</li>
-                    <li><strong>Temple and brow areas</strong>, where light catches and structure fades.</li>
-                  </ul>
-
-                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
-                    <p className="text-sm font-medium text-gray-900">
-                      🗒️ Post-It Reminder:
-                    </p>
-                    <p className="text-sm text-gray-700 mt-1">
-                      The older the canvas, the finer the brush.
-                    </p>
-                  </div>
-
-                  <p>
-                    Each micro-adjustment — half a syringe here, a soft touch there — builds a symphony of lift, support, and reflection.
-                    The filler isn't the hero. The hand is.
-                  </p>
-
-                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    The Practitioner Matters More Than the Product
-                  </h3>
-
-                  <p>
-                    At this level, the difference between good and great isn't the brand of filler — it's the mind behind the needle.
-                    Your practitioner needs to think in systems, not syringes.
-                    Every area connects: the jaw affects the eyes, the lips affect the neck, the temples affect the lower face.
-                    You can't just "treat an area." You have to treat a flow.
+                    At Cosmedocs, our job isn't to change who you are — it's to preserve who you are well.
+                    We're not here for one-off treatments or TikTok trends.
+                    We're here to be your GP for your skin health, walking alongside you for ten or fifteen years, not ten or fifteen minutes.
                   </p>
 
                   <p>
-                    That's why a cheap 40-minute session that's just cheeks, lips, and a dash of Botox won't do justice anymore.
-                    This isn't a price point issue — it's a precision issue.
+                    We believe in the old techniques done meticulously well —
+                    the tried, tested, and safe approaches that have earned their reputation through time, not marketing.
+                    Because while the industry is busy inventing new names for old mistakes,
+                    we're quietly refining what already works.
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    💬 "At sixty, every millilitre counts — and every hand that touches you should have earned that right."
+                    💬 "Old doesn't mean outdated. It means proven."
+                  </p>
+
+                  <p>
+                    There is still no replacement for retinol —
+                    no matter how many shiny new serums appear with lab-made promises.
+                    We know its chemistry. We know its concentration.
+                    We know how to use it with respect, not aggression.
+                  </p>
+
+                  <p>
+                    And when it comes to injectables, we use only dissolvable hyaluronic acid fillers —
+                    because reversibility isn't optional; it's responsibility.
+                    Our aim is for you to leave the clinic looking fresher, not different —
+                    to go back to work without anyone noticing anything except that something quietly fits again.
                   </p>
 
                   <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    The Collagen Comeback
+                    The Truth About Complications
                   </h3>
 
                   <p>
-                    Here, the focus isn't just filler — it's reconstruction.
-                    We combine:
-                  </p>
-
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Biostimulators</strong> to stiffen and strengthen the dermis.</li>
-                    <li><strong>Polynucleotides, exosomes, PRF</strong> to restore cellular activity.</li>
-                    <li><strong>Threads</strong> to reposition tissue and stimulate support.</li>
-                    <li><strong>Advanced energy devices</strong> to remodel collagen and tighten deep fascia.</li>
-                  </ul>
-
-                  <p>
-                    The face doesn't need more volume — it needs firmness, elasticity, and continuity.
-                    When skin flows smoothly from one compartment to another, you get that elusive quality people call "freshness."
-                  </p>
-
-                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
-                    <p className="text-sm font-medium text-gray-900">
-                      🗒️ Post-It Tip:
-                    </p>
-                    <p className="text-sm text-gray-700 mt-1">
-                      In your sixties, it's not about looking young. It's about looking alive.
-                    </p>
-                  </div>
-
-                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    The Magic of Micro-Precision
-                  </h3>
-
-                  <p>
-                    This stage is like fine art restoration.
-                    Every injection must blend seamlessly into the next.
-                    We're no longer "fixing" faces — we're fusing compartments together: jaw to cheek, cheek to temple, eye to brow.
+                    We also don't pretend this is magic.
+                    Complications exist. They always will.
+                    The majority are minor — a little swelling, mild bruising, temporary tenderness.
+                    These are not failures. They're the biology of healing.
                   </p>
 
                   <p>
-                    That smooth, unbroken transition is what separates the beautifully maintained from the obviously altered.
+                    But in recent years, social media has given birth to new kinds of fear —
+                    the biggest one being migration.
+                    It's the word that's suddenly everywhere, whispered like a scandal.
+                  </p>
+
+                  <p>
+                    Here's the truth: in seventeen years of practice, I've rarely seen true migration.
+                    What I have seen, far too often, is misplacement.
+                    Filler injected into the wrong anatomical plane —
+                    it looks perfect for a few months, then drifts subtly off because it was never anchored correctly.
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    💬 "In your sixties, the goal isn't to erase age — it's to polish wisdom."
+                    💬 "It's not that filler moves — it's that it was put where it didn't belong."
+                  </p>
+
+                  <p>
+                    That's not migration. That's poor mapping disguised as a mystery.
                   </p>
 
                   <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    Heavy Work, Light Hands
+                    The Industry's Growing Pains
                   </h3>
 
                   <p>
-                    Yes — there's more work to do.
-                    The lines are deeper, the skin is slower, and the shadows are heavier.
-                    But the satisfaction? Tremendous.
+                    We're living in a world where every beauty salon owner wants to become an aesthetic practitioner overnight.
+                    They finish a two-day course, learn how to identify gram-positive and gram-negative bacteria,
+                    and believe that's what infection control means.
                   </p>
 
                   <p>
-                    Because the difference one or two carefully planned treatments can make is astonishing.
-                    You can rebuild a decade of youth with precision and patience — not volume.
+                    The truth is, that's not medical practice.
+                    That's memorisation without understanding.
+                    A face isn't a patch of skin — it's a living network of arteries, veins, fascia, and expression.
+                    It's the sum of your biology, your culture, your identity.
+                    To treat it well, you need more than a certificate. You need respect.
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    💬 "One face, one plan, one steady hand."
+                    💬 "The needle is easy to hold. The responsibility is not."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Balance of Art and Safety
+                  </h3>
+
+                  <p>
+                    So, we stay grounded.
+                    We don't chase new names or untested toys.
+                    We perfect the foundations —
+                    old products, stable formulations, known anatomy, precise hands.
                   </p>
 
                   <p>
-                    That's what separates mastery from marketing.
-                    You need someone who understands sequence — what to treat first, what to wait for, what to leave alone.
-                    Because sometimes, doing nothing is part of the treatment.
+                    Because medicine isn't fashion.
+                    And faces aren't experiments.
+                  </p>
+
+                  <p>
+                    We exist in that fine, sacred space where art meets accountability —
+                    where subtlety matters more than speed, and long-term trust matters more than short-term applause.
                   </p>
 
                   <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
@@ -2101,81 +2087,289 @@ export default function AestheticTreatmentsMadeEasy() {
                       🗒️ Post-It Wisdom:
                     </p>
                     <p className="text-sm text-gray-700 mt-1">
-                      Experience isn't knowing what to do. It's knowing when to stop.
+                      In a world full of trends, stay timeless.
                     </p>
                   </div>
 
                   <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    The Psychology of Renewal
+                    What We Learned
                   </h3>
 
                   <p>
-                    The best part about patients in their fifties and sixties?
-                    They're done chasing approval.
-                    They're doing this for themselves — for reflection, not attention.
-                    And that makes the work purer, the result deeper.
+                    In the end, the philosophy of aesthetics isn't about the face at all.
+                    It's about understanding time — and learning how to move with it instead of against it.
+                    Every wrinkle tells a story, every shadow hints at strength, every asymmetry reveals authenticity.
                   </p>
 
                   <p>
-                    When the face matches the soul again, something clicks.
-                    They stand taller.
-                    They smile easier.
-                    And every time they look in the mirror, they whisper — "That's me again."
+                    And our job?
+                    Not to erase.
+                    Not to imitate.
+                    But to guide time gently — with precision, logic, and respect.
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    💬 "You don't look younger. You look truthful."
+                    💬 "Because beauty isn't what you add. It's what you preserve."
                   </p>
 
                   <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    Never Be Dismayed
+                    The Legacy
                   </h3>
 
                   <p>
-                    So don't ever think it's too late.
-                    The amount of positive change you can create in one or two thoughtful sessions is immensely satisfying — both for you and for us.
-                    The key is precision, not panic.
-                    Subtle structure, patient regeneration, steady evolution.
+                    If you remember one thing from this book, let it be this:
+                    We don't fix faces. We steward them.
+                    Over years, not sessions.
+                    Through science, not slogans.
+                    With experience, not ego.
                   </p>
 
                   <p>
-                    Because no matter how advanced the years or deep the lines,
-                    the light is still in there — waiting to be brought back to the surface.
+                    So when the next miracle treatment appears on your feed,
+                    take a breath.
+                    Ask your face what it really needs — not what's being sold to it.
+                  </p>
+
+                  <p>
+                    And if we've done our job right,
+                    your reflection will still feel like you —
+                    just a little calmer, a little clearer, a little more timeless.
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    ✨ "We're not fighting age. We're sculpting time."
+                    ✨ "In the end, the goal was never to chase youth.<br />
+                    It was to age with intelligence."
+                  </p>
+                </div>
+              </section>
+
+              {/* Postscript: Core Principles */}
+              <section id="postscript" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Postscript: The Core Principles of Aesthetic Medicine
+                </h2>
+                
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    "A face should be studied, not sold."
+                  </p>
+
+                  <p>
+                    After decades of practice, refinement, and reflection, we've learned that a beautiful result doesn't come from a syringe — it comes from a system.
+                    Every face deserves a structured plan — not a shopping list.
+                    That plan rests on three pillars of consultation:
+                  </p>
+
+                  <ul className="list-disc pl-6 space-y-2 text-lg font-medium">
+                    <li>The Skin</li>
+                    <li>The Wrinkles in Motion</li>
+                    <li>The Volume of the Face</li>
+                  </ul>
+
+                  <p>
+                    Each must be observed, understood, and restored — slowly, intelligently, and in sequence.
                   </p>
 
                   <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                    Final Reflection — Legacy & Light
+                    1. The Skin — The Canvas of Light
                   </h3>
 
                   <p>
-                    By sixty, beauty isn't performance anymore — it's presence.
-                    It's the quiet assurance of someone who's taken care of themselves, inside and out.
+                    When we first meet a face, we look at the surface: pores, tone, and texture.
+                    This is your skin's handwriting — and it tells us everything about your history, habits, and health.
                   </p>
 
-                  <p>
-                    Aesthetic medicine, at this point, isn't vanity.
-                    It's craftsmanship.
-                    It's the science of keeping form and spirit aligned.
-                  </p>
+                  <p className="font-medium">In your 20s, the foundation is simple:</p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Vitamin C</strong> in the morning to protect and brighten.</li>
+                    <li><strong>Retinol</strong> at night to renew and rebuild.</li>
+                  </ul>
 
                   <p>
-                    So find the right hands.
-                    Stay patient.
-                    And never stop refining.
+                    Sometimes we'll use prescription retinoids for faster cellular turnover and true collagen stimulation.
+                    When combined with skin peels, these two ingredients alone can transform your texture into what we call "glass skin."
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    💬 "The goal was never to stay young — it was to stay luminous."
+                    💬 "Skincare isn't a luxury; it's a discipline."
+                  </p>
+
+                  <p>
+                    In your 30s, we add microneedling — a controlled injury to wake the dermis and keep collagen alert.
+                    By your late 30s and beyond, we may introduce polynucleotides — regenerative injectables that repair DNA and restore radiance from within.
+                  </p>
+
+                  <p>
+                    This sequence — Vitamin C, Retinol, Microneedling, Polynucleotides —
+                    is the backbone of modern skin health.
+                    It's not glamorous, but it works. Always has.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Tip:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      Don't complicate your skincare — commit to it.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    2. Wrinkles in Motion — The Language of Expression
+                  </h3>
+
+                  <p>
+                    Next, we study the muscles — the ones that move your story.
+                    Wrinkles aren't the enemy. They're evidence of a life lived.
+                    But when movement becomes memory — when lines start staying at rest — it's time to guide the muscles, not fight them.
+                  </p>
+
+                  <p>
+                    We start with the upper face — forehead, frown lines, crow's feet.
+                    But many practitioners stop there, ignoring the lower face, where real emotion hides.
+                  </p>
+
+                  <p>
+                    The sad corners of the mouth begin in the mid-30s — driven by a small but powerful muscle that pulls the lips downward when we express frustration or disappointment.
+                    You can see it in children when they don't get what they want — that subtle pout.
+                    As adults, we don't notice we're doing it, but over time it leaves permanent shadows and mouth-corner lines.
+                  </p>
+
+                  <p>
+                    The chin joins in too, contracting constantly with speech, expression, and tension.
+                    That's what creates the little crease above the chin — the mental crease — which deepens with time, especially in photos you never meant to take.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Every emotion writes something on your face.<br />
+                    Botox just edits it lightly."
+                  </p>
+
+                  <p>
+                    Softening these lower-face muscles is not vanity; it's balance.
+                    A relaxed chin, a softened mouth corner, and a calmer frown make the whole face breathe again.
+                    We teach this only to advanced injectors — because the lower face is the hardest to master, and the most transformative when done right.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    3. Volume — The Architecture Beneath
+                  </h3>
+
+                  <p>
+                    Finally, we study volume — the most underestimated part of facial ageing.
+                    It's not just about filler; it's about reading the terrain.
+                  </p>
+
+                  <p className="font-medium">In your late 20s, subtle volume loss starts to appear as:</p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Early tear troughs</li>
+                    <li>Slight upper cheek flattening</li>
+                    <li>Mild lip dehydration and fine creasing</li>
+                  </ul>
+
+                  <p className="font-medium">By your early 30s, the changes spread to:</p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>The jawline, where mild jowls begin to form</li>
+                    <li>The chin, where heaviness appears</li>
+                    <li>The marionette shadows, cutting lines from mouth to jaw</li>
+                    <li>The cheeks, which are no longer "sunken," but not projecting forward either</li>
+                  </ul>
+
+                  <p>
+                    These are the first signs of architectural fatigue — not ageing, just structural tiredness.
+                    Our goal is to restore, not inflate.
+                    A touch to each zone, placed in harmony, can rebuild youth without betraying age.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Good filler doesn't fill. It replaces the story you lost."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Consultation Philosophy
+                  </h3>
+
+                  <p>
+                    When we assess your face, we don't chase trends.
+                    We trace connections.
+                    Every pore, wrinkle, and shadow speaks to another.
+                    We plan your journey over years, not sessions — because that's how real results last.
+                  </p>
+
+                  <p className="font-medium">We respect the classics:</p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Retinol over reinvention.</li>
+                    <li>Hyaluronic acid that dissolves, not one that lingers dangerously.</li>
+                    <li>Safe, clean formulations that honour anatomy, not marketing.</li>
+                  </ul>
+
+                  <p>
+                    And above all — we aim for zero downtime, quiet recovery, and a result that makes people think, "She looks amazing," not, "She had something done."
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Wisdom:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      The best aesthetic plan isn't rushed. It's rehearsed.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    What We Stand For
+                  </h3>
+
+                  <p className="font-medium">Longevity, not novelty.</p>
+                  <p>We refine proven methods — not chase the next viral trend.</p>
+
+                  <p className="font-medium">Balance, not symmetry.</p>
+                  <p>Perfect symmetry is lifeless. Beauty lives in nuance.</p>
+
+                  <p className="font-medium">Safety, not shortcuts.</p>
+                  <p>We use only dissolvable, reversible fillers — because your safety comes before your selfie.</p>
+
+                  <p className="font-medium">Partnership, not procedure.</p>
+                  <p>We don't "fix" you once. We walk with you — through decades, not days.</p>
+
+                  <p className="font-medium">Experience, not ego.</p>
+                  <p>The older the face, the steadier the hand required. Precision, patience, and planning matter more than products.</p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "We don't change faces. We maintain stories."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    In the End
+                  </h3>
+
+                  <p>
+                    Aesthetic medicine was never meant to erase time — only to guide it.
+                    Every era of your face — 20s, 30s, 40s, 50s, 60s — has its own rhythm, its own light.
+                    Our job is to keep that rhythm in tune, softly, faithfully, one subtle correction at a time.
+                  </p>
+
+                  <p>
+                    Because when balance is restored —
+                    when the light flows from the eyes to the jaw,
+                    when texture reflects health, and motion reflects calm —
+                    you don't look "done."
+                    You look complete.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "This is not about changing who you are.<br />
+                    It's about remembering who you were — and carrying it forward, gracefully."
                   </p>
                 </div>
               </section>
 
               {/* Placeholder for remaining chapters */}
-              {chapters.slice(7).map((chapter) => (
+              {chapters.slice(8).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
