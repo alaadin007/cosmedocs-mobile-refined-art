@@ -2368,6 +2368,100 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* About the Author & The Philosophy of Cosmedocs */}
+              <section id="about-author" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  About the Author & The Philosophy of Cosmedocs
+                </h2>
+                
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    "Medicine gave me science. Faces taught me truth."
+                  </p>
+
+                  <p>
+                    Dr. Ahmed Haq's philosophy is simple: aesthetic medicine is not about changing faces — it's about preserving humanity.
+                    For over seventeen years, he has worked across every layer of the face — from skin to soul — refining a method that values balance over exaggeration, and logic over fashion.
+                  </p>
+
+                  <p>
+                    He believes that aesthetic medicine should be a long-term relationship, not a one-night miracle.
+                    That real beauty isn't instant; it's sustained.
+                    His patients stay with him for decades, not sessions — because what he builds isn't just symmetry, it's trust.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "We are not in the business of transformation.<br />
+                    We are in the craft of restoration."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Philosophy of Cosmedocs
+                  </h3>
+
+                  <p>
+                    At Cosmedocs, we see ourselves as GPs for your skin and structure — not quick-fix injectors, but custodians of your face over time.
+                    Every plan is written like a medical roadmap — combining anatomy, psychology, and longevity.
+                  </p>
+
+                  <p>
+                    We don't chase trends.<br />
+                    We refine classics.<br />
+                    We don't experiment with your face.<br />
+                    We honour it.
+                  </p>
+
+                  <p className="font-medium">We believe in:</p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Old techniques done meticulously well</strong> — because safety never goes out of style.</li>
+                    <li><strong>Dissolvable hyaluronic acid fillers only</strong> — reversible, safe, and predictable.</li>
+                    <li><strong>Minimal downtime, maximum subtlety</strong> — you return to work, not recovery.</li>
+                    <li><strong>Longevity of relationship</strong> — we learn your face as it evolves, not as it ages.</li>
+                    <li><strong>Education over marketing</strong> — because intelligence always outlasts illusion.</li>
+                  </ul>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Our art is quiet, but it lasts longer than the noise."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    On Faces and Philosophy
+                  </h3>
+
+                  <p>
+                    Every face tells a story — of culture, ancestry, laughter, and survival.
+                    We do not seek to neutralise those stories with trends or filters.
+                    We work with them — to protect, to elevate, to respect.
+                  </p>
+
+                  <p>
+                    Because in the end, beauty is not a finish line.
+                    It's a lifelong dialogue between time and technique.
+                    And we are just the translators — helping your face speak clearly, honestly, and with grace.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "The greatest compliment to an aesthetic doctor isn't that their work is seen — it's that it isn't."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Closing Thought
+                  </h3>
+
+                  <p>
+                    After years of watching faces evolve — in clinics, in mirrors, in life —
+                    one truth remains:
+                  </p>
+
+                  <p>
+                    Perfection is static. Beauty is alive.
+                    And our only job, as practitioners and as humans,
+                    is to keep it breathing.
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
               {chapters.slice(8).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
