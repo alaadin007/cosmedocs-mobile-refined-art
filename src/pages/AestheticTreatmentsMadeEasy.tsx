@@ -48,7 +48,7 @@ const chapters: Chapter[] = [
   {
     id: "chapter-7",
     title: "Chapter 7",
-    subtitle: "The Cheek — The Power Below the Trough",
+    subtitle: "The Sixties: Legacy, Light & the Art of Mastery",
   },
 ];
 
@@ -1934,8 +1934,248 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* Chapter 7: The Sixties */}
+              <section id="chapter-7" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Chapter 7: The Sixties: Legacy, Light & the Art of Mastery
+                </h2>
+                
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    🌙 "By sixty, beauty isn't a miracle. It's a collaboration."
+                  </p>
+
+                  <p>
+                    Welcome to the decade where everything you've done — or not done — shows its report card.
+                    If your practitioner knew what they were doing in your forties and fifties, you're walking into your sixties with calm, balanced, luminous skin and structure.
+                    If they didn't — well, this is the chapter where experience finally matters more than enthusiasm.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Era of the Expert
+                  </h3>
+
+                  <p>
+                    Let's be honest.
+                    This is not the decade to experiment with someone new who's just finished a weekend course and calls every cheek filler a "liquid facelift."
+                    At this stage, your face is a living map — every compartment, ligament, and muscle has shifted slightly from where nature first drew it.
+                  </p>
+
+                  <p>
+                    This isn't "filling."
+                    This is restoration — a millimetre at a time.
+                    And that requires an injector who can see not just where to place filler, but where not to.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "By sixty, you don't need a fan. You need a conductor."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Skill of the Subtle
+                  </h3>
+
+                  <p>
+                    A good practitioner at this age doesn't chase youth.
+                    They restore coherence — the smooth flow of light, contour, and tone across the face.
+                    That means treating every detail with intention:
+                  </p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Under-eyes</strong>, where skin has thinned and the fat pads have separated.</li>
+                    <li><strong>Corners of the lips</strong>, to lift mood as much as mouth.</li>
+                    <li><strong>Jawline</strong>, to hold definition without heaviness.</li>
+                    <li><strong>Preauricular zones</strong> (near the ears), to transition from face to neck.</li>
+                    <li><strong>Temple and brow areas</strong>, where light catches and structure fades.</li>
+                  </ul>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Reminder:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      The older the canvas, the finer the brush.
+                    </p>
+                  </div>
+
+                  <p>
+                    Each micro-adjustment — half a syringe here, a soft touch there — builds a symphony of lift, support, and reflection.
+                    The filler isn't the hero. The hand is.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Practitioner Matters More Than the Product
+                  </h3>
+
+                  <p>
+                    At this level, the difference between good and great isn't the brand of filler — it's the mind behind the needle.
+                    Your practitioner needs to think in systems, not syringes.
+                    Every area connects: the jaw affects the eyes, the lips affect the neck, the temples affect the lower face.
+                    You can't just "treat an area." You have to treat a flow.
+                  </p>
+
+                  <p>
+                    That's why a cheap 40-minute session that's just cheeks, lips, and a dash of Botox won't do justice anymore.
+                    This isn't a price point issue — it's a precision issue.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "At sixty, every millilitre counts — and every hand that touches you should have earned that right."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Collagen Comeback
+                  </h3>
+
+                  <p>
+                    Here, the focus isn't just filler — it's reconstruction.
+                    We combine:
+                  </p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Biostimulators</strong> to stiffen and strengthen the dermis.</li>
+                    <li><strong>Polynucleotides, exosomes, PRF</strong> to restore cellular activity.</li>
+                    <li><strong>Threads</strong> to reposition tissue and stimulate support.</li>
+                    <li><strong>Advanced energy devices</strong> to remodel collagen and tighten deep fascia.</li>
+                  </ul>
+
+                  <p>
+                    The face doesn't need more volume — it needs firmness, elasticity, and continuity.
+                    When skin flows smoothly from one compartment to another, you get that elusive quality people call "freshness."
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Tip:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      In your sixties, it's not about looking young. It's about looking alive.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Magic of Micro-Precision
+                  </h3>
+
+                  <p>
+                    This stage is like fine art restoration.
+                    Every injection must blend seamlessly into the next.
+                    We're no longer "fixing" faces — we're fusing compartments together: jaw to cheek, cheek to temple, eye to brow.
+                  </p>
+
+                  <p>
+                    That smooth, unbroken transition is what separates the beautifully maintained from the obviously altered.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "In your sixties, the goal isn't to erase age — it's to polish wisdom."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Heavy Work, Light Hands
+                  </h3>
+
+                  <p>
+                    Yes — there's more work to do.
+                    The lines are deeper, the skin is slower, and the shadows are heavier.
+                    But the satisfaction? Tremendous.
+                  </p>
+
+                  <p>
+                    Because the difference one or two carefully planned treatments can make is astonishing.
+                    You can rebuild a decade of youth with precision and patience — not volume.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "One face, one plan, one steady hand."
+                  </p>
+
+                  <p>
+                    That's what separates mastery from marketing.
+                    You need someone who understands sequence — what to treat first, what to wait for, what to leave alone.
+                    Because sometimes, doing nothing is part of the treatment.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Wisdom:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      Experience isn't knowing what to do. It's knowing when to stop.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Psychology of Renewal
+                  </h3>
+
+                  <p>
+                    The best part about patients in their fifties and sixties?
+                    They're done chasing approval.
+                    They're doing this for themselves — for reflection, not attention.
+                    And that makes the work purer, the result deeper.
+                  </p>
+
+                  <p>
+                    When the face matches the soul again, something clicks.
+                    They stand taller.
+                    They smile easier.
+                    And every time they look in the mirror, they whisper — "That's me again."
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "You don't look younger. You look truthful."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Never Be Dismayed
+                  </h3>
+
+                  <p>
+                    So don't ever think it's too late.
+                    The amount of positive change you can create in one or two thoughtful sessions is immensely satisfying — both for you and for us.
+                    The key is precision, not panic.
+                    Subtle structure, patient regeneration, steady evolution.
+                  </p>
+
+                  <p>
+                    Because no matter how advanced the years or deep the lines,
+                    the light is still in there — waiting to be brought back to the surface.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "We're not fighting age. We're sculpting time."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Final Reflection — Legacy & Light
+                  </h3>
+
+                  <p>
+                    By sixty, beauty isn't performance anymore — it's presence.
+                    It's the quiet assurance of someone who's taken care of themselves, inside and out.
+                  </p>
+
+                  <p>
+                    Aesthetic medicine, at this point, isn't vanity.
+                    It's craftsmanship.
+                    It's the science of keeping form and spirit aligned.
+                  </p>
+
+                  <p>
+                    So find the right hands.
+                    Stay patient.
+                    And never stop refining.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "The goal was never to stay young — it was to stay luminous."
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
-              {chapters.slice(6).map((chapter) => (
+              {chapters.slice(7).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
