@@ -16,7 +16,24 @@ serve(async (req) => {
   }
 
   try {
+    // Verify authentication
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader) {
+      return new Response(JSON.stringify({ error: 'Authentication required' }), {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
     const { question, context } = await req.json();
+    
+    // Add rate limiting check - max length for inputs
+    if (question.length > 1000 || context.length > 10000) {
+      return new Response(JSON.stringify({ error: 'Input too long' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',

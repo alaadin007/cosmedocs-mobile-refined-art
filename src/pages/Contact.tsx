@@ -7,6 +7,29 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Helmet } from 'react-helmet-async';
+import { z } from "zod";
+
+// Input validation schema
+const contactFormSchema = z.object({
+  name: z.string()
+    .trim()
+    .min(1, { message: "Name is required" })
+    .max(100, { message: "Name must be less than 100 characters" }),
+  email: z.string()
+    .trim()
+    .email({ message: "Please enter a valid email address" })
+    .max(255, { message: "Email must be less than 255 characters" }),
+  phone: z.string()
+    .trim()
+    .max(20, { message: "Phone number must be less than 20 characters" })
+    .regex(/^[0-9\s\-\+\(\)]*$/, { message: "Please enter a valid phone number" })
+    .optional()
+    .or(z.literal("")),
+  message: z.string()
+    .trim()
+    .min(1, { message: "Message is required" })
+    .max(2000, { message: "Message must be less than 2000 characters" })
+});
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -31,15 +54,30 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Insert form data into Supabase
+      // Validate input before submission
+      const validationResult = contactFormSchema.safeParse(formData);
+      
+      if (!validationResult.success) {
+        // Show the first validation error
+        toast({
+          title: "Validation Error",
+          description: validationResult.error.errors[0].message,
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Insert form data into Supabase with validated data
+      const validData = validationResult.data;
       const { error } = await supabase
         .from('contact_us')
         .insert([
           {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone || null,
-            message: formData.message,
+            name: validData.name,
+            email: validData.email,
+            phone: validData.phone || null,
+            message: validData.message,
           }
         ]);
 

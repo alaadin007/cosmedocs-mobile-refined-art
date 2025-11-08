@@ -2,3 +2,9 @@ project_id = "mrrdrtbarxaacmlzvgne"
 
 [functions.raffle-offer]
 verify_jwt = false
+
+[functions.ai-chat]
+verify_jwt = true
+
+[functions.aesthetic-analysis]
+verify_jwt = true
