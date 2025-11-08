@@ -119,6 +119,7 @@ const ProductAnalysisDetail = lazy(() => import("./pages/ProductAnalysisDetail")
 const PopupOffer = lazy(() => import("./pages/PopupOffer"));
 const NonSurgicalPonytail = lazy(() => import("./pages/NonSurgicalPonytail"));
 const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWorkExperience"));
+const AestheticTreatmentsMadeEasy = lazy(() => import("./pages/AestheticTreatmentsMadeEasy"));
 
 // Loading component
 const PageLoader = () => (
@@ -252,8 +253,9 @@ const App = () => {
                  <Route path="/aesthetic-intelligence" element={<AestheticIntelligence />} />
                  <Route path="/product-analysis/:id" element={<ProductAnalysisDetail />} />
                  <Route path="/trap-botox" element={<TrapBotox />} />
-                <Route path="/non-surgical-ponytail" element={<NonSurgicalPonytail />} />
-               <Route path="/hydrafacial-london" element={<HydraFacial />} />
+               <Route path="/non-surgical-ponytail" element={<NonSurgicalPonytail />} />
+               <Route path="/aesthetic-treatments-made-easy" element={<AestheticTreatmentsMadeEasy />} />
+                <Route path="/hydrafacial-london" element={<HydraFacial />} />
               <Route path="/prp-treatment" element={<PRPTreatment />} />
               
               
