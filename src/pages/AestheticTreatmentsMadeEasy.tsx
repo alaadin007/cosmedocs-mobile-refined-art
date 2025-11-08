@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
@@ -17,13 +17,12 @@ interface Chapter {
 }
 
 const prefaceSubchapters = [
-  "Introduction",
-  "The Art of Depth",
-  "The Language of Layers",
-  "From Anatomy to Artistry",
-  "Acknowledging the Great Minds",
-  "The Harley Street Institute Way",
-  "Experience Our Philosophy",
+  { id: "preface-intro", title: "Introduction" },
+  { id: "art-of-depth", title: "The Art of Depth" },
+  { id: "apple-analogy", title: "The Apple Analogy" },
+  { id: "energy-devices", title: "When Energy Devices Help" },
+  { id: "balance", title: "The Balance Between Skin and Structure" },
+  { id: "simpler-words", title: "In Simpler Words" },
 ];
 
 const chapters: Chapter[] = [
@@ -49,8 +48,42 @@ const chapters: Chapter[] = [
 ];
 
 export default function AestheticTreatmentsMadeEasy() {
-  const [activeSection, setActiveSection] = useState("preface");
+  const [activeSection, setActiveSection] = useState("preface-intro");
   const [prefaceOpen, setPrefaceOpen] = useState(true);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll sidebar and update active section based on content scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        ...prefaceSubchapters.map(sub => sub.id),
+        ...chapters.map(ch => ch.id)
+      ];
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Check if section is in viewport (with offset for header)
+          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Auto-scroll sidebar to active section
+  useEffect(() => {
+    const activeButton = document.querySelector(`[data-section="${activeSection}"]`);
+    if (activeButton && sidebarRef.current) {
+      activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, [activeSection]);
 
   const seo = generateSEOMetadata(
     "Aesthetic Treatments Made Easy - CosmeDocs Educational Guide",
@@ -92,13 +125,13 @@ export default function AestheticTreatmentsMadeEasy() {
         </script>
       </Helmet>
 
-      <div className="flex min-h-screen bg-background">
+      <div className="flex min-h-screen bg-gray-50">
         {/* Sidebar */}
-        <aside className="w-64 border-r border-border bg-card sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+        <aside ref={sidebarRef} className="w-64 border-r border-gray-200 bg-white sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
           <div className="p-4">
             <div className="flex items-center gap-2 mb-6">
-              <BookOpen className="h-5 w-5" />
-              <h2 className="font-semibold text-lg">Aesthetic Talk</h2>
+              <BookOpen className="h-5 w-5 text-gray-700" />
+              <h2 className="font-semibold text-lg text-gray-900">Aesthetic Talk</h2>
             </div>
 
             {/* Preface Section */}
@@ -106,15 +139,15 @@ export default function AestheticTreatmentsMadeEasy() {
               <CollapsibleTrigger asChild>
                 <button
                   className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors ${
-                    activeSection === "preface"
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-secondary hover:bg-accent"
+                    prefaceSubchapters.some(sub => sub.id === activeSection)
+                      ? "bg-gray-900 text-white"
+                      : "bg-gray-100 hover:bg-gray-200 text-gray-900"
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-semibold">Preface</div>
-                      <div className="text-xs opacity-80">The Philosophy</div>
+                      <div className="text-xs opacity-80">The Art of Depth</div>
                     </div>
                     {prefaceOpen ? (
                       <ChevronLeft className="h-4 w-4" />
@@ -129,15 +162,19 @@ export default function AestheticTreatmentsMadeEasy() {
                 <div className="space-y-1 ml-2">
                   {prefaceSubchapters.map((subchapter) => (
                     <button
-                      key={subchapter}
-                      onClick={() => setActiveSection(subchapter.toLowerCase())}
+                      key={subchapter.id}
+                      data-section={subchapter.id}
+                      onClick={() => {
+                        setActiveSection(subchapter.id);
+                        document.getElementById(subchapter.id)?.scrollIntoView({ behavior: 'smooth' });
+                      }}
                       className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
-                        activeSection === subchapter.toLowerCase()
-                          ? "bg-accent text-accent-foreground"
-                          : "hover:bg-muted"
+                        activeSection === subchapter.id
+                          ? "bg-gray-200 text-gray-900 font-medium"
+                          : "hover:bg-gray-100 text-gray-700"
                       }`}
                     >
-                      {subchapter}
+                      {subchapter.title}
                     </button>
                   ))}
                 </div>
@@ -149,15 +186,19 @@ export default function AestheticTreatmentsMadeEasy() {
               {chapters.map((chapter) => (
                 <button
                   key={chapter.id}
-                  onClick={() => setActiveSection(chapter.id)}
+                  data-section={chapter.id}
+                  onClick={() => {
+                    setActiveSection(chapter.id);
+                    document.getElementById(chapter.id)?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
                     activeSection === chapter.id
-                      ? "bg-accent"
-                      : "hover:bg-muted"
+                      ? "bg-gray-200 text-gray-900"
+                      : "hover:bg-gray-100 text-gray-700"
                   }`}
                 >
                   <div className="font-semibold text-sm">{chapter.title}</div>
-                  <div className="text-xs text-muted-foreground mt-1">
+                  <div className="text-xs text-gray-600 mt-1">
                     {chapter.subtitle}
                   </div>
                 </button>
@@ -167,96 +208,175 @@ export default function AestheticTreatmentsMadeEasy() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1">
+        <main className="flex-1 bg-white">
           <div className="max-w-4xl mx-auto px-8 py-12">
             {/* Back Button */}
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
+              className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-8 transition-colors"
             >
               <ChevronLeft className="h-4 w-4" />
               Back to Home
             </Link>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
               Aesthetic Treatments Made Easy
             </h1>
-            <p className="text-xl text-muted-foreground italic mb-6">
+            <p className="text-xl text-gray-600 italic mb-6">
               Don't believe advice, trust education
             </p>
 
             {/* Meta Info */}
-            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8 pb-8 border-b border-border">
+            <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-200">
               <span>By CosmeDocs Team</span>
               <span>•</span>
               <span>Educational Guide</span>
               <span>•</span>
-              <span>12 min read</span>
+              <span>15 min read</span>
             </div>
 
             {/* Preface Content */}
-            <article className="prose prose-invert prose-lg max-w-none">
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-foreground">
-                  Preface: The Philosophy — Why You Need to Read This
+            <article className="prose prose-gray prose-lg max-w-none">
+              <section id="preface-intro" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Preface: The Art of Depth — Why Depth Defines Natural Results
                 </h2>
                 
-                <div className="space-y-6 text-foreground/90 leading-relaxed">
+                <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    In an age of endless "new" — new lasers, new devices, new trends — it's easy to lose sight of the one thing that never changes: human anatomy.
+                    When most people think of ageing, they think of the skin — lines, folds, wrinkles, texture.
+                    But the truth is, skin is rarely the problem; it's the symptom.
+                  </p>
+
+                  <p className="font-semibold text-lg text-gray-900">
+                    The true story of ageing lies beneath.
                   </p>
 
                   <p>
-                    Every few months, a new technology arrives promising miracles — high-energy ultrasound, radiofrequency, "green lasers," even facials marketed as collagen boosters. The names are modern, the adverts are beautiful, but the biology underneath remains exactly the same.
-                  </p>
-
-                  <p className="font-semibold text-lg text-foreground">
-                    If you don't understand your skin, you'll always be sold something for it.
-                    <br />
-                    But if you understand the layers beneath, you'll know what truly needs to be restored — and what never did.
-                  </p>
-
-                  <p>
-                    This book, or rather this journey, is not about the next treatment.
-                    It's about the why behind every result.
-                  </p>
-
-                  <p>
-                    At CosmeDocs, our philosophy has always been simple:
-                  </p>
-
-                  <blockquote className="border-l-4 border-primary pl-6 italic text-xl my-8">
-                    "You cannot restore what you do not understand."
-                  </blockquote>
-
-                  <p>
-                    When you understand your anatomy — your epidermis, dermis, fat pads, ligaments, and muscles — you begin to see where time has taken, and how to give back wisely.
-                  </p>
-
-                  <p>
-                    Every needle, every device, every skincare product is only as intelligent as the hand and the mind behind it.
-                    And that's where our story begins.
-                  </p>
-
-                  <p>
-                    This isn't written for doctors alone, but for anyone who wants to understand beauty beyond marketing.
-                    Because once you do, you'll never fall for false promises again.
-                    You'll start asking the right questions — and that's where true rejuvenation begins.
-                  </p>
-
-                  <p>
-                    So before we talk about treatments, let's talk about you — your skin, your structure, and your story beneath the surface.
+                    To understand this, I often ask patients to imagine something simple: an apple.
                   </p>
                 </div>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-foreground">
+              <section id="apple-analogy" className="mb-16 scroll-mt-20">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                  The Apple Analogy
+                </h3>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p>
+                    The skin of the apple is your face — thin, delicate, and only about two millimetres thick. Beneath it lies the yellow flesh — the fat pads and support tissue that give the apple its shape, firmness, and lift. Deep inside sits the core, much like your bone structure and ligaments — the framework that holds everything together.
+                  </p>
+
+                  <p>
+                    When the apple is fresh, the surface looks smooth and tight because the flesh underneath is full and hydrated.
+                    But as it begins to lose volume and moisture, the skin starts to wrinkle and sink.
+                  </p>
+
+                  <p>
+                    Now, imagine trying to fix that apple's surface by heating or polishing its skin from the outside.
+                    You can't restore its plumpness by treating only the peel — because the problem is deeper.
+                  </p>
+
+                  <p className="font-semibold text-gray-900">
+                    The same is true for your face.
+                  </p>
+                </div>
+              </section>
+
+              <section id="energy-devices" className="mb-16 scroll-mt-20">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                  When Energy Devices Help — and When They Don't
+                </h3>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p>
+                    Lasers, radiofrequency, and ultrasound devices can be powerful tools — but only when used for the right reason.
+                    If your skin is genuinely thin or loose, resurfacing or stimulating collagen can help restore its texture and firmness.
+                    That's treating the skin layer — the "red peel" of the apple.
+                  </p>
+
+                  <p>
+                    But if your face has lost its natural fullness, your support layers — the yellow part — are the issue.
+                    No amount of energy from above will replace lost fat or restore structure.
+                    That's where volume restoration through filler, bio-stimulants, or regenerative treatments becomes the logical step.
+                  </p>
+
+                  <p className="font-semibold text-gray-900">
+                    At CosmeDocs, we don't choose treatments by name — we choose them by depth.
+                  </p>
+
+                  <p>
+                    Every tool we use has a layer it's meant to serve.
+                    The key to natural results lies not in what you use, but how deep you understand where to use it.
+                  </p>
+                </div>
+              </section>
+
+              <section id="balance" className="mb-16 scroll-mt-20">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                  The Balance Between Skin and Structure
+                </h3>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p>
+                    When your surface treatments and your volume restoration are in harmony, the result is seamless.
+                    The skin glows because it sits on something stable.
+                    The volume looks natural because the skin above it is healthy.
+                  </p>
+
+                  <p>
+                    Most overdone results happen when practitioners chase "lift" at the wrong depth — adding too much where the foundation was never restored.
+                    That's why our philosophy is layered:
+                  </p>
+
+                  <ul className="list-none space-y-3 my-6 pl-0">
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Restore structure first.</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Refine the surface next.</strong></span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Respect anatomy always.</strong></span>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section id="simpler-words" className="mb-16 scroll-mt-20">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                  In Simpler Words
+                </h3>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p className="text-xl italic text-gray-600">
+                    If the skin is the story you see,<br />
+                    the depth is the truth beneath it.
+                  </p>
+
+                  <p>
+                    At CosmeDocs, we work from the bottom up — not the top down.
+                    Because no device, no cream, and no laser can replace what time has taken from below.
+                    But when we rebuild intelligently, the skin no longer needs to be "lifted" — it naturally rises to where it once belonged.
+                  </p>
+
+                  <blockquote className="border-l-4 border-gray-900 pl-6 italic text-xl my-8 text-gray-800">
+                    "You cannot restore what you do not understand."
+                  </blockquote>
+                </div>
+              </section>
+
+              <section id="art-of-depth" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Introduction — The Modern Face of Aesthetics
                 </h2>
 
-                <div className="space-y-6 text-foreground/90 leading-relaxed">
+                <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
                     Aesthetics today has become both more advanced and more confusing than ever.
                     Every clinic promises "natural," every treatment claims to "lift," and every year brings another technology that supposedly changes everything.
@@ -272,80 +392,18 @@ export default function AestheticTreatmentsMadeEasy() {
                     Your skin, fat pads, ligaments, muscles, and bones all work together like the architecture of a house. When one element weakens, the others shift to compensate.
                     Treating just one without understanding the rest is like painting over cracks in a wall — the cracks will always return.
                   </p>
-
-                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-foreground">
-                    The Shift From Treatment to Understanding
-                  </h3>
-
-                  <p>
-                    A decade ago, most people came to clinics asking for Botox or filler.
-                    Today, they ask for "skin tightening," "lifting," or "glow."
-                    But few ask why their skin became loose, or what "lifting" actually means.
-                  </p>
-
-                  <p>
-                    That "why" is the gap we aim to fill.
-                    True restoration doesn't start with what's trending — it starts with knowing what's lost.
-                    That means going back to the layers:
-                  </p>
-
-                  <ul className="list-none space-y-3 my-6 pl-4">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary font-bold">•</span>
-                      <span>The epidermis, where youth begins with renewal.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary font-bold">•</span>
-                      <span>The dermis, where collagen and elasticity form the skin's architecture.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary font-bold">•</span>
-                      <span>The fat pads, which sculpt our features.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary font-bold">•</span>
-                      <span>The ligaments, which hold it all together.</span>
-                    </li>
-                  </ul>
-
-                  <p>
-                    Everything you see on the surface — fine lines, shadows, folds — is just an expression of what's happening underneath.
-                  </p>
-
-                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-foreground">
-                    Beyond Marketing, Back to Medicine
-                  </h3>
-
-                  <p>
-                    Modern marketing often turns aesthetic medicine into entertainment — before-and-after photos, viral gadgets, miracle creams.
-                    But medicine, even when it's aesthetic, is still medicine.
-                    It demands thought, anatomy, and respect.
-                  </p>
-
-                  <p>
-                    At CosmeDocs, we see beauty not as an illusion to create, but as balance to restore.
-                    This is not anti-technology — it's pro-wisdom.
-                    Devices, injectables, and treatments all have their place — but only when they make anatomical sense.
-                  </p>
-
-                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-foreground">
-                    The Promise of This Journey
-                  </h3>
-
-                  <p>
-                    As you move through each chapter, you'll begin to see patterns — how everything in your face connects.
-                    You'll learn that the "problem areas" you notice are rarely the true problem.
-                    That "nasolabial fold" might come from cheek volume loss.
-                    Those "eye bags" might be from ligament relaxation.
-                    And sometimes, the best treatment isn't a filler or a laser — it's understanding when to do nothing at all.
-                  </p>
-
-                  <p>
-                    This journey is designed to help you think like a practitioner, even if you're a patient.
-                    Because when you understand your anatomy, you'll make better choices — and better choices always lead to better results.
-                  </p>
                 </div>
               </section>
+
+              {/* Placeholder for remaining chapters */}
+              {chapters.map((chapter) => (
+                <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
+                  <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                    {chapter.title}: {chapter.subtitle}
+                  </h2>
+                  <p className="text-gray-600 italic">Content coming soon...</p>
+                </section>
+              ))}
 
               {/* SEO Hidden Content */}
               <div className="sr-only">
@@ -369,12 +427,12 @@ export default function AestheticTreatmentsMadeEasy() {
             </article>
 
             {/* Navigation Buttons */}
-            <div className="flex justify-between mt-12 pt-8 border-t border-border">
-              <Button variant="outline" disabled>
+            <div className="flex justify-between mt-12 pt-8 border-t border-gray-200">
+              <Button variant="outline" disabled className="border-gray-300 text-gray-400">
                 <ChevronLeft className="h-4 w-4 mr-2" />
                 Previous
               </Button>
-              <Button>
+              <Button className="bg-gray-900 hover:bg-gray-800 text-white">
                 Next Chapter
                 <ChevronRight className="h-4 w-4 ml-2" />
               </Button>
