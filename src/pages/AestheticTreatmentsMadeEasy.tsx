@@ -41,7 +41,7 @@ const chapters: Chapter[] = [
   {
     id: "chapter-4",
     title: "Chapter 4",
-    subtitle: "Medical Rhinoplasty",
+    subtitle: "The Thirties: The Age of Shift and Structure",
   },
   { id: "chapter-5", title: "Chapter 5", subtitle: "Medical Rhinoplasty" },
   { id: "chapter-6", title: "Chapter 6", subtitle: "Tear Trough" },
@@ -1088,8 +1088,316 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* Chapter 4 - Full Content */}
+              <section id="chapter-4" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Chapter 4 — The Thirties: The Age of Shift and Structure
+                </h2>
+
+                <div className="space-y-8 text-gray-700 leading-relaxed">
+                  <p className="text-2xl text-center italic text-gray-600">
+                    ⚖️ "Your twenties were about holding the line. Your thirties are about redrawing it."
+                  </p>
+
+                  <p>
+                    This is the decade where gravity starts whispering, collagen gives up negotiations, and restraint becomes your new best friend.
+                    You still look good — you just don't wake up automatically good anymore.
+                    It's the age where skincare stops being a hobby and starts being strategy.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Face Starts Talking Back
+                  </h3>
+
+                  <p>
+                    You can't treat all faces the same anymore — because not all faces age the same.
+                    Now we start to look deeper, analytically.
+                    Is the face oval and slim, or round and heavy?
+                    Because what you lose and what you need depends entirely on your shape.
+                  </p>
+
+                  <p>
+                    Slim, oval faces — they sink.
+                    Volume loss shows early. The mid-face flattens, under-eyes hollow, temples thin out.
+                    These faces age like paper — delicate, detailed, and quick to show change.
+                  </p>
+
+                  <p>
+                    Round, heavier faces — they sag.
+                    Fat is still there, but gravity starts to pull the scaffolding south.
+                    You get softness, droop, early jowls, and blurred contours.
+                    They age slower at first — but when the drop happens, it's fast.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Thought:</p>
+                    <p className="text-gray-700 mt-1">
+                      Slim faces fall in love with volume.
+                      Round faces fall out with gravity.
+                    </p>
+                  </div>
+
+                  <p>
+                    Both shapes have advantages.
+                    Smaller faces might look a touch older when they're young, but they stay like that for a long time.
+                    Heavier faces look youthful early on — then wake up one day and realise everything slid half an inch lower.
+                    The trick isn't fighting it. It's understanding it.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Skin in Its Thirties — The Quiet Rebel
+                  </h3>
+
+                  <p>
+                    In your thirties, skin becomes stubborn.
+                    The renewal rate drops again. Pores get louder. Pigmentation gets bolder.
+                    This is where microneedling, skin peels, and strong retinoids stop being options — they become maintenance tools.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "By thirty, your skin doesn't need more makeup. It needs more discipline."
+                  </p>
+
+                  <p>
+                    We push the skin harder now — deeper exfoliation, collagen stimulation, and cellular turnover.
+                    Tretinoin becomes the gold standard — the real deal of vitamin A.
+                    It keeps fibroblasts active, rebuilds collagen, and pushes skin to behave like it did a decade ago.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Tip:</p>
+                    <p className="text-gray-700 mt-1">
+                      Retinol was your warm-up. Tretinoin is your training.
+                    </p>
+                  </div>
+
+                  <p>
+                    Microneedling wakes up the dermis from below; peels clear the epidermis from above.
+                    Together, they remind the skin that it still knows how to heal.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Sensitised Skin — When Too Much Becomes the Problem
+                  </h3>
+
+                  <p>
+                    This is also the decade when everyone becomes a skincare expert — or so Instagram says.
+                    You've tried everything: the "glow" serums, the miracle foundations, hydrating masks, vitamin C's from five different brands, and a moisturiser that costs more than rent.
+                    Maybe even that tiny jar of Crème de la Mer you bought in a moment of faith and fear.
+                  </p>
+
+                  <p>
+                    And now? The skin's not glowing — it's reacting.
+                    Tingling, flushing, redness, tightness — not real sensitivity, but sensitised skin.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Your skin's not delicate — it's exhausted."
+                  </p>
+
+                  <p>
+                    It's not born sensitive. It's been irritated into fragility by hundreds of chemicals layered over time.
+                    Too much exfoliation. Too much perfume. Too much "science."
+                    You tried to fix your skin with everything, and now it just wants silence.
+                  </p>
+
+                  <p>
+                    We know how to fix that too.
+                    We strip it back to basics: no fragrance, no scrubs, no actives for a few weeks.
+                    We calm the barrier, feed the microbiome, rebuild its trust.
+                    Then — and only then — we reintroduce what truly matters: retinoids, hydration, and protection.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Reminder:</p>
+                    <p className="text-gray-700 mt-1">
+                      Good skin isn't built by more products. It's built by smarter restraint.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Volume, Angles, and the Law of Proportion
+                  </h3>
+
+                  <p>
+                    By your thirties, volume restoration becomes about architecture, not filler.
+                    We're no longer just replacing fat — we're redesigning the frame.
+                  </p>
+
+                  <p>
+                    The midface still leads the story.
+                    A touch to the cheekbones can lift everything below — the under-eyes, the nasolabial folds, even the mouth corners.
+                    But now we start paying attention to the jawline — because this is where balance starts to slip.
+                  </p>
+
+                  <p>
+                    Slim faces need softer volume, to replace what time has borrowed.
+                    Round faces need sharper contour, to redefine what gravity has softened.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "At thirty, filler stops being about fullness. It starts being about flow."
+                  </p>
+
+                  <p>
+                    Overdo one area, and you distort the balance.
+                    Leave one neglected, and you drag the whole composition down.
+                    That's where artistry separates itself from injection.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Myth of More
+                  </h3>
+
+                  <p>
+                    This is the decade where you learn a hard truth:
+                    More filler doesn't mean younger.
+                    Sometimes it means swollen, distorted, or just wrong.
+                    Because ageing isn't uniform — it's asymmetric, emotional, and personal.
+                    That's why "one syringe each side" is not a plan. It's a guess.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Sticky Note:</p>
+                    <p className="text-gray-700 mt-1">
+                      You don't fight time with volume. You negotiate with proportion.
+                    </p>
+                  </div>
+
+                  <p>
+                    Less, placed precisely, beats more, spread blindly.
+                    That's how we keep the face readable, not rewritten.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Jawline — The Unspoken Hero
+                  </h3>
+
+                  <p>
+                    Remember the cheeks you loved filling in your twenties?
+                    Now meet their rival: the jawline.
+                  </p>
+
+                  <p>
+                    As ligaments loosen and fat pads slide, the jaw starts losing definition.
+                    That's why so many faces in their thirties look "tired" — not because of wrinkles, but because the frame is melting.
+                    A touch of structure here restores the entire lower third of the face.
+                    Cheeks lift; marionette lines relax; the whole face feels lighter.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "A strong jawline doesn't make you younger — it makes you believable."
+                  </p>
+
+                  <p>
+                    At CosmeDocs, we treat the jawline not as an afterthought, but as an anchor.
+                    Because when the border's sharp, the rest of the picture makes sense.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Restraint Becomes the New Luxury
+                  </h3>
+
+                  <p>
+                    In your twenties, the goal was glow.
+                    In your thirties, it's credibility.
+                    You want to look good without looking done, fresh without looking fixed.
+                    That's where restraint becomes the highest form of artistry.
+                  </p>
+
+                  <p>
+                    The face in its thirties doesn't need a full makeover — it needs management.
+                    Micro-adjustments. Honest proportions. Smarter habits.
+                    You're not chasing youth; you're curating it.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "The best work is the work no one notices — not even you."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Skin Routine That Works
+                  </h3>
+
+                  <ul className="list-none space-y-3 my-6 pl-0">
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Cleanse less, renew more.</strong> Don't strip; resurface.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Microneedling every few months.</strong> Collagen therapy disguised as texture refinement.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Medical peels seasonally.</strong> Shed the buildup, reveal the clarity.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Tretinoin 2–3 nights a week.</strong> Your cellular insurance policy.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">SPF daily.</strong> Every UV hit is a withdrawal from your collagen bank.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Hydration inside out.</strong> Water, diet, sleep — the original skincare trio.</span>
+                    </li>
+                  </ul>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Reminder:</p>
+                    <p className="text-gray-700 mt-1">
+                      You can't fix your skin if you don't respect your biology.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    In The End
+                  </h3>
+
+                  <p>
+                    Your thirties aren't a crisis. They're a checkpoint.
+                    The decade where prevention graduates into planning.
+                    Where the goal shifts from chasing glow to preserving structure.
+                  </p>
+
+                  <p>
+                    You start to understand that everything — skin, fat, bone, muscle — is a conversation.
+                    You can't just inject one layer and expect harmony.
+                    It's a symphony, and your injector is the conductor.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "The goal isn't to stop ageing — it's to age in high definition."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Good News
+                  </h3>
+
+                  <p>
+                    The good news?
+                    Though it may feel like everything is falling apart, it isn't.
+                    A tiny, precise tweak to each area — a drop in the right cheek, a micro-dose in the right muscle, a skin reboot at the right time — can restore your face for another 20 hours of life.
+                  </p>
+
+                  <p>
+                    That's the magic of anatomy-led aesthetics — not transformation, just calibration.
+                    And if you ever find yourself torn between buying that designer bag or investing in your skin,
+                    choose your face.
+                    The bag won't smile back — but your mirror will.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "Happiness looks better on your skin than it does on your arm."
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
-              {chapters.slice(3).map((chapter) => (
+              {chapters.slice(4).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
