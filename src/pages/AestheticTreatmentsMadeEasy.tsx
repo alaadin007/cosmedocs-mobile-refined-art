@@ -16,18 +16,8 @@ interface Chapter {
   subtitle: string;
 }
 
-const prefaceSubchapters = [
-  { id: "preface-intro", title: "Introduction" },
-  { id: "art-of-depth", title: "The Art of Depth" },
-  { id: "apple-analogy", title: "The Apple Analogy" },
-  { id: "energy-devices", title: "When Energy Devices Help" },
-  { id: "balance", title: "The Balance Between Skin and Structure" },
-  { id: "simpler-words", title: "In Simpler Words" },
-];
-
 const allSections = [
   { id: "preface", title: "Preface", subtitle: "The Art of Depth", type: "preface" },
-  ...prefaceSubchapters.map(sub => ({ ...sub, subtitle: sub.title, type: "preface-sub" })),
 ];
 
 const chapters: Chapter[] = [
@@ -70,7 +60,6 @@ const chapters: Chapter[] = [
 export default function AestheticTreatmentsMadeEasy() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
-  const [prefaceOpen, setPrefaceOpen] = useState(true);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   const allChapterSections = [...allSections, ...chapters];
@@ -147,48 +136,19 @@ export default function AestheticTreatmentsMadeEasy() {
             </div>
 
             {/* Preface Section */}
-            <Collapsible open={prefaceOpen} onOpenChange={setPrefaceOpen}>
-              <CollapsibleTrigger asChild>
-                <button
-                  className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors ${
-                    currentChapterIndex === 0 || (currentChapterIndex >= 1 && currentChapterIndex <= prefaceSubchapters.length)
-                      ? "bg-gray-900 text-white"
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-900"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-semibold">Preface</div>
-                      <div className="text-xs opacity-80">The Art of Depth</div>
-                    </div>
-                    {prefaceOpen ? (
-                      <ChevronLeft className="h-4 w-4" />
-                    ) : (
-                      <ChevronRight className="h-4 w-4" />
-                    )}
-                  </div>
-                </button>
-              </CollapsibleTrigger>
-
-              <CollapsibleContent>
-                <div className="space-y-1 ml-2">
-                  {prefaceSubchapters.map((subchapter, idx) => (
-                    <button
-                      key={subchapter.id}
-                      data-section={subchapter.id}
-                      onClick={() => setCurrentChapterIndex(idx + 1)}
-                      className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
-                        currentChapterIndex === idx + 1
-                          ? "bg-gray-200 text-gray-900 font-medium"
-                          : "hover:bg-gray-100 text-gray-700"
-                      }`}
-                    >
-                      {subchapter.title}
-                    </button>
-                  ))}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
+            <button
+              onClick={() => setCurrentChapterIndex(0)}
+              className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors ${
+                currentChapterIndex === 0
+                  ? "bg-gray-900 text-white"
+                  : "bg-gray-100 hover:bg-gray-200 text-gray-900"
+              }`}
+            >
+              <div>
+                <div className="font-semibold">Preface</div>
+                <div className="text-xs opacity-80">The Art of Depth</div>
+              </div>
+            </button>
 
             {/* Chapters */}
             <div className="space-y-1 mt-4">
@@ -196,9 +156,9 @@ export default function AestheticTreatmentsMadeEasy() {
                 <button
                   key={chapter.id}
                   data-section={chapter.id}
-                  onClick={() => setCurrentChapterIndex(prefaceSubchapters.length + 1 + idx)}
+                  onClick={() => setCurrentChapterIndex(1 + idx)}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-                    currentChapterIndex === prefaceSubchapters.length + 1 + idx
+                    currentChapterIndex === 1 + idx
                       ? "bg-gray-200 text-gray-900"
                       : "hover:bg-gray-100 text-gray-700"
                   }`}
@@ -282,13 +242,12 @@ export default function AestheticTreatmentsMadeEasy() {
             {/* Content */}
             <article className="prose prose-gray prose-lg max-w-none">
               {currentChapterIndex === 0 && (
+              <>
               <section id="preface" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">Preface</h2>
                 <p className="text-gray-600 italic">The Art of Depth</p>
               </section>
-              )}
               
-              {currentChapterIndex === 1 && (
               <section id="preface-intro" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   The Philosophy — Why You Need to Read This
@@ -331,9 +290,7 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
-              )}
 
-              {currentChapterIndex === 2 && (
               <section id="art-of-depth" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   The Modern Face of Aesthetics
@@ -427,9 +384,7 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
-              )}
 
-              {currentChapterIndex === 3 && (
               <section id="apple-analogy" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   The Art of Depth — Why Depth Defines Natural Results
@@ -476,9 +431,7 @@ export default function AestheticTreatmentsMadeEasy() {
                   </div>
                 </div>
               </section>
-              )}
 
-              {currentChapterIndex === 4 && (
               <section id="energy-devices" className="mb-16">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                   When Energy Devices Help — and When They Don't
@@ -502,9 +455,7 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
-              )}
 
-              {currentChapterIndex === 5 && (
               <section id="balance" className="mb-16">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                   The Balance Between Skin and Structure
@@ -530,9 +481,7 @@ export default function AestheticTreatmentsMadeEasy() {
                   </div>
                 </div>
               </section>
-              )}
 
-              {currentChapterIndex === 6 && (
               <section id="simpler-words" className="mb-16">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                   In Simpler Words
@@ -555,10 +504,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </blockquote>
                 </div>
               </section>
+              </>
               )}
 
               {/* Chapter 1 - Full Content */}
-              {currentChapterIndex === 7 && (
+              {currentChapterIndex === 1 && (
               <section id="chapter-1" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 1 — The Epidermis: The Foundation of All Skin Health
@@ -683,7 +633,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* Chapter 2 - Full Content */}
-              {currentChapterIndex === 8 && (
+              {currentChapterIndex === 2 && (
               <section id="chapter-2" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 2 — The Dermis: The Architecture of Youth
@@ -868,7 +818,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* Chapter 3 - Full Content */}
-              {currentChapterIndex === 9 && (
+              {currentChapterIndex === 3 && (
               <section id="chapter-3" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 3 — The Subcutaneous Layer: Fat, Muscle & the First Signs of Time
@@ -1152,7 +1102,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* Chapter 4 - Full Content */}
-              {currentChapterIndex === 10 && (
+              {currentChapterIndex === 4 && (
               <section id="chapter-4" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 4 — The Thirties: The Age of Shift and Structure
@@ -1462,7 +1412,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* Chapter 5 - Full Content */}
-              {currentChapterIndex === 11 && (
+              {currentChapterIndex === 5 && (
               <section id="chapter-5" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 5 — The Forties: The Era of Lift and Logic
@@ -1720,7 +1670,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* Chapter 6: The Fifties */}
-              {currentChapterIndex === 12 && (
+              {currentChapterIndex === 6 && (
               <section id="chapter-6" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 6: The Fifties: Elegance, Elasticity & Energy
@@ -2004,7 +1954,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* Epilogue: The Philosophy of Aesthetics */}
-              {currentChapterIndex === 13 && (
+              {currentChapterIndex === 7 && (
               <section id="epilogue" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Epilogue: The Philosophy of Aesthetics: What We Learned from Faces
@@ -2210,7 +2160,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* Postscript: Core Principles */}
-              {currentChapterIndex === 14 && (
+              {currentChapterIndex === 8 && (
               <section id="postscript" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Postscript: The Core Principles of Aesthetic Medicine
@@ -2437,7 +2387,7 @@ export default function AestheticTreatmentsMadeEasy() {
               )}
 
               {/* About the Author & The Philosophy of Cosmedocs */}
-              {currentChapterIndex === 15 && (
+              {currentChapterIndex === 9 && (
               <section id="about-author" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   About the Author & The Philosophy of Cosmedocs
