@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 import {
@@ -23,6 +23,11 @@ const prefaceSubchapters = [
   { id: "energy-devices", title: "When Energy Devices Help" },
   { id: "balance", title: "The Balance Between Skin and Structure" },
   { id: "simpler-words", title: "In Simpler Words" },
+];
+
+const allSections = [
+  { id: "preface", title: "Preface", subtitle: "The Art of Depth", type: "preface" },
+  ...prefaceSubchapters.map(sub => ({ ...sub, subtitle: sub.title, type: "preface-sub" })),
 ];
 
 const chapters: Chapter[] = [
@@ -55,45 +60,36 @@ const chapters: Chapter[] = [
     title: "Postscript",
     subtitle: "The Core Principles of Aesthetic Medicine",
   },
+  {
+    id: "about-author",
+    title: "About the Author",
+    subtitle: "The Philosophy of Cosmedocs",
+  },
 ];
 
 export default function AestheticTreatmentsMadeEasy() {
-  const [activeSection, setActiveSection] = useState("preface-intro");
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
   const [prefaceOpen, setPrefaceOpen] = useState(true);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll sidebar and update active section based on content scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        ...prefaceSubchapters.map(sub => sub.id),
-        ...chapters.map(ch => ch.id)
-      ];
+  const allChapterSections = [...allSections, ...chapters];
 
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // Check if section is in viewport (with offset for header)
-          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-            setActiveSection(sectionId);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Auto-scroll sidebar to active section
-  useEffect(() => {
-    const activeButton = document.querySelector(`[data-section="${activeSection}"]`);
-    if (activeButton && sidebarRef.current) {
-      activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  const handlePrevious = () => {
+    if (currentChapterIndex > 0) {
+      setCurrentChapterIndex(currentChapterIndex - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [activeSection]);
+  };
+
+  const handleNext = () => {
+    if (currentChapterIndex < allChapterSections.length - 1) {
+      setCurrentChapterIndex(currentChapterIndex + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const currentSection = allChapterSections[currentChapterIndex];
 
   const seo = generateSEOMetadata(
     "Aesthetic Treatments Made Easy - CosmeDocs Educational Guide",
@@ -137,7 +133,13 @@ export default function AestheticTreatmentsMadeEasy() {
 
       <div className="flex min-h-screen bg-gray-50">
         {/* Sidebar */}
-        <aside ref={sidebarRef} className="w-64 border-r border-gray-200 bg-white sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+        <aside 
+          ref={sidebarRef} 
+          className={`${
+            sidebarOpen ? 'w-64' : 'w-0'
+          } border-r border-gray-200 bg-white sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto transition-all duration-300`}
+        >
+          {sidebarOpen && (
           <div className="p-4">
             <div className="flex items-center gap-2 mb-6">
               <BookOpen className="h-5 w-5 text-gray-700" />
@@ -149,7 +151,7 @@ export default function AestheticTreatmentsMadeEasy() {
               <CollapsibleTrigger asChild>
                 <button
                   className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors ${
-                    prefaceSubchapters.some(sub => sub.id === activeSection)
+                    currentChapterIndex === 0 || (currentChapterIndex >= 1 && currentChapterIndex <= prefaceSubchapters.length)
                       ? "bg-gray-900 text-white"
                       : "bg-gray-100 hover:bg-gray-200 text-gray-900"
                   }`}
@@ -170,16 +172,13 @@ export default function AestheticTreatmentsMadeEasy() {
 
               <CollapsibleContent>
                 <div className="space-y-1 ml-2">
-                  {prefaceSubchapters.map((subchapter) => (
+                  {prefaceSubchapters.map((subchapter, idx) => (
                     <button
                       key={subchapter.id}
                       data-section={subchapter.id}
-                      onClick={() => {
-                        setActiveSection(subchapter.id);
-                        document.getElementById(subchapter.id)?.scrollIntoView({ behavior: 'smooth' });
-                      }}
+                      onClick={() => setCurrentChapterIndex(idx + 1)}
                       className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
-                        activeSection === subchapter.id
+                        currentChapterIndex === idx + 1
                           ? "bg-gray-200 text-gray-900 font-medium"
                           : "hover:bg-gray-100 text-gray-700"
                       }`}
@@ -193,16 +192,13 @@ export default function AestheticTreatmentsMadeEasy() {
 
             {/* Chapters */}
             <div className="space-y-1 mt-4">
-              {chapters.map((chapter) => (
+              {chapters.map((chapter, idx) => (
                 <button
                   key={chapter.id}
                   data-section={chapter.id}
-                  onClick={() => {
-                    setActiveSection(chapter.id);
-                    document.getElementById(chapter.id)?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                  onClick={() => setCurrentChapterIndex(prefaceSubchapters.length + 1 + idx)}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
-                    activeSection === chapter.id
+                    currentChapterIndex === prefaceSubchapters.length + 1 + idx
                       ? "bg-gray-200 text-gray-900"
                       : "hover:bg-gray-100 text-gray-700"
                   }`}
@@ -215,10 +211,20 @@ export default function AestheticTreatmentsMadeEasy() {
               ))}
             </div>
           </div>
+          )}
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 bg-white">
+        <main className="flex-1 bg-white relative">
+          {/* Sidebar Toggle Button */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="fixed top-20 left-4 z-50 p-2 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-50 transition-colors"
+            aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
+          >
+            {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+
           <div className="max-w-4xl mx-auto px-8 py-12">
             {/* Back Button */}
             <Link
@@ -246,9 +252,44 @@ export default function AestheticTreatmentsMadeEasy() {
               <span>15 min read</span>
             </div>
 
-            {/* Preface Content */}
+            {/* Chapter Navigation */}
+            <div className="flex items-center justify-between mb-8">
+              <Button
+                onClick={handlePrevious}
+                disabled={currentChapterIndex === 0}
+                variant="outline"
+                className="gap-2"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                Previous
+              </Button>
+              
+              <span className="text-sm text-gray-600">
+                {currentChapterIndex + 1} of {allChapterSections.length}
+              </span>
+
+              <Button
+                onClick={handleNext}
+                disabled={currentChapterIndex === allChapterSections.length - 1}
+                variant="outline"
+                className="gap-2"
+              >
+                Next
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+
+            {/* Content */}
             <article className="prose prose-gray prose-lg max-w-none">
-              <section id="preface-intro" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 0 && (
+              <section id="preface" className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">Preface</h2>
+                <p className="text-gray-600 italic">The Art of Depth</p>
+              </section>
+              )}
+              
+              {currentChapterIndex === 1 && (
+              <section id="preface-intro" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   The Philosophy — Why You Need to Read This
                 </h2>
@@ -290,8 +331,10 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
-              <section id="art-of-depth" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 2 && (
+              <section id="art-of-depth" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   The Modern Face of Aesthetics
                 </h2>
@@ -380,12 +423,14 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
 
                   <p className="text-xl italic text-gray-600 text-center my-6">
-                    🖤 "Sometimes the best treatment is restraint."
+                  🖤 "Sometimes the best treatment is restraint."
                   </p>
                 </div>
               </section>
+              )}
 
-              <section id="apple-analogy" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 3 && (
+              <section id="apple-analogy" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   The Art of Depth — Why Depth Defines Natural Results
                 </h2>
@@ -431,8 +476,10 @@ export default function AestheticTreatmentsMadeEasy() {
                   </div>
                 </div>
               </section>
+              )}
 
-              <section id="energy-devices" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 4 && (
+              <section id="energy-devices" className="mb-16">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                   When Energy Devices Help — and When They Don't
                 </h3>
@@ -455,8 +502,10 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
-              <section id="balance" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 5 && (
+              <section id="balance" className="mb-16">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                   The Balance Between Skin and Structure
                 </h3>
@@ -481,8 +530,10 @@ export default function AestheticTreatmentsMadeEasy() {
                   </div>
                 </div>
               </section>
+              )}
 
-              <section id="simpler-words" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 6 && (
+              <section id="simpler-words" className="mb-16">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                   In Simpler Words
                 </h3>
@@ -504,9 +555,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </blockquote>
                 </div>
               </section>
+              )}
 
               {/* Chapter 1 - Full Content */}
-              <section id="chapter-1" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 7 && (
+              <section id="chapter-1" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 1 — The Epidermis: The Foundation of All Skin Health
                 </h2>
@@ -627,9 +680,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* Chapter 2 - Full Content */}
-              <section id="chapter-2" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 8 && (
+              <section id="chapter-2" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 2 — The Dermis: The Architecture of Youth
                 </h2>
@@ -810,9 +865,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* Chapter 3 - Full Content */}
-              <section id="chapter-3" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 9 && (
+              <section id="chapter-3" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 3 — The Subcutaneous Layer: Fat, Muscle & the First Signs of Time
                 </h2>
@@ -1092,9 +1149,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* Chapter 4 - Full Content */}
-              <section id="chapter-4" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 10 && (
+              <section id="chapter-4" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 4 — The Thirties: The Age of Shift and Structure
                 </h2>
@@ -1400,9 +1459,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* Chapter 5 - Full Content */}
-              <section id="chapter-5" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 11 && (
+              <section id="chapter-5" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 5 — The Forties: The Era of Lift and Logic
                 </h2>
@@ -1656,9 +1717,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* Chapter 6: The Fifties */}
-              <section id="chapter-6" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 12 && (
+              <section id="chapter-6" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Chapter 6: The Fifties: Elegance, Elasticity & Energy
                 </h2>
@@ -1938,9 +2001,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* Epilogue: The Philosophy of Aesthetics */}
-              <section id="epilogue" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 13 && (
+              <section id="epilogue" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Epilogue: The Philosophy of Aesthetics: What We Learned from Faces
                 </h2>
@@ -2142,9 +2207,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* Postscript: Core Principles */}
-              <section id="postscript" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 14 && (
+              <section id="postscript" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   Postscript: The Core Principles of Aesthetic Medicine
                 </h2>
@@ -2367,9 +2434,11 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
 
               {/* About the Author & The Philosophy of Cosmedocs */}
-              <section id="about-author" className="mb-16 scroll-mt-20">
+              {currentChapterIndex === 15 && (
+              <section id="about-author" className="mb-16">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   About the Author & The Philosophy of Cosmedocs
                 </h2>
@@ -2461,19 +2530,38 @@ export default function AestheticTreatmentsMadeEasy() {
                   </p>
                 </div>
               </section>
+              )}
+            </article>
 
-              {/* Placeholder for remaining chapters */}
-              {chapters.slice(8).map((chapter) => (
-                <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
-                  <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                    {chapter.title}: {chapter.subtitle}
-                  </h2>
-                  <p className="text-gray-600 italic">Content coming soon...</p>
-                </section>
-              ))}
+            {/* Bottom Navigation */}
+            <div className="flex items-center justify-between mt-12 pt-8 border-t border-gray-200">
+              <Button
+                onClick={handlePrevious}
+                disabled={currentChapterIndex === 0}
+                variant="outline"
+                className="gap-2"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                Previous
+              </Button>
+              
+              <span className="text-sm text-gray-600">
+                {currentChapterIndex + 1} of {allChapterSections.length}
+              </span>
 
-              {/* SEO Hidden Content */}
-              <div className="sr-only">
+              <Button
+                onClick={handleNext}
+                disabled={currentChapterIndex === allChapterSections.length - 1}
+                variant="outline"
+                className="gap-2"
+              >
+                Next
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+
+            {/* SEO Hidden Content */}
+            <div className="sr-only">
                 <h2>Comprehensive Guide to Aesthetic Treatments</h2>
                 <p>
                   Understanding aesthetic treatments begins with a solid foundation in facial anatomy and skin physiology. This educational guide covers everything from basic skin layers to advanced non-surgical aesthetic procedures. Whether you're considering dermal fillers, anti-wrinkle treatments, or skin rejuvenation therapies, understanding the science behind these treatments is essential for making informed decisions.
@@ -2491,22 +2579,9 @@ export default function AestheticTreatmentsMadeEasy() {
                   Skin rejuvenation treatments work at multiple levels. Chemical peels target the epidermis, microneedling stimulates dermal collagen production, and injectable treatments restore volume in deeper tissue planes. Medical-grade skincare products containing retinoids, vitamin C, and peptides complement these treatments by improving skin texture and tone. Understanding how these treatments interact with your skin's natural healing processes helps you maintain long-term aesthetic results.
                 </p>
               </div>
-            </article>
-
-            {/* Navigation Buttons */}
-            <div className="flex justify-between mt-12 pt-8 border-t border-gray-200">
-              <Button variant="outline" disabled className="border-gray-300 text-gray-400">
-                <ChevronLeft className="h-4 w-4 mr-2" />
-                Previous
-              </Button>
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white">
-                Next Chapter
-                <ChevronRight className="h-4 w-4 ml-2" />
-              </Button>
             </div>
-          </div>
-        </main>
-      </div>
-    </>
-  );
-}
+          </main>
+        </div>
+      </>
+    );
+  }
