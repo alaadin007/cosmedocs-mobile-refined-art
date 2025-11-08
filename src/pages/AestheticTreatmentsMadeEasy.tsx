@@ -229,7 +229,7 @@ export default function AestheticTreatmentsMadeEasy() {
 
             {/* Meta Info */}
             <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-200">
-              <span>By CosmeDocs Team</span>
+              <span>By Dr. Ahmed Haq & Ai Team</span>
               <span>•</span>
               <span>Educational Guide</span>
               <span>•</span>
