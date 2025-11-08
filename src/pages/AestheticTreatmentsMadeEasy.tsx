@@ -240,48 +240,185 @@ export default function AestheticTreatmentsMadeEasy() {
             <article className="prose prose-gray prose-lg max-w-none">
               <section id="preface-intro" className="mb-16 scroll-mt-20">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                  Preface: The Art of Depth — Why Depth Defines Natural Results
+                  The Philosophy — Why You Need to Read This
                 </h2>
                 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
-                  <p>
-                    When most people think of ageing, they think of the skin — lines, folds, wrinkles, texture.
-                    But the truth is, skin is rarely the problem; it's the symptom.
-                  </p>
-
-                  <p className="font-semibold text-lg text-gray-900">
-                    The true story of ageing lies beneath.
+                  <p className="text-xl text-center italic text-gray-600">
+                    🖤 "You can't fix what you don't understand."
                   </p>
 
                   <p>
-                    To understand this, I often ask patients to imagine something simple: an apple.
+                    Every few months, the industry throws another miracle at you — ultrasound this, radiofrequency that, a laser with a colour name to make it sound scientific.
+                    They promise lift, glow, youth, redemption.
+                  </p>
+
+                  <p>
+                    Here's the problem: your skin didn't suddenly forget how to be skin.
+                    Biology didn't change — marketing did.
+                  </p>
+
+                  <p>
+                    If you don't know what sits under your skin, you'll keep buying what sparkles.
+                    But when you do know, you start to see the patterns — where time took, what never needed fixing, and what you've been trying to replace with hashtags.
+                  </p>
+
+                  <p className="font-semibold text-gray-900">
+                    At CosmeDocs, we don't chase trends. We chase truth.
+                    <br />
+                    Anatomy, not algorithms. Logic, not luck.
+                  </p>
+
+                  <p>
+                    This isn't a manual about treatments. It's a field guide to understanding yourself before someone sells you yourself back.
+                  </p>
+
+                  <p>
+                    So, take a breath. Forget the noise.
+                    <br />
+                    Let's start with what's real.
+                  </p>
+                </div>
+              </section>
+
+              <section id="art-of-depth" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  The Modern Face of Aesthetics
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p className="text-xl text-center italic text-gray-600">
+                    💬 "The face isn't a project; it's a relationship."
+                  </p>
+
+                  <p>
+                    Aesthetics got complicated.
+                    Everything's "natural," yet everyone looks edited.
+                    Devices multiply faster than wrinkles.
+                  </p>
+
+                  <p>
+                    Underneath it all, the same rule still applies: simple works.
+                  </p>
+
+                  <p>
+                    The face is architecture — bones, ligaments, fat pads, skin — each holding the other up.
+                    Lose one, the rest shifts. Patch one, and the crack moves somewhere else.
+                    You don't paint over cracks; you fix the foundation.
+                  </p>
+
+                  <p>
+                    That's why we start with why.
+                    Why did it drop, dull, or deepen?
+                    Why are you chasing light with a laser when what you lost was volume?
+                  </p>
+
+                  <p>The answers live in layers:</p>
+
+                  <ul className="list-none space-y-3 my-6 pl-0">
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Epidermis</strong> — where renewal happens.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Dermis</strong> — where strength lives.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Fat pads</strong> — where contour hides.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-gray-900 font-bold text-xl">•</span>
+                      <span><strong className="text-gray-900">Ligaments</strong> — the truth about lift.</span>
+                    </li>
+                  </ul>
+
+                  <p>
+                    Once you know the layers, the rest is common sense dressed as science.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Sticky Thought:</p>
+                    <p className="text-gray-700 mt-1">
+                      Trends change every quarter. Anatomy hasn't updated in a few million years.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Beyond Marketing, Back to Medicine
+                  </h3>
+
+                  <p>
+                    Medicine is supposed to heal, not entertain.
+                    Yet half the industry sells adrenaline instead of anatomy.
+                    We'd rather stay boring — grounded in what works.
+                  </p>
+
+                  <p>
+                    At CosmeDocs, we don't worship the syringe or the laser.
+                    We respect the biology they serve.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Promise of This Journey
+                  </h3>
+
+                  <p>
+                    You'll start to see how everything connects — how folds come from cheeks, how eye bags come from ligaments, how "texture" often just means tired cells.
+                    And sometimes, the most intelligent move is doing nothing at all.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    🖤 "Sometimes the best treatment is restraint."
                   </p>
                 </div>
               </section>
 
               <section id="apple-analogy" className="mb-16 scroll-mt-20">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-                  The Apple Analogy
-                </h3>
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  The Art of Depth — Why Depth Defines Natural Results
+                </h2>
 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    The skin of the apple is your face — thin, delicate, and only about two millimetres thick. Beneath it lies the yellow flesh — the fat pads and support tissue that give the apple its shape, firmness, and lift. Deep inside sits the core, much like your bone structure and ligaments — the framework that holds everything together.
+                    When people talk about ageing, they point at the surface.
+                    Lines, texture, shadows.
+                    But the surface is just the mirror — the story's written underneath.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Apple Analogy
+                  </h3>
+
+                  <p className="text-xl italic text-gray-600">
+                    🍎 "Your face is an apple — the secret's in the flesh, not the peel."
                   </p>
 
                   <p>
-                    When the apple is fresh, the surface looks smooth and tight because the flesh underneath is full and hydrated.
-                    But as it begins to lose volume and moisture, the skin starts to wrinkle and sink.
+                    Picture an apple.
+                    The skin is your face — two millimetres of truth.
+                    Beneath it is the yellow part — fat, fascia, the soft stuff that keeps you round and alive.
+                    The core is your bone structure and ligaments — the frame.
                   </p>
 
                   <p>
-                    Now, imagine trying to fix that apple's surface by heating or polishing its skin from the outside.
-                    You can't restore its plumpness by treating only the peel — because the problem is deeper.
+                    When the apple's full, the skin is tight and shiny.
+                    As it dehydrates, the skin wrinkles.
+                    You can polish it, heat it, laser it — it'll still sink, because what's gone is inside.
                   </p>
 
                   <p className="font-semibold text-gray-900">
-                    The same is true for your face.
+                    That's the whole game of ageing.
+                    Lose the yellow, the red caves in.
                   </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Thought:</p>
+                    <p className="text-gray-700 mt-1">
+                      Lasers treat the peel. Fillers rebuild the fruit. Wisdom knows which one you need.
+                    </p>
+                  </div>
                 </div>
               </section>
 
@@ -292,24 +429,19 @@ export default function AestheticTreatmentsMadeEasy() {
 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    Lasers, radiofrequency, and ultrasound devices can be powerful tools — but only when used for the right reason.
-                    If your skin is genuinely thin or loose, resurfacing or stimulating collagen can help restore its texture and firmness.
-                    That's treating the skin layer — the "red peel" of the apple.
+                    If your problem's on the surface, sure — laser away.
+                    But when your volume's gone, no energy from above is going to refill what gravity stole.
+                    That's not cynicism; that's anatomy.
                   </p>
 
                   <p>
-                    But if your face has lost its natural fullness, your support layers — the yellow part — are the issue.
-                    No amount of energy from above will replace lost fat or restore structure.
-                    That's where volume restoration through filler, bio-stimulants, or regenerative treatments becomes the logical step.
+                    At CosmeDocs, we treat by depth, not by brand name.
+                    Every tool has a layer.
+                    Use the wrong depth, and you're fighting the wrong war.
                   </p>
 
-                  <p className="font-semibold text-gray-900">
-                    At CosmeDocs, we don't choose treatments by name — we choose them by depth.
-                  </p>
-
-                  <p>
-                    Every tool we use has a layer it's meant to serve.
-                    The key to natural results lies not in what you use, but how deep you understand where to use it.
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ⚖️ "Depth decides everything — beauty, safety, and sanity."
                   </p>
                 </div>
               </section>
@@ -321,30 +453,22 @@ export default function AestheticTreatmentsMadeEasy() {
 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    When your surface treatments and your volume restoration are in harmony, the result is seamless.
-                    The skin glows because it sits on something stable.
-                    The volume looks natural because the skin above it is healthy.
+                    Good results are like good writing — balanced, unforced, layered.
+                    The skin glows because the foundation's steady.
+                    The filler looks natural because the skin above it's alive.
                   </p>
 
                   <p>
-                    Most overdone results happen when practitioners chase "lift" at the wrong depth — adding too much where the foundation was never restored.
-                    That's why our philosophy is layered:
+                    Most "overdone" faces happen when people chase lift at the wrong level —
+                    filling where they should rebuild, lasering what never needed fixing.
                   </p>
 
-                  <ul className="list-none space-y-3 my-6 pl-0">
-                    <li className="flex items-start gap-3">
-                      <span className="text-gray-900 font-bold text-xl">•</span>
-                      <span><strong className="text-gray-900">Restore structure first.</strong></span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-gray-900 font-bold text-xl">•</span>
-                      <span><strong className="text-gray-900">Refine the surface next.</strong></span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-gray-900 font-bold text-xl">•</span>
-                      <span><strong className="text-gray-900">Respect anatomy always.</strong></span>
-                    </li>
-                  </ul>
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Sticky Note:</p>
+                    <p className="text-gray-700 mt-1">
+                      Restore first. Refine next. Respect always.
+                    </p>
+                  </div>
                 </div>
               </section>
 
@@ -354,44 +478,20 @@ export default function AestheticTreatmentsMadeEasy() {
                 </h3>
 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
-                  <p className="text-xl italic text-gray-600">
-                    If the skin is the story you see,<br />
-                    the depth is the truth beneath it.
+                  <p className="text-xl italic text-gray-600 text-center">
+                    If the skin is the story,<br />
+                    the depth is the truth.
                   </p>
 
                   <p>
-                    At CosmeDocs, we work from the bottom up — not the top down.
-                    Because no device, no cream, and no laser can replace what time has taken from below.
-                    But when we rebuild intelligently, the skin no longer needs to be "lifted" — it naturally rises to where it once belonged.
+                    We work bottom-up.
+                    No cream, no gadget, no hype replaces lost foundation.
+                    Rebuild intelligently and the skin finds its way home.
                   </p>
 
                   <blockquote className="border-l-4 border-gray-900 pl-6 italic text-xl my-8 text-gray-800">
                     "You cannot restore what you do not understand."
                   </blockquote>
-                </div>
-              </section>
-
-              <section id="art-of-depth" className="mb-16 scroll-mt-20">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                  Introduction — The Modern Face of Aesthetics
-                </h2>
-
-                <div className="space-y-6 text-gray-700 leading-relaxed">
-                  <p>
-                    Aesthetics today has become both more advanced and more confusing than ever.
-                    Every clinic promises "natural," every treatment claims to "lift," and every year brings another technology that supposedly changes everything.
-                  </p>
-
-                  <p>
-                    Yet when you look closely, the most beautiful, timeless results all share one thing: simplicity guided by understanding.
-                  </p>
-
-                  <p>
-                    We've reached a point where aesthetics is no longer about chasing youth, but about restoring harmony.
-                    The face is not a collection of parts — it's a system of relationships.
-                    Your skin, fat pads, ligaments, muscles, and bones all work together like the architecture of a house. When one element weakens, the others shift to compensate.
-                    Treating just one without understanding the rest is like painting over cracks in a wall — the cracks will always return.
-                  </p>
                 </div>
               </section>
 
