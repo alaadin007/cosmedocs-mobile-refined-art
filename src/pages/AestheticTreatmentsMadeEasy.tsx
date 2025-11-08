@@ -43,7 +43,7 @@ const chapters: Chapter[] = [
     title: "Chapter 4",
     subtitle: "The Thirties: The Age of Shift and Structure",
   },
-  { id: "chapter-5", title: "Chapter 5", subtitle: "Medical Rhinoplasty" },
+  { id: "chapter-5", title: "Chapter 5", subtitle: "The Forties: The Era of Lift and Logic" },
   { id: "chapter-6", title: "Chapter 6", subtitle: "Tear Trough" },
   {
     id: "chapter-7",
@@ -1396,8 +1396,264 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* Chapter 5 - Full Content */}
+              <section id="chapter-5" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Chapter 5 — The Forties: The Era of Lift and Logic
+                </h2>
+
+                <div className="space-y-8 text-gray-700 leading-relaxed">
+                  <p className="text-2xl text-center italic text-gray-600">
+                    🕰️ "Your forties aren't falling apart — they're just asking for structure."
+                  </p>
+
+                  <p>
+                    Welcome to the decade where the rules finally change.
+                    The easy fixes of your thirties start needing a little reinforcement.
+                    Gravity has done its homework, collagen's gone part-time, and the face — well, it's negotiating for better support.
+                  </p>
+
+                  <p>
+                    If your thirties were about maintenance, your forties are about management and mechanics.
+                    You don't just chase glow anymore. You chase geometry.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Reality Check
+                  </h3>
+
+                  <p>
+                    Let's be honest — if you were good to your face in your thirties, you're cruising into your forties with grace.
+                    But if you skipped the small stuff, now's the time for slightly more than a tweak.
+                    Don't panic — this isn't about "change."
+                    It's about quiet reinforcement.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "If your thirties were prevention, your forties are precision."
+                  </p>
+
+                  <p>
+                    And here's the beautiful irony:
+                    when done right, no one really knows what you did.
+                    Your husband won't notice.
+                    Your kids won't care.
+                    But your best friend and your mum — they'll know something's different.
+                    Not changed — restored.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The New Equation — Lift Over Volume
+                  </h3>
+
+                  <p>
+                    This is when ligaments — those tiny bands that hold everything up — start loosening their grip.
+                    Fat pads shift south, volume migrates, and the face becomes less about fullness and more about support.
+                  </p>
+
+                  <p>
+                    We used to chase plumpness.
+                    Now, we chase vectors — lines of lift and tension that hold the face upright.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Youth isn't fullness. It's direction."
+                  </p>
+
+                  <p>
+                    That's why filler placement in your forties is strategic, not cosmetic.
+                    A few millimetres in the right spot can pull up the entire lower face —
+                    the same way one well-placed beam holds up a ceiling.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    When Threads Join the Story
+                  </h3>
+
+                  <p>
+                    Threads have evolved.
+                    They're no longer the crude "fishhooks" from a decade ago.
+                    Modern threads are dissolvable scaffolds — collagen-stimulating sutures that lift now and build later.
+                    Think of them as architectural reinforcements — like invisible strings holding the midface, jawline, and brows exactly where they belong.
+                  </p>
+
+                  <p>
+                    They don't replace filler.
+                    They work with it — one for lift, one for shape, one for light.
+                    And when used correctly, you don't look "pulled."
+                    You just look like you slept really well, for the first time in a decade.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Tip:</p>
+                    <p className="text-gray-700 mt-1">
+                      Threads lift. Fillers refine. Together, they rewrite gravity.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Enter the Biostimulators
+                  </h3>
+
+                  <p>
+                    At this age, you stop renting collagen and start building it again.
+                    That's where biostimulators like Sculptra and Radiesse come in —
+                    they don't just fill space; they tell your body to do the work itself.
+                  </p>
+
+                  <p>
+                    Over a few months, they stimulate fibroblasts, rebuild internal scaffolding, and restore firmness from within.
+                    You don't wake up different. You wake up stronger.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "You don't add youth. You earn it back."
+                  </p>
+
+                  <p>
+                    The results are slow, graceful, and long-lasting —
+                    like ageing in reverse, but politely.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Regenerative Fillers — The New Frontier
+                  </h3>
+
+                  <p>
+                    Welcome to the decade of hybrid injectables —
+                    fillers that not only fill, but heal.
+                    Polynucleotides, exosomes, PRF, even diluted hyaluronic acid cocktails —
+                    this is where rejuvenation meets biochemistry.
+                  </p>
+
+                  <p>
+                    These aren't the big lifts. These are the quiet revolutions.
+                    They restore hydration, texture, and elasticity from deep within the dermis,
+                    the way nature intended — just with a little nudge from science.
+                  </p>
+
+                  <p>
+                    At CosmeDocs, we combine these with skin boosters and collagen inducers to rebuild glow, density, and bounce.
+                    Because the surface doesn't shine if the foundation's gone soft.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Reminder:</p>
+                    <p className="text-gray-700 mt-1">
+                      The future of beauty isn't filler or Botox. It's regeneration.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Cost of Subtlety
+                  </h3>
+
+                  <p>
+                    Now, let's talk about the unspoken truth: the investment.
+                    If your thirties were a few hundred here and there,
+                    your forties might ask for a little more — say around £3-4 for a complete, full-face restoration over a year or more.
+                  </p>
+
+                  <p>
+                    That includes soft filler, biostimulators, and maybe a thread or two to keep gravity guessing.
+                    Still subtle. Still you.
+                    You could easily spend that on a designer bag —
+                    but only one of these things will look better on you every day.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "If Hermès sold faces, we'd have a waiting list."
+                  </p>
+
+                  <p>
+                    Because honestly, if someone told you there's something that can rewind your reflection for another five years —
+                    and it costs less than what you spent on handbags you forgot about —
+                    you'd call that a fair trade.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Truth:</p>
+                    <p className="text-gray-700 mt-1">
+                      The bag holds your stuff. The face holds your story.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Why It Still Feels Natural
+                  </h3>
+
+                  <p>
+                    The trick to looking natural in your forties isn't less work — it's smarter work.
+                    Subtle layering. Deep understanding of anatomy. Respect for proportion.
+                    No one needs to know what you did — only that you look like yourself again.
+                  </p>
+
+                  <p>
+                    Your husband won't notice.
+                    Your colleagues might think you've changed your haircut or colour kit.
+                    But your best friend will grin and say,
+                    "You look amazing — what are you doing?"
+                  </p>
+
+                  <p>
+                    That's when you know it worked.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "The secret to natural beauty isn't hiding it. It's editing it."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Logic of Lift
+                  </h3>
+
+                  <p>
+                    Your forties aren't about chasing youth — they're about lifting logic back into your face.
+                    Anchoring sagging tissue. Restoring lost vectors.
+                    Respecting anatomy and balance.
+                  </p>
+
+                  <p>
+                    Because when your face makes sense again, everything else falls into place —
+                    your expressions, your makeup, your confidence, your mirror.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "A good lift doesn't erase time. It just stops it from bossing you around."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Good News
+                  </h3>
+
+                  <p>
+                    The good news is: you're not broken.
+                    You just need a tune-up.
+                    A micro-lift here, a collagen boost there, a little refill where time took too much.
+                    Each tweak buys you another few years of freshness — not hours, years.
+                  </p>
+
+                  <p>
+                    And the best part?
+                    It's still subtle. Still believable.
+                    You'll feel like yourself again — just sharper, clearer, calmer.
+                  </p>
+
+                  <p>
+                    So skip the next handbag. Invest in your reflection.
+                    Because a face that glows with quiet confidence?
+                    That's the ultimate luxury.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "The Hermès bag sits in the wardrobe.<br />
+                    Your face walks into the room."
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
-              {chapters.slice(4).map((chapter) => (
+              {chapters.slice(5).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
