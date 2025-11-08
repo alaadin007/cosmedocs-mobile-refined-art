@@ -29,7 +29,7 @@ const chapters: Chapter[] = [
   {
     id: "chapter-1",
     title: "Chapter 1",
-    subtitle: "Choosing Clients, Ethical Selling, and the Art of Assessment",
+    subtitle: "The Epidermis: The Foundation of All Skin Health",
   },
   { id: "chapter-2", title: "Chapter 2", subtitle: "The Epidermis" },
   { id: "chapter-3", title: "Chapter 3", subtitle: "The Dermis" },
@@ -395,8 +395,131 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* Chapter 1 - Full Content */}
+              <section id="chapter-1" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Chapter 1 — The Epidermis: The Foundation of All Skin Health
+                </h2>
+
+                <div className="space-y-8 text-gray-700 leading-relaxed">
+                  <p className="text-2xl text-center italic text-gray-600">
+                    🌙 "The surface may be thin, but it holds the light of youth."
+                  </p>
+
+                  <p>
+                    The skin — it's your first defence and your last disguise.
+                    The body's largest organ, the one thing you can't hide behind forever.
+                    It tells stories: how you sleep, how you eat, what you worry about.
+                  </p>
+
+                  <p>
+                    The epidermis, that paper-thin outer layer, carries all your secrets.
+                    It reflects light, texture, and tone.
+                    When it's healthy, even a tired face looks alive.
+                    When it's dull, no amount of filler, no fancy device, no miracle serum can fake that light.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Layers of Youth
+                  </h3>
+
+                  <p>
+                    The epidermis is built from keratinocytes — tiny cells that live fast and die young.
+                    They rise to the surface, harden, and form your armour.
+                    When you're young, this happens every few weeks, like clockwork.
+                    Then life happens. Time slows the cycle.
+                    Dead cells hang around longer than they should, muting your glow.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Tip:</p>
+                    <p className="text-gray-700 mt-1">
+                      Think of your skin like glass — clarity depends on turnover, not thickness.
+                    </p>
+                  </div>
+
+                  <p>
+                    That's why at CosmeDocs, we don't start with needles; we start with renewal.
+                    Peels, retinol, medical-grade skincare — they're not indulgence, they're hygiene for the soul of your skin.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Melanocytes — The Artists of the Epidermis
+                  </h3>
+
+                  <p className="text-xl italic text-gray-600">
+                    🎨 "Every skin tone is a painting; melanocytes hold the brush."
+                  </p>
+
+                  <p>
+                    These tiny cells decide how you face the world.
+                    When they're calm, they paint evenly.
+                    When they panic — from sun, stress, hormones, heat — they blot, stain, and smudge.
+                    You see it as uneven tone, dark spots, that post-inflammatory memory your skin refuses to forget.
+                  </p>
+
+                  <p>
+                    For darker or mixed skin tones, we play it slow.
+                    We calm the artists before handing them the brush.
+                    Kojic acid, hydroquinone, retinol — gentle persuasion before the heavy machinery comes in.
+                  </p>
+
+                  <p>
+                    Because quick results? They burn bright and fade fast.
+                    Cellular calm — that's where the long game lives.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Epidermis and Osmosis — Where Water Lives
+                  </h3>
+
+                  <p className="text-xl italic text-gray-600">
+                    💧 "Moisture doesn't come from your cream — it comes from below."
+                  </p>
+
+                  <p>
+                    Here's the truth nobody likes to hear:
+                    Most dry skin isn't dehydrated — it's blocked.
+                    When dead cells pile up, water from the dermis can't reach the surface.
+                    So you keep adding more moisturiser, and the skin keeps ignoring you.
+                  </p>
+
+                  <p>
+                    At CosmeDocs, we take a different route — we clear the traffic.
+                    We gently strip the barrier, allowing the water to flow up again.
+                    Real hydration happens when the skin starts breathing.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Tip:</p>
+                    <p className="text-gray-700 mt-1">
+                      Don't just add — unblock.
+                      Renewal brings more hydration than any heavy cream.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Our Philosophy — Treat the Surface with Respect
+                  </h3>
+
+                  <p>
+                    A luminous face isn't born from volume; it's born from vitality.
+                    Light reflects off skin that's alive, not stuffed.
+                    Before we lift, before we fill, before we even think about tightening — we honour the canvas.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "Before the art, honour the canvas."
+                  </p>
+
+                  <p>
+                    Because when the surface is breathing, every deeper treatment performs better and looks more like you — just a version that remembered how to glow.
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
-              {chapters.map((chapter) => (
+              {chapters.slice(1).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
