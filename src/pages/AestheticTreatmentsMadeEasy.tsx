@@ -44,7 +44,7 @@ const chapters: Chapter[] = [
     subtitle: "The Thirties: The Age of Shift and Structure",
   },
   { id: "chapter-5", title: "Chapter 5", subtitle: "The Forties: The Era of Lift and Logic" },
-  { id: "chapter-6", title: "Chapter 6", subtitle: "Tear Trough" },
+  { id: "chapter-6", title: "Chapter 6", subtitle: "The Fifties: Elegance, Elasticity & Energy" },
   {
     id: "chapter-7",
     title: "Chapter 7",
@@ -1652,8 +1652,290 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* Chapter 6: The Fifties */}
+              <section id="chapter-6" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Chapter 6: The Fifties: Elegance, Elasticity & Energy
+                </h2>
+                
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    🕰️ "This is where medicine meets its edge — and mastery begins."
+                  </p>
+
+                  <p>
+                    Welcome to the decade where we arrive at the fine line between aesthetic medicine and plastic surgery.
+                    It's not the end of the road — it's just where the tools need sharper thinking, steadier hands, and clearer purpose.
+                  </p>
+
+                  <p>
+                    The fifties aren't about chasing youth anymore.
+                    They're about keeping grace alive in motion.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    When Time Gets Structural
+                  </h3>
+
+                  <p>
+                    By fifty, the face has rewritten its architecture.
+                    Ligaments have loosened their hold.
+                    Fat has descended from its original postcode.
+                    The skin has thinned, folded, and etched in the story of everything you've lived.
+                  </p>
+
+                  <p>
+                    If you've been with us for ten or fifteen years, congratulations — you've aged in slow motion.
+                    You shouldn't look fifty.
+                    You should look like the biological version of yourself from your late thirties.
+                    Not frozen. Not re-inflated. Just untouched by panic.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Consistency beats correction."
+                  </p>
+
+                  <p>
+                    But if you're walking in at fifty for the first time — don't worry.
+                    There's still plenty we can do.
+                    It's just that now, we're no longer tweaking.
+                    We're rebuilding structure from the bottom up.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Rule of Light and Shadow
+                  </h3>
+
+                  <p>
+                    At this stage, it's not just volume loss. It's shape distortion.
+                    The heaviest giveaway of age isn't wrinkles — it's shadows.
+                    They appear under the eyes, beside the mouth, across the jawline, and around the temples.
+                    The face goes from reflecting light to breaking it.
+                  </p>
+
+                  <p>
+                    Our mission now is to erase the shadows, not to fill everything that moves.
+                  </p>
+
+                  <p>
+                    That's why in your fifties, I don't start with the cheeks.
+                    I start with structure.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "If you lift the base, the light comes back on its own."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Jawline First Philosophy
+                  </h3>
+
+                  <p>
+                    The first step is the jawline — the anchor of the face.
+                    We rebuild the angle of the jaw, the mandibular line, and the corners of the mouth.
+                    When the jawline is clean and the mouth corners turn upwards, the entire face looks lighter.
+                  </p>
+
+                  <p>
+                    Only then do we move upward — to the cheeks, under-eyes, and temples — restoring balance rather than distortion.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Truth:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      The face should read top to bottom like a story, not a typo.
+                    </p>
+                  </div>
+
+                  <p>
+                    The goal is no age mismatch.
+                    Too often, you see women (and men) with cheeks that look twenty-five — but jawlines that look sixty-five.
+                    The result? A visual contradiction that fools no one.
+                  </p>
+
+                  <p>
+                    It's not their fault.
+                    It's the industry's habit.
+                    Too many practitioners practice what they know — or worse, what they were last taught — instead of reading the face in front of them.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Era of Skin Work
+                  </h3>
+
+                  <p>
+                    By now, the real battlefront is the skin itself.
+                    Collagen and elastin production are at historic lows.
+                    The dermis is thinner, drier, and slower to heal.
+                    So we stop trying to fill everything and start regenerating.
+                  </p>
+
+                  <p className="font-medium">This is where we go heavy on:</p>
+
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Tretinoin</strong> for deep resurfacing and renewal.</li>
+                    <li><strong>Microneedling with biostimulators</strong> to thicken dermis and rebuild texture.</li>
+                    <li><strong>PRF (Platelet-Rich Fibrin)</strong> to reintroduce growth factors.</li>
+                    <li><strong>Polynucleotides & Exosomes</strong> to boost cell repair and energy.</li>
+                    <li><strong>Energy-based devices</strong> (radiofrequency, fractional lasers, ultrasound) — carefully used, not overused.</li>
+                  </ul>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "At fifty, the skin isn't tired. It's just waiting for orders."
+                  </p>
+
+                  <p>
+                    The goal here isn't tightening — it's retraining the skin to act young again.
+                    We treat it like muscle memory — because that's exactly what it is.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Regeneration Over Replacement
+                  </h3>
+
+                  <p>
+                    At Cosmedocs, our philosophy evolves with your biology.
+                    In your twenties, we preserved.
+                    In your thirties, we planned.
+                    In your forties, we lifted.
+                    Now, in your fifties, we regenerate.
+                  </p>
+
+                  <p>
+                    Filler alone can't fight this stage.
+                    We bring in bio-stimulators, collagen inducers, and regenerative injectables to rebuild the tissue from within.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Tip:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      In your fifties, less filling — more healing.
+                    </p>
+                  </div>
+
+                  <p>
+                    The approach is subtle but profound.
+                    You're not just "holding back time" — you're quietly rewriting it.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Biological vs. Chronological Age
+                  </h3>
+
+                  <p>
+                    When we track our long-term patients — those who started early and stayed consistent — the difference is astonishing.
+                    They don't just look younger. They are younger.
+                    Biologically, metabolically, dermally — they've reversed the wear.
+                  </p>
+
+                  <p>
+                    A face that's been maintained for fifteen years isn't fifty.
+                    It's biologically closer to thirty-five.
+                    The collagen, the elasticity, the hydration — everything is preserved by years of micro-intervention.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "The reward for consistency isn't looking good. It's never looking tired."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Truth About Late Starters
+                  </h3>
+
+                  <p>
+                    For those who discover aesthetic medicine at fifty — it's never too late.
+                    You just need a little more structure, patience, and a realistic roadmap.
+                  </p>
+
+                  <p>
+                    We start with light, not filler — by lifting shadows through jawline restoration, mouth-corner correction, and redefining borders.
+                    Once the framework is reestablished, we work upwards to replace volume, restore balance, and reintroduce softness.
+                  </p>
+
+                  <p>
+                    It's like renovating a house — you start with the foundation, not the curtains.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Don't fill the cheeks before fixing the floor."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Logic of Balance
+                  </h3>
+
+                  <p>
+                    The key word now is coherence.
+                    Every millimetre matters.
+                    Every area must match its neighbour.
+                  </p>
+
+                  <p>
+                    If the jawline looks sixty but the cheeks look twenty-five, the illusion breaks.
+                    We want harmony, not highlights.
+                  </p>
+
+                  <p>
+                    That's why in your fifties, artistry becomes everything.
+                    Because science can't teach judgment — and judgment is the only thing that keeps beauty believable.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-medium text-gray-900">
+                      🗒️ Post-It Wisdom:
+                    </p>
+                    <p className="text-sm text-gray-700 mt-1">
+                      Youth is a look. Balance is a feeling.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Good News
+                  </h3>
+
+                  <p>
+                    The good news is — there's still so much that can be done.
+                    The tools are smarter. The results are subtler.
+                    And if you've invested in your face for a decade or two, you've already won half the battle.
+                  </p>
+
+                  <p>
+                    Each little tweak — a bio-stimulator here, a jawline lift there, a deep peel once or twice a year —
+                    adds years of vitality back to your reflection.
+                  </p>
+
+                  <p>
+                    You'll look in the mirror and think, "I still recognise that person."
+                    And that's the goal.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "At fifty, beauty isn't about pretending. It's about remembering."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Final Thought
+                  </h3>
+
+                  <p>
+                    If aesthetic medicine were music, this would be the slow jazz phase — subtle, layered, elegant.
+                    Everything is about tempo, tone, and restraint.
+                    The instruments are the same — filler, threads, retinoids, energy — but the melody has matured.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "We're not chasing youth anymore.<br />
+                    We're perfecting grace."
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
-              {chapters.slice(5).map((chapter) => (
+              {chapters.slice(6).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
