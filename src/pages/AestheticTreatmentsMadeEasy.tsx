@@ -32,11 +32,16 @@ const chapters: Chapter[] = [
     subtitle: "The Epidermis: The Foundation of All Skin Health",
   },
   { id: "chapter-2", title: "Chapter 2", subtitle: "The Dermis: The Architecture of Youth" },
-  { id: "chapter-3", title: "Chapter 3", subtitle: "The Dermis" },
+  
+  {
+    id: "chapter-3",
+    title: "Chapter 3",
+    subtitle: "The Subcutaneous Layer: Fat, Muscle & the First Signs of Time",
+  },
   {
     id: "chapter-4",
     title: "Chapter 4",
-    subtitle: "The Subcutaneous Layer",
+    subtitle: "Medical Rhinoplasty",
   },
   { id: "chapter-5", title: "Chapter 5", subtitle: "Medical Rhinoplasty" },
   { id: "chapter-6", title: "Chapter 6", subtitle: "Tear Trough" },
@@ -801,8 +806,290 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* Chapter 3 - Full Content */}
+              <section id="chapter-3" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Chapter 3 — The Subcutaneous Layer: Fat, Muscle & the First Signs of Time
+                </h2>
+
+                <div className="space-y-8 text-gray-700 leading-relaxed">
+                  <p className="text-2xl text-center italic text-gray-600">
+                    🔥 "You don't wake up old. It happens slowly, quietly — like a song fading out."
+                  </p>
+
+                  <p>
+                    After your twenties, things start to shift — not enough to panic, but enough to notice.
+                    One morning, your skin feels the same, but makeup doesn't sit right.
+                    Your reflection looks familiar, but something's off.
+                    That's not imagination. That's biology catching up.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Fibroblast Slowdown
+                  </h3>
+
+                  <p>
+                    Here's the part no one tells you in your early twenties:
+                    you start using collagen faster than you make it.
+                    Your fibroblasts — the little engines that build collagen and elastin — slow down like an overworked band after the encore.
+                    By your mid-twenties, they're running at one-third of their teenage rhythm.
+                  </p>
+
+                  <p>
+                    That's when lines that used to vanish when you relaxed start hanging around.
+                    The frown, the forehead, the crow's feet — they start writing permanent notes on your skin.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Sometimes it's only a year or two between temporary and permanent."
+                  </p>
+
+                  <p>
+                    This is where Botox earns its reputation — not as vanity, but as strategy.
+                    If lines appear only with movement, Botox is prevention.
+                    If they stay when you're still, it's treatment.
+                  </p>
+
+                  <p>
+                    It doesn't freeze expression; it just gives your skin a break.
+                    Think of it as a reset for the upper and lower face — frown, crow's feet, forehead, chin, mouth corners — letting your skin remember smooth again.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Tip:</p>
+                    <p className="text-gray-700 mt-1">
+                      Botox isn't freezing time. It's slowing it to your rhythm.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Fibroblast Reactivation — Retinol & Tretinoin
+                  </h3>
+
+                  <p>
+                    If Botox calms the muscles, retinoids wake the builders.
+                    Retinol and tretinoin — vitamin A's smarter cousins — don't fill, peel, or fake.
+                    They retrain fibroblasts to work like they used to.
+                  </p>
+
+                  <p>
+                    Used consistently, they help skin remember how to make new collagen and elastin, refine texture, and smooth fine lines from within.
+                    It's not a quick win — it's cellular discipline.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Retinoids don't work fast; they work forever."
+                  </p>
+
+                  <p>
+                    Go slow, start light, stay steady.
+                    That's how you keep fibroblasts alive and loyal long after your twenties clock out.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Thought:</p>
+                    <p className="text-gray-700 mt-1">
+                      Feed the fibroblasts; don't frighten them.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Fat: The Silent Sculptor
+                  </h3>
+
+                  <p>
+                    Your face isn't flat — it's a 3-D landscape built on fat compartments.
+                    Each one gives contour, balance, and softness.
+                    In youth, they're firm, round, sitting exactly where nature intended.
+                    By your late twenties, they start to shrink and shift.
+                  </p>
+
+                  <p>
+                    The under-eye hollows, the cheeks deflate, and the lid-cheek junction widens.
+                    That shadow under your eye? It's not fatigue.
+                    It's support loss.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Sticky Thought:</p>
+                    <p className="text-gray-700 mt-1">
+                      You didn't get older. You lost scaffolding.
+                    </p>
+                  </div>
+
+                  <p>
+                    That's where fillers come in — not to change you, but to quietly replace structure.
+                    A touch in the cheeks restores lift; a whisper in the lips brings back hydration and shape.
+                    Lips are fullest between 16 and 18 — after that, volume slips away.
+                    We don't inflate them; we just rewind them a little.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Filler done right doesn't add — it reminds."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Filler Migration — The Social Media Myth
+                  </h3>
+
+                  <p>
+                    Let's talk about the elephant in your algorithm.
+                    Filler didn't "migrate" to your temple overnight.
+                    It was put in the wrong place.
+                  </p>
+
+                  <p>
+                    Fat compartments are like rooms with walls.
+                    Inject too much, too deep, or outside the room, and filler finds the path of least resistance — gravity and pressure do the rest.
+                    That's not migration; that's bad mapping.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Truth:</p>
+                    <p className="text-gray-700 mt-1">
+                      Good filler doesn't move — bad judgement does.
+                    </p>
+                  </div>
+
+                  <p>
+                    At CosmeDocs, we don't chase hollows. We follow anatomy.
+                    That's why our results look natural six months later — not swollen, not strange, just balanced.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Muscle: The Repetitive Artist
+                  </h3>
+
+                  <p>
+                    While fat fades, muscle remembers.
+                    Every smile, frown, squint, pout — repetition carves memory into motion.
+                    Over time, the upper face writes fine lines from emotion; the lower face writes them from gravity and habit.
+                  </p>
+
+                  <p>
+                    You're not "ageing." You're repeating.
+                  </p>
+
+                  <p>
+                    Botox breaks the loop — softens the upper face (frown, crow's feet, forehead) and calms the lower face (chin dimples, downturning corners).
+                    Muscles relax, skin heals, filler lasts longer, and the face stops looking tense for no reason.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Tip:</p>
+                    <p className="text-gray-700 mt-1">
+                      If you can't stop frowning, teach your muscles to forget.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Truth About Fillers — The Tool, Not the Villain
+                  </h3>
+
+                  <p className="text-xl italic text-gray-600">
+                    💉 "Fillers aren't the problem. Bad hands are."
+                  </p>
+
+                  <p>
+                    Let's stop pretending filler is evil.
+                    It's not.
+                    It's Hyaluronic Acid — a soft, natural sugar gel that lives in your own skin.
+                    It attracts water, restores shape, and when used right, it's actually softer than fat.
+                  </p>
+
+                  <p>
+                    So why the horror stories?
+                    Because bad injectors chase trends instead of proportion.
+                    They pump too much into the lips, overload the cheeks, and forget the jawline.
+                    You end up with a face that's 25 up top and 45 down below.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Thought:</p>
+                    <p className="text-gray-700 mt-1">
+                      For every bad filler face you've seen, ten thousand good ones walked right past you.
+                    </p>
+                  </div>
+
+                  <p>
+                    The problem isn't filler.
+                    It's maths — wrong ratios, wrong balance.
+                    True artistry lives in micromillimetres: the quiet corrections around the mouth, jaw, and temple that make a face look alive again.
+                    Get those right, and the whole face shifts from tired to timeless.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "It's not about how much you add. It's about where you stop."
+                  </p>
+
+                  <p>
+                    A great injector doesn't fill — they sculpt.
+                    They restore direction, not just volume.
+                    The aim is harmony, not hype.
+                    That's why filler at CosmeDocs doesn't look "done."
+                    It looks right.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Good filler doesn't change who you are — it reminds you who you were."
+                  </p>
+
+                  <p>
+                    So don't cancel the tool because someone used it wrong.
+                    You wouldn't blame a scalpel for a bad scar.
+                    Blame the surgeon.
+                    Sometimes, yes, blame the patient too — the one who asked for "more" when "enough" was already beautiful.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "In the right hands, filler isn't vanity. It's precision."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Skin: The Mirror Between Fat & Feeling
+                  </h3>
+
+                  <p>
+                    As all this happens underneath, the skin above starts whispering for help.
+                    Texture roughens, tone dulls, sensitivity creeps in.
+                    You start noticing that your neck looks better than your face — because the neck stayed out of the sun and drama.
+                  </p>
+
+                  <p>
+                    Most people respond with more makeup.
+                    But what hides your glow isn't pigment — it's dead skin.
+                    Exfoliate it off, let the epidermis breathe again, and suddenly your reflection catches the light the way it used to.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "Youth isn't something you add. It's what appears when you stop hiding behind damage."
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Goal
+                  </h3>
+
+                  <p>
+                    Your twenties aren't about transformation — they're about preservation.
+                    Keep fibroblasts alive with retinoids.
+                    Keep muscles relaxed with Botox.
+                    Keep volume honest with subtle filler.
+                    Keep skin fresh with renewal, not disguise.
+                  </p>
+
+                  <p>
+                    We're not trying to make you look eighteen again.
+                    We're helping you look mid-twenties for longer — quietly, naturally, logically.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "Stay subtle. Stay soft. Stay twenty-something longer than nature planned."
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
-              {chapters.slice(2).map((chapter) => (
+              {chapters.slice(3).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
