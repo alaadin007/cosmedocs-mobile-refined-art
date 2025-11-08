@@ -31,7 +31,7 @@ const chapters: Chapter[] = [
     title: "Chapter 1",
     subtitle: "The Epidermis: The Foundation of All Skin Health",
   },
-  { id: "chapter-2", title: "Chapter 2", subtitle: "The Epidermis" },
+  { id: "chapter-2", title: "Chapter 2", subtitle: "The Dermis: The Architecture of Youth" },
   { id: "chapter-3", title: "Chapter 3", subtitle: "The Dermis" },
   {
     id: "chapter-4",
@@ -618,8 +618,191 @@ export default function AestheticTreatmentsMadeEasy() {
                 </div>
               </section>
 
+              {/* Chapter 2 - Full Content */}
+              <section id="chapter-2" className="mb-16 scroll-mt-20">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  Chapter 2 — The Dermis: The Architecture of Youth
+                </h2>
+
+                <div className="space-y-8 text-gray-700 leading-relaxed">
+                  <p className="text-2xl text-center italic text-gray-600">
+                    🏗️ "Beauty isn't skin deep — it's dermis deep."
+                  </p>
+
+                  <p>
+                    If the epidermis is the skin you see in the mirror, the dermis is the one that quietly holds it up.
+                    It's the scaffolding under the wallpaper — invisible until it starts to collapse.
+                    This is where strength, bounce, and resilience live.
+                    Lose this layer, and the surface starts begging for help.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Scaffolding Beneath the Smile
+                  </h3>
+
+                  <p>
+                    The dermis is where collagen and elastin hang out — the two best friends you took for granted your whole life.
+                    Collagen gives firmness. Elastin gives snap.
+                    Together, they're the reason a 25-year-old can stay up all night and still look alive in the morning.
+                  </p>
+
+                  <p>
+                    Then the slow fade begins.
+                    By your 30s, collagen starts packing its bags.
+                    By your 40s, elastin follows.
+                    Sunlight speeds it up. Sugar ruins it. Stress accelerates the exit.
+                  </p>
+
+                  <p>
+                    You don't feel it happening — until one day your reflection looks tired, even when you're not.
+                    That's not emotion. That's architecture.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Thought:</p>
+                    <p className="text-gray-700 mt-1">
+                      You don't age. You decompress.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Why Tightening Alone Doesn't Work
+                  </h3>
+
+                  <p>
+                    Here's the dirty secret behind "skin tightening":
+                    you can't tighten what isn't supported.
+                    High-energy devices try to shrink collagen,
+                    but if the fat below is gone and the ligaments are loose,
+                    all you're doing is pulling on an empty tent.
+                  </p>
+
+                  <p>
+                    That's why some people chase ultrasound, RF, lasers — and still look hollow.
+                    They're fixing the wallpaper when the wall's already crumbling.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💬 "You can't heat your way out of lost volume."
+                  </p>
+
+                  <p>
+                    At CosmeDocs, we rebuild from the foundation up.
+                    Once the dermis has something to grip again — volume, hydration, structure —
+                    it remembers how to hold you up.
+                  </p>
+
+                  <p>
+                    That's what "lifting" really is.
+                    Not pulling tighter, but rebuilding smarter.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Collagen — The Builder
+                  </h3>
+
+                  <p>
+                    Collagen's a bit like trust — hard to earn, easy to lose.
+                    You can't trick your body into making it overnight.
+                    You have to give it reason and resources.
+                    Vitamin C, retinol, peptides, and a clean dermis to work in —
+                    that's how collagen gets the memo.
+                  </p>
+
+                  <p>
+                    It's not about "stimulating" it once with a fancy device.
+                    It's about feeding the system that makes it every day.
+                    You don't go to the gym once and call it fitness.
+                    Same logic applies here.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Post-It Tip:</p>
+                    <p className="text-gray-700 mt-1">
+                      Collagen doesn't need noise. It needs consistency.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Elastin — The Forgotten Hero
+                  </h3>
+
+                  <p>
+                    Collagen gets the headlines, but elastin is the quiet genius.
+                    It's what lets your skin stretch when you laugh and snap back when you stop.
+                    When elastin breaks down, faces don't fall — they melt.
+                    The cheeks drift south, the jawline softens, the neck forgets its line.
+                  </p>
+
+                  <p>
+                    Most devices promise to "boost elastin."
+                    Few actually can.
+                    The best way to protect it?
+                    Don't destroy it in the first place.
+                    That means: less sun, less smoke, less chaos.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    💭 "If collagen is the beam, elastin is the spring."
+                  </p>
+
+                  <p>
+                    Lose either, and the house doesn't collapse — it just starts to sigh.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    Blood Flow — The Forgotten Symphony
+                  </h3>
+
+                  <p>
+                    The dermis is also where your blood supply lives —
+                    tiny capillaries carrying oxygen, warmth, and colour.
+                    That pink, healthy glow? That's blood, not makeup.
+                    Lose circulation, and everything dulls — skin tone, healing, even mood.
+                  </p>
+
+                  <p>
+                    We often underestimate how much lifestyle writes itself onto your dermis.
+                    Good sleep, good food, low stress — cliché, yes, but anatomy doesn't lie.
+                    You can't out-inject bad circulation.
+                    You can only live better skin from the inside out.
+                  </p>
+
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                    <p className="text-sm font-semibold text-gray-900">🗒️ Sticky Note:</p>
+                    <p className="text-gray-700 mt-1">
+                      Your face doesn't glow from skincare. It glows from oxygen.
+                    </p>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
+                    The Quiet Truth
+                  </h3>
+
+                  <p>
+                    The dermis isn't glamorous.
+                    It's not where filters live.
+                    It's where the truth of your skin hides.
+                  </p>
+
+                  <p>
+                    Every time you break it, stretch it, stress it, or starve it — it remembers.
+                    Every time you feed it, heal it, or protect it — it forgives.
+                  </p>
+
+                  <p>
+                    That's the contract.
+                    That's the architecture of youth.
+                  </p>
+
+                  <p className="text-xl italic text-gray-600 text-center my-6">
+                    ✨ "Treat your dermis like you treat your character — build it quietly, strengthen it daily, and it will hold you when everything else sags."
+                  </p>
+                </div>
+              </section>
+
               {/* Placeholder for remaining chapters */}
-              {chapters.slice(1).map((chapter) => (
+              {chapters.slice(2).map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="mb-16 scroll-mt-20">
                   <h2 className="text-3xl font-bold mb-6 text-gray-900">
                     {chapter.title}: {chapter.subtitle}
