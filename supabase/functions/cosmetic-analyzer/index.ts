@@ -273,97 +273,12 @@ Return ONLY a valid JSON object with this exact structure:
 
 Base your analysis on evidence-based dermatology and cosmetic chemistry principles.`;
 
-    const userPrompt = `Analyze this skincare product using the CosmeDocs medical approach:
-URL: ${productUrl}
-Product Name: ${inferredName}
-
-Provide a comprehensive analysis following the Three-Cell Approach, scoring rubric, and detailed ingredient assessment. Include ingredient count and provide evidence-based medical insights.`;
-
-    console.log('Sending to OpenAI for analysis...');
+    // Note: The AI cannot directly access URLs. This is a limitation.
+    // For now, we'll provide a clear error message to users.
+    console.log('Product URL analysis requested, but URL fetching is not implemented');
     
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${openAIApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: userPrompt }
-        ],
-        max_tokens: 3000,
-        temperature: 0.3,
-      }),
-    });
-
-    if (!openAIResponse.ok) {
-      const errorText = await openAIResponse.text();
-      console.error('OpenAI API error:', errorText);
-      throw new Error(`OpenAI API error: ${openAIResponse.status} - ${errorText}`);
-    }
-
-    const openAIData = await openAIResponse.json();
-    const analysisText = openAIData.choices[0].message.content;
-    
-    console.log('Received AI analysis');
-
-    // Parse the JSON response
-    let analysisData;
-    try {
-      // Clean the response in case it has markdown formatting
-      const cleanedResponse = analysisText.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
-      analysisData = JSON.parse(cleanedResponse);
-    } catch (error) {
-      console.error('Failed to parse AI response as JSON:', error);
-      console.error('Raw response:', analysisText);
-      throw new Error('Invalid AI response format');
-    }
-
-    // Store the analysis in the database
-    const productData = analysisData.products[0]; // Get the first product from the analysis
-    const { error: upsertError } = await supabase
-      .from('product_analyses')
-      .upsert({
-        product_name: productData.name || inferredName,
-        product_brand: productData.brand || 'Unknown Brand',
-        product_url: productUrl,
-        analysis_data: analysisData,
-        overall_score: productData.scores?.final_score_0to10 ?? 0
-      }, { onConflict: 'product_url' });
-
-    if (upsertError) {
-      // Handle possible duplicate insert race conditions gracefully
-      if ((upsertError as any).code === '23505') {
-        const { error: updateError } = await supabase
-          .from('product_analyses')
-          .update({
-            product_name: productData.name || inferredName,
-            product_brand: productData.brand || 'Unknown Brand',
-            analysis_data: analysisData,
-            overall_score: productData.scores?.final_score_0to10 ?? 0
-          })
-          .eq('product_url', productUrl);
-        if (updateError) {
-          console.error('Error updating existing analysis:', updateError);
-          throw new Error('Failed to store analysis');
-        }
-      } else {
-        console.error('Error storing analysis:', upsertError);
-        throw new Error('Failed to store analysis');
-      }
-    }
-
-    console.log('Analysis completed and stored successfully');
-
-    return new Response(JSON.stringify({
-      success: true,
-      data: analysisData,
-      cached: false
-    }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+    // Return a helpful error message
+    throw new Error('Product analysis from URLs is not yet implemented. Please provide the product ingredients list and details directly, or this feature needs web scraping capability to fetch product information from the URL.');
 
   } catch (error) {
     console.error('Error in cosmetic-analyzer function:', error);

@@ -192,7 +192,7 @@ export default function Header() {
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center justify-between w-full">
             {/* Mobile Menu Button - Left */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <Button
                 onClick={() => setIsContactMenuOpen(true)}
                 variant="ghost"
@@ -205,16 +205,16 @@ export default function Header() {
               <Button
                 onClick={() => setIsSearchOpen(true)}
                 variant="ghost"
-                className="text-white/90 hover:text-white hover:bg-white/10 px-2 py-2 rounded-lg flex items-center gap-1"
-                title="Ask anything"
+                size="icon"
+                className="text-white/90 hover:text-white hover:bg-white/10 p-2 rounded-lg"
+                title="Ask AI"
               >
                 <Brain className="h-4 w-4" />
-                <span className="text-xs">ask anything</span>
               </Button>
             </div>
             
             {/* Mobile Actions - Right */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <Button
                 onClick={() => window.open('https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29', '_blank')}
                 variant="ghost"
