@@ -9,7 +9,7 @@ const corsHeaders = {
 
 const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-const openAIApiKey = Deno.env.get('OPENAI_API_KEY')!;
+const lovableApiKey = Deno.env.get('LOVABLE_API_KEY')!;
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -48,7 +48,7 @@ serve(async (req) => {
     // Extract product name from URL if not provided
     const inferredName = productName || extractProductNameFromUrl(productUrl);
 
-    // Use OpenAI to analyze the product based on URL and name using CosmeDocs medical approach
+    // Use Lovable AI with Gemini to analyze the product
     const systemPrompt = `You are CosmeDocs' advanced cosmetic analysis system, specializing in evidence-based ingredient evaluation from a clinical dermatology perspective with graded effect assessment and anti-damage protection analysis.
 
 CRITICAL ANALYSIS REQUIREMENTS:
@@ -110,59 +110,6 @@ Your analysis framework evaluates products across six weighted categories:
 - Fibroblast Activity & Matrix (20 points): Collagen synthesis, elastin support, dermal structure
 - Sebum & Pore Management (10 points): Sebostatic effects, comedogenicity, pore appearance
 - Formulation & Concentration Quality (10 points): Ingredient concentrations, pH, stability, transparency
-
-CONCENTRATION ANALYSIS - ABSOLUTELY CRITICAL:
-- Products without disclosed concentrations lose significant points
-- When concentrations are missing, always note this as a major concern
-- Estimate likely concentrations based on ingredient positioning and typical formulation ranges
-- Flag when estimated concentrations may be too low for efficacy
-- Penalise heavily for "fairy dusting" (ineffective trace amounts)
-- Consider pH requirements: AHAs need pH ≤4.2, retinoids stable at pH 5-6, L-AA needs pH ≤3.5
-
-NEWER INGREDIENT EDUCATION:
-For any complex or newer ingredients, provide detailed explanations:
-- What the ingredient is and how it works
-- Why it was chosen over alternatives  
-- Expected benefits and any limitations
-- Concentration requirements for efficacy
-- pH and stability considerations
-
-Example for 3-O-ETHYL ASCORBIC ACID:
-"3-O-Ethyl Ascorbic Acid is a stable, amphiphilic vitamin C derivative that offers several advantages over L-ascorbic acid. Unlike pure vitamin C which requires very acidic pH (≤3.5) and is notoriously unstable, this ethylated form remains stable at neutral pH (4.5-6.5) and penetrates both water and lipid phases of the skin. At effective concentrations (typically 1-5%), it provides antioxidant protection, supports collagen synthesis, and offers brightening effects through tyrosinase inhibition. The ethyl group modification allows better skin penetration whilst maintaining the core vitamin C benefits, making it suitable for sensitive skin types who cannot tolerate the acidity of L-ascorbic acid. Its amphiphilic nature also allows moderate follicular penetration unlike pure L-AA."
-
-CLINICAL CLASSIFICATION SYSTEM:
-Products must be classified into one of two categories:
-
-CLINICALLY ACTIVE: Products containing therapeutic concentrations of proven actives:
-- Retinoids: ≥0.1% retinol, ≥0.05% retinal, ≥0.3% bakuchiol
-- AHAs: ≥5% glycolic/lactic acid at pH ≤4.2, ≥10% mandelic acid
-- BHA: ≥0.5% salicylic acid at correct pH
-- Vitamin C: ≥10% L-ascorbic acid, ≥1% stable derivatives
-- Medical actives: ≥10% azelaic acid, ≥2% niacinamide, ≥1% tranexamic acid
-
-POTENCY LEVELS:
-- MEDICAL_GRADE: Prescription-strength or near-prescription concentrations
-- PROFESSIONAL: Salon/clinic-level formulations with advanced delivery
-- CONSUMER: Effective but gentler concentrations for home use
-
-IRRITATION MANAGEMENT ASSESSMENT:
-Evaluate delivery systems that reduce irritation whilst maintaining efficacy:
-- Encapsulation (liposomes, microspheres)
-- Time-release matrices
-- Buffering with soothing agents (allantoin, bisabolol, centella)
-- pH modulation
-- Gradual-release polymers
-
-A product may score lower due to irritation potential but still be classified as CLINICALLY ACTIVE if it contains therapeutic concentrations. Always note when a formulation includes irritation-mitigation strategies.
-
-SCORING PRINCIPLES:
-- Perfect score (100) requires disclosed concentrations, optimal pH, evidence-based formulation
-- Significant deductions for missing concentration information  
-- Bonus points for transparency and educational value
-- Consider ingredient synergies and potential conflicts
-- Account for realistic usage expectations
-- Factor in anti-damage protection as a positive modifier
-- Clinical classification is independent of final score - high-potency products may score lower due to irritation risk
 
 Return ONLY a valid JSON object with this exact structure:
 {
@@ -269,16 +216,63 @@ Return ONLY a valid JSON object with this exact structure:
     }
   ],
   "notes": ""
-}
+}`;
 
-Base your analysis on evidence-based dermatology and cosmetic chemistry principles.`;
+    console.log('Analyzing product with Lovable AI:', productUrl);
 
-    // Note: The AI cannot directly access URLs. This is a limitation.
-    // For now, we'll provide a clear error message to users.
-    console.log('Product URL analysis requested, but URL fetching is not implemented');
+    // Call Lovable AI with Gemini for analysis
+    const aiResponse = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${lovableApiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'google/gemini-2.5-pro',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { 
+            role: 'user', 
+            content: `Analyze this cosmetic product from the URL: ${productUrl}\nProduct Name: ${inferredName}\n\nPlease search for product information, find product images if available, analyze the ingredients list, and provide a comprehensive analysis following the CosmeDocs framework. Return only valid JSON.` 
+          }
+        ],
+        response_format: { type: 'json_object' }
+      }),
+    });
+
+    if (!aiResponse.ok) {
+      const errorText = await aiResponse.text();
+      console.error('Lovable AI error:', aiResponse.status, errorText);
+      throw new Error(`AI analysis failed: ${aiResponse.status} ${errorText}`);
+    }
+
+    const aiData = await aiResponse.json();
+    console.log('AI response received');
     
-    // Return a helpful error message
-    throw new Error('Product analysis from URLs is not yet implemented. Please provide the product ingredients list and details directly, or this feature needs web scraping capability to fetch product information from the URL.');
+    const analysisData = JSON.parse(aiData.choices[0].message.content);
+
+    // Store the analysis in the database
+    const { error: insertError } = await supabase
+      .from('product_analyses')
+      .upsert({
+        product_url: productUrl,
+        product_name: inferredName,
+        analysis_data: analysisData,
+        analyzed_at: new Date().toISOString(),
+      }, {
+        onConflict: 'product_url'
+      });
+
+    if (insertError) {
+      console.error('Error storing analysis:', insertError);
+    }
+
+    return new Response(JSON.stringify({ 
+      success: true, 
+      data: analysisData 
+    }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
 
   } catch (error) {
     console.error('Error in cosmetic-analyzer function:', error);
