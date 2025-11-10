@@ -208,6 +208,11 @@ const CosmetalkBlog = () => {
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
 
+  const featuredArticle = blogPosts[0]; // First article links to /aesthetic-treatments-made-easy
+  const mustReadStories = blogPosts.slice(1, 5);
+  const researchArticles = blogPosts.slice(5, 8);
+  const latestNews = blogPosts.slice(8);
+
   return (
     <>
       <Helmet>
@@ -234,156 +239,272 @@ const CosmetalkBlog = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-white">
-        {/* Minimal Header */}
-        <section className="bg-black border-b border-gray-800">
-          <div className="container mx-auto px-4 py-8">
-            <h1 className="text-4xl font-bold text-white mb-2">
-              Cosme<span className="text-red-400">Talk</span>
-            </h1>
-            <p className="text-gray-300 text-sm">
-              Our aesthetics is invisible art • Bold • Natural • Always Your Way
-            </p>
-          </div>
-        </section>
-
-        <div className="container mx-auto px-2 py-4">
-          {/* Featured Article */}
-          {featuredPost && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-2"
-            >
-              <Card className="overflow-hidden bg-gray-800 border border-gray-700">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="relative h-48 md:h-full">
+      <div className="min-h-screen bg-white">
+        {/* Hero Section with Featured Article */}
+        <section className="bg-gray-50 border-b">
+          <div className="container mx-auto px-4 py-12">
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Main Featured Article */}
+              <div className="lg:col-span-2">
+                <Link to="/aesthetic-treatments-made-easy" className="block group">
+                  <div className="relative h-[400px] overflow-hidden rounded-lg mb-4">
                     <img 
-                      src={featuredPost.image} 
-                      alt={featuredPost.title}
-                      className="w-full h-full object-cover"
+                      src={featuredArticle.image} 
+                      alt={featuredArticle.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   
-                  <CardHeader className="p-3">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge className="text-xs bg-red-500 text-white">
-                        FEATURED
-                      </Badge>
-                      <Badge className="text-xs bg-gray-600 text-gray-200">
-                        {featuredPost.category}
-                      </Badge>
-                      <span className="text-xs text-gray-400">
-                        {featuredPost.date} • {featuredPost.readTime}
-                      </span>
-                    </div>
-                    
-                    <CardTitle className="text-lg mb-2 leading-tight text-white">
-                      {featuredPost.title}
-                    </CardTitle>
-                    
-                    <p className="text-gray-300 text-sm mb-3 leading-tight">
-                      {featuredPost.description}
-                    </p>
-                    
-                    <Button asChild className="bg-gray-700 hover:bg-gray-600 text-white text-xs h-8">
-                      <Link to={featuredPost.slug} className="inline-flex items-center gap-1">
-                        Read
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
-                    </Button>
-                  </CardHeader>
-                </div>
-              </Card>
-            </motion.div>
-          )}
+                  <Badge className="mb-3 bg-orange-100 text-orange-800 hover:bg-orange-200 uppercase text-xs">
+                    {featuredArticle.category}
+                  </Badge>
+                  
+                  <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                    <Calendar className="h-4 w-4" />
+                    <span>{featuredArticle.date}</span>
+                    <span>•</span>
+                    <Clock className="h-4 w-4" />
+                    <span>{featuredArticle.readTime}</span>
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+                    {featuredArticle.title}
+                  </h2>
+                  
+                  <p className="text-gray-600 text-lg mb-4 leading-relaxed">
+                    {featuredArticle.description}
+                  </p>
+                  
+                  <div className="flex items-center text-orange-600 font-medium group-hover:gap-3 transition-all">
+                    Read Full Story <ArrowRight className="ml-2 h-5 w-5" />
+                  </div>
+                </Link>
+              </div>
 
-          {/* Latest Articles Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mb-2"
-          >
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
-              {regularPosts.map((post, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                >
-                  <Card className="h-full overflow-hidden bg-gray-800 border border-gray-700">
-                    <div className="relative h-32 overflow-hidden">
-                      <img 
-                        src={post.image} 
-                        alt={post.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <Badge className="absolute top-2 left-2 text-xs bg-gray-600 text-gray-200">
-                        {post.category}
+              {/* Must Read Stories Sidebar */}
+              <div className="lg:col-span-1">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                    <Sparkles className="h-5 w-5 text-orange-500" />
+                    MUST READ STORIES
+                  </h3>
+                  <ArrowRight className="h-5 w-5 text-gray-400" />
+                </div>
+                
+                <div className="space-y-4">
+                  {mustReadStories.map((story, idx) => (
+                    <Link key={idx} to={story.slug} className="flex gap-3 group">
+                      <div className="w-24 h-20 flex-shrink-0 overflow-hidden rounded">
+                        <img 
+                          src={story.image} 
+                          alt={story.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <Badge className="mb-1 bg-orange-100 text-orange-700 text-xs uppercase">
+                          {story.category}
+                        </Badge>
+                        <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                          {story.title}
+                        </h4>
+                        <p className="text-xs text-gray-500 mt-1">{story.date}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Aesthetic Research & Publications */}
+        <section className="bg-blue-50 py-12">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-1 w-12 bg-blue-600"></div>
+              <h2 className="text-2xl font-bold text-gray-900">AESTHETIC RESEARCH & PUBLICATIONS</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              {researchArticles.map((article, idx) => (
+                <Link key={idx} to={article.slug} className="group">
+                  <Card className="h-full hover:shadow-lg transition-shadow bg-white">
+                    <CardHeader className="p-6">
+                      <Badge className="mb-3 w-fit bg-blue-100 text-blue-700 uppercase text-xs">
+                        {article.category}
                       </Badge>
-                    </div>
-                    
-                    <CardHeader className="p-3">
-                      <div className="flex items-center gap-2 mb-1 text-xs text-gray-400">
-                        <span>{post.date}</span>
-                        <span>•</span>
-                        <span>{post.readTime}</span>
-                      </div>
-                      
-                      <CardTitle className="text-sm mb-2 text-white leading-tight">
-                        {post.title}
+                      <CardTitle className="text-lg mb-3 group-hover:text-blue-600 transition-colors">
+                        {article.title}
                       </CardTitle>
-                      
-                      <p className="text-gray-300 text-xs mb-2 leading-tight line-clamp-2">
-                        {post.description}
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                        {article.description}
                       </p>
-                      
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-400">{post.author}</span>
-                        <Button variant="ghost" size="sm" asChild className="p-0 h-auto text-gray-300 hover:text-white text-xs">
-                          <Link to={post.slug} className="flex items-center gap-1">
-                            Read
-                            <ArrowRight className="w-3 h-3" />
-                          </Link>
-                        </Button>
-                      </div>
+                      <div className="text-xs text-gray-500">{article.date}</div>
                     </CardHeader>
                   </Card>
-                </motion.div>
+                </Link>
               ))}
             </div>
-          </motion.div>
+          </div>
+        </section>
 
-          {/* Newsletter CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mb-2"
-          >
-            <Card className="bg-gray-800 border border-gray-700">
-              <CardHeader className="p-3 text-center">
-                <h3 className="text-sm font-bold mb-2 text-white">Stay Updated</h3>
-                <div className="flex gap-2">
-                  <input 
-                    type="email" 
-                    placeholder="Email" 
-                    className="flex-1 px-2 py-1 text-xs rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600"
-                  />
-                  <Button className="bg-gray-600 hover:bg-gray-500 text-white text-xs px-3 py-1 h-auto">
-                    Subscribe
+        {/* Latest News Grid */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-1 w-12 bg-orange-500"></div>
+              <h2 className="text-2xl font-bold text-gray-900">LATEST NEWS</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {latestNews.slice(0, 4).map((news, idx) => (
+                <Link key={idx} to={news.slug} className="flex gap-4 group">
+                  <div className="w-32 h-32 flex-shrink-0 overflow-hidden rounded">
+                    <img 
+                      src={news.image} 
+                      alt={news.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <Badge className="mb-2 bg-orange-100 text-orange-700 uppercase text-xs">
+                      {news.category}
+                    </Badge>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                      {news.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-2 line-clamp-2">
+                      {news.description}
+                    </p>
+                    <p className="text-xs text-gray-500">{news.date}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Quote of the Day */}
+            <Card className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 mb-12">
+              <div className="flex items-center gap-3 mb-4">
+                <Star className="h-6 w-6 text-orange-400" />
+                <h3 className="text-sm font-semibold uppercase tracking-wide">Quote of the Day</h3>
+              </div>
+              <blockquote className="text-2xl md:text-3xl font-serif italic mb-4">
+                "Our aesthetics is invisible art — transformation that speaks without saying a word."
+              </blockquote>
+              <p className="text-gray-400">— CosmeDocs Philosophy</p>
+            </Card>
+          </div>
+        </section>
+
+        {/* Spotlight - Expert Treatment Showcase */}
+        <section className="bg-gray-50 py-12">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="h-1 w-12 bg-orange-500"></div>
+              <h2 className="text-2xl font-bold text-gray-900">Spotlight - Expert Aesthetic Treatments</h2>
+            </div>
+            <p className="text-gray-600 mb-8">Discover our comprehensive range of aesthetic treatments for all skill levels</p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link to="/botox" className="block group">
+                <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="relative h-64">
+                    <img 
+                      src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80" 
+                      alt="Botox Treatment"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <Badge className="absolute top-4 left-4 bg-orange-500 text-white">ADVANCED TREATMENT</Badge>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">Master Botox Techniques</h3>
+                    <p className="text-gray-600 mb-4">Advanced wrinkle reduction with precision techniques</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">From £150</span>
+                      <ArrowRight className="h-5 w-5 text-orange-500" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/dermal-fillers" className="block group">
+                <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="relative h-64">
+                    <img 
+                      src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80" 
+                      alt="Dermal Fillers"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <Badge className="absolute top-4 left-4 bg-blue-500 text-white">EXPERT TRAINING</Badge>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">Dermal Filler Mastery</h3>
+                    <p className="text-gray-600 mb-4">Expert-led training with HD live injection videos</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">From £200</span>
+                      <ArrowRight className="h-5 w-5 text-orange-500" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Tools Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="h-1 w-12 bg-orange-500"></div>
+              <h2 className="text-2xl font-bold text-gray-900">CLIENT TOOLS</h2>
+            </div>
+            <p className="text-gray-600 mb-8">Professional resources to complement your aesthetic treatments and help you achieve your beauty goals</p>
+
+            <div className="space-y-4 max-w-4xl">
+              <Link to="/book-consultation" className="block">
+                <Card className="p-6 hover:shadow-lg transition-all border-2 border-orange-100 hover:border-orange-300 group">
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">Free Consultation Booking</h3>
+                      <p className="text-gray-600">Book your personalised aesthetic consultation with our expert team</p>
+                    </div>
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                      Book Now <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </Card>
+              </Link>
+
+              <Card className="p-6 border-2 border-gray-100">
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Treatment Cost Calculator</h3>
+                    <p className="text-gray-600">Get personalised pricing recommendations tailored to your aesthetic goals</p>
+                  </div>
+                  <Button variant="outline" className="border-gray-300 hover:border-orange-500 hover:text-orange-600">
+                    Calculate Now <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
-              </CardHeader>
-            </Card>
-          </motion.div>
-        </div>
+              </Card>
+
+              <Card className="p-6 border-2 border-gray-100">
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Virtual Aesthetic Consultation</h3>
+                    <p className="text-gray-600">Expert guidance and treatment planning from the comfort of your home</p>
+                  </div>
+                  <Button variant="outline" className="border-gray-300 hover:border-orange-500 hover:text-orange-600">
+                    Access Now <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
 
         {/* Hidden SEO Content */}
-        <div className="hidden">
+        <div className="sr-only">
           <p>
             Cosmetalk is the premier destination for aesthetic medicine insights, featuring expert articles on 
             non-surgical treatments, skincare science, dermal fillers, botox procedures, and anti-aging solutions. 
@@ -392,7 +513,7 @@ const CosmetalkBlog = () => {
             non-surgical facelifts, PDO threads, chemical peels, or advanced skincare treatments, 
             Cosmetalk provides evidence-based information from certified aesthetic practitioners. 
             Explore topics including vitamin C serums, retinoids, hyaluronic acid treatments, 
-            polynucleotide therapy, Profhilo treatments, and professional skincare regimens. 
+            polynucleotide therapy, Profhilo treatments, and professional skincare regimens.
             Our content focuses on natural-looking results, safety protocols, treatment longevity, 
             and the art of subtle enhancement that defines modern aesthetic medicine. 
             Join thousands of readers who trust Cosmetalk for reliable, professional insights 
