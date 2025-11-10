@@ -121,6 +121,19 @@ export default function AestheticTreatmentsMadeEasy() {
       </Helmet>
 
       <div className="flex min-h-screen bg-gray-50">
+        {/* Sidebar Toggle Button (visible when collapsed) */}
+        {!sidebarOpen && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setSidebarOpen(true)}
+            className="fixed left-4 top-20 z-50 h-10 w-10 bg-white border border-gray-200 shadow-md hover:bg-gray-50"
+            aria-label="Open sidebar"
+          >
+            <Menu className="h-5 w-5" />
+          </Button>
+        )}
+
         {/* Sidebar */}
         <aside 
           ref={sidebarRef} 
@@ -130,9 +143,20 @@ export default function AestheticTreatmentsMadeEasy() {
         >
           {sidebarOpen && (
           <div className="p-4">
-            <div className="flex items-center gap-2 mb-6">
-              <BookOpen className="h-5 w-5 text-gray-700" />
-              <h2 className="font-semibold text-lg text-gray-900">Aesthetic Talk</h2>
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-5 w-5 text-gray-700" />
+                <h2 className="font-semibold text-lg text-gray-900">Aesthetic Talk</h2>
+              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setSidebarOpen(false)}
+                className="h-8 w-8 hover:bg-gray-100"
+                aria-label="Collapse sidebar"
+              >
+                <X className="h-4 w-4" />
+              </Button>
             </div>
 
             {/* Preface Section */}
