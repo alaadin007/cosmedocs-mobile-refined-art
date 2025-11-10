@@ -15,6 +15,8 @@ import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import AnimatedDots from "@/components/AnimatedDots";
 import { generateSEOMetadata } from '@/utils/seo';
 import RaffleChatbot from "@/components/RaffleChatbot";
+import FloatingChatBot from "@/components/FloatingChatBot";
+import WebsiteKnowledgeInitializer from "@/components/WebsiteKnowledgeInitializer";
 const Index = () => {
   const [isRejuvenationDialogOpen, setIsRejuvenationDialogOpen] = useState(false);
   const [isScoringDialogOpen, setIsScoringDialogOpen] = useState(false);
@@ -759,6 +761,12 @@ const Index = () => {
 
         {/* Raffle Chatbot */}
         <RaffleChatbot />
+        
+        {/* Floating AI Chatbot */}
+        <FloatingChatBot />
+        
+        {/* Initialize Knowledge Base */}
+        <WebsiteKnowledgeInitializer />
       </TooltipProvider>
     </>;
 };

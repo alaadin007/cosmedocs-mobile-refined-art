@@ -103,10 +103,10 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
     setResults("");
 
     try {
-      const { data, error } = await supabase.functions.invoke('ai-chat', {
+      const { data, error } = await supabase.functions.invoke('ai-knowledge-chat', {
         body: {
           question: query,
-          context: searchContext
+          includeWebSearch: true
         }
       });
 
@@ -114,7 +114,7 @@ export default function LiquidGlassSearch({ isOpen, onClose }: LiquidGlassSearch
         throw error;
       }
 
-      setResults(data.response);
+      setResults(data.answer);
       
     } catch (error) {
       console.error('Error getting AI response:', error);

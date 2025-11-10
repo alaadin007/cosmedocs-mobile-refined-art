@@ -8,3 +8,12 @@ verify_jwt = true
 
 [functions.aesthetic-analysis]
 verify_jwt = true
+
+[functions.cosmetic-analyzer]
+verify_jwt = true
+
+[functions.scrape-website]
+verify_jwt = true
+
+[functions.ai-knowledge-chat]
+verify_jwt = false

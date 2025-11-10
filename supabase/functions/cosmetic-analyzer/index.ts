@@ -218,9 +218,9 @@ Return ONLY a valid JSON object with this exact structure:
   "notes": ""
 }`;
 
-    console.log('Analyzing product with Lovable AI:', productUrl);
+    const lovableApiKey = Deno.env.get('LOVABLE_API_KEY')!;
 
-    // Call Lovable AI with Gemini for analysis
+    // Call Lovable AI with Gemini Pro for image and web analysis
     const aiResponse = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -233,7 +233,7 @@ Return ONLY a valid JSON object with this exact structure:
           { role: 'system', content: systemPrompt },
           { 
             role: 'user', 
-            content: `Analyze this cosmetic product from the URL: ${productUrl}\nProduct Name: ${inferredName}\n\nPlease search for product information, find product images if available, analyze the ingredients list, and provide a comprehensive analysis following the CosmeDocs framework. Return only valid JSON.` 
+            content: `Analyze this cosmetic product: ${productUrl}\nProduct Name: ${inferredName}\n\nPlease search the web for this product, analyze any product images, ingredient lists, and claims. Provide comprehensive analysis following the CosmeDocs framework. Return only valid JSON.` 
           }
         ],
         response_format: { type: 'json_object' }
