@@ -117,60 +117,120 @@ export default function CampaignAds() {
 
               {/* Back Flyer */}
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
-                <div className="bg-black text-white p-12 aspect-[1/1.414] flex flex-col justify-between">
-                  {/* Back Design */}
-                  <div className="space-y-8">
-                    <div className="space-y-3">
-                      <h2 className="text-2xl md:text-3xl font-bold">
-                        Your secret to natural youth — revealed discreetly.
-                      </h2>
+                <div className="bg-black text-white p-8 aspect-[1/1.414] flex flex-col justify-between">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                      <div className="text-black text-xs font-bold">CD</div>
                     </div>
-
-                    <div className="space-y-4 text-sm">
-                      <div className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                        <p className="text-white/90">
-                          Scientifically refined injectables & skin therapies
-                        </p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                        <p className="text-white/90">
-                          Bespoke rejuvenation plan designed for your age and skin type
-                        </p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                        <p className="text-white/90">
-                          Guaranteed results you'll see, but no one else will notice
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="border-t border-white/20 pt-6 space-y-4">
-                      <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                        <p className="text-xs text-white/70 mb-2">✨ LIMITED LAUNCH OFFER</p>
-                        <p className="text-lg font-bold">10% OFF your first session</p>
-                      </div>
-
-                      <div className="space-y-2">
-                        <p className="text-sm font-semibold text-primary">MedSpa Membership</p>
-                        <p className="text-2xl font-bold">£25<span className="text-base font-normal text-white/70">/month</span></p>
-                        <p className="text-xs text-white/80">
-                          Get 50% OFF all treatments, including laser, peels, microneedling, and boosters
-                        </p>
-                      </div>
+                    <div className="text-right">
+                      <p className="text-sm font-bold">COSMEDOCS</p>
+                      <p className="text-[10px] text-white/70">Harley Street Since 2007, 1M+ Injection</p>
                     </div>
                   </div>
 
-                  <div className="border-t border-white/20 pt-6">
+                  {/* Treatment Benefits */}
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <p className="text-xs text-white/80">
+                        Scientifically refined injectables & skin therapies
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <p className="text-xs text-white/80">
+                        Bespoke rejuvenation plan designed for your age and skin type
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <p className="text-xs text-white/80">
+                        Guaranteed results you'll see, but no one else will notice
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Injectable Treatments */}
+                  <div className="space-y-3 mb-4">
+                    <div>
+                      <p className="text-sm font-bold mb-1">Injectable Treatments</p>
+                      <p className="text-[10px] text-white/60">Natural results · Expert practitioners</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-xs font-semibold">Anti-Wrinkle Injections</p>
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px]">
+                        <div className="flex justify-between"><span className="text-white/70">1 Area</span><span>£150</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">2 Areas</span><span>£200</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">3 Areas</span><span>£250</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Full Face (5)</span><span>£500</span></div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-xs font-semibold">Dermal Fillers</p>
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px]">
+                        <div className="flex justify-between"><span className="text-white/70">Lips (0.5ml)</span><span>£200</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Lips (1ml)</span><span>£300</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Cheeks (1ml)</span><span>£350</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Jawline (2ml)</span><span>£500</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Chin (1ml)</span><span>£300</span></div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-xs font-semibold">Age-Reversal Packages</p>
+                      <div className="space-y-1 text-[10px]">
+                        <div className="flex justify-between"><span className="text-white/70">5 Years Younger (30-40s)</span><span>£500</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">10 Years Younger (40+)</span><span>£1,000</span></div>
+                      </div>
+                    </div>
+
+                    <p className="text-[10px] text-white/60 italic">Free consultation · Natural results guaranteed</p>
+                  </div>
+
+                  {/* MedSpa Membership */}
+                  <div className="border-t border-white/20 pt-3 space-y-3">
+                    <div>
+                      <p className="text-sm font-bold">MedSpa Membership</p>
+                      <p className="text-[10px] text-white/60">50% OFF all treatments · £25/month</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-xs font-semibold">Laser Hair Removal</p>
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px]">
+                        <div className="flex justify-between"><span className="text-white/70">Upper Lip/Chin</span><span>£30 → £15</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Full Face</span><span>£70 → £35</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Underarms</span><span>£50 → £25</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Hollywood</span><span>£80 → £40</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Full Legs</span><span>£100 → £50</span></div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-xs font-semibold">Skin Rejuvenation</p>
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px]">
+                        <div className="flex justify-between"><span className="text-white/70">Exosomes</span><span>£300 → £150</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Microneedling</span><span>£150 → £75</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">PRP Facial</span><span>£250 → £125</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Signature Hydra</span><span>£135 → £67.5</span></div>
+                        <div className="flex justify-between"><span className="text-white/70">Platinum Hydra</span><span>£200 → £100</span></div>
+                      </div>
+                    </div>
+
+                    <p className="text-[10px] text-white/60 italic">Full treatment menu at cosmedocs.co.uk</p>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="border-t border-white/20 pt-3 mt-3">
                     <div className="flex items-center justify-between">
-                      <div className="text-xs space-y-1">
+                      <div className="text-[10px] space-y-0.5">
                         <p className="font-medium">www.cosmedocs.co.uk</p>
                         <p className="text-white/70">020 7060 1960</p>
                       </div>
-                      <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-                        <QrCode className="w-10 h-10 text-black" />
+                      <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                        <QrCode className="w-8 h-8 text-black" />
                       </div>
                     </div>
                   </div>
