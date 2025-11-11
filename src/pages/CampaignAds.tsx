@@ -43,28 +43,21 @@ export default function CampaignAds() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Front Flyer */}
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
-                <div className="bg-black text-white p-16 aspect-[1/1.414] flex flex-col justify-between">
+                <div className="bg-black text-white p-16 aspect-[1/1.414] flex flex-col justify-between relative">
                   {/* Brand header */}
-                  <div className="flex items-start justify-between">
-                    <img 
-                      src={cosmedocsLogo} 
-                      alt="Cosmedocs Logo"
-                      className="h-10 w-auto"
-                    />
-                    <div className="text-right">
-                      <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
-                      <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
-                    </div>
+                  <div className="text-right">
+                    <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
+                    <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
                   </div>
 
-                  {/* Main Content - Injectable Pricing */}
+                  {/* Main Content - Injectables Pricing */}
                   <div className="flex-1 space-y-6 text-left px-4">
                     <div className="space-y-2">
-                      <h2 className="text-sm font-light tracking-wide">Injectable Treatments</h2>
+                      <h2 className="text-xs font-light tracking-wide">Injectable Treatments</h2>
                       <p className="text-[8px] text-white/60">Natural results · Expert practitioners</p>
                     </div>
 
-                    {/* Anti-Wrinkle Injections */}
+                    {/* Anti-Wrinkle */}
                     <div className="space-y-1.5">
                       <p className="text-[9px] text-white/80 uppercase tracking-wider">Anti-Wrinkle Injections</p>
                       <div className="space-y-0.5 text-[8px] text-white/60">
@@ -87,7 +80,7 @@ export default function CampaignAds() {
                       </div>
                     </div>
 
-                    {/* Age-Reversal Packages */}
+                    {/* Special Packages */}
                     <div className="space-y-1.5">
                       <p className="text-[9px] text-white/80 uppercase tracking-wider">Age-Reversal Packages</p>
                       <div className="space-y-0.5 text-[8px] text-white/60">
@@ -101,7 +94,7 @@ export default function CampaignAds() {
 
                   {/* Bottom Contact */}
                   <div className="flex items-center justify-between border-t border-white/10 pt-6">
-                    <div className="text-[10px] space-y-1 text-white/70">
+                    <div className="text-[8px] space-y-0.5 text-white/70">
                       <p>www.cosmedocs.co.uk</p>
                       <p>020 7060 1960</p>
                     </div>
@@ -126,16 +119,9 @@ export default function CampaignAds() {
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
                 <div className="bg-black text-white p-16 aspect-[1/1.414] flex flex-col justify-between">
                   {/* Brand header */}
-                  <div className="flex items-start justify-between">
-                    <img 
-                      src={cosmedocsLogo} 
-                      alt="Cosmedocs Logo"
-                      className="h-10 w-auto"
-                    />
-                    <div className="text-right">
-                      <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
-                      <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
-                    </div>
+                  <div className="text-right">
+                    <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
+                    <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
                   </div>
 
                   {/* Main Content - Pricing Table */}
