@@ -42,15 +42,37 @@ export default function CampaignAds() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Front Flyer */}
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
-                <div className="bg-black text-white p-12 aspect-[1/1.414] flex flex-col justify-between relative">
+                <div className="bg-black text-white p-8 aspect-[1/1.414] flex flex-col justify-between relative">
                   {/* Front Design */}
-                  <div className="space-y-6">
-                    <div className="space-y-2">
-                      <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                  <div className="space-y-4">
+                    <div className="space-y-1">
+                      <h2 className="text-2xl font-bold tracking-tight">
                         Untraceably You
                       </h2>
-                      <p className="text-lg text-white/80">
+                      <p className="text-sm text-white/70">
                         Look 5–10 years younger — naturally.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Treatment Benefits */}
+                  <div className="space-y-2 my-4">
+                    <div className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <p className="text-xs text-white/80">
+                        Scientifically refined injectables & skin therapies
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <p className="text-xs text-white/80">
+                        Bespoke rejuvenation plan designed for your age and skin type
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <p className="text-xs text-white/80">
+                        Guaranteed results you'll see, but no one else will notice
                       </p>
                     </div>
                   </div>
@@ -70,34 +92,34 @@ export default function CampaignAds() {
                   </div>
 
                   {/* Pricing */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-white/10 rounded-lg p-3 border border-white/20 text-center">
-                      <p className="text-2xl font-bold">£500</p>
-                      <p className="text-xs text-white/80">5 Years (30-40s)</p>
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="bg-white/10 rounded-lg p-2.5 border border-white/20 text-center">
+                      <p className="text-xl font-bold">£500</p>
+                      <p className="text-[10px] text-white/70">5 Years (30-40s)</p>
                     </div>
-                    <div className="bg-white/10 rounded-lg p-3 border border-white/20 text-center">
-                      <p className="text-2xl font-bold">£1,000</p>
-                      <p className="text-xs text-white/80">10 Years (40+)</p>
+                    <div className="bg-white/10 rounded-lg p-2.5 border border-white/20 text-center">
+                      <p className="text-xl font-bold">£1,000</p>
+                      <p className="text-[10px] text-white/70">10 Years (40+)</p>
                     </div>
                   </div>
 
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent pointer-events-none" />
 
-                  <div className="space-y-6 relative z-10">
-                    <div className="border-t border-white/20 pt-6 space-y-3">
-                      <p className="text-sm text-white/90 font-light">
+                  <div className="space-y-4 relative z-10">
+                    <div className="border-t border-white/20 pt-4 space-y-2">
+                      <p className="text-xs text-white/80 font-light">
                         Harley Street. Natural Tweaks.
                       </p>
                       <div className="space-y-1">
-                        <p className="text-base font-medium">📍 Cosmedocs | Harley Street</p>
-                        <p className="text-sm text-white/80">📱 Scan for your free glow consultation</p>
+                        <p className="text-sm font-medium">📍 Cosmedocs | Harley Street</p>
+                        <p className="text-xs text-white/70">📱 Scan for your free glow consultation</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center">
-                        <QrCode className="w-12 h-12 text-black" />
+                      <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                        <QrCode className="w-10 h-10 text-black" />
                       </div>
-                      <p className="text-xs text-white/70 flex-1">
+                      <p className="text-[10px] text-white/60 flex-1">
                         Scan to see if you qualify for our Untraceably You programme
                       </p>
                     </div>
@@ -126,28 +148,6 @@ export default function CampaignAds() {
                     <div className="text-right">
                       <p className="text-sm font-bold">COSMEDOCS</p>
                       <p className="text-[10px] text-white/70">Harley Street Since 2007, 1M+ Injection</p>
-                    </div>
-                  </div>
-
-                  {/* Treatment Benefits */}
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-start gap-2">
-                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
-                      <p className="text-xs text-white/80">
-                        Scientifically refined injectables & skin therapies
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
-                      <p className="text-xs text-white/80">
-                        Bespoke rejuvenation plan designed for your age and skin type
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <div className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0" />
-                      <p className="text-xs text-white/80">
-                        Guaranteed results you'll see, but no one else will notice
-                      </p>
                     </div>
                   </div>
 
