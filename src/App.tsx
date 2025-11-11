@@ -120,6 +120,8 @@ const PopupOffer = lazy(() => import("./pages/PopupOffer"));
 const NonSurgicalPonytail = lazy(() => import("./pages/NonSurgicalPonytail"));
 const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWorkExperience"));
 const AestheticTreatmentsMadeEasy = lazy(() => import("./pages/AestheticTreatmentsMadeEasy"));
+const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
+const CampaignAds = lazy(() => import("./pages/CampaignAds"));
 
 // Loading component
 const PageLoader = () => (
@@ -287,9 +289,13 @@ const App = () => {
                 <Route path="/popupoffer" element={<PopupOffer />} />
                 <Route path="/medical-student-work-experience" element={<MedicalStudentWorkExperience />} />
                 
-                {/* Blog redirects */}
+              {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
               <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/cosmetalk/vitamin-c-ferulic-acid-benefits" replace />} />
+              
+              {/* Campaign Routes */}
+              <Route path="/untraceably-you" element={<UntraceablyYouCampaign />} />
+              <Route path="/ads" element={<CampaignAds />} />
               
               <Route path="/experimental-treatment" element={<ExperimentalTreatment />} />
               <Route path="/admin/video-upload" element={<VideoUpload />} />

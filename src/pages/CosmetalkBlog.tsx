@@ -16,6 +16,17 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Untraceably You: Look 5-10 Years Younger Naturally",
+      description: "Turn back time so subtly, not even your closest will notice. Exclusive Cosmedocs campaign with guaranteed natural results. Limited launch offer available.",
+      category: "Special Campaign",
+      readTime: "10 min read",
+      date: "January 2025",
+      slug: "/untraceably-you",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
+      author: "By Cosmedocs"
+    },
+    {
       title: "Botox Price London: Complete Guide to Costs & Expert Treatment",
       description: "Discover comprehensive Botox prices in London. Learn why master injectors offer better value despite higher costs, with expert insights on safety and results.",
       category: "Price Guide",
