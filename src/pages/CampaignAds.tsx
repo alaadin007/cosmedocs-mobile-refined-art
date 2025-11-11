@@ -125,32 +125,48 @@ export default function CampaignAds() {
                     <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
                   </div>
 
-                  {/* Main Content - Centered with lots of space */}
-                  <div className="flex-1 flex flex-col justify-center space-y-12 text-center px-4">
-                    <h2 className="text-lg font-light leading-relaxed tracking-wide">
-                      Your secret to natural youth<br />— revealed discreetly
-                    </h2>
-
-                    <div className="space-y-4 text-[10px] text-white/70 leading-relaxed">
-                      <p>Scientifically refined injectables & skin therapies</p>
-                      <p>Bespoke rejuvenation for your age and skin type</p>
-                      <p>Guaranteed results you'll see, no one else will notice</p>
+                  {/* Main Content - Pricing Table */}
+                  <div className="flex-1 space-y-6 text-left px-4">
+                    <div className="space-y-2">
+                      <h2 className="text-xs font-light tracking-wide">MedSpa Membership</h2>
+                      <p className="text-[8px] text-white/60">50% OFF all treatments · £25/month</p>
                     </div>
 
-                    <div className="space-y-6 pt-4">
-                      <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                        <p className="text-[9px] text-white/60 mb-1 uppercase tracking-wider">Limited Launch Offer</p>
-                        <p className="text-sm font-light">10% OFF first session</p>
-                      </div>
-
-                      <div className="space-y-1">
-                        <p className="text-[10px] text-primary/80 uppercase tracking-wider">MedSpa Membership</p>
-                        <p className="text-xl font-light">£25<span className="text-xs text-white/60">/mo</span></p>
-                        <p className="text-[9px] text-white/60 leading-relaxed">
-                          50% OFF all treatments
-                        </p>
+                    {/* Laser Hair Removal */}
+                    <div className="space-y-1.5">
+                      <p className="text-[9px] text-white/80 uppercase tracking-wider">Laser Hair Removal</p>
+                      <div className="space-y-0.5 text-[8px] text-white/60">
+                        <div className="flex justify-between"><span>Upper Lip or Chin</span><span>£30 → £15</span></div>
+                        <div className="flex justify-between"><span>Full Face</span><span>£70 → £35</span></div>
+                        <div className="flex justify-between"><span>Underarms</span><span>£50 → £25</span></div>
+                        <div className="flex justify-between"><span>Hollywood</span><span>£80 → £40</span></div>
+                        <div className="flex justify-between"><span>Full Legs</span><span>£100 → £50</span></div>
                       </div>
                     </div>
+
+                    {/* Skin Rejuvenation */}
+                    <div className="space-y-1.5">
+                      <p className="text-[9px] text-white/80 uppercase tracking-wider">Skin Rejuvenation</p>
+                      <div className="space-y-0.5 text-[8px] text-white/60">
+                        <div className="flex justify-between"><span>Exosomes</span><span>£300 → £150</span></div>
+                        <div className="flex justify-between"><span>Microneedling</span><span>£150 → £75</span></div>
+                        <div className="flex justify-between"><span>PRP Vampire Facial</span><span>£250 → £125</span></div>
+                        <div className="flex justify-between"><span>Signature HydraFacial</span><span>£135 → £67.5</span></div>
+                        <div className="flex justify-between"><span>Platinum HydraFacial</span><span>£200 → £100</span></div>
+                      </div>
+                    </div>
+
+                    {/* Body Sculpting */}
+                    <div className="space-y-1.5">
+                      <p className="text-[9px] text-white/80 uppercase tracking-wider">Body Sculpting</p>
+                      <div className="space-y-0.5 text-[8px] text-white/60">
+                        <div className="flex justify-between"><span>Double Chin</span><span>£150 → £75</span></div>
+                        <div className="flex justify-between"><span>Upper Arms</span><span>£200 → £100</span></div>
+                        <div className="flex justify-between"><span>Full Abdomen</span><span>£350 → £175</span></div>
+                      </div>
+                    </div>
+
+                    <p className="text-[7px] text-white/50">Full treatment menu at cosmedocs.co.uk</p>
                   </div>
 
                   {/* Bottom Contact */}
