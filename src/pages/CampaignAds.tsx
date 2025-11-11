@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { generateSEOMetadata } from "@/utils/seo";
 import { Download, QrCode } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import flyerImage1 from "@/assets/flyer-before-after-1.jpeg";
+import flyerImage2 from "@/assets/flyer-before-after-2.jpeg";
 
 export default function CampaignAds() {
   const { toast } = useToast();
@@ -50,6 +52,32 @@ export default function CampaignAds() {
                       <p className="text-lg text-white/80">
                         Look 5–10 years younger — naturally.
                       </p>
+                    </div>
+                  </div>
+
+                  {/* Before/After Images in Center */}
+                  <div className="grid grid-cols-2 gap-3 my-8">
+                    <img 
+                      src={flyerImage1} 
+                      alt="Natural rejuvenation before and after"
+                      className="w-full h-auto rounded-lg"
+                    />
+                    <img 
+                      src={flyerImage2} 
+                      alt="Subtle anti-aging results"
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+
+                  {/* Pricing */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-white/10 rounded-lg p-3 border border-white/20 text-center">
+                      <p className="text-2xl font-bold">£500</p>
+                      <p className="text-xs text-white/80">5 Years (30-40s)</p>
+                    </div>
+                    <div className="bg-white/10 rounded-lg p-3 border border-white/20 text-center">
+                      <p className="text-2xl font-bold">£1,000</p>
+                      <p className="text-xs text-white/80">10 Years (40+)</p>
                     </div>
                   </div>
 
