@@ -44,13 +44,10 @@ export default function CampaignAds() {
               {/* Front Flyer */}
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
                 <div className="bg-black text-white p-16 aspect-[1/1.414] flex flex-col justify-between relative">
-                  {/* Logo at top */}
-                  <div className="flex justify-center">
-                    <img 
-                      src={cosmedocsLogo} 
-                      alt="Cosmedocs"
-                      className="h-8 w-auto"
-                    />
+                  {/* Brand header */}
+                  <div className="text-left">
+                    <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
+                    <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
                   </div>
 
                   {/* Centered Content */}
@@ -122,13 +119,10 @@ export default function CampaignAds() {
               {/* Back Flyer */}
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
                 <div className="bg-black text-white p-16 aspect-[1/1.414] flex flex-col justify-between">
-                  {/* Logo at top */}
-                  <div className="flex justify-center">
-                    <img 
-                      src={cosmedocsLogo} 
-                      alt="Cosmedocs"
-                      className="h-8 w-auto"
-                    />
+                  {/* Brand header */}
+                  <div className="text-left">
+                    <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
+                    <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
                   </div>
 
                   {/* Main Content - Centered with lots of space */}
