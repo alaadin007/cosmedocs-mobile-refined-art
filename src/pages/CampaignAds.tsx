@@ -45,7 +45,7 @@ export default function CampaignAds() {
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
                 <div className="bg-black text-white p-16 aspect-[1/1.414] flex flex-col justify-between relative">
                   {/* Brand header */}
-                  <div className="text-left">
+                  <div className="text-right">
                     <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
                     <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
                   </div>
@@ -119,7 +119,7 @@ export default function CampaignAds() {
               <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-xl">
                 <div className="bg-black text-white p-16 aspect-[1/1.414] flex flex-col justify-between">
                   {/* Brand header */}
-                  <div className="text-left">
+                  <div className="text-right">
                     <h3 className="text-sm font-light tracking-wider">COSMEDOCS</h3>
                     <p className="text-[8px] text-white/60 tracking-wide">Harley Street Since 2007, 1M+ Injection</p>
                   </div>
