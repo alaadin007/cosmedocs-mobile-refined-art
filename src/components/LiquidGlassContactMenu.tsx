@@ -94,10 +94,10 @@ const treatmentCategories = [
 export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: LiquidGlassContactMenuProps) {
   const [showPhoneNumbers, setShowPhoneNumbers] = useState(false);
   
-  // Find the navigate and contact groups
+  // Find the navigate, contact, and social groups
   const navigateGroup = groups.find(g => g.title === "Navigate");
   const contactGroup = groups.find(g => g.title === "Get in Touch");
-  const otherGroups = groups.filter(g => g.title !== "Navigate" && g.title !== "Get in Touch");
+  const socialGroup = groups.find(g => g.title === "Social Media");
   
   return (
     <AnimatePresence>
@@ -148,9 +148,9 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                 </Button>
               </div>
 
-              {/* Main Content Grid - Optimized for mobile */}
-              <div className="grid lg:grid-cols-3 gap-2 md:gap-4 flex-1 min-h-0">
-                {/* Left Column: Compact Navigation & Contact - Scrollable on mobile */}
+              {/* Main Content Grid - Left navigation, Right treatments taking 3/4 */}
+              <div className="grid lg:grid-cols-4 gap-2 md:gap-4 flex-1 min-h-0">
+                {/* Left Column: Compact Navigation, Contact & Social - Scrollable on mobile */}
                 <div className="flex flex-col min-h-0">
                   <div className="space-y-1 overflow-y-auto flex-1 pr-1">
                     {/* Compact Navigate Section */}
@@ -168,8 +168,8 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                           <h3 className="text-xs md:text-sm font-bold text-amber-400">{navigateGroup.title}</h3>
                         </div>
                         
-                        {/* Single line navigation with separators */}
-                        <div className="flex items-center gap-1 text-xs flex-wrap">
+                        {/* Single line navigation with separators - First 3 items */}
+                        <div className="flex items-center gap-1 text-xs flex-wrap mb-1">
                           {navigateGroup.options.slice(0, 3).map((option, idx) => (
                             <div key={option.label} className="flex items-center gap-1">
                               <button
@@ -183,20 +183,19 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                           ))}
                         </div>
                         
-                        {/* Remaining nav items as compact buttons */}
+                        {/* Second line - About Us | Contact */}
                         {navigateGroup.options.length > 3 && (
-                          <div className="space-y-0.5 mt-1">
-                            {navigateGroup.options.slice(3).map((option) => (
-                              <motion.button
-                                key={option.label}
-                                whileHover={{ x: 2 }}
-                                whileTap={{ scale: 0.98 }}
-                                className="w-full text-left flex items-center gap-1 px-1 py-0.5 rounded text-xs bg-white/5 hover:bg-amber-400/10 border border-transparent hover:border-amber-400/20 transition-all duration-200 text-white/80 hover:text-white"
-                                onClick={option.action}
-                              >
-                                <option.icon className="h-3 w-3" />
-                                <span className="truncate">{option.label}</span>
-                              </motion.button>
+                          <div className="flex items-center gap-1 text-xs">
+                            {navigateGroup.options.slice(3).map((option, idx) => (
+                              <div key={option.label} className="flex items-center gap-1">
+                                <button
+                                  onClick={option.action}
+                                  className="text-white/80 hover:text-amber-400 transition-colors duration-200"
+                                >
+                                  {option.label}
+                                </button>
+                                {idx < navigateGroup.options.slice(3).length - 1 && <span className="text-amber-400/50">|</span>}
+                              </div>
                             ))}
                           </div>
                         )}
@@ -229,8 +228,8 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                           <span className="text-xs md:text-sm">Book Appointment</span>
                         </motion.button>
 
-                        {/* Compact Icon Row for Phone, WhatsApp, Email */}
-                        <div className="flex items-center gap-2 justify-start px-1">
+                        {/* Compact Icon Row for Phone, WhatsApp, Email, Chat */}
+                        <div className="flex items-center gap-2 justify-start px-1 flex-wrap">
                           {/* Phone Icon - Click to expand numbers */}
                           <button
                             onClick={() => setShowPhoneNumbers(!showPhoneNumbers)}
@@ -247,14 +246,23 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                             <MessageSquare className="h-4 w-4 text-green-400" />
                           </button>
 
-                          {/* Email - Clickable with full display */}
-                          <a
-                            href="mailto:info@cosmedocs.com"
-                            className="flex items-center gap-1 px-2 py-1 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-500/10 hover:from-purple-400/30 hover:to-purple-500/20 border border-purple-400/30 transition-all duration-200 text-xs text-white/90 hover:text-white"
+                          {/* Email Icon */}
+                          <button
+                            onClick={() => window.open("mailto:info@cosmedocs.com", "_blank")}
+                            className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-500/10 hover:from-purple-400/30 hover:to-purple-500/20 border border-purple-400/30 transition-all duration-200"
                           >
-                            <Mail className="h-3 w-3 text-purple-400" />
-                            <span className="hidden sm:inline">info@cosmedocs.com</span>
-                          </a>
+                            <Mail className="h-4 w-4 text-purple-400" />
+                          </button>
+                          
+                          {/* Chat Online Icon */}
+                          {contactGroup.options.find(o => o.label === "Chat Online") && (
+                            <button
+                              onClick={contactGroup.options.find(o => o.label === "Chat Online")?.action}
+                              className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-500/10 hover:from-blue-400/30 hover:to-blue-500/20 border border-blue-400/30 transition-all duration-200"
+                            >
+                              <MessageSquare className="h-4 w-4 text-blue-400" />
+                            </button>
+                          )}
                         </div>
 
                         {/* Expandable Phone Numbers */}
@@ -287,53 +295,39 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                       </motion.div>
                     )}
 
-                    {/* Other Groups (AI Tools, Social Media, etc.) */}
-                    {otherGroups.map((group, groupIndex) => (
+                    {/* Social Media Section */}
+                    {socialGroup && (
                       <motion.div
-                        key={group.title}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: (groupIndex + 2) * 0.1, duration: 0.3 }}
+                        transition={{ delay: 0.2, duration: 0.3 }}
                         className="bg-gradient-to-br from-white/5 to-amber-400/5 backdrop-blur-sm rounded-lg p-2 border border-amber-400/20"
                       >
                         <div className="flex items-center gap-1 md:gap-2 mb-1">
                           <div className="w-4 h-4 md:w-5 md:h-5 bg-gradient-to-br from-amber-400 to-amber-500 rounded-md flex items-center justify-center">
                             <Sparkles className="h-2 w-2 md:h-3 md:w-3 text-black" />
                           </div>
-                          <h3 className="text-xs md:text-sm font-bold text-amber-400">{group.title}</h3>
+                          <h3 className="text-xs md:text-sm font-bold text-amber-400">{socialGroup.title}</h3>
                         </div>
                         
-                        <div className="space-y-0.5">
-                          {group.options.map((option, itemIndex) => (
-                            <motion.button
+                        <div className="flex gap-2 justify-start">
+                          {socialGroup.options.map((option) => (
+                            <button
                               key={option.label}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: ((groupIndex + 2) * 0.1) + (itemIndex * 0.05), duration: 0.2 }}
-                              whileHover={{ x: 2, scale: 1.01 }}
-                              whileTap={{ scale: 0.98 }}
-                              className="w-full text-left flex items-center gap-1 md:gap-2 px-1 py-1 rounded-md bg-white/5 hover:bg-amber-400/10 border border-transparent hover:border-amber-400/20 transition-all duration-300 group text-white/80 hover:text-white"
                               onClick={option.action}
+                              className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 hover:from-amber-400/30 hover:to-amber-500/20 border border-amber-400/30 transition-all duration-200"
                             >
-                              <div className="w-4 h-4 md:w-5 md:h-5 bg-gradient-to-br from-white/10 to-white/5 rounded-md flex items-center justify-center border border-white/10 group-hover:border-amber-400/30 transition-all duration-300 flex-shrink-0">
-                                <option.icon className="h-2 w-2 md:h-3 md:w-3 text-amber-400" />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <p className="text-xs truncate">{option.label}</p>
-                                {option.subtitle && (
-                                  <p className="text-[10px] text-white/50 truncate">{option.subtitle}</p>
-                                )}
-                              </div>
-                            </motion.button>
+                              <option.icon className="h-4 w-4 text-amber-400" />
+                            </button>
                           ))}
                         </div>
                       </motion.div>
-                    ))}
+                    )}
                   </div>
                 </div>
                 
-                {/* Right Column: Treatment Categories - Larger and more prominent */}
-                <div className="lg:col-span-2 overflow-y-auto">
+                {/* Right Column: Treatment Categories - Taking 3/4 of space */}
+                <div className="lg:col-span-3 overflow-y-auto">
                   <div className="mb-2 md:mb-3">
                     <h3 className="text-base md:text-xl font-bold bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent flex items-center gap-2">
                       <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-amber-400" />
