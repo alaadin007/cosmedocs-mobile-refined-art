@@ -122,6 +122,7 @@ const MedicalStudentWorkExperience = lazy(() => import("./pages/MedicalStudentWo
 const AestheticTreatmentsMadeEasy = lazy(() => import("./pages/AestheticTreatmentsMadeEasy"));
 const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
 const CampaignAds = lazy(() => import("./pages/CampaignAds"));
+const LondonTweakmentsNaturalAesthetics = lazy(() => import("./pages/LondonTweakmentsNaturalAesthetics"));
 
 // Loading component
 const PageLoader = () => (
@@ -292,6 +293,7 @@ const App = () => {
               {/* Blog redirects */}
               <Route path="/blog" element={<Navigate to="/cosmetalk" replace />} />
               <Route path="/blog/vitamin-c-ferulic-acid-benefits" element={<Navigate to="/cosmetalk/vitamin-c-ferulic-acid-benefits" replace />} />
+              <Route path="/blog/london-tweakments-natural-aesthetics" element={<LondonTweakmentsNaturalAesthetics />} />
               
               {/* Campaign Routes */}
               <Route path="/untraceably-you" element={<UntraceablyYouCampaign />} />
