@@ -456,20 +456,19 @@ export function ThreadFaceLift() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="relative group cursor-pointer p-2"
+                    className="group cursor-pointer p-2"
                   >
-                    <img 
-                      src={image.src} 
-                      alt={image.alt}
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                      className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                    <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                      <p className="text-white text-sm font-medium">{image.caption}</p>
+                    <div className="aspect-square overflow-hidden rounded-lg mb-3">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        width="400"
+                        height="400"
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
+                    <p className="text-white text-sm font-medium text-center">{image.caption}</p>
                   </motion.div>
                 </CarouselItem>
               ))}
