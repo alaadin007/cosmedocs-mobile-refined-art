@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar } from "lucide-react";
+import { MessageCircle, X, Send, Phone, Mail, MapPin, Calendar, MessageSquare, Plus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -16,6 +16,7 @@ interface Message {
 
 const FloatingChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -31,36 +32,60 @@ const FloatingChatBot = () => {
   const whatsappNumber = "+447735606447";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.`;
 
-  const contactIcons = [
+  const contactOptions = [
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      action: () => window.open(whatsappUrl, "_blank"),
-      color: "bg-green-500 hover:bg-green-600"
+      action: () => {
+        window.open(whatsappUrl, "_blank");
+        setIsExpanded(false);
+      },
+      color: "from-green-400 to-green-500"
     },
     {
       icon: Phone,
-      label: "Call Us",
-      action: () => window.open("tel:+448008600178", "_blank"),
-      color: "bg-blue-500 hover:bg-blue-600"
+      label: "Call",
+      action: () => {
+        window.open("tel:+448008600178", "_blank");
+        setIsExpanded(false);
+      },
+      color: "from-blue-400 to-blue-500"
     },
     {
       icon: Mail,
       label: "Email",
-      action: () => window.open("mailto:info@cosmedocs.com", "_blank"),
-      color: "bg-purple-500 hover:bg-purple-600"
+      action: () => {
+        window.open("mailto:info@cosmedocs.com", "_blank");
+        setIsExpanded(false);
+      },
+      color: "from-purple-400 to-purple-500"
     },
     {
       icon: Calendar,
       label: "Book",
-      action: () => window.open("https://med.as.me/schedule.php?appointmentType=16864702", "_blank"),
-      color: "bg-pink-500 hover:bg-pink-600"
+      action: () => {
+        window.open("https://med.as.me/schedule/0cc7d92b/?categories[]=CosmeDocs%20%288-10%20Harley%20Street%2C%20London%20W1G9PF%29", "_blank");
+        setIsExpanded(false);
+      },
+      color: "from-pink-400 to-pink-500"
     },
     {
       icon: MapPin,
-      label: "Location",
-      action: () => window.open("https://maps.google.com/?q=8-10+Harley+Street+London+W1G+9PF", "_blank"),
-      color: "bg-orange-500 hover:bg-orange-600"
+      label: "Maps",
+      action: () => {
+        window.open("https://www.google.com/maps/search/?api=1&query=8-10+Harley+Street+London+W1G+9PF", "_blank");
+        setIsExpanded(false);
+      },
+      color: "from-orange-400 to-orange-500"
+    },
+    {
+      icon: MessageSquare,
+      label: "Chat",
+      action: () => {
+        setIsOpen(true);
+        setIsExpanded(false);
+      },
+      color: "from-purple-400 to-purple-500"
     }
   ];
 
@@ -90,7 +115,7 @@ const FloatingChatBot = () => {
 
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: data.answer || "I apologize, I couldn't process that request.",
+        text: data.answer || "I apologise, I couldn't process that request.",
         isUser: false,
         timestamp: new Date()
       };
@@ -128,40 +153,54 @@ const FloatingChatBot = () => {
 
   return (
     <>
-      {/* Contact Icons - Always visible at bottom right */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-2 z-40">
-        {contactIcons.map((contact, index) => (
-          <motion.div
-            key={contact.label}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            <Button
-              onClick={contact.action}
-              className={`${contact.color} text-white shadow-lg hover:shadow-xl transition-all duration-300 w-12 h-12 rounded-full p-0`}
-              title={contact.label}
+      <div className="fixed bottom-4 right-4 z-50">
+        {/* Expanded Contact Options */}
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              className="absolute bottom-20 right-0 flex flex-col gap-3 mb-2"
             >
-              <contact.icon className="w-5 h-5" />
-            </Button>
-          </motion.div>
-        ))}
-      </div>
+              {contactOptions.map((option, index) => (
+                <motion.button
+                  key={option.label}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  onClick={option.action}
+                  className={`bg-gradient-to-br ${option.color} text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group relative`}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <option.icon className="h-6 w-6" />
+                  <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/90 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm">
+                    {option.label}
+                  </span>
+                </motion.button>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-      {/* Chatbot Toggle Button */}
-      <motion.div
-        className="fixed bottom-6 right-24 z-50"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 w-16 h-16 rounded-full p-0"
+        {/* Main Gold Toggle Button */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 text-white p-5 rounded-full shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 relative overflow-hidden group border-2 border-amber-300/50"
         >
-          {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-        </Button>
-      </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-300 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <motion.div
+            animate={{ rotate: isExpanded ? 45 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="relative z-10"
+          >
+            <Plus className="h-7 w-7" />
+          </motion.div>
+        </motion.button>
+      </div>
 
       {/* Chat Window */}
       <AnimatePresence>
@@ -171,12 +210,22 @@ const FloatingChatBot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-28 right-6 w-96 h-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800"
+            className="fixed bottom-4 right-4 w-96 h-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
-              <h3 className="font-bold text-lg">CosmeDocs AI Assistant</h3>
-              <p className="text-sm text-purple-100">Ask me anything about aesthetic treatments</p>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white flex justify-between items-center">
+              <div>
+                <h3 className="font-bold text-lg">CosmeDocs AI Assistant</h3>
+                <p className="text-sm text-purple-100">Ask me anything about aesthetic treatments</p>
+              </div>
+              <Button
+                onClick={() => setIsOpen(false)}
+                variant="ghost"
+                size="icon"
+                className="text-white hover:bg-white/20"
+              >
+                <X className="h-5 w-5" />
+              </Button>
             </div>
 
             {/* Messages */}
@@ -224,16 +273,16 @@ const FloatingChatBot = () => {
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  placeholder="Type your question..."
-                  disabled={isLoading}
+                  placeholder="Type your message..."
                   className="flex-1"
+                  disabled={isLoading}
                 />
                 <Button
                   onClick={handleSendMessage}
                   disabled={isLoading || !inputMessage.trim()}
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="h-4 w-4" />
                 </Button>
               </div>
             </div>

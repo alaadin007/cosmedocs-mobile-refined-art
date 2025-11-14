@@ -37,12 +37,12 @@ export default function Header() {
         },
         {
           icon: Camera,
-          label: "Before & After Gallery",
+          label: "B/A Gallery",
           action: () => window.location.href = "/before-after-gallery"
         },
         {
           icon: MessageSquare,
-          label: "Cosmetalk",
+          label: "CosmeTalk",
           action: () => window.location.href = "/cosmetalk"
         },
         {
@@ -67,47 +67,22 @@ export default function Header() {
         },
         {
           icon: Phone,
-          label: "Call Us - Clinic 1",
-          action: () => window.open("tel:+443330551503", "_blank"),
-          subtitle: "333 0551 503"
-        },
-        {
-          icon: Phone,
-          label: "Call Us - Clinic 2", 
-          action: () => window.open("tel:+448008600178", "_blank"),
-          subtitle: "0800 8600 178"
+          label: "Call",
+          action: () => window.open("tel:+443330551503", "_blank")
         },
         {
           icon: MessageSquare,
           label: "WhatsApp",
-          action: () => window.open(whatsappUrl, "_blank"),
-          subtitle: "+44 7735 606447"
+          action: () => window.open(whatsappUrl, "_blank")
         },
         {
           icon: Mail,
-          label: "Email Us",
-          action: () => window.open("mailto:info@cosmedocs.com", "_blank"),
-          subtitle: "info@cosmedocs.com"
-        }
-      ]
-    },
-    {
-      title: "AI Tools",
-      options: [
-        {
-          icon: Sparkles,
-          label: "AI Aesthetic Intelligence",
-          action: () => window.location.href = "/aesthetic-intelligence",
-          subtitle: "Product analysis tool"
+          label: "Email",
+          action: () => window.open("mailto:info@cosmedocs.com", "_blank")
         },
         {
-          icon: Sparkles,
-          label: "AI Aesthetic Analysis",
-          action: () => setIsAnalysisOpen(true)
-        },
-        {
-          icon: Search,
-          label: "Chat With Our AI CosmeDoc",
+          icon: MessageSquare,
+          label: "Chat Online",
           action: () => setIsSearchOpen(true)
         }
       ]
