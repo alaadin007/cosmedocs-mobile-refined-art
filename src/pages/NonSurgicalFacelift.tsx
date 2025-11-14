@@ -170,7 +170,7 @@ const NonSurgicalFacelift = () => {
                   <Calendar className="text-purple-600" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">12-24 months with maintenance</p>
+                <p className="text-gray-300">2 to 3 years with mild maintenance sometimes required</p>
               </motion.div>
 
               <motion.div
@@ -229,16 +229,19 @@ const NonSurgicalFacelift = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="relative group cursor-pointer p-2"
+                      className="p-2"
                     >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-2 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                      <div className="absolute bottom-2 left-2 right-2 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg">
-                        <p className="text-white text-sm font-medium">{image.caption}</p>
+                      <div className="bg-gray-900 rounded-lg overflow-hidden">
+                        <div className="aspect-square relative">
+                          <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            className="w-full h-full object-contain bg-black"
+                          />
+                        </div>
+                        <div className="p-4 bg-gray-900">
+                          <p className="text-white text-sm font-medium">{image.caption}</p>
+                        </div>
                       </div>
                     </motion.div>
                   </CarouselItem>

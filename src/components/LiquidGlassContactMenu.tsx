@@ -229,7 +229,7 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                         </motion.button>
 
                         {/* Compact Icon Row for Phone, WhatsApp, Email, Chat */}
-                        <div className="flex items-center gap-2 justify-start px-1 flex-wrap">
+                        <div className="flex items-center gap-2 justify-start px-1 flex-wrap mb-1">
                           {/* Phone Icon - Click to expand numbers */}
                           <button
                             onClick={() => setShowPhoneNumbers(!showPhoneNumbers)}
@@ -265,6 +265,25 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                           )}
                         </div>
 
+                        {/* Divider with spacing */}
+                        <div className="my-2 border-t border-amber-400/20"></div>
+
+                        {/* Social Media Icons */}
+                        {socialGroup && (
+                          <div className="flex items-center gap-2 justify-start px-1 flex-wrap">
+                            {socialGroup.options.map((option) => (
+                              <button
+                                key={option.label}
+                                onClick={option.action}
+                                className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 hover:from-amber-400/30 hover:to-amber-500/20 border border-amber-400/30 transition-all duration-200"
+                                title={option.label}
+                              >
+                                <option.icon className="h-4 w-4 text-amber-400" />
+                              </button>
+                            ))}
+                          </div>
+                        )}
+
                         {/* Expandable Phone Numbers */}
                         <AnimatePresence>
                           {showPhoneNumbers && (
@@ -292,35 +311,6 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                             </motion.div>
                           )}
                         </AnimatePresence>
-                      </motion.div>
-                    )}
-
-                    {/* Social Media Section */}
-                    {socialGroup && (
-                      <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.2, duration: 0.3 }}
-                        className="bg-gradient-to-br from-white/5 to-amber-400/5 backdrop-blur-sm rounded-lg p-2 border border-amber-400/20"
-                      >
-                        <div className="flex items-center gap-1 md:gap-2 mb-1">
-                          <div className="w-4 h-4 md:w-5 md:h-5 bg-gradient-to-br from-amber-400 to-amber-500 rounded-md flex items-center justify-center">
-                            <Sparkles className="h-2 w-2 md:h-3 md:w-3 text-black" />
-                          </div>
-                          <h3 className="text-xs md:text-sm font-bold text-amber-400">{socialGroup.title}</h3>
-                        </div>
-                        
-                        <div className="flex gap-2 justify-start">
-                          {socialGroup.options.map((option) => (
-                            <button
-                              key={option.label}
-                              onClick={option.action}
-                              className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 hover:from-amber-400/30 hover:to-amber-500/20 border border-amber-400/30 transition-all duration-200"
-                            >
-                              <option.icon className="h-4 w-4 text-amber-400" />
-                            </button>
-                          ))}
-                        </div>
                       </motion.div>
                     )}
                   </div>

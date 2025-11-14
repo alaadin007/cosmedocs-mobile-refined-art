@@ -3,6 +3,7 @@ import { ReactNode, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "./Header";
 import Footer from "./Footer";
+import FloatingChatBot from "./FloatingChatBot";
 
 interface LayoutProps {
   children: ReactNode;
@@ -28,6 +29,7 @@ export default function Layout({ children }: LayoutProps) {
         <Header />
         <main className="flex-grow pt-16">{children}</main>
         <Footer />
+        <FloatingChatBot />
       </div>
     </>
   );
