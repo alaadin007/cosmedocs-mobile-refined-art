@@ -153,136 +153,109 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                 {/* Left Column: Compact Navigation, Contact & Social - Scrollable on mobile */}
                 <div className="flex flex-col min-h-0">
                   <div className="space-y-1 overflow-y-auto flex-1 pr-1">
-                    {/* Compact Navigate Section */}
-                    {navigateGroup && (
+                    {/* Combined Navigate & Get in Touch Section */}
+                    {(navigateGroup || contactGroup) && (
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-gradient-to-br from-white/5 to-amber-400/5 backdrop-blur-sm rounded-lg p-2 border border-amber-400/20"
+                        className="bg-gradient-to-br from-white/5 to-amber-400/5 backdrop-blur-sm rounded-lg p-3 border border-amber-400/20"
                       >
-                        <div className="flex items-center gap-1 md:gap-2 mb-1">
+                        <div className="flex items-center gap-1 md:gap-2 mb-2">
                           <div className="w-4 h-4 md:w-5 md:h-5 bg-gradient-to-br from-amber-400 to-amber-500 rounded-md flex items-center justify-center">
                             <Sparkles className="h-2 w-2 md:h-3 md:w-3 text-black" />
                           </div>
-                          <h3 className="text-xs md:text-sm font-bold text-amber-400">{navigateGroup.title}</h3>
+                          <h3 className="text-xs md:text-sm font-bold text-amber-400">Navigation & Contact</h3>
                         </div>
                         
-                        {/* Single line navigation with separators - First 3 items */}
-                        <div className="flex items-center gap-1 text-xs flex-wrap mb-1">
-                          {navigateGroup.options.slice(0, 3).map((option, idx) => (
-                            <div key={option.label} className="flex items-center gap-1">
-                              <button
-                                onClick={option.action}
-                                className="text-white/80 hover:text-amber-400 transition-colors duration-200"
-                              >
-                                {option.label}
-                              </button>
-                              {idx < 2 && <span className="text-amber-400/50">|</span>}
-                            </div>
-                          ))}
-                        </div>
-                        
-                        {/* Second line - About Us | Contact */}
-                        {navigateGroup.options.length > 3 && (
-                          <div className="flex items-center gap-1 text-xs">
-                            {navigateGroup.options.slice(3).map((option, idx) => (
-                              <div key={option.label} className="flex items-center gap-1">
-                                <button
-                                  onClick={option.action}
-                                  className="text-white/80 hover:text-amber-400 transition-colors duration-200"
-                                >
-                                  {option.label}
-                                </button>
-                                {idx < navigateGroup.options.slice(3).length - 1 && <span className="text-amber-400/50">|</span>}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </motion.div>
-                    )}
-
-                    {/* Compact Contact Section */}
-                    {contactGroup && (
-                      <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1, duration: 0.3 }}
-                        className="bg-gradient-to-br from-white/5 to-amber-400/5 backdrop-blur-sm rounded-lg p-2 border border-amber-400/20"
-                      >
-                        <div className="flex items-center gap-1 md:gap-2 mb-1">
-                          <div className="w-4 h-4 md:w-5 md:h-5 bg-gradient-to-br from-amber-400 to-amber-500 rounded-md flex items-center justify-center">
-                            <Sparkles className="h-2 w-2 md:h-3 md:w-3 text-black" />
-                          </div>
-                          <h3 className="text-xs md:text-sm font-bold text-amber-400">{contactGroup.title}</h3>
-                        </div>
-                        
-                        {/* Book Appointment - Keep visible */}
-                        <motion.button
-                          whileHover={{ x: 2 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="w-full text-left flex items-center gap-1 md:gap-2 px-1 py-1 rounded-md bg-white/5 hover:bg-amber-400/10 border border-transparent hover:border-amber-400/20 transition-all duration-200 group text-white/80 hover:text-white mb-1"
-                          onClick={contactGroup.options[0]?.action}
-                        >
-                          <Calendar className="h-4 w-4 md:h-5 md:w-5 text-amber-400" />
-                          <span className="text-xs md:text-sm">Book Appointment</span>
-                        </motion.button>
-
-                        {/* Compact Icon Row for Phone, WhatsApp, Email, Chat */}
-                        <div className="flex items-center gap-2 justify-start px-1 flex-wrap mb-1">
-                          {/* Phone Icon - Click to expand numbers */}
-                          <button
-                            onClick={() => setShowPhoneNumbers(!showPhoneNumbers)}
-                            className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 hover:from-amber-400/30 hover:to-amber-500/20 border border-amber-400/30 transition-all duration-200"
-                          >
-                            <Phone className="h-4 w-4 text-amber-400" />
-                          </button>
-
-                          {/* WhatsApp Icon */}
-                          <button
-                            onClick={() => window.open("https://wa.me/447735606447?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.", "_blank")}
-                            className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-green-400/20 to-green-500/10 hover:from-green-400/30 hover:to-green-500/20 border border-green-400/30 transition-all duration-200"
-                          >
-                            <MessageSquare className="h-4 w-4 text-green-400" />
-                          </button>
-
-                          {/* Email Icon */}
-                          <button
-                            onClick={() => window.open("mailto:info@cosmedocs.com", "_blank")}
-                            className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-500/10 hover:from-purple-400/30 hover:to-purple-500/20 border border-purple-400/30 transition-all duration-200"
-                          >
-                            <Mail className="h-4 w-4 text-purple-400" />
-                          </button>
-                          
-                          {/* Chat Online Icon */}
-                          {contactGroup.options.find(o => o.label === "Chat Online") && (
-                            <button
-                              onClick={contactGroup.options.find(o => o.label === "Chat Online")?.action}
-                              className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-500/10 hover:from-blue-400/30 hover:to-blue-500/20 border border-blue-400/30 transition-all duration-200"
-                            >
-                              <MessageSquare className="h-4 w-4 text-blue-400" />
-                            </button>
-                          )}
-                        </div>
-
-                        {/* Divider with spacing */}
-                        <div className="my-2 border-t border-amber-400/20"></div>
-
-                        {/* Social Media Icons */}
-                        {socialGroup && (
-                          <div className="flex items-center gap-2 justify-start px-1 flex-wrap">
-                            {socialGroup.options.map((option) => (
+                        {/* Main Content - Text Links on Left, Icon Links on Right */}
+                        <div className="grid grid-cols-2 gap-3">
+                          {/* Left Side - Text Navigation Links */}
+                          <div className="space-y-1">
+                            {navigateGroup?.options.map((option) => (
                               <button
                                 key={option.label}
                                 onClick={option.action}
-                                className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 hover:from-amber-400/30 hover:to-amber-500/20 border border-amber-400/30 transition-all duration-200"
-                                title={option.label}
+                                className="w-full text-left text-xs text-white/80 hover:text-amber-400 transition-colors duration-200 py-1"
                               >
-                                <option.icon className="h-4 w-4 text-amber-400" />
+                                {option.label}
                               </button>
                             ))}
+                            
+                            {/* Book Appointment Button */}
+                            {contactGroup?.options[0] && (
+                              <motion.button
+                                whileHover={{ x: 2 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="w-full text-left flex items-center gap-1 px-2 py-1.5 rounded-md bg-amber-400/10 hover:bg-amber-400/20 border border-amber-400/30 transition-all duration-200 text-white mt-2"
+                                onClick={contactGroup.options[0].action}
+                              >
+                                <Calendar className="h-3 w-3 text-amber-400" />
+                                <span className="text-xs">Book Appointment</span>
+                              </motion.button>
+                            )}
                           </div>
-                        )}
+                          
+                          {/* Right Side - Icon Links */}
+                          <div className="flex flex-col gap-2">
+                            {/* Contact Icons */}
+                            <div className="flex flex-wrap gap-2 justify-end">
+                              {/* Phone Icon - Click to expand numbers */}
+                              <button
+                                onClick={() => setShowPhoneNumbers(!showPhoneNumbers)}
+                                className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 hover:from-amber-400/30 hover:to-amber-500/20 border border-amber-400/30 transition-all duration-200"
+                                title="Phone"
+                              >
+                                <Phone className="h-4 w-4 text-amber-400" />
+                              </button>
+
+                              {/* WhatsApp Icon */}
+                              <button
+                                onClick={() => window.open("https://wa.me/447735606447?text=Hello, I'm interested in aesthetic treatments at CosmeDocs.", "_blank")}
+                                className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-green-400/20 to-green-500/10 hover:from-green-400/30 hover:to-green-500/20 border border-green-400/30 transition-all duration-200"
+                                title="WhatsApp"
+                              >
+                                <MessageSquare className="h-4 w-4 text-green-400" />
+                              </button>
+
+                              {/* Email Icon */}
+                              <button
+                                onClick={() => window.open("mailto:info@cosmedocs.com", "_blank")}
+                                className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-500/10 hover:from-purple-400/30 hover:to-purple-500/20 border border-purple-400/30 transition-all duration-200"
+                                title="Email"
+                              >
+                                <Mail className="h-4 w-4 text-purple-400" />
+                              </button>
+                              
+                              {/* Chat Online Icon */}
+                              {contactGroup?.options.find(o => o.label === "Chat Online") && (
+                                <button
+                                  onClick={contactGroup.options.find(o => o.label === "Chat Online")?.action}
+                                  className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-500/10 hover:from-blue-400/30 hover:to-blue-500/20 border border-blue-400/30 transition-all duration-200"
+                                  title="Chat Online"
+                                >
+                                  <MessageSquare className="h-4 w-4 text-blue-400" />
+                                </button>
+                              )}
+                            </div>
+                            
+                            {/* Social Media Icons */}
+                            {socialGroup && (
+                              <div className="flex flex-wrap gap-2 justify-end mt-1">
+                                {socialGroup.options.map((option) => (
+                                  <button
+                                    key={option.label}
+                                    onClick={option.action}
+                                    className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 hover:from-amber-400/30 hover:to-amber-500/20 border border-amber-400/30 transition-all duration-200"
+                                    title={option.label}
+                                  >
+                                    <option.icon className="h-4 w-4 text-amber-400" />
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
 
                         {/* Expandable Phone Numbers */}
                         <AnimatePresence>
@@ -292,7 +265,7 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.2 }}
-                              className="overflow-hidden mt-1 space-y-0.5"
+                              className="overflow-hidden mt-2 space-y-0.5"
                             >
                               <a
                                 href="tel:+443330551503"
