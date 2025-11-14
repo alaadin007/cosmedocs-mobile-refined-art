@@ -37,8 +37,8 @@ const PopularTreatments = ({
       link: "/dermal-fillers"
     },
     {
-      title: "Non-Surgical Face Lift – Instant Lift, Zero Downtime",
-      description: "Advanced thread lifting and strategic volume restoration.\n\n• Sagging jowls & jawline\n• Neck laxity\n• Cheek drooping\n• Brow ptosis\n• Nasolabial fold deepening\n• Marionette lines\n• Loss of facial contour",
+      title: "Non-Surgical Facelift & Neck Lift",
+      description: "✓ No scars, no marks\n⏱ Lasting 2-3 years\n\nCombination of volumising and lifting dissolvable threads. Forming and teaching this combination since 2014 — one of the first in the UK.\n\n✓ No downtime",
       link: "/non-surgical-facelift"
     },
     {
