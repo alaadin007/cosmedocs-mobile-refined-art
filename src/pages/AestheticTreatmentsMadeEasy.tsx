@@ -135,11 +135,11 @@ export default function AestheticTreatmentsMadeEasy() {
         )}
 
         {/* Sidebar */}
-        <aside 
-          ref={sidebarRef} 
+        <aside
+          ref={sidebarRef}
           className={`${
             sidebarOpen ? 'w-64' : 'w-0'
-          } border-r border-gray-200 bg-white sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto transition-all duration-300`}
+          } border-r border-gray-200 bg-gray-50 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto transition-all duration-300 md:relative`}
         >
           {sidebarOpen && (
           <div className="p-4">
@@ -203,10 +203,10 @@ export default function AestheticTreatmentsMadeEasy() {
           {/* Sidebar Toggle Button */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="fixed top-20 left-4 z-50 p-2 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-50 transition-colors"
+            className="fixed top-20 left-4 z-50 p-2 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hover:bg-orange-600 transition-colors"
             aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
           >
-            {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {sidebarOpen ? <X className="h-5 w-5 text-white" /> : <Menu className="h-5 w-5 text-white" />}
           </button>
 
           <div className="max-w-4xl mx-auto px-8 py-12">
