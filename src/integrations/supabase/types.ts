@@ -496,7 +496,7 @@ export type Database = {
         Row: {
           created_at: string | null
           domain: string
-          fts: unknown | null
+          fts: unknown
           id: string
           normalized_query: string
           original_query: string
@@ -505,7 +505,7 @@ export type Database = {
         Insert: {
           created_at?: string | null
           domain: string
-          fts?: unknown | null
+          fts?: unknown
           id?: string
           normalized_query: string
           original_query: string
@@ -514,7 +514,7 @@ export type Database = {
         Update: {
           created_at?: string | null
           domain?: string
-          fts?: unknown | null
+          fts?: unknown
           id?: string
           normalized_query?: string
           original_query?: string
@@ -696,7 +696,7 @@ export type Database = {
         Row: {
           content: string | null
           created_at: string | null
-          fts: unknown | null
+          fts: unknown
           id: string
           images: string[] | null
           last_scraped: string | null
@@ -709,7 +709,7 @@ export type Database = {
         Insert: {
           content?: string | null
           created_at?: string | null
-          fts?: unknown | null
+          fts?: unknown
           id?: string
           images?: string[] | null
           last_scraped?: string | null
@@ -722,7 +722,7 @@ export type Database = {
         Update: {
           content?: string | null
           created_at?: string | null
-          fts?: unknown | null
+          fts?: unknown
           id?: string
           images?: string[] | null
           last_scraped?: string | null
@@ -917,18 +917,9 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      cleanup_expired_results: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      }
-      delete_all_website_content: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      }
-      get_ai_system_prompt: {
-        Args: { query: string }
-        Returns: string
-      }
+      cleanup_expired_results: { Args: never; Returns: undefined }
+      delete_all_website_content: { Args: never; Returns: undefined }
+      get_ai_system_prompt: { Args: { query: string }; Returns: string }
     }
     Enums: {
       [_ in never]: never

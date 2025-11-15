@@ -195,33 +195,20 @@ const BeforeAfterGallery = () => {
                     {/* Media Preview */}
                     <div className="relative aspect-[4/3] overflow-hidden">
                       {item.type === "image" ? (
-                        <div className="flex h-full">
-                          <div className="flex-1 relative">
-                            <img
-                              src={item.beforeUrl}
-                              alt={`Before ${item.treatment}`}
-                              loading="lazy"
-                              onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-xs">
-                              Before
-                            </div>
+                        <div className="relative h-full">
+                          <img
+                            src={item.beforeUrl}
+                            alt={`${item.treatment} before and after`}
+                            loading="lazy"
+                            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-2 left-2 bg-black/70 text-white px-2 py-1 rounded text-xs">
+                            Before
                           </div>
-                          {item.afterUrl && (
-                            <div className="flex-1 relative">
-                              <img
-                                src={item.afterUrl}
-                                alt={`After ${item.treatment}`}
-                                loading="lazy"
-                                onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
-                                className="w-full h-full object-cover"
-                              />
-                              <div className="absolute top-2 right-2 bg-amber-500 text-black px-2 py-1 rounded text-xs font-medium">
-                                After
-                              </div>
-                            </div>
-                          )}
+                          <div className="absolute top-2 right-2 bg-amber-500 text-black px-2 py-1 rounded text-xs font-medium">
+                            After
+                          </div>
                         </div>
                       ) : (
                         <div className="relative w-full h-full">
@@ -302,33 +289,20 @@ const BeforeAfterGallery = () => {
                 {/* Modal Content */}
                 <div className="relative">
                   {selectedItem.type === "image" ? (
-                    <div className="flex">
-                      <div className="flex-1 relative">
-                        <img
-                          src={selectedItem.beforeUrl}
-                          alt={`Before ${selectedItem.treatment}`}
-                          loading="lazy"
-                          onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
-                          className="w-full h-[400px] object-cover"
-                        />
-                        <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-2 rounded">
-                          Before
-                        </div>
+                    <div className="relative">
+                      <img
+                        src={selectedItem.beforeUrl}
+                        alt={`${selectedItem.treatment} before and after`}
+                        loading="lazy"
+                        onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
+                        className="w-full h-[400px] object-cover"
+                      />
+                      <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-2 rounded">
+                        Before
                       </div>
-                      {selectedItem.afterUrl && (
-                        <div className="flex-1 relative">
-                          <img
-                            src={selectedItem.afterUrl}
-                            alt={`After ${selectedItem.treatment}`}
-                            loading="lazy"
-                            onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
-                            className="w-full h-[400px] object-cover"
-                          />
-                          <div className="absolute top-4 right-4 bg-amber-500 text-black px-3 py-2 rounded font-medium">
-                            After
-                          </div>
-                        </div>
-                      )}
+                      <div className="absolute top-4 right-4 bg-amber-500 text-black px-3 py-2 rounded font-medium">
+                        After
+                      </div>
                     </div>
                   ) : (
                     <div className="relative h-[400px]">
