@@ -138,7 +138,7 @@ export default function AestheticTreatmentsMadeEasy() {
         <aside
           ref={sidebarRef}
           className={`${
-            sidebarOpen ? 'w-64' : 'w-0'
+            sidebarOpen ? 'w-1/2 md:w-64' : 'w-0'
           } border-r border-gray-200 bg-gray-50 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto transition-all duration-300 md:relative`}
         >
           {sidebarOpen && (
