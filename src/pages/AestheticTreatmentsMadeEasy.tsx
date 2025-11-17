@@ -58,11 +58,26 @@ const chapters: Chapter[] = [
 ];
 
 export default function AestheticTreatmentsMadeEasy() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   const allChapterSections = [...allSections, ...chapters];
+
+  // Close sidebar on mobile by default, open on desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setSidebarOpen(true);
+      } else {
+        setSidebarOpen(false);
+      }
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handlePrevious = () => {
     if (currentChapterIndex > 0) {
@@ -121,42 +136,88 @@ export default function AestheticTreatmentsMadeEasy() {
       </Helmet>
 
       <div className="flex min-h-screen bg-gray-50">
-        {/* Sidebar Toggle Button (visible when collapsed) */}
-        {!sidebarOpen && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setSidebarOpen(true)}
-            className="fixed left-4 top-20 z-50 h-10 w-10 bg-white border border-gray-200 shadow-md hover:bg-gray-50"
-            aria-label="Open sidebar"
+        {/* Mobile Popup Menu */}
+        {sidebarOpen && (
+          <div 
+            className="md:hidden fixed inset-0 bg-black/50 z-40"
+            onClick={() => setSidebarOpen(false)}
           >
-            <Menu className="h-5 w-5" />
-          </Button>
+            <div 
+              className="fixed inset-y-0 left-0 w-[85%] max-w-sm bg-gray-50 overflow-y-auto shadow-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-4">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="h-5 w-5 text-gray-700" />
+                    <h2 className="font-semibold text-lg text-gray-900">Aesthetic Talk</h2>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setSidebarOpen(false)}
+                    className="h-8 w-8 hover:bg-gray-100"
+                    aria-label="Close menu"
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                </div>
+
+                {/* Preface Section */}
+                <button
+                  onClick={() => {
+                    setCurrentChapterIndex(0);
+                    setSidebarOpen(false);
+                  }}
+                  className={`w-full text-left px-4 py-3 rounded-lg mb-2 transition-colors ${
+                    currentChapterIndex === 0
+                      ? "bg-gray-900 text-white"
+                      : "bg-gray-100 hover:bg-gray-200 text-gray-900"
+                  }`}
+                >
+                  <div>
+                    <div className="font-semibold">Preface</div>
+                    <div className="text-xs opacity-80">The Art of Depth</div>
+                  </div>
+                </button>
+
+                {/* Chapters */}
+                <div className="space-y-1 mt-4">
+                  {chapters.map((chapter, idx) => (
+                    <button
+                      key={chapter.id}
+                      data-section={chapter.id}
+                      onClick={() => {
+                        setCurrentChapterIndex(1 + idx);
+                        setSidebarOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${
+                        currentChapterIndex === 1 + idx
+                          ? "bg-gray-200 text-gray-900"
+                          : "hover:bg-gray-100 text-gray-700"
+                      }`}
+                    >
+                      <div className="font-semibold text-sm">{chapter.title}</div>
+                      <div className="text-xs text-gray-600 mt-1">
+                        {chapter.subtitle}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         )}
 
-        {/* Sidebar */}
+        {/* Desktop Sidebar */}
         <aside
           ref={sidebarRef}
-          className={`${
-            sidebarOpen ? 'w-1/2 md:w-64' : 'w-0'
-          } border-r border-gray-200 bg-gray-50 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto transition-all duration-300 md:relative`}
+          className="hidden md:block md:w-64 border-r border-gray-200 bg-gray-50 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto"
         >
-          {sidebarOpen && (
           <div className="p-4">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-2">
-                <BookOpen className="h-5 w-5 text-gray-700" />
-                <h2 className="font-semibold text-lg text-gray-900">Aesthetic Talk</h2>
-              </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setSidebarOpen(false)}
-                className="h-8 w-8 hover:bg-gray-100"
-                aria-label="Collapse sidebar"
-              >
-                <X className="h-4 w-4" />
-              </Button>
+            <div className="flex items-center gap-2 mb-6">
+              <BookOpen className="h-5 w-5 text-gray-700" />
+              <h2 className="font-semibold text-lg text-gray-900">Aesthetic Talk</h2>
             </div>
 
             {/* Preface Section */}
@@ -195,18 +256,17 @@ export default function AestheticTreatmentsMadeEasy() {
               ))}
             </div>
           </div>
-          )}
         </aside>
 
         {/* Main Content */}
         <main className="flex-1 bg-white relative">
-          {/* Sidebar Toggle Button */}
+          {/* Sidebar Toggle Button - Only on mobile */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="fixed top-20 left-4 z-50 p-2 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hover:bg-orange-600 transition-colors"
-            aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
+            className="md:hidden fixed top-20 left-4 z-50 p-2 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hover:bg-orange-600 transition-colors"
+            aria-label={sidebarOpen ? "Close menu" : "Open menu"}
           >
-            {sidebarOpen ? <X className="h-5 w-5 text-white" /> : <Menu className="h-5 w-5 text-white" />}
+            <Menu className="h-5 w-5 text-white" />
           </button>
 
           <div className="max-w-4xl mx-auto px-8 py-12">
