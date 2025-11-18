@@ -27,6 +27,14 @@ function generatePrizeCode(): string {
   return code;
 }
 
+const LASER_AREAS = [
+  'Upper Lip',
+  'Chin',
+  'Underarms',
+  'Half Arms',
+  'Half Legs'
+];
+
 function selectPrize(availablePrizes: typeof PRIZES): typeof PRIZES[0] {
   const totalWeight = availablePrizes.reduce((sum, prize) => sum + prize.weight, 0);
   let random = Math.random() * totalWeight;
@@ -39,6 +47,10 @@ function selectPrize(availablePrizes: typeof PRIZES): typeof PRIZES[0] {
   }
   
   return availablePrizes[0]; // Fallback
+}
+
+function selectLaserArea(): string {
+  return LASER_AREAS[Math.floor(Math.random() * LASER_AREAS.length)];
 }
 
 serve(async (req) => {
@@ -72,13 +84,24 @@ serve(async (req) => {
 
     if (existingEntry) {
       // User already played, return their existing prize
+      // Parse laser area from prize if it's a laser prize
+      let laserArea = undefined;
+      if (existingEntry.prize.includes('Laser Hair Removal')) {
+        const match = existingEntry.prize.match(/\((.*?)\)/);
+        laserArea = match ? match[1] : undefined;
+      }
+
       return new Response(
         JSON.stringify({
           success: true,
           alreadyPlayed: true,
           prize: existingEntry.prize,
           prizeCode: existingEntry.prize_code,
-          prizeType: PRIZES.find(p => p.name === existingEntry.prize)?.type || 'standard'
+          prizeType: PRIZES.find(p => p.name.includes('Laser Hair Removal')) ? 
+            (existingEntry.prize.includes('Laser Hair Removal') ? 'standard' : 
+            PRIZES.find(p => p.name === existingEntry.prize)?.type || 'standard') : 
+            PRIZES.find(p => p.name === existingEntry.prize)?.type || 'standard',
+          laserArea
         }),
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
@@ -111,6 +134,14 @@ serve(async (req) => {
     // Select a prize from available options
     const selectedPrize = selectPrize(availablePrizes);
     const prizeCode = generatePrizeCode();
+    
+    // If it's a laser prize, select a specific area
+    let finalPrizeName = selectedPrize.name;
+    let laserArea = undefined;
+    if (selectedPrize.name === "Laser Hair Removal (1 Area)") {
+      laserArea = selectLaserArea();
+      finalPrizeName = `Laser Hair Removal (${laserArea})`;
+    }
 
     // Save to database
     const { data: newEntry, error: insertError } = await supabase
@@ -120,7 +151,7 @@ serve(async (req) => {
         email,
         phone,
         postcode,
-        prize: selectedPrize.name,
+        prize: finalPrizeName,
         prize_code: prizeCode,
       })
       .select()
@@ -138,9 +169,10 @@ serve(async (req) => {
       JSON.stringify({
         success: true,
         alreadyPlayed: false,
-        prize: selectedPrize.name,
+        prize: finalPrizeName,
         prizeCode: prizeCode,
-        prizeType: selectedPrize.type
+        prizeType: selectedPrize.type,
+        laserArea
       }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
