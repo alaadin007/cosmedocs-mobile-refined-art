@@ -100,6 +100,7 @@ const SpinToWin = () => {
                   prizeCode={prizeResult.prizeCode}
                   prizeType={prizeResult.prizeType}
                   alreadyPlayed={prizeResult.alreadyPlayed}
+                  laserArea={prizeResult.laserArea}
                 />
               )}
             </div>

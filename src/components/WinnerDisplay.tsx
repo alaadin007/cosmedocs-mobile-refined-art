@@ -8,19 +8,12 @@ interface WinnerDisplayProps {
   prizeCode: string;
   prizeType: 'standard' | 'mega';
   alreadyPlayed?: boolean;
+  laserArea?: string;
 }
 
-export const WinnerDisplay = ({ prize, prizeCode, prizeType, alreadyPlayed }: WinnerDisplayProps) => {
+export const WinnerDisplay = ({ prize, prizeCode, prizeType, alreadyPlayed, laserArea }: WinnerDisplayProps) => {
   const isMegaPrize = prizeType === 'mega';
-  const isLaserPrize = prize.includes('Laser Hair Removal (1 Area)');
-  
-  const laserAreas = [
-    'Upper Lip',
-    'Chin',
-    'Underarms',
-    'Half Arms',
-    'Half Legs'
-  ];
+  const isLaserPrize = prize.includes('Laser Hair Removal');
 
   return (
     <motion.div
@@ -73,16 +66,12 @@ export const WinnerDisplay = ({ prize, prizeCode, prizeType, alreadyPlayed }: Wi
           </div>
         </div>
 
-        {isLaserPrize && (
-          <div className="mb-6 p-4 bg-muted/50 rounded-lg">
-            <p className="font-semibold mb-2">Choose Your Laser Area In-Clinic:</p>
-            <div className="grid grid-cols-2 gap-2">
-              {laserAreas.map(area => (
-                <div key={area} className="flex items-center gap-2 text-sm">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                  {area}
-                </div>
-              ))}
+        {isLaserPrize && laserArea && (
+          <div className="mb-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
+            <p className="font-semibold mb-2 text-center">Your Selected Laser Area:</p>
+            <div className="flex items-center justify-center gap-3 text-lg">
+              <Sparkles className="w-5 h-5 text-primary" />
+              <span className="font-bold text-primary">{laserArea}</span>
             </div>
           </div>
         )}

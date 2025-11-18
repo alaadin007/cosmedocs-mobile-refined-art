@@ -36,6 +36,15 @@ interface SpinWheelProps {
   onComplete: (result: any) => void;
 }
 
+interface SpinResult {
+  success: boolean;
+  alreadyPlayed: boolean;
+  prize: string;
+  prizeCode: string;
+  prizeType: string;
+  laserArea?: string;
+}
+
 export const SpinWheel = ({ userDetails, onComplete }: SpinWheelProps) => {
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
@@ -48,19 +57,26 @@ export const SpinWheel = ({ userDetails, onComplete }: SpinWheelProps) => {
 
     try {
       // Call edge function to determine prize
-      const { data, error } = await supabase.functions.invoke('spin-to-win', {
+      const { data, error } = await supabase.functions.invoke<SpinResult>('spin-to-win', {
         body: userDetails
       });
 
       if (error) throw error;
 
+      // Find the base prize name for matching (remove area specification if laser)
+      let prizeName = data.prize;
+      if (data.prize.includes('Laser Hair Removal')) {
+        prizeName = "Laser Hair Removal (1 Area)";
+      }
+
       // Calculate which segment the prize is on
-      const prizeIndex = PRIZES.findIndex(p => p === data.prize);
+      const prizeIndex = PRIZES.findIndex(p => p === prizeName);
       const segmentAngle = 360 / PRIZES.length;
       const targetAngle = 360 - (prizeIndex * segmentAngle + segmentAngle / 2);
       
-      // Add multiple full rotations for dramatic effect
-      const finalRotation = rotation + 1440 + targetAngle;
+      // Add multiple full rotations for dramatic effect (5-7 rotations)
+      const extraRotations = 1800 + Math.random() * 360;
+      const finalRotation = rotation + extraRotations + targetAngle;
 
       setRotation(finalRotation);
 
