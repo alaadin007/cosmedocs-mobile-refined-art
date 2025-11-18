@@ -38,7 +38,7 @@ const SpinToWin = () => {
     <>
       <Helmet>
         <title>Spin to Win – Glow Giveaway | Cosmedocs</title>
-        <meta name="description" content="Spin our luxury prize wheel for a chance to win premium aesthetic treatments including HydraFacials, microneedling, laser treatments and more at Cosmedocs." />
+        <meta name="description" content="Click to reveal your free Cosmedocs gift! Win premium aesthetic treatments including HydraFacials, microneedling, laser treatments and more." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted">
