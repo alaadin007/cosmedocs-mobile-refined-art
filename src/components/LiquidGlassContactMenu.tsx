@@ -118,7 +118,7 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
             animate={{ opacity: 1, scale: 1, rotateX: 0 }}
             exit={{ opacity: 0, scale: 0.8, rotateX: 15 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative w-full max-w-7xl h-[98vh] md:h-[88vh] overflow-hidden"
+            className="relative w-full max-w-7xl h-[85vh] md:h-[88vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Glass background */}
@@ -149,10 +149,10 @@ export default function LiquidGlassContactMenu({ isOpen, onClose, groups }: Liqu
               </div>
 
               {/* Main Content Grid - Left navigation, Right treatments taking 3/4 */}
-              <div className="grid lg:grid-cols-4 gap-2 md:gap-4 flex-1 min-h-0">
+              <div className="grid lg:grid-cols-4 gap-2 md:gap-4 flex-1 min-h-0 overflow-hidden">
                 {/* Left Column: Compact Navigation, Contact & Social - Scrollable on mobile */}
-                <div className="flex flex-col min-h-0">
-                  <div className="space-y-1 overflow-y-auto flex-1 pr-1">
+                <div className="flex flex-col min-h-0 overflow-hidden">
+                  <div className="space-y-1 overflow-y-auto flex-1 pr-1 max-h-full">
                     {/* Combined Navigate & Get in Touch Section */}
                     {(navigateGroup || contactGroup) && (
                       <motion.div
