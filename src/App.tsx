@@ -123,6 +123,7 @@ const AestheticTreatmentsMadeEasy = lazy(() => import("./pages/AestheticTreatmen
 const UntraceablyYouCampaign = lazy(() => import("./pages/UntraceablyYouCampaign"));
 const CampaignAds = lazy(() => import("./pages/CampaignAds"));
 const LondonTweakmentsNaturalAesthetics = lazy(() => import("./pages/LondonTweakmentsNaturalAesthetics"));
+const SpinToWin = lazy(() => import("./pages/SpinToWin"));
 
 // Loading component
 const PageLoader = () => (
@@ -298,6 +299,7 @@ const App = () => {
               {/* Campaign Routes */}
               <Route path="/untraceably-you" element={<UntraceablyYouCampaign />} />
               <Route path="/ads" element={<CampaignAds />} />
+              <Route path="/spin-to-win" element={<SpinToWin />} />
               
               <Route path="/experimental-treatment" element={<ExperimentalTreatment />} />
               <Route path="/admin/video-upload" element={<VideoUpload />} />
