@@ -340,12 +340,12 @@ const CosmetalkBlog = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {researchArticles.map((article, idx) => (
                 <Link key={idx} to={article.slug} className="group">
-                  <Card className="h-full hover:shadow-lg transition-shadow bg-white">
+                  <Card className="h-full hover:shadow-lg transition-shadow bg-white text-gray-900">
                     <CardHeader className="p-6">
                       <Badge className="mb-3 w-fit bg-blue-100 text-blue-700 uppercase text-xs">
                         {article.category}
                       </Badge>
-                      <CardTitle className="text-lg mb-3 group-hover:text-blue-600 transition-colors">
+                      <CardTitle className="text-lg mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
                         {article.title}
                       </CardTitle>
                       <p className="text-gray-600 text-sm mb-4 line-clamp-3">
