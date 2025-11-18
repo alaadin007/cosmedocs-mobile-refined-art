@@ -17,3 +17,6 @@ verify_jwt = true
 
 [functions.ai-knowledge-chat]
 verify_jwt = false
+
+[functions.spin-to-win]
+verify_jwt = false

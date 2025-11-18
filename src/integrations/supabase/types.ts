@@ -617,6 +617,42 @@ export type Database = {
           },
         ]
       }
+      spin_winners: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          name: string
+          phone: string
+          postcode: string
+          prize: string
+          prize_code: string
+          redeemed: boolean
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          phone: string
+          postcode: string
+          prize: string
+          prize_code: string
+          redeemed?: boolean
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          phone?: string
+          postcode?: string
+          prize?: string
+          prize_code?: string
+          redeemed?: boolean
+        }
+        Relationships: []
+      }
       treatment_images: {
         Row: {
           created_at: string
