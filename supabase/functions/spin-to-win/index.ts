@@ -65,21 +65,21 @@ serve(async (req) => {
       Deno.env.get('SUPABASE_ANON_KEY') ?? ''
     );
 
-    const { email, phone, name, postcode } = await req.json();
+    const { email, name, phone, postcode } = await req.json();
 
-    // Validate input
-    if (!email || !phone || !name || !postcode) {
+    // Validate required fields
+    if (!email || !name) {
       return new Response(
-        JSON.stringify({ error: 'All fields are required' }),
+        JSON.stringify({ error: 'Missing required fields: email, name' }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
-    // Check if user has already played (by email OR phone)
+    // Check if user has already played (by email)
     const { data: existingEntry } = await supabase
       .from('spin_winners')
       .select('*')
-      .or(`email.eq.${email},phone.eq.${phone}`)
+      .eq('email', email)
       .single();
 
     if (existingEntry) {
@@ -149,8 +149,8 @@ serve(async (req) => {
       .insert({
         name,
         email,
-        phone,
-        postcode,
+        phone: phone || '',
+        postcode: postcode || '',
         prize: finalPrizeName,
         prize_code: prizeCode,
       })

@@ -1,23 +1,37 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { SpinWheel } from "@/components/SpinWheel";
-import { SpinForm } from "@/components/SpinForm";
+import { PrizeReveal } from "@/components/PrizeReveal";
 import { WinnerDisplay } from "@/components/WinnerDisplay";
 import { Gift, Sparkles, Award } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const SpinToWin = () => {
-  const [gameState, setGameState] = useState<'form' | 'spin' | 'winner'>('form');
-  const [userDetails, setUserDetails] = useState<any>(null);
+  const [gameState, setGameState] = useState<'reveal' | 'processing' | 'winner'>('reveal');
   const [prizeResult, setPrizeResult] = useState<any>(null);
+  const { toast } = useToast();
 
-  const handleFormSubmit = (details: any) => {
-    setUserDetails(details);
-    setGameState('spin');
-  };
+  const handleRevealComplete = async (userDetails: { name: string; email: string }) => {
+    setGameState('processing');
 
-  const handleSpinComplete = (result: any) => {
-    setPrizeResult(result);
-    setGameState('winner');
+    try {
+      const { data, error } = await supabase.functions.invoke('spin-to-win', {
+        body: userDetails
+      });
+
+      if (error) throw error;
+
+      setPrizeResult(data);
+      setGameState('winner');
+    } catch (error: any) {
+      console.error('Prize error:', error);
+      toast({
+        title: "Error",
+        description: error.message || "Failed to process your entry. Please try again.",
+        variant: "destructive"
+      });
+      setGameState('reveal');
+    }
   };
 
   return (
@@ -83,15 +97,15 @@ const SpinToWin = () => {
 
             {/* Main Game Area */}
             <div className="max-w-5xl mx-auto">
-              {gameState === 'form' && (
-                <SpinForm onSubmit={handleFormSubmit} />
+              {gameState === 'reveal' && (
+                <PrizeReveal onComplete={handleRevealComplete} />
               )}
               
-              {gameState === 'spin' && userDetails && (
-                <SpinWheel 
-                  userDetails={userDetails} 
-                  onComplete={handleSpinComplete}
-                />
+              {gameState === 'processing' && (
+                <div className="text-center py-20">
+                  <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-primary border-t-transparent mb-4" />
+                  <p className="text-xl text-muted-foreground">Processing your entry...</p>
+                </div>
               )}
               
               {gameState === 'winner' && prizeResult && (
