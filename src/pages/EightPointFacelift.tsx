@@ -1322,13 +1322,20 @@ export default function EightPointFacelift() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs?</h2>
-              <p className="text-gray-300 mb-8">Open Monday-Friday, 9am-6pm • 10 Harley Street, London W1G 9PF</p>
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <Award className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Excellence in Aesthetics</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4 text-white">Why Choose Cosmedocs for Your 8 Point Face Lift?</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Harley Street's leading aesthetic clinic combining expertise, safety, and natural results
+              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            {/* Credentials Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1407,6 +1414,103 @@ export default function EightPointFacelift() {
                 <h3 className="text-lg font-semibold text-white mb-2">Aftercare</h3>
                 <p className="text-gray-300">Comprehensive aftercare and follow-up</p>
               </motion.div>
+            </div>
+
+            {/* Meet Our Specialist */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <GraduationCap className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Expert Care</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Meet Our Specialist</h3>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Your treatment will be performed by highly qualified, GMC-registered practitioners
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto mb-16">
+              {teamMembers.map((member, index) => {
+                const Icon = member.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="bg-accent border-purple-500/20">
+                      <CardContent className="p-8">
+                        <div className="flex items-start gap-6">
+                          <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0">
+                            <Icon className="text-purple-300" size={32} />
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-2xl font-bold text-white mb-2">{member.name}</h4>
+                            <p className="text-purple-300 font-semibold mb-2">{member.role}</p>
+                            <p className="text-sm text-gray-400 mb-4">{member.credentials}</p>
+                            <p className="text-gray-300">{member.description}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Clinic Location */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <MapPin className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Visit Us</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Our Clinic Location</h3>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Located in the heart of London's medical district on prestigious Harley Street
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto">
+              {clinicLocations.map((location, index) => {
+                const Icon = location.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="bg-accent border-purple-500/20">
+                      <CardContent className="p-8">
+                        <div className="flex items-start gap-6">
+                          <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <Icon className="text-purple-300" size={24} />
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-xl font-bold text-white mb-2">{location.name}</h4>
+                            <p className="text-gray-300 mb-2">{location.address}</p>
+                            <p className="text-purple-300 font-semibold">{location.hours}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -1600,111 +1704,6 @@ export default function EightPointFacelift() {
                   </Card>
                 </motion.div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Meet the Team Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
-                <GraduationCap className="text-purple-400" size={20} />
-                <span className="text-purple-300 font-semibold">Expert Care</span>
-              </div>
-              <h2 className="text-3xl font-bold text-white mb-4">Meet Our Specialist</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Your treatment will be performed by highly qualified, GMC-registered practitioners with extensive experience
-              </p>
-            </motion.div>
-
-            <div className="max-w-2xl mx-auto">
-              {teamMembers.map((member, index) => {
-                const Icon = member.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="bg-black border-purple-500/20">
-                      <CardContent className="p-8">
-                        <div className="flex items-start gap-6">
-                          <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0">
-                            <Icon className="text-purple-300" size={32} />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                            <p className="text-purple-300 font-semibold mb-2">{member.role}</p>
-                            <p className="text-sm text-gray-400 mb-4">{member.credentials}</p>
-                            <p className="text-gray-300">{member.description}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Clinic Locations Section */}
-        <section className="py-20 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
-                <MapPin className="text-purple-400" size={20} />
-                <span className="text-purple-300 font-semibold">Visit Us</span>
-              </div>
-              <h2 className="text-3xl font-bold text-white mb-4">Our Clinic Location</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Located in the heart of London's medical district on prestigious Harley Street
-              </p>
-            </motion.div>
-
-            <div className="max-w-2xl mx-auto">
-              {clinicLocations.map((location, index) => {
-                const Icon = location.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="bg-accent border-purple-500/20">
-                      <CardContent className="p-8">
-                        <div className="flex items-start gap-6">
-                          <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                            <Icon className="text-purple-300" size={24} />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-xl font-bold text-white mb-2">{location.name}</h3>
-                            <p className="text-gray-300 mb-2">{location.address}</p>
-                            <p className="text-purple-300 font-semibold">{location.hours}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                );
-              })}
             </div>
           </div>
         </section>
