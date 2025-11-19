@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle, Diamond, Eye, Smile, Gem, Droplets, Sparkles, Award, GraduationCap, MapPin } from 'lucide-react';
+import { Clock, Shield, Calendar, Activity, Heart, Users, CheckCircle, Diamond, Eye, Smile, Gem, Droplets, Sparkles, Award, GraduationCap, MapPin, Play, Star, TrendingUp, Syringe } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -358,6 +358,90 @@ export default function EightPointFacelift() {
     "Customized to your needs"
   ];
 
+  const atAGlanceData = [
+    { label: "Treatment Time", value: "10-25 minutes", icon: Clock },
+    { label: "Results", value: "Immediate", icon: Star },
+    { label: "Duration", value: "12-18 months", icon: Calendar },
+    { label: "Downtime", value: "None", icon: Activity }
+  ];
+
+  const videoData = {
+    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "8 Point Facelift Explained - Non-Surgical Face Lift",
+    description: "Watch as Dr. Ahmed Haq explains the 8 Point Face Lift procedure and what to expect from this transformative non-surgical treatment."
+  };
+
+  const relatedTreatments = [
+    {
+      name: "Dermal Fillers",
+      description: "Restore volume and smooth wrinkles",
+      price: "From £250",
+      link: "/dermal-fillers"
+    },
+    {
+      name: "Thread Face Lift",
+      description: "PDO threads for lifting and tightening",
+      price: "From £800",
+      link: "/thread-face-lift"
+    },
+    {
+      name: "Profhilo",
+      description: "Bio-remodelling for skin quality",
+      price: "From £450",
+      link: "/profhilo"
+    },
+    {
+      name: "Botox",
+      description: "Smooth dynamic lines and wrinkles",
+      price: "From £150",
+      link: "/botox"
+    }
+  ];
+
+  const clinicLocations = [
+    {
+      name: "Harley Street, London",
+      address: "10 Harley Street, London W1G 9PF",
+      hours: "Mon-Fri: 9am-6pm",
+      icon: MapPin
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: "Dr. Ahmed Haq",
+      role: "Aesthetic Medicine Specialist",
+      credentials: "GMC Registered • 15+ Years Experience",
+      description: "Leading expert in facial aesthetics with over 1 million injections performed. Trainer at Harley Street Institute.",
+      icon: Award
+    }
+  ];
+
+  const additionalFaqData = [
+    {
+      question: "Does the 8 Point Face Lift Hurt?",
+      answer: "The treatment uses local anaesthetic to ensure comfort throughout the procedure. Most patients report minimal discomfort, describing only a slight pinching sensation during injection. Any tenderness typically resolves within 24-48 hours."
+    },
+    {
+      question: "Is This Treatment Safe?",
+      answer: "Yes, the 8 Point Face Lift is extremely safe when performed by qualified practitioners. We use only FDA-approved dermal fillers with an excellent safety profile. Our doctors are GMC registered and have performed over 1 million aesthetic injections."
+    },
+    {
+      question: "What Should I Do After Treatment?",
+      answer: "Avoid touching or massaging the treated areas for 24 hours. Stay upright for 4 hours post-treatment and avoid strenuous exercise for 24-48 hours. Avoid alcohol, excessive heat (saunas, sunbeds) and dental work for 2 weeks. Apply ice if needed to reduce swelling."
+    },
+    {
+      question: "How Long Until I See Results?",
+      answer: "Results are visible immediately after treatment. However, the full effect becomes apparent after 2-3 weeks once any minor swelling subsides. The dermal fillers continue to integrate and settle, with optimal results visible at the 2-week mark."
+    },
+    {
+      question: "Can I Combine This with Other Treatments?",
+      answer: "Yes, the 8 Point Face Lift can be combined with other treatments like Botox, skin boosters, or laser treatments for comprehensive facial rejuvenation. We'll create a personalised treatment plan during your consultation."
+    }
+  ];
+
+  const combinedFaqData = [...faqData, ...additionalFaqData];
+
   return (
     <>
       <Helmet>
@@ -415,7 +499,7 @@ export default function EightPointFacelift() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
+            "mainEntity": combinedFaqData.map(faq => ({
               "@type": "Question",
               "name": faq.question,
               "acceptedAnswer": {
@@ -455,11 +539,12 @@ export default function EightPointFacelift() {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
                   <span className="text-purple-300">8 Point Face Lift London</span>
-                  <span className="block text-sm mt-4">Invisible art - natural facial rejuvenation that speaks without words</span>
+                  <span className="block text-3xl mt-4 text-white">Non-Surgical Liquid Facelift</span>
+                  <span className="block text-sm mt-4 font-normal">Invisible art - natural facial rejuvenation that speaks without words</span>
                 </h1>
                 <div className="mb-8">
                   <p className="text-2xl text-purple-300 font-bold">Expert Facial Enhancement</p>
-                  <p className="text-sm text-gray-300">Non-surgical facelift using dermal fillers at 8 strategic points for natural transformation</p>
+                  <p className="text-lg text-gray-300">Non-surgical facelift using premium dermal fillers at 8 strategic points for natural, youthful transformation</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -559,6 +644,161 @@ export default function EightPointFacelift() {
           </div>
         </section>
 
+        {/* At a Glance Section */}
+        <section className="py-16 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <Star className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">At a Glance</span>
+              </div>
+              <h2 className="text-3xl font-bold text-white">Liquid Facelift • Non-Surgical Face Lift</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {atAGlanceData.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-accent p-6 rounded-xl text-center border border-purple-500/20"
+                  >
+                    <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                      <Icon className="text-purple-300" size={20} />
+                    </div>
+                    <p className="text-sm text-gray-400 mb-1">{item.label}</p>
+                    <p className="text-lg font-semibold text-white">{item.value}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-8"
+            >
+              <div className="inline-flex items-center gap-2 bg-green-500/10 px-6 py-3 rounded-full">
+                <CheckCircle className="text-green-400" size={20} />
+                <span className="text-green-300 font-semibold">Visible Results After One Treatment</span>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <Play className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Watch & Learn</span>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">{videoData.title}</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">{videoData.description}</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl border-2 border-purple-500/20">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={videoData.embedUrl}
+                  title={videoData.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* How It Works - Mechanism Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <Syringe className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Science Behind the Treatment</span>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">How Does the 8 Point Liquid Facelift Work?</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-accent p-8 rounded-xl border border-purple-500/20"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">The Power of Hyaluronic Acid Dermal Fillers</h3>
+                <div className="space-y-4 text-gray-300">
+                  <p>
+                    The 8 Point Face Lift uses premium hyaluronic acid dermal fillers strategically injected at eight key points on the face. 
+                    Hyaluronic acid is a naturally occurring substance in your skin that provides hydration, volume, and structure.
+                  </p>
+                  <p>
+                    As we age, we lose natural hyaluronic acid, collagen, and facial fat, leading to volume loss, sagging, and the appearance of lines and wrinkles. 
+                    This non-surgical facelift treatment works by:
+                  </p>
+                  <ul className="space-y-3 ml-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-white">Restoring Volume:</strong> Replenishing lost facial volume in areas such as the cheeks, temples, and jawline</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-white">Lifting & Contouring:</strong> Creating a natural lifting effect by strategically placing filler to support facial structures</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-white">Hydrating Skin:</strong> Hyaluronic acid attracts and retains moisture, improving skin quality and texture</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-white">Stimulating Collagen:</strong> Encouraging natural collagen production for longer-term skin improvement</span>
+                    </li>
+                  </ul>
+                  <p className="pt-4">
+                    The result is a natural, refreshed appearance that looks like you - just more rested, youthful, and rejuvenated. 
+                    The treatment is completely reversible and biocompatible, making it one of the safest aesthetic procedures available.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Before & After Gallery */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -617,13 +857,76 @@ export default function EightPointFacelift() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                What is 8 Point Face Lift?
+                What is the 8 Point Face Lift?
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                The 8 point face lift treatment is designed to restore lost volume and lift the face. 
-                This non-surgical facelift treatment is also called 'liquid facelift treatment' because dermal fillers are used 
-                strategically to give volume to the face and create a lifting impact for a completely rejuvenated appearance.
-              </p>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-4 text-left">
+                <p>
+                  The 8 Point Face Lift, also known as a <strong>liquid facelift</strong> or <strong>non-surgical facelift</strong>, is a revolutionary treatment that uses premium dermal fillers strategically injected at eight key points on the face to restore lost volume, lift sagging skin, and create a naturally youthful appearance.
+                </p>
+                <p>
+                  Unlike traditional surgical facelifts, this minimally invasive procedure offers immediate results with virtually no downtime, making it the perfect solution for those seeking facial rejuvenation without surgery.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <h3 className="text-2xl font-bold mb-6">What Can the 8 Point Liquid Facelift Help With?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div className="bg-black p-6 rounded-xl border border-purple-500/20">
+                  <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    Volume Loss & Sagging
+                  </h4>
+                  <ul className="space-y-2 text-gray-300 text-sm ml-7">
+                    <li>• Hollow cheeks and temples</li>
+                    <li>• Jowls and loss of jawline definition</li>
+                    <li>• Sagging mid-face and lower face</li>
+                    <li>• Loss of facial volume due to ageing</li>
+                  </ul>
+                </div>
+                <div className="bg-black p-6 rounded-xl border border-purple-500/20">
+                  <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    Lines & Wrinkles
+                  </h4>
+                  <ul className="space-y-2 text-gray-300 text-sm ml-7">
+                    <li>• Nasolabial folds (nose to mouth lines)</li>
+                    <li>• Marionette lines (mouth to chin)</li>
+                    <li>• Tear troughs and under-eye hollows</li>
+                    <li>• Static facial lines and creases</li>
+                  </ul>
+                </div>
+                <div className="bg-black p-6 rounded-xl border border-purple-500/20">
+                  <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    Facial Contours
+                  </h4>
+                  <ul className="space-y-2 text-gray-300 text-sm ml-7">
+                    <li>• Undefined or weak chin</li>
+                    <li>• Lack of cheekbone definition</li>
+                    <li>• Loss of facial symmetry</li>
+                    <li>• Downturned mouth corners</li>
+                  </ul>
+                </div>
+                <div className="bg-black p-6 rounded-xl border border-purple-500/20">
+                  <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                    <CheckCircle className="text-purple-400" size={20} />
+                    Overall Ageing Signs
+                  </h4>
+                  <ul className="space-y-2 text-gray-300 text-sm ml-7">
+                    <li>• Tired, aged appearance</li>
+                    <li>• Loss of youthful facial proportions</li>
+                    <li>• Deflated or sunken appearance</li>
+                    <li>• Desire for natural refreshment</li>
+                  </ul>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -1189,7 +1492,7 @@ export default function EightPointFacelift() {
               viewport={{ once: true }}
             >
               <Accordion type="single" collapsible className="w-full space-y-4">
-                {faqData.map((faq, index) => (
+                {combinedFaqData.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border border-primary/20 rounded-lg px-6">
                     <AccordionTrigger className="text-left hover:text-primary">
                       {faq.question}
@@ -1241,6 +1544,194 @@ export default function EightPointFacelift() {
                   onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
                 >
                   Book Free Consultation
+                </Button>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
+                  Call 0207 435 7521
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Related Treatments Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <TrendingUp className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Explore More</span>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">Related Treatments</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Combine the 8 Point Face Lift with these complementary treatments for optimal results
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {relatedTreatments.map((treatment, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-accent border-purple-500/20 hover:border-purple-500/40 transition-all h-full">
+                    <CardHeader>
+                      <CardTitle className="text-white">{treatment.name}</CardTitle>
+                      <CardDescription className="text-gray-300">{treatment.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-purple-300 font-semibold mb-4">{treatment.price}</p>
+                      <Button
+                        variant="outline"
+                        className="w-full border-purple-500/50 text-purple-300 hover:bg-purple-500/20"
+                        onClick={() => window.location.href = treatment.link}
+                      >
+                        Learn More
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Meet the Team Section */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <GraduationCap className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Expert Care</span>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">Meet Our Specialist</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Your treatment will be performed by highly qualified, GMC-registered practitioners with extensive experience
+              </p>
+            </motion.div>
+
+            <div className="max-w-2xl mx-auto">
+              {teamMembers.map((member, index) => {
+                const Icon = member.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="bg-black border-purple-500/20">
+                      <CardContent className="p-8">
+                        <div className="flex items-start gap-6">
+                          <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0">
+                            <Icon className="text-purple-300" size={32} />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
+                            <p className="text-purple-300 font-semibold mb-2">{member.role}</p>
+                            <p className="text-sm text-gray-400 mb-4">{member.credentials}</p>
+                            <p className="text-gray-300">{member.description}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Clinic Locations Section */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
+                <MapPin className="text-purple-400" size={20} />
+                <span className="text-purple-300 font-semibold">Visit Us</span>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">Our Clinic Location</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Located in the heart of London's medical district on prestigious Harley Street
+              </p>
+            </motion.div>
+
+            <div className="max-w-2xl mx-auto">
+              {clinicLocations.map((location, index) => {
+                const Icon = location.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="bg-accent border-purple-500/20">
+                      <CardContent className="p-8">
+                        <div className="flex items-start gap-6">
+                          <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <Icon className="text-purple-300" size={24} />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-xl font-bold text-white mb-2">{location.name}</h3>
+                            <p className="text-gray-300 mb-2">{location.address}</p>
+                            <p className="text-purple-300 font-semibold">{location.hours}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center max-w-3xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready for Your 8 Point Face Lift Transformation?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Book your consultation today and discover how our non-surgical liquid facelift can help you achieve natural, 
+                beautiful results
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
+                >
+                  Book Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
                   Call 0207 435 7521
