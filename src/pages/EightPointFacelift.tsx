@@ -1610,37 +1610,6 @@ export default function EightPointFacelift() {
           </div>
         </section>
 
-        {/* Final CTA Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready for Your 8 Point Face Lift Transformation?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Book your consultation today and discover how our non-surgical liquid facelift can help you achieve natural, 
-                beautiful results
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  onClick={() => window.open("https://med.as.me/harleystreet", "_blank")}
-                  className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold shadow-2xl"
-                >
-                  Book Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6">
-                  Call 0207 435 7521
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Hidden SEO Content */}
         <div className="sr-only">
