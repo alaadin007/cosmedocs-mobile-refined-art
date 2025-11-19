@@ -638,60 +638,6 @@ export default function EightPointFacelift() {
           </div>
         </section>
 
-        {/* At a Glance Section */}
-        <section className="py-16 bg-black">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
-                <Star className="text-purple-400" size={20} />
-                <span className="text-purple-300 font-semibold">At a Glance</span>
-              </div>
-              <h2 className="text-3xl font-bold text-white">Liquid Facelift • Non-Surgical Face Lift</h2>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {atAGlanceData.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-accent p-6 rounded-xl text-center border border-purple-500/20"
-                  >
-                    <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                      <Icon className="text-purple-300" size={20} />
-                    </div>
-                    <p className="text-sm text-gray-400 mb-1">{item.label}</p>
-                    <p className="text-lg font-semibold text-white">{item.value}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-8"
-            >
-              <div className="inline-flex items-center gap-2 bg-green-500/10 px-6 py-3 rounded-full">
-                <CheckCircle className="text-green-400" size={20} />
-                <span className="text-green-300 font-semibold">Visible Results After One Treatment</span>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* How It Works - Mechanism Section */}
         <section className="py-20 bg-black">
           <div className="page-container">
