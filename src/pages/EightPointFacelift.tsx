@@ -365,12 +365,6 @@ export default function EightPointFacelift() {
     { label: "Downtime", value: "None", icon: Activity }
   ];
 
-  const videoData = {
-    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    title: "8 Point Facelift Explained - Non-Surgical Face Lift",
-    description: "Watch as Dr. Ahmed Haq explains the 8 Point Face Lift procedure and what to expect from this transformative non-surgical treatment."
-  };
-
   const relatedTreatments = [
     {
       name: "Dermal Fillers",
@@ -693,44 +687,6 @@ export default function EightPointFacelift() {
               <div className="inline-flex items-center gap-2 bg-green-500/10 px-6 py-3 rounded-full">
                 <CheckCircle className="text-green-400" size={20} />
                 <span className="text-green-300 font-semibold">Visible Results After One Treatment</span>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Video Section */}
-        <section className="py-20 bg-accent">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <div className="inline-flex items-center gap-2 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
-                <Play className="text-purple-400" size={20} />
-                <span className="text-purple-300 font-semibold">Watch & Learn</span>
-              </div>
-              <h2 className="text-3xl font-bold text-white mb-4">{videoData.title}</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">{videoData.description}</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl border-2 border-purple-500/20">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src={videoData.embedUrl}
-                  title={videoData.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
               </div>
             </motion.div>
           </div>
