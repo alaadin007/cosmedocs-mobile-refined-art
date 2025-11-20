@@ -56,6 +56,22 @@ const DermalFillerMakeover = () => {
       answer: "Hyaluronic acid (HA) is a naturally occurring substance found in your skin, joints, and eyes. It's a powerful humectant that can hold up to 1,000 times its weight in water, making it exceptional for maintaining skin hydration and volume. In dermal fillers, HA provides natural-looking results because it integrates seamlessly with your body's existing hyaluronic acid. This biocompatible substance adds volume, smooths wrinkles, and enhances facial contours while maintaining a natural feel and appearance."
     },
     {
+      question: "Am I suitable for dermal fillers?",
+      answer: "Most adults over 18 in good general health are suitable for dermal fillers. Ideal candidates are those looking to restore volume, smooth wrinkles, or enhance facial features without surgery. However, dermal fillers may not be suitable if you're pregnant or breastfeeding, have active skin infections, severe allergies, or certain autoimmune conditions. During your consultation, our practitioners will assess your medical history, skin condition, and aesthetic goals to determine if dermal fillers are right for you."
+    },
+    {
+      question: "Do dermal fillers hurt?",
+      answer: "Most patients experience minimal discomfort during dermal filler treatments. We use ultra-fine needles and many modern fillers contain lidocaine (a local anaesthetic) to enhance comfort during injection. Additionally, topical numbing cream can be applied before treatment. Most patients describe the sensation as a slight pressure or pinching. The treatment typically takes 15-30 minutes, and any discomfort is brief and manageable."
+    },
+    {
+      question: "What brands of dermal fillers do you use?",
+      answer: "At Cosmedocs, we exclusively use premium, FDA-approved dermal filler brands including Juvéderm, Restylane, and Teosyal. These are all hyaluronic acid-based fillers renowned for their safety profile, natural results, and longevity. Each brand offers different formulations designed for specific treatment areas and outcomes. During your consultation, your practitioner will recommend the most appropriate product based on your individual needs and desired results."
+    },
+    {
+      question: "Are dermal fillers FDA approved and safe?",
+      answer: "Yes, all dermal fillers used at Cosmedocs are FDA-approved and have undergone rigorous safety testing. Hyaluronic acid fillers have an excellent safety record with millions of treatments performed worldwide annually. As a naturally occurring substance in the body, hyaluronic acid has minimal risk of allergic reactions. Additionally, hyaluronic acid fillers can be dissolved with hyaluronidase if needed, providing an extra safety measure. Our experienced practitioners follow strict safety protocols to minimise risks and ensure optimal outcomes."
+    },
+    {
       question: "How does hyaluronic acid leave the body naturally?",
       answer: "Hyaluronic acid is completely biodegradable and leaves the body through natural metabolic processes. Your body's enzymes, particularly hyaluronidase, gradually break down the HA molecules over time. The broken-down components are then naturally absorbed and eliminated through your lymphatic system and kidneys. This process typically takes 12-18 months, which is why dermal filler results are temporary and require maintenance treatments. The gradual breakdown ensures a natural fade without sudden changes to your appearance."
     },
@@ -299,9 +315,13 @@ const DermalFillerMakeover = () => {
                 { area: "Jawline Definition", description: "Create sharp, masculine or feminine jawline definition with strategic placement", link: "/jawline-filler" },
                 { area: "Tear Trough", description: "Reduce under-eye hollowing and dark circles for a refreshed, rested look", link: "/tear-trough-filler" },
                 { area: "Lip Enhancement", description: "Add volume, shape, and definition to lips for natural or dramatic results", link: "/lip-fillers" },
+                { area: "Lip Lines (Perioral Lines)", description: "Smooth vertical lines around the mouth for a more youthful appearance", link: "/lip-fillers" },
                 { area: "Temple Hollowing", description: "Restore temple volume lost with aging for improved facial proportions", link: "/temple-filler-london" },
                 { area: "Non-Surgical Nose Job", description: "Reshape and refine nose contours without surgery for immediate results", link: "/non-surgical-nose-job" },
-                { area: "Forehead Enhancement", description: "Smooth bumps and irregularities for an even, youthful forehead surface", link: "/forehead-fillers" }
+                { area: "Chin Augmentation", description: "Enhance chin projection and balance facial proportions for improved profile", link: "/chin-filler" },
+                { area: "Forehead Enhancement", description: "Smooth bumps and irregularities for an even, youthful forehead surface", link: "/forehead-fillers" },
+                { area: "Hand Rejuvenation", description: "Restore volume to hands, minimising veins and tendons for a youthful appearance", link: "/dermal-fillers" },
+                { area: "Neck & Décolletage", description: "Smooth necklines and chest wrinkles for comprehensive facial rejuvenation", link: "/dermal-fillers" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -642,6 +662,110 @@ const DermalFillerMakeover = () => {
                 can recommend the best approach for your specific aesthetic goals during consultation.
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Aftercare Instructions */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Dermal Filler Aftercare Guide</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Following proper aftercare ensures optimal results and minimises potential side effects
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-gray-700 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <CheckCircle className="text-green-400 mr-2" size={24} />
+                      Do's After Treatment
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Apply ice packs for 10-15 minutes to reduce swelling</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Sleep with head elevated for the first 24-48 hours</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Drink plenty of water to support hyaluronic acid hydration</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Take arnica supplements to minimise bruising</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Use gentle, fragrance-free skincare products</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Contact clinic immediately if severe pain or unusual symptoms occur</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-black/50 border-gray-700 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white text-xl flex items-center">
+                      <Shield className="text-red-400 mr-2" size={24} />
+                      Don'ts After Treatment
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Avoid touching or massaging treated areas for 24 hours</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">No strenuous exercise or heavy lifting for 24-48 hours</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Avoid alcohol for 24 hours as it increases bruising risk</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">No facial treatments, peels, or lasers for 2 weeks</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Avoid extreme temperatures (saunas, steam rooms) for 48 hours</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0"></div>
+                      <p className="text-gray-300">Don't wear makeup on treated areas for at least 12 hours</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
           </div>
         </section>
 
