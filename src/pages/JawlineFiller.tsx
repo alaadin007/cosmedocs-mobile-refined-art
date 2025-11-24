@@ -549,7 +549,7 @@ const JawlineFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-12 max-w-4xl mx-auto"
             >
-              <h2 className="text-4xl font-bold mb-6">What Is Jawline Filler?</h2>
+              <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
                 The treatment involves injecting <strong>hyaluronic acid (HA)-based dermal fillers</strong> to enhance structure, 
@@ -651,7 +651,7 @@ const JawlineFiller = () => {
               className="max-w-4xl mx-auto"
             >
               <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-10 border border-purple-500/30 text-center">
-                <h3 className="text-3xl font-bold mb-6 text-white">The Golden Ratio Face</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-white">The Golden Ratio Face</h3>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                   Aesthetic experts at Cosmedocs often use the <strong className="text-purple-300">"Golden Ratio" (1:1.618)</strong> to create facial harmony. 
                   This means the distance from the centre of your lips to your chin should be about 1.618 times 
@@ -801,7 +801,7 @@ const JawlineFiller = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">1ml vs 2ml Jawline Filler</h2>
+              <h2 className="text-3xl font-bold mb-6 text-white">1ml vs 2ml Jawline Filler</h2>
               <p className="text-gray-300 max-w-3xl mx-auto text-lg">
                 Choose the perfect volume for your desired transformation. From subtle enhancement to dramatic sculpting.
               </p>
@@ -820,7 +820,7 @@ const JawlineFiller = () => {
                   <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-full inline-block mb-4">
                     <span className="text-2xl font-bold">1ml Jawline Filler</span>
                   </div>
-                  <h3 className="text-xl text-purple-300 mb-6">Subtle Enhancement</h3>
+                  <h3 className="text-xl font-semibold text-purple-300 mb-6">Subtle Enhancement</h3>
                 </div>
                 
                 <div className="relative">
@@ -847,7 +847,7 @@ const JawlineFiller = () => {
                   <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-full inline-block mb-4">
                     <span className="text-2xl font-bold">2ml Jawline Filler</span>
                   </div>
-                  <h3 className="text-xl text-purple-300 mb-6">Dramatic Transformation</h3>
+                  <h3 className="text-xl font-semibold text-purple-300 mb-6">Dramatic Transformation</h3>
                 </div>
                 
                 <div className="relative">
