@@ -1251,48 +1251,6 @@ const JawlineFiller = () => {
           </div>
         </section>
 
-        {/* Additional Information - Now Visible in Accordion */}
-        <section className="py-20 bg-accent">
-          <div className="page-container max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-white">Additional Information</h2>
-              <p className="text-gray-300">
-                Comprehensive details about jawline filler treatments at Cosmedocs
-              </p>
-            </motion.div>
-
-            <Collapsible className="bg-black rounded-lg border border-gray-800">
-              <CollapsibleTrigger className="flex justify-between items-center w-full px-6 py-4 text-left hover:bg-gray-900 rounded-lg">
-                <span className="text-white font-semibold text-lg">Understanding Jawline Filler Treatments</span>
-                <ChevronDown className="h-5 w-5 text-gray-400 transition-transform" />
-              </CollapsibleTrigger>
-              <CollapsibleContent className="px-6 pb-6 space-y-4 text-gray-300">
-                <p>
-                  Jawline filler London treatments at Cosmedocs Harley Street offer the perfect solution for creating a jaw-dropping jawline. Our 1ml jawline filler costs £350 while 2ml jawline filler costs £650, with our Natural HD Package at £950 combining premium dermal fillers with Dr. Ahmed Haq's advanced jawline injections techniques. Jaw filler before and after results show dramatic improvements lasting 15-18 months.
-                </p>
-                <p>
-                  Before and after jaw filler galleries showcase incredible transformations using 1ml jawline filler before and after comparisons and 2ml jawline filler results. Our jawline treatment enhances facial structure for chubby face 1ml jawline filler solutions and dramatic jaw and chin filler combinations. Jawline fillers before and after photos demonstrate natural-looking results at our prestigious Harley Street clinic.
-                </p>
-                <p>
-                  The benefits of choosing jaw fillers include immediate jawline before and after results, minimal downtime, and reversible effects. Filler for jawline treatments allow gradual improvements with chin and jawline filler combinations. Our patients see instant before and after jawline filler results, returning to work the same day with only mild swelling from the jaw line treatment.
-                </p>
-                <p>
-                  Dr. Ahmed Haq specializes in jawline filler for jowls, pre jowl filler, and jowl filler before and after transformations. His expertise in chin shadow filler, chin line filler, and chin crease filler ensures optimal jawline chin filler results. The jawline injections technique creates definition using 1 ml chin filler and comprehensive jaw and chin filler approaches.
-                </p>
-                <p>
-                  What does jaw filler do? It creates structure, reduces double chin filler concerns, and provides stunning jowl fillers before and after results. How long does chin filler last? Our chin and jaw filler treatments typically last 15-18 months. The jaw fillers cost includes comprehensive aftercare, making it an excellent investment with remarkable before and after jowl fillers transformations requiring touch-ups only every 15-18 months.
-                </p>
-              </CollapsibleContent>
-            </Collapsible>
-          </div>
-        </section>
-
         {/* Client Reviews */}
         <ClientReviews />
       </div>
