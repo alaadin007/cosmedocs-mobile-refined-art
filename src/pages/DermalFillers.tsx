@@ -84,14 +84,6 @@ const DermalFillerMakeover = () => {
       answer: "Yes, when performed by qualified medical professionals using FDA-approved hyaluronic acid fillers, dermal filler makeovers are very safe. At Cosmedocs, our expert practitioners have extensive training in facial anatomy and injection techniques. We use only premium, medical-grade fillers and follow strict safety protocols. Side effects are typically minimal and temporary, including slight swelling or bruising that resolves within a few days."
     },
     {
-      question: "What's the difference between dermal fillers and Botox?",
-      answer: "Dermal fillers and Botox work differently to achieve complementary results. Dermal fillers add volume, restore lost facial structure, and enhance contours by filling spaces beneath the skin. Botox relaxes muscles to prevent dynamic wrinkles caused by facial expressions. A comprehensive facial rejuvenation often combines both treatments - fillers for volume restoration and structural enhancement, while Botox addresses expression lines and prevents new wrinkle formation."
-    },
-    {
-      question: "Fillers or Botox - Which is best?",
-      answer: "Dermal fillers are just as effective as Botox, but the results will last much longer than other anti-wrinkle treatments. However, the longevity of the effects of dermal fillers can still vary, mostly by the type of filler. Some fillers may last only as long as Botox (3-4 months), while other types of fillers can last for a year or more. The best choice depends on your specific concerns: fillers for volume loss and structural enhancement, Botox for dynamic wrinkles and expression lines. Many patients benefit from combining both treatments for comprehensive facial rejuvenation."
-    },
-    {
       question: "What is the 8 Point Lift?",
       answer: "The 8 Point Lift is a revolutionary treatment that can give you a youthful-looking glow without invasive cosmetic surgery. This advanced technique involves restoring volume in eight strategic areas of the face, giving lift and support using small amounts of dermal filler. The treatment targets key areas including the cheeks, temples, and jawline to create a natural lifting effect without the discomfort or downtime of a surgical facelift. Results are immediate and can last 12-18 months."
     },
