@@ -13,7 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { generateSEOMetadata } from '@/utils/seo';
-import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check, Activity, Syringe, GraduationCap, Palette, Brain, Droplets, RefreshCw, User, Sparkles } from "lucide-react";
+import { Clock, Users, Award, Calendar, MapPin, Phone, CheckCircle, Star, Eye, Zap, ArrowRight, BookOpen, Target, Shield, Heart, ChevronLeft, ChevronRight, Check, Activity, Syringe, GraduationCap, Palette, Brain, Droplets, RefreshCw, User, Sparkles, AlertTriangle } from "lucide-react";
 import PopularTreatments from '@/components/PopularTreatments';
 import ClientReviews from '@/components/ClientReviews';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -508,7 +508,107 @@ export default function FaceBotox() {
           </div>
         </section>
 
-        {/* Enhanced Pricing Section */}
+        {/* Treatment Administration Process */}
+        <section className="py-20 bg-black">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">How Is Botox Treatment Administered?</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Understanding the treatment process helps ensure you're fully prepared for your Botox appointment at our Harley Street clinic.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card className="bg-gray-900/50 border-purple-500">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+                        <Syringe className="w-6 h-6 text-purple-600" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">Preparation</h3>
+                    </div>
+                    <p className="text-gray-300 mb-4">
+                      Botox comes in vial form containing botulinum toxin in powder form. Your doctor will:
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Dilute the powder by adding sterile saline solution</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Draw up the necessary amount using a fine syringe</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Disinfect your skin thoroughly</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Mark the injection sites for precise placement</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gray-900/50 border-purple-500">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+                        <Target className="w-6 h-6 text-purple-600" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">Injection Process</h3>
+                    </div>
+                    <p className="text-gray-300 mb-4">
+                      Using ultra-fine 'invisible needles', your doctor will:
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Inject controlled amounts directly into targeted muscles</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Use multiple injection points for even distribution</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Apply ice or topical anaesthetic if needed</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                        <span>Complete treatment in 15-30 minutes</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <Card className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500 mt-8">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <Brain className="w-8 h-8 text-purple-300 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3 text-white">Why the Process Matters</h3>
+                      <p className="text-gray-300">
+                        The precision of reconstitution, dilution ratios, and injection technique directly affects your results. 
+                        Our doctors' extensive experience ensures optimal dosage and placement for natural-looking outcomes that 
+                        maintain facial expression whilst effectively reducing wrinkles.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
 
         {/* Before & After Gallery */}
         <section className="py-20 bg-accent">
@@ -881,7 +981,7 @@ export default function FaceBotox() {
 
 
 
-        {/* Medical Botox Applications */}
+        {/* Medical Botox Applications - Expanded */}
         <section className="py-20 bg-accent">
           <div className="page-container">
             <motion.div
@@ -891,21 +991,25 @@ export default function FaceBotox() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">Medical Botox Injections</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Medical Botox Applications</h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Botox isn't just for cosmetic enhancement - it's a proven medical treatment for various conditions.
+                Beyond aesthetics, Botox is an FDA-approved medical treatment for various therapeutic conditions. 
+                Discover how this versatile treatment can improve both appearance and quality of life.
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
+            {/* Overview Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-purple-600" />
+                    <Activity className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/bruxism-botox" className="text-purple-300 underline hover:text-purple-200">Bruxism</Link> & TMJ</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white">
+                    <Link to="/bruxism-botox" className="text-purple-300 underline hover:text-purple-200">Bruxism & TMJ</Link>
+                  </h3>
                   <p className="text-sm text-gray-300">
-                    Effective treatment for jaw pain, teeth grinding, and TMJ disorders.
+                    Effective treatment for jaw pain, teeth grinding, and TMJ disorders
                   </p>
                 </CardContent>
               </Card>
@@ -913,11 +1017,13 @@ export default function FaceBotox() {
               <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-purple-600" />
+                    <Brain className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/migraine-botox" className="text-purple-300 underline hover:text-purple-200">Migraines</Link></h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white">
+                    <Link to="/migraine-botox" className="text-purple-300 underline hover:text-purple-200">Chronic Migraines</Link>
+                  </h3>
                   <p className="text-sm text-gray-300">
-                    FDA-approved treatment for chronic migraines and tension headaches.
+                    FDA-approved treatment for chronic migraines and tension headaches
                   </p>
                 </CardContent>
               </Card>
@@ -925,11 +1031,13 @@ export default function FaceBotox() {
               <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-purple-600" />
+                    <Droplets className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white"><Link to="/excessive-sweat-botox" className="text-purple-300 underline hover:text-purple-200">Hyperhidrosis</Link></h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white">
+                    <Link to="/excessive-sweat-botox" className="text-purple-300 underline hover:text-purple-200">Hyperhidrosis</Link>
+                  </h3>
                   <p className="text-sm text-gray-300">
-                    Effective solution for excessive sweating in underarms, palms, and feet.
+                    Effective solution for excessive sweating in underarms, palms, and feet
                   </p>
                 </CardContent>
               </Card>
@@ -937,12 +1045,274 @@ export default function FaceBotox() {
               <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-purple-600" />
+                    <Heart className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">Facial Asymmetry</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Facial Flushing</h3>
                   <p className="text-sm text-gray-300">
-                    Corrective treatment for conditions like Bell's Palsy and facial imbalances.
+                    Treatment for anxiety-induced blushing and facial redness
                   </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Detailed Medical Explanations */}
+            <div className="max-w-5xl mx-auto space-y-8">
+              {/* Migraines */}
+              <Card className="bg-gradient-to-r from-purple-900/30 to-gray-900/50 border-purple-500">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-2 text-white">Botox for Chronic Migraines</h3>
+                      <p className="text-purple-300 text-sm">FDA-Approved Since 2010</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">How It Works:</h4>
+                      <p className="text-gray-300 text-sm mb-4">
+                        Botox prevents chronic migraines by blocking the release of pain neurotransmitters associated with migraine pain. 
+                        It intercepts pain signals before they reach nerve endings in the head and neck.
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>31-39 injection points around head and neck</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Blocks neurotransmitter release (CGRP, substance P)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Prevents pain signals from reaching brain</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">Treatment Protocol:</h4>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-purple-300 text-xs font-bold">1</span>
+                          </div>
+                          <span>Treatments every 12 weeks for maximum effectiveness</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-purple-300 text-xs font-bold">2</span>
+                          </div>
+                          <span>Results typically seen within 2-4 weeks</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-purple-300 text-xs font-bold">3</span>
+                          </div>
+                          <span>Average 50% reduction in migraine days per month</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-purple-300 text-xs font-bold">4</span>
+                          </div>
+                          <span>Suitable for patients with 15+ headache days per month</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Hyperhidrosis */}
+              <Card className="bg-gradient-to-r from-blue-900/30 to-gray-900/50 border-blue-500">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <Droplets className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-2 text-white">Botox for Excessive Sweating (Hyperhidrosis)</h3>
+                      <p className="text-blue-300 text-sm">Life-Changing Treatment for Confidence</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">How It Works:</h4>
+                      <p className="text-gray-300 text-sm mb-4">
+                        Botox blocks the signals from the brain to the sweat glands, temporarily stopping excessive sweat production. 
+                        This treatment doesn't affect your body's ability to regulate temperature overall.
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span>Blocks acetylcholine release to sweat glands</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span>Prevents gland stimulation without harming glands</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span>Safe and reversible treatment</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">Treatment Areas & Duration:</h4>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <Target className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span><strong>Underarms:</strong> Most common, 15-20 injections per side</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Target className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span><strong>Palms:</strong> Helps with handshakes and daily tasks</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Target className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span><strong>Feet:</strong> Reduces odour and discomfort</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Calendar className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span><strong>Duration:</strong> Effects last 3-6 months, then repeat</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Facial Flushing */}
+              <Card className="bg-gradient-to-r from-pink-900/30 to-gray-900/50 border-pink-500">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-pink-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <Heart className="w-6 h-6 text-pink-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-2 text-white">Botox for Facial Flushing & Blushing</h3>
+                      <p className="text-pink-300 text-sm">Confidence-Restoring Treatment for Social Anxiety</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">How It Works:</h4>
+                      <p className="text-gray-300 text-sm mb-4">
+                        Botox treats facial blushing and flushing by blocking the signals between nerve cells that reach the skin's blood vessels. 
+                        This prevents the involuntary dilation of facial blood vessels that causes redness.
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Blocks nerve signals to facial blood vessels</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Prevents involuntary vessel dilation</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Reduces anxiety-related blushing episodes</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">Life Quality Improvements:</h4>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Significantly reduces social anxiety and embarrassment</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Improves confidence in professional settings</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Treats face, neck, and chest flushing</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Results visible within 2 weeks, lasting 3-6 months</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-pink-900/20 rounded-lg border border-pink-500/30">
+                    <p className="text-sm text-gray-300">
+                      <strong className="text-pink-300">Important:</strong> For those who suffer from chronic blushing linked to anxiety, 
+                      this treatment can be truly life-changing by removing a major source of stress and self-consciousness.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Gummy Smile */}
+              <Card className="bg-gradient-to-r from-purple-900/30 to-gray-900/50 border-purple-500">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                      <User className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-2 text-white">Botox for Gummy Smile Correction</h3>
+                      <p className="text-purple-300 text-sm">Subtle Enhancement for Perfect Smile Proportions</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">How It Works:</h4>
+                      <p className="text-gray-300 text-sm mb-4">
+                        Some people are self-conscious about excessive gum display when smiling. Botox relaxes the muscle above the upper lip 
+                        (levator labii superioris), preventing it from lifting too high and reducing visible gum tissue.
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>2-4 units injected above upper lip</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Relaxes hyperactive lip elevator muscle</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Reduces gum display by 2-4mm</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-white mb-3">Treatment Benefits:</h4>
+                      <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Non-surgical alternative to gum surgery</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Quick 5-minute procedure</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Results visible within 3-5 days</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Sparkles className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Natural-looking smile enhancement</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -1017,6 +1387,148 @@ export default function FaceBotox() {
                       <span>Results last 18-24 months</span>
                     </li>
                   </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Pre-Treatment Preparation Guide */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Preparing for Your Botox Treatment</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Proper preparation ensures optimal results and minimises potential side effects. Here's what you need to know before your appointment.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <Card className="bg-gray-900/50 border-purple-500 mb-8">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-semibold mb-6 text-white">What to Tell Your Doctor Before Treatment</h3>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <Shield className="w-5 h-5 text-purple-300 mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Medical History</h4>
+                          <p className="text-sm text-gray-300">
+                            Inform us of any current illnesses or medications you're taking, as these may affect treatment
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <AlertTriangle className="w-5 h-5 text-purple-300 mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Pregnancy & Breastfeeding</h4>
+                          <p className="text-sm text-gray-300">
+                            Botox is not recommended if you're pregnant or breastfeeding
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <Activity className="w-5 h-5 text-purple-300 mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Previous Treatments</h4>
+                          <p className="text-sm text-gray-300">
+                            Mention any previous botulinum toxin injections or injection-related problems
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <Droplets className="w-5 h-5 text-purple-300 mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Skin Conditions</h4>
+                          <p className="text-sm text-gray-300">
+                            Tell us about any inflammation in muscles or skin where we plan to inject
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <Heart className="w-5 h-5 text-purple-300 mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Swallowing Issues</h4>
+                          <p className="text-sm text-gray-300">
+                            Disclose any problems with swallowing or related conditions
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <Syringe className="w-5 h-5 text-purple-300 mt-1 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">Recent Surgery</h4>
+                          <p className="text-sm text-gray-300">
+                            Inform us of any recent or pending surgical procedures in treatment areas
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-semibold mb-6 text-white">Medications to Avoid Before Treatment</h3>
+                  
+                  <div className="bg-gray-900/50 rounded-lg p-6 mb-6">
+                    <p className="text-gray-300 mb-4">
+                      <strong className="text-purple-300">To minimise bruising risk,</strong> avoid these medications for 7 days before your appointment:
+                    </p>
+                    
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span>Aspirin</span>
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span>Ibuprofen (Nurofen)</span>
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span>Anti-inflammatories (NSAIDs)</span>
+                        </li>
+                      </ul>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span>Blood thinners (Warfarin)</span>
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span>Vitamin E supplements</span>
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span>Fish oil supplements</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-purple-900/30 rounded-lg p-4 border border-purple-500/30">
+                    <p className="text-sm text-gray-300">
+                      <strong className="text-purple-300">Important:</strong> Always consult your GP before stopping any prescribed medications. 
+                      If you're on prescribed blood thinners, discuss alternatives with your doctor rather than stopping them.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -1176,6 +1688,237 @@ export default function FaceBotox() {
               </motion.div>
             </div>
 
+          </div>
+        </section>
+
+        {/* Post-Treatment Care Guide */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Botox Aftercare: Essential Post-Treatment Instructions</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Following these aftercare guidelines ensures optimal results and minimises potential side effects. Our comprehensive approach helps you achieve the best possible outcome.
+              </p>
+            </motion.div>
+
+            <div className="max-w-5xl mx-auto">
+              {/* CLEAN, HEAL, HYDRATE Framework */}
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                <Card className="bg-gradient-to-b from-purple-900/30 to-gray-900/50 border-purple-500">
+                  <CardContent className="p-6 text-center">
+                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Droplets className="w-8 h-8 text-purple-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">CLEAN</h3>
+                    <div className="text-left space-y-3 text-sm text-gray-300">
+                      <p className="font-semibold text-purple-300">First 72 Hours:</p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Use gentle cleanser with warm (not hot) water only</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Pat skin dry with soft towel - don't rub</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Ensure hands are clean before touching treated area</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-purple-300 mt-1 flex-shrink-0" />
+                          <span>Avoid harsh soaps or exfoliants</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gradient-to-b from-pink-900/30 to-gray-900/50 border-pink-500">
+                  <CardContent className="p-6 text-center">
+                    <div className="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Heart className="w-8 h-8 text-pink-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">HEAL</h3>
+                    <div className="text-left space-y-3 text-sm text-gray-300">
+                      <p className="font-semibold text-pink-300">Promote Recovery:</p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Apply antioxidant serums to reduce irritation</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Use vitamin C serums to support healing</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Avoid direct sun exposure for 24 hours</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-pink-300 mt-1 flex-shrink-0" />
+                          <span>Apply SPF 30+ daily after first 24 hours</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gradient-to-b from-blue-900/30 to-gray-900/50 border-blue-500">
+                  <CardContent className="p-6 text-center">
+                    <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <RefreshCw className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">HYDRATE</h3>
+                    <div className="text-left space-y-3 text-sm text-gray-300">
+                      <p className="font-semibold text-blue-300">Restore Moisture:</p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span>Use hyaluronic acid serums to hydrate skin</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span>Apply gentle, fragrance-free moisturiser</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span>Drink plenty of water (2-3 litres daily)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-blue-300 mt-1 flex-shrink-0" />
+                          <span>Balance and restore skin barrier function</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* What to Avoid */}
+              <Card className="bg-gray-900/50 border-purple-500 mb-8">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-semibold mb-6 text-white">What to Avoid After Botox Treatment</h3>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-purple-300 mb-4">First 24 Hours - Avoid:</h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Makeup Application</p>
+                            <p className="text-gray-400 text-xs">Wait 24 hours, avoid brushes (especially unclean ones)</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Exercise & Heat</p>
+                            <p className="text-gray-400 text-xs">No strenuous activity, saunas, or hot baths</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Rubbing or Touching</p>
+                            <p className="text-gray-400 text-xs">Don't massage or press on treated areas for 4 hours</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Lying Down</p>
+                            <p className="text-gray-400 text-xs">Avoid lying face down for first few hours</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-purple-300 mb-4">First 3 Days - Avoid:</h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Active Skincare</p>
+                            <p className="text-gray-400 text-xs">No AHAs, BHAs, Retinol, Vitamin C (low pH), or 'active' products</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Swimming</p>
+                            <p className="text-gray-400 text-xs">Avoid pools, hot tubs, and open water</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Alcohol Consumption</p>
+                            <p className="text-gray-400 text-xs">Excessive alcohol can increase bruising and swelling</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="text-red-400 text-xs font-bold">✕</span>
+                          </div>
+                          <div>
+                            <p className="text-white text-sm font-medium">Sun Exposure</p>
+                            <p className="text-gray-400 text-xs">No direct sunlight or tanning beds</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* For 2 Weeks Post-Treatment */}
+              <Card className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">For 2 Weeks Post-Treatment</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-red-400 text-xs font-bold">✕</span>
+                      </div>
+                      <div>
+                        <p className="text-white text-sm font-medium">Ibuprofen (Nurofen)</p>
+                        <p className="text-gray-400 text-xs">Use paracetamol instead for pain relief if needed</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-white text-sm font-medium">Normal Activities Resume</p>
+                        <p className="text-gray-400 text-xs">Return to regular skincare routine after 3 days</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 
