@@ -385,9 +385,14 @@ const LipFillerDissolve = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
-                      Hyaluronidase is a naturally occurring enzyme that breaks down hyaluronic acid molecules. 
-                      When injected into areas with unwanted filler, it dissolves the gel structure safely and effectively. This is the primary lip filler dissolver used by aesthetic professionals worldwide for safe correction.
+                      Hyaluronidase is a naturally occurring enzyme found in the human body that breaks down hyaluronic acid molecules. 
+                      When injected into areas with unwanted filler, it dissolves the gel structure safely and effectively. This prescription-only medication must be administered by qualified medical professionals and is the primary lip filler dissolver used by aesthetic professionals worldwide for safe correction.
                     </p>
+                    <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4 mb-4">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        <strong className="text-purple-300">Medical-Grade Treatment:</strong> Hyaluronidase is a prescription medication that can only be prescribed and administered by qualified medical practitioners. Before treatment, we perform a patch test to ensure safety and minimise any risk of allergic reactions.
+                      </p>
+                    </div>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
@@ -395,7 +400,7 @@ const LipFillerDissolve = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300 text-sm">Does not damage natural lip tissue</p>
+                        <p className="text-gray-300 text-sm">Does not damage natural lip tissue or collagen</p>
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
@@ -403,7 +408,7 @@ const LipFillerDissolve = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300 text-sm">Allows for precise correction</p>
+                        <p className="text-gray-300 text-sm">Allows for precise correction with controlled results</p>
                       </div>
                     </div>
                   </CardContent>
@@ -423,8 +428,13 @@ const LipFillerDissolve = () => {
                   <CardContent className="space-y-4">
                     <p className="text-gray-300 leading-relaxed">
                       Various situations may require lip filler dissolving, from aesthetic dissatisfaction 
-                      to <a href="https://www.nhs.uk/conditions/cosmetic-procedures/dermal-fillers/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical complications</a> requiring immediate correction. Whether you need emergency treatment or simply want to refresh your look before new <a href="/lip-filler" className="text-purple-300 hover:text-purple-200 underline">lip filler</a> treatment.
+                      to <a href="https://www.nhs.uk/conditions/cosmetic-procedures/dermal-fillers/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 underline">medical complications</a> requiring immediate correction. Poor injection technique or treatment by unqualified practitioners can lead to serious complications including vascular occlusion, tissue necrosis, and in rare cases, blindness.
                     </p>
+                    <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 mb-4">
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        <strong className="text-red-400">Serious Complications Requiring Immediate Treatment:</strong> Vascular occlusion (blocked blood vessels), skin blanching or discolouration, severe pain, tissue necrosis, or vision changes require emergency dissolving treatment. We work closely with A&E consultants to manage filler complications safely.
+                      </p>
+                    </div>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
@@ -440,7 +450,11 @@ const LipFillerDissolve = () => {
                       </div>
                       <div className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                        <p className="text-gray-300 text-sm">Vascular complications or allergic reactions</p>
+                        <p className="text-gray-300 text-sm">Emergency vascular complications requiring immediate intervention</p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                        <p className="text-gray-300 text-sm">Refreshing before new lip filler treatment</p>
                       </div>
                     </div>
                   </CardContent>
@@ -725,8 +739,8 @@ const LipFillerDissolve = () => {
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <ShieldCheck className="text-purple-600" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Safety</h3>
-                <p className="text-gray-300 text-sm">Medical-grade products and emergency protocols</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Safety First</h3>
+                <p className="text-gray-300 text-sm">Medical-grade products, emergency protocols, and collaboration with A&E consultants for complication management</p>
               </motion.div>
 
               <motion.div
