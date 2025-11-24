@@ -551,13 +551,39 @@ const JawlineFiller = () => {
               <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
                 <p className="text-gray-300 mb-6">
                   Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
-                  The treatment involves injecting hyaluronic acid-based dermal fillers to enhance structure, 
+                  The treatment involves injecting <strong>hyaluronic acid (HA)-based dermal fillers</strong> to enhance structure, 
                   hydration, and contour in the jawline area. Similar to{" "}
                   <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline font-medium">
                     dermal filler treatments
                   </Link>
                   , jawline fillers use premium FDA-approved products.
                 </p>
+                
+                <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 mb-6">
+                  <h3 className="text-xl font-semibold mb-3 text-purple-300">Common Jawline Concerns</h3>
+                  <p className="text-gray-300 mb-3">
+                    Patients seek jawline filler treatments for various aesthetic concerns including:
+                  </p>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                      <span><strong>Weak or undefined jawlines</strong> lacking natural definition and structure</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                      <span><strong>Age-related volume loss</strong> causing jowl formation and sagging appearance</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                      <span><strong>Round or soft face shapes</strong> seeking more angular, sculpted contours</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                      <span><strong>Asymmetrical jawlines</strong> requiring balance and proportion correction</span>
+                    </li>
+                  </ul>
+                </div>
+
                 <p className="text-gray-300 mb-6">
                   Just <strong>1ml of filler</strong> — about 1/5 of a teaspoon — can make a noticeable 
                   difference, delivering precise, long-lasting results for a beautifully sculpted lower face. Many patients also combine this with{" "}
@@ -690,7 +716,33 @@ const JawlineFiller = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-white">How Does Jaw Filler Work?</h2>
               <p className="text-gray-300 mb-4 leading-relaxed text-lg">
-                Jaw filler enhances volume and definition, creating a sharper jawline tailored to your features. Jawline injections using hyaluronic acid address concerns from double chin filler needs to comprehensive contouring. According to the <a href="https://baaps.org.uk/media/press_releases/1891/cosmetic_surgery_trends_2024_facial_rejuvenation_surges_while_mens_procedures_decline?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">British Association of Aesthetic Plastic Surgeons</a>, dermal filler treatments show remarkable before and after jawline filler results.
+                Jaw filler enhances volume and definition, creating a sharper jawline tailored to your features. At Cosmedocs, we use <strong>specialised hyaluronic acid (HA) fillers</strong> specifically formulated for jawline enhancement. These advanced fillers feature a <strong>thicker, more cohesive gel structure</strong> compared to standard facial fillers, providing superior structural support and projection whilst maintaining natural movement and flexibility.
+              </p>
+              
+              <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 mb-6 text-left">
+                <h3 className="text-xl font-semibold mb-3 text-purple-300">Why Hyaluronic Acid for Jawlines?</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                    <span><strong>Biodegradable & Safe:</strong> HA is naturally found in your skin, making it biocompatible and fully biodegradable over time</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                    <span><strong>Dense Formulation:</strong> Thicker, more robust HA gel provides structural lift and definition essential for jawline contouring</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                    <span><strong>Reversible Results:</strong> Can be safely dissolved if needed, providing peace of mind and flexibility</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
+                    <span><strong>Long-lasting:</strong> Premium HA formulations designed for structural support last 15-18 months in the jawline area</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-gray-300 mb-4 leading-relaxed text-lg">
+                Jawline injections using hyaluronic acid address concerns from double chin filler needs to comprehensive contouring. According to the <a href="https://baaps.org.uk/media/press_releases/1891/cosmetic_surgery_trends_2024_facial_rejuvenation_surges_while_mens_procedures_decline?" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">British Association of Aesthetic Plastic Surgeons</a>, dermal filler treatments show remarkable before and after jawline filler results.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Jaw line treatment defines your jaw angle, enhances receding chins with jawline chin filler and chin line filler, and reduces jowls. Fillers for chin enhancement combined with chin crease filler create lower face rejuvenation. Our jawline filler London treatments deliver beautifully contoured jaw fillers before and after effects. Combine with <a href="/masseter-botox" className="text-purple-300 hover:underline">masseter Botox</a> or <a href="/face-botox" className="text-purple-300 hover:underline">anti-wrinkle treatments</a> for comprehensive results.
@@ -912,6 +964,12 @@ const JawlineFiller = () => {
               <p className="text-gray-300 mb-6">
                 *Consultation fee is deducted from treatment cost if you proceed on the same day
               </p>
+              
+              <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 max-w-3xl mx-auto mt-8">
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  <strong className="text-purple-300">Individual Results May Vary:</strong> Treatment outcomes depend on individual factors including facial anatomy, skin quality, metabolism, lifestyle, and adherence to aftercare instructions. The results shown in before-and-after images are specific to those patients and may not represent typical results. Your practitioner will discuss realistic expectations during your consultation based on your unique facial structure and aesthetic goals.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
