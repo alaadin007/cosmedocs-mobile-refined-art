@@ -86,6 +86,30 @@ const DermalFillerMakeover = () => {
     {
       question: "What's the difference between dermal fillers and Botox?",
       answer: "Dermal fillers and Botox work differently to achieve complementary results. Dermal fillers add volume, restore lost facial structure, and enhance contours by filling spaces beneath the skin. Botox relaxes muscles to prevent dynamic wrinkles caused by facial expressions. A comprehensive facial rejuvenation often combines both treatments - fillers for volume restoration and structural enhancement, while Botox addresses expression lines and prevents new wrinkle formation."
+    },
+    {
+      question: "Fillers or Botox - Which is best?",
+      answer: "Dermal fillers are just as effective as Botox, but the results will last much longer than other anti-wrinkle treatments. However, the longevity of the effects of dermal fillers can still vary, mostly by the type of filler. Some fillers may last only as long as Botox (3-4 months), while other types of fillers can last for a year or more. The best choice depends on your specific concerns: fillers for volume loss and structural enhancement, Botox for dynamic wrinkles and expression lines. Many patients benefit from combining both treatments for comprehensive facial rejuvenation."
+    },
+    {
+      question: "What is the 8 Point Lift?",
+      answer: "The 8 Point Lift is a revolutionary treatment that can give you a youthful-looking glow without invasive cosmetic surgery. This advanced technique involves restoring volume in eight strategic areas of the face, giving lift and support using small amounts of dermal filler. The treatment targets key areas including the cheeks, temples, and jawline to create a natural lifting effect without the discomfort or downtime of a surgical facelift. Results are immediate and can last 12-18 months."
+    },
+    {
+      question: "What are tear trough fillers?",
+      answer: "Tear trough fillers are specifically designed to smooth and minimise the appearance of under-eye bags and hollows. This delicate treatment addresses the area between the lower eyelid and upper cheek, where shadows and hollowing can create a tired or aged appearance. By carefully injecting hyaluronic acid filler into this area, we can restore volume, reduce dark circles, and create a fresher, brighter appearance around the eyes. The results are subtle yet transformative, making you look more rested and youthful."
+    },
+    {
+      question: "What are dermal cheek fillers?",
+      answer: "Dermal cheek fillers are injectable treatments designed to restore volume to sunken or flat cheeks, which can give a skeletal appearance as we age. The solution is injected into your cheek muscles and acts as a plumping mechanism that creates youthful-looking cheeks. Cheek fillers can enhance cheekbones, lift the mid-face, smooth nasolabial folds, and create better facial proportions. The treatment provides immediate results that look natural and can last 12-18 months."
+    },
+    {
+      question: "What are dermal lip fillers?",
+      answer: "Dermal lip fillers are specifically formulated injectable treatments designed to enhance, reshape, and add volume to the lips. Unlike general facial fillers, lip fillers use softer formulations that provide natural movement and a subtle finish. They can address thin lips, asymmetry, loss of definition, and vertical lip lines. The treatment allows for precise control, enabling us to enhance your natural lip shape or create more volume depending on your aesthetic goals. Results are immediate and typically last 6-12 months."
+    },
+    {
+      question: "What is non-surgical nose reshaping?",
+      answer: "Non-surgical nose reshaping, also known as liquid rhinoplasty, is an advanced procedure that allows the nose to be reshaped using dermal filler without the need for invasive surgery. This technique can smooth bumps, lift a drooping tip, straighten a crooked nose, and improve overall symmetry. The treatment takes just 15-30 minutes with immediate results and no downtime. While it cannot reduce the size of your nose, it can create the illusion of a more refined shape by adding volume strategically. Results typically last 12-18 months."
     }
   ];
 
@@ -284,6 +308,77 @@ const DermalFillerMakeover = () => {
                   <p className="text-gray-300 leading-relaxed">
                     The treatment uses hyaluronic acid, a naturally occurring substance that attracts and retains moisture, providing immediate volume while integrating seamlessly with your existing facial structure for natural-looking, long-lasting results.
                   </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Understanding Collagen and Skin Aging */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="page-container">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-8 text-white text-center">Understanding Collagen Loss and Natural Ageing</h2>
+                
+                <div className="space-y-6 text-left">
+                  <div className="bg-black/30 border border-gray-700 rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-purple-300 mb-4 flex items-center">
+                      <Activity className="mr-2" size={24} />
+                      What Happens as We Age
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed mb-4">
+                      As a person ages, the body begins to lose collagen. Collagen is an important substance that exists in your skin, muscles, bones, and tissues. It's the structural protein that gives your skin its firmness, elasticity, and youthful appearance.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      A decrease in the amount of collagen can cause skin laxity and loss of volume. The skin becomes thinner, loses its elasticity, and starts to sag. This natural ageing process affects everyone differently, but typically becomes more noticeable in our 30s and progresses with each passing decade.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 border border-gray-700 rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-purple-300 mb-4 flex items-center">
+                      <Eye className="mr-2" size={24} />
+                      Visible Signs of Collagen Loss
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed mb-4">
+                      As we age, our skin changes and we lose hydration as well as facial fat. Our natural skin elasticity reduces due to the degradation of collagen, and our skin becomes more fragile. Because of these natural skin changes, over time the natural volume of your youthful skin begins to diminish, and wrinkles and folds start to form.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      The more mobile facial areas are the first to be affected by this natural ageing process. Skin will eventually begin to sag, and "expressive" wrinkles will start to appear around the eyes, forehead, and mouth, which are more difficult to smooth out without intervention.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 border border-gray-700 rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-purple-300 mb-4 flex items-center">
+                      <Heart className="mr-2" size={24} />
+                      How Dermal Fillers Help
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed mb-4">
+                      Dermal fillers work by acting to replace lost collagen in the skin, helping to restore a firm and full structure that effectively lifts sagging skin around the cheeks, chin, and jawline. The hyaluronic acid gel contains a high concentration of moisture-binding molecules, flooding the skin with hydration to boost overall skin quality.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      Adding volume to help smooth the texture of the skin's surface can work effectively to soften the look of facial wrinkles, including smile lines and lip lines. As the underlying tissues of the skin regain density, dermal fillers can restore a volumised look to sunken cheeks, tear trough furrows, and hollow temples for a naturally youthful appearance.
+                    </p>
+                  </div>
+
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="mt-8 text-center"
+                  >
+                    <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg font-semibold" asChild>
+                      <a href="https://med.as.me/harleystreet" target="_blank" rel="noopener noreferrer">
+                        Book Your Consultation
+                      </a>
+                    </Button>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
