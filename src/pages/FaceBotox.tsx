@@ -978,9 +978,79 @@ export default function FaceBotox() {
           </div>
         </section>
 
-
-
-
+        {/* Medical Botox Applications - Brief Overview */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">Medical Botox Applications</h2>
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                Beyond aesthetics, Botox is FDA-approved for various therapeutic conditions
+              </p>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <Activity className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">
+                    <Link to="/bruxism-botox" className="text-purple-300 underline hover:text-purple-200">Bruxism & TMJ</Link>
+                  </h3>
+                  <p className="text-sm text-gray-300">
+                    Relief from jaw pain, teeth grinding, and TMJ disorders
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">
+                    <Link to="/migraine-botox" className="text-purple-300 underline hover:text-purple-200">Chronic Migraines</Link>
+                  </h3>
+                  <p className="text-sm text-gray-300">
+                    FDA-approved treatment for chronic migraines
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <Droplets className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">
+                    <Link to="/excessive-sweat-botox" className="text-purple-300 underline hover:text-purple-200">Hyperhidrosis</Link>
+                  </h3>
+                  <p className="text-sm text-gray-300">
+                    Solution for excessive sweating
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-900/50 border-gray-700 text-center hover:bg-gray-900/70 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <Heart className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Facial Flushing</h3>
+                  <p className="text-sm text-gray-300">
+                    Treatment for blushing and facial redness
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
 
         {/* Advanced Combination Approach */}
         <section className="py-20 bg-accent">
