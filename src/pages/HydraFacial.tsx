@@ -246,7 +246,7 @@ const HydraFacial = () => {
                   <Calendar className="text-purple-300" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Results Duration</h3>
-                <p className="text-gray-300">Monthly treatments recommended</p>
+                <p className="text-gray-300">Visible for 5-7 days; optimal with treatments every 4-6 weeks</p>
               </motion.div>
 
               <motion.div
@@ -474,6 +474,210 @@ const HydraFacial = () => {
           </div>
         </section>
 
+        {/* HydraFacial Specialised Boosters */}
+        <section className="py-20 bg-accent">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-white">Specialised Treatment Boosters</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your HydraFacial with targeted boosters designed for specific skin concerns
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
+                        <Heart className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-xl mb-2">Growth Factor Booster</CardTitle>
+                        <p className="text-purple-200 text-sm font-medium">Anti-Ageing & Regeneration</p>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-gray-300">
+                    <p className="mb-3">
+                      Designed to boost collagen and elastin production, helping to diminish the appearance of fine lines 
+                      whilst capturing and removing toxins and irritants.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Reduces visible signs of ageing</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Enhances skin firmness and elasticity</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Detoxifies and protects skin barrier</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
+                        <Droplets className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-xl mb-2">Clarifying Booster</CardTitle>
+                        <p className="text-purple-200 text-sm font-medium">Acne & Blemish Control</p>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-gray-300">
+                    <p className="mb-3">
+                      Perfect for acne-prone skin, this booster cleanses, reduces excess oil, purifies pores, 
+                      and improves the appearance of acne whilst brightening and smoothing the skin.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Controls excess sebum production</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Reduces breakouts and inflammation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Refines pores and evens skin tone</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
+                        <Star className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-xl mb-2">Brightening Complex</CardTitle>
+                        <p className="text-purple-200 text-sm font-medium">Pigmentation & Even Tone</p>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-gray-300">
+                    <p className="mb-3">
+                      A skin-brightening complex that reduces the appearance of brown spots, evens skin tone, 
+                      prevents new pigmentation formation, and restores hydration.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Fades dark spots and hyperpigmentation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Creates luminous, even complexion</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Prevents future discolouration</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-purple-500/30 h-full">
+                  <CardHeader>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-600 rounded-full p-3 flex-shrink-0">
+                        <Palette className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-xl mb-2">Calming Complex</CardTitle>
+                        <p className="text-purple-200 text-sm font-medium">Redness & Sensitivity Relief</p>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-gray-300">
+                    <p className="mb-3">
+                      Specifically formulated to relieve visible signs of red, sensitised skin, this booster 
+                      supports healthy skin barrier function and detoxifies the skin.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Reduces facial redness and inflammation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Strengthens skin barrier protection</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                        <span>Ideal for rosacea-prone skin</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center mt-10"
+            >
+              <p className="text-gray-300 mb-6">
+                During your consultation, our aesthetic practitioners will recommend the optimal booster 
+                combination tailored to your unique skin concerns and desired outcomes.
+              </p>
+              <Button 
+                size="lg"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8"
+                onClick={() => window.open(bookingUrl, '_blank')}
+              >
+                Book Consultation
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+
         {/* HydraFacial Aftercare & Results Timeline */}
         <section className="py-20 bg-black">
           <div className="page-container">
@@ -522,7 +726,7 @@ const HydraFacial = () => {
               >
                 <h2 className="text-3xl font-bold mb-6">Results Timeline</h2>
                 <p className="text-gray-300 mb-6">
-                  See when to expect results and how they develop over time:
+                  Experience immediate glow that lasts up to 7 days. Optimal, long-lasting results achieved with regular treatments every 4-6 weeks.
                 </p>
 
                 <div className="space-y-4">
@@ -553,6 +757,22 @@ const HydraFacial = () => {
                     <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 flex-1">
                       <h3 className="text-lg font-semibold text-white mb-1">Next Session Due</h3>
                       <p className="text-gray-300 text-sm">Optimal time for maintenance treatment</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-purple-600/30 to-purple-800/30 border-2 border-purple-400/50 rounded-lg p-5 mt-6">
+                    <div className="flex items-start gap-3">
+                      <Calendar className="w-6 h-6 text-purple-300 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Recommended Treatment Plan</h3>
+                        <p className="text-gray-300 text-sm mb-2">
+                          For optimal, long-lasting results, we recommend a treatment every 4-6 weeks. 
+                          Regular sessions help maintain your skin's radiance, hydration, and overall health.
+                        </p>
+                        <p className="text-purple-200 text-sm font-medium">
+                          Book a course to save up to £150
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
