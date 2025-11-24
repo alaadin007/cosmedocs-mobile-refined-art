@@ -541,88 +541,128 @@ const JawlineFiller = () => {
         {/* What Is Jawline Filler Section */}
         <section className="py-20">
           <div className="page-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Main Heading and Introduction */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12 max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-6">What Is Jawline Filler?</h2>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
+                The treatment involves injecting <strong>hyaluronic acid (HA)-based dermal fillers</strong> to enhance structure, 
+                hydration, and contour in the jawline area. Similar to{" "}
+                <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline font-medium">
+                  dermal filler treatments
+                </Link>
+                , jawline fillers use premium FDA-approved products.
+              </p>
+            </motion.div>
+
+            {/* Two Column Layout: Concerns & Key Facts */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Common Concerns */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-              <h2 className="text-3xl font-bold mb-6">What Is Jawline Filler?</h2>
-                <p className="text-gray-300 mb-6">
-                  Jaw fillers provide a safe, non-surgical solution for achieving a youthful, defined jawline. 
-                  The treatment involves injecting <strong>hyaluronic acid (HA)-based dermal fillers</strong> to enhance structure, 
-                  hydration, and contour in the jawline area. Similar to{" "}
-                  <Link to="/dermal-fillers" className="text-purple-400 hover:text-purple-300 underline font-medium">
-                    dermal filler treatments
-                  </Link>
-                  , jawline fillers use premium FDA-approved products.
-                </p>
-                
-                <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20 mb-6">
-                  <h3 className="text-xl font-semibold mb-3 text-purple-300">Common Jawline Concerns</h3>
-                  <p className="text-gray-300 mb-3">
-                    Patients seek jawline filler treatments for various aesthetic concerns including:
+                <div className="bg-purple-900/20 rounded-xl p-8 border border-purple-500/20 h-full">
+                  <h3 className="text-2xl font-semibold mb-4 text-purple-300">Common Jawline Concerns</h3>
+                  <p className="text-gray-300 mb-6">
+                    Patients seek jawline filler treatments for various aesthetic concerns:
                   </p>
-                  <ul className="space-y-2 text-gray-300">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
-                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
-                      <span><strong>Weak or undefined jawlines</strong> lacking natural definition and structure</span>
+                      <CheckCircle className="text-purple-400 mr-3 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <strong className="text-white">Weak or Undefined Jawlines</strong>
+                        <p className="text-gray-300 text-sm mt-1">Lacking natural definition and structure</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
-                      <span><strong>Age-related volume loss</strong> causing jowl formation and sagging appearance</span>
+                      <CheckCircle className="text-purple-400 mr-3 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <strong className="text-white">Age-Related Volume Loss</strong>
+                        <p className="text-gray-300 text-sm mt-1">Causing jowl formation and sagging appearance</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
-                      <span><strong>Round or soft face shapes</strong> seeking more angular, sculpted contours</span>
+                      <CheckCircle className="text-purple-400 mr-3 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <strong className="text-white">Round or Soft Face Shapes</strong>
+                        <p className="text-gray-300 text-sm mt-1">Seeking more angular, sculpted contours</p>
+                      </div>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-purple-400 mr-2 mt-1 flex-shrink-0" size={16} />
-                      <span><strong>Asymmetrical jawlines</strong> requiring balance and proportion correction</span>
+                      <CheckCircle className="text-purple-400 mr-3 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <strong className="text-white">Asymmetrical Jawlines</strong>
+                        <p className="text-gray-300 text-sm mt-1">Requiring balance and proportion correction</p>
+                      </div>
                     </li>
                   </ul>
                 </div>
-
-                <p className="text-gray-300 mb-6">
-                  Just <strong>1ml of filler</strong> — about 1/5 of a teaspoon — can make a noticeable 
-                  difference, delivering precise, long-lasting results for a beautifully sculpted lower face. Many patients also combine this with{" "}
-                  <Link to="/chin-filler" className="text-purple-400 hover:text-purple-300 underline font-medium">
-                    chin filler treatments
-                  </Link>{" "}
-                  for comprehensive lower face enhancement.
-                </p>
-                <div className="bg-purple-900/20 rounded-lg p-6 border border-purple-500/20">
-                  <h3 className="text-xl font-semibold mb-3 text-purple-300">Jawline Signifies Youth</h3>
-                  <p className="text-gray-300">
-                    A defined jawline is like the perfect frame for a portrait—it adds structure and balance 
-                    to your face. The jawline filler before and after results are stunning, restoring volume, 
-                    correcting asymmetry, and creating a beautifully contoured look.
-                  </p>
-                </div>
               </motion.div>
-              
+
+              {/* Treatment Benefits */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative"
+                className="space-y-6"
               >
-                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-center">Golden Ratio Face</h3>
-                  <p className="text-gray-300 mb-4">
-                    Aesthetic experts at Cosmedocs often use the "Golden Ratio" (1:1.618) to create facial harmony. 
-                    This means the distance from the center of your lips to your chin should be about 1.618 times 
-                    that from your nose to your lips.
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-8 border border-purple-500/20">
+                  <h3 className="text-2xl font-semibold mb-4 text-white">Jawline Signifies Youth</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    A defined jawline is like the perfect frame for a portrait—it adds structure and balance 
+                    to your face. The jawline filler before and after results are stunning, restoring volume, 
+                    correcting asymmetry, and creating a beautifully contoured look.
                   </p>
-                  <p className="text-gray-300">
-                    At Cosmedocs, we use this principle to enhance both the chin and jawline, giving you a more 
-                    balanced, youthful profile with beautifully natural results.
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-8 border border-purple-500/20">
+                  <h3 className="text-2xl font-semibold mb-4 text-white">Precise Results</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Just <strong className="text-purple-300">1ml of filler</strong> — about 1/5 of a teaspoon — can make a noticeable 
+                    difference, delivering precise, long-lasting results for a beautifully sculpted lower face.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Many patients combine this with{" "}
+                    <Link to="/chin-filler" className="text-purple-400 hover:text-purple-300 underline font-medium">
+                      chin filler treatments
+                    </Link>{" "}
+                    for comprehensive lower face enhancement.
                   </p>
                 </div>
               </motion.div>
             </div>
+
+            {/* Golden Ratio Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-10 border border-purple-500/30 text-center">
+                <h3 className="text-3xl font-bold mb-6 text-white">The Golden Ratio Face</h3>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Aesthetic experts at Cosmedocs often use the <strong className="text-purple-300">"Golden Ratio" (1:1.618)</strong> to create facial harmony. 
+                  This means the distance from the centre of your lips to your chin should be about 1.618 times 
+                  that from your nose to your lips.
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  At Cosmedocs, we use this principle to enhance both the chin and jawline, giving you a more 
+                  balanced, youthful profile with beautifully natural results.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
