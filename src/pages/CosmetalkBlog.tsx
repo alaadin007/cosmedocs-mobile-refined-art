@@ -16,6 +16,17 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Breaking the Cycle: Understanding Orofacial & Neck Pain",
+      description: "The chicken-and-egg dilemma of jaw clenching, TMJ disorder, headaches, neck pain & shoulder knots. Discover treatment options including Botox, physio & trigger point therapy.",
+      category: "Medical Insight",
+      readTime: "8 min read",
+      date: "January 26, 2025",
+      slug: "/cosmetalk/orofacial-neck-pain-cycle",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80",
+      author: "By Cosmedocs Medical Team"
+    },
+    {
       title: "Untraceably You: Look 5-10 Years Younger Naturally",
       description: "Turn back time so subtly, not even your closest will notice. Exclusive Cosmedocs campaign with guaranteed natural results. Limited launch offer available.",
       category: "Special Campaign",
