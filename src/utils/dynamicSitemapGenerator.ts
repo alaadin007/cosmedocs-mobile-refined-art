@@ -75,7 +75,10 @@ function extractAllRoutes(): { pages: string[], treatments: string[], blog: stri
         '/blog/non-surgical-nose-job-evolution', '/blog/pdo-threads-comprehensive-guide',
         '/blog/aesthetic-maintenance-cost-guide', '/blog/chinese-london-aesthetics-guide',
         '/long-term-aesthetic-care-blog', '/aesthetic-maintenance-cost-blog',
-        '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog'
+        '/pdo-threads-blog', '/non-surgical-nose-job-blog', '/chinese-london-aesthetics-blog',
+        '/cosmetalk', '/cosmetalk/vitamin-c-ferulic-acid-benefits', '/cosmetalk/smokers-lines-women',
+        '/cosmetalk/flawless-skin', '/cosmetalk/lazy-skin-syndrome', '/cosmetalk/orofacial-neck-pain-cycle',
+        '/blog/beauty-ethnic-neutrality', '/inside-mind-aesthetic-doctor-blog'
       ],
       locations: ['/birmingham', '/manchester', '/cardiff', '/delhi', '/karachi', '/barbados']
     };
