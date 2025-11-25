@@ -16,13 +16,24 @@ const CosmetalkBlog = () => {
 
   const blogPosts = [
     {
+      title: "Aesthetic Treatments Made Easy",
+      description: "Don't believe advice, trust education. A comprehensive guide to understanding aesthetic treatments, helping you make informed decisions about your aesthetic journey.",
+      category: "Educational Guide",
+      readTime: "15 min read",
+      date: "January 2025",
+      slug: "/aesthetic-treatments-made-easy",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
+      author: "By Dr. Ahmed Haq & AI Team"
+    },
+    {
       title: "Breaking the Cycle: Understanding Orofacial & Neck Pain",
       description: "The chicken-and-egg dilemma of jaw clenching, TMJ disorder, headaches, neck pain & shoulder knots. Discover treatment options including Botox, physio & trigger point therapy.",
       category: "Medical Insight",
       readTime: "8 min read",
       date: "January 26, 2025",
       slug: "/cosmetalk/orofacial-neck-pain-cycle",
-      featured: true,
+      featured: false,
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80",
       author: "By Cosmedocs Medical Team"
     },
@@ -268,7 +279,7 @@ const CosmetalkBlog = () => {
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Main Featured Article */}
               <div className="lg:col-span-2">
-                <Link to="/aesthetic-treatments-made-easy" className="block group">
+                <Link to={featuredArticle.slug} className="block group">
                   <div className="relative h-[400px] overflow-hidden rounded-lg mb-4">
                     <img 
                       src={featuredArticle.image} 
