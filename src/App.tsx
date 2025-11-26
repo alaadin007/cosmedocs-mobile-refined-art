@@ -125,6 +125,7 @@ const CampaignAds = lazy(() => import("./pages/CampaignAds"));
 const LondonTweakmentsNaturalAesthetics = lazy(() => import("./pages/LondonTweakmentsNaturalAesthetics"));
 const SpinToWin = lazy(() => import("./pages/SpinToWin"));
 const OrofacialNeckPainBlog = lazy(() => import("./pages/OrofacialNeckPainBlog"));
+const Partnerships = lazy(() => import("./pages/Partnerships"));
 
 // Loading component
 const PageLoader = () => (
@@ -228,7 +229,8 @@ const App = () => {
                <Route path="/cosmetalk/smokers-lines-women" element={<SmokersLinesWomen />} />
               <Route path="/cosmetalk/flawless-skin" element={<FlawlessSkin />} />
                <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
-               <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
+          <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
+          <Route path="/partnerships" element={<Partnerships />} />
                <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
                 <Route path="/journal" element={<BlogHome />} />
                <Route path="/8-point-facelift" element={<EightPointFacelift />} />
