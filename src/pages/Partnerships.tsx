@@ -14,14 +14,47 @@ import {
   Building2,
   LineChart,
   Globe,
-  Zap
+  Zap,
+  Mail
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
+};
+
+const EmailReveal = () => {
+  const [revealed, setRevealed] = useState(false);
+  
+  const emailParts = ['pashma', '@', 'cosmedocs', '.', 'com'];
+  const email = emailParts.join('');
+  
+  return (
+    <div className="flex flex-col items-center gap-3">
+      {!revealed ? (
+        <Button 
+          size="lg" 
+          variant="secondary" 
+          className="gap-2"
+          onClick={() => setRevealed(true)}
+        >
+          <Mail className="w-4 h-4" />
+          Click to Reveal Email
+        </Button>
+      ) : (
+        <a 
+          href={`mailto:${email}`}
+          className="text-xl font-semibold hover:underline flex items-center gap-2"
+        >
+          <Mail className="w-5 h-5" />
+          {email}
+        </a>
+      )}
+    </div>
+  );
 };
 
 const Partnerships = () => {
@@ -542,15 +575,7 @@ const Partnerships = () => {
                 <p className="text-lg mb-6 opacity-90">
                   Stop looking for a job. Start building your own aesthetic career.
                 </p>
-                <Button size="lg" variant="secondary" className="gap-2" asChild>
-                  <Link to="/contact-us">
-                    Apply Now
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
-                <p className="mt-6 text-sm opacity-80">
-                  Or email us at: <a href="mailto:partnerships@cosmedocs.co.uk" className="underline font-semibold">partnerships@cosmedocs.co.uk</a>
-                </p>
+                <EmailReveal />
               </div>
             </motion.div>
           </div>
