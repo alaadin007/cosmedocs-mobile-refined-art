@@ -56,7 +56,7 @@ function extractAllRoutes(): { pages: string[], treatments: string[], blog: stri
     // Fallback to manual route definitions
     return {
       pages: [
-        '/', '/treatments', '/about', '/contact', '/partners', '/partnerships',
+        '/', '/treatments', '/about', '/contact', '/partners', '/partnerships', '/auth', '/dashboard',
         '/treatments-summary-arabic', '/treatments-summary-chinese', '/treatments-summary-japanese',
         '/team', '/before-after-gallery', '/membership', '/harley-street-consulting-rooms'
       ],
