@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense } from "react";
 import { useAutoSitemap } from "@/hooks/useAutoSitemap";
+import { AuthProvider } from "@/contexts/AuthContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -126,6 +127,8 @@ const LondonTweakmentsNaturalAesthetics = lazy(() => import("./pages/LondonTweak
 const SpinToWin = lazy(() => import("./pages/SpinToWin"));
 const OrofacialNeckPainBlog = lazy(() => import("./pages/OrofacialNeckPainBlog"));
 const Partnerships = lazy(() => import("./pages/Partnerships"));
+const Auth = lazy(() => import("./pages/Auth"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 // Loading component
 const PageLoader = () => (
@@ -147,13 +150,14 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
-          <ScrollToTop />
-          <Suspense fallback={null}>
-            <GoogleAnalytics />
-          </Suspense>
-          <Layout>
-            <Suspense fallback={<PageLoader />}>
-            <Routes>
+            <AuthProvider>
+              <ScrollToTop />
+              <Suspense fallback={null}>
+                <GoogleAnalytics />
+              </Suspense>
+              <Layout>
+                <Suspense fallback={<PageLoader />}>
+                <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/home" element={<Home />} />
               <Route path="/home2" element={<Home2 />} />
@@ -231,6 +235,8 @@ const App = () => {
                <Route path="/cosmetalk/lazy-skin-syndrome" element={<LazySkinSyndrome />} />
           <Route path="/cosmetalk/orofacial-neck-pain-cycle" element={<OrofacialNeckPainBlog />} />
           <Route path="/partnerships" element={<Partnerships />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/dashboard" element={<Dashboard />} />
                <Route path="/blog/beauty-ethnic-neutrality" element={<BeautyEthnicNeutrality />} />
                 <Route path="/journal" element={<BlogHome />} />
                <Route path="/8-point-facelift" element={<EightPointFacelift />} />
@@ -311,10 +317,11 @@ const App = () => {
             </Routes>
             </Suspense>
           </Layout>
-        </BrowserRouter>
-      </TooltipProvider>
-    </HelmetProvider>
-  </QueryClientProvider>
+            </AuthProvider>
+          </BrowserRouter>
+        </TooltipProvider>
+      </HelmetProvider>
+    </QueryClientProvider>
   );
 };
 

@@ -14,6 +14,60 @@ export type Database = {
   }
   public: {
     Tables: {
+      assessments: {
+        Row: {
+          analysis_result: Json
+          assessment_type: string
+          created_at: string | null
+          id: string
+          images: string[]
+          overall_score: number | null
+          user_id: string
+        }
+        Insert: {
+          analysis_result: Json
+          assessment_type: string
+          created_at?: string | null
+          id?: string
+          images: string[]
+          overall_score?: number | null
+          user_id: string
+        }
+        Update: {
+          analysis_result?: Json
+          assessment_type?: string
+          created_at?: string | null
+          id?: string
+          images?: string[]
+          overall_score?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      chat_messages: {
+        Row: {
+          content: string
+          created_at: string | null
+          id: string
+          role: string
+          user_id: string
+        }
+        Insert: {
+          content: string
+          created_at?: string | null
+          id?: string
+          role: string
+          user_id: string
+        }
+        Update: {
+          content?: string
+          created_at?: string | null
+          id?: string
+          role?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       chatbot_knowledge: {
         Row: {
           content: string
@@ -320,6 +374,33 @@ export type Database = {
         }
         Relationships: []
       }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string | null
+          email: string | null
+          full_name: string | null
+          id: string
+          updated_at: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string | null
+          email?: string | null
+          full_name?: string | null
+          id: string
+          updated_at?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string | null
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       raffle_entries: {
         Row: {
           claimed: boolean | null
@@ -343,6 +424,47 @@ export type Database = {
           prize?: string
         }
         Relationships: []
+      }
+      recommendations: {
+        Row: {
+          assessment_id: string | null
+          category: string | null
+          created_at: string | null
+          description: string
+          id: string
+          priority: string | null
+          title: string
+          user_id: string
+        }
+        Insert: {
+          assessment_id?: string | null
+          category?: string | null
+          created_at?: string | null
+          description: string
+          id?: string
+          priority?: string | null
+          title: string
+          user_id: string
+        }
+        Update: {
+          assessment_id?: string | null
+          category?: string | null
+          created_at?: string | null
+          description?: string
+          id?: string
+          priority?: string | null
+          title?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "recommendations_assessment_id_fkey"
+            columns: ["assessment_id"]
+            isOneToOne: false
+            referencedRelation: "assessments"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       search_bar_ai_configs: {
         Row: {
@@ -728,6 +850,27 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string | null
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
       website_content: {
         Row: {
           content: string | null
@@ -956,9 +1099,16 @@ export type Database = {
       cleanup_expired_results: { Args: never; Returns: undefined }
       delete_all_website_content: { Args: never; Returns: undefined }
       get_ai_system_prompt: { Args: { query: string }; Returns: string }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "moderator" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -1085,6 +1235,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "moderator", "user"],
+    },
   },
 } as const
