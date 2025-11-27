@@ -20,3 +20,9 @@ verify_jwt = false
 
 [functions.spin-to-win]
 verify_jwt = false
+
+[functions.analyze-skin]
+verify_jwt = false
+
+[functions.analyze-hair]
+verify_jwt = false
