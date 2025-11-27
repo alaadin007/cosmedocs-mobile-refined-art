@@ -139,8 +139,7 @@ Return a JSON object with this structure:
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content }
-        ],
-        response_format: { type: "json_object" }
+        ]
       }),
     });
 
@@ -163,12 +162,12 @@ Return a JSON object with this structure:
     }
 
     const data = await response.json();
-    const analysisResult = JSON.parse(data.choices[0].message.content);
+    const analysis = data.choices[0].message.content;
 
     console.log('Hair analysis completed successfully');
 
     return new Response(
-      JSON.stringify(analysisResult),
+      JSON.stringify({ analysis }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
 
