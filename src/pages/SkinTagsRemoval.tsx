@@ -93,45 +93,70 @@ const SkinTagsRemoval = () => {
       </Helmet>
 
       <article className="min-h-screen bg-background">
-        {/* Hero Section with Background Image */}
-        <section className="relative py-32 px-4 overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-secondary/70 z-10"></div>
-            <img 
-              src="/placeholder.svg" 
-              alt="Skin tags removal treatment"
-              className="w-full h-full object-cover opacity-20"
-            />
-          </div>
-          
-          {/* Content */}
-          <div className="relative z-20 max-w-4xl mx-auto text-center">
+        {/* Hero Section - Treatment Page Style */}
+        <section className="relative py-20 px-4 bg-[#4ecdc4] overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-wrap justify-center gap-2 mb-6">
               <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Skin</span>
               <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/20 text-white backdrop-blur-sm">Clinical Concepts</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
               Skin Tags — What Are These Fleshy Skin Flaps & How To Untag Them
             </h1>
-            <p className="text-lg md:text-xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow">
-              Familiar with tagging on Facebook and hashtags on Instagram and Twitter? There is another tag that loves to 'hang around' known as the 'Skin Tags.' Although harmless, their removal becomes an absolute essential for cosmetic or comfort reasons.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/90">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <time dateTime={publishDate}>April 15, 2024</time>
-              </div>
-              <span>•</span>
-              <span>By Dr. Hena Haq</span>
-              <span>•</span>
-              <span>8 min read</span>
+            <div className="w-24 h-1 bg-white/40 mx-auto mb-6"></div>
+            <h2 className="text-xl md:text-2xl text-white/95 mb-8 font-light">
+              Untag Those Pesky Skin Tags
+            </h2>
+            <Button size="lg" variant="outline" className="bg-white/10 border-white/40 text-white hover:bg-white hover:text-[#4ecdc4]" asChild>
+              <Link to="/contact">Request A Call Back</Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* At a Glance Section */}
+        <section className="max-w-6xl mx-auto px-4 py-12 -mt-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="bg-card p-4 rounded-lg border border-border text-center">
+              <div className="text-sm font-semibold text-primary mb-1">Anaesthetic</div>
+              <div className="text-xs text-muted-foreground">Local</div>
+            </div>
+            <div className="bg-card p-4 rounded-lg border border-border text-center">
+              <div className="text-sm font-semibold text-primary mb-1">Results</div>
+              <div className="text-xs text-muted-foreground">Permanent</div>
+            </div>
+            <div className="bg-card p-4 rounded-lg border border-border text-center">
+              <div className="text-sm font-semibold text-primary mb-1">Procedure Time</div>
+              <div className="text-xs text-muted-foreground">15-30 mins</div>
+            </div>
+            <div className="bg-card p-4 rounded-lg border border-border text-center">
+              <div className="text-sm font-semibold text-primary mb-1">Risks</div>
+              <div className="text-xs text-muted-foreground">Minimal</div>
+            </div>
+            <div className="bg-card p-4 rounded-lg border border-border text-center">
+              <div className="text-sm font-semibold text-primary mb-1">Full Recovery</div>
+              <div className="text-xs text-muted-foreground">24-48 hours</div>
+            </div>
+            <div className="bg-card p-4 rounded-lg border border-border text-center">
+              <div className="text-sm font-semibold text-primary mb-1">Back To Work</div>
+              <div className="text-xs text-muted-foreground">Immediate</div>
             </div>
           </div>
         </section>
 
         {/* Main Content */}
         <section className="max-w-4xl mx-auto px-4 py-16">
+          {/* Article Meta */}
+          <div className="flex items-center gap-4 pb-8 mb-8 border-b border-border">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Calendar className="h-4 w-4" />
+              <time dateTime={publishDate}>April 15, 2024</time>
+            </div>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-sm text-muted-foreground">By Dr. Hena Haq</span>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-sm text-muted-foreground">8 min read</span>
+          </div>
+
           <div className="prose prose-lg max-w-none">
             
             <p className="lead text-xl text-muted-foreground mb-8">
